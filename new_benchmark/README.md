@@ -34,7 +34,7 @@ The full GitHub corpus (`all_versioned_files.jsonl`, ~451MB) is hosted on Huggin
 pip install huggingface_hub
 
 # Download the large GitHub data file
-huggingface-cli download ngyygm/BiTempQA-v3 \
+huggingface-cli download heihei/BiTempQA-v3 \
   benchmark_github/all_versioned_files.jsonl \
   --repo-type dataset \
   --local-dir new_benchmark/data/
