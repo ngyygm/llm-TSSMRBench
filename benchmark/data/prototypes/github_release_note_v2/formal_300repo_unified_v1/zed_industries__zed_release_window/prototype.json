@@ -1,0 +1,530 @@
+{
+  "prototype_id": "zed_industries__zed_release_window",
+  "domain": "github_release_evolution",
+  "repo": "zed-industries/zed",
+  "source_type": "release_note",
+  "window_title": "zed-industries/zed recent release evolution",
+  "window_summary": "This window tracks the recent zed-industries/zed release stream across pre-release and stable releases, covering AI agent improvements, Git features, terminal enhancements, and bug fixes from v1.1.6 through v1.5.3-pre.",
+  "chunks": [
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_2_0_pre",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.2.0-pre",
+      "tag_name": "v1.2.0-pre",
+      "title": "v1.2.0-pre",
+      "time_hint": "2026-05-06",
+      "published_at": "2026-05-06T17:59:08Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.2.0-pre",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.2.0-pre\nTag: v1.2.0-pre; draft: False; prerelease: True; published_at: 2026-05-06T17:59:08Z; created_at: 2026-05-06T14:26:51Z\nRelease notes:\nThis week's release includes more reliable Agent edits, Git Graph remote support, the ability to use the project panel's `View History` action on folders, and improved text rendering clarity on macOS.\n## Shipped by the Zed Guild 🛡️\n- Terminal: Improved 256 color ANSI rendering. ([#54565](https://github.com/zed-industries/zed/pull/54565); thanks [feitreim](https://github.com/feitreim))\n- Git Panel: Fixed empty state labels in the git panel becoming left-aligned when wrapped to multiple lines. ([#55235](https://github.com/zed-industries/zed/pull/55235); thanks [dongdong867](https://github.com/dongdong867))\n- Fixed \"Diagnostics\" in Editor Controls re-enabling itself after being manually disabled. ([#52907](https://github.com/zed-industries/zed/pull/52907); thanks [OmChillure](https://github.com/OmChillure))\n- Fixed agent profiles with `enable_all_context_servers: true` ignoring per-tool `false` overrides in `context_servers`, allowing agents to call tools the user had explicitly disabled. ([#54863](https://github.com/zed-industries/zed/pull/54863); thanks [OmChillure](https://github.com/OmChillure))\n---\n*Learn about the [Zed Guild](https://zed.dev/community/zed-guild).*\n## Features\n### AI\n- Agent: Improved the edit tool so it can still apply edits when a file has changed on disk, as long as the target text still matches. ([#55606](https://github.com/zed-industries/zed/pull/55606))\n- Agent: Improved reliability when the LLM edits a file. ([#55612](https://github.com/zed-industries/zed/pull/55612))\n- Agent: Reduced token usage when the LLM edits a file. ([#55752](https://github.com/zed-industries/zed/pull/55752))\n- ACP: Added running agent version display in the External Agent settings. ([#55824](https://github.com/zed-industries/zed/pull/55824))\n- Added support for the latest MCP version (`2025-11-25`). ([#54494](https://github.com/zed-industries/zed/pull/54494))\n- Improved Zed Agent's terminal tool to much more consistently use `--no-pager` and `GIT_EDITOR` with `git` commands. ([#55787](https://github.com/zed-industries/zed/pull/55787))\n- Mistral: Added Ministral 3 models and removed deprecated models. ([#55443](https://github.com/zed-industries/zed/pull/55443); thanks [dargor](https://github.com/dargor))\n### Git\n- Git Graph: Added remote support. ([#55788](https://github.com/zed-industries/zed/pull/55788))\n- Git Graph: Added a context menu to the graph rows. ([#55720](https://github.com/zed-industries/zed/pull/55720))\n- Added a `git::ToggleFillCommitEditor` action that expands the commit editor to fill the git panel's available vertical space. ([#55043](https://github.com/zed-industries/zed/pull/55043))\n- Added `View History` to folder and project-root context menus in the project panel, opening Git history for the selected folder or the whole project. ([#52634](https://github.com/zed-industries/zed/pull/52634); thanks [robert7k](https://github.com/robert7k))\n- Added an affordance to jump to the project file from the commit view. ([#55088](https://github.com/zed-industries/zed/pull/55088))\n### Terminal\n- Added path pasting functionality in the terminal. ([#48222](https://github.com/zed-industries/zed/pull/48222); thanks [dunkmann00](https://github.com/dunkmann00))\n### Vim / Helix\n- Improved Vim navigation in the git graph with Ctrl-U and Ctrl-D half-page scrolling. ([#55506](https://github.com/zed-industries/zed/pull/55506); thanks [aprogramq](https://github.com/aprogramq))\n### Linux\n- Added support for using embedded bitmaps in fonts on Linux. ([#55202](https://github.com/zed-industries/zed/pull/55202))\n- Reduced crash rate when recovering GPUs. ([#55343](https://github.com/zed-industries/zed/pull/55343))\n### Other\n- Improved performance of \"Replace All\" in buffer search. ([#51941](https://github.com/zed-industries/zed/pull/51941))\n- Improved...",
+      "memory_unit_text": "In the zed-industries/zed release v1.2.0-pre, the project delivers more reliable Agent edits, Git Graph remote support, the ability to use the project panel's View History action on folders, and improved text rendering clarity on macOS. Terminal 256 color ANSI rendering is improved. Git panel empty state labels are fixed. Diagnostics in Editor Controls no longer re-enables itself after being manually disabled. Agent profiles with enable_all_context_servers: true now respect per-tool false overrides. The Agent edit tool can apply edits when a file has changed on disk if the target text still matches. Agent reliability when the LLM edits a file is improved, and token usage is reduced. ACP running agent version display is added in External Agent settings. Support for the latest MCP version (2025-11-25) is added. The Zed Agent terminal tool more consistently uses --no-pager and GIT_EDITOR with git commands. Mistral Ministral 3 models are added and deprecated models removed. Git Graph gains remote support and a context menu. A git::ToggleFillCommitEditor action expands the commit editor to fill the git panel's vertical space. View History is added to folder and project-root context menus. An affordance to jump to the project file from the commit view is added. Terminal path pasting functionality is added. Vim navigation in the git graph is improved with Ctrl-U and Ctrl-D half-page scrolling. Linux support for embedded bitmaps in fonts is added, and GPU recovery crash rate is reduced. Performance of Replace All in buffer search is improved."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_2_1_pre",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.2.1-pre",
+      "tag_name": "v1.2.1-pre",
+      "title": "v1.2.1-pre",
+      "time_hint": "2026-05-06",
+      "published_at": "2026-05-06T21:23:35Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.2.1-pre",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.2.1-pre\nTag: v1.2.1-pre; draft: False; prerelease: True; published_at: 2026-05-06T21:23:35Z; created_at: 2026-05-06T20:39:25Z\nRelease notes:\n- Fixed ACP agents failing to launch on Windows with \"The system cannot find the file specified\" ([#55946](https://github.com/zed-industries/zed/pull/55946))\n- Fixed inotify event queue overflows on Linux ([#55941](https://github.com/zed-industries/zed/pull/55941))",
+      "memory_unit_text": "In the zed-industries/zed release v1.2.1-pre, the release fixes ACP agents failing to launch on Windows with 'The system cannot find the file specified' and fixes inotify event queue overflows on Linux."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_1_6",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.1.6",
+      "tag_name": "v1.1.6",
+      "title": "v1.1.6",
+      "time_hint": "2026-05-06",
+      "published_at": "2026-05-06T21:42:44Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.1.6",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.1.6\nTag: v1.1.6; draft: False; prerelease: False; published_at: 2026-05-06T21:42:44Z; created_at: 2026-05-06T20:35:33Z\nRelease notes:\n- Fixed ACP agents failing to launch on Windows with \"The system cannot find the file specified\" ([#55947](https://github.com/zed-industries/zed/pull/55947))\n- Fixed inotify event queue overflows on Linux ([#55942](https://github.com/zed-industries/zed/pull/55942))",
+      "memory_unit_text": "In the zed-industries/zed release v1.1.6, the release fixes ACP agents failing to launch on Windows with 'The system cannot find the file specified' and fixes inotify event queue overflows on Linux."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_2_2_pre",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.2.2-pre",
+      "tag_name": "v1.2.2-pre",
+      "title": "v1.2.2-pre",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T19:55:07Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.2.2-pre",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.2.2-pre\nTag: v1.2.2-pre; draft: False; prerelease: True; published_at: 2026-05-08T19:55:07Z; created_at: 2026-05-08T18:37:36Z\nRelease notes:\n- bedrock: Always use 1M context windows for Anthropic models ([#56201](https://github.com/zed-industries/zed/pull/56201))\n- Fixed local zeta2 edit predictions using the wrong prompt format. ([#56191](https://github.com/zed-industries/zed/pull/56191))\n- Fixed an issue where broken symlinks, permission errors, or other fs errors in watched directories could cause excessive CPU usage ([#56174](https://github.com/zed-industries/zed/pull/56174))\n- Fixed a crash on Windows that could occur when closing the settings window\n- Improved the overall performance of the settings window ([#56093](https://github.com/zed-industries/zed/pull/56093))\n- Fixed a crash on Windows when the GPU device is lost and recovered during use (typically driver crash, suspend/resume, or display reconfiguration, most commonly on Intel iGPUs) ([#56035](https://github.com/zed-industries/zed/pull/56035))\n- Fixed missing reload implementation for markdown preview. ([#56026](https://github.com/zed-industries/zed/pull/56026))",
+      "memory_unit_text": "In the zed-industries/zed release v1.2.2-pre, the release changes Bedrock to always use 1M context windows for Anthropic models, fixes local zeta2 edit predictions using the wrong prompt format, fixes an issue where broken symlinks, permission errors, or other fs errors in watched directories could cause excessive CPU usage, fixes a crash on Windows when closing the settings window, improves the overall performance of the settings window, fixes a crash on Windows when the GPU device is lost and recovered during use, and fixes missing reload implementation for markdown preview."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_1_7",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.1.7",
+      "tag_name": "v1.1.7",
+      "title": "v1.1.7",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T20:11:28Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.1.7",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.1.7\nTag: v1.1.7; draft: False; prerelease: False; published_at: 2026-05-08T20:11:28Z; created_at: 2026-05-08T18:40:28Z\nRelease notes:\n- Fixed local zeta2 edit predictions using the wrong prompt format. ([#56192](https://github.com/zed-industries/zed/pull/56192))\n- Fixed an issue where broken symlinks, permission errors, or other fs errors in watched directories could cause excessive CPU usage ([#56175](https://github.com/zed-industries/zed/pull/56175))\n- Fixed a rare panic when invoking helix motions on an editor that had not yet been laid out. ([#56062](https://github.com/zed-industries/zed/pull/56062))\n- Fixed missing reload implementation for markdown preview. ([#56027](https://github.com/zed-industries/zed/pull/56027))",
+      "memory_unit_text": "In the zed-industries/zed release v1.1.7, the release fixes local zeta2 edit predictions using the wrong prompt format, fixes an issue where broken symlinks, permission errors, or other fs errors in watched directories could cause excessive CPU usage, fixes a rare panic when invoking helix motions on an editor that had not yet been laid out, and fixes missing reload implementation for markdown preview."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_2_3_pre",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.2.3-pre",
+      "tag_name": "v1.2.3-pre",
+      "title": "v1.2.3-pre",
+      "time_hint": "2026-05-12",
+      "published_at": "2026-05-12T18:11:24Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.2.3-pre",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.2.3-pre\nTag: v1.2.3-pre; draft: False; prerelease: True; published_at: 2026-05-12T18:11:24Z; created_at: 2026-05-12T17:13:58Z\nRelease notes:\n- Fixed some issues where the activity indicator would show the wrong icon and not be clickable on errors present. ([#56470](https://github.com/zed-industries/zed/pull/56470))\n- Fixed a memory leak with diffing non-existing files with Zed cli ([#56444](https://github.com/zed-industries/zed/pull/56444))\n- Fixed edit prediction provider menu checkmarks for active non-Zed providers. ([#56291](https://github.com/zed-industries/zed/pull/56291))\n- Fixed an issue where project files would take a long time to appear when opening Zed on a file system that requires polling ([#56207](https://github.com/zed-industries/zed/pull/56207))",
+      "memory_unit_text": "In the zed-industries/zed release v1.2.3-pre, the release fixes some issues where the activity indicator would show the wrong icon and not be clickable on errors present, fixes a memory leak with diffing non-existing files with Zed cli, fixes edit prediction provider menu checkmarks for active non-Zed providers, and fixes an issue where project files would take a long time to appear when opening Zed on a file system that requires polling."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_1_8",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.1.8",
+      "tag_name": "v1.1.8",
+      "title": "v1.1.8",
+      "time_hint": "2026-05-12",
+      "published_at": "2026-05-12T18:17:56Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.1.8",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.1.8\nTag: v1.1.8; draft: False; prerelease: False; published_at: 2026-05-12T18:17:56Z; created_at: 2026-05-12T17:13:26Z\nRelease notes:\n- Fixed some issues where the activity indicator would show the wrong icon and not be clickable on errors present. ([#56471](https://github.com/zed-industries/zed/pull/56471))\n- Fixed a memory leak with diffing non-existing files with Zed cli ([#56445](https://github.com/zed-industries/zed/pull/56445))\n- Fixed edit prediction provider menu checkmarks for active non-Zed providers. ([#56292](https://github.com/zed-industries/zed/pull/56292))\n- Fixed an issue where project files would take a long time to appear when opening Zed on a file system that requires polling ([#56207](https://github.com/zed-industries/zed/pull/56207))",
+      "memory_unit_text": "In the zed-industries/zed release v1.1.8, the release fixes some issues where the activity indicator would show the wrong icon and not be clickable on errors present, fixes a memory leak with diffing non-existing files with Zed cli, fixes edit prediction provider menu checkmarks for active non-Zed providers, and fixes an issue where project files would take a long time to appear when opening Zed on a file system that requires polling."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_2_3",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.2.3",
+      "tag_name": "v1.2.3",
+      "title": "v1.2.3",
+      "time_hint": "2026-05-13",
+      "published_at": "2026-05-13T18:06:42Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.2.3",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.2.3\nTag: v1.2.3; draft: False; prerelease: False; published_at: 2026-05-13T18:06:42Z; created_at: 2026-05-13T17:09:47Z\nRelease notes:\nThis week's release includes more reliable Agent edits, Git Graph remote support, the ability to use the project panel's `View History` action on folders, and improved text rendering clarity on macOS.\n## Shipped by the Zed Guild 🛡️\n- Terminal: Improved 256 color ANSI rendering. ([#54565](https://github.com/zed-industries/zed/pull/54565); thanks [feitreim](https://github.com/feitreim))\n- Git Panel: Fixed empty state labels in the git panel becoming left-aligned when wrapped to multiple lines. ([#55235](https://github.com/zed-industries/zed/pull/55235); thanks [dongdong867](https://github.com/dongdong867))\n- Fixed \"Diagnostics\" in Editor Controls re-enabling itself after being manually disabled. ([#52907](https://github.com/zed-industries/zed/pull/52907); thanks [OmChillure](https://github.com/OmChillure))\n- Fixed agent profiles with `enable_all_context_servers: true` ignoring per-tool `false` overrides in `context_servers`, allowing agents to call tools the user had explicitly disabled. ([#54863](https://github.com/zed-industries/zed/pull/54863); thanks [OmChillure](https://github.com/OmChillure))\n---\n*Learn about the [Zed Guild](https://zed.dev/community/zed-guild).*\n## Features\n### AI\n- Agent: Improved the edit tool so it can still apply edits when a file has changed on disk, as long as the target text still matches. ([#55606](https://github.com/zed-industries/zed/pull/55606))\n- Agent: Improved reliability when the LLM edits a file. ([#55612](https://github.com/zed-industries/zed/pull/55612))\n- Agent: Reduced token usage when the LLM edits a file. ([#55752](https://github.com/zed-industries/zed/pull/55752))\n- ACP: Added running agent version display in the External Agent settings. ([#55824](https://github.com/zed-industries/zed/pull/55824))\n- Added support for the latest MCP version (`2025-11-25`). ([#54494](https://github.com/zed-industries/zed/pull/54494))\n- Improved Zed Agent's terminal tool to much more consistently use `--no-pager` and `GIT_EDITOR` with `git` commands. ([#55787](https://github.com/zed-industries/zed/pull/55787))\n- Mistral: Added Ministral 3 models and removed deprecated models. ([#55443](https://github.com/zed-industries/zed/pull/55443); thanks [dargor](https://github.com/dargor))\n- Bedrock: Changed to always use 1M context windows for Anthropic models. ([#56201](https://github.com/zed-industries/zed/pull/56201))\n### Git\n- Git Graph: Added remote support. ([#55788](https://github.com/zed-industries/zed/pull/55788))\n- Git Graph: Added a context menu to the graph rows. ([#55720](https://github.com/zed-industries/zed/pull/55720))\n- Added a `git::ToggleFillCommitEditor` action that expands the commit editor to fill the git panel's available vertical space. ([#55043](https://github.com/zed-industries/zed/pull/55043))\n- Added `View History` to folder and project-root context menus in the project panel, opening Git history for the selected folder or the whole project. ([#52634](https://github.com/zed-industries/zed/pull/52634); thanks [robert7k](https://github.com/robert7k))\n- Added an affordance to jump to the project file from the commit view. ([#55088](https://github.com/zed-industries/zed/pull/55088))\n### Terminal\n- Added path pasting functionality in the terminal. ([#48222](https://github.com/zed-industries/zed/pull/48222); thanks [dunkmann00](https://github.com/dunkmann00))\n### Vim / Helix\n- Improved Vim navigation in the git graph with Ctrl-U and Ctrl-D half-page scrolling. ([#55506](https://github.com/zed-industries/zed/pull/55506); thanks [aprogramq](https://github.com/aprogramq))\n### Linux\n- Added support for using embedded bitmaps in fonts on Linux. ([#55202](https://github.com/zed-industries/zed/pull/55202))\n- Reduced crash rate when recovering GPUs. ([#55343](https://github.com/zed-industries/zed/pull/55343))\n### Other\n-...",
+      "memory_unit_text": "In the zed-industries/zed release v1.2.3, the project delivers more reliable Agent edits, Git Graph remote support, the ability to use the project panel's View History action on folders, and improved text rendering clarity on macOS. Terminal 256 color ANSI rendering is improved. Git panel empty state labels are fixed. Diagnostics in Editor Controls no longer re-enables itself after being manually disabled. Agent profiles with enable_all_context_servers: true now respect per-tool false overrides. The Agent edit tool can apply edits when a file has changed on disk if the target text still matches. Agent reliability when the LLM edits a file is improved, and token usage is reduced. ACP running agent version display is added in External Agent settings. Support for the latest MCP version (2025-11-25) is added. The Zed Agent terminal tool more consistently uses --no-pager and GIT_EDITOR with git commands. Mistral Ministral 3 models are added and deprecated models removed. Bedrock is changed to always use 1M context windows for Anthropic models. Git Graph gains remote support and a context menu. A git::ToggleFillCommitEditor action expands the commit editor to fill the git panel's vertical space. View History is added to folder and project-root context menus. An affordance to jump to the project file from the commit view is added. Terminal path pasting functionality is added. Vim navigation in the git graph is improved with Ctrl-U and Ctrl-D half-page scrolling. Linux support for embedded bitmaps in fonts is added, and GPU recovery crash rate is reduced. Performance of Replace All in buffer search is improved."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_3_0_pre",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.0-pre",
+      "tag_name": "v1.3.0-pre",
+      "title": "v1.3.0-pre",
+      "time_hint": "2026-05-13",
+      "published_at": "2026-05-13T20:28:59Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.3.0-pre",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.3.0-pre\nTag: v1.3.0-pre; draft: False; prerelease: True; published_at: 2026-05-13T20:28:59Z; created_at: 2026-05-13T17:10:08Z\nRelease notes:\nThis week's release includes a Git panel branch history view and support for running custom Git commands from the Git Graph context menu, inline image and Mermaid diagram rendering in the agent, a new `subagent_model` setting, optional text icons for completion items (`\"completion_menu_item_kind\": \"symbol\"`), and Vim `g z` jump-to-word navigation.\n## Shipped by the Zed Guild 🛡️\n- Added built-in language server support for Bash. ([#52811](https://github.com/zed-industries/zed/pull/52811); thanks [lingyaochu](https://github.com/lingyaochu))\n---\n*Learn about the [Zed Guild](https://zed.dev/community/zed-guild).*\n## Features\n### AI\n- Agent: Added setting `subagent_model` to specify which model is used when a subagent is spawned. ([#56203](https://github.com/zed-industries/zed/pull/56203))\n- Agent: Added support for rendering inline images. ([#56427](https://github.com/zed-industries/zed/pull/56427))\n- Agent: Added support for Mermaid diagrams. ([#56430](https://github.com/zed-industries/zed/pull/56430))\n- Agent: Improved UX when agent tries to edit unsaved buffer. ([#55655](https://github.com/zed-industries/zed/pull/55655))\n- Agent: Added Mistral Ministral 3 models. ([#55443](https://github.com/zed-industries/zed/pull/55443); thanks [dargor](https://github.com/dargor))\n- Agent: Added support for grok-4.3 and grok-4.2. ([#55931](https://github.com/zed-industries/zed/pull/55931))\n- Agent: Added Google Gemini 3.1 Flash Lite. ([#56248](https://github.com/zed-industries/zed/pull/56248); thanks [qtqgyt](https://github.com/qtqgyt))\n- Agent: Updated OpenCode Free models (BigPickle and Ring 2.6 1T Free). ([#56328](https://github.com/zed-industries/zed/pull/56328); thanks [Vlaaaaaaad](https://github.com/Vlaaaaaaad))\n- Agent: Added support for gpt-5.4-nano/mini models for OpenAI provider. ([#56476](https://github.com/zed-industries/zed/pull/56476))\n- Agent: Improved output quality when using OpenAI models. ([#56476](https://github.com/zed-industries/zed/pull/56476))\n- Agent: Added `guardrail_identifier` and `guardrail_version` settings for AWS Bedrock, enabling use in environments where IAM policies require a guardrail on all model requests. ([#50084](https://github.com/zed-industries/zed/pull/50084); thanks [9to6](https://github.com/9to6))\n- Agent: Added support for editing the thread title for external agent threads. ([#56446](https://github.com/zed-industries/zed/pull/56446))\n- Agent: Added user confirmation requirement before letting tools modify files inside `.agents/skills/` (per-project) or `~/.agents/skills/` (global), so skills installed by any agent are protected from unsolicited edits. ([#56456](https://github.com/zed-industries/zed/pull/56456))\n- Anthropic: Added dynamic fetching of available models from Anthropic API. ([#56397](https://github.com/zed-industries/zed/pull/56397))\n- Improved sidebar search placeholder text to read \"Search threads…\" instead of \"Search…\". ([#56081](https://github.com/zed-industries/zed/pull/56081))\n- Edit Prediction: Added the ability to input the \"expected patch\", i.e. what the model should have predicted in the `edit prediction: rate completions` modal. ([#56629](https://github.com/zed-industries/zed/pull/56629))\n- Improved Anthropic prompt cache utilization, reducing latency and cost for ongoing conversations. ([#56472](https://github.com/zed-industries/zed/pull/56472))\n- Improved Bedrock prompt cache utilization by anchoring the system prompt as its own cache prefix. ([#56474](https://github.com/zed-industries/zed/pull/56474))\n- Improved Copilot edit predictions to no longer rely on a system node installation, so the system node version no longer affects whether they work in Zed. ([#56635](https://github.com/zed-industries/zed/pull/56635))\n### Git\n- Added a history view to the Git panel that allows to quickly see...",
+      "memory_unit_text": "In the zed-industries/zed release v1.3.0-pre, the release includes a Git panel branch history view and support for running custom Git commands from the Git Graph context menu, inline image and Mermaid diagram rendering in the agent, a new subagent_model setting, optional text icons for completion items (completion_menu_item_kind: symbol), and Vim g z jump-to-word navigation. Built-in language server support for Bash is added. The Agent gains a subagent_model setting, support for rendering inline images and Mermaid diagrams, improved UX when editing unsaved buffers, Mistral Ministral 3 models, support for grok-4.3 and grok-4.2, Google Gemini 3.1 Flash Lite, updated OpenCode Free models, support for gpt-5.4-nano/mini models for OpenAI provider, improved output quality with OpenAI models, guardrail_identifier and guardrail_version settings for AWS Bedrock, support for editing thread titles for external agent threads, and user confirmation requirement before tools modify files inside .agents/skills/. Anthropic dynamic fetching of available models is added. Sidebar search placeholder text is improved. Edit Prediction gains the ability to input the expected patch. Anthropic prompt cache utilization is improved. Bedrock prompt cache utilization is improved. Copilot edit predictions no longer rely on a system node installation."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_3_1_pre",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.1-pre",
+      "tag_name": "v1.3.1-pre",
+      "title": "v1.3.1-pre",
+      "time_hint": "2026-05-14",
+      "published_at": "2026-05-14T23:56:46Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.3.1-pre",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.3.1-pre\nTag: v1.3.1-pre; draft: False; prerelease: True; published_at: 2026-05-14T23:56:46Z; created_at: 2026-05-14T23:13:32Z\nRelease notes:\n- Added ChatGPT subscription provider, allowing users to use their ChatGPT Plus/Pro subscription with the Zed agent ([#56807](https://github.com/zed-industries/zed/pull/56807))\n- Fixed an issue where file system events or language server events that resulted in Zed unwatching many paths would result in high CPU usage ([#56805](https://github.com/zed-industries/zed/pull/56805))\n- Agent: Fix squashed message editor when `limit_content_width=false` ([#56688](https://github.com/zed-industries/zed/pull/56688))\n- Add the ability to create Terminal Threads in the Sidebar and Agent Panel. ([#56685](https://github.com/zed-industries/zed/pull/56685))",
+      "memory_unit_text": "In the zed-industries/zed release v1.3.1-pre, the release adds a ChatGPT subscription provider, allowing users to use their ChatGPT Plus/Pro subscription with the Zed agent, fixes an issue where file system events or language server events that resulted in Zed unwatching many paths would cause high CPU usage, fixes squashed message editor when limit_content_width=false, and adds the ability to create Terminal Threads in the Sidebar and Agent Panel."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_2_4",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.2.4",
+      "tag_name": "v1.2.4",
+      "title": "v1.2.4",
+      "time_hint": "2026-05-15",
+      "published_at": "2026-05-15T00:48:51Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.2.4",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.2.4\nTag: v1.2.4; draft: False; prerelease: False; published_at: 2026-05-15T00:48:51Z; created_at: 2026-05-14T23:13:31Z\nRelease notes:\n- Added ChatGPT subscription provider, allowing users to use their ChatGPT Plus/Pro subscription with the Zed agent. ([#56811](https://github.com/zed-industries/zed/pull/56811))\n- Removed deprecated OpenAI models.\n- Added support for gpt-5.4-nano/mini models for the OpenAI provider.\n- Improved output quality when using OpenAI models. ([#56809](https://github.com/zed-industries/zed/pull/56809))\n- Added support for specifying effort level when using OpenAI models. ([#56808](https://github.com/zed-industries/zed/pull/56808))\n- Fixed an issue where file system events or language server events that resulted in Zed unwatching many paths would cause high CPU usage. ([#56806](https://github.com/zed-industries/zed/pull/56806))\n- Agent: Fixed squashed message editor when `limit_content_width=false`. ([#56687](https://github.com/zed-industries/zed/pull/56687))",
+      "memory_unit_text": "In the zed-industries/zed release v1.2.4, the release adds a ChatGPT subscription provider, allowing users to use their ChatGPT Plus/Pro subscription with the Zed agent, removes deprecated OpenAI models, adds support for gpt-5.4-nano/mini models for the OpenAI provider, improves output quality when using OpenAI models, adds support for specifying effort level when using OpenAI models, fixes an issue where file system events or language server events that resulted in Zed unwatching many paths would cause high CPU usage, and fixes squashed message editor when limit_content_width=false."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_2_5",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.2.5",
+      "tag_name": "v1.2.5",
+      "title": "v1.2.5",
+      "time_hint": "2026-05-15",
+      "published_at": "2026-05-15T08:11:30Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.2.5",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.2.5\nTag: v1.2.5; draft: False; prerelease: False; published_at: 2026-05-15T08:11:30Z; created_at: 2026-05-15T04:00:40Z\nRelease notes:\n- Fixed pressing \"New Thread\" (or Cmd-N) doing nothing when the Agent Panel's Settings view was open ([#56818](https://github.com/zed-industries/zed/pull/56818))",
+      "memory_unit_text": "In the zed-industries/zed release v1.2.5, the release fixes pressing 'New Thread' (or Cmd-N) doing nothing when the Agent Panel's Settings view was open."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_3_2_pre",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.2-pre",
+      "tag_name": "v1.3.2-pre",
+      "title": "v1.3.2-pre",
+      "time_hint": "2026-05-15",
+      "published_at": "2026-05-15T08:12:12Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.3.2-pre",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.3.2-pre\nTag: v1.3.2-pre; draft: False; prerelease: True; published_at: 2026-05-15T08:12:12Z; created_at: 2026-05-15T04:00:19Z\nRelease notes:\n- Always pass null when body is non-existent in Vue language server request ([#56826](https://github.com/zed-industries/zed/pull/56826))\n- Fixed pressing \"New Thread\" (or Cmd-N) doing nothing when the Agent Panel's Settings view was open ([#56818](https://github.com/zed-industries/zed/pull/56818))",
+      "memory_unit_text": "In the zed-industries/zed release v1.3.2-pre, the release always passes null when body is non-existent in Vue language server request and fixes pressing 'New Thread' (or Cmd-N) doing nothing when the Agent Panel's Settings view was open."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_3_3_pre",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.3-pre",
+      "tag_name": "v1.3.3-pre",
+      "title": "v1.3.3-pre",
+      "time_hint": "2026-05-15",
+      "published_at": "2026-05-15T14:16:27Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.3.3-pre",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.3.3-pre\nTag: v1.3.3-pre; draft: False; prerelease: True; published_at: 2026-05-15T14:16:27Z; created_at: 2026-05-15T13:30:55Z\nRelease notes:\n- Added support for specifying effort level when using OpenAI models via ChatGPT subscription ([#56871](https://github.com/zed-industries/zed/pull/56871))",
+      "memory_unit_text": "In the zed-industries/zed release v1.3.3-pre, the release adds support for specifying effort level when using OpenAI models via ChatGPT subscription."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_2_6",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.2.6",
+      "tag_name": "v1.2.6",
+      "title": "v1.2.6",
+      "time_hint": "2026-05-15",
+      "published_at": "2026-05-15T14:53:00Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.2.6",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.2.6\nTag: v1.2.6; draft: False; prerelease: False; published_at: 2026-05-15T14:53:00Z; created_at: 2026-05-15T13:30:58Z\nRelease notes:\n- Added support for specifying effort level when using OpenAI models via ChatGPT subscription ([#56872](https://github.com/zed-industries/zed/pull/56872))\n- Always pass null when body is non-existent in Vue language server request ([#56827](https://github.com/zed-industries/zed/pull/56827))",
+      "memory_unit_text": "In the zed-industries/zed release v1.2.6, the release adds support for specifying effort level when using OpenAI models via ChatGPT subscription and always passes null when body is non-existent in Vue language server request."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_3_4_pre",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.4-pre",
+      "tag_name": "v1.3.4-pre",
+      "title": "v1.3.4-pre",
+      "time_hint": "2026-05-18",
+      "published_at": "2026-05-18T22:39:06Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.3.4-pre",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.3.4-pre\nTag: v1.3.4-pre; draft: False; prerelease: True; published_at: 2026-05-18T22:39:06Z; created_at: 2026-05-18T21:57:32Z\nRelease notes:\n- Fixed angled brackets being included in rainbow bracket highlights for JavaScript. ([#57072](https://github.com/zed-industries/zed/pull/57072))\n- Improved `Copy Tag` workflow from Git Graph context menu to deploy a submenu instead of a modal picker. ([#57081](https://github.com/zed-industries/zed/pull/57081))\n- Persist Terminal Threads across reloads ([#57045](https://github.com/zed-industries/zed/pull/57045))\n- git: Fix git blame processes not getting dropped properly. ([#56894](https://github.com/zed-industries/zed/pull/56894))",
+      "memory_unit_text": "In the zed-industries/zed release v1.3.4-pre, the release fixes angled brackets being included in rainbow bracket highlights for JavaScript, improves Copy Tag workflow from Git Graph context menu to deploy a submenu instead of a modal picker, persists Terminal Threads across reloads, and fixes git blame processes not getting dropped properly."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_3_5_pre",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.5-pre",
+      "tag_name": "v1.3.5-pre",
+      "title": "v1.3.5-pre",
+      "time_hint": "2026-05-19",
+      "published_at": "2026-05-19T20:16:04Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.3.5-pre",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.3.5-pre\nTag: v1.3.5-pre; draft: False; prerelease: True; published_at: 2026-05-19T20:16:04Z; created_at: 2026-05-19T18:35:39Z\nRelease notes:\n- Fixed an issue where git state would be stale in some cases. (#57176)",
+      "memory_unit_text": "In the zed-industries/zed release v1.3.5-pre, the release fixes an issue where git state would be stale in some cases."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_2_7",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.2.7",
+      "tag_name": "v1.2.7",
+      "title": "v1.2.7",
+      "time_hint": "2026-05-19",
+      "published_at": "2026-05-19T20:51:23Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.2.7",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.2.7\nTag: v1.2.7; draft: False; prerelease: False; published_at: 2026-05-19T20:51:23Z; created_at: 2026-05-19T18:36:17Z\nRelease notes:\n- git: Fix git blame processes not getting dropped properly. ([#56912](https://github.com/zed-industries/zed/pull/56912))",
+      "memory_unit_text": "In the zed-industries/zed release v1.2.7, the release fixes git blame processes not getting dropped properly."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_3_5",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.5",
+      "tag_name": "v1.3.5",
+      "title": "v1.3.5",
+      "time_hint": "2026-05-20",
+      "published_at": "2026-05-20T16:11:53Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.3.5",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.3.5\nTag: v1.3.5; draft: False; prerelease: False; published_at: 2026-05-20T16:11:53Z; created_at: 2026-05-20T14:31:42Z\nRelease notes:\nThis week's release includes the [ability to create Terminal Threads from the sidebar and Agent Panel](https://zed.dev/blog/terminal-threads), a Git panel branch history view and support for running custom Git commands from the Git Graph context menu, inline image and Mermaid diagram rendering in the agent, a new `subagent_model` setting, optional text icons for completion items (`\"completion_menu_item_kind\": \"symbol\"`), and Vim `g z` jump-to-word navigation.\n## Shipped by the Zed Guild 🛡️\n- Added built-in language server support for Bash. ([#52811](https://github.com/zed-industries/zed/pull/52811); thanks [lingyaochu](https://github.com/lingyaochu))\n---\n*Learn about the [Zed Guild](https://zed.dev/community/zed-guild).*\n## Features\n### AI\n- Added the ability to create Terminal Threads in the Sidebar and Agent Panel. ([#56685](https://github.com/zed-industries/zed/pull/56685))\n- Agent: Added setting `subagent_model` to specify which model is used when a subagent is spawned. ([#56203](https://github.com/zed-industries/zed/pull/56203))\n- Agent: Added support for rendering inline images. ([#56427](https://github.com/zed-industries/zed/pull/56427))\n- Agent: Added support for Mermaid diagrams. ([#56430](https://github.com/zed-industries/zed/pull/56430))\n- Agent: Improved UX when agent tries to edit unsaved buffer. ([#55655](https://github.com/zed-industries/zed/pull/55655))\n- Agent: Added support for grok-4.3 and grok-4.2. ([#55931](https://github.com/zed-industries/zed/pull/55931))\n- Agent: Added Google Gemini 3.1 Flash Lite. ([#56248](https://github.com/zed-industries/zed/pull/56248); thanks [qtqgyt](https://github.com/qtqgyt))\n- Agent: Updated OpenCode Free models (BigPickle and Ring 2.6 1T Free). ([#56328](https://github.com/zed-industries/zed/pull/56328); thanks [Vlaaaaaaad](https://github.com/Vlaaaaaaad))\n- Agent: Added support for gpt-5.4-nano/mini models for OpenAI provider. ([#56476](https://github.com/zed-industries/zed/pull/56476))\n- Agent: Improved output quality when using OpenAI models. ([#56476](https://github.com/zed-industries/zed/pull/56476))\n- Agent: Added `guardrail_identifier` and `guardrail_version` settings for AWS Bedrock, enabling use in environments where IAM policies require a guardrail on all model requests. ([#50084](https://github.com/zed-industries/zed/pull/50084); thanks [9to6](https://github.com/9to6))\n- Agent: Added support for editing the thread title for external agent threads. ([#56446](https://github.com/zed-industries/zed/pull/56446))\n- Agent: Added user confirmation requirement before letting tools modify files inside `.agents/skills/` (per-project) or `~/.agents/skills/` (global), so skills installed by any agent are protected from unsolicited edits. ([#56456](https://github.com/zed-industries/zed/pull/56456))\n- Anthropic: Added dynamic fetching of available models from Anthropic API. ([#56397](https://github.com/zed-industries/zed/pull/56397))\n- Improved sidebar search placeholder text to read \"Search threads…\" instead of \"Search…\". ([#56081](https://github.com/zed-industries/zed/pull/56081))\n- Edit Prediction: Added the ability to input the \"expected patch\", i.e. what the model should have predicted in the `edit prediction: rate completions` modal. ([#56629](https://github.com/zed-industries/zed/pull/56629))\n- Improved Anthropic prompt cache utilization, reducing latency and cost for ongoing conversations. ([#56472](https://github.com/zed-industries/zed/pull/56472))\n- Improved Bedrock prompt cache utilization by anchoring the system prompt as its own cache prefix. ([#56474](https://github.com/zed-industries/zed/pull/56474))\n- Improved Copilot edit predictions to no longer rely on a system node installation, so the system node version no longer affects whether they work in Zed. ([#56635](https://github.com/zed-ind...",
+      "memory_unit_text": "In the zed-industries/zed release v1.3.5, the release includes the ability to create Terminal Threads from the sidebar and Agent Panel, a Git panel branch history view and support for running custom Git commands from the Git Graph context menu, inline image and Mermaid diagram rendering in the agent, a new subagent_model setting, optional text icons for completion items (completion_menu_item_kind: symbol), and Vim g z jump-to-word navigation. Built-in language server support for Bash is added. The Agent gains the ability to create Terminal Threads, a subagent_model setting, support for rendering inline images and Mermaid diagrams, improved UX when editing unsaved buffers, support for grok-4.3 and grok-4.2, Google Gemini 3.1 Flash Lite, updated OpenCode Free models, support for gpt-5.4-nano/mini models for OpenAI provider, improved output quality with OpenAI models, guardrail_identifier and guardrail_version settings for AWS Bedrock, support for editing thread titles for external agent threads, and user confirmation requirement before tools modify files inside .agents/skills/. Anthropic dynamic fetching of available models is added. Sidebar search placeholder text is improved. Edit Prediction gains the ability to input the expected patch. Anthropic prompt cache utilization is improved. Bedrock prompt cache utilization is improved. Copilot edit predictions no longer rely on a system node installation."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_4_0_pre",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.4.0-pre",
+      "tag_name": "v1.4.0-pre",
+      "title": "v1.4.0-pre",
+      "time_hint": "2026-05-20",
+      "published_at": "2026-05-20T18:07:56Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.4.0-pre",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.4.0-pre\nTag: v1.4.0-pre; draft: False; prerelease: True; published_at: 2026-05-20T18:07:56Z; created_at: 2026-05-20T14:31:48Z\nRelease notes:\nThis week's release includes support for skills, a global `AGENTS.md` file for user-wide agent instructions, the ability to choose a base branch in the branch diff view, and a new `editor: toggle all diff hunks` action.\n## Features\n### AI\n- Agent: Added support for skills.\n- Agent: Added support for a global `AGENTS.md` file alongside `settings.json` for user-wide instructions that are included in every project’s system prompt. ([#56757](https://github.com/zed-industries/zed/pull/56757))\n- Agent: Added support for image output from MCP tools. ([#57134](https://github.com/zed-industries/zed/pull/57134))\n- Agent: Added support for OAuth client pre-registration with a client ID and client secret in the built-in MCP client. ([#52900](https://github.com/zed-industries/zed/pull/52900))\n- OpenCode: Updated available models and metadata, including reasoning support, image support, and token counts. ([#57076](https://github.com/zed-industries/zed/pull/57076); thanks [Vlaaaaaaad](https://github.com/Vlaaaaaaad))\n### Git\n- Added the ability to choose the base branch in the branch diff view. ([#56569](https://github.com/zed-industries/zed/pull/56569))\n- Added keyboard shortcuts for switching between the Changes and History tabs: `cmd-1`/`cmd-2` on macOS and `ctrl-1`/`ctrl-2` on Linux/Windows. ([#56743](https://github.com/zed-industries/zed/pull/56743))\n- Added `editor: toggle all diff hunks` to expand or collapse all diff hunks at once. ([#56421](https://github.com/zed-industries/zed/pull/56421))\n- Improved the display of user avatars in Git-related surfaces. ([#56755](https://github.com/zed-industries/zed/pull/56755))\n- Improved diff stats by formatting large line counts with thousand separators. ([#56754](https://github.com/zed-industries/zed/pull/56754))\n- Added the `git.show_stage_restore_buttons` setting to hide Stage/Restore buttons on diff hunks. ([#56740](https://github.com/zed-industries/zed/pull/56740))\n### Languages\n- Added runnables for C++. ([#57161](https://github.com/zed-industries/zed/pull/57161); thanks [Helmutt03](https://github.com/Helmutt03))\n### Linux\n- Added support for `buffer_font_fallbacks` on Linux. ([#54878](https://github.com/zed-industries/zed/pull/54878); thanks [Albab-Hasan](https://github.com/Albab-Hasan))\n- Improved the first mouse-driven text copy action on Wayland. ([#50406](https://github.com/zed-industries/zed/pull/50406); thanks [soundslocke](https://github.com/soundslocke))\n### Other\n- Added `markdown_preview_code_font_family` to override the code font in the markdown preview. ([#56744](https://github.com/zed-industries/zed/pull/56744); thanks [wln](https://github.com/wln))\n- Improved CSV preview with column pinning to keep identifiers visible while scrolling. ([#56619](https://github.com/zed-industries/zed/pull/56619); thanks [HalavicH](https://github.com/HalavicH))\n- Improved restricted mode by making it more obvious and requiring immediate action when opening an untrusted project. ([#57056](https://github.com/zed-industries/zed/pull/57056))\n- Improved truncated text labels so they no longer show trailing spaces or punctuation before the ellipsis. ([#57106](https://github.com/zed-industries/zed/pull/57106))\n## Bug Fixes\n- Agent: Fixed image output from tools not being reloaded when restoring a thread. ([#57143](https://github.com/zed-industries/zed/pull/57143))\n- MCP OAuth: Fixed authentication failing when an MCP server returned a broken metadata URL. ([#53502](https://github.com/zed-industries/zed/pull/53502))\n- MCP OAuth: Fixed OAuth client registration failing with some MCP servers. ([#53501](https://github.com/zed-industries/zed/pull/53501))\n- Fixed AI completions from OpenAI-compatible providers failing when token usage details were missing. ([#55919](https://github.com/zed-industries/zed/pull/55919); thanks [...",
+      "memory_unit_text": "In the zed-industries/zed release v1.4.0-pre, the release includes support for skills, a global AGENTS.md file for user-wide agent instructions, the ability to choose a base branch in the branch diff view, and a new editor: toggle all diff hunks action. The Agent gains support for skills, a global AGENTS.md file, image output from MCP tools, and OAuth client pre-registration with a client ID and client secret in the built-in MCP client. OpenCode models are updated. Git gains the ability to choose the base branch in the branch diff view, keyboard shortcuts for switching between Changes and History tabs, editor: toggle all diff hunks, improved display of user avatars, improved diff stats with thousand separators, and a git.show_stage_restore_buttons setting. C++ runnables are added. Linux gains support for buffer_font_fallbacks and improved first mouse-driven text copy on Wayland. Other additions include markdown_preview_code_font_family, improved CSV preview with column pinning, improved restricted mode, and improved truncated text labels. Bug fixes include Agent image output not reloading when restoring a thread, MCP OAuth authentication failures, MCP OAuth client registration failures, and AI completions from OpenAI-compatible providers failing when token usage details were missing."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_4_1_pre",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.4.1-pre",
+      "tag_name": "v1.4.1-pre",
+      "title": "v1.4.1-pre",
+      "time_hint": "2026-05-21",
+      "published_at": "2026-05-21T22:33:46Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.4.1-pre",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.4.1-pre\nTag: v1.4.1-pre; draft: False; prerelease: True; published_at: 2026-05-21T22:33:46Z; created_at: 2026-05-21T21:47:38Z\nRelease notes:\n- Fixed a crash when clicking a built-in skill mention in the agent panel while connected to a remote project (Preview only). ([#57442](https://github.com/zed-industries/zed/pull/57442))\n- Add `agent::NewTerminalThread` for defining custom shortcuts to launch an Agent Panel terminal thread. ([#57400](https://github.com/zed-industries/zed/pull/57400))\n- google: Support thinking levels for Google models. ([#57377](https://github.com/zed-industries/zed/pull/57377))\n- Added support for Gemini 3.5 Flash in the Google AI model provider. ([#57373](https://github.com/zed-industries/zed/pull/57373))",
+      "memory_unit_text": "In the zed-industries/zed release v1.4.1-pre, the release fixes a crash when clicking a built-in skill mention in the agent panel while connected to a remote project (Preview only), adds agent::NewTerminalThread for defining custom shortcuts to launch an Agent Panel terminal thread, supports thinking levels for Google models, and adds support for Gemini 3.5 Flash in the Google AI model provider."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_3_6",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.6",
+      "tag_name": "v1.3.6",
+      "title": "v1.3.6",
+      "time_hint": "2026-05-21",
+      "published_at": "2026-05-21T23:10:28Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.3.6",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.3.6\nTag: v1.3.6; draft: False; prerelease: False; published_at: 2026-05-21T23:10:28Z; created_at: 2026-05-21T21:47:55Z\nRelease notes:\n- Fixed npm-backed tool installs to better respect npm release-age filters. ([#57439](https://github.com/zed-industries/zed/pull/57439))\n- google: Support thinking levels for Google models. ([#57394](https://github.com/zed-industries/zed/pull/57394))\n- Added support for Gemini 3.5 Flash in the Google AI model provider. ([#57392](https://github.com/zed-industries/zed/pull/57392))",
+      "memory_unit_text": "In the zed-industries/zed release v1.3.6, the release fixes npm-backed tool installs to better respect npm release-age filters, supports thinking levels for Google models, and adds support for Gemini 3.5 Flash in the Google AI model provider."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_4_2_pre",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.4.2-pre",
+      "tag_name": "v1.4.2-pre",
+      "title": "v1.4.2-pre",
+      "time_hint": "2026-05-25",
+      "published_at": "2026-05-25T18:22:42Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.4.2-pre",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.4.2-pre\nTag: v1.4.2-pre; draft: False; prerelease: True; published_at: 2026-05-25T18:22:42Z; created_at: 2026-05-25T17:39:51Z\nRelease notes:\n- Fixed a bug on macOS where Git operations could be blocked depending on the timing of spawning child processes. ([#57661](https://github.com/zed-industries/zed/pull/57661))",
+      "memory_unit_text": "In the zed-industries/zed release v1.4.2-pre, the release fixes a bug on macOS where Git operations could be blocked depending on the timing of spawning child processes."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_3_7",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.7",
+      "tag_name": "v1.3.7",
+      "title": "v1.3.7",
+      "time_hint": "2026-05-25",
+      "published_at": "2026-05-25T19:28:34Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.3.7",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.3.7\nTag: v1.3.7; draft: False; prerelease: False; published_at: 2026-05-25T19:28:34Z; created_at: 2026-05-25T17:39:39Z\nRelease notes:\n- Fixed a bug on macOS where Git operations could be blocked depending on the timing of spawning child processes. ([#57662](https://github.com/zed-industries/zed/pull/57662))",
+      "memory_unit_text": "In the zed-industries/zed release v1.3.7, the release fixes a bug on macOS where Git operations could be blocked depending on the timing of spawning child processes."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_4_2",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.4.2",
+      "tag_name": "v1.4.2",
+      "title": "v1.4.2",
+      "time_hint": "2026-05-27",
+      "published_at": "2026-05-27T19:07:40Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.4.2",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.4.2\nTag: v1.4.2; draft: False; prerelease: False; published_at: 2026-05-27T19:07:40Z; created_at: 2026-05-27T17:21:24Z\nRelease notes:\nThis week's release includes [support for agent skills](https://zed.dev/docs/ai/skills), a global `AGENTS.md` file for user-wide agent instructions, the ability to choose a base branch in the branch diff view, and a new `editor: toggle all diff hunks` action.\n## Features\n### AI\n- Agent: Added support for skills.\n- Agent: Added support for a global `AGENTS.md` file alongside `settings.json` for user-wide instructions that are included in every project’s system prompt. ([#56757](https://github.com/zed-industries/zed/pull/56757))\n- Agent: Added commands to open global and project-specific `AGENTS.md` rules. ([#57847](https://github.com/zed-industries/zed/pull/57847))\n- Agent: Added `agent: new terminal thread` for defining custom shortcuts to launch an Agent Panel terminal thread. ([#57400](https://github.com/zed-industries/zed/pull/57400))\n- Agent: Added support for image output from MCP tools. ([#57134](https://github.com/zed-industries/zed/pull/57134))\n- Agent: Added support for OAuth client pre-registration with a client ID and client secret in the built-in MCP client. ([#52900](https://github.com/zed-industries/zed/pull/52900))\n- Agent: Improved file and skill mention disambiguation in the Agent Panel. ([#50097](https://github.com/zed-industries/zed/pull/50097); thanks [jmg-duarte](https://github.com/jmg-duarte), [#56926](https://github.com/zed-industries/zed/pull/56926))\n- OpenCode: Updated available models and metadata, including reasoning support, image support, and token counts. ([#57076](https://github.com/zed-industries/zed/pull/57076); thanks [Vlaaaaaaad](https://github.com/Vlaaaaaaad))\n### Git\n- Added the ability to choose the base branch in the branch diff view. ([#56569](https://github.com/zed-industries/zed/pull/56569))\n- Added keyboard shortcuts for switching between the Changes and History tabs: `cmd-1`/`cmd-2` on macOS and `ctrl-1`/`ctrl-2` on Linux/Windows. ([#56743](https://github.com/zed-industries/zed/pull/56743))\n- Added `editor: toggle all diff hunks` to expand or collapse all diff hunks at once. ([#56421](https://github.com/zed-industries/zed/pull/56421))\n- Improved the display of user avatars in Git-related surfaces. ([#56755](https://github.com/zed-industries/zed/pull/56755))\n- Improved diff stats by formatting large line counts with thousand separators. ([#56754](https://github.com/zed-industries/zed/pull/56754))\n- Added the `git.show_stage_restore_buttons` setting to hide Stage/Restore buttons on diff hunks. ([#56740](https://github.com/zed-industries/zed/pull/56740))\n### Languages\n- Added runnables for C++. ([#57161](https://github.com/zed-industries/zed/pull/57161); thanks [Helmutt03](https://github.com/Helmutt03))\n### Linux\n- Added support for `buffer_font_fallbacks` on Linux. ([#54878](https://github.com/zed-industries/zed/pull/54878); thanks [Albab-Hasan](https://github.com/Albab-Hasan))\n- Improved the first mouse-driven text copy action on Wayland. ([#50406](https://github.com/zed-industries/zed/pull/50406); thanks [soundslocke](https://github.com/soundslocke))\n### Other\n- Added `markdown_preview_code_font_family` to override the code font in the markdown preview. ([#56744](https://github.com/zed-industries/zed/pull/56744); thanks [wln](https://github.com/wln))\n- Improved CSV preview with column pinning to keep identifiers visible while scrolling. ([#56619](https://github.com/zed-industries/zed/pull/56619); thanks [HalavicH](https://github.com/HalavicH))\n- Improved restricted mode by making it more obvious and requiring immediate action when opening an untrusted project. ([#57056](https://github.com/zed-industries/zed/pull/57056))\n- Improved truncated text labels so they no longer show trailing spaces or punctuation before the ellipsis. ([#57106](https://github.com/zed-industries/zed/pull/57106))\n## Bug Fixes\n- Agent:...",
+      "memory_unit_text": "In the zed-industries/zed release v1.4.2, the release includes support for agent skills, a global AGENTS.md file for user-wide agent instructions, the ability to choose a base branch in the branch diff view, and a new editor: toggle all diff hunks action. The Agent gains support for skills, a global AGENTS.md file, commands to open global and project-specific AGENTS.md rules, agent: new terminal thread, image output from MCP tools, OAuth client pre-registration, improved file and skill mention disambiguation, and updated OpenCode models. Git gains the ability to choose the base branch, keyboard shortcuts for Changes and History tabs, editor: toggle all diff hunks, improved user avatar display, improved diff stats, and a git.show_stage_restore_buttons setting. C++ runnables are added. Linux gains buffer_font_fallbacks and improved mouse-driven text copy on Wayland. Other additions include markdown_preview_code_font_family, improved CSV preview, improved restricted mode, and improved truncated text labels. Bug fixes include Agent image output not reloading, MCP OAuth authentication and registration failures, and AI completions from OpenAI-compatible providers failing when token usage details were missing."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_5_0_pre",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.5.0-pre",
+      "tag_name": "v1.5.0-pre",
+      "title": "v1.5.0-pre",
+      "time_hint": "2026-05-27",
+      "published_at": "2026-05-27T20:12:02Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.5.0-pre",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.5.0-pre\nTag: v1.5.0-pre; draft: False; prerelease: True; published_at: 2026-05-27T20:12:02Z; created_at: 2026-05-27T17:21:18Z\nRelease notes:\nThis week's release includes a new Mermaid renderer with faster and more accurate diagrams, support for importing skills from GitHub Markdown URLs in the Skill Creator, and the ability to rename threads directly in the sidebar.\n## Features\n### AI\n- Agent: Added support for importing skills from GitHub Markdown URLs in the Skill Creator. ([#57458](https://github.com/zed-industries/zed/pull/57458))\n- Agent: Added commands for opening global and project-specific `AGENTS.md` rules. ([#57847](https://github.com/zed-industries/zed/pull/57847))\n- Agent: Added support for copying or moving skills into and out of `~/.agents/skills` and deleting individual skills, with an explicit confirmation prompt for each operation. ([#57760](https://github.com/zed-industries/zed/pull/57760))\n- Agent: Made the Skill Creator window resizable and its contents scrollable when the window is smaller than the form. ([#57754](https://github.com/zed-industries/zed/pull/57754))\n- Agent: Improved `read_file` tool output rendering with a line-number gutter. ([#56779](https://github.com/zed-industries/zed/pull/56779))\n- Agent: Improved scrolling smoothness when expanding `read_file` tool calls with large file outlines. ([#57287](https://github.com/zed-industries/zed/pull/57287))\n- Agent: Improved visibility of pending tool call confirmations when they are scrolled out of view in the Agent Panel. ([#57632](https://github.com/zed-industries/zed/pull/57632))\n- Agent: Added a notification indicator to collapsed project headers in the sidebar when a thread completes. ([#57322](https://github.com/zed-industries/zed/pull/57322))\n- Agent: Added Fast Mode (priority service tier) support to OpenAI models used through the ChatGPT subscription provider. ([#57436](https://github.com/zed-industries/zed/pull/57436))\n- Agent: Added Fast Mode (priority service tier) support to the OpenAI API provider. ([#57412](https://github.com/zed-industries/zed/pull/57412))\n- Agent: Made file paths in `backticks` clickable in the Agent Panel; clicking opens the referenced file at the given line when present. ([#57303](https://github.com/zed-industries/zed/pull/57303))\n- Agent: Added automatic refreshes for the list of Zed-hosted models, without requiring a restart. ([#57528](https://github.com/zed-industries/zed/pull/57528))\n- Agent: Added the ability to reorder projects by moving them up and down through the sidebar ellipsis menu. ([#57448](https://github.com/zed-industries/zed/pull/57448))\n- Agent: Added support for renaming agent threads directly from the sidebar. ([#57656](https://github.com/zed-industries/zed/pull/57656))\n- OpenCode: Updated the model list, adding Gemini 3.5 Flash and Grok Build 0.1 and removing MiniMax M2.5 Free. ([#57556](https://github.com/zed-industries/zed/pull/57556); thanks [Vlaaaaaaad](https://github.com/Vlaaaaaaad))\n- ACP: Added a logout flow for agents that support it. ([#57492](https://github.com/zed-industries/zed/pull/57492))\n- ACP: Allowed external agents that support it to access all working directories in a project. ([#57497](https://github.com/zed-industries/zed/pull/57497))\n### Git\n- Added a `git_commit_buffer_font_size` setting and made the in-panel and modal commit message editors zoomable. ([#56077](https://github.com/zed-industries/zed/pull/56077))\n- Added icons for Bitbucket, Codeberg, Forgejo, Gitea, and GitLab remote providers. ([#57500](https://github.com/zed-industries/zed/pull/57500); thanks [albertbogusz](https://github.com/albertbogusz))\n- Improved Git worktree creation by fetching the latest `origin/main` before creating a worktree. ([#57704](https://github.com/zed-industries/zed/pull/57704))\n- Improved Git Graph commit tooltips. ([#57032](https://github.com/zed-industries/zed/pull/57032); thanks [aaronang](https://github.com/aaronang))\n- Improved perform...",
+      "memory_unit_text": "In the zed-industries/zed release v1.5.0-pre, the release includes a new Mermaid renderer with faster and more accurate diagrams, support for importing skills from GitHub Markdown URLs in the Skill Creator, and the ability to rename threads directly in the sidebar. The Agent gains support for importing skills from GitHub Markdown URLs, commands for opening global and project-specific AGENTS.md rules, support for copying or moving skills, a resizable Skill Creator window, improved read_file tool output rendering with a line-number gutter, improved scrolling smoothness, improved visibility of pending tool call confirmations, a notification indicator for completed threads, Fast Mode support for OpenAI models via ChatGPT subscription and OpenAI API, clickable file paths in backticks, automatic refreshes for Zed-hosted models, the ability to reorder projects, and support for renaming agent threads from the sidebar. OpenCode models are updated. ACP gains a logout flow and allows external agents to access all working directories. Git gains a git_commit_buffer_font_size setting, icons for Bitbucket, Codeberg, Forgejo, Gitea, and GitLab remote providers, improved worktree creation, improved Git Graph commit tooltips, and improved performance."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_5_1_pre",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.5.1-pre",
+      "tag_name": "v1.5.1-pre",
+      "title": "v1.5.1-pre",
+      "time_hint": "2026-05-28",
+      "published_at": "2026-05-28T16:41:47Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.5.1-pre",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.5.1-pre\nTag: v1.5.1-pre; draft: False; prerelease: True; published_at: 2026-05-28T16:41:47Z; created_at: 2026-05-28T15:54:46Z\nRelease notes:\n- Fixed GitHub Copilot Chat showing an empty model dropdown for users on newer Copilot SDK builds ([#57964](https://github.com/zed-industries/zed/pull/57964))\n- git: Fixed an issue where worktree creation would not be possible if resolving default branch fails ([#57960](https://github.com/zed-industries/zed/pull/57960))",
+      "memory_unit_text": "In the zed-industries/zed release v1.5.1-pre, the release fixes GitHub Copilot Chat showing an empty model dropdown for users on newer Copilot SDK builds and fixes an issue where worktree creation would not be possible if resolving default branch fails."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_4_3",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.4.3",
+      "tag_name": "v1.4.3",
+      "title": "v1.4.3",
+      "time_hint": "2026-05-28",
+      "published_at": "2026-05-28T16:53:14Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.4.3",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.4.3\nTag: v1.4.3; draft: False; prerelease: False; published_at: 2026-05-28T16:53:14Z; created_at: 2026-05-28T15:55:15Z\nRelease notes:\n- Fixed GitHub Copilot Chat showing an empty model dropdown for users on newer Copilot SDK builds ([#57965](https://github.com/zed-industries/zed/pull/57965))",
+      "memory_unit_text": "In the zed-industries/zed release v1.4.3, the release fixes GitHub Copilot Chat showing an empty model dropdown for users on newer Copilot SDK builds."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_5_3_pre",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.5.3-pre",
+      "tag_name": "v1.5.3-pre",
+      "title": "v1.5.3-pre",
+      "time_hint": "2026-05-28",
+      "published_at": "2026-05-28T18:47:41Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.5.3-pre",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.5.3-pre\nTag: v1.5.3-pre; draft: False; prerelease: True; published_at: 2026-05-28T18:47:41Z; created_at: 2026-05-28T17:57:59Z\nRelease notes:\nNo public-facing changes in this release. [View the commits](https://github.com/zed-industries/zed/compare/v1.5.2-pre...v1.5.3-pre#commits_bucket).",
+      "memory_unit_text": "In the zed-industries/zed release v1.5.3-pre, there are no public-facing changes in this release."
+    },
+    {
+      "memory_node_id": "zed_industries__zed__release__v1_4_4",
+      "repo": "zed-industries/zed",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.4.4",
+      "tag_name": "v1.4.4",
+      "title": "v1.4.4",
+      "time_hint": "2026-05-28",
+      "published_at": "2026-05-28T20:55:02Z",
+      "source_url": "https://github.com/zed-industries/zed/releases/tag/v1.4.4",
+      "raw_text": "Repository: zed-industries/zed\nRelease: v1.4.4\nTag: v1.4.4; draft: False; prerelease: False; published_at: 2026-05-28T20:55:02Z; created_at: 2026-05-28T17:58:20Z\nRelease notes:\n- copilot: Fixed an issue where using GPT models would return an error in `invalid_request_body` ([#57979](https://github.com/zed-industries/zed/pull/57979))",
+      "memory_unit_text": "In the zed-industries/zed release v1.4.4, the release fixes an issue where using GPT models would return an error in invalid_request_body."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the zed-industries/zed releases, which release adds a ChatGPT subscription provider allowing users to use their ChatGPT Plus/Pro subscription with the Zed agent?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v1.2.4"
+        },
+        {
+          "option_id": "B",
+          "text": "v1.3.1-pre"
+        },
+        {
+          "option_id": "C",
+          "text": "v1.3.5"
+        },
+        {
+          "option_id": "D",
+          "text": "v1.4.0-pre"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v1.2.4",
+      "source_chunk_ids": [
+        "zed_industries__zed__release__v1_2_4"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "zed_industries__zed__release__v1_2_4",
+          "answer_text": "adds a ChatGPT subscription provider, allowing users to use their ChatGPT Plus/Pro subscription with the Zed agent"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the zed-industries/zed releases, how does the Git-related change described in v1.2.0-pre differ from the Git-related change described in v1.4.0-pre?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v1.2.0-pre adds Git Graph remote support and View History on folders, while v1.4.0-pre adds the ability to choose a base branch in the branch diff view and an editor: toggle all diff hunks action."
+        },
+        {
+          "option_id": "B",
+          "text": "v1.2.0-pre adds the ability to choose a base branch, while v1.4.0-pre adds Git Graph remote support."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only add keyboard shortcuts for Git operations."
+        },
+        {
+          "option_id": "D",
+          "text": "v1.2.0-pre adds editor: toggle all diff hunks, while v1.4.0-pre adds View History on folders."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v1.2.0-pre adds Git Graph remote support and View History on folders, while v1.4.0-pre adds the ability to choose a base branch in the branch diff view and an editor: toggle all diff hunks action.",
+      "source_chunk_ids": [
+        "zed_industries__zed__release__v1_2_0_pre",
+        "zed_industries__zed__release__v1_4_0_pre"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "zed_industries__zed__release__v1_2_0_pre",
+          "answer_text": "Git Graph remote support, View History on folders"
+        },
+        {
+          "memory_node_id": "zed_industries__zed__release__v1_4_0_pre",
+          "answer_text": "ability to choose a base branch in the branch diff view, editor: toggle all diff hunks"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the zed-industries/zed release window, order the following release-content states from earliest to latest: (1) a release that adds support for specifying effort level when using OpenAI models via ChatGPT subscription, (2) a release that adds a ChatGPT subscription provider allowing users to use their ChatGPT Plus/Pro subscription with the Zed agent, (3) a release that adds support for skills and a global AGENTS.md file, (4) a release that adds a new Mermaid renderer and support for importing skills from GitHub Markdown URLs.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2 -> 1 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "1 -> 2 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 3 -> 1 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 2 -> 1 -> 4"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2 -> 1 -> 3 -> 4",
+      "source_chunk_ids": [
+        "zed_industries__zed__release__v1_2_4",
+        "zed_industries__zed__release__v1_2_6",
+        "zed_industries__zed__release__v1_4_0_pre",
+        "zed_industries__zed__release__v1_5_0_pre"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "zed_industries__zed__release__v1_2_4",
+          "answer_text": "adds a ChatGPT subscription provider"
+        },
+        {
+          "memory_node_id": "zed_industries__zed__release__v1_2_6",
+          "answer_text": "adds support for specifying effort level when using OpenAI models via ChatGPT subscription"
+        },
+        {
+          "memory_node_id": "zed_industries__zed__release__v1_4_0_pre",
+          "answer_text": "support for skills, a global AGENTS.md file"
+        },
+        {
+          "memory_node_id": "zed_industries__zed__release__v1_5_0_pre",
+          "answer_text": "new Mermaid renderer, support for importing skills from GitHub Markdown URLs"
+        }
+      ]
+    }
+  ]
+}

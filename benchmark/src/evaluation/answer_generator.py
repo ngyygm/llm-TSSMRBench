@@ -1,207 +1,365 @@
-"""LLM-based answer generation from retrieved context.
-
-All systems use the same LLM to generate answers from retrieved context,
-ensuring fair comparison of retrieval quality across systems.
-"""
+"""LLM-based answer generation from retrieved context."""
 
 from __future__ import annotations
 
-import json
 import logging
 import re
 import time
-from typing import List, Optional
+from dataclasses import dataclass
+from typing import Any, List, Optional
 
+import httpx
 from openai import OpenAI
 
 logger = logging.getLogger(__name__)
 
-# --- Prompt Templates ---
+MC_SYSTEM_PROMPT = """You are a strict evaluation assistant for a memory benchmark.
 
-MC_SYSTEM_PROMPT = """你是一个选择题答题助手。你只能根据提供的记忆上下文来选择正确答案。
-你必须以JSON格式回复，格式为：{"answer": "X"}
-其中X是选项字母（A/B/C/D等）。不要输出任何其他内容。"""
+You must answer using only the retrieved memory.
+You must not use outside knowledge, background knowledge, guessing, or prior world knowledge.
+Your job is to choose the best-supported answer from the retrieved memory.
 
-MC_USER_PROMPT = """## 记忆上下文
+Output rule:
+- Return exactly one uppercase option letter: A, B, C, D, or E.
+- Do not output any explanation, punctuation, JSON, markdown, or extra text.
+- If the retrieved memory contains relevant evidence for one option, choose that option actively.
+- Return E only when the retrieved memory is completely irrelevant or contains no answer-bearing evidence for any option."""
+
+MC_USER_PROMPT = """You may answer only from the retrieved memory below.
+If the retrieved memory contains relevant evidence for one option, choose the best-supported option.
+Return E only if the retrieved memory is completely irrelevant or contains no answer-bearing evidence.
+
+Retrieved memory:
 {retrieved_context}
 
-## 问题
+Question:
 {question}
 
-## 选项
+Options:
 {choices_text}
 
-请根据记忆上下文选择正确答案，以JSON格式回复：{{"answer": "字母"}}
-只回复JSON，不要有任何其他文字。"""
+Return exactly one uppercase letter: A, B, C, D, or E."""
 
-ABSTRACTIVE_SYSTEM_PROMPT = """你是一个记忆助手。你只能根据提供的记忆上下文来回答问题。
-回答要简洁，不超过5-6个词。"""
+BOOLEAN_SYSTEM_PROMPT = """You are a strict evaluation assistant for a memory benchmark.
 
-ABSTRACTIVE_USER_PROMPT = """# 指令
-1. 仔细分析所有提供的记忆
-2. 特别注意时间戳来确定答案
-3. 如果记忆包含矛盾信息，优先使用最新的记忆
-4. 将相对时间引用转换为具体日期
-5. 回答不超过5-6个词
+You must answer using only the retrieved memory.
+You must not use outside knowledge, background knowledge, guessing, or prior world knowledge.
+You must decide whether the retrieved memory alone is sufficient.
 
-## 记忆上下文
+Output rule:
+- Return exactly one uppercase option letter: A, B, or C.
+- A = Yes
+- B = No
+- C = The retrieved memory is insufficient to make a judgment
+- Do not output any explanation, punctuation, JSON, markdown, or extra text."""
+
+BOOLEAN_USER_PROMPT = """You may answer only from the retrieved memory below.
+If the retrieved memory does not contain enough support to answer Yes or No, you must return C.
+
+Retrieved memory:
 {retrieved_context}
 
-## 问题
+Question:
 {question}
 
-## 回答"""
+Return exactly one uppercase letter: A, B, or C."""
+
+ABSTRACTIVE_SYSTEM_PROMPT = """You are a strict evaluation assistant for a memory benchmark.
+
+You must answer using only the retrieved memory.
+You must not use outside knowledge, background knowledge, guessing, or prior world knowledge.
+You must answer positively whenever the retrieved memory contains relevant answer-bearing evidence.
+
+Output rule:
+- If the retrieved memory is insufficient, return exactly:
+Insufficient information to support reasoning.
+- Otherwise answer in plain English using only retrieved-memory evidence.
+- The answer must be concise and between 10 and 100 words.
+- Do not be over-conservative: if the retrieved memory is relevant and supports an answer, answer directly.
+- Return the insufficiency sentence only when the retrieved memory is completely irrelevant or lacks any answer-bearing evidence.
+- Do not mention the benchmark, hidden nodes, retrieval process, or your reasoning process."""
+
+ABSTRACTIVE_USER_PROMPT = """You may answer only from the retrieved memory below.
+If the retrieved memory is relevant and contains answer-bearing evidence, answer directly from it.
+Return exactly the sentence below only if the retrieved memory is completely irrelevant or lacks any answer-bearing evidence:
+Insufficient information to support reasoning.
+
+Retrieved memory:
+{retrieved_context}
+
+Question:
+{question}"""
+
+STRICT_MC_FALLBACK = "Return only one uppercase letter from {letters}. No explanation."
+STRICT_BOOLEAN_FALLBACK = "Return only one uppercase letter: A, B, or C. No explanation."
+STRICT_ABSTRACTIVE_FALLBACK = (
+    "Use only the retrieved memory. If insufficient, return exactly 'Insufficient information to support reasoning.' "
+    "Otherwise answer in 10 to 100 words with no extra commentary."
+)
+
+
+@dataclass
+class AnswerGenerationResult:
+    answer: str
+    raw_response: str
+    error: Optional[str]
+    system_prompt: str
+    user_prompt: str
+    prompt_mode: str
 
 
 def _format_choices(choices: List[str]) -> str:
-    """Format choices as A/B/C/D list."""
     labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    lines = []
-    for i, choice in enumerate(choices):
-        if i < len(labels):
-            lines.append(f"{labels[i]}. {choice}")
+    lines = [f"{labels[i]}. {choice}" for i, choice in enumerate(choices) if i < len(labels)]
+    lines.append(f"{labels[len(choices)]}. Insufficient information")
     return "\n".join(lines)
 
 
-def parse_mc_answer(response: str, num_choices: int) -> Optional[int]:
-    """Parse multi-choice answer from LLM response.
-
-    Returns 0-indexed choice index, or None if unparseable.
-    """
+def parse_mc_answer(response: str, num_choices: int, allow_abstain: bool = False) -> Optional[int]:
     if not response:
         return None
+    label = response.strip().upper()
+    if len(label) == 1 and "A" <= label <= "Z":
+        idx = ord(label) - ord("A")
+    else:
+        match = re.search(r"\b([A-Z])\b", label)
+        idx = ord(match.group(1)) - ord("A") if match else -1
+    max_choices = num_choices + 1 if allow_abstain else num_choices
+    if 0 <= idx < max_choices:
+        return idx
+    logger.warning("Could not parse strict MC answer from: %s", response[:100])
+    return None
 
-    response = response.strip()
 
-    max_letter = chr(ord("A") + num_choices - 1)
-    valid_range = f"A-{max_letter}"
+def _normalize_choice_text(text: str) -> str:
+    return re.sub(r"[^a-z0-9_]+", "", (text or "").strip().lower())
 
-    def _to_idx(letter: str) -> Optional[int]:
-        idx = ord(letter.upper()) - ord("A")
-        return idx if 0 <= idx < num_choices else None
 
-    # Strategy 1: Single letter only (A / B / C / ...)
-    match = re.search(rf"^([{valid_range}])$", response, re.IGNORECASE)
-    if match:
-        idx = _to_idx(match.group(1))
-        if idx is not None:
-            return idx
-
-    # Strategy 2: Letter with punctuation prefix (A. / A) / A） / A: )
-    match = re.search(rf"^([{valid_range}])[\.\)）:\s]", response, re.IGNORECASE)
-    if match:
-        idx = _to_idx(match.group(1))
-        if idx is not None:
-            return idx
-
-    # Strategy 3: Chinese patterns - "答案是X" / "选择X" / "选X" / "正确答案是X"
-    match = re.search(r"(?:正确)?答案(?:是|为|：|:)?\s*([{valid_range}])", response, re.IGNORECASE)
-    if match:
-        idx = _to_idx(match.group(1))
-        if idx is not None:
-            return idx
-
-    match = re.search(r"(?:选择|选|应该选)(?:的)?(?:答案)?(?:是|为|：|:)?\s*([{valid_range}])", response, re.IGNORECASE)
-    if match:
-        idx = _to_idx(match.group(1))
-        if idx is not None:
-            return idx
-
-    # Strategy 4: "选项X" / "option X" pattern
-    match = re.search(r"(?:选项|option)\s*([{valid_range}])", response, re.IGNORECASE)
-    if match:
-        idx = _to_idx(match.group(1))
-        if idx is not None:
-            return idx
-
-    # Strategy 5: Last letter in the response (likely the final answer)
-    # Scan from end to find the last valid letter
-    for m in re.finditer(rf"[{valid_range}]", response, re.IGNORECASE):
-        idx = _to_idx(m.group(0))
-        if idx is not None:
-            return idx
-
-    # Strategy 6: First valid letter in response (fallback)
-    match = re.search(rf"[{valid_range}]", response, re.IGNORECASE)
-    if match:
-        idx = _to_idx(match.group(0))
-        if idx is not None:
-            return idx
-
-    logger.warning(f"Could not parse MC answer from: {response[:100]}")
+def parse_mc_answer_with_choices(
+    response: str,
+    choices: List[str],
+    allow_abstain: bool = False,
+) -> Optional[int]:
+    idx = parse_mc_answer(response, len(choices), allow_abstain=allow_abstain)
+    if idx is not None:
+        return idx
+    normalized = _normalize_choice_text(response)
+    if not normalized:
+        return None
+    matches: list[int] = []
+    for i, choice in enumerate(choices):
+        normalized_choice = _normalize_choice_text(choice)
+        if not normalized_choice:
+            continue
+        if normalized == normalized_choice:
+            return i
+        if len(normalized) >= 4 and (
+            normalized in normalized_choice or normalized_choice in normalized
+        ):
+            matches.append(i)
+    if len(matches) == 1:
+        return matches[0]
+    if allow_abstain and normalized in {
+        "e",
+        "insufficient",
+        "insufficientinformation",
+        "insufficientinformationtosupportreasoning",
+    }:
+        return len(choices)
+    logger.warning("Could not parse MC answer against choices from: %s", response[:100])
     return None
 
 
 class AnswerGenerator:
-    """Generates answers from retrieved context using LLM."""
+    """Generates answers from retrieved context using one shared LLM."""
 
     def __init__(
         self,
         base_url: str,
         api_key: str,
-        model: str = "deepseek-ai/DeepSeek-V3",
+        model: str = "deepseek-v4-pro",
         temperature: float = 0.0,
         timeout: int = 60,
+        extra_body: Optional[dict[str, Any]] = None,
     ):
-        self.client = OpenAI(base_url=base_url, api_key=api_key, timeout=timeout)
+        http_client = httpx.Client(timeout=timeout, trust_env=False)
+        self.client = OpenAI(base_url=base_url, api_key=api_key, timeout=timeout, http_client=http_client)
         self.model = model
         self.temperature = temperature
+        self.extra_body = extra_body or {}
+        self.last_error: Optional[str] = None
+        self.last_raw_response: str = ""
+        self.last_prompt: dict[str, str] = {}
 
     def generate(
         self,
         question: str,
         retrieved_context: str,
         choices: Optional[List[str]] = None,
+        answer_type: Optional[str] = None,
     ) -> str:
-        """Generate answer from retrieved context.
+        return self.generate_detailed(
+            question=question,
+            retrieved_context=retrieved_context,
+            choices=choices,
+            answer_type=answer_type,
+        ).answer
 
-        Args:
-            question: The question to answer
-            retrieved_context: Context retrieved by the memory system
-            choices: For multi-choice, the list of options
+    def generate_detailed(
+        self,
+        question: str,
+        retrieved_context: str,
+        choices: Optional[List[str]] = None,
+        answer_type: Optional[str] = None,
+    ) -> AnswerGenerationResult:
+        self.last_error = None
+        self.last_raw_response = ""
+        self.last_prompt = {}
 
-        Returns:
-            Generated answer string (letter for MC, text for abstractive)
-        """
-        is_mc = choices is not None and len(choices) > 0
+        is_mc = bool(choices)
+        is_boolean = answer_type == "boolean"
 
         if is_mc:
             system_prompt = MC_SYSTEM_PROMPT
             user_prompt = MC_USER_PROMPT.format(
-                retrieved_context=retrieved_context[:3000],
+                retrieved_context=retrieved_context,
                 question=question,
-                choices_text=_format_choices(choices),
+                choices_text=_format_choices(choices or []),
             )
-            # Use small max_tokens to force brief output, no JSON mode (causes truncation on some APIs)
-            raw = self._call_llm(system_prompt, user_prompt, max_tokens=50)
-            return self._extract_mc_letter(raw, len(choices))
-        else:
-            system_prompt = ABSTRACTIVE_SYSTEM_PROMPT
-            user_prompt = ABSTRACTIVE_USER_PROMPT.format(
-                retrieved_context=retrieved_context[:3000],
-                question=question,
+            raw, used_prompt = self._generate_with_retry(
+                system_prompt,
+                user_prompt,
+                max_tokens=16,
+                parse_validator=lambda text: parse_mc_answer_with_choices(text, choices or [], allow_abstain=True) is not None,
+                fallback_user_prompt=(
+                    f"{user_prompt}\n\n"
+                    + STRICT_MC_FALLBACK.format(
+                        letters="/".join(chr(ord("A") + i) for i in range(len(choices or []) + 1))
+                    )
+                ),
             )
+            answer = self._extract_mc_letter(raw, choices or [], allow_abstain=True)
+            result = AnswerGenerationResult(
+                answer=answer,
+                raw_response=raw,
+                error=self.last_error,
+                system_prompt=system_prompt,
+                user_prompt=used_prompt,
+                prompt_mode="multiple_choice",
+            )
+            self.last_raw_response = raw
+            self.last_prompt = {
+                "system_prompt": system_prompt,
+                "user_prompt": used_prompt,
+                "prompt_mode": "multiple_choice",
+            }
+            return result
 
+        if is_boolean:
+            system_prompt = BOOLEAN_SYSTEM_PROMPT
+            user_prompt = BOOLEAN_USER_PROMPT.format(
+                retrieved_context=retrieved_context,
+                question=question,
+            )
+            raw, used_prompt = self._generate_with_retry(
+                system_prompt,
+                user_prompt,
+                max_tokens=16,
+                parse_validator=lambda text: self._extract_boolean_label(text) in {"A", "B", "C"},
+                fallback_user_prompt=f"{user_prompt}\n\n{STRICT_BOOLEAN_FALLBACK}",
+            )
+            answer = self._extract_boolean_label(raw)
+            result = AnswerGenerationResult(
+                answer=answer,
+                raw_response=raw,
+                error=self.last_error,
+                system_prompt=system_prompt,
+                user_prompt=used_prompt,
+                prompt_mode="boolean",
+            )
+            self.last_raw_response = raw
+            self.last_prompt = {
+                "system_prompt": system_prompt,
+                "user_prompt": used_prompt,
+                "prompt_mode": "boolean",
+            }
+            return result
+
+        system_prompt = ABSTRACTIVE_SYSTEM_PROMPT
+        user_prompt = ABSTRACTIVE_USER_PROMPT.format(
+            retrieved_context=retrieved_context,
+            question=question,
+        )
+        raw, used_prompt = self._generate_with_retry(
+            system_prompt,
+            user_prompt,
+            max_tokens=180,
+            parse_validator=self._validate_abstractive_answer,
+            fallback_user_prompt=f"{user_prompt}\n\n{STRICT_ABSTRACTIVE_FALLBACK}",
+        )
+        answer = raw.strip()
+        result = AnswerGenerationResult(
+            answer=answer,
+            raw_response=raw,
+            error=self.last_error,
+            system_prompt=system_prompt,
+            user_prompt=used_prompt,
+            prompt_mode="abstractive",
+        )
+        self.last_raw_response = raw
+        self.last_prompt = {
+            "system_prompt": system_prompt,
+            "user_prompt": used_prompt,
+            "prompt_mode": "abstractive",
+        }
+        return result
+
+    def _generate_with_retry(
+        self,
+        system_prompt: str,
+        user_prompt: str,
+        max_tokens: int = 256,
+        parse_validator=None,
+        fallback_user_prompt: Optional[str] = None,
+    ) -> tuple[str, str]:
         for attempt in range(3):
             try:
-                raw = self._call_llm(system_prompt, user_prompt)
-                return raw.strip()
-            except Exception as e:
-                logger.warning(f"Answer generation error (attempt {attempt+1}/3): {e}")
+                prompt = fallback_user_prompt if (attempt >= 1 and fallback_user_prompt) else user_prompt
+                raw = self._call_llm(system_prompt, prompt, max_tokens=max_tokens).strip()
+                if not raw:
+                    self.last_error = "empty_response"
+                    logger.warning("Answer generation returned empty content (attempt %s/3)", attempt + 1)
+                    if attempt < 2:
+                        time.sleep(2 ** attempt)
+                        continue
+                    return "", prompt
+                if parse_validator is not None and not parse_validator(raw):
+                    self.last_error = f"unparseable_response: {raw[:120]}"
+                    logger.warning(
+                        "Answer generation returned unparseable content (attempt %s/3): %s",
+                        attempt + 1,
+                        raw[:120],
+                    )
+                    if attempt < 2:
+                        time.sleep(2 ** attempt)
+                        continue
+                self.last_error = None
+                return raw, prompt
+            except Exception as exc:
+                self.last_error = str(exc)
+                logger.warning("Answer generation error (attempt %s/3): %s", attempt + 1, exc)
                 if attempt < 2:
                     time.sleep(2 ** attempt)
-
-        return ""
+        return "", fallback_user_prompt or user_prompt
 
     def _call_llm(
         self,
         system_prompt: str,
         user_prompt: str,
-        response_format: dict = None,
+        response_format: dict | None = None,
         max_tokens: int = 256,
     ) -> str:
-        """Make an LLM API call."""
-        kwargs = {
+        kwargs: dict[str, Any] = {
             "model": self.model,
             "messages": [
                 {"role": "system", "content": system_prompt},
@@ -212,27 +370,45 @@ class AnswerGenerator:
         }
         if response_format:
             kwargs["response_format"] = response_format
+        if self.extra_body:
+            kwargs["extra_body"] = self.extra_body
         resp = self.client.chat.completions.create(**kwargs)
         return resp.choices[0].message.content or ""
 
-    def _extract_mc_letter(self, raw: str, num_choices: int) -> str:
-        """Extract MC letter from JSON or plain text response."""
-        # Try JSON parse first
-        try:
-            data = json.loads(raw)
-            if isinstance(data, dict):
-                letter = data.get("answer", "")
-                if letter and len(letter) <= 2:
-                    return letter.strip().upper()
-        except (json.JSONDecodeError, AttributeError):
-            pass
+    def _extract_mc_letter(self, raw: str, choices: List[str], allow_abstain: bool = False) -> str:
+        idx = parse_mc_answer_with_choices(raw, choices, allow_abstain=allow_abstain)
+        return chr(ord("A") + idx) if idx is not None else ""
 
-        # Fallback: use regex parser
-        idx = parse_mc_answer(raw, num_choices)
-        if idx is not None:
-            return chr(ord("A") + idx)
+    @staticmethod
+    def _extract_boolean_label(raw: str) -> str:
+        lowered = (raw or "").strip().lower()
+        if len(lowered) == 1 and lowered in {"a", "b", "c"}:
+            return lowered.upper()
+        match = re.search(r"\b([abc])\b", lowered)
+        if match:
+            return match.group(1).upper()
+        if lowered in {"a", "yes"}:
+            return "A"
+        if lowered in {"b", "no"}:
+            return "B"
+        if lowered in {
+            "c",
+            "insufficient",
+            "the retrieved memory is insufficient to make a judgment",
+            "the retrieved memory is insufficient to make a judgment.",
+        }:
+            return "C"
+        return ""
 
-        return raw.strip()  # Return raw for fallback parsing
+    @staticmethod
+    def _validate_abstractive_answer(raw: str) -> bool:
+        text = (raw or "").strip()
+        if not text:
+            return False
+        if text == "Insufficient information to support reasoning.":
+            return True
+        words = re.findall(r"[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)*", text)
+        return 10 <= len(words) <= 100
 
     def generate_mc(
         self,
@@ -240,6 +416,5 @@ class AnswerGenerator:
         retrieved_context: str,
         choices: List[str],
     ) -> Optional[int]:
-        """Generate and parse multi-choice answer. Returns 0-indexed choice."""
         raw = self.generate(question, retrieved_context, choices)
-        return parse_mc_answer(raw, len(choices))
+        return parse_mc_answer_with_choices(raw, choices, allow_abstain=True)

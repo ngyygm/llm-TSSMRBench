@@ -1,0 +1,530 @@
+{
+  "prototype_id": "grafana__pyroscope_release_window",
+  "domain": "github_release_evolution",
+  "repo": "grafana/pyroscope",
+  "source_type": "release_note",
+  "window_title": "grafana/pyroscope recent release evolution",
+  "window_summary": "This window tracks the recent grafana/pyroscope release stream from v1.13.6 through v2.0.2, covering feature additions, performance improvements, security patches, and the major v2.0.0 breaking changes.",
+  "chunks": [
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_13_6",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.13.6",
+      "tag_name": "v1.13.6",
+      "title": "v1.13.6",
+      "time_hint": "2025-08-26",
+      "published_at": "2025-08-26T14:48:28Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.13.6",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.13.6\nTag: v1.13.6; draft: False; prerelease: False; published_at: 2025-08-26T14:48:28Z; created_at: 2025-08-26T10:50:25Z\nRelease notes:\n## Changelog\n* 05cd20055b6462211e774580a09137259cb58dae Update golang version to 1.23.12\n* 5b9cc0c01fa4ada0388f8ca82886143f3d913866 chore: Remove oauth2-proxy (#4345)\nAs always, feedbacks are more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C047CCW6YM8)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope/issues)\n- [Mailing List](https://groups.google.com/g/pyroscope-team)\n## Docker Images\n- [grafana/pyroscope](https://hub.docker.com/r/grafana/pyroscope/tags)\n```bash\ndocker pull docker.io/grafana/pyroscope:1.13.6\n```",
+      "memory_unit_text": "In the grafana/pyroscope release v1.13.6, the project updates the golang version to 1.23.12 and removes the oauth2-proxy component."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_15_0",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.15.0",
+      "tag_name": "v1.15.0",
+      "title": "v1.15.0",
+      "time_hint": "2025-10-08",
+      "published_at": "2025-10-08T10:31:25Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.15.0",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.15.0\nTag: v1.15.0; draft: False; prerelease: False; published_at: 2025-10-08T10:31:25Z; created_at: 2025-10-08T08:34:21Z\nRelease notes:\n## Enhancements\n* Metastore auto-join (#4474)\n* Bearer token support in profilecli (#4475)\n* Helm support for v1/v2 storage (#4417)\n* Sample type relabeling in distributor (#4376)\n* Stacktrace selector support for `SelectMergeStacktraces` requests (#4380)\n* Metadata index retention policy (#4148)\n* Azure ClientSecretCredential authentication support (#4477)\n* Add --max-nodes flag to query profile command in profilecli (#4433)\n* Allow to optionally enforce maxNodes through limits (#4436)\n* Set querier.max-flamegraph-nodes-max default to 1,048,576 (#4370)\n* Annotate sampled profiles (#4375)\n* Improve request observability (#4400)\n* Serve recording rules from config in tenant-settings (#4299)\n* Add block list/inspect to profilecli (#4412)\n* Extract signal correlation information from OTEL profiles (#4393)\n* Distributor performance improvements: single profile series processing (#4342), new metrics (#4367), multi-stage receive metrics (#4384)\n* Performance: Use stacktrace tree for adhoc uploads (#4438)\n* Performance: Initialize dataset segment head lazily (#4274)\n* Performance: Avoid merging single profiles (#4421)\n* Performance: Add searchHint to getSeriesIndex (#4286)\n* Reduce memory allocations when rendering diff flamegraphs (#4430)\n* Improve distributor sampling rule evaluation (#4347)\n## Fixes\n* Fix panic in query pprof path (#4429)\n* Fix panic when handling error in metastore snapshot compaction (#4313)\n* Fix JFR: merge EnhancerBySpringCGLIB classes (#4471)\n* Fix issue in pprof split when using `relabel.LabelDrop` (#4365)\n* Fix breaking change in ProfileTypes v2 (#4398)\n* Fix GetTenantStats reports wrong stats (#4394)\n* Fix goroutine leak in compaction-worker (#4409)\n* Fix location with empty lines parquet roundtrip (#4407)\n* Fix nil check for empty stacktrace filters (#4308)\n* Fix revert unintended change in profile merge (#4410)\n* Fix vcs.decodeToken can eat an error (#4336)\n* Fix Docker ebpf-otel example matches k8s versions (#4386)\n* Fix integration test data of partially symbolized profile (#4446)\n* Reapply: Handle duplicate validation correctly when sanitizing (#4265)\n* Revert: Correct HasFunctions flags for mixed symbolization profiles (#4457)\n## Documentation\n* Update docs and examples for .NET to add LD_LIBRARY_PATH (#4456)\n* Add doc for finding URL, password, and user in Cloud Profiles (#4352)\n* Update architecture and OS requirements for .NET (#4334)\n* Update ebpf supported languages content (#4338)\n* Fix typo and update link for GitHub integration (#4374)\n* Update ride share tutorial documentation (#4277)\n* Mention the dependency on the compactor feature flag (#4302)\n* Fix .NET naming (#4289)\n## Changelog\n* c9dd613aafdd988dddf7ca3a07dd509555ae7a6b Add missing bracket in profile-cli.md (#4369)\n* 661762ea9875d2e57bba89bb29e6d94c86fc93f6 Adds  configuration option to enable external-dns integration and other ingress labeling use cases. (#4402)\n* 11065c20d29c8662c672600425c306940a290dba Cherry pick Aleksandar readpath patches (#4404)\n* 2a4608ec3614da38ed0b77c51889be7b556167eb Fix panic in query pprof path (#4429)\n* 73a5c8066bf4c70362b0fcca691d617c7d0ede66 Fix panic when handling error in metastore snapshot compaction (#4313)\n* 0b02657344b7ab11c7df34575266d4ca9e1d01df Improve distributor sampling rule evaluation (#4347)\n* 6f8e0d3228f8f5cc6df71ea336088e92f758273e Reapply \"Fix: Handle duplicate validation correctly when sanitizing (#4238)\" (#4265)\n* 3b1c0ba1c9e0c21477c723f74c33c1413822ad21 Reduce memory allocations when rendering diff flamegraphs (#4430)\n* 6fc57136a8231a6f3c751b8471ee430d863aa3ac Remove frontend package typescript-plugin-css-modules to fix the build (#4312)\n* 8d39c5312981930349a2b621197a40b6c975e350 Replaced tags with hashes to prevent Zizmor complaining (#4479)\n* 81e0e5ff76426aa7c413cb7ef12fe9276884d4b1 Revert \"fix: correct...",
+      "memory_unit_text": "In the grafana/pyroscope release v1.15.0, the project introduces metastore auto-join, bearer token support in profilecli, Helm support for v1/v2 storage, sample type relabeling in the distributor, stacktrace selector support for SelectMergeStacktraces requests, metadata index retention policy, Azure ClientSecretCredential authentication support, a --max-nodes flag for the query profile command in profilecli, optional enforcement of maxNodes through limits, a default querier.max-flamegraph-nodes-max of 1,048,576, annotated sampled profiles, improved request observability, serving recording rules from config in tenant-settings, block list/inspect in profilecli, extraction of signal correlation information from OTEL profiles, distributor performance improvements including single profile series processing, new metrics, and multi-stage receive metrics, performance improvements using stacktrace tree for adhoc uploads, lazy initialization of dataset segment head, avoiding merging single profiles, adding searchHint to getSeriesIndex, reduced memory allocations when rendering diff flamegraphs, and improved distributor sampling rule evaluation. Fixes include a panic in the query pprof path, a panic when handling error in metastore snapshot compaction, JFR merging of EnhancerBySpringCGLIB classes, an issue in pprof split when using relabel.LabelDrop, a breaking change in ProfileTypes v2, wrong stats in GetTenantStats, a goroutine leak in compaction-worker, a location with empty lines parquet roundtrip, a nil check for empty stacktrace filters, a revert of an unintended change in profile merge, an error in vcs.decodeToken, a Docker ebpf-otel example matching k8s versions, integration test data of partially symbolized profile, reapplication of duplicate validation handling, and a revert of correct HasFunctions flags for mixed symbolization profiles. Documentation updates cover .NET LD_LIBRARY_PATH, finding URL/password/user in Cloud Profiles, architecture and OS requirements for .NET, ebpf supported languages, a typo and link for GitHub integration, ride share tutorial, dependency on compactor feature flag, and .NET naming."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_16_0",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.16.0",
+      "tag_name": "v1.16.0",
+      "title": "v1.16.0",
+      "time_hint": "2025-11-05",
+      "published_at": "2025-11-05T17:55:20Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.16.0",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.16.0\nTag: v1.16.0; draft: False; prerelease: False; published_at: 2025-11-05T17:55:20Z; created_at: 2025-11-05T14:30:57Z\nRelease notes:\n## Enhancements\n* Add OTLP HTTP/json and HTTP/protobuf ingestion (#4495)\n* Add a basic metric for metastore DLQ recovery (#4563)\n* Improve metastore observability (#4580)\n* Add option to add annotations to headless service (#4451)\n* Add admin pages for inspecting v2 blocks (#4480, #4543, #4555, #4560)\n* Performance: Cancel artificial delay on async ingest (#4261)\n* Add sanitized_label_names_total counter metric (#4501)\n* Add pyroscope-monitoring helm chart (#4525)\n* Implement utf8 label name client capability and use in UI/profilecli (#4442, #4490, #4493)\n* Add OTLP canary query (#4488)\n* Performance: add health check/warmup to segmentwriter to reduce first-write latency (#4453)\n* Update golang version to 1.24.9 (#4596)\n## Fixes\n* Fix distributor sampling rule processing priority (#4491)\n* Fix panic in ad-hoc profile upload (#4556)\n* Add ingest limits to connect push requests (#4586)\n* Add profile_name label to Speedscope profile ingestion (#4588)\n* Add stricter validation for metrics from profiles fields (#4522)\n* Ensure to build the same architecture image, as the current machine (#4552)\n* Fix go get in update-examples-cron.yml (#4547)\n* Handle Speedscope sample types in ingestion (#4568)\n* Handle utf-8 matchers correctly (#4496)\n* Fix Helm release only supports one changed chart at a time (#4583)\n* Fix OTLP: Guard against profiles with no lines (#4517)\n* Redirect to admin pages when no query API available (#4553)\n* Replace nop logger used in label validation (#4531)\n* Skip duplicated label name filtering in some cases (#4502)\n* Update deprecated GF_INSTALL_PLUGINS env var (#4554)\n* Avoid flushing empty tenant settings (quick win) (#4458)\n* Fix create fallback symbols for mappings without BuildIDs (#4527)\n* Fix go version for update-contributors (#4582)\n* Fix golang-push examples test (#4558)\n* Fix incorrect multitenancy header handling in new HTTP OTLP endpoint (#4559)\n* Fix not missing recording rules symbols by relaxing ObserveSymbols condition (#4545)\n* Fix opentelemetry-collector otlphttp exporter compatibility: gzip compression (#4579)\n* Fix panic when handling unsafe tenant name (#4519)\n* Use github app to update-make-docs workflow (#4548)\n* Don't 500 on bad profile types (#4537)\n* Fix flaky admin test (#4528)\n* Pin node to v23 in examples until latest (v25) is supported (#4561)\n## Changelog\n* 690a4f671ea042466c275d3238f2dfd0cc27961a Add OTLP HTTP/json and HTTP/protobuf ingestion (#4495)\n* 019bac278eb3f627f7ee08dcc86ce4eec44d5e09 Add Renovate config (#4499)\n* df72d5764ffc1d39f2a7a9807ca50e933b5f8088 Add a basic metric for metastore DLQ recovery (#4563)\n* 5c0385237d1bde6ddcea1e3dec1a7c56a41723a5 Added tests for OTLP HTTP json/protobuf paths (#4500)\n* c0df078e73a96917c82d1f6c995599c4a3096254 Don't 500 on bad profile types (#4537)\n* caae4c40a0ad147f642c68d76aa3f72965ffe366 Fix flaky admin test (#4528)\n* 9ebcb6159a52ac49bee634530b9eb56c044f173f Improve metastore observability (#4580)\n* d7ee31ea03e7716ee2092c04443d103885c93c76 Pin `node` to v23 in examples until latest (v25) is supported (#4561)\n* b1824a1fec5fd49126810420cf0acbc93471b765 Pyroscope: Update x/net (#4485)\n* 6ac069fb8923b7fa2de2a9c2dcc1d84cffac61bf Reenable OTLP HTTP canary exporter (#4544)\n* db7b86a81f3561a84e2fb76349338822b4a83b91 Remove Dependabot (#4505)\n* 6a728c64f8cd78176aaee269c1be644c88452778 Revert Renovate base config as the base config is in private repo (#4577)\n* ac44fc2699f5bb22e597053ae6d40025ff2b75a8 Simplify canary-exporter label check to \"at least these labels\" (#4562)\n* b025909591bade5295d64719b4710214f08cac44 Update `make docs` procedure (#4551)\n* ded59af966ffe4e593639e4b6741729cd713cf95 chore(config): migrate config renovate.json (#4503)\n* a905a54d7b7503015d7365ba078b8b1a42f647e5 chore(deps): bump axios (#4466)\n* 33c05e4da9474ec548de79b3b639b48e9f02ee80 chore(dep...",
+      "memory_unit_text": "In the grafana/pyroscope release v1.16.0, the project adds OTLP HTTP/json and HTTP/protobuf ingestion, a basic metric for metastore DLQ recovery, improved metastore observability, an option to add annotations to headless service, admin pages for inspecting v2 blocks, performance improvement by canceling artificial delay on async ingest, a sanitized_label_names_total counter metric, a pyroscope-monitoring helm chart, utf8 label name client capability and use in UI/profilecli, an OTLP canary query, a health check/warmup for segmentwriter to reduce first-write latency, and updates the golang version to 1.24.9. Fixes include distributor sampling rule processing priority, a panic in ad-hoc profile upload, ingest limits for connect push requests, adding profile_name label to Speedscope profile ingestion, stricter validation for metrics from profiles fields, ensuring the same architecture image is built, fixing go get in update-examples-cron.yml, handling Speedscope sample types in ingestion, handling utf-8 matchers correctly, fixing Helm release only supporting one changed chart at a time, guarding against OTLP profiles with no lines, redirecting to admin pages when no query API is available, replacing nop logger used in label validation, skipping duplicated label name filtering in some cases, updating deprecated GF_INSTALL_PLUGINS env var, avoiding flushing empty tenant settings, creating fallback symbols for mappings without BuildIDs, fixing go version for update-contributors, fixing golang-push examples test, fixing incorrect multitenancy header handling in new HTTP OTLP endpoint, fixing not missing recording rules symbols by relaxing ObserveSymbols condition, fixing opentelemetry-collector otlphttp exporter compatibility with gzip compression, fixing panic when handling unsafe tenant name, using github app to update-make-docs workflow, not returning 500 on bad profile types, fixing a flaky admin test, and pinning node to v23 in examples until v25 is supported."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_15_1",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.15.1",
+      "tag_name": "v1.15.1",
+      "title": "v1.15.1",
+      "time_hint": "2025-11-25",
+      "published_at": "2025-11-25T19:51:32Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.15.1",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.15.1\nTag: v1.15.1; draft: False; prerelease: False; published_at: 2025-11-25T19:51:32Z; created_at: 2025-11-25T19:27:55Z\nRelease notes:\n## Changelog\n- Update golang version to 1.24.9 (https://github.com/grafana/pyroscope/pull/4596)\nAs always, feedbacks are more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C047CCW6YM8)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope/issues)\n- [Mailing List](https://groups.google.com/g/pyroscope-team)\n## Docker Images\n- [grafana/pyroscope](https://hub.docker.com/r/grafana/pyroscope/tags)\n```bash\ndocker pull docker.io/grafana/pyroscope:1.15.1\n```",
+      "memory_unit_text": "In the grafana/pyroscope release v1.15.1, the project updates the golang version to 1.24.9."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_15_2",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.15.2",
+      "tag_name": "v1.15.2",
+      "title": "v1.15.2",
+      "time_hint": "2025-12-19",
+      "published_at": "2025-12-19T19:55:47Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.15.2",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.15.2\nTag: v1.15.2; draft: False; prerelease: False; published_at: 2025-12-19T19:55:47Z; created_at: 2025-12-19T16:22:48Z\nRelease notes:\n## Changelog\n* f6f1c0f24c0ee2f15efa275d9553c49ee0d0b9a1 [backport/release/v1.15] docs: Generate API docs for connect-go API (#4408) (#4541)\n* fbe50a3e81c34fbf0ee884fb2deb4a8f579d0635 chore: Update golang version to 1.24.9 (#4596)\n* 5737eb77c7e93881102108a1619ff8ca024cf5b9 fix: Docs release workflow (#4534)\n* aadf53baca8e7a63efdff9d7be6b923dad5eb561 fix: mask COS provider secret_key config CVE-2025-41118 (#4700)\nAs always, feedbacks are more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C047CCW6YM8)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope/issues)\n- [Mailing List](https://groups.google.com/g/pyroscope-team)\n## Docker Images\n- [grafana/pyroscope](https://hub.docker.com/r/grafana/pyroscope/tags)\n```bash\ndocker pull docker.io/grafana/pyroscope:1.15.2\n```",
+      "memory_unit_text": "In the grafana/pyroscope release v1.15.2, the project backports documentation for the connect-go API, updates the golang version to 1.24.9, fixes the docs release workflow, and masks the COS provider secret_key config for CVE-2025-41118."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_16_1",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.16.1",
+      "tag_name": "v1.16.1",
+      "title": "v1.16.1",
+      "time_hint": "2025-12-19",
+      "published_at": "2025-12-19T19:58:40Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.16.1",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.16.1\nTag: v1.16.1; draft: False; prerelease: False; published_at: 2025-12-19T19:58:40Z; created_at: 2025-12-19T16:16:18Z\nRelease notes:\n## Changelog\n* https://github.com/grafana/pyroscope/commit/b8263bb659a9e73d6034f436c94b038e3e7e9fbc fix: mask COS provider secret_key config CVE-2025-41118 (https://github.com/grafana/pyroscope/pull/4700)\nAs always, feedbacks are more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C047CCW6YM8)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope/issues)\n- [Mailing List](https://groups.google.com/g/pyroscope-team)\n## Docker Images\n- [grafana/pyroscope](https://hub.docker.com/r/grafana/pyroscope/tags)\n```bash\ndocker pull docker.io/grafana/pyroscope:1.16.1\n```",
+      "memory_unit_text": "In the grafana/pyroscope release v1.16.1, the project fixes the masking of the COS provider secret_key config for CVE-2025-41118."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_17_0",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.17.0",
+      "tag_name": "v1.17.0",
+      "title": "v1.17.0",
+      "time_hint": "2025-12-19",
+      "published_at": "2025-12-19T19:59:05Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.17.0",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.17.0\nTag: v1.17.0; draft: False; prerelease: False; published_at: 2025-12-19T19:59:05Z; created_at: 2025-12-19T15:35:53Z\nRelease notes:\n## Enhancements\n* Exemplar support for individual profile retrieval (#4615) (#4621) (#4657) (#4657) (#4686) (#4605) (#4631)\n* Introduce additional metastore compaction metrics (#4625)\n* Add trace spans for query-frontend (#4620)\n* Add tracing instrumentation to source code integration #4607)\n* Minor symbolizer metrics improvements (#4597)\n* Parallelize mapping symbolization to improve query performance (#4594)\n* Add metric to track unsymbolized profile blocks at ingestion (#4619)\n* lidia: dynsym symbols (#4691)\n* perf: Merge duplicate annotations (#4646)\n* vcs: Allow to provide functionName to the GetFile API. (#4613)\n## Fixes\n* Address npm CVEs (#4682)\n* Fix update-examples after ruby upgrade (#4687)\n* Fix panic in pprof split when using relabel.LabelDrop (#4699)\n* Assign appropriate HTTP status codes (#4684)\n* Fetching go stdlib without configs (#4655)\n* Implement Speedscope profile merging (#4592)\n* limit max nodes in symbolization queries (#4629)\n* mask COS provider secret_key config CVE-2025-41118 (#4700)\n* Source code module path parsing (#4609)\n* Set file name and line number in symbolization (#4610)\n* SelectSeries not correct for single reports (#4617)\n* Return modified labels after validation sanitization (#4662)\n## Changelog\n* 9e07b6bfbed4380d41b4bb077dedcc5a45284dcd  feat: add exemplar support to timeseries responses for individual profile retrieval (#4615)\n* 620fc2da6259c7a4574988768a53fa02f34f79ed Fix error in configuring-github-integration.md (#4614)\n* 20391786efc4f9a7d1e897bbd24ff759e3bb6879 Fix update-examples after ruby upgrade (#4687)\n* 114dd9f58715694491b60b1ed4d832c48148ea3b Introduce additional metastore compaction metrics (#4625)\n* 1e59e76232a524f25c3dcb9a6401b2815c39049d Update README.md (#4676)\n* 40d6db8b22edcfe2f2b41a6287df13e4d6f104c7 Update `make docs` procedure (#4612)\n* eb847bd4aa60e765ca6afa395f33690b311987fa Update go version to 1.24.10 (#4634)\n* f27dc74d0244cd228b9c888c24b5edc59f07b021 Update golang version to 1.24.11 (#4666)\n* 909602af8c1810f7327ca223d9e61308c8b3b948 chore(deps): bump golang.org/x/net (#4573)\n* 14097c26c2fd3ba3f9f7cda77608e6d56eef378e chore(deps): bump golang.org/x/net (#4645)\n* de43403089f7f0903e7e36df11a5068c7ee51f99 chore(deps): bump golang.org/x/net in /examples/golang-pgo (#4630)\n* d110baba6bd6b292d2519039cdc82581fe248a9a chore(deps): bump node-forge from 1.3.1 to 1.3.2 (#4643)\n* 8e5a68b15413e3dea75017315b3c9c546aff0d13 chore(deps): bump rack from 3.1.16 to 3.1.18 in /examples/tracing/ruby (#4624)\n* 2241c41ce8f3cc523468b0fcf04b405749811325 chore(deps): update actions/setup-node action to v4 (#4600)\n* a720980ce08a3b0047c66d138f196575e73de68d chore(deps): update dependency eslint-config-airbnb-typescript to v18 (#4602)\n* 39bbce14f8fc75bffea43ffb95e1929d4d472f45 chore(deps): update dependency eslint-plugin-jsdoc to v46 (#4604)\n* a3d131046ceb1c66f8facf1d8970f697605db051 chore(deps): update dependency eslint-plugin-jsdoc to v50 (#4674)\n* 667170ec6f58243a0f20beb19b624ea04d32aa31 chore(deps): update github-actions (#4590)\n* feff4504b08a5bdbf4eaff61dc185e6bf8bf6626 chore(deps): update github-actions (#4632)\n* 42783a06cc73c7df5d74170e3276f269a336fed7 chore(deps): update github-actions (#4656)\n* ecb1d3499c18933f82a54e47241d9e5879ae3785 chore(deps): update module golang.org/x/crypto to v0.45.0 [security] (#4628)\n* 6406621dd4385337cb667842dd7050470c62570e chore(deps): update node.js to aa648b3 (#4589)\n* d57a9fcc72054b856e00c0f0e77597bf75c20f78 chore(examples): fix issues with rideshare .NET example\n* 34be3c56828fb1a84d9f372c9b61d7c1c54ca713 chore(examples): update examples (#4639)\n* 1349a522eb317d239728c859128e0ec745a70bc9 chore(examples): update examples (#4649)\n* c97e9a3528508872ca066f01d48b3e512595c8af chore(examples): update examples (#4688)\n* 8817809e329271e9b7e05ab0800ec95d8eef1882 chore: Add tests to...",
+      "memory_unit_text": "In the grafana/pyroscope release v1.17.0, the project adds exemplar support for individual profile retrieval, introduces additional metastore compaction metrics, adds trace spans for query-frontend, adds tracing instrumentation to source code integration, makes minor symbolizer metrics improvements, parallelizes mapping symbolization to improve query performance, adds a metric to track unsymbolized profile blocks at ingestion, adds lidia dynsym symbols, merges duplicate annotations for performance, allows providing functionName to the VCS GetFile API, addresses npm CVEs, fixes update-examples after ruby upgrade, fixes a panic in pprof split when using relabel.LabelDrop, assigns appropriate HTTP status codes, fixes fetching go stdlib without configs, implements Speedscope profile merging, limits max nodes in symbolization queries, masks COS provider secret_key config for CVE-2025-41118, fixes source code module path parsing, sets file name and line number in symbolization, fixes SelectSeries not correct for single reports, and returns modified labels after validation sanitization."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_15_3",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.15.3",
+      "tag_name": "v1.15.3",
+      "title": "v1.15.3",
+      "time_hint": "2025-12-23",
+      "published_at": "2025-12-23T10:04:14Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.15.3",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.15.3\nTag: v1.15.3; draft: False; prerelease: False; published_at: 2025-12-23T10:04:14Z; created_at: 2025-12-23T09:48:24Z\nRelease notes:\n## Changelog\nMaintenance release to update Go version and address security vulnerability.\n### Changes\n* Update golang version to 1.24.11 ([#4707](https://github.com/grafana/pyroscope/pull/4707))\n* Patch golang.org/x/crypto/ssh vulnerability ([#4707](https://github.com/grafana/pyroscope/pull/4707))\nAs always, feedbacks are more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C047CCW6YM8)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope/issues)\n- [Mailing List](https://groups.google.com/g/pyroscope-team)\n## Docker Images\n- [grafana/pyroscope](https://hub.docker.com/r/grafana/pyroscope/tags)\n```bash\ndocker pull docker.io/grafana/pyroscope:1.15.3\n```",
+      "memory_unit_text": "In the grafana/pyroscope release v1.15.3, the project performs a maintenance update to golang version 1.24.11 and patches the golang.org/x/crypto/ssh vulnerability."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_16_2",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.16.2",
+      "tag_name": "v1.16.2",
+      "title": "v1.16.2",
+      "time_hint": "2025-12-23",
+      "published_at": "2025-12-23T10:54:02Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.16.2",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.16.2\nTag: v1.16.2; draft: False; prerelease: False; published_at: 2025-12-23T10:54:02Z; created_at: 2025-12-23T09:55:04Z\nRelease notes:\n## Changelog\nMaintenance release to update Go version and address security vulnerability.\n### Changes\n* Update golang version to 1.24.11 ([#4708](https://github.com/grafana/pyroscope/pull/4708))\n* Patch golang.org/x/crypto/ssh vulnerability ([#4708](https://github.com/grafana/pyroscope/pull/4708))\nAs always, feedbacks are more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C047CCW6YM8)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope/issues)\n- [Mailing List](https://groups.google.com/g/pyroscope-team)\n## Docker Images\n- [grafana/pyroscope](https://hub.docker.com/r/grafana/pyroscope/tags)\n```bash\ndocker pull docker.io/grafana/pyroscope:1.16.2\n```",
+      "memory_unit_text": "In the grafana/pyroscope release v1.16.2, the project performs a maintenance update to golang version 1.24.11 and patches the golang.org/x/crypto/ssh vulnerability."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_17_1",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.17.1",
+      "tag_name": "v1.17.1",
+      "title": "v1.17.1",
+      "time_hint": "2026-01-12",
+      "published_at": "2026-01-12T21:50:32Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.17.1",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.17.1\nTag: v1.17.1; draft: False; prerelease: False; published_at: 2026-01-12T21:50:32Z; created_at: 2026-01-12T21:35:28Z\nRelease notes:\n## Changelog\n* f27f585b01018bcb24300b16da4845b9201126a2 Pyroscope 1.17.1 release (#4748)\n* 6730264aa0ca7c01c37641c9115999d010620ea7 Update goreleaser and use it to push weekly builds (#4719)\n* 9f652453df29cb63d878f7836a22aa1214b7248f [release/v1.17] backport docs updates (#4711)\n* 767ee745872ae38ca358485056efa2ef521f1f24 chore: Publish Github releases immediately during release process (#4720)\n* e55ecb59b72df71ea6aef595d61def58280e7023 docs: add missing CVE reference in v1.17 release notes (#4715)\n* 8ebbbc27a24b7299ffd988b5c002b615270b9193 fix: Re-enable defaults for /render `from` and `until` parameters (#4745) (#4747)\n* 5b051e1b463ed533aeb157f826b089d42f42eb43 fix: pass `$IMAGE_TAG` directly to Goreleaser (#4749) (#4750)\nAs always, feedback is more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C049PLMV8TB)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope/issues)\n- [Mailing List](https://groups.google.com/g/pyroscope-team)\n## Docker Images\n- [grafana/pyroscope](https://hub.docker.com/r/grafana/pyroscope/tags)\n```bash\ndocker pull docker.io/grafana/pyroscope:1.17.1\n```",
+      "memory_unit_text": "In the grafana/pyroscope release v1.17.1, the project updates goreleaser and uses it to push weekly builds, backports docs updates, publishes Github releases immediately during the release process, adds a missing CVE reference in v1.17 release notes, re-enables defaults for /render from and until parameters, and fixes passing $IMAGE_TAG directly to Goreleaser."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_18_0",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.18.0",
+      "tag_name": "v1.18.0",
+      "title": "v1.18.0",
+      "time_hint": "2026-01-16",
+      "published_at": "2026-01-16T16:47:22Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.18.0",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.18.0\nTag: v1.18.0; draft: False; prerelease: False; published_at: 2026-01-16T16:47:22Z; created_at: 2026-01-16T16:34:17Z\nRelease notes:\n## Enhancements\n* The source code integration now supports Python ([#4726](https://github.com/grafana/pyroscope/pull/4726), [#4732](https://github.com/grafana/pyroscope/pull/4732), [#4730](https://github.com/grafana/pyroscope/pull/4730))\n* Implement comprehensive profile size limits across ingestion endpoints ([#4734](https://github.com/grafana/pyroscope/pull/4734))\n* Update golang version to 1.24.12 ([#4760](https://github.com/grafana/pyroscope/pull/4760))\n* Set a maximum ingestion body size by default ([#4761](https://github.com/grafana/pyroscope/pull/4761))\n* Update OpenTelemetry dependencies, `proto=v1.9.0` `profiles=v0.2.0` ([#4731](https://github.com/grafana/pyroscope/pull/4731))\n* Enforce maxNodes optionally on SelectMergeProfile through limits in v2 ([#4723](https://github.com/grafana/pyroscope/pull/4723))\n* Add benchmarks for timeseries query performance with exemplars ([#4665](https://github.com/grafana/pyroscope/pull/4665))\n## Fixes\n* Fix exemplar value calculation for split profiles ([#4753](https://github.com/grafana/pyroscope/pull/4753))\n* Relative matching for source code mapping ([#4754](https://github.com/grafana/pyroscope/pull/4754))\n* VCS Service: Failed file lookup should be 404 instead of 500 ([#4759](https://github.com/grafana/pyroscope/pull/4759))\n* Remove unintended double base64 encoding in vcs service ([#4703](https://github.com/grafana/pyroscope/pull/4703))\n* Frontend: Bump `qs` to address CVE-2025-15284 ([#4724](https://github.com/grafana/pyroscope/pull/4724))\n* Frontend: Bump `sweetalert2` to address GHSA-457r-cqc8-9vj9, GHSA-8jh9-wqpf-q52c and GHSA-pg98-6v7f-2xfv ([#4727](https://github.com/grafana/pyroscope/pull/4727))\n* Frontend: Bump `@remix-run/router` and `react-router` to address CVE-2026-22029 and CVE-2025-68470 ([#4763](https://github.com/grafana/pyroscope/pull/4763))\n## Documentation\n* Rename GitHub integration to source code integration ([#4755](https://github.com/grafana/pyroscope/pull/4755))\n* Update source code integration docs to include Java and Python support ([#4651](https://github.com/grafana/pyroscope/pull/4651))\n* Fix inline link in eBPF docs ([#4733](https://github.com/grafana/pyroscope/pull/4733))\n## Changelog\n* e542ef3a68b3bdef255087370c90ab3aa751cfc3 Add release notes for v1.18\n* a6dcad6eaadc0ca37f1651d6008f35a957de717e Fixing inline link (#4733)\n* 4523fd14aa2341479d577bdc53f242c4a22353a5 Implement comprehensive profile size limits across ingestion endpoints (#4734)\n* f7611c2db2d6d55269804f63e79115e1df103722 Partially revert function name modification from `pyspy`-based profiles (#4757)\n* 1d28675dfb491da2ae336f193af1b78183227b0b Remove function name modification from `pyspy`-based profiles (#4730)\n* ef09e77ee0baf4bee9401bf461bc8bdf0e5231b9 Rename GitHub integration to source code integration (#4755)\n* 2155e94cb52f2be0975f866d3408755cca32bfca Update golang version to 1.24.12 (#4760)\n* e2dbb9c83fb873dc604f753ec992c2d8c4f8bac9 Update goreleaser and use it to push weekly builds (#4719)\n* fb3b8c6548181805b1000985ba8eb5bb5e9434c1 chore(deps): bump axios (#4764)\n* 6fdc8e6bf40b36706bbc1b4676ad923a597e3f4f chore(deps): bump sinatra (#4518)\n* b80dcbeb3f4ed15011c9ae395beeb1bce7498e86 chore(deps): update a few frontend packages flagged for vulnerabilities (#4724)\n* 7f21353a391f672ab05e69961767c3f55b913572 chore(deps): update dependency eslint-plugin-jsdoc to v53 (#4744)\n* 8390f63df7fcdeaf5ae3db094592261aa59391a2 chore(deps): update helm release alloy to v1.5.1 (#4740)\n* 60bd48959bbfb2ae59baf5013a11b1bb4f40434b chore(deps): update helm release k8s-monitoring to v3.7.1 (#4741)\n* c55e2fd64ba1ae5cda0e2f261acf4f9e5a539855 chore(examples): update examples (#4698)\n* 413c0516b631444b2e40d64cee8048e2a2f52d64 chore(exampless,.NET) update Pyroscope.Opentelemetry dependency, fix dynamic labels (#4722)\n* 976a49e128f65438...",
+      "memory_unit_text": "In the grafana/pyroscope release v1.18.0, the project adds Python support to the source code integration, implements comprehensive profile size limits across ingestion endpoints, updates golang version to 1.24.12, sets a maximum ingestion body size by default, updates OpenTelemetry dependencies to proto=v1.9.0 and profiles=v0.2.0, optionally enforces maxNodes on SelectMergeProfile through limits in v2, adds benchmarks for timeseries query performance with exemplars, fixes exemplar value calculation for split profiles, fixes relative matching for source code mapping, changes VCS Service failed file lookup to 404 instead of 500, removes unintended double base64 encoding in vcs service, bumps frontend packages qs, sweetalert2, @remix-run/router and react-router to address CVEs, renames GitHub integration to source code integration, updates source code integration docs to include Java and Python support, and fixes an inline link in eBPF docs."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_17_2",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.17.2",
+      "tag_name": "v1.17.2",
+      "title": "v1.17.2",
+      "time_hint": "2026-02-03",
+      "published_at": "2026-02-03T10:56:29Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.17.2",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.17.2\nTag: v1.17.2; draft: False; prerelease: False; published_at: 2026-02-03T10:56:29Z; created_at: 2026-02-03T10:41:43Z\nRelease notes:\n## Changelog\nAs always, feedback is more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C049PLMV8TB)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope/issues)\n- [Mailing List](https://groups.google.com/g/pyroscope-team)\n## Docker Images\n- [grafana/pyroscope](https://hub.docker.com/r/grafana/pyroscope/tags)\n```bash\ndocker pull docker.io/grafana/pyroscope:1.17.2\n```",
+      "memory_unit_text": "In the grafana/pyroscope release v1.17.2, the project provides a changelog entry with no specific changes listed."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_17_3",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.17.3",
+      "tag_name": "v1.17.3",
+      "title": "v1.17.3",
+      "time_hint": "2026-02-12",
+      "published_at": "2026-02-12T20:47:07Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.17.3",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.17.3\nTag: v1.17.3; draft: False; prerelease: False; published_at: 2026-02-12T20:47:07Z; created_at: 2026-02-12T20:33:00Z\nRelease notes:\n## Changelog\n* 8e975eac374b2dd2c813e53f8c4602ae8cd5defc Update golang version to 1.24.13 (#4830)\nAs always, feedback is more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C049PLMV8TB)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope/issues)\n- [Mailing List](https://groups.google.com/g/pyroscope-team)\n## Docker Images\n- [grafana/pyroscope](https://hub.docker.com/r/grafana/pyroscope/tags)\n```bash\ndocker pull docker.io/grafana/pyroscope:1.17.3\n```",
+      "memory_unit_text": "In the grafana/pyroscope release v1.17.3, the project updates the golang version to 1.24.13."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_18_1",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.18.1",
+      "tag_name": "v1.18.1",
+      "title": "v1.18.1",
+      "time_hint": "2026-02-12",
+      "published_at": "2026-02-12T20:51:22Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.18.1",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.18.1\nTag: v1.18.1; draft: False; prerelease: False; published_at: 2026-02-12T20:51:22Z; created_at: 2026-02-12T20:38:06Z\nRelease notes:\n## Changelog\n* 3657d21e83b5fce185b12d120c7766ff77e6a47f Update golang version to 1.24.13 (#4808) (#4831)\n* dd2622d2f760e170494569ee984315dc5e65c78f docs: Add release notes for v1.18.1\nAs always, feedback is more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C049PLMV8TB)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope/issues)\n- [Mailing List](https://groups.google.com/g/pyroscope-team)\n## Docker Images\n- [grafana/pyroscope](https://hub.docker.com/r/grafana/pyroscope/tags)\n```bash\ndocker pull docker.io/grafana/pyroscope:1.18.1\n```",
+      "memory_unit_text": "In the grafana/pyroscope release v1.18.1, the project updates the golang version to 1.24.13 and adds release notes for v1.18.1."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_17_4",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.17.4",
+      "tag_name": "v1.17.4",
+      "title": "v1.17.4",
+      "time_hint": "2026-02-17",
+      "published_at": "2026-02-17T20:30:36Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.17.4",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.17.4\nTag: v1.17.4; draft: False; prerelease: False; published_at: 2026-02-17T20:30:36Z; created_at: 2026-02-17T20:17:20Z\nRelease notes:\n## Changelog\n* f1d10b1c35a17ee59518b9cb5efc1e7f5e82278c chore: bump react router (#4845)\nAs always, feedback is more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C049PLMV8TB)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope/issues)\n- [Mailing List](https://groups.google.com/g/pyroscope-team)\n## Docker Images\n- [grafana/pyroscope](https://hub.docker.com/r/grafana/pyroscope/tags)\n```bash\ndocker pull docker.io/grafana/pyroscope:1.17.4\n```",
+      "memory_unit_text": "In the grafana/pyroscope release v1.17.4, the project bumps react router."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_19_0",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.19.0",
+      "tag_name": "v1.19.0",
+      "title": "v1.19.0",
+      "time_hint": "2026-03-13",
+      "published_at": "2026-03-13T15:49:05Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.19.0",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.19.0\nTag: v1.19.0; draft: False; prerelease: False; published_at: 2026-03-13T15:49:05Z; created_at: 2026-03-13T15:17:38Z\nRelease notes:\n## Enhancements\n* Add `query top` command for top function analysis ([#4889](https://github.com/grafana/pyroscope/pull/4889))\n* Add `recording-rules` command for rules self-service ([#4823](https://github.com/grafana/pyroscope/pull/4823))\n* Add `kube-proxy` command for unified microservice access ([#4777](https://github.com/grafana/pyroscope/pull/4777))\n* Add `--output=table|json` to `query series` ([#4890](https://github.com/grafana/pyroscope/pull/4890))\n* Add `--span-selector` flag to `query profile` command ([#4873](https://github.com/grafana/pyroscope/pull/4873))\n* Add `--force/-f` flag to overwrite output files ([#4776](https://github.com/grafana/pyroscope/pull/4776))\n* Use `SelectMergeStacktraces` instead of `SelectMergeProfile` when `--tree` ([#4795](https://github.com/grafana/pyroscope/pull/4795))\n* Add support for Javascript and Typescript source code integration ([#4797](https://github.com/grafana/pyroscope/pull/4797))\n* Add configuration to skip label sanitization ([#4796 (https://github.com/grafana/pyroscope/pull/4796))\n* Add S3 `aws_sdk_auth` config option ([#4819 (https://github.com/grafana/pyroscope/pull/4819))\n* Add ad-hoc profiles Diff RPC ([#4850](https://github.com/grafana/pyroscope/pull/4850))\n* Add debug info upload service ([#4648](https://github.com/grafana/pyroscope/pull/4648))\n* Implement AttributeTable with string interning for exemplar labels\n([#4756](https://github.com/grafana/pyroscope/pull/4756))\n* Allow retrieving heatmap from spans/individual profiles ([#4736](https://github.com/grafana/pyroscope/pull/4736))\n* Add normalization stats ([#4820](https://github.com/grafana/pyroscope/pull/4820))\n* Query diagnostics for v2 admin ([#4806](https://github.com/grafana/pyroscope/pull/4806))\n* Refactor symbolization into per-query backendWrapper ([#4887](https://github.com/grafana/pyroscope/pull/4887))\n* lidia: Add gopclntab support for Go symbol resolution ([#4782](https://github.com/grafana/pyroscope/pull/4782))\n* Update ebpf-profiler docs/examples to use official builds ([#4891](https://github.com/grafana/pyroscope/pull/4891))\n* Helm: Add `extraContainers` field to pyroscope helm chart ([#4783](https://github.com/grafana/pyroscope/pull/4783))\n* Helm: Allow to control mounting of shared volume ([#4809](https://github.com/grafana/pyroscope/pull/4809))\n* Update Go to 1.25.8 ([#4883](https://github.com/grafana/pyroscope/pull/4883))\n## Fixes\n* Filter profile IDs post-join instead of predicate push-down ([#4888](https://github.com/grafana/pyroscope/pull/4888))\n* Add `pyroscope_` prefix to memberlist metrics ([#4885](https://github.com/grafana/pyroscope/pull/4885))\n* Correctly visit str value on labels to not drop incorrect values from the string table ([#4826](https://github.com/grafana/pyroscope/pull/4826))\n* Correct datatype for Exemplar value uint64→int64 ([#4779](https://github.com/grafana/pyroscope/pull/4779))\n* Prevent panic in `Tree.IterateStacks` with >1024 root nodes ([#4841](https://github.com/grafana/pyroscope/pull/4841))\n* lidia: Use stable sort ([#4758](https://github.com/grafana/pyroscope/pull/4758))\n* Replace regex with manual string scanning in `DropGoTypeParameters` ([#4828](https://github.com/grafana/pyroscope/pull/4828))\n* Bump jfr-parser to v0.15.0 ([#4881](https://github.com/grafana/pyroscope/pull/4881))\n## Documentation\n* Update Java profile types support ([#4893](https://github.com/grafana/pyroscope/pull/4893))\n* Update profilecli docs for latest changes ([#4894](https://github.com/grafana/pyroscope/pull/4894))\n* Update profile-cli.md for #4980 ([#4902](https://github.com/grafana/pyroscope/pull/4902))\n* Update eBPF profiler supported languages ([#4822](https://github.com/grafana/pyroscope/pull/4822))\n* Remove `detect_subprocesses` from python client config ([#4854](https://github.com/grafana/pyroscope/pull/485...",
+      "memory_unit_text": "In the grafana/pyroscope release v1.19.0, the project adds a query top command for top function analysis, a recording-rules command for rules self-service, a kube-proxy command for unified microservice access, --output=table|json to query series, a --span-selector flag to query profile command, a --force/-f flag to overwrite output files, uses SelectMergeStacktraces instead of SelectMergeProfile when --tree, adds support for Javascript and Typescript source code integration, adds configuration to skip label sanitization, adds S3 aws_sdk_auth config option, adds ad-hoc profiles Diff RPC, adds a debug info upload service, implements AttributeTable with string interning for exemplar labels, allows retrieving heatmap from spans/individual profiles, adds normalization stats, adds query diagnostics for v2 admin, refactors symbolization into per-query backendWrapper, adds gopclntab support for Go symbol resolution in lidia, updates ebpf-profiler docs/examples to use official builds, adds extraContainers field to pyroscope helm chart, allows controlling mounting of shared volume in Helm, updates Go to 1.25.8, fixes filtering profile IDs post-join instead of predicate push-down, adds pyroscope_ prefix to memberlist metrics, correctly visits str value on labels to not drop incorrect values from the string table, corrects datatype for Exemplar value uint64→int64, prevents panic in Tree.IterateStacks with >1024 root nodes, uses stable sort in lidia, replaces regex with manual string scanning in DropGoTypeParameters, bumps jfr-parser to v0.15.0, updates Java profile types support, updates profilecli docs, updates profile-cli.md, updates eBPF profiler supported languages, and removes detect_subprocesses from python client config."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_19_1",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.19.1",
+      "tag_name": "v1.19.1",
+      "title": "v1.19.1",
+      "time_hint": "2026-03-25",
+      "published_at": "2026-03-25T11:15:51Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.19.1",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.19.1\nTag: v1.19.1; draft: False; prerelease: False; published_at: 2026-03-25T11:15:51Z; created_at: 2026-03-25T11:02:32Z\nRelease notes:\n## Changes\nMaintenance release to update dependencies and address a security vulnerability.\n## Changelog\n* 9dd7ad9ad599099119a15c952f078516a0947b6c Add release notes for v1.19 (#4904) (#4906)\n* 68d538f2d3932fe402bbb89e6e6bd8f08774c172 chore(deps): bump google.golang.org/grpc (#4938)\n* bb7d5bf0993d122d79eb9596a1aeb0e0e102d8ff chore(deps): bump google.golang.org/grpc in /examples/golang-pgo (#4920)\n* 0196930d458d8368f8a7c49fcccb8e9acc006006 chore(deps): bump immutable (yarn) (#4923)\n* e60d86dfe3ac0a24a90452362415682e2326db00 chore(deps): bump minimatch to 10.2.3 (yarn) (#4924)\n* d5d2cb69c41e3c59d23b3829a2226bcde2812570 chore(deps): bump svgo to 2.8.1 (yarn) (#4928)\n* d2698dc635b7af428df47c1b3789c680706a352b chore(deps): bump undici to 7.24.0 (yarn) (#4932)\n* bc4a04d62fd3f3f6b7ac0a507412d6ac4855ee89 fix(deps): update module google.golang.org/grpc to v1.79.3 [security] (#4921)\nAs always, feedback is more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C049PLMV8TB)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope/issues)\n- [Mailing List](https://groups.google.com/g/pyroscope-team)\n## Docker Images\n- [grafana/pyroscope](https://hub.docker.com/r/grafana/pyroscope/tags)\n```bash\ndocker pull docker.io/grafana/pyroscope:1.19.1\n```",
+      "memory_unit_text": "In the grafana/pyroscope release v1.19.1, the project performs a maintenance release to update dependencies and address a security vulnerability, including bumping google.golang.org/grpc, immutable, minimatch, svgo, undici, and updating google.golang.org/grpc to v1.79.3 for security."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_18_2",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.18.2",
+      "tag_name": "v1.18.2",
+      "title": "v1.18.2",
+      "time_hint": "2026-03-25",
+      "published_at": "2026-03-25T16:48:37Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.18.2",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.18.2\nTag: v1.18.2; draft: False; prerelease: False; published_at: 2026-03-25T16:48:37Z; created_at: 2026-03-25T16:24:18Z\nRelease notes:\n## Changelog\n* f499c67360ec8a28eb745a69c37c02e0a378fccb .doc Update Java profile types support (#4893) (#4901)\n* e542ef3a68b3bdef255087370c90ab3aa751cfc3 Add release notes for v1.18\n* 3657d21e83b5fce185b12d120c7766ff77e6a47f Update golang version to 1.24.13 (#4808) (#4831)\n* 1d07a08d807fdc664bbbff08cef0297f66a1eb04 [backport/v1.18] Update go dependencies for release (#4943)\n* 7d3ceb66e913fd32cce18f50778c8789242e9ff1 [backport/v1.18] Update go to 1.25.8 (#4945)\n* 37304eecd09aefb33e2696732ae94f2170abb82a chore(deps): update yarn deps and resolve CVEs (#4941) (#4944)\n* 4ce762c1df3d83a165a424bbbdfb5f0ae7c20b2e chore(helm): Update Helm charts to Pyroscope v1.18.1 (#4837)\n* e7e8d86ceb5af82c322b8d000307fc80320f34f3 chore: v1.18 is no longer latest (#4942)\n* dd2622d2f760e170494569ee984315dc5e65c78f docs: Add release notes for v1.18.1\nAs always, feedback is more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C049PLMV8TB)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope/issues)\n- [Mailing List](https://groups.google.com/g/pyroscope-team)\n## Docker Images\n- [grafana/pyroscope](https://hub.docker.com/r/grafana/pyroscope/tags)\n```bash\ndocker pull docker.io/grafana/pyroscope:1.18.2\n```",
+      "memory_unit_text": "In the grafana/pyroscope release v1.18.2, the project updates Java profile types support, adds release notes for v1.18, updates golang version to 1.24.13, backports go dependency updates, updates go to 1.25.8, updates yarn deps and resolves CVEs, updates Helm charts to Pyroscope v1.18.1, and marks v1.18 as no longer latest."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_20_0",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.20.0",
+      "tag_name": "v1.20.0",
+      "title": "v1.20.0",
+      "time_hint": "2026-04-07",
+      "published_at": "2026-04-07T14:55:52Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.20.0",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.20.0\nTag: v1.20.0; draft: False; prerelease: False; published_at: 2026-04-07T14:55:52Z; created_at: 2026-04-07T07:48:01Z\nRelease notes:\n## Enhancements\n* Add flags to disable v1 components in single-binary v2 mode ([#4934](https://github.com/grafana/pyroscope/pull/4934))\n* Implement `SelectMergeTree` via the `model.Tree` ([#4790](https://github.com/grafana/pyroscope/pull/4790))\n* Switch tracing instrumentation to OpenTelemetry ([#4855](https://github.com/grafana/pyroscope/pull/4855))\n* Add trace ID field to profile storage schema ([#4884](https://github.com/grafana/pyroscope/pull/4884))\n* Add tenant ID config for self-profiling ([#4880](https://github.com/grafana/pyroscope/pull/4880))\n* Enable native histograms across all classic-only histogram metrics ([#4961](https://github.com/grafana/pyroscope/pull/4961))\n* Log query weight on the read path ([#4964](https://github.com/grafana/pyroscope/pull/4964))\n* Log decompressed size of JFR, OTLP (and other non-pprof) profiles ([#4968](https://github.com/grafana/pyroscope/pull/4968))\n* Frontend: support `auto` for `--enable-query-backend-from` flag ([#4926](https://github.com/grafana/pyroscope/pull/4926))\n* Metastore: add log store write timeout to prevent stuck raft leader ([#4892](https://github.com/grafana/pyroscope/pull/4892))\n* `profilecli`: add exemplar query and profile-id drill-down ([#4939](https://github.com/grafana/pyroscope/pull/4939))\n* `profilecli`: add span exemplar query command ([#4953](https://github.com/grafana/pyroscope/pull/4953))\n* `profilecli`: rename `exemplars individual` to `exemplars profile` ([#4954](https://github.com/grafana/pyroscope/pull/4954))\n* Helm: support `global.imageRegistry` ([#4866](https://github.com/grafana/pyroscope/pull/4866))\n* JFR: switch to `klauspost/compress` for gzip decompression ([#4958](https://github.com/grafana/pyroscope/pull/4958))\n* Bump `jfr-parser` to v0.16.0 ([#4960](https://github.com/grafana/pyroscope/pull/4960))\n* Update OTLP version ([#4952](https://github.com/grafana/pyroscope/pull/4952))\n* Update `parquet-go` to v0.26.4 ([#4925](https://github.com/grafana/pyroscope/pull/4925))\n* Embedded UI v2 refactor ([#4948](https://github.com/grafana/pyroscope/pull/4948))\n* Prune `infiniteStrategy` from distributor ([#4913](https://github.com/grafana/pyroscope/pull/4913))\n* Exercise exemplars on the canary exporter ([#4959](https://github.com/grafana/pyroscope/pull/4959))\n## Fixes\n* OTLP: extend `v1.AnyValue` possible types in `stringValueFromAnyValue` ([#4988](https://github.com/grafana/pyroscope/pull/4988))\n* OTLP: handle slice-typed sample attributes from pprof OTLP profiles ([#4966](https://github.com/grafana/pyroscope/pull/4966))\n* Symbolizer: skip locations with `MappingId 0` instead of erroring ([#4985](https://github.com/grafana/pyroscope/pull/4985))\n* symdb: bounds-check mapping and function IDs in `SymbolMerger` ([#4967](https://github.com/grafana/pyroscope/pull/4967))\n* Fix `BinaryJoinIterator` unalignment bug ([#4950](https://github.com/grafana/pyroscope/pull/4950))\n* Metastore: implement `MonotonicLogStore` on `timeoutLogStore` ([#4935](https://github.com/grafana/pyroscope/pull/4935))\n* Querier: surface previously dropped errors ([#4914](https://github.com/grafana/pyroscope/pull/4914))\n* `profilecli`: remove duplicate `--collect-diagnostics` flag ([#4911](https://github.com/grafana/pyroscope/pull/4911))\n* debug-info: use `LimitReader` ([#4898](https://github.com/grafana/pyroscope/pull/4898))\n* lidia: tolerate `elf.ErrNoSymbols` when both symbol tables are missing ([#4895](https://github.com/grafana/pyroscope/pull/4895))\n* Helm: filter `pyroscope.components` by storage flags in microservices mode ([#4946](https://github.com/grafana/pyroscope/pull/4946))\n* Fix CVE vulnerabilities in `go.mod` files ([#4970](https://github.com/grafana/pyroscope/pull/4970))\n* Update `google.golang.org/grpc` to v1.79.3 (security) ([#4921](https://github.com/grafana/pyroscope/pull/4921))\n* Update `g...",
+      "memory_unit_text": "In the grafana/pyroscope release v1.20.0, the project adds flags to disable v1 components in single-binary v2 mode, implements SelectMergeTree via the model.Tree, switches tracing instrumentation to OpenTelemetry, adds a trace ID field to profile storage schema, adds tenant ID config for self-profiling, enables native histograms across all classic-only histogram metrics, logs query weight on the read path, logs decompressed size of JFR, OTLP and other non-pprof profiles, supports auto for --enable-query-backend-from flag in the frontend, adds log store write timeout to prevent stuck raft leader in metastore, adds exemplar query and profile-id drill-down to profilecli, adds span exemplar query command to profilecli, renames exemplars individual to exemplars profile in profilecli, supports global.imageRegistry in Helm, switches JFR to klauspost/compress for gzip decompression, bumps jfr-parser to v0.16.0, updates OTLP version, updates parquet-go to v0.26.4, refactors embedded UI v2, prunes infiniteStrategy from distributor, exercises exemplars on the canary exporter, fixes OTLP v1.AnyValue possible types in stringValueFromAnyValue, handles slice-typed sample attributes from pprof OTLP profiles, skips locations with MappingId 0 instead of erroring in symbolizer, bounds-checks mapping and function IDs in SymbolMerger, fixes BinaryJoinIterator unalignment bug, implements MonotonicLogStore on timeoutLogStore in metastore, surfaces previously dropped errors in querier, removes duplicate --collect-diagnostics flag in profilecli, uses LimitReader in debug-info, tolerates elf.ErrNoSymbols when both symbol tables are missing in lidia, filters pyroscope.components by storage flags in microservices mode in Helm, fixes CVE vulnerabilities in go.mod files, updates google.golang.org/grpc to v1.79.3 for security, and updates golang.org/x/net."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_20_1",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.20.1",
+      "tag_name": "v1.20.1",
+      "title": "v1.20.1",
+      "time_hint": "2026-04-08",
+      "published_at": "2026-04-08T02:12:44Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.20.1",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.20.1\nTag: v1.20.1; draft: False; prerelease: False; published_at: 2026-04-08T02:12:44Z; created_at: 2026-04-08T01:58:27Z\nRelease notes:\n## Changelog\n* 358874c299d3460711470a122064128c2babe570 chore(deps): update dependency vite to v8.0.5 [security] (#4994) (#4998)\nAs always, feedback is more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C049PLMV8TB)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope/issues)\n- [Mailing List](https://groups.google.com/g/pyroscope-team)\n## Docker Images\n- [grafana/pyroscope](https://hub.docker.com/r/grafana/pyroscope/tags)\n```bash\ndocker pull docker.io/grafana/pyroscope:1.20.1\n```",
+      "memory_unit_text": "In the grafana/pyroscope release v1.20.1, the project updates the dependency vite to v8.0.5 for security."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_20_2",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.20.2",
+      "tag_name": "v1.20.2",
+      "title": "v1.20.2",
+      "time_hint": "2026-04-08",
+      "published_at": "2026-04-08T02:47:27Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.20.2",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.20.2\nTag: v1.20.2; draft: False; prerelease: False; published_at: 2026-04-08T02:47:27Z; created_at: 2026-04-08T02:32:50Z\nRelease notes:\n## Changelog\n* e5bf2d8e9c5f6179eff9f9a9f25be10cbf9ae923 Add release notes for v1.20 (#4996) (#4997)\n* 57f7e08e82a6a991daf6df009abe597dd3ffea47 chore(deps): update module github.com/go-jose/go-jose/v4 to v4.1.4 [security] (#4984) (#5002)\nAs always, feedback is more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C049PLMV8TB)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope/issues)\n- [Mailing List](https://groups.google.com/g/pyroscope-team)\n## Docker Images\n- [grafana/pyroscope](https://hub.docker.com/r/grafana/pyroscope/tags)\n```bash\ndocker pull docker.io/grafana/pyroscope:1.20.2\n```",
+      "memory_unit_text": "In the grafana/pyroscope release v1.20.2, the project adds release notes for v1.20 and updates the module github.com/go-jose/go-jose/v4 to v4.1.4 for security."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_19_2",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.19.2",
+      "tag_name": "v1.19.2",
+      "title": "v1.19.2",
+      "time_hint": "2026-04-08",
+      "published_at": "2026-04-08T02:58:25Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.19.2",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.19.2\nTag: v1.19.2; draft: False; prerelease: False; published_at: 2026-04-08T02:58:25Z; created_at: 2026-04-08T02:45:47Z\nRelease notes:\n## Changelog\n* 9dd7ad9ad599099119a15c952f078516a0947b6c Add release notes for v1.19 (#4904) (#4906)\n* dd10d245c58d7df5485130ecca16885c984cbb8c Revert \"chore(deps): update parquet-go to v0.26.4 (#4925)\"\n* b76d30c4c797979e808c37c44cacc61e11ed3315 Update .NET documentation (#4949)\n* 68d538f2d3932fe402bbb89e6e6bd8f08774c172 chore(deps): bump google.golang.org/grpc (#4938)\n* bb7d5bf0993d122d79eb9596a1aeb0e0e102d8ff chore(deps): bump google.golang.org/grpc in /examples/golang-pgo (#4920)\n* 0196930d458d8368f8a7c49fcccb8e9acc006006 chore(deps): bump immutable (yarn) (#4923)\n* e60d86dfe3ac0a24a90452362415682e2326db00 chore(deps): bump minimatch to 10.2.3 (yarn) (#4924)\n* d5d2cb69c41e3c59d23b3829a2226bcde2812570 chore(deps): bump svgo to 2.8.1 (yarn) (#4928)\n* d2698dc635b7af428df47c1b3789c680706a352b chore(deps): bump undici to 7.24.0 (yarn) (#4932)\n* 998526dd282560b668bfedf25f37ad1dd5597f76 chore(deps): update module github.com/go-jose/go-jose/v4 to v4.1.4 [security] (#4984) (#5001)\n* 565588d67fc387a32a1837d1a71de3f19495879d chore(deps): update parquet-go to v0.26.4 (#4925)\n* de36ce11fb779c66159e4357843ffc3567f763d1 ci: set IMAGE_PUBLISH_LATEST=false for v1.19 patch releases\n* bc4a04d62fd3f3f6b7ac0a507412d6ac4855ee89 fix(deps): update module google.golang.org/grpc to v1.79.3 [security] (#4921)\nAs always, feedback is more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C049PLMV8TB)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope/issues)\n- [Mailing List](https://groups.google.com/g/pyroscope-team)\n## Docker Images\n- [grafana/pyroscope](https://hub.docker.com/r/grafana/pyroscope/tags)\n```bash\ndocker pull docker.io/grafana/pyroscope:1.19.2\n```",
+      "memory_unit_text": "In the grafana/pyroscope release v1.19.2, the project adds release notes for v1.19, reverts the parquet-go update to v0.26.4, updates .NET documentation, bumps google.golang.org/grpc, immutable, minimatch, svgo, undici, updates go-jose to v4.1.4 for security, updates parquet-go to v0.26.4, sets IMAGE_PUBLISH_LATEST=false for v1.19 patch releases, and updates google.golang.org/grpc to v1.79.3 for security."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_19_3",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.19.3",
+      "tag_name": "v1.19.3",
+      "title": "v1.19.3",
+      "time_hint": "2026-04-08",
+      "published_at": "2026-04-08T15:27:08Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.19.3",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.19.3\nTag: v1.19.3; draft: False; prerelease: False; published_at: 2026-04-08T15:27:08Z; created_at: 2026-04-08T15:14:14Z\nRelease notes:\n## Changelog\n* a87f0e070 chore: update Go toolchain to 1.25.9 (#5015) (#5017)\nAs always, feedback is more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C049PLMV8TB)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope/issues)\n- [Mailing List](https://groups.google.com/g/pyroscope-team)\n## Docker Images\n- [grafana/pyroscope](https://hub.docker.com/r/grafana/pyroscope/tags)\n```bash\ndocker pull docker.io/grafana/pyroscope:1.19.3\n```",
+      "memory_unit_text": "In the grafana/pyroscope release v1.19.3, the project updates the Go toolchain to 1.25.9."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_20_3",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.20.3",
+      "tag_name": "v1.20.3",
+      "title": "v1.20.3",
+      "time_hint": "2026-04-08",
+      "published_at": "2026-04-08T15:53:13Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.20.3",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.20.3\nTag: v1.20.3; draft: False; prerelease: False; published_at: 2026-04-08T15:53:13Z; created_at: 2026-04-08T15:36:36Z\nRelease notes:\n## Changelog\n* 22ad073a49cecd5609e6ed8489e9a38e38a555a7 chore: update Go toolchain to 1.25.9 (#5015) (#5016)\n* 1e3df8ef22bfc6e1edda0dae39b9d57cebe4fc70 docs: add v1.20.1 v1.20.2 release notes (#4999)\nAs always, feedback is more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C049PLMV8TB)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope/issues)\n- [Mailing List](https://groups.google.com/g/pyroscope-team)\n## Docker Images\n- [grafana/pyroscope](https://hub.docker.com/r/grafana/pyroscope/tags)\n```bash\ndocker pull docker.io/grafana/pyroscope:1.20.3\n```",
+      "memory_unit_text": "In the grafana/pyroscope release v1.20.3, the project updates the Go toolchain to 1.25.9 and adds release notes for v1.20.1 and v1.20.2."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_20_4",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.20.4",
+      "tag_name": "v1.20.4",
+      "title": "v1.20.4",
+      "time_hint": "2026-04-17",
+      "published_at": "2026-04-17T05:05:42Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.20.4",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.20.4\nTag: v1.20.4; draft: False; prerelease: False; published_at: 2026-04-17T05:05:42Z; created_at: 2026-04-17T04:51:03Z\nRelease notes:\n## Changelog\n* 2b49131fb821d9029514945bf13209c2917dede1 chore(deps): bump protobufjs from 7.5.4 to 7.5.5 in /ui (#5062) (#5064)\n* b8ee74b159ebe78fe9f3065e42ad0172e8f8d575 chore(deps): bump protocol-buffers-schema from 3.6.0 to 3.6.1 in /ui (#5059) (#5061)\n* edcc88f9d1de1be881b8a0a659568336f28bf072 docs: add v1.20.3 release notes (#5019) (#5021)\nAs always, feedback is more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C049PLMV8TB)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope/issues)\n- [Mailing List](https://groups.google.com/g/pyroscope-team)\n## Docker Images\n- [grafana/pyroscope](https://hub.docker.com/r/grafana/pyroscope/tags)\n```bash\ndocker pull docker.io/grafana/pyroscope:1.20.4\n```",
+      "memory_unit_text": "In the grafana/pyroscope release v1.20.4, the project bumps protobufjs from 7.5.4 to 7.5.5 in /ui, bumps protocol-buffers-schema from 3.6.0 to 3.6.1 in /ui, and adds v1.20.3 release notes."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_21_0",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.21.0",
+      "tag_name": "v1.21.0",
+      "title": "v1.21.0",
+      "time_hint": "2026-04-17",
+      "published_at": "2026-04-17T10:54:40Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.21.0",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.21.0\nTag: v1.21.0; draft: False; prerelease: False; published_at: 2026-04-17T10:54:40Z; created_at: 2026-04-17T10:30:15Z\nRelease notes:\n## Changelog\n* 49d94a53193c7de94872908ae048f9491a2cf102 Add per-request timeout for debug info upload handler (#5056)\n* 4a43a854e746d94ecd9da3e4d6809049caeccf3d Add release notes for v1.20 (#4996)\n* 3ec501ddead5ef9ddbf7d3c9387d19d804fc3a8e Cleanup dev/tools/v2 and references (#5040)\n* 950f9ee628d5a774f256ddacade93d41dbf3b01c chore(deps): bump axios (#5045)\n* 6193166e38690940ba8c5277f6240c63d6ed7d42 chore(deps): bump go.opentelemetry.io/otel to v1.43.0 across all modules (#5037)\n* 1ecd1708cb6cc929dd5d5f37208d3589295ea04f chore(deps): bump lodash from 4.17.23 to 4.18.1 in /ui (#4974)\n* ecd7045c4109020d39651811b2a122d1466bf34a chore(deps): bump protobufjs from 7.5.4 to 7.5.5 in /ui (#5062)\n* 804f590e8968b18408b2e7ab5886a84e7885b320 chore(deps): bump protocol-buffers-schema from 3.6.0 to 3.6.1 in /ui (#5059)\n* c4cff3a87c3cc8a75142ba7ff620059e79af62bb chore(deps): bump rack-session (#5003)\n* 9dc65a89b828a2465df912dbe8bd8599071dafeb chore(deps): bump rack-session in /examples/tracing/ruby (#5011)\n* 741073e36830fd67a826d5764ee2b6252b9c1ed2 chore(deps): update dependency vite to v8.0.5 [security] (#4994)\n* 80d8cbe651b069c63995743f81b0f9d565fe8c42 chore(deps): update module github.com/go-jose/go-jose/v4 to v4.1.4 [security] (#4984)\n* 56b2bf9882dd18d1ebff4d04aa2d59d0507af139 chore(renovate): raise prConcurrentLimit to 239 (#5063)\n* faac8703131b0209d5dd8ef0751715c0b946542b chore: bump Helm chart to v1.20.2 (#5013)\n* 846a339286a1cdd04620e81679e12370a7f31c17 chore: bump Helm chart to v1.20.3 (#5022)\n* aadd5159c87d4b503fa60e5b7b999a20911daef6 chore: log HTTP protocol version in per-request logs (#5014)\n* fa655d4162614d382c91e79120f72e3349b34dea chore: replace broken husky pre-commit hook with UI linter (#5000)\n* ef8a801e2d4fa13d1fd31a3bf5ef66330a710e55 chore: unblock bump for github.com/prometheus/prometheus (#5053)\n* 77b39b147fd3d0161502fda9a88367a249543c76 chore: update Go toolchain to 1.25.9 (#5015)\n* 55e4ca19e16034600d72d55de524d6a599fb14e0 ci: add test runs without -race -cover to the matrix (#5004)\n* f82444bc356c388e464ed606c2b8e3b4d302204e ci: split integration tests into a separate CI job (#5009)\n* 042738280404d18a86666244ac94b7b5385ddff3 docs(proto): clarify HeatmapSlot timestamp semantics (#4986)\n* 8dbabce8507ba0015e569540cb6bdf03caddaca1 docs(v2): fix migration guide prereq check and port-forward race (#5044)\n* ad88b7ef4f0be1f5c05170b51f7596b8ad8117a9 docs: add security patch check to release process (#5012)\n* c7fe25e6e843826f60d804da0a1e811442312890 docs: add v1.19.2 release notes (#5008)\n* 08cbe93a9e2ec24c096baa34a36541306c995b97 docs: add v1.19.3 release notes (#5018)\n* 865dfe334069a0074e24112d9e844f377aa64b78 docs: add v1.20.1 and v1.20.2 release notes (#5006)\n* 07966575fc608eab1c5eb8d5956e133fddf9cb18 docs: add v1.20.3 release notes (#5019)\n* 742a4a9b59b7770ac0f556080bc5969e47ceb2b0 docs: add v1.20.4 release notes (#5065)\n* ad352840a1638bf20832122bd2acb12aeacf756b docs: fix Rust SDK documentation and examples for v2.0.0 (#4972)\n* 5eb4b919ec16f72f52b5a57b4bc3ab325f803689 feat(debuginfo): rewrite upload API to work over HTTP/1.1 (#5046)\n* c626a69ba75531d360522b745399dd01d17691f3 feat(querier): add DOT format support to SelectMergeStacktraces Connect API (#5047)\n* 87ddf302e1b7bdaf9a696c8a94df3587914ee7ae feat(query-frontend): log user_agent on query log lines (#5042)\n* 9d24f59cc51e51be8f57183cc3e54fca1f0d7995 feat(v2): move default storage paths under ./data/v2/ (#4978)\n* be4dd48182ca2b01e4231d1aaedf9d9149d36909 fix pkg/test/integration.TestStatusCode (#5058)\n* 0b317bd71108746b303062d9db29e4e10e3166d2 fix(compactor): Indefinitely hanging within the blocks cleaner after receiving a SIGTERM (#4992)\n* e2e01c0daecb1192c13694e79dcd86ca6670c7fc fix(profilecli): preserve label name casing in table output (#4989)\n* e264a034848f8c912da631ae50d519556d9ebf88 fi...",
+      "memory_unit_text": "In the grafana/pyroscope release v1.21.0, the project adds a per-request timeout for debug info upload handler, adds release notes for v1.20, cleans up dev/tools/v2 and references, bumps axios, bumps go.opentelemetry.io/otel to v1.43.0 across all modules, bumps lodash from 4.17.23 to 4.18.1 in /ui, bumps protobufjs from 7.5.4 to 7.5.5 in /ui, bumps protocol-buffers-schema from 3.6.0 to 3.6.1 in /ui, bumps rack-session, bumps rack-session in /examples/tracing/ruby, updates vite to v8.0.5 for security, updates go-jose to v4.1.4 for security, raises prConcurrentLimit to 239 in renovate, bumps Helm chart to v1.20.2, bumps Helm chart to v1.20.3, logs HTTP protocol version in per-request logs, replaces broken husky pre-commit hook with UI linter, unblocks bump for github.com/prometheus/prometheus, updates Go toolchain to 1.25.9, adds test runs without -race -cover to the matrix, splits integration tests into a separate CI job, clarifies HeatmapSlot timestamp semantics in proto docs, fixes migration guide prereq check and port-forward race in v2 docs, adds security patch check to release process, adds v1.19.2 release notes, adds v1.19.3 release notes, adds v1.20.1 and v1.20.2 release notes, adds v1.20.3 release notes, adds v1.20.4 release notes, fixes Rust SDK documentation and examples for v2.0.0, rewrites debuginfo upload API to work over HTTP/1.1, adds DOT format support to SelectMergeStacktraces Connect API in querier, logs user_agent on query log lines in query-frontend, moves default storage paths under ./data/v2/ in v2, fixes pkg/test/integration.TestStatusCode, fixes compactor indefinitely hanging within the blocks cleaner after receiving a SIGTERM, and preserves label name casing in table output in profilecli."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v2_0_0",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.0.0",
+      "tag_name": "v2.0.0",
+      "title": "v2.0.0",
+      "time_hint": "2026-04-20",
+      "published_at": "2026-04-20T09:15:34Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v2.0.0",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v2.0.0\nTag: v2.0.0; draft: False; prerelease: False; published_at: 2026-04-20T09:15:34Z; created_at: 2026-04-20T08:27:30Z\nRelease notes:\n## Breaking changes\n* Go module path bumped to `github.com/grafana/pyroscope/v2`. Library consumers must update their imports ([#5073](https://github.com/grafana/pyroscope/pull/5073))\n* Default write path flipped from `ingester` to `segment-writer`. Set `-write-path=ingester` to preserve v1 behavior ([#5038](https://github.com/grafana/pyroscope/pull/5038))\n* Default storage backend flipped from empty to `filesystem` ([#5038](https://github.com/grafana/pyroscope/pull/5038))\n* New `-architecture.storage` flag (`v1` | `v1-v2-dual` | `v2`), default `v1-v2-dual` ([#5038](https://github.com/grafana/pyroscope/pull/5038))\n* Error at startup when `-architecture.storage` includes v2 and no object-storage backend is configured ([#5074](https://github.com/grafana/pyroscope/pull/5074))\n* Default filesystem paths moved under `./data/v2/` ([#5038](https://github.com/grafana/pyroscope/pull/5038))\n* Removed `PYROSCOPE_V2_EXPERIMENTAL` environment variable ([#5038](https://github.com/grafana/pyroscope/pull/5038))\n* Removed legacy positional `server` argument from the `pyroscope` binary ([#5038](https://github.com/grafana/pyroscope/pull/5038))\n* Label sanitization disabled by default; UTF-8 label names with dots are accepted as-is. Set\n`-validation.disable-label-sanitization=false` to restore previous behavior ([#5038](https://github.com/grafana/pyroscope/pull/5038))\n* Helm chart 2.0.0 replaces `all.enable-v1-write-path` / `all.enable-v1-read-path` with `architecture.storage`, removes `persistence.shared` and `migration.queryBackend`, and forwards `ingesterWeight` / `segmentWriterWeight` correctly ([#5076](https://github.com/grafana/pyroscope/pull/5076))\n## Enhancements\n* `profilecli`: add `debuginfo upload` subcommand ([#5080](https://github.com/grafana/pyroscope/pull/5080))\n## Fixes\n* Fix missed v1 import path in `pyroscope_test.go` after module bump to v2 ([#5077](https://github.com/grafana/pyroscope/pull/5077))\n* make: add `frontend/build` dependency to `reference-help` target ([#5071](https://github.com/grafana/pyroscope/pull/5071))\n## Documentation\n* Improve v1 → v2 migration docs: switch to `--reset-then-reuse-values`, target chart 2.0.0 ([#5079](https://github.com/grafana/pyroscope/pull/5079))\n* Add v1.21 release notes ([#5082](https://github.com/grafana/pyroscope/pull/5082))\n* Fix contributors grid layout in README ([#5078](https://github.com/grafana/pyroscope/pull/5078))\n## Changelog\n* d55b18e5775adc062962ee1848929ad30930ff02 Bump Go module path to github.com/grafana/pyroscope/v2 (#5073)\n* 171db75a366e5b056d9e9f14d6fbe93d19132450 Fix missed v1 import path in pyroscope_test.go after module bump to v2 (#5077)\n* 3a68604b9938687ab11d15d399dc26c560b5195b Pyroscope OSS v2.0 breaking changes (#5038)\n* d89fbf01e4b7f72e7284b22b9fe785b58cfe7aaf chore: Release helm chart for v1.21.0 (#5072)\n* 2cc2762d71dee47290dfb732c45f4d10b1dab711 docs(v2): improve v1->v2 migration docs (#5079)\n* f7f6cb3a20a997456f2f1cf907da94cd38781028 docs: add v1.21 release notes (#5082)\n* 5f41b5429b3deb8b139c83ea33b82af9c7ce9cf0 docs: fix contributors grid layout in README (#5078)\n* 150cb32be23345b0bf6d331af327c8ca0decbc56 feat(validation): error on startup when V2 storage layer has no backend (#5074)\n* b2127ab79d7b2d21fd98bebce8a84f48e2a62b36 helm: update chart for v2.0 breaking changes (#5076)\n* df732c6180f5be6ab8943d848a44f5d2fca533bd make: add frontend/build dependency to reference-help target (#5071)\n* 550a11929fe4c2890a067a9fec26115f0085d717 profilecli: add a debuginfo upload subcommand  (#5080)\nAs always, feedback is more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C049PLMV8TB)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope...",
+      "memory_unit_text": "In the grafana/pyroscope release v2.0.0, the project introduces breaking changes: the Go module path is bumped to github.com/grafana/pyroscope/v2, the default write path is flipped from ingester to segment-writer, the default storage backend is flipped from empty to filesystem, a new -architecture.storage flag is added with default v1-v2-dual, an error occurs at startup when -architecture.storage includes v2 and no object-storage backend is configured, default filesystem paths are moved under ./data/v2/, the PYROSCOPE_V2_EXPERIMENTAL environment variable is removed, the legacy positional server argument is removed, label sanitization is disabled by default with UTF-8 label names with dots accepted as-is, and the Helm chart 2.0.0 replaces all.enable-v1-write-path / all.enable-v1-read-path with architecture.storage, removes persistence.shared and migration.queryBackend, and forwards ingesterWeight / segmentWriterWeight correctly. Enhancements include adding a debuginfo upload subcommand to profilecli. Fixes include a missed v1 import path in pyroscope_test.go after module bump to v2 and adding a frontend/build dependency to the reference-help target. Documentation improvements cover v1 → v2 migration docs, adding v1.21 release notes, and fixing the contributors grid layout in README."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v2_0_1",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.0.1",
+      "tag_name": "v2.0.1",
+      "title": "v2.0.1",
+      "time_hint": "2026-04-20",
+      "published_at": "2026-04-20T11:02:12Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v2.0.1",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v2.0.1\nTag: v2.0.1; draft: False; prerelease: False; published_at: 2026-04-20T11:02:12Z; created_at: 2026-04-20T10:44:38Z\nRelease notes:\n## Fixes\n* **goreleaser**: stamp `github.com/grafana/pyroscope/v2/pkg/util/build` in build ldflags so `pyroscope -version` and the `pyroscope_build_info` metric report `Version`, `Branch`, `Revision`, and `BuildDate` correctly. Restores the v2.0.0 regression where those fields were empty ([#5084](https://github.com/grafana/pyroscope/pull/5084))\n## Documentation\n* Add v2.0 release notes page ([#5083](https://github.com/grafana/pyroscope/pull/5083))\n## Changelog\n* cd861ccc13e2266a0f68682bf0f384b3ca45e9fe docs: add v2.0 release notes (#5083) (#5085)\n* 025f2c7a7dcdf741330e92b9eb8390c230241fc8 fix(goreleaser): stamp v2 module path in build ldflags (#5084) (#5086)\nAs always, feedback is more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C049PLMV8TB)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope/issues)\n- [Mailing List](https://groups.google.com/g/pyroscope-team)\n## Docker Images\n- [grafana/pyroscope](https://hub.docker.com/r/grafana/pyroscope/tags)\n```bash\ndocker pull docker.io/grafana/pyroscope:2.0.1\n```",
+      "memory_unit_text": "In the grafana/pyroscope release v2.0.1, the project fixes goreleaser to stamp the v2 module path in build ldflags so that pyroscope -version and the pyroscope_build_info metric report Version, Branch, Revision, and BuildDate correctly, restoring the v2.0.0 regression where those fields were empty. Documentation adds the v2.0 release notes page."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v1_21_1",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.21.1",
+      "tag_name": "v1.21.1",
+      "title": "v1.21.1",
+      "time_hint": "2026-05-07",
+      "published_at": "2026-05-07T12:38:46Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v1.21.1",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v1.21.1\nTag: v1.21.1; draft: False; prerelease: False; published_at: 2026-05-07T12:38:46Z; created_at: 2026-05-07T12:10:35Z\nRelease notes:\n## Changelog\n* d6cb8c3db58edf6c0ea26daa1dd40d84f11a4ef0 Bump security deps for v1.21 (#5124)\n* e1db60e72cd7c290128fb1763b66c942baece407 fix: clone label values to prevent buffer reuse-after-free (#5116) (#5122)\nAs always, feedback is more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C049PLMV8TB)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope/issues)\n- [Mailing List](https://groups.google.com/g/pyroscope-team)\n## Docker Images\n- [grafana/pyroscope](https://hub.docker.com/r/grafana/pyroscope/tags)\n```bash\ndocker pull docker.io/grafana/pyroscope:1.21.1\n```",
+      "memory_unit_text": "In the grafana/pyroscope release v1.21.1, the project bumps security dependencies for v1.21 and fixes cloning label values to prevent buffer reuse-after-free."
+    },
+    {
+      "memory_node_id": "grafana__pyroscope__release__v2_0_2",
+      "repo": "grafana/pyroscope",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.0.2",
+      "tag_name": "v2.0.2",
+      "title": "v2.0.2",
+      "time_hint": "2026-05-07",
+      "published_at": "2026-05-07T12:59:45Z",
+      "source_url": "https://github.com/grafana/pyroscope/releases/tag/v2.0.2",
+      "raw_text": "Repository: grafana/pyroscope\nRelease: v2.0.2\nTag: v2.0.2; draft: False; prerelease: False; published_at: 2026-05-07T12:59:45Z; created_at: 2026-05-07T12:10:44Z\nRelease notes:\n## Changelog\n* d969f943947df3a22525418ac3f9f1ae86b5c13f Bump security deps for v2.0 (#5125)\n* f33eeccd1f0fb0f28a3c3d4337a09736914ad54d docs: add v2.0.1 release notes (#5087) (#5088)\n* 0b2595808fec77477867076b155766f4a0db0b1e docs: remove outdated v2 note (#5109) (#5110)\n* fd8c466229308899255f64a0d10e329c58f3c98a fix: clone label values to prevent buffer reuse-after-free (#5116) (#5121)\nAs always, feedback is more than welcome, feel free to open issues/discussions.\nYou can reach out to the team using:\n- [Slack](https://grafana.slack.com/archives/C049PLMV8TB)\n- [Github Discussions](https://github.com/grafana/pyroscope/discussions)\n- [Github Issues](https://github.com/grafana/pyroscope/issues)\n- [Mailing List](https://groups.google.com/g/pyroscope-team)\n## Docker Images\n- [grafana/pyroscope](https://hub.docker.com/r/grafana/pyroscope/tags)\n```bash\ndocker pull docker.io/grafana/pyroscope:2.0.2\n```",
+      "memory_unit_text": "In the grafana/pyroscope release v2.0.2, the project bumps security dependencies for v2.0, adds v2.0.1 release notes, removes an outdated v2 note, and fixes cloning label values to prevent buffer reuse-after-free."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the grafana/pyroscope releases, which release introduces OTLP HTTP/json and HTTP/protobuf ingestion?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v1.15.0"
+        },
+        {
+          "option_id": "B",
+          "text": "v1.16.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v1.17.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v1.18.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v1.16.0",
+      "source_chunk_ids": [
+        "grafana__pyroscope__release__v1_16_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "grafana__pyroscope__release__v1_16_0",
+          "answer_text": "Add OTLP HTTP/json and HTTP/protobuf ingestion"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the grafana/pyroscope releases, how does the source code integration change described in v1.18.0 differ from the change described in v1.19.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v1.18.0 adds Python support, while v1.19.0 adds Javascript and Typescript support."
+        },
+        {
+          "option_id": "B",
+          "text": "v1.18.0 adds Java support, while v1.19.0 adds Python support."
+        },
+        {
+          "option_id": "C",
+          "text": "v1.18.0 adds Javascript support, while v1.19.0 adds Python support."
+        },
+        {
+          "option_id": "D",
+          "text": "v1.18.0 adds Python support, while v1.19.0 adds Java support."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v1.18.0 adds Python support, while v1.19.0 adds Javascript and Typescript support.",
+      "source_chunk_ids": [
+        "grafana__pyroscope__release__v1_18_0",
+        "grafana__pyroscope__release__v1_19_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "grafana__pyroscope__release__v1_18_0",
+          "answer_text": "The source code integration now supports Python"
+        },
+        {
+          "memory_node_id": "grafana__pyroscope__release__v1_19_0",
+          "answer_text": "Add support for Javascript and Typescript source code integration"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the grafana/pyroscope release window, order the following release-content states from earliest to latest: (1) a release that updates the golang version to 1.24.9, (2) a release that updates the golang version to 1.24.11, (3) a release that updates the golang version to 1.24.12, (4) a release that updates the golang version to 1.24.13.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "grafana__pyroscope__release__v1_15_1",
+        "grafana__pyroscope__release__v1_15_3",
+        "grafana__pyroscope__release__v1_18_0",
+        "grafana__pyroscope__release__v1_17_3"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "grafana__pyroscope__release__v1_15_1",
+          "answer_text": "Update golang version to 1.24.9"
+        },
+        {
+          "memory_node_id": "grafana__pyroscope__release__v1_15_3",
+          "answer_text": "Update golang version to 1.24.11"
+        },
+        {
+          "memory_node_id": "grafana__pyroscope__release__v1_18_0",
+          "answer_text": "Update golang version to 1.24.12"
+        },
+        {
+          "memory_node_id": "grafana__pyroscope__release__v1_17_3",
+          "answer_text": "Update golang version to 1.24.13"
+        }
+      ]
+    }
+  ]
+}

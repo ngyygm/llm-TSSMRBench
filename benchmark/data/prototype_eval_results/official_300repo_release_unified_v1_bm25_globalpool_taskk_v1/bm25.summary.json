@@ -1,0 +1,161 @@
+{
+  "system_name": "BM25",
+  "summary": {
+    "overall": {
+      "question_count": 900,
+      "qa_accuracy": 0.5311111111111111,
+      "answerable_accuracy": 0.5311111111111111,
+      "gold_coverage_at_k": 0.6492592592592593,
+      "complete_support_rate": 0.49333333333333335,
+      "answerable_zero_gold_rate": 0.20777777777777778,
+      "answerable_zero_gold_count": 187,
+      "correct_without_complete_support_rate": 0.1192468619246862,
+      "correct_avg_matched_node_count": 3.6757322175732217,
+      "correct_avg_gold_coverage": 0.9473500697350069,
+      "distractor_to_gold_ratio": 1.0316666666666667,
+      "retrieval_latency_ms": 1110.630038579305,
+      "retrieved_context_token_count": 340.5711111111111
+    },
+    "breakdowns": {
+      "domain": {
+        "github_evolution": {
+          "question_count": 900,
+          "qa_accuracy": 0.5311111111111111,
+          "answerable_accuracy": 0.5311111111111111,
+          "gold_coverage_at_k": 0.6492592592592593,
+          "complete_support_rate": 0.49333333333333335,
+          "answerable_zero_gold_rate": 0.20777777777777778,
+          "answerable_zero_gold_count": 187,
+          "correct_without_complete_support_rate": 0.1192468619246862,
+          "correct_avg_matched_node_count": 3.6757322175732217,
+          "correct_avg_gold_coverage": 0.9473500697350069,
+          "distractor_to_gold_ratio": 1.0316666666666667,
+          "retrieval_latency_ms": 1110.630038579305,
+          "retrieved_context_token_count": 340.5711111111111
+        }
+      },
+      "split": {
+        "prototype": {
+          "question_count": 900,
+          "qa_accuracy": 0.5311111111111111,
+          "answerable_accuracy": 0.5311111111111111,
+          "gold_coverage_at_k": 0.6492592592592593,
+          "complete_support_rate": 0.49333333333333335,
+          "answerable_zero_gold_rate": 0.20777777777777778,
+          "answerable_zero_gold_count": 187,
+          "correct_without_complete_support_rate": 0.1192468619246862,
+          "correct_avg_matched_node_count": 3.6757322175732217,
+          "correct_avg_gold_coverage": 0.9473500697350069,
+          "distractor_to_gold_ratio": 1.0316666666666667,
+          "retrieval_latency_ms": 1110.630038579305,
+          "retrieved_context_token_count": 340.5711111111111
+        }
+      },
+      "task_type": {
+        "cross_version_comparison": {
+          "question_count": 300,
+          "qa_accuracy": 0.3933333333333333,
+          "answerable_accuracy": 0.3933333333333333,
+          "gold_coverage_at_k": 0.4483333333333333,
+          "complete_support_rate": 0.30333333333333334,
+          "answerable_zero_gold_rate": 0.4066666666666667,
+          "answerable_zero_gold_count": 122,
+          "correct_without_complete_support_rate": 0.2288135593220339,
+          "correct_avg_matched_node_count": 5.169491525423729,
+          "correct_avg_gold_coverage": 0.8813559322033898,
+          "distractor_to_gold_ratio": 1.9433333333333334,
+          "retrieval_latency_ms": 836.3866782188416,
+          "retrieved_context_token_count": 402.16
+        },
+        "single_state_lookup": {
+          "question_count": 300,
+          "qa_accuracy": 0.88,
+          "answerable_accuracy": 0.88,
+          "gold_coverage_at_k": 0.89,
+          "complete_support_rate": 0.89,
+          "answerable_zero_gold_rate": 0.11,
+          "answerable_zero_gold_count": 33,
+          "correct_without_complete_support_rate": 0.007575757575757576,
+          "correct_avg_matched_node_count": 2.340909090909091,
+          "correct_avg_gold_coverage": 0.9924242424242424,
+          "distractor_to_gold_ratio": 0.31,
+          "retrieval_latency_ms": 762.4298469225565,
+          "retrieved_context_token_count": 181.41333333333333
+        },
+        "temporal_version_ordering": {
+          "question_count": 300,
+          "qa_accuracy": 0.32,
+          "answerable_accuracy": 0.32,
+          "gold_coverage_at_k": 0.6094444444444445,
+          "complete_support_rate": 0.2866666666666667,
+          "answerable_zero_gold_rate": 0.10666666666666667,
+          "answerable_zero_gold_count": 32,
+          "correct_without_complete_support_rate": 0.2916666666666667,
+          "correct_avg_matched_node_count": 5.510416666666667,
+          "correct_avg_gold_coverage": 0.9045138888888888,
+          "distractor_to_gold_ratio": 0.8416666666666667,
+          "retrieval_latency_ms": 1733.0735905965169,
+          "retrieved_context_token_count": 438.14
+        }
+      },
+      "difficulty_level": {
+        "high": {
+          "question_count": 600,
+          "qa_accuracy": 0.3566666666666667,
+          "answerable_accuracy": 0.3566666666666667,
+          "gold_coverage_at_k": 0.5288888888888889,
+          "complete_support_rate": 0.295,
+          "answerable_zero_gold_rate": 0.25666666666666665,
+          "answerable_zero_gold_count": 154,
+          "correct_without_complete_support_rate": 0.2570093457943925,
+          "correct_avg_matched_node_count": 5.322429906542056,
+          "correct_avg_gold_coverage": 0.8917445482866044,
+          "distractor_to_gold_ratio": 1.3925,
+          "retrieval_latency_ms": 1284.7301344076793,
+          "retrieved_context_token_count": 420.15
+        },
+        "low": {
+          "question_count": 300,
+          "qa_accuracy": 0.88,
+          "answerable_accuracy": 0.88,
+          "gold_coverage_at_k": 0.89,
+          "complete_support_rate": 0.89,
+          "answerable_zero_gold_rate": 0.11,
+          "answerable_zero_gold_count": 33,
+          "correct_without_complete_support_rate": 0.007575757575757576,
+          "correct_avg_matched_node_count": 2.340909090909091,
+          "correct_avg_gold_coverage": 0.9924242424242424,
+          "distractor_to_gold_ratio": 0.31,
+          "retrieval_latency_ms": 762.4298469225565,
+          "retrieved_context_token_count": 181.41333333333333
+        }
+      },
+      "answer_format": {
+        "multiple_choice": {
+          "question_count": 900,
+          "qa_accuracy": 0.5311111111111111,
+          "answerable_accuracy": 0.5311111111111111,
+          "gold_coverage_at_k": 0.6492592592592593,
+          "complete_support_rate": 0.49333333333333335,
+          "answerable_zero_gold_rate": 0.20777777777777778,
+          "answerable_zero_gold_count": 187,
+          "correct_without_complete_support_rate": 0.1192468619246862,
+          "correct_avg_matched_node_count": 3.6757322175732217,
+          "correct_avg_gold_coverage": 0.9473500697350069,
+          "distractor_to_gold_ratio": 1.0316666666666667,
+          "retrieval_latency_ms": 1110.630038579305,
+          "retrieved_context_token_count": 340.5711111111111
+        }
+      }
+    },
+    "notes": {
+      "task_type": "recommended as the main task-structure breakdown when available because it directly reflects the benchmark's target question types.",
+      "difficulty_level": "retained as a default breakdown because low/high still provides a compact view of evidence complexity without requiring gold-node-count grouping in the main paper.",
+      "gold_node_count": "retained per question for optional appendix analysis because it indicates how many version-memory nodes are required to support an answer.",
+      "retrieval_failure_metric": "answerable_zero_gold_rate measures how often an answerable question retrieved no gold support at all; correct_without_complete_support_rate measures how often a correct answer was produced without fully retrieving the required gold evidence.",
+      "correct_answer_retrieval_metric": "correct_avg_matched_node_count and correct_avg_gold_coverage characterize how much chain evidence the retriever actually returned on questions that were answered correctly.",
+      "non_gold_pollution_metric": "distractor_to_gold_ratio is interpreted as the ratio of retrieved non-gold nodes to retrieved gold support, even when the dataset does not explicitly label adversarial nodes.",
+      "removed_metric": "support_precision is omitted from aggregate reports because it is largely redundant with distractor_to_gold_ratio; end_to_end_latency is omitted in favor of retrieved_context_token_count."
+    }
+  }
+}

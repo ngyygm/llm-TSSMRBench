@@ -1,0 +1,525 @@
+{
+  "prototype_id": "pbatard__rufus_release_window",
+  "domain": "github_release_evolution",
+  "repo": "pbatard/rufus",
+  "source_type": "release_note",
+  "window_title": "pbatard/rufus recent release evolution",
+  "window_summary": "This window tracks the recent pbatard/rufus release stream from v3.8 through v4.14, covering bug fixes, new features, and platform support changes.",
+  "chunks": [
+    {
+      "memory_node_id": "pbatard__rufus__release__v3_8",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.8",
+      "tag_name": "v3.8",
+      "title": "Rufus 3.8 [BUGFIX RELEASE]",
+      "time_hint": "2019-09-16",
+      "published_at": "2019-09-16T19:03:30Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v3.8",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 3.8 [BUGFIX RELEASE]\nTag: v3.8; draft: False; prerelease: False; published_at: 2019-09-16T19:03:30Z; created_at: 2019-09-16T18:37:09Z\nRelease notes:\n* Fix a regression where some ISOs (e.g. Debian) would produce a Syslinux error when booted in BIOS mode [#1375]\n* Fix a potential `0xC0030057` error when trying to create a persistent partitions on a non-FIXED drive (Windows 10 1703 or earlier) [#1374]",
+      "memory_unit_text": "In the pbatard/rufus release v3.8, the project fixes a regression where some ISOs (e.g. Debian) would produce a Syslinux error when booted in BIOS mode, and fixes a potential 0xC0030057 error when trying to create persistent partitions on a non-FIXED drive on Windows 10 1703 or earlier."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v3_9",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.9",
+      "tag_name": "v3.9",
+      "title": "Rufus 3.9",
+      "time_hint": "2020-02-29",
+      "published_at": "2020-02-29T12:08:09Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v3.9",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 3.9\nTag: v3.9; draft: False; prerelease: False; published_at: 2020-02-29T12:08:09Z; created_at: 2020-02-29T11:27:01Z\nRelease notes:\n* Add `exFAT` support when creating blank [UEFI:NTFS](https://github.com/pbatard/uefi-ntfs) drives __[EXPERIMENTAL]__\n* Fix `ext2`/`ext3` corruption for partitions larger than 4 GB [#1396]\n* Fix early boot files not being usable on compressed `NTFS` partitions [#1381]\n* Fix writing of compressed streams that don't end on sector boundary [#1422]\n* Fix percent not being displayed on slow format\n* Improve file preallocation and speed up ISO extraction (courtesy of __Mattiwatti__) [#1445]\n* Improve `ext2`/`ext3` formatting speed\n* Improve protective MBR message for GPT partitioned drives\n* Improve reporting of Syslinux/GRUB download errors\n* Improve reporting of partition types and of Windows' version\n* Report the usage of `UDF` symbolic links [#1446]\n* Update embedded Syslinux to 6.04-pre1",
+      "memory_unit_text": "In the pbatard/rufus release v3.9, the project adds experimental exFAT support when creating blank UEFI:NTFS drives, fixes ext2/ext3 corruption for partitions larger than 4 GB, fixes early boot files not being usable on compressed NTFS partitions, fixes writing of compressed streams that don't end on sector boundary, fixes percent not being displayed on slow format, improves file preallocation and speeds up ISO extraction, improves ext2/ext3 formatting speed, improves protective MBR message for GPT partitioned drives, improves reporting of Syslinux/GRUB download errors, improves reporting of partition types and of Windows' version, reports the usage of UDF symbolic links, and updates embedded Syslinux to 6.04-pre1."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v3_10",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.10",
+      "tag_name": "v3.10",
+      "title": "Rufus 3.10",
+      "time_hint": "2020-04-22",
+      "published_at": "2020-04-22T12:24:00Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v3.10",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 3.10\nTag: v3.10; draft: False; prerelease: False; published_at: 2020-04-22T12:24:00Z; created_at: 2020-04-22T11:38:18Z\nRelease notes:\n* Improve support for Ubuntu 20.04 [#1499]\n* Improve detection of FIXED drives with no mounted partitions\n* Improve `extfs` formatting (courtesy of __Marcos Mello__) [#1516]\n* Update UEFI:NTFS [file system drivers](https://github.com/pbatard/efifs) to v1.5\n* Fix progress not being updated when using the German localization\n* Fix primary GPT being overwritten when adding the protective MBR message [#1507]\n* Fix a regression with lousy security solutions that prevent the creation of an `autorun.inf` [#1496]\n* Fix an assert during FreeDOS drive creation when the Windows system locale is set to UTF-8 [#1468]\n* Fix invalid label errors when using a non-Western locale [#1506]",
+      "memory_unit_text": "In the pbatard/rufus release v3.10, the project improves support for Ubuntu 20.04, improves detection of FIXED drives with no mounted partitions, improves extfs formatting, updates UEFI:NTFS file system drivers to v1.5, fixes progress not being updated when using the German localization, fixes primary GPT being overwritten when adding the protective MBR message, fixes a regression with security solutions that prevent the creation of an autorun.inf, fixes an assert during FreeDOS drive creation when the Windows system locale is set to UTF-8, and fixes invalid label errors when using a non-Western locale."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v3_11",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.11",
+      "tag_name": "v3.11",
+      "title": "Rufus 3.11",
+      "time_hint": "2020-06-18",
+      "published_at": "2020-06-18T11:17:21Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v3.11",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 3.11\nTag: v3.11; draft: False; prerelease: False; published_at: 2020-06-18T11:17:21Z; created_at: 2020-06-18T10:43:33Z\nRelease notes:\n* Add [Rock Ridge deep directory](https://en.wikipedia.org/wiki/Rock_Ridge) support [#1526]\n* Add an option to write small ISOs to an [ESP](https://en.wikipedia.org/wiki/EFI_system_partition) ([GPT](https://en.wikipedia.org/wiki/GUID_Partition_Table) only)\n* Add a cheat mode (<kbd>Ctrl</kbd>-<kbd>SELECT</kbd>) to extract content from an additional zip archive on top of the ISO\n* Add a cheat mode (<kbd>Alt</kbd>-<kbd>G</kbd>) to disable Virtual Hard Disk listing\n* Add a cheat mode (<kbd>Alt</kbd>-<kbd>P</kbd>) to toggle a GPT [ESP](https://en.wikipedia.org/wiki/EFI_system_partition) to Basic Data (Windows 10 only)\n* Fix improper x86 32-bit NTFS driver being used for [UEFI:NTFS](https://github.com/pbatard/uefi-ntfs)\n* Improve [UEFI:NTFS](https://github.com/pbatard/uefi-ntfs) compatibility with older UEFI firmwares [#1213]\n* Improve startup time by running the ISO download feature check in the background\n* Remove Ubuntu's splash screen for persistent UEFI drives\n* Enable [ASLR](https://en.wikipedia.org/wiki/Address_space_layout_randomization) for the Rufus executable",
+      "memory_unit_text": "In the pbatard/rufus release v3.11, the project adds Rock Ridge deep directory support, adds an option to write small ISOs to an ESP (GPT only), adds a cheat mode (Ctrl-SELECT) to extract content from an additional zip archive on top of the ISO, adds a cheat mode (Alt-G) to disable Virtual Hard Disk listing, adds a cheat mode (Alt-P) to toggle a GPT ESP to Basic Data (Windows 10 only), fixes improper x86 32-bit NTFS driver being used for UEFI:NTFS, improves UEFI:NTFS compatibility with older UEFI firmwares, improves startup time by running the ISO download feature check in the background, removes Ubuntu's splash screen for persistent UEFI drives, and enables ASLR for the Rufus executable."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v3_12",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.12",
+      "tag_name": "v3.12",
+      "title": "Rufus 3.12",
+      "time_hint": "2020-10-14",
+      "published_at": "2020-10-14T15:36:31Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v3.12",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 3.12\nTag: v3.12; draft: False; prerelease: False; published_at: 2020-10-14T15:36:31Z; created_at: 2020-10-14T11:50:12Z\nRelease notes:\n* Add optional SHA-512 digest algorithm (<kbd>Alt</kbd>-<kbd>H</kbd>)\n* Add a cheat mode (<kbd>Alt</kbd>-<kbd>+</kbd>/<kbd>-</kbd>) to increase/decrease application priority\n* Enable direct provision of `install.wim`/`install.esd` for Windows To Go\n* Move Windows To Go [ESP](https://en.wikipedia.org/wiki/EFI_system_partition) to the beginning of the drive, on systems that allow it\n* Enforce a minimum volume size of 256 MB for `ext2`/`ext3` partitions [#1576]\n* Speed up the scanning of ISOs with lots of Rock Ridge deep directory entries [#1575]\n* Fix detection of GRUB version and update embedded GRUB for Ubuntu 20.10 support [#1573, #1616]\n* Fix user interface labels for accessibility [#1467]\n* Work around a Windows bug where the wrong drive letter may be returned",
+      "memory_unit_text": "In the pbatard/rufus release v3.12, the project adds optional SHA-512 digest algorithm (Alt-H), adds a cheat mode (Alt-+/-) to increase/decrease application priority, enables direct provision of install.wim/install.esd for Windows To Go, moves Windows To Go ESP to the beginning of the drive on systems that allow it, enforces a minimum volume size of 256 MB for ext2/ext3 partitions, speeds up the scanning of ISOs with lots of Rock Ridge deep directory entries, fixes detection of GRUB version and updates embedded GRUB for Ubuntu 20.10 support, fixes user interface labels for accessibility, and works around a Windows bug where the wrong drive letter may be returned."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v3_13",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.13",
+      "tag_name": "v3.13",
+      "title": "Rufus 3.13",
+      "time_hint": "2020-11-20",
+      "published_at": "2020-11-20T13:54:19Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v3.13",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 3.13\nTag: v3.13; draft: False; prerelease: False; published_at: 2020-11-20T13:54:19Z; created_at: 2020-11-20T13:25:51Z\nRelease notes:\n* Add a cheat mode (<kbd>Alt</kbd>-<kbd>M</kbd>) to accept disk images without a Boot Marker\n* Add marquee operation progress to the taskbar icon\n* Add zeroing/image writing progress to the log\n* Switch to using `0x55` and `0xAA` instead of `0x00` and `0xFF` for low pass badblock check\n* Switch to using fake/manufacturer units when computing the default label\n* Fix overnumerous write retries on error when writing a disk image\n* Work around Windows' abysmal handling of removable drives that contain an ESP [#1637]\n* Improve mounting/unmounting of volumes [#1640]\n* Update [UEFI:NTFS](https://github.com/pbatard/uefi-ntfs) [file system drivers](https://github.com/pbatard/efifs) to version 1.7\n* Other internal fixes and improvements (VDS, error reporting, etc.)",
+      "memory_unit_text": "In the pbatard/rufus release v3.13, the project adds a cheat mode (Alt-M) to accept disk images without a Boot Marker, adds marquee operation progress to the taskbar icon, adds zeroing/image writing progress to the log, switches to using 0x55 and 0xAA instead of 0x00 and 0xFF for low pass badblock check, switches to using fake/manufacturer units when computing the default label, fixes overnumerous write retries on error when writing a disk image, works around Windows' abysmal handling of removable drives that contain an ESP, improves mounting/unmounting of volumes, updates UEFI:NTFS file system drivers to version 1.7, and includes other internal fixes and improvements (VDS, error reporting, etc.)."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v3_14",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.14",
+      "tag_name": "v3.14",
+      "title": "Rufus 3.14",
+      "time_hint": "2021-04-30",
+      "published_at": "2021-04-30T15:30:48Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v3.14",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 3.14\nTag: v3.14; draft: False; prerelease: False; published_at: 2021-04-30T15:30:48Z; created_at: 2021-04-30T12:36:17Z\nRelease notes:\n* Improve DD write speed (uncompressed images only)\n* Improve checksum computation speed\n* Improve network connectivity detection\n* Only prompt for additional GRUB/Syslinux downloads when not writing in DD mode\n* Fix potential \"loss\" of disk after writing Ubuntu 20.10 in DD mode\n* Fix GRUB compatibility issue with Ubuntu 21.04\n* Fix Rufus MBR not being selected by default for Windows ISOs\n* Fix drag and drop being enabled during drive creation\n* Add more \"exceptions\" for forced DD image writing",
+      "memory_unit_text": "In the pbatard/rufus release v3.14, the project improves DD write speed (uncompressed images only), improves checksum computation speed, improves network connectivity detection, only prompts for additional GRUB/Syslinux downloads when not writing in DD mode, fixes potential loss of disk after writing Ubuntu 20.10 in DD mode, fixes GRUB compatibility issue with Ubuntu 21.04, fixes Rufus MBR not being selected by default for Windows ISOs, fixes drag and drop being enabled during drive creation, and adds more exceptions for forced DD image writing."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v3_15",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.15",
+      "tag_name": "v3.15",
+      "title": "Rufus 3.15",
+      "time_hint": "2021-08-03",
+      "published_at": "2021-08-03T11:07:37Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v3.15",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 3.15\nTag: v3.15; draft: False; prerelease: False; published_at: 2021-08-03T11:07:37Z; created_at: 2021-08-03T10:33:07Z\nRelease notes:\n- Update [GRUB](https://www.gnu.org/software/grub/) to version 2.06\n- Add support for `.vtsi` files ([Ventoy](https://github.com/ventoy/Ventoy) Sparse Image, courtesy of __@ventoy__)\n- Add workaround for openSUSE Live ISOs\n- Move default app directory to `%LocalAppData%\\Rufus\\` and always save a log there on exit\n- Fix AppStore version of Rufus not being able to store downloaded files [#1744]\n- Fix failure to open Syslinux/GRUB files when Rufus is located at the root of a drive [#1747, #1761]\n- Prevent the creation of `System Volume Information` on [ESP](https://en.wikipedia.org/wiki/EFI_system_partition)s written in DD mode\n- Prevent drive letter assignation to the [UEFI:NTFS](https://github.com/pbatard/uefi-ntfs) partition [pbatard/uefi-ntfs#25]\n- Prevent persistent partition creation errors due to size\n- Enhance safety checks before running the [Fido ISO download script](https://github.com/pbatard/Fido)\n- Other internal fixes and improvements [#1727, etc]",
+      "memory_unit_text": "In the pbatard/rufus release v3.15, the project updates GRUB to version 2.06, adds support for .vtsi files (Ventoy Sparse Image), adds workaround for openSUSE Live ISOs, moves default app directory to %LocalAppData%\\Rufus\\ and always saves a log there on exit, fixes AppStore version of Rufus not being able to store downloaded files, fixes failure to open Syslinux/GRUB files when Rufus is located at the root of a drive, prevents the creation of System Volume Information on ESPs written in DD mode, prevents drive letter assignation to the UEFI:NTFS partition, prevents persistent partition creation errors due to size, enhances safety checks before running the Fido ISO download script, and includes other internal fixes and improvements."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v3_16",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.16",
+      "tag_name": "v3.16",
+      "title": "Rufus 3.16",
+      "time_hint": "2021-10-13",
+      "published_at": "2021-10-13T11:57:36Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v3.16",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 3.16\nTag: v3.16; draft: False; prerelease: False; published_at: 2021-10-13T11:57:36Z; created_at: 2021-10-13T11:22:04Z\nRelease notes:\n* Fix ISO mode support for Red Hat 8.2+ and derivatives [#1777]\n* Fix BIOS boot support for Arch derivatives\n* Fix [removal of some boot entries for Ubuntu derivatives](https://ubuntuforums.org/showthread.php?t=2465291&page=10&p=14052629#post14052629)\n* Fix log not being saved on exit\n* Add Windows 11 _\"Extended\"_ installation support (Disables TPM/Secure Boot/RAM requirements)\n* Add [UEFI Shell](https://github.com/pbatard/UEFI-Shell/releases) ISO downloads (retroactively applied through [FIDO](https://github.com/pbatard/Fido))\n* Add support for Intel NUC card readers\n* Improve Windows 11 support [#1779]\n* Improve Windows version reporting\n* Speed up clearing of MBR/GPT",
+      "memory_unit_text": "In the pbatard/rufus release v3.16, the project fixes ISO mode support for Red Hat 8.2+ and derivatives, fixes BIOS boot support for Arch derivatives, fixes removal of some boot entries for Ubuntu derivatives, fixes log not being saved on exit, adds Windows 11 Extended installation support (disables TPM/Secure Boot/RAM requirements), adds UEFI Shell ISO downloads (retroactively applied through FIDO), adds support for Intel NUC card readers, improves Windows 11 support, improves Windows version reporting, and speeds up clearing of MBR/GPT."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v3_17",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.17",
+      "tag_name": "v3.17",
+      "title": "Rufus 3.17 [BUGFIX RELEASE]",
+      "time_hint": "2021-10-23",
+      "published_at": "2021-10-23T15:24:10Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v3.17",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 3.17 [BUGFIX RELEASE]\nTag: v3.17; draft: False; prerelease: False; published_at: 2021-10-23T15:24:10Z; created_at: 2021-10-23T14:40:06Z\nRelease notes:\n* Fix MBR not being properly cleared\n* Fix commandline hogger not being deleted on exit\n* Improve ReFS handling for platforms that support it\n* Update [UEFI:NTFS](https://github.com/pbatard/uefi-ntfs) to latest and remove Secure Boot notice since this version is Secure Boot signed\n* Update Grub4DOS to latest",
+      "memory_unit_text": "In the pbatard/rufus release v3.17, the project fixes MBR not being properly cleared, fixes commandline hogger not being deleted on exit, improves ReFS handling for platforms that support it, updates UEFI:NTFS to latest and removes Secure Boot notice since this version is Secure Boot signed, and updates Grub4DOS to latest."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v3_18",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.18",
+      "tag_name": "v3.18",
+      "title": "Rufus 3.18",
+      "time_hint": "2022-03-11",
+      "published_at": "2022-03-11T17:26:30Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v3.18",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 3.18\nTag: v3.18; draft: False; prerelease: False; published_at: 2022-03-11T17:26:30Z; created_at: 2022-03-11T16:51:59Z\nRelease notes:\n* Fix DLL sideloading vulnerabilities (#1838, #1877)\n* Fix ISO → ESP creation when running on Windows 11 (#1855)\n* Fix an issue when detecting network connectivity when the DHCP service is disabled (#1801)\n* Update [FreeDOS](https://www.freedos.org) to version 1.3\n* Add bypass of Windows 11 restrictions for in-place upgrades\n* Add Miracle Linux 8 to the list of Red Hat exceptions (#1866)\n* Other internal fixes and improvements",
+      "memory_unit_text": "In the pbatard/rufus release v3.18, the project fixes DLL sideloading vulnerabilities, fixes ISO to ESP creation when running on Windows 11, fixes an issue when detecting network connectivity when the DHCP service is disabled, updates FreeDOS to version 1.3, adds bypass of Windows 11 restrictions for in-place upgrades, adds Miracle Linux 8 to the list of Red Hat exceptions, and includes other internal fixes and improvements."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v3_19",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.19",
+      "tag_name": "v3.19",
+      "title": "Rufus 3.19",
+      "time_hint": "2022-07-01",
+      "published_at": "2022-07-01T22:22:44Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v3.19",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 3.19\nTag: v3.19; draft: False; prerelease: False; published_at: 2022-07-01T22:22:44Z; created_at: 2022-07-01T21:42:02Z\nRelease notes:\n* Add a new selection dialog for Windows 11 setup customization:\n- Secure Boot and TPM bypass have now been moved to this dialog\n- Also allows to bypass the mandatory requirement for a Microsoft account with Windows 11 22H2\n(NB: Network *MUST* be temporarily disabled or unplugged for the local account creation to be proposed)\n- Also add an option to skip all collection questions (Sets all answers to _\"Don't allow\"_)\n- Also add an option for setting internal drives offline with Windows To Go\n**Note:** These customization options are only proposed when using a Windows 11 image.\n* Add support for distros using a nonstandard GRUB 2.0 prefix directory (openSUSE Live, GeckoLinux)\n* Add the ability to ignore USBs (See [here](https://github.com/pbatard/rufus/blob/master/res/rufus.ini) for details)\n* Change drive listing to always list in increasing order of size\n* Update exceptions needed by Red Hat and derivatives for the 9.x releases\n* Update [UEFI:NTFS](https://github.com/pbatard/uefi-ntfs) drivers to latest\n* Reassign a letter for drives written in DD mode that don't have an [ESP](https://en.wikipedia.org/wiki/EFI_system_partition) (e.g. CoreELEC)\n* Fix Windows refusing to mount Linux MBR partitions on FIXED drives\n* Fix support for multiextent files when Joliet is in use",
+      "memory_unit_text": "In the pbatard/rufus release v3.19, the project adds a new selection dialog for Windows 11 setup customization, which moves Secure Boot and TPM bypass to this dialog, also allows bypassing the mandatory requirement for a Microsoft account with Windows 11 22H2 (network must be temporarily disabled or unplugged for local account creation to be proposed), also adds an option to skip all collection questions (sets all answers to \"Don't allow\"), also adds an option for setting internal drives offline with Windows To Go (these customization options are only proposed when using a Windows 11 image), adds support for distros using a nonstandard GRUB 2.0 prefix directory (openSUSE Live, GeckoLinux), adds the ability to ignore USBs, changes drive listing to always list in increasing order of size, updates exceptions needed by Red Hat and derivatives for the 9.x releases, updates UEFI:NTFS drivers to latest, reassigns a letter for drives written in DD mode that don't have an ESP (e.g. CoreELEC), fixes Windows refusing to mount Linux MBR partitions on FIXED drives, and fixes support for multiextent files when Joliet is in use."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v3_20",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.20",
+      "tag_name": "v3.20",
+      "title": "Rufus 3.20",
+      "time_hint": "2022-08-03",
+      "published_at": "2022-08-03T16:52:10Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v3.20",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 3.20\nTag: v3.20; draft: False; prerelease: False; published_at: 2022-08-03T16:52:10Z; created_at: 2022-08-03T15:49:31Z\nRelease notes:\n* Enable applicable Windows User Experience options for Windows 10\n* Remember last Windows User Experience selection between sessions\n* Add automatic local account creation and regional options duplication\n_(This is limited to creating an account with the same name as the current user and with an empty password that the user will be prompted to change after first reboot)_\n* Add a workaround for ISOs that have a `syslinux` symbolic link to `/isolinux/` (Knoppix)\n* Revert to offline insertion of registry keys for the TPM/SB/RAM bypass where possible (#1971)\n* Remove storage bypass, since this is a bogus bypass that doesn't do anything (#1990)\n* Improve BIOS compatibility when displaying the \"UEFI boot only\" alert message\n* Fix Windows User Experience dialog appearing twice for Windows To Go (#1968)\n* Fix Windows User Experience options not being applied for ARM64 (#1996)\n* Fix Microsoft Account bypass not being applied unless TPM/SB/RAM bypass is selected (#1981)\n* Fix overeager detection of GRUB2 bootloaders with nonstandard prefixes",
+      "memory_unit_text": "In the pbatard/rufus release v3.20, the project enables applicable Windows User Experience options for Windows 10, remembers last Windows User Experience selection between sessions, adds automatic local account creation and regional options duplication (limited to creating an account with the same name as the current user and with an empty password that the user will be prompted to change after first reboot), adds a workaround for ISOs that have a syslinux symbolic link to /isolinux/ (Knoppix), reverts to offline insertion of registry keys for the TPM/SB/RAM bypass where possible, removes storage bypass since this is a bogus bypass that doesn't do anything, improves BIOS compatibility when displaying the \"UEFI boot only\" alert message, fixes Windows User Experience dialog appearing twice for Windows To Go, fixes Windows User Experience options not being applied for ARM64, fixes Microsoft Account bypass not being applied unless TPM/SB/RAM bypass is selected, and fixes overeager detection of GRUB2 bootloaders with nonstandard prefixes."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v3_21",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.21",
+      "tag_name": "v3.21",
+      "title": "Rufus 3.21",
+      "time_hint": "2022-11-28",
+      "published_at": "2022-11-28T17:14:44Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v3.21",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 3.21\nTag: v3.21; draft: False; prerelease: False; published_at: 2022-11-28T17:14:44Z; created_at: 2022-11-28T16:41:27Z\nRelease notes:\n* Allow the provision of an arbitrary local account username in the _Windows User Experience_ dialog\n* Improve Windows version reporting from ISO/.wim\n* Update [UEFI:NTFS](https://github.com/pbatard/uefi-ntfs)' NTFS drivers to [v1.4](https://github.com/pbatard/ntfs-3g/releases/tag/1.4) and exFAT drivers to [v1.9](https://github.com/pbatard/efifs/releases/tag/v1.9)\n* Switch to remote download for nonstandard GRUB (Fedora 37, openSUSE Live, GeckoLinux)\n* Fix [UEFI:NTFS](https://github.com/pbatard/uefi-ntfs) partition not being set in MBR mode for ISOs with a >4GB file (UwUntu)\n* Fix GRUB support for Arch and derivatives, when a non FAT compliant label is used (#2086)\n* Fix incorrect detection of GRUB with nonstandard prefixes\n* Fix tab order not working on the _Windows User Experience_ dialog",
+      "memory_unit_text": "In the pbatard/rufus release v3.21, the project allows the provision of an arbitrary local account username in the Windows User Experience dialog, improves Windows version reporting from ISO/.wim, updates UEFI:NTFS' NTFS drivers to v1.4 and exFAT drivers to v1.9, switches to remote download for nonstandard GRUB (Fedora 37, openSUSE Live, GeckoLinux), fixes UEFI:NTFS partition not being set in MBR mode for ISOs with a >4GB file (UwUntu), fixes GRUB support for Arch and derivatives when a non FAT compliant label is used, fixes incorrect detection of GRUB with nonstandard prefixes, and fixes tab order not working on the Windows User Experience dialog."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v3_22",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.22",
+      "tag_name": "v3.22",
+      "title": "Rufus 3.22",
+      "time_hint": "2023-03-25",
+      "published_at": "2023-03-25T14:32:05Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v3.22",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 3.22\nTag: v3.22; draft: False; prerelease: False; published_at: 2023-03-25T14:32:05Z; created_at: 2023-03-25T13:44:19Z\nRelease notes:\n* Add SHA-1 and SHA-256 x86 acceleration on CPUs that support it (#2090, courtesy of **Jeffrey Walton**)\n* Add an option to disable BitLocker device encryption in the _Windows User Experience_ dialog (#2121)\n* Add a cheat mode (<kbd>Ctrl</kbd>-<kbd>P</kbd>) to preserve the log between sessions\n* Fix potential media creation errors by forcing the unmount of stale `.wim` images (#2199)\n* Fix potential access errors in ISO → ESP mode by forcing Large FAT32 formatting\n* Fix user-specified label not being preserved on error/cancel\n* Fix some large SSD devices being listed by default (#2164)\n* Fix processing of Rock Ridge CE fields\n* Work around the use of Rock Ridge symbolic links for Linux firmware packages (Debian)\n* Remove the ISO download feature on Windows 7\n* **Note: This is the last version of Rufus that can run on Windows 7**",
+      "memory_unit_text": "In the pbatard/rufus release v3.22, the project adds SHA-1 and SHA-256 x86 acceleration on CPUs that support it, adds an option to disable BitLocker device encryption in the Windows User Experience dialog, adds a cheat mode (Ctrl-P) to preserve the log between sessions, fixes potential media creation errors by forcing the unmount of stale .wim images, fixes potential access errors in ISO to ESP mode by forcing Large FAT32 formatting, fixes user-specified label not being preserved on error/cancel, fixes some large SSD devices being listed by default, fixes processing of Rock Ridge CE fields, works around the use of Rock Ridge symbolic links for Linux firmware packages (Debian), removes the ISO download feature on Windows 7, and notes that this is the last version of Rufus that can run on Windows 7."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v4_0",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0",
+      "tag_name": "v4.0",
+      "title": "Rufus 4.0",
+      "time_hint": "2023-04-25",
+      "published_at": "2023-04-25T23:41:05Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v4.0",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 4.0\nTag: v4.0; draft: False; prerelease: False; published_at: 2023-04-25T23:41:05Z; created_at: 2023-04-25T23:00:03Z\nRelease notes:\n* Fix persistent partition not working with Ubuntu 23.04 (#2231)\n* Fix out of range pointer error with Ubuntu 23.04 when booting in BIOS mode (#2233)\n* Fix boot freeze with Ubuntu Studio when Secure Boot is enabled (#2210)\n* Fix incorrect architecture detection when checking for updates\n* Fix a Windows Store application crash when processing GRUB bootloaders\n* Fix a Windows Store application crash when enumerating processes that contain a `%` sign\n* Fix a Windows Store application crash when using German localization\n* Note that the major version was bumped on account of:\n- New versions of Rufus requiring Windows 8 or later\n- New versions of Rufus defaulting to a 64-bit executable\n- Old versions of Rufus potentially not being able to update properly",
+      "memory_unit_text": "In the pbatard/rufus release v4.0, the project fixes persistent partition not working with Ubuntu 23.04, fixes out of range pointer error with Ubuntu 23.04 when booting in BIOS mode, fixes boot freeze with Ubuntu Studio when Secure Boot is enabled, fixes incorrect architecture detection when checking for updates, fixes a Windows Store application crash when processing GRUB bootloaders, fixes a Windows Store application crash when enumerating processes that contain a % sign, fixes a Windows Store application crash when using German localization, and notes that the major version was bumped because new versions of Rufus require Windows 8 or later, default to a 64-bit executable, and old versions potentially not being able to update properly."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v4_1",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1",
+      "tag_name": "v4.1",
+      "title": "Rufus 4.1",
+      "time_hint": "2023-05-31",
+      "published_at": "2023-05-31T17:56:49Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v4.1",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 4.1\nTag: v4.1; draft: False; prerelease: False; published_at: 2023-05-31T17:56:49Z; created_at: 2023-05-31T17:24:46Z\nRelease notes:\n* Add timeouts on enumeration queries that may stall on some systems\n* Restore MS-DOS drive creation through the download of binaries from Microsoft\n* Update the log button icon\n* Fix UEFI:NTFS incompatibility with Windows Dev Kit 2023 platform (pbatard/uefi-ntfs#37)\n* Fix more GRUB `out of range pointer` errors with Ubuntu/Fedora when booting in BIOS mode",
+      "memory_unit_text": "In the pbatard/rufus release v4.1, the project adds timeouts on enumeration queries that may stall on some systems, restores MS-DOS drive creation through the download of binaries from Microsoft, updates the log button icon, fixes UEFI:NTFS incompatibility with Windows Dev Kit 2023 platform, and fixes more GRUB out of range pointer errors with Ubuntu/Fedora when booting in BIOS mode."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v4_2",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.2",
+      "tag_name": "v4.2",
+      "title": "Rufus 4.2",
+      "time_hint": "2023-07-26",
+      "published_at": "2023-07-26T12:32:16Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v4.2",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 4.2\nTag: v4.2; draft: False; prerelease: False; published_at: 2023-07-26T12:32:16Z; created_at: 2023-07-26T11:54:49Z\nRelease notes:\n* Add detection and warning for UEFI revoked bootloaders (including ones revoked through `SkuSiPolicy.p7b`) (#2244)\n* Add ZIP64 support, to extract `.zip` images that are larger than 4 GB (#2264)\n* Add saving and restoring current drive to/from compressed VHDX image\n* Add saving and restoring current drive to/from compressed FFU ([Full Flash Update](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/deploy-windows-using-full-flash-update--ffu)) image **[EXPERIMENTAL]**\n* Fix a crash when trying to open Windows ISOs, with the MinGW compiled x86 32-bit version (#2272)\n* Fix an issue where ISOs that contain a boot image with an `EFI` label are not detected as bootable (#2288)\n* Increase the ISO → ESP limit for Debian 12 netinst images\n* Ensure that the main partition size is aligned to the cluster size",
+      "memory_unit_text": "In the pbatard/rufus release v4.2, the project adds detection and warning for UEFI revoked bootloaders (including ones revoked through SkuSiPolicy.p7b), adds ZIP64 support to extract .zip images that are larger than 4 GB, adds saving and restoring current drive to/from compressed VHDX image, adds saving and restoring current drive to/from compressed FFU (Full Flash Update) image [EXPERIMENTAL], fixes a crash when trying to open Windows ISOs with the MinGW compiled x86 32-bit version, fixes an issue where ISOs that contain a boot image with an EFI label are not detected as bootable, increases the ISO to ESP limit for Debian 12 netinst images, and ensures that the main partition size is aligned to the cluster size."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v4_3",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.3",
+      "tag_name": "v4.3",
+      "title": "Rufus 4.3",
+      "time_hint": "2023-10-19",
+      "published_at": "2023-10-19T10:16:15Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v4.3",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 4.3\nTag: v4.3; draft: False; prerelease: False; published_at: 2023-10-19T10:16:15Z; created_at: 2023-10-19T09:31:19Z\nRelease notes:\n* Add support for symbolic link preservation when NTFS is used\n* Add an exception to enforce NTFS for Linux Mint's LMDE\n* Add an expert feature to restrict a Windows installation to S Mode\n* Fix persistence support for Debian 12 in BIOS mode\n* Fix a regression that prevented the opening of `.vhd` images (#2309)\n* Update UEFI:NTFS to report a more explicit error on `bootmgr` security issues\n* Improve the search for conflicting processes, by running it in a background thread\n* Improve support for [Slax Linux](https://www.slax.org) (#2336)",
+      "memory_unit_text": "In the pbatard/rufus release v4.3, the project adds support for symbolic link preservation when NTFS is used, adds an exception to enforce NTFS for Linux Mint's LMDE, adds an expert feature to restrict a Windows installation to S Mode, fixes persistence support for Debian 12 in BIOS mode, fixes a regression that prevented the opening of .vhd images, updates UEFI:NTFS to report a more explicit error on bootmgr security issues, improves the search for conflicting processes by running it in a background thread, and improves support for Slax Linux."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v4_4",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.4",
+      "tag_name": "v4.4",
+      "title": "Rufus 4.4",
+      "time_hint": "2024-01-17",
+      "published_at": "2024-01-17T14:44:30Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v4.4",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 4.4\nTag: v4.4; draft: False; prerelease: False; published_at: 2024-01-17T14:44:30Z; created_at: 2024-01-17T14:11:50Z\nRelease notes:\n* Add workaround for distros that use broken symbolic links as their UEFI bootloaders (such as Mint 21.3)\n* Add support for GRUB 2.12\n* Fix a crash when saving [`.ffu`](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/deploy-windows-using-full-flash-update--ffu) images\n* Fix [UEFI:NTFS](https://github.com/pbatard/uefi-ntfs) partition not being added, in MBR mode, for some Linux ISOs\n* Prevent [Microsoft Dev Drives](https://learn.microsoft.com/en-us/windows/dev-drive/) from being listed [#2395]\n* Improve support for SDXC card readers\n* Improve Large FAT32 formatting by aligning start of data regions to 1 MB (courtesy of **Fred**) [#2387]",
+      "memory_unit_text": "In the pbatard/rufus release v4.4, the project adds workaround for distros that use broken symbolic links as their UEFI bootloaders (such as Mint 21.3), adds support for GRUB 2.12, fixes a crash when saving .ffu images, fixes UEFI:NTFS partition not being added in MBR mode for some Linux ISOs, prevents Microsoft Dev Drives from being listed, improves support for SDXC card readers, and improves Large FAT32 formatting by aligning start of data regions to 1 MB."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v4_5",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.5",
+      "tag_name": "v4.5",
+      "title": "Rufus 4.5",
+      "time_hint": "2024-05-22",
+      "published_at": "2024-05-22T11:38:23Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v4.5",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 4.5\nTag: v4.5; draft: False; prerelease: False; published_at: 2024-05-22T11:38:23Z; created_at: 2024-05-22T11:02:44Z\nRelease notes:\n* Add new advanced option to perform [runtime UEFI media validation](https://github.com/pbatard/uefi-md5sum) of suitable images (Windows, most Linux)\n* Move the _Use Rufus MBR_ advanced option to a cheat mode (<kbd>Alt</kbd>-<kbd>A</kbd>)\n* Fix truncation of VHDX images, as well as a benign error message when writing VHD/VHDX (#2468)\n* Fix support for Linux persistence in some configurations (Mint, Ubuntu 24.04)\n* Fix multiple potential vulnerabilities (with thanks to __Mansour Gashasbi__)\n* Update internal GRUB to version 2.12\n* Update UEFI:NTFS to latest (now always uses the ntfs-3g driver, rather than the [buggy AMI NTFS one](https://github.com/pbatard/AmiNtfsBug))\n* Increase buffer size when copying ISO files, in an attempt to minimize the [AMI NTFS UEFI driver bug](https://github.com/pbatard/AmiNtfsBug)\n* Improve partition creation handling\n* Don't display the WUE dialog when a conflicting `unattend.xml` already exists (#2451)",
+      "memory_unit_text": "In the pbatard/rufus release v4.5, the project adds new advanced option to perform runtime UEFI media validation of suitable images (Windows, most Linux), moves the Use Rufus MBR advanced option to a cheat mode (Alt-A), fixes truncation of VHDX images as well as a benign error message when writing VHD/VHDX, fixes support for Linux persistence in some configurations (Mint, Ubuntu 24.04), fixes multiple potential vulnerabilities, updates internal GRUB to version 2.12, updates UEFI:NTFS to latest (now always uses the ntfs-3g driver rather than the buggy AMI NTFS one), increases buffer size when copying ISO files in an attempt to minimize the AMI NTFS UEFI driver bug, improves partition creation handling, and doesn't display the WUE dialog when a conflicting unattend.xml already exists."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v4_6",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.6",
+      "tag_name": "v4.6",
+      "title": "Rufus 4.6",
+      "time_hint": "2024-10-21",
+      "published_at": "2024-10-21T15:21:37Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v4.6",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 4.6\nTag: v4.6; draft: False; prerelease: False; published_at: 2024-10-21T15:21:37Z; created_at: 2024-10-21T14:46:25Z\nRelease notes:\n* Add a new `setup.exe` wrapper to bypass Windows 11 24H2 in-place upgrade restrictions (#2568)\n* Add TimeZone to regional options replication (#2499)\n* Set local account passwords to not expire by default\n* Fix an error when trying to write compressed VHD images (#2468)\n* Fix an error when invoking Rufus from the PowerShell commandline (#2556)\n* Improve revoked UEFI bootloaders check to support [Linux SBAT](https://github.com/rhboot/shim/blob/main/SBAT.md), [Windows SVN](https://support.microsoft.com/en-us/topic/kb5025885-how-to-manage-the-windows-boot-manager-revocations-for-secure-boot-changes-associated-with-cve-2023-24932-41a975df-beb2-40c1-99a3-b3ff139f832d#bkmk_mitigation_guidelines) and cert DBX\n* Improve support for [ReactOS](https://reactos.org/) boot media (#2589)",
+      "memory_unit_text": "In the pbatard/rufus release v4.6, the project adds a new setup.exe wrapper to bypass Windows 11 24H2 in-place upgrade restrictions, adds TimeZone to regional options replication, sets local account passwords to not expire by default, fixes an error when trying to write compressed VHD images, fixes an error when invoking Rufus from the PowerShell commandline, improves revoked UEFI bootloaders check to support Linux SBAT, Windows SVN and cert DBX, and improves support for ReactOS boot media."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v4_7",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.7",
+      "tag_name": "v4.7",
+      "title": "Rufus 4.7",
+      "time_hint": "2025-04-09",
+      "published_at": "2025-04-09T11:00:59Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v4.7",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 4.7\nTag: v4.7; draft: False; prerelease: False; published_at: 2025-04-09T11:00:59Z; created_at: 2025-04-09T10:10:21Z\nRelease notes:\n* Add a mechanism to detect and download updated [DBXs](https://uefi.org/revocationlistfile) from the official UEFI repository\n* Add [ztsd compression](https://github.com/facebook/zstd) support for disk images\n* Add a new exclusion feature in the settings, to ignore disks with a specific GPT GUID\n* Improve detection for compressed VHD images that are too large to fit the target drive\n* Fix commandline hogger not being deleted when running Rufus from a different directory\n* Fix FAT filenames from embedded images being potentially truncated on image extraction\n* Fix a side-loading vulnerability [[CVE-2025-26624](https://github.com/pbatard/rufus/security/advisories/GHSA-p8p5-r296-g2jv)] with `cfgmgr32.dll` (with thanks to @EmperialX)\n* Fix UI memory leaks (courtesy of @ozone10)\n* Fall back to user/system default locale when getting error description (courtesy of @Wack0)\n* Don't run the commandline hogger on POSIX shells\n* Drop ARM 32-bit builds (Note that ARM 64-bit builds are **NOT** affected by this)\n* Update [FreeDOS](https://www.freedos.org/) and [Grub4DOS](https://github.com/chenall/grub4dos) to latest",
+      "memory_unit_text": "In the pbatard/rufus release v4.7, the project adds a mechanism to detect and download updated DBXs from the official UEFI repository, adds ztsd compression support for disk images, adds a new exclusion feature in the settings to ignore disks with a specific GPT GUID, improves detection for compressed VHD images that are too large to fit the target drive, fixes commandline hogger not being deleted when running Rufus from a different directory, fixes FAT filenames from embedded images being potentially truncated on image extraction, fixes a side-loading vulnerability (CVE-2025-26624) with cfgmgr32.dll, fixes UI memory leaks, falls back to user/system default locale when getting error description, doesn't run the commandline hogger on POSIX shells, drops ARM 32-bit builds (ARM 64-bit builds are NOT affected), and updates FreeDOS and Grub4DOS to latest."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v4_8",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.8",
+      "tag_name": "v4.8",
+      "title": "Rufus 4.8",
+      "time_hint": "2025-06-11",
+      "published_at": "2025-06-11T12:07:51Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v4.8",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 4.8\nTag: v4.8; draft: False; prerelease: False; published_at: 2025-06-11T12:07:51Z; created_at: 2025-06-11T11:34:08Z\nRelease notes:\n* Switch to [wimlib](https://wimlib.net) for all WIM image processing:\n- Greatly speeds up image analysis when opening Windows ISOs\n- Can speed up Windows To Go drive creation (But won't do miracles if you have a crap drive)\n- Might help with Parallels limitations on Mac (But Rufus on Parallels is still **unsupported**)\n- Enables the splitting of >4GB files with <kbd>Alt</kbd>-<kbd>E</kbd> (But still **WAY SLOWER** than using [UEFI:NTFS](https://github.com/pbatard/uefi-ntfs))\n* Switch to using Visual Studio binaries everywhere, due to MinGW DLL delay-loading limitations\n* Add more exceptions for Linux ISOs that restrict themselves to DD mode (Nobara, openSUSE, ...)\n* Improve reporting of UEFI bootloaders in the log, with info on the Secure Boot status\n* Fix an issue with size limitations when writing an uncompressed VHD back to the same drive\n* Fix a crash when opening the log with the 32-bit MinGW compiled version\n* Fix commandline parameters not being forwarded to original Windows <code>setup.exe</code>",
+      "memory_unit_text": "In the pbatard/rufus release v4.8, the project switches to wimlib for all WIM image processing, which greatly speeds up image analysis when opening Windows ISOs, can speed up Windows To Go drive creation, might help with Parallels limitations on Mac (but Rufus on Parallels is still unsupported), enables the splitting of >4GB files with Alt-E (but still way slower than using UEFI:NTFS), switches to using Visual Studio binaries everywhere due to MinGW DLL delay-loading limitations, adds more exceptions for Linux ISOs that restrict themselves to DD mode (Nobara, openSUSE, ...), improves reporting of UEFI bootloaders in the log with info on the Secure Boot status, fixes an issue with size limitations when writing an uncompressed VHD back to the same drive, fixes a crash when opening the log with the 32-bit MinGW compiled version, and fixes commandline parameters not being forwarded to original Windows setup.exe."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v4_9",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.9",
+      "tag_name": "v4.9",
+      "title": "Rufus 4.9 [BUGFIX RELEASE]",
+      "time_hint": "2025-06-15",
+      "published_at": "2025-06-15T20:52:12Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v4.9",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 4.9 [BUGFIX RELEASE]\nTag: v4.9; draft: False; prerelease: False; published_at: 2025-06-15T20:52:12Z; created_at: 2025-06-15T20:22:13Z\nRelease notes:\n* Fix downloads from https://rufus.ie no longer working due to recent GitHub server changes\n* Fix unofficial Windows ISOs, with single index WIMs, not presenting the WUE dialog\n**Note:** The GitHub issue mentioned above means that **NONE** of the existing versions of Rufus are able to automatically detect and update to the 4.9 release.\nYou **MUST** upgrade to Rufus 4.9 manually, even if you have check for updates enabled in Rufus... 😢\n### Also from Rufus 4.8:\n* Switch to [wimlib](https://wimlib.net) for all WIM image processing:\n- Greatly speeds up image analysis when opening Windows ISOs\n- Can speed up Windows To Go drive creation (But won't do miracles if you have a crap drive)\n- Might help with Parallels limitations on Mac (But Rufus on Parallels is still **unsupported**)\n- Enables the splitting of >4GB files with <kbd>Alt</kbd>-<kbd>E</kbd> (But still **WAY SLOWER** than using [UEFI:NTFS](https://github.com/pbatard/uefi-ntfs))\n* Switch to using Visual Studio binaries everywhere, due to MinGW DLL delay-loading limitations\n* Add more exceptions for Linux ISOs that restrict themselves to DD mode (Nobara, openSUSE, ...)\n* Improve reporting of UEFI bootloaders in the log, with info on the Secure Boot status\n* Fix an issue with size limitations when writing an uncompressed VHD back to the same drive\n* Fix a crash when opening the log with the 32-bit MinGW compiled version\n* Fix commandline parameters not being forwarded to original Windows <code>setup.exe</code>",
+      "memory_unit_text": "In the pbatard/rufus release v4.9, the project fixes downloads from https://rufus.ie no longer working due to recent GitHub server changes, fixes unofficial Windows ISOs with single index WIMs not presenting the WUE dialog, and notes that none of the existing versions of Rufus are able to automatically detect and update to the 4.9 release, so users must upgrade manually. Also from Rufus 4.8: switches to wimlib for all WIM image processing, switches to using Visual Studio binaries everywhere, adds more exceptions for Linux ISOs that restrict themselves to DD mode, improves reporting of UEFI bootloaders in the log with info on the Secure Boot status, fixes an issue with size limitations when writing an uncompressed VHD back to the same drive, fixes a crash when opening the log with the 32-bit MinGW compiled version, and fixes commandline parameters not being forwarded to original Windows setup.exe."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v4_10",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.10",
+      "tag_name": "v4.10",
+      "title": "Rufus 4.10",
+      "time_hint": "2025-09-24",
+      "published_at": "2025-09-24T11:56:51Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v4.10",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 4.10\nTag: v4.10; draft: False; prerelease: False; published_at: 2025-09-24T11:56:51Z; created_at: 2025-09-24T11:26:56Z\nRelease notes:\n* Add Dark Mode support (courtesy of @ozone10) (#1453)(#2510)(#2713)\n* Add support for creating `Windows CA 2023` compatible media (requires a Windows 11 25H2 ISO. For more on this, see [this Rufus FAQ entry](https://github.com/pbatard/rufus/wiki/FAQ#how-do-i-secure-a-pc-for-the-pca-2011-windows-uefi-certificate-revocation-and-install-windows-11-25h2-on-it)).\n* Add support for saving an existing drive to ISO (UDF only)\n* Improve error reporting when saving to VHD/VHDX (with thanks to @Kazkans) (#2779)(#2799)\n* Improve persistence support for Linux Mint (#2807)\n* Fix UEFI DBX updates being reported in some timezones, even when there are none (#2762)\n* Fix a situation where no file system can be selected in ISO mode (#2769)\n* Fix a crash when trying to process Windows ISOs with very long paths (#2777)(#2787)(#2793)",
+      "memory_unit_text": "In the pbatard/rufus release v4.10, the project adds Dark Mode support, adds support for creating Windows CA 2023 compatible media (requires a Windows 11 25H2 ISO), adds support for saving an existing drive to ISO (UDF only), improves error reporting when saving to VHD/VHDX, improves persistence support for Linux Mint, fixes UEFI DBX updates being reported in some timezones even when there are none, fixes a situation where no file system can be selected in ISO mode, and fixes a crash when trying to process Windows ISOs with very long paths."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v4_11",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.11",
+      "tag_name": "v4.11",
+      "title": "Rufus 4.11",
+      "time_hint": "2025-10-02",
+      "published_at": "2025-10-02T17:22:40Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v4.11",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 4.11\nTag: v4.11; draft: False; prerelease: False; published_at: 2025-10-02T17:22:40Z; created_at: 2025-10-02T16:53:22Z\nRelease notes:\n* Add a cheat mode (<kbd>Ctrl</kbd>-<kbd>Alt</kbd>-<kbd>D</kbd>) to toggle between Light and Dark mode (#2814)\n* Improve WUE option text relating to the CA 2023 option\n* Update Linux SBAT / Microsoft SVN Secure Boot revocation values to latest\n* Fix some GRUB/Syslinux download dialogs showing only the 'Close' button (#2813)\n* Fix an assert being triggered when using the WUE CA 2023 option on its own (#2815, #2818)\n* Fix an application crash on systems that have a failed dynamic disk (#2794)",
+      "memory_unit_text": "In the pbatard/rufus release v4.11, the project adds a cheat mode (Ctrl-Alt-D) to toggle between Light and Dark mode, improves WUE option text relating to the CA 2023 option, updates Linux SBAT / Microsoft SVN Secure Boot revocation values to latest, fixes some GRUB/Syslinux download dialogs showing only the 'Close' button, fixes an assert being triggered when using the WUE CA 2023 option on its own, and fixes an application crash on systems that have a failed dynamic disk."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v4_12",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.12",
+      "tag_name": "v4.12",
+      "title": "Rufus 4.12",
+      "time_hint": "2026-01-30",
+      "published_at": "2026-01-30T13:39:21Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v4.12",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 4.12\nTag: v4.12; draft: False; prerelease: False; published_at: 2026-01-30T13:39:21Z; created_at: 2026-01-30T13:08:10Z\nRelease notes:\n* Filter out the new Bitdefender VHDs\n* Filter disallowed characters in local account names\n* Improve Microsoft Dev Drive detection (#2873, courtesy of @MartinKuschnik)\n* Improve the pre-formatting partition cleanup code\n* Improve error reporting on ISO extraction issues\n* Improve detection of drives with long hardware IDs (typically SSDs) (#2894)\n* Improve conflicting process reporting\n* Improve support for Nutanix (#2884) and umbrelOS ISOs\n* Fix a TOCTOU vulnerability in Fido script execution ([CVE-2026-2398](https://github.com/pbatard/rufus/security/advisories/GHSA-hcx5-hrhj-xhq9), reported by @independent-arg)\n* Fix replacement vulnerabilities for `diskcopy.dll` and `oscdimg.exe`\n* Fix FFU image creation being erroneously invocated, when trying to save an ISO image (#2889)\n* Fix saving of ISO images to paths that contain spaces (#2829)\n* Update UEFI:NTFS and UEFI DBXs to latest",
+      "memory_unit_text": "In the pbatard/rufus release v4.12, the project filters out the new Bitdefender VHDs, filters disallowed characters in local account names, improves Microsoft Dev Drive detection, improves the pre-formatting partition cleanup code, improves error reporting on ISO extraction issues, improves detection of drives with long hardware IDs (typically SSDs), improves conflicting process reporting, improves support for Nutanix and umbrelOS ISOs, fixes a TOCTOU vulnerability in Fido script execution (CVE-2026-2398), fixes replacement vulnerabilities for diskcopy.dll and oscdimg.exe, fixes FFU image creation being erroneously invocated when trying to save an ISO image, fixes saving of ISO images to paths that contain spaces, and updates UEFI:NTFS and UEFI DBXs to latest."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v4_13",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.13",
+      "tag_name": "v4.13",
+      "title": "Rufus 4.13 [BUGFIX RELEASE]",
+      "time_hint": "2026-02-17",
+      "published_at": "2026-02-17T21:05:01Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v4.13",
+      "raw_text": "Repository: pbatard/rufus\nRelease:  Rufus 4.13 [BUGFIX RELEASE]\nTag: v4.13; draft: False; prerelease: False; published_at: 2026-02-17T21:05:01Z; created_at: 2026-02-17T20:05:19Z\nRelease notes:\n* Fix UEFI:NTFS not selecting the proper driver for ARM/ARM64\n* Update embedded GRUB to v2.14",
+      "memory_unit_text": "In the pbatard/rufus release v4.13, the project fixes UEFI:NTFS not selecting the proper driver for ARM/ARM64, and updates embedded GRUB to v2.14."
+    },
+    {
+      "memory_node_id": "pbatard__rufus__release__v4_14",
+      "repo": "pbatard/rufus",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.14",
+      "tag_name": "v4.14",
+      "title": "Rufus 4.14",
+      "time_hint": "2026-04-30",
+      "published_at": "2026-04-30T11:32:43Z",
+      "source_url": "https://github.com/pbatard/rufus/releases/tag/v4.14",
+      "raw_text": "Repository: pbatard/rufus\nRelease: Rufus 4.14\nTag: v4.14; draft: False; prerelease: False; published_at: 2026-04-30T11:32:43Z; created_at: 2026-04-30T10:44:05Z\nRelease notes:\n* _Windows User Experience_ improvements:\n- Add a _\"Quality of Life\"_ option, to disable Teams, Outlook, Copilot and other Microsoft forced nuisances\n- Add a _Silent_ installation option, that automatically, and **WITHOUT PROMPT**, installs Windows on the first detected disk on the target platform\n- Add an option to copy `SkuSiPolicy.p7b` to the ESP on installation (please refer to [KB5042562](https://support.microsoft.com/kb/5042562) for more info)\n- Add tooltips for all the dialog options\n* Add limited support for [El-Torito](http://wiki.osdev.org/El-Torito) UEFI image extraction (Mostly for Dell BIOS update ISOs)\n* Improve error report when the user tries to use an image that resides on the target drive\n* Improve the [UEFI:NTFS](github.com/pbatard/uefi-ntfs) partition label to make the install media more explicit during _Windows Setup_ disk partitioning\n* Improve support for Bazzite and other Fedora derivatives that don't follow EFI conventions\n* Improve reporting of GRUB and Isolinux MBRs\n* Improve detection and exclusion of the new Bitdefender hidden VHDs (#2953)\n* Fix potential errors during creation of _Windows To Go_ media, due to the use of new versions of `bcdboot` (#2940)\n* Fix errors with local accounts that start or end with whitespaces (#2950)",
+      "memory_unit_text": "In the pbatard/rufus release v4.14, the project adds Windows User Experience improvements: a \"Quality of Life\" option to disable Teams, Outlook, Copilot and other Microsoft forced nuisances, a Silent installation option that automatically and without prompt installs Windows on the first detected disk on the target platform, an option to copy SkuSiPolicy.p7b to the ESP on installation, and tooltips for all the dialog options; adds limited support for El-Torito UEFI image extraction (mostly for Dell BIOS update ISOs), improves error report when the user tries to use an image that resides on the target drive, improves the UEFI:NTFS partition label to make the install media more explicit during Windows Setup disk partitioning, improves support for Bazzite and other Fedora derivatives that don't follow EFI conventions, improves reporting of GRUB and Isolinux MBRs, improves detection and exclusion of the new Bitdefender hidden VHDs, fixes potential errors during creation of Windows To Go media due to the use of new versions of bcdboot, and fixes errors with local accounts that start or end with whitespaces."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the pbatard/rufus releases, which release adds a new selection dialog for Windows 11 setup customization that includes bypassing the mandatory Microsoft account requirement for Windows 11 22H2?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v3.19"
+        },
+        {
+          "option_id": "B",
+          "text": "v3.20"
+        },
+        {
+          "option_id": "C",
+          "text": "v3.21"
+        },
+        {
+          "option_id": "D",
+          "text": "v3.22"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v3.19",
+      "source_chunk_ids": [
+        "pbatard__rufus__release__v3_19"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "pbatard__rufus__release__v3_19",
+          "answer_text": "adds a new selection dialog for Windows 11 setup customization ... also allows bypassing the mandatory requirement for a Microsoft account with Windows 11 22H2"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the pbatard/rufus releases, how does the Windows 11 in-place upgrade bypass in v4.6 differ from the Windows 11 setup customization dialog introduced in v3.19?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v4.6 adds a setup.exe wrapper to bypass Windows 11 24H2 in-place upgrade restrictions, while v3.19 adds a dialog that includes bypassing the Microsoft account requirement for Windows 11 22H2."
+        },
+        {
+          "option_id": "B",
+          "text": "v4.6 removes the customization dialog entirely, while v3.19 only adds TPM bypass."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases add the same setup.exe wrapper for in-place upgrades."
+        },
+        {
+          "option_id": "D",
+          "text": "v4.6 adds a dialog for Microsoft account bypass, while v3.19 adds a setup.exe wrapper."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v4.6 adds a setup.exe wrapper to bypass Windows 11 24H2 in-place upgrade restrictions, while v3.19 adds a dialog that includes bypassing the Microsoft account requirement for Windows 11 22H2.",
+      "source_chunk_ids": [
+        "pbatard__rufus__release__v4_6",
+        "pbatard__rufus__release__v3_19"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "pbatard__rufus__release__v4_6",
+          "answer_text": "Add a new setup.exe wrapper to bypass Windows 11 24H2 in-place upgrade restrictions"
+        },
+        {
+          "memory_node_id": "pbatard__rufus__release__v3_19",
+          "answer_text": "adds a new selection dialog for Windows 11 setup customization ... also allows bypassing the mandatory requirement for a Microsoft account with Windows 11 22H2"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the pbatard/rufus release window, order the following release-content states from earliest to latest: (1) a release that adds a new selection dialog for Windows 11 setup customization including Microsoft account bypass, (2) a release that adds a setup.exe wrapper to bypass Windows 11 24H2 in-place upgrade restrictions, (3) a release that adds Dark Mode support and support for creating Windows CA 2023 compatible media.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3",
+      "source_chunk_ids": [
+        "pbatard__rufus__release__v3_19",
+        "pbatard__rufus__release__v4_6",
+        "pbatard__rufus__release__v4_10"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "pbatard__rufus__release__v3_19",
+          "answer_text": "adds a new selection dialog for Windows 11 setup customization ... also allows bypassing the mandatory requirement for a Microsoft account with Windows 11 22H2"
+        },
+        {
+          "memory_node_id": "pbatard__rufus__release__v4_6",
+          "answer_text": "Add a new setup.exe wrapper to bypass Windows 11 24H2 in-place upgrade restrictions"
+        },
+        {
+          "memory_node_id": "pbatard__rufus__release__v4_10",
+          "answer_text": "Add Dark Mode support ... Add support for creating Windows CA 2023 compatible media"
+        }
+      ]
+    }
+  ]
+}

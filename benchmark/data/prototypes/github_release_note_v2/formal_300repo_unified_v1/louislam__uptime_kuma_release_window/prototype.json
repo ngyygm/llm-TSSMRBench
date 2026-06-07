@@ -1,0 +1,525 @@
+{
+  "prototype_id": "louislam__uptime_kuma_release_window",
+  "domain": "github_release_evolution",
+  "repo": "louislam/uptime-kuma",
+  "source_type": "release_note",
+  "window_title": "louislam/uptime-kuma recent release evolution",
+  "window_summary": "This window tracks the recent release evolution of louislam/uptime-kuma, covering a series of 1.23.x patch releases, the major 2.0.0 release with its beta cycle, and subsequent 2.x feature and patch releases up to 2.4.0.",
+  "chunks": [
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__1_23_10",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.23.10",
+      "tag_name": "1.23.10",
+      "title": "1.23.10",
+      "time_hint": "2023-12-12",
+      "published_at": "2023-12-12T17:21:47Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/1.23.10",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 1.23.10\nTag: 1.23.10; draft: False; prerelease: False; published_at: 2023-12-12T17:21:47Z; created_at: 2023-12-12T16:55:58Z\nRelease notes:\n### ⬆️ Improvements\n- #4216 Due to a security patch in 1.23.9, some Uptime Kuma setups behind a reverse proxy required re-configuration.  It is no longer necessary now.\n- If you added `UPTIME_KUMA_WS_ORIGIN_CHECK=bypass` in the previous version, you should remove it to enhance protection, unless you are using some 3rd-party plugins/apps.\n### ⬆️ Security Fixes\n- #4213 https://github.com/louislam/uptime-kuma/security/advisories/GHSA-88j4-pcx8-q4q3 was not fully patched due to a careless mistake (Thanks @chakflying)",
+      "memory_unit_text": "In the louislam/uptime-kuma release 1.23.10, the project addresses a security patch from 1.23.9 that required reverse proxy reconfiguration, which is no longer necessary. Users who added UPTIME_KUMA_WS_ORIGIN_CHECK=bypass in the previous version are advised to remove it to enhance protection, unless using third-party plugins/apps. A security fix fully patches GHSA-88j4-pcx8-q4q3."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__1_23_11",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.23.11",
+      "tag_name": "1.23.11",
+      "title": "1.23.11",
+      "time_hint": "2023-12-30",
+      "published_at": "2023-12-30T22:00:38Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/1.23.11",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 1.23.11\nTag: 1.23.11; draft: False; prerelease: False; published_at: 2023-12-30T22:00:38Z; created_at: 2023-12-30T21:46:54Z\nRelease notes:\n### 💇‍♀️ Improvements\n- Update dependencies\n### 🐞 Bug Fixes\n- #4224 Fix: `origin` undefined on error handling (Thanks @chakflying)\n- #4231 [Non-docker] Fixed the Tailscale monitor issue which was broken in 1.23.8",
+      "memory_unit_text": "In the louislam/uptime-kuma release 1.23.11, dependencies are updated. A bug fix resolves an 'origin' undefined error in error handling, and a non-Docker fix addresses a Tailscale monitor issue that was broken since 1.23.8."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__1_23_12",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.23.12",
+      "tag_name": "1.23.12",
+      "title": "1.23.12",
+      "time_hint": "2024-04-18",
+      "published_at": "2024-04-18T17:27:21Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/1.23.12",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 1.23.12\nTag: 1.23.12; draft: False; prerelease: False; published_at: 2024-04-18T17:27:21Z; created_at: 2024-04-18T17:17:13Z\nRelease notes:\n> [!WARNING]\n> The i18n detection mehanism which matches your languages and our languages introduced in #4244 was too basic (depending on your setup you might or might not be affected)\n> See #4692 for further details.\n> [!WARNING]\n> If you use proxys, please use `1.23.11` instead, as the more reliable events from #4630 don't take this part into consideration.\n> If you want to prevent such breakages in the future, we would be very happy with increasing the test-coverage in general ^^\n### 💇‍♀️ Improvements\n- #4477 Improved helptext of how to send mail via the systems mail subsystem (Thanks @apio-sys)\n- #4630 Feat: Use keylog event to obtain TLS certificate for better reliability [1.23.X] (Thanks @chakflying)\n### 🐞 Bug Fixes\n- #4326 Fix `encodeBase64` for empty password or user in HTTP Basic Authentication (Thanks @Saibamen)\n- #4244 made sure that the i18n does use `navigator.languages` instead of  `navigator.language` for automatic language detection (Thanks @CommanderStorm)\n- #3598 fix(notification-dingding): throw error when failed (Thanks @AnnAngela)\n- #4417 Fix: Make sure browser is connected before returning (Thanks @chakflying)\n- #4425 Fix: [JSON-Query] Prevent parsing string-only JSON (Thanks @chakflying)\n- #4631 Fix: Add missing FK for monitor-tls-info table [1.23.X] (Thanks @chakflying)\n### ⬆️ Security Fixes\n- GHSA-23q2-5gf8-gjpp\n- #4653 fix: Update nodemailer to fix GHSA-9h6g-pr28-7cqp [1.23.X] (Thanks @Saibamen)\n- #4652 fix: Update `axios`, `@actions/github` and `dompurify`  [1.23.X] (Thanks @Saibamen)\n- Update all dependencies\n### 🦎 Translation Contributions\n### Others\n- #4633 Fix: Fix CI on Windows Runner [1.23.X] (Thanks @chakflying)\n- Other small changes, code refactoring and comment/doc updates in this repo:",
+      "memory_unit_text": "In the louislam/uptime-kuma release 1.23.12, the i18n detection mechanism introduced in #4244 is noted as too basic, potentially affecting some setups. Proxy users are advised to use 1.23.11 instead due to unreliable events from #4630. Improvements include enhanced mail subsystem help text and using keylog events for TLS certificate reliability. Bug fixes cover encodeBase64 for empty credentials, i18n language detection, Dingding notification error handling, browser connection checks, JSON-Query parsing, and a missing FK for monitor-tls-info. Security fixes address GHSA-23q2-5gf8-gjpp, nodemailer, axios, and other dependency updates."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__1_23_13",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.23.13",
+      "tag_name": "1.23.13",
+      "title": "1.23.13",
+      "time_hint": "2024-04-25",
+      "published_at": "2024-04-25T07:33:49Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/1.23.13",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 1.23.13\nTag: 1.23.13; draft: False; prerelease: False; published_at: 2024-04-25T07:33:49Z; created_at: 2024-04-25T07:27:28Z\nRelease notes:\n### 🐞 Bug Fixes\n- #4692 Fixed language setting issues: Localisation-matching algorithm missing some edgecase (Thanks @CommanderStorm)\n- #4700 Fixed TLS issues: Getting TLS certificate through proxy & prometheus update (Thanks @chakflying)",
+      "memory_unit_text": "In the louislam/uptime-kuma release 1.23.13, bug fixes resolve language setting issues with the localisation-matching algorithm missing edge cases, and TLS issues when getting certificates through a proxy and updating Prometheus."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__1_23_14",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.23.14",
+      "tag_name": "1.23.14",
+      "title": "1.23.14",
+      "time_hint": "2024-09-29",
+      "published_at": "2024-09-29T13:59:55Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/1.23.14",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 1.23.14\nTag: 1.23.14; draft: False; prerelease: False; published_at: 2024-09-29T13:59:55Z; created_at: 2024-09-29T13:46:19Z\nRelease notes:\n### 💇‍♀️ Improvements\n- #4723 Fix: Show API Keys disabled msg when disabled auth (Thanks @chakflying)\n- #4757 Fix: Status Page icon do not display correctly after uploaded (Thanks @jmolnar-comparative)\n### ⬆️ Security Fixes\n- #5132 Update dependencies",
+      "memory_unit_text": "In the louislam/uptime-kuma release 1.23.14, improvements include showing an API Keys disabled message when auth is disabled and fixing status page icon display after upload. Security fixes update dependencies."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__1_23_15",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.23.15",
+      "tag_name": "1.23.15",
+      "title": "1.23.15",
+      "time_hint": "2024-09-29",
+      "published_at": "2024-09-29T21:56:24Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/1.23.15",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 1.23.15\nTag: 1.23.15; draft: False; prerelease: False; published_at: 2024-09-29T21:56:24Z; created_at: 2024-09-29T21:44:32Z\nRelease notes:\nFollow up with the crash issue of `1.23.14`. A quick fix for someone who are using the Alpine image or Node.js <= 16.\n### 🐞 Bug Fixes\n- #5142 Pin `cheerio` to avoid the breaking change of undici",
+      "memory_unit_text": "In the louislam/uptime-kuma release 1.23.15, a quick fix addresses a crash issue from 1.23.14 for users on Alpine image or Node.js <= 16 by pinning cheerio to avoid a breaking change in undici."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__2_0_0_beta_0",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.0.0-beta.0",
+      "tag_name": "2.0.0-beta.0",
+      "title": "2.0.0-beta.0",
+      "time_hint": "2024-10-29",
+      "published_at": "2024-10-29T13:10:34Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/2.0.0-beta.0",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 2.0.0-beta.0\nTag: 2.0.0-beta.0; draft: False; prerelease: True; published_at: 2024-10-29T13:10:34Z; created_at: 2024-10-29T13:05:31Z\nRelease notes:\nWow! When I was preparing this changelog, I just couldn't believe that we have a lot of pull requests merged in this version. I'm so grateful for all the contributors who have helped to make Uptime Kuma better. Thank you so much for your time and effort. 🙏\n> [!WARNING]\n> It is a major version update. It contains some breaking changes. Please read the migration guide carefully if you want to upgrade from v1 to v2.\n> [!NOTE]\n> Pro tip#1:👉 Backup, backup and backup\nMigration Guide: https://github.com/louislam/uptime-kuma/wiki/Migration-From-v1-To-v2\n### 🆕 New Features\n- #2738 #4728 #5258 #5075 Support MariaDB\n- #2086 #4052 #5257 Rootless docker image (⚠️Not recommended for upgrading from v1 to v2)\n- #3441 Feat: Toast notification timeout settings (Thanks @chakflying)\n- #3499 Adding x-www-form-urlencoded (Thanks @anderskvist)\n- #3414 Feature: SMTP-templating of `customBody` and  `customHeader` via liquidjs (Thanks @CommanderStorm)\n- #2783 Add Grafana Oncall notification provider (Thanks @atmaniak)\n- #3941 Chore: Allow MS Edge for real-browser monitor (Thanks @chakflying)\n- #3814 Feat: Retries persistence (Thanks @chakflying)\n- #3904 Feature: remote browser support (Thanks @adamhancock)\n- #3857 Feat: Add json-query to MQTT monitor type (Thanks @chakflying)\n- #3912 Adding a way to reset the admin password via CLI without any user interaction (Thanks @C-Duv)\n- #4485 Add Heii On-Call Notification Provider (Thanks @hevans66)\n- #4481 Add gtxmessaging Notification Support (Thanks @cfichtmueller)\n- #4625 Cellsynt mobile services (Thanks @escw0rm)\n- #4605 New notification provider: CallMeBot API (Thanks @BothimTV)\n- #4323 Add support for Whapi notification provider (Thanks @edo2313)\n- #4219 SevenIO Notification Provider (Thanks @scolastico)\n- #4722 feat: keephq notification provider (Thanks @ezhil56x)\n- #4260 Make auto refresh interval customizable (Thanks @laupse)\n- #4445 Add support for custom mongodb commands (Thanks @SebastianLng)\n- #3620 Add Bitrix24 Webhook notification (Thanks @furkanipek)\n- #4769 New notification provider: SMS Partner API (Thanks @nicolasverlhiac)\n- #1991 feat: added HTTP method option for push monitor (Thanks @0tt0sson)\n- #4854 New notification provider: Threema Gateway (Thanks @booooza)\n- #4717 feat: Add SNMP Monitor (Thanks @mattv8)\n- #4971 Add OneSender Webhook notification (Thanks @hasanbasri1993)\n- #3525 Add option to pass cache bust param (Thanks @dansullivan86)\n- #5049 Add WPush Notification Provider (Thanks @anhao)\n- #5058 New Notification Provider SIGNL4 (Thanks @rons4)\n- #5048 [DNS Monitor] Conditions (Thanks @simshaun)\n- #5047 feat: implement very crude and bare-bones RSS feed (Thanks @MrYakobo)\n- #5145 Add serverchan3 support for  serverchan notification provider (Thanks @easychen)\n- #5167 [slack] allow the user to choose the message format to send (Thanks @DaanMeijer)\n- #5253 Add `next` and `next-slim` tags\n- #4880 #5251 Apprise update to 1.9.0\n- #5184 feat: new notification provider `46elks` (Thanks @erlaan)\n- #5205 feat: add notification provider `SendGrid` (Thanks @sctnightcore)\n- #5199 feat: add `RabbitMQ` monitor (Thanks @Suven-p)\n### Breaking Changes\n- #3892 Drop backup and restore feature\n- #3955 Drop install.sh and related files\n- #4178 Drop cacheable-lookup\n- #3747 Drop support for Node.js 14 and 16 (Thanks @harryzcy)\n- #2085 Drop support for Alpine based docker image\n- The `:duration` of these endpoints accepts `24`, `24h`, `30d`, `1y` only\n- <kuma-url>/api/badge/:monitorID/ping/:duration\n- <kuma-url>/api/badge/:monitorID/uptime/:duration\n### 💇‍♀️ Improvements\n- #2750 Uptime calculation improvement and 1-year uptime\n- #3676 UI/UX: Added no tags found message to tags filter when empty (Thanks @BrandonDR)\n- #3735 #3739 Push Examples\n- #2759 Use API v2 for Bark notification (Thanks @harryzcy)\n- #3515 Feat...",
+      "memory_unit_text": "In the louislam/uptime-kuma release 2.0.0-beta.0, a major version update introduces breaking changes and requires reading the migration guide. New features include MariaDB support, rootless Docker image, toast notification timeout settings, x-www-form-urlencoded support, SMTP templating via liquidjs, Grafana Oncall notification provider, MS Edge for real-browser monitor, retries persistence, remote browser support, json-query for MQTT monitor, CLI admin password reset, and numerous new notification providers (Heii On-Call, gtxmessaging, Cellsynt, CallMeBot, Whapi, SevenIO, keephq, Bitrix24, SMS Partner, Threema Gateway, SNMP Monitor, OneSender, cache bust param, WPush, SIGNL4, DNS Monitor conditions, RSS feed, serverchan3, Slack message format, 46elks, SendGrid, RabbitMQ monitor). Breaking changes drop backup/restore, install.sh, cacheable-lookup, Node.js 14/16 support, and Alpine-based Docker image. Improvements include uptime calculation, UI/UX enhancements, push examples, Bark API v2, and more."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__1_23_16",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.23.16",
+      "tag_name": "1.23.16",
+      "title": "1.23.16",
+      "time_hint": "2024-12-20",
+      "published_at": "2024-12-20T07:33:34Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/1.23.16",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 1.23.16\nTag: 1.23.16; draft: False; prerelease: False; published_at: 2024-12-20T07:33:34Z; created_at: 2024-12-20T07:15:52Z\nRelease notes:\n### ⬆️ Security Fixes\n- #5455 Update dependencies\n- GHSA-2qgm-m29m-cj2h [CVE-2024-56331] Local File Inclusion (LFI) via Improper URL Handling in `Real-Browser` monitor (Thanks @griisemine)",
+      "memory_unit_text": "In the louislam/uptime-kuma release 1.23.16, security fixes update dependencies and address CVE-2024-56331, a Local File Inclusion vulnerability via improper URL handling in the Real-Browser monitor."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__2_0_0_beta_1",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.0.0-beta.1",
+      "tag_name": "2.0.0-beta.1",
+      "title": "2.0.0-beta.1",
+      "time_hint": "2024-12-20",
+      "published_at": "2024-12-20T08:56:43Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/2.0.0-beta.1",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 2.0.0-beta.1\nTag: 2.0.0-beta.1; draft: False; prerelease: True; published_at: 2024-12-20T08:56:43Z; created_at: 2024-12-20T08:42:59Z\nRelease notes:\n> [!IMPORTANT]\n> Please also read all previous changelogs if you are upgrading from v1.\n### 🆕 New Features\n- #5311 Docker images are now also available on ghcr.io\n### 🐞 Bug Fixes\n- #5283 Fix: Embedded MariaDB startup issue\n- #5298 fix(tags): Fix the tag deletion (Thanks @Ionys320)\n- #5295 fix not setting a default for json monitor operations (Thanks @CommanderStorm)\n- #5312 only allow for valid urls in slack button (Thanks @DaanMeijer)\n- #5318 fix #5314 Email Address Friendly Name Error (Thanks @ABHIGYAN-MOHANTA)\n- #5333 fix(notification): #5323 fix EditMonitor.vue useToast error (Thanks @Dorence)\n- #5340 fix(status page): Make sure the group deletion is correctly handled when `groupIDList` is empty (Thanks @Ionys320)\n- #5352 Fix the timeout value (Thanks @Ionys320)\n- #5239 fix: slug input (Thanks @Zoobdude)\n- #5385 Fix the save bar of the maintenance menu (Thanks @cyril59310)\n- #5425 Fix: [MariaDB] Unable to clean up heartbeat data (Thanks @homelab-alpha)\n- #5354 feat(monitor condition): Remove the empty default condition creation (Thanks @Ionys320)\n### ⬆️ Security Fixes\n- #5458 Update dependencies\n- GHSA-2qgm-m29m-cj2h [CVE-2024-56331] Local File Inclusion (LFI) via Improper URL Handling in `Real-Browser` monitor (Thanks @griisemine)\n### 🦎 Translation Contributions\n- #5282 Translations Update from Weblate (Thanks @Aldairg97 @DJEDIVER @Dominik727 @MrEddX @Saibamen @aindriu80 @amaurygomes @asma019 @black23 @cyril59310 @fajnyCreeper @imyller @ivanbratovic @jgtorcal @joaorocha-ceiia @moemoeq @stanol @takumi0213 @vipnetant @youssefbrr @natgho)\n### Others\n- Other small changes, code refactoring and comment/doc updates in this repo:\n#5457 #5457 #5459",
+      "memory_unit_text": "In the louislam/uptime-kuma release 2.0.0-beta.1, new features include Docker images on ghcr.io. Bug fixes address embedded MariaDB startup, tag deletion, JSON monitor default operations, Slack button URL validation, email address friendly name error, toast error in EditMonitor, status page group deletion, timeout value, slug input, maintenance save bar, MariaDB heartbeat cleanup, and empty default condition creation. Security fixes update dependencies and patch CVE-2024-56331. Translation contributions are updated."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__2_0_0_beta_2",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.0.0-beta.2",
+      "tag_name": "2.0.0-beta.2",
+      "title": "2.0.0-beta.2",
+      "time_hint": "2025-03-28",
+      "published_at": "2025-03-28T15:35:04Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/2.0.0-beta.2",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 2.0.0-beta.2\nTag: 2.0.0-beta.2; draft: False; prerelease: True; published_at: 2025-03-28T15:35:04Z; created_at: 2025-03-28T15:25:28Z\nRelease notes:\n> [!IMPORTANT]\n> Please also read all previous changelogs if you are upgrading from v1.\n### 🆕 New Features\n- #5686 feat: Support YZJ notification provider (Thanks @innerpeacez)\n- #5647 Add WhatsApp (WAHA) notification provider (Thanks @devlikepro)\n- #5716 feat: add notification provider `PushPlus` (Thanks @sysfox)\n### 💇‍♀️ Improvements\n- #5495 chore(deps): update nostr notification provider (Thanks @zappityzap)\n- #5548 chore(deps): upgrade http/https/socks proxy agents  (Thanks @TheBoroer)\n- #5659 Update TLS expiration warning (Thanks @frednntelia)\n- #5637 feat: rework notification templating and add support for telegram (Thanks @skgsergio)\n- #5668 Add Telegram custom bot api server support (Thanks @RaminMT)\n- #5714 Update PWA icons to have transparency (Thanks @GyozaGuy)\n### 🐞 Bug Fixes\n- #5463 Fix monitor tags deletion (Thanks @Ionys320)\n- #5490 Fix push examples cannot be loaded (Docker only)\n- #5476 fix: add notification-fallback for better google chat popups (Thanks @elliotmatson)\n- #5573 fix: make sure that stripping backslashes for notification urls cannot cause catastophic backtracking (ReDOS) (Thanks @ShiyuBanzhou)\n- #5724 Fix #5721: Change proxy port column type to integer to support larger port numbers\n### ⬆️ Security Fixes\n- #5664 #5715 #5731 Update dependencies\n- #5563 GHSA-hx7h-9vf7-5xhg Fix: Regular Expression in pushdeeer and whapi file Leads to ReDoS Vulnerability Due to Catastrophic Backtracking (Thanks @ShiyuBanzhou)\n### 🦎 Translation Contributions\n- #5474 #5669 Translations Update from Weblate (Thanks @Aluisio @AnnAngela @ArianAr @Buchtic @Celer21 @DJEDIVER @Dominik727 @Dumach @IMIEEET @Jozeeeds @KEINOS @Kisem @LordWiseRus @MrEddX @R-HNF @RainoutOvO @RaminMT @ShadowGaming100 @TheSkout001 @TitasPi @aaf-30 @binaryYuki @bioslet @cristianbadea @csjoh @cyril59310 @dongsu8142 @eliyas5044 @erkenbilgin @fpindado @gautamrabinraj @gil-obradors @hamx01 @ivanbratovic @izzetemredemir @kiznick @mantak111 @marco-doerig @melroy89 @nikito7 @nikolay-mansas @nkgiovannivl @picazenave @sakvarelidze @spectre011-code @stanol @steno-baz @svalo @takumi0213 @tiseppw @tomee03 @utolosa002 @youssefbrr)\n- #5732 Add Lithuanian language code to dropdown (Thanks @mantak111)\n### Others\n- Other small changes, code refactoring and comment/doc updates in this repo: #5465 #5593 #5604 #5587 #5645 #5644 (Thanks @homelab-alpha @Zaid-maker @melroy89)",
+      "memory_unit_text": "In the louislam/uptime-kuma release 2.0.0-beta.2, new features add YZJ, WhatsApp (WAHA), and PushPlus notification providers. Improvements update nostr notification, proxy agents, TLS expiration warning, notification templating with Telegram support, Telegram custom bot API server, and PWA icon transparency. Bug fixes address monitor tags deletion, push examples loading, Google Chat notification fallback, ReDoS vulnerability in notification URL backslash stripping, and proxy port column type. Security fixes update dependencies and fix ReDoS in pushdeer and whapi. Translation contributions and other small changes are included."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__2_0_0_beta_3",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.0.0-beta.3",
+      "tag_name": "2.0.0-beta.3",
+      "title": "2.0.0-beta.3",
+      "time_hint": "2025-06-04",
+      "published_at": "2025-06-04T03:46:40Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/2.0.0-beta.3",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 2.0.0-beta.3\nTag: 2.0.0-beta.3; draft: False; prerelease: True; published_at: 2025-06-04T03:46:40Z; created_at: 2025-06-04T03:31:03Z\nRelease notes:\n> [!IMPORTANT]\n> Please also read all previous changelogs if you are upgrading from v1.\n### 🆕 New Features\n- #5782 feat: Support for country flags emojis (Thanks @alanescarcha)\n- #5800 feat: Support SMSPlanet notification provider (Thanks @dpierwola)\n- #5781 Added Pumble Notification (Thanks @cs-jako)\n- #5546 Add OneChat notification provider (Thanks @xNewz)\n- #5635 Allow HTML for custom email bodies (Thanks @youpie)\n- #5813 Add SpugPush notification provider (Thanks @vapao)\n- #5832 feat: add notification provider Notifery (Thanks @martinhjartmyr)\n- #5489 added SMTP monitor (Thanks @koehn)\n### ⬆️ Improvements\n- #5588 Enhanced ping monitor with advanced options (count, timeout, numeric) (Thanks @filippolauria)\n- #5241 feat: Extend the length of status bar and feed sufficient data (Thanks @R-HNF)\n- #5426 Pushover add UP/DOWN status sounds (Thanks @sebastian-mora)\n- #5756 Update SMSEagle support adding APIv2 and calls integration (Thanks @AxeKam333)\n- #5816 Update SpugPush notification payload (Thanks @vapao)\n- #5817 Add disable url option in notification Discord (Thanks @cyril59310)\n- #5795 feat: Set default friendly name using hostname or the URL host (Thanks @happy-game)\n- #5435 Add a public URL field for monitors and uses it on the status page (Thanks @Ionys320)\n- #5859 Flashduty IntegrationKey support Endpoint URL (Thanks @guguji5)\n### 🐛 Bug Fixes\n- #5729 Update url for Matrix Login to match Matrix Spec v1.13 (Thanks @MTRNord)\n- #5768 fix: flat txt records before conditions check (Thanks @lbriceno-tz)\n- #5165 fix: remove modal when navigating back (Thanks @mohit-nagaraj)\n- #5760 fix: Mattermost notification provider not sending service name (Thanks @II-EMC)\n- #5771 Fix #5745: Some labels without value still show a 'null' value\n- #5774 fix(dashboard): prevent y-overlapping of tags (Thanks @psycho0verload)\n- #5788 fix: Check password strength when resetting the password in CLI (Thanks @happy-game)\n- #5769 fix: Add name to preparePreloadData call in sendNotification as a better fix for #5760 (Thanks @II-EMC)\n- #5824 fixed: #5564 slack notifications no preview available (Thanks @xNewz)\n- #5843 fix(sql): use UTC_TIMESTAMP instead of NOW for consistent time calc betwee mysql and sqlite (Thanks @etnad17)\n- #5842 Fix monitor reference in push notification logic (Thanks @rainbend)\n- #5847 Fix: [Push Monitor] Send notifications during maintenance period\n### 🦎 Translation Contributions\n- #5738 Translations Update from Weblate (Thanks @101br03k @Aluisio @AnnAngela @CommanderStorm @Dumach @Enes3078 @JonneSaloranta @Jumala9163 @MrEddX @Saibamen @Zaid-maker @asteriskyg @authorless @cyril59310 @dongsu8142 @flashbackpa @jc-discdev @marcispauls @marco-doerig @ramondsq @stanol @tepung @tiramisuflavor)\n### ⬆️ Security Fixes\n- #5763 #5765 #5876 #5851 Update dependencies\n- #5875 GHSA-5px6-fx2w-459r Unauthenticated file read of files that begin with `index.` (Thanks @ptrstr)\n### Others\n- Other small changes, code refactoring and comment/doc updates in this repo:\n- #5733 #5728 #5749 #5752 #4395 #5869 (Thanks @homelab-alpha @Zaid-maker @CommanderStorm)\nPlease let me know if your username is missing, if your pull request has been merged in this version, or your commit has been included in one of the pull requests.",
+      "memory_unit_text": "In the louislam/uptime-kuma release 2.0.0-beta.3, new features include country flag emojis, SMSPlanet, Pumble, OneChat notification providers, HTML for custom email bodies, SpugPush, Notifery, and SMTP monitor. Improvements enhance ping monitor options, status bar length, Pushover sounds, SMSEagle APIv2, SpugPush payload, Discord disable URL option, default friendly name, public URL field for monitors, and Flashduty integration. Bug fixes cover Matrix login URL, flat TXT records, modal navigation, Mattermost service name, null label values, tag overlapping, password strength check, notification name, Slack preview, SQL UTC_TIMESTAMP, push notification logic, and maintenance period notifications. Security fixes update dependencies and address GHSA-5px6-fx2w-459r. Translation contributions are updated."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__2_0_0_beta_4",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.0.0-beta.4",
+      "tag_name": "2.0.0-beta.4",
+      "title": "2.0.0-beta.4",
+      "time_hint": "2025-09-05",
+      "published_at": "2025-09-05T04:55:25Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/2.0.0-beta.4",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 2.0.0-beta.4\nTag: 2.0.0-beta.4; draft: False; prerelease: True; published_at: 2025-09-05T04:55:25Z; created_at: 2025-09-05T04:32:31Z\nRelease notes:\n> [!WARNING]\n> It is a major version update. It contains some breaking changes. Please read the migration guide carefully if you want to upgrade from v1 to v2.\n> [!IMPORTANT]\n> Please also read all previous changelogs (2.0.0-beta.0 to 2.0.0-beta.3) if you are upgrading from v1.\n> [!NOTE]\n> Pro tip#1:👉 Backup, backup and backup\nMigration Guide: https://github.com/louislam/uptime-kuma/wiki/Migration-From-v1-To-v2\n# Changelog\n### 🆕 New Features\n- #6079 feat: Add deletion button on status list item (Thanks @RobinToubi)\n- #6052 feat: Add clear events button (Thanks @cyril59310 @CommanderStorm)\n- #6048 feat: Add templating and plaintext for Google Workspace Notification Provider (Thanks @Erikel746 @CommanderStorm)\n- #5950 feat: Add optional audience for HTTP monitors via the OAuth2 client credentials flow (Thanks @goshlanguage @CommanderStorm)\n- #5944 feat: Add proxy clone functionality to settings (Thanks @Q0 @CommanderStorm)\n- #5897 feat: Add a \"manual\" (static/fixed) monitor (Thanks @warpreality @CommanderStorm)\n- #5880 feat: Add option to force IPv4 or IPv6 for HTTP(S) monitor type (Thanks @fabtrie @CommanderStorm @Ionys320)\n- #5846 feat: Add multiple tags in bulk for a monitor (Thanks @grvwy @CommanderStorm)\n- #5576 feat: Render markdown in monitor descriptions (Thanks @eden881)\n- #5220 feat: Convert interval seconds to days, hours, minutes, and seconds in UI (Thanks @Vivek-Py @CommanderStorm)\n### 💇‍♀️ Improvements\n- #6094 #6016 #5876 Update dependencies\n- #6049 Make chart period global instead of individual (Thanks @singh-kanwarpreet @CommanderStorm)\n- #6009 Add WebSocket path to MQTT monitor for WebSocket connection (Thanks @lupaulus)\n- #5942 Improve the experience of testing pull requests\n- #5939 Improve i18n language matching (Thanks @Ionys320)\n- #5929 feat: Add heartbeat tooltip while hovering over status page heartbeats (Thanks @peaktwilight @CommanderStorm)\n- #5920 Improve UI: Edit buttons in status page (Thanks @peaktwilight @CommanderStorm)\n- #5907 Add monitor ID label to Prometheus metrics (Thanks @tr4nt0r)\n- #5928 #5927 #5926 #5925 Eliminate some blocking I/O operations\n- #5890 Add default avatar in Discord notifications (Thanks @cyril59310)\n- #5893 Separate down priority for ntfy.sh (Thanks @DrDrrae @CommanderStorm)\n### 🐞 Bug Fixes\n- #6101 Clear cache (Thanks @singh-kanwarpreet)\n- #6093 Fix: Update cloudflared installation to use bookworm instead of bullseye\n- #6081 Fix: HeartbeatBar DOWN status showing green instead of red (Thanks @jabamo @CommanderStorm)\n- #6080 Fix monitor name cropping in nested groups (#5981) (Thanks @nklsgod)\n- #6014 Fix: Send Slack message throwing 400 invalid_attachments (Thanks @skypesky)\n- #5991 Fix: Check MySQL database name\n- #5990 Fix: Matrix token command hint should send JSON (Thanks @fnetX)\n- #5961 Fix: Refresh interval incremented by 10 on status page despite a minimum of 5 (Thanks @Lyall-A @CommanderStorm)\n- #5923 Fix Day.js\n- #5921 Fix database column type for manual monitor (Thanks @warpreality @CommanderStorm)\n- #5914 Fix recurring maintenance start (again) (Thanks @Ionys320 @CommanderStorm)\n- #5903 Ensure maintenance is always run at the right moment (Thanks @Ionys320 @CommanderStorm)\n- #5901 Fix invalid maintenance date (Thanks @Ionys320)\n- #5871 Fix: Properly handle NTLM part embedded inside other authentication headers (Thanks @FlorianFeka @CommanderStorm)\n- #5875 Fix (Thanks @CommanderStorm @ptrstr)\n### ⬆️ Security Fixes\n- None\n### 🦎 Translation Contributions\n- #6033 #5971 #5889 #5888 #6017 Update translations from Weblate (Thanks @101br03k @aindriu80 @aljvdi @Aluisio @AnnAngela @artsmolkin @asteriskyg @authorless @benemiryilmazer @Buchtic @bunubbv @carbeso @conglinyizhi @cyril59310 @daniel2231 @dekkeng @dongsu8142 @Dumach @Enes3078 @ezhkov-ph @flashbackpa @Frodothedwarf @geek-id @Gun...",
+      "memory_unit_text": "In the louislam/uptime-kuma release 2.0.0-beta.4, a major version update with breaking changes requires reading the migration guide. New features include deletion button on status list, clear events button, Google Workspace notification templating, optional audience for OAuth2, proxy clone, manual monitor, force IPv4/IPv6 for HTTP, bulk tag addition, markdown in descriptions, and interval conversion. Improvements update dependencies, make chart period global, add WebSocket path to MQTT, improve PR testing, i18n language matching, heartbeat tooltip, status page edit buttons, Prometheus monitor ID label, eliminate blocking I/O, Discord default avatar, and ntfy down priority. Bug fixes address cache clearing, cloudflared installation, HeartbeatBar color, monitor name cropping, Slack attachments, MySQL database name check, Matrix token hint, refresh interval, Day.js, database column type, recurring maintenance, invalid maintenance date, NTLM header handling, and other fixes. No security fixes are listed. Translation contributions are updated."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__2_0_0",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.0.0",
+      "tag_name": "2.0.0",
+      "title": "2.0.0",
+      "time_hint": "2025-10-20",
+      "published_at": "2025-10-20T12:40:55Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/2.0.0",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 2.0.0\nTag: 2.0.0; draft: False; prerelease: False; published_at: 2025-10-20T12:40:55Z; created_at: 2025-10-20T12:40:14Z\nRelease notes:\n> [!WARNING]\n> It is a major version update. It contains some breaking changes. Please read the migration guide carefully if you want to upgrade from v1 to v2.\n> [!IMPORTANT]\n> Please also read all previous changelogs (2.0.0-beta.0 to 2.0.0-beta.4) if you are upgrading from v1.\n> [!NOTE]\n> Pro tip#1:👉 Backup, backup and backup\nMigration Guide: https://github.com/louislam/uptime-kuma/wiki/Migration-From-v1-To-v2\n### 🆕 New Features\n- #6158 feat: Add Nextcloud Talk notification provider (Thanks @SystemKeeper)\n- #6150 feat: Add Brevo notification provider (Thanks @smitmartijn)\n- #6135 Added Evolution API as notification provider (Thanks @bode327)\n- #6128 feat(login): Autofocus 2FA (Thanks @cyril59310)\n- #6111 feat: Added Slovak language to dropdown menu (Thanks @dodog)\n### 💇‍♀️ Improvements\n- #6125 feature: Add an environment variable enabling most notification providers to work behind a proxy. (Thanks @MatanAmoyal1)\n- #6113 Fixes buttons getting out of view on mobile screens less than 450px #5978 (Thanks @Devang47)\n- #5948 Generate a better changelog\n### 🐞 Bug Fixes\n- #6189 Fix: Maintenance: Handle optional startDateTime to prevent errors when null\n- #6188 Fix: Set default value for `ping` column to 0 in stat tables\n- #6187 Fix: Change `monitor`.`ip_family` data type from boolean to string\n### ⬆️ Security Fixes\n- #6156 fix: Replace proxy-agent due to vm2 vulnerability (Thanks @MatanAmoyal1)\n- #6197 Update dependencies\n- GHSA-vffh-c9pq-4crh\n### 🦎 Translation Contributions\n- #6179 #6096 Translations Update from Weblate (Thanks @aaf-30 @aindriu80 @alexsandroccarv @Aluisio @AnnAngela @appelmoesgg @Buchtic @cyril59310 @daniel2231 @DJEDIVER @dodog @GitClo @Gringit @ivanbratovic @KristianNaess @marco-doerig @marvin2k0 @MrEddX @Phiton12 @simonghpub @superpep @Virenbar @xAlcahest @Zeromskas)\n### Others\n- #6168 chore(deps): update compression dependencies and vendor the radius dependency (Thanks @devopsmatt)\n- #6141 fix(docs): pm2 command order in the readme (Thanks @BorisWild)\nMore changelog:\nhttps://github.com/louislam/uptime-kuma/releases/tag/2.0.0-beta.0\nhttps://github.com/louislam/uptime-kuma/releases/tag/2.0.0-beta.1\nhttps://github.com/louislam/uptime-kuma/releases/tag/2.0.0-beta.2\nhttps://github.com/louislam/uptime-kuma/releases/tag/2.0.0-beta.3\nhttps://github.com/louislam/uptime-kuma/releases/tag/2.0.0-beta.4",
+      "memory_unit_text": "In the louislam/uptime-kuma release 2.0.0, a major version update with breaking changes requires reading the migration guide and all beta changelogs. New features add Nextcloud Talk, Brevo, Evolution API notification providers, 2FA autofocus, and Slovak language. Improvements add an environment variable for proxy support in notifications, fix mobile button visibility, and generate a better changelog. Bug fixes handle optional startDateTime in maintenance, default ping column value, and monitor ip_family data type. Security fixes replace proxy-agent due to vm2 vulnerability, update dependencies, and address GHSA-vffh-c9pq-4crh. Translation contributions are updated."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__1_23_17",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.23.17",
+      "tag_name": "1.23.17",
+      "title": "1.23.17",
+      "time_hint": "2025-10-20",
+      "published_at": "2025-10-20T15:54:28Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/1.23.17",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 1.23.17\nTag: 1.23.17; draft: False; prerelease: False; published_at: 2025-10-20T15:54:28Z; created_at: 2025-10-20T14:18:19Z\nRelease notes:\n### 🐛 Bug Fixes\n- #6169 Fixed: The browser monitor issue due to EOL of Debian Buster (Thanks @Dream-Cypher)\n### ⬆️ Security Fixes\n- #6169 Update dependencies\n- GHSA-vffh-c9pq-4crh Server-side Template Injection (SSTI) in Notification Templates Allows Arbitrary File Read",
+      "memory_unit_text": "In the louislam/uptime-kuma release 1.23.17, a bug fix addresses the browser monitor issue due to the end of life of Debian Buster. Security fixes update dependencies and address GHSA-vffh-c9pq-4crh, a Server-side Template Injection vulnerability in notification templates."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__2_0_1",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.0.1",
+      "tag_name": "2.0.1",
+      "title": "2.0.1",
+      "time_hint": "2025-10-20",
+      "published_at": "2025-10-20T16:11:12Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/2.0.1",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 2.0.1\nTag: 2.0.1; draft: False; prerelease: False; published_at: 2025-10-20T16:11:12Z; created_at: 2025-10-20T16:02:12Z\nRelease notes:\n### 🐞 Bug Fixes\n- #6204 Fix: healthcheck could shutdown Uptime Kuma during migration",
+      "memory_unit_text": "In the louislam/uptime-kuma release 2.0.1, a bug fix prevents the healthcheck from shutting down Uptime Kuma during migration."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__2_0_2",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.0.2",
+      "tag_name": "2.0.2",
+      "title": "2.0.2",
+      "time_hint": "2025-10-22",
+      "published_at": "2025-10-22T17:03:54Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/2.0.2",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 2.0.2\nTag: 2.0.2; draft: False; prerelease: False; published_at: 2025-10-22T17:03:54Z; created_at: 2025-10-22T16:37:33Z\nRelease notes:\n### 🐞 Bug Fixes\n- #6225 Fix: False positive for Google Chrome during migration\n### Others\n- #6210 #6220 Revise supported versions and Docker tags in SECURITY.md",
+      "memory_unit_text": "In the louislam/uptime-kuma release 2.0.2, a bug fix resolves a false positive for Google Chrome during migration. Other changes revise supported versions and Docker tags in SECURITY.md."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__2_1_0_beta_0",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.1.0-beta.0",
+      "tag_name": "2.1.0-beta.0",
+      "title": "2.1.0-beta.0",
+      "time_hint": "2025-12-20",
+      "published_at": "2025-12-20T04:38:35Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/2.1.0-beta.0",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 2.1.0-beta.0\nTag: 2.1.0-beta.0; draft: False; prerelease: True; published_at: 2025-12-20T04:38:35Z; created_at: 2025-12-20T04:30:00Z\nRelease notes:\nMerry Christmas!🎄\n## Changelog\n### 🆕 New Features\n- #6421 Webpush notifications (Thanks @cmorg789)\n- #6401 feat: add SSL/STARTTLS option and certificate monitoring to TCP Port monitor (Thanks @shanto @chakflying @rouja)\n- #6347 feat: Add Messaging Service SID option for Twilio (Thanks @SomeoneVeryCool)\n- #6346 feat: Multi number notifications for SMSIR (Thanks @amirparsadd)\n- #6335 feat:  Disabled telegram links preview (Thanks @timocov)\n- #6334 SMSIR Notification Provider Support (Thanks @amirparsadd)\n- #6330 feat: Added option to clone an existing maintenance (Thanks @teodormoq)\n- #6314 feat: enhance monitor deletion functionality by adding child deletion (Thanks @kurama)\n- #6256 feat: Add Drag & drop for groups (Thanks @TheBestPartOfMe)\n- #6194 Feature/webhook get method support (Thanks @aruj0)\n- #5845 feat(prometheus): add tags to prometheus metrics (Thanks @RickVdrongelen)\n- #5766 feat:  add sorting to status pages (Thanks @MarshuMax)\n- #5613 Add Websocket Upgrade Test (Thanks @PoleTransformer)\n- #5398 Allow MQTT topic to have wildcards (# or +) (Thanks @EricDuminil)\n- #4587 feat: Add toggle to hide the uptime percentage on a status page (Thanks @broodroosterdev)\n- #1740 feat: allow reducing the monitor minimum interval to 1 second after accepting a warning (Thanks @Computroniks)\n### 💇‍♀️ Improvements\n- #6407 feat: optimize HeartbeatBar performance by replacing `div`s with Canvas based rendering (Thanks @kurama)\n- #6386 feat: make mariadb max pool connections controllable via env (Thanks @amirparsadd)\n- #6377 Chore: add description and shortcuts to the PWA Manifest (Thanks @amirparsadd)\n- #6375 Improvements for SMSC i18n (Thanks @amirparsadd)\n- #6365 Shorten text for SMSIR Notification provider (Thanks @amirparsadd)\n- #6254 feat(status-page): add help text for 'Description' in monitor edit status page (Thanks @notashutosh)\n- #6245 Adding retries to Google Chat Notifications #6242 (Thanks @maxmichels)\n- #6240 Change Relative Time Formatter options to 'always' (Thanks @JohnAbassian)\n- #6222 [Docker] Bump to Node.js 22\n- #3942 Feat: Add warning for cert. hostname mismatch (Thanks @chakflying)\n- #5924 [Eliminate Blocking] Real Browser Monitor + Check Apprise\n### 🐞 Bug Fixes\n- #6504 Also apply package-lock version fix to beta\n- #6500 [GitHub Workflow] Fix e2e test + cache node_modules\n- #6491 fix: tags are not saved if you don't save 2 times (Thanks @iotux)\n- #6468 Fix: improve error messages when passing arrays in evaluateJsonQuery (Thanks @mattv8)\n- #6458 Fix swapped up/down sound in Pushover component (Thanks @app/copilot-swe-agent)\n- #6436 [Push monitor] Fix:  Prometheus update with incorrect value\n- #6435 fix: redraw HeartbeatBar canvas on theme change & update empty beat color (Thanks @kurama)\n- #6433 Enforce UP status for non-custom status monitors\n- #6432 fix: dynamically adjust beat border radius (Thanks @kurama)\n- #6424 fix: correct SevenIO notification receiver field name (Thanks @cl77)\n- #6409 fix: smsir not sending long SMSes (Thanks @amirparsadd)\n- #6398 fix: Clear all statistics and clear heartbeats not resetting uptime statistics of monitors (Thanks @Sn0r1axi)\n- #6382 fix: remove incorrect /push path from Bark notification endpoint (Thanks @Finb)\n- #6287 fix: child monitors disappear after group deletion (Thanks @kurama)\n- #6286 Fix Group monitors to send notification after reaching maximum retries count (Thanks @MayMeow)\n- #6281 fix(i18n): refactor secondsToHumanReadableFormat (Thanks @mercury233)\n- #6271 Fix:  disable eqeqeq for UPTIME_KUMA_LOG_RESPONSE_BODY_MONITOR_ID\n- #6263 fix(auth/UX): trim username in login & setup (Thanks @reussio)\n- #6231 Fix do nothing erroneous api call for Pagerduty (Thanks @maldotcom2)\n- #6229 fix: gear settings being invisible when trying to edit status page items with long names (Thanks @l...",
+      "memory_unit_text": "In the louislam/uptime-kuma release 2.1.0-beta.0, new features include Webpush notifications, SSL/STARTTLS and certificate monitoring for TCP Port monitor, Twilio Messaging Service SID, multi-number SMSIR, disabled Telegram link previews, SMSIR notification provider, clone maintenance, enhanced monitor deletion, drag & drop for groups, webhook GET method, tags in Prometheus metrics, status page sorting, WebSocket upgrade test, MQTT wildcard topics, hide uptime percentage on status page, and reducing monitor minimum interval to 1 second. Improvements optimize HeartbeatBar with Canvas, make MariaDB pool size configurable, add PWA manifest descriptions, SMSC i18n, SMSIR text shortening, status page help text, Google Chat retries, relative time formatter, Node.js 22 bump, cert hostname mismatch warning, and eliminate blocking in Real Browser Monitor and Apprise. Bug fixes cover package-lock, e2e test, tag saving, JSON query error messages, Pushover sound swap, Prometheus update, HeartbeatBar redraw, UP status enforcement, beat border radius, SevenIO field name, SMSIR long SMS, statistics reset, Bark path, child monitor disappearance, group monitor retries, i18n refactor, eqeqeq disable, username trim, Pagerduty API call, gear settings visibility, and more."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__2_1_0_beta_1",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.1.0-beta.1",
+      "tag_name": "2.1.0-beta.1",
+      "title": "2.1.0-beta.1",
+      "time_hint": "2026-01-05",
+      "published_at": "2026-01-05T02:02:30Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/2.1.0-beta.1",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 2.1.0-beta.1\nTag: 2.1.0-beta.1; draft: False; prerelease: True; published_at: 2026-01-05T02:02:30Z; created_at: 2026-01-05T02:01:42Z\nRelease notes:\n### 🆕 New Features\n- #6573 feat: label the min, avg, max on the dashboard ping chart and make them selectable (Thanks @cyril59310)\n- #6545 feat: extract the sqlserver monitor to its own monitor-type and enable support conditions for a single `result` (Thanks @pmagno)\n- #6544 feat: add \"resend\" email sending notification provider (Thanks @lsnnt)\n- #6528 feat: \"select all\" monitors on the maintenance page (Thanks @hemanth5544)\n- #6508 feat: Add XMPP dialog in STARTTLS routine (Thanks @shanto)\n- #6488 feat: system service (aka systemd/windows service) monitor (Thanks @iotux)\n- #6413 feat: Domain name expiry (Thanks @shanto @AiroPi)\n- #5608 feat: Add support for umami, matomo and plausible analytics in status page (Thanks @hadestructhor)\n- #4949 feat(gamedig): Update gamedig implementation to v5 (Thanks @elonmir)\n### 💇‍♀️ Improvements\n- #6562 feat(status-page): add `og:type` Open Graph meta tags (Thanks @DanielDerefaka)\n- #6561 fix(discord): hide empty Service URL and N/A Ping fields (Thanks @DanielDerefaka)\n- #6551 fix: make the websocket check more resilient to status codes, add Subprotocol inputs and Timeouts (Thanks @PoleTransformer)\n- #6541 feat: Added Vazirmatn to the font-family for Farsi/Persian localization (Thanks @cmandesign)\n- #6533 Added a button to reset the status page icon to the default (Thanks @cyril59310)\n- #6526 fix(websocket): Show Websocket URL (Thanks @PoleTransformer)\n- #6520 fix: update dns monitor to evaluate full response list on CAA resolver_type (Thanks @am17torres)\n- #5970 chore: Migrate gamedig to be a `GameDigMonitorType` and add dyndns resolution (Thanks @mariogarridopt)\n### 🐞 Bug Fixes\n- #6579 fix: escape Telegram MarkdownV2 after template rendering (Thanks @GivenBY)\n- #6577 fix(monitor): DNS monitor hostname and other monitors URL validations (Thanks @AnuragEkkati @autofix-ci[bot])\n- #6571 fix(mysql-mariadb): change `dns_last_result column` from `VARCHAR(255)` to `TEXT` (Thanks @app/copilot-swe-agent)\n- #6570 fix(rss): fix the rss endpoint having the wrong content type\n- #6567 fix(ci): update OS versions in auto-test workflow to use github hosted instead of selfhosted runners\n- #6559 fix(ci): Update domain expiry notification days setting for testcase\n- #6516 fix: v2 migration process report is always 0 when having many monitors/dates (Thanks @Harry-Chen)\n- #6513 fix: MariaDB datetime format error when pausing maintenance (Thanks @app/copilot-swe-agent)\n- #6511 fix: Optimize heartbeat indexes containing `important` on sqlite using SQLite partial indexes (Thanks @app/copilot-swe-agent)\n- #6292 fix(docker): handle the state \"unhealthy\" as `DOWN` instead of `PENDING` (Thanks @benji2k2)\n### ⬆️ Security Fixes\n- #6575 chore(sec): run zizmor in CI\n- #6568 chore(sec): harden our CI by pinning gha, add dependabot to update them, not persisting credentials and adding permission blocks\n- #6540 chore: bump nodemailer and adjust how nltm does random number generation (Thanks @KingIronMan2011 @dependabot[bot])\n### 🦎 Translation Contributions\n- #6530 Added missing translation keys (Thanks @cyril59310)\n- #6509 #6485 Translations Update from Weblate (Thanks @Aluisio @atriwidada @c-c-epr @cyril59310 @Gringit @marco-doerig @michi-onl @MrEddX @socdel73 @utolosa002 @Virenbar @woodmichl)\n### Others\n- Other small changes, code refactoring and comment/doc updates in this repo:\n- #6578 chore(docs): reduce the documentation overhead in the contribution guide\n- #6574 feat(ci): autofix in CI instead of requiring contributors to push a new commit\n- #6564 chore(tests): using test suites and better test names where possible\n- #6531 Updated the RabbitMQ documentation (Thanks @cyril59310)\n- #6505 Update to 2.1.0-beta.0\n- #6504 Also apply package-lock version fix to beta\n- #6503 Update npm\n- #6088 remove: drop LINE Notify integration (Thank...",
+      "memory_unit_text": "In the louislam/uptime-kuma release 2.1.0-beta.1, new features include labeling min/avg/max on ping chart, extracting SQL Server monitor with conditions, resend email notification, select all monitors on maintenance page, XMPP STARTTLS dialog, system service monitor, domain name expiry, analytics support (umami, matomo, plausible) on status page, and gamedig v5 update. Improvements add Open Graph meta tags, hide empty Discord fields, make WebSocket check more resilient, add Vazirmatn font, reset status page icon button, show WebSocket URL, evaluate full DNS response for CAA, and migrate gamedig to GameDigMonitorType. Bug fixes escape Telegram MarkdownV2, validate DNS hostname and URLs, change dns_last_result column type, fix RSS content type, update CI OS versions, fix domain expiry test, improve v2 migration progress, fix MariaDB datetime format, optimize heartbeat indexes, and handle unhealthy Docker state as DOWN. Security fixes run zizmor, harden CI, and bump nodemailer. Translation contributions are updated."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__2_1_0_beta_2",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.1.0-beta.2",
+      "tag_name": "2.1.0-beta.2",
+      "title": "2.1.0-beta.2",
+      "time_hint": "2026-01-14",
+      "published_at": "2026-01-14T02:45:36Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/2.1.0-beta.2",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 2.1.0-beta.2\nTag: 2.1.0-beta.2; draft: False; prerelease: True; published_at: 2026-01-14T02:45:36Z; created_at: 2026-01-14T02:41:03Z\nRelease notes:\n### 🆕 New Features\n- #6690 feat(notification): expose path vars and improve Slack rich message (Thanks @tellorian)\n- #6687 feat: Add option to retry only on status code failure for JSON Query monitors (#5693) (Thanks @0xsid0703 @autofix-ci[bot])\n- #6684 feat: Add configurable response data storage for notifications (Thanks @codercms @autofix-ci[bot])\n- #6677 feat(nostr): switch to gift-wrapped events (Thanks @tionis @autofix-ci[bot])\n- #6676 feat: Rework how selected actions to perform pause, resume work and add a bulk-delete option (Thanks @hemanth5544 @autofix-ci[bot])\n- #6671 feat(setup-database): Add SSL authentication method for database setup (Thanks @nilanjan-debnath @autofix-ci[bot])\n- #6665 chore: Add scheduled workflow for nightly Docker image releases\n- #6640 feat: Adds support for ntfy's phone call feature (Thanks @erik-ff)\n- #6629 feat: add `UPTIME_KUMA_DB_PASSWORD_FILE` and `UPTIME_KUMA_DB_USERNAME_FILE` for docker secrets control (Thanks @leonace924)\n- #6616 feat(ui): group notification services into categories in dropdown (Thanks @DanielDerefaka)\n- #6610 feat(serwersms): add group messaging support (Thanks @MkDev11)\n- #6606 feat: allow maintenance without affected monitors (Thanks @MkDev11 @autofix-ci[bot])\n- #6601 feat: extract MySQL/MariaDB monitor to its own monitor-type and enable support conditions (Thanks @leonace924)\n- #6593 feat: add conditions support for MQTT monitor type (Thanks @MkDev11)\n- #6592 feat: add rss title field and handle rss link from request (Thanks @leonace924)\n- #6588 feat: add monitored URL link to Google Chat notifications (Thanks @MkDev11)\n- #6587 feat: the option to expect a certain TLS error for the TCP monitor (Thanks @MkDev11)\n- #6560 feat: add Halo PSA webhook notification provider (Thanks @Yasindu20)\n- #6524 feat: DNS monitor multi IP address and hostname support for Resolver Servers (Thanks @PoleTransformer @autofix-ci[bot])\n- #5506 feat: add `monitor_uptime_ratio` and `monitor_response_time_seconds` prometheus metric (Thanks @honoref @autofix-ci[bot])\n- #5362 feat: Add new monitor type - SIP Options Reply Ping (Thanks @edman80 @eddie-planetnet)\n### 💇‍♀️ Improvements\n- #6699 fix(ui): improve monitor list readability on mobile (Thanks @AnuragEkkati @autofix-ci[bot])\n- #6685 feat: don't show a retry interval without retries enabled\n- #6664 fix: Expand the logging around AggregateError (Thanks @AnuragEkkati @autofix-ci[bot])\n- #6651 chore: make the monitors consistently log using this.name where appropriate (Thanks @autofix-ci[bot])\n- #6645 chore: improve misc i18n things\n- #6642 feat: Add prettier and configure autofix to use it\n- #6638 fix: Proper processing of date fields (Domain Expiry) with cleanup of unnecessary Date comparison functions (Thanks @shanto @autofix-ci[bot])\n- #6637 fix: noisy domain expiry checks in monitor editor and missing debuggability (Thanks @josephadamsdev @autofix-ci[bot])\n- #6628 chore: Add validation for retryInterval in Monitor.validate() (Thanks @Angel98518)\n- #6626 fix: standardize password fields to use HiddenInput component for con… (Thanks @Angel98518)\n- #6625 chore: made code more robust to undefined expiry\n- #6623 chore: improve some domain expiry logs\n- #6614 feat: Added a translation key for “Password is too weak” (Thanks @cyril59310 @autofix-ci[bot])\n- #6605 Implement message sanitization for Aliyun SMS (Thanks @IsayIsee @autofix-ci[bot])\n- #6599 fix: rename Badge Generator to Badge Link Generator and add help text (Thanks @leonace924)\n### 🐞 Bug Fixes\n- #6696 fix: handle existing release branch in beta-release workflow (Thanks @app/copilot-swe-agent)\n- #6668 fix: Ensure ping can handle pings larger than 24 days by changing INT to BIGINT and FLOAT(8,2) to FLOAT(20,2) (Thanks @app/copilot-swe-agent)\n- #6662 fix: idn ping errors (Thanks @iotux @autofix...",
+      "memory_unit_text": "In the louislam/uptime-kuma release 2.1.0-beta.2, new features include exposing path vars and improving Slack rich message, retry only on status code failure for JSON Query, configurable response data storage, switch to gift-wrapped events for nostr, rework pause/resume/bulk-delete actions, SSL authentication for database setup, nightly Docker image releases, ntfy phone call support, Docker secrets for DB credentials, group notification services in dropdown, group messaging for serwersms, maintenance without affected monitors, MySQL/MariaDB monitor with conditions, MQTT conditions, RSS title field, monitored URL link in Google Chat, expected TLS error for TCP monitor, Halo PSA webhook, DNS multi IP/hostname support, prometheus metrics, and SIP Options Reply Ping monitor. Improvements enhance mobile monitor list readability, hide retry interval without retries, expand AggregateError logging, consistent monitor logging, i18n improvements, add prettier, proper date field processing, reduce domain expiry noise, add retryInterval validation, standardize password fields, robust expiry handling, improve domain expiry logs, add password strength translation key, and sanitize Aliyun SMS messages. Bug fixes handle release branch in workflow, ping data type, IDN ping errors, and more."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__2_1_0_beta_3",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.1.0-beta.3",
+      "tag_name": "2.1.0-beta.3",
+      "title": "2.1.0-beta.3",
+      "time_hint": "2026-01-22",
+      "published_at": "2026-01-22T13:01:00Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/2.1.0-beta.3",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 2.1.0-beta.3\nTag: 2.1.0-beta.3; draft: False; prerelease: True; published_at: 2026-01-22T13:01:00Z; created_at: 2026-01-22T12:58:34Z\nRelease notes:\n# Changelog\n## 🆕 New Features\n- #6777 feat:  add Google Sheets notification provider (Thanks @dharunashokkumar @autofix-ci[bot])\n- #6766 feat(ntfy): include tag values in ntfy tags array (Thanks @epifeny)\n- #6762 feat(ntfy): add monitor metadata to notification messages for automation (Thanks @epifeny)\n- #6758 feat(notification): add WeCom mentioned mobile list support (Thanks @ChenJBBB @autofix-ci[bot])\n- #6753 feat:  add screenshot delay option for Browser Engine monitor (Thanks @bitloi @autofix-ci[bot])\n- #6743 feat(dashboard): add expand/collapse all groups button (Thanks @kurama)\n- #6736 feat: added monitoring for Postgres query result (Thanks @daltonpearson)\n- #6718 feat(maintenance): add quick duration buttons and pre-fill datetime fields (Thanks @kurama @autofix-ci[bot])\n- #6717 feat(notification): Discord suppress notifications (Thanks @yashikota)\n- #6670 feat: add path to socket for external MariaDB database (Thanks @UnwishingMoon @autofix-ci[bot])\n- #6552 feat(snmp): add SNMPv3 noAuthNoPriv support with backend test (Thanks @querysmith-sys @autofix-ci[bot] @dipok-1)\n- #6469 feat: implement incident history (Thanks @aluminyoom @autofix-ci[bot])\n## 💇‍♀️ Improvements\n- #6749 refactor: simplify filters components (Thanks @kurama @autofix-ci[bot])\n- #6747 fix: clarify the help text that markdown is supported with a warning about HTML indentation (Thanks @iyawnnn)\n- #6727 chore(deps): bump vue-i18n for smoother pluralization (Thanks @autofix-ci[bot] @kurama)\n- #6724 chore(i18n): improve some of the punctuation related issues (Thanks @autofix-ci[bot])\n- #6723 fix(domain-expiry): move logging out of checkSupport to separate logic to reduce to half the amount of domain expiry logs (Thanks @aviralgarg05 @autofix-ci[bot])\n## 🐞 Bug Fixes\n- #6778 fix: MongoDB monitor JSON. parse error handling (Thanks @Angel98518 @autofix-ci[bot])\n- #6770 fix: add option to disable STARTTLS for SMTP servers without TLS support (Thanks @dharunashokkumar @autofix-ci[bot])\n- #6769 fix(domain_expiry): include static RDAP DNS data with auto-updates instead of dynamically requesting it (Thanks @app/copilot-swe-agent)\n- #6767 fix: JSON parse crashes in monitor model with safe parsing (Thanks @dharunashokkumar @autofix-ci[bot])\n- #6757 fix: cancel multiple in-progress tests\n- #6752 fix: handle multi-level public suffixes in RDAP lookup (Thanks @josephadamsdev)\n- #6751 fix(ui): refreshing the page if pressing enter in the search, horizontal scrolling the monitor list on mobile/tablets and aligning items in the monitor list (Thanks @maybe-but-fly)\n- #6711 fix: allow for private domains like example.local and others (Thanks @iotux @autofix-ci[bot])\n- #6713 fix: final fix of beta workflow\n## ⬆️ Security Fixes\n## 🦎 Translation Contributions\n## Others\n- Other small changes, code refactoring and comment/doc updates in this repo:\n- #6755 chore: fix typos in comments (Thanks @NAM-MAN)\n- #6741 chore: add manual workflow for building Docker base images (Thanks @app/copilot-swe-agent)\n- #6735 chore(ci): fix a missing `--repo` in the labeling automation\n- #6732 chore: fix permissions for the draft labeling automation\n- #6731 chore(deps): bump postcss-* dependencies\n- #6730 fix: automate mark as draft\n- #6729 chore:  automate marking as draft on requesting changes\n- #6725 chore(release): ignore autofix as an author in the changelog\n- #6721 chore: update to 2.1.0-beta.2 (Thanks @app/github-actions @github-actions[bot])",
+      "memory_unit_text": "In the louislam/uptime-kuma release 2.1.0-beta.3, new features add Google Sheets notification provider, ntfy tag values and metadata, WeCom mentioned mobile list, screenshot delay for Browser Engine, expand/collapse all groups button, Postgres query result monitoring, maintenance quick duration buttons, Discord suppress notifications, external MariaDB socket path, SNMPv3 noAuthNoPriv support, and incident history. Improvements simplify filters, clarify markdown help text, bump vue-i18n, improve punctuation, and reduce domain expiry logs. Bug fixes address MongoDB JSON parse error, disable STARTTLS option, static RDAP DNS data, JSON parse crashes, cancel multiple tests, multi-level public suffixes, UI refresh/search/scroll issues, private domain support, and beta workflow. No security fixes are listed. Translation contributions and other small changes are included."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__2_1_0",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.1.0",
+      "tag_name": "2.1.0",
+      "title": "2.1.0",
+      "time_hint": "2026-02-07",
+      "published_at": "2026-02-07T02:31:49Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/2.1.0",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 2.1.0\nTag: 2.1.0; draft: False; prerelease: False; published_at: 2026-02-07T02:31:49Z; created_at: 2026-02-07T02:31:37Z\nRelease notes:\nChangelog:\nAll beta changes are also included in this release.\nPlease go throught them too, in total this relase had 250 PRs merged.\nhttps://github.com/louislam/uptime-kuma/releases/tag/2.1.0-beta.0\nhttps://github.com/louislam/uptime-kuma/releases/tag/2.1.0-beta.1\nhttps://github.com/louislam/uptime-kuma/releases/tag/2.1.0-beta.2\nhttps://github.com/louislam/uptime-kuma/releases/tag/2.1.0-beta.3\n### 🆕 New Features\n- #6830 feat(notification): add Jira Service Management as a notification provider (Thanks @jankal)\n- #6777 feat: add google sheets notification provider (Thanks @dharunashokkumar)\n### 💇‍♀️ Improvements\n- #6843 feat(discord): add custom message and format presets for notifications (Thanks @epifeny)\n- #6804 feat(ntfy): add custom title and message templates for notifications (Thanks @epifeny)\n### 🐞 Bug Fixes\n- #6845 fix: certificate expiry (use Settings.set instead of Settings.setSetting) (Thanks @epifeny)\n- #6841 fix: weblate conflict (Thanks @Aluisio @AnnAngela @cyril59310 @dodog @FunNikita @Kf637 @kurama @mafen @michi-onl @MrEddX @pmontp19)\n- #6835 feat(slack): Add option to include monitor group name in notifications (Thanks @dovansy1998)\n- #6822 fix: improve monitor list selection behavior (Thanks @frozenflux2)\n- #6805 fix: RSS pubDate timezone issue with backend test (#6422) (Thanks @Aqudi)\n- #6795 fix: monitor names hidden by tags (Thanks @bittoby)\n- #6792 fix: expand/collapse all groups now works with nested groups (Thanks @kurama)\n- #6791 Fix bot filtering in generate-changelog.mjs\n- #6789 fix: Add input validation for monitor ID in badge endpoints (Thanks @Angel98518)\n- #6783 fix: improve RADIUS client error handling and socket cleanup (Thanks @dive2tech)\n- #6778 fix: MongoDB monitor JSON.parse error handling (Thanks @Angel98518)\n### ⬆️ Security Fixes\n### 🦎 Translation Contributions\n- #6853 chore: Translations Update from Weblate (Thanks @2000Arion @Aluisio @AnnAngela @cyril59310 @dodog @jochemp264 @Kf637 @michi-onl @MrEddX)\n- #6834 feat(i18n): Add Bavarian German language support\n- #6817 Translations Update from Weblate (Thanks @Aluisio @AnnAngela @dodog @FunNikita @Kf637 @kurama @mafen @michi-onl @MrEddX @pmontp19)\n- #6597 chore: Translations Update from Weblate (Thanks @101br03k @2000Arion @aindriu80 @Aluisio @AndyLCQ @AnnAngela @atriwidada @bkzspam @Buchtic @cyril59310 @dodog @Donglingfeng @hackerpro17s @IsayIsee @isfan14 @ivanbratovic @JavierLuna @JWeinelt @Kodashas @michi-onl @MrEddX @simonghpub @superpep @tony-chompoo @Virenbar)\n- #6163 feat: add Globalping support (Thanks @radulucut)\n### Others\n- #6877 chore: npm update\n- #6875 chore: Update final release workflow\n- #6849 feat: Adding monitor_id and heartbeat_id to HaloPSA (Thanks @Yasindu20)\n- #6814 chore: Revert \"feat: added monitoring for postgres query result\"\n- #6787 chore: update to 2.1.0-beta.3",
+      "memory_unit_text": "In the louislam/uptime-kuma release 2.1.0, all beta changes are included. New features add Jira Service Management and Google Sheets notification providers. Improvements add custom message and format presets for Discord, and custom title/message templates for ntfy. Bug fixes address certificate expiry, Weblate conflict, Slack group name option, monitor list selection, RSS pubDate timezone, monitor names hidden by tags, expand/collapse nested groups, bot filtering in changelog, monitor ID validation, RADIUS error handling, and MongoDB JSON parse. No security fixes are listed. Translation contributions add Bavarian German and update translations."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__2_1_1",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.1.1",
+      "tag_name": "2.1.1",
+      "title": "2.1.1",
+      "time_hint": "2026-02-13",
+      "published_at": "2026-02-13T16:07:33Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/2.1.1",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 2.1.1\nTag: 2.1.1; draft: False; prerelease: False; published_at: 2026-02-13T16:07:33Z; created_at: 2026-02-13T16:03:16Z\nRelease notes:\n### 💇‍♀️ Improvements\n- #6899 feat: add customizable matrix notifications (Thanks @namatery)\n- #6868 feat: Add Group Name column to the Monitors table on dashboard page (Thanks @evolvomind)\n### 🐞 Bug Fixes\n- #6923 fix: Gamedig unable to resolve SRV records by removing redundant DNS resolution in GameDigMonitorType\n- #6907 fix: Remove vite-plugin-pwa, avoid this plugin caches files unexpectedly\n- #6894 fix: discord notification timestamp & update notification message (Thanks @ryangurn)\n- #6887 fix(dashboard): add scroll bar to tags dropdown (Thanks @smartcoder0777)\n- #6884 fix(domain-expiry): only enable domain expiry notification when TLD has RDAP support (Thanks @BitWise-0x)\n### 🦎 Translation Contributions\n- #6878 #6853 chore: Translations Update from Weblate (Thanks @2000Arion @alihatamitajik @Aluisio @AnnAngela @cyril59310 @dodog @florian-berger @jochemp264 @JWeinelt @Kf637 @michi-onl @MrEddX @Saibamen @simonghpub @tvpetersen)\n### Others\n- Other small changes, code refactoring and comment/doc updates in this repo:\n- #6927 chore: Update dependencies\n- #6877 chore: npm update\n- #6925 chore: Update security policy and reporting guidelines\n- #6890 chore(generate-changelog): Fix Translation PRs did not merge together\n- #6875 chore: Update final release workflow\n- #6879 chore: update to 2.1.0",
+      "memory_unit_text": "In the louislam/uptime-kuma release 2.1.1, improvements add customizable Matrix notifications and a Group Name column on the dashboard. Bug fixes resolve Gamedig SRV record resolution, remove vite-plugin-pwa to avoid unexpected caching, fix Discord notification timestamp and message, add scroll bar to tags dropdown, and enable domain expiry notification only when TLD has RDAP support. Translation contributions are updated."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__2_1_2",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.1.2",
+      "tag_name": "2.1.2",
+      "title": "2.1.2",
+      "time_hint": "2026-02-19",
+      "published_at": "2026-02-19T05:09:11Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/2.1.2",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 2.1.2\nTag: 2.1.2; draft: False; prerelease: False; published_at: 2026-02-19T05:09:11Z; created_at: 2026-02-19T05:07:45Z\nRelease notes:\n### 🆕 New Features\n- #6952 feat: Notification provider Teltonika RUTxxx SMS gateway (Thanks @unixerius)\n- #6939 feat: add tags to teams notifications (Thanks @thelfensdrfer)\n- #6850 feat: add DNS support via Globalping (Thanks @radulucut)\n### 💇‍♀️ Improvements\n- #6971 refactor: improve dynamic RDAP DNS data\n### 🐞 Bug Fixes\n- #6933 fix: Clear 2.1.0 frontend PWA cache\n- #6978 fix: Add helptext about usage to expiry checkboxes\n- #6977 fix: handle undefined monitor name in PagerDuty notification summary (Thanks @mixelburg)\n- #6960 fix: typo in DNS monitor error message (specifiy → specify) (Thanks @redbasecap-buiss)\n- #6897 fix: clearing heartbeats on paused monitors leaves them paused (Thanks @bruce691)\n### 🦎 Translation Contributions\n- #6945 chore: Translations Update from Weblate (Thanks @2000Arion @Aluisio @cyril59310 @DJEDIVER @dodog @florian-berger @hernikplays @Kf637 @MrEddX @thelfensdrfer @VeerGosai)\n### Others\n- #6969 chore: Add automated npm dependency update workflow\n- #6968 chore: Update dependencies\n- #6963 chore: Update pull request template with AI usage warning\n- #6951 chore: Update PR template with AI usage warning\n- #6948 fix: Restrict scheduled workflows to upstream repository\n- #6970 fix: npm dependency update GitHub workflow",
+      "memory_unit_text": "In the louislam/uptime-kuma release 2.1.2, new features add Teltonika RUTxxx SMS gateway notification, tags to Teams notifications, and DNS support via Globalping. Improvements refactor dynamic RDAP DNS data. Bug fixes clear 2.1.0 frontend PWA cache, add help text to expiry checkboxes, handle undefined monitor name in PagerDuty, fix DNS error message typo, and fix clearing heartbeats on paused monitors. Translation contributions are updated."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__2_1_3",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.1.3",
+      "tag_name": "2.1.3",
+      "title": "2.1.3",
+      "time_hint": "2026-02-19",
+      "published_at": "2026-02-19T05:37:30Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/2.1.3",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 2.1.3\nTag: 2.1.3; draft: False; prerelease: False; published_at: 2026-02-19T05:37:30Z; created_at: 2026-02-19T05:34:03Z\nRelease notes:\n### 🐞 Bug Fixes\n- #6981 fix: rdap data is not actually cached",
+      "memory_unit_text": "In the louislam/uptime-kuma release 2.1.3, a bug fix ensures RDAP data is actually cached."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__2_2_0",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.2.0",
+      "tag_name": "2.2.0",
+      "title": "2.2.0",
+      "time_hint": "2026-03-05",
+      "published_at": "2026-03-05T02:08:14Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/2.2.0",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 2.2.0\nTag: 2.2.0; draft: False; prerelease: False; published_at: 2026-03-05T02:08:14Z; created_at: 2026-03-05T01:58:30Z\nRelease notes:\n### 🆕 New Features\n- #7088 feat(proxy): allow socks proxy for the notifications (Thanks @ASLanin)\n- #7046 feat: add whatsApp (360messenger) notification provider (Thanks @WaMessenger)\n- #6989 feat: allow templating in the Signal notificaiton provider (Thanks @karthikeya-333)\n### 💇‍♀️ Improvements\n- #6979 refactor: improve SQLite multiple connections\n### 🐞 Bug Fixes\n- #7019 fix: Uptime Kuma is not able to start on older version of Node.js 20 (~20.17.0)\n- #7076 fix(monitor-list): cannot display monitor name in full width\n- #7069 fix(monitor-list): tag list do not update\n- #7056 fix(globalping): retry creating the measurement on status 500 (Thanks @radulucut)\n- #7055 fix(globalping): show error message when using multiple locations (Thanks @radulucut)\n- #7048 fix: Fix domain validation not allowing for PTR DNS records (Thanks @sgdc3)\n- #7045 fix: Remove forced DOWN status in group monitor (Thanks @MayMeow)\n- #7043 fix: Setting Status Page Analytics Type to \"None\" fails with SQLite constraint violation\n- #7011 fix(edit-monitor): several issues in edit page\n- #7010 fix(edit-monitor): url validation is incorrect\n- #6999 fix: show actual bind address in startup logs (Thanks @mixelburg)\n- #6994 fix: preserve Domain Name Expiry Notification setting when editing monitor (Thanks @RohitDarekar816)\n- #6984 fix: show certificate expiry on status page for TCP monitors (Thanks @mixelburg)\n### ⬆️ Security Fixes\n- GHSA-c7hf-c5p5-5g6h Missing Authorization Check on Ping Badge Endpoint Leaks Ping times of montors (Thanks @kuranikaran)\n### 🦎 Translation Contributions\n- #7072 #7007 chore: Translations Update from Weblate (Thanks @2000Arion @abcsnoob @aindriu80 @Aluisio @AnnAngela @AntonPalmqvist @BelenCaSa @cyril59310 @dodog @florian-berger @helakostain @ivanbratovic @kiznick @LovesAsuna @mariogarridopt @MrDariusz @MrEddX @robertcoroianu @Virenbar)\n### Others\n- #7015 chore: follow up #7013\n- #7013 chore: add PR description template check workflow\n- #5179 feat: structured logging (JSON) (Thanks @SapphicCode)\n- #7092 chore: update to 2.2.0\n- #7071 #6991 chore: Update dependencies\n- #7032 chore: remove @aws-sdk, @azure packages\n- #7077 chore: generate package-lock.json from scratch to ensure accuracy\n- #7058 chore: improve changelog generator",
+      "memory_unit_text": "In the louislam/uptime-kuma release 2.2.0, new features allow socks proxy for notifications, add WhatsApp (360messenger) notification provider, and enable templating in Signal notifications. Improvements refactor SQLite multiple connections. Bug fixes address Node.js 20 compatibility, monitor name display, tag list update, Globalping retry and error messages, domain validation for PTR records, forced DOWN status in group monitor, status page analytics type, edit page issues, URL validation, bind address logging, domain expiry notification setting preservation, certificate expiry on status page for TCP monitors, and more. Security fixes address GHSA-c7hf-c5p5-5g6h. Translation contributions are updated."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__2_2_1",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.2.1",
+      "tag_name": "2.2.1",
+      "title": "2.2.1",
+      "time_hint": "2026-03-10",
+      "published_at": "2026-03-10T02:25:33Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/2.2.1",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 2.2.1\nTag: 2.2.1; draft: False; prerelease: False; published_at: 2026-03-10T02:25:33Z; created_at: 2026-03-10T02:24:07Z\nRelease notes:\n### 🆕 New Features\n- #7109 feat: fluxer notification provider (Thanks @letruxux)\n- #7096 feat: set process.title to uptime-kuma (Thanks @Hill-98)\n### 🐞 Bug Fixes\n- #7121 fix: isParentActive return type to boolean (Thanks @terisikk)\n- #7110 fix(ui): fix fluxer input styling; make discord input hidden (Thanks @letruxux)\n- #6915 fix: removal of uptime ratio and avg. response time from prometheus metrics (Thanks @tr4nt0r)\n- #7101 fix: revert: remove @aws-sdk, @azure packages\n### ⬆️ Security Fixes\nGHSA-v832-4r73-wx5j - Another Server-side Template Injection (SSTI) in Notification Templates Allows Arbitrary File Read (fixed in upstream dependency LiquidJS, also see: https://github.com/harttle/liquidjs/security/advisories/GHSA-wmfp-5q7x-987x)\n### 🦎 Translation Contributions\n- #7119 #7099 chore: Translations Update from Weblate (Thanks @aindriu80 @Aluisio @cyril59310 @dodog @fabianovich @krmu @letruxux @maxisimonazzi @MrEddX)\n### Others\n- #7120 #7100 chore: Update dependencies",
+      "memory_unit_text": "In the louislam/uptime-kuma release 2.2.1, new features add fluxer notification provider and set process.title to uptime-kuma. Bug fixes correct isParentActive return type, fix fluxer input styling, restore uptime ratio and avg response time in Prometheus metrics, and revert removal of @aws-sdk and @azure packages. Security fixes address GHSA-v832-4r73-wx5j, an SSTI vulnerability in LiquidJS. Translation contributions are updated."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__2_3_0",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.3.0",
+      "tag_name": "2.3.0",
+      "title": "2.3.0",
+      "time_hint": "2026-05-01",
+      "published_at": "2026-05-01T04:01:17Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/2.3.0",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 2.3.0\nTag: 2.3.0; draft: False; prerelease: False; published_at: 2026-05-01T04:01:17Z; created_at: 2026-05-01T03:51:47Z\nRelease notes:\n### ⚠️ Breaking changes\n- #7194 fix: Revert \"add sorting to status pages\"\n- No more sorting feature in status pages.\n- Due to bad performance.\n- #7312 fix(database): add `UPTIME_KUMA_SQLITE_SINGLE_CONNECTION`\n- For Raspberry Pi users, you may have to set it to `true` to avoid SQLite locking issues.\n- Mainly affected Raspberry Pi users only, you can ignore it if you are not using devices like Raspberry Pi.\n### 🆕 New Features\n- #7304 feat: websocket improve to fix issue #7268 including support authentication (Thanks @sofia-fernandez-six)\n- #7207 feat(notification): add custom message template support for Evolution provider (Thanks @kbrianps)\n- #7201 feat: add Telnyx messaging provider (Thanks @LuvForAirplanes)\n- #7182 feat: Add VK notification provider (Thanks @FunNikita)\n- #7160 feat: Add MAX messenger notification provider (Thanks @Redleks)\n- #7156 feat: add OracleDB monitor (Thanks @sitiom)\n- #7154 feat: add collapsible groups to status page (Thanks @marco-carvalho)\n### 💇‍♀️ Improvements\n- #7303 feat(ui): add a helptext that RTT for the ping monitor is not avaliable on linux (Thanks @stchigel)\n- #7300 feat(ux): changed warning msg (Thanks @hemanth5544)\n- #7128 fix: Update Home Assistant notification help text for HA 2024 Services→Actions rename (Thanks @tr4nt0r)\n### 🐞 Bug Fixes\n- #7248 fix(notification): check for monitorJSON in Stackfield provider (Thanks @jlbrt)\n- #7166 fix: Handle SSL in setup database temp server\n- #7235 fix(uptime): ensure correct handling of missing time buckets in uptime calculations (Thanks @adrianceding)\n- #7221 fix(notification): ensure applyExisting is not saved to database\n- #7198 fix: Domain expiry doesn't seem to update #7189 (Thanks @shanto)\n- #7155 fix: propagate create errors (Thanks @otbutz)\n- #7159 fix: monitor graph gaps for sub-millisecond TCP pings (Thanks @0xRozier)\n- #7125 fix: prometheus metrics have two series for a single monitor when that monitor has tags (Thanks @nicjansma)\n### 🦎 Translation Contributions\n- #7108 feat: Add English (United Kingdom) language support (Thanks @andibing)\n- #7292 #7197 #7132 chore: Translations Update from Weblate (Thanks @aindriu80 @Ale1x @Aluisio @andibing @AnnAngela @CammarataLudovico @cyril59310 @dodog @efenow @fcordeiro @firedur @FunNikita @Gringit @Hamstio1 @helakostain @ivanbratovic @kevinheyer-dev @mlopezcoria @Mo7amm1d @MrEddX @numarkpro @Redleks @rodis120 @samsilveira @thisisjaymehta @ttymayor @Virenbar @wibe01204 @Zeromskas)\n### Others\n- #7317 #7195 #7133 chore: Update dependencies\n- #7204 chore: Add agents.md - anti AI slop\n- #7146 chore: Add monthly workflow to build `push` Docker image",
+      "memory_unit_text": "In the louislam/uptime-kuma release 2.3.0, breaking changes revert sorting on status pages due to performance and add UPTIME_KUMA_SQLITE_SINGLE_CONNECTION for Raspberry Pi users. New features improve WebSocket with authentication, add custom message template for Evolution provider, Telnyx messaging, VK notification, MAX messenger, OracleDB monitor, and collapsible groups on status page. Improvements add RTT help text, change warning message, and update Home Assistant help text. Bug fixes address Stackfield provider, SSL in setup database, uptime calculation, applyExisting saving, domain expiry update, create error propagation, monitor graph gaps, and Prometheus metric duplication. Translation contributions add English (United Kingdom) and update translations."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__2_3_1",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.3.1",
+      "tag_name": "2.3.1",
+      "title": "2.3.1",
+      "time_hint": "2026-05-03",
+      "published_at": "2026-05-03T13:40:11Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/2.3.1",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 2.3.1\nTag: 2.3.1; draft: False; prerelease: False; published_at: 2026-05-03T13:40:11Z; created_at: 2026-05-03T13:37:29Z\nRelease notes:\n### 🐞 Bug Fixes\n- #7307 fix: Add `busy_timeout` to sqlite to avoid error `SQLITE_BUSY: database is locked` (Thanks @wagnerand)\n### Others\n- #7340 chore: Update dependencies\n- #7345 chore: update to 2.3.1\n- #7344 fix(push): use multi-arch Node base in push image Dockerfile (Thanks @herwinz)",
+      "memory_unit_text": "In the louislam/uptime-kuma release 2.3.1, a bug fix adds busy_timeout to SQLite to avoid SQLITE_BUSY errors. Other changes update dependencies and fix the push image Dockerfile for multi-arch."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__2_3_2",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.3.2",
+      "tag_name": "2.3.2",
+      "title": "2.3.2",
+      "time_hint": "2026-05-03",
+      "published_at": "2026-05-03T16:15:29Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/2.3.2",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 2.3.2\nTag: 2.3.2; draft: False; prerelease: False; published_at: 2026-05-03T16:15:29Z; created_at: 2026-05-03T16:11:20Z\nRelease notes:\n### 🐞 Bug Fixes\n- #7346 fix: Revert back from multiple connection to single connection for SQLite by default",
+      "memory_unit_text": "In the louislam/uptime-kuma release 2.3.2, a bug fix reverts SQLite back from multiple connections to a single connection by default."
+    },
+    {
+      "memory_node_id": "louislam__uptime_kuma__release__2_4_0",
+      "repo": "louislam/uptime-kuma",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.4.0",
+      "tag_name": "2.4.0",
+      "title": "2.4.0",
+      "time_hint": "2026-05-31",
+      "published_at": "2026-05-31T00:55:12Z",
+      "source_url": "https://github.com/louislam/uptime-kuma/releases/tag/2.4.0",
+      "raw_text": "Repository: louislam/uptime-kuma\nRelease: 2.4.0\nTag: 2.4.0; draft: False; prerelease: False; published_at: 2026-05-31T00:55:12Z; created_at: 2026-05-31T00:46:42Z\nRelease notes:\n### 🆕 New Features\n- #7434 feat(notification): add EgoSMS SMS provider for Uganda (Thanks @kristianinc @cursoragent)\n- #7420 feat: Add incidents to RSS (Thanks @dj-tuxis)\n- #7365 feat: Add VKTeams bot notification provider (Thanks @aleshasam)\n### 💇‍♀️ Improvements\n- #7433 feat: add optional token field for gamedig monitors (Thanks @aminoacidity)\n- #7415 feat: Adding bearer token  (Thanks @aminoacidity @nyeswant)\n- #7431 fix: Add bearer token support to WebSocket upgrade monitor (Thanks @aminoacidity @nyeswant)\n- #7373 fix: update link to documentation about API keys (Thanks @eleanordoesntcode)\n### 🐞 Bug Fixes\n- ~#7453 fix(docker-only): add Let's Encrypt Gen Y root certificates~ (Please ignore this change)\n- #7451 fix: handling npm 11.16.0\n- #7351 fix: NTLM monitor over plain HTTP fails with 400 Bad Request (Thanks @karzac)\n### ⬆️ Security Fixes\n- (Admin only/Authenticated only) Remote Code Execution, a vulnerability from an upstream dependency (Reveal later, ping me if I forgot to reveal)\n### 🦎 Translation Contributions\n- #7366 #7353 chore: Translations Update from Weblate (Thanks @aindriu80 @Aluisio @andibing @AnnAngela @Arden-Ahmad @bartoostveen @cyril59310 @dodog @Gringit @helakostain @ivanbratovic @Jumala9163 @Kf637 @master3395 @MrEddX @OnyxOracle @PolarniMeda @samsilveira @toniv90 @ttymayor @Virenbar @xuantan97)\n### Others\n- #7432 chore: Implement dev data directory handling for non-master branches\n- #7390 fix: normalize hidden log level lookup (Thanks @aqilaziz)",
+      "memory_unit_text": "In the louislam/uptime-kuma release 2.4.0, new features add EgoSMS provider, incidents to RSS, and VKTeams bot notification. Improvements add optional token for gamedig, bearer token support, and update API key documentation link. Bug fixes handle npm 11.16.0 and fix NTLM monitor over plain HTTP. Security fixes address an authenticated Remote Code Execution vulnerability from an upstream dependency. Translation contributions are updated."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the louislam/uptime-kuma releases, which release introduces a manual (static/fixed) monitor and a proxy clone functionality?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2.0.0-beta.3"
+        },
+        {
+          "option_id": "B",
+          "text": "2.0.0-beta.4"
+        },
+        {
+          "option_id": "C",
+          "text": "2.0.0"
+        },
+        {
+          "option_id": "D",
+          "text": "2.1.0-beta.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "2.0.0-beta.4",
+      "source_chunk_ids": [
+        "louislam__uptime_kuma__release__2_0_0_beta_4"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "louislam__uptime_kuma__release__2_0_0_beta_4",
+          "answer_text": "feat: Add a \"manual\" (static/fixed) monitor ... feat: Add proxy clone functionality to settings"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the louislam/uptime-kuma releases, how does the security fix in release 1.23.16 differ from the security fix in release 1.23.17?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1.23.16 patches CVE-2024-56331 (LFI in Real-Browser monitor), while 1.23.17 patches GHSA-vffh-c9pq-4crh (SSTI in notification templates)."
+        },
+        {
+          "option_id": "B",
+          "text": "1.23.16 patches an SSTI vulnerability, while 1.23.17 patches an LFI vulnerability."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases patch the same CVE-2024-56331."
+        },
+        {
+          "option_id": "D",
+          "text": "1.23.16 patches a dependency update, while 1.23.17 patches a browser monitor issue."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1.23.16 patches CVE-2024-56331 (LFI in Real-Browser monitor), while 1.23.17 patches GHSA-vffh-c9pq-4crh (SSTI in notification templates).",
+      "source_chunk_ids": [
+        "louislam__uptime_kuma__release__1_23_16",
+        "louislam__uptime_kuma__release__1_23_17"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "louislam__uptime_kuma__release__1_23_16",
+          "answer_text": "CVE-2024-56331 Local File Inclusion (LFI) via Improper URL Handling in Real-Browser monitor"
+        },
+        {
+          "memory_node_id": "louislam__uptime_kuma__release__1_23_17",
+          "answer_text": "GHSA-vffh-c9pq-4crh Server-side Template Injection (SSTI) in Notification Templates Allows Arbitrary File Read"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the louislam/uptime-kuma release window, order the following release-content states from earliest to latest: (1) a release that adds a manual monitor and proxy clone functionality, (2) a release that adds Webpush notifications and drag & drop for groups, (3) a release that adds incidents to RSS and VKTeams bot notification.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3",
+      "source_chunk_ids": [
+        "louislam__uptime_kuma__release__2_0_0_beta_4",
+        "louislam__uptime_kuma__release__2_1_0_beta_0",
+        "louislam__uptime_kuma__release__2_4_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "louislam__uptime_kuma__release__2_0_0_beta_4",
+          "answer_text": "feat: Add a \"manual\" (static/fixed) monitor ... feat: Add proxy clone functionality to settings"
+        },
+        {
+          "memory_node_id": "louislam__uptime_kuma__release__2_1_0_beta_0",
+          "answer_text": "Webpush notifications ... feat: Add Drag & drop for groups"
+        },
+        {
+          "memory_node_id": "louislam__uptime_kuma__release__2_4_0",
+          "answer_text": "feat: Add incidents to RSS ... feat: Add VKTeams bot notification provider"
+        }
+      ]
+    }
+  ]
+}

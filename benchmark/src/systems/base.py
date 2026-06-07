@@ -28,17 +28,11 @@ class MemorySystem(ABC):
     def remember(
         self,
         text: str,
-        event_time: str,
-        record_time: Optional[str] = None,
-        source_name: str = "scenario_trace",
     ) -> str:
-        """Store a memory with event_time and record_time.
+        """Store one memory text.
 
         Args:
             text: The natural language content to remember.
-            event_time: When the described event occurred (valid time).
-            record_time: When the system recorded this fact (transaction time).
-            source_name: Provenance tag for the memory.
 
         Returns a write_id or task identifier.
         """
@@ -48,19 +42,13 @@ class MemorySystem(ABC):
     def query(
         self,
         question: str,
-        query_event_time: Optional[str] = None,
-        query_record_time: Optional[str] = None,
-        time_before: Optional[str] = None,
-        time_after: Optional[str] = None,
+        top_k: Optional[int] = None,
     ) -> QueryResult:
         """Query the memory system.
 
         Args:
             question: Natural language question
-            query_event_time: The event time the question refers to
-            query_record_time: The record time to query as-of
-            time_before: Only consider memories with event_time before this
-            time_after: Only consider memories with event_time after this
+            top_k: Optional retrieval budget override for the current query.
 
         Returns:
             QueryResult with answer and context
@@ -76,9 +64,22 @@ class MemorySystem(ABC):
         """Ingest all memory writes from a scenario, ordered by record_time."""
         writes = sorted(scenario.memory_writes, key=lambda w: w.record_time)
         for write in writes:
-            self.remember(
-                text=write.text,
-                event_time=write.event_time,
-                record_time=write.record_time,
-                source_name=write.source_name,
-            )
+            self.remember(text=write.text)
+
+    def remember_many(self, texts: List[str]) -> List[str]:
+        """Optional bulk-ingest hook.
+
+        Systems with native batch ingestion can override this to reduce overhead.
+        The default implementation preserves the one-text-per-memory-write protocol.
+        """
+        return [self.remember(text=text) for text in texts]
+
+    def remember_chain(self, chain_id: str, node_ids: List[str], texts: List[str]) -> List[str]:
+        """Optional chain-aware ingest hook.
+
+        Systems that preserve source chain/node provenance can override this to align
+        retrieval metadata with benchmark node ids while still ingesting one chain
+        sequentially or in bulk.
+        """
+        del chain_id, node_ids
+        return self.remember_many(texts)

@@ -1,0 +1,530 @@
+{
+  "prototype_id": "sharkdp__fd_release_window",
+  "domain": "github_release_evolution",
+  "repo": "sharkdp/fd",
+  "source_type": "release_note",
+  "window_title": "sharkdp/fd recent release evolution",
+  "window_summary": "This window tracks the recent sharkdp/fd release stream from v7.0.0 through v10.4.2, covering new features like --exec-batch, --glob, --list-details, --owner, --format, and performance improvements across major versions.",
+  "chunks": [
+    {
+      "memory_node_id": "sharkdp__fd__release__v7_0_0",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v7.0.0",
+      "tag_name": "v7.0.0",
+      "title": "v7.0.0",
+      "time_hint": "2018-03-26",
+      "published_at": "2018-03-26T09:39:37Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v7.0.0",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v7.0.0\nTag: v7.0.0; draft: False; prerelease: False; published_at: 2018-03-26T09:39:37Z; created_at: 2018-03-26T08:25:33Z\nRelease notes:\n## Features\n* Added `--type executable` (or `-t x`) to search for executable files only, see #246 (@PramodBisht)\n* Added support for `.fdignore` files, see #156 and #241.\n* Added `--ignore-file` option to add custom ignore files, see #156.\n* Suggest `--fixed-strings` on invalid regular expressions, see #234 (@PramodBisht)\n* Detect when user supplied path instead of pattern, see #235.\n## Changes\n* `.ignore` and `.rgignore` files are not parsed anymore. Use `.fdignore` files\nor add custom files via `--ignore-file` instead.\n* Updated to `regex-syntax` 0.5 (@cuviper)\n## Bugfixes\n* Properly normalize absolute paths, see #268\n* Invalid utf8 filenames displayed when `-e` is used, see #250\n* If `--type` is used, fifos/sockets/etc. are always shown, see #260\n## Other\n* Packaging:\n* The Arch Linux package is now simply called `fd`.\n* There is now a `fd` ebuild for Gentoo Linux.\n* There is a `scoop` package for `fd` (Windows).\n* There is a `Chocolatey` package for `fd` (Windows).\n* There is a Fedora `copr` package for `fd`.",
+      "memory_unit_text": "In the sharkdp/fd release v7.0.0, the project introduces --type executable to search for executable files, support for .fdignore files, the --ignore-file option to add custom ignore files, and suggestions for --fixed-strings on invalid regex. It also stops parsing .ignore and .rgignore files, updates regex-syntax to 0.5, and fixes absolute path normalization and invalid UTF-8 display with -e."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v7_1_0",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v7.1.0",
+      "tag_name": "v7.1.0",
+      "title": "v7.1.0",
+      "time_hint": "2018-08-19",
+      "published_at": "2018-08-19T17:38:07Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v7.1.0",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v7.1.0\nTag: v7.1.0; draft: False; prerelease: False; published_at: 2018-08-19T17:38:07Z; created_at: 2018-08-19T16:50:47Z\nRelease notes:\n## Features\n* Added `--size` filter option, see #276 (@stevepentland, @JonathanxD and @alexmaco)\n* Added `--type empty` (or `-t e`) to search for empty files and/or directories, see #273\n## Changes\n* With the new version, `.gitignore` files will only be respected in Git repositories, not outside.\n* A few performance improvements for `--type` searches, see 641976cf7ad311ba741571ca8b7f02b2654b6955 and 50a2bab5cd52d26d4a3bc786885a2c270ed3b227\n## Other\n* Starting with this release, we will offer pre-built ARM binaries, see #244\n* Added instructions on how to use `fd` with `emacs`, see #282 (@redguardtoo)\n* `fd` is now in the official openSUSE repositories, see #275 (@avindra)\n* `fd` is now available via MacPorts, see #291 (@raimue)",
+      "memory_unit_text": "In the sharkdp/fd release v7.1.0, the project adds --size filter option, --type empty to search for empty files/directories, and changes .gitignore to only be respected inside Git repositories. It also includes performance improvements for --type searches and starts offering pre-built ARM binaries."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v7_2_0",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v7.2.0",
+      "tag_name": "v7.2.0",
+      "title": "v7.2.0",
+      "time_hint": "2018-10-27",
+      "published_at": "2018-10-27T16:44:07Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v7.2.0",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v7.2.0\nTag: v7.2.0; draft: False; prerelease: False; published_at: 2018-10-27T16:44:07Z; created_at: 2018-10-27T16:11:50Z\nRelease notes:\n## Features\n* Added support for filtering by file modification time by adding two new options `--changed-before <date|duration>` and `--changed-within <..>`. For more details, see the `--help` text, the man page, the relevant issue #165 and the PR #339 (@kimsnj)\n* Added `--show-errors` option to enable the display of filesystem error messages such as \"permission denied\", see #311 (@psinghal20 and @majecty)\n* Added `--maxdepth` as a (hidden) alias for `--max-depth`, see #323 (@mqudsi)\n* Added `--search-path` option which can be supplied to replace the positional `path` argument at any position.\n## Changes\n* Loosen strict handling of missing `--ignore-file`, see #280 (@psinghal20)\n* Re-enabled `.ignore` files, see #156.\n## Bugfixes\n* `fd` could previously get stuck when run from the root directory in the\npresence of zombie processes. This curious bug has been fixed in Rust 1.29 and higher. For more details, see #288, [rust-lang/rust#50619](https://github.com/rust-lang/rust/issues/50619) and [the fix](https://github.com/rust-lang/rust/pull/50630)\n## Other\n* `fd` has officially landed in Debian! See #345 for details. Thanks goes to @sylvestre, @paride and possibly others I don't know about.\n* Added Chinese translation of README (@chinanf-boy)\n## Thanks\nA special thanks goes to @joshleeb for his amazing improvements throughout\nthe code base (new tests, refactoring work and various other things)!",
+      "memory_unit_text": "In the sharkdp/fd release v7.2.0, the project adds --changed-before and --changed-within for filtering by file modification time, --show-errors to display filesystem errors, --maxdepth alias, and --search-path option. It loosens handling of missing --ignore-file, re-enables .ignore files, and fixes a hang caused by zombie processes."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v7_3_0",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v7.3.0",
+      "tag_name": "v7.3.0",
+      "title": "v7.3.0",
+      "time_hint": "2019-02-13",
+      "published_at": "2019-02-13T20:08:51Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v7.3.0",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v7.3.0\nTag: v7.3.0; draft: False; prerelease: False; published_at: 2019-02-13T20:08:51Z; created_at: 2019-02-13T19:04:37Z\nRelease notes:\n## Features\n- New `--exec-batch <cmd>`/`-X <cmd>` option for batch execution of commands, see #360 (@kimsnj).\nThis allows you to do things like:\n``` bash\nfd … -X vim  # open all search results in vim (or any other editor)\nfd … -X ls -l  # view detailed stats about the search results with 'ls'\nfd -e svg -X inkscape  # open all SVG files in Inkscape\n```\n- Support for 24-bit color codes (when specified via `LS_COLORS`) as well as\ndifferent font styles (bold, italic, underline).\n## Changes\n- A few performance improvements, in particular when printing lots of colorized\nresults to the console, see #370\n- The `LS_COLORS` handling has been \"outsourced\" to a separate crate (https://github.com/sharkdp/lscolors) that is now being used by other tools as well: [fselect](https://github.com/jhspetersson/fselect), [lsd](https://github.com/Peltoche/lsd/pull/84). For details, see #363.\n## Other\n- `fd` will be available in Ubuntu Disco DIngo (19.04), see #373 (@sylvestre)\n- This release should come with a static ARM binary (`arm-unknown-linux-musleabihf`), see #320 (@duncanfinney)\n- Various documentation improvements, see #389\n## Thanks\nSpecial thanks to @alexmaco for his awesome work on refactoring and code improvements! (see #401, #398, and #383)",
+      "memory_unit_text": "In the sharkdp/fd release v7.3.0, the project introduces --exec-batch / -X for batch command execution, support for 24-bit color codes and font styles in LS_COLORS, and performance improvements for colorized output. LS_COLORS handling is outsourced to a separate crate."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v7_4_0",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v7.4.0",
+      "tag_name": "v7.4.0",
+      "title": "v7.4.0",
+      "time_hint": "2019-09-15",
+      "published_at": "2019-09-15T17:45:02Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v7.4.0",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v7.4.0\nTag: v7.4.0; draft: False; prerelease: False; published_at: 2019-09-15T17:45:02Z; created_at: 2019-09-15T17:29:15Z\nRelease notes:\n## Performance improvements\n- Reduce number of `stat` syscalls, improving the performance for searches where file metadata is\nrequired (`--type`, `--size`, `--changed-within`, …), see #434 (@tavianator)\n- Use jemalloc by default, improving the performance for almost all searches, see #481. Note that\nWindows and `*musl*` builds do not profit from this.\n## Features\n- Added a new `-g`/`--glob` option to switch to glob-based searches (instead of regular expression\nbased searches). This is accompanied by a new `--regex` option that can be used to switch back,\nif users want to `alias fd=\"fd --glob\"`. See #284\n- Added a new `--path-separator <sep>` option which can be useful for Windows users who\nwant/need `fd` to use `/` instead of `\\`, see #428 and #153 (@mookid)\n- Added support for hidden files on Windows, see #379\n- When `fd` is run with the `--exec-batch`/`-X` option, it now exposes the exit status of the\ncommand that was run, see #333.\n- Exit immediately when Ctrl-C has been pressed twice, see #423\n## Bugfixes\n- Make `--changed-within`/`--changed-before` work for directories, see #470\n## Other\n- Pre-built `fd` binaries should now be available for `armhf` targets, see #457 (@detly)\n- `fd` is now available on Alpine Linux, see #451 (@5paceToast)\n- `fd` is now in the officla FreeBSD repositories, see #412 (@t6)\n- Added OpenBSD install instructions, see #421 (@evitalis)\n- Added metadata to the Debian package, see #416 (@cathalgarvey)\n- `fd` can be installed via npm, see #438 (@pablopunk)",
+      "memory_unit_text": "In the sharkdp/fd release v7.4.0, the project reduces stat syscalls for metadata searches, uses jemalloc by default, adds --glob for glob-based searches, --path-separator, support for hidden files on Windows, exposes exit status of --exec-batch commands, and exits on double Ctrl-C. It also fixes --changed-within/--changed-before for directories."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v7_5_0",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v7.5.0",
+      "tag_name": "v7.5.0",
+      "title": "v7.5.0",
+      "time_hint": "2020-03-22",
+      "published_at": "2020-03-22T15:38:51Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v7.5.0",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v7.5.0\nTag: v7.5.0; draft: False; prerelease: False; published_at: 2020-03-22T15:38:51Z; created_at: 2020-03-22T15:19:28Z\nRelease notes:\n## Features\n- Added `--one-file-system` (aliases: `--mount`, `--xdev`) to not cross file system boundaries on Unix and Windows, see #507 (@FallenWarrior2k).\n- Added `--base-directory` to change the working directory in which `fd` is run, see #509 and #475 (@hajdamak).\n- `fd` will not use colored output if the `NO_COLOR` environment variable is set, see #550 and #551 (@metadave).\n- `fd --exec` will return exit code 1 if one of the executed commands fails, see #526 and #531 (@fusillicode and @Giuffre)\n## Bug Fixes\n- Fixed 'command not found' error when using zsh completion, see #487 (@barskern).\n- `fd -L` should include broken symlinks, see #357 and #497 (@tommilligan, @neersighted and @sharkdp)\n- Display directories even if we don't have permission to enter, see #437 (@sharkdp)\n## Changes\n- A flag can now be passed multiple times without producing an error, see #488 and #496 (@rootbid).\n- Search results are sorted when using the `-X` option to match the behaviour of piping to `xargs`, see #441 and #524 (@Marcoleni @crash-g).",
+      "memory_unit_text": "In the sharkdp/fd release v7.5.0, the project adds --one-file-system to not cross filesystem boundaries, --base-directory to change working directory, NO_COLOR support, and --exec returns exit code 1 on command failure. It fixes zsh completion, -L including broken symlinks, and displays directories even without permission to enter. Flags can be passed multiple times, and search results are sorted with -X."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v8_0_0",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.0.0",
+      "tag_name": "v8.0.0",
+      "title": "v8.0.0",
+      "time_hint": "2020-04-16",
+      "published_at": "2020-04-16T08:30:51Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v8.0.0",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v8.0.0\nTag: v8.0.0; draft: False; prerelease: False; published_at: 2020-04-16T08:30:51Z; created_at: 2020-04-16T08:11:05Z\nRelease notes:\n## Features\n- Add a new `-l`/`--list-details` option to show more details about the search results. This is\nbasically an alias for `--exec-batch ls -l` with some additional `ls` options.\nThis can be used in order to:\n* see metadata like permissions, owner, file size, modification times (#491)\n* see symlink targets (#482)\n* achieve a deterministic output order (#324, #196, #159)\n- Add a new `--max-results=<count>` option to limit the number of search results, see #472, #476 and #555\nThis can be useful to speed up searches in cases where you know that there are only N results.\nUsing this option is also (slightly) faster than piping to `head -n <count>` where `fd` can only\nexit when it finds the search results `<count> + 1`.\n- Add the alias `-1` for `--max-results=1`, see #561. (@SimplyDanny).\n- Add new `--type socket` and `--type pipe` filters, see #511.\n- Add new `--min-depth <depth>` and `--exact-depth <depth>` options in addition to the existing option\nto limit the maximum depth. See #404.\n- Support additional ANSI font styles in `LS_COLORS`: faint, slow blink, rapid blink, dimmed, hidden and strikethrough.\n## Bugfixes\n- Preserve non-UTF8 filenames: invalid UTF-8 filenames are now properly passed to child-processes\nwhen using `--exec`, `--exec-batch` or `--list-details`. In `fd`'s output, we replace non-UTF-8\nsequences with the \"�\" character. However, if the output of `fd` goes to another process, we\nprint the actual bytes of the filename. For more details, see #558 and #295.\n- `LS_COLORS` entries with unsupported font styles are not completely ignored, see #552\n## Changes\n- Colored output will now be enabled by default on older Windows versions.\nThis allows the use of colored output if the terminal supports it (e.g.\nMinTTY, Git Bash). On the other hand, this will be a regression for users\non older Windows versions with terminals that do not support ANSI escape\nsequences. Affected users can use an alias `fd=\"fd --color=never\"` to\ncontinue using `fd` without colors. There is no change of behavior for\nWindows 10. See #469.\n- When using `--glob` in combination with `--full-path`, a `*` character does not match a path\nseparation character (`/` or `\\\\`) anymore. You can use `**` for that. This allows things like\n`fd -p -g '/some/base/path/*/*/*.txt'` which would previously match to arbitrary depths (instead\nof exactly two folders below `/some/base/path`. See #404.\n- \"Legacy\" support to use `fd -exec` (with a single dash) has been removed. Use `fd -x` or\n`fd --exec` instead.\n- Overall improved error handling and error messages.\n## Other\n- Package maintainers on MacOS and Windows might think about adding (GNU) `ls` as an optional dependency for `fd` to make full use of `fd`s new `-l`/`--list-details` option. For MacOS, `fd` relies on `gls` which should be available via `coreutils`.\n- Korean translation of the README, see: [한국어](https://github.com/spearkkk/fd-kor) (@spearkkk)",
+      "memory_unit_text": "In the sharkdp/fd release v8.0.0, the project adds --list-details / -l to show metadata, --max-results to limit results, -1 alias for --max-results=1, --type socket and --type pipe, --min-depth and --exact-depth, and additional ANSI font styles. It preserves non-UTF-8 filenames in child processes, enables colored output by default on older Windows, changes --glob with --full-path to not match path separators with *, removes legacy -exec support, and improves error handling."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v8_1_0",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.1.0",
+      "tag_name": "v8.1.0",
+      "title": "v8.1.0",
+      "time_hint": "2020-05-19",
+      "published_at": "2020-05-19T16:51:05Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v8.1.0",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v8.1.0\nTag: v8.1.0; draft: False; prerelease: False; published_at: 2020-05-19T16:51:05Z; created_at: 2020-05-19T16:01:51Z\nRelease notes:\n## Features\n- Add new `--owner [user][:group]` command-line option See #307 (pull #581) (@alexmaco)\nThis can be used to filter results by ownership:\n``` bash\n# files matching the 'exercise' pattern, owned by john\nfd exercise --type file --owner john\n# files/directories that are not owned by john\nfd --owner '!john'\n# … owned by the 'students' group\nfd --owner ':students'\n# … owned by the 'students' group, but not by john\nfd --owner '!john:students'\n```\nNote that the new option is currently not available on Windows.\n- Add support for a global ignore file (`~/.config/fd/ignore` on Unix), see #575 (@soedirgo)\n- Do not exit immediately if one of the search paths is missing, see #587 (@DJRHails)\n## Bugfixes\n- Reverted a change from fd 8.0 that enabled colors on all Windows terminals (see below) in order to support older Windows versions again, see #577. Unfortunately, this re-opens #469\n- Fix segfault caused by jemalloc on macOS Catalina, see #498\n- Fix `--glob` behavior with empty pattern, see #579 (@SeamusConnor)\n- Fix `--list-details` on FreeBSD, DragonFly BSD, OpenBSD and NetBSD. See #573 (@t6)\n## Changes\n- Updated documentation for `--size`, see #584",
+      "memory_unit_text": "In the sharkdp/fd release v8.1.0, the project adds --owner filter to filter by user/group, support for a global ignore file (~/.config/fd/ignore on Unix), and does not exit immediately if a search path is missing. It reverts the Windows color change from v8.0.0, fixes a jemalloc segfault on macOS Catalina, --glob with empty pattern, and --list-details on BSDs."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v8_1_1",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.1.1",
+      "tag_name": "v8.1.1",
+      "title": "v8.1.1",
+      "time_hint": "2020-05-25",
+      "published_at": "2020-05-25T13:39:59Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v8.1.1",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v8.1.1\nTag: v8.1.1; draft: False; prerelease: False; published_at: 2020-05-25T13:39:59Z; created_at: 2020-05-25T13:38:30Z\nRelease notes:\n## Bugfixes\n- Support colored output on older Windows versions if either (1) `--color=always` is set or (2) the `TERM` environment variable is set. See #469",
+      "memory_unit_text": "In the sharkdp/fd release v8.1.1, the project supports colored output on older Windows versions if --color=always is set or the TERM environment variable is set."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v8_2_0",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.2.0",
+      "tag_name": "v8.2.0",
+      "title": "v8.2.0",
+      "time_hint": "2020-12-06",
+      "published_at": "2020-12-06T15:06:30Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v8.2.0",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v8.2.0\nTag: v8.2.0; draft: False; prerelease: False; published_at: 2020-12-06T15:06:30Z; created_at: 2020-12-06T15:04:37Z\nRelease notes:\n## Features\n- Add new `--prune` flag, see #535 (@reima)\n- Improved the usability of the time-based options, see #624 and #645 (@gorogoroumaru)\n- Add support for exact file sizes in the `--size` filter, see #669 and #696 (@Rogach)\n- `fd` now prints an error message if the search pattern requires a leading dot but\n`--hidden` is not enabled (Unix only), see #615\n## Bugfixes\n- Avoid panic when performing limited searches in directories with restricted permissions, see #678\n- Invalid numeric command-line arguments are silently ignored, see #675\n- Disable jemalloc on Android, see #662\n- The `--help` text will be colorless if `NO_COLOR` has been set, see #600 (@xanonid)\n## Changes\n- If `LS_COLORS` is not set (e.g. on Windows), we now provide a more comprehensive default which\nincludes much more filetypes, see #604 and #682 (mjsir911).\n## Other\n- Added `zsh` completion files, see #654 and #189 (@smancill)",
+      "memory_unit_text": "In the sharkdp/fd release v8.2.0, the project adds --prune flag, improves time-based options usability, adds support for exact file sizes in --size filter, prints an error if pattern requires leading dot without --hidden, avoids panic on restricted directories, disables jemalloc on Android, makes --help colorless with NO_COLOR, and provides a more comprehensive default LS_COLORS when not set."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v8_2_1",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.2.1",
+      "tag_name": "v8.2.1",
+      "title": "v8.2.1",
+      "time_hint": "2020-12-07",
+      "published_at": "2020-12-07T18:03:59Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v8.2.1",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v8.2.1\nTag: v8.2.1; draft: False; prerelease: False; published_at: 2020-12-07T18:03:59Z; created_at: 2020-12-07T17:57:45Z\nRelease notes:\nNo functional changes with respect to v8.2.0. Bugfix in the release process.",
+      "memory_unit_text": "In the sharkdp/fd release v8.2.1, there are no functional changes compared to v8.2.0; it is a bugfix in the release process."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v8_3_0",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.3.0",
+      "tag_name": "v8.3.0",
+      "title": "v8.3.0",
+      "time_hint": "2021-11-26",
+      "published_at": "2021-11-26T21:21:10Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v8.3.0",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v8.3.0\nTag: v8.3.0; draft: False; prerelease: False; published_at: 2021-11-26T21:21:10Z; created_at: 2021-11-26T21:18:50Z\nRelease notes:\n## Performance improvements\n- Colorized output is now significantly faster, see #720 and #853 (@tavianator)\n- Writing to stdout is now buffered if the output does not go to a TTY. This increases performance\nwhen the output of `fd` is piped to another program or to a file, see #885 (@tmccombs, original\nimplementation by @sourlemon207)\n- File metadata is now cached between the different filters that require it (e.g. `--owner`,\n`--size`), reducing the number of `stat` syscalls when multiple filters are used; see #863\n(@tavianator, original implementation by @alexmaco)\n## Features\n- Don't buffer command output from `--exec` when using a single thread. See #522\n- Add new `-q, --quiet` flag, see #303 (@Asha20)\n- Add new `--no-ignore-parent` flag, see #787 (@will459)\n- Add new `--batch-size` flag, see #410 (@devonhollowood)\n- Add opposing command-line options, see #595 (@Asha20)\n- Add support for more filesystem indicators in `LS_COLORS`, see\nhttps://github.com/sharkdp/lscolors/pull/35 (@tavianator)\n## Bugfixes\n- Always show the `./` prefix for search results unless the output is a TTY or `--strip-cwd-prefix` is set, see #760 and #861 (@jcaplan)\n- Set default path separator to `/` in MSYS, see #537 and #730 (@aswild)\n- fd cannot search files under a RAM disk, see #752\n- fd doesn't show substituted drive on Windows, see #365\n- Properly handle write errors to devices that are full, see #737\n- Use local time zone for time functions (`--change-newer-than`, `--change-older-than`), see #631 (@jacobmischka)\n- Support `--list-details` on more platforms (like BusyBox), see #783\n- The filters `--owner`, `--size`, and `--changed-{within,before}` now apply to symbolic links\nthemselves, rather than the link target, except when `--follow` is specified; see #863\n- Change time comparisons to be exclusive, see #794 (@jacobmischka)\n## Changes\n- Apply custom `--path-separator` to commands run with `--exec(-batch)` and `--list-details`, see #697 (@aswild)\n## Other\n- Many documentation updates",
+      "memory_unit_text": "In the sharkdp/fd release v8.3.0, the project significantly speeds up colorized output, buffers stdout when not a TTY, caches file metadata between filters, doesn't buffer --exec output with single thread, adds --quiet, --no-ignore-parent, --batch-size, opposing command-line options, and more LS_COLORS indicators. It always shows ./ prefix unless TTY or --strip-cwd-prefix, sets default path separator to / in MSYS, fixes RAM disk search, substituted drive on Windows, write errors to full devices, uses local time zone for time functions, supports --list-details on more platforms, applies filters to symlinks themselves, and makes time comparisons exclusive."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v8_3_1",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.3.1",
+      "tag_name": "v8.3.1",
+      "title": "v8.3.1",
+      "time_hint": "2022-01-06",
+      "published_at": "2022-01-06T13:20:59Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v8.3.1",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v8.3.1\nTag: v8.3.1; draft: False; prerelease: False; published_at: 2022-01-06T13:20:59Z; created_at: 2022-01-06T13:20:02Z\nRelease notes:\n## Bugfixes\n- Stop implying `--no-ignore-parent` when `--no-vcs-ignore` is supplied, see #907, #901, #908 (@tmccombs)\n- fd no longer waits for the whole traversal if the only matches arrive within max_buffer_time, see #868 and #895 (@tavianator)\n- `--max-results=1` now immediately quits after the first result, see #867 (@tavianator)\n- `fd -h` does not panic anymore when stdout is closed, see #897\n## Changes\n- Disable jemalloc on FreeBSD, see #896 (@xanderio)\n- Updated man page, see #912 (@rlue)\n- Updated zsh completions, see #932 (@tmccombs)",
+      "memory_unit_text": "In the sharkdp/fd release v8.3.1, the project stops implying --no-ignore-parent with --no-vcs-ignore, no longer waits for full traversal if matches arrive within max_buffer_time, makes --max-results=1 quit immediately, fixes -h panic when stdout closed, disables jemalloc on FreeBSD, and updates man page and zsh completions."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v8_3_2",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.3.2",
+      "tag_name": "v8.3.2",
+      "title": "v8.3.2",
+      "time_hint": "2022-01-29",
+      "published_at": "2022-01-29T15:57:31Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v8.3.2",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v8.3.2\nTag: v8.3.2; draft: False; prerelease: False; published_at: 2022-01-29T15:57:31Z; created_at: 2022-01-29T15:53:13Z\nRelease notes:\n## Bufixes\n- Invalid absolute path on windows when searching from the drive root, see #931 and #936 (@gbarta)",
+      "memory_unit_text": "In the sharkdp/fd release v8.3.2, the project fixes an invalid absolute path on Windows when searching from the drive root."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v8_4_0",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.4.0",
+      "tag_name": "v8.4.0",
+      "title": "v8.4.0",
+      "time_hint": "2022-05-29",
+      "published_at": "2022-05-29T09:29:29Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v8.4.0",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v8.4.0\nTag: v8.4.0; draft: False; prerelease: False; published_at: 2022-05-29T09:29:29Z; created_at: 2022-05-29T09:21:45Z\nRelease notes:\n## Features\n- Support multiple `--exec <cmd>` instances, see #406 and #960 (@tmccombs)\n## Bugfixes\n- *\"Argument list too long\"* errors can not appear anymore when using `--exec-batch`/`-X`, as the command invocations are automatically batched at the maximum possible size, even if `--batch-size` is not given. See #410 and #1020 (@tavianator)\n## Changes\n- Directories are now printed with an additional path separator at the end: `foo/bar/`, see #436 and #812 (@yyogo)\n- The `-u` flag was changed to be equivalent to `-HI` (previously, a single `-u` was only equivalent to `-I`). Additional `-u` flags are still allowed, but ignored. See #840 and #986 (@jacksontheel)\n## Other\n- Added installation instructions for RHEL8, see #989 (@ethsol)",
+      "memory_unit_text": "In the sharkdp/fd release v8.4.0, the project supports multiple --exec instances, prevents 'Argument list too long' errors with --exec-batch by auto-batching, prints directories with trailing path separator, and changes -u flag to be equivalent to -HI."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v8_5_0",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.5.0",
+      "tag_name": "v8.5.0",
+      "title": "v8.5.0",
+      "time_hint": "2022-11-01",
+      "published_at": "2022-11-01T20:34:24Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v8.5.0",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v8.5.0\nTag: v8.5.0; draft: False; prerelease: False; published_at: 2022-11-01T20:34:24Z; created_at: 2022-11-01T20:18:11Z\nRelease notes:\n## Features\n- `--type executable`/`-t` now works on Windows, see #1051 and #1061 (@tavianator)\n## Bugfixes\n- Fixed differences between piped / non-piped output. This changes `fd`s behavior back to what we\nhad before 8.3.0, i.e. there will be no leading `./` prefixes, unless `--exec`/`-x`,\n`--exec-batch`/`-X`, or `--print0`/`-0` are used. `--strip-cwd-prefix` can be used to strip that\nprefix in those cases. See #1046, #1115, and #1121 (@tavianator)\n- `fd` could previously crash with a panic due to a race condition in Rusts standard library\n(see https://github.com/rust-lang/rust/issues/39364). This has been fixed by switching to a different\nmessage passing implementation, see #1060 and #1146 (@tavianator)\n- `fd`s memory usage will not grow unboundedly on huge directory trees, see #1146 (@tavianator)\n- fd returns an error when current working directory does not exist while a search path is\nspecified, see #1072 (@vijfhoek)\n- Improved \"command not found\" error message, see #1083 and #1109 (@themkat)\n- Preserve command exit codes when using `--exec-batch`, see #1136 and #1137 (@amesgen)\n## Changes\n- No leading `./` prefix for non-interactive results, see above.\n- fd now colorizes paths in parallel, significantly improving performance, see #1148 (@tavianator)\n- fd can now avoid `stat` syscalls even when colorizing paths, as long as the color scheme doesn't\nrequire metadata, see #1148 (@tavianator)\n- The statically linked `musl` versions of `fd` now use `jmalloc`, leading to a significant performance\nimprovement, see #1062 (@tavianator)\n## Other\n- Added link back to GitHub in man page and `--help` text, see #1086 (@scottchiefbaker)\n- Major update in how `fd` handles command line options internally, see #1067 (@tmccombs)",
+      "memory_unit_text": "In the sharkdp/fd release v8.5.0, the project makes --type executable work on Windows, fixes piped vs non-piped output differences (no leading ./ prefix unless --exec, --exec-batch, or --print0), fixes a panic from a race condition, prevents unbounded memory growth on huge trees, returns error when CWD doesn't exist with search path, improves 'command not found' error, preserves exit codes with --exec-batch, colorizes paths in parallel, avoids stat syscalls when color scheme doesn't need metadata, and uses jmalloc in static musl builds."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v8_5_1",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.5.1",
+      "tag_name": "v8.5.1",
+      "title": "v8.5.1",
+      "time_hint": "2022-11-02",
+      "published_at": "2022-11-02T12:48:55Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v8.5.1",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v8.5.1\nTag: v8.5.1; draft: False; prerelease: False; published_at: 2022-11-02T12:48:55Z; created_at: 2022-11-02T12:46:20Z\nRelease notes:\n## Bugfixes\n- Fix --threads/-j option value parsing, see #1160 and #1162 (@sharkdp)",
+      "memory_unit_text": "In the sharkdp/fd release v8.5.1, the project fixes --threads/-j option value parsing."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v8_5_2",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.5.2",
+      "tag_name": "v8.5.2",
+      "title": "v8.5.2",
+      "time_hint": "2022-11-03",
+      "published_at": "2022-11-03T08:14:38Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v8.5.2",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v8.5.2\nTag: v8.5.2; draft: False; prerelease: False; published_at: 2022-11-03T08:14:38Z; created_at: 2022-11-03T08:13:15Z\nRelease notes:\n## Bugfixes\n- Fix --owner option value parsing, see #1163 and #1164 (@tmccombs)",
+      "memory_unit_text": "In the sharkdp/fd release v8.5.2, the project fixes --owner option value parsing."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v8_5_3",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.5.3",
+      "tag_name": "v8.5.3",
+      "title": "v8.5.3",
+      "time_hint": "2022-11-21",
+      "published_at": "2022-11-21T19:43:49Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v8.5.3",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v8.5.3\nTag: v8.5.3; draft: False; prerelease: False; published_at: 2022-11-21T19:43:49Z; created_at: 2022-11-21T07:36:43Z\nRelease notes:\n## Bugfixes\n- Fix completion generation to not include full path of fd command\n- Fix build error if completions feature is disabled",
+      "memory_unit_text": "In the sharkdp/fd release v8.5.3, the project fixes completion generation to not include full path of fd command and fixes a build error when completions feature is disabled."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v8_6_0",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.6.0",
+      "tag_name": "v8.6.0",
+      "title": "v8.6.0",
+      "time_hint": "2022-12-09",
+      "published_at": "2022-12-09T07:02:26Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v8.6.0",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v8.6.0\nTag: v8.6.0; draft: False; prerelease: False; published_at: 2022-12-09T07:02:26Z; created_at: 2022-12-09T06:41:24Z\nRelease notes:\n## Features\n- New `--and <pattern>` option to add additional patterns that must also be matched. See #315\nand #1139 (@Uthar)\n- Added `--changed-after` as alias for `--changed-within`, to have a name consistent with `--changed-before`.\n## Changes\n- Breaking: On Unix-like systems, `--type executable` now additionally checks if\nthe file is executable by the current user, see #1106 and #1169 (@ptipiak)\n## Bugfixes\n- Use fd instead of fd.exe for Powershell completions (when completions are generated on windows)",
+      "memory_unit_text": "In the sharkdp/fd release v8.6.0, the project adds --and option for additional required patterns, --changed-after alias for --changed-within, changes --type executable on Unix to check if file is executable by current user, and fixes Powershell completions to use fd instead of fd.exe."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v8_7_0",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.7.0",
+      "tag_name": "v8.7.0",
+      "title": "v8.7.0",
+      "time_hint": "2023-02-24",
+      "published_at": "2023-02-24T08:25:03Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v8.7.0",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v8.7.0\nTag: v8.7.0; draft: False; prerelease: False; published_at: 2023-02-24T08:25:03Z; created_at: 2023-02-24T07:14:46Z\nRelease notes:\n## Features\n- Add flag --no-require-git to always respect gitignore files, see #1216 (@vegerot)\n## Bugfixes\n- Fix logic for when to use global ignore file. There was a bug where the only case where the\nglobal ignore file wasn't processed was if `--no-ignore` was passed, but neither `--unrestricted`\nnor `--no-global-ignore-file` is passed. See #1209",
+      "memory_unit_text": "In the sharkdp/fd release v8.7.0, the project adds --no-require-git flag to always respect gitignore files and fixes logic for when to use the global ignore file."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v8_7_1",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.7.1",
+      "tag_name": "v8.7.1",
+      "title": "8.7.1",
+      "time_hint": "2023-10-21",
+      "published_at": "2023-10-21T04:29:37Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v8.7.1",
+      "raw_text": "Repository: sharkdp/fd\nRelease: 8.7.1\nTag: v8.7.1; draft: False; prerelease: False; published_at: 2023-10-21T04:29:37Z; created_at: 2023-10-21T03:57:38Z\nRelease notes:\n## Bugfixes\n- `-1` properly conflicts with the exec family of options.\n- `--max-results` overrides `-1`\n- `--quiet` properly conflicts with the exec family of options. This used to be the case, but broke during the switch to clap-derive\n- `--changed-within` now accepts a space as well as a \"T\" as the separator between date and time (due to update of chrono dependency)\n## Other\n- Many dependencies were updated\n- Some documentation was updated and fixed",
+      "memory_unit_text": "In the sharkdp/fd release v8.7.1, the project fixes -1 conflicting with exec options, --max-results overriding -1, --quiet conflicting with exec options, and --changed-within accepting space as date-time separator."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v9_0_0",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v9.0.0",
+      "tag_name": "v9.0.0",
+      "title": "v9.0.0",
+      "time_hint": "2023-12-19",
+      "published_at": "2023-12-19T10:31:32Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v9.0.0",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v9.0.0\nTag: v9.0.0; draft: False; prerelease: False; published_at: 2023-12-19T10:31:32Z; created_at: 2023-12-19T10:28:59Z\nRelease notes:\n## Performance\n- This release is all about performance, which has been *significantly improved*, both due to optimizations in the underlying `ignore` crate (#1429 by @tavianator), and in `fd` itself (#1422, #1408, #1362 by @tavianator). [Benchmark results](https://gist.github.com/tavianator/32edbe052f33ef60570cf5456b59de81) show gains of 6-8x for full traversals of smaller directories (100k files) and up to 13x for larger directories (1M files).\n- The default number of threads is now constrained to be at most 64. This should improve startup time on systems with many CPU cores. (#1203, #1410, #1412, #1431) - @tmccombs and @tavianator\n- New flushing behavior when writing output to stdout, providing better performance for TTY and non-TTY use cases, see #1452 and #1313 (@tavianator).\n## Features\n- Support character and block device file types, see #1213 and #1336 (@cgzones)\n- Breaking: `.git/` is now ignored by default when using `--hidden` / `-H`, use `--no-ignore` / `-I` or `--no-ignore-vcs` to override, see #1387 and #1396 (@skoriop)\n## Bugfixes\n- Fix `NO_COLOR` support, see #1421 (@acuteenvy)\n## Other\n- Fixed documentation typos, see #1409 (@marcospb19)\n## Thanks\nSpecial thanks to @tavianator for his incredible work on performance in the `ignore` crate and `fd` itself.",
+      "memory_unit_text": "In the sharkdp/fd release v9.0.0, the project significantly improves performance (6-8x for smaller directories, up to 13x for larger), constrains default threads to at most 64, adds new flushing behavior for stdout, supports character and block device file types, ignores .git/ by default with --hidden, and fixes NO_COLOR support."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v10_0_0",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v10.0.0",
+      "tag_name": "v10.0.0",
+      "title": "v10.0.0",
+      "time_hint": "2024-05-06",
+      "published_at": "2024-05-06T06:05:42Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v10.0.0",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v10.0.0\nTag: v10.0.0; draft: False; prerelease: False; published_at: 2024-05-06T06:05:42Z; created_at: 2024-05-06T06:01:31Z\nRelease notes:\n## Features\n- Add `dir` as an alias to `directory` when using `-t` \\ `--type`, see #1460 and #1464 (@Ato2207).\n- Add support for @%s date format in time filters similar to GNU date (seconds since Unix epoch for --older/--newer), see #1493 (@nabellows)\n- Breaking: No longer automatically ignore `.git` when using `--hidden` with vcs ignore enabled. This reverts the change in v9.0.0. While this feature\nwas often useful, it also broke some existing workflows, and there wasn't a good way to opt out of it. And there isn't really a good way for us to add\na way to opt out of it. And you can easily get similar behavior by adding `.git/` to your global fdignore file.\nSee #1457.\n## Bugfixes\n- Respect NO_COLOR environment variable with `--list-details` option. (#1455)\n- Fix bug that would cause hidden files to be included despite gitignore rules\nif search path is \".\" (#1461, BurntSushi/ripgrep#2711).\n- aarch64 builds now use 64k page sizes with jemalloc. This fixes issues on some systems, such as ARM Macs that\nhave a larger system page size than the system that the binary was built on. (#1547)\n- Address [CVE-2024-24576](https://blog.rust-lang.org/2024/04/09/cve-2024-24576.html), by increasing minimum rust version.\n## Changes\n- Minimum supported rust version is now 1.77.2",
+      "memory_unit_text": "In the sharkdp/fd release v10.0.0, the project adds 'dir' as alias for 'directory' in --type, supports @%s date format in time filters, reverts the v9.0.0 change to no longer automatically ignore .git with --hidden when VCS ignore is enabled, respects NO_COLOR with --list-details, fixes hidden files included despite gitignore when search path is '.', uses 64k page sizes for aarch64 jemalloc, addresses CVE-2024-24576, and raises minimum Rust version to 1.77.2."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v10_1_0",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v10.1.0",
+      "tag_name": "v10.1.0",
+      "title": "v10.1.0",
+      "time_hint": "2024-05-08",
+      "published_at": "2024-05-08T06:41:38Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v10.1.0",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v10.1.0\nTag: v10.1.0; draft: False; prerelease: False; published_at: 2024-05-08T06:41:38Z; created_at: 2024-05-08T06:40:02Z\nRelease notes:\n## Features\n- Allow passing an optional argument to `--strip-cwd-prefix` of \"always\", \"never\", or \"auto\". to force whether the cwd prefix is stripped or not.\n- Add a `--format` option which allows using a format template for direct ouput similar to the template used for `--exec`. (#1043)\n## Bugfixes\n- Fix aarch64 page size again. This time it should actually work. (#1085, #1549) (@tavianator)\n## Other\n- aarch64-apple-darwin target added to builds on the release page. Note that this is a tier 2 rust target.",
+      "memory_unit_text": "In the sharkdp/fd release v10.1.0, the project allows optional argument to --strip-cwd-prefix (always/never/auto), adds --format option for template output, fixes aarch64 page size again, and adds aarch64-apple-darwin target to release builds."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v10_2_0",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v10.2.0",
+      "tag_name": "v10.2.0",
+      "title": "v10.2.0",
+      "time_hint": "2024-08-23",
+      "published_at": "2024-08-23T06:36:39Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v10.2.0",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v10.2.0\nTag: v10.2.0; draft: False; prerelease: False; published_at: 2024-08-23T06:36:39Z; created_at: 2024-08-22T19:27:40Z\nRelease notes:\n## Features\n- Add --hyperlink option to add OSC 8 hyperlinks to output\n## Changes\n- Build windows releases with rust 1.77 so windows 7 is still supported\n- Deb packages now include symlink for fdfind to be more consistent with official packages\n## New Contributors\n* @bryanhonof made their first contribution in https://github.com/sharkdp/fd/pull/1574\n* @JCHacking made their first contribution in https://github.com/sharkdp/fd/pull/1602\n* @RossSmyth made their first contribution in https://github.com/sharkdp/fd/pull/1596\n**Full Changelog**: https://github.com/sharkdp/fd/compare/v10.1.0...v10.2.0",
+      "memory_unit_text": "In the sharkdp/fd release v10.2.0, the project adds --hyperlink option for OSC 8 hyperlinks, builds Windows releases with Rust 1.77 for Windows 7 support, and includes a symlink for fdfind in deb packages."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v10_3_0",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v10.3.0",
+      "tag_name": "v10.3.0",
+      "title": "v10.3.0",
+      "time_hint": "2025-08-26",
+      "published_at": "2025-08-26T08:18:28Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v10.3.0",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v10.3.0\nTag: v10.3.0; draft: False; prerelease: False; published_at: 2025-08-26T08:18:28Z; created_at: 2025-08-26T07:32:04Z\nRelease notes:\n## Features\n- Add a hidden `--mindepth` alias for `--min-depth`. (#1617)\n## Bugfixes\n## Changes\n- Replace `humantime` crate and `chrono` crate with `jiff` crate, see #1690 (@sorairolake). This has some small changes to the\nway dates given to options such `--changed-within` and `--changed-before` including:\n- 'M' no longer means \"month\", as that could be confusing with minutes. Use \"mo\", \"mos\", \"month\" or \"months\" instead.\n- month and year now account for variability in the calander rather than being a hard-coded number of seconds. That is probably\nwhat you would expect, but it is a slight change in behavior.\n- aarch64 Windows was added to CI and release artifacts\n- Many dependencies were updated\n- Better support building on Illumos (there is no automated testing, but some known issues were fixed)\n## Other\nThis will be the last release that has been tested on x86_64 Mac OS, since GitHub is\ndropping support for runners with that hardware.\nIt may also be the last release to use a version of Rust with tier-1 support for\nx86_64/intel Macs and Windows 7.",
+      "memory_unit_text": "In the sharkdp/fd release v10.3.0, the project adds a hidden --mindepth alias, replaces humantime and chrono crates with jiff, changing date parsing (e.g., 'M' no longer means month), adds aarch64 Windows to CI, updates dependencies, and improves Illumos support. This is the last release tested on x86_64 Mac OS and possibly the last with tier-1 support for Intel Macs and Windows 7."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v10_4_0",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v10.4.0",
+      "tag_name": "v10.4.0",
+      "title": "v10.4.0",
+      "time_hint": "2026-03-07",
+      "published_at": "2026-03-07T07:04:04Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v10.4.0",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v10.4.0\nTag: v10.4.0; draft: False; prerelease: False; published_at: 2026-03-07T07:04:04Z; created_at: 2026-03-07T03:20:54Z\nRelease notes:\n## Features\n- Add `--ignore-contain` option to ignore directories containing a named entry (e.g. to ignore [`CACHEDIR.TAG`](https://bford.info/cachedir/)); see #1727 (@fischman).\n## Bugfixes\n- Fix Windows hyperlink generation for paths with spaces. (#1872)\n- `--print0` combined with `--exec` will now print a `\\0` between the output of each entry. Note that if there are multiple instances\nof `--exec`, the `\\0` will be between each _set_ of commands, _not_ between each individual command run. Fixes #1797.\n- Several bugs were fixed by an update to the `ignore` library used for handling ignore rules\n- #1506\n- #1667\n- #1813\n## Changes\n- Minimum required rust version has been increased to 1.90.0. Notably, this means dropping fully support for intel Mac and Windows 7.\n- Statically link the CRT for MSVC builds via Cargo config to avoid runtime DLL dependencies, see #1874 (@FidelSch)",
+      "memory_unit_text": "In the sharkdp/fd release v10.4.0, the project adds --ignore-contain option to ignore directories containing a named entry, fixes Windows hyperlink generation for paths with spaces, makes --print0 with --exec print \\0 between entry outputs, fixes several ignore rule bugs via updated ignore library, raises minimum Rust version to 1.90.0 (dropping Intel Mac and Windows 7 support), and statically links CRT for MSVC builds."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v10_4_1",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v10.4.1",
+      "tag_name": "v10.4.1",
+      "title": "v10.4.1",
+      "time_hint": "2026-03-08",
+      "published_at": "2026-03-08T08:41:02Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v10.4.1",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v10.4.1\nTag: v10.4.1; draft: False; prerelease: False; published_at: 2026-03-08T08:41:02Z; created_at: 2026-03-08T08:38:40Z\nRelease notes:\nThis is just a re-release of 10.4.0 due to an issue with the 10.4.0 release.",
+      "memory_unit_text": "In the sharkdp/fd release v10.4.1, this is a re-release of v10.4.0 due to an issue with the original release."
+    },
+    {
+      "memory_node_id": "sharkdp__fd__release__v10_4_2",
+      "repo": "sharkdp/fd",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v10.4.2",
+      "tag_name": "v10.4.2",
+      "title": "v10.4.2",
+      "time_hint": "2026-03-10",
+      "published_at": "2026-03-10T07:33:26Z",
+      "source_url": "https://github.com/sharkdp/fd/releases/tag/v10.4.2",
+      "raw_text": "Repository: sharkdp/fd\nRelease: v10.4.2\nTag: v10.4.2; draft: False; prerelease: False; published_at: 2026-03-10T07:33:26Z; created_at: 2026-03-10T07:32:25Z\nRelease notes:\n## Bugfixes\n- Fixed performance regression due to `--ignore-contain`; see #1913 and #1914",
+      "memory_unit_text": "In the sharkdp/fd release v10.4.2, the project fixes a performance regression caused by --ignore-contain."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the sharkdp/fd releases, which release introduces the --exec-batch option for batch command execution?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v7.2.0"
+        },
+        {
+          "option_id": "B",
+          "text": "v7.3.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v7.4.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v8.0.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v7.3.0",
+      "source_chunk_ids": [
+        "sharkdp__fd__release__v7_3_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "sharkdp__fd__release__v7_3_0",
+          "answer_text": "introduces --exec-batch / -X for batch command execution"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the sharkdp/fd releases, how does the handling of .gitignore differ between v7.1.0 and v9.0.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v7.1.0 respects .gitignore only inside Git repositories, while v9.0.0 ignores .git/ by default when using --hidden."
+        },
+        {
+          "option_id": "B",
+          "text": "v7.1.0 ignores .gitignore entirely, while v9.0.0 always respects it."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases treat .gitignore identically."
+        },
+        {
+          "option_id": "D",
+          "text": "v7.1.0 adds .fdignore support, while v9.0.0 removes .gitignore support."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v7.1.0 respects .gitignore only inside Git repositories, while v9.0.0 ignores .git/ by default when using --hidden.",
+      "source_chunk_ids": [
+        "sharkdp__fd__release__v7_1_0",
+        "sharkdp__fd__release__v9_0_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "sharkdp__fd__release__v7_1_0",
+          "answer_text": "changes .gitignore to only be respected inside Git repositories"
+        },
+        {
+          "memory_node_id": "sharkdp__fd__release__v9_0_0",
+          "answer_text": "ignores .git/ by default when using --hidden"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the sharkdp/fd release window, order the following release-content states from earliest to latest: (1) a release that adds --list-details and --max-results, (2) a release that adds --owner filter and global ignore file, (3) a release that adds --hyperlink option, (4) a release that adds --ignore-contain option.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "2 -> 3 -> 1 -> 4"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "sharkdp__fd__release__v8_0_0",
+        "sharkdp__fd__release__v8_1_0",
+        "sharkdp__fd__release__v10_2_0",
+        "sharkdp__fd__release__v10_4_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "sharkdp__fd__release__v8_0_0",
+          "answer_text": "adds --list-details / -l to show metadata, --max-results to limit results"
+        },
+        {
+          "memory_node_id": "sharkdp__fd__release__v8_1_0",
+          "answer_text": "adds --owner filter to filter by user/group, support for a global ignore file"
+        },
+        {
+          "memory_node_id": "sharkdp__fd__release__v10_2_0",
+          "answer_text": "adds --hyperlink option for OSC 8 hyperlinks"
+        },
+        {
+          "memory_node_id": "sharkdp__fd__release__v10_4_0",
+          "answer_text": "adds --ignore-contain option to ignore directories containing a named entry"
+        }
+      ]
+    }
+  ]
+}

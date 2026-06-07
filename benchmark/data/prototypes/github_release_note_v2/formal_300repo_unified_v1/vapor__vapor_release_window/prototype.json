@@ -1,0 +1,530 @@
+{
+  "prototype_id": "vapor__vapor_release_window",
+  "domain": "github_release_evolution",
+  "repo": "vapor/vapor",
+  "source_type": "release_note",
+  "window_title": "vapor/vapor recent release evolution",
+  "window_summary": "This window tracks the recent vapor/vapor release stream from 4.109.0 through 4.121.4, covering additions like swift-distributed-tracing, Swift Testing compatibility, validation API improvements, Android support, and various bug fixes and enhancements.",
+  "chunks": [
+    {
+      "memory_node_id": "vapor__vapor__release__4_109_0",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.109.0",
+      "tag_name": "4.109.0",
+      "title": "4.109.0 - Adds swift-distributed-tracing and TracingMiddleware",
+      "time_hint": "2024-12-20",
+      "published_at": "2024-12-20T10:18:40Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.109.0",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.109.0 - Adds swift-distributed-tracing and TracingMiddleware\nTag: 4.109.0; draft: False; prerelease: False; published_at: 2024-12-20T10:18:40Z; created_at: 2024-12-20T10:18:34Z\nRelease notes:\n## What's Changed\nAdds swift-distributed-tracing and TracingMiddleware by @NeedleInAJayStack in #3253\n> This adds support for `swift-distributed-tracing` and adds a `TracingMiddleware` type. This type will create a span for each wrapped request, and apply a standard set of span attributes according to OTEL standards.\n>\n> For background, see: [vapor/vapor#3033](https://github.com/vapor/vapor/issues/3033)\n## Reviewers\nThanks to the reviewers for their help:\n- @ktoso\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.108.0...4.109.0",
+      "memory_unit_text": "In the vapor/vapor release 4.109.0, the project adds support for swift-distributed-tracing and introduces a TracingMiddleware type. This middleware creates a span for each wrapped request and applies a standard set of span attributes according to OTEL standards."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_110_0",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.110.0",
+      "tag_name": "4.110.0",
+      "title": "4.110.0 - Better compatibility with Swift Testing",
+      "time_hint": "2024-12-21",
+      "published_at": "2024-12-21T01:33:19Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.110.0",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.110.0 - Better compatibility with Swift Testing\nTag: 4.110.0; draft: False; prerelease: False; published_at: 2024-12-21T01:33:19Z; created_at: 2024-12-21T01:33:12Z\nRelease notes:\n## What's Changed\nBetter compatibility with Swift Testing by @MahdiBM in #3257\n> Introduces a new `VaporTesting` module for testing with better compatibility with Swift Testing that removes usages of `XCTest`.\n>\n> Use the new `testing()` extension on `Application` to write your tests. E.g.:\n>\n> ```swift\n> try await app.testing().test(.POST, \"/decode\") { req in\n>   try req.content.encode(MyContent())\n> } afterResponse: { res in\n>   #expect(res.status == .ok)\n>   expectContains(res.body.string, \"Hello World!\")\n> }\n> ```\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.109.0...4.110.0",
+      "memory_unit_text": "In the vapor/vapor release 4.110.0, the project introduces a new VaporTesting module for better compatibility with Swift Testing, removing usages of XCTest. A new testing() extension on Application is provided to write tests."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_110_1",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.110.1",
+      "tag_name": "4.110.1",
+      "title": "4.110.1 - Minor swift-testing related improvements",
+      "time_hint": "2024-12-26",
+      "published_at": "2024-12-26T15:37:45Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.110.1",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.110.1 - Minor swift-testing related improvements\nTag: 4.110.1; draft: False; prerelease: False; published_at: 2024-12-26T15:37:45Z; created_at: 2024-12-26T15:37:40Z\nRelease notes:\n## What's Changed\nMinor swift-testing related improvements by @MahdiBM in #3274\n>\n###### _This patch was released by @MahdiBM_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.110.0...4.110.1",
+      "memory_unit_text": "In the vapor/vapor release 4.110.1, the project includes minor swift-testing related improvements."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_110_2",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.110.2",
+      "tag_name": "4.110.2",
+      "title": "4.110.2 - In withApp(), always shut down app even if error is thrown",
+      "time_hint": "2024-12-28",
+      "published_at": "2024-12-28T12:23:27Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.110.2",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.110.2 - In withApp(), always shut down app even if error is thrown\nTag: 4.110.2; draft: False; prerelease: False; published_at: 2024-12-28T12:23:27Z; created_at: 2024-12-28T12:23:23Z\nRelease notes:\n## What's Changed\nIn withApp(), always shut down app even if error is thrown by @gwynne in #3275\n> This method is documented as “while handling the lifecycle of the application”, so let’s actually do so.\n## Reviewers\nThanks to the reviewers for their help:\n- @MahdiBM\n###### _This patch was released by @gwynne_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.110.1...4.110.2",
+      "memory_unit_text": "In the vapor/vapor release 4.110.2, the project modifies the withApp() method to always shut down the application even if an error is thrown, ensuring proper lifecycle handling."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_111_0",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.111.0",
+      "tag_name": "4.111.0",
+      "title": "4.111.0 - Validation API | `Custom` Validator",
+      "time_hint": "2024-12-30",
+      "published_at": "2024-12-30T18:52:06Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.111.0",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.111.0 - Validation API | `Custom` Validator\nTag: 4.111.0; draft: False; prerelease: False; published_at: 2024-12-30T18:52:06Z; created_at: 2024-12-30T18:52:00Z\nRelease notes:\n## What's Changed\nValidation API | `Custom` Validator by @WilliamFernsV3 in #3263\n> Resolves this issue I created the other day: [vapor/vapor#3261](https://github.com/vapor/vapor/issues/3261)\n>\n> **Problem**:\n>\n> The Validation API allows you to create custom validators. It works, and it is good enough. In some cases however, extending the Validation API is not needed, as the validation is only for one `Content` object, meaning it will only be used once. I also find it more complex to extend the Validation API.\n>\n> **Solution**:\n>\n> In some if not most cases where a user wants to add some custom validation, they can now use the `Custom` validator. It is simpler, and the implementation is shorter.\n>\n> ```swift\n> extension Validator where T == String {\n>     public static var usPhoneNumber: Validator<T> {\n>         .init { input -> ValidatorResult in\n>             let stripped = input\n>                 .replacingOccurrences(of: \"(\", with: \"\")\n>                 .replacingOccurrences(of: \")\", with: \"\")\n>                 .replacingOccurrences(of: \"-\", with: \"\")\n>                 .replacingOccurrences(of: \" \", with: \"\")\n> …\n> ```\n> …\n## Reviewers\nThanks to the reviewers for their help:\n- @MrSuddenJoy\n- @Naveen-C-Ramachandrappa\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.110.2...4.111.0",
+      "memory_unit_text": "In the vapor/vapor release 4.111.0, the project adds a Custom validator to the Validation API, allowing users to add custom validation logic more simply without extending the API."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_111_1",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.111.1",
+      "tag_name": "4.111.1",
+      "title": "4.111.1 - do not truncate response when streaming on error",
+      "time_hint": "2025-01-14",
+      "published_at": "2025-01-14T13:15:50Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.111.1",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.111.1 - do not truncate response when streaming on error\nTag: 4.111.1; draft: False; prerelease: False; published_at: 2025-01-14T13:15:50Z; created_at: 2025-01-14T13:15:43Z\nRelease notes:\n## What's Changed\ndo not truncate response when streaming on error by @weissi in #3283\n> As described in #2949, Vapor silently truncates a streamed response body for error responses. This leads to data loss. This pull request addresses that.\n>\n> - Fixes #2949\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.111.0...4.111.1",
+      "memory_unit_text": "In the vapor/vapor release 4.111.1, the project fixes a bug where Vapor silently truncated a streamed response body for error responses, preventing data loss."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_112_0",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.112.0",
+      "tag_name": "4.112.0",
+      "title": "4.112.0 - Adds Support for Tracing Header Extraction",
+      "time_hint": "2025-01-22",
+      "published_at": "2025-01-22T15:40:06Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.112.0",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.112.0 - Adds Support for Tracing Header Extraction\nTag: 4.112.0; draft: False; prerelease: False; published_at: 2025-01-22T15:40:06Z; created_at: 2025-01-22T15:39:59Z\nRelease notes:\n## What's Changed\nAdds Support for Tracing Header Extraction by @NeedleInAJayStack in #3280\n> This adds header extraction support for tracing backends as described in [this document](https://swiftpackageindex.com/apple/swift-distributed-tracing/main/documentation/tracing/instrumentyourlibrary#Handling-inbound-requests). In the context of OTEL, this is used to correlate trace data across the HTTP boundary by passing the `traceparent` and `tracestate` header, as [documented here](https://www.w3.org/TR/trace-context/#header-name) and implemented in the [swift-otel package here](https://github.com/swift-otel/swift-otel/blob/main/Sources/OTel/Tracing/Propagating/OTelW3CPropagator.swift).\n>\n> It also adds a closure to `TracingMiddleware` that allows users to set custom span metadata on requests.\n>\n> Finally, it fixes a few warnings caused by the MiddlewareTest function introduced in [vapor/vapor#3253](https://github.com/vapor/vapor/pull/3253)\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.111.1...4.112.0",
+      "memory_unit_text": "In the vapor/vapor release 4.112.0, the project adds support for tracing header extraction, enabling correlation of trace data across HTTP boundaries. It also adds a closure to TracingMiddleware for custom span metadata and fixes warnings from the MiddlewareTest function."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_112_1",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.112.1",
+      "tag_name": "4.112.1",
+      "title": "4.112.1 - Use singleton NIOThreadPool by default",
+      "time_hint": "2025-02-07",
+      "published_at": "2025-02-07T20:01:01Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.112.1",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.112.1 - Use singleton NIOThreadPool by default\nTag: 4.112.1; draft: False; prerelease: False; published_at: 2025-02-07T20:01:01Z; created_at: 2025-02-07T20:00:55Z\nRelease notes:\n## What's Changed\nUse singleton NIOThreadPool by default by @gwynne in #3298\n> All Vapor applications currently end up with at least two running thread pools - the global singleton and the one created by Vapor by default. This change configures the global singleton (whose thread count defaults to `System.coreCount` anyway) as the default, eliminating the additional thread pool. This is especially nice for backtraces, as it cuts down noticeably on the number of excess threads in a Vapor process.\n>\n> We also now ignore `UnsupportedOperation` errors during thread pool shutdown, which is necessary for using the singleton pool, and was previously preventing users from explicitly configuring use of the singleton thread pool, due to the (inconsistent) use of `try!`.\n## Reviewers\nThanks to the reviewers for their help:\n- @MahdiBM\n###### _This patch was released by @gwynne_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.112.0...4.112.1",
+      "memory_unit_text": "In the vapor/vapor release 4.112.1, the project configures the global singleton NIOThreadPool as the default, eliminating an additional thread pool and reducing excess threads. It also ignores UnsupportedOperation errors during thread pool shutdown."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_112_2",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.112.2",
+      "tag_name": "4.112.2",
+      "title": "4.112.2 - Android support",
+      "time_hint": "2025-02-10",
+      "published_at": "2025-02-10T23:45:51Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.112.2",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.112.2 - Android support\nTag: 4.112.2; draft: False; prerelease: False; published_at: 2025-02-10T23:45:51Z; created_at: 2025-02-10T23:45:45Z\nRelease notes:\n## What's Changed\nAndroid support by @marcprux in #3282\n> This PR adds experimental support for building and testing on Android. It simply involves adding some conditional imports.\n>\n> Building is contingent on [apple/swift-distributed-tracing#163](https://github.com/apple/swift-distributed-tracing/pull/163), [apple/swift-http-structured-headers#57](https://github.com/apple/swift-http-structured-headers/pull/57), [swift-server/async-http-client#799](https://github.com/swift-server/async-http-client/pull/799), and [apple/swift-nio-extras#244](https://github.com/apple/swift-nio-extras/pull/244), but if you use local snapshots of those packages, you can build with the [Android SDK](https://github.com/finagolfin/swift-android-sdk) using:\n>\n> ```\n> ~/Library/Developer/Toolchains/swift-6.0.3-RELEASE.xctoolchain/usr/bin/swift build --swift-sdk aarch64-unknown-linux-android24 --build-tests\n> ```\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.112.1...4.112.2",
+      "memory_unit_text": "In the vapor/vapor release 4.112.2, the project adds experimental support for building and testing on Android by adding conditional imports."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_113_0",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.113.0",
+      "tag_name": "4.113.0",
+      "title": "4.113.0 - Fix warnings from NIO 2.79.0",
+      "time_hint": "2025-02-10",
+      "published_at": "2025-02-10T23:58:42Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.113.0",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.113.0 - Fix warnings from NIO 2.79.0\nTag: 4.113.0; draft: False; prerelease: False; published_at: 2025-02-10T23:58:42Z; created_at: 2025-02-10T23:58:35Z\nRelease notes:\n## What's Changed\nFix warnings from NIO 2.79.0 by @0xTim in #3285\n> Fixes a number of `Sendable` warnings introduced by https://github.com/apple/swift-nio/releases/tag/2.79.0\n>\n> This also deprecates the main `Application.init()` API that was blocking on an event loop that has been marked as `noasync` for a while. Vapor users should migrate to the async APIs.\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.112.2...4.113.0",
+      "memory_unit_text": "In the vapor/vapor release 4.113.0, the project fixes Sendable warnings introduced by NIO 2.79.0 and deprecates the main blocking Application.init() API, advising migration to async APIs."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_113_1",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.113.1",
+      "tag_name": "4.113.1",
+      "title": "4.113.1 - Prevent stack overflow by using `NIOLock` instead of `NIOLockedValueBox` during service initialization",
+      "time_hint": "2025-02-11",
+      "published_at": "2025-02-11T17:04:12Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.113.1",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.113.1 - Prevent stack overflow by using `NIOLock` instead of `NIOLockedValueBox` during service initialization\nTag: 4.113.1; draft: False; prerelease: False; published_at: 2025-02-11T17:04:12Z; created_at: 2025-02-11T17:04:07Z\nRelease notes:\n## What's Changed\nPrevent stack overflow by using `NIOLock` instead of `NIOLockedValueBox` during service initialization by @MrMage in #3302\n> At first glance, one could think that using a `NIOLockedValueBox<(@Sendable (Application) -> ServiceType)?>` for `makeService` would be sufficient here. However, for some reason, calling `self.storage.makeService.withLockedValue({ $0 })` repeatedly in `Service.service` causes each subsequent call to the function stored inside the locked value to perform one (or several) more “trampoline” function calls, slowing down the execution and eventually leading to a stack overflow. This is why we use a `NIOLock` here instead; it seems to avoid the `{ $0 }` issue above despite still accessing `_makeService` from within a closure (`{ self._makeService }`).\n>\n> - Replace `NIOLockedValueBox` with `NIOLock` to avoid adding trampoline function calls\n> - Add detailed comment explaining the rationale behind the locking mechanism change\n> - Simplify service initialization with direct fatalError instead of optional handling\n> - Remove redundant nil checks in service getter\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.113.0...4.113.1",
+      "memory_unit_text": "In the vapor/vapor release 4.113.1, the project prevents a stack overflow during service initialization by replacing NIOLockedValueBox with NIOLock for makeService."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_113_2",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.113.2",
+      "tag_name": "4.113.2",
+      "title": "4.113.2 - Fix warning in service fix",
+      "time_hint": "2025-02-12",
+      "published_at": "2025-02-12T12:14:52Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.113.2",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.113.2 - Fix warning in service fix\nTag: 4.113.2; draft: False; prerelease: False; published_at: 2025-02-12T12:14:52Z; created_at: 2025-02-12T12:14:46Z\nRelease notes:\n## What's Changed\nFix warning in service fix by @0xTim in #3303\n>\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.113.1...4.113.2",
+      "memory_unit_text": "In the vapor/vapor release 4.113.2, the project fixes a warning in the service fix from the previous release."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_114_0",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.114.0",
+      "tag_name": "4.114.0",
+      "title": "4.114.0 - Added a cache policy for file middleware",
+      "time_hint": "2025-03-18",
+      "published_at": "2025-03-18T16:35:03Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.114.0",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.114.0 - Added a cache policy for file middleware\nTag: 4.114.0; draft: False; prerelease: False; published_at: 2025-03-18T16:35:03Z; created_at: 2025-03-18T16:34:58Z\nRelease notes:\n## What's Changed\nAdded a cache policy for file middleware by @dimitribouniol in #3314\n> Currently, if a vapor app uses `FileMiddleware` to deliver static resources, it would have no control over the cache policy used by the browser for those files. This adds a configurable cache policy interface with reasonable defaults to better control when and how often a browser re-requests files (for instance, disabling caches during development).\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.113.2...4.114.0",
+      "memory_unit_text": "In the vapor/vapor release 4.114.0, the project adds a configurable cache policy interface for FileMiddleware, allowing control over browser caching of static resources."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_114_1",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.114.1",
+      "tag_name": "4.114.1",
+      "title": "4.114.1 - Correct SessionData's Codable conformance",
+      "time_hint": "2025-03-28",
+      "published_at": "2025-03-28T09:26:54Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.114.1",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.114.1 - Correct SessionData's Codable conformance\nTag: 4.114.1; draft: False; prerelease: False; published_at: 2025-03-28T09:26:54Z; created_at: 2025-03-28T09:26:48Z\nRelease notes:\n## What's Changed\nCorrect SessionData's Codable conformance by @gwynne in #3317\n> The `SessionData` type (which is nothing but a very thin wrapper over a `[String: String]` dictionary anyway) had a `Codable` implementation that was technically incorrect. This corrects it. There should not be any effect whatsoever on behavior unless someone is using a very esoteric `Encoder` or `Decoder` to encode or decode it, but it’s still more correct this way.\n>\n> Also took the opportunity to do a little code formatting cleanup and to replace the silly use of `.reduce()` in the `ExpressibleByDictionaryLiteral` initializer with use of the applicable (and somewhat faster) `Dictionary` initializer.\n## Reviewers\nThanks to the reviewers for their help:\n- @ptoffy\n###### _This patch was released by @gwynne_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.114.0...4.114.1",
+      "memory_unit_text": "In the vapor/vapor release 4.114.1, the project corrects the Codable conformance of SessionData and cleans up code formatting and initialization."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_115_0",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.115.0",
+      "tag_name": "4.115.0",
+      "title": "4.115.0 - Improve `VaporTesting`'s `withApp` method",
+      "time_hint": "2025-05-15",
+      "published_at": "2025-05-15T13:45:13Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.115.0",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.115.0 - Improve `VaporTesting`'s `withApp` method\nTag: 4.115.0; draft: False; prerelease: False; published_at: 2025-05-15T13:45:13Z; created_at: 2025-05-15T13:45:02Z\nRelease notes:\n## What's Changed\nImprove `VaporTesting`'s `withApp` method by @fpseverino in #3332\n> This PR makes the `withApp` helper method work as advertised, allowing an optional configuration method for the `Application` to be passed.\n>\n> Also, marks it with `@discardableResult` to avoid unnecessary warnings.\n###### _This patch was released by @gwynne_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.114.1...4.115.0",
+      "memory_unit_text": "In the vapor/vapor release 4.115.0, the project improves the VaporTesting withApp method to work as advertised, allowing an optional configuration method for the Application, and marks it with @discardableResult."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_115_1",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.115.1",
+      "tag_name": "4.115.1",
+      "title": "4.115.1 - Add Sendable annotations to the OTP types",
+      "time_hint": "2025-07-14",
+      "published_at": "2025-07-14T13:47:30Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.115.1",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.115.1 - Add Sendable annotations to the OTP types\nTag: 4.115.1; draft: False; prerelease: False; published_at: 2025-07-14T13:47:30Z; created_at: 2025-07-14T13:47:23Z\nRelease notes:\n## What's Changed\nAdd Sendable annotations to the OTP types by @0xTim in #3345\n> Add some missing Sendable annontations to the OTP types so `@preconcurrency import` is not required when using the types across isolation boundaries\n## Reviewers\nThanks to the reviewers for their help:\n- @ptoffy\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.115.0...4.115.1",
+      "memory_unit_text": "In the vapor/vapor release 4.115.1, the project adds missing Sendable annotations to the OTP types so that @preconcurrency import is not required when using them across isolation boundaries."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_116_0",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.116.0",
+      "tag_name": "4.116.0",
+      "title": "4.116.0 - Allow initializing Vapor.Application with a Logger",
+      "time_hint": "2025-09-09",
+      "published_at": "2025-09-09T13:03:03Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.116.0",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.116.0 - Allow initializing Vapor.Application with a Logger\nTag: 4.116.0; draft: False; prerelease: False; published_at: 2025-09-09T13:03:03Z; created_at: 2025-09-09T13:02:58Z\nRelease notes:\n## What's Changed\nAllow initializing Vapor.Application with a Logger by @czechboy0 in #3359\n> When using a single Logger in the whole app, it’s useful to be able to initialize the Vapor app with one as well, rather than letting it create one internally.\n>\n> This doesn’t change behavior for existing users, just adds a new variant of the `Vapor.Application.make` method that takes a Logger explicitly.\n>\n> Added unit tests to cover both the default and the new option.\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.115.1...4.116.0",
+      "memory_unit_text": "In the vapor/vapor release 4.116.0, the project allows initializing Vapor.Application with a Logger, adding a new variant of the make method that takes a Logger explicitly."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_117_0",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.117.0",
+      "tag_name": "4.117.0",
+      "title": "4.117.0 - Fix warnings in 6.2",
+      "time_hint": "2025-09-12",
+      "published_at": "2025-09-12T14:32:53Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.117.0",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.117.0 - Fix warnings in 6.2\nTag: 4.117.0; draft: False; prerelease: False; published_at: 2025-09-12T14:32:53Z; created_at: 2025-09-12T14:32:46Z\nRelease notes:\n## What's Changed\nFix warnings in 6.2 by @0xTim in #3361\n> Fixes the warnings from the 6.2 RC\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.116.0...4.117.0",
+      "memory_unit_text": "In the vapor/vapor release 4.117.0, the project fixes warnings from the Swift 6.2 RC."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_117_1",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.117.1",
+      "tag_name": "4.117.1",
+      "title": "4.117.1 - Add HEIC (HEVC in HEIF) HTTPMediaType Support",
+      "time_hint": "2025-11-03",
+      "published_at": "2025-11-03T10:39:25Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.117.1",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.117.1 - Add HEIC (HEVC in HEIF) HTTPMediaType Support\nTag: 4.117.1; draft: False; prerelease: False; published_at: 2025-11-03T10:39:25Z; created_at: 2025-11-03T10:39:19Z\nRelease notes:\n## What's Changed\nAdd HEIC (HEVC in HEIF) HTTPMediaType Support by @fang-ling in #3374\n> Add the HTTP media type for HEIC/HEIF images to HTTPMediaType, as Safari 17+ supports this format.\n## New Contributor\n- @fang-ling made their first contribution in #3374 🎉\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.117.0...4.117.1",
+      "memory_unit_text": "In the vapor/vapor release 4.117.1, the project adds HTTP media type support for HEIC/HEIF images to HTTPMediaType."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_117_2",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.117.2",
+      "tag_name": "4.117.2",
+      "title": "4.117.2 - Fixing error in documentation of HTTPHeaders accept variable",
+      "time_hint": "2025-11-03",
+      "published_at": "2025-11-03T16:24:04Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.117.2",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.117.2 - Fixing error in documentation of HTTPHeaders accept variable\nTag: 4.117.2; draft: False; prerelease: False; published_at: 2025-11-03T16:24:04Z; created_at: 2025-11-03T16:23:56Z\nRelease notes:\n## What's Changed\nFixing error in documentation of HTTPHeaders accept variable by @VerticalHeretic in #3375\n> This fix is addressing an issue [vapor/docs#1098](https://github.com/vapor/docs/issues/1098), and it’s fixing one of two of the problem mentioned there. The one being that the accept variables is accessible on the headers variable of the httpRequest. I couldn’t reproduce the second problem while it is working correctly on Swift 6.2, and indeed I can make use `.html` as a condition for the media types.\n>\n> As on the screenshot below:\n> <img width=\"668\" height=\"98\" alt=\"image\" src=\"https://github.com/user-attachments/assets/9d54b6dc-26eb-48b0-bb53-0a8f0d829afd\" />\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.117.1...4.117.2",
+      "memory_unit_text": "In the vapor/vapor release 4.117.2, the project fixes an error in the documentation of the HTTPHeaders accept variable."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_118_0",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.118.0",
+      "tag_name": "4.118.0",
+      "title": "4.118.0 - Update minimum Swift version to 6.0",
+      "time_hint": "2025-11-04",
+      "published_at": "2025-11-04T15:08:07Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.118.0",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.118.0 - Update minimum Swift version to 6.0\nTag: 4.118.0; draft: False; prerelease: False; published_at: 2025-11-04T15:08:07Z; created_at: 2025-11-04T15:07:59Z\nRelease notes:\n## What's Changed\nUpdate minimum Swift version to 6.0 by @gwynne in #3365\n> Clean up all the relevant `#if` conditionals, add theme settings to the API documentation, and clean up the tests. (FileTests and AsyncFileTests no longer crash on ten different force-unwraps when `#file` (now `#filePath`) is inaccessible.)\n>\n> The tests now also build and pass on iOS, watchOS, tvOS, and visionOS.\n## Reviewers\nThanks to the reviewers for their help:\n- @MahdiBM\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.117.2...4.118.0",
+      "memory_unit_text": "In the vapor/vapor release 4.118.0, the project updates the minimum Swift version to 6.0, cleans up #if conditionals, adds theme settings to API documentation, and ensures tests build and pass on iOS, watchOS, tvOS, and visionOS."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_119_0",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.119.0",
+      "tag_name": "4.119.0",
+      "title": "4.119.0 - Expose peer certificates in request handlers",
+      "time_hint": "2025-11-05",
+      "published_at": "2025-11-05T11:24:54Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.119.0",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.119.0 - Expose peer certificates in request handlers\nTag: 4.119.0; draft: False; prerelease: False; published_at: 2025-11-05T11:24:54Z; created_at: 2025-11-05T11:24:47Z\nRelease notes:\n## What's Changed\nExpose peer certificates in request handlers by @josephnoir in #3362\n> Additional certificate information can be relevant in mTLS deployments. This PR exposes the certificate chain of the peer per request. In contrast to #3352, this includes not just the leaf but the validated peer certificate chain, i.e., the certificates that establish trust of the peer identity from the leaf to (and including) the root certificate.\n>\n> The validated certificate chain is only available when setting a custom verification callback with metadata. Configuration of this callback is made available in this PR. It also adds a dependency on `swift-certificates` to use `X509.ValidatedCertificateChain` for the certificate chain.\n>\n> Example usage:\n>\n> ```swift\n> app.get { req async in\n>   if let chain = req.peerCertificateChain {\n>     return \"I am trusting you because I trust: \\(chain.root.description)\"\n>   } else {\n>     return \"I am not trusting you.\"\n>   }\n> }\n> ```\n>\n> I suggest close #3352 in favor of this PR.\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.118.0...4.119.0",
+      "memory_unit_text": "In the vapor/vapor release 4.119.0, the project exposes peer certificates in request handlers, providing the validated certificate chain for mTLS deployments and adding a dependency on swift-certificates."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_119_1",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.119.1",
+      "tag_name": "4.119.1",
+      "title": "4.119.1 - Fix a couple of import issues",
+      "time_hint": "2025-11-10",
+      "published_at": "2025-11-10T13:09:06Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.119.1",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.119.1 - Fix a couple of import issues\nTag: 4.119.1; draft: False; prerelease: False; published_at: 2025-11-10T13:09:06Z; created_at: 2025-11-10T13:08:59Z\nRelease notes:\n## What's Changed\nFix a couple of import issues by @0xTim in #3390\n> Fixes a couple of import issues seen recently:\n>\n> - Sendable error with TOTP types on old macOS SDKs - CryptoKit types have Sendable annotations from Xcode 16.3 (Swift 6.1). If trying to compile on older versions of Xcode, which we support you get an error in Swift 6 mode\n> - Some UBI9 based images complain about a missing import for CNIOLinux\n###### _This patch was released by @gwynne_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.119.0...4.119.1",
+      "memory_unit_text": "In the vapor/vapor release 4.119.1, the project fixes import issues related to Sendable errors with TOTP types on old macOS SDKs and missing CNIOLinux imports on some UBI9 based images."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_119_2",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.119.2",
+      "tag_name": "4.119.2",
+      "title": "4.119.2 - Fix parallel build failures on platforms with Glibc",
+      "time_hint": "2025-11-11",
+      "published_at": "2025-11-11T15:07:16Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.119.2",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.119.2 - Fix parallel build failures on platforms with Glibc\nTag: 4.119.2; draft: False; prerelease: False; published_at: 2025-11-11T15:07:16Z; created_at: 2025-11-11T15:07:08Z\nRelease notes:\n## What's Changed\nFix parallel build failures on platforms with Glibc by @simonjbeaumont in #3393\n> ## Motivation\n>\n> Since adding `MemberImportVisibility`, when Vapor is compiled in highly parallel environments it fails with high probability:\n>\n> ```console\n> % git rev-parse HEAD\n> ac3aeb7730b63f4f54248603c38137b551b465c7\n>\n> % rm -rf .build ~/.cache/org.swift.swiftpm/manifests/ && swift build -j 64\n> ...\n> Building for debugging...\n> /pwd/Sources/Vapor/Utilities/String+IsIPAddress.swift:10:24: error: initializer 'init()' is not available due to missing import of defining module 'CNIOLinux' [#Membe\n> rImportVisibility]\n>  1 | import Foundation\n>  2 | import NIOCore\n>  3 | #if canImport(Android)\n>    | `- note: add import of module 'CNIOLinux'\n>  4 | import Android\n>  5 | #endif\n>    :\n>  8 |     func isIPAddress() -> Bool {\n>  9 |         // We need some scratch space to let inet_pton write into.\n> 10 |         var ipv4Addr = in_addr()\n>    |                        `- error: initializer 'init()' is not available due to missing import of defining module 'CNIOLinux' [#MemberImportVisibility]\n> 11 |         var ipv6Addr = in6_addr()\n> 12 |\n>\n> ---[ similar error for in6_addr t…\n> ```\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.119.1...4.119.2",
+      "memory_unit_text": "In the vapor/vapor release 4.119.2, the project fixes parallel build failures on platforms with Glibc caused by MemberImportVisibility."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_120_0",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.120.0",
+      "tag_name": "4.120.0",
+      "title": "4.120.0 - Fix compatibility with swift-log 1.8.0 and later",
+      "time_hint": "2025-12-12",
+      "published_at": "2025-12-12T22:35:41Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.120.0",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.120.0 - Fix compatibility with swift-log 1.8.0 and later\nTag: 4.120.0; draft: False; prerelease: False; published_at: 2025-12-12T22:35:41Z; created_at: 2025-12-12T22:35:35Z\nRelease notes:\n## What's Changed\nFix compatibility with swift-log 1.8.0 and later by @gwynne in #3412\n> [swift-log](https://github.com/apple/swift-log) introduced `CustomStringConvertible` and `LosslessStringConvertible` conformances on `Logger.Level` which cause build errors by conflicting with our implementations, so ours are now gone.\n## Reviewers\nThanks to the reviewers for their help:\n- @ptoffy\n###### _This patch was released by @gwynne_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.119.2...4.120.0",
+      "memory_unit_text": "In the vapor/vapor release 4.120.0, the project fixes compatibility with swift-log 1.8.0 and later by removing conflicting CustomStringConvertible and LosslessStringConvertible conformances on Logger.Level."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_121_0",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.121.0",
+      "tag_name": "4.121.0",
+      "title": "4.121.0 - The RouteNotFound that is used when the router finds nothing is now public",
+      "time_hint": "2026-01-05",
+      "published_at": "2026-01-05T12:16:24Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.121.0",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.121.0 - The RouteNotFound that is used when the router finds nothing is now public\nTag: 4.121.0; draft: False; prerelease: False; published_at: 2026-01-05T12:16:24Z; created_at: 2026-01-05T12:16:17Z\nRelease notes:\n## What's Changed\nThe RouteNotFound that is used when the router finds nothing is now public by @fizker in #3326\n> When no routes match the current request, `DefaultResponder` throws the `RouteNotFound` error.\n>\n> This PR makes that error public, allowing any middleware to handle that specific scenario.\n>\n> Unlike the CatchAll route `**`, a middleware catching the `RouteNotFound` works across all HTTP methods automatically.\n>\n> This would be used in a middleware like so:\n>\n> ```swift\n> public struct CatchAllMiddleware: AsyncMiddleware {\n>     public func respond(to request: Request, chainingTo next: any AsyncResponder) async throws -> Response {\n>         do {\n>             return try await next.respond(to: request)\n>         } catch is RouteNotFound {\n>             // No route was found, so this would normally result in a 404.\n>             // We can now handle this like any other request.\n>             // Or we can make treat it like an ErrorMiddleware where we\n>             // log purposeful 404s different than `RouteNotFound` 404s.\n>             ...\n>         }\n>     }\n> }\n> ```\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.120.0...4.121.0",
+      "memory_unit_text": "In the vapor/vapor release 4.121.0, the project makes the RouteNotFound error public, allowing middleware to handle cases where no routes match the current request."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_121_1",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.121.1",
+      "tag_name": "4.121.1",
+      "title": "4.121.1 - Do not create a session if no cookie was provided",
+      "time_hint": "2026-01-14",
+      "published_at": "2026-01-14T13:48:58Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.121.1",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.121.1 - Do not create a session if no cookie was provided\nTag: 4.121.1; draft: False; prerelease: False; published_at: 2026-01-14T13:48:58Z; created_at: 2026-01-14T13:48:51Z\nRelease notes:\n## What's Changed\nDo not create a session if no cookie was provided by @czechboy0 in #3372\n> ## Summary\n>\n> When using `SessionsMiddleware` and a custom `AsyncSessionAuthenticator` together, we were seeing that even in cases when no cookie is provided in the request, and no error was thrown by e.g. a guard middleware or the handler, we were still seeing a `set-cookie` header in the response, which isn’t desired.\n>\n> This lead to many sessions created in the sessions driver for calls that didn’t require authentication, nor did it provide any.\n>\n> This seemed to be a side effect of the way `AsyncSessionAuthenticator` checked if the session already contained an authenticated value - by using the getter `request.session`, a session was created lazily.\n>\n> The fix is to prepend a check to `request.hasSession` and only using `request.session...` if one indeed exists.\n>\n> ## Test Plan\n>\n> A regression test was added which exercises this scenario - and it fails without the fix.\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.121.0...4.121.1",
+      "memory_unit_text": "In the vapor/vapor release 4.121.1, the project prevents the creation of a session if no cookie was provided, fixing an issue where set-cookie headers were sent unnecessarily when using SessionsMiddleware and AsyncSessionAuthenticator."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_121_2",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.121.2",
+      "tag_name": "4.121.2",
+      "title": "4.121.2 - Add Sendable conformance to application testing Method type",
+      "time_hint": "2026-02-10",
+      "published_at": "2026-02-10T16:23:51Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.121.2",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.121.2 - Add Sendable conformance to application testing Method type\nTag: 4.121.2; draft: False; prerelease: False; published_at: 2026-02-10T16:23:51Z; created_at: 2026-02-10T16:23:45Z\nRelease notes:\n## What's Changed\nAdd Sendable conformance to application testing Method type by @tib in #3424\n> This PR adds `Sendable` conformance to the `Method` type in the `VaporTestUtils` target.\n## New Contributor\n- @tib made their first contribution in #3424 🎉\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.121.1...4.121.2",
+      "memory_unit_text": "In the vapor/vapor release 4.121.2, the project adds Sendable conformance to the Method type in the VaporTestUtils target."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_121_3",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.121.3",
+      "tag_name": "4.121.3",
+      "title": "4.121.3 - Parse directives from all Cookie headers, not just the first",
+      "time_hint": "2026-02-24",
+      "published_at": "2026-02-24T17:37:47Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.121.3",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.121.3 - Parse directives from all Cookie headers, not just the first\nTag: 4.121.3; draft: False; prerelease: False; published_at: 2026-02-24T17:37:47Z; created_at: 2026-02-24T17:37:41Z\nRelease notes:\n## What's Changed\nParse directives from all Cookie headers, not just the first by @gwynne in #3436\n> Fixes #3435.\n## Reviewers\nThanks to the reviewers for their help:\n- @ptoffy\n- @MahdiBM\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.121.2...4.121.3",
+      "memory_unit_text": "In the vapor/vapor release 4.121.3, the project fixes cookie parsing to parse directives from all Cookie headers, not just the first."
+    },
+    {
+      "memory_node_id": "vapor__vapor__release__4_121_4",
+      "repo": "vapor/vapor",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.121.4",
+      "tag_name": "4.121.4",
+      "title": "4.121.4 - Fix Response Compression Bug when Content Type header is empty",
+      "time_hint": "2026-04-10",
+      "published_at": "2026-04-10T17:17:16Z",
+      "source_url": "https://github.com/vapor/vapor/releases/tag/4.121.4",
+      "raw_text": "Repository: vapor/vapor\nRelease: 4.121.4 - Fix Response Compression Bug when Content Type header is empty\nTag: 4.121.4; draft: False; prerelease: False; published_at: 2026-04-10T17:17:16Z; created_at: 2026-04-10T17:17:08Z\nRelease notes:\n## What's Changed\nFix Response Compression Bug when Content Type header is empty by @0xTim in #3453\n> Fixes a bug in the response compression pipeline where the response would be compressed, even if response compression is disabled, if no content-type header was set for the response.\n###### _This patch was released by @0xTim_\n**Full Changelog**: https://github.com/vapor/vapor/compare/4.121.3...4.121.4",
+      "memory_unit_text": "In the vapor/vapor release 4.121.4, the project fixes a bug in the response compression pipeline where responses were compressed even if compression was disabled when no content-type header was set."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the vapor/vapor releases, which release introduces a new VaporTesting module for better compatibility with Swift Testing?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "4.109.0"
+        },
+        {
+          "option_id": "B",
+          "text": "4.110.0"
+        },
+        {
+          "option_id": "C",
+          "text": "4.111.0"
+        },
+        {
+          "option_id": "D",
+          "text": "4.112.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "4.110.0",
+      "source_chunk_ids": [
+        "vapor__vapor__release__4_110_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "vapor__vapor__release__4_110_0",
+          "answer_text": "introduces a new VaporTesting module for better compatibility with Swift Testing"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the vapor/vapor releases, how does the change in release 4.112.1 differ from the change in release 4.113.1?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "4.112.1 configures the global singleton NIOThreadPool as default to reduce threads, while 4.113.1 prevents a stack overflow by replacing NIOLockedValueBox with NIOLock during service initialization."
+        },
+        {
+          "option_id": "B",
+          "text": "4.112.1 adds Android support, while 4.113.1 fixes Sendable warnings from NIO 2.79.0."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only update documentation without functional changes."
+        },
+        {
+          "option_id": "D",
+          "text": "4.112.1 deprecates Application.init(), while 4.113.1 adds a Custom validator."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "4.112.1 configures the global singleton NIOThreadPool as default to reduce threads, while 4.113.1 prevents a stack overflow by replacing NIOLockedValueBox with NIOLock during service initialization.",
+      "source_chunk_ids": [
+        "vapor__vapor__release__4_112_1",
+        "vapor__vapor__release__4_113_1"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "vapor__vapor__release__4_112_1",
+          "answer_text": "configures the global singleton NIOThreadPool as the default, eliminating an additional thread pool"
+        },
+        {
+          "memory_node_id": "vapor__vapor__release__4_113_1",
+          "answer_text": "prevents a stack overflow during service initialization by replacing NIOLockedValueBox with NIOLock"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the vapor/vapor release window, order the following release-content states from earliest to latest: (1) a release that adds experimental Android support, (2) a release that updates the minimum Swift version to 6.0, (3) a release that exposes peer certificates in request handlers, (4) a release that fixes compatibility with swift-log 1.8.0 and later.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "vapor__vapor__release__4_112_2",
+        "vapor__vapor__release__4_118_0",
+        "vapor__vapor__release__4_119_0",
+        "vapor__vapor__release__4_120_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "vapor__vapor__release__4_112_2",
+          "answer_text": "adds experimental support for building and testing on Android"
+        },
+        {
+          "memory_node_id": "vapor__vapor__release__4_118_0",
+          "answer_text": "updates the minimum Swift version to 6.0"
+        },
+        {
+          "memory_node_id": "vapor__vapor__release__4_119_0",
+          "answer_text": "exposes peer certificates in request handlers"
+        },
+        {
+          "memory_node_id": "vapor__vapor__release__4_120_0",
+          "answer_text": "fixes compatibility with swift-log 1.8.0 and later"
+        }
+      ]
+    }
+  ]
+}

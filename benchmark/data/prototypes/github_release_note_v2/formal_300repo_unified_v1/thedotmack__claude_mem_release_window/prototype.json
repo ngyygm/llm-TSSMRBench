@@ -1,0 +1,525 @@
+{
+  "prototype_id": "thedotmack__claude_mem_release_window",
+  "domain": "github_release_evolution",
+  "repo": "thedotmack/claude-mem",
+  "source_type": "release_note",
+  "window_title": "thedotmack/claude-mem recent release evolution",
+  "window_summary": "This window tracks the recent thedotmack/claude-mem release stream from v12.3.7 through v13.4.0, covering worker reliability fixes, observation pipeline overhauls, server-beta introduction, and skill expansions.",
+  "chunks": [
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_3_7",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.3.7",
+      "tag_name": "v12.3.7",
+      "title": "v12.3.7",
+      "time_hint": "2026-04-20",
+      "published_at": "2026-04-20T20:32:38Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.3.7",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.3.7\nTag: v12.3.7; draft: False; prerelease: False; published_at: 2026-04-20T20:32:38Z; created_at: 2026-04-20T20:32:20Z\nRelease notes:\n## What's Changed\n**Refactor: remove bearer auth and platform_source context filter** (#2081)\n- Drop bearer-token auth from the worker API. Worker binds localhost-only and CORS restricts origins to localhost — the token added friction for every internal client (hooks, CLI, viewer, sync script) with no real security benefit for single-user local deployments.\n- Drop the unused `platform_source` query-time filter from the `/api/context/inject` pipeline (ContextBuilder, ObservationCompiler, SearchRoutes, context handler, transcripts processor). The DB column stays — only the WHERE-clause filter and its plumbing are removed.\n- Replace the removed auth with a simple in-memory rate limiter (300 req/min) as a lightweight compensating control. Limiter normalises IPv4-mapped IPv6, emits `Retry-After` on 429, and has a size-guarded prune that never runs on localhost.\n## Cleanup\n- Deleted `src/shared/auth-token.ts` and all its dependents (`worker-utils.ts` Authorization header, `ViewerRoutes.ts` token injection, CORS `allowedHeaders: ['Authorization']`, `sync-marketplace.cjs` admin restart header).\n- Stopped tracking `.docker-blowout-data/claude-mem.db` and added the directory to `.gitignore`.\n## Full Changelog\nhttps://github.com/thedotmack/claude-mem/compare/v12.3.6...v12.3.7",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.3.7, the project refactors the worker API by removing bearer-token auth and the unused platform_source query-time filter. A simple in-memory rate limiter (300 req/min) is added as a compensating control. Cleanup includes deleting src/shared/auth-token.ts and its dependents, and stopping tracking of .docker-blowout-data/claude-mem.db."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_3_8",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.3.8",
+      "tag_name": "v12.3.8",
+      "title": "v12.3.8",
+      "time_hint": "2026-04-21",
+      "published_at": "2026-04-21T02:51:53Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.3.8",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.3.8\nTag: v12.3.8; draft: False; prerelease: False; published_at: 2026-04-21T02:51:53Z; created_at: 2026-04-21T02:51:26Z\nRelease notes:\n## 🔧 Fix\n**Detect PID reuse in the worker start-guard so containers can restart cleanly.** (#2082)\nThe `kill(pid, 0)` liveness check false-positived when the worker's PID file outlived its PID namespace — most commonly after `docker stop` / `docker start` with a bind-mounted `~/.claude-mem`. The new worker would boot as the same low PID (often 11) as the old one, `kill(0)` would report \"alive,\" and the worker would refuse to start *against its own prior incarnation*. Symptom: container appeared to start, immediately exited cleanly with no user-visible error, worker never came up.\n### What changed\n- Capture an opaque **process-start identity token** alongside the PID and verify identity, not just liveness:\n- **Linux**: `/proc/<pid>/stat` field 22 (starttime in jiffies) — cheap, no exec, same signal `pgrep`/`systemd` use.\n- **macOS / POSIX**: `ps -p <pid> -o lstart=` with `LC_ALL=C` pinned so the emitted timestamp is locale-independent across environments.\n- **Windows**: unchanged — falls back to liveness-only. The PID-reuse scenario doesn't affect Windows deployments the way containers do.\n- `verifyPidFileOwnership` emits a DEBUG log when liveness passes but the token mismatches, so the \"PID reused\" case is distinguishable from \"process dead\" in production logs.\n- PID files written by older versions are token-less; `verifyPidFileOwnership` falls back to the existing liveness-only behavior for backwards compatibility. **No migration required.**\n### Surface\nShared helpers (`PidInfo`, `captureProcessStartToken`, `verifyPidFileOwnership`) live in `src/supervisor/process-registry.ts` and are re-exported from `ProcessManager.ts` to preserve the existing public surface. Both entry points updated: `worker-service.ts` GUARD 1 and `supervisor/index.ts` `validateWorkerPidFile`.\n### Tests\n+14 new tests covering token capture, ownership verification, backwards compatibility for tokenless PID files, and the container-restart regression scenario. Zero regressions.",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.3.8, a fix detects PID reuse in the worker start-guard so containers can restart cleanly. The liveness check now captures a process-start identity token alongside the PID, using /proc/<pid>/stat on Linux and ps on macOS, with a fallback to liveness-only for backwards compatibility. 14 new tests cover the change."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_3_9",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.3.9",
+      "tag_name": "v12.3.9",
+      "title": "v12.3.9",
+      "time_hint": "2026-04-22",
+      "published_at": "2026-04-22T23:12:08Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.3.9",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.3.9\nTag: v12.3.9; draft: False; prerelease: False; published_at: 2026-04-22T23:12:08Z; created_at: 2026-04-22T23:11:06Z\nRelease notes:\n## Highlights\n### 🔐 Security observation types + Telegram notifier\n- New observation types: `security_alert` 🚨 (high-priority, triggers notifications) and `security_note` 🔐 (low-priority).\n- Fire-and-forget Telegram notifier — MarkdownV2 formatting, per-observation error isolation, no token logging.\n- Five env vars control behavior. `CLAUDE_MEM_TELEGRAM_ENABLED` master toggle defaults on (no-op without bot token + chat ID).\n### ⚡ Stop hook: fire-and-forget summarize\n- Eliminated the ~110s terminal block when a session ended. Summarize handler now enqueues and returns immediately.\n- Server-side `SessionCompletionHandler` finalizes off the hook's critical path (generator + HTTP fallback), with singleton sharing across the worker.\n### 🐛 Hooks: worker-port precedence + Windows (#2086 / PR #2084)\n- Hooks now resolve endpoint with the same precedence as the worker: env (`CLAUDE_MEM_WORKER_PORT`, `CLAUDE_MEM_WORKER_HOST`) > settings.json > defaults.\n- Looser sed regex handles both quoted and unquoted JSON port values.\n- Windows fallback to 37777 when per-uid formula doesn't apply.\n### 🔧 Bug fixes (reviewer rounds on PR #2084)\n- Don't remove in-memory session after a failed finalize; preserve crash-recovery state at 3 sites.\n- Eliminate double-broadcast of `session_completed` on fallback path.\n- Sync `DatabaseManager.getSessionById` return type.\n- `TelegramNotifier` now respects `settings.json` (not just env).\n- Hardcoded 🚨 emoji replaced with per-type mapping.\n### 📝 Docs\n- `version-bump` skill now covers `npm publish` + all 6 manifest paths so `npx claude-mem@<version>` always resolves. Adds `git grep` pre-flight for new manifests.\n### ⚙️ Chores\n- 🤖 Generated with [Claude Code](https://claude.com/claude-code)\n**Full Changelog**: https://github.com/thedotmack/claude-mem/compare/v12.3.8...v12.3.9",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.3.9, new security observation types (security_alert and security_note) and a fire-and-forget Telegram notifier are introduced. A stop hook fire-and-forget summarize eliminates a ~110s terminal block. Hooks now resolve worker-port precedence correctly, and several bug fixes address session finalization and double-broadcast issues."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_4_1",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.4.1",
+      "tag_name": "v12.4.1",
+      "title": "v12.4.1",
+      "time_hint": "2026-04-25",
+      "published_at": "2026-04-25T21:07:12Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.4.1",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.4.1\nTag: v12.4.1; draft: False; prerelease: False; published_at: 2026-04-25T21:07:12Z; created_at: 2026-04-25T21:06:12Z\nRelease notes:\n## perf(chroma): Cache backfill watermarks to skip per-restart Chroma scans\nWorker restarts were re-scanning Chroma's full metadata for every project on every boot to determine which sqlite ids were already embedded. With ~253 projects and ~92k embeddings, this pegged `chroma-mcp` at 100–422% CPU on each spawn.\n### What changed\n- New `~/.claude-mem/chroma-sync-state.json` watermark cache — per-project highest synced sqlite_id for observations, summaries, and prompts.\n- Backfill SQL changed from `id NOT IN (huge list)` to `id > watermark`.\n- Live `syncObservation` / `syncSummary` / `syncUserPrompt` bump the watermark on success.\n- One-time bootstrap derives initial watermarks from a single Chroma scan if the state file is missing — after that, Chroma metadata is never scanned again on startup.\n- Watermark advances per batch, so partial-failure runs resume cleanly.\n### Result\n- Chroma CPU on worker restart: **422% → 0%**.\n- State file size for 253 projects: **~3.7 KB**.\n- Backfill startup time: **seconds → near-instant** after bootstrap.",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.4.1, a performance improvement caches Chroma backfill watermarks to skip per-restart Chroma scans. A new chroma-sync-state.json file stores per-project highest synced sqlite_id, reducing Chroma CPU on worker restart from 422% to 0% and making backfill startup near-instant."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_4_2",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.4.2",
+      "tag_name": "v12.4.2",
+      "title": "v12.4.2",
+      "time_hint": "2026-04-25",
+      "published_at": "2026-04-25T21:47:46Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.4.2",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.4.2\nTag: v12.4.2; draft: False; prerelease: False; published_at: 2026-04-25T21:47:46Z; created_at: 2026-04-25T21:47:01Z\nRelease notes:\n## Two ship-blockers from yesterday's triage + 5 trivial fixes\n### Worker reliability\n- **Context overflow no longer loops forever.** When the Claude SDK throws `Prompt is too long`, `SDKAgent` now clears `session.memorySessionId` and sets `session.forceInit = true` before throwing — so the immediately-following crash-recovery spawn starts a fresh SDK session instead of resuming the same overflowed context. In the wild this had stranded 68+ pending messages on a single poisoned session before the windowed RestartGuard finally abandoned the queue.\n- **`<task-notification>` payloads no longer pollute `user_prompts`.** Claude Code's autonomous protocol blocks (emitted on background `Agent` completion) were being captured as if they were user prompts — 471 such rows in one local DB. New `isInternalProtocolPayload()` predicate in `src/utils/tag-stripping.ts` blocks them at both the hook layer (`session-init.ts`) and the worker boundary (`SessionRoutes.ts`). Conservative deny-list — does NOT touch `<command-name>` / `<command-message>` which wrap real user slash-commands.\n### Triage cleanup (from yesterday's open-issue review)\n- **#2092**: `worker-service.cjs` build banner now CJS-safe (no `import.meta.url`); `node -c` passes for the first time in several releases.\n- **#2100**: PreToolUse Read hook timeout reduced from `2000` (s, plainly a typo) to `60`.\n- **#2131**: `\"shell\": \"bash\"` added to every hook in `plugin/hooks/hooks.json` so Claude Code on Windows routes through Git Bash instead of cmd.exe.\n- **#2132**: Antigravity context file path corrected from `.agent/rules` to `.agents/rules`.\n- **#2088**: Worker SDK `query()` calls now pass `mcpServers: {}` to suppress inheritance of the user's global MCP servers (Serena, etc.) into observer/knowledge sessions.\n### Notes\n- Cleanup of polluted rows is included in the worker — fresh installs are clean. To clean an existing DB: `sqlite3 ~/.claude-mem/claude-mem.db \"DELETE FROM user_prompts WHERE prompt_text LIKE '<task-notification>%';\"` (the AFTER-DELETE trigger handles FTS).\n- The 5 triage fixes were authored from a multi-agent review of 38 open issues against the v12.3.0–v12.4.1 cleanup arc.\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.4.2, two ship-blockers are fixed: context overflow no longer loops forever by resetting the session, and <task-notification> payloads are blocked from polluting user_prompts. Five triage fixes address CJS build safety, hook timeout, Windows shell, path correction, and MCP server inheritance suppression."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_4_3",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.4.3",
+      "tag_name": "v12.4.3",
+      "title": "v12.4.3",
+      "time_hint": "2026-04-25",
+      "published_at": "2026-04-25T23:33:12Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.4.3",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.4.3\nTag: v12.4.3; draft: False; prerelease: False; published_at: 2026-04-25T23:33:12Z; created_at: 2026-04-25T23:32:03Z\nRelease notes:\nOne-time pollution cleanup migration plus the v12.4.1 / v12.4.2 ship-blocker fixes folded into a single release.\n## Headline\n**One-shot DB cleanup migration** (`CleanupV12_4_3.ts`) — runs once per data directory at worker startup, marker-file gated, opt-out via `CLAUDE_MEM_SKIP_CLEANUP_V12_4_3=1`. Cleans:\n- `observer-sessions` rows that polluted user-facing search/timeline before the observer-sessions filter shipped (cascades to `user_prompts`, `observations`, `session_summaries`).\n- Stuck `pending_messages` chains (≥10 rows per session in `failed`/`processing`) left over from the pre-v12.4.2 context-overflow loop.\n- `~/.claude-mem/chroma/` and `chroma-sync-state.json` so `backfillAllProjects` rebuilds vectors from the cleaned SQLite.\nBackups before any delete: `VACUUM INTO` first, with a `copyFileSync` fallback that also mirrors `-wal` / `-shm` sidecars so a WAL-mode restore is complete. Pre-flight `statfsSync` disk check before backup. The marker is only written after SQLite purges succeed; Chroma-wipe failures record the error on the marker rather than re-running the backup on every boot.\n## v12.4.2 ship-blockers\n- **Context-overflow loop fix** (`SDKAgent.ts`): both overflow detection paths (`'prompt is too long'` / `'Prompt is too long'`) now clear `memorySessionId` and force a fresh session via the new `resetSessionForFreshStart` helper before aborting/throwing. Stops the infinite retry seen in pre-v12.4.2 logs.\n- **`<task-notification>` storage leak** (`tag-stripping.ts` + `session-init.ts` + `SessionRoutes.ts`): dual-layer filter at the hook and at the worker HTTP boundary. `isInternalProtocolPayload` uses a tempered greedy body with negative lookahead so adjacent and surrounded protocol tags can't span across user text. 256 KB size guard before the regex prevents ReDoS on malformed payloads.\n## v12.4.1 trivial fixes\n- `mcpServers: {}` on `SDKAgent` and `KnowledgeAgent` spawns prevents host MCP server inheritance.\n- `McpIntegrations.ts`: `.agent` → `.agents` path correction.\n- `hooks.json`: `file-context` timeout `2000` → `60` (was 33 minutes); explicit `shell: bash` on hooks that use bash-only syntax.\n## Cleanup-migration counts (sample run)\n11 sessions + 3 cascade rows + 141 pending_messages purged in 1.1s; 277 MB pre-cleanup backup written.\n## Tests\nNew: `tests/infrastructure/cleanup-v12_4_3.test.ts` — real on-disk SQLite under a tmpdir, exercises the happy path, idempotency, opt-out env var, no-DB marker, threshold-boundary preservation. Writing these tests caught a real counting bug (bun:sqlite `result.changes` inflates with FTS triggers) and the regex false positive (greedy `[\\s\\S]*` spanning two protocol blocks).\n## Notes\n- The migration is intentionally NOT atomic across the two transactions: if `runStuckPendingPurge` fails after `runObserverSessionsPurge` commits, the observer rows stay deleted and the cleanup retries on next boot. Both purges are idempotent.\n- A user low on disk at first post-upgrade boot will retry on the next boot with adequate space (the marker is not written on disk-skip).",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.4.3, a one-shot DB cleanup migration runs once per data directory at worker startup, cleaning observer-sessions rows, stuck pending_messages chains, and Chroma data. It includes the v12.4.2 ship-blocker fixes for context-overflow loop and <task-notification> storage leak, plus v12.4.1 trivial fixes."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_4_4",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.4.4",
+      "tag_name": "v12.4.4",
+      "title": "v12.4.4",
+      "time_hint": "2026-04-26",
+      "published_at": "2026-04-26T00:12:45Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.4.4",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.4.4\nTag: v12.4.4; draft: False; prerelease: False; published_at: 2026-04-26T00:12:45Z; created_at: 2026-04-26T00:11:31Z\nRelease notes:\n## Bug fix: stop draining the observation queue on /clear\nWhen users typed `/clear` in Claude Code (or logged out, exited, or hit `prompt_input_exit`), every still-pending observation in the worker queue was being marked `abandoned` and never processed. The same shim was wired across Claude Code, Gemini CLI, the transcripts processor, OpenCode plugin, and OpenClaw — five surfaces, all draining the queue on what should be benign session-end signals.\nThis release removes the `SessionEnd → session-complete` hook entirely. The worker self-completes via its SDK-agent generator's finally-block, so no external completion call is needed. Pending observations now finish processing naturally instead of being abandoned.\nExplicit user-initiated session deletion (via the viewer UI's `DELETE /api/sessions/:id`) still drains the queue — that's the only path that should.\n### What changed\n- Removed `SessionEnd` hook block from `plugin/hooks/hooks.json`\n- Removed `POST /api/sessions/complete` route + Zod schema in `SessionRoutes.ts`\n- Deleted `src/cli/handlers/session-complete.ts` and its registry entry\n- Removed the call from `src/services/transcripts/processor.ts`\n- Removed the call from the OpenCode plugin's `session.deleted` handler\n- Removed the Gemini CLI installer's `SessionEnd → session-complete` mapping\n- Removed `scheduleSessionComplete`, `pendingCompletionTimers`, and `completionDelayMs` from OpenClaw\n### Background\nThis bug had been quietly draining queues since **November 7, 2025** (~6 months). The wiring crept in as a \"cleanup hook stops the spinner\" side effect (#4416), got rationalized as canonical architecture (#6682, #14793), and survived multiple refactors that preserved it instead of questioning it. Full timeline in PR #2136.",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.4.4, a bug fix stops draining the observation queue on /clear. The SessionEnd hook is removed entirely, so pending observations finish processing naturally instead of being abandoned. Explicit user-initiated session deletion via the viewer UI still drains the queue."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_4_5",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.4.5",
+      "tag_name": "v12.4.5",
+      "title": "v12.4.5",
+      "time_hint": "2026-04-26",
+      "published_at": "2026-04-26T01:48:51Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.4.5",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.4.5\nTag: v12.4.5; draft: False; prerelease: False; published_at: 2026-04-26T01:48:51Z; created_at: 2026-04-26T01:47:18Z\nRelease notes:\n## Bug Fixes\n- **Fix observation persistence on fresh installs (#2139)**: `SessionStore` was missing migration 28's column additions, so freshly created `pending_messages` tables had no `tool_use_id` or `worker_pid` columns. Every queue claim and observation insert failed silently with \"no such column\" errors and nothing reached memory. Added `addPendingMessagesToolUseIdAndWorkerPidColumns` mirror in `SessionStore.ts` (matches the existing `addObservationSubagentColumns` / `addObservationsUniqueContentHashIndex` mirror pattern). Already-broken DBs at \"v29 with no v28 columns\" self-heal on next worker boot via column-existence guards. Dedup DELETE + UNIQUE index creation are now wrapped in a transaction matching the v29 mirror precedent.\nThanks to @drdah123 for the precise diagnosis and reproduction in the issue report.",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.4.5, a bug fix addresses observation persistence on fresh installs. SessionStore was missing migration 28's column additions, causing silent failures on queue claims and observation inserts. The fix adds the missing columns and self-heals already-broken DBs."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_4_7",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.4.7",
+      "tag_name": "v12.4.7",
+      "title": "v12.4.7",
+      "time_hint": "2026-04-26",
+      "published_at": "2026-04-26T04:29:42Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.4.7",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.4.7\nTag: v12.4.7; draft: False; prerelease: False; published_at: 2026-04-26T04:29:42Z; created_at: 2026-04-26T04:27:28Z\nRelease notes:\n## Cynical deletion + review fixes\nThis release wraps up the cynical-deletion sweep (PR #2141) — closing 27 issues by removing two anti-patterns that were breeding bugs:\n- **Defenders** (orphan cleanup, duplicate liveness probes, restart-port-steal logic) replaced with fail-fast or single-source paths.\n- **Tolerators** (silent JSON drops, drifted SSE/SQL filters, passthrough Zod schemas) replaced with strict boundaries.\n### Highlights\n- Multi-account isolation via `CLAUDE_MEM_DATA_DIR` + per-UID worker port (`37700 + uid % 100`), with `CLAUDE_MEM_WORKER_PORT` override (#2101)\n- New `CLAUDE_MEM_INTERNAL=1` trust boundary replaces cwd-based observer-session detection\n- Shared `shouldEmitProjectRow` predicate keeps SSE broadcast and pagination filters in sync\n- Pinned `chroma-mcp` to 0.2.6 for reproducible installs\n- Install/uninstall: shared `shutdown-helper` releases file locks before overwrite/delete (#2106)\n- Migration 30: `observations.metadata` column added (#2116)\n- Proxy env vars stripped from spawned subprocesses to prevent user proxy config leaking into AI API calls\n### Review-comment fixes (post-PR)\n- `worker-service` restart now exits 1 with error if `spawnDaemon` fails (Greptile P1)\n- `shutdown-helper` distinguishes `AbortError` (slow worker) from connection-refused (gone) (Greptile P2)\n- `hooks.json` `$HOME` cache lookup quoted to support paths with spaces\n- `timeline-report` SKILL works on Windows (no `process.getuid()` requirement)\n- `opencode-plugin` validates `CLAUDE_MEM_WORKER_PORT` before use\n- `uninstall` only strips alias lines, not function declarations\n- `MemoryRoutes` trims whitespace-only `project` before precedence resolution\n- Migration 21 preserves `metadata` column when rebuilding observations table\n### Closes\n#2087, #2089, #2094, #2099, #2101, #2103, #2106, #2116, #2139, #2140, and 17 more (see PR #2141).",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.4.7, a cynical deletion sweep closes 27 issues by removing defenders and tolerators. Highlights include multi-account isolation via CLAUDE_MEM_DATA_DIR, a new CLAUDE_MEM_INTERNAL trust boundary, shared SSE/SQL filter predicate, pinned chroma-mcp, and migration 30 adding observations.metadata column."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_4_8",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.4.8",
+      "tag_name": "v12.4.8",
+      "title": "v12.4.8",
+      "time_hint": "2026-04-28",
+      "published_at": "2026-04-28T02:41:54Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.4.8",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.4.8\nTag: v12.4.8; draft: False; prerelease: False; published_at: 2026-04-28T02:41:54Z; created_at: 2026-04-28T02:41:19Z\nRelease notes:\n## Bug Fixes\n- **timeline tool:** Coerce stringified numeric anchors (e.g. `\"123\"`) into the observation-ID dispatch path so they no longer fall through to ISO-timestamp parsing and return wrong-epoch windows. The HTTP layer always sends anchor as a string, so this fixes anchor lookups via MCP and HTTP across the board. (#2176)\n## Tests\n- Added a 7-case regression suite covering JS-number anchors, stringified-number anchors (incl. whitespace-padded), session-ID anchors (`S<n>`), ISO-timestamp anchors, garbage anchors, and explicit numeric-not-found behavior. The suite runs against a real in-memory SQLite `SessionStore` to exercise the full dispatch path.\n## Refactors\n- Extracted `parseNumericAnchor` helper in `SearchManager` to centralize anchor coercion across timeline handlers.",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.4.8, a bug fix coerces stringified numeric anchors in the timeline tool so they no longer fall through to ISO-timestamp parsing. A 7-case regression suite is added, and a parseNumericAnchor helper is extracted in SearchManager."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_4_9",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.4.9",
+      "tag_name": "v12.4.9",
+      "title": "v12.4.9",
+      "time_hint": "2026-04-30",
+      "published_at": "2026-04-30T00:12:12Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.4.9",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.4.9\nTag: v12.4.9; draft: False; prerelease: False; published_at: 2026-04-30T00:12:12Z; created_at: 2026-04-30T00:09:24Z\nRelease notes:\nPatches in 7 critical fixes from PR #2219 (integration/critical-fixes-april):\n- #2211 build/bundle drift — remove stale macOS binary + regen artifacts (closes #2158, #2200, #2154)\n- #2204 strip privacy tags before summarization (closes #2149)\n- #2205 preserve relevance order in semantic search (closes #2153)\n- #2208 restore Windows spawn (PR #751 re-apply) + Windows CI\n- #2209 Codex transcript ingestion + queue self-deadlock on Windows (closes #2192)\n- #2206 isolate SDK boundary — close 6 issues at 3 call sites\n- #2210 standalone batch — npm peer deps, marketplace self-heal, cache prune",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.4.9, seven critical fixes are patched in, including build/bundle drift removal, privacy tag stripping before summarization, preservation of relevance order in semantic search, Windows spawn restoration, Codex transcript ingestion fix, SDK boundary isolation, and standalone batch fixes."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_5_0",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.5.0",
+      "tag_name": "v12.5.0",
+      "title": "v12.5.0",
+      "time_hint": "2026-05-02",
+      "published_at": "2026-05-02T23:09:16Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.5.0",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.5.0\nTag: v12.5.0; draft: False; prerelease: False; published_at: 2026-05-02T23:09:16Z; created_at: 2026-05-02T23:07:37Z\nRelease notes:\n## Highlights\n**Observation pipeline cleanup — kill the per-message retry counter.** The AI's parseable response is the only success signal; any other response (unparseable, empty, transport error) is a no-op. No more silent data loss after 3 retries.\n## What changed\n- **Parser:** collapsed to binary `{ valid: true, observations, summary } | { valid: false }`. No more `kind`/`skipped` enum dispatch in callers.\n- **ResponseProcessor:** two branches only — parseable → store + clear pending → broadcast; not parseable → reset claimed-but-unprocessed messages to pending. Removed per-message FIFO popping and the summarize-special-case best-effort confirm.\n- **PendingMessageStore:** 226 → 165 lines. Removed `markFailed` (the retry counter that silently dropped data after 3 attempts), `transitionMessagesTo`, `confirmProcessed`, `clearFailedOlderThan`, plus four other dead methods.\n- **Provider cleanup:** removed `processingMessageIds` tracking from Claude, Gemini, OpenRouter providers. The session-scoped clear handles the success path; no per-message in-flight tracking needed.\n- **GeneratorExitHandler:** drain-in-flight loop deleted; hard-stop / restart-guard paths now just clear pending for the session.\n- **Schema migration v31 + v32:** dropped four dead columns from `pending_messages` — `retry_count`, `failed_at_epoch`, `completed_at_epoch`, `worker_pid`. Status enum reduced to `'pending' | 'processing'` (the unreachable `'processed'` and `'failed'` are gone).\n## Bug fixes / polish\n- **`SessionQueueProcessor`:** removed two arbitrary 1-second recovery sleeps after error in `claimNextMessage`/`waitForMessage`; let the iterator end cleanly so `GeneratorExitHandler` can restart it.\n- **`Server.ts` + `SettingsRoutes.ts`:** unified four magic-number `setTimeout` exit-flush patterns (100ms × 2, 1000ms × 2) into one `flushResponseThen` helper using `res.on('finish', ...)`.\n- **PR review feedback (21+ threads):** install.ts argument fixes, settings cache TTL, Dockerfile login-banner sourcing, docs port-model + Node version updates, regex whitespace fix, Date.UTC for year-mismatch test, sync-marketplace port range guard, banner inflate fail-open, version-bump arg validation.\n## Net diff\n`-181 lines` (worker-service.cjs unaffected; total source lines down).\n## Migration\nExisting databases auto-migrate on worker startup (schema v31 + v32 drop the dead columns). No user action needed.",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.5.0, the observation pipeline is cleaned up by killing the per-message retry counter. The parser is collapsed to binary valid/invalid, ResponseProcessor has two branches, and PendingMessageStore is simplified. Schema migrations v31 and v32 drop dead columns from pending_messages."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_5_1",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.5.1",
+      "tag_name": "v12.5.1",
+      "title": "v12.5.1",
+      "time_hint": "2026-05-03",
+      "published_at": "2026-05-03T22:07:27Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.5.1",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.5.1\nTag: v12.5.1; draft: False; prerelease: False; published_at: 2026-05-03T22:07:27Z; created_at: 2026-05-03T22:05:47Z\nRelease notes:\n## Fixed\n- **Install failure on Node 25+** — `bun install` no longer fails when trying to compile the unused `tree-sitter` runtime against Node 25's V8 headers (which require C++20). Added `trustedDependencies: [\"tree-sitter-cli\"]` to the plugin manifest so bun runs only the CLI's prebuilt-binary download script and skips all other lifecycle scripts — including the failing native compile and the unused `.node` bindings of all 24+ grammar packages. claude-mem only ever shells out to the prebuilt `tree-sitter-cli` Rust binary; the runtime native module was never imported. (#2278)\n## Internal\n- Sync the OpenClaw plugin manifest version (10.4.1 → 12.5.1) so it tracks with the rest of the package going forward; the version-bump skill already lists it but past releases skipped it.",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.5.1, an install failure on Node 25+ is fixed by adding trustedDependencies to the plugin manifest so bun skips the failing native compile of tree-sitter. The OpenClaw plugin manifest version is synced to 12.5.1."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_6_0",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.6.0",
+      "tag_name": "v12.6.0",
+      "title": "v12.6.0",
+      "time_hint": "2026-05-04",
+      "published_at": "2026-05-04T05:52:59Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.6.0",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.6.0\nTag: v12.6.0; draft: False; prerelease: False; published_at: 2026-05-04T05:52:59Z; created_at: 2026-05-04T05:48:16Z\nRelease notes:\n## Highlights\n**17 issues fixed** and **4 new foundations** introduced via PR #2282 — a 24-cycle review-loop landed across 33 commits.\n### New capabilities\n- **OAuth keychain reader** (#2215) — `readClaudeOAuthToken()` reads from platform-native credential stores (macOS keychain, Windows DPAPI, Linux libsecret) at worker spawn-time. JWT exp / sidecar `expiresAt` validation refuses stale tokens. Re-login hint surfaced via SessionStart `additionalContext`.\n- **Quota-aware wall-clock guard** (#2234) — new `RateLimitStore` with auth-type gate: `api_key` never aborts; cli/oauth aborts at per-window thresholds (5h:0.95, 7d_opus:0.93, 7d_sonnet:0.92). 15min reset-grace buffer with 0.85 utilization floor. `rateLimits` exposed on `/api/health`.\n- **Network retry helper** (#2254) — `withRetry` honors `ClassifiedProviderError.kind`, exponential backoff with jitter, request-id capture for dedup logging.\n### Foundations (new public modules)\n- **F1 `spawnHidden`** (`src/shared/spawn.ts`) — `windowsHide: true` default; 8 spawn sites adopted.\n- **F2 `paths`** (`src/shared/paths.ts`) — 24 hardcoded `homedir() + '.claude-mem'` sites collapsed into 18 named accessors. `CLAUDE_MEM_DATA_DIR` flows through 100% of runtime. Self-extending invariant test.\n- **F3 `getUptimeSeconds`** (`src/shared/uptime.ts`) — fixes ms-bug at `Server.ts:165`.\n- **F4 `ClassifiedProviderError`** (`src/services/worker/provider-errors.ts`) — `kind` union (`transient | unrecoverable | rate_limit | quota_exhausted | auth_invalid`); per-provider classifiers; `unrecoverablePatterns` allowlist deleted.\n### Bug fixes\n- #2188 — empty stdin no longer falls back to `'{}'`; diagnostic log + `CAPTURE_BROKEN` marker\n- #2196 — `ANTHROPIC_BASE_URL` documentation added\n- #2220 / #2253 — chroma-mcp CPU storm (Windows + macOS): thread caps, per-batch watermarks, telemetry off, `killProcessTree` on shutdown\n- #2225 — opencode `_zod.def` crash: Zod schemas replace plain JSON-schema arg shapes\n- #2231 — `SECURITY.md` at repo root populates GitHub Security tab\n- #2233 — Part A: `stripCodeFences()` + fence example removed from prompt (Part B deferred)\n- #2236 — observer agent visible windows on Windows (consumed F1)\n- #2237 / #2238 — hardcoded paths (consumed F2)\n- #2240 — dedupe `observationIds` before Chroma sync\n- #2242 — `check-pending-queue.ts` points at `/api/processing-status` + `/api/processing`; honors `CLAUDE_MEM_WORKER_PORT`\n- #2243 — `scripts/sync-marketplace.cjs` rsync excludes stale `scripts/package.json` + `scripts/node_modules`\n- #2244 — `unrecoverablePatterns` allowlist deleted; worker dispatches on `error.kind`\n- #2247 — Codex `task_complete` event added to session-end matched types\n- #2248 — Cursor sessions never summarized: 3 bugs in stop→summarize path fixed (transcriptPath, type-only match, empty-text first-match) — 10-case regression test added\n- #2250 — health endpoint uptime returns seconds (consumed F3)\n- #2222 — `CLAUDE_CODE_PATH` desktop-app silent fail: rejects `Claude.exe` paths, falls back to real CLI binary\n### Tests / CI\n- 1454 pass / 77 fail — matches main baseline, zero net regressions\n- All CI green: build, CodeRabbit (17 rounds resolved), Greptile (clean)\n### Out of scope (deferred)\n#2213 dual-queue avalanche, #2256 unbounded transcript retention, #2217 observation chunking, #2202 codex compression provider, #2249 Codex hook lifecycle migration, #2218 installer cache cleanup, #2167 parallel-agent throughput, #2191 Kiro IDE, #2212 Windows PTY, #2166 stable/beta channels.\n---\n**Full diff:** d384d3c5 → a3b161f8",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.6.0, 17 issues are fixed and 4 new foundations introduced. New capabilities include an OAuth keychain reader, quota-aware wall-clock guard, and network retry helper. Foundations include spawnHidden, paths, getUptimeSeconds, and ClassifiedProviderError."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_6_1",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.6.1",
+      "tag_name": "v12.6.1",
+      "title": "v12.6.1",
+      "time_hint": "2026-05-05",
+      "published_at": "2026-05-05T03:32:11Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.6.1",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.6.1\nTag: v12.6.1; draft: False; prerelease: False; published_at: 2026-05-05T03:32:11Z; created_at: 2026-05-05T03:29:49Z\nRelease notes:\n## Patch release\n### Fixed\n- **install:** marketplace `npm install` no longer fails on tree-sitter peer-dep ERESOLVE. Tree-sitter grammar packages moved from `devDependencies` to `dependencies` and the install command updated to `--omit=dev --legacy-peer-deps` (#2300).\n- **chroma-mcp:** removed ONNX/OpenBLAS thread cap from spawn env to restore performance on multi-core systems.\n### Docs\n- Documented the `--legacy-peer-deps` rationale in `runNpmInstallInMarketplace`.",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.6.1, a patch fixes marketplace npm install failure on tree-sitter peer-dep ERESOLVE by moving grammar packages to dependencies and using --omit=dev --legacy-peer-deps. Chroma-mcp ONNX/OpenBLAS thread cap is removed to restore performance."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_6_2",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.6.2",
+      "tag_name": "v12.6.2",
+      "title": "v12.6.2",
+      "time_hint": "2026-05-05",
+      "published_at": "2026-05-05T05:35:58Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.6.2",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.6.2\nTag: v12.6.2; draft: False; prerelease: False; published_at: 2026-05-05T05:35:58Z; created_at: 2026-05-05T04:48:43Z\nRelease notes:\n## Fix: `npx claude-mem@latest install` no longer hangs on tree-sitter-swift\n### What broke in 12.6.1\nPR #2300 moved 21 tree-sitter grammar packages from root `devDependencies` → root `dependencies`. As a result, `npx claude-mem@12.6.1 install` started fetching all 21 grammars at npx time. `tree-sitter-swift`'s postinstall pulled a nested `tree-sitter-cli` that downloads a Rust binary from GitHub and SIGINT'd the install:\n```\nnpm error path .../node_modules/claude-mem/node_modules/tree-sitter-swift/node_modules/tree-sitter-cli\nnpm error command failed\nnpm error signal SIGINT\nnpm error Downloading https://github.com/tree-sitter/tree-sitter/releases/download/v0.23.2/tree-sitter-macos-arm64.gz\n```\nnpm doesn't honor the bun-only `trustedDependencies` allowlist, so postinstalls always run on a bare `npx` fetch.\n### Fix (PR #2305)\nMove the 21 grammar packages back to root `devDependencies`. The marketplace plugin install path is untouched — `plugin/package.json` keeps them as runtime deps and `bun install` (in `installPluginDependencies`) honors `trustedDependencies: [\"tree-sitter-cli\"]` to skip the harmful postinstalls on every other grammar. Smart-search/smart-outline/smart-unfold continue to work end-to-end.\nPR #2300's `--legacy-peer-deps` and `--omit=dev` install.ts changes are kept — they fix a separate, valid marketplace ERESOLVE.",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.6.2, a fix addresses npx claude-mem@latest install hanging on tree-sitter-swift. The 21 grammar packages are moved back to devDependencies, and the marketplace plugin install path keeps them as runtime deps with trustedDependencies."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_6_4",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.6.4",
+      "tag_name": "v12.6.4",
+      "title": "v12.6.4",
+      "time_hint": "2026-05-05",
+      "published_at": "2026-05-05T21:37:49Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.6.4",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.6.4\nTag: v12.6.4; draft: False; prerelease: False; published_at: 2026-05-05T21:37:49Z; created_at: 2026-05-05T21:35:02Z\nRelease notes:\n## Fixed\n- Drain invalid/non-XML observer responses so pending agent observations are cleared instead of retrying forever (PR #2316 / issue #2315).\n- Correct all plugin manifest versions so Claude, Codex, OpenClaw, bundled plugin, and npm metadata agree on 12.6.4.",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.6.4, a fix drains invalid/non-XML observer responses so pending agent observations are cleared instead of retrying forever. All plugin manifest versions are corrected to agree on 12.6.4."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_6_5",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.6.5",
+      "tag_name": "v12.6.5",
+      "title": "v12.6.5",
+      "time_hint": "2026-05-05",
+      "published_at": "2026-05-05T21:57:50Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.6.5",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.6.5\nTag: v12.6.5; draft: False; prerelease: False; published_at: 2026-05-05T21:57:50Z; created_at: 2026-05-05T21:48:24Z\nRelease notes:\n## [12.6.5] - 2026-05-05\n### Added\n- Installer now keeps the Claude Agent SDK as the single memory-agent path while supporting subscription auth, direct Anthropic API keys, and LiteLLM/custom gateway setup.\n- Added gateway env support for `ANTHROPIC_AUTH_TOKEN` alongside `ANTHROPIC_BASE_URL`.\n### Fixed\n- Removed the fixed agent-pool slot timeout so queued memory-agent work waits for process availability instead of dropping pending messages under load.\n- Reset generator failures back to pending messages instead of clearing queued work.",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.6.5, the installer keeps the Claude Agent SDK as the single memory-agent path while supporting subscription auth, direct API keys, and custom gateway setup. The fixed agent-pool slot timeout is removed, and generator failures are reset to pending messages."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_7_0",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.7.0",
+      "tag_name": "v12.7.0",
+      "title": "v12.7.0",
+      "time_hint": "2026-05-06",
+      "published_at": "2026-05-06T08:58:53Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.7.0",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.7.0\nTag: v12.7.0; draft: False; prerelease: False; published_at: 2026-05-06T08:58:53Z; created_at: 2026-05-06T08:57:54Z\nRelease notes:\n## Added\n- Add native Codex hooks integration through the Codex plugin marketplace.\n- Add Codex hook payload normalization, file-context extraction, and Stop hook observation support.\n- Add Codex installer support for `npx claude-mem@latest install` with Codex CLI version guidance.\n## Fixed\n- Avoid slow observation flow retries by replacing the worker-side initialization wait with hook-side readiness polling.\n- Keep Codex file-context extraction from consuming boolean flags like `cat -n`.\n- Include `bun-runner.js` in hook distribution verification.",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.7.0, native Codex hooks integration is added through the Codex plugin marketplace, along with hook payload normalization, file-context extraction, and Stop hook observation support. Worker-side initialization wait is replaced with hook-side readiness polling."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_7_1",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.7.1",
+      "tag_name": "v12.7.1",
+      "title": "v12.7.1",
+      "time_hint": "2026-05-06",
+      "published_at": "2026-05-06T10:07:07Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.7.1",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.7.1\nTag: v12.7.1; draft: False; prerelease: False; published_at: 2026-05-06T10:07:07Z; created_at: 2026-05-06T10:06:21Z\nRelease notes:\n## Added\n- Package the new `babysit` skill for monitoring PR checks, review comments, and unresolved review threads until a PR is merge-ready.\n## Verification\n- `npm run build`\n- `npm publish` completed for `claude-mem@12.7.1`",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.7.1, the new babysit skill is packaged for monitoring PR checks, review comments, and unresolved review threads until a PR is merge-ready."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_7_2",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.7.2",
+      "tag_name": "v12.7.2",
+      "title": "v12.7.2",
+      "time_hint": "2026-05-06",
+      "published_at": "2026-05-06T10:34:46Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.7.2",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.7.2\nTag: v12.7.2; draft: False; prerelease: False; published_at: 2026-05-06T10:34:46Z; created_at: 2026-05-06T10:34:22Z\nRelease notes:\n## v12.7.2\n### Fixed\n- Disable Claude Code built-in auto-memory during claude-code installs by setting `CLAUDE_CODE_DISABLE_AUTO_MEMORY=1` in Claude settings.\n- Make JSON config writes crash-safe, durable, symlink-safe, and safe for dangling symlink destinations.\n- Add regression coverage for atomic JSON writes through symlinked and dangling-symlink settings paths.",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.7.2, Claude Code built-in auto-memory is disabled during claude-code installs by setting CLAUDE_CODE_DISABLE_AUTO_MEMORY=1. JSON config writes are made crash-safe, durable, symlink-safe, and safe for dangling symlink destinations."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_7_3",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.7.3",
+      "tag_name": "v12.7.3",
+      "title": "v12.7.3",
+      "time_hint": "2026-05-07",
+      "published_at": "2026-05-07T01:32:28Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.7.3",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.7.3\nTag: v12.7.3; draft: False; prerelease: False; published_at: 2026-05-07T01:32:28Z; created_at: 2026-05-07T01:30:53Z\nRelease notes:\nPatch release for the reliability fixes merged in PR #2344.\n- Stops context-overflow and quota hard-stop failures from restarting observer generators and burning subscription quota.\n- Makes Stop hook transcript lookup failures non-blocking, so missing worktree transcript paths do not re-wake Claude Code in a loop.\n- Hardens MCP/plugin startup path resolution when host plugin-root environment variables are absent.\n- Accepts legacy install markers while keeping new marker writes on the JSON format.\n- Fixes export-memories to honor isolated data dirs, validate worker ports, and send the worker route's canonical session-id field.\n- Makes pending_messages repair safer and removes stale worker_pid assumptions from the current queue/schema path.\n- Adds a focused PR babysit status helper for low-noise review/check monitoring.",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.7.3, reliability fixes stop context-overflow and quota hard-stop failures from restarting observer generators, make Stop hook transcript lookup failures non-blocking, harden MCP/plugin startup path resolution, and fix export-memories to honor isolated data dirs."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_7_4",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.7.4",
+      "tag_name": "v12.7.4",
+      "title": "v12.7.4",
+      "time_hint": "2026-05-07",
+      "published_at": "2026-05-07T02:40:42Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.7.4",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.7.4\nTag: v12.7.4; draft: False; prerelease: False; published_at: 2026-05-07T02:40:42Z; created_at: 2026-05-07T02:39:51Z\nRelease notes:\nPatch release for the Codex mem-search marketplace fix.\nHighlights:\n- Restores Codex access to the claude-mem MCP/search plugin by pointing the Codex marketplace at the bundled plugin root.\n- Adds resilient MCP launcher fallbacks for local installs, Codex plugin cache installs, Claude plugin cache installs, and remote marketplace clones.\n- Registers Codex plugin marketplaces during install, enables plugin_hooks, and cleans up legacy AGENTS-based Codex context injection.\n- Includes the Codex session-start hook migration and Codex version-mismatch investigation plan.\nValidation:\n- npm run build\n- bun test tests/install-non-tty.test.ts tests/infrastructure/plugin-distribution.test.ts tests/servers/mcp-tool-schemas.test.ts tests/setup-runtime.test.ts tests/hook-command.test.ts\n- Docker smoke with codex-cli 0.128.0 for local install, remote marketplace add/upgrade, and MCP initialize.",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.7.4, a patch restores Codex access to the claude-mem MCP/search plugin by pointing the Codex marketplace at the bundled plugin root. Resilient MCP launcher fallbacks are added for various install scenarios, and Codex plugin marketplaces are registered during install."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v12_7_5",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v12.7.5",
+      "tag_name": "v12.7.5",
+      "title": "v12.7.5",
+      "time_hint": "2026-05-07",
+      "published_at": "2026-05-07T04:31:22Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v12.7.5",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v12.7.5\nTag: v12.7.5; draft: False; prerelease: False; published_at: 2026-05-07T04:31:22Z; created_at: 2026-05-07T04:29:40Z\nRelease notes:\nPatch release for npx installs that hit an existing Codex marketplace registration.\nFixes:\n- If Codex already has claude-mem-local registered from a different source, the installer now removes that stale registration and re-adds the local npx marketplace instead of failing.\n- Keeps Codex plugin_hooks enablement and legacy AGENTS cleanup after the marketplace registration succeeds.\n- Updates the release workflow instructions to use npm run build-and-sync instead of plain npm run build so the local marketplace and worker are synced during releases.\nValidation:\n- npm run build-and-sync\n- bun test tests/install-non-tty.test.ts tests/infrastructure/plugin-distribution.test.ts tests/servers/mcp-tool-schemas.test.ts tests/setup-runtime.test.ts tests/hook-command.test.ts\n- Docker smoke with codex-cli 0.128.0 reproducing the remote-to-local marketplace source conflict and verifying install completion.\n- npx --yes claude-mem@12.7.5 --version",
+      "memory_unit_text": "In the thedotmack/claude-mem release v12.7.5, a patch fixes npx installs that hit an existing Codex marketplace registration by removing stale registration and re-adding the local npx marketplace. Release workflow instructions are updated to use npm run build-and-sync."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v13_0_0",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v13.0.0",
+      "tag_name": "v13.0.0",
+      "title": "v13.0.0 — Server Beta + Apache 2.0",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T08:27:13Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v13.0.0",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v13.0.0 — Server Beta + Apache 2.0\nTag: v13.0.0; draft: False; prerelease: False; published_at: 2026-05-08T08:27:13Z; created_at: 2026-05-08T08:24:17Z\nRelease notes:\n## Highlights\nThis is the **claude-mem 13** major release, landing the Server Beta runtime and the project's relicense.\n### Server Beta runtime (opt-in)\n- Independent server-beta service with its own lifecycle (`claude-mem server start/status/stop`)\n- Postgres-backed observation storage\n- BullMQ + Redis observation queue engine (gated behind `CLAUDE_MEM_QUEUE_ENGINE=bullmq`, fail-fast)\n- New `/v1` REST API surface (events, sessions, memories, search, context, audit, jobs)\n- API-key auth + Better-Auth proxy\n- Outbox pattern for transactional event-to-job pipelines\n- Generation-job primitives (`ServerJobQueue`, `ActiveServerBetaQueueManager`, deterministic colon-free SHA-256 job IDs)\n- Docker Compose + E2E harness for the new stack\n### Licensing\n- Repository relicensed from **AGPL-3.0** to **Apache-2.0**\n- `NOTICE` file added\n- `docs/license.md` and `docs/ip-boundary.md` clarify the OSS / commercial boundary\n- `ragtime/` subproject also relicensed to Apache-2.0\n### Installer\n- Server Beta is exposed as an installer option (default off — open-source core is unaffected)\n## Migration notes\n- Existing users on the worker-era plugin keep working — no breaking changes for the default install\n- Server Beta is opt-in. Worker continues to run on its existing port and SQLite store.\n- See `docs/migration-worker-to-server.md` for forward-looking migration guidance\n## Compatibility\n- Node ≥ 20, Bun ≥ 1.0\n- Server Beta requires Postgres + Redis (only when enabled)\nFull diff: https://github.com/thedotmack/claude-mem/compare/v12.7.5...v13.0.0",
+      "memory_unit_text": "In the thedotmack/claude-mem release v13.0.0, the Server Beta runtime is introduced as an opt-in service with its own lifecycle, Postgres-backed storage, BullMQ+Redis queue engine, new /v1 REST API, API-key auth, and outbox pattern. The repository is relicensed from AGPL-3.0 to Apache-2.0."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v13_0_1",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v13.0.1",
+      "tag_name": "v13.0.1",
+      "title": "v13.0.1",
+      "time_hint": "2026-05-10",
+      "published_at": "2026-05-10T07:26:31Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v13.0.1",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v13.0.1\nTag: v13.0.1; draft: False; prerelease: False; published_at: 2026-05-10T07:26:31Z; created_at: 2026-05-10T01:09:05Z\nRelease notes:\n## Bug fixes\n### MCP server\n- **#2371** — drop `${_R%/}` parameter-expansion trim in `.mcp.json` that tripped Claude Code's MCP validator\n### Environment isolation\n- **#2357** — block `ANTHROPIC_BASE_URL` leak; use a three-branch OAuth-skip predicate\n- Add `CLAUDE_MEM_ENV_FILE` lazy resolver so tests (and multi-profile users) can redirect the env-file path without module-load-order constraints\n### Worker lifecycle\n- Classify Claude SDK HTTP 400 as **unrecoverable** so the worker stops retrying a doomed request\n- Stop hook crash hardened: `onclose` handler now performs background tree-kill on unexpected subprocess exit\n### Chroma\n- **#2313** — enforce a single `chroma-mcp` subprocess per worker (singleton via `disposeCurrentSubprocess()` on every code path; tree-kill of orphans on dispose)\n- Pin `onnxruntime>=1.20` and `protobuf<7` to fix `INVALID_PROTOBUF` on macOS arm64\n### Build\n- Polyfill `import.meta.url` to `pathToFileURL(__filename)` in the CJS worker bundle so ESM-style code resolves correctly (CodeRabbit-driven follow-up)\n### Tests / review\n- `tests/env-isolation.test.ts` no longer mutates the real `~/.claude-mem/.env`; OAuth spy wrapped in try/finally to avoid leaks across runs\n- 3 new chroma-mcp regression tests for #2313 (singleton enforcement)\n### Misc\n- Daily dependency bump per CLAUDE.md maintenance policy\nFull diff: https://github.com/thedotmack/claude-mem/pull/2394",
+      "memory_unit_text": "In the thedotmack/claude-mem release v13.0.1, bug fixes include dropping a parameter-expansion trim in .mcp.json, blocking ANTHROPIC_BASE_URL leak, classifying Claude SDK HTTP 400 as unrecoverable, hardening stop hook crash, enforcing a single chroma-mcp subprocess, and pinning onnxruntime/protobuf versions."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v13_1_0",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v13.1.0",
+      "tag_name": "v13.1.0",
+      "title": "v13.1.0",
+      "time_hint": "2026-05-11",
+      "published_at": "2026-05-11T07:30:39Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v13.1.0",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v13.1.0\nTag: v13.1.0; draft: False; prerelease: False; published_at: 2026-05-11T07:30:39Z; created_at: 2026-05-11T07:29:08Z\nRelease notes:\n## Server-beta event pipeline (phases 4–13)\nThis release lands the full server-beta track developed on `server-beta-phase-4-event-pipeline` — a self-contained Postgres + BullMQ event-to-observation pipeline with API-key auth, team/project scope, audit log, three AI providers (Anthropic, OpenAI, Google), a dedicated MCP server, legacy compat adapters for existing worker clients, a Docker/Compose stack, and a generation-job retry/cancel surface.\n### Highlights\n- **Event pipeline**: `agent_event` → `observation_generation_jobs` (outbox) → BullMQ worker → `observation` row. Idempotent enqueue, request-id propagation end-to-end, structured audit log.\n- **API surface**: `POST /v1/events`, `POST /v1/sessions/start`, `POST /v1/sessions/:id/end`, generation-job list/retry/cancel, MCP routes, scoped reads.\n- **Legacy compat**: `/api/sessions/observations` and `/api/sessions/summarize` shims map legacy worker payloads into the new event/job model without touching worker code. Both shims now wrap session lookup in their try/catch so Postgres failures return structured JSON, and `resolveServerSession` survives TOCTOU races via 23505 catch-and-refetch.\n- **POST /v1/sessions/start** also catches 23505 on concurrent start with the same `externalSessionId` and refetches the winning row instead of returning 500.\n- **Generation providers**: Anthropic, OpenAI, and Google with per-team-project scope enforcement and error classification.\n- **Docker / Compose stack** and `bin/server-beta-cli` for local operator workflows.\n### Bug fixes\n- `resolveServerSession` Postgres errors no longer escape `asyncHandler.catch(next)` and return HTML 500s to legacy clients.\n- `POST /v1/sessions/start` no longer returns 500 to the loser of a concurrent same-`externalSessionId` race.\nFull PR thread: #2383.",
+      "memory_unit_text": "In the thedotmack/claude-mem release v13.1.0, the server-beta event pipeline is landed with phases 4–13, including a Postgres+BullMQ event-to-observation pipeline, API-key auth, team/project scope, audit log, three AI providers, legacy compat adapters, and Docker/Compose stack."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v13_2_0",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v13.2.0",
+      "tag_name": "v13.2.0",
+      "title": "v13.2.0",
+      "time_hint": "2026-05-12",
+      "published_at": "2026-05-12T01:44:07Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v13.2.0",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v13.2.0\nTag: v13.2.0; draft: False; prerelease: False; published_at: 2026-05-12T01:44:07Z; created_at: 2026-05-12T01:41:25Z\nRelease notes:\n## What's new\n### `wowerpoint` skill — kawaii NotebookLM slide-deck generator\nTurn one source document into a kawaii NotebookLM slide-deck PDF. Wraps the `notebooklm` CLI with the kawaii-prompt + `--format detailed` defaults and a spawn-subagent pattern so generation (~10 min) never blocks the main conversation.\n- **Single-source-per-deck** is enforced by the workflow shape: confirm or write the source doc *before* adding it to NotebookLM. Don't paper over a weak source by stacking more sources — write a comprehensive doc first.\n- **Slide-deck only.** Videos and podcasts from the same engine are noticeably worse and out of scope; the skill refers users to the `notebooklm` CLI directly for those formats.\n- **Default prompt template:** `Use kawaii characters to tell the story of <subject>. Keep it warm and clear.` Pass any user-supplied prompt through verbatim.\n- **Setup requires** `notebooklm-py` (via `uv tool install --with playwright`), `playwright install chromium`, and `jq`.\n- **Spawn-and-end-turn** pattern: the subagent's completion notification fires when the PDF is on disk; the main conversation never blocks on the ~10 min render.\nSee PR #2430 for the full design notes and review history.\n## Skills inventory\nThis release brings the plugin to **12 skills**: babysit, do, how-it-works, knowledge-agent, learn-codebase, make-plan, mem-search, pathfinder, smart-explore, timeline-report, version-bump, wowerpoint.",
+      "memory_unit_text": "In the thedotmack/claude-mem release v13.2.0, the wowerpoint skill is added for generating kawaii NotebookLM slide-deck PDFs from a single source document. The plugin now has 12 skills."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v13_3_0",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v13.3.0",
+      "tag_name": "v13.3.0",
+      "title": "v13.3.0",
+      "time_hint": "2026-05-21",
+      "published_at": "2026-05-21T10:26:08Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v13.3.0",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v13.3.0\nTag: v13.3.0; draft: False; prerelease: False; published_at: 2026-05-21T10:26:08Z; created_at: 2026-05-21T10:25:39Z\nRelease notes:\n## What's New\n### New skills\n- **design-is** (#2483) — audits a design against Dieter Rams' ten \"Good design is...\" principles. Produces per-principle 0–3 scores with file:line evidence and a NEW / REFINE / REDESIGN verdict, then hands off a ready-to-run `/make-plan` prompt.\n- **weekly-digests** (#2399) — produces a chapter-per-ISO-week serial digest of a project's full claude-mem timeline. Sequential subagent pipeline keeps the narrative coherent across 30+ chapters.\n- **oh-my-issues** (#2409) — root-cause issue clustering. Codifies the consolidation method that turned ~100 open issues into 6 plan-masters during the v13.0.1 cycle. Three modes: cluster pass, triage, bundle.\n### Fixes\n- **fix(mcp): drop duplicate root `.mcp.json`** (#2411) — Claude Code's `/doctor` was warning \"MCP server mcp-search skipped — same command/URL as already-configured mcp-search\" for every plugin user. The root copy was vestigial; the plugin's namespaced registration now wins.\n- **fix: stop Codex transcript replay after hooks migration** (#2365) — disables the default `~/.codex/sessions/**/*.jsonl` watch (native Codex hooks are now authoritative). Repairs `~/.codex/config.toml` to set `[features] hooks = true` and `[plugins.\"claude-mem@claude-mem-local\"] enabled = true` directly. Fixes transcript replay where files discovered after startup ignored `startAtEnd` and re-injected history.\nOpt back into legacy Codex transcript ingestion with `CLAUDE_MEM_CODEX_TRANSCRIPT_INGESTION=true` if you depend on the JSONL watcher.",
+      "memory_unit_text": "In the thedotmack/claude-mem release v13.3.0, new skills design-is, weekly-digests, and oh-my-issues are added. Fixes include dropping a duplicate root .mcp.json and stopping Codex transcript replay after hooks migration."
+    },
+    {
+      "memory_node_id": "thedotmack__claude_mem__release__v13_4_0",
+      "repo": "thedotmack/claude-mem",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v13.4.0",
+      "tag_name": "v13.4.0",
+      "title": "v13.4.0",
+      "time_hint": "2026-05-29",
+      "published_at": "2026-05-29T18:35:01Z",
+      "source_url": "https://github.com/thedotmack/claude-mem/releases/tag/v13.4.0",
+      "raw_text": "Repository: thedotmack/claude-mem\nRelease: v13.4.0\nTag: v13.4.0; draft: False; prerelease: False; published_at: 2026-05-29T18:35:01Z; created_at: 2026-05-29T18:34:16Z\nRelease notes:\n## v13.4.0 — Defect backlog clearance + provider extensibility\nClears a large defect backlog (plans 01–11 plus standalone fixes) and adds provider configurability. Test suite moved 46 → 0 failing and typecheck 24 → 0 errors over the branch.\n### Features\n- **Configurable OpenAI-compatible base URL** for the OpenRouter provider (`CLAUDE_MEM_OPENROUTER_BASE_URL`) — point claude-mem at DeepSeek, LM Studio, or any custom OpenAI-compatible endpoint.\n### Fixes (highlights)\n- **Spawn contract (plan-02):** canonical `${CLAUDE_PLUGIN_ROOT}` resolution + Windows spawn fixes (codex.cmd, chroma-mcp cmd.exe quoting).\n- **Worker lifecycle (plan-03):** Windows PID-reuse start-token guard.\n- **Output fidelity (plan-11):** commit-hash verification before persist; null-`cwd` no longer strips every hex string from summaries.\n- **SQLite self-healing:** schema repair via `sqlite3 .recover`; close DB handle on repair error paths (no leaked write lock).\n- **SessionMessageBuffer:** `clear()` now also resets the dedup set, so a previously-seen toolUseId can re-enter.\n- **Standalone:** project name, dot-path encoding, path-match, CLAUDE.md denylist.\n### CI / tests\n- New CI workflow (typecheck · build · test · bundle-size + docker pg+valkey e2e) made green; removed npm-lockfile dependency to match the repo's no-committed-lockfile convention.\n- Fixed `mock.module` logger leakage across test files and guarded sqlite3 `.recover` capability so CI runs cleanly.\nFull diff: https://github.com/thedotmack/claude-mem/pull/2701",
+      "memory_unit_text": "In the thedotmack/claude-mem release v13.4.0, a large defect backlog is cleared with fixes for spawn contract, worker lifecycle, output fidelity, SQLite self-healing, and more. A configurable OpenAI-compatible base URL for OpenRouter provider is added. Test suite moved from 46 to 0 failing."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the thedotmack/claude-mem releases, which release introduces a one-shot DB cleanup migration that runs once per data directory at worker startup?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v12.4.1"
+        },
+        {
+          "option_id": "B",
+          "text": "v12.4.2"
+        },
+        {
+          "option_id": "C",
+          "text": "v12.4.3"
+        },
+        {
+          "option_id": "D",
+          "text": "v12.4.4"
+        }
+      ],
+      "correct_option_id": "C",
+      "expected_answer": "v12.4.3",
+      "source_chunk_ids": [
+        "thedotmack__claude_mem__release__v12_4_3"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "thedotmack__claude_mem__release__v12_4_3",
+          "answer_text": "One-shot DB cleanup migration (CleanupV12_4_3.ts) — runs once per data directory at worker startup"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the thedotmack/claude-mem releases, how does the observation pipeline change described in v12.5.0 differ from the queue-draining fix described in v12.4.4?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v12.5.0 kills the per-message retry counter and simplifies the parser, while v12.4.4 removes the SessionEnd hook to stop draining the observation queue on /clear."
+        },
+        {
+          "option_id": "B",
+          "text": "v12.5.0 adds a Telegram notifier, while v12.4.4 adds a rate limiter."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only update Chroma watermarks without changing observation handling."
+        },
+        {
+          "option_id": "D",
+          "text": "v12.5.0 introduces the Server Beta, while v12.4.4 relicenses the project."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v12.5.0 kills the per-message retry counter and simplifies the parser, while v12.4.4 removes the SessionEnd hook to stop draining the observation queue on /clear.",
+      "source_chunk_ids": [
+        "thedotmack__claude_mem__release__v12_5_0",
+        "thedotmack__claude_mem__release__v12_4_4"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "thedotmack__claude_mem__release__v12_5_0",
+          "answer_text": "Observation pipeline cleanup — kill the per-message retry counter. Parser collapsed to binary valid/invalid."
+        },
+        {
+          "memory_node_id": "thedotmack__claude_mem__release__v12_4_4",
+          "answer_text": "Bug fix: stop draining the observation queue on /clear. Removed SessionEnd hook entirely."
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the thedotmack/claude-mem release window, order the following release-content states from earliest to latest: (1) a release that adds a one-shot DB cleanup migration, (2) a release that introduces the Server Beta runtime and relicenses to Apache-2.0, (3) a release that adds the wowerpoint skill for generating kawaii NotebookLM slide-deck PDFs.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3",
+      "source_chunk_ids": [
+        "thedotmack__claude_mem__release__v12_4_3",
+        "thedotmack__claude_mem__release__v13_0_0",
+        "thedotmack__claude_mem__release__v13_2_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "thedotmack__claude_mem__release__v12_4_3",
+          "answer_text": "One-shot DB cleanup migration"
+        },
+        {
+          "memory_node_id": "thedotmack__claude_mem__release__v13_0_0",
+          "answer_text": "Server Beta runtime ... relicensed from AGPL-3.0 to Apache-2.0"
+        },
+        {
+          "memory_node_id": "thedotmack__claude_mem__release__v13_2_0",
+          "answer_text": "wowerpoint skill — kawaii NotebookLM slide-deck generator"
+        }
+      ]
+    }
+  ]
+}

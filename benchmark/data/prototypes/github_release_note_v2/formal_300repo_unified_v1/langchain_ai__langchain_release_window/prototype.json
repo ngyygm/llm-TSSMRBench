@@ -1,0 +1,525 @@
+{
+  "prototype_id": "langchain_ai__langchain_release_window",
+  "domain": "github_release_evolution",
+  "repo": "langchain-ai/langchain",
+  "source_type": "release_note",
+  "window_title": "langchain-ai/langchain recent release evolution",
+  "window_summary": "This window tracks the recent langchain-ai/langchain release stream across core, partner, and classic packages, including the introduction of v3 streaming, security hardening, and partner SDK migrations.",
+  "chunks": [
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_1_3_0a1",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain==1.3.0a1",
+      "tag_name": "langchain==1.3.0a1",
+      "title": "langchain==1.3.0a1",
+      "time_hint": "2026-05-01",
+      "published_at": "2026-05-01T19:19:36Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.0a1",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain==1.3.0a1\nTag: langchain==1.3.0a1; draft: False; prerelease: False; published_at: 2026-05-01T19:19:36Z; created_at: 2026-05-01T19:16:58Z\nRelease notes:\nInitial release\nrelease(langchain): 1.3.0a1 (#37140)\nfeat(langchain): wire stream_events(version='v3') into create_agent (#37136)\nMerge remote-tracking branch 'origin/master' into v1.4\nfeat(core): stream_events(version='v3') protocol (#37111)\nrelease(fireworks): 1.2.1 (#37113)\nrelease(langchain): 1.2.17 (#37110)\nfeat(langchain): add `respond` decision to HITL middleware (#37095)\nrelease(langchain): 1.2.16 (#37085)\nchore(docs): update x handle references (#37081)\nrelease(anthropic): 1.4.2 (#37061)\nperf(langchain): stop inlining agent state into tool-dispatch `Send`s (#36960)\ndocs(langchain): correct import paths in agent middleware docstrings (#36987)\nhotfix: bump min core versions (#36996)\nrelease(openai): 1.2.1 (#36995)\nfeat(core): add content-block-centric streaming (v2) (#36834)\nfix(fireworks): honor `max_retries` (#36973)\nrelease(openai): 1.2.0 (#36961)\ndocs(langchain): correct import path in `ModelCallLimitMiddleware` docstring (#36895)\nfeat(langchain): `ls_agent_type` tag on `create_agent` calls (#36774)\nrelease(core): release 1.3.0 (#36851)\nchore: bump langsmith from 0.6.3 to 0.7.31 in /libs/langchain_v1 (#36800)\nchore(deps): bump pytest to `9.0.3` (#36801)\nchore: bump pytest from 9.0.2 to 9.0.3 in /libs/langchain_v1 (#36717)\nchore: bump pillow from 12.1.1 to 12.2.0 in /libs/langchain_v1 (#36710)\ntest(langchain): test cache hit/miss on lru (#36659)\nperf(langchain): add lru cache when resolving types (#36649)\nperf(langchain): add another init test with middleware (#36644)\nchore(core): reduce streaming metadata / perf (#36588)\nperf(langchain): add benchmark command (#36641)\nchore: bump cryptography from 46.0.6 to 46.0.7 in /libs/langchain_v1 (#36619)\ndocs(langchain): add missing baseten and litellm to `init_chat_model` (#36562)\nrelease(core): 1.2.26 (#36511)\nrelease: langchain v1.2.15 (#36496)\nchore: bump aiohttp from 3.13.3 to 3.13.4 in /libs/langchain_v1 (#36438)\nrelease(langchain): 1.2.14 (#36396)\nchore: pygments>=2.20.0 across all packages (CVE-2026-4539) (#36385)\ntest(langchain): cover runtime recursion limit override in create_agent (#36376)\nperf(langchain): reduce init speed by 15% (#36375)\nfix(langchain): update recursion limit for create_agent (#36351)\nfix(infra): correct lint_diff relative paths in package makefiles (#36333)\nchore: bump cryptography from 46.0.5 to 46.0.6 in /libs/langchain_v1 (#36324)\nfix(langchain): recognize ChatAnthropicVertex in _get_approximate_token_counter (#36320)\nchore(langchain): remove unnecessary description for toods list as a group (#36315)\nchore(langchain): add async implementation to todolist and test (#36313)\nchore(langchain): speed up todo list middleware init (#36311)\nchore: bump requests from 2.32.5 to 2.33.0 in /libs/langchain_v1 (#36241)\nchore(partners): bump `langchain-core` min to `1.2.21` (#36183)\nfix(core,model-profiles): add missing `ModelProfile` fields, warn on schema drift (#36129)\nfix(langchain,langchain-classic): update model provider classes for Azure AI Foundry (#35812)\nrelease(langchain): 1.2.13 (#36111)\nci: suppress pytest streaming output in CI (#36092)\nfeat: Add LangSmith integration metadata to create_agent and init_chat_model (#35810)\nci: avoid unnecessary dep installs in lint targets (#36046)\nchore: bump pyasn1 from 0.6.2 to 0.6.3 in /libs/langchain_v1 (#36029)\nchore: bump pyjwt from 2.10.1 to 2.12.0 in /libs/langchain_v1 (#36024)\nfix(langchain): export Runtime from agents.middleware (#35975)\nchore: bump locks, lint (#35985)\nfix(openai): add type: message to Responses API input items (#35693)\nchore: bump black from 25.11.0 to 26.3.1 in /libs/langchain_v1 (#35802)\nchore: bump orjson from 3.11.5 to 3.11.6 in /libs/langchain_v1 (#35807)\nchore(langchain): add baseten to `_BUILTIN_PROVIDERS` (#35777)\nrelease(langchain_v1): 1.2.12 (#35770)\nfeat: tracing for...",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain==1.3.0a1, the initial alpha release of the 1.3 series, the project wires stream_events(version='v3') into create_agent, adds a 'respond' decision to HITL middleware, introduces content-block-centric streaming (v2) in core, and includes various performance improvements such as an LRU cache for type resolution and a 15% reduction in init speed."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_fireworks_1_3_0",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain-fireworks==1.3.0",
+      "tag_name": "langchain-fireworks==1.3.0",
+      "title": "langchain-fireworks==1.3.0",
+      "time_hint": "2026-05-01",
+      "published_at": "2026-05-01T20:46:43Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.3.0",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain-fireworks==1.3.0\nTag: langchain-fireworks==1.3.0; draft: False; prerelease: False; published_at: 2026-05-01T20:46:43Z; created_at: 2026-05-01T20:43:33Z\nRelease notes:\nChanges since langchain-fireworks==1.2.1\nrelease(fireworks): 1.3.0 (#37144)\nfeat(fireworks): `service_tier` init kwarg on `ChatFireworks` (#37143)\nchore(model-profiles): refresh model profile data (#37122)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain-fireworks==1.3.0, the fireworks partner package adds a 'service_tier' init kwarg on ChatFireworks and refreshes model profile data."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_mistralai_1_1_3",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain-mistralai==1.1.3",
+      "tag_name": "langchain-mistralai==1.1.3",
+      "title": "langchain-mistralai==1.1.3",
+      "time_hint": "2026-05-01",
+      "published_at": "2026-05-01T21:11:18Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-mistralai%3D%3D1.1.3",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain-mistralai==1.1.3\nTag: langchain-mistralai==1.1.3; draft: False; prerelease: False; published_at: 2026-05-01T21:11:18Z; created_at: 2026-05-01T21:08:22Z\nRelease notes:\nChanges since langchain-mistralai==1.1.2\nrelease(mistralai): 1.1.3 (#37145)\nfeat(mistralai): add image input support for human messages (#37112)\nchore(model-profiles): refresh model profile data (#37122)\nchore(docs): update x handle references (#37081)\nhotfix: bump min core versions (#36996)\nfeat(core): add content-block-centric streaming (v2) (#36834)\nci(infra): add `pytest-xdist` to partner test groups (#36988)\nhotfix(ci): remove nobenchmark flag (#36959)\nchore(partners): standardize integration test invocation (#36958)\nchore(deps): bump pytest to `9.0.3` (#36801)\nchore: bump langsmith from 0.6.3 to 0.7.31 in /libs/partners/mistralai (#36793)\nchore: add comment explaining `pygments>=2.20.0` (#36570)\nchore: pygments>=2.20.0 across all packages (CVE-2026-4539) (#36385)\nchore(model-profiles): refresh model profile data (#36368)\nfix(infra): correct lint_diff relative paths in package makefiles (#36333)\nchore: bump requests from 2.32.5 to 2.33.0 in /libs/partners/mistralai (#36251)\nchore(partners): bump `langchain-core` min to `1.2.21` (#36183)\nfix(core,model-profiles): add missing `ModelProfile` fields, warn on schema drift (#36129)\nci: suppress pytest streaming output in CI (#36092)\nci: avoid unnecessary dep installs in lint targets (#36046)\nchore: bump orjson from 3.11.5 to 3.11.6 in /libs/partners/mistralai (#35864)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain-mistralai==1.1.3, the mistralai partner package adds image input support for human messages and refreshes model profile data."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_openrouter_0_2_3",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain-openrouter==0.2.3",
+      "tag_name": "langchain-openrouter==0.2.3",
+      "title": "langchain-openrouter==0.2.3",
+      "time_hint": "2026-05-01",
+      "published_at": "2026-05-01T21:59:57Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openrouter%3D%3D0.2.3",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain-openrouter==0.2.3\nTag: langchain-openrouter==0.2.3; draft: False; prerelease: False; published_at: 2026-05-01T21:59:57Z; created_at: 2026-05-01T21:57:11Z\nRelease notes:\nChanges since langchain-openrouter==0.2.2\nrelease(openrouter): 0.2.3 (#37146)\nfix(openrouter): merge fragmented `reasoning_details` in streaming (#36401)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain-openrouter==0.2.3, the openrouter partner package fixes merging of fragmented reasoning_details in streaming."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_classic_1_0_5",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain-classic==1.0.5",
+      "tag_name": "langchain-classic==1.0.5",
+      "title": "langchain-classic==1.0.5",
+      "time_hint": "2026-05-03",
+      "published_at": "2026-05-03T17:32:23Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-classic%3D%3D1.0.5",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain-classic==1.0.5\nTag: langchain-classic==1.0.5; draft: False; prerelease: False; published_at: 2026-05-03T17:32:23Z; created_at: 2026-05-03T17:29:37Z\nRelease notes:\nChanges since langchain-classic==1.0.4\nrelease(langchain-classic): 1.0.5 (#37165)\nrefactor(langchain-classic): retarget deprecations to `create_agent`, other chores (#37164)\nchore(langchain,langchain-classic): uncomment optional deps (#37163)\nchore: bump types-pyyaml from 6.0.12.20250915 to 6.0.12.20260408 in /libs/langchain (#37130)\nchore: bump types-pytz from 2026.1.1.20260304 to 2026.1.1.20260408 in /libs/langchain (#37131)\nchore: bump notebook from 7.4.5 to 7.5.6 in /libs/langchain (#37104)\nrelease(perplexity): 1.2.0 (#37091)\nchore(docs): update x handle references (#37081)\nhotfix: bump min core versions (#36996)\nrelease(openai): 1.2.1 (#36995)\nfeat(core): add content-block-centric streaming (v2) (#36834)\nfix(fireworks): honor `max_retries` (#36973)\nrelease(openai): 1.2.0 (#36961)\nchore: bump nbconvert from 7.17.0 to 7.17.1 in /libs/langchain (#36922)\nchore: bump langsmith from 0.7.13 to 0.7.31 in /libs/langchain (#36812)\nrelease(core): release 1.3.0 (#36851)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain-classic==1.0.5, the classic package retargets deprecations to create_agent and performs other chores."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_anthropic_1_4_3",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain-anthropic==1.4.3",
+      "tag_name": "langchain-anthropic==1.4.3",
+      "title": "langchain-anthropic==1.4.3",
+      "time_hint": "2026-05-03",
+      "published_at": "2026-05-03T17:33:44Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.4.3",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain-anthropic==1.4.3\nTag: langchain-anthropic==1.4.3; draft: False; prerelease: False; published_at: 2026-05-03T17:33:44Z; created_at: 2026-05-03T17:30:08Z\nRelease notes:\nChanges since langchain-anthropic==1.4.2\nrelease(anthropic): 1.4.3 (#37166)\nrefactor(langchain-classic): retarget deprecations to `create_agent`, other chores (#37164)\nchore(docs): update x handle references (#37081)\nfix(anthropic): guard httpx finalizers (#37064)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain-anthropic==1.4.3, the anthropic partner package guards httpx finalizers."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_mistralai_1_1_4",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain-mistralai==1.1.4",
+      "tag_name": "langchain-mistralai==1.1.4",
+      "title": "langchain-mistralai==1.1.4",
+      "time_hint": "2026-05-05",
+      "published_at": "2026-05-05T15:29:15Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-mistralai%3D%3D1.1.4",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain-mistralai==1.1.4\nTag: langchain-mistralai==1.1.4; draft: False; prerelease: False; published_at: 2026-05-05T15:29:15Z; created_at: 2026-05-05T15:25:50Z\nRelease notes:\nChanges since langchain-mistralai==1.1.3\nrelease(mistralai): 1.1.4 (#37191)\nfix(mistralai): strip non-wire keys from `ToolMessage` (#37188)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain-mistralai==1.1.4, the mistralai partner package strips non-wire keys from ToolMessage."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_fireworks_1_3_1",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain-fireworks==1.3.1",
+      "tag_name": "langchain-fireworks==1.3.1",
+      "title": "langchain-fireworks==1.3.1",
+      "time_hint": "2026-05-05",
+      "published_at": "2026-05-05T15:43:37Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.3.1",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain-fireworks==1.3.1\nTag: langchain-fireworks==1.3.1; draft: False; prerelease: False; published_at: 2026-05-05T15:43:37Z; created_at: 2026-05-05T15:39:16Z\nRelease notes:\nChanges since langchain-fireworks==1.3.0\nfix(fireworks): require `api_key` in `FireworksEmbeddings` (#37193)\nrelease(fireworks): 1.3.1 (#37189)\nfix(fireworks): strip non-wire keys from `ToolMessage` text content blocks (#37187)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain-fireworks==1.3.1, the fireworks partner package requires api_key in FireworksEmbeddings and strips non-wire keys from ToolMessage text content blocks."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_core_1_3_3",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain-core==1.3.3",
+      "tag_name": "langchain-core==1.3.3",
+      "title": "langchain-core==1.3.3",
+      "time_hint": "2026-05-05",
+      "published_at": "2026-05-05T19:02:53Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.3.3",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain-core==1.3.3\nTag: langchain-core==1.3.3; draft: False; prerelease: False; published_at: 2026-05-05T19:02:53Z; created_at: 2026-05-05T19:00:01Z\nRelease notes:\nChanges since langchain-core==1.3.2\nrelease(core): 1.3.3 (#37198)\nfix(core): set deprecation `since` to 1.3.3 to match release (#37200)\nfix(core, langchain): harden `load()` against untrusted manifests (#37197)\nchore: bump notebook from 7.5.0 to 7.5.6 in /libs/core (#37109)\nchore: bump types-pyyaml from 6.0.12.20250915 to 6.0.12.20260408 in /libs/core (#37129)\nfix(core): preserve structured `inputs` on tool runs in tracers (#37108)\nrelease(perplexity): 1.2.0 (#37091)\nchore(docs): update x handle references (#37081)\nfix(core): make `removal` optional in `warn_deprecated` (#37056)\nfix(core): validate batch_size in _batch and _abatch to prevent infinite loop (#36663)\nchore(core): mark stream_v2/astream_v2 as beta (#36992)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain-core==1.3.3, the core package hardens load() against untrusted manifests, preserves structured inputs on tool runs in tracers, makes removal optional in warn_deprecated, and validates batch_size to prevent infinite loops."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_core_0_3_85",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain-core==0.3.85",
+      "tag_name": "langchain-core==0.3.85",
+      "title": "langchain-core==0.3.85",
+      "time_hint": "2026-05-05",
+      "published_at": "2026-05-05T20:43:46Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D0.3.85",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain-core==0.3.85\nTag: langchain-core==0.3.85; draft: False; prerelease: False; published_at: 2026-05-05T20:43:46Z; created_at: 2026-05-05T20:37:44Z\nRelease notes:\nChanges since langchain-core==0.3.84\nrelease(core): 0.3.85 (#37205)\nfix(core, langchain): harden `load()` against untrusted manifests (#37201)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain-core==0.3.85, the core package backports the hardening of load() against untrusted manifests to the 0.3.x line."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_0_3_29",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain==0.3.29",
+      "tag_name": "langchain==0.3.29",
+      "title": "langchain==0.3.29",
+      "time_hint": "2026-05-05",
+      "published_at": "2026-05-05T21:02:15Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D0.3.29",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain==0.3.29\nTag: langchain==0.3.29; draft: False; prerelease: False; published_at: 2026-05-05T21:02:15Z; created_at: 2026-05-05T20:57:53Z\nRelease notes:\nChanges since langchain==0.3.28\nrelease(langchain): 0.3.29 (#37212)\nfix(langchain): restrict deserialization in `langchain.storage._lc_store` (#37209)\nfix(core, langchain): harden `load()` against untrusted manifests (#37201)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain==0.3.29, the main package restricts deserialization in langchain.storage._lc_store and hardens load() against untrusted manifests."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_classic_1_0_6",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain-classic==1.0.6",
+      "tag_name": "langchain-classic==1.0.6",
+      "title": "langchain-classic==1.0.6",
+      "time_hint": "2026-05-05",
+      "published_at": "2026-05-05T21:02:41Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-classic%3D%3D1.0.6",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain-classic==1.0.6\nTag: langchain-classic==1.0.6; draft: False; prerelease: False; published_at: 2026-05-05T21:02:41Z; created_at: 2026-05-05T20:59:12Z\nRelease notes:\nChanges since langchain-classic==1.0.5\nrelease(langchain-classic): 1.0.6 (#37211)\nchore: bump jupyter-server from 2.17.0 to 2.18.0 in /libs/langchain (#37203)\nfix(langchain): restrict deserialization in `langchain_classic.storage._lc_store` (#37208)\nfix(langchain): use langchain-classic version for `hub.pull` deprecation (#37199)\nfix(core, langchain): harden `load()` against untrusted manifests (#37197)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain-classic==1.0.6, the classic package restricts deserialization in langchain_classic.storage._lc_store, uses langchain-classic version for hub.pull deprecation, and hardens load() against untrusted manifests."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_1_3_0a2",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain==1.3.0a2",
+      "tag_name": "langchain==1.3.0a2",
+      "title": "langchain==1.3.0a2",
+      "time_hint": "2026-05-06",
+      "published_at": "2026-05-06T18:54:44Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.0a2",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain==1.3.0a2\nTag: langchain==1.3.0a2; draft: False; prerelease: False; published_at: 2026-05-06T18:54:44Z; created_at: 2026-05-06T18:51:53Z\nRelease notes:\nInitial release\nrelease(langchain): 1.3.0a2 (#37225)\nrelease(langchain): 1.3.0a2 (#37224)\nfix(langchain): ordered schema resolution — list replaces set so state_schema wins (#37223)\nrelease(langchain): 1.3.0a1 (#37140)\nfeat(langchain): wire stream_events(version='v3') into create_agent (#37136)\nMerge remote-tracking branch 'origin/master' into v1.4\nfeat(core): stream_events(version='v3') protocol (#37111)\nrelease(fireworks): 1.2.1 (#37113)\nrelease(langchain): 1.2.17 (#37110)\nfeat(langchain): add `respond` decision to HITL middleware (#37095)\nrelease(langchain): 1.2.16 (#37085)\nchore(docs): update x handle references (#37081)\nrelease(anthropic): 1.4.2 (#37061)\nperf(langchain): stop inlining agent state into tool-dispatch `Send`s (#36960)\ndocs(langchain): correct import paths in agent middleware docstrings (#36987)\nhotfix: bump min core versions (#36996)\nrelease(openai): 1.2.1 (#36995)\nfeat(core): add content-block-centric streaming (v2) (#36834)\nfix(fireworks): honor `max_retries` (#36973)\nrelease(openai): 1.2.0 (#36961)\ndocs(langchain): correct import path in `ModelCallLimitMiddleware` docstring (#36895)\nfeat(langchain): `ls_agent_type` tag on `create_agent` calls (#36774)\nrelease(core): release 1.3.0 (#36851)\nchore: bump langsmith from 0.6.3 to 0.7.31 in /libs/langchain_v1 (#36800)\nchore(deps): bump pytest to `9.0.3` (#36801)\nchore: bump pytest from 9.0.2 to 9.0.3 in /libs/langchain_v1 (#36717)\nchore: bump pillow from 12.1.1 to 12.2.0 in /libs/langchain_v1 (#36710)\ntest(langchain): test cache hit/miss on lru (#36659)\nperf(langchain): add lru cache when resolving types (#36649)\nperf(langchain): add another init test with middleware (#36644)\nchore(core): reduce streaming metadata / perf (#36588)\nperf(langchain): add benchmark command (#36641)\nchore: bump cryptography from 46.0.6 to 46.0.7 in /libs/langchain_v1 (#36619)\ndocs(langchain): add missing baseten and litellm to `init_chat_model` (#36562)\nrelease(core): 1.2.26 (#36511)\nrelease: langchain v1.2.15 (#36496)\nchore: bump aiohttp from 3.13.3 to 3.13.4 in /libs/langchain_v1 (#36438)\nrelease(langchain): 1.2.14 (#36396)\nchore: pygments>=2.20.0 across all packages (CVE-2026-4539) (#36385)\ntest(langchain): cover runtime recursion limit override in create_agent (#36376)\nperf(langchain): reduce init speed by 15% (#36375)\nfix(langchain): update recursion limit for create_agent (#36351)\nfix(infra): correct lint_diff relative paths in package makefiles (#36333)\nchore: bump cryptography from 46.0.5 to 46.0.6 in /libs/langchain_v1 (#36324)\nfix(langchain): recognize ChatAnthropicVertex in _get_approximate_token_counter (#36320)\nchore(langchain): remove unnecessary description for toods list as a group (#36315)\nchore(langchain): add async implementation to todolist and test (#36313)\nchore(langchain): speed up todo list middleware init (#36311)\nchore: bump requests from 2.32.5 to 2.33.0 in /libs/langchain_v1 (#36241)\nchore(partners): bump `langchain-core` min to `1.2.21` (#36183)\nfix(core,model-profiles): add missing `ModelProfile` fields, warn on schema drift (#36129)\nfix(langchain,langchain-classic): update model provider classes for Azure AI Foundry (#35812)\nrelease(langchain): 1.2.13 (#36111)\nci: suppress pytest streaming output in CI (#36092)\nfeat: Add LangSmith integration metadata to create_agent and init_chat_model (#35810)\nci: avoid unnecessary dep installs in lint targets (#36046)\nchore: bump pyasn1 from 0.6.2 to 0.6.3 in /libs/langchain_v1 (#36029)\nchore: bump pyjwt from 2.10.1 to 2.12.0 in /libs/langchain_v1 (#36024)\nfix(langchain): export Runtime from agents.middleware (#35975)\nchore: bump locks, lint (#35985)\nfix(openai): add type: message to Responses API input items (#35693)\nchore: bump black from 25.11.0 to 26.3.1 in /libs/langchain_v1 (#35802)\nchore: bump orjson from 3...",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain==1.3.0a2, the second alpha of the 1.3 series, the project implements ordered schema resolution so that state_schema wins, and continues to include the features from 1.3.0a1 such as stream_events v3 wiring and HITL middleware."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_classic_1_0_7",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain-classic==1.0.7",
+      "tag_name": "langchain-classic==1.0.7",
+      "title": "langchain-classic==1.0.7",
+      "time_hint": "2026-05-07",
+      "published_at": "2026-05-07T15:47:20Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-classic%3D%3D1.0.7",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain-classic==1.0.7\nTag: langchain-classic==1.0.7; draft: False; prerelease: False; published_at: 2026-05-07T15:47:20Z; created_at: 2026-05-07T15:44:10Z\nRelease notes:\nChanges since langchain-classic==1.0.6\nrelease(langchain-classic): 1.0.7 (#37240)\nchore(langchain-classic): deprecate hub, limit loads/dumps (#37234)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain-classic==1.0.7, the classic package deprecates hub and limits loads/dumps."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_0_3_30",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain==0.3.30",
+      "tag_name": "langchain==0.3.30",
+      "title": "langchain==0.3.30",
+      "time_hint": "2026-05-07",
+      "published_at": "2026-05-07T15:48:35Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D0.3.30",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain==0.3.30\nTag: langchain==0.3.30; draft: False; prerelease: False; published_at: 2026-05-07T15:48:35Z; created_at: 2026-05-07T15:43:46Z\nRelease notes:\nChanges since langchain==0.3.29\nrelease(langchain): release 0.3.30 (#37241)\nchore(langchain): backport loads/dumps harden to v0.3 and deprecate hub (#37239)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain==0.3.30, the main package backports loads/dumps hardening to v0.3 and deprecates hub."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_core_0_3_86",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain-core==0.3.86",
+      "tag_name": "langchain-core==0.3.86",
+      "title": "langchain-core==0.3.86",
+      "time_hint": "2026-05-07",
+      "published_at": "2026-05-07T16:48:35Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D0.3.86",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain-core==0.3.86\nTag: langchain-core==0.3.86; draft: False; prerelease: False; published_at: 2026-05-07T16:48:35Z; created_at: 2026-05-07T16:44:54Z\nRelease notes:\nChanges since langchain-core==0.3.85\nrelease(core): 0.3.86 (#37242)\nfix(core): backport path-traversal fix to v0.3 (CVE-2026-34070, GHSA-qh6h-p6c9-ff54) (#37233)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain-core==0.3.86, the core package backports a path-traversal fix (CVE-2026-34070, GHSA-qh6h-p6c9-ff54) to the 0.3.x line."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_1_2_18",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain==1.2.18",
+      "tag_name": "langchain==1.2.18",
+      "title": "langchain==1.2.18",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:59:43Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.2.18",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain==1.2.18\nTag: langchain==1.2.18; draft: False; prerelease: False; published_at: 2026-05-08T13:59:43Z; created_at: 2026-05-08T13:57:27Z\nRelease notes:\nChanges since langchain==1.2.17\nrelease(langchain): 1.2.18 (#37250)\nrevert: feat(langchain): ls_agent_type tag on create_agent calls (#37249)\nchore(langchain-classic): deprecate hub, limit loads/dumps (#37234)\nrefactor(langchain-classic): retarget deprecations to `create_agent`, other chores (#37164)\nchore(langchain,langchain-classic): uncomment optional deps (#37163)\nrelease(fireworks): 1.2.1 (#37113)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain==1.2.18, the main package reverts the ls_agent_type tag on create_agent calls, deprecates hub, limits loads/dumps, and retargets deprecations to create_agent."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_core_1_4_0",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain-core==1.4.0",
+      "tag_name": "langchain-core==1.4.0",
+      "title": "langchain-core==1.4.0",
+      "time_hint": "2026-05-11",
+      "published_at": "2026-05-11T18:42:53Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.4.0",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain-core==1.4.0\nTag: langchain-core==1.4.0; draft: False; prerelease: False; published_at: 2026-05-11T18:42:53Z; created_at: 2026-05-11T18:39:55Z\nRelease notes:\nChanges since langchain-core==0.3.86\nchore(infra): merge v1.4 into master (#37350)\nchore: bump urllib3 from 2.6.3 to 2.7.0 in /libs/core (#37329)\nfix(core): avoid eager `pydantic.v1` import in `@deprecated` (#37308)\nchore: bump mistune from 3.1.4 to 3.2.1 in /libs/core (#37237)\nchore: bump jupyter-server from 2.17.0 to 2.18.0 in /libs/core (#37204)\nrelease(core): 1.3.3 (#37198)\nfix(core): set deprecation `since` to 1.3.3 to match release (#37200)\nfix(core, langchain): harden `load()` against untrusted manifests (#37197)\nchore: bump notebook from 7.5.0 to 7.5.6 in /libs/core (#37109)\nchore: bump types-pyyaml from 6.0.12.20250915 to 6.0.12.20260408 in /libs/core (#37129)\nfix(core): preserve structured `inputs` on tool runs in tracers (#37108)\nrelease(perplexity): 1.2.0 (#37091)\nchore(docs): update x handle references (#37081)\nfix(core): make `removal` optional in `warn_deprecated` (#37056)\nfix(core): validate batch_size in _batch and _abatch to prevent infinite loop (#36663)\nchore(core): mark stream_v2/astream_v2 as beta (#36992)\nrelease(core): 1.3.2 (#36990)\nfeat(core): add content-block-centric streaming (v2) (#36834)\nrelease(core): 1.3.1 (#36972)\nfeat(core): allow _format_output to pass through list of ToolOutputMixin instances (#36963)\nchore: bump nbconvert from 7.17.0 to 7.17.1 in /libs/core (#36923)\nfeat(core): Update inheritance behavior for tracer metadata for special keys (#36900)\nchore: bump langsmith from 0.7.13 to 0.7.31 in /libs/core (#36813)\nrelease(core): release 1.3.0 (#36851)\nrelease(core): 1.3.0a3 (#36829)\nchore(core): keep checkpoint_ns behavior in streaming metadata for backwards compat (#36828)\nfeat(core): Add chat model and LLM invocation params to traceable metadata (#36771)\nfix(core): restore cloud metadata IPs and link-local range in SSRF policy (#36816)\nchore(deps): bump pytest to `9.0.3` (#36801)\nchore(core): harden private SSRF utilities (#36768)\nfix(openai): handle content blocks without type key in responses api conversion (#36725)\nchore: bump pytest from 9.0.2 to 9.0.3 in /libs/core (#36719)\nrelease(core): 1.3.0.a2 (#36698)\nfix(core): Use reference counting for storing inherited run trees to support garbage collection (#36660)\ndocs(core): nit (#36685)\nrelease(core): 1.3.0a1 (#36656)\nchore(core): reduce streaming metadata / perf (#36588)\nrelease(core): release 1.2.28 (#36614)\nfix(core): add more sanitization to templates (#36612)\nrelease(core): 1.2.27 (#36586)\nfix(core): handle symlinks in deprecated prompt save path (#36585)\nchore: add comment explaining `pygments>=2.20.0` (#36570)\nrelease(core): 1.2.26 (#36511)\nfix(core): add init validator and serialization mappings for Bedrock models (#34510)\nfeat(core): add `ChatBaseten` to serializable mapping (#36510)\nchore(core): drop `gpt-3.5-turbo` from docstrings (#36497)\nfix(core): correct parameter names in filter_messages docstring example (#36462)\nrelease(core): 1.2.25 (#36473)\nfix(core): harden check for txt files in deprecated prompt loading functions (#36471)\nfix(core): fixed typos in the documentation (#36459)\nrelease(core): 1.2.24 (#36434)\nfeat(core): impute placeholder filenames for OpenAI file inputs (#36433)\nchore: pygments>=2.20.0 across all packages (CVE-2026-4539) (#36385)\nfix(core): add \"computer\" to _WellKnownOpenAITools (#36261)\nrelease(core): 1.2.23 (#36323)\nrevert: Revert \"fix(core): trace invocation params in metadata\" (#36322)\nchore: bump requests from 2.32.5 to 2.33.0 in /libs/core (#36243)\nrelease(core): 1.2.22 (#36201)\nfix(core): validate paths in `prompt.save` and `load_prompt`, deprecate methods (#36200)\nrelease(core): 1.2.21 (#36179)\nfix(core,model-profiles): add missing `ModelProfile` fields, warn on schema drift (#36129)\nchore(core): remove stale blockbuster allowlist for deleted context module (#36168)\nci: suppress...",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain-core==1.4.0, the core package merges the v1.4 branch into master, avoids eager pydantic.v1 import in @deprecated, and includes all changes from 1.3.3 such as load() hardening and batch_size validation."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_1_3_0",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain==1.3.0",
+      "tag_name": "langchain==1.3.0",
+      "title": "langchain==1.3.0",
+      "time_hint": "2026-05-12",
+      "published_at": "2026-05-12T14:46:03Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.0",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain==1.3.0\nTag: langchain==1.3.0; draft: False; prerelease: False; published_at: 2026-05-12T14:46:03Z; created_at: 2026-05-12T14:28:19Z\nRelease notes:\nThis release adds support for `version=\"v3\"` in `stream_events` / `astream_events` for `langchain` agents. Refer to the [event streaming](https://docs.langchain.com/oss/python/langchain/event-streaming) guide for details.",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain==1.3.0, the stable release of the 1.3 series, the project adds support for version='v3' in stream_events/astream_events for langchain agents."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_1_3_1",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain==1.3.1",
+      "tag_name": "langchain==1.3.1",
+      "title": "langchain==1.3.1",
+      "time_hint": "2026-05-15",
+      "published_at": "2026-05-15T18:15:13Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.1",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain==1.3.1\nTag: langchain==1.3.1; draft: False; prerelease: False; published_at: 2026-05-15T18:15:13Z; created_at: 2026-05-15T18:12:59Z\nRelease notes:\nChanges since langchain==1.3.0\nrelease(langchain): 1.3.1 (#37454)\nfix(langchain): alias Bedrock providers in summarization token check (#37453)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain==1.3.1, the main package aliases Bedrock providers in the summarization token check."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_tests_1_1_8",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain-tests==1.1.8",
+      "tag_name": "langchain-tests==1.1.8",
+      "title": "langchain-tests==1.1.8",
+      "time_hint": "2026-05-18",
+      "published_at": "2026-05-18T21:33:45Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-tests%3D%3D1.1.8",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain-tests==1.1.8\nTag: langchain-tests==1.1.8; draft: False; prerelease: False; published_at: 2026-05-18T21:33:45Z; created_at: 2026-05-18T21:31:37Z\nRelease notes:\nChanges since langchain-tests==1.1.7\nhotfix(standard-tests): set `langchain-core` version bounds (#37509)\nhotfix: bump lockfiles (#37508)\nrelease(standard-tests): 1.1.8 (#37507)\ntest(standard-tests): assert `ls_model_name` honors per-call model override (#37504)\nchore(core,langchain,openai): refresh stale OpenAI model references (#37487)\nchore: bump langsmith from 0.7.31 to 0.8.0 in /libs/standard-tests (#37381)\nchore(infra): merge v1.4 into master (#37350)\nchore: bump urllib3 from 2.6.3 to 2.7.0 in /libs/standard-tests (#37324)\nchore: bump langchain-core from 1.3.2 to 1.3.3 in /libs/standard-tests (#37253)\nchore: bump types-pyyaml from 6.0.12.20250915 to 6.0.12.20260408 in /libs/standard-tests (#37125)\nchore(docs): update x handle references (#37081)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain-tests==1.1.8, the standard-tests package sets langchain-core version bounds and asserts that ls_model_name honors per-call model override."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_fireworks_1_4_0",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain-fireworks==1.4.0",
+      "tag_name": "langchain-fireworks==1.4.0",
+      "title": "langchain-fireworks==1.4.0",
+      "time_hint": "2026-05-20",
+      "published_at": "2026-05-20T21:57:13Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.4.0",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain-fireworks==1.4.0\nTag: langchain-fireworks==1.4.0; draft: False; prerelease: False; published_at: 2026-05-20T21:57:13Z; created_at: 2026-05-20T21:53:52Z\nRelease notes:\nChanges since langchain-fireworks==1.3.1\nrelease(fireworks): 1.4.0 (#37582)\nfeat(fireworks): migrate to `fireworks-ai` 1.x SDK (#37581)\nchore(model-profiles): refresh model profile data (#37574)\nchore: bump idna from 3.10 to 3.15 in /libs/partners/fireworks (#37527)\nci(infra): harden Dependabot version-bound preservation (#37510)\nfix(fireworks): raise `ContextOverflowError` on prompt-too-long (#37458)\nchore: bump langsmith from 0.7.31 to 0.8.0 in /libs/partners/fireworks (#37404)\nchore: bump requests from 2.33.1 to 2.34.0 in /libs/partners/fireworks (#37355)\nchore: bump urllib3 from 2.6.3 to 2.7.0 in /libs/partners/fireworks (#37339)\nchore: bump langchain-core from 1.3.2 to 1.3.3 in /libs/partners/fireworks (#37279)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain-fireworks==1.4.0, the fireworks partner package migrates to the fireworks-ai 1.x SDK and raises ContextOverflowError on prompt-too-long."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_fireworks_1_4_1",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain-fireworks==1.4.1",
+      "tag_name": "langchain-fireworks==1.4.1",
+      "title": "langchain-fireworks==1.4.1",
+      "time_hint": "2026-05-21",
+      "published_at": "2026-05-21T06:38:55Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.4.1",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain-fireworks==1.4.1\nTag: langchain-fireworks==1.4.1; draft: False; prerelease: False; published_at: 2026-05-21T06:38:55Z; created_at: 2026-05-21T06:33:47Z\nRelease notes:\nChanges since langchain-fireworks==1.4.0\nrelease(fireworks): 1.4.1 (#37603)\nfix(fireworks): retry on bare `APIConnectionError`, default `max_retries=2` (#37602)\ntest(fireworks): stabilize integration tests with rate limiting and retries (#37590)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain-fireworks==1.4.1, the fireworks partner package retries on bare APIConnectionError with a default max_retries of 2."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_tests_1_1_9",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain-tests==1.1.9",
+      "tag_name": "langchain-tests==1.1.9",
+      "title": "langchain-tests==1.1.9",
+      "time_hint": "2026-05-21",
+      "published_at": "2026-05-21T18:24:27Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-tests%3D%3D1.1.9",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain-tests==1.1.9\nTag: langchain-tests==1.1.9; draft: False; prerelease: False; published_at: 2026-05-21T18:24:27Z; created_at: 2026-05-21T18:22:16Z\nRelease notes:\nChanges since langchain-tests==1.1.8\nrelease(standard-tests): 1.1.9 (#37609)\ntest(standard-tests): allow extra content blocks in streaming assertions (#37592)\nchore: bump idna from 3.11 to 3.15 in /libs/standard-tests (#37536)\nchore: bump the minor-and-patch group across 3 directories with 15 updates (#37515)\nci(infra): harden Dependabot version-bound preservation (#37510)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain-tests==1.1.9, the standard-tests package allows extra content blocks in streaming assertions."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_openai_1_2_2",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain-openai==1.2.2",
+      "tag_name": "langchain-openai==1.2.2",
+      "title": "langchain-openai==1.2.2",
+      "time_hint": "2026-05-21",
+      "published_at": "2026-05-21T22:08:45Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.2.2",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain-openai==1.2.2\nTag: langchain-openai==1.2.2; draft: False; prerelease: False; published_at: 2026-05-21T22:08:45Z; created_at: 2026-05-21T21:55:36Z\nRelease notes:\nChanges since langchain-openai==1.2.1\nrelease(openai): 1.2.2 (#37617)\nchore(infra): bump `langchain-tests` floor to 1.1.9 (#37610)\ntest(openai): unbreak audio chat and Azure embedding integration tests (#37589)\nfix(openai): guard httpx finalizers (#37570)\nchore: bump langsmith from 0.8.4 to 0.8.5 in /libs/partners/openai (#37549)\nchore: bump idna from 3.11 to 3.15 in /libs/partners/openai (#37548)\nci(infra): harden Dependabot version-bound preservation (#37510)\ntest(standard-tests): assert `ls_model_name` honors per-call model override (#37504)\nfix(openai): source LLM context size from model profiles (#37489)\nchore(core,langchain,openai): refresh stale OpenAI model references (#37487)\nfix(openai): broaden condition for ContextOverflowError to accommodate other providers (#37457)\ndocs(openai): document `base_url` env var fallback chain (#37436)\nchore: bump langsmith from 0.8.0 to 0.8.4 in /libs/partners/openai (#37416)\nchore: bump langsmith from 0.7.31 to 0.8.0 in /libs/partners/openai (#37398)\nchore(infra): merge v1.4 into master (#37350)\nchore: bump urllib3 from 2.6.3 to 2.7.0 in /libs/partners/openai (#37330)\nchore: bump langchain-core from 1.3.2 to 1.3.3 in /libs/partners/openai (#37266)\nchore(docs): update x handle references (#37081)\nchore(model-profiles): refresh model profile data (#37074)\nchore(docs): update comment for chatopenai (#37034)\nchore(model-profiles): refresh model profile data (#37015)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain-openai==1.2.2, the openai partner package guards httpx finalizers, sources LLM context size from model profiles, and broadens the condition for ContextOverflowError."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_1_3_2",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain==1.3.2",
+      "tag_name": "langchain==1.3.2",
+      "title": "langchain==1.3.2",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T18:18:15Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.2",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain==1.3.2\nTag: langchain==1.3.2; draft: False; prerelease: False; published_at: 2026-05-26T18:18:15Z; created_at: 2026-05-26T18:16:06Z\nRelease notes:\nChanges since langchain==1.3.1\nchore(langchain): bump to 1.3.2, require langgraph>=1.2.2 (#37703)\nfix(langchain): land final answer in last AIMessage for `TodoListMiddleware` (#37643)\nfeat(langchain): redact streamed PII in flight on `PIIMiddleware` (#37616)\nchore(infra): bump `langchain-tests` floor to 1.1.9 (#37610)\nrelease(standard-tests): 1.1.9 (#37609)\nfeat(langchain): register stream transformers on middleware (#37591)\nchore: bump idna from 3.11 to 3.15 in /libs/langchain_v1 (#37534)\nci(infra): harden Dependabot version-bound preservation (#37510)\nrefactor(langchain): clean redundancy ifelse. (#37448)\nhotfix: bump lockfiles (#37508)\nchore(core,langchain,openai): refresh stale OpenAI model references (#37487)\nfix(langchain): sort glob_search results by mtime (newest first) (#37462)\nchore: bump langsmith from 0.7.31 to 0.8.0 in /libs/langchain_v1 (#37391)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain==1.3.2, the main package requires langgraph>=1.2.2, lands the final answer in the last AIMessage for TodoListMiddleware, redacts streamed PII in flight on PIIMiddleware, and registers stream transformers on middleware."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_perplexity_1_3_0",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain-perplexity==1.3.0",
+      "tag_name": "langchain-perplexity==1.3.0",
+      "title": "langchain-perplexity==1.3.0",
+      "time_hint": "2026-05-27",
+      "published_at": "2026-05-27T00:22:23Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-perplexity%3D%3D1.3.0",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain-perplexity==1.3.0\nTag: langchain-perplexity==1.3.0; draft: False; prerelease: False; published_at: 2026-05-27T00:22:23Z; created_at: 2026-05-27T00:19:35Z\nRelease notes:\nChanges since langchain-perplexity==1.2.0\nrelease(perplexity): 1.3.0 (#37707)\nfeat(perplexity): `use_responses_api` flag on `ChatPerplexity` (#37359)\nchore(infra): bump `langchain-tests` floor to 1.1.9 (#37610)\nchore: bump langsmith from 0.8.4 to 0.8.5 in /libs/partners/perplexity (#37545)\nchore: bump idna from 3.10 to 3.15 in /libs/partners/perplexity (#37544)\nci(infra): harden Dependabot version-bound preservation (#37510)\nchore: bump langsmith from 0.8.0 to 0.8.4 in /libs/partners/perplexity (#37413)\nchore: bump langsmith from 0.7.31 to 0.8.0 in /libs/partners/perplexity (#37396)\nchore: bump urllib3 from 2.6.3 to 2.7.0 in /libs/partners/perplexity (#37336)\nchore: bump langchain-core from 1.3.2 to 1.3.3 in /libs/partners/perplexity (#37262)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain-perplexity==1.3.0, the perplexity partner package adds a use_responses_api flag on ChatPerplexity."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_fireworks_1_4_2",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain-fireworks==1.4.2",
+      "tag_name": "langchain-fireworks==1.4.2",
+      "title": "langchain-fireworks==1.4.2",
+      "time_hint": "2026-05-27",
+      "published_at": "2026-05-27T18:10:23Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-fireworks%3D%3D1.4.2",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain-fireworks==1.4.2\nTag: langchain-fireworks==1.4.2; draft: False; prerelease: False; published_at: 2026-05-27T18:10:23Z; created_at: 2026-05-27T18:02:15Z\nRelease notes:\nChanges since langchain-fireworks==1.4.1\nrelease(fireworks): 1.4.2 (#37715)\nfix(fireworks): strip non-wire keys from all content parts before serialization (#37714)\nchore(model-profiles): refresh model profile data (#37650)\nchore(infra): bump `langchain-tests` floor to 1.1.9 (#37610)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain-fireworks==1.4.2, the fireworks partner package strips non-wire keys from all content parts before serialization."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_perplexity_1_3_1",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain-perplexity==1.3.1",
+      "tag_name": "langchain-perplexity==1.3.1",
+      "title": "langchain-perplexity==1.3.1",
+      "time_hint": "2026-05-27",
+      "published_at": "2026-05-27T20:45:42Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-perplexity%3D%3D1.3.1",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain-perplexity==1.3.1\nTag: langchain-perplexity==1.3.1; draft: False; prerelease: False; published_at: 2026-05-27T20:45:42Z; created_at: 2026-05-27T20:42:53Z\nRelease notes:\nChanges since langchain-perplexity==1.3.0\nrelease(perplexity): 1.3.1 (#37720)\nchore(perplexity): bump `perplexityai` to 0.34.1 (#37710)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain-perplexity==1.3.1, the perplexity partner package bumps the perplexityai dependency to 0.34.1."
+    },
+    {
+      "memory_node_id": "langchain_ai__langchain__release__langchain_anthropic_1_4_4",
+      "repo": "langchain-ai/langchain",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:langchain-anthropic==1.4.4",
+      "tag_name": "langchain-anthropic==1.4.4",
+      "title": "langchain-anthropic==1.4.4",
+      "time_hint": "2026-05-28",
+      "published_at": "2026-05-28T20:20:39Z",
+      "source_url": "https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.4.4",
+      "raw_text": "Repository: langchain-ai/langchain\nRelease: langchain-anthropic==1.4.4\nTag: langchain-anthropic==1.4.4; draft: False; prerelease: False; published_at: 2026-05-28T20:20:39Z; created_at: 2026-05-28T20:17:11Z\nRelease notes:\nChanges since langchain-anthropic==1.4.3\nrelease(anthropic): 1.4.4 (#37757)\nfix(anthropic): normalize cross-provider tool-call IDs (#37756)\ntest(anthropic): retry integration tests on transient failures (#37697)\nchore(infra): bump `langchain-tests` floor to 1.1.9 (#37610)\nchore: bump langsmith from 0.8.3 to 0.8.5 in /libs/partners/anthropic (#37564)\nchore: bump idna from 3.11 to 3.15 in /libs/partners/anthropic (#37565)\nci(infra): harden Dependabot version-bound preservation (#37510)\nchore(infra): merge v1.4 into master (#37350)\nchore: bump urllib3 from 2.6.3 to 2.7.0 in /libs/partners/anthropic (#37343)\nchore: bump requests from 2.33.0 to 2.33.1 in /libs/partners/anthropic (#37286)\nchore: bump langsmith from 0.7.31 to 0.8.3 in /libs/partners/anthropic (#37287)\nchore: bump langchain-core from 1.3.2 to 1.3.3 in /libs/partners/anthropic (#37288)",
+      "memory_unit_text": "In the langchain-ai/langchain release langchain-anthropic==1.4.4, the anthropic partner package normalizes cross-provider tool-call IDs."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the langchain-ai/langchain releases, which release adds a 'respond' decision to HITL middleware?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "langchain==1.3.0a1"
+        },
+        {
+          "option_id": "B",
+          "text": "langchain==1.3.0"
+        },
+        {
+          "option_id": "C",
+          "text": "langchain==1.3.2"
+        },
+        {
+          "option_id": "D",
+          "text": "langchain==1.2.18"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "langchain==1.3.0a1",
+      "source_chunk_ids": [
+        "langchain_ai__langchain__release__langchain_1_3_0a1"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "langchain_ai__langchain__release__langchain_1_3_0a1",
+          "answer_text": "adds a 'respond' decision to HITL middleware"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the langchain-ai/langchain releases, how does the fireworks partner package change from version 1.3.0 to version 1.4.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1.3.0 adds a service_tier init kwarg, while 1.4.0 migrates to the fireworks-ai 1.x SDK and raises ContextOverflowError on prompt-too-long."
+        },
+        {
+          "option_id": "B",
+          "text": "1.3.0 strips non-wire keys from ToolMessage, while 1.4.0 requires api_key in FireworksEmbeddings."
+        },
+        {
+          "option_id": "C",
+          "text": "1.3.0 retries on APIConnectionError, while 1.4.0 strips non-wire keys from all content parts."
+        },
+        {
+          "option_id": "D",
+          "text": "1.3.0 migrates to the 1.x SDK, while 1.4.0 adds a service_tier init kwarg."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1.3.0 adds a service_tier init kwarg, while 1.4.0 migrates to the fireworks-ai 1.x SDK and raises ContextOverflowError on prompt-too-long.",
+      "source_chunk_ids": [
+        "langchain_ai__langchain__release__langchain_fireworks_1_3_0",
+        "langchain_ai__langchain__release__langchain_fireworks_1_4_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "langchain_ai__langchain__release__langchain_fireworks_1_3_0",
+          "answer_text": "adds a 'service_tier' init kwarg on ChatFireworks"
+        },
+        {
+          "memory_node_id": "langchain_ai__langchain__release__langchain_fireworks_1_4_0",
+          "answer_text": "migrates to the fireworks-ai 1.x SDK and raises ContextOverflowError on prompt-too-long"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the langchain-ai/langchain release window, order the following release-content states from earliest to latest: (1) a release that hardens load() against untrusted manifests in core 1.3.3, (2) a release that merges the v1.4 branch into master in core, (3) a release that backports a path-traversal fix to core 0.3.x.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 3 -> 2"
+        },
+        {
+          "option_id": "B",
+          "text": "3 -> 1 -> 2"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "D",
+          "text": "2 -> 1 -> 3"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 3 -> 2",
+      "source_chunk_ids": [
+        "langchain_ai__langchain__release__langchain_core_1_3_3",
+        "langchain_ai__langchain__release__langchain_core_0_3_86",
+        "langchain_ai__langchain__release__langchain_core_1_4_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "langchain_ai__langchain__release__langchain_core_1_3_3",
+          "answer_text": "hardens load() against untrusted manifests"
+        },
+        {
+          "memory_node_id": "langchain_ai__langchain__release__langchain_core_0_3_86",
+          "answer_text": "backports a path-traversal fix (CVE-2026-34070, GHSA-qh6h-p6c9-ff54) to the 0.3.x line"
+        },
+        {
+          "memory_node_id": "langchain_ai__langchain__release__langchain_core_1_4_0",
+          "answer_text": "merges the v1.4 branch into master"
+        }
+      ]
+    }
+  ]
+}

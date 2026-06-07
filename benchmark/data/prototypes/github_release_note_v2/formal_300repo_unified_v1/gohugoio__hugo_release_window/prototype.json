@@ -1,0 +1,530 @@
+{
+  "prototype_id": "gohugoio__hugo_release_window",
+  "domain": "github_release_evolution",
+  "repo": "gohugoio/hugo",
+  "source_type": "release_note",
+  "window_title": "gohugoio/hugo recent release evolution",
+  "window_summary": "This window tracks the recent gohugoio/hugo release stream from v0.152.1 through v0.162.1, covering new features such as multidimensional content models, WebP improvements, partial decorators, css.Build, AVIF support, and numerous bug fixes and deprecations.",
+  "chunks": [
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_152_1",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.152.1",
+      "tag_name": "v0.152.1",
+      "title": "v0.152.1",
+      "time_hint": "2025-10-22",
+      "published_at": "2025-10-22T19:27:43Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.152.1",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.152.1\nTag: v0.152.1; draft: False; prerelease: False; published_at: 2025-10-22T19:27:43Z; created_at: 2025-10-22T19:10:44Z\nRelease notes:\nThese fixes are are all related to the YAML library upgrade in [v0.152.0](https://github.com/gohugoio/hugo/releases/tag/v0.152.0).\n* Expand the numeric conversions to template funcs/methods e08278d16 @bep #14079\n* Fix where with uint64 df4f80d54 @bep #14081\n* Fix it so YAML integer types can be used where Go int types are expected d4c78885a @bep #14079\n* tpl/compare: Fix compare/sort of uint64s 29e2c2fa9 @bep #14078\n* Fix \"assignment to entry in nil map\" on empty YAML config files 0579afc3c @bep #14074",
+      "memory_unit_text": "In the gohugoio/hugo release v0.152.1, the release note describes fixes related to a YAML library upgrade from v0.152.0. It expands numeric conversions in template funcs/methods, fixes where with uint64, ensures YAML integer types can be used where Go int types are expected, fixes compare/sort of uint64s, and fixes an 'assignment to entry in nil map' error on empty YAML config files."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_152_2",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.152.2",
+      "tag_name": "v0.152.2",
+      "title": "v0.152.2",
+      "time_hint": "2025-10-24",
+      "published_at": "2025-10-24T15:47:22Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.152.2",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.152.2\nTag: v0.152.2; draft: False; prerelease: False; published_at: 2025-10-24T15:47:22Z; created_at: 2025-10-24T15:31:49Z\nRelease notes:\nIn `v0.152.0` we tightened the source validation for [file mounts](https://gohugo.io/configuration/module/#mounts). We always said that _project mounts can mount with absolute file/directorynames, modules/themes are restricted to relative_. In `v0.152.0` we narrowed module/themes mounts to be local, which made the setup in the bug report listed below fail:\n```toml\n[[module.mounts]]\nsource = '../../node_modules/bootstrap'\ntarget = 'assets/vendor/bootstrap'\n```\nOne part of this is security. But the construct above is _usually_ very odd (the project uses files in a theme/module, not the other way around) and not very portable. But the example above demonstrates a valid exception, that we now have added support for in a portable way. The above example now works as it did before `v0.152.0`, but going forward you can also write:\n```toml\n[[module.mounts]]\nsource = 'node_modules/bootstrap'\ntarget = 'assets/vendor/bootstrap'\n```\nWe now have the `node_modules` as a special case: For themes/modules we first check if the mounted source exists locally, if not we try relative to the project root.\n## What's Changed\n* deps: Update github.com/tdewolff/minify v2.24.4 => v2.24.5 1c8c21e45 @jmooring #14086\n* hugofs: Make node_modules a \"special case\" mount 809ebe01f @bep #14089\n* github: Fix typo in stale PR message 08a0679a8 @jordelver",
+      "memory_unit_text": "In the gohugoio/hugo release v0.152.2, the release note addresses a regression in file mount source validation introduced in v0.152.0. It adds special handling for node_modules mounts, allowing themes/modules to mount node_modules relative to the project root if the local source does not exist. It also updates the minify dependency and fixes a typo in a stale PR message."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_153_0",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.153.0",
+      "tag_name": "v0.153.0",
+      "title": "v0.153.0",
+      "time_hint": "2025-12-19",
+      "published_at": "2025-12-19T11:46:28Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.153.0",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.153.0\nTag: v0.153.0; draft: False; prerelease: False; published_at: 2025-12-19T11:46:28Z; created_at: 2025-12-19T10:14:01Z\nRelease notes:\n> [!note]\n>There is a newer bug fix release available [here](https://github.com/gohugoio/hugo/releases/tag/v0.153.1).\nThis is a good one! Hugo `v0.153.0` comes with a powerful new multidimensional content model (languages, versions and roles) and completely overhauls WebP image support, and much more:\n* For the new multidimensional content model, start reading [sites matrix](https://gohugo.io/quick-reference/glossary/#sites-matrix) and [sites complements](https://gohugo.io/quick-reference/glossary/#sites-complements). The matrix is what gets written to disk, `complements` allows e.g. a site in Swedish to fill in missing gaps in the site in Norwegian's page and resource collections. Also see the new [Rotate](https://gohugo.io/methods/page/rotate/) method, that allows you to rotate the content tree in a given dimension.\n* For WebP we now build a WASM version of [libwebp](https://github.com/webmproject/libwebp/) (`v1.6.0`) and run it in the [Wazero](https://wazero.io/) runtime. We use this for both encoding and decoding. This solves an old and annoying  issue with Go's stdlib's decoder, with [loss of contrast and muted colors](https://github.com/gohugoio/hugo/issues/8879) in some photos, but it also means that you don't need the extended version of Hugo to handle WebP images. And, drum roll, we now also support animated WebP, including converting to and from animated GIFs.\n* For MacOS, we now build signed and notarised `pkg` installers.\nAlso:\n* The Asciidoctor integration is greatly improved.\n* New template funcs [urls.PathUnescape](https://gohugo.io/functions/urls/pathunescape/) and  [urls.PathEscape](https://gohugo.io/functions/urls/pathescape/).\n* [openapi3.Unmarshal](https://gohugo.io/functions/openapi3/unmarshal/) now support external refs (including remote refs).\n## Notes\n* tpl/css: Deprecate libsass in favor of dartsass (note) 9937a5dc @bep #14261\n* Build Order: Hugo builds sites based on the sorted dimensions (see below). In earlier versions, we built the sites starting with the default content language. This change is also reflected in the sort order of `.Site.Sites` to make it consistent with `.Site.Languages`.\n* Sort Order: The dimensions are sorted as follows, which affects build order and complement selection:\n* languages: By weight, then by name.\n* versions: By weight, then by semantic versioning (descending).\n* roles: By weight, then by name.\n* Deprecations:\n* The lang option on mounts (https://gohugo.io/configuration/module/#mounts) and segments\n(https://gohugo.io/configuration/segments/#segment-definition) is deprecated in favor of the more powerful `sites.matrix`\noption.\n* File mount `includeFiles` and `excludeFiles` are deprecated in favour of the new files filter, which supports negation.\n* Logging: We no longer log warnings about potential duplicate content paths, as this becomes impractical to reason about with a\ncomplex sites matrix.\n## Bug fixes\n* Fix some outdated front matter b82e496c @bep #14271\n* Fix server rebuilds on editing content with Chinese terms e2e64aee @bep #14240\n* Fix slow server startup of very big content trees 7a43b928 @bep #14211\n* github: Fix \"no space left on device\" issue in CI b037b930 @bep\n* docs: Fix link to CGO wiki page 5af31128 @jordelver\n* Fix grammatical error in styleguide.md 62c47407 @bep\n* hugolib: Fix recently introduced data race 94a6233a @bep #14140\n* docshelper: Fix some YAML serialization issues with sites matrix configuration 22d0c17e @bep #14132\n* resources/page: Fix slugorcontentbasename for section pages 25c7c18f @dvdksn #14104\n* all: Fix some benchmarks broken by modernize 91eac9e5 @bep #14107\n* all: Run modernize -fix ./... 04650ce7 @bep #14107\n## Improvements\n* resources/images: Don't trust the file extension when decoding JPEG and PNG images 65d43e1d @bep\n* Add full filename to image...",
+      "memory_unit_text": "In the gohugoio/hugo release v0.153.0, the release note introduces a multidimensional content model with languages, versions, and roles, including sites matrix and complements. It overhauls WebP image support by building a WASM version of libwebp v1.6.0 running in Wazero, enabling animated WebP and removing the need for the extended edition for WebP. It adds signed and notarised pkg installers for macOS, improves Asciidoctor integration, adds urls.PathUnescape and urls.PathEscape template funcs, and supports external refs in openapi3.Unmarshal. It also deprecates libsass in favor of dartsass, changes build and sort order for dimensions, and deprecates lang option on mounts and segments in favor of sites.matrix, and file mount includeFiles/excludeFiles in favor of a new files filter."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_153_1",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.153.1",
+      "tag_name": "v0.153.1",
+      "title": "v0.153.1",
+      "time_hint": "2025-12-20",
+      "published_at": "2025-12-20T15:42:45Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.153.1",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.153.1\nTag: v0.153.1; draft: False; prerelease: False; published_at: 2025-12-20T15:42:45Z; created_at: 2025-12-20T15:15:53Z\nRelease notes:\n> [!note]\n>This is a bug fix release. See the [main release](https://github.com/gohugoio/hugo/releases/tag/v0.153.0) for a list of new features.\n* Handle PNG named *.webp 4085ee93 @bep #14288\n* Revert deprecation logging for contentDir per language 168bf17e @bep #14287\n* Fix panic when 404 is backed by a content file f740d7cf @bep #14283\n* internal/warpc: Increase WebP memory limit to 256 MiB 5f46da6e @jmooring #14282",
+      "memory_unit_text": "In the gohugoio/hugo release v0.153.1, the release note is a bug fix release that handles PNG files named *.webp, reverts deprecation logging for contentDir per language, fixes a panic when 404 is backed by a content file, and increases the WebP memory limit to 256 MiB."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_153_2",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.153.2",
+      "tag_name": "v0.153.2",
+      "title": "v0.153.2",
+      "time_hint": "2025-12-22",
+      "published_at": "2025-12-22T18:25:24Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.153.2",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.153.2\nTag: v0.153.2; draft: False; prerelease: False; published_at: 2025-12-22T18:25:24Z; created_at: 2025-12-22T16:53:01Z\nRelease notes:\n## What's Changed\n* Fix \"image: unknown format\" error a8c5d0d0 @bep #14295\n* modules: Remove extended edition check a94a941f @bep #14284\n* misc: Update edition comparison and guidance in README.md 385d1a13 @jmooring",
+      "memory_unit_text": "In the gohugoio/hugo release v0.153.2, the release note fixes an 'image: unknown format' error, removes the extended edition check from modules, and updates edition comparison and guidance in README.md."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_153_3",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.153.3",
+      "tag_name": "v0.153.3",
+      "title": "v0.153.3",
+      "time_hint": "2025-12-26",
+      "published_at": "2025-12-26T16:38:54Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.153.3",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.153.3\nTag: v0.153.3; draft: False; prerelease: False; published_at: 2025-12-26T16:38:54Z; created_at: 2025-12-26T15:33:04Z\nRelease notes:\n## What's Changed\n* build(deps): bump github.com/bep/imagemeta from 0.12.0 to 0.12.1 96ac146e @dependabot[bot]\n* Fix error with _content.gotmpl file with index.md siblings d4c0e445 @bep #14299",
+      "memory_unit_text": "In the gohugoio/hugo release v0.153.3, the release note bumps a dependency and fixes an error with _content.gotmpl file when index.md siblings exist."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_153_4",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.153.4",
+      "tag_name": "v0.153.4",
+      "title": "v0.153.4",
+      "time_hint": "2025-12-28",
+      "published_at": "2025-12-28T21:58:12Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.153.4",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.153.4\nTag: v0.153.4; draft: False; prerelease: False; published_at: 2025-12-28T21:58:12Z; created_at: 2025-12-28T21:34:16Z\nRelease notes:\n## What's Changed\n* Set cascade target to the content matrix if not set in the cascade itself 96777d9b @bep #14310",
+      "memory_unit_text": "In the gohugoio/hugo release v0.153.4, the release note sets the cascade target to the content matrix if not set in the cascade itself."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_153_5",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.153.5",
+      "tag_name": "v0.153.5",
+      "title": "v0.153.5",
+      "time_hint": "2025-12-30",
+      "published_at": "2025-12-30T10:48:25Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.153.5",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.153.5\nTag: v0.153.5; draft: False; prerelease: False; published_at: 2025-12-30T10:48:25Z; created_at: 2025-12-30T10:27:17Z\nRelease notes:\n## What's Changed\n* images: Add compression option to image config and clean up some of the options handling c6ae33c6 @bep\n* config: Fix cascade per language in hugo.toml regression edeebf0d @bep #14321\n* images: Fix WebP quality and hint parameters being ignored ea9675f6 @simonheimlicher #14316",
+      "memory_unit_text": "In the gohugoio/hugo release v0.153.5, the release note adds a compression option to image config, fixes a cascade per language regression in hugo.toml, and fixes WebP quality and hint parameters being ignored."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_154_0",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.154.0",
+      "tag_name": "v0.154.0",
+      "title": "v0.154.0",
+      "time_hint": "2025-12-31",
+      "published_at": "2025-12-31T14:25:22Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.154.0",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.154.0\nTag: v0.154.0; draft: False; prerelease: False; published_at: 2025-12-31T14:25:22Z; created_at: 2025-12-31T12:45:55Z\nRelease notes:\nHugo `v0.154.0` is the **14th release** this year (not counting patch releases) and introduces [partial decorators](https://gohugo.io/quick-reference/glossary/#partial-decorator), or “partials with a twist.” This is a very powerful construct that I, @bep, have always wanted to have in Hugo, but I could never wrap my head around an implementation. Until now.\nA small and not very useful example:\n```handlebars\n{{ with partial \"b.html\" \"World\" }}Hello {{ . }}{{ end }}\n{{ define \"_partials/b.html\" }}<b>{{ inner . }}</b>{{ end }}\n```\nThe above renders to:\n```handlebars\n<b>Hello World</b>\n```\n* The new `inner` keyword can be used zero or more times in a partial template, typically with different data (e.g. pages in a range), and its presence signals a reversal of the execution -- the callee becomes the caller.\n* Decorators can be deeply nested, see [this PR](https://github.com/gohugoio/hugoDocs/pull/3330) for an example.\nThis release also brings some new utility funcs in the [reflect](https://gohugo.io/functions/reflect/) package to identify the core types in Hugo. For example, to identify an [processable image](https://gohugo.io/quick-reference/glossary/#processable-image) hasn't been trivial, now it is:\n```handlebars\n{{ $obj := . }}\n{{ if reflect.IsResource $obj }}\n{{ if reflect.IsImageResource $obj }}\n// It has width/height and we can process it.\n{{ else }}\n// Just link to it.\n{{ end }}\n{{ end }}\n```\n## Bug fixes\n* tpl/collections: Fix apply to work with built-in funcs like len 5c7fad23 @bep #13418\n* Revert \"resources/page: Fix slugorcontentbasename for section pages\" bf1d20d7 @bep #14104 #14325\n## Improvements\n* helpers: Limit verbose watch output for better readability d3b5d47a @majiayu000 #14277\n* tpl/reflect: Make the IsImageResource implementation less technical 86cd1838 @bep\n* internal/warpc: Increase WebP memory limit to 384 MiB 871da337 @jmooring #14309\n* Update tpl/reflect/reflect.go 1deec99b @bep\n* Add reflect.Is{Page,Site,Resource,ImageResource} b7bb557c @bep #14307\n* Allow partials to work as decorators 7c19c196 @bep #13193\n## Dependency Updates\n* build(deps): bump github.com/tetratelabs/wazero from 1.10.1 to 1.11.0 2637aa15 @dependabot[bot]",
+      "memory_unit_text": "In the gohugoio/hugo release v0.154.0, the release note introduces partial decorators, a new construct allowing partials to act as decorators with an inner keyword. It adds reflect.IsPage, IsSite, IsResource, and IsImageResource utility functions. It fixes apply to work with built-in funcs like len, reverts a previous slugorcontentbasename fix, limits verbose watch output, increases WebP memory limit to 384 MiB, and updates dependencies."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_154_1",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.154.1",
+      "tag_name": "v0.154.1",
+      "title": "v0.154.1",
+      "time_hint": "2026-01-01",
+      "published_at": "2026-01-01T17:53:52Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.154.1",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.154.1\nTag: v0.154.1; draft: False; prerelease: False; published_at: 2026-01-01T17:53:52Z; created_at: 2026-01-01T17:32:20Z\nRelease notes:\n## What's Changed\n* Add WASM licensing information to README 8f3527f6 @bep\n* Fix partial decorator detection in partial with blocks with outer range break or continue 09048aad @bep #14333",
+      "memory_unit_text": "In the gohugoio/hugo release v0.154.1, the release note adds WASM licensing information to README and fixes partial decorator detection in partials with blocks containing outer range break or continue."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_154_2",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.154.2",
+      "tag_name": "v0.154.2",
+      "title": "v0.154.2",
+      "time_hint": "2026-01-02",
+      "published_at": "2026-01-02T16:52:23Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.154.2",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.154.2\nTag: v0.154.2; draft: False; prerelease: False; published_at: 2026-01-02T16:52:23Z; created_at: 2026-01-02T16:08:44Z\nRelease notes:\n## What's Changed\n* Fix alpha/fuzzy border issue with new webp decoder for images with with transparent background e9b9b36f @bep #14339",
+      "memory_unit_text": "In the gohugoio/hugo release v0.154.2, the release note fixes an alpha/fuzzy border issue with the new WebP decoder for images with transparent backgrounds."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_154_3",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.154.3",
+      "tag_name": "v0.154.3",
+      "title": "v0.154.3",
+      "time_hint": "2026-01-06",
+      "published_at": "2026-01-06T17:16:58Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.154.3",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.154.3\nTag: v0.154.3; draft: False; prerelease: False; published_at: 2026-01-06T17:16:58Z; created_at: 2026-01-06T16:30:17Z\nRelease notes:\n## What's Changed\n* build(deps): bump github.com/yuin/goldmark from 1.7.13 to 1.7.16 866b8e5a @dependabot[bot]",
+      "memory_unit_text": "In the gohugoio/hugo release v0.154.3, the release note bumps the goldmark dependency from v1.7.13 to v1.7.16."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_154_4",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.154.4",
+      "tag_name": "v0.154.4",
+      "title": "v0.154.4",
+      "time_hint": "2026-01-10",
+      "published_at": "2026-01-10T16:30:41Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.154.4",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.154.4\nTag: v0.154.4; draft: False; prerelease: False; published_at: 2026-01-10T16:30:41Z; created_at: 2026-01-10T15:24:22Z\nRelease notes:\n## What's Changed\n* tpl: Fix language resolution for markdown shortcodes ec178ea4 @BarkinBalci #14098\n* For multiple dimensions setups, fix alias handling and multihost publish path 2d80b8a7 @bep #14354 #14356\n* build(deps): bump github.com/goccy/go-yaml from 1.19.1 to 1.19.2 a2b2a5a9 @dependabot[bot]\nAlso see the new [Page.OutputFormats.Canonical](https://gohugo.io/methods/page/outputformats/#canonical) method.",
+      "memory_unit_text": "In the gohugoio/hugo release v0.154.4, the release note fixes language resolution for markdown shortcodes, fixes alias handling and multihost publish path for multiple dimensions setups, bumps a dependency, and adds the Page.OutputFormats.Canonical method."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_154_5",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.154.5",
+      "tag_name": "v0.154.5",
+      "title": "v0.154.5",
+      "time_hint": "2026-01-11",
+      "published_at": "2026-01-11T21:18:01Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.154.5",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.154.5\nTag: v0.154.5; draft: False; prerelease: False; published_at: 2026-01-11T21:18:01Z; created_at: 2026-01-11T20:53:23Z\nRelease notes:\n## What's Changed\n* Fix some default site redirect woes a7754883 @bep #14357 #14361\n* hugolib: Fix newly created shortcodes not found during server rebuild 66ba63cd @Hasaber8 #14207\n* tpl/tplimpl: Remove trailing slash from void elements eb06a3cd @jmooring",
+      "memory_unit_text": "In the gohugoio/hugo release v0.154.5, the release note fixes some default site redirect woes, fixes newly created shortcodes not found during server rebuild, and removes trailing slash from void elements."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_155_0",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.155.0",
+      "tag_name": "v0.155.0",
+      "title": "v0.155.0",
+      "time_hint": "2026-01-28",
+      "published_at": "2026-01-28T17:29:04Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.155.0",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.155.0\nTag: v0.155.0; draft: False; prerelease: False; published_at: 2026-01-28T17:29:04Z; created_at: 2026-01-28T16:28:23Z\nRelease notes:\nSome notable new things in this release are:\n* Improvements to how [versions](https://gohugo.io/methods/site/version/#article) are handled: We now support version (and also for the other dimension) range queries (e.g. `>= v1.0.0`), and we now cache Go module version queries, which makes mounting multiple versions of the same GitHub repo with different version much more practical and enjoyable, se    [this site and config](https://github.com/bep/hugo-testing-git-versions/blob/main/hugo.toml) for an annotated example.\n* We finally have XMP and IPTC image metadata support, in addition to EXIF, see #13146\n* Page `aliases` now works in multidimensional sites (e.g. multiple languages), and it is now much easier to create e.g. Netlify `_redirects` files that works in such setups.\n* There are several performance related WebP improvements in this release.\n* Also, image processing in general (e.g. resize operations) should be considerably more effective.\n## Breaking change\nPrior to v0.155.0, alias paths beginning with a slash (`/`) were treated as [server-relative]. In v0.155.0 and later, they are now [site-relative]. This change only affects multilingual single-host projects that used alias paths beginning with a slash (`/`) to cross language boundaries. See [details].\n[details]: https://discourse.gohugo.io/t/alias-paths-in-v0-155-0-and-later/56674\n[server-relative]: https://gohugo.io/quick-reference/glossary/#server-relative\n[site-relative]: https://gohugo.io/quick-reference/glossary/#site-relative\n## Note\n* Make Page.Aliases more useful in multidimensional setups (note) ee91c707 @bep #14402\n## Bug fixes\n* Fix data race when clearing cache in cachebusters 8a979d54 @wjiec\n* resources/images: Fix comment for Quality field in ImageConfig fd49df8f @bep\n* Fix panic reported in discourse c7b35c87 @bep #14441\n* Fix recently introduced partial rendering bug 8dfcece8 @bep #14433\n* tpl: Fix partial decorator panic when partial returns falsy f472dd48 @simonheimlicher #14419\n* resources: Fix race condition in test helper 48566b6f @simonheimlicher\n* Fix cascade draft panic 11f7f399 @bep #14409 #14412\n* hugolib: Fix multilingual alias generation 5ba03bf6 @jmooring #14388\n* Fix file mount specifity issue within the same module c1b2e58b @bep #14405\n* warpc: Fix typed nil return in Start 2c611091 @Sam-404-404 #14372\n* hugolib: Fix relative alias generation 32334d09 @jmooring #14381\n## Improvements\n* Remove disableDate and disableLatLong from MetaConfig 5916b61b @bep #14437\n*  internal/warpc: Make webp C defaults match the Go defaults 7eafef22 @bep\n* testscripts: Move server tests to own folder 00c4228f @bep #14439\n* testing: Skip some slow tests when not running in CI 5f5b2f37 @bep #14438\n* magefile: Skip commands test when running mage check locally ef7a22a2 @bep\n* Remove -p 2 parallelism limit for local test runs 9a6bfe26 @bep\n* Add AGENTS.md and CLAUDE.md 0fc63fbf @bep\n* Add == and != operators to range predicates 50973e72 @bep\n* Add modulequeries file cache for module version queries b441472b @bep #14417\n* Allow v1,v2 etc. style version names while still supporting full semver in queries ac2c3fb2 @bep #14414\n* Add range matchers for site matrix vector store filtering 192e3c45 @bep #14359\n* Misc webp performance work e569dd59 @bep #14370\n* Move from github.com/disintegration/gift to github.com/gohugoio/gift 1a947316 @bep #14397\n* resources/images: Stabilize order of valid sources in error message 8e9e04e3 @jmooring #14390\n* Add XMP and IPTC image metadata support 8e2e60dd @bep #13146\n* output: Add TestCanonical integration test 2bc54df6 @bep\n* Rename common/maps to common/hmaps (#14384) 608ed09a @bep\n* Decode webp.ImageConfig natively d36a8f56 @bep #14371\n## Dependency Updates\n* build(deps): bump golang.org/x/tools from 0.40.0 to 0.41.0 7d45614c @dependabot[bot]\n* build(de...",
+      "memory_unit_text": "In the gohugoio/hugo release v0.155.0, the release note improves version handling with range queries and caching of Go module version queries. It adds XMP and IPTC image metadata support, makes page aliases work in multidimensional sites, and includes performance improvements for WebP and image processing. It introduces a breaking change where alias paths beginning with '/' are now site-relative instead of server-relative. It also adds == and != operators to range predicates, range matchers for site matrix vector store filtering, and various bug fixes and dependency updates."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_155_1",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.155.1",
+      "tag_name": "v0.155.1",
+      "title": "v0.155.1",
+      "time_hint": "2026-01-30",
+      "published_at": "2026-01-30T10:36:30Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.155.1",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.155.1\nTag: v0.155.1; draft: False; prerelease: False; published_at: 2026-01-30T10:36:30Z; created_at: 2026-01-30T10:10:48Z\nRelease notes:\n## What's Changed\n* Fix image DecodeConfig regression of WebP images from file cache b5d43cdc @bep #14453\n* resources/images: Fix WebP useSharpYuv being ignored b1e1eede @jmooring #14449\n* tpl/tplimpl: Remove failing Twitter tests f522a728 @jmooring",
+      "memory_unit_text": "In the gohugoio/hugo release v0.155.1, the release note fixes an image DecodeConfig regression for WebP images from file cache, fixes WebP useSharpYuv being ignored, and removes failing Twitter tests."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_155_2",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.155.2",
+      "tag_name": "v0.155.2",
+      "title": "v0.155.2",
+      "time_hint": "2026-02-02",
+      "published_at": "2026-02-02T10:41:52Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.155.2",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.155.2\nTag: v0.155.2; draft: False; prerelease: False; published_at: 2026-02-02T10:41:52Z; created_at: 2026-02-02T10:04:51Z\nRelease notes:\nNote that the bug fix below is for the two new dimensions introduced in `v0.153.0` (version and role), multiple languages worked fine.  Also, changes to the first version and role also worked, which had me head-scratching for a while. Oh, well, enjoy.\n* Fix template change detection for multi-version sites 0f1c7d12 @bep #14461\n* resources/image: Add some image decode/encode debug logging 6bd2bde9 @bep #14337 #14460",
+      "memory_unit_text": "In the gohugoio/hugo release v0.155.2, the release note fixes template change detection for multi-version sites and adds image decode/encode debug logging."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_155_3",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.155.3",
+      "tag_name": "v0.155.3",
+      "title": "v0.155.3",
+      "time_hint": "2026-02-08",
+      "published_at": "2026-02-08T17:06:13Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.155.3",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.155.3\nTag: v0.155.3; draft: False; prerelease: False; published_at: 2026-02-08T17:06:13Z; created_at: 2026-02-08T16:40:42Z\nRelease notes:\n## What's Changed\n* hugolib: Don't render default site redirect for non-primary isHTML output formats 6ac7d081 @bep #14482\n* server: Fix stuck server global error logging 24eb84f8 @bep #14469\n* build(deps): bump github.com/evanw/esbuild from 0.27.2 to 0.27.3 95a36782 @dependabot[bot]\n* server: Fix panic when the server browser error handler tried to use a config in a state of flux 9045797d @bep #14470",
+      "memory_unit_text": "In the gohugoio/hugo release v0.155.3, the release note prevents rendering default site redirect for non-primary isHTML output formats, fixes stuck server global error logging, bumps esbuild dependency, and fixes a panic when the server browser error handler tried to use a config in a state of flux."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_156_0",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.156.0",
+      "tag_name": "v0.156.0",
+      "title": "v0.156.0",
+      "time_hint": "2026-02-18",
+      "published_at": "2026-02-18T17:21:05Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.156.0",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.156.0\nTag: v0.156.0; draft: False; prerelease: False; published_at: 2026-02-18T17:21:05Z; created_at: 2026-02-18T16:39:55Z\nRelease notes:\nThis release brings significant speedups of [collections.Where](https://gohugo.io/functions/collections/where/#article) and [collections.Sort](https://gohugo.io/functions/collections/sort/#article) – but this is mostly a \"spring cleaning\" release, to make the API cleaner and simpler to understand/document.\n## Deprecated\n* Site.AllPages is Deprecated\n* Site.BuildDrafts is Deprecated\n* Site.Languages is Deprecated\n* Site.Data is deprecated, use  hugo.Data\n* Page.Sites and Site.Sites is Deprecated, use hugo.Sites\nSee [this topic](https://discourse.gohugo.io/t/deprecations-in-v0-156-0/56732) for more info.\n## Removed\nThese have all been deprecated at least since `v0.136.0` and any usage have been logged as an error for a long time:\nTemplate functions\n- data.GetCSV / getCSV (use resources.GetRemote)\n- data.GetJSON / getJSON (use resources.GetRemote)\n- crypto.FNV32a (use hash.FNV32a)\n- resources.Babel (use js.Babel)\n- resources.PostCSS (use css.PostCSS)\n- resources.ToCSS (use css.Sass)\nPage methods:\n- .Page.NextPage (use .Page.Next)\n- .Page.PrevPage (use .Page.Prev)\nPaginator:\n- .Paginator.PageSize (use .Paginator.PagerSize)\nSite methods:\n- .Site.LastChange (use .Site.Lastmod)\n- .Site.Author (use .Site.Params.Author)\n- .Site.Authors (use .Site.Params.Authors)\n- .Site.Social (use .Site.Params.Social)\n- .Site.IsMultiLingual (use hugo.IsMultilingual)\n- .Sites.First (use .Sites.Default)\nSite config:\n- paginate (use pagination.pagerSize)\n- paginatePath (use pagination.path)\nFile caches:\n- getjson cache\n- getcsv cache\n## Notes\n* Remove items deprecated <= v0.136.0 (note) af5051e7 @bep\n* hugolib: Move site.Data to hugo.Data, deprecate Site.AllPages/BuildDrafts/Languages 86aa6252 @bep #14521\n* hugolib: Add Page.Sites to Site.Sites deprecation notice 4148eded @jmooring #14532\n* resources/page: Deprecate cascade._target in favor of cascade.target 828ee720 @jmooring #14341\n* tpl/tplimpl: Throw error when calling gist shortcode 4384f9b8 @jmooring #14491\n* tpl/tplimpl: Throw error when calling twitter/twitter_simple shortcodes 55d136dd @jmooring #14488\n## Bug fixes\n* tpl/internal: Replace deprecated parser.ParseDir and doc.New 4a641d15 @bep #14513\n* commands: Fix --panicOnWarning flag having no effect with module version warnings 3f9d0ad2 @bep #14524\n* paths: Fix handling of _ as a path name 32027e50 @khayyamsaleem #14344\n* docs: Fix lineNos default value in docs.yaml 498431d6 @jmooring\n* hugolib: Fix term title when taxonomy name contains spaces 773664b8 @bep #13422\n## Improvements\n* hugolib: Simplify sites collection bba2aed3 @bep\n* hugolib: Adjust hugo.Sites.Default 29b8e17d @bep #14531\n* Move common/hugo/HugoInfo to resources/page 3c823408 @bep\n* hugolib: Add hugo.Sites and .Site.IsDefault(), modify .Site.Sites ab62320d @jmooring #14479 #14481\n* output: Remove unused method 8d19f5a7 @bep #14522\n* Update AI assistance guidelines in CONTRIBUTING.md 77294735 @bep\n* tpl/collections: Speed up where and sort performance 47e39af2 @bep\n* commands: Skip chmod for files without owner-write permission 7850e7ce @jmooring #14507\n*  tpl/collections: Add some more benchmarks for where and sort 2e5132d8 @bep\n* all: Change site to project where appropriate 19ab3f58 @jmooring #14504\n* markup/highlight: Allow lineNos to be true, false, \"inline\", or \"table\" 3158a512 @jmooring #13481\n* Upgrade to Go 1.26 b358a65c @bep\n* tpl: Move from md5 to xxhash for some in memory keys 8ae5e1a8 @bep\n* testscripts/commands: Update 'future' date to far future e2776593 @toddy15 #14486\n## Dependency Updates\n* build(deps): bump google.golang.org/api from 0.255.0 to 0.267.0 d8ec0eee @dependabot[bot]\n* build(deps): bump github.com/bep/textandbinarywriter 21be4afd @dependabot[bot]\n* build(deps): bump github.com/bep/simplecobra from 0.6.1 to 0.7.0 e549016b @dependabot[bot]\n* build(deps): bump github.com/bep/t...",
+      "memory_unit_text": "In the gohugoio/hugo release v0.156.0, the release note brings significant speedups to collections.Where and collections.Sort. It deprecates Site.AllPages, Site.BuildDrafts, Site.Languages, Site.Data, Page.Sites, and Site.Sites, and removes many previously deprecated template functions, page methods, paginator methods, site methods, site config options, and file caches. It also moves site.Data to hugo.Data, deprecates cascade._target in favor of cascade.target, and throws errors for gist and twitter shortcodes. It includes various bug fixes and improvements such as allowing lineNos to be true, false, 'inline', or 'table', and upgrades to Go 1.26."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_157_0",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.157.0",
+      "tag_name": "v0.157.0",
+      "title": "v0.157.0",
+      "time_hint": "2026-02-25",
+      "published_at": "2026-02-25T17:00:45Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.157.0",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.157.0\nTag: v0.157.0; draft: False; prerelease: False; published_at: 2026-02-25T17:00:45Z; created_at: 2026-02-25T16:38:33Z\nRelease notes:\nThe notable new feature is [GitInfo support for Hugo Modules](https://gohugo.io/methods/page/gitinfo/#module-content). See [this repo](https://github.com/bep/hugo-testing-git-versions) for a runnable demo where multiple versions of the same content is mounted into different versions.\n## Bug fixes\n* Fix menu pageRef resolution in multidimensional setups 3dff7c8c @bep #14566\n* docs: Regen and fix the imaging docshelper output 8e28668b @bep #14562\n* hugolib: Fix automatic section pages not replaced by sites.complements a18bec11 @bep #14540\n## Improvements\n* Handle GitInfo for modules where Origin is not set when running go list d98cd4ae @bep #14564\n* commands: Update link to highlighting style examples 68059972 @jmooring #14556\n* Add AVIF, HEIF and HEIC partial support (only metadata for now) 49bfb107 @bep #14549\n* resources/images: Adjust WebP processing defaults b7203bbb @jmooring\n* Add Page.GitInfo support for content from Git modules dfece5b6 @bep #14431 #5533\n* Add per-request timeout option to `resources.GetRemote` 2d691c7e @vanbroup\n* Update AI Watchdog action version in workflow b96d58a1 @bep\n* config: Skip taxonomy entries with empty keys or values 65b4287c @bep #14550\n* Add guideline for brevity in code and comments cc338a9d @bep\n* modules: Include JSON error info from go mod download in error messages 3850881f @bep #14543\n## Dependency Updates\n* build(deps): bump github.com/tdewolff/minify/v2 from 2.24.8 to 2.24.9 9869e71a @dependabot[bot]\n* build(deps): bump github.com/bep/imagemeta from 0.14.0 to 0.15.0 8f47fe8c @dependabot[bot]",
+      "memory_unit_text": "In the gohugoio/hugo release v0.157.0, the release note adds GitInfo support for Hugo Modules, allowing content from Git modules to have GitInfo. It fixes menu pageRef resolution in multidimensional setups, fixes automatic section pages not replaced by sites.complements, handles GitInfo for modules where Origin is not set, adds AVIF, HEIF and HEIC partial metadata support, adjusts WebP processing defaults, adds a per-request timeout option to resources.GetRemote, and includes other improvements and dependency updates."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_158_0",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.158.0",
+      "tag_name": "v0.158.0",
+      "title": "v0.158.0",
+      "time_hint": "2026-03-16",
+      "published_at": "2026-03-16T18:07:38Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.158.0",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.158.0\nTag: v0.158.0; draft: False; prerelease: False; published_at: 2026-03-16T18:07:38Z; created_at: 2026-03-16T17:42:04Z\nRelease notes:\nThis release adds [css.Build](https://gohugo.io/functions/css/build/), native and very fast bundling/transformation/minifying of CSS resources. Also see the new [strings.ReplacePairs](https://gohugo.io/functions/strings/replacepairs/), a very fast option if you need to do many string replacements.\n## Notes\n* Upgrade to to Go 1.26.1 (#14597) (note) 1f578f16 @bep #14595. This fixes a security issue in Go's template package used by Hugo: https://www.cve.org/CVERecord?id=CVE-2026-27142\n## Deprecations\nThe methods and config options are deprecated and will be removed in a future Hugo release.\nAlso see [this article](https://discourse.gohugo.io/t/deprecations-in-v0-158-0/56869)\n### Language configuration\n- `languageCode` → Use `locale` instead.\n- `languages.<lang>.languageCode` → Use `languages.<lang>.locale` instead.\n- `languages.<lang>.languageName` → Use `languages.<lang>.label` instead.\n- `languages.<lang>.languageDirection` → Use `languages.<lang>.direction` instead.\n### Language methods\n- `.Site.LanguageCode` → Use `.Site.Language.Locale` instead.\n- `.Language.LanguageCode` → Use `.Language.Locale` instead.\n- `.Language.LanguageName` → Use `.Language.Label` instead.\n- `.Language.LanguageDirection` → Use `.Language.Direction` instead.\n## Bug fixes\n* tpl/css: Fix external source maps e431f90b @bep #14620\n* hugolib: Fix server no watch 59e0446f @jmooring #14615\n* resources: Fix context canceled on GetRemote with per-request timeout 842d8f10 @bep #14611\n* tpl/tplimpl: Prefer early suffixes when media type matches 4eafd9eb @bep #13877 #14601\n* all: Run go fix ./... e3108225 @bep\n* internal/warpc: Fix SIGSEGV in Close() when dispatcher fails to start c9b88e4d @bep #14536\n* Fix index out of range panic in fileEventsContentPaths f797f849 @bep #14573\n## Improvements\n* resources: Re-publish on transformation cache hit 3c980c07 @bep #14629\n* create/skeletons: Use css.Build in theme skeleton 404ac000 @jmooring #14626\n* tpl/css: Add a test case for rebuilds on CSS options changes 06fcb724 @bep\n* hugolib: Allow regular pages to cascade to self 9b5f1d49 @jmooring #14627\n* tpl/css: Allow the user to override single loader entries 623722bb @bep #14623\n* tpl/css: Make default loader resolution for CSS @import and url() always behave the same a7cbcf15 @bep #14619\n* internal/js: Add default mainFields for CSS builds 36cdb2c7 @jmooring #14614\n* Add css.Build 3e3b849c @bep #14609 #14613\n* resources: Use full path for Exif etc. decoding error/warning messages c47ec233 @bep #12693\n* Move to new locales library and upgrade CLDR from v36.1 to v48.1 4652ae4a @bep\n* tpl/strings: Add strings.ReplacePairs function 13a95b9c @jmooring #14594\n* github: Remove pull_request_template.md 54c80487 @bep\n* testing: Make commands tests pass in Go 1.26.1 157bfddd @bep\n* refactor: Deprecate language configuration and template methods d4f2122d @jmooring #14269\n* Replace Exif with Meta in tests 991d2f9a @bep\n* resources: Improve getImageOps error message e8577771 @jmooring #14571\n* resources/images: Add IsImageResourceWithMeta etc. tests for bmp and gif 44dc3847 @bep #14568\n## Dependency Updates\n* deps: Upgrade github.com/evanw/esbuild v0.27.3 => v0.27.4 0e46a97e @bep\n* build(deps): bump github.com/getkin/kin-openapi from 0.133.0 to 0.134.0 c27d9e8f @dependabot[bot]\n* build(deps): bump golang.org/x/tools from 0.42.0 to 0.43.0 098eac59 @dependabot[bot]\n* build(deps): bump gocloud.dev from 0.44.0 to 0.45.0 87f8de8c @dependabot[bot]\n* build(deps): bump golang.org/x/sync from 0.19.0 to 0.20.0 67ef6c68 @dependabot[bot]\n* build(deps): bump golang.org/x/net from 0.50.0 to 0.51.0 (#14569) b29c2f7a @dependabot[bot]\n* build(deps): bump github.com/tdewolff/minify/v2 from 2.24.9 to 2.24.10 (#14585) e91d1911 @dependabot[bot]\n* build(deps): bump github.com/bep/imagemeta from 0.15.0 to 0.17.0 (#14584) a8a54bd0...",
+      "memory_unit_text": "In the gohugoio/hugo release v0.158.0, the release note adds css.Build for native CSS bundling/transformation/minifying and strings.ReplacePairs for fast string replacements. It upgrades to Go 1.26.1 to fix a security issue. It deprecates language configuration options (languageCode, languageName, languageDirection) and their corresponding methods in favor of locale, label, and direction. It includes bug fixes for external source maps, server no watch, context canceled on GetRemote, and others, and improvements such as re-publishing on transformation cache hit and allowing regular pages to cascade to self."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_159_0",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.159.0",
+      "tag_name": "v0.159.0",
+      "title": "v0.159.0",
+      "time_hint": "2026-03-23",
+      "published_at": "2026-03-23T18:36:09Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.159.0",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.159.0\nTag: v0.159.0; draft: False; prerelease: False; published_at: 2026-03-23T18:36:09Z; created_at: 2026-03-23T18:16:59Z\nRelease notes:\nThis release greatly improves and simplifies management of Node.js/npm dependencies in a multi-module setup. See [this page](https://gohugo.io/hugo-modules/nodejs-dependencies/) for more information.\n## Note\n* Replace deprecated site.Data with hugo.Data in tests a8fca598 @bep\n* Replace deprecated excludeFiles and includeFiles with files in tests 182b1045 @bep\n* Replace deprecated :filename with :contentbasename in the permalinks test eb11c3d0 @bep\n## Bug fixes\n* tpl/tplimpl: Fix Vimeo shortcode test eaf4c751 @jmooring #14649\n## Improvements\n* create: Return error instead of panic when page not found 807cae1d @mango766 #14112\n* commands: Preserve non-content files in convert output c4fb61d9 @xndvaz #4621\n* npm: Use workspaces to simplify `hugo mod npm pack` d88a29e0 @bep\n* commands: Close cpu profile file when StartCPUProfile fails 9dd9c760 @buley\n* Remove the AI Watchdog workflow for now 3315a86d @bep\n* Remove 'bep' from PR user logins skip list 38244842 @bep\n* tpl/tplimpl: Comment out the Vimeo simple shortcode tests 7813c5c8 @bep #14649\n## Dependency Updates\n* build(deps): bump github.com/olekukonko/tablewriter from 1.1.3 to 1.1.4 (#14641) 3ff9b7f8 @dependabot[bot]\n* build(deps): bump github.com/yuin/goldmark from 1.7.16 to 1.7.17 be93ccd3 @dependabot[bot]\n* build(deps): bump github.com/magefile/mage from 1.15.0 to 1.16.1 2669bca6 @dependabot[bot]\n* build(deps): bump golang.org/x/image from 0.36.0 to 0.37.0 753d447f @dependabot[bot]\n* build(deps): bump google.golang.org/grpc from 1.78.0 to 1.79.3 4f39d724 @dependabot[bot]\n## Documentation\n* docs: Update docs.yaml d2043cfa @bep\n* commands: Update docs linke to Node.js docs 4f3c3989 @bep",
+      "memory_unit_text": "In the gohugoio/hugo release v0.159.0, the release note improves and simplifies management of Node.js/npm dependencies in a multi-module setup. It replaces deprecated site.Data with hugo.Data in tests, replaces deprecated excludeFiles and includeFiles with files in tests, and replaces deprecated :filename with :contentbasename in permalinks test. It fixes a Vimeo shortcode test, returns error instead of panic when page not found, preserves non-content files in convert output, uses workspaces to simplify 'hugo mod npm pack', and includes other improvements and dependency updates."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_159_1",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.159.1",
+      "tag_name": "v0.159.1",
+      "title": "v0.159.1",
+      "time_hint": "2026-03-26",
+      "published_at": "2026-03-26T10:18:33Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.159.1",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.159.1\nTag: v0.159.1; draft: False; prerelease: False; published_at: 2026-03-26T10:18:33Z; created_at: 2026-03-26T09:54:15Z\nRelease notes:\nThe regression fixed in this release isn't new, but it's so subtle that we thought we'd release this sooner rather than later. For some time now, the minifier we use have stripped namespaced attributes in SVGs, which broke dynamic constructs using e.g. [AlpineJS' x-bind:](https://alpinejs.dev/directives/bind) namespace (library used by Hugo's [documentation site](https://gohugo.io/)).\nTo fix this, the upstream library has hadded a `keepNamespaces` slice option. It was not possible to find a default that would make all happy, so we opted for an option that at least would make AlpineJS sites work out of the box:\n```toml\n[minify.tdewolff.svg]\nkeepNamespaces = ['', 'x-bind']\n```\n## What's Changed\n* minifiers: Keep x-bind and blank namespace in SVG minification 42289d76 @bep #14669",
+      "memory_unit_text": "In the gohugoio/hugo release v0.159.1, the release note fixes a regression where the minifier stripped namespaced attributes in SVGs, breaking dynamic constructs like AlpineJS' x-bind. It adds a keepNamespaces option to the SVG minifier, defaulting to keep '' and 'x-bind' namespaces."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_159_2",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.159.2",
+      "tag_name": "v0.159.2",
+      "title": "v0.159.2",
+      "time_hint": "2026-04-01",
+      "published_at": "2026-04-01T14:42:10Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.159.2",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.159.2\nTag: v0.159.2; draft: False; prerelease: False; published_at: 2026-04-01T14:42:10Z; created_at: 2026-04-01T12:59:20Z\nRelease notes:\nNote that the security fix below is not a potential threat if you either:\n* Trust your Markdown content files.\n* Have custom [render hook template](https://gohugo.io/render-hooks/) for links and images.\nEDIT IN: This release also adds release archives for non-extended-withdeploy builds.\n## What's Changed\n* Fix potential content XSS by escaping dangerous URLs in Markdown links and images 479fe6c6 @bep\n* resources/page: Fix shared reader in Source.ValueAsOpenReadSeekCloser df520e31 @jmooring #14684",
+      "memory_unit_text": "In the gohugoio/hugo release v0.159.2, the release note fixes a potential content XSS by escaping dangerous URLs in Markdown links and images, and fixes a shared reader issue in Source.ValueAsOpenReadSeekCloser. It also adds release archives for non-extended-withdeploy builds."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_160_0",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.160.0",
+      "tag_name": "v0.160.0",
+      "title": "v0.160.0",
+      "time_hint": "2026-04-04",
+      "published_at": "2026-04-04T14:17:16Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.160.0",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.160.0\nTag: v0.160.0; draft: False; prerelease: False; published_at: 2026-04-04T14:17:16Z; created_at: 2026-04-04T13:32:34Z\nRelease notes:\nNow you can inject [CSS vars](https://gohugo.io/functions/css/build/#vars), e.g. from the configuration, into your stylesheets when building with [css.Build](https://gohugo.io/functions/css/build/). Also, now all the render hooks has a  [.Position](https://gohugo.io/render-hooks/links/#position) method, now also more accurate and effective.\n## Bug fixes\n* Fix some recently introduced Position issues 4e91e14c @bep #14710\n* markup/goldmark: Fix double-escaping of ampersands in link URLs dc9b51d2 @bep #14715\n* tpl: Fix stray quotes from partial decorator in script context 43aad711 @bep #14711\n## Improvements\n* all: Replace NewIntegrationTestBuilder with Test/TestE/TestRunning 481baa08 @bep\n* tpl/css: Support @import \"hugo:vars\" for CSS custom properties in css.Build 5d09b5e3 @bep #14699\n* Improve and extend .Position handling in Goldmark render hooks 303e443e @bep #14663\n* markup/goldmark: Clean up test 638262ce @bep\n## Dependency Updates\n* build(deps): bump github.com/magefile/mage from 1.16.1 to 1.17.1 bf6e35a7 @dependabot[bot]\n* build(deps): bump github.com/go-jose/go-jose/v4 from 4.1.3 to 4.1.4 0eda24e6 @dependabot[bot]\n* build(deps): bump golang.org/x/image from 0.37.0 to 0.38.0 beb57a68 @dependabot[bot]\n## Documentation\n* readme: Revise edition descriptions and installation instructions 9f1f1be0 @jmooring",
+      "memory_unit_text": "In the gohugoio/hugo release v0.160.0, the release note adds support for injecting CSS vars into stylesheets via css.Build and adds .Position method to all render hooks. It fixes recently introduced Position issues, double-escaping of ampersands in link URLs, and stray quotes from partial decorator in script context. It also supports @import 'hugo:vars' for CSS custom properties and improves .Position handling in Goldmark render hooks."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_160_1",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.160.1",
+      "tag_name": "v0.160.1",
+      "title": "v0.160.1",
+      "time_hint": "2026-04-08",
+      "published_at": "2026-04-08T14:23:31Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.160.1",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.160.1\nTag: v0.160.1; draft: False; prerelease: False; published_at: 2026-04-08T14:23:31Z; created_at: 2026-04-08T14:02:42Z\nRelease notes:\n## What's Changed\n* Fix panic when passthrough elements are used in headings 8b00030b @bep #14677\n* Fix panic on edit of legacy mapped template names that's also a valid path in the new setup c4855167 @bep #14740\n* Fix RenderShortcodes leaking context markers when indented 161d0d47 @bep #12457\n* Strip nested page context markers from standalone RenderShortcodes 45e45966 @bep #14732\n* Rename deprecated cascade._target to cascade.target in tests 58927aa1 @bep\n* Fix auto-creation of root sections in multilingual sites ce009e3a @bep #14681\n* readme: Fix links 07558724 @chicks-net",
+      "memory_unit_text": "In the gohugoio/hugo release v0.160.1, the release note fixes a panic when passthrough elements are used in headings, a panic on edit of legacy mapped template names, RenderShortcodes leaking context markers when indented, strips nested page context markers from standalone RenderShortcodes, renames deprecated cascade._target to cascade.target in tests, fixes auto-creation of root sections in multilingual sites, and fixes links in readme."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_161_0",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.161.0",
+      "tag_name": "v0.161.0",
+      "title": "v0.161.0",
+      "time_hint": "2026-04-28",
+      "published_at": "2026-04-28T13:55:11Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.161.0",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.161.0\nTag: v0.161.0; draft: False; prerelease: False; published_at: 2026-04-28T13:55:11Z; created_at: 2026-04-28T11:46:32Z\nRelease notes:\nThis release contains two security hardening fixes:\n* We now run the Node tools PostCSS, Babel and TailwindCSS, by default, with the `--permission` flag with the permissions defined in [security.node.permissions](https://gohugo.io/configuration/security/). This means that you need Node >= 22 installed and that `css.TailwindCSS` now requires that the Tailwind CSS CLI must be installed as a Node.js package. The [standalone executable](https://github.com/tailwindlabs/tailwindcss/releases/latest) is no longer supported\n* We have made the defaults in [security.http.urls](https://gohugo.io/configuration/security/#httpurls) more restrictive.\nBut there are some notable new features, as well:\n## Nested vars support in css.Build and css.Sass\nA practical example in `css.Build` would be to have something like this in `hugo.toml`:\n```toml\n[params.style]\nprimary    = \"#000000\"\nbackground = \"#ffffff\"\n[params.style.dark]\nprimary    = \"#ffffff\"\nbackground = \"#000000\"\n```\nAnd in the stylesheet:\n```css\n@import \"hugo:vars\";\n@import \"hugo:vars/dark\" (prefers-color-scheme: dark);\n:root {\ncolor-scheme: light dark;\n}\n```\n## Slice-based permalinks config\nThe `permalinks` configuration is now much more flexible (the old setup still works). It uses the same [target](https://gohugo.io/configuration/cascade/#target) matchers as in the `cascade` config, meaning you can now do:\n```yaml\npermalinks:\n- target:\nkind: page\npath: \"/books/**\"\npattern: /books/:year/:slug/\n- target:\nkind: section\npath: \"/{books,books/**}\"\npattern: /libros/:sections[1:]\n- target:\nkind: page\npattern: /other/:slug/\n```\nThe above example isn't great, but it at least shows the gist of it.\n## A more flexible scheme for identifiers in filenames\nWhat we had before was e.g. `content/mypost.en.md` which told Hugo that the content files was in English. With the new setup you could also name the file `content/mypost._language_en_.md`. This alone doesn't sound very useful, but this allows you to use more prefixes:\n| Prefix          | Description   | Relevant for              |\n| --------------- | ------------- | ------------------------- |\n| language_       | Language      | Content and layout files. |\n| role_           | Role          | Content and layout files. |\n| version_        | Version       | Content and layout files. |\n| outputformat_   | Output format | Layout files.             |\n| mediatype_      | Media type    | Layout files.             |\n| kind_           | Page kind     | Layout files.             |\n| layout_         | Layout        | Layout files.             |\n## All Changes\n* langs/i18n: Fix translation lookup when using language variants 72b85d5f @jmooring #7982\n* create: Fix non-deterministic conflict detection in hugo new content 6436deb3 @jmooring #12602 #12786 #14112 #14769\n* commands: Fix environment isolation for configuration settings 1eea9fba @jmooring #14763\n* Fix filename dimension identifiers (_role_X_, _version_X_) to replace mount config 8d6145f3 @bep #14756\n* Fix it so we never auto-fallback to page resources in other roles/versions 97477242 @bep #14749 #14752\n* css: Support nested hugo:vars/<name> imports 7622dd86 @bep #14705\n* github: Update GitHub actions versions 0814059b @bep #14810\n* hugolib: Do not render aliases if the page is not rendered 8920d56e @jmooring #14807\n* langs/i18n: Improve default content language fallback 633cc772 @jmooring #14243\n* helpers: Remove unused code 4c40c6d5 @bep\n* common/constants: Remove unused consts d2594db6 @bep\n*  common/paths: Remove unused code ab2de51e @bep\n* tests: Update Ruby setup action to v1.305.0 75f61832 @jmooring\n* langs: Use Language.Locale as primary localization key 1b7495bc @jmooring #9109\n* config/security: Add \"! \" negation to Whitelist, harden default http.urls 79f030be @bep #14792\n* Harden Node tool execution with --permission...",
+      "memory_unit_text": "In the gohugoio/hugo release v0.161.0, the release note contains security hardening: Node tools run with --permission flag, requiring Node >= 22, and TailwindCSS CLI must be installed as a Node.js package; security.http.urls defaults are more restrictive. It adds nested vars support in css.Build and css.Sass, slice-based permalinks config, and a more flexible scheme for identifiers in filenames using prefixes like language_, role_, version_, etc. It also includes various bug fixes and improvements."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_161_1",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.161.1",
+      "tag_name": "v0.161.1",
+      "title": "v0.161.1",
+      "time_hint": "2026-04-29",
+      "published_at": "2026-04-29T14:38:49Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.161.1",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.161.1\nTag: v0.161.1; draft: False; prerelease: False; published_at: 2026-04-29T14:38:49Z; created_at: 2026-04-29T13:56:01Z\nRelease notes:\n## What's Changed\n* resources: Honor Retry-After header in resources.GetRemote retries c4eba928 @bep #14828\n* warpc: Move to parson.c in https://github.com/kgabis/parson 8b40a96b @bep #14823\n* config/security: Add AllowChildProcess to security.node.permissions d65af84d @bep #14824\n* config/security: Restrict default http.urls \"@\" deny to userinfo 454450a6 @bep #14825",
+      "memory_unit_text": "In the gohugoio/hugo release v0.161.1, the release note makes resources.GetRemote honor the Retry-After header, moves warpc to parson.c, adds AllowChildProcess to security.node.permissions, and restricts default http.urls '@' deny to userinfo."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_162_0",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.162.0",
+      "tag_name": "v0.162.0",
+      "title": "v0.162.0",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T14:16:07Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.162.0",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.162.0\nTag: v0.162.0; draft: False; prerelease: False; published_at: 2026-05-26T14:16:07Z; created_at: 2026-05-26T13:53:44Z\nRelease notes:\nThe notable new feature in this release is support for [AVIF images](https://gohugo.io/configuration/imaging/#avif-images) (both encoder and decoder). There's a [demo site](https://github.com/bep/hdrsdr.com) set up that demonstrates the difference between HDR AVIF and SDR JPEG images. Note that that demo is only really interesting if viewed on an HDR capable screen (e.g. Apple Retina).\n## Security fixes\nThere are some notable security fixes in this release.\n### Security fixes in Go\nThis release upgrades from Go 1.26.1 to 126.3, which brings a set of security fixes. Some relevant for Hugo are:\n* XSS in html/template (CVE-2026-39826 & CVE-2026-39823): Two separate vulnerabilities where escaper bypasses in html/template could lead to Cross-Site Scripting (XSS).\n* html/template: Fixes an issue where JS template literal contexts were incorrectly tracked across template branches, which could lead to improper content escaping.\n### Security fixes and hardening in Hugo\nThe following changes either fix a concrete issue or reduce the default attack surface of `hugo` builds.\n- **Disallow `text/html` content files by default** ([e41a064](https://github.com/gohugoio/hugo/commit/e41a06447d)). A new `security.allowContent` policy gates which content media types may be used for pages under `/content`. `text/html` is denied by default; sites that rely on hand-authored or adapter-emitted HTML content can opt back in with `security.allowContent = ['.*']`.\n- **Re-check `security.http.urls` on every redirect hop in `resources.GetRemote`** ([86fbb0f](https://github.com/gohugoio/hugo/commit/86fbb0f7a8)).\n- **Reject symlinked entries in `resources.Get`** ([f8b5fa0](https://github.com/gohugoio/hugo/commit/f8b5fa09a6)).\n**We will update this section later with links to CVEs where applicable.**\n## All changes\n* hugolib: Fix Page.GitInfo for modules with go.mod in a repo subdirectory df542191 @bep #14942\n* Fix typo in CONTRIBUTING.md 4bc7caea @bep\n* resources: Fix the :counter placeholder 5d51b82a @jmooring #14921\n* commands: Fix import from Jekyll 81d77620 @jmooring #14795 #14906\n* Fix prevention of direct symlink reads in resources.Get f8b5fa09 @bep\n* commands: Fix github-dark chromastyles 88d838a9 @xndvaz #14831\n* Disallow HTML content by default e41a0644 @bep\n* Add image processing support for AVIF 90d9f812 @bep #7837\n* config: Preserve intentionally empty maps 80e60847 @jmooring #14944\n* hugolib: Merge existing hugo_stats.json when renderSegments is set aeb9a5cc @bep #14939\n* all: Replace RWMutex struct caches with ConcurrentMap c4bbc280 @bep\n* tpl/tplimpl: Consolidate and improve embedded template integration tests d8c70218 @jmooring #14932\n* parser: Drop empty sub maps from hugo config output ee4f1acd @bep #14855\n* markup/highlight: Allow overriding type and code via options b6133657 @bep #11872\n* Update AI assistance disclosure requirements d2c821b5 @bep\n* hugolib: Use AllTranslated in IsTranslated 4ed7600f @bep\n* tpl: Simplify sitemap template cbe4339a @bep #14912\n* tpl: Use AllTranslations in sitemap template 6475d308 @bep #14912 #14917\n* tpl/collections: Make dict return nil when no values are provided 67aede43 @bep\n* Sync Go template package to 1.26.3 87f194b2 @bep #14897\n* Upgrade to Go 1.26.3 d81e3c29 @bep #14897\n* ci: Check embedded template formatting with gotmplfmt 7c65a4db @bep\n* tpl: Run gotmplfmt -w . d31a9275 @bep\n* markup/goldmark/codeblocks: Always split Chroma options into .Options c36608c5 @jmooring #14909\n* hugolib: Allow empty params front matter 2f361a8e @xndvaz #14886\n* common/hmaps: Merge slice-valued module config into site config 55592633 @jmooring #13869\n* tpl: Use GetMatch for both local and global image resources 656fc040 @bep #14062\n* Revert \"markup/tableofcontents: Skip empty TOC levels\" a20cb5b1 @bep #14898\n* tpl/templates: Reject Defer insid...",
+      "memory_unit_text": "In the gohugoio/hugo release v0.162.0, the release note adds support for AVIF images (encoder and decoder). It includes security fixes from Go 1.26.3 (XSS in html/template) and Hugo-specific hardening: disallows text/html content files by default with a new security.allowContent policy, re-checks security.http.urls on every redirect hop in resources.GetRemote, and rejects symlinked entries in resources.Get. It also includes various bug fixes and improvements such as fixing Page.GitInfo for modules with go.mod in a subdirectory, allowing empty params front matter, and merging existing hugo_stats.json when renderSegments is set."
+    },
+    {
+      "memory_node_id": "gohugoio__hugo__release__v0_162_1",
+      "repo": "gohugoio/hugo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.162.1",
+      "tag_name": "v0.162.1",
+      "title": "v0.162.1",
+      "time_hint": "2026-05-28",
+      "published_at": "2026-05-28T18:06:06Z",
+      "source_url": "https://github.com/gohugoio/hugo/releases/tag/v0.162.1",
+      "raw_text": "Repository: gohugoio/hugo\nRelease: v0.162.1\nTag: v0.162.1; draft: False; prerelease: False; published_at: 2026-05-28T18:06:06Z; created_at: 2026-05-28T17:40:44Z\nRelease notes:\n## What's Changed\n* modules/npm: Fix false stale warning after npm pack 59f35cd9 @jmooring #14959\n* Revert \"tpl/collections: Make dict return nil when no values are provided\" c2709750 @bep #14958\n* tpl/time: Fix locale-specific month abbreviations ea8b48af @jmooring #14948",
+      "memory_unit_text": "In the gohugoio/hugo release v0.162.1, the release note fixes a false stale warning after npm pack, reverts a change that made dict return nil when no values are provided, and fixes locale-specific month abbreviations."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the gohugoio/hugo releases, which release introduces partial decorators and adds reflect.IsPage, IsSite, IsResource, and IsImageResource utility functions?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.153.0"
+        },
+        {
+          "option_id": "B",
+          "text": "v0.154.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v0.155.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v0.156.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v0.154.0",
+      "source_chunk_ids": [
+        "gohugoio__hugo__release__v0_154_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "gohugoio__hugo__release__v0_154_0",
+          "answer_text": "introduces partial decorators ... adds reflect.IsPage, IsSite, IsResource, and IsImageResource utility functions"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the gohugoio/hugo releases, how does the WebP memory limit change from v0.153.1 to v0.154.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.153.1 increases the WebP memory limit to 256 MiB, while v0.154.0 further increases it to 384 MiB."
+        },
+        {
+          "option_id": "B",
+          "text": "v0.153.1 sets the WebP memory limit to 128 MiB, while v0.154.0 removes the limit entirely."
+        },
+        {
+          "option_id": "C",
+          "text": "v0.153.1 introduces the WebP memory limit, and v0.154.0 decreases it to 256 MiB."
+        },
+        {
+          "option_id": "D",
+          "text": "Both releases keep the WebP memory limit at 256 MiB."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v0.153.1 increases the WebP memory limit to 256 MiB, while v0.154.0 further increases it to 384 MiB.",
+      "source_chunk_ids": [
+        "gohugoio__hugo__release__v0_153_1",
+        "gohugoio__hugo__release__v0_154_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "gohugoio__hugo__release__v0_153_1",
+          "answer_text": "increases the WebP memory limit to 256 MiB"
+        },
+        {
+          "memory_node_id": "gohugoio__hugo__release__v0_154_0",
+          "answer_text": "increases WebP memory limit to 384 MiB"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the gohugoio/hugo release window, order the following release-content states from earliest to latest: (1) a release that adds AVIF image support and disallows text/html content files by default, (2) a release that introduces a multidimensional content model and overhauls WebP image support, (3) a release that adds css.Build and deprecates language configuration options, (4) a release that adds nested vars support in css.Build and slice-based permalinks config.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2 -> 3 -> 4 -> 1"
+        },
+        {
+          "option_id": "B",
+          "text": "3 -> 2 -> 1 -> 4"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 4 -> 3 -> 1"
+        },
+        {
+          "option_id": "D",
+          "text": "1 -> 2 -> 3 -> 4"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2 -> 3 -> 4 -> 1",
+      "source_chunk_ids": [
+        "gohugoio__hugo__release__v0_153_0",
+        "gohugoio__hugo__release__v0_158_0",
+        "gohugoio__hugo__release__v0_161_0",
+        "gohugoio__hugo__release__v0_162_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "gohugoio__hugo__release__v0_153_0",
+          "answer_text": "introduces a multidimensional content model ... overhauls WebP image support"
+        },
+        {
+          "memory_node_id": "gohugoio__hugo__release__v0_158_0",
+          "answer_text": "adds css.Build ... deprecates language configuration options"
+        },
+        {
+          "memory_node_id": "gohugoio__hugo__release__v0_161_0",
+          "answer_text": "adds nested vars support in css.Build ... slice-based permalinks config"
+        },
+        {
+          "memory_node_id": "gohugoio__hugo__release__v0_162_0",
+          "answer_text": "adds AVIF image support ... disallows text/html content files by default"
+        }
+      ]
+    }
+  ]
+}

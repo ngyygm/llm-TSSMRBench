@@ -1,0 +1,525 @@
+{
+  "prototype_id": "files_community__Files_release_window",
+  "domain": "github_release_evolution",
+  "repo": "files-community/Files",
+  "source_type": "release_note",
+  "window_title": "files-community/Files recent release evolution",
+  "window_summary": "This window tracks the recent release evolution of files-community/Files, covering major and minor releases from v3.1.1 through v4.1.1. It includes feature additions, bug fixes, and infrastructure updates across the project's development timeline.",
+  "chunks": [
+    {
+      "memory_node_id": "files_community__Files__release__v3_1_1",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.1.1",
+      "tag_name": "v3.1.1",
+      "title": "v3.1.1",
+      "time_hint": "2024-01-08",
+      "published_at": "2024-01-08T16:36:06Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v3.1.1",
+      "raw_text": "Repository: files-community/Files\nRelease: v3.1.1\nTag: v3.1.1; draft: False; prerelease: False; published_at: 2024-01-08T16:36:06Z; created_at: 2024-01-08T16:32:32Z\nRelease notes:\nDownload Files from our [download page](https://files.community/download)\n## What's Changed\n* Fix: Fixed issue where the app would crash when opening the properties window from the home page by @hishitetsu in https://github.com/files-community/Files/pull/14385\n* Fix: Fixed issue where the app would crash when opening the properties window twice by @hishitetsu in https://github.com/files-community/Files/pull/14386\n* Fix: Fixed issue where the app would crash when pinning an executable file to the start menu by @hishitetsu in https://github.com/files-community/Files/pull/14387\n* New Crowdin updates by @yaira2 in https://github.com/files-community/Files/pull/14388\n**Full Changelog**: https://github.com/files-community/Files/compare/v3.1...v3.1.1",
+      "memory_unit_text": "In the files-community/Files release v3.1.1, the update addresses several crash fixes: a crash when opening the properties window from the home page, a crash when opening the properties window twice, and a crash when pinning an executable file to the start menu. It also includes new Crowdin localization updates."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v3_2",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.2",
+      "tag_name": "v3.2",
+      "title": "v3.2",
+      "time_hint": "2024-02-11",
+      "published_at": "2024-02-11T01:15:57Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v3.2",
+      "raw_text": "Repository: files-community/Files\nRelease: v3.2\nTag: v3.2; draft: False; prerelease: False; published_at: 2024-02-11T01:15:57Z; created_at: 2024-02-08T15:26:06Z\nRelease notes:\nDownload Files from our [download page](https://files.community/download)\n## What's Changed\n* Feature: Added support for pinning executable shortcuts to start by @yaira2 in https://github.com/files-community/Files/pull/14667\n* Feature: Use File Explorer naming preferences when creating shortcuts by @yaira2 in https://github.com/files-community/Files/pull/14600\n* Feature: Added support for starting tag search from the Details Pane by @yaira2 in https://github.com/files-community/Files/pull/14544\n* Feature: Added support for hiding more options from the context menu by @yaira2 in https://github.com/files-community/Files/pull/14408\n* Feature: Added an option to disable auto scroll when navigating up by @yaira2 in https://github.com/files-community/Files/pull/14412\n* Feature: Updated to WinAppSDK 1.4.4 by @yaira2 in https://github.com/files-community/Files/pull/14414\n* Feature: Updated search query to include unindexed items in results by @yaira2 in https://github.com/files-community/Files/pull/14415\n* Feature: Switched away from GetThumbnailAsync API by @yaira2 in https://github.com/files-community/Files/pull/14423\n* Feature: Added support for setting jfif files as the wallpaper by @MrFrawsty in https://github.com/files-community/Files/pull/14537\n* Feature: Updated the cloud status icon for Columns Layout by @yaira2 in https://github.com/files-community/Files/pull/14520\n* Feature: Added support for editing album covers by @yaira2 in https://github.com/files-community/Files/pull/14485\n* Feature: Add newly created items to the Recent Files list by @yaira2 in https://github.com/files-community/Files/pull/14466\n* Feature: Added a List View layout by @marcelwgn in https://github.com/files-community/Files/pull/14489\n* Fix: Fixed issue where smart extraction didn't work correctly for a single folder by @hishitetsu in https://github.com/files-community/Files/pull/14395\n* Fix: Use the Stream API to list streams instead of opening the file by @mbartlett21 in https://github.com/files-community/Files/pull/14398\n* Fix: Fixed issue where directly opening a library would invoke explorer.exe by @SakuraKade in https://github.com/files-community/Files/pull/14336\n* Fix: Fixed issue where pinned applications were executed in `%windir%\\System32` by @hishitetsu in https://github.com/files-community/Files/pull/14420\n* Fix: Fixed COMException with BaseLayoutPage.GetAllItems by @hishitetsu in https://github.com/files-community/Files/pull/14431\n* Fix: Fixed issue where it didn't work to pick files when creating new shortcuts by @yaira2 in https://github.com/files-community/Files/pull/14422\n* Fix: Fixed COMException in ItemsAdded_CollectionChanged by @hishitetsu in https://github.com/files-community/Files/pull/14439\n* Fix: Fixed environment variables expansion for shortcuts by @Qin-shihuang in https://github.com/files-community/Files/pull/14425\n* Fix: Fixed COMException in ItemsAdded_CollectionChanged - part 2 by @hishitetsu in https://github.com/files-community/Files/pull/14448\n* Fix: Fixed COMException with BaseLayoutPage.GetAllItems - part 2 by @hishitetsu in https://github.com/files-community/Files/pull/14447\n* Fix: Fixed issue where switching from Details to Tiles didn't reload thumbnails by @hishitetsu in https://github.com/files-community/Files/pull/14457\n* Fix: Fixed issue where a new tab would open when trying to open a new window by @hishitetsu in https://github.com/files-community/Files/pull/14463\n* Fix: Fixed issue where folders sizes weren't calculated when opening Properties from the sidebar by @ferrariofilippo in https://github.com/files-community/Files/pull/14480\n* Fix: Handle InvalidOperationException in RunPowershellCommandAsync by @yaira2 in https://github.com/files-community/Files/pull/14481\n* Fix: Fixed crash when selecting the address bar with `Shift` + `Tab`...",
+      "memory_unit_text": "In the files-community/Files release v3.2, new features include support for pinning executable shortcuts to start, using File Explorer naming preferences when creating shortcuts, starting tag search from the Details Pane, hiding more options from the context menu, an option to disable auto scroll when navigating up, updating to WinAppSDK 1.4.4, including unindexed items in search results, switching away from GetThumbnailAsync API, setting jfif files as wallpaper, updating cloud status icon for Columns Layout, editing album covers, adding newly created items to Recent Files, and a new List View layout. Numerous fixes address smart extraction, stream API usage, library opening, pinned application execution directory, COM exceptions, file picking for shortcuts, environment variable expansion, thumbnail reloading, new tab opening, folder size calculation, PowerShell command handling, and address bar selection crash."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v3_2_1",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.2.1",
+      "tag_name": "v3.2.1",
+      "title": "v3.2.1",
+      "time_hint": "2024-02-16",
+      "published_at": "2024-02-16T16:45:18Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v3.2.1",
+      "raw_text": "Repository: files-community/Files\nRelease: v3.2.1\nTag: v3.2.1; draft: False; prerelease: False; published_at: 2024-02-16T16:45:18Z; created_at: 2024-02-16T16:20:15Z\nRelease notes:\nDownload Files from our [download page](https://files.community/download)\n## What's Changed\n* Feature: Added a notification when the app goes to the background for the first time by @hishitetsu in https://github.com/files-community/Files/pull/14673\n* Feature: Added a prompt when failing to rename items requiring additional permissions by @ferrariofilippo in https://github.com/files-community/Files/pull/14669\n* Fix: Fixed issue where switching directory while renaming item wouldn't cancel rename by @hishitetsu in https://github.com/files-community/Files/pull/14676\n* Fix: Fixed high contrast support in menu flyouts by @0x5bfa in https://github.com/files-community/Files/pull/14664\n* Fix: Fixed COMException in HandleLocationItemDroppedAsync by @hishitetsu in https://github.com/files-community/Files/pull/14680\n* Fix: Fixed NullReferenceException in InvertSelectionAction by @hishitetsu in https://github.com/files-community/Files/pull/14681\n* Fix: Fixed ArgumentException in ContextMenu by @hishitetsu in https://github.com/files-community/Files/pull/14689\n* Fix: Fixed issue where the path bar on the home page was not translated by @hishitetsu in https://github.com/files-community/Files/pull/14694\n* Fix: Fixed issue where exe icons were sometimes small by @yaira2 in https://github.com/files-community/Files/pull/14700\n* Fix: Fixed InvalidOperationException when removing page from BackStack by @yaira2 in https://github.com/files-community/Files/pull/14698\n* Fix: Fixed NullReferenceException in Item_Opening by @yaira2 in https://github.com/files-community/Files/pull/14699\n* Fix: Fixed NullReferenceException in DirectoryInfoUpdated by @hishitetsu in https://github.com/files-community/Files/pull/14720\n* Fix: Fixed issue where icon overlays were cached by @yaira2 in https://github.com/files-community/Files/pull/14727\n* Code Quality: Updated Windows App SDK to 1.4.5 by @hishitetsu in https://github.com/files-community/Files/pull/14728\n* Code Quality: Improved Widget code by @0x5bfa in https://github.com/files-community/Files/pull/14458\n* Code Quality: Update dependencies by @hishitetsu in https://github.com/files-community/Files/pull/14693\n* Code Quality: Refactor IncreaseLayoutSize by @yaira2 in https://github.com/files-community/Files/pull/14677\n* Code Quality: Improved performance of Git operations by @hishitetsu in https://github.com/files-community/Files/pull/14688\n* Code Quality: Differentiate between icon size & icon height by @yaira2 in https://github.com/files-community/Files/pull/14713\n* Code Quality: Transition Sidebar and Tabs away from LoadIconFromPathAsync by @yaira2 in https://github.com/files-community/Files/pull/14701\n**Full Changelog**: https://github.com/files-community/Files/compare/v3.2...v3.2.1",
+      "memory_unit_text": "In the files-community/Files release v3.2.1, new features include a notification when the app goes to the background for the first time and a prompt when failing to rename items requiring additional permissions. Fixes address issues with renaming while switching directories, high contrast support in menu flyouts, COMException in HandleLocationItemDroppedAsync, NullReferenceException in InvertSelectionAction, ArgumentException in ContextMenu, untranslated path bar on the home page, small exe icons, InvalidOperationException when removing page from BackStack, NullReferenceException in Item_Opening, NullReferenceException in DirectoryInfoUpdated, and cached icon overlays. Code quality improvements update Windows App SDK to 1.4.5, improve Widget code, update dependencies, refactor IncreaseLayoutSize, improve Git operation performance, differentiate icon size and height, and transition Sidebar and Tabs away from LoadIconFromPathAsync."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v3_2_2",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.2.2",
+      "tag_name": "v3.2.2",
+      "title": "v3.2.2",
+      "time_hint": "2024-02-18",
+      "published_at": "2024-02-18T02:00:33Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v3.2.2",
+      "raw_text": "Repository: files-community/Files\nRelease: v3.2.2\nTag: v3.2.2; draft: False; prerelease: False; published_at: 2024-02-18T02:00:33Z; created_at: 2024-02-18T01:03:18Z\nRelease notes:\nDownload Files from our [download page](https://files.community/download)\n## What's Changed\n* Fix: Fixed crash that would occur when clicking an item in the Tags widget by @hishitetsu in https://github.com/files-community/Files/pull/14745\n* Fix: Fixed crash that would occur when navigating folders continuously in a short period of time by @hishitetsu in https://github.com/files-community/Files/pull/14744\n* Fix: Fixed COMException loop due to failure to generate notification by @hishitetsu in https://github.com/files-community/Files/pull/14754\n* Fix: Fixed ArgumentException when wrong color was specified by @hishitetsu in https://github.com/files-community/Files/pull/14751\n* Fix: Fixed InvalidOperationException in ColumnsLayoutPage by @hishitetsu in https://github.com/files-community/Files/pull/14746\n* New Crowdin updates by @yaira2 in https://github.com/files-community/Files/pull/14756\n**Full Changelog**: https://github.com/files-community/Files/compare/v3.2.1...v3.2.2",
+      "memory_unit_text": "In the files-community/Files release v3.2.2, fixes address a crash when clicking an item in the Tags widget, a crash when navigating folders continuously in a short period, a COMException loop due to notification generation failure, an ArgumentException when a wrong color is specified, and an InvalidOperationException in ColumnsLayoutPage. It also includes new Crowdin localization updates."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v3_2_3",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.2.3",
+      "tag_name": "v3.2.3",
+      "title": "v3.2.3",
+      "time_hint": "2024-02-21",
+      "published_at": "2024-02-21T20:56:41Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v3.2.3",
+      "raw_text": "Repository: files-community/Files\nRelease: v3.2.3\nTag: v3.2.3; draft: False; prerelease: False; published_at: 2024-02-21T20:56:41Z; created_at: 2024-02-21T20:54:46Z\nRelease notes:\nDownload Files from our [download page](https://files.community/download)\n## What's Changed\n- Serviced the update pipeline for the sideload version",
+      "memory_unit_text": "In the files-community/Files release v3.2.3, the update services the update pipeline for the sideload version."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v3_2_4",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.2.4",
+      "tag_name": "v3.2.4",
+      "title": "v3.2.4",
+      "time_hint": "2024-03-12",
+      "published_at": "2024-03-12T22:11:17Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v3.2.4",
+      "raw_text": "Repository: files-community/Files\nRelease: v3.2.4\nTag: v3.2.4; draft: False; prerelease: False; published_at: 2024-03-12T22:11:17Z; created_at: 2024-03-12T21:24:19Z\nRelease notes:\nDownload Files from our [download page](https://files.community/download)\n## What's Changed\n*This version is only for the sideload version of Files*\n- Updated our deployment pipeline, as a result of this change, you'll be required to uninstall and then reinstall the sideload version. See here for more information: https://files.community/docs/install#:~:text=Steps%20required%20for%20the%20%E2%80%9Cclassic%20installer%E2%80%9D%20version%20after%203/21/2024\n**Full Changelog**: https://github.com/files-community/Files/compare/v3.2.3...v3.2.4",
+      "memory_unit_text": "In the files-community/Files release v3.2.4, this version is only for the sideload version of Files. It updates the deployment pipeline, requiring users to uninstall and reinstall the sideload version."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v3_3",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.3",
+      "tag_name": "v3.3",
+      "title": "v3.3",
+      "time_hint": "2024-03-18",
+      "published_at": "2024-03-18T22:39:15Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v3.3",
+      "raw_text": "Repository: files-community/Files\nRelease: v3.3\nTag: v3.3; draft: False; prerelease: False; published_at: 2024-03-18T22:39:15Z; created_at: 2024-03-18T20:15:31Z\nRelease notes:\nDownload Files from our [download page](https://files.community/download)\n## What's Changed\n* Feature: Added slider to control item size by @yaira2 in https://github.com/files-community/Files/pull/14719\n* Feature: Add icon sizes to the layout flyout by @yaira2 in https://github.com/files-community/Files/pull/14834\n* Feature: Update layout size selection state by @yaira2 in https://github.com/files-community/Files/pull/14845\n* Feature: Added tooltips to Layout Picker by @0x5bfa in https://github.com/files-community/Files/pull/14852\n* Feature: Updated layout icons in the toolbar by @yaira2 in https://github.com/files-community/Files/pull/14846\n* Feature: Replaced string \"Layout mode\" with \"Layout\" for simplicity by @0x5bfa in https://github.com/files-community/Files/pull/14847\n* Feature: Created new \"Layout\" settings page by @yaira2 in https://github.com/files-community/Files/pull/14912\n* Feature: Added a header to the home page by @0x5bfa in https://github.com/files-community/Files/pull/14864\n* Feature: Renamed \"Favorites\" section to \"Pinned\" by @0x5bfa in https://github.com/files-community/Files/pull/14862\n* Feature: Added shimmer animation when loading icons by @yaira2 in https://github.com/files-community/Files/pull/14905\n* Feature: Restore tabs when Files process is closed incorrectly by @yaira2 in https://github.com/files-community/Files/pull/14795\n* Feature: Added Discord link to About page by @hishitetsu in https://github.com/files-community/Files/pull/14821\n* Feature: Added support for opening and extracting mrpack files by @yaira2 in https://github.com/files-community/Files/pull/14942\n* Feature: Removed web shortcut icon placeholder by @yaira2 in https://github.com/files-community/Files/pull/14913\n* Fix: Use correct DPI settings when requesting icons by @yaira2 in https://github.com/files-community/Files/pull/14779\n* Fix: Fixed SocketException in GitHelpers.RequireGitAuthenticationAsync by @hishitetsu in https://github.com/files-community/Files/pull/14769\n* Fix: Fixed NullReferenceException in Item_Opening by @hishitetsu in https://github.com/files-community/Files/pull/14784\n* Fix: Fixed NullReferenceException in CloseTab by @hishitetsu in https://github.com/files-community/Files/pull/14783\n* Fix: Fixed NullReferenceException in ShareItemsAsync by @hishitetsu in https://github.com/files-community/Files/pull/14782\n* Fix: Fixed NullReferenceException in DuplicateSelectedTabAction.ExecuteAsync by @hishitetsu in https://github.com/files-community/Files/pull/14789\n* Fix: Fixed issue where item selection didn't work properly the List View layout by @hishitetsu in https://github.com/files-community/Files/pull/14800\n* Fix: Fixed an issue where pin/unpin string is not shown by @0x5bfa in https://github.com/files-community/Files/pull/14869\n* Fix: Fixed issue where copy and paste out of archive file didn't work by @hishitetsu in https://github.com/files-community/Files/pull/14829\n* Fix: Fixed issue where hashes weren't able to calculate by @hishitetsu in https://github.com/files-community/Files/pull/14832\n* Fix: Fixed issue where some files failed to load properties by @hishitetsu in https://github.com/files-community/Files/pull/14850\n* Fix: Fixed issue where tabs weren't restored when resuming from the background by @yaira2 in https://github.com/files-community/Files/pull/14857\n* Fix: Fixed issue where Open with and Send to submenus didn't appear properly in Widgets by @hishitetsu in https://github.com/files-community/Files/pull/14879\n* Fix: Prompt for credentials when a network share access is denied by @nmangue in https://github.com/files-community/Files/pull/14904\n* Fix: Save tab list on path change by @yaira2 in https://github.com/files-community/Files/pull/14874\n* Fix: Fixed localization issue in the Layout Picker by @0x5bfa in https://github.com/f...",
+      "memory_unit_text": "In the files-community/Files release v3.3, new features include a slider to control item size, icon sizes in the layout flyout, updated layout size selection state, tooltips on the Layout Picker, updated layout icons in the toolbar, simplified 'Layout' string, a new 'Layout' settings page, a header on the home page, renaming 'Favorites' to 'Pinned', shimmer animation when loading icons, restoring tabs when the process is closed incorrectly, a Discord link on the About page, support for opening and extracting mrpack files, and removal of the web shortcut icon placeholder. Fixes address DPI settings for icons, SocketException in GitHelpers, NullReferenceException in Item_Opening, CloseTab, ShareItemsAsync, and DuplicateSelectedTabAction, item selection in List View, pin/unpin string display, copy/paste from archives, hash calculation, file property loading, tab restoration from background, Open with and Send to submenus in Widgets, network share credential prompts, tab list saving, localization in Layout Picker, and more."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v3_4",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.4",
+      "tag_name": "v3.4",
+      "title": "v3.4",
+      "time_hint": "2024-05-07",
+      "published_at": "2024-05-07T22:34:25Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v3.4",
+      "raw_text": "Repository: files-community/Files\nRelease: v3.4\nTag: v3.4; draft: False; prerelease: False; published_at: 2024-05-07T22:34:25Z; created_at: 2024-05-07T21:32:09Z\nRelease notes:\nDownload Files from our [download page](https://files.community/download)\n## What's Changed\n- Added support for personalizing Files with a custom background image\n- Added support for remapping keyboard shortcuts\n- Added support for filtering items by file name\n- Added an integration with Listary\n- Added localizations for Albanian, Khmer, Kurdish, and Lithuanian\n- Added support to the sidebar for multiple SharePoint drives\n- Added an integration for the Lucid Link cloud provider\n- Added audio bitrate, and video to the list of properties in the Details Pane\n- The Recent Files widget now respects the setting for displaying file extensions\n- Improved the display of keyboard shortcuts in the Command Palette\n- Fixed an issue where pinned items weren't displayed in the sidebar\n- Fixed an issue clicking the header in the details view wouldn't change the sort direction\n- Fixed an issue where the adaptive layout option wasn't disabled when syncing layout settings\n- Fixed an issue where changing the sort preferences didn't work properly when syncing layout settings\n- Fixed an issue where existing tabs would duplicate when opening a folder from outside of Files\n- Fixed an issue where the Properties Window wouldn't navigate between pages after returning from advanced settings\n- Fixed an issue where the app would sometimes crash when entering characters into the Address Bar\n- Fixed the alignment of the add tab button\n- Fixed an issue where the Git submenu was sometimes shown for non-GitHub repos\n- Fixed a crash that would sometimes occur when closing the GitHub login modal\n- Fixed an issue where Recycle Bin wasn't pinned to the Sidebar by default\n- Fixed an issue where the View More and Open All options where disabled in the Tags widget\n- Fixed an issue where the scroll position was sometimes incorrect\n- Fixed an issue where \"Scroll to previous folder\" didn't work in some folders\n- Fixed an issue where HWiNFO64.exe wouldn't open\n- Fixed an issue where changing the focus in columns view caused an extra animation\n- Fixed an issue where the app window wasn't refocused if minimized on launch\n- Fixed an issue where the conflicts dialog didn't append numbers when pasting files\n- Fixed an issue where renaming an item in the conflict dialog would leave the copy status in process\n- Fixed an issue where the setting control margin was misaligned\n- Fixed an issue with exporting tags\n- Fixed an issue where certain drive icons didn't load on the Drive Widget\n- Fixed an issue where ftp addresses were not displayed in the Address Bar\n- Fixed an issue where coping or moving a folder would cause the contents of the destination folder to be empty\n- Fixed an issue where there wasn't enough space to right click folders in columns view\n- Fixed an issue where the wrong item was shown as active in the sidebar\n- Fixed an issue where holding the arrow key would cause the Preview Pane to freeze\n- Fixed an issue with editing properties of multiple items at the same time\n- Fixed a conflict with svg thumbnails generated by PowerToys\n- Fixed an issue of overlapping brushes leaving a gap in the columns view\n## New Contributors\n* @gumbarros made their first contribution in https://github.com/files-community/Files/pull/14990\n* @Arnav-2004 made their first contribution in https://github.com/files-community/Files/pull/15011\n* @Artoryn made their first contribution in https://github.com/files-community/Files/pull/15304\n**Full Changelog**: https://github.com/files-community/Files/compare/v3.3...v3.4",
+      "memory_unit_text": "In the files-community/Files release v3.4, new features include support for personalizing Files with a custom background image, remapping keyboard shortcuts, filtering items by file name, an integration with Listary, localizations for Albanian, Khmer, Kurdish, and Lithuanian, support for multiple SharePoint drives in the sidebar, an integration for the Lucid Link cloud provider, audio bitrate and video properties in the Details Pane, and the Recent Files widget respecting file extension display settings. Improvements include better display of keyboard shortcuts in the Command Palette. Fixes address issues with pinned items not displaying in the sidebar, sort direction not changing on header click, adaptive layout option not disabled when syncing layout settings, sort preference changes not working with synced layout settings, existing tabs duplicating when opening a folder from outside Files, Properties Window navigation after returning from advanced settings, app crash when entering characters into the Address Bar, alignment of the add tab button, Git submenu shown for non-GitHub repos, crash when closing the GitHub login modal, Recycle Bin not pinned to the Sidebar by default, View More and Open All options disabled in the Tags widget, incorrect scroll position, 'Scroll to previous folder' not working in some folders, HWiNFO64.exe not opening, extra animation when changing focus in columns view, app window not refocused if minimized on launch, conflicts dialog not appending numbers when pasting files, renaming in conflict dialog leaving copy status in process, misaligned setting control margin, exporting tags, certain drive icons not loading on the Drive Widget, ftp addresses not displayed in the Address Bar, copying or moving a folder causing empty destination folder contents, insufficient space to right click folders in columns view, wrong item shown as active in the sidebar, Preview Pane freezing when holding arrow key, editing properties of multiple items simultaneously, conflict with svg thumbnails generated by PowerToys, and overlapping brushes leaving a gap in the columns view."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v3_4_1",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.4.1",
+      "tag_name": "v3.4.1",
+      "title": "v3.4.1",
+      "time_hint": "2024-05-13",
+      "published_at": "2024-05-13T20:12:24Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v3.4.1",
+      "raw_text": "Repository: files-community/Files\nRelease: v3.4.1\nTag: v3.4.1; draft: False; prerelease: False; published_at: 2024-05-13T20:12:24Z; created_at: 2024-05-13T16:56:41Z\nRelease notes:\nDownload Files from our [download page](https://files.community/download)\n## What's Changed\n- Added support for displaying all network folders on the sidebar\n- Added support for SeerPro's \"Track selected file\" setting\n- Added toolbar button to play mkv files\n- Added support for setting tif files as the Background Image\n- Updated the wording of the \"Files is running as admin\" prompt\n- Fixed an issue where the app wouldn’t run as admin\n- Fixed crash when connecting some removable drives\n- Fixed an issue where the string for \"Actions\" wasn't localize in the Settings menu\n**Full Changelog**: https://github.com/files-community/Files/compare/v3.4...v3.4.1",
+      "memory_unit_text": "In the files-community/Files release v3.4.1, new features include support for displaying all network folders on the sidebar, support for SeerPro's 'Track selected file' setting, a toolbar button to play mkv files, and support for setting tif files as the Background Image. The wording of the 'Files is running as admin' prompt is updated. Fixes address the app not running as admin, a crash when connecting some removable drives, and the 'Actions' string not being localized in the Settings menu."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v3_5",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.5",
+      "tag_name": "v3.5",
+      "title": "v3.5",
+      "time_hint": "2024-06-23",
+      "published_at": "2024-06-23T15:53:49Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v3.5",
+      "raw_text": "Repository: files-community/Files\nRelease: v3.5\nTag: v3.5; draft: False; prerelease: False; published_at: 2024-06-23T15:53:49Z; created_at: 2024-06-23T14:16:42Z\nRelease notes:\nDownload Files from our [download page](https://files.community/download)\n## What's Changed\n- Updated the design with rounded corners\n- Added an action to switch focus between panes\n- Added an \"Edit in notepad\" option to the right click context menu\n- Added a setting to configure the \"Open in ide\" button on the status bar\n- Added support for \"Thin acrylic\" system backdrop\n- Added support for running AHK files as admin\n- Added support for hiding the toolbar\n- Added support for displaying the total duration when selecting multiple video files\n- Added support for closing the left pane in Dual Pane mode\n- Added a network locations widget to the home page\n- Hovering over items in OneDrive locations will now display a tooltip detailing the file’s current sync status\n- Hovering over images will now display the dimensions in a tooltip\n- Selecting a batch (.bat) file display an \"Edit in Notepad\" option on the toolbar\n- Opening the log location will now close the Settings Dialog when Files is the default file manager\n- Fixed crash that would occur when two paths were entered from the command line\n- Fixed crash that would occur when ungrouping from zoomed out view\n- Fixed an issue where a resize cursor was incorrectly shown at titlebar edges when Files was maximized\n- Fixed an issue where empty folders could not be compressed into an archive\n- Fixed an issue where it didn't work to switch between panes using a touch screen\n- Fixed an issue where text on the Actions page wasn't responsive on smaller screens\n- Fixed an issue where the focus was changed when quickly switching between tabs\n- Fixed an issue with launching programs from the Address Bar\n- Fixed an issue where search results would stop loading after switching between tabs\n- Fixed an issue where the Toolbar didn't display properly in High Contrast\n- Fixed an issue in Column View where the chevron didn't support High Contrast\n- Fixed an issue where the Files logo was displayed incorrectly in High Contrast\n- Fixed an issue where the app could crash when changing the theme\n- Fixed an issue where entering certain commands into the Address Bar would change the format\n- Fixed an issue with Nutstore cloud drive detection\n- Fixed an issue where certain keys couldn't be mapped to Actions\n- Fixed an issue where setting the desktop wallpaper didn't work on multiple monitors\n- Fixed an issue where changing icons didn't work when admin access was required\n- Fixed an issue with deleting items from zip files\n- Fixed a potential crash when trying to locate the Libraries folder\n- Fixed a potential crash when clicking items in the Quick Access widget\n- Fixed a potential crash from occurring when deleting items\n## New Contributors\n* @XTorLukas made their first contribution in https://github.com/files-community/Files/pull/15433\n* @wangfu91 made their first contribution in https://github.com/files-community/Files/pull/15445\n* @FieryRMS made their first contribution in https://github.com/files-community/Files/pull/15459\n* @AArnott made their first contribution in https://github.com/files-community/Files/pull/15637\n**Full Changelog**: https://github.com/files-community/Files/compare/v3.4.1...v3.5",
+      "memory_unit_text": "In the files-community/Files release v3.5, the design is updated with rounded corners. New features include an action to switch focus between panes, an 'Edit in notepad' option in the right-click context menu, a setting to configure the 'Open in ide' button on the status bar, support for 'Thin acrylic' system backdrop, support for running AHK files as admin, support for hiding the toolbar, support for displaying total duration when selecting multiple video files, support for closing the left pane in Dual Pane mode, and a network locations widget on the home page. Hovering over items in OneDrive locations displays a tooltip with sync status, and hovering over images displays dimensions in a tooltip. Selecting a batch file shows an 'Edit in Notepad' option on the toolbar. Opening the log location closes the Settings Dialog when Files is the default file manager. Fixes address crashes when two paths are entered from the command line or when ungrouping from zoomed out view, a resize cursor incorrectly shown at titlebar edges when maximized, inability to compress empty folders into an archive, inability to switch between panes using a touch screen, unresponsive text on the Actions page on smaller screens, focus change when quickly switching between tabs, launching programs from the Address Bar, search results stopping after switching tabs, Toolbar display in High Contrast, chevron in Column View not supporting High Contrast, Files logo displayed incorrectly in High Contrast, app crash when changing the theme, certain commands in the Address Bar changing format, Nutstore cloud drive detection, certain keys not mappable to Actions, setting desktop wallpaper on multiple monitors, changing icons when admin access is required, deleting items from zip files, potential crash when locating the Libraries folder, potential crash when clicking items in the Quick Access widget, and potential crash when deleting items."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v3_6",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.6",
+      "tag_name": "v3.6",
+      "title": "v3.6",
+      "time_hint": "2024-08-05",
+      "published_at": "2024-08-05T23:49:55Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v3.6",
+      "raw_text": "Repository: files-community/Files\nRelease: v3.6\nTag: v3.6; draft: False; prerelease: False; published_at: 2024-08-05T23:49:55Z; created_at: 2024-08-05T21:36:42Z\nRelease notes:\nDownload Files from our [download page](https://files.community/download)\n## What's Changed\n- Added support for changing the pane orientation in Dual Pane mode\n- Added an \"Actions\" menu to the title bar\n- Customize folder locations with unique background images\n- Added localization for Malay\n- Optimized sorting performance when loading large folders\n- Moved the sidebar toggle button to the address toolbar\n- Added a keyboard shortcut to toggle the toolbar visibility `Ctrl+Shift+B`\n- Added a keyboard shortcut to move focus between panes in Dual Pane mode `Ctrl+Shift+Right`\n- Added support for clicking links when previewing markdown files\n- Added an action to toggle the dot files setting\n- Fixed an issue where the tab title was empty when opening a folder in a new tab\n- Fixed an issue where dragging or opening multiple items would use the wrong sort mode\n- Fixed an issue where Run with PowerShell didn't display a window\n- Fixed an issue where the Home Page was opened when Files was launched with custom args\n- Fixed an issue where changing the layout size didn't work when adaptive layout was enabled\n- Fixed an issue where quick search filtering wasn't cleared when navigating to another folder\n- Fixed an issue where non-cached windows sometimes had the wrong theme\n- Fixed an issue where settings weren't exported in the correct format\n- Fixed an issue where double tap to rename was too sensitive\n- Fixed an issue where hover to open was too sensitive\n- Fixed an issue where the cursor wasn't inline when resizing columns in the Details View\n- Fixed an issue where online files were downloaded when loading tooltips\n- Fixed an issue where navigation button had the wrong foreground in the disabled state\n- Fixed an issue where arguments weren’t passed when running shortcuts as admin\n- Fixed an issue with compressing and extracting archives on ARM64 devices\n- Fixed an issue where a warning about WSL would display on startup\n- Fixed the position of the \"New item\" flyout\n- Fixed a crash that would sometimes occur when updating Files\n- Fixed a crash that would occur when entering invalid parameters via command line\n- Fixed crash that would sometimes occur when adding items to the jumplist\n- Fixed ArgumentNullException in DefaultSettingsSerializer.ReadFromFile\n- Fixed ArgumentNullException in SortingHelper.OrderFileList\n- Fixed ArgumentException in PinnedFoldersManager\n- Fixed ArgumentException in PathNormalization.NormalizePath\n- Fixed TypeInitializationException in UIHelpers\n- Fixed DirectoryNotFoundException when pinning items to the start menu\n- Fixed FileNotFoundException in Recycle Bin watcher\n- Fixed NullReferenceException in DriveItem.LoadThumbnailAsync\n- Fixed NullReferenceException in SystemTrayIcon.OnQuitClicked\n- Fixed NullReferenceException in RecycleBinLocationItem.RefreshSpaceUsed\n- Fixed NullReferenceException in DrivesWidgetViewModel.NavigateToPath\n- Fixed InvalidOperationException in SideloadUpdateService.CheckForUpdatesAsync\n- Fixed COMException in MainWindow.EnsureWindowIsInitialized\n- Fixed COMException in SidebarItem.ItemGrid_Drop\n## New Contributors\n* @mdtauk made their first contribution in https://github.com/files-community/Files/pull/15784\n* @Tptogiar made their first contribution in https://github.com/files-community/Files/pull/15831\n**Full Changelog**: https://github.com/files-community/Files/compare/v3.5...v3.6",
+      "memory_unit_text": "In the files-community/Files release v3.6, new features include support for changing the pane orientation in Dual Pane mode, an 'Actions' menu on the title bar, customizing folder locations with unique background images, localization for Malay, optimized sorting performance for large folders, moving the sidebar toggle button to the address toolbar, a keyboard shortcut to toggle toolbar visibility (Ctrl+Shift+B), a keyboard shortcut to move focus between panes in Dual Pane mode (Ctrl+Shift+Right), support for clicking links when previewing markdown files, and an action to toggle the dot files setting. Fixes address issues with empty tab title when opening a folder in a new tab, wrong sort mode when dragging or opening multiple items, Run with PowerShell not displaying a window, Home Page opening when launched with custom args, layout size change not working with adaptive layout enabled, quick search filtering not cleared when navigating to another folder, non-cached windows having the wrong theme, settings not exported in correct format, double tap to rename being too sensitive, hover to open being too sensitive, cursor not inline when resizing columns in Details View, online files downloaded when loading tooltips, navigation button wrong foreground in disabled state, arguments not passed when running shortcuts as admin, compressing and extracting archives on ARM64 devices, a warning about WSL displaying on startup, position of the 'New item' flyout, crash when updating Files, crash when entering invalid parameters via command line, crash when adding items to the jumplist, and various exceptions including ArgumentNullException, ArgumentException, TypeInitializationException, DirectoryNotFoundException, FileNotFoundException, NullReferenceException, InvalidOperationException, and COMException."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v3_7",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.7",
+      "tag_name": "v3.7",
+      "title": "v3.7",
+      "time_hint": "2024-09-04",
+      "published_at": "2024-09-04T20:09:36Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v3.7",
+      "raw_text": "Repository: files-community/Files\nRelease: v3.7\nTag: v3.7; draft: False; prerelease: False; published_at: 2024-09-04T20:09:36Z; created_at: 2024-09-04T17:23:33Z\nRelease notes:\nDownload Files from our [download page](https://files.community/download)\n## What's Changed\n- Added a setting to hide the System Tray icon\n- Focus existing tab when opening locations from external process\n- View navigation history when right clicking back/forward buttons\n- Added thumbnails to the breadcrumb flyouts\n- Optional toolbar button to navigate home\n- Customize CPU threads when creating archives\n- Added an action to navigate home\n- Experimental support for flattening folders\n- Removed the loading animation from the home page\n- Hold the `shift` key while pressing the properties button to open the File Explorer properties window\n- Added support for opening the breadcrumb dropdown via keyboard navigation\n- Added support for Infomaniak kDrive\n- Added an option to close the active pane from the right-click context menu\n- Corrected inverted scrolling behavior for icon size adjustment\n- Fixed an issue where shortcuts couldn’t be created for commands\n- Fixed an issue where resuming from background didn’t bring Files to the foreground\n- Fixed an issue where context menus didn’t follow the custom font setting\n- Fixed an issue where a shortcut to a folder couldn’t be created\n- Fixed an issue where Google Drive wasn’t displayed when mounted as a folder\n- Fixed an issue where layout settings didn’t persist across updates\n- Fixed an issue where folders with file extensions were sometimes treated as files\n- Fixed an issue where ejecting drives would sometimes fail\n- Fixed an issue where double-clicking a file would sometimes navigate up\n- Fixed issues with opening certain file formats\n## New Contributors\n* @wharvex made their first contribution in https://github.com/files-community/Files/pull/15771\n* @devin-slothower made their first contribution in https://github.com/files-community/Files/pull/15992\n**Full Changelog**: https://github.com/files-community/Files/compare/v3.6...v3.7",
+      "memory_unit_text": "In the files-community/Files release v3.7, new features include a setting to hide the System Tray icon, focusing existing tab when opening locations from external process, viewing navigation history when right-clicking back/forward buttons, thumbnails in breadcrumb flyouts, an optional toolbar button to navigate home, customizing CPU threads when creating archives, an action to navigate home, experimental support for flattening folders, removing the loading animation from the home page, holding shift while pressing the properties button to open File Explorer properties window, support for opening the breadcrumb dropdown via keyboard navigation, support for Infomaniak kDrive, and an option to close the active pane from the right-click context menu. Inverted scrolling behavior for icon size adjustment is corrected. Fixes address issues with creating shortcuts for commands, resuming from background not bringing Files to the foreground, context menus not following custom font setting, creating a shortcut to a folder, Google Drive not displayed when mounted as a folder, layout settings not persisting across updates, folders with file extensions treated as files, ejecting drives failing, double-clicking a file navigating up, and opening certain file formats."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v3_7_6",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.7.6",
+      "tag_name": "v3.7.6",
+      "title": "v3.7.6",
+      "time_hint": "2024-09-12",
+      "published_at": "2024-09-12T21:18:39Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v3.7.6",
+      "raw_text": "Repository: files-community/Files\nRelease: v3.7.6\nTag: v3.7.6; draft: False; prerelease: False; published_at: 2024-09-12T21:18:39Z; created_at: 2024-09-12T20:50:52Z\nRelease notes:\nDownload Files from our [download page](https://files.community/download)\n## What's Changed\n- Enhanced the user experience for toolbar settings.\n- Removed the restriction on opening more than 10 files simultaneously.\n- Updated translations for better localization.\n- Resolved a NullReferenceException caused by EnableRaisingEvents.\n- Addressed an OverflowException in UpdateSelectionSize.\n- Fixed a NullReferenceException related to ShellFileOperations2.\n- Fixed a crash when opening folders with invalid Git configurations.\n- Fixed a crash that occurred when closing the main window.\n- Fixed a crash that occurred when the Windows Event Log service wasn't running.\n**Full Changelog**: https://github.com/files-community/Files/compare/v3.7...v3.7.6",
+      "memory_unit_text": "In the files-community/Files release v3.7.6, the user experience for toolbar settings is enhanced, the restriction on opening more than 10 files simultaneously is removed, and translations are updated. Fixes address a NullReferenceException caused by EnableRaisingEvents, an OverflowException in UpdateSelectionSize, a NullReferenceException related to ShellFileOperations2, a crash when opening folders with invalid Git configurations, a crash when closing the main window, and a crash when the Windows Event Log service isn't running."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v3_7_7",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.7.7",
+      "tag_name": "v3.7.7",
+      "title": "v3.7.7",
+      "time_hint": "2024-09-15",
+      "published_at": "2024-09-15T23:21:16Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v3.7.7",
+      "raw_text": "Repository: files-community/Files\nRelease: v3.7.7\nTag: v3.7.7; draft: False; prerelease: False; published_at: 2024-09-15T23:21:16Z; created_at: 2024-09-15T23:18:07Z\nRelease notes:\nDownload Files from our [download page](https://files.community/download)\n## What's Changed\n- Updated translations for better localization.\n- Fixed QuickLook support.\n- Fixed InvalidOperationException in GetSystemFilePropertiesAsync.\n- Fixed InvalidOperationException in FileTagsContextMenu.\n**Full Changelog**: https://github.com/files-community/Files/compare/v3.7.6...v3.7.7",
+      "memory_unit_text": "In the files-community/Files release v3.7.7, translations are updated, QuickLook support is fixed, and exceptions including InvalidOperationException in GetSystemFilePropertiesAsync and InvalidOperationException in FileTagsContextMenu are fixed."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v3_7_11",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.7.11",
+      "tag_name": "v3.7.11",
+      "title": "v3.7.11",
+      "time_hint": "2024-10-10",
+      "published_at": "2024-10-10T15:53:02Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v3.7.11",
+      "raw_text": "Repository: files-community/Files\nRelease: v3.7.11\nTag: v3.7.11; draft: False; prerelease: False; published_at: 2024-10-10T15:53:02Z; created_at: 2024-10-10T15:02:37Z\nRelease notes:\nDownload Files from our [download page](https://files.community/download)\n## What's Changed\n- Added Files icon to the process in Windows.\n- Enabled support for typing custom icon path in the properties window.\n- Updated translations.\n- Added support for renaming multiple items at the same time.\n- Improved UX for the \"Create new item\" dialog.\n- Added an option to copy the User ID from the about page.\n- Reduced minimum window dimensions.\n- Fixed window placement.\n- Fixed an issue where sorting preferences weren't saved when changed in the Columns Layout.\n- Fixed NullReferenceException in BaseTransferItemAction.ExecuteTransferAsync.\n- Fixed an issue when dragging & dropping items in the sidebar.\n- Fixed an issue where the Start Menu tile didn't specify the branch.\n- Fixed an issue with navigating photos on Windows 10.\n## New Contributors\n* @karman1111 made their first contribution in https://github.com/files-community/Files/pull/16277\n* @IviriusMain made their first contribution in https://github.com/files-community/Files/pull/16321\n**Full Changelog**: https://github.com/files-community/Files/compare/v3.7.7...v3.7.11",
+      "memory_unit_text": "In the files-community/Files release v3.7.11, new features include adding the Files icon to the process in Windows, enabling support for typing a custom icon path in the properties window, updated translations, support for renaming multiple items at the same time, improved UX for the 'Create new item' dialog, an option to copy the User ID from the about page, and reduced minimum window dimensions. Fixes address window placement, sorting preferences not saved when changed in Columns Layout, NullReferenceException in BaseTransferItemAction.ExecuteTransferAsync, issues when dragging & dropping items in the sidebar, the Start Menu tile not specifying the branch, and navigating photos on Windows 10."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v3_8",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.8",
+      "tag_name": "v3.8",
+      "title": "v3.8",
+      "time_hint": "2024-11-23",
+      "published_at": "2024-11-23T23:28:57Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v3.8",
+      "raw_text": "Repository: files-community/Files\nRelease: v3.8\nTag: v3.8; draft: False; prerelease: False; published_at: 2024-11-23T23:28:57Z; created_at: 2024-11-20T16:42:27Z\nRelease notes:\nDownload Files from our [download page](https://files.community/download)\n## What's Changed\n- Manage tags from the sidebar.\n- Free up space with the Storage Sense action.\n- Create alternate data streams.\n- Copy the path of the current tab.\n- Close all tabs with ctrl+shift+w.\n- Paste items from the clipboard as shortcuts.\n- Archive creation settings are now stored across sessions.\n- Updated the privacy policy URL.\n- Improved responsiveness of the cards in the drives widget.\n- Fixed an issue where a WSL prompt would sometimes display on startup.\n- Fixed an issue where canceling drag & drop cleared the selected items.\n- Fixed an issue where bulk rename didn’t follow the sort order.\n- Fixed the context menu placement on the home page.\n**Full Changelog**: https://github.com/files-community/Files/compare/v3.7.11...v3.8",
+      "memory_unit_text": "In the files-community/Files release v3.8, new features include managing tags from the sidebar, freeing up space with the Storage Sense action, creating alternate data streams, copying the path of the current tab, closing all tabs with Ctrl+Shift+W, pasting items from the clipboard as shortcuts, and storing archive creation settings across sessions. The privacy policy URL is updated, and the responsiveness of cards in the drives widget is improved. Fixes address a WSL prompt sometimes displaying on startup, canceling drag & drop clearing selected items, bulk rename not following sort order, and context menu placement on the home page."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v3_9",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.9",
+      "tag_name": "v3.9",
+      "title": "v3.9",
+      "time_hint": "2025-01-29",
+      "published_at": "2025-01-29T21:27:57Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v3.9",
+      "raw_text": "Repository: files-community/Files\nRelease: v3.9\nTag: v3.9; draft: False; prerelease: False; published_at: 2025-01-29T21:27:57Z; created_at: 2025-01-29T15:39:46Z\nRelease notes:\n## Files v3.9 is now available! 🎉\nExisting users will receive an update notification in the top right corner of the app, while new users can get started for free from our [download page](https://files.community/download/).\nThe changelog for v3.9 is available on our website https://files.community/blog/posts/v3-9-0.\n## New Contributors\n* @Jack251970 made their first contribution in https://github.com/files-community/Files/pull/16536\n* @viruseg made their first contribution in https://github.com/files-community/Files/pull/16523\n* @andreistaravoitau made their first contribution in https://github.com/files-community/Files/pull/16694\n* @Roilin-Lab made their first contribution in https://github.com/files-community/Files/pull/16745\n**Full Changelog**: https://github.com/files-community/Files/compare/v3.8...v3.9",
+      "memory_unit_text": "In the files-community/Files release v3.9, the release note announces the availability of Files v3.9 and directs users to the website for the full changelog. New contributors are acknowledged."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v3_9_1",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.9.1",
+      "tag_name": "v3.9.1",
+      "title": "v3.9.1",
+      "time_hint": "2025-02-06",
+      "published_at": "2025-02-06T23:01:47Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v3.9.1",
+      "raw_text": "Repository: files-community/Files\nRelease: v3.9.1\nTag: v3.9.1; draft: False; prerelease: False; published_at: 2025-02-06T23:01:47Z; created_at: 2025-02-05T15:27:18Z\nRelease notes:\n## Files v3.9.1 is now available! 🎉\nExisting users will receive an update notification in the top right corner of the app, while new users can get started for free from our [download page](https://files.community/download/).\nThe changelog for v3.9.1 is available on our website https://files.community/blog/posts/v3-9-1.\n**Full Changelog**: https://github.com/files-community/Files/compare/v3.9...v3.9.1",
+      "memory_unit_text": "In the files-community/Files release v3.9.1, the release note announces the availability of Files v3.9.1 and directs users to the website for the full changelog."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v4_0",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0",
+      "tag_name": "v4.0",
+      "title": "v4.0",
+      "time_hint": "2025-09-02",
+      "published_at": "2025-09-02T20:19:14Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v4.0",
+      "raw_text": "Repository: files-community/Files\nRelease: v4.0\nTag: v4.0; draft: False; prerelease: False; published_at: 2025-09-02T20:19:14Z; created_at: 2025-09-01T23:43:07Z\nRelease notes:\n## Files v4.0 is now available! 🎉\nExisting users will receive an update notification in the top right corner of the app, while new users can get started from our [download page](https://files.community/download/).\nThe changelog for v4.0 is available on our website https://files.community/blog/posts/v4-0-0.\n## New Contributors\n* @IHaidov made their first contribution in https://github.com/files-community/Files/pull/16739\n* @primetime43 made their first contribution in https://github.com/files-community/Files/pull/16830\n* @mrashutoshnigam made their first contribution in https://github.com/files-community/Files/pull/16849\n* @dongle-the-gadget made their first contribution in https://github.com/files-community/Files/pull/16882\n* @KFlab made their first contribution in https://github.com/files-community/Files/pull/16812\n* @oxygen-dioxide made their first contribution in https://github.com/files-community/Files/pull/17026\n* @nethbotheju made their first contribution in https://github.com/files-community/Files/pull/17012\n* @ChengYi0224 made their first contribution in https://github.com/files-community/Files/pull/17092\n* @AkhilReddy-Ramireddy made their first contribution in https://github.com/files-community/Files/pull/17127\n* @corvinsz made their first contribution in https://github.com/files-community/Files/pull/17258\n* @SilverGreen93 made their first contribution in https://github.com/files-community/Files/pull/17300\n* @NicholasChin28 made their first contribution in https://github.com/files-community/Files/pull/17426\n**Full Changelog**: https://github.com/files-community/Files/compare/v3.9.1...v4.0",
+      "memory_unit_text": "In the files-community/Files release v4.0, the release note announces the availability of Files v4.0 and directs users to the website for the full changelog. New contributors are acknowledged."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v4_0_10",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.10",
+      "tag_name": "v4.0.10",
+      "title": "v4.0.10",
+      "time_hint": "2025-09-17",
+      "published_at": "2025-09-17T14:52:44Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v4.0.10",
+      "raw_text": "Repository: files-community/Files\nRelease: v4.0.10\nTag: v4.0.10; draft: False; prerelease: False; published_at: 2025-09-17T14:52:44Z; created_at: 2025-09-16T20:20:03Z\nRelease notes:\n## Files v4.0.10 is now available! 🎉\nExisting users will receive an update notification in the top right corner of the app, while new users can get started from our [download page](https://files.community/download/).\nThe changelog for v4.0.10 is available on our website https://files.community/blog/posts/v4-0-10.\n**Full Changelog**: https://github.com/files-community/Files/compare/v4.0...v4.0.10",
+      "memory_unit_text": "In the files-community/Files release v4.0.10, the release note announces the availability of Files v4.0.10 and directs users to the website for the full changelog."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v4_0_11",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.11",
+      "tag_name": "v4.0.11",
+      "title": "v4.0.11",
+      "time_hint": "2025-09-17",
+      "published_at": "2025-09-17T20:34:43Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v4.0.11",
+      "raw_text": "Repository: files-community/Files\nRelease: v4.0.11\nTag: v4.0.11; draft: False; prerelease: False; published_at: 2025-09-17T20:34:43Z; created_at: 2025-09-17T19:17:30Z\nRelease notes:\n## Files v4.0.11 is now available! 🎉\nExisting users will receive an update notification in the top right corner of the app, while new users can get started from our [download page](https://files.community/download/).\nThe changelog for v4.0.11 is available on our website https://files.community/blog/posts/v4-0-11.\n**Full Changelog**: https://github.com/files-community/Files/compare/v4.0.10...v4.0.11",
+      "memory_unit_text": "In the files-community/Files release v4.0.11, the release note announces the availability of Files v4.0.11 and directs users to the website for the full changelog."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v4_0_20",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.20",
+      "tag_name": "v4.0.20",
+      "title": "v4.0.20",
+      "time_hint": "2025-11-23",
+      "published_at": "2025-11-23T22:04:49Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v4.0.20",
+      "raw_text": "Repository: files-community/Files\nRelease: v4.0.20\nTag: v4.0.20; draft: False; prerelease: False; published_at: 2025-11-23T22:04:49Z; created_at: 2025-11-23T21:10:30Z\nRelease notes:\n## Files v4.0.20 is now available! 🎉\nExisting users will receive an update notification in the top right corner of the app, while new users can get started from our [download page](https://files.community/download/).\nThe changelog for v4.0.20 is available on our website https://files.community/blog/posts/v4-0-20.\n## New Contributors\n* @Manisha1679 made their first contribution in https://github.com/files-community/Files/pull/17622\n* @thisisleobro made their first contribution in https://github.com/files-community/Files/pull/17652\n* @erhebend-tai made their first contribution in https://github.com/files-community/Files/pull/17815\n* @learncold made their first contribution in https://github.com/files-community/Files/pull/17827\n**Full Changelog**: https://github.com/files-community/Files/compare/v4.0.11...v4.0.20",
+      "memory_unit_text": "In the files-community/Files release v4.0.20, the release note announces the availability of Files v4.0.20 and directs users to the website for the full changelog. New contributors are acknowledged."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v4_0_21",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.21",
+      "tag_name": "v4.0.21",
+      "title": "v4.0.21",
+      "time_hint": "2025-11-24",
+      "published_at": "2025-11-24T17:20:52Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v4.0.21",
+      "raw_text": "Repository: files-community/Files\nRelease: v4.0.21\nTag: v4.0.21; draft: False; prerelease: False; published_at: 2025-11-24T17:20:52Z; created_at: 2025-11-24T15:14:37Z\nRelease notes:\n## Files v4.0.21 is now available! 🎉\nExisting users will receive an update notification in the top right corner of the app, while new users can get started from our [download page](https://files.community/download/).\nThe changelog for v4.0.21 is available on our website https://files.community/blog/posts/v4-0-21.\n**Full Changelog**: https://github.com/files-community/Files/compare/v4.0.20...v4.0.21",
+      "memory_unit_text": "In the files-community/Files release v4.0.21, the release note announces the availability of Files v4.0.21 and directs users to the website for the full changelog."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v4_0_24",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.24",
+      "tag_name": "v4.0.24",
+      "title": "v4.0.24",
+      "time_hint": "2025-12-28",
+      "published_at": "2025-12-28T15:35:04Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v4.0.24",
+      "raw_text": "Repository: files-community/Files\nRelease: v4.0.24\nTag: v4.0.24; draft: False; prerelease: False; published_at: 2025-12-28T15:35:04Z; created_at: 2025-12-25T21:38:12Z\nRelease notes:\n## Files v4.0.24 is now available! 🎉\nExisting users will receive an update notification in the top right corner of the app, while new users can get started from our [download page](https://files.community/download/).\nThe changelog for v4.0.24 is available on our website https://files.community/blog/posts/v4-0-24.\n## New Contributors\n* @kalmix made their first contribution in https://github.com/files-community/Files/pull/17924\n* @marlenhalvorsen made their first contribution in https://github.com/files-community/Files/pull/17942\n**Full Changelog**: https://github.com/files-community/Files/compare/v4.0.21...v4.0.24",
+      "memory_unit_text": "In the files-community/Files release v4.0.24, the release note announces the availability of Files v4.0.24 and directs users to the website for the full changelog. New contributors are acknowledged."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v4_0_28",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.28",
+      "tag_name": "v4.0.28",
+      "title": "v4.0.28",
+      "time_hint": "2026-02-16",
+      "published_at": "2026-02-16T15:51:57Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v4.0.28",
+      "raw_text": "Repository: files-community/Files\nRelease: v4.0.28\nTag: v4.0.28; draft: False; prerelease: False; published_at: 2026-02-16T15:51:57Z; created_at: 2026-02-15T22:59:55Z\nRelease notes:\n## Files v4.0.28 is now available! 🎉\nExisting users will receive an update notification in the top right corner of the app, while new users can get started from our [download page](https://files.community/download/).\nThe changelog for v4.0.28 is available on our website https://files.community/blog/posts/v4-0-28.\n## New Contributors\n* @Anoop-2024si96509 made their first contribution in https://github.com/files-community/Files/pull/18018\n* @KrisVandermotten made their first contribution in https://github.com/files-community/Files/pull/18044\n* @ThomasDixini made their first contribution in https://github.com/files-community/Files/pull/18046\n* @Youssef1313 made their first contribution in https://github.com/files-community/Files/pull/17982\n* @Jxiced made their first contribution in https://github.com/files-community/Files/pull/18123\n* @babisque made their first contribution in https://github.com/files-community/Files/pull/18141\n**Full Changelog**: https://github.com/files-community/Files/compare/v4.0.24...v4.0.28",
+      "memory_unit_text": "In the files-community/Files release v4.0.28, the release note announces the availability of Files v4.0.28 and directs users to the website for the full changelog. New contributors are acknowledged."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v4_0_34",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.34",
+      "tag_name": "v4.0.34",
+      "title": "v4.0.34",
+      "time_hint": "2026-03-06",
+      "published_at": "2026-03-06T06:22:12Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v4.0.34",
+      "raw_text": "Repository: files-community/Files\nRelease: v4.0.34\nTag: v4.0.34; draft: False; prerelease: False; published_at: 2026-03-06T06:22:12Z; created_at: 2026-03-06T02:31:03Z\nRelease notes:\n## Files v4.0.34 is now available! 🎉\nExisting users will receive an update notification in the top right corner of the app, while new users can get started from our [download page](https://files.community/download/).\nThe changelog for v4.0.34 is available on our website https://files.community/blog/posts/v4-0-34.\n**Full Changelog**: https://github.com/files-community/Files/compare/v4.0.28...v4.0.34",
+      "memory_unit_text": "In the files-community/Files release v4.0.34, the release note announces the availability of Files v4.0.34 and directs users to the website for the full changelog."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v4_0_37",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.37",
+      "tag_name": "v4.0.37",
+      "title": "v4.0.37",
+      "time_hint": "2026-03-24",
+      "published_at": "2026-03-24T02:52:26Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v4.0.37",
+      "raw_text": "Repository: files-community/Files\nRelease: v4.0.37\nTag: v4.0.37; draft: False; prerelease: False; published_at: 2026-03-24T02:52:26Z; created_at: 2026-03-24T02:25:08Z\nRelease notes:\n## Files v4.0.37 is now available! 🎉\nExisting users will receive an update notification in the top right corner of the app, while new users can get started from our [download page](https://files.community/download/).\nThe changelog for v4.0.37 is available on our website https://files.community/blog/posts/v4-0-37.\n## New Contributors\n* @BorniaPedro made their first contribution in https://github.com/files-community/Files/pull/18282\n**Full Changelog**: https://github.com/files-community/Files/compare/v4.0.34...v4.0.37",
+      "memory_unit_text": "In the files-community/Files release v4.0.37, the release note announces the availability of Files v4.0.37 and directs users to the website for the full changelog. A new contributor is acknowledged."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v4_0_38",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.38",
+      "tag_name": "v4.0.38",
+      "title": "v4.0.38",
+      "time_hint": "2026-03-29",
+      "published_at": "2026-03-29T15:05:26Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v4.0.38",
+      "raw_text": "Repository: files-community/Files\nRelease: v4.0.38\nTag: v4.0.38; draft: False; prerelease: False; published_at: 2026-03-29T15:05:26Z; created_at: 2026-03-29T14:38:31Z\nRelease notes:\n## Files v4.0.38 is now available! 🎉\nExisting users will receive an update notification in the top right corner of the app, while new users can get started from our [download page](https://files.community/download/).\nThe changelog for v4.0.38 is available on our website https://files.community/blog/posts/v4-0-38.\n**Full Changelog**: https://github.com/files-community/Files/compare/v4.0.37...v4.0.38",
+      "memory_unit_text": "In the files-community/Files release v4.0.38, the release note announces the availability of Files v4.0.38 and directs users to the website for the full changelog."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v4_1",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1",
+      "tag_name": "v4.1",
+      "title": "v4.1",
+      "time_hint": "2026-05-10",
+      "published_at": "2026-05-10T15:36:21Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v4.1",
+      "raw_text": "Repository: files-community/Files\nRelease: v4.1\nTag: v4.1; draft: False; prerelease: False; published_at: 2026-05-10T15:36:21Z; created_at: 2026-05-07T13:56:19Z\nRelease notes:\n## Files v4.1 is now available! 🎉\nExisting users will receive an update notification in the top right corner of the app, while new users can get started from our [download page](https://files.community/download/).\nThe changelog for v4.1 is available on our website https://files.community/blog/posts/v4-1-0.\n## New Contributors\n* @muko made their first contribution in https://github.com/files-community/Files/pull/18422\n**Full Changelog**: https://github.com/files-community/Files/compare/v4.0.38...v4.1",
+      "memory_unit_text": "In the files-community/Files release v4.1, the release note announces the availability of Files v4.1 and directs users to the website for the full changelog. A new contributor is acknowledged."
+    },
+    {
+      "memory_node_id": "files_community__Files__release__v4_1_1",
+      "repo": "files-community/Files",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.1",
+      "tag_name": "v4.1.1",
+      "title": "v4.1.1",
+      "time_hint": "2026-05-11",
+      "published_at": "2026-05-11T15:17:43Z",
+      "source_url": "https://github.com/files-community/Files/releases/tag/v4.1.1",
+      "raw_text": "Repository: files-community/Files\nRelease: v4.1.1\nTag: v4.1.1; draft: False; prerelease: False; published_at: 2026-05-11T15:17:43Z; created_at: 2026-05-11T15:09:13Z\nRelease notes:\n## Files v4.1.1 is now available! 🎉\nExisting users will receive an update notification in the top right corner of the app, while new users can get started from our [download page](https://files.community/download/).\nThe changelog for v4.1.1 is available on our website https://files.community/blog/posts/v4-1-1.\n**Full Changelog**: https://github.com/files-community/Files/compare/v4.1...v4.1.1",
+      "memory_unit_text": "In the files-community/Files release v4.1.1, the release note announces the availability of Files v4.1.1 and directs users to the website for the full changelog."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the files-community/Files releases, which release introduces a slider to control item size and a new 'Layout' settings page?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v3.2"
+        },
+        {
+          "option_id": "B",
+          "text": "v3.3"
+        },
+        {
+          "option_id": "C",
+          "text": "v3.4"
+        },
+        {
+          "option_id": "D",
+          "text": "v3.5"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v3.3",
+      "source_chunk_ids": [
+        "files_community__Files__release__v3_3"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "files_community__Files__release__v3_3",
+          "answer_text": "Added slider to control item size ... Created new 'Layout' settings page"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the files-community/Files releases, how does the feature set in v3.4 differ from the feature set in v3.5 regarding personalization and design?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v3.4 adds custom background images and keyboard shortcut remapping, while v3.5 updates the design with rounded corners and adds a network locations widget."
+        },
+        {
+          "option_id": "B",
+          "text": "v3.4 introduces rounded corners and a network locations widget, while v3.5 adds custom background images and keyboard shortcut remapping."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only add localization updates without any personalization features."
+        },
+        {
+          "option_id": "D",
+          "text": "v3.4 adds a slider to control item size, while v3.5 adds support for hiding the toolbar."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v3.4 adds custom background images and keyboard shortcut remapping, while v3.5 updates the design with rounded corners and adds a network locations widget.",
+      "source_chunk_ids": [
+        "files_community__Files__release__v3_4",
+        "files_community__Files__release__v3_5"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "files_community__Files__release__v3_4",
+          "answer_text": "Added support for personalizing Files with a custom background image ... Added support for remapping keyboard shortcuts"
+        },
+        {
+          "memory_node_id": "files_community__Files__release__v3_5",
+          "answer_text": "Updated the design with rounded corners ... Added a network locations widget to the home page"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the files-community/Files release window, order the following release-content states from earliest to latest: (1) a release that adds support for pinning executable shortcuts to start and a List View layout, (2) a release that adds a slider to control item size and a new 'Layout' settings page, (3) a release that adds support for personalizing Files with a custom background image and remapping keyboard shortcuts.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3",
+      "source_chunk_ids": [
+        "files_community__Files__release__v3_2",
+        "files_community__Files__release__v3_3",
+        "files_community__Files__release__v3_4"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "files_community__Files__release__v3_2",
+          "answer_text": "Added support for pinning executable shortcuts to start ... Added a List View layout"
+        },
+        {
+          "memory_node_id": "files_community__Files__release__v3_3",
+          "answer_text": "Added slider to control item size ... Created new 'Layout' settings page"
+        },
+        {
+          "memory_node_id": "files_community__Files__release__v3_4",
+          "answer_text": "Added support for personalizing Files with a custom background image ... Added support for remapping keyboard shortcuts"
+        }
+      ]
+    }
+  ]
+}

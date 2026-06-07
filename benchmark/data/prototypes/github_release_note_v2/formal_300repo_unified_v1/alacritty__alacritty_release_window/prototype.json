@@ -1,0 +1,525 @@
+{
+  "prototype_id": "alacritty__alacritty_release_window",
+  "domain": "github_release_evolution",
+  "repo": "alacritty/alacritty",
+  "source_type": "release_note",
+  "window_title": "alacritty/alacritty recent release evolution",
+  "window_summary": "This window tracks the recent alacritty/alacritty release stream from v0.12.0-rc3 through v0.17.0, covering feature additions, configuration changes, and platform-specific fixes across multiple minor and patch versions.",
+  "chunks": [
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_12_0_rc3",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.0-rc3",
+      "tag_name": "v0.12.0-rc3",
+      "title": "Alacritty Version 0.12.0 Release Candidate 3",
+      "time_hint": "2023-03-17",
+      "published_at": "2023-03-17T21:58:19Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.12.0-rc3",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.12.0 Release Candidate 3\nTag: v0.12.0-rc3; draft: False; prerelease: True; published_at: 2023-03-17T21:58:19Z; created_at: 2023-03-17T20:18:27Z\nRelease notes:\n### Fixed\n- Memory leak on macOS\n- Pasting from Alacritty freezing the target application",
+      "memory_unit_text": "In the alacritty/alacritty release v0.12.0-rc3, the release notes fix a memory leak on macOS and an issue where pasting from Alacritty would freeze the target application."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_12_0",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.0",
+      "tag_name": "v0.12.0",
+      "title": "Alacritty Version 0.12.0",
+      "time_hint": "2023-03-24",
+      "published_at": "2023-03-24T23:29:34Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.12.0",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.12.0\nTag: v0.12.0; draft: False; prerelease: False; published_at: 2023-03-24T23:29:34Z; created_at: 2023-03-24T23:11:05Z\nRelease notes:\n### Added\n- Uppercase `-T` short form for `--title`\n- Support for horizontal scrolling in mouse mode and alternative scrolling modes\n- Support for fractional scaling on Wayland with wp-fractional-scale protocol\n- Support for running on GLES context\n- Touchscreen input for click/scroll/select/zoom\n- `window.resize_increments` config option, disabled by default\n### Changed\n- Always use sRGB color space on macOS\n- Erase in line after the last column will no longer clear the last column\n- Open new windows by default with macOS `Cmd`+`N` binding\n- The hint about window transparency is now properly issued on Wayland and macOS\n- `window.decorations_theme_variant` could now control theme on macOS and Windows\n- The IME purpose is now set to `Terminal` which could help with OSK\n- `window.decorations_theme_variant` is now using `Dark`, `Light`, and `None` values\n- Resize increments are now set on macOS and X11 to resize by cell sizes\n### Fixed\n- `--help` output for `--class` does not match man pages\n- Cursor and underlines always being black on very old hardware\n- Crash when using very low negative `font.offset`\n- Startup failure on macOS with default config when system `/bin/sh` is `dash`\n- Artifacts in corners for maximized window with CSD on Wayland\n- Dotted underline not shown on macOS\n- Underline on macOS always being at the bottom of the cell\n- Crash with `OT-SVG` fonts on Linux/BSD\n- Crash during text compose on old GNOME under Wayland\n- Mouse cursor staying hidden after window regains focus on macOS Ventura\n- Blurry fonts when changing padding size at runtime\n- Crash while typing on Wayland\n- Multi-line semantic bracket selection\n- Reduced GPU memory usage\n- Low frame rate when multiple windows render at the same time\n- Redraw hanging until a keypress on X11 in rare cases\n- Window clipping when maximizing a window without decorations on Windows\n- Quadrants not aligned with half blocks with built-in font\n- EOT (`\\x03`) escaping bracketed paste mode\n- Drag & Drop not working for the search bar\n- Simple-fullscreened window not resized when moving between monitors on macOS\n### Removed\n- `window.gtk_theme_variant` config field; use `window.decorations_theme_variant` instead\n- `alt_send_esc` is now always set to `true`",
+      "memory_unit_text": "In the alacritty/alacritty release v0.12.0, the release notes add uppercase -T short form for --title, support for horizontal scrolling in mouse mode and alternative scrolling modes, support for fractional scaling on Wayland with wp-fractional-scale protocol, support for running on GLES context, touchscreen input for click/scroll/select/zoom, and a window.resize_increments config option disabled by default. Changes include always using sRGB color space on macOS, erasing in line after the last column no longer clearing the last column, opening new windows by default with macOS Cmd+N binding, properly issuing the hint about window transparency on Wayland and macOS, window.decorations_theme_variant now controlling theme on macOS and Windows, IME purpose set to Terminal, window.decorations_theme_variant using Dark, Light, and None values, and resize increments set on macOS and X11 to resize by cell sizes. Fixes address --help output for --class not matching man pages, cursor and underlines always being black on very old hardware, crash when using very low negative font.offset, startup failure on macOS with default config when system /bin/sh is dash, artifacts in corners for maximized window with CSD on Wayland, dotted underline not shown on macOS, underline on macOS always being at the bottom of the cell, crash with OT-SVG fonts on Linux/BSD, crash during text compose on old GNOME under Wayland, mouse cursor staying hidden after window regains focus on macOS Ventura, blurry fonts when changing padding size at runtime, crash while typing on Wayland, multi-line semantic bracket selection, reduced GPU memory usage, low frame rate when multiple windows render at the same time, redraw hanging until a keypress on X11 in rare cases, window clipping when maximizing a window without decorations on Windows, quadrants not aligned with half blocks with built-in font, EOT (\\x03) escaping bracketed paste mode, drag & drop not working for the search bar, and simple-fullscreened window not resized when moving between monitors on macOS. Removals include window.gtk_theme_variant config field (use window.decorations_theme_variant instead) and alt_send_esc now always set to true."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_12_1_rc1",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.1-rc1",
+      "tag_name": "v0.12.1-rc1",
+      "title": "Alacritty Version 0.12.1 Release Candidate 1",
+      "time_hint": "2023-05-06",
+      "published_at": "2023-05-06T21:20:12Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.12.1-rc1",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.12.1 Release Candidate 1\nTag: v0.12.1-rc1; draft: False; prerelease: True; published_at: 2023-05-06T21:20:12Z; created_at: 2023-05-06T21:39:38Z\nRelease notes:\n### Fixed\n- Character `;` inside the `URI` in `OSC 8` sequence breaking the URI\n- Selection on last line not updating correctly on resize\n- Keyboard input not working on macOS with some IMEs like Fig.io",
+      "memory_unit_text": "In the alacritty/alacritty release v0.12.1-rc1, the release notes fix character ';' inside the URI in OSC 8 sequence breaking the URI, selection on last line not updating correctly on resize, and keyboard input not working on macOS with some IMEs like Fig.io."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_12_1_rc2",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.1-rc2",
+      "tag_name": "v0.12.1-rc2",
+      "title": "Alacritty Version 0.12.1 Release Candidate 2",
+      "time_hint": "2023-05-16",
+      "published_at": "2023-05-16T01:20:22Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.12.1-rc2",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.12.1 Release Candidate 2\nTag: v0.12.1-rc2; draft: False; prerelease: True; published_at: 2023-05-16T01:20:22Z; created_at: 2023-05-16T01:17:39Z\nRelease notes:\n### Fixed\n- Very long startup times on Wayland systems with broken xdg-portal setup\n- Error on startup with `GLX` when using old mesa platforms",
+      "memory_unit_text": "In the alacritty/alacritty release v0.12.1-rc2, the release notes fix very long startup times on Wayland systems with broken xdg-portal setup and error on startup with GLX when using old mesa platforms."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_12_1",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.1",
+      "tag_name": "v0.12.1",
+      "title": "Alacritty Version 0.12.1",
+      "time_hint": "2023-05-21",
+      "published_at": "2023-05-21T22:21:58Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.12.1",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.12.1\nTag: v0.12.1; draft: False; prerelease: False; published_at: 2023-05-21T22:21:58Z; created_at: 2023-05-21T22:17:41Z\nRelease notes:\n### Fixed\n- Very long startup times on Wayland systems with broken xdg-portal setup\n- Error on startup with `GLX` when using old mesa platforms\n- Character `;` inside the `URI` in `OSC 8` sequence breaking the URI\n- Selection on last line not updating correctly on resize\n- Keyboard input not working on macOS with some IMEs like Fig.io",
+      "memory_unit_text": "In the alacritty/alacritty release v0.12.1, the release notes fix very long startup times on Wayland systems with broken xdg-portal setup, error on startup with GLX when using old mesa platforms, character ';' inside the URI in OSC 8 sequence breaking the URI, selection on last line not updating correctly on resize, and keyboard input not working on macOS with some IMEs like Fig.io."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_12_2_rc1",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.2-rc1",
+      "tag_name": "v0.12.2-rc1",
+      "title": "Alacritty Version 0.12.2 Release Candidate 1",
+      "time_hint": "2023-06-26",
+      "published_at": "2023-06-26T10:22:39Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.12.2-rc1",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.12.2 Release Candidate 1\nTag: v0.12.2-rc1; draft: False; prerelease: True; published_at: 2023-06-26T10:22:39Z; created_at: 2023-06-26T10:18:03Z\nRelease notes:\n### Fixed\n- Hyperlink preview not being shown when the terminal has exactly 2 lines\n- Crash on Windows when changing display scale factor\n- Freeze with some drivers when using GLX\n- Crash when shrinking the terminal scrolled into the history",
+      "memory_unit_text": "In the alacritty/alacritty release v0.12.2-rc1, the release notes fix hyperlink preview not being shown when the terminal has exactly 2 lines, crash on Windows when changing display scale factor, freeze with some drivers when using GLX, and crash when shrinking the terminal scrolled into the history."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_12_2",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.2",
+      "tag_name": "v0.12.2",
+      "title": "Alacritty Version 0.12.2",
+      "time_hint": "2023-07-01",
+      "published_at": "2023-07-01T18:10:44Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.12.2",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.12.2\nTag: v0.12.2; draft: False; prerelease: False; published_at: 2023-07-01T18:10:44Z; created_at: 2023-07-01T18:07:46Z\nRelease notes:\n### Fixed\n- Hyperlink preview not being shown when the terminal has exactly 2 lines\n- Crash on Windows when changing display scale factor\n- Freeze with some drivers when using GLX\n- Crash when shrinking the terminal scrolled into the history",
+      "memory_unit_text": "In the alacritty/alacritty release v0.12.2, the release notes fix hyperlink preview not being shown when the terminal has exactly 2 lines, crash on Windows when changing display scale factor, freeze with some drivers when using GLX, and crash when shrinking the terminal scrolled into the history."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_12_3_rc1",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.3-rc1",
+      "tag_name": "v0.12.3-rc1",
+      "title": "Alacritty Version 0.12.3 Release Candidate 1",
+      "time_hint": "2023-09-28",
+      "published_at": "2023-09-28T09:04:54Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.12.3-rc1",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.12.3 Release Candidate 1\nTag: v0.12.3-rc1; draft: False; prerelease: True; published_at: 2023-09-28T09:04:54Z; created_at: 2023-09-28T09:03:37Z\nRelease notes:\n### Fixed\n- Crash on macOS Sonoma due to change in macOS resize handling\n- Crash when Wayland compositor advertises `wl_compositor@v5` interface",
+      "memory_unit_text": "In the alacritty/alacritty release v0.12.3-rc1, the release notes fix crash on macOS Sonoma due to change in macOS resize handling and crash when Wayland compositor advertises wl_compositor@v5 interface."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_12_3",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.3",
+      "tag_name": "v0.12.3",
+      "title": "Alacritty Version 0.12.3",
+      "time_hint": "2023-10-02",
+      "published_at": "2023-10-02T20:29:13Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.12.3",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.12.3\nTag: v0.12.3; draft: False; prerelease: False; published_at: 2023-10-02T20:29:13Z; created_at: 2023-10-02T20:27:03Z\nRelease notes:\n### Fixed\n- Crash on macOS Sonoma due to change in macOS resize handling\n- Crash when Wayland compositor advertises `wl_compositor@v5` interface",
+      "memory_unit_text": "In the alacritty/alacritty release v0.12.3, the release notes fix crash on macOS Sonoma due to change in macOS resize handling and crash when Wayland compositor advertises wl_compositor@v5 interface."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_13_0_rc1",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.13.0-rc1",
+      "tag_name": "v0.13.0-rc1",
+      "title": "Alacritty Version 0.13.0 Release Candidate 1",
+      "time_hint": "2023-12-14",
+      "published_at": "2023-12-14T04:11:55Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.13.0-rc1",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.13.0 Release Candidate 1\nTag: v0.13.0-rc1; draft: False; prerelease: True; published_at: 2023-12-14T04:11:55Z; created_at: 2023-12-14T04:10:29Z\nRelease notes:\n### Packaging\n- Minimum Rust version has been bumped to 1.70.0\n- Manpages are now generated using `scdoc` (see `INSTALL.md`)\n### Added\n- Warnings for unused configuration file options\n- Config option `persist` in `hints` config section\n- Support for dynamically loading conpty.dll on Windows\n- Support for keybindings with dead keys\n- `Back`/`Forward` mouse buttons support in bindings\n- Copy global IPC options (`-w -1`) for new windows\n- Bindings to create and navigate tabs on macOS\n- Support startup notify protocol to raise initial window on Wayland/X11\n- Debug option `prefer_egl` to prioritize EGL over other display APIs\n- Inline vi-mode search using `f`/`F`/`t`/`T`\n- `window.blur` config option to request blur for transparent windows\n- `--option` argument for `alacritty msg create-window`\n- Support for `DECRQM`/`DECRPM` escape sequences\n- Support for kitty's keyboard protocol\n### Changed\n- Mode-specific bindings can now be bound in any mode for easier macros\n- `--help` output is more compact now and uses more neutral palette\n- Configuration file now uses TOML instead of YAML\nRun `alacritty migrate` to automatically convert all configuration files\n- Deprecated config option `draw_bold_text_with_bright_colors`, use\n`colors.draw_bold_text_with_bright_colors`\n- Deprecated config option `key_bindings`, use `keyboard.bindings`\n- Deprecated config option `mouse_bindings`, use `mouse.bindings`\n- The default colorscheme is now based on base16 classic dark\n- IME popup now tries to not obscure the current cursor line\n- The double click threshold was raised to `400ms`\n- OSC 52 paste ability is now **disabled by default**; use `terminal.osc52` to adjust it\n- Apply `colors.transparent_background_colors` for selections, hints, and search matches\n- Underline full hint during keyboard selection\n- Synchronized updates now use `CSI 2026` instead of legacy `DCS` variant\n- In mouse mode with `Shift` pressed, mouse bindings without `Shift` are only triggered\nif no exact binding (i.e. one with `Shift`) is found.\n- Use built-in font for powerline symbols from `U+E0B0` to `U+E0B3`\n- Default `bell.animation` is now `Linear`\n- `IncreaseFontSize/DecreaseFontSize` step is now 1px\n- `font.size` precision was raised to 6 floating point digits\n- Default font size to `11.25` matching 15px\n### Fixed\n- Unconditional query of xdg-portal settings on Wayland\n- `Maximized` startup mode not filling the screen properly on GNOME Wayland\n- `OptionAsAlt` with `OnlyLeft`/`OnlyRight` settings not working properly on macOS\n- Default Vi key bindings for `Last`/`First` actions not working on X11/Wayland\n- Cut off wide characters in preedit string\n- Scrolling on touchscreens\n- Double clicking on CSD titlebar not always maximizing a window on Wayland\n- Excessive memory usage when using regexes with a large number of possible states\n- `window.decorations_theme_variant` not live reloading\n- Copy/Paste being truncated to 64KiB on Wayland\n- X11 clipboard lagging behind sometimes\n- High wakeup count on Wayland due to clipboard polling\n- Blocking paste freezing alacritty on Wayland\n- `Command` modifier persisting after `Cmd + Tab` on macOS\n- Crash on exit when using NVIDIA binary drivers on Wayland\n- `window.startup_mode` applied to window again when creating new tab\n- Crash when leaving search after resize\n- Cursor being hidden after reaching cursor blinking timeout\n- Message bar content getting stuck after closing with multiple messages on Wayland\n- Vi cursor position not redrawn on PageUp/PageDown without scrollback\n- Cursor not updating when blinking and viewport is scrolled\n- Failure to start with recent version of mesa's i915 driver\n- Error when using `chars` inside the mouse bindings\n### Removed\n- Config option `background_opacity`, use `window.background_...",
+      "memory_unit_text": "In the alacritty/alacritty release v0.13.0-rc1, the release notes bump minimum Rust version to 1.70.0, generate manpages using scdoc, add warnings for unused configuration file options, config option persist in hints config section, support for dynamically loading conpty.dll on Windows, support for keybindings with dead keys, Back/Forward mouse buttons support in bindings, copy global IPC options (-w -1) for new windows, bindings to create and navigate tabs on macOS, support startup notify protocol to raise initial window on Wayland/X11, debug option prefer_egl to prioritize EGL over other display APIs, inline vi-mode search using f/F/t/T, window.blur config option to request blur for transparent windows, --option argument for alacritty msg create-window, support for DECRQM/DECRPM escape sequences, and support for kitty's keyboard protocol. Changes include mode-specific bindings now bindable in any mode for easier macros, more compact --help output with neutral palette, configuration file now using TOML instead of YAML (run alacritty migrate to convert), deprecation of draw_bold_text_with_bright_colors (use colors.draw_bold_text_with_bright_colors), key_bindings (use keyboard.bindings), mouse_bindings (use mouse.bindings), default colorscheme based on base16 classic dark, IME popup tries to not obscure current cursor line, double click threshold raised to 400ms, OSC 52 paste ability disabled by default (use terminal.osc52 to adjust), apply colors.transparent_background_colors for selections/hints/search matches, underline full hint during keyboard selection, synchronized updates now use CSI 2026 instead of legacy DCS variant, in mouse mode with Shift pressed mouse bindings without Shift are only triggered if no exact binding with Shift is found, use built-in font for powerline symbols from U+E0B0 to U+E0B3, default bell.animation is now Linear, IncreaseFontSize/DecreaseFontSize step is now 1px, font.size precision raised to 6 floating point digits, default font size to 11.25 matching 15px. Fixes address unconditional query of xdg-portal settings on Wayland, Maximized startup mode not filling screen properly on GNOME Wayland, OptionAsAlt with OnlyLeft/OnlyRight settings not working properly on macOS, default Vi key bindings for Last/First actions not working on X11/Wayland, cut off wide characters in preedit string, scrolling on touchscreens, double clicking on CSD titlebar not always maximizing window on Wayland, excessive memory usage when using regexes with large number of possible states, window.decorations_theme_variant not live reloading, Copy/Paste being truncated to 64KiB on Wayland, X11 clipboard lagging behind sometimes, high wakeup count on Wayland due to clipboard polling, blocking paste freezing alacritty on Wayland, Command modifier persisting after Cmd+Tab on macOS, crash on exit when using NVIDIA binary drivers on Wayland, window.startup_mode applied to window again when creating new tab, crash when leaving search after resize, cursor being hidden after reaching cursor blinking timeout, message bar content getting stuck after closing with multiple messages on Wayland, Vi cursor position not redrawn on PageUp/PageDown without scrollback, cursor not updating when blinking and viewport is scrolled, failure to start with recent version of mesa's i915 driver, and error when using chars inside the mouse bindings. Removals include config option background_opacity (use window.background_...)."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_13_0_rc2",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.13.0-rc2",
+      "tag_name": "v0.13.0-rc2",
+      "title": "Alacritty Version 0.13.0 Release Candidate 2",
+      "time_hint": "2023-12-22",
+      "published_at": "2023-12-22T10:42:25Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.13.0-rc2",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.13.0 Release Candidate 2\nTag: v0.13.0-rc2; draft: False; prerelease: True; published_at: 2023-12-22T10:42:25Z; created_at: 2023-12-22T09:42:51Z\nRelease notes:\n### Fixed\n- `Ctrl + Shift + C` not copying in Vi mode\n- `Alt + $` not working in nvim on macOS with `option_as_alt`\n- `Xft.dpi` ignored on X11\n- Keyboard input stopping when entering Vi mode on X11",
+      "memory_unit_text": "In the alacritty/alacritty release v0.13.0-rc2, the release notes fix Ctrl+Shift+C not copying in Vi mode, Alt+$ not working in nvim on macOS with option_as_alt, Xft.dpi ignored on X11, and keyboard input stopping when entering Vi mode on X11."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_13_0",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.13.0",
+      "tag_name": "v0.13.0",
+      "title": "Alacritty Version 0.13.0",
+      "time_hint": "2023-12-27",
+      "published_at": "2023-12-27T21:16:22Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.13.0",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.13.0\nTag: v0.13.0; draft: False; prerelease: False; published_at: 2023-12-27T21:16:22Z; created_at: 2023-12-27T21:14:11Z\nRelease notes:\n### Packaging\n- Minimum Rust version has been bumped to 1.70.0\n- Manpages are now generated using `scdoc` (see `INSTALL.md`)\n### Added\n- Warnings for unused configuration file options\n- Config option `persist` in `hints` config section\n- Support for dynamically loading conpty.dll on Windows\n- Support for keybindings with dead keys\n- `Back`/`Forward` mouse buttons support in bindings\n- Copy global IPC options (`-w -1`) for new windows\n- Bindings to create and navigate tabs on macOS\n- Support startup notify protocol to raise initial window on Wayland/X11\n- Debug option `prefer_egl` to prioritize EGL over other display APIs\n- Inline vi-mode search using `f`/`F`/`t`/`T`\n- `window.blur` config option to request blur for transparent windows\n- `--option` argument for `alacritty msg create-window`\n- Support for `DECRQM`/`DECRPM` escape sequences\n- Support for kitty's keyboard protocol\n### Changed\n- Mode-specific bindings can now be bound in any mode for easier macros\n- `--help` output is more compact now and uses more neutral palette\n- Configuration file now uses TOML instead of YAML\nRun `alacritty migrate` to automatically convert all configuration files\n- Deprecated config option `draw_bold_text_with_bright_colors`, use\n`colors.draw_bold_text_with_bright_colors`\n- Deprecated config option `key_bindings`, use `keyboard.bindings`\n- Deprecated config option `mouse_bindings`, use `mouse.bindings`\n- The default colorscheme is now based on base16 classic dark\n- IME popup now tries to not obscure the current cursor line\n- The double click threshold was raised to `400ms`\n- OSC 52 paste ability is now **disabled by default**; use `terminal.osc52` to adjust it\n- Apply `colors.transparent_background_colors` for selections, hints, and search matches\n- Underline full hint during keyboard selection\n- Synchronized updates now use `CSI 2026` instead of legacy `DCS` variant\n- In mouse mode with `Shift` pressed, mouse bindings without `Shift` are only triggered\nif no exact binding (i.e. one with `Shift`) is found.\n- Use built-in font for powerline symbols from `U+E0B0` to `U+E0B3`\n- Default `bell.animation` is now `Linear`\n- `IncreaseFontSize/DecreaseFontSize` step is now 1px\n- `font.size` precision was raised to 6 floating point digits\n- Default font size to `11.25` matching 15px\n- `Xft.dpi` is now reloaded when xsettingd change its value on X11\n### Fixed\n- Unconditional query of xdg-portal settings on Wayland\n- `Maximized` startup mode not filling the screen properly on GNOME Wayland\n- `OptionAsAlt` with `OnlyLeft`/`OnlyRight` settings not working properly on macOS\n- Default Vi key bindings for `Last`/`First` actions not working on X11/Wayland\n- Cut off wide characters in preedit string\n- Scrolling on touchscreens\n- Double clicking on CSD titlebar not always maximizing a window on Wayland\n- Excessive memory usage when using regexes with a large number of possible states\n- `window.decorations_theme_variant` not live reloading\n- Copy/Paste being truncated to 64KiB on Wayland\n- X11 clipboard lagging behind sometimes\n- High wakeup count on Wayland due to clipboard polling\n- Blocking paste freezing alacritty on Wayland\n- `Command` modifier persisting after `Cmd + Tab` on macOS\n- Crash on exit when using NVIDIA binary drivers on Wayland\n- `window.startup_mode` applied to window again when creating new tab\n- Crash when leaving search after resize\n- Cursor being hidden after reaching cursor blinking timeout\n- Message bar content getting stuck after closing with multiple messages on Wayland\n- Vi cursor position not redrawn on PageUp/PageDown without scrollback\n- Cursor not updating when blinking and viewport is scrolled\n- Failure to start with recent version of mesa's i915 driver\n- Error when using `chars` inside the mouse bindings\n### Removed\n- Config option `...",
+      "memory_unit_text": "In the alacritty/alacritty release v0.13.0, the release notes bump minimum Rust version to 1.70.0, generate manpages using scdoc, add warnings for unused configuration file options, config option persist in hints config section, support for dynamically loading conpty.dll on Windows, support for keybindings with dead keys, Back/Forward mouse buttons support in bindings, copy global IPC options (-w -1) for new windows, bindings to create and navigate tabs on macOS, support startup notify protocol to raise initial window on Wayland/X11, debug option prefer_egl to prioritize EGL over other display APIs, inline vi-mode search using f/F/t/T, window.blur config option to request blur for transparent windows, --option argument for alacritty msg create-window, support for DECRQM/DECRPM escape sequences, and support for kitty's keyboard protocol. Changes include mode-specific bindings now bindable in any mode for easier macros, more compact --help output with neutral palette, configuration file now using TOML instead of YAML (run alacritty migrate to convert), deprecation of draw_bold_text_with_bright_colors (use colors.draw_bold_text_with_bright_colors), key_bindings (use keyboard.bindings), mouse_bindings (use mouse.bindings), default colorscheme based on base16 classic dark, IME popup tries to not obscure current cursor line, double click threshold raised to 400ms, OSC 52 paste ability disabled by default (use terminal.osc52 to adjust), apply colors.transparent_background_colors for selections/hints/search matches, underline full hint during keyboard selection, synchronized updates now use CSI 2026 instead of legacy DCS variant, in mouse mode with Shift pressed mouse bindings without Shift are only triggered if no exact binding with Shift is found, use built-in font for powerline symbols from U+E0B0 to U+E0B3, default bell.animation is now Linear, IncreaseFontSize/DecreaseFontSize step is now 1px, font.size precision raised to 6 floating point digits, default font size to 11.25 matching 15px, and Xft.dpi now reloaded when xsettingd changes its value on X11. Fixes address unconditional query of xdg-portal settings on Wayland, Maximized startup mode not filling screen properly on GNOME Wayland, OptionAsAlt with OnlyLeft/OnlyRight settings not working properly on macOS, default Vi key bindings for Last/First actions not working on X11/Wayland, cut off wide characters in preedit string, scrolling on touchscreens, double clicking on CSD titlebar not always maximizing window on Wayland, excessive memory usage when using regexes with large number of possible states, window.decorations_theme_variant not live reloading, Copy/Paste being truncated to 64KiB on Wayland, X11 clipboard lagging behind sometimes, high wakeup count on Wayland due to clipboard polling, blocking paste freezing alacritty on Wayland, Command modifier persisting after Cmd+Tab on macOS, crash on exit when using NVIDIA binary drivers on Wayland, window.startup_mode applied to window again when creating new tab, crash when leaving search after resize, cursor being hidden after reaching cursor blinking timeout, message bar content getting stuck after closing with multiple messages on Wayland, Vi cursor position not redrawn on PageUp/PageDown without scrollback, cursor not updating when blinking and viewport is scrolled, failure to start with recent version of mesa's i915 driver, and error when using chars inside the mouse bindings. Removals include config option background_... (truncated)."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_13_1_rc1",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.13.1-rc1",
+      "tag_name": "v0.13.1-rc1",
+      "title": "Alacritty Version 0.13.1 Release Candidate 1",
+      "time_hint": "2024-01-06",
+      "published_at": "2024-01-06T08:02:38Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.13.1-rc1",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.13.1 Release Candidate 1\nTag: v0.13.1-rc1; draft: False; prerelease: True; published_at: 2024-01-06T08:02:38Z; created_at: 2024-01-06T08:00:44Z\nRelease notes:\n### Added\n- Support for pasting in Vi + Search mode\n### Changed\n- `alacritty migrate` will ignore null values in yaml instead of erroring out\n### Fixed\n- `alacritty migrate` failing with nonexistent imports\n- `Alt` bindings requiring composed key rather than pre-composed one on macOS\n- `Alt + Control` bindings not working on Windows\n- `chars = \"\\u000A\"` action in bindings inserting `\\n`\n- Alternate keys not sent for `Shift + <number>` when using kitty protocol\n- Alternative keys being swapped in kitty protocol implementation\n- Powerline glyphs being cut for narrow fonts\n- Xmodmap not working on X11\n- Occasional slow startup on some X11 window managers\n- Blurry window when using `window.dimensions` on some Wayland compositors\n- IME input lagging behind on X11\n- xdotool modifiers input not working correctly on X11\n- Parsing numbers fails for mouse bindings\n- Some config options overriding each other in CLI/IPC\n- Numpad `Left` used for numpad `Up`",
+      "memory_unit_text": "In the alacritty/alacritty release v0.13.1-rc1, the release notes add support for pasting in Vi + Search mode, change alacritty migrate to ignore null values in yaml instead of erroring out, and fix alacritty migrate failing with nonexistent imports, Alt bindings requiring composed key rather than pre-composed one on macOS, Alt+Control bindings not working on Windows, chars = \"\\u000A\" action in bindings inserting \\n, alternate keys not sent for Shift+<number> when using kitty protocol, alternative keys being swapped in kitty protocol implementation, powerline glyphs being cut for narrow fonts, Xmodmap not working on X11, occasional slow startup on some X11 window managers, blurry window when using window.dimensions on some Wayland compositors, IME input lagging behind on X11, xdotool modifiers input not working correctly on X11, parsing numbers fails for mouse bindings, some config options overriding each other in CLI/IPC, and numpad Left used for numpad Up."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_13_1",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.13.1",
+      "tag_name": "v0.13.1",
+      "title": "Alacritty Version 0.13.1",
+      "time_hint": "2024-01-08",
+      "published_at": "2024-01-08T15:50:13Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.13.1",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.13.1\nTag: v0.13.1; draft: False; prerelease: False; published_at: 2024-01-08T15:50:13Z; created_at: 2024-01-08T15:48:42Z\nRelease notes:\n### Added\n- Support for pasting in Vi + Search mode\n### Changed\n- `alacritty migrate` will ignore null values in yaml instead of erroring out\n### Fixed\n- `alacritty migrate` failing with nonexistent imports\n- `Alt` bindings requiring composed key rather than pre-composed one on macOS\n- `Alt + Control` bindings not working on Windows\n- `chars = \"\\u000A\"` action in bindings inserting `\\n`\n- Alternate keys not sent for `Shift + <number>` when using kitty protocol\n- Alternative keys being swapped in kitty protocol implementation\n- Powerline glyphs being cut for narrow fonts\n- Xmodmap not working on X11\n- Occasional slow startup on some X11 window managers\n- Blurry window when using `window.dimensions` on some Wayland compositors\n- IME input lagging behind on X11\n- xdotool modifiers input not working correctly on X11\n- Parsing numbers fails for mouse bindings\n- Some config options overriding each other in CLI/IPC\n- Numpad `Left` used for numpad `Up`",
+      "memory_unit_text": "In the alacritty/alacritty release v0.13.1, the release notes add support for pasting in Vi + Search mode, change alacritty migrate to ignore null values in yaml instead of erroring out, and fix alacritty migrate failing with nonexistent imports, Alt bindings requiring composed key rather than pre-composed one on macOS, Alt+Control bindings not working on Windows, chars = \"\\u000A\" action in bindings inserting \\n, alternate keys not sent for Shift+<number> when using kitty protocol, alternative keys being swapped in kitty protocol implementation, powerline glyphs being cut for narrow fonts, Xmodmap not working on X11, occasional slow startup on some X11 window managers, blurry window when using window.dimensions on some Wayland compositors, IME input lagging behind on X11, xdotool modifiers input not working correctly on X11, parsing numbers fails for mouse bindings, some config options overriding each other in CLI/IPC, and numpad Left used for numpad Up."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_13_2_rc1",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.13.2-rc1",
+      "tag_name": "v0.13.2-rc1",
+      "title": "Alacritty Version 0.13.2 Release Candidate 1",
+      "time_hint": "2024-03-19",
+      "published_at": "2024-03-19T01:29:27Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.13.2-rc1",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.13.2 Release Candidate 1\nTag: v0.13.2-rc1; draft: False; prerelease: True; published_at: 2024-03-19T01:29:27Z; created_at: 2024-03-19T01:24:44Z\nRelease notes:\n### Added\n- Default `Home`/`End` bindings in Vi mode mapped to `First`/`Last` respectively\n### Fixed\n- CLI env variables clearing configuration file variables\n- Vi inline search/semantic selection expanding across newlines\n- C0 and C1 codes being emitted in associated text when using kitty keyboard\n- Occasional hang on startup with some Wayland compositors\n- Missing key for `NumpadDecimal` in key bindings\n- Scrolling content upwards moving lines into history when it shouldn't\n- Sticky keys not working sometimes on X11\n- Modifiers occasionally getting desynced on X11\n- Autokey no longer working with alacritty on X11\n- Freeze when moving window between monitors on Xfwm\n- Mouse cursor not changing on Wayland when cursor theme uses legacy cursor icon names\n- Config keys are available under proper names\n- Build failure when compiling with x11 feature on NetBSD\n- Hint `Select` action selecting the entire line for URL escapes\n### Changed\n- No unused-key warnings will be emitted for OS-specific config keys\n- Use built-in font for sextant symbols from `U+1FB00` to `U+1FB3B`\n- Kitty encoding is not used anymore for uncommon keys unless the protocol enabled",
+      "memory_unit_text": "In the alacritty/alacritty release v0.13.2-rc1, the release notes add default Home/End bindings in Vi mode mapped to First/Last respectively, and fix CLI env variables clearing configuration file variables, Vi inline search/semantic selection expanding across newlines, C0 and C1 codes being emitted in associated text when using kitty keyboard, occasional hang on startup with some Wayland compositors, missing key for NumpadDecimal in key bindings, scrolling content upwards moving lines into history when it shouldn't, sticky keys not working sometimes on X11, modifiers occasionally getting desynced on X11, autokey no longer working with alacritty on X11, freeze when moving window between monitors on Xfwm, mouse cursor not changing on Wayland when cursor theme uses legacy cursor icon names, config keys are available under proper names, build failure when compiling with x11 feature on NetBSD, and hint Select action selecting the entire line for URL escapes. Changes include no unused-key warnings will be emitted for OS-specific config keys, use built-in font for sextant symbols from U+1FB00 to U+1FB3B, and kitty encoding is not used anymore for uncommon keys unless the protocol enabled."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_13_2",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.13.2",
+      "tag_name": "v0.13.2",
+      "title": "Alacritty Version 0.13.2",
+      "time_hint": "2024-03-24",
+      "published_at": "2024-03-24T17:53:58Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.13.2",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.13.2\nTag: v0.13.2; draft: False; prerelease: False; published_at: 2024-03-24T17:53:58Z; created_at: 2024-03-24T17:51:35Z\nRelease notes:\n### Added\n- Default `Home`/`End` bindings in Vi mode mapped to `First`/`Last` respectively\n### Fixed\n- CLI env variables clearing configuration file variables\n- Vi inline search/semantic selection expanding across newlines\n- C0 and C1 codes being emitted in associated text when using kitty keyboard\n- Occasional hang on startup with some Wayland compositors\n- Missing key for `NumpadDecimal` in key bindings\n- Scrolling content upwards moving lines into history when it shouldn't\n- Sticky keys not working sometimes on X11\n- Modifiers occasionally getting desynced on X11\n- Autokey no longer working with alacritty on X11\n- Freeze when moving window between monitors on Xfwm\n- Mouse cursor not changing on Wayland when cursor theme uses legacy cursor icon names\n- Config keys are available under proper names\n- Build failure when compiling with x11 feature on NetBSD\n- Hint `Select` action selecting the entire line for URL escapes\n- Kitty encoding used for regular keys when they don't carry text\n### Changed\n- No unused-key warnings will be emitted for OS-specific config keys\n- Use built-in font for sextant symbols from `U+1FB00` to `U+1FB3B`\n- Kitty encoding is not used anymore for uncommon keys unless the protocol enabled",
+      "memory_unit_text": "In the alacritty/alacritty release v0.13.2, the release notes add default Home/End bindings in Vi mode mapped to First/Last respectively, and fix CLI env variables clearing configuration file variables, Vi inline search/semantic selection expanding across newlines, C0 and C1 codes being emitted in associated text when using kitty keyboard, occasional hang on startup with some Wayland compositors, missing key for NumpadDecimal in key bindings, scrolling content upwards moving lines into history when it shouldn't, sticky keys not working sometimes on X11, modifiers occasionally getting desynced on X11, autokey no longer working with alacritty on X11, freeze when moving window between monitors on Xfwm, mouse cursor not changing on Wayland when cursor theme uses legacy cursor icon names, config keys are available under proper names, build failure when compiling with x11 feature on NetBSD, hint Select action selecting the entire line for URL escapes, and kitty encoding used for regular keys when they don't carry text. Changes include no unused-key warnings will be emitted for OS-specific config keys, use built-in font for sextant symbols from U+1FB00 to U+1FB3B, and kitty encoding is not used anymore for uncommon keys unless the protocol enabled."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_14_0_rc1",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.14.0-rc1",
+      "tag_name": "v0.14.0-rc1",
+      "title": "Alacritty Version 0.14.0 Release Candidate 1",
+      "time_hint": "2024-10-11",
+      "published_at": "2024-10-11T16:49:14Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.14.0-rc1",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.14.0 Release Candidate 1\nTag: v0.14.0-rc1; draft: False; prerelease: True; published_at: 2024-10-11T16:49:14Z; created_at: 2024-10-11T16:13:09Z\nRelease notes:\n### Packaging\n- Minimum Rust version has been bumped to 1.74.0\n### Added\n- Support relative path imports from config files\n- `alacritty migrate` support for TOML configuration changes\n- Support for Unicode 16 characters\n### Changed\n- Pressing `Alt` with unicode input will now add `ESC` like for ASCII input\n- Decorations use opaque style and system window background on macOS\n- No longer source `~/.zshenv` on macOS\n- Moved config options `import`, `working_directory`, `live_config_reload`, and `ipc_socket`\nto the new `general` section\n- Moved config option `shell` to `terminal.shell`\n- `ctrl+shift+u` binding to open links to `ctrl+shift+o` to avoid collisions with IMEs\n### Fixed\n- Crash when trying to create a new tab without decorations enabled\n- New window being treated as focused when it's not on Wayland\n- IME preview blending into text below it\n- Dynamic title disabled for new windows when initial one has title as CLI option\n- While terminal in mouse mode, mouse bindings that used the shift modifier and\nhad multiple actions only performed the first action\n- Leaking FDs when closing windows on Unix systems\n- Config emitting errors for nonexistent import paths\n- Kitty keyboard protocol reporting shifted key codes\n- Broken search with words broken across line boundary on the first character\n- Config import changes not being live reloaded\n- Cursor color requests with default cursor colors\n- Fullwidth semantic escape characters\n- Windows app icon now displays properly in old alt+tab on Windows\n- Alacritty not being properly activated with startup notify\n- Invalid URL highlights after terminal scrolling",
+      "memory_unit_text": "In the alacritty/alacritty release v0.14.0-rc1, the release notes bump minimum Rust version to 1.74.0, add support relative path imports from config files, alacritty migrate support for TOML configuration changes, and support for Unicode 16 characters. Changes include pressing Alt with unicode input will now add ESC like for ASCII input, decorations use opaque style and system window background on macOS, no longer source ~/.zshenv on macOS, moved config options import, working_directory, live_config_reload, and ipc_socket to the new general section, moved config option shell to terminal.shell, and ctrl+shift+u binding to open links to ctrl+shift+o to avoid collisions with IMEs. Fixes address crash when trying to create a new tab without decorations enabled, new window being treated as focused when it's not on Wayland, IME preview blending into text below it, dynamic title disabled for new windows when initial one has title as CLI option, while terminal in mouse mode mouse bindings that used the shift modifier and had multiple actions only performed the first action, leaking FDs when closing windows on Unix systems, config emitting errors for nonexistent import paths, kitty keyboard protocol reporting shifted key codes, broken search with words broken across line boundary on the first character, config import changes not being live reloaded, cursor color requests with default cursor colors, fullwidth semantic escape characters, Windows app icon now displays properly in old alt+tab on Windows, alacritty not being properly activated with startup notify, and invalid URL highlights after terminal scrolling."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_14_0_rc2",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.14.0-rc2",
+      "tag_name": "v0.14.0-rc2",
+      "title": "Alacritty Version 0.14.0 Release Candidate 2",
+      "time_hint": "2024-10-15",
+      "published_at": "2024-10-15T21:40:00Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.14.0-rc2",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.14.0 Release Candidate 2\nTag: v0.14.0-rc2; draft: False; prerelease: True; published_at: 2024-10-15T21:40:00Z; created_at: 2024-10-15T20:12:38Z\nRelease notes:\n### Added\n- Headless mode using `alacritty --daemon`\n### Changed\n- Use `Beam` cursor for single char cursor inside the IME preview\n### Fixed\n- Hollow block cursor not spanning multiple chars being edited inside the IME preview\n- Vi inline search only working for direct key input without modifiers",
+      "memory_unit_text": "In the alacritty/alacritty release v0.14.0-rc2, the release notes add headless mode using alacritty --daemon, change to use Beam cursor for single char cursor inside the IME preview, and fix hollow block cursor not spanning multiple chars being edited inside the IME preview and Vi inline search only working for direct key input without modifiers."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_14_0",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.14.0",
+      "tag_name": "v0.14.0",
+      "title": "Alacritty Version 0.14.0",
+      "time_hint": "2024-10-22",
+      "published_at": "2024-10-22T23:16:37Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.14.0",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.14.0\nTag: v0.14.0; draft: False; prerelease: False; published_at: 2024-10-22T23:16:37Z; created_at: 2024-10-22T23:10:44Z\nRelease notes:\n### Packaging\n- Minimum Rust version has been bumped to 1.74.0\n### Added\n- Support relative path imports from config files\n- `alacritty migrate` support for TOML configuration changes\n- Headless mode using `alacritty --daemon`\n### Changed\n- Pressing `Alt` with unicode input will now add `ESC` like for ASCII input\n- Decorations use opaque style and system window background on macOS\n- No longer source `~/.zshenv` on macOS\n- Moved config options `import`, `working_directory`, `live_config_reload`, and `ipc_socket`\nto the new `general` section\n- Moved config option `shell` to `terminal.shell`\n- `ctrl+shift+u` binding to open links to `ctrl+shift+o` to avoid collisions with IMEs\n- Use `Beam` cursor for single char cursor inside the IME preview\n### Fixed\n- Crash when trying to create a new tab without decorations enabled\n- New window being treated as focused when it's not on Wayland\n- IME preview blending into text below it\n- Dynamic title disabled for new windows when initial one has title as CLI option\n- While terminal in mouse mode, mouse bindings that used the shift modifier and\nhad multiple actions only performed the first action\n- Leaking FDs when closing windows on Unix systems\n- Config emitting errors for nonexistent import paths\n- Kitty keyboard protocol reporting shifted key codes\n- Broken search with words broken across line boundary on the first character\n- Config import changes not being live reloaded\n- Cursor color requests with default cursor colors\n- Fullwidth semantic escape characters\n- Windows app icon now displays properly in old alt+tab on Windows\n- Alacritty not being properly activated with startup notify\n- Invalid URL highlights after terminal scrolling\n- Hollow block cursor not spanning multiple chars being edited inside the IME preview\n- Vi inline search only working for direct key input without modifiers",
+      "memory_unit_text": "In the alacritty/alacritty release v0.14.0, the release notes bump minimum Rust version to 1.74.0, add support relative path imports from config files, alacritty migrate support for TOML configuration changes, headless mode using alacritty --daemon. Changes include pressing Alt with unicode input will now add ESC like for ASCII input, decorations use opaque style and system window background on macOS, no longer source ~/.zshenv on macOS, moved config options import, working_directory, live_config_reload, and ipc_socket to the new general section, moved config option shell to terminal.shell, ctrl+shift+u binding to open links to ctrl+shift+o to avoid collisions with IMEs, and use Beam cursor for single char cursor inside the IME preview. Fixes address crash when trying to create a new tab without decorations enabled, new window being treated as focused when it's not on Wayland, IME preview blending into text below it, dynamic title disabled for new windows when initial one has title as CLI option, while terminal in mouse mode mouse bindings that used the shift modifier and had multiple actions only performed the first action, leaking FDs when closing windows on Unix systems, config emitting errors for nonexistent import paths, kitty keyboard protocol reporting shifted key codes, broken search with words broken across line boundary on the first character, config import changes not being live reloaded, cursor color requests with default cursor colors, fullwidth semantic escape characters, Windows app icon now displays properly in old alt+tab on Windows, alacritty not being properly activated with startup notify, invalid URL highlights after terminal scrolling, hollow block cursor not spanning multiple chars being edited inside the IME preview, and Vi inline search only working for direct key input without modifiers."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_14_1_rc1",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.14.1-rc1",
+      "tag_name": "v0.14.1-rc1",
+      "title": "Alacritty Version 0.14.1 Release Candidate 1",
+      "time_hint": "2024-12-22",
+      "published_at": "2024-12-22T23:27:10Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.14.1-rc1",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.14.1 Release Candidate 1\nTag: v0.14.1-rc1; draft: False; prerelease: True; published_at: 2024-12-22T23:27:10Z; created_at: 2024-12-22T23:24:00Z\nRelease notes:\n### Changed\n- Always emit `1` for the first parameter when having modifiers in kitty keyboard protocol\n### Fixed\n- Mouse/Vi cursor hint highlighting broken on the terminal cursor line\n- Hint launcher opening arbitrary text, when terminal content changed while opening\n- `SemanticRight`/`SemanticLeft` vi motions breaking with wide semantic escape characters\n- `alacritty migrate` crashing with recursive toml imports\n- Migrating nonexistent toml import breaking the entire migration\n- Crash when pressing certain modifier keys on macOS 15+\n- First daemon mode window ignoring window options passed through CLI",
+      "memory_unit_text": "In the alacritty/alacritty release v0.14.1-rc1, the release notes change to always emit 1 for the first parameter when having modifiers in kitty keyboard protocol, and fix mouse/Vi cursor hint highlighting broken on the terminal cursor line, hint launcher opening arbitrary text when terminal content changed while opening, SemanticRight/SemanticLeft vi motions breaking with wide semantic escape characters, alacritty migrate crashing with recursive toml imports, migrating nonexistent toml import breaking the entire migration, crash when pressing certain modifier keys on macOS 15+, and first daemon mode window ignoring window options passed through CLI."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_15_0_rc1",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.15.0-rc1",
+      "tag_name": "v0.15.0-rc1",
+      "title": "Alacritty Version 0.15.0 Release Candidate 1",
+      "time_hint": "2025-01-06",
+      "published_at": "2025-01-06T04:19:50Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.15.0-rc1",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.15.0 Release Candidate 1\nTag: v0.15.0-rc1; draft: False; prerelease: True; published_at: 2025-01-06T04:19:50Z; created_at: 2025-01-06T04:18:35Z\nRelease notes:\n### Added\n- Config option `window.level = \"AlwaysOnTop\"` to force Alacritty to always be the toplevel window\n- Escape sequence to move cursor forward tabs ( CSI Ps I )\n- Pass activation token in `alacritty msg create-window` on Wayland/X11\n### Changed\n- Always focus new windows on macOS\n- Don't switch to semantic/line selection when control is pressed\n- Always emit `1` for the first parameter when having modifiers in kitty keyboard protocol\n### Fixed\n- Mouse/Vi cursor hint highlighting broken on the terminal cursor line\n- Hint launcher opening arbitrary text, when terminal content changed while opening\n- `SemanticRight`/`SemanticLeft` vi motions breaking with wide semantic escape characters\n- `alacritty migrate` crashing with recursive toml imports\n- Migrating nonexistent toml import breaking the entire migration\n- First daemon mode window ignoring window options passed through CLI\n- Report of Enter/Tab/Backspace in kitty keyboard's report event types mode\n- Crash when pressing certain modifier keys on macOS 15+",
+      "memory_unit_text": "In the alacritty/alacritty release v0.15.0-rc1, the release notes add config option window.level = \"AlwaysOnTop\" to force Alacritty to always be the toplevel window, escape sequence to move cursor forward tabs (CSI Ps I), and pass activation token in alacritty msg create-window on Wayland/X11. Changes include always focus new windows on macOS, don't switch to semantic/line selection when control is pressed, and always emit 1 for the first parameter when having modifiers in kitty keyboard protocol. Fixes address mouse/Vi cursor hint highlighting broken on the terminal cursor line, hint launcher opening arbitrary text when terminal content changed while opening, SemanticRight/SemanticLeft vi motions breaking with wide semantic escape characters, alacritty migrate crashing with recursive toml imports, migrating nonexistent toml import breaking the entire migration, first daemon mode window ignoring window options passed through CLI, report of Enter/Tab/Backspace in kitty keyboard's report event types mode, and crash when pressing certain modifier keys on macOS 15+."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_15_0",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.15.0",
+      "tag_name": "v0.15.0",
+      "title": "Alacritty Version 0.15.0",
+      "time_hint": "2025-01-13",
+      "published_at": "2025-01-13T20:54:33Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.15.0",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.15.0\nTag: v0.15.0; draft: False; prerelease: False; published_at: 2025-01-13T20:54:33Z; created_at: 2025-01-13T20:33:34Z\nRelease notes:\n### Added\n- Config option `window.level = \"AlwaysOnTop\"` to force Alacritty to always be the toplevel window\n- Escape sequence to move cursor forward tabs ( CSI Ps I )\n- Pass activation token in `alacritty msg create-window` on Wayland/X11\n### Changed\n- Always focus new windows on macOS\n- Don't switch to semantic/line selection when control is pressed\n- Always emit `1` for the first parameter when having modifiers in kitty keyboard protocol\n### Fixed\n- Mouse/Vi cursor hint highlighting broken on the terminal cursor line\n- Hint launcher opening arbitrary text, when terminal content changed while opening\n- `SemanticRight`/`SemanticLeft` vi motions breaking with wide semantic escape characters\n- `alacritty migrate` crashing with recursive toml imports\n- Migrating nonexistent toml import breaking the entire migration\n- First daemon mode window ignoring window options passed through CLI\n- Report of Enter/Tab/Backspace in kitty keyboard's report event types mode\n- Crash when pressing certain modifier keys on macOS 15+\n- Cut off wide characters in preedit string",
+      "memory_unit_text": "In the alacritty/alacritty release v0.15.0, the release notes add config option window.level = \"AlwaysOnTop\" to force Alacritty to always be the toplevel window, escape sequence to move cursor forward tabs (CSI Ps I), and pass activation token in alacritty msg create-window on Wayland/X11. Changes include always focus new windows on macOS, don't switch to semantic/line selection when control is pressed, and always emit 1 for the first parameter when having modifiers in kitty keyboard protocol. Fixes address mouse/Vi cursor hint highlighting broken on the terminal cursor line, hint launcher opening arbitrary text when terminal content changed while opening, SemanticRight/SemanticLeft vi motions breaking with wide semantic escape characters, alacritty migrate crashing with recursive toml imports, migrating nonexistent toml import breaking the entire migration, first daemon mode window ignoring window options passed through CLI, report of Enter/Tab/Backspace in kitty keyboard's report event types mode, crash when pressing certain modifier keys on macOS 15+, and cut off wide characters in preedit string."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_15_1_rc1",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.15.1-rc1",
+      "tag_name": "v0.15.1-rc1",
+      "title": "Alacritty Version 0.15.1 Release Candidate 1",
+      "time_hint": "2025-02-12",
+      "published_at": "2025-02-12T15:57:29Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.15.1-rc1",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.15.1 Release Candidate 1\nTag: v0.15.1-rc1; draft: False; prerelease: True; published_at: 2025-02-12T15:57:29Z; created_at: 2025-02-12T06:16:45Z\nRelease notes:\n### Changed\n- Error out when socket fails to create with `--daemon`\n- Default URL hints now stop before backslashes\n### Fixed\n- Modifiers being out of sync for fast/synthetic input on X11\n- Child process creation failing while inside a deleted directory\n- Shifted key reported without a shift when using kitty keyboard protocol",
+      "memory_unit_text": "In the alacritty/alacritty release v0.15.1-rc1, the release notes change to error out when socket fails to create with --daemon, default URL hints now stop before backslashes, and fix modifiers being out of sync for fast/synthetic input on X11, child process creation failing while inside a deleted directory, and shifted key reported without a shift when using kitty keyboard protocol."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_15_1",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.15.1",
+      "tag_name": "v0.15.1",
+      "title": "Alacritty Version 0.15.1",
+      "time_hint": "2025-02-16",
+      "published_at": "2025-02-16T20:58:16Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.15.1",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.15.1\nTag: v0.15.1; draft: False; prerelease: False; published_at: 2025-02-16T20:58:16Z; created_at: 2025-02-16T20:43:11Z\nRelease notes:\n### Changed\n- Error out when socket fails to create with `--daemon`\n- Default URL hints now stop before backslashes\n### Fixed\n- Modifiers being out of sync for fast/synthetic input on X11\n- Child process creation failing while inside a deleted directory\n- Shifted key reported without a shift when using kitty keyboard protocol",
+      "memory_unit_text": "In the alacritty/alacritty release v0.15.1, the release notes change to error out when socket fails to create with --daemon, default URL hints now stop before backslashes, and fix modifiers being out of sync for fast/synthetic input on X11, child process creation failing while inside a deleted directory, and shifted key reported without a shift when using kitty keyboard protocol."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_16_0_rc1",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.16.0-rc1",
+      "tag_name": "v0.16.0-rc1",
+      "title": "Alacritty Version 0.16.0 Release Candidate 1",
+      "time_hint": "2025-08-29",
+      "published_at": "2025-08-29T19:11:49Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.16.0-rc1",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.16.0 Release Candidate 1\nTag: v0.16.0-rc1; draft: False; prerelease: True; published_at: 2025-08-29T19:11:49Z; created_at: 2025-08-29T19:04:45Z\nRelease notes:\n### Packaging\n- Minimum Rust version has been bumped to 1.85.0\n### Added\n- Vi motions `*`, `#`, `{`, and `}`\n- IPC config retrieval using `alacritty msg get-config`\n- Multi-sequence touch zoom sequences\n- Vi action `Y` keybind, yank to the end of line\n- Add `/etc/alacritty/alacritty.toml` fallback for system wide configuration\n### Changed\n- Hide login message if `~/.hushlogin` is present\n- Improve rendering of rounded corners with builtin box drawing\n### Fixed\n- Crash when OpenGL context resets\n- Modifier keys clearing selection with kitty keyboard protocol enabled\n- `glyph_offset.y` not applied to strikeout\n- `Enter`,`Tab`, `Backspace` not disambiguated with `shift` in kitty keyboard's disambiguate mode\n- Hint bindings not respecting IPC overrides\n- Search matching a wrapping fullwidth character in the last column\n- Crash when `AppleFontSmoothing` option is not present on macOS\n- Origin mode (DECOM) not moving cursor to the origin point\n- Unresponsiveness when spamming the bell character with a bell command enabled\n- `window.startup_mode` applied to existing window when opening a new tab on macOS",
+      "memory_unit_text": "In the alacritty/alacritty release v0.16.0-rc1, the release notes bump minimum Rust version to 1.85.0, add Vi motions *, #, {, and }, IPC config retrieval using alacritty msg get-config, multi-sequence touch zoom sequences, Vi action Y keybind (yank to the end of line), and add /etc/alacritty/alacritty.toml fallback for system wide configuration. Changes include hide login message if ~/.hushlogin is present and improve rendering of rounded corners with builtin box drawing. Fixes address crash when OpenGL context resets, modifier keys clearing selection with kitty keyboard protocol enabled, glyph_offset.y not applied to strikeout, Enter/Tab/Backspace not disambiguated with shift in kitty keyboard's disambiguate mode, hint bindings not respecting IPC overrides, search matching a wrapping fullwidth character in the last column, crash when AppleFontSmoothing option is not present on macOS, origin mode (DECOM) not moving cursor to the origin point, unresponsiveness when spamming the bell character with a bell command enabled, and window.startup_mode applied to existing window when opening a new tab on macOS."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_16_0_rc2",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.16.0-rc2",
+      "tag_name": "v0.16.0-rc2",
+      "title": "Alacritty Version 0.16.0 Release Candidate 2",
+      "time_hint": "2025-09-21",
+      "published_at": "2025-09-21T05:46:09Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.16.0-rc2",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.16.0 Release Candidate 2\nTag: v0.16.0-rc2; draft: False; prerelease: True; published_at: 2025-09-21T05:46:09Z; created_at: 2025-09-21T01:16:31Z\nRelease notes:\n### Fixed\n- macOS crashing issues",
+      "memory_unit_text": "In the alacritty/alacritty release v0.16.0-rc2, the release notes fix macOS crashing issues."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_16_0",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.16.0",
+      "tag_name": "v0.16.0",
+      "title": "Alacritty Version 0.16.0",
+      "time_hint": "2025-10-18",
+      "published_at": "2025-10-18T02:38:37Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.16.0",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.16.0\nTag: v0.16.0; draft: False; prerelease: False; published_at: 2025-10-18T02:38:37Z; created_at: 2025-10-18T02:35:48Z\nRelease notes:\n### Packaging\n- Minimum Rust version has been bumped to 1.85.0\n### Added\n- Vi motions `*`, `#`, `{`, and `}`\n- IPC config retrieval using `alacritty msg get-config`\n- Multi-sequence touch zoom sequences\n- Vi action `Y` keybind, yank to the end of line\n- Add `/etc/alacritty/alacritty.toml` fallback for system wide configuration\n- Unicode 17 support\n### Changed\n- Hide login message if `~/.hushlogin` is present\n- Improve rendering of rounded corners with builtin box drawing\n### Fixed\n- Crash when OpenGL context resets\n- Modifier keys clearing selection with kitty keyboard protocol enabled\n- `glyph_offset.y` not applied to strikeout\n- `Enter`,`Tab`, `Backspace` not disambiguated with `shift` in kitty keyboard's disambiguate mode\n- Hint bindings not respecting IPC overrides\n- Search matching a wrapping fullwidth character in the last column\n- Crash when `AppleFontSmoothing` option is not present on macOS\n- Origin mode (DECOM) not moving cursor to the origin point\n- Unresponsiveness when spamming the bell character with a bell command enabled\n- `window.startup_mode` applied to existing window when opening a new tab on macOS\n- Slowdowns over time on macOS 26",
+      "memory_unit_text": "In the alacritty/alacritty release v0.16.0, the release notes bump minimum Rust version to 1.85.0, add Vi motions *, #, {, and }, IPC config retrieval using alacritty msg get-config, multi-sequence touch zoom sequences, Vi action Y keybind (yank to the end of line), add /etc/alacritty/alacritty.toml fallback for system wide configuration, and Unicode 17 support. Changes include hide login message if ~/.hushlogin is present and improve rendering of rounded corners with builtin box drawing. Fixes address crash when OpenGL context resets, modifier keys clearing selection with kitty keyboard protocol enabled, glyph_offset.y not applied to strikeout, Enter/Tab/Backspace not disambiguated with shift in kitty keyboard's disambiguate mode, hint bindings not respecting IPC overrides, search matching a wrapping fullwidth character in the last column, crash when AppleFontSmoothing option is not present on macOS, origin mode (DECOM) not moving cursor to the origin point, unresponsiveness when spamming the bell character with a bell command enabled, window.startup_mode applied to existing window when opening a new tab on macOS, and slowdowns over time on macOS 26."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_16_1",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.16.1",
+      "tag_name": "v0.16.1",
+      "title": "Alacritty Version 0.16.1",
+      "time_hint": "2025-10-20",
+      "published_at": "2025-10-20T05:30:28Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.16.1",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.16.1\nTag: v0.16.1; draft: False; prerelease: False; published_at: 2025-10-20T05:30:28Z; created_at: 2025-10-20T05:28:57Z\nRelease notes:\n### Fixed\n- Crashes on GPUs with partial robustness support",
+      "memory_unit_text": "In the alacritty/alacritty release v0.16.1, the release notes fix crashes on GPUs with partial robustness support."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_17_0_rc1",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.17.0-rc1",
+      "tag_name": "v0.17.0-rc1",
+      "title": "Alacritty Version 0.17.0 Release Candidate 1",
+      "time_hint": "2026-03-21",
+      "published_at": "2026-03-21T01:58:28Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.17.0-rc1",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.17.0 Release Candidate 1\nTag: v0.17.0-rc1; draft: False; prerelease: True; published_at: 2026-03-21T01:58:28Z; created_at: 2026-03-21T01:51:40Z\nRelease notes:\n### Packaging\n- Fixed invalid logo SVG attributes\n- New `alacritty-escapes(7)` manpage\n- Removed broken flash capability from terminfo\n### Added\n- Ability to bind `WheelUp` and `WheelDown` in `mouse.bindings`\n- Support TOML 1.1 syntax\n- `window.resize_increments` support on Wayland\n### Changed\n- Don't highlight hints on hover when the mouse cursor is hidden\n- IME is disabled in Vi mode on X11\n- Require explicit tap to enable IME with touch input\n- Use built-in font for block elements symbols from `U+1FB82` to `U+1FB8B`\n### Fixed\n- Brief error popup when saving the config file with some editors\n- Subprocesses on OpenBSD now run with their CWD set to that of the shell's foreground process.\n- Crash when OpenGL context resets\n- Crash when committing text with some IMEs on macOS\n- Signal termination skipping resource cleanup",
+      "memory_unit_text": "In the alacritty/alacritty release v0.17.0-rc1, the release notes fix invalid logo SVG attributes, add new alacritty-escapes(7) manpage, remove broken flash capability from terminfo, add ability to bind WheelUp and WheelDown in mouse.bindings, support TOML 1.1 syntax, window.resize_increments support on Wayland. Changes include don't highlight hints on hover when the mouse cursor is hidden, IME is disabled in Vi mode on X11, require explicit tap to enable IME with touch input, and use built-in font for block elements symbols from U+1FB82 to U+1FB8B. Fixes address brief error popup when saving the config file with some editors, subprocesses on OpenBSD now run with their CWD set to that of the shell's foreground process, crash when OpenGL context resets, crash when committing text with some IMEs on macOS, and signal termination skipping resource cleanup."
+    },
+    {
+      "memory_node_id": "alacritty__alacritty__release__v0_17_0",
+      "repo": "alacritty/alacritty",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.17.0",
+      "tag_name": "v0.17.0",
+      "title": "Alacritty Version 0.17.0",
+      "time_hint": "2026-04-06",
+      "published_at": "2026-04-06T19:24:18Z",
+      "source_url": "https://github.com/alacritty/alacritty/releases/tag/v0.17.0",
+      "raw_text": "Repository: alacritty/alacritty\nRelease: Alacritty Version 0.17.0\nTag: v0.17.0; draft: False; prerelease: False; published_at: 2026-04-06T19:24:18Z; created_at: 2026-04-06T19:21:07Z\nRelease notes:\n### Packaging\n- Fixed invalid logo SVG attributes\n- New `alacritty-escapes(7)` manpage\n- Removed broken flash capability from terminfo\n### Added\n- Ability to bind `WheelUp` and `WheelDown` in `mouse.bindings`\n- Support TOML 1.1 syntax\n- `window.resize_increments` support on Wayland\n### Changed\n- Don't highlight hints on hover when the mouse cursor is hidden\n- IME is disabled in Vi mode on X11\n- Require explicit tap to enable IME with touch input\n- Use built-in font for block elements symbols from `U+1FB82` to `U+1FB8B`\n### Fixed\n- Brief error popup when saving the config file with some editors\n- Subprocesses on OpenBSD now run with their CWD set to that of the shell's foreground process.\n- Crash when OpenGL context resets\n- Crash when committing text with some IMEs on macOS\n- Signal termination skipping resource cleanup",
+      "memory_unit_text": "In the alacritty/alacritty release v0.17.0, the release notes fix invalid logo SVG attributes, add new alacritty-escapes(7) manpage, remove broken flash capability from terminfo, add ability to bind WheelUp and WheelDown in mouse.bindings, support TOML 1.1 syntax, window.resize_increments support on Wayland. Changes include don't highlight hints on hover when the mouse cursor is hidden, IME is disabled in Vi mode on X11, require explicit tap to enable IME with touch input, and use built-in font for block elements symbols from U+1FB82 to U+1FB8B. Fixes address brief error popup when saving the config file with some editors, subprocesses on OpenBSD now run with their CWD set to that of the shell's foreground process, crash when OpenGL context resets, crash when committing text with some IMEs on macOS, and signal termination skipping resource cleanup."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the alacritty/alacritty releases, which release adds support for fractional scaling on Wayland with wp-fractional-scale protocol?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.12.0"
+        },
+        {
+          "option_id": "B",
+          "text": "v0.13.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v0.14.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v0.15.0"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v0.12.0",
+      "source_chunk_ids": [
+        "alacritty__alacritty__release__v0_12_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "alacritty__alacritty__release__v0_12_0",
+          "answer_text": "support for fractional scaling on Wayland with wp-fractional-scale protocol"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the alacritty/alacritty releases, how does the configuration file format change described in v0.13.0 differ from the configuration-related change described in v0.14.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.13.0 switches from YAML to TOML, while v0.14.0 moves several config options to a new general section."
+        },
+        {
+          "option_id": "B",
+          "text": "v0.13.0 introduces TOML support, while v0.14.0 removes TOML support."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only add new keybindings without configuration changes."
+        },
+        {
+          "option_id": "D",
+          "text": "v0.13.0 deprecates all mouse bindings, while v0.14.0 restores YAML configuration."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v0.13.0 switches from YAML to TOML, while v0.14.0 moves several config options to a new general section.",
+      "source_chunk_ids": [
+        "alacritty__alacritty__release__v0_13_0",
+        "alacritty__alacritty__release__v0_14_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "alacritty__alacritty__release__v0_13_0",
+          "answer_text": "Configuration file now uses TOML instead of YAML"
+        },
+        {
+          "memory_node_id": "alacritty__alacritty__release__v0_14_0",
+          "answer_text": "Moved config options import, working_directory, live_config_reload, and ipc_socket to the new general section"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the alacritty/alacritty release window, order the following release-content states from earliest to latest: (1) a release that adds support for pasting in Vi + Search mode, (2) a release that adds headless mode using alacritty --daemon, (3) a release that adds config option window.level = \"AlwaysOnTop\".",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3",
+      "source_chunk_ids": [
+        "alacritty__alacritty__release__v0_13_1",
+        "alacritty__alacritty__release__v0_14_0",
+        "alacritty__alacritty__release__v0_15_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "alacritty__alacritty__release__v0_13_1",
+          "answer_text": "add support for pasting in Vi + Search mode"
+        },
+        {
+          "memory_node_id": "alacritty__alacritty__release__v0_14_0",
+          "answer_text": "add headless mode using alacritty --daemon"
+        },
+        {
+          "memory_node_id": "alacritty__alacritty__release__v0_15_0",
+          "answer_text": "add config option window.level = \"AlwaysOnTop\""
+        }
+      ]
+    }
+  ]
+}

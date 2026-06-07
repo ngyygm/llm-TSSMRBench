@@ -1,0 +1,525 @@
+{
+  "prototype_id": "songquanpeng__one_api_release_window",
+  "domain": "github_release_evolution",
+  "repo": "songquanpeng/one-api",
+  "source_type": "release_note",
+  "window_title": "songquanpeng/one-api recent release evolution",
+  "window_summary": "This window tracks the recent songquanpeng/one-api release stream from v0.4.3 to v0.6.10, covering new model integrations, channel management features, UI improvements, and bug fixes.",
+  "chunks": [
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_4_3",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.3",
+      "tag_name": "v0.4.3",
+      "title": "v0.4.3",
+      "time_hint": "2023-06-14",
+      "published_at": "2023-06-14T04:56:31Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.4.3",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.4.3\nTag: v0.4.3; draft: False; prerelease: False; published_at: 2023-06-14T04:56:31Z; created_at: 2023-06-14T04:52:56Z\nRelease notes:\n## 更新内容\n1. 支持了 OpenAI 新放出的模型。\n2. 支持了通道设置多个分组（#153）。\n3. 支持了获取 OpenAI-SB 通道的余额（#125）。\n4. 更新了默认倍率，以与官方匹配。\n5. 修复了分组列表不正确的问题（#147）。\n6. 修复了部分接口的 input 字段不支持列表类型的问题（#149）。\n## 其他\n第三个的实现基于 @quzard 的 PR（#146）。\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.4.2...v0.4.3",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.4.3, the project adds support for newly released OpenAI models, allows channels to be assigned to multiple groups, supports fetching balance for OpenAI-SB channels, updates default multipliers to match official values, fixes an incorrect group list issue, and resolves a problem where the input field of some interfaces did not support list types."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_4_4",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.4",
+      "tag_name": "v0.4.4",
+      "title": "v0.4.4",
+      "time_hint": "2023-06-17",
+      "published_at": "2023-06-17T03:20:46Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.4.4",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.4.4\nTag: v0.4.4; draft: False; prerelease: False; published_at: 2023-06-17T03:20:46Z; created_at: 2023-06-17T03:03:01Z\nRelease notes:\n## 更新内容\n1. 支持了关闭额度消耗记录（#156）。\n2. 支持了记录用户的已消耗额度和请求次数（#165）。\n3. 支持了记录渠道的已消耗额度（#137）。\n4. 支持了更新 AI Proxy 渠道的账户余额（#171，by @adevjoe）。\n5. 支持了返回显式的错误信息如果请求了错误的 API 端点。\n6. 修复了 Azure 未适配 `0613` 版本的问题（#163，by @quzard ）。\n7. 修复了 `prompt` 字段不兼容列表类型的问题（#166，#167，by @assert6 ）。\n8. 修复了页脚未能及时更新的问题。\n9. 新增了部署到 Zeabur 的教程（#170，by @LeslieLeung ）。\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.4.3...v0.4.4",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.4.4, the project adds the ability to disable quota consumption logging, record user consumed quota and request count, record channel consumed quota, update AI Proxy channel account balance, return explicit error messages for wrong API endpoints, fix Azure adaptation for the 0613 version, fix prompt field incompatibility with list types, fix a footer update issue, and add a deployment tutorial for Zeabur."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_4_5",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.5",
+      "tag_name": "v0.4.5",
+      "title": "v0.4.5",
+      "time_hint": "2023-06-19",
+      "published_at": "2023-06-19T02:37:33Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.4.5",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.4.5\nTag: v0.4.5; draft: False; prerelease: False; published_at: 2023-06-19T02:37:33Z; created_at: 2023-06-19T02:04:38Z\nRelease notes:\n## 更新内容\n1. 支持了邀请码（#75）。\n2. 支持了嵌入聊天页面（#70）。\n3. 支持了在消耗日志中记录令牌名称（#172，by @miniers）。\n4. 支持了 API2GPT 平台（#173，by @kidultx）。\n5. 更改了 CORS 设置，现在可以在 ChatGPT-Next-Web 中直接在浏览器端请求 One API 了。\n6. 更改了 fallback 模型倍率，现在为 30。\n7. 更新了 UI，现在其显示更为紧凑。\n8. 更新了设置页面，现在运营设置单独成页。\n9. 修复了 SQL 语句中使用了错误的字段名的问题。\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.4.4...v0.4.5",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.4.5, the project introduces invitation codes, embedded chat page support, token name recording in consumption logs, API2GPT platform support, CORS setting changes for direct browser requests from ChatGPT-Next-Web, a fallback model multiplier change to 30, a more compact UI, a separate operations settings page, and a fix for an incorrect SQL field name."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_4_6",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.6",
+      "tag_name": "v0.4.6",
+      "title": "v0.4.6",
+      "time_hint": "2023-06-23",
+      "published_at": "2023-06-23T12:43:02Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.4.6",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.4.6\nTag: v0.4.6; draft: False; prerelease: False; published_at: 2023-06-23T12:43:02Z; created_at: 2023-06-23T12:14:53Z\nRelease notes:\n## 更新内容\n1. 支持了使用缓存来避免在响应返回前请求数据库，以减少多机部署时访问数据库的延迟造成的用户响应延迟（#158）。\n2. 支持了以美元为单位显示额度。\n3. 支持了为所有通道设置镜像地址。\n4. 支持了自动测试通道可用性以及更新余额（#11，#59）。\n5. 支持了通过密钥来搜索通道（#185）。\n6. 支持了在 billing API 中返回令牌相关的信息，而非用户的信息（#186）。\n7. 修复了通道表的排序问题（#188，by @quzard）。\n## 不兼容的改动\n现在使用 `NODE_TYPE` 环境变量来指示是否是主节点。\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.4.5...v0.4.6",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.4.6, the project adds caching to avoid database requests before response return, reducing latency in multi-node deployments; supports displaying quota in USD; allows setting a mirror address for all channels; supports automatic channel availability testing and balance updates; supports searching channels by key; returns token-related information in the billing API; fixes a channel table sorting issue; and introduces the NODE_TYPE environment variable to indicate the master node."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_4_7",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.7",
+      "tag_name": "v0.4.7",
+      "title": "v0.4.7",
+      "time_hint": "2023-06-25",
+      "published_at": "2023-06-25T02:48:53Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.4.7",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.4.7\nTag: v0.4.7; draft: False; prerelease: False; published_at: 2023-06-25T02:48:53Z; created_at: 2023-06-25T02:40:54Z\nRelease notes:\n## 更新内容\n1. 新增了记录以及展示令牌的额度用量。\n2. 新增了日志查询功能（#144）。\n3. 修复了状态码与 OpenAI 不一致的问题（#193）。\n4. 修复了使用量 API 返回的值不正确的问题。\n5. 修复了表格的排序问题（#195，by @quzard ）。\n6. 修复了发生错误的情况下依然扣费的问题。\n7. 新增了英文支持，拉取 `justsong/one-api-en` 即可获取英文版本的程序。\n8. 新增了请求体校验，避免恶意用户以不消耗额度的方式进行攻击。\n9. 调整了 UI 的样式。\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.4.6...v0.4.7",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.4.7, the project adds recording and displaying token quota usage, a log query function, fixes status code inconsistency with OpenAI, fixes incorrect usage API return values, fixes table sorting, fixes charging on error, adds English support via a separate image, adds request body validation to prevent attacks without consuming quota, and adjusts UI styles."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_4_8",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.8",
+      "tag_name": "v0.4.8",
+      "title": "v0.4.8",
+      "time_hint": "2023-06-29",
+      "published_at": "2023-06-29T02:57:42Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.4.8",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.4.8\nTag: v0.4.8; draft: False; prerelease: False; published_at: 2023-06-29T02:57:42Z; created_at: 2023-06-28T05:38:09Z\nRelease notes:\n## 更新内容\n1. 支持了 `/v1/edits` 接口（#196）。\n2. 支持了模型映射，现在可以重定向用户的请求模型了。\n3. 修复了被禁用的通道也加载到缓存里的问题（#201，by @mrhaoji ）。\n4. 修复了启用缓存的情况下存在的超额度使用的问题（#204）。\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.4.7...v0.4.8",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.4.8, the project adds support for the /v1/edits endpoint, model mapping to redirect user request models, fixes an issue where disabled channels were loaded into cache, and fixes an over-quota usage problem when caching is enabled."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_4_9",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.9",
+      "tag_name": "v0.4.9",
+      "title": "v0.4.9",
+      "time_hint": "2023-07-15",
+      "published_at": "2023-07-15T04:34:58Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.4.9",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.4.9\nTag: v0.4.9; draft: False; prerelease: False; published_at: 2023-07-15T04:34:58Z; created_at: 2023-07-15T03:49:58Z\nRelease notes:\n## 更新内容\n1. 新增了记录以及展示令牌的额度用量。\n2. 新增了日志查询功能（#238）。\n3. 修复了状态码与 OpenAI 不一致的问题（#230）。\n4. 修复了使用量 API 返回的值不正确的问题。\n5. 修复了表格的排序问题（#229）。\n6. 修复了发生错误的情况下依然扣费的问题。\n7. 新增了英文支持，拉取 `justsong/one-api-en` 即可获取英文版本的程序。\n8. 新增了请求体校验，避免恶意用户以不消耗额度的方式进行攻击。\n9. 调整了 UI 的样式。\n10. 新增了支持通过 CloseAI 查询余额的功能（#240）。\n11. 新增了模型参数到 time_test 脚本中（#245）。\n12. 更新了渠道添加和编辑页面的样式。\n13. 移除了 UsersTable 中的邮箱以腾出其他字段的位置（#246）。\n14. 新增了令牌近似计算功能（#207）。\n15. 修复了 HTTP2 连接请求头的问题。\n16. 新增了账户停用时禁用渠道的功能（#271）。\n17. 使用事务保护赎回过程，确保数据一致性。\n18. 恢复了之前删除的 display_name/username 字段（#268）。\n19. 更新了国际化支持（#262）。\n20. 更新了 README 文档。\n21. 修复了恢复令牌过程中的显示问题（#257）。\n请注意，这个发布说明是根据提交信息生成的，如果有任何遗漏或错误之处，欢迎提供反馈。\n## New Contributors\n* @anhao made their first contribution in https://github.com/songquanpeng/one-api/pull/220\n* @diemus made their first contribution in https://github.com/songquanpeng/one-api/pull/240\n* @ckt1031 made their first contribution in https://github.com/songquanpeng/one-api/pull/262\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.4.8...v0.4.9",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.4.9, the project adds recording and displaying token quota usage, a log query function, fixes status code inconsistency with OpenAI, fixes incorrect usage API return values, fixes table sorting, fixes charging on error, adds English support, adds request body validation, adjusts UI styles, adds CloseAI balance query, adds model parameters to the time_test script, updates channel add/edit page styles, removes email from UsersTable, adds approximate token calculation, fixes HTTP2 connection header issues, adds channel disabling on account suspension, uses transactions for redemption, restores display_name/username fields, updates internationalization, updates README, and fixes a display issue during token restoration."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_5_0",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.5.0",
+      "tag_name": "v0.5.0",
+      "title": "v0.5.0",
+      "time_hint": "2023-07-23",
+      "published_at": "2023-07-23T15:36:53Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.5.0",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.5.0\nTag: v0.5.0; draft: False; prerelease: False; published_at: 2023-07-23T15:36:53Z; created_at: 2023-07-23T15:23:56Z\nRelease notes:\n## 更新内容\n1. 新增了对 `/v1/engines/text-embedding-ada-002/embeddings` 的支持（#224）。\n2. 初步支持 Dall-E（#148, #266，by @ckt1031, @playniuniu）。\n3. 新增了登录表单的闸机（#263，by @ckt1031）。\n4. 现在支持自定义模型（#276）。\n5. 合并了主分支的代码。\n6. 取消了登录时的闸机检查。\n7. 现在支持 ChatGLM2（#274）。\n8. 对失败的情况进行重试（#112）。\n9. 更新了 README 文档。\n10. 让订阅 API 与官方 API 兼容。\n11. 现在支持 Claude（#150）。\n12. 重构了 Claude 相关的代码。\n13. 重构了 OpenAI 相关的代码。\n14. 使用白名单在禁用通道时（#292）。\n15. 修复了模型编辑不正常的问题（#288）。\n16. 现在支持百度的模型（#286）。\n17. 新增了对百度的通知。\n18. 现在支持 Google 的 PaLM2（#105）。\n19. 修复了 PaLM2 未计费的问题。\n20. 在错误消息中新增了更多的上下文。\n21. 现在支持 Zhipu 的 ChatGLM（#289）。\n22. 调整了通道配置页面。\n23. 更新了通道配置页面的提示。\n24. 优化了前端（#293，by @yangfan-sys）。\n25. 能够自行删除账户（#294，by @ckt1031）。\n26. 在订阅 API 中新增了 access_until 字段（#295，by @ckt1031）。\n27. 重用 HTTP 客户端以减少延迟。\n28. 修复了刷新后的空白屏幕问题。\n29. 不再硬编码缓存时间（#302）。\n30. 修复了在某些情况下可以多次使用兑换的问题。\n31. 当前通道类型不支持测试时，向用户发送通知。\n请注意，这个发布说明是根据提交信息生成的，如果有任何遗漏或错误之处，欢迎提供反馈。\n## New Contributors\n* @playniuniu made their first contribution in https://github.com/songquanpeng/one-api/pull/224\n* @yangfan-sys made their first contribution in https://github.com/songquanpeng/one-api/pull/293\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.4.9...v0.5.0",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.5.0, the project adds support for /v1/engines/text-embedding-ada-002/embeddings, preliminary Dall-E support, a login form turnstile, custom models, ChatGLM2, retry on failure, Claude support, Baidu model support, Google PaLM2 support, Zhipu ChatGLM support, subscription API compatibility with the official API, a whitelist for disabling channels, model editing fix, channel configuration page adjustments, frontend optimization, self-service account deletion, access_until field in subscription API, HTTP client reuse, removal of hardcoded cache time, fix for multiple redemption, and notification when channel type does not support testing."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_5_1",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.5.1",
+      "tag_name": "v0.5.1",
+      "title": "v0.5.1",
+      "time_hint": "2023-07-29",
+      "published_at": "2023-07-29T11:54:49Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.5.1",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.5.1\nTag: v0.5.1; draft: False; prerelease: False; published_at: 2023-07-29T11:54:49Z; created_at: 2023-07-29T11:32:06Z\nRelease notes:\n## 更新内容\n1. 新增了对阿里的大模型的支持（#326）。\n2. 新增了对百度的 embedding model 的支持（#324）。\n3. 修复了 relay router 的 List models 类型错误（#320）。\n4. 修复了 APITypePaLM 中 baseURL 无效的问题（#317，by @mrhaoji）。\n5. 修复了使用频道类型确定 api 类型的问题（#321）。\n6. 修复了将系统消息转换为用户消息的问题（#328）。\n7. 修复了针对 claude 的系统消息到用户消息的转换。\n8. 修复了针对 zhipu 的系统消息到用户消息的转换。\n10. 更新了 README 文档。\n12. 调整了在切换类型时自动添加相关模型的功能。\n13. 修复了模型映射无法删除的问题。\n14. 调整了 UI 的样式。\n请注意，这个发布说明是根据提交信息生成的，如果有任何遗漏或错误之处，欢迎提供反馈。\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.5.0...v0.5.1",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.5.1, the project adds support for Alibaba's large models, Baidu's embedding model, fixes a relay router List models type error, fixes an invalid baseURL in APITypePaLM, fixes using channel type to determine API type, fixes system message to user message conversion for Claude and Zhipu, updates README, adjusts auto-adding related models on type switch, fixes model mapping deletion, and adjusts UI styles."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_5_2",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.5.2",
+      "tag_name": "v0.5.2",
+      "title": "v0.5.2",
+      "time_hint": "2023-08-06",
+      "published_at": "2023-08-06T13:45:29Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.5.2",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.5.2\nTag: v0.5.2; draft: False; prerelease: False; published_at: 2023-08-06T13:45:29Z; created_at: 2023-08-06T10:14:13Z\nRelease notes:\n## 更新内容\n1. 更新了 i18n。\n2. 新增了对讯飞的 llm 的支持（#206）。\n3. 更新了讯飞的提示。\n4. 更新了讯飞的标题。\n5. 重构了与账单相关的代码。\n6. 修复了响应结束时未关闭连接的问题。\n7. 修复了用户无法进行频道测试的问题。\n8. 修复了数据没有正确前缀时被忽略的问题。\n9. 新增了支持电子邮件域名白名单功能（#337，by @ckt1031）。\n10. 修复了在某些情况下 sse 未能正确结束的问题。\n11. 更新了 README 文档。\n12. 修复了流相关问题（#349，by @glzjin）。\n13. 更新了在 sealos 上的部署文档（#351，by @a497625414）。\n14. 更新了 README 文档（#359，by @a497625414）。\n15. 修复了 SparkDesk 未被计费的问题（#344，by @glzjin）。\n16. 新增了复制 ama, opencat & chatgpt next web 的 scheme 功能（#343，by @miniers）。\n17. 修复了在非流模式下未给出使用量计算的问题（#352，by @glzjin）。\n18. 修复了流模式确定相关逻辑的问题（#360）。\n19. 更新了域名。\n请注意，这个发布说明是根据提交信息生成的，如果有任何遗漏或错误之处，欢迎提供反馈。\n## New Contributors\n* @glzjin made their first contribution in https://github.com/songquanpeng/one-api/pull/349\n* @a497625414 made their first contribution in https://github.com/songquanpeng/one-api/pull/351\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.5.1...v0.5.2",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.5.2, the project updates i18n, adds support for Xunfei LLM, refactors billing-related code, fixes connection not closing on response end, fixes user channel testing, fixes data prefix ignoring, adds email domain whitelist, fixes SSE not ending correctly, updates README, fixes stream-related issues, updates Sealos deployment docs, fixes SparkDesk billing, adds scheme copy for AMA, OpenCat & ChatGPT Next Web, fixes non-stream usage calculation, fixes stream mode determination logic, and updates the domain."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_5_3",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.5.3",
+      "tag_name": "v0.5.3",
+      "title": "v0.5.3",
+      "time_hint": "2023-08-26",
+      "published_at": "2023-08-26T04:43:30Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.5.3",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.5.3\nTag: v0.5.3; draft: False; prerelease: False; published_at: 2023-08-26T04:43:30Z; created_at: 2023-08-20T14:07:50Z\nRelease notes:\n## What's Changed\n* 优化UI交互，新增令牌页跳转聊天按钮 by @yangfan-sys in https://github.com/songquanpeng/one-api/pull/363\n* fastgpt desciption by @c121914yu in https://github.com/songquanpeng/one-api/pull/388\n* Fix: try to fix #161 by @glzjin in https://github.com/songquanpeng/one-api/pull/392\n* 修改描述 by @woodchen-ink in https://github.com/songquanpeng/one-api/pull/374\n* 部分优化 by @yangfan-sys in https://github.com/songquanpeng/one-api/pull/387\n* 统一接口的finish_reason字段 by @igophper in https://github.com/songquanpeng/one-api/pull/373\n* 封装流式传输响应头的设置 by @igophper in https://github.com/songquanpeng/one-api/pull/402\n* 【百度文心千帆】支持填写secretKey|apiKey，兼容accessToken，支持自动刷新accessToken by @igophper in https://github.com/songquanpeng/one-api/pull/400\n* 【百度文心千帆】文心千帆的向量模型接口问题（请求input是数组报错） by @igophper in https://github.com/songquanpeng/one-api/pull/398\n* ci: Add stage caching to Dockerfile by @Jungley8 in https://github.com/songquanpeng/one-api/pull/408\n* Add Japanese README by @eltociear in https://github.com/songquanpeng/one-api/pull/425\n* fix: Claude model ratio by @mrhaoji in https://github.com/songquanpeng/one-api/pull/449\n* feat: add toggleable visibility for total quota using an eye icon by @mrhaoji in https://github.com/songquanpeng/one-api/pull/448\n* 修复百度和阿里的计费问题 by @glzjin in https://github.com/songquanpeng/one-api/pull/444\n* 兼容讯飞v2接口 by @lvtao-net in https://github.com/songquanpeng/one-api/pull/442\n* fix: empty completion issue caused by bad status code from upstream c… by @mrhaoji in https://github.com/songquanpeng/one-api/pull/422\n* Fix xunfei crash by @glzjin in https://github.com/songquanpeng/one-api/pull/451\n## New Contributors\n* @woodchen-ink made their first contribution in https://github.com/songquanpeng/one-api/pull/374\n* @igophper made their first contribution in https://github.com/songquanpeng/one-api/pull/373\n* @Jungley8 made their first contribution in https://github.com/songquanpeng/one-api/pull/408\n* @eltociear made their first contribution in https://github.com/songquanpeng/one-api/pull/425\n* @lvtao-net made their first contribution in https://github.com/songquanpeng/one-api/pull/442\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.5.2...v0.5.3",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.5.3, the project optimizes UI interactions, adds a chat button on the token page, fixes an issue, modifies descriptions, unifies the finish_reason field across interfaces, encapsulates streaming response header settings, supports Baidu Wenxin Qianfan secretKey/apiKey and automatic accessToken refresh, fixes Baidu vector model interface issues, adds stage caching to Dockerfile, adds a Japanese README, fixes Claude model ratio, adds toggleable visibility for total quota, fixes billing for Baidu and Alibaba, adds compatibility with Xunfei v2 interface, fixes empty completion due to bad upstream status code, and fixes Xunfei crash."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_5_4",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.5.4",
+      "tag_name": "v0.5.4",
+      "title": "v0.5.4",
+      "time_hint": "2023-08-30",
+      "published_at": "2023-08-30T13:48:20Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.5.4",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.5.4\nTag: v0.5.4; draft: False; prerelease: False; published_at: 2023-08-30T13:48:20Z; created_at: 2023-08-27T08:16:45Z\nRelease notes:\n## What's Changed\n* 修复了使用模型重定向功能时，函数调用不正常的问题 by @shao0222 in https://github.com/songquanpeng/one-api/pull/462\n* 当收到 401 响应码时禁用渠道（#467）\n* 启动时初始化所有的 TokenEncoder 避免并发问题（#459）\n* 支持了 360 的大模型（#331）\n* 支持了 Whisper API 调用（#197）\n* 支持了 OpenRouter 渠道（#333）\n* 修复了错误信息未透传的问题（#468）\n## New Contributors\n* @shao0222 made their first contribution in https://github.com/songquanpeng/one-api/pull/462\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.5.3...v0.5.4",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.5.4, the project fixes function call issues when using model redirection, disables channels on 401 response, initializes all TokenEncoders at startup to avoid concurrency issues, adds support for 360's large model, Whisper API calls, and OpenRouter channel, and fixes error message passthrough."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_5_5",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.5.5",
+      "tag_name": "v0.5.5",
+      "title": "v0.5.5",
+      "time_hint": "2023-09-17",
+      "published_at": "2023-09-17T10:05:37Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.5.5",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.5.5\nTag: v0.5.5; draft: False; prerelease: False; published_at: 2023-09-17T10:05:37Z; created_at: 2023-09-17T09:19:12Z\nRelease notes:\n## What's Changed\n* 支持阿里的 embedding 模型 by @igophper in https://github.com/songquanpeng/one-api/pull/481\n*  支持了数据库聚合更新，可显著减轻数据库压力（#414）\n* 支持了通过环境变量设置请求频率限制（#477）\n* 支持了在后台删除历史消耗日志（#486）\n* 改进了日志输出，默认开启且当记录数过多时自动切换文件，且同时记录了 request id 以便于 debug\n* 修复了日志列表页面偶现的渲染 bug\n* 修复了渠道编辑页面输入自定义名称时按 Enter 会导致页面返回的问题\n* 修复了发生错误时预扣费未返还的问题（#518）\n* 修复了 GitHub OAuth2 客户端实现未校验 state 字段的问题\n* 修复了自定义 chat link 时未传递 url 的问题\n## New Contributors\n* @RockChinQ made their first contribution in https://github.com/songquanpeng/one-api/pull/522\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.5.4...v0.5.5",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.5.5, the project adds support for Alibaba's embedding model, database aggregation updates to reduce database pressure, request rate limiting via environment variables, background deletion of historical consumption logs, improved logging with automatic file switching and request ID recording, fixes a rendering bug on the log list page, fixes the channel edit page Enter key issue, fixes pre-consumed quota not being returned on error, fixes GitHub OAuth2 state validation, and fixes custom chat link URL passing."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_5_6",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.5.6",
+      "tag_name": "v0.5.6",
+      "title": "v0.5.6",
+      "time_hint": "2023-10-02",
+      "published_at": "2023-10-02T04:24:07Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.5.6",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.5.6\nTag: v0.5.6; draft: False; prerelease: False; published_at: 2023-10-02T04:24:07Z; created_at: 2023-10-02T04:13:30Z\nRelease notes:\n## What's Changed\n* 讯飞支持非 stream 模式 by @igophper in https://github.com/songquanpeng/one-api/pull/498\n* 支持设置渠道优先级 & 日志中显示使用的渠道 ID by @xyfacai in https://github.com/songquanpeng/one-api/pull/484\n* NULL 转换 int 时出现不支持的错误 by @igophper in https://github.com/songquanpeng/one-api/pull/541\n* 修复了无法取消设置 base url 和 model mapping 的问题\n* 增加了对 `gpt-3.5-turbo-instruct` 的支持（#545）\n* 更新了阿里的模型名称\n* 优化了 token encoder 初始化逻辑，减少了内存占用（#566）\n* 现在如果检测到超级管理员用户使用默认密码登录会直接跳转修改密码页面（#526）\n* 修复了预扣费时未检查额度为负的问题\n## New Contributors\n* @xyfacai made their first contribution in https://github.com/songquanpeng/one-api/pull/484\n* @redreamality made their first contribution in https://github.com/songquanpeng/one-api/pull/502\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.5.5...v0.5.6",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.5.6, the project adds Xunfei non-stream mode support, channel priority setting and channel ID display in logs, fixes a NULL to int conversion error, fixes inability to unset base URL and model mapping, adds support for gpt-3.5-turbo-instruct, updates Alibaba model names, optimizes token encoder initialization to reduce memory usage, redirects to password change if default admin password is detected, and fixes pre-consumed quota not checking for negative balance."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_5_7",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.5.7",
+      "tag_name": "v0.5.7",
+      "title": "v0.5.7",
+      "time_hint": "2023-11-05",
+      "published_at": "2023-11-05T11:21:21Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.5.7",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.5.7\nTag: v0.5.7; draft: False; prerelease: False; published_at: 2023-11-05T11:21:21Z; created_at: 2023-10-29T14:03:01Z\nRelease notes:\n## What's Changed\n* chore(deps): bump golang.org/x/net from 0.10.0 to 0.17.0 by @dependabot in https://github.com/songquanpeng/one-api/pull/591\n* fix: 404 Component is missing by @dirname in https://github.com/songquanpeng/one-api/pull/592\n* 解决令牌页面聊天按钮丢失url参数的问题 by @zp96324511 in https://github.com/songquanpeng/one-api/pull/562\n* fix: docker compose healthcheck failed by @aoaostar in https://github.com/songquanpeng/one-api/pull/593\n* 更新缓存目录配置文档 by @jsubnew in https://github.com/songquanpeng/one-api/pull/612\n* update route for Cloudflare AI gateway for OpenAI models test, image, audio. by @v1cc0 in https://github.com/songquanpeng/one-api/pull/607\n* fix: 通义千问,流式调用不成功(在fastgpt里通过one-api调用);优化在国内构建镜像体验(设置镜像) by @yiGmMk in https://github.com/songquanpeng/one-api/pull/615\n* fix postgresql support by @ImSingee in https://github.com/songquanpeng/one-api/pull/606\n* 适配讯飞星火 v3 版本 by @MaricoHan in https://github.com/songquanpeng/one-api/pull/637\n## New Contributors\n* @dirname made their first contribution in https://github.com/songquanpeng/one-api/pull/592\n* @zp96324511 made their first contribution in https://github.com/songquanpeng/one-api/pull/562\n* @aoaostar made their first contribution in https://github.com/songquanpeng/one-api/pull/593\n* @jsubnew made their first contribution in https://github.com/songquanpeng/one-api/pull/612\n* @v1cc0 made their first contribution in https://github.com/songquanpeng/one-api/pull/607\n* @yiGmMk made their first contribution in https://github.com/songquanpeng/one-api/pull/615\n* @ImSingee made their first contribution in https://github.com/songquanpeng/one-api/pull/606\n* @MaricoHan made their first contribution in https://github.com/songquanpeng/one-api/pull/637\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.5.6...v0.5.7",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.5.7, the project bumps golang.org/x/net, fixes a missing 404 component, fixes missing URL parameters on the token page chat button, fixes Docker Compose healthcheck, updates cache directory configuration docs, updates route for Cloudflare AI gateway, fixes Tongyi Qianwen streaming issues and optimizes Docker build in China, fixes PostgreSQL support, and adapts to Xunfei Spark v3."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_5_8",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.5.8",
+      "tag_name": "v0.5.8",
+      "title": "v0.5.8",
+      "time_hint": "2023-11-24",
+      "published_at": "2023-11-24T12:43:21Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.5.8",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.5.8\nTag: v0.5.8; draft: False; prerelease: False; published_at: 2023-11-24T12:43:21Z; created_at: 2023-11-19T10:38:54Z\nRelease notes:\n## What's Changed\n* fix: model.go for typos by @BaksiLi in https://github.com/songquanpeng/one-api/pull/651\n* feat: support chatglm_turbo by @prnake in https://github.com/songquanpeng/one-api/pull/648\n* 当使用Cloudflare AI Gateway时，支持openai渠道测试 by @woodchen-ink in https://github.com/songquanpeng/one-api/pull/639\n* fix: change quota calc code (close #599) by @wzxjohn in https://github.com/songquanpeng/one-api/pull/627\n* feat: sync pricing for new 1106 models by @dirname in https://github.com/songquanpeng/one-api/pull/696\n* fix: Numeric Sorting in Tables by @BaksiLi in https://github.com/songquanpeng/one-api/pull/695\n* Add deploy to Zeabur button by @MichaelYuhe in https://github.com/songquanpeng/one-api/pull/693\n* feat: Add improve docker-compose.yml and support fast startup by @qingfengfenga in https://github.com/songquanpeng/one-api/pull/685\n* fix: Incorrect column name on log search by @Kxzuir in https://github.com/songquanpeng/one-api/pull/681\n* bugfix for #515 最新版本谷歌PaLM模型无法使用 by @mylxsw in https://github.com/songquanpeng/one-api/pull/667\n* DALL·E 3, DALL·E 3 HD, DALL·E 2 支持、减少模型混淆以及更好的处理图像中继的代码逻辑 by @ckt1031 in https://github.com/songquanpeng/one-api/pull/679\n* 支持最新的 OpenAI TTS 模型 by @ckt1031 in https://github.com/songquanpeng/one-api/pull/713\n* fix: cloudflare test & expose detailed info about test failures by @dirname in https://github.com/songquanpeng/one-api/pull/715\n* 🐛 Fix cloudflare gateway request failure by @MartialBE in https://github.com/songquanpeng/one-api/pull/666\n* fix: Skip JSON deserialization when accessing transcriptions and translations. by @techotaku in https://github.com/songquanpeng/one-api/pull/718\n## New Contributors\n* @BaksiLi made their first contribution in https://github.com/songquanpeng/one-api/pull/651\n* @prnake made their first contribution in https://github.com/songquanpeng/one-api/pull/648\n* @wzxjohn made their first contribution in https://github.com/songquanpeng/one-api/pull/627\n* @MichaelYuhe made their first contribution in https://github.com/songquanpeng/one-api/pull/693\n* @qingfengfenga made their first contribution in https://github.com/songquanpeng/one-api/pull/685\n* @Kxzuir made their first contribution in https://github.com/songquanpeng/one-api/pull/681\n* @mylxsw made their first contribution in https://github.com/songquanpeng/one-api/pull/667\n* @MartialBE made their first contribution in https://github.com/songquanpeng/one-api/pull/666\n* @techotaku made their first contribution in https://github.com/songquanpeng/one-api/pull/718\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.5.7...v0.5.8",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.5.8, the project fixes model typos, adds chatglm_turbo support, supports OpenAI channel testing with Cloudflare AI Gateway, fixes quota calculation, syncs pricing for new 1106 models, fixes numeric sorting in tables, adds a deploy to Zeabur button, improves docker-compose for fast startup, fixes incorrect column name on log search, fixes Google PaLM model usage, adds DALL·E 3, DALL·E 3 HD, DALL·E 2 support with better image relay logic, supports the latest OpenAI TTS models, fixes Cloudflare test and exposes detailed test failure info, fixes Cloudflare gateway request failure, and skips JSON deserialization for transcriptions and translations."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_5_9",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.5.9",
+      "tag_name": "v0.5.9",
+      "title": "v0.5.9",
+      "time_hint": "2023-12-10",
+      "published_at": "2023-12-10T11:53:49Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.5.9",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.5.9\nTag: v0.5.9; draft: False; prerelease: False; published_at: 2023-12-10T11:53:49Z; created_at: 2023-12-03T12:45:11Z\nRelease notes:\n## What's Changed\n* feat: 删除relay-text中的consumeQuota变量 by @igophper in https://github.com/songquanpeng/one-api/pull/738\n* feat: 发送邮件时添加 Message-ID  by @ShinChven in https://github.com/songquanpeng/one-api/pull/732\n* 修复自建邮箱发送错误: INVALID HEADER Missing required header field: \"Date\" by @YOMIkio in https://github.com/songquanpeng/one-api/pull/742\n* feat: Support Azure OpenAI Whisper. by @techotaku in https://github.com/songquanpeng/one-api/pull/720\n* 兼容 Azure dall-e-3 模型 by @ShinChven in https://github.com/songquanpeng/one-api/pull/754\n* Fix \"invalidPayload\" error when request Azure dall-e-3 api without optional parameter by @simulacraliasing in https://github.com/songquanpeng/one-api/pull/764\n* 增加功能: 渠道 - 测试所有通道; 设置 - 运营设置 - 监控设置 - 成功时自动启用通道 by @YOMIkio in https://github.com/songquanpeng/one-api/pull/771\n## New Contributors\n* @ShinChven made their first contribution in https://github.com/songquanpeng/one-api/pull/732\n* @YOMIkio made their first contribution in https://github.com/songquanpeng/one-api/pull/742\n* @simulacraliasing made their first contribution in https://github.com/songquanpeng/one-api/pull/764\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.5.8...v0.5.9",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.5.9, the project removes a consumeQuota variable in relay-text, adds Message-ID to sent emails, fixes a self-built email sending error, adds Azure OpenAI Whisper support, makes Azure DALL-E 3 compatible, fixes an invalidPayload error for Azure DALL-E 3 without optional parameters, and adds channel test-all and auto-enable on success features."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_5_10",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.5.10",
+      "tag_name": "v0.5.10",
+      "title": "v0.5.10",
+      "time_hint": "2023-12-20",
+      "published_at": "2023-12-20T14:01:03Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.5.10",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.5.10\nTag: v0.5.10; draft: False; prerelease: False; published_at: 2023-12-20T14:01:03Z; created_at: 2023-12-20T13:45:33Z\nRelease notes:\n## What's Changed\n* feat: Refactor response parsing logic to support multiple formats by @igophper in https://github.com/songquanpeng/one-api/pull/782\n* gpt-4 vision计费方案 by @WqyJh in https://github.com/songquanpeng/one-api/pull/795\n* feat: add Google Gemini Pro support by @cnbeining in https://github.com/songquanpeng/one-api/pull/826\n* feat: reset image num to 1 when not given by @ye4293 in https://github.com/songquanpeng/one-api/pull/821\n* feat: able to set sqlite busy_timeout by @Calcium-Ion in https://github.com/songquanpeng/one-api/pull/818\n* feat: update ali relay implementation by @lichengwu in https://github.com/songquanpeng/one-api/pull/830\n* fix: Azure 渠道调用DALLE模型报错n_not_within_range by @ShinChven in https://github.com/songquanpeng/one-api/pull/775\n## New Contributors\n* @WqyJh made their first contribution in https://github.com/songquanpeng/one-api/pull/795\n* @cnbeining made their first contribution in https://github.com/songquanpeng/one-api/pull/826\n* @ye4293 made their first contribution in https://github.com/songquanpeng/one-api/pull/821\n* @Calcium-Ion made their first contribution in https://github.com/songquanpeng/one-api/pull/818\n* @lichengwu made their first contribution in https://github.com/songquanpeng/one-api/pull/830\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.5.9...v0.5.10",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.5.10, the project refactors response parsing to support multiple formats, adds gpt-4 vision billing, adds Google Gemini Pro support, resets image num to 1 when not given, allows setting SQLite busy_timeout, updates Alibaba relay implementation, and fixes an Azure DALL-E model error."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_5_11",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.5.11",
+      "tag_name": "v0.5.11",
+      "title": "v0.5.11",
+      "time_hint": "2024-01-14",
+      "published_at": "2024-01-14T06:10:03Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.5.11",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.5.11\nTag: v0.5.11; draft: False; prerelease: False; published_at: 2024-01-14T06:10:03Z; created_at: 2024-01-14T05:22:31Z\nRelease notes:\n## What's Changed\n* fix: gpt-4 vision 传入 base64 字符串图片时解析错误 by @MartialBE in https://github.com/songquanpeng/one-api/pull/858\n* feat: 改进阿里模型 stream 模式 & 使其支持联网搜索能力 by @moondie in https://github.com/songquanpeng/one-api/pull/856\n* chore(deps): bump golang.org/x/crypto from 0.14.0 to 0.17.0 by @dependabot in https://github.com/songquanpeng/one-api/pull/840\n* fix: fix SearchUsers not working if using PostgreSQL by @ImSingee in https://github.com/songquanpeng/one-api/pull/778\n* fix: openai response should contains `model` by @Laisky in https://github.com/songquanpeng/one-api/pull/841\n* feat: able to change gemini safety setting by @tisfeng in https://github.com/songquanpeng/one-api/pull/867\n* fix: base 64 encoded format support of gemini-pro-vision for field im… by @liuzl in https://github.com/songquanpeng/one-api/pull/878\n* feat: add support for davinci-002 and babbage-002 by @Tailen in https://github.com/songquanpeng/one-api/pull/888\n* fix: fix button copywriting by @seven-yu in https://github.com/songquanpeng/one-api/pull/880\n* fix: support base64 encoded image_url for gemini-pro-vision by @Laisky in https://github.com/songquanpeng/one-api/pull/872\n* fix: fix token validation exception handling by @seven-yu in https://github.com/songquanpeng/one-api/pull/901\n* 一个现代化的web UI界面 by @MartialBE in https://github.com/songquanpeng/one-api/pull/860\n* fix: fix some issues with berry by @MartialBE in https://github.com/songquanpeng/one-api/pull/913\n* fix: fix bugs with theme berry by @MartialBE in https://github.com/songquanpeng/one-api/pull/931\n## New Contributors\n* @moondie made their first contribution in https://github.com/songquanpeng/one-api/pull/856\n* @Laisky made their first contribution in https://github.com/songquanpeng/one-api/pull/841\n* @tisfeng made their first contribution in https://github.com/songquanpeng/one-api/pull/867\n* @liuzl made their first contribution in https://github.com/songquanpeng/one-api/pull/878\n* @Tailen made their first contribution in https://github.com/songquanpeng/one-api/pull/888\n* @seven-yu made their first contribution in https://github.com/songquanpeng/one-api/pull/880\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.5.10...v0.5.11",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.5.11, the project fixes gpt-4 vision base64 image parsing, improves Alibaba model stream mode and adds web search capability, bumps golang.org/x/crypto, fixes SearchUsers for PostgreSQL, ensures OpenAI response contains model, allows changing Gemini safety settings, fixes base64 support for gemini-pro-vision, adds davinci-002 and babbage-002 support, fixes button copywriting, fixes token validation exception handling, introduces a modern web UI theme called Berry, and fixes several Berry theme issues."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_6_0",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.6.0",
+      "tag_name": "v0.6.0",
+      "title": "v0.6.0",
+      "time_hint": "2024-03-01",
+      "published_at": "2024-03-01T16:03:46Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.6.0",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.6.0\nTag: v0.6.0; draft: False; prerelease: False; published_at: 2024-03-01T16:03:46Z; created_at: 2024-02-26T14:52:16Z\nRelease notes:\n## What's Changed\n* fix: remove useless wrong index by @Calcium-Ion in https://github.com/songquanpeng/one-api/pull/916\n* refactor: refactor relay part by @songquanpeng in https://github.com/songquanpeng/one-api/pull/935\n* fix: aff not effective with berry by @MartialBE in https://github.com/songquanpeng/one-api/pull/937\n* refactor: refactor relay part by @songquanpeng in https://github.com/songquanpeng/one-api/pull/957\n* fix: fix primary chat button in berry theme by @yongman in https://github.com/songquanpeng/one-api/pull/951\n* feat: sync models with OpenAI by @mrhaoji in https://github.com/songquanpeng/one-api/pull/971\n* chore: update code implementation by @Laisky in https://github.com/songquanpeng/one-api/pull/978\n## New Contributors\n* @songquanpeng made their first contribution in https://github.com/songquanpeng/one-api/pull/935\n* @yongman made their first contribution in https://github.com/songquanpeng/one-api/pull/951\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.5.11...v0.6.0",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.6.0, the project removes a useless wrong index, refactors the relay part, fixes aff not effective with Berry theme, fixes the primary chat button in Berry theme, syncs models with OpenAI, and updates code implementation."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_6_1",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.6.1",
+      "tag_name": "v0.6.1",
+      "title": "v0.6.1",
+      "time_hint": "2024-03-10",
+      "published_at": "2024-03-10T11:53:06Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.6.1",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.6.1\nTag: v0.6.1; draft: False; prerelease: False; published_at: 2024-03-10T11:53:06Z; created_at: 2024-03-08T17:15:54Z\nRelease notes:\n## What's Changed\n1. 修复了版本号为空的问题；\n2. 支持了百川的模型；\n3. 支持了 MiniMax 的模型；\n4. 支持了 ChatGLM-4；\n5. 修复了 Azure 渠道的测试功能；\n6. 支持了 Mistral 的模型；\n7. 支持了在重试时切换到其他优先级的渠道；\n8. 修复了 Ali 的模型在 relay 到时候部分参数被 ignore 掉的问题；\n9. 当进行渠道测试的时候，如果 gpt-3.5-turbo 不在模型列表中，则使用模型列表中的第一个模型进行测试；\n## New Contributors\n* @momomobinx made their first contribution in https://github.com/songquanpeng/one-api/pull/1046\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.6.0...v0.6.1",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.6.1, the project fixes an empty version number issue, adds support for Baichuan models, MiniMax models, ChatGLM-4, Mistral models, fixes Azure channel testing, supports switching to other priority channels on retry, fixes Alibaba model relay ignoring some parameters, and uses the first model in the list for channel testing if gpt-3.5-turbo is not present."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_6_2",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.6.2",
+      "tag_name": "v0.6.2",
+      "title": "v0.6.2",
+      "time_hint": "2024-03-15",
+      "published_at": "2024-03-15T16:02:51Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.6.2",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.6.2\nTag: v0.6.2; draft: False; prerelease: False; published_at: 2024-03-15T16:02:51Z; created_at: 2024-03-14T16:55:28Z\nRelease notes:\n## What's Changed\n* 支持 Claude 3 系列模型\n* 现在渠道编辑页面可以直接填充与本渠道相关的全部模型了\n* 支持了 Groq 渠道\n* 删除了之前为国产大模型不支持 system 提示词时的兼容措施\n* 优化了 stream 模式下的错误检测\n* 现在渠道编辑页面可以直接搜索渠道类型与模型名称了\n* 现在用户被删除、封禁后将实时生效\n* 现在可以根据错误率自动禁用渠道了，需要手动开启，详见 README 中 METRIC 相关环境变量部分\n* 修复了开启 Turnstile 后用用户无法修改密码的问题\n* 现在支持通过 Message Pusher 将报警信息推送到各种 App 中了\n* 现在 One API 将自动为你补齐缺失的模型的倍率\n* 现在支持在渠道编辑页面传入大 key 了\n* 现在日志只会保存到一个文件中，除非重新启动\n* 现在会在 panic 时输出更多的信息以供 debug\n* 现在当缓存中用户额度过低时，会强制刷新缓存\n* 支持了 Ollama 渠道\n* 为百度渠道添加了更多的 Embeddable 模型支持\n* fix: model name typo by @sparanoid in https://github.com/songquanpeng/one-api/pull/1109\n* 修复百度模型中URL的字符串判断bug； by @Jguobao in https://github.com/songquanpeng/one-api/pull/1143\n* 修改AMA问天为BotGem(官方改名) by @afafw in https://github.com/songquanpeng/one-api/pull/934\n* Update OtherSetting.js by @yooyui in https://github.com/songquanpeng/one-api/pull/1148\n* chore(deps): bump google.golang.org/protobuf from 1.30.0 to 1.33.0 by @dependabot in https://github.com/songquanpeng/one-api/pull/1145\n* feat: add support for private registry in docker-compose.yml by @warjiang in https://github.com/songquanpeng/one-api/pull/1103\n## New Contributors\n* @sparanoid made their first contribution in https://github.com/songquanpeng/one-api/pull/1109\n* @Jguobao made their first contribution in https://github.com/songquanpeng/one-api/pull/1143\n* @afafw made their first contribution in https://github.com/songquanpeng/one-api/pull/934\n* @yooyui made their first contribution in https://github.com/songquanpeng/one-api/pull/1148\n* @warjiang made their first contribution in https://github.com/songquanpeng/one-api/pull/1103\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.6.1...v0.6.2",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.6.2, the project adds Claude 3 series model support, allows filling all related models in the channel edit page, adds Groq channel support, removes compatibility measures for domestic models not supporting system prompts, optimizes stream mode error detection, adds search for channel type and model name in the channel edit page, makes user deletion/banning effective in real-time, adds automatic channel disabling based on error rate (manual activation required), fixes user password change issue with Turnstile enabled, adds Message Pusher for alert notifications, automatically fills missing model multipliers, supports large key input in channel edit page, limits logs to a single file unless restarted, outputs more panic information for debugging, forces cache refresh when user quota is too low, adds Ollama channel support, adds more embeddable model support for Baidu, fixes a model name typo, fixes a Baidu model URL string judgment bug, renames AMA Wentian to BotGem, updates OtherSetting.js, bumps google.golang.org/protobuf, and adds private registry support in docker-compose.yml."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_6_3",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.6.3",
+      "tag_name": "v0.6.3",
+      "title": "v0.6.3",
+      "time_hint": "2024-03-24",
+      "published_at": "2024-03-24T15:45:48Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.6.3",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.6.3\nTag: v0.6.3; draft: False; prerelease: False; published_at: 2024-03-24T15:45:48Z; created_at: 2024-03-17T13:06:36Z\nRelease notes:\n## What's Changed\n* fix: 修复`berry`主题下`令牌`在`编辑`后点击`新建`弹窗值的初始化问题 by @yooyui in https://github.com/songquanpeng/one-api/pull/1165\n* fix: fix ratio of gpt-3.5-turbo (close #1011) by @mrhaoji in https://github.com/songquanpeng/one-api/pull/1163\n* fix: change Moonshot value to 25 by @zu1k in https://github.com/songquanpeng/one-api/pull/1158\n* chore(deps): bump github.com/jackc/pgx/v5 from 5.3.1 to 5.5.4 by @dependabot in https://github.com/songquanpeng/one-api/pull/1157\n* ZhiPuAI compatibility with the temperature topP parameter (0.0, 1) by @majian159 in https://github.com/songquanpeng/one-api/pull/1091\n* 零一万物的模型价格错误了 by @ye4293 in https://github.com/songquanpeng/one-api/pull/1182\n* feat: add user list sorting and pagination enhancements (#77, #602) by @mrhaoji in https://github.com/songquanpeng/one-api/pull/1178\n* fix: fix panel cards style(修复penal卡片高度不一致) by @shuiRong in https://github.com/songquanpeng/one-api/pull/1171\n* feat: support Azure OpenAI TTS. by @techotaku in https://github.com/songquanpeng/one-api/pull/1177\n* feat: update default API version for Azure OpenAI by @techotaku in https://github.com/songquanpeng/one-api/pull/994\n* docs: update README by @mrhaoji in https://github.com/songquanpeng/one-api/pull/1186\n## New Contributors\n* @zu1k made their first contribution in https://github.com/songquanpeng/one-api/pull/1158\n* @majian159 made their first contribution in https://github.com/songquanpeng/one-api/pull/1091\n* @shuiRong made their first contribution in https://github.com/songquanpeng/one-api/pull/1171\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.6.2...v0.6.3",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.6.3, the project fixes token edit/new popup initialization in Berry theme, fixes gpt-3.5-turbo ratio, changes Moonshot value to 25, bumps pgx dependency, makes ZhiPuAI temperature/topP parameters compatible, fixes 01.AI model pricing, adds user list sorting and pagination enhancements, fixes panel card height inconsistency, adds Azure OpenAI TTS support, updates default API version for Azure OpenAI, and updates README."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_6_4",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.6.4",
+      "tag_name": "v0.6.4",
+      "title": "v0.6.4",
+      "time_hint": "2024-03-30",
+      "published_at": "2024-03-30T02:50:28Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.6.4",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.6.4\nTag: v0.6.4; draft: False; prerelease: False; published_at: 2024-03-30T02:50:28Z; created_at: 2024-03-27T11:09:27Z\nRelease notes:\n## What's Changed\n* feat: 移除 azure model 的 TrimSuffix by @lgxisbb in https://github.com/songquanpeng/one-api/pull/1193\n* feat: 支持 ollama 的 embedding 接口 by @xietong in https://github.com/songquanpeng/one-api/pull/1221\n* fix: 修复了讯飞的错误处理\n* feat: 现在调用 /api/token 会返回创建的 token 的信息了\n* fix: 修复了 audio 相关接口的错误时未返还 quota 的问题\n* chore: 更新了主题 berry 的文案\n* fix: 修复了自动填充的模型列表不正确的问题\n* fix: 修复了在未启用缓存的情况下重试时依然使用最高优先级的问题\n## New Contributors\n* @lgxisbb made their first contribution in https://github.com/songquanpeng/one-api/pull/1193\n* @xietong made their first contribution in https://github.com/songquanpeng/one-api/pull/1221\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.6.3...v0.6.4",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.6.4, the project removes Azure model TrimSuffix, adds Ollama embedding interface support, fixes Xunfei error handling, makes /api/token return created token info, fixes audio interface error not returning quota, updates Berry theme copy, fixes auto-filled model list incorrectness, and fixes retry still using highest priority when caching is disabled."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_6_5",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.6.5",
+      "tag_name": "v0.6.5",
+      "title": "v0.6.5",
+      "time_hint": "2024-04-19",
+      "published_at": "2024-04-19T16:41:28Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.6.5",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.6.5\nTag: v0.6.5; draft: False; prerelease: False; published_at: 2024-04-19T16:41:28Z; created_at: 2024-04-15T15:09:12Z\nRelease notes:\n## What's Changed\n* fix: update model-ratio.go 修正文心计费模型名称 by @manjieqi in https://github.com/songquanpeng/one-api/pull/1241\n* feat: add embedding-2 support for zhipu by @cdredfox in https://github.com/songquanpeng/one-api/pull/1273\n* feat: update baidu model name & ratio by @manjieqi in https://github.com/songquanpeng/one-api/pull/1253\n* feat: update baidu model name & ratio by @manjieqi in https://github.com/songquanpeng/one-api/pull/1277\n* feat: support Ali stable-diffusion-xl and wanx-v1 model by @mo2g in https://github.com/songquanpeng/one-api/pull/1240\n* fix:  fix Lark icon button style by @AI-ASS in https://github.com/songquanpeng/one-api/pull/1279\n* feat: berry theme update & bug fix by @MartialBE in https://github.com/songquanpeng/one-api/pull/1282\n* chore: resolve the issue of onclick event scope for custom Lark button by @AI-ASS in https://github.com/songquanpeng/one-api/pull/1281\n* feat: support function call for ali (close #1242)\n* feat: support top_k for claude (close #1239)\n* feat: initial function call support for xunfei\n* feat: able to set model limitation for token (close #178)\n* feat: /v1/models now only return available models\n* feat: add subnet validation (#1275)\n* feat: support feishu login now\n* fix: do not detect quota field in error message (close #1276)\n* feat: show token info when quota is not enough (close #1274)\n* feat: able to change gemini version (close #1211)\n* feat: add gpt-4-turbo support (close #1304)\n## New Contributors\n* @manjieqi made their first contribution in https://github.com/songquanpeng/one-api/pull/1241\n* @cdredfox made their first contribution in https://github.com/songquanpeng/one-api/pull/1273\n* @mo2g made their first contribution in https://github.com/songquanpeng/one-api/pull/1240\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.6.4...v0.6.5",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.6.5, the project fixes Wenxin billing model name, adds embedding-2 support for Zhipu, updates Baidu model name and ratio, adds Ali stable-diffusion-xl and wanx-v1 model support, fixes Lark icon button style, updates Berry theme and fixes bugs, resolves onclick event scope for custom Lark button, adds function call support for Ali, top_k support for Claude, initial function call support for Xunfei, model limitation setting for tokens, makes /v1/models return only available models, adds subnet validation, supports Feishu login, avoids detecting quota field in error messages, shows token info when quota is insufficient, allows changing Gemini version, and adds gpt-4-turbo support."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_6_6",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.6.6",
+      "tag_name": "v0.6.6",
+      "title": "v0.6.6",
+      "time_hint": "2024-05-27",
+      "published_at": "2024-05-27T17:50:41Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.6.6",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.6.6\nTag: v0.6.6; draft: False; prerelease: False; published_at: 2024-05-27T17:50:41Z; created_at: 2024-05-07T15:57:34Z\nRelease notes:\n## What's Changed\n* chore(deps): bump golang.org/x/net from 0.17.0 to 0.23.0 by @dependabot in https://github.com/songquanpeng/one-api/pull/1335\n* feat: support aws bedrockruntime claude3 by @Laisky in https://github.com/songquanpeng/one-api/pull/1328\n* fix: logger race by @Laisky in https://github.com/songquanpeng/one-api/pull/1339\n* feat: groq support Llama3 now by @tylinux in https://github.com/songquanpeng/one-api/pull/1333\n* feat: add function and tools support for Gemini by @mxdlzg in https://github.com/songquanpeng/one-api/pull/1358\n* fix: fix default theme blank screen when edit channel again by @tylinux in https://github.com/songquanpeng/one-api/pull/1363\n* feat: add cohere support by @ye4293 in https://github.com/songquanpeng/one-api/pull/1355\n* fix: refactor Gemini adaptor to support streaming content generation by @mxdlzg in https://github.com/songquanpeng/one-api/pull/1382\n* feat: support for the ollama vision model by @nongmo677 in https://github.com/songquanpeng/one-api/pull/1376\n* feat: use mapped model name to test by @tylinux in https://github.com/songquanpeng/one-api/pull/1370\n* fix: claude stream response parse by @WqyJh in https://github.com/songquanpeng/one-api/pull/1334\n* fix: fix zhipu embedding error when input is array but not string by @caixinjiang in https://github.com/songquanpeng/one-api/pull/1306\n* fix: fix getPreConsumedQuota by @plusye in https://github.com/songquanpeng/one-api/pull/1312\n## New Contributors\n* @tylinux made their first contribution in https://github.com/songquanpeng/one-api/pull/1333\n* @mxdlzg made their first contribution in https://github.com/songquanpeng/one-api/pull/1358\n* @nongmo677 made their first contribution in https://github.com/songquanpeng/one-api/pull/1376\n* @caixinjiang made their first contribution in https://github.com/songquanpeng/one-api/pull/1306\n* @plusye made their first contribution in https://github.com/songquanpeng/one-api/pull/1312\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.6.5...v0.6.6",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.6.6, the project bumps golang.org/x/net, adds AWS Bedrock Runtime Claude3 support, fixes a logger race, adds Groq Llama3 support, adds function and tools support for Gemini, fixes default theme blank screen on channel re-edit, adds Cohere support, refactors Gemini adaptor for streaming content generation, adds Ollama vision model support, uses mapped model name for testing, fixes Claude stream response parsing, fixes Zhipu embedding error with array input, and fixes getPreConsumedQuota."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_6_7",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.6.7",
+      "tag_name": "v0.6.7",
+      "title": "v0.6.7",
+      "time_hint": "2024-06-25",
+      "published_at": "2024-06-25T14:59:20Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.6.7",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.6.7\nTag: v0.6.7; draft: False; prerelease: False; published_at: 2024-06-25T14:59:20Z; created_at: 2024-06-23T07:37:11Z\nRelease notes:\n## What's Changed\n* feat: support gpt-4o by @WqyJh in https://github.com/songquanpeng/one-api/pull/1431\n* feat: berry theme update & bug fix by @MartialBE in https://github.com/songquanpeng/one-api/pull/1471\n* fix: fix gpt-4o token encoding by @Kxzuir in https://github.com/songquanpeng/one-api/pull/1446\n* chore: print user id when relay error happened by @ye4293 in https://github.com/songquanpeng/one-api/pull/1447\n* fix: fix react-apexcharts version by @fatwang2 in https://github.com/songquanpeng/one-api/pull/1465\n* fix: add prefixes to image models to solve the problem of duplicate models by @mo2g in https://github.com/songquanpeng/one-api/pull/1469\n* feat: generate default token after register by @carey036 in https://github.com/songquanpeng/one-api/pull/1401\n* feat: Support gemini embeddings (text-embedding-004,embedding-001) by @mxdlzg in https://github.com/songquanpeng/one-api/pull/1475\n* feat: add support for bytedance's doubao  by @klb3713 in https://github.com/songquanpeng/one-api/pull/1438\n* feat: post all messages for cloudflare by @fxsome in https://github.com/songquanpeng/one-api/pull/1515\n* fix: xunfei interface call 4001 error by @lynnssb in https://github.com/songquanpeng/one-api/pull/1499\n* fix: support for Spark Lite model by @laxtiz in https://github.com/songquanpeng/one-api/pull/1526\n* fix: berry theme channel edit settings key error by @MartialBE in https://github.com/songquanpeng/one-api/pull/1496\n* fix: fix default token not created in some cases by @jinjianming in https://github.com/songquanpeng/one-api/pull/1510\n* fix: Gemini streaming return being truncated by FinishReason. by @mxdlzg in https://github.com/songquanpeng/one-api/pull/1477\n* feat: support tencent v3 api by @lihangfu in https://github.com/songquanpeng/one-api/pull/1542\n* fix: fix sparkdesk function call by @shijilin0116 in https://github.com/songquanpeng/one-api/pull/1544\n## New Contributors\n* @fatwang2 made their first contribution in https://github.com/songquanpeng/one-api/pull/1465\n* @carey036 made their first contribution in https://github.com/songquanpeng/one-api/pull/1401\n* @klb3713 made their first contribution in https://github.com/songquanpeng/one-api/pull/1438\n* @fxsome made their first contribution in https://github.com/songquanpeng/one-api/pull/1515\n* @lynnssb made their first contribution in https://github.com/songquanpeng/one-api/pull/1499\n* @laxtiz made their first contribution in https://github.com/songquanpeng/one-api/pull/1526\n* @jinjianming made their first contribution in https://github.com/songquanpeng/one-api/pull/1510\n* @lihangfu made their first contribution in https://github.com/songquanpeng/one-api/pull/1542\n* @shijilin0116 made their first contribution in https://github.com/songquanpeng/one-api/pull/1544\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.6.6...v0.6.7",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.6.7, the project adds gpt-4o support, updates Berry theme and fixes bugs, fixes gpt-4o token encoding, prints user ID on relay error, fixes react-apexcharts version, adds prefixes to image models to avoid duplicates, generates default token after registration, adds Gemini embeddings support, adds ByteDance Doubao support, posts all messages for Cloudflare, fixes Xunfei interface call 4001 error, adds Spark Lite model support, fixes Berry theme channel edit settings key error, fixes default token not created in some cases, fixes Gemini streaming truncation by FinishReason, adds Tencent v3 API support, and fixes SparkDesk function call."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_6_8",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.6.8",
+      "tag_name": "v0.6.8",
+      "title": "v0.6.8",
+      "time_hint": "2024-08-06",
+      "published_at": "2024-08-06T15:54:14Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.6.8",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.6.8\nTag: v0.6.8; draft: False; prerelease: False; published_at: 2024-08-06T15:54:14Z; created_at: 2024-07-22T14:51:19Z\nRelease notes:\n## What's Changed\n* fix minimax empty log by @ye4293 in https://github.com/songquanpeng/one-api/pull/1560\n* ci: use codecov to upload coverage report by @LeoQuote in https://github.com/songquanpeng/one-api/pull/1583\n* refactor: replace hardcoded string with ctxkey constant by @igophper in https://github.com/songquanpeng/one-api/pull/1579\n* chore(deps): bump golang.org/x/image from 0.16.0 to 0.18.0 by @dependabot in https://github.com/songquanpeng/one-api/pull/1568\n* chore: Add support for Claude Sonnet 3.5 by @shaoyun in https://github.com/songquanpeng/one-api/pull/1567\n* refactor: abusing goroutines and channel by @zijiren233 in https://github.com/songquanpeng/one-api/pull/1561\n* feat: support spark4.0 ultra by @lihangfu in https://github.com/songquanpeng/one-api/pull/1569\n* feat: support Spark4.0 Ultra by @shijilin0116 in https://github.com/songquanpeng/one-api/pull/1575\n* fix: fix size not support during image generation by @igophper in https://github.com/songquanpeng/one-api/pull/1564\n* docs: add related projects by @da730 in https://github.com/songquanpeng/one-api/pull/1562\n* ci: skip archive, upload directly by @LeoQuote in https://github.com/songquanpeng/one-api/pull/1586\n* feat: add support for Claude 3 tool use (function calling) by @dirname in https://github.com/songquanpeng/one-api/pull/1587\n* refactor: init db by @igophper in https://github.com/songquanpeng/one-api/pull/1590\n* feat: support one or more log file by @linzeliang1222 in https://github.com/songquanpeng/one-api/pull/1400\n* feat: support smtp without auth by @LeoQuote in https://github.com/songquanpeng/one-api/pull/1101\n* feat(ui): show available models for air theme by @LeoQuote in https://github.com/songquanpeng/one-api/pull/1595\n* feat: support test specific model by @WqyJh in https://github.com/songquanpeng/one-api/pull/1600\n* feat: cloudflare support native openai api by @zijiren233 in https://github.com/songquanpeng/one-api/pull/1596\n* fix: use musl libc by @zijiren233 in https://github.com/songquanpeng/one-api/pull/1597\n* fix: update readme docs by @peterwillcn in https://github.com/songquanpeng/one-api/pull/1599\n* feat: add initial root access token by @peterwillcn in https://github.com/songquanpeng/one-api/pull/1598\n* feat: add Novita AI as model provider by @jasonhp in https://github.com/songquanpeng/one-api/pull/1609\n* feat: refactor AwsClaude to Aws to support both llama3 and claude by @WqyJh in https://github.com/songquanpeng/one-api/pull/1601\n* fix: duplicate [DONE] by @WqyJh in https://github.com/songquanpeng/one-api/pull/1629\n* fix: impl cloudflare worker ai gateway by @zijiren233 in https://github.com/songquanpeng/one-api/pull/1617\n* fix: 修复4v请求下text参数缺少引发的nil by @ye4293 in https://github.com/songquanpeng/one-api/pull/1634\n* feat: support claude and gemini in vertex ai by @vaayne in https://github.com/songquanpeng/one-api/pull/1621\n* feat: add field stop in GeneralOpenAIRequest by @f1ynn-zhan9 in https://github.com/songquanpeng/one-api/pull/1637\n* chore(deps): bump google.golang.org/grpc from 1.64.0 to 1.64.1 by @dependabot in https://github.com/songquanpeng/one-api/pull/1641\n* fix: rate limit can be zero by @zijiren233 in https://github.com/songquanpeng/one-api/pull/1643\n* feat: fast build linux/arm64 frontend by @zijiren233 in https://github.com/songquanpeng/one-api/pull/1645\n* feat: vertexai support proxy url(example: cloudflare ai gateway) and fix some vertexai bug by @zijiren233 in https://github.com/songquanpeng/one-api/pull/1642\n* feat: extend anthropic header to support 8k context windows by @Laisky in https://github.com/songquanpeng/one-api/pull/1654\n* fix: support embedding models for doubao by @igophper in https://github.com/songquanpeng/one-api/pull/1662\n* feat: fast build linux/arm64 frontend by @zijiren233 in https://github.com/songquanpeng/one-a...",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.6.8, the project fixes Minimax empty log, uses Codecov for coverage reports, replaces hardcoded strings with ctxkey constants, bumps golang.org/x/image, adds Claude Sonnet 3.5 support, refactors goroutines and channels, adds Spark4.0 Ultra support, fixes image generation size not supported, adds related projects docs, skips archive in CI, adds Claude 3 tool use (function calling), refactors DB init, supports one or more log files, supports SMTP without auth, shows available models for air theme, supports testing specific models, adds Cloudflare native OpenAI API support, uses musl libc, updates readme docs, adds initial root access token, adds Novita AI as model provider, refactors AwsClaude to Aws for both Llama3 and Claude, fixes duplicate [DONE], implements Cloudflare Worker AI gateway, fixes 4v request nil text parameter, adds Vertex AI Claude and Gemini support, adds stop field in GeneralOpenAIRequest, bumps google.golang.org/grpc, allows rate limit zero, fast builds linux/arm64 frontend, adds Vertex AI proxy URL support, extends Anthropic header for 8k context windows, and fixes embedding models for Doubao."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_6_9",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.6.9",
+      "tag_name": "v0.6.9",
+      "title": "v0.6.9",
+      "time_hint": "2024-12-22",
+      "published_at": "2024-12-22T10:26:16Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.6.9",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.6.9\nTag: v0.6.9; draft: False; prerelease: False; published_at: 2024-12-22T10:26:16Z; created_at: 2024-12-20T16:33:20Z\nRelease notes:\n## What's Changed\n* docs: update introduction for QChatGPT by @RockChinQ in https://github.com/songquanpeng/one-api/pull/1707\n* feat: add SiliconFlow by @jackalcooper in https://github.com/songquanpeng/one-api/pull/1717\n* feat: update Ollama embedding API to latest version with multi-text embedding support by @SLKun in https://github.com/songquanpeng/one-api/pull/1715\n* feat: update gemini model by @longkeyy in https://github.com/songquanpeng/one-api/pull/1705\n* feat: add Max Tokens and Context Window Setting Options for Ollama Channel by @MotorBottle in https://github.com/songquanpeng/one-api/pull/1694\n* feat: synchronize with the official release of the groq model. by @longkeyy in https://github.com/songquanpeng/one-api/pull/1677\n* fix: Groq organization not auto-disabled when blocked by @kaqijiang in https://github.com/songquanpeng/one-api/pull/1822\n* fix: postgres use COALESCE replace null by @guogeer in https://github.com/songquanpeng/one-api/pull/1793\n* feat: update disabled channel by @ye4293 in https://github.com/songquanpeng/one-api/pull/1780\n* feat: ResponseFormat support json_schema by @majian159 in https://github.com/songquanpeng/one-api/pull/1759\n* fix: fix ali embedding model always use v1 by @leavegee in https://github.com/songquanpeng/one-api/pull/1747\n* feat: update stepfun's models by @forrestlinfeng in https://github.com/songquanpeng/one-api/pull/1740\n* feat: add lobechat open link options by @MrChihiro in https://github.com/songquanpeng/one-api/pull/1741\n* fix: getTokenById return token nil, make panic by @qinguoyi in https://github.com/songquanpeng/one-api/pull/1728\n* feat: support new openai models (4o 0806, chatgpt-4o-latest) by @HynoR in https://github.com/songquanpeng/one-api/pull/1721\n* feat: add oidc support by @Oniokey in https://github.com/songquanpeng/one-api/pull/1725\n* feat: support SparkDesk-v3.1-128K by @lihangfu in https://github.com/songquanpeng/one-api/pull/1732\n* feat: support siliconflow usage by @TimeTrapzz in https://github.com/songquanpeng/one-api/pull/1798\n* fix: modify the type of token models to be text by @xuruidong in https://github.com/songquanpeng/one-api/pull/1761\n* feat: support multipart/form-data format request by @bearslyricattack in https://github.com/songquanpeng/one-api/pull/1690\n* feat: support SparkDesk-v3.5-32K by @lihangfu in https://github.com/songquanpeng/one-api/pull/1832\n* fix：unsuccessful lobechat redirection link by @MrChihiro in https://github.com/songquanpeng/one-api/pull/1843\n* feat: add Vertex AI gemini-1.5-pro-002 and gemini-1.5-flash-002 by @hellof20 in https://github.com/songquanpeng/one-api/pull/1854\n* fix: use modelMap when testing a channel by @liangjs in https://github.com/songquanpeng/one-api/pull/1855\n* feat: update groq model and price by @longkeyy in https://github.com/songquanpeng/one-api/pull/1864\n* feat: add support for Claude Sonnet 3.5 v2 by @shaoyun in https://github.com/songquanpeng/one-api/pull/1888\n* feat: update Gemini adaptor to support custom response format by @mxdlzg in https://github.com/songquanpeng/one-api/pull/1892\n* feat: added support for Claude 3.5 Haiku by @shaoyun in https://github.com/songquanpeng/one-api/pull/1912\n* feat: add support for xAI by @lwshen in https://github.com/songquanpeng/one-api/pull/1915\n* feat: add new claude models by @Laisky in https://github.com/songquanpeng/one-api/pull/1910\n* fix: changeoptional field to pointer type by @wanthigh in https://github.com/songquanpeng/one-api/pull/1907\n* fix: update Spark Lite's domain to lite by @lihangfu in https://github.com/songquanpeng/one-api/pull/1896\n* feat: support gzip decode by @Calcium-Ion in https://github.com/songquanpeng/one-api/pull/1962\n## New Contributors\n* @jackalcooper made their first contribution in https://github.com/songquanpeng/one-api/pull/1717\n* @SLKun made their f...",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.6.9, the project updates QChatGPT introduction, adds SiliconFlow, updates Ollama embedding API to latest with multi-text support, updates Gemini model, adds Max Tokens and Context Window settings for Ollama, synchronizes Groq model with official release, fixes Groq organization not auto-disabled when blocked, uses COALESCE for PostgreSQL nulls, updates disabled channel, adds ResponseFormat json_schema support, fixes Ali embedding model always using v1, updates Stepfun models, adds LobeChat open link options, fixes getTokenById nil panic, supports new OpenAI models (4o 0806, chatgpt-4o-latest), adds OIDC support, adds SparkDesk-v3.1-128K, supports SiliconFlow usage, modifies token models type to text, supports multipart/form-data requests, adds SparkDesk-v3.5-32K, fixes LobeChat redirection link, adds Vertex AI gemini-1.5-pro-002 and gemini-1.5-flash-002, uses modelMap when testing a channel, updates Groq model and price, adds Claude Sonnet 3.5 v2 support, updates Gemini adaptor for custom response format, adds Claude 3.5 Haiku, adds xAI support, adds new Claude models, changes optional field to pointer type, updates Spark Lite domain to lite, and supports gzip decode."
+    },
+    {
+      "memory_node_id": "songquanpeng__one_api__release__v0_6_10",
+      "repo": "songquanpeng/one-api",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.6.10",
+      "tag_name": "v0.6.10",
+      "title": "v0.6.10",
+      "time_hint": "2025-02-02",
+      "published_at": "2025-02-02T12:29:38Z",
+      "source_url": "https://github.com/songquanpeng/one-api/releases/tag/v0.6.10",
+      "raw_text": "Repository: songquanpeng/one-api\nRelease: v0.6.10\nTag: v0.6.10; draft: False; prerelease: False; published_at: 2025-02-02T12:29:38Z; created_at: 2024-12-27T14:01:37Z\nRelease notes:\n## What's Changed\n* feat: support replicate chat models by @Laisky in https://github.com/songquanpeng/one-api/pull/1989\n* feat: add openai o1 by @Laisky in https://github.com/songquanpeng/one-api/pull/1990\n* feat: add gemini-2.0-flash-exp by @Laisky in https://github.com/songquanpeng/one-api/pull/1983\n* chore(deps): bump golang.org/x/crypto from 0.24.0 to 0.31.0 by @dependabot in https://github.com/songquanpeng/one-api/pull/1976\n* feat: update qwen model and price by @longkeyy in https://github.com/songquanpeng/one-api/pull/1966\n* feat: enhance response handling to support gemini-2.0-thinking by @mxdlzg in https://github.com/songquanpeng/one-api/pull/1995\n* fix: fix balance query for siliconflow by @Gk0Wk in https://github.com/songquanpeng/one-api/pull/1960\n* docs: add tutorial section for BT Panel installation by @bestlaw66 in https://github.com/songquanpeng/one-api/pull/1985\n* fix: remove the duplicate `claude-3-5-haiku-20241022` in Anthropic's base model list by @ZhangTianrong in https://github.com/songquanpeng/one-api/pull/1957\n* feat: support Redis Sentinel and Redis Cluster by @lihangfu in https://github.com/songquanpeng/one-api/pull/1952\n* feat: add balance query support for DeepSeek by @Gk0Wk in https://github.com/songquanpeng/one-api/pull/1946\n* chore: update model mapping implementation for audio by @ibigbug in https://github.com/songquanpeng/one-api/pull/1932\n* feat: support gpt-4o-2024-11-20 by @WqyJh in https://github.com/songquanpeng/one-api/pull/1941\n## New Contributors\n* @Gk0Wk made their first contribution in https://github.com/songquanpeng/one-api/pull/1960\n* @bestlaw66 made their first contribution in https://github.com/songquanpeng/one-api/pull/1985\n* @ZhangTianrong made their first contribution in https://github.com/songquanpeng/one-api/pull/1957\n* @ibigbug made their first contribution in https://github.com/songquanpeng/one-api/pull/1932\n**Full Changelog**: https://github.com/songquanpeng/one-api/compare/v0.6.9...v0.6.10",
+      "memory_unit_text": "In the songquanpeng/one-api release v0.6.10, the project adds Replicate chat models, OpenAI o1, gemini-2.0-flash-exp, bumps golang.org/x/crypto, updates Qwen model and price, enhances response handling for gemini-2.0-thinking, fixes SiliconFlow balance query, adds BT Panel installation tutorial, removes duplicate claude-3-5-haiku-20241022 in Anthropic's base model list, adds Redis Sentinel and Redis Cluster support, adds DeepSeek balance query, updates model mapping for audio, and adds gpt-4o-2024-11-20 support."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the songquanpeng/one-api releases, which release introduces support for the /v1/edits endpoint and model mapping?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.4.7"
+        },
+        {
+          "option_id": "B",
+          "text": "v0.4.8"
+        },
+        {
+          "option_id": "C",
+          "text": "v0.4.9"
+        },
+        {
+          "option_id": "D",
+          "text": "v0.5.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v0.4.8",
+      "source_chunk_ids": [
+        "songquanpeng__one_api__release__v0_4_8"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "songquanpeng__one_api__release__v0_4_8",
+          "answer_text": "adds support for the /v1/edits endpoint, model mapping to redirect user request models"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the songquanpeng/one-api releases, how does the caching-related change in v0.4.6 differ from the caching-related change in v0.4.8?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.4.6 introduces caching to reduce latency in multi-node deployments, while v0.4.8 fixes an over-quota usage problem when caching is enabled."
+        },
+        {
+          "option_id": "B",
+          "text": "v0.4.6 removes caching entirely, while v0.4.8 adds caching for the first time."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only update UI styles without any caching changes."
+        },
+        {
+          "option_id": "D",
+          "text": "v0.4.6 fixes a caching bug, while v0.4.8 introduces caching for database queries."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v0.4.6 introduces caching to reduce latency in multi-node deployments, while v0.4.8 fixes an over-quota usage problem when caching is enabled.",
+      "source_chunk_ids": [
+        "songquanpeng__one_api__release__v0_4_6",
+        "songquanpeng__one_api__release__v0_4_8"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "songquanpeng__one_api__release__v0_4_6",
+          "answer_text": "adds caching to avoid database requests before response return, reducing latency in multi-node deployments"
+        },
+        {
+          "memory_node_id": "songquanpeng__one_api__release__v0_4_8",
+          "answer_text": "fixes an over-quota usage problem when caching is enabled"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the songquanpeng/one-api release window, order the following release-content states from earliest to latest: (1) a release that adds support for the /v1/edits endpoint and model mapping, (2) a release that introduces caching to reduce latency in multi-node deployments, (3) a release that adds support for newly released OpenAI models and allows channels to be assigned to multiple groups.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "3 -> 2 -> 1"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 3 -> 1"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 1 -> 2"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "3 -> 2 -> 1",
+      "source_chunk_ids": [
+        "songquanpeng__one_api__release__v0_4_3",
+        "songquanpeng__one_api__release__v0_4_6",
+        "songquanpeng__one_api__release__v0_4_8"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "songquanpeng__one_api__release__v0_4_3",
+          "answer_text": "adds support for newly released OpenAI models, allows channels to be assigned to multiple groups"
+        },
+        {
+          "memory_node_id": "songquanpeng__one_api__release__v0_4_6",
+          "answer_text": "adds caching to avoid database requests before response return, reducing latency in multi-node deployments"
+        },
+        {
+          "memory_node_id": "songquanpeng__one_api__release__v0_4_8",
+          "answer_text": "adds support for the /v1/edits endpoint, model mapping"
+        }
+      ]
+    }
+  ]
+}

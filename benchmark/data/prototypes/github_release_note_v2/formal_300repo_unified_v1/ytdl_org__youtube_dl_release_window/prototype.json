@@ -1,0 +1,525 @@
+{
+  "prototype_id": "ytdl_org__youtube_dl_release_window",
+  "domain": "github_release_evolution",
+  "repo": "ytdl-org/youtube-dl",
+  "source_type": "release_note",
+  "window_title": "ytdl-org/youtube-dl recent release evolution",
+  "window_summary": "This window tracks the recent ytdl-org/youtube-dl release stream from late 2020 through 2021, covering extractor additions, fixes, and core improvements across frequent versioned releases.",
+  "chunks": [
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2020_12_02",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2020.12.02",
+      "tag_name": "2020.12.02",
+      "title": "youtube-dl 2020.12.02",
+      "time_hint": "2020-12-01",
+      "published_at": "2020-12-01T18:38:55Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2020.12.02",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2020.12.02\nTag: 2020.12.02; draft: False; prerelease: False; published_at: 2020-12-01T18:38:55Z; created_at: 2020-12-01T18:37:47Z\nRelease notes:\nExtractors\n+ [tva] Add support for qub.ca (#27235)\n+ [toggle] Detect DRM protected videos (closes #16479)(closes #20805)\n+ [toggle] Add support for new MeWatch URLs (#27256)\n* [youtube:tab] Extract channels only from channels tab (#27266)\n+ [cspan] Extract info from jwplayer data (#3672, #3734, #10638, #13030,\n#18806, #23148, #24461, #26171, #26800, #27263)\n* [cspan] Pass Referer header with format's video URL (#26032, #25729)\n* [youtube] Improve age-gated videos extraction (#27259)\n+ [mediaset] Add support for movie URLs (#27240)\n* [yandexmusic] Refactor\n+ [yandexmusic] Add support for artist's tracks and albums (#11887, #22284)\n* [yandexmusic:track] Fix extraction (#26449, #26669, #26747, #26748, #26762)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2020.12.02, the release notes describe extractor changes including adding support for tva qub.ca, toggle DRM detection and new MeWatch URLs, fixing youtube:tab to extract channels only from channels tab, adding cspan jwplayer data extraction, improving age-gated video extraction for youtube, adding mediaset movie URL support, refactoring yandexmusic and adding artist tracks and albums support, and fixing yandexmusic:track extraction."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2020_12_05",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2020.12.05",
+      "tag_name": "2020.12.05",
+      "title": "youtube-dl 2020.12.05",
+      "time_hint": "2020-12-04",
+      "published_at": "2020-12-04T20:41:16Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2020.12.05",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2020.12.05\nTag: 2020.12.05; draft: False; prerelease: False; published_at: 2020-12-04T20:41:16Z; created_at: 2020-12-04T20:40:08Z\nRelease notes:\nCore\n* [extractor/common] Improve Akamai HTTP format extraction\n* Allow m3u8 manifest without an additional audio format\n* Fix extraction for qualities starting with a number\nExtractors\n* [teachable:course] Improve extraction (#24507, #27286)\n* [nrk] Improve error extraction\n* [nrktv:series] Improve extraction (#21926)\n* [nrktv:season] Improve extraction\n* [nrk] Improve format extraction and geo-restriction detection (#24221)\n* [pornhub] Handle HTTP errors gracefully (#26414)\n* [nrktv] Relax URL regular expression (#27299, #26185)\n+ [zdf] Extract webm formats (#26659)\n+ [gamespot] Extract DASH and HTTP formats\n+ [tver] Add support for tver.jp (#26662, #27284)\n+ [pornhub] Add support for pornhub.org (#27276)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2020.12.05, the release notes describe core improvements to Akamai HTTP format extraction, allowing m3u8 manifest without additional audio format, and fixing extraction for qualities starting with a number. Extractor changes include improving teachable:course extraction, various nrk improvements (error extraction, series/season extraction, format extraction, geo-restriction detection, relaxed URL regex), handling pornhub HTTP errors gracefully, adding zdf webm formats, gamespot DASH and HTTP formats, tver.jp support, and pornhub.org support."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2020_12_07",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2020.12.07",
+      "tag_name": "2020.12.07",
+      "title": "youtube-dl 2020.12.07",
+      "time_hint": "2020-12-06",
+      "published_at": "2020-12-06T19:04:49Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2020.12.07",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2020.12.07\nTag: 2020.12.07; draft: False; prerelease: False; published_at: 2020-12-06T19:04:49Z; created_at: 2020-12-06T19:03:41Z\nRelease notes:\nCore\n* [extractor/common] Extract timestamp from Last-Modified header\n+ [extractor/common] Add support for dl8-* media tags (#27283)\n* [extractor/common] Fix media type extraction for HTML5 media tags\nin start/end form\nExtractors\n* [aenetworks] Fix extraction (#23363, #23390, #26795, #26985)\n* Fix Fastly format extraction\n+ Add support for play and watch subdomains\n+ Extract series metadata\n* [youtube] Improve youtu.be extraction in non-existing playlists (#27324)\n+ [generic] Extract RSS video description, timestamp and itunes metadata\n(#27177)\n* [nrk] Reduce the number of instalments and episodes requests\n* [nrk] Improve extraction\n* Improve format extraction for old akamai formats\n+ Add is_live value to entry info dict\n* Request instalments only when available\n* Fix skole extraction\n+ [peertube] Extract fps\n+ [peertube] Recognize audio-only formats (#27295)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2020.12.07, the release notes describe core changes: extracting timestamp from Last-Modified header, adding support for dl8-* media tags, and fixing media type extraction for HTML5 media tags in start/end form. Extractor changes include fixing aenetworks extraction, fixing Fastly format extraction, adding support for play and watch subdomains, extracting series metadata, improving youtu.be extraction in non-existing playlists, adding generic RSS video description/timestamp/itunes metadata extraction, various nrk improvements (reducing requests, improving extraction, fixing old akamai formats, adding is_live, fixing skole), and peertube fps extraction and audio-only format recognition."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2020_12_09",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2020.12.09",
+      "tag_name": "2020.12.09",
+      "title": "youtube-dl 2020.12.09",
+      "time_hint": "2020-12-08",
+      "published_at": "2020-12-08T21:27:39Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2020.12.09",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2020.12.09\nTag: 2020.12.09; draft: False; prerelease: False; published_at: 2020-12-08T21:27:39Z; created_at: 2020-12-08T21:25:31Z\nRelease notes:\nCore\n* [extractor/common] Fix inline HTML5 media tags processing (#27345)\nExtractors\n* [youtube:tab] Improve identity token extraction (#27197)\n* [youtube:tab] Make click tracking params on continuation optional\n* [youtube:tab] Delegate inline playlists to tab-based playlists (27298)\n+ [tubitv] Extract release year (#27317)\n* [amcnetworks] Fix free content extraction (#20354)\n+ [lbry:channel] Add support for channels (#25584)\n+ [lbry] Add support for short and embed URLs\n* [lbry] Fix channel metadata extraction\n+ [telequebec] Add support for video.telequebec.tv (#27339)\n* [telequebec] Fix extraction (#25733, #26883)\n+ [youtube:tab] Capture and output alerts (#27340)\n* [tvplay:home] Fix extraction (#21153)\n* [americastestkitchen] Fix Extraction and add support\nfor Cook's Country and Cook's Illustrated (#17234, #27322)\n+ [slideslive] Add support for yoda service videos and extract subtitles\n(#27323)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2020.12.09, the release notes describe a core fix for inline HTML5 media tags processing. Extractor changes include improving youtube:tab identity token extraction, making click tracking params optional, delegating inline playlists to tab-based playlists, adding tubitv release year extraction, fixing amcnetworks free content extraction, adding lbry channel and short/embed URL support, fixing lbry channel metadata, adding telequebec video.telequebec.tv support and fixing extraction, adding youtube:tab alert capture/output, fixing tvplay:home extraction, fixing americastestkitchen extraction and adding Cook's Country/Illustrated support, and adding slideslive yoda service videos and subtitle extraction."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2020_12_12",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2020.12.12",
+      "tag_name": "2020.12.12",
+      "title": "youtube-dl 2020.12.12",
+      "time_hint": "2020-12-12",
+      "published_at": "2020-12-12T00:11:18Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2020.12.12",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2020.12.12\nTag: 2020.12.12; draft: False; prerelease: False; published_at: 2020-12-12T00:11:18Z; created_at: 2020-12-12T00:10:08Z\nRelease notes:\nCore\n* [YoutubeDL] Improve thumbnail filename deducing (#26010, #27244)\nExtractors\n+ [ruutu] Extract more metadata\n+ [ruutu] Detect non-free videos (#21154)\n* [ruutu] Authenticate format URLs (#21031, #26782)\n+ [ruutu] Add support for static.nelonenmedia.fi (#25412)\n+ [ruutu] Extend URL regular expression (#24839)\n+ [facebook] Add support archived live video URLs (#15859)\n* [wdr] Improve overall extraction\n+ [wdr] Extend subtitles extraction (#22672, #22723)\n+ [facebook] Add support for videos attached to Relay based story pages\n(#10795)\n+ [wdr:page] Add support for kinder.wdr.de (#27350)\n+ [facebook] Add another regular expression for handleServerJS\n* [facebook] Fix embed page extraction\n+ [facebook] Add support for Relay post pages (#26935)\n+ [facebook] Add support for watch videos (#22795, #27062)\n+ [facebook] Add support for group posts with multiple videos (#19131)\n* [itv] Fix series metadata extraction (#26897)\n- [itv] Remove old extraction method (#23177)\n* [facebook] Redirect mobile URLs to desktop URLs (#24831, #25624)\n+ [facebook] Add support for Relay based pages (#26823)\n* [facebook] Try to reduce unnecessary tahoe requests\n- [facebook] Remove hardcoded Chrome User-Agent (#18974, #25411, #26958,\n#27329)\n- [smotri] Remove extractor (#27358)\n- [beampro] Remove extractor (#17290, #22871, #23020, #23061, #26099)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2020.12.12, the release notes describe a core improvement to thumbnail filename deducing. Extractor changes include adding ruutu metadata extraction, non-free video detection, authenticating format URLs, static.nelonenmedia.fi support, extended URL regex; adding facebook archived live video URLs, Relay story page videos, another handleServerJS regex, Relay post pages, watch videos, group posts with multiple videos; fixing facebook embed page extraction; improving wdr extraction and extending subtitles; adding wdr:page kinder.wdr.de support; fixing itv series metadata extraction and removing old extraction method; redirecting facebook mobile URLs to desktop; adding facebook Relay based pages; reducing unnecessary tahoe requests; removing hardcoded Chrome User-Agent; and removing smotri and beampro extractors."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2020_12_14",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2020.12.14",
+      "tag_name": "2020.12.14",
+      "title": "youtube-dl 2020.12.14",
+      "time_hint": "2020-12-13",
+      "published_at": "2020-12-13T17:58:53Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2020.12.14",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2020.12.14\nTag: 2020.12.14; draft: False; prerelease: False; published_at: 2020-12-13T17:58:53Z; created_at: 2020-12-13T17:57:17Z\nRelease notes:\nCore\n* [extractor/common] Improve JSON-LD interaction statistic extraction (#23306)\n* [downloader/hls] Delegate manifests with media initialization to ffmpeg\n+ [extractor/common] Document duration meta field for playlists\nExtractors\n* [mdr] Bypass geo restriction\n* [mdr] Improve extraction (#24346, #26873)\n* [yandexmusic:album] Improve album title extraction (#27418)\n* [eporner] Fix view count extraction and make optional (#23306)\n+ [eporner] Extend URL regular expression\n* [eporner] Fix hash extraction and extend _VALID_URL (#27396)\n* [slideslive] Use m3u8 entry protocol for m3u8 formats (#27400)\n* [twitcasting] Fix format extraction and improve info extraction (#24868)\n* [linuxacademy] Fix authentication and extraction (#21129, #26223, #27402)\n* [itv] Clean description from HTML tags (#27399)\n* [vlive] Sort live formats (#27404)\n* [hotstart] Fix and improve extraction\n* Fix format extraction (#26690)\n+ Extract thumbnail URL (#16079, #20412)\n+ Add support for country specific playlist URLs (#23496)\n* Select the last id in video URL (#26412)\n+ [youtube] Add some invidious instances (#27373)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2020.12.14, the release notes describe core improvements to JSON-LD interaction statistic extraction, delegating HLS manifests with media initialization to ffmpeg, and documenting duration meta field for playlists. Extractor changes include bypassing mdr geo restriction and improving extraction, improving yandexmusic:album title extraction, fixing eporner view count/hash extraction and extending URL regex, using m3u8 entry protocol for slideslive m3u8 formats, fixing twitcasting format/info extraction, fixing linuxacademy authentication/extraction, cleaning itv description from HTML tags, sorting vlive live formats, fixing and improving hotstart extraction (format, thumbnail, country-specific playlist URLs, selecting last id in video URL), and adding invidious instances to youtube."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2020_12_22",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2020.12.22",
+      "tag_name": "2020.12.22",
+      "title": "youtube-dl 2020.12.22",
+      "time_hint": "2020-12-21",
+      "published_at": "2020-12-21T21:49:23Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2020.12.22",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2020.12.22\nTag: 2020.12.22; draft: False; prerelease: False; published_at: 2020-12-21T21:49:23Z; created_at: 2020-12-21T21:48:15Z\nRelease notes:\nCore\n* [common] Remove unwanted query params from unsigned akamai manifest URLs\nExtractors\n- [tastytrade] Remove extractor (#25716)\n* [niconico] Fix playlist extraction (#27428)\n- [everyonesmixtape] Remove extractor\n- [kanalplay] Remove extractor\n* [arkena] Fix extraction\n* [nba] Rewrite extractor\n* [turner] Improve info extraction\n* [youtube] Improve xsrf token extraction (#27442)\n* [generic] Improve RSS age limit extraction\n* [generic] Fix RSS itunes thumbnail extraction (#27405)\n+ [redditr] Extract duration (#27426)\n- [zaq1] Remove extractor\n+ [asiancrush] Add support for retrocrush.tv\n* [asiancrush] Fix extraction\n- [noco] Remove extractor (#10864)\n* [nfl] Fix extraction (#22245)\n* [skysports] Relax URL regular expression (#27435)\n+ [tv5unis] Add support for tv5unis.ca (#22399, #24890)\n+ [videomore] Add support for more.tv (#27088)\n+ [yandexmusic] Add support for music.yandex.com (#27425)\n+ [nhk:program] Add support for audio programs and program clips\n+ [nhk] Add support for NHK video programs (#27230)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2020.12.22, the release notes describe a core change to remove unwanted query params from unsigned akamai manifest URLs. Extractor changes include removing tastytrade, everyonesmixtape, kanalplay, zaq1, and noco extractors; fixing niconico playlist extraction; rewriting nba extractor; improving turner info extraction; improving youtube xsrf token extraction; improving generic RSS age limit extraction and fixing itunes thumbnail extraction; adding redditr duration extraction; adding asiancrush retrocrush.tv support and fixing extraction; fixing nfl extraction; relaxing skysports URL regex; adding tv5unis.ca, videomore more.tv, yandexmusic music.yandex.com, and nhk audio programs/program clips and video programs support."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2020_12_26",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2020.12.26",
+      "tag_name": "2020.12.26",
+      "title": "youtube-dl 2020.12.26",
+      "time_hint": "2020-12-26",
+      "published_at": "2020-12-26T16:18:48Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2020.12.26",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2020.12.26\nTag: 2020.12.26; draft: False; prerelease: False; published_at: 2020-12-26T16:18:48Z; created_at: 2020-12-26T16:17:44Z\nRelease notes:\nExtractors\n* [instagram] Fix comment count extraction\n+ [instagram] Add support for reel URLs (#26234, #26250)\n* [bbc] Switch to media selector v6 (#23232, #23933, #26303, #26432, #26821,\n#27538)\n* [instagram] Improve thumbnail extraction\n* [instagram] Fix extraction when authenticated (#22880, #26377, #26981,\n#27422)\n* [spankbang:playlist] Fix extraction (#24087)\n+ [spankbang] Add support for playlist videos\n* [pornhub] Improve like and dislike count extraction (#27356)\n* [pornhub] Fix lq formats extraction (#27386, #27393)\n+ [bongacams] Add support for bongacams.com (#27440)\n* [youtube:tab] Extend URL regular expression (#27501)\n* [theweatherchannel] Fix extraction (#25930, #26051)\n+ [sprout] Add support for Universal Kids (#22518)\n* [theplatform] Allow passing geo bypass countries from other extractors\n+ [wistia] Add support for playlists (#27533)\n+ [ctv] Add support for ctv.ca (#27525)\n* [9c9media] Improve info extraction\n* [youtube] Fix automatic captions extraction (#27162, #27388)\n* [sonyliv] Fix title for movies\n* [sonyliv] Fix extraction (#25667)\n* [streetvoice] Fix extraction (#27455, #27492)\n+ [facebook] Add support for watchparty pages (#27507)\n* [cbslocal] Fix video extraction\n+ [brightcove] Add another method to extract policyKey\n* [mewatch] Relax URL regular expression (#27506)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2020.12.26, the release notes describe extractor changes: fixing instagram comment count extraction and adding reel URL support; switching bbc to media selector v6; improving instagram thumbnail extraction and fixing authenticated extraction; fixing spankbang:playlist extraction and adding playlist videos support; improving pornhub like/dislike count and fixing lq formats; adding bongacams support; extending youtube:tab URL regex; fixing theweatherchannel extraction; adding sprout Universal Kids support; allowing theplatform geo bypass countries from other extractors; adding wistia playlists, ctv.ca support; improving 9c9media info extraction; fixing youtube automatic captions extraction; fixing sonyliv title for movies and extraction; fixing streetvoice extraction; adding facebook watchparty pages; fixing cbslocal video extraction; adding brightcove policyKey method; and relaxing mewatch URL regex."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2020_12_29",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2020.12.29",
+      "tag_name": "2020.12.29",
+      "title": "youtube-dl 2020.12.29",
+      "time_hint": "2020-12-28",
+      "published_at": "2020-12-28T19:55:01Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2020.12.29",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2020.12.29\nTag: 2020.12.29; draft: False; prerelease: False; published_at: 2020-12-28T19:55:01Z; created_at: 2020-12-28T19:53:49Z\nRelease notes:\nExtractors\n* [youtube] Improve yt initial data extraction (#27524)\n* [youtube:tab] Improve URL matching #27559)\n* [youtube:tab] Restore retry on browse requests (#27313, #27564)\n* [aparat] Fix extraction (#22285, #22611, #23348, #24354, #24591, #24904,\n#25418, #26070, #26350, #26738, #27563)\n- [brightcove] Remove sonyliv specific code\n* [piksel] Improve format extraction\n+ [zype] Add support for uplynk videos\n+ [toggle] Add support for live.mewatch.sg (#27555)\n+ [go] Add support for fxnow.fxnetworks.com (#13972, #22467, #23754, #26826)\n* [teachable] Improve embed detection (#26923)\n* [mitele] Fix free video extraction (#24624, #25827, #26757)\n* [telecinco] Fix extraction\n* [youtube] Update invidious.snopyta.org (#22667)\n* [amcnetworks] Improve auth only video detection (#27548)\n+ [generic] Add support for VHX Embeds (#27546)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2020.12.29, the release notes describe extractor changes: improving youtube yt initial data extraction; improving youtube:tab URL matching and restoring retry on browse requests; fixing aparat extraction; removing sonyliv specific brightcove code; improving piksel format extraction; adding zype uplynk videos; adding toggle live.mewatch.sg; adding go fxnow.fxnetworks.com; improving teachable embed detection; fixing mitele free video extraction; fixing telecinco extraction; updating youtube invidious.snopyta.org; improving amcnetworks auth only video detection; and adding generic VHX embeds support."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2020_12_31",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2020.12.31",
+      "tag_name": "2020.12.31",
+      "title": "youtube-dl 2020.12.31",
+      "time_hint": "2020-12-30",
+      "published_at": "2020-12-30T22:19:20Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2020.12.31",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2020.12.31\nTag: 2020.12.31; draft: False; prerelease: False; published_at: 2020-12-30T22:19:20Z; created_at: 2020-12-30T22:18:16Z\nRelease notes:\nCore\n* [utils] Accept only supported protocols in url_or_none\n* [YoutubeDL] Allow format filtering using audio language (#16209)\nExtractors\n+ [redditr] Extract all thumbnails (#27503)\n* [vvvvid] Improve info extraction\n+ [vvvvid] Add support for playlists (#18130, #27574)\n+ [yandexdisk] Extract info from webpage\n* [yandexdisk] Fix extraction (#17861, #27131)\n* [yandexvideo] Use old API call as fallback\n* [yandexvideo] Fix extraction (#25000)\n- [nbc] Remove CSNNE extractor\n* [nbc] Fix NBCSport VPlayer URL extraction (#16640)\n+ [aenetworks] Add support for biography.com (#3863)\n* [uktvplay] Match new video URLs (#17909)\n* [sevenplay] Detect API errors\n* [tenplay] Fix format extraction (#26653)\n* [brightcove] Raise error for DRM protected videos (#23467, #27568)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2020.12.31, the release notes describe core changes: accepting only supported protocols in url_or_none and allowing format filtering using audio language. Extractor changes include adding redditr all thumbnails extraction; improving vvvvid info extraction and adding playlists support; adding yandexdisk webpage info extraction and fixing extraction; using old API call fallback for yandexvideo and fixing extraction; removing nbc CSNNE extractor and fixing NBCSport VPlayer URL extraction; adding aenetworks biography.com support; matching uktvplay new video URLs; detecting sevenplay API errors; fixing tenplay format extraction; and raising error for brightcove DRM protected videos."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2021_01_03",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2021.01.03",
+      "tag_name": "2021.01.03",
+      "title": "youtube-dl 2021.01.03",
+      "time_hint": "2021-01-03",
+      "published_at": "2021-01-03T02:14:10Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2021.01.03",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2021.01.03\nTag: 2021.01.03; draft: False; prerelease: False; published_at: 2021-01-03T02:14:10Z; created_at: 2021-01-03T02:13:05Z\nRelease notes:\nExtractors\n* [nrk] Improve series metadata extraction (#27473)\n+ [nrk] Extract subtitles\n* [nrk] Fix age limit extraction\n* [nrk] Improve video id extraction\n+ [nrk] Add support for podcasts (#27634, #27635)\n* [nrk] Generalize and delegate all item extractors to nrk\n+ [nrk] Add support for mp3 formats\n* [nrktv] Switch to playback endpoint\n* [vvvvid] Fix season metadata extraction (#18130)\n* [stitcher] Fix extraction (#20811, #27606)\n* [acast] Fix extraction (#21444, #27612, #27613)\n+ [arcpublishing] Add support for arcpublishing.com (#2298, #9340, #17200)\n+ [sky] Add support for Sports News articles and Brighcove videos (#13054)\n+ [vvvvid] Extract akamai formats\n* [vvvvid] Skip unplayable episodes (#27599)\n* [yandexvideo] Fix extraction for Python 3.4",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2021.01.03, the release notes describe extractor changes: improving nrk series metadata extraction, adding subtitle extraction, fixing age limit extraction, improving video id extraction, adding podcasts and mp3 formats support, generalizing item extractors, and switching nrktv to playback endpoint; fixing vvvvid season metadata extraction; fixing stitcher and acast extraction; adding arcpublishing.com support; adding sky Sports News articles and Brightcove videos; extracting akamai formats for vvvvid and skipping unplayable episodes; and fixing yandexvideo extraction for Python 3.4."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2021_01_08",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2021.01.08",
+      "tag_name": "2021.01.08",
+      "title": "youtube-dl 2021.01.08",
+      "time_hint": "2021-01-08",
+      "published_at": "2021-01-08T04:05:41Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2021.01.08",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2021.01.08\nTag: 2021.01.08; draft: False; prerelease: False; published_at: 2021-01-08T04:05:41Z; created_at: 2021-01-08T04:04:21Z\nRelease notes:\nCore\n* [downloader/hls] Disable decryption in tests (#27660)\n+ [utils] Add a function to clean podcast URLs\nExtractors\n* [rai] Improve subtitles extraction (#27698, #27705)\n* [canvas] Match only supported VRT NU URLs (#27707)\n+ [bibeltv] Add support for bibeltv.de (#14361)\n+ [bfmtv] Add support for bfmtv.com (#16053, #26615)\n+ [sbs] Add support for ondemand play and news embed URLs (#17650, #27629)\n* [twitch] Drop legacy kraken API v5 code altogether and refactor\n* [twitch:vod] Switch to GraphQL for video metadata\n* [canvas] Fix VRT NU extraction (#26957, #27053)\n* [twitch] Switch access token to GraphQL and refactor (#27646)\n+ [rai] Detect ContentItem in iframe (#12652, #27673)\n* [ketnet] Fix extraction (#27662)\n+ [dplay] Add suport Discovery+ domains (#27680)\n* [motherless] Improve extraction (#26495, #27450)\n* [motherless] Fix recent videos upload date extraction (#27661)\n* [nrk] Fix extraction for videos without a legalAge rating\n- [googleplus] Remove extractor (#4955, #7400)\n+ [applepodcasts] Add support for podcasts.apple.com (#25918)\n+ [googlepodcasts] Add support for podcasts.google.com\n+ [iheart] Add support for iheart.com (#27037)\n* [acast] Clean podcast URLs\n* [stitcher] Clean podcast URLs\n+ [xfileshare] Add support for aparat.cam (#27651)\n+ [twitter] Add support for summary card (#25121)\n* [twitter] Try to use a Generic fallback for unknown twitter cards (#25982)\n+ [stitcher] Add support for shows and show metadata extraction (#20510)\n* [stv] Improve episode id extraction (#23083)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2021.01.08, the release notes describe core changes: disabling HLS decryption in tests and adding a function to clean podcast URLs. Extractor changes include improving rai subtitles extraction; matching only supported VRT NU URLs for canvas; adding bibeltv.de, bfmtv.com, sbs ondemand play and news embed URLs; dropping legacy kraken API v5 code for twitch and switching twitch:vod to GraphQL; fixing canvas VRT NU extraction; switching twitch access token to GraphQL; detecting rai ContentItem in iframe; fixing ketnet extraction; adding dplay Discovery+ domains; improving motherless extraction and fixing recent videos upload date; fixing nrk extraction for videos without legalAge rating; removing googleplus extractor; adding applepodcasts, googlepodcasts, iheart.com support; cleaning acast and stitcher podcast URLs; adding xfileshare aparat.cam; adding twitter summary card and generic fallback; adding stitcher shows and show metadata extraction; and improving stv episode id extraction."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2021_01_16",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2021.01.16",
+      "tag_name": "2021.01.16",
+      "title": "youtube-dl 2021.01.16",
+      "time_hint": "2021-01-16",
+      "published_at": "2021-01-16T02:53:01Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2021.01.16",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2021.01.16\nTag: 2021.01.16; draft: False; prerelease: False; published_at: 2021-01-16T02:53:01Z; created_at: 2021-01-16T02:51:42Z\nRelease notes:\nCore\n* [YoutubeDL] Protect from infinite recursion due to recursively nested\nplaylists (#27833)\n* [YoutubeDL] Ignore failure to create existing directory (#27811)\n* [YoutubeDL] Raise syntax error for format selection expressions with multiple\n+ operators (#27803)\nExtractors\n+ [animeondemand] Add support for lazy playlist extraction (#27829)\n* [youporn] Restrict fallback download URL (#27822)\n* [youporn] Improve height and tbr extraction (#20425, #23659)\n* [youporn] Fix extraction (#27822)\n+ [twitter] Add support for unified cards (#27826)\n+ [twitch] Add Authorization header with OAuth token for GraphQL requests\n(#27790)\n* [mixcloud:playlist:base] Extract video id in flat playlist mode (#27787)\n* [cspan] Improve info extraction (#27791)\n* [adn] Improve info extraction\n* [adn] Fix extraction (#26963, #27732)\n* [youtube:search] Extract from all sections (#27604)\n* [youtube:search] fix viewcount and try to extract all video sections (#27604)\n* [twitch] Improve login error extraction\n* [twitch] Fix authentication (#27743)\n* [3qsdn] Improve extraction (#21058)\n* [peertube] Extract formats from streamingPlaylists (#26002, #27586, #27728)\n* [khanacademy] Fix extraction (#2887, #26803)\n* [spike] Update Paramount Network feed URL (#27715)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2021.01.16, the release notes describe core changes: protecting from infinite recursion due to recursively nested playlists, ignoring failure to create existing directory, and raising syntax error for format selection expressions with multiple + operators. Extractor changes include adding animeondemand lazy playlist extraction; restricting youporn fallback download URL, improving height/tbr extraction, and fixing extraction; adding twitter unified cards; adding twitch Authorization header with OAuth token for GraphQL; extracting video id in flat playlist mode for mixcloud:playlist:base; improving cspan info extraction; improving adn info extraction and fixing extraction; extracting from all sections for youtube:search and fixing viewcount; improving twitch login error extraction and fixing authentication; improving 3qsdn extraction; extracting formats from streamingPlaylists for peertube; fixing khanacademy extraction; and updating spike Paramount Network feed URL."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2021_01_24_1",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2021.01.24.1",
+      "tag_name": "2021.01.24.1",
+      "title": "youtube-dl 2021.01.24.1",
+      "time_hint": "2021-01-24",
+      "published_at": "2021-01-24T11:12:42Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2021.01.24.1",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2021.01.24.1\nTag: 2021.01.24.1; draft: False; prerelease: False; published_at: 2021-01-24T11:12:42Z; created_at: 2021-01-24T11:11:31Z\nRelease notes:\nCore\n* Introduce --output-na-placeholder (#27896)\nExtractors\n* [franceculture] Make thumbnail optional (#18807)\n* [franceculture] Fix extraction (#27891, #27903)\n* [njpwworld] Fix extraction (#27890)\n* [comedycentral] Fix extraction (#27905)\n* [wat] Fix format extraction (#27901)\n+ [americastestkitchen:season] Add support for seasons (#27861)\n+ [trovo] Add support for trovo.live (#26125)\n+ [aol] Add support for yahoo videos (#26650)\n* [yahoo] Fix single video extraction\n* [lbry] Unescape lbry URI (#27872)\n* [9gag] Fix and improve extraction (#23022)\n* [americastestkitchen] Improve metadata extraction for ATK episodes (#27860)\n* [aljazeera] Fix extraction (#20911, #27779)\n+ [minds] Add support for minds.com (#17934)\n* [ard] Fix title and description extraction (#27761)\n+ [spotify] Add support for Spotify Podcasts (#27443)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2021.01.24.1, the release notes describe a core introduction of --output-na-placeholder. Extractor changes include making franceculture thumbnail optional and fixing extraction; fixing njpwworld, comedycentral, and wat format extraction; adding americastestkitchen:season support; adding trovo.live support; adding aol yahoo videos support; fixing yahoo single video extraction; unescaping lbry URI; fixing and improving 9gag extraction; improving americastestkitchen metadata extraction for ATK episodes; fixing aljazeera extraction; adding minds.com support; fixing ard title and description extraction; and adding spotify podcasts support."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2021_02_04",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2021.02.04",
+      "tag_name": "2021.02.04",
+      "title": "youtube-dl 2021.02.04",
+      "time_hint": "2021-02-03",
+      "published_at": "2021-02-03T21:50:42Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2021.02.04",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2021.02.04\nTag: 2021.02.04; draft: False; prerelease: False; published_at: 2021-02-03T21:50:42Z; created_at: 2021-02-03T21:49:32Z\nRelease notes:\nExtractors\n* [pornhub] Implement lazy playlist extraction\n* [svtplay] Fix video id extraction (#28058)\n+ [pornhub] Add support for authentication (#18797, #21416, #24294)\n* [pornhub:user] Improve paging\n+ [pornhub:user] Add support for URLs unavailable via /videos page (#27853)\n+ [bravotv] Add support for oxygen.com (#13357, #22500)\n+ [youtube] Pass embed URL to get_video_info request\n* [ccma] Improve metadata extraction (#27994)\n+ Extract age limit, alt title, categories, series and episode number\n* Fix timestamp multiple subtitles extraction\n* [egghead] Update API domain (#28038)\n- [vidzi] Remove extractor (#12629)\n* [vidio] Improve metadata extraction\n* [youtube] Improve subtitles extraction\n* [youtube] Fix chapter extraction fallback\n* [youtube] Rewrite extractor\n* Improve format sorting\n* Remove unused code\n* Fix series metadata extraction\n* Fix trailer video extraction\n* Improve error reporting\n+ Extract video location\n+ [vvvvid] Add support for youtube embeds (#27825)\n* [googledrive] Report download page errors (#28005)\n* [vlive] Fix error message decoding for python 2 (#28004)\n* [youtube] Improve DASH formats file size extraction\n* [cda] Improve birth validation detection (#14022, #27929)\n+ [awaan] Extract uploader id (#27963)\n+ [medialaan] Add support DPG Media MyChannels based websites (#14871, #15597,\n#16106, #16489)\n* [abcnews] Fix extraction (#12394, #27920)\n* [AMP] Fix upload date and timestamp extraction (#27970)\n* [tv4] Relax URL regular expression (#27964)\n+ [tv2] Add support for mtvuutiset.fi (#27744)\n* [adn] Improve login warning reporting\n* [zype] Fix uplynk id extraction (#27956)\n+ [adn] Add support for authentication (#17091, #27841, #27937)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2021.02.04, the release notes describe extractor changes: implementing pornhub lazy playlist extraction; fixing svtplay video id extraction; adding pornhub authentication, improving user paging, and adding support for URLs unavailable via /videos page; adding bravotv oxygen.com; passing embed URL to get_video_info for youtube; improving ccma metadata extraction (age limit, alt title, categories, series, episode number, timestamp multiple subtitles); updating egghead API domain; removing vidzi extractor; improving vidio metadata extraction; improving youtube subtitles extraction, fixing chapter extraction fallback, rewriting extractor, improving format sorting, removing unused code, fixing series metadata extraction, fixing trailer video extraction, improving error reporting, extracting video location; adding vvvvid youtube embeds; reporting googledrive download page errors; fixing vlive error message decoding for python 2; improving youtube DASH formats file size extraction; improving cda birth validation detection; extracting awaan uploader id; adding medialaan DPG Media MyChannels based websites; fixing abcnews extraction; fixing AMP upload date and timestamp extraction; relaxing tv4 URL regex; adding tv2 mtvuutiset.fi; improving adn login warning reporting; fixing zype uplynk id extraction; and adding adn authentication."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2021_02_04_1",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2021.02.04.1",
+      "tag_name": "2021.02.04.1",
+      "title": "youtube-dl 2021.02.04.1",
+      "time_hint": "2021-02-04",
+      "published_at": "2021-02-04T06:12:52Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2021.02.04.1",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2021.02.04.1\nTag: 2021.02.04.1; draft: False; prerelease: False; published_at: 2021-02-04T06:12:52Z; created_at: 2021-02-04T06:11:41Z\nRelease notes:\nExtractors\n* [youtube] Prefer DASH formats (#28070)\n* [azmedien] Fix extraction (#28064)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2021.02.04.1, the release notes describe extractor changes: preferring DASH formats for youtube and fixing azmedien extraction."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2021_02_10",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2021.02.10",
+      "tag_name": "2021.02.10",
+      "title": "youtube-dl 2021.02.10",
+      "time_hint": "2021-02-10",
+      "published_at": "2021-02-10T15:36:05Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2021.02.10",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2021.02.10\nTag: 2021.02.10; draft: False; prerelease: False; published_at: 2021-02-10T15:36:05Z; created_at: 2021-02-10T15:34:54Z\nRelease notes:\nExtractors\n* [youtube:tab] Improve grid continuation extraction (#28130)\n* [ign] Fix extraction (#24771)\n+ [xhamster] Extract format filesize\n+ [xhamster] Extract formats from xplayer settings (#28114)\n+ [youtube] Add support phone/tablet JS player (#26424)\n* [archiveorg] Fix and improve extraction (#21330, #23586, #25277, #26780,\n#27109, #27236, #28063)\n+ [cda] Detect geo restricted videos (#28106)\n* [urplay] Fix extraction (#28073, #28074)\n* [youtube] Fix release date extraction (#28094)\n+ [youtube] Extract abr and vbr (#28100)\n* [youtube] Skip OTF formats (#28070)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2021.02.10, the release notes describe extractor changes: improving youtube:tab grid continuation extraction; fixing ign extraction; adding xhamster format filesize and xplayer settings formats; adding youtube phone/tablet JS player support; fixing and improving archiveorg extraction; detecting cda geo restricted videos; fixing urplay extraction; fixing youtube release date extraction; extracting youtube abr and vbr; and skipping OTF formats for youtube."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2021_02_22",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2021.02.22",
+      "tag_name": "2021.02.22",
+      "title": "youtube-dl 2021.02.22",
+      "time_hint": "2021-02-21",
+      "published_at": "2021-02-21T19:45:33Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2021.02.22",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2021.02.22\nTag: 2021.02.22; draft: False; prerelease: False; published_at: 2021-02-21T19:45:33Z; created_at: 2021-02-21T19:42:29Z\nRelease notes:\nCore\n+ [postprocessor/embedthumbnail] Recognize atomicparsley binary in lowercase\n(#28112)\nExtractors\n* [apa] Fix and improve extraction (#27750)\n+ [youporn] Extract duration (#28019)\n+ [peertube] Add support for canard.tube (#28190)\n* [youtube] Fixup m4a_dash formats (#28165)\n+ [samplefocus] Add support for samplefocus.com (#27763)\n+ [vimeo] Add support for unlisted video source format extraction\n* [viki] Improve extraction (#26522, #28203)\n* Extract uploader URL and episode number\n* Report login required error\n+ Extract 480p formats\n* Fix API v4 calls\n* [ninegag] Unescape title (#28201)\n* [youtube] Improve URL regular expression (#28193)\n+ [youtube] Add support for redirect.invidious.io (#28193)\n+ [dplay] Add support for de.hgtv.com (#28182)\n+ [dplay] Add support for discoveryplus.com (#24698)\n+ [simplecast] Add support for simplecast.com (#24107)\n* [youtube] Fix uploader extraction in flat playlist mode (#28045)\n* [yandexmusic:playlist] Request missing tracks in chunks (#27355, #28184)\n+ [storyfire] Add support for storyfire.com (#25628, #26349)\n+ [zhihu] Add support for zhihu.com (#28177)\n* [youtube] Fix controversial videos when authenticated with cookies (#28174)\n* [ccma] Fix timestamp parsing in python 2\n+ [videopress] Add support for video.wordpress.com\n* [kakao] Improve info extraction and detect geo restriction (#26577)\n* [xboxclips] Fix extraction (#27151)\n* [ard] Improve formats extraction (#28155)\n+ [canvas] Add support for dagelijksekost.een.be (#28119)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2021.02.22, the release notes describe a core addition of recognizing atomicparsley binary in lowercase for postprocessor/embedthumbnail. Extractor changes include fixing and improving apa extraction; adding youporn duration; adding peertube canard.tube; fixing youtube m4a_dash formats; adding samplefocus.com; adding vimeo unlisted video source format extraction; improving viki extraction (uploader URL, episode number, login required error, 480p formats, API v4 calls); unescaping ninegag title; improving youtube URL regex and adding redirect.invidious.io; adding dplay de.hgtv.com and discoveryplus.com; adding simplecast.com; fixing youtube uploader extraction in flat playlist mode; requesting missing tracks in chunks for yandexmusic:playlist; adding storyfire.com and zhihu.com; fixing youtube controversial videos when authenticated with cookies; fixing ccma timestamp parsing in python 2; adding videopress video.wordpress.com; improving kakao info extraction and geo restriction detection; fixing xboxclips extraction; improving ard formats extraction; and adding canvas dagelijksekost.een.be."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2021_03_02",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2021.03.02",
+      "tag_name": "2021.03.02",
+      "title": "youtube-dl 2021.03.02",
+      "time_hint": "2021-03-01",
+      "published_at": "2021-03-01T23:21:21Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2021.03.02",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2021.03.02\nTag: 2021.03.02; draft: False; prerelease: False; published_at: 2021-03-01T23:21:21Z; created_at: 2021-03-01T23:20:10Z\nRelease notes:\nExtractors\n* [zdf] Rework extractors (#11606, #13473, #17354, #21185, #26711, #27068,\n#27930, #28198, #28199, #28274)\n* Generalize cross-extractor video ids for zdf based extractors\n* Improve extraction\n* Fix 3sat and phoenix\n* [stretchinternet] Fix extraction (#28297)\n* [urplay] Fix episode data extraction (#28292)\n+ [bandaichannel] Add support for b-ch.com (#21404)\n* [srgssr] Improve extraction (#14717, #14725, #27231, #28238)\n+ Extract subtitle\n* Fix extraction for new videos\n* Update srf download domains\n* [vvvvid] Reduce season request payload size\n+ [vvvvid] Extract series sublists playlist title (#27601, #27618)\n+ [dplay] Extract Ad-Free uplynk URLs (#28160)\n+ [wat] Detect DRM protected videos (#27958)\n* [tf1] Improve extraction (#27980, #28040)\n* [tmz] Fix and improve extraction (#24603, #24687, 28211)\n+ [gedidigital] Add support for Gedi group sites (#7347, #26946)\n* [youtube] Fix get_video_info request",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2021.03.02, the release notes describe extractor changes: reworking zdf extractors (generalizing cross-extractor video ids, improving extraction, fixing 3sat and phoenix); fixing stretchinternet extraction; fixing urplay episode data extraction; adding bandaichannel b-ch.com; improving srgssr extraction (subtitle extraction, fixing new videos, updating srf download domains); reducing vvvvid season request payload size and extracting series sublists playlist title; extracting ad-free uplynk URLs for dplay; detecting DRM protected videos for wat; improving tf1 extraction; fixing and improving tmz extraction; adding gedidigital Gedi group sites; and fixing youtube get_video_info request."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2021_03_03",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2021.03.03",
+      "tag_name": "2021.03.03",
+      "title": "youtube-dl 2021.03.03",
+      "time_hint": "2021-03-03",
+      "published_at": "2021-03-03T04:49:01Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2021.03.03",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2021.03.03\nTag: 2021.03.03; draft: False; prerelease: False; published_at: 2021-03-03T04:49:01Z; created_at: 2021-03-03T04:47:42Z\nRelease notes:\nExtractors\n* [youtube:tab] Switch continuation to browse API (#28289, #28327)\n* [9c9media] Fix extraction for videos with multiple ContentPackages (#28309)\n+ [bbc] Add support for BBC Reel videos (#21870, #23660, #28268)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2021.03.03, the release notes describe extractor changes: switching youtube:tab continuation to browse API; fixing 9c9media extraction for videos with multiple ContentPackages; and adding bbc BBC Reel videos support."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2021_03_14",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2021.03.14",
+      "tag_name": "2021.03.14",
+      "title": "youtube-dl 2021.03.14",
+      "time_hint": "2021-03-14",
+      "published_at": "2021-03-14T02:39:28Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2021.03.14",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2021.03.14\nTag: 2021.03.14; draft: False; prerelease: False; published_at: 2021-03-14T02:39:28Z; created_at: 2021-03-14T02:38:23Z\nRelease notes:\nCore\n+ Introduce release_timestamp meta field (#28386)\nExtractors\n+ [southpark] Add support for southparkstudios.com (#28413)\n* [southpark] Fix extraction (#26763, #28413)\n* [sportdeutschland] Fix extraction (#21856, #28425)\n* [pinterest] Reduce the number of HLS format requests\n* [peertube] Improve thumbnail extraction (#28419)\n* [tver] Improve title extraction (#28418)\n* [fujitv] Fix HLS formats extension (#28416)\n* [shahid] Fix format extraction (#28383)\n+ [lbry] Add support for channel filters (#28385)\n+ [bandcamp] Extract release timestamp\n+ [lbry] Extract release timestamp (#28386)\n* [pornhub] Detect flagged videos\n+ [pornhub] Extract formats from get_media end point (#28395)\n* [bilibili] Fix video info extraction (#28341)\n+ [cbs] Add support for Paramount+ (#28342)\n+ [trovo] Add Origin header to VOD formats (#28346)\n* [voxmedia] Fix volume embed extraction (#28338)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2021.03.14, the release notes describe a core introduction of release_timestamp meta field. Extractor changes include adding southpark southparkstudios.com and fixing extraction; fixing sportdeutschland extraction; reducing pinterest HLS format requests; improving peertube thumbnail extraction; improving tver title extraction; fixing fujitv HLS formats extension; fixing shahid format extraction; adding lbry channel filters; extracting bandcamp release timestamp; extracting lbry release timestamp; detecting flagged videos for pornhub and extracting formats from get_media end point; fixing bilibili video info extraction; adding cbs Paramount+; adding trovo Origin header to VOD formats; and fixing voxmedia volume embed extraction."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2021_03_25",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2021.03.25",
+      "tag_name": "2021.03.25",
+      "title": "youtube-dl 2021.03.25",
+      "time_hint": "2021-03-24",
+      "published_at": "2021-03-24T17:05:28Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2021.03.25",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2021.03.25\nTag: 2021.03.25; draft: False; prerelease: False; published_at: 2021-03-24T17:05:28Z; created_at: 2021-03-24T17:04:18Z\nRelease notes:\nExtractors\n+ [zoom] Add support for zoom.us (#16597, #27002, #28531)\n* [bbc] Fix BBC IPlayer Episodes/Group extraction (#28360)\n* [youtube] Fix default value for youtube_include_dash_manifest (#28523)\n* [zingmp3] Fix extraction (#11589, #16409, #16968, #27205)\n+ [vgtv] Add support for new tv.aftonbladet.se URL schema (#28514)\n+ [tiktok] Detect private videos (#28453)\n* [vimeo:album] Fix extraction for albums with number of videos multiple\nto page size (#28486)\n* [vvvvid] Fix kenc format extraction (#28473)\n* [mlb] Fix video extraction (#21241)\n* [svtplay] Improve extraction (#28448)\n* [applepodcasts] Fix extraction (#28445)\n* [rtve] Improve extraction\n+ Extract all formats\n* Fix RTVE Infantil extraction (#24851)\n+ Extract is_live and series",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2021.03.25, the release notes describe extractor changes: adding zoom.us support; fixing bbc BBC IPlayer Episodes/Group extraction; fixing youtube default value for youtube_include_dash_manifest; fixing zingmp3 extraction; adding vgtv new tv.aftonbladet.se URL schema; detecting tiktok private videos; fixing vimeo:album extraction for albums with number of videos multiple to page size; fixing vvvvid kenc format extraction; fixing mlb video extraction; improving svtplay extraction; fixing applepodcasts extraction; improving rtve extraction (extracting all formats, fixing RTVE Infantil, extracting is_live and series)."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2021_03_31",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2021.03.31",
+      "tag_name": "2021.03.31",
+      "title": "youtube-dl 2021.03.31",
+      "time_hint": "2021-03-30",
+      "published_at": "2021-03-30T20:00:19Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2021.03.31",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2021.03.31\nTag: 2021.03.31; draft: False; prerelease: False; published_at: 2021-03-30T20:00:19Z; created_at: 2021-03-30T19:59:14Z\nRelease notes:\nExtractors\n* [vlive] Fix inkey request (#28589)\n* [francetvinfo] Improve video id extraction (#28584)\n+ [instagram] Extract duration (#28469)\n* [instagram] Improve title extraction (#28469)\n+ [sbs] Add support for ondemand watch URLs (#28566)\n* [youtube] Fix video's channel extraction (#28562)\n* [picarto] Fix live stream extraction (#28532)\n* [vimeo] Fix unlisted video extraction (#28414)\n* [youtube:tab] Fix playlist/community continuation items extraction (#28266)\n* [ard] Improve clip id extraction (#22724, #28528)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2021.03.31, the release notes describe extractor changes: fixing vlive inkey request; improving francetvinfo video id extraction; adding instagram duration and improving title extraction; adding sbs ondemand watch URLs; fixing youtube video's channel extraction; fixing picarto live stream extraction; fixing vimeo unlisted video extraction; fixing youtube:tab playlist/community continuation items extraction; and improving ard clip id extraction."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2021_04_01",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2021.04.01",
+      "tag_name": "2021.04.01",
+      "title": "youtube-dl 2021.04.01",
+      "time_hint": "2021-03-31",
+      "published_at": "2021-03-31T21:48:24Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2021.04.01",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2021.04.01\nTag: 2021.04.01; draft: False; prerelease: False; published_at: 2021-03-31T21:48:24Z; created_at: 2021-03-31T21:47:19Z\nRelease notes:\nExtractors\n* [youtube] Setup CONSENT cookie when needed (#28604)\n* [vimeo] Fix password protected review extraction (#27591)\n* [youtube] Improve age-restricted video extraction (#28578)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2021.04.01, the release notes describe extractor changes: setting up CONSENT cookie when needed for youtube; fixing vimeo password protected review extraction; and improving youtube age-restricted video extraction."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2021_04_07",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2021.04.07",
+      "tag_name": "2021.04.07",
+      "title": "youtube-dl 2021.04.07",
+      "time_hint": "2021-04-06",
+      "published_at": "2021-04-06T20:43:37Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2021.04.07",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2021.04.07\nTag: 2021.04.07; draft: False; prerelease: False; published_at: 2021-04-06T20:43:37Z; created_at: 2021-04-06T20:42:32Z\nRelease notes:\nCore\n* [extractor/common] Use compat_cookies_SimpleCookie for _get_cookies\n+ [compat] Introduce compat_cookies_SimpleCookie\n* [extractor/common] Improve JSON-LD author extraction\n* [extractor/common] Fix _get_cookies on python 2 (#20673, #23256, #20326,\n#28640)\nExtractors\n* [youtube] Fix extraction of videos with restricted location (#28685)\n+ [line] Add support for live.line.me (#17205, #28658)\n* [vimeo] Improve extraction (#28591)\n* [youku] Update ccode (#17852, #28447, #28460, #28648)\n* [youtube] Prefer direct entry metadata over entry metadata from playlist\n(#28619, #28636)\n* [screencastomatic] Fix extraction (#11976, #24489)\n+ [palcomp3] Add support for palcomp3.com (#13120)\n+ [arnes] Add support for video.arnes.si (#28483)\n+ [youtube:tab] Add support for hashtags (#28308)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2021.04.07, the release notes describe core changes: using compat_cookies_SimpleCookie for _get_cookies, introducing compat_cookies_SimpleCookie, improving JSON-LD author extraction, and fixing _get_cookies on python 2. Extractor changes include fixing youtube extraction of videos with restricted location; adding line live.line.me; improving vimeo extraction; updating youku ccode; preferring direct entry metadata over playlist metadata for youtube; fixing screencastomatic extraction; adding palcomp3.com and video.arnes.si; and adding youtube:tab hashtags support."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2021_04_17",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2021.04.17",
+      "tag_name": "2021.04.17",
+      "title": "youtube-dl 2021.04.17",
+      "time_hint": "2021-04-16",
+      "published_at": "2021-04-16T20:51:26Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2021.04.17",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2021.04.17\nTag: 2021.04.17; draft: False; prerelease: False; published_at: 2021-04-16T20:51:26Z; created_at: 2021-04-16T20:50:17Z\nRelease notes:\nCore\n+ [utils] Add support for experimental HTTP response status code\n308 Permanent Redirect (#27877, #28768)\nExtractors\n+ [lbry] Add support for HLS videos (#27877, #28768)\n* [youtube] Fix stretched ratio calculation\n* [youtube] Improve stretch extraction (#28769)\n* [youtube:tab] Improve grid extraction (#28725)\n+ [youtube:tab] Detect series playlist on playlists page (#28723)\n+ [youtube] Add more invidious instances (#28706)\n* [pluralsight] Extend anti-throttling timeout (#28712)\n* [youtube] Improve URL to extractor routing (#27572, #28335, #28742)\n+ [maoritv] Add support for maoritelevision.com (#24552)\n+ [youtube:tab] Pass innertube context and x-goog-visitor-id header along with\ncontinuation requests (#28702)\n* [mtv] Fix Viacom A/B Testing Video Player extraction (#28703)\n+ [pornhub] Extract DASH and HLS formats from get_media end point (#28698)\n* [cbssports] Fix extraction (#28682)\n* [jamendo] Fix track extraction (#28686)\n* [curiositystream] Fix format extraction (#26845, #28668)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2021.04.17, the release notes describe a core addition of support for experimental HTTP response status code 308 Permanent Redirect. Extractor changes include adding lbry HLS videos; fixing youtube stretched ratio calculation and improving stretch extraction; improving youtube:tab grid extraction; detecting series playlist on playlists page for youtube:tab; adding more invidious instances for youtube; extending pluralsight anti-throttling timeout; improving youtube URL to extractor routing; adding maoritv maoritelevision.com; passing innertube context and x-goog-visitor-id header with continuation requests for youtube:tab; fixing mtv Viacom A/B Testing Video Player extraction; extracting DASH and HLS formats from get_media end point for pornhub; fixing cbssports extraction; fixing jamendo track extraction; and fixing curiositystream format extraction."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2021_04_26",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2021.04.26",
+      "tag_name": "2021.04.26",
+      "title": "youtube-dl 2021.04.26",
+      "time_hint": "2021-04-25",
+      "published_at": "2021-04-25T18:34:45Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2021.04.26",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2021.04.26\nTag: 2021.04.26; draft: False; prerelease: False; published_at: 2021-04-25T18:34:45Z; created_at: 2021-04-25T18:33:38Z\nRelease notes:\nExtractors\n+ [xfileshare] Add support for wolfstream.tv (#28858)\n* [francetvinfo] Improve video id extraction (#28792)\n* [medaltv] Fix extraction (#28807)\n* [tver] Redirect all downloads to Brightcove (#28849)\n* [go] Improve video id extraction (#25207, #25216, #26058)\n* [youtube] Fix lazy extractors (#28780)\n+ [bbc] Extract description and timestamp from __INITIAL_DATA__ (#28774)\n* [cbsnews] Fix extraction for python <3.6 (#23359)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2021.04.26, the release notes describe extractor changes: adding xfileshare wolfstream.tv; improving francetvinfo video id extraction; fixing medaltv extraction; redirecting all tver downloads to Brightcove; improving go video id extraction; fixing youtube lazy extractors; extracting bbc description and timestamp from __INITIAL_DATA__; and fixing cbsnews extraction for python <3.6."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2021_05_16",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2021.05.16",
+      "tag_name": "2021.05.16",
+      "title": "youtube-dl 2021.05.16",
+      "time_hint": "2021-05-16",
+      "published_at": "2021-05-16T15:56:29Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2021.05.16",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2021.05.16\nTag: 2021.05.16; draft: False; prerelease: False; published_at: 2021-05-16T15:56:29Z; created_at: 2021-05-16T15:55:15Z\nRelease notes:\nCore\n* [options] Fix thumbnail option group name (#29042)\n* [YoutubeDL] Improve extract_info doc (#28946)\nExtractors\n+ [playstuff] Add support for play.stuff.co.nz (#28901, #28931)\n* [eroprofile] Fix extraction (#23200, #23626, #29008)\n+ [vivo] Add support for vivo.st (#29009)\n+ [generic] Add support for og:audio (#28311, #29015)\n* [phoenix] Fix extraction (#29057)\n+ [generic] Add support for sibnet embeds\n+ [vk] Add support for sibnet embeds (#9500)\n+ [generic] Add Referer header for direct videojs download URLs (#2879,\n#20217, #29053)\n* [orf:radio] Switch download URLs to HTTPS (#29012, #29046)\n- [blinkx] Remove extractor (#28941)\n* [medaltv] Relax URL regular expression (#28884)\n+ [funimation] Add support for optional lang code in URLs (#28950)\n+ [gdcvault] Add support for HTML5 videos\n* [dispeak] Improve FLV extraction (#13513, #28970)\n* [kaltura] Improve iframe extraction (#28969)\n* [kaltura] Make embed code alternatives actually work\n* [cda] Improve extraction (#28709, #28937)\n* [twitter] Improve formats extraction from vmap URL (#28909)\n* [xtube] Fix formats extraction (#28870)\n* [svtplay] Improve extraction (#28507, #28876)\n* [tv2dk] Fix extraction (#28888)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2021.05.16, the release notes describe core changes: fixing thumbnail option group name and improving extract_info doc. Extractor changes include adding playstuff play.stuff.co.nz; fixing eroprofile extraction; adding vivo.st; adding generic og:audio and sibnet embeds; fixing phoenix extraction; adding vk sibnet embeds; adding Referer header for direct videojs download URLs; switching orf:radio download URLs to HTTPS; removing blinkx extractor; relaxing medaltv URL regex; adding funimation optional lang code in URLs; adding gdcvault HTML5 videos; improving dispeak FLV extraction; improving kaltura iframe extraction and making embed code alternatives work; improving cda extraction; improving twitter formats extraction from vmap URL; fixing xtube formats extraction; improving svtplay extraction; and fixing tv2dk extraction."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2021_06_06",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2021.06.06",
+      "tag_name": "2021.06.06",
+      "title": "youtube-dl 2021.06.06",
+      "time_hint": "2021-06-05",
+      "published_at": "2021-06-05T19:01:28Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2021.06.06",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2021.06.06\nTag: 2021.06.06; draft: False; prerelease: False; published_at: 2021-06-05T19:01:28Z; created_at: 2021-06-05T18:38:35Z\nRelease notes:\nExtractors\n* [facebook] Improve login required detection\n* [youporn] Fix formats and view count extraction (#29216)\n* [orf:tvthek] Fix thumbnails extraction (#29217)\n* [formula1] Fix extraction (#29206)\n* [ard] Relax URL regular expression and fix video ids (#22724, #29091)\n+ [ustream] Detect https embeds (#29133)\n* [ted] Prefer own formats over external sources (#29142)\n* [twitch:clips] Improve extraction (#29149)\n+ [twitch:clips] Add access token query to download URLs (#29136)\n* [youtube] Fix get_video_info request (#29086, #29165)\n* [vimeo] Fix vimeo pro embed extraction (#29126)\n* [redbulltv] Fix embed data extraction (#28770)\n* [shahid] Relax URL regular expression (#28772, #28930)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2021.06.06, the release notes describe extractor changes: improving facebook login required detection; fixing youporn formats and view count extraction; fixing orf:tvthek thumbnails extraction; fixing formula1 extraction; relaxing ard URL regex and fixing video ids; detecting ustream https embeds; preferring ted own formats over external sources; improving twitch:clips extraction and adding access token query to download URLs; fixing youtube get_video_info request; fixing vimeo pro embed extraction; fixing redbulltv embed data extraction; and relaxing shahid URL regex."
+    },
+    {
+      "memory_node_id": "ytdl_org__youtube_dl__release__2021_12_17",
+      "repo": "ytdl-org/youtube-dl",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2021.12.17",
+      "tag_name": "2021.12.17",
+      "title": "youtube-dl 2021.12.17",
+      "time_hint": "2021-12-16",
+      "published_at": "2021-12-16T19:01:08Z",
+      "source_url": "https://github.com/ytdl-org/youtube-dl/releases/tag/2021.12.17",
+      "raw_text": "Repository: ytdl-org/youtube-dl\nRelease: youtube-dl 2021.12.17\nTag: 2021.12.17; draft: False; prerelease: False; published_at: 2021-12-16T19:01:08Z; created_at: 2021-12-16T18:49:28Z\nRelease notes:\n**This release is old and has many known issues.** See \"... commits to master since this release\" above.\nYou almost certainly want the [nightly build release](https://github.com/ytdl-org/ytdl-nightly/releases/), and not this one. The nightly build is created from the `master` branch of this repo if changes have been committed since the last build. Read about [Installation](https://github.com/ytdl-org/ytdl-nightly#user-content-installation) of the nightly build. Major fixes in the nightly build are listed [here](https://github.com/ytdl-org/youtube-dl/issues/30839).\nCore\n* [postprocessor/ffmpeg] Show ffmpeg output on error (#22680, #29336)\nExtractors\n* [youtube] Update signature function patterns (#30363, #30366)\n* [peertube] Only call description endpoint if necessary (#29383)\n* [periscope] Pass referer to HLS requests (#29419)\n- [liveleak] Remove extractor (#17625, #24222, #29331)\n+ [pornhub] Add support for pornhubthbh7ap3u.onion\n* [pornhub] Detect geo restriction\n* [pornhub] Dismiss tbr extracted from download URLs (#28927)\n* [curiositystream:collection] Extend _VALID_URL (#26326, #29117)\n* [youtube] Make get_video_info processing more robust (#29333)\n* [youtube] Workaround for get_video_info request (#29333)\n* [bilibili] Strip uploader name (#29202)\n* [youtube] Update invidious instance list (#29281)\n* [umg:de] Update GraphQL API URL (#29304)\n* [nrk] Switch psapi URL to https (#29344)\n+ [egghead] Add support for app.egghead.io (#28404, #29303)\n* [appleconnect] Fix extraction (#29208)\n+ [orf:tvthek] Add support for MPD formats (#28672, #29236)",
+      "memory_unit_text": "In the ytdl-org/youtube-dl release 2021.12.17, the release notes describe a core change to show ffmpeg output on error. Extractor changes include updating youtube signature function patterns; only calling peertube description endpoint if necessary; passing referer to periscope HLS requests; removing liveleak extractor; adding pornhub onion support, detecting geo restriction, and dismissing tbr from download URLs; extending curiositystream:collection _VALID_URL; making youtube get_video_info processing more robust and adding workaround; stripping bilibili uploader name; updating youtube invidious instance list; updating umg:de GraphQL API URL; switching nrk psapi URL to https; adding egghead app.egghead.io; fixing appleconnect extraction; and adding orf:tvthek MPD formats."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the ytdl-org/youtube-dl releases, which release adds support for extracting DASH and HLS formats from the get_media endpoint for pornhub?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2021.04.17"
+        },
+        {
+          "option_id": "B",
+          "text": "2021.03.14"
+        },
+        {
+          "option_id": "C",
+          "text": "2021.02.04"
+        },
+        {
+          "option_id": "D",
+          "text": "2021.01.16"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2021.04.17",
+      "source_chunk_ids": [
+        "ytdl_org__youtube_dl__release__2021_04_17"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "ytdl_org__youtube_dl__release__2021_04_17",
+          "answer_text": "extracting DASH and HLS formats from get_media end point for pornhub"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the ytdl-org/youtube-dl releases, how does the youtube extractor change described in release 2021.02.04.1 differ from the youtube extractor change described in release 2021.02.10?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2021.02.04.1 prefers DASH formats, while 2021.02.10 adds phone/tablet JS player support and skips OTF formats."
+        },
+        {
+          "option_id": "B",
+          "text": "2021.02.04.1 removes DASH formats, while 2021.02.10 adds them back."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only fix azmedien extraction."
+        },
+        {
+          "option_id": "D",
+          "text": "2021.02.04.1 adds invidious instances, while 2021.02.10 removes them."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2021.02.04.1 prefers DASH formats, while 2021.02.10 adds phone/tablet JS player support and skips OTF formats.",
+      "source_chunk_ids": [
+        "ytdl_org__youtube_dl__release__2021_02_04_1",
+        "ytdl_org__youtube_dl__release__2021_02_10"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "ytdl_org__youtube_dl__release__2021_02_04_1",
+          "answer_text": "preferring DASH formats for youtube"
+        },
+        {
+          "memory_node_id": "ytdl_org__youtube_dl__release__2021_02_10",
+          "answer_text": "adding youtube phone/tablet JS player support ... skipping OTF formats for youtube"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the ytdl-org/youtube-dl release window, order the following release-content states from earliest to latest: (1) a release that adds support for zoom.us, (2) a release that introduces the release_timestamp meta field, (3) a release that adds support for BBC Reel videos, (4) a release that switches youtube:tab continuation to browse API.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2 -> 3 -> 4 -> 1"
+        },
+        {
+          "option_id": "B",
+          "text": "3 -> 4 -> 2 -> 1"
+        },
+        {
+          "option_id": "C",
+          "text": "4 -> 3 -> 2 -> 1"
+        },
+        {
+          "option_id": "D",
+          "text": "1 -> 2 -> 3 -> 4"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2 -> 3 -> 4 -> 1",
+      "source_chunk_ids": [
+        "ytdl_org__youtube_dl__release__2021_03_14",
+        "ytdl_org__youtube_dl__release__2021_03_03",
+        "ytdl_org__youtube_dl__release__2021_03_25"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "ytdl_org__youtube_dl__release__2021_03_14",
+          "answer_text": "introduction of release_timestamp meta field"
+        },
+        {
+          "memory_node_id": "ytdl_org__youtube_dl__release__2021_03_03",
+          "answer_text": "adding bbc BBC Reel videos support ... switching youtube:tab continuation to browse API"
+        },
+        {
+          "memory_node_id": "ytdl_org__youtube_dl__release__2021_03_25",
+          "answer_text": "adding zoom.us support"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,530 @@
+{
+  "prototype_id": "labstack__echo_release_window",
+  "domain": "github_release_evolution",
+  "repo": "labstack/echo",
+  "source_type": "release_note",
+  "window_title": "labstack/echo recent release evolution",
+  "window_summary": "This window tracks the recent labstack/echo release stream from v4.7.1 through v5.1.1, covering security fixes, middleware deprecations, major breaking changes in v5, and new features like generic parameter binding and CSRF enhancements.",
+  "chunks": [
+    {
+      "memory_node_id": "labstack__echo__release__v4_7_1",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.7.1",
+      "tag_name": "v4.7.1",
+      "title": "v4.7.1",
+      "time_hint": "2022-03-13",
+      "published_at": "2022-03-13T17:13:04Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.7.1",
+      "raw_text": "Repository: labstack/echo\nRelease: v4.7.1\nTag: v4.7.1; draft: False; prerelease: False; published_at: 2022-03-13T17:13:04Z; created_at: 2022-03-13T16:43:24Z\nRelease notes:\n**Fixes**\n* Fix `e.Static`, `.File()`, `c.Attachment()` being picky with paths starting with `./`, `../` and `/` after 4.7.0 introduced echo.Filesystem support (Go1.16+) [#2123](https://github.com/labstack/echo/pull/2123)\n**Enhancements**\n* Remove some unused code [#2116](https://github.com/labstack/echo/pull/2116)",
+      "memory_unit_text": "In the labstack/echo release v4.7.1, fixes are made to e.Static, .File(), and c.Attachment() to handle paths starting with './', '../', and '/' correctly after the introduction of echo.Filesystem support in v4.7.0. Some unused code is also removed."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v4_7_2",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.7.2",
+      "tag_name": "v4.7.2",
+      "title": "v4.7.2",
+      "time_hint": "2022-03-16",
+      "published_at": "2022-03-16T07:55:32Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.7.2",
+      "raw_text": "Repository: labstack/echo\nRelease: v4.7.2\nTag: v4.7.2; draft: False; prerelease: False; published_at: 2022-03-16T07:55:32Z; created_at: 2022-03-16T07:34:26Z\nRelease notes:\n**Fixes**\n* Fix nil pointer exception when calling Start again after address binding error [#2131](https://github.com/labstack/echo/pull/2131)\n* Fix CSRF middleware not being able to extract token from multipart/form-data form [#2136](https://github.com/labstack/echo/pull/2136)\n* Fix Timeout middleware write race [#2126](https://github.com/labstack/echo/pull/2126)\n**Enhancements**\n* Recover middleware should not log panic for aborted handler [#2134](https://github.com/labstack/echo/pull/2134)",
+      "memory_unit_text": "In the labstack/echo release v4.7.2, a nil pointer exception when calling Start again after an address binding error is fixed. The CSRF middleware is fixed to extract tokens from multipart/form-data forms. A write race in the Timeout middleware is fixed. The Recover middleware no longer logs panics for aborted handlers."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v4_8_0",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.8.0",
+      "tag_name": "v4.8.0",
+      "title": "v4.8.0",
+      "time_hint": "2022-08-10",
+      "published_at": "2022-08-10T20:20:07Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.8.0",
+      "raw_text": "Repository: labstack/echo\nRelease: v4.8.0\nTag: v4.8.0; draft: False; prerelease: False; published_at: 2022-08-10T20:20:07Z; created_at: 2022-08-10T20:12:40Z\nRelease notes:\n**Most notable things**\nYou can now add any arbitrary HTTP method type as a route [#2237](https://github.com/labstack/echo/pull/2237)\n```go\ne.Add(\"COPY\", \"/*\", func(c echo.Context) error\nreturn c.String(http.StatusOK, \"OK COPY\")\n})\n```\nYou can add custom 404 handler for specific paths [#2217](https://github.com/labstack/echo/pull/2217)\n```go\ne.RouteNotFound(\"/*\", func(c echo.Context) error { return c.NoContent(http.StatusNotFound) })\ng := e.Group(\"/images\")\ng.RouteNotFound(\"/*\", func(c echo.Context) error { return c.NoContent(http.StatusNotFound) })\n```\n**Enhancements**\n* Add new value binding methods (UnixTimeMilli,TextUnmarshaler,JSONUnmarshaler) to Valuebinder [#2127](https://github.com/labstack/echo/pull/2127)\n* Refactor: body_limit middleware unit test [#2145](https://github.com/labstack/echo/pull/2145)\n* Refactor: Timeout mw: rework how test waits for timeout. [#2187](https://github.com/labstack/echo/pull/2187)\n* BasicAuth middleware returns 500 InternalServerError on invalid base64 strings but should return 400 [#2191](https://github.com/labstack/echo/pull/2191)\n* Refactor: duplicated findStaticChild process at findChildWithLabel [#2176](https://github.com/labstack/echo/pull/2176)\n* Allow different param names in different methods with same path scheme [#2209](https://github.com/labstack/echo/pull/2209)\n* Add support for registering handlers for different 404 routes [#2217](https://github.com/labstack/echo/pull/2217)\n* Middlewares should use errors.As() instead of type assertion on HTTPError [#2227](https://github.com/labstack/echo/pull/2227)\n* Allow arbitrary HTTP method types to be added as routes [#2237](https://github.com/labstack/echo/pull/2237)",
+      "memory_unit_text": "In the labstack/echo release v4.8.0, support is added for arbitrary HTTP method types as routes and for custom 404 handlers on specific paths. New value binding methods (UnixTimeMilli, TextUnmarshaler, JSONUnmarshaler) are added to Valuebinder. The BasicAuth middleware now returns 400 instead of 500 for invalid base64 strings. Different param names are allowed in different methods with the same path scheme. Middlewares are updated to use errors.As() instead of type assertion on HTTPError."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v4_9_0",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.9.0",
+      "tag_name": "v4.9.0",
+      "title": "v4.9.0",
+      "time_hint": "2022-09-04",
+      "published_at": "2022-09-04T20:06:41Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.9.0",
+      "raw_text": "Repository: labstack/echo\nRelease: v4.9.0\nTag: v4.9.0; draft: False; prerelease: False; published_at: 2022-09-04T20:06:41Z; created_at: 2022-09-04T20:04:47Z\nRelease notes:\n**Security**\n* Fix open redirect vulnerability in handlers serving static directories (e.Static, e.StaticFs, echo.StaticDirectoryHandler) [#2260](https://github.com/labstack/echo/pull/2260)\n**Enhancements**\n* Allow configuring ErrorHandler in CSRF middleware [#2257](https://github.com/labstack/echo/pull/2257)\n* Replace HTTP method constants in tests with stdlib constants [#2247](https://github.com/labstack/echo/pull/2247)",
+      "memory_unit_text": "In the labstack/echo release v4.9.0, an open redirect vulnerability in handlers serving static directories (e.Static, e.StaticFs, echo.StaticDirectoryHandler) is fixed. The CSRF middleware now allows configuring an ErrorHandler. HTTP method constants in tests are replaced with stdlib constants."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v4_9_1",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.9.1",
+      "tag_name": "v4.9.1",
+      "title": "v4.9.1",
+      "time_hint": "2022-10-12",
+      "published_at": "2022-10-12T19:38:40Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.9.1",
+      "raw_text": "Repository: labstack/echo\nRelease: v4.9.1\nTag: v4.9.1; draft: False; prerelease: False; published_at: 2022-10-12T19:38:40Z; created_at: 2022-10-12T19:37:08Z\nRelease notes:\n**Fixes**\n* Fix logger panicing (when template is set to empty) by bumping dependency version [#2295](https://github.com/labstack/echo/issues/2295)\n**Enhancements**\n* Improve CORS documentation [#2272](https://github.com/labstack/echo/pull/2272)\n* Update readme about supported Go versions [#2291](https://github.com/labstack/echo/pull/2291)\n* Tests: improve error handling on closing body [#2254](https://github.com/labstack/echo/pull/2254)\n* Tests: refactor some of the assertions in tests [#2275](https://github.com/labstack/echo/pull/2275)\n* Tests: refactor assertions [#2301](https://github.com/labstack/echo/pull/2301)",
+      "memory_unit_text": "In the labstack/echo release v4.9.1, a logger panic when the template is set to empty is fixed by bumping a dependency version. CORS documentation is improved, the readme is updated about supported Go versions, and several test improvements are made."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v4_10_0",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.10.0",
+      "tag_name": "v4.10.0",
+      "title": "v4.10.0",
+      "time_hint": "2022-12-27",
+      "published_at": "2022-12-27T20:09:24Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.10.0",
+      "raw_text": "Repository: labstack/echo\nRelease: v4.10.0\nTag: v4.10.0; draft: False; prerelease: False; published_at: 2022-12-27T20:09:24Z; created_at: 2022-12-27T19:59:53Z\nRelease notes:\n**Security**\n* We are deprecating JWT middleware in this repository. Please use https://github.com/labstack/echo-jwt instead.\nJWT middleware is moved to separate repository to allow us to bump/upgrade version of JWT implementation (`github.com/golang-jwt/jwt`) we are using which we can not do in Echo core because this would break backwards compatibility guarantees we try to maintain.\n* This minor version bumps minimum Go version to 1.17 (from 1.16) due `golang.org/x/` packages we depend on. There are several vulnerabilities fixed in these libraries.\nEcho still tries to support last 4 Go versions but there are occasions we can not guarantee this promise.\n**Enhancements**\n* Bump x/text to 0.3.8 [#2305](https://github.com/labstack/echo/pull/2305)\n* Bump dependencies and add notes about Go releases we support [#2336](https://github.com/labstack/echo/pull/2336)\n* Add helper interface for ProxyBalancer interface [#2316](https://github.com/labstack/echo/pull/2316)\n* Expose `middleware.CreateExtractors` function so we can use it from echo-contrib repository [#2338](https://github.com/labstack/echo/pull/2338)\n* Refactor func(Context) error to HandlerFunc [#2315](https://github.com/labstack/echo/pull/2315)\n* Improve function comments [#2329](https://github.com/labstack/echo/pull/2329)\n* Add new method HTTPError.WithInternal [#2340](https://github.com/labstack/echo/pull/2340)\n* Replace io/ioutil package usages [#2342](https://github.com/labstack/echo/pull/2342)\n* Add staticcheck to CI flow [#2343](https://github.com/labstack/echo/pull/2343)\n* Replace relative path determination from proprietary to std [#2345](https://github.com/labstack/echo/pull/2345)\n* Remove square brackets from ipv6 addresses in XFF (X-Forwarded-For header) [#2182](https://github.com/labstack/echo/pull/2182)\n* Add testcases for some BodyLimit middleware configuration options [#2350](https://github.com/labstack/echo/pull/2350)\n* Additional configuration options for RequestLogger and Logger middleware [#2341](https://github.com/labstack/echo/pull/2341)\n* Add route to request log [#2162](https://github.com/labstack/echo/pull/2162)\n* GitHub Workflows security hardening [#2358](https://github.com/labstack/echo/pull/2358)\n* Add govulncheck to CI and bump dependencies [#2362](https://github.com/labstack/echo/pull/2362)\n* Fix rate limiter docs [#2366](https://github.com/labstack/echo/pull/2366)\n* Refactor how `e.Routes()` work and introduce `e.OnAddRouteHandler` callback [#2337](https://github.com/labstack/echo/pull/2337)",
+      "memory_unit_text": "In the labstack/echo release v4.10.0, the JWT middleware is deprecated and moved to a separate repository. The minimum Go version is bumped to 1.17. Dependencies are updated, including x/text to 0.3.8. A helper interface for ProxyBalancer is added, and middleware.CreateExtractors is exposed. func(Context) error is refactored to HandlerFunc. HTTPError.WithInternal is added. io/ioutil usage is replaced. Staticcheck is added to CI. Relative path determination is replaced with stdlib. Square brackets are removed from IPv6 addresses in XFF. Additional configuration options for RequestLogger and Logger middleware are added. Route is added to request log. GitHub Workflows security is hardened. govulncheck is added to CI. e.Routes() is refactored and e.OnAddRouteHandler callback is introduced."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v4_10_1",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.10.1",
+      "tag_name": "v4.10.1",
+      "title": "v4.10.1",
+      "time_hint": "2023-02-20",
+      "published_at": "2023-02-20T04:12:36Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.10.1",
+      "raw_text": "Repository: labstack/echo\nRelease: v4.10.1\nTag: v4.10.1; draft: False; prerelease: False; published_at: 2023-02-20T04:12:36Z; created_at: 2023-02-19T19:12:17Z\nRelease notes:\n**Security**\n* Upgrade deps due to the latest golang.org/x/net vulnerability [#2402](https://github.com/labstack/echo/pull/2402)\n**Enhancements**\n* Add new JWT repository to the README [#2377](https://github.com/labstack/echo/pull/2377)\n* Return an empty string for ctx.path if there is no registered path [#2385](https://github.com/labstack/echo/pull/2385)\n* Add context timeout middleware [#2380](https://github.com/labstack/echo/pull/2380)\n* Update link to jaegertracing [#2394](https://github.com/labstack/echo/pull/2394)",
+      "memory_unit_text": "In the labstack/echo release v4.10.1, dependencies are upgraded due to a golang.org/x/net vulnerability. The new JWT repository is added to the README. ctx.path returns an empty string if there is no registered path. A context timeout middleware is added. The link to jaegertracing is updated."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v4_10_2",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.10.2",
+      "tag_name": "v4.10.2",
+      "title": "v4.10.2",
+      "time_hint": "2023-02-21",
+      "published_at": "2023-02-21T23:36:28Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.10.2",
+      "raw_text": "Repository: labstack/echo\nRelease: v4.10.2\nTag: v4.10.2; draft: False; prerelease: False; published_at: 2023-02-21T23:36:28Z; created_at: 2023-02-21T23:11:41Z\nRelease notes:\n**Security**\n* `filepath.Clean` behaviour has changed in Go 1.20 - adapt to it [#2406](https://github.com/labstack/echo/pull/2406)\n* Add `middleware.CORSConfig.UnsafeWildcardOriginWithAllowCredentials` to make UNSAFE usages of wildcard origin + allow cretentials less likely [#2405](https://github.com/labstack/echo/pull/2405)\n**Enhancements**\n* Add more HTTP error values [#2277](https://github.com/labstack/echo/pull/2277)",
+      "memory_unit_text": "In the labstack/echo release v4.10.2, filepath.Clean behavior is adapted for Go 1.20. middleware.CORSConfig.UnsafeWildcardOriginWithAllowCredentials is added to make unsafe wildcard origin with allow credentials less likely. More HTTP error values are added."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v4_11_0",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.11.0",
+      "tag_name": "v4.11.0",
+      "title": "v4.11.0",
+      "time_hint": "2023-07-14",
+      "published_at": "2023-07-14T20:33:29Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.11.0",
+      "raw_text": "Repository: labstack/echo\nRelease: v4.11.0\nTag: v4.11.0; draft: False; prerelease: False; published_at: 2023-07-14T20:33:29Z; created_at: 2023-07-14T20:18:22Z\nRelease notes:\n**Fixes**\n* Fixes the proxy middleware concurrency issue of calling the Next() proxy target on Round Robin Balancer [#2409](https://github.com/labstack/echo/pull/2409)\n* Fix `group.RouteNotFound` not working when group has attached middlewares [#2411](https://github.com/labstack/echo/pull/2411)\n* Fix global error handler return error message when message is an error [#2456](https://github.com/labstack/echo/pull/2456)\n* Do not use global timeNow variables [#2477](https://github.com/labstack/echo/pull/2477)\n**Enhancements**\n* Added a optional config variable to disable centralized error handler in recovery middleware [#2410](https://github.com/labstack/echo/pull/2410)\n* refactor: use `strings.ReplaceAll` directly [#2424](https://github.com/labstack/echo/pull/2424)\n* Add support for Go1.20 `http.rwUnwrapper` to Response struct [#2425](https://github.com/labstack/echo/pull/2425)\n* Check whether is nil before invoking centralized error handling [#2429](https://github.com/labstack/echo/pull/2429)\n* Proper colon support in `echo.Reverse` method [#2416](https://github.com/labstack/echo/pull/2416)\n* Fix misuses of a vs an in documentation comments [#2436](https://github.com/labstack/echo/pull/2436)\n* Add link to slog.Handler library for Echo logging into README.md [#2444](https://github.com/labstack/echo/pull/2444)\n* In proxy middleware Support retries of failed proxy requests [#2414](https://github.com/labstack/echo/pull/2414)\n* gofmt fixes to comments [#2452](https://github.com/labstack/echo/pull/2452)\n* gzip response only if it exceeds a minimal length [#2267](https://github.com/labstack/echo/pull/2267)\n* Upgrade packages [#2475](https://github.com/labstack/echo/pull/2475)",
+      "memory_unit_text": "In the labstack/echo release v4.11.0, a concurrency issue in the proxy middleware's Round Robin Balancer is fixed. group.RouteNotFound is fixed when the group has attached middlewares. The global error handler now returns the error message when the message is an error. Global timeNow variables are removed. An optional config variable to disable the centralized error handler in recovery middleware is added. strings.ReplaceAll is used directly. Support for Go1.20 http.rwUnwrapper is added to the Response struct. A nil check is added before invoking centralized error handling. Proper colon support is added in echo.Reverse. Documentation comments are fixed. A link to a slog.Handler library for Echo logging is added to README.md. The proxy middleware supports retries of failed proxy requests. gofmt fixes are applied to comments. Gzip response only if it exceeds a minimal length. Packages are upgraded."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v4_11_1",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.11.1",
+      "tag_name": "v4.11.1",
+      "title": "v4.11.1",
+      "time_hint": "2023-07-16",
+      "published_at": "2023-07-16T17:46:52Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.11.1",
+      "raw_text": "Repository: labstack/echo\nRelease: v4.11.1\nTag: v4.11.1; draft: False; prerelease: False; published_at: 2023-07-16T17:46:52Z; created_at: 2023-07-16T17:41:57Z\nRelease notes:\n**Fixes**\n* Fix `Gzip` middleware not sending response code for no content responses (404, 301/302 redirects etc) [#2481](https://github.com/labstack/echo/pull/2481)",
+      "memory_unit_text": "In the labstack/echo release v4.11.1, the Gzip middleware is fixed to send response codes for no content responses (404, 301/302 redirects etc)."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v4_11_2",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.11.2",
+      "tag_name": "v4.11.2",
+      "title": "v4.11.2",
+      "time_hint": "2023-10-11",
+      "published_at": "2023-10-11T05:34:07Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.11.2",
+      "raw_text": "Repository: labstack/echo\nRelease: v4.11.2\nTag: v4.11.2; draft: False; prerelease: False; published_at: 2023-10-11T05:34:07Z; created_at: 2023-10-11T05:32:23Z\nRelease notes:\n**Security**\n* Bump golang.org/x/net to prevent CVE-2023-39325 / CVE-2023-44487 HTTP/2 Rapid Reset Attack [#2527](https://github.com/labstack/echo/pull/2527)\n* fix(sec): randomString bias introduced by #2490 [#2492](https://github.com/labstack/echo/pull/2492)\n* CSRF/RequestID mw: switch math/random usage to crypto/random [#2490](https://github.com/labstack/echo/pull/2490)\n**Enhancements**\n* Delete unused context in body_limit.go [#2483](https://github.com/labstack/echo/pull/2483)\n* Use Go 1.21 in CI [#2505](https://github.com/labstack/echo/pull/2505)\n* Fix some typos [#2511](https://github.com/labstack/echo/pull/2511)\n* Allow CORS middleware to send Access-Control-Max-Age: 0 [#2518](https://github.com/labstack/echo/pull/2518)\n* Bump dependancies [#2522](https://github.com/labstack/echo/pull/2522)",
+      "memory_unit_text": "In the labstack/echo release v4.11.2, golang.org/x/net is bumped to prevent CVE-2023-39325 / CVE-2023-44487 HTTP/2 Rapid Reset Attack. A randomString bias is fixed, and CSRF/RequestID middleware switch from math/random to crypto/random. Unused context in body_limit.go is deleted. Go 1.21 is used in CI. Some typos are fixed. CORS middleware is allowed to send Access-Control-Max-Age: 0. Dependencies are bumped."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v4_11_3",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.11.3",
+      "tag_name": "v4.11.3",
+      "title": "v4.11.3",
+      "time_hint": "2023-11-07",
+      "published_at": "2023-11-07T12:22:36Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.11.3",
+      "raw_text": "Repository: labstack/echo\nRelease: v4.11.3\nTag: v4.11.3; draft: False; prerelease: False; published_at: 2023-11-07T12:22:36Z; created_at: 2023-11-07T12:19:32Z\nRelease notes:\n**Security**\n* 'c.Attachment' and 'c.Inline' should escape filename in 'Content-Disposition' header to avoid 'Reflect File Download' vulnerability. [#2541](https://github.com/labstack/echo/pull/2541)\n**Enhancements**\n* Tests: refactor context tests to be separate functions [#2540](https://github.com/labstack/echo/pull/2540)\n* Proxy middleware: reuse echo request context [#2537](https://github.com/labstack/echo/pull/2537)\n* Mark unmarshallable yaml struct tags as ignored [#2536](https://github.com/labstack/echo/pull/2536)",
+      "memory_unit_text": "In the labstack/echo release v4.11.3, c.Attachment and c.Inline escape the filename in the Content-Disposition header to avoid a Reflect File Download vulnerability. Context tests are refactored into separate functions. The proxy middleware reuses the echo request context. Unmarshallable yaml struct tags are marked as ignored."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v4_11_4",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.11.4",
+      "tag_name": "v4.11.4",
+      "title": "v4.11.4 upgrade dependencies",
+      "time_hint": "2023-12-20",
+      "published_at": "2023-12-20T13:28:48Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.11.4",
+      "raw_text": "Repository: labstack/echo\nRelease: v4.11.4 upgrade dependencies\nTag: v4.11.4; draft: False; prerelease: False; published_at: 2023-12-20T13:28:48Z; created_at: 2023-12-20T13:24:30Z\nRelease notes:\n**Security**\n* Upgrade golang.org/x/crypto to v0.17.0 to fix vulnerability [issue](https://pkg.go.dev/vuln/GO-2023-2402) [#2562](https://github.com/labstack/echo/pull/2562)\n**Enhancements**\n* Update deps and mark Go version to 1.18 as this is what golang.org/x/* use [#2563](https://github.com/labstack/echo/pull/2563)\n* Request logger: add example for Slog https://pkg.go.dev/log/slog [#2543](https://github.com/labstack/echo/pull/2543)",
+      "memory_unit_text": "In the labstack/echo release v4.11.4, golang.org/x/crypto is upgraded to v0.17.0 to fix a vulnerability. Dependencies are updated and the Go version is marked to 1.18. An example for Slog is added to the request logger."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v4_12_0",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.12.0",
+      "tag_name": "v4.12.0",
+      "title": "v4.12.0",
+      "time_hint": "2024-04-15",
+      "published_at": "2024-04-15T18:33:31Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.12.0",
+      "raw_text": "Repository: labstack/echo\nRelease: v4.12.0\nTag: v4.12.0; draft: False; prerelease: False; published_at: 2024-04-15T18:33:31Z; created_at: 2024-04-15T18:31:01Z\nRelease notes:\n## v4.12.0 - 2024-04-15\n**Security**\n* Update golang.org/x/net dep because of [GO-2024-2687](https://pkg.go.dev/vuln/GO-2024-2687) by @aldas in https://github.com/labstack/echo/pull/2625\n**Enhancements**\n* binder: make binding to Map work better with string destinations by @aldas in https://github.com/labstack/echo/pull/2554\n* README.md: add Encore as sponsor by @marcuskohlberg in https://github.com/labstack/echo/pull/2579\n* Reorder paragraphs in README.md by @aldas in https://github.com/labstack/echo/pull/2581\n* CI: upgrade actions/checkout to v4 by @aldas in https://github.com/labstack/echo/pull/2584\n* Remove default charset from 'application/json' Content-Type header by @doortts in https://github.com/labstack/echo/pull/2568\n* CI: Use Go 1.22 by @aldas in https://github.com/labstack/echo/pull/2588\n* binder: allow binding to a nil map by @georgmu in https://github.com/labstack/echo/pull/2574\n* Add Skipper Unit Test In BasicBasicAuthConfig and Add More Detail Explanation regarding BasicAuthValidator by @RyoKusnadi in https://github.com/labstack/echo/pull/2461\n* fix some typos by @teslaedison in https://github.com/labstack/echo/pull/2603\n* fix: some typos by @pomadev in https://github.com/labstack/echo/pull/2596\n* Allow ResponseWriters to unwrap writers when flushing/hijacking by @aldas in https://github.com/labstack/echo/pull/2595\n* Add SPDX licence comments to files.  by @aldas in https://github.com/labstack/echo/pull/2604\n* Upgrade deps by @aldas in https://github.com/labstack/echo/pull/2605\n* Change type definition blocks to single declarations. This helps copy… by @aldas in https://github.com/labstack/echo/pull/2606\n* Fix Real IP logic by @cl-bvl in https://github.com/labstack/echo/pull/2550\n* Default binder can use `UnmarshalParams(params []string) error` inter… by @aldas in https://github.com/labstack/echo/pull/2607\n* Default binder can bind pointer to slice as struct field. For example  `*[]string` by @aldas in https://github.com/labstack/echo/pull/2608\n* Remove maxparam dependence from Context by @aldas in https://github.com/labstack/echo/pull/2611\n* When route is registered with empty path it is normalized to `/`.  by @aldas in https://github.com/labstack/echo/pull/2616\n* proxy middleware should use httputil.ReverseProxy for SSE requests by @aldas in https://github.com/labstack/echo/pull/2624\n## New Contributors\n* @marcuskohlberg made their first contribution in https://github.com/labstack/echo/pull/2579\n* @doortts made their first contribution in https://github.com/labstack/echo/pull/2568\n* @georgmu made their first contribution in https://github.com/labstack/echo/pull/2574\n* @RyoKusnadi made their first contribution in https://github.com/labstack/echo/pull/2461\n* @teslaedison made their first contribution in https://github.com/labstack/echo/pull/2603\n* @pomadev made their first contribution in https://github.com/labstack/echo/pull/2596\n* @cl-bvl made their first contribution in https://github.com/labstack/echo/pull/2550\n**Full Changelog**: https://github.com/labstack/echo/compare/v4.11.4...v4.12.0",
+      "memory_unit_text": "In the labstack/echo release v4.12.0, golang.org/x/net is updated due to GO-2024-2687. The binder is improved for binding to Map with string destinations. Encore is added as a sponsor in README.md. The default charset is removed from the 'application/json' Content-Type header. Go 1.22 is used in CI. Binding to a nil map is allowed. A Skipper unit test is added in BasicAuthConfig. Some typos are fixed. ResponseWriters are allowed to unwrap writers when flushing/hijacking. SPDX licence comments are added. Dependencies are upgraded. Type definition blocks are changed to single declarations. Real IP logic is fixed. The default binder can use UnmarshalParams and bind pointer to slice as struct field. maxparam dependence is removed from Context. Routes registered with empty path are normalized to '/'. The proxy middleware uses httputil.ReverseProxy for SSE requests."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v4_13_0",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.13.0",
+      "tag_name": "v4.13.0",
+      "title": "JWT Middleware Removed",
+      "time_hint": "2024-12-04",
+      "published_at": "2024-12-04T20:29:04Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.13.0",
+      "raw_text": "Repository: labstack/echo\nRelease: JWT Middleware Removed\nTag: v4.13.0; draft: False; prerelease: False; published_at: 2024-12-04T20:29:04Z; created_at: 2024-12-04T20:13:45Z\nRelease notes:\n## BREAKING CHANGE: JWT Middleware Removed from Core\nThe JWT middleware has been **removed from Echo core** due to another security vulnerability, [CVE-2024-51744](https://nvd.nist.gov/vuln/detail/CVE-2024-51744). For more details, refer to issue [#2699](https://github.com/labstack/echo/issues/2699). A drop-in replacement is available in the [labstack/echo-jwt](https://github.com/labstack/echo-jwt) repository or see [alternative implementation](https://github.com/labstack/echo-jwt/discussions/29)\n**Important**: Direct assignments like `token := c.Get(\"user\").(*jwt.Token)` will now cause a panic due to an invalid cast. Update your code accordingly. Replace the current imports from `\"github.com/golang-jwt/jwt\"` in your handlers to the new middleware version using `\"github.com/golang-jwt/jwt/v5\"`.\nBackground:\nThe version of `golang-jwt/jwt` (v3.2.2) previously used in Echo core has been in an unmaintained state for some time. This is not the first vulnerability affecting this library; earlier issues were addressed in [PR #1946](https://github.com/labstack/echo/pull/1946).\nJWT middleware was marked as deprecated in Echo core as of [v4.10.0](https://github.com/labstack/echo/releases/tag/v4.10.0) on 2022-12-27. If you did not notice that, consider leveraging tools like [Staticcheck](https://staticcheck.dev/) to catch such deprecations earlier in you dev/CI flow.  For bonus points - check out [gosec](https://github.com/securego/gosec).\nWe sincerely apologize for any inconvenience caused by this change. While we strive to maintain backward compatibility within Echo core, recurring security issues with third-party dependencies have forced this decision.\n**Enhancements**\n* remove jwt middleware by @stevenwhitehead in https://github.com/labstack/echo/pull/2701\n* optimization: struct alignment by @behnambm in https://github.com/labstack/echo/pull/2636\n* bind: Maintain backwards compatibility for map[string]interface{} binding by @thesaltree in https://github.com/labstack/echo/pull/2656\n* Add Go 1.23 to CI by @aldas in https://github.com/labstack/echo/pull/2675\n* improve `MultipartForm` test by @martinyonatann in https://github.com/labstack/echo/pull/2682\n* `bind` : add support of multipart multi files by @martinyonatann in https://github.com/labstack/echo/pull/2684\n* Add TemplateRenderer struct to ease creating renderers for `html/template` and `text/template` packages. by @aldas in https://github.com/labstack/echo/pull/2690\n* Refactor TestBasicAuth to utilize table-driven test format by @ErikOlson in https://github.com/labstack/echo/pull/2688\n* Remove broken header by @aldas in https://github.com/labstack/echo/pull/2705\n* fix(bind body): content-length can be -1 by @phamvinhdat in https://github.com/labstack/echo/pull/2710\n* CORS middleware should compile allowOrigin regexp at creation by @aldas in https://github.com/labstack/echo/pull/2709\n* Shorten Github issue template and add test example by @aldas in https://github.com/labstack/echo/pull/2711\n## New Contributors\n* @behnambm made their first contribution in https://github.com/labstack/echo/pull/2636\n* @thesaltree made their first contribution in https://github.com/labstack/echo/pull/2656\n* @martinyonatann made their first contribution in https://github.com/labstack/echo/pull/2682\n* @ErikOlson made their first contribution in https://github.com/labstack/echo/pull/2688\n* @phamvinhdat made their first contribution in https://github.com/labstack/echo/pull/2710\n* @stevenwhitehead made their first contribution in https://github.com/labstack/echo/pull/2701\n**Full Changelog**: https://github.com/labstack/echo/compare/v4.12.0...v4.13.0",
+      "memory_unit_text": "In the labstack/echo release v4.13.0, the JWT middleware is removed from core due to CVE-2024-51744. Users are directed to labstack/echo-jwt. The release includes struct alignment optimization, maintaining backwards compatibility for map[string]interface{} binding, adding Go 1.23 to CI, improving MultipartForm test, adding support for multipart multi files binding, adding a TemplateRenderer struct, refactoring TestBasicAuth, removing a broken header, fixing bind body when content-length is -1, and making CORS middleware compile allowOrigin regexp at creation."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v4_13_1",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.13.1",
+      "tag_name": "v4.13.1",
+      "title": "v4.13.1",
+      "time_hint": "2024-12-11",
+      "published_at": "2024-12-11T10:22:30Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.13.1",
+      "raw_text": "Repository: labstack/echo\nRelease: v4.13.1\nTag: v4.13.1; draft: False; prerelease: False; published_at: 2024-12-11T10:22:30Z; created_at: 2024-12-11T10:18:50Z\nRelease notes:\n**Fixes**\n* Fix BindBody ignoring `Transfer-Encoding: chunked` requests (introduced in [#2710](https://github.com/labstack/echo/pull/2710)) by @178inaba in https://github.com/labstack/echo/pull/2717\n**Full Changelog**: https://github.com/labstack/echo/compare/v4.13.0...v4.13.1",
+      "memory_unit_text": "In the labstack/echo release v4.13.1, BindBody is fixed to handle Transfer-Encoding: chunked requests, which was introduced in a previous change."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v4_13_2",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.13.2",
+      "tag_name": "v4.13.2",
+      "title": "v4.13.2 - update dependencies",
+      "time_hint": "2024-12-12",
+      "published_at": "2024-12-12T07:18:21Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.13.2",
+      "raw_text": "Repository: labstack/echo\nRelease: v4.13.2 - update dependencies\nTag: v4.13.2; draft: False; prerelease: False; published_at: 2024-12-12T07:18:21Z; created_at: 2024-12-12T05:47:56Z\nRelease notes:\n**Security**\n* Update dependencies (dependabot reports https://pkg.go.dev/vuln/GO-2024-3321 by @aldas in https://github.com/labstack/echo/pull/2721\n**Full Changelog**: https://github.com/labstack/echo/compare/v4.13.1...v4.13.2",
+      "memory_unit_text": "In the labstack/echo release v4.13.2, dependencies are updated due to a security report (GO-2024-3321)."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v4_13_3",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.13.3",
+      "tag_name": "v4.13.3",
+      "title": "v4.13.3",
+      "time_hint": "2024-12-19",
+      "published_at": "2024-12-19T04:54:02Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.13.3",
+      "raw_text": "Repository: labstack/echo\nRelease: v4.13.3\nTag: v4.13.3; draft: False; prerelease: False; published_at: 2024-12-19T04:54:02Z; created_at: 2024-12-19T04:51:34Z\nRelease notes:\n**Security**\n* Update golang.org/x/net dependency [GO-2024-3333](https://pkg.go.dev/vuln/GO-2024-3333) in https://github.com/labstack/echo/pull/2722\n**Full Changelog**: https://github.com/labstack/echo/compare/v4.13.2...v4.13.3",
+      "memory_unit_text": "In the labstack/echo release v4.13.3, the golang.org/x/net dependency is updated for GO-2024-3333."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v4_13_4",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.13.4",
+      "tag_name": "v4.13.4",
+      "title": "v4.13.4",
+      "time_hint": "2025-05-22",
+      "published_at": "2025-05-22T11:22:34Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.13.4",
+      "raw_text": "Repository: labstack/echo\nRelease: v4.13.4\nTag: v4.13.4; draft: False; prerelease: False; published_at: 2025-05-22T11:22:34Z; created_at: 2025-05-22T11:18:29Z\nRelease notes:\n## What's Changed\n* chore: fix some typos in comment by @zhuhaicity in https://github.com/labstack/echo/pull/2735\n* CI: test with Go 1.24 by @aldas in https://github.com/labstack/echo/pull/2748\n* Add support for TLS WebSocket proxy by @t-ibayashi-safie in https://github.com/labstack/echo/pull/2762\n**Security**\n* Update dependencies for [GO-2025-3487](https://pkg.go.dev/vuln/GO-2025-3487), [GO-2025-3503](https://pkg.go.dev/vuln/GO-2025-3503) and [GO-2025-3595](https://pkg.go.dev/vuln/GO-2025-3595) in https://github.com/labstack/echo/pull/2780\n## New Contributors\n* @zhuhaicity made their first contribution in https://github.com/labstack/echo/pull/2735\n* @t-ibayashi-safie made their first contribution in https://github.com/labstack/echo/pull/2762\n**Full Changelog**: https://github.com/labstack/echo/compare/v4.13.3...v4.13.4",
+      "memory_unit_text": "In the labstack/echo release v4.13.4, some typos in comments are fixed. CI tests with Go 1.24. Support for TLS WebSocket proxy is added. Dependencies are updated for GO-2025-3487, GO-2025-3503, and GO-2025-3595."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v4_14_0",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.14.0",
+      "tag_name": "v4.14.0",
+      "title": "v4.14.0",
+      "time_hint": "2025-12-11",
+      "published_at": "2025-12-11T21:00:48Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.14.0",
+      "raw_text": "Repository: labstack/echo\nRelease: v4.14.0\nTag: v4.14.0; draft: False; prerelease: False; published_at: 2025-12-11T21:00:48Z; created_at: 2025-12-11T20:49:38Z\nRelease notes:\n`middleware.Logger()` has been deprecated. For request logging, use `middleware.RequestLogger()` or\n`middleware.RequestLoggerWithConfig()`.\n`middleware.RequestLogger()` replaces `middleware.Logger()`, offering comparable configuration while relying on the\nGo standard library’s new `slog` logger.\nThe previous default output format was JSON. The new default follows the standard `slog` logger settings.\nTo continue emitting request logs in JSON, configure `slog` accordingly:\n```go\nslog.SetDefault(slog.New(slog.NewJSONHandler(os.Stdout, nil)))\ne.Use(middleware.RequestLogger())\n```\nIf you are developing anything more substantial than a demo, use `middleware.RequestLoggerWithConfig()`\n**Security**\n* Logger middleware json string escaping and deprecation by @aldas in https://github.com/labstack/echo/pull/2849\n## What's Changed\n* Update deps  by @aldas in https://github.com/labstack/echo/pull/2807\n* refactor to use reflect.TypeFor by @cuiweixie in https://github.com/labstack/echo/pull/2812\n* Use Go 1.25 in CI by @aldas in https://github.com/labstack/echo/pull/2810\n* Modernize context.go by replacing interface{} with any by @vishr in https://github.com/labstack/echo/pull/2822\n* Fix typo in SetParamValues comment by @vishr in https://github.com/labstack/echo/pull/2828\n* Fix typo in ContextTimeout middleware comment by @vishr in https://github.com/labstack/echo/pull/2827\n* Improve BasicAuth middleware: use strings.Cut and RFC compliance by @vishr in https://github.com/labstack/echo/pull/2825\n* Fix duplicate plus operator in router backtracking logic by @yuya-morimoto in https://github.com/labstack/echo/pull/2832\n* Replace custom private IP range check with built-in net.IP.IsPrivate by @kumapower17 in https://github.com/labstack/echo/pull/2835\n* Ensure proxy connection is closed in proxyRaw function(#2837) by @kumapower17 in https://github.com/labstack/echo/pull/2838\n* Update deps by @aldas in https://github.com/labstack/echo/pull/2843\n* Logger middleware json string escaping and deprecation by @aldas in https://github.com/labstack/echo/pull/2849\n* Update golang.org/x/* deps by @aldas in https://github.com/labstack/echo/pull/2850\n* Changelog for 4.14.0 by @aldas in https://github.com/labstack/echo/pull/2851\n## New Contributors\n* @cuiweixie made their first contribution in https://github.com/labstack/echo/pull/2812\n* @yuya-morimoto made their first contribution in https://github.com/labstack/echo/pull/2832\n* @kumapower17 made their first contribution in https://github.com/labstack/echo/pull/2835\n**Full Changelog**: https://github.com/labstack/echo/compare/v4.13.4...v4.14.0",
+      "memory_unit_text": "In the labstack/echo release v4.14.0, middleware.Logger() is deprecated in favor of middleware.RequestLogger() or middleware.RequestLoggerWithConfig(), which use the standard library's slog logger. The default output format changes from JSON to the standard slog logger settings. Dependencies are updated. reflect.TypeFor is used. Go 1.25 is used in CI. context.go is modernized by replacing interface{} with any. Typos in SetParamValues and ContextTimeout middleware comments are fixed. BasicAuth middleware is improved with strings.Cut and RFC compliance. A duplicate plus operator in router backtracking logic is fixed. Custom private IP range check is replaced with net.IP.IsPrivate. Proxy connection is ensured to be closed in proxyRaw function. Logger middleware json string escaping and deprecation are handled. golang.org/x/* deps are updated."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v4_15_0",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.15.0",
+      "tag_name": "v4.15.0",
+      "title": "v4.15.0",
+      "time_hint": "2026-01-01",
+      "published_at": "2026-01-01T11:09:06Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.15.0",
+      "raw_text": "Repository: labstack/echo\nRelease: v4.15.0\nTag: v4.15.0; draft: False; prerelease: False; published_at: 2026-01-01T11:09:06Z; created_at: 2026-01-01T10:57:24Z\nRelease notes:\n**Security**\nWARNING: **If your application relies on cross-origin or same-site (same subdomain) requests do not blindly push this version to production**\nThe CSRF middleware now supports the [**Sec-Fetch-Site**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Sec-Fetch-Site) header as a modern, defense-in-depth approach to [CSRF\nprotection](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html#fetch-metadata-headers), implementing the OWASP-recommended Fetch Metadata API alongside the traditional token-based mechanism.\n**How it works:**\nModern browsers automatically send the `Sec-Fetch-Site` header with all requests, indicating the relationship\nbetween the request origin and the target. The middleware uses this to make security decisions:\n- **`same-origin`** or **`none`**: Requests are allowed (exact origin match or direct user navigation)\n- **`same-site`**: Falls back to token validation (e.g., subdomain to main domain)\n- **`cross-site`**: Blocked by default with 403 error for unsafe methods (POST, PUT, DELETE, PATCH)\nFor browsers that don't send this header (older browsers), the middleware seamlessly falls back to\ntraditional token-based CSRF protection.\n**New Configuration Options:**\n- `TrustedOrigins []string`: Allowlist specific origins for cross-site requests (useful for OAuth callbacks, webhooks)\n- `AllowSecFetchSiteFunc func(echo.Context) (bool, error)`: Custom logic for same-site/cross-site request validation\n**Example:**\n```go\ne.Use(middleware.CSRFWithConfig(middleware.CSRFConfig{\n// Allow OAuth callbacks from trusted provider\nTrustedOrigins: []string{\"https://oauth-provider.com\"},\n// Custom validation for same-site requests\nAllowSecFetchSiteFunc: func(c echo.Context) (bool, error) {\n// Your custom authorization logic here\nreturn validateCustomAuth(c), nil\n// return true, err  // blocks request with error\n// return true, nil  // allows CSRF request through\n// return false, nil // falls back to legacy token logic\n},\n}))\n```\nPR: https://github.com/labstack/echo/pull/2858\n**Type-Safe Generic Parameter Binding**\n* Added generic functions for type-safe parameter extraction and context access by @aldas in https://github.com/labstack/echo/pull/2856\nEcho now provides generic functions for extracting path, query, and form parameters with automatic type conversion,\neliminating manual string parsing and type assertions.\n**New Functions:**\n- Path parameters: `PathParam[T]`, `PathParamOr[T]`\n- Query parameters: `QueryParam[T]`, `QueryParamOr[T]`, `QueryParams[T]`, `QueryParamsOr[T]`\n- Form values: `FormParam[T]`, `FormParamOr[T]`, `FormParams[T]`, `FormParamsOr[T]`\n- Context store: `ContextGet[T]`, `ContextGetOr[T]`\n**Supported Types:**\nPrimitives (`bool`, `string`, `int`/`uint` variants, `float32`/`float64`), `time.Duration`, `time.Time`\n(with custom layouts and Unix timestamp support), and custom types implementing `BindUnmarshaler`,\n`TextUnmarshaler`, or `JSONUnmarshaler`.\n**Example:**\n```go\n// Before: Manual parsing\nidStr := c.Param(\"id\")\nid, err := strconv.Atoi(idStr)\n// After: Type-safe with automatic parsing\nid, err := echo.PathParam[int](c, \"id\")\n// With default values\npage, err := echo.QueryParamOr[int](c, \"page\", 1)\nlimit, err := echo.QueryParamOr[int](c, \"limit\", 20)\n// Type-safe context access (no more panics from type assertions)\nuser, err := echo.ContextGet[*User](c, \"user\")\n```\nPR: https://github.com/labstack/echo/pull/2856\n**DEPRECATION NOTICE** Timeout Middleware Deprecated - Use ContextTimeout Instead\nThe `middleware.Timeout` middleware has been **deprecated** due to fundamental architectural issues that cause\ndata races. Use `middleware.ContextTimeout` or `middleware.ContextTimeoutWithConfig` instead.\n**Why is this being deprecated?**\nThe Timeout middleware manipulates...",
+      "memory_unit_text": "In the labstack/echo release v4.15.0, the CSRF middleware now supports the Sec-Fetch-Site header as a modern defense-in-depth approach, with new configuration options TrustedOrigins and AllowSecFetchSiteFunc. Type-safe generic parameter binding functions are added (PathParam, QueryParam, FormParam, ContextGet with variants). The Timeout middleware is deprecated in favor of ContextTimeout due to data race issues."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v5_0_0",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.0",
+      "tag_name": "v5.0.0",
+      "title": "V5 is out",
+      "time_hint": "2026-01-18",
+      "published_at": "2026-01-18T16:19:13Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v5.0.0",
+      "raw_text": "Repository: labstack/echo\nRelease: V5 is out\nTag: v5.0.0; draft: False; prerelease: False; published_at: 2026-01-18T16:19:13Z; created_at: 2026-01-18T16:14:41Z\nRelease notes:\nEcho `v5` is a maintenance release with **major breaking changes**\n- `Context` is now struct instead of interface and we can add method to it in the future in minor versions.\n- Adds new `Router` interface for possible new routing implementations.\n- Drops old logging interface and uses moderm `log/slog` instead.\n- Rearranges alot of methods/function signatures to make them more consistent.\nUpgrade notes and `v4` support:\n- Echo `v4` is supported with **security*** updates and **bug** fixes until **2026-12-31**\n- If you are using Echo in a production environment, it is recommended to wait until after 2026-03-31 before upgrading.\n- Until 2026-03-31, any critical issues requiring breaking `v5` API changes will be addressed, even if this violates semantic versioning.\nSee [API_CHANGES_V5.md](./API_CHANGES_V5.md) for public API changes between `v4` and `v5`, notes on **upgrading**.\nUpgrading TLDR:\nIf you are using Linux you can migrate easier parts like that:\n```bash\nfind . -type f -name \"*.go\" -exec sed -i 's/ echo.Context/ *echo.Context/g' {} +\nfind . -type f -name \"*.go\" -exec sed -i 's/echo\\/v4/echo\\/v5/g' {} +\n```\nmacOS\n```bash\nfind . -type f -name \"*.go\" -exec sed -i '' 's/ echo.Context/ *echo.Context/g' {} +\nfind . -type f -name \"*.go\" -exec sed -i '' 's/echo\\/v4/echo\\/v5/g' {} +\n```\nor in your favorite IDE\nReplace all:\n1. ` echo.Context` -> ` *echo.Context`\n2. `echo/v4` -> `echo/v5`\nWhen reworking error handlers, you can access `Comitted` fields like that in `v5`\n```go\nif resp, _ := echo.UnwrapResponse(c.Response()); resp != nil && resp.Committed {\nreturn\n}\n```\nThis should solve most of the issues. Probably the hardest part is updating all the tests.",
+      "memory_unit_text": "In the labstack/echo release v5.0.0, a major breaking change is introduced: Context is now a struct instead of an interface, a new Router interface is added, the old logging interface is dropped in favor of log/slog, and many method/function signatures are rearranged for consistency. v4 is supported with security updates and bug fixes until 2026-12-31. Upgrade notes and migration instructions are provided."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v5_0_1",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.1",
+      "tag_name": "v5.0.1",
+      "title": "v5.0.1 small fixes",
+      "time_hint": "2026-01-28",
+      "published_at": "2026-01-28T21:31:30Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v5.0.1",
+      "raw_text": "Repository: labstack/echo\nRelease: v5.0.1 small fixes\nTag: v5.0.1; draft: False; prerelease: False; published_at: 2026-01-28T21:31:30Z; created_at: 2026-01-28T21:28:05Z\nRelease notes:\n## What's Changed\n* Panic MW: will now return a custom PanicStackError with stack trace by @aldas in https://github.com/labstack/echo/pull/2871\n* Docs: add missing err parameter to DenyHandler example by @cgalibern in https://github.com/labstack/echo/pull/2878\n* Context: improve websocket checks in IsWebSocket() [per RFC 6455] by @raju-mechatronics in https://github.com/labstack/echo/pull/2875\n* Fix: Context.Json() should not send status code before serialization is complete by @aldas in https://github.com/labstack/echo/pull/2877\n## New Contributors\n* @cgalibern made their first contribution in https://github.com/labstack/echo/pull/2878\n* @raju-mechatronics made their first contribution in https://github.com/labstack/echo/pull/2875\n**Full Changelog**: https://github.com/labstack/echo/compare/v5.0.0...v5.0.1",
+      "memory_unit_text": "In the labstack/echo release v5.0.1, the Panic middleware returns a custom PanicStackError with stack trace. A missing err parameter is added to the DenyHandler example. Context.IsWebSocket() is improved per RFC 6455. Context.Json() is fixed to not send status code before serialization is complete."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v5_0_2",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.2",
+      "tag_name": "v5.0.2",
+      "title": "v5.0.2 security (static middleware folder browsing)",
+      "time_hint": "2026-02-02",
+      "published_at": "2026-02-02T18:12:18Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v5.0.2",
+      "raw_text": "Repository: labstack/echo\nRelease: v5.0.2 security (static middleware folder browsing)\nTag: v5.0.2; draft: False; prerelease: False; published_at: 2026-02-02T18:12:18Z; created_at: 2026-02-02T18:02:23Z\nRelease notes:\n**Security**\n* Fix Static middleware when folder browsing is enabled (`config.Browse=true` , defaults to `false`) lists all files/subfolders from `config.Filesystem` root folder and not starting from `config.Root` and requested folder in https://github.com/labstack/echo/pull/2887 . Reported by @shblue21 in https://github.com/labstack/echo/issues/2886\n**Full Changelog**: https://github.com/labstack/echo/compare/v5.0.1...v5.0.2",
+      "memory_unit_text": "In the labstack/echo release v5.0.2, a security fix is made for the Static middleware: when folder browsing is enabled, it now lists files/subfolders starting from config.Root and the requested folder, not from the config.Filesystem root folder."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v5_0_3",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.3",
+      "tag_name": "v5.0.3",
+      "title": "v5.0.3 security (static middleware directory traversal under Windows)",
+      "time_hint": "2026-02-06",
+      "published_at": "2026-02-06T13:30:17Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v5.0.3",
+      "raw_text": "Repository: labstack/echo\nRelease: v5.0.3 security (static middleware directory traversal under Windows)\nTag: v5.0.3; draft: False; prerelease: False; published_at: 2026-02-06T13:30:17Z; created_at: 2026-02-06T13:23:31Z\nRelease notes:\nFix directory traversal vulnerability under Windows in Static middleware when default Echo filesystem is used. Reported by @shblue21 (https://github.com/labstack/echo/pull/2891).\nThis applies to cases when:\n- Windows is used as OS\n- `middleware.StaticConfig.Filesystem` is `nil` (default)\n- `echo.Filesystem` is has not been set explicitly (default)\n**Full Changelog**: https://github.com/labstack/echo/compare/v5.0.2...v5.0.3",
+      "memory_unit_text": "In the labstack/echo release v5.0.3, a directory traversal vulnerability under Windows in the Static middleware is fixed when the default Echo filesystem is used."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v5_0_4",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.4",
+      "tag_name": "v5.0.4",
+      "title": "v5.0.4 small fixes and improvements",
+      "time_hint": "2026-02-15",
+      "published_at": "2026-02-15T15:55:53Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v5.0.4",
+      "raw_text": "Repository: labstack/echo\nRelease: v5.0.4 small fixes and improvements\nTag: v5.0.4; draft: False; prerelease: False; published_at: 2026-02-15T15:55:53Z; created_at: 2026-02-15T15:48:33Z\nRelease notes:\n## What's Changed\n* Remove unused import 'errors' from README example by @kumapower17 in https://github.com/labstack/echo/pull/2889\n* Fix Graceful shutdown: after `http.Server.Serve` returns we need to wait for graceful shutdown goroutine to finish by @aldas in https://github.com/labstack/echo/pull/2898\n* Update location of oapi-codegen in README by @mromaszewicz in https://github.com/labstack/echo/pull/2896\n* Add Go 1.26 to CI flow by @aldas in https://github.com/labstack/echo/pull/2899\n* Add new function `echo.StatusCode` by @suwakei in https://github.com/labstack/echo/pull/2892\n* CSRF: support older token-based CSRF protection handler that want to render token into template by @aldas in https://github.com/labstack/echo/pull/2894\n* Add `echo.ResolveResponseStatus` function to help middleware/handlers determine HTTP status code and echo.Response by @aldas in https://github.com/labstack/echo/pull/2900\n## New Contributors\n* @mromaszewicz made their first contribution in https://github.com/labstack/echo/pull/2896\n* @suwakei made their first contribution in https://github.com/labstack/echo/pull/2892\n**Full Changelog**: https://github.com/labstack/echo/compare/v5.0.3...v5.0.4",
+      "memory_unit_text": "In the labstack/echo release v5.0.4, an unused import is removed from a README example. Graceful shutdown is fixed to wait for the goroutine to finish after http.Server.Serve returns. The location of oapi-codegen in README is updated. Go 1.26 is added to CI. A new function echo.StatusCode is added. CSRF supports older token-based CSRF protection handlers that want to render token into template. echo.ResolveResponseStatus is added to help determine HTTP status code and echo.Response."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v4_15_1",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.15.1",
+      "tag_name": "v4.15.1",
+      "title": "v4.15.1",
+      "time_hint": "2026-02-22",
+      "published_at": "2026-02-22T11:54:25Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.15.1",
+      "raw_text": "Repository: labstack/echo\nRelease: v4.15.1\nTag: v4.15.1; draft: False; prerelease: False; published_at: 2026-02-22T11:54:25Z; created_at: 2026-02-22T11:50:50Z\nRelease notes:\n## What's Changed\n* CSRF: support older token-based CSRF protection handler that want to render token into template by @aldas in https://github.com/labstack/echo/pull/2905\n**Full Changelog**: https://github.com/labstack/echo/compare/v4.15.0...v4.15.1",
+      "memory_unit_text": "In the labstack/echo release v4.15.1, CSRF now supports older token-based CSRF protection handlers that want to render token into template."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v5_1_0",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.1.0",
+      "tag_name": "v5.1.0",
+      "title": "v5.1.0",
+      "time_hint": "2026-03-31",
+      "published_at": "2026-03-31T20:56:54Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v5.1.0",
+      "raw_text": "Repository: labstack/echo\nRelease: v5.1.0\nTag: v5.1.0; draft: False; prerelease: False; published_at: 2026-03-31T20:56:54Z; created_at: 2026-03-31T20:52:35Z\nRelease notes:\n##  Security\nThis change does not break the API contract, but it does introduce breaking changes in logic/behavior.\nIf your application is using `c.RealIP()` beware and read https://echo.labstack.com/docs/ip-address\nIn `v5` the `c.RealIP()` will now return `request.RemoteAddr` unless `e.IPExtractor` has been configured. No potentially spoofable headers are used by default anymore.\nConfigure `IPExtractor` with proper trust options when you want to read IP from headers. See:\n- https://pkg.go.dev/github.com/labstack/echo/v5#ExtractIPFromRealIPHeader\n- https://pkg.go.dev/github.com/labstack/echo/v5#ExtractIPFromXFFHeader\n`v4` behavior can be restored with:\n```go\ne := echo.New()\ne.IPExtractor = echo.LegacyIPExtractor()\n```\nRelated PR: Remove legacy IP extraction logic from context.RealIP method by @aldas in https://github.com/labstack/echo/pull/2933\n## What's Changed\n* Add echo-opentelemetry to the README.md by @aldas in https://github.com/labstack/echo/pull/2908\n* fix: correct spelling mistakes in comments and field name by @crawfordxx in https://github.com/labstack/echo/pull/2916\n* Add https://github.com/labstack/echo-prometheus to the middleware list in README.md by @aldas in https://github.com/labstack/echo/pull/2919\n* Add StartConfig.Listener so server with custom Listener is easier to create by @aldas in https://github.com/labstack/echo/pull/2920\n* Fix rate limiter documentation for default burst value by @karesansui-u in https://github.com/labstack/echo/pull/2925\n* Add doc comments to clarify usage of File related methods and leading slash handling by @aldas in https://github.com/labstack/echo/pull/2928\n* Add NewDefaultFS function to help create filesystem that allows absolute paths by @aldas in https://github.com/labstack/echo/pull/2931\n* Do not set http.Server.WriteTimeout in StartConfig by @aldas in https://github.com/labstack/echo/pull/2932\n* Remove legacy IP extraction logic from context.RealIP method  by @aldas in https://github.com/labstack/echo/pull/2933\n## New Contributors\n* @crawfordxx made their first contribution in https://github.com/labstack/echo/pull/2916\n* @karesansui-u made their first contribution in https://github.com/labstack/echo/pull/2925\n**Full Changelog**: https://github.com/labstack/echo/compare/v5.0.4...v5.1.0",
+      "memory_unit_text": "In the labstack/echo release v5.1.0, c.RealIP() now returns request.RemoteAddr unless e.IPExtractor is configured, removing legacy IP extraction logic. echo-opentelemetry is added to README.md. Spelling mistakes in comments and a field name are corrected. echo-prometheus is added to the middleware list. StartConfig.Listener is added for easier custom listener creation. Rate limiter documentation for default burst value is fixed. Doc comments clarify File related methods and leading slash handling. NewDefaultFS function helps create a filesystem that allows absolute paths. http.Server.WriteTimeout is no longer set in StartConfig."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v4_15_2",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.15.2",
+      "tag_name": "v4.15.2",
+      "title": "v4.15.2 - Context.Scheme() header validation",
+      "time_hint": "2026-05-01",
+      "published_at": "2026-05-01T18:01:21Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v4.15.2",
+      "raw_text": "Repository: labstack/echo\nRelease: v4.15.2 - Context.Scheme() header validation\nTag: v4.15.2; draft: False; prerelease: False; published_at: 2026-05-01T18:01:21Z; created_at: 2026-05-01T17:59:02Z\nRelease notes:\n**Security**\n* `Context.Scheme()` should validate values taken from header by @aldas in https://github.com/labstack/echo/pull/2962\nThanks to @shblue21 for reporting this [issue](https://github.com/labstack/echo/issues/2952).\n**Full Changelog**: https://github.com/labstack/echo/compare/v4.15.1...v4.15.2",
+      "memory_unit_text": "In the labstack/echo release v4.15.2, Context.Scheme() now validates values taken from the header to fix a security issue."
+    },
+    {
+      "memory_node_id": "labstack__echo__release__v5_1_1",
+      "repo": "labstack/echo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.1.1",
+      "tag_name": "v5.1.1",
+      "title": "v5.1.1 - Context.Scheme() should validate header values",
+      "time_hint": "2026-05-01",
+      "published_at": "2026-05-01T19:17:38Z",
+      "source_url": "https://github.com/labstack/echo/releases/tag/v5.1.1",
+      "raw_text": "Repository: labstack/echo\nRelease: v5.1.1 - Context.Scheme() should validate header values\nTag: v5.1.1; draft: False; prerelease: False; published_at: 2026-05-01T19:17:38Z; created_at: 2026-05-01T19:14:30Z\nRelease notes:\n**Security**\n* `Context.Scheme()` should validate values taken from header by @aldas in https://github.com/labstack/echo/pull/2953\nThanks to @shblue21 for reporting this issue - [Context.Scheme accepts malformed forwarded scheme values used by host redirects](https://github.com/labstack/echo/issues/2952).\n**Enhancements**\n* Add golangci linter configuration by @aldas in https://github.com/labstack/echo/pull/2930\n* Make StartConfig listener creation context-aware by @EricGusmao in https://github.com/labstack/echo/pull/2936\n* fix(lint): resolve staticcheck issues and improve code quality by @itsllyaz in https://github.com/labstack/echo/pull/2941\n* Context.Scheme should validate values taken from header by @aldas in https://github.com/labstack/echo/pull/2953\n* chore: fix typos in httperror.go by @tisonkun in https://github.com/labstack/echo/pull/2958\n* Context.Json should not unwrap response  by @aldas in https://github.com/labstack/echo/pull/2964\n## New Contributors\n* @EricGusmao made their first contribution in https://github.com/labstack/echo/pull/2936\n* @itsllyaz made their first contribution in https://github.com/labstack/echo/pull/2941\n* @tisonkun made their first contribution in https://github.com/labstack/echo/pull/2958\n**Full Changelog**: https://github.com/labstack/echo/compare/v5.1.0...v5.1.1",
+      "memory_unit_text": "In the labstack/echo release v5.1.1, Context.Scheme() validates values taken from the header. A golangci linter configuration is added. StartConfig listener creation is made context-aware. Staticcheck issues are resolved. Typos in httperror.go are fixed. Context.Json does not unwrap response."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the labstack/echo releases, which release adds support for arbitrary HTTP method types as routes and custom 404 handlers for specific paths?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v4.7.2"
+        },
+        {
+          "option_id": "B",
+          "text": "v4.8.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v4.9.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v4.10.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v4.8.0",
+      "source_chunk_ids": [
+        "labstack__echo__release__v4_8_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "labstack__echo__release__v4_8_0",
+          "answer_text": "support is added for arbitrary HTTP method types as routes and for custom 404 handlers on specific paths"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the labstack/echo releases, how does the CSRF middleware change described in v4.15.0 differ from the CSRF change described in v4.15.1?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v4.15.0 adds Sec-Fetch-Site header support and new configuration options, while v4.15.1 adds support for older token-based CSRF protection handlers that want to render token into template."
+        },
+        {
+          "option_id": "B",
+          "text": "v4.15.0 removes CSRF middleware entirely, while v4.15.1 reintroduces it with token-based protection."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only update CSRF documentation without functional changes."
+        },
+        {
+          "option_id": "D",
+          "text": "v4.15.0 fixes a CSRF token extraction bug, while v4.15.1 adds support for multipart forms."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v4.15.0 adds Sec-Fetch-Site header support and new configuration options, while v4.15.1 adds support for older token-based CSRF protection handlers that want to render token into template.",
+      "source_chunk_ids": [
+        "labstack__echo__release__v4_15_0",
+        "labstack__echo__release__v4_15_1"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "labstack__echo__release__v4_15_0",
+          "answer_text": "the CSRF middleware now supports the Sec-Fetch-Site header as a modern defense-in-depth approach, with new configuration options TrustedOrigins and AllowSecFetchSiteFunc"
+        },
+        {
+          "memory_node_id": "labstack__echo__release__v4_15_1",
+          "answer_text": "CSRF now supports older token-based CSRF protection handlers that want to render token into template"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the labstack/echo release window, order the following release-content states from earliest to latest: (1) a release that deprecates the JWT middleware and bumps the minimum Go version to 1.17, (2) a release that removes the JWT middleware from core due to CVE-2024-51744, (3) a release that adds type-safe generic parameter binding functions and deprecates the Timeout middleware, (4) a release that introduces a major breaking change where Context becomes a struct and the logging interface is replaced with log/slog.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 2 -> 4 -> 3"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "labstack__echo__release__v4_10_0",
+        "labstack__echo__release__v4_13_0",
+        "labstack__echo__release__v4_15_0",
+        "labstack__echo__release__v5_0_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "labstack__echo__release__v4_10_0",
+          "answer_text": "the JWT middleware is deprecated and moved to a separate repository. The minimum Go version is bumped to 1.17."
+        },
+        {
+          "memory_node_id": "labstack__echo__release__v4_13_0",
+          "answer_text": "the JWT middleware is removed from core due to CVE-2024-51744"
+        },
+        {
+          "memory_node_id": "labstack__echo__release__v4_15_0",
+          "answer_text": "Type-safe generic parameter binding functions are added ... The Timeout middleware is deprecated"
+        },
+        {
+          "memory_node_id": "labstack__echo__release__v5_0_0",
+          "answer_text": "Context is now a struct instead of an interface ... the old logging interface is dropped in favor of log/slog"
+        }
+      ]
+    }
+  ]
+}

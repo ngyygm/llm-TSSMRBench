@@ -1,0 +1,530 @@
+{
+  "prototype_id": "lobehub__lobehub_release_window",
+  "domain": "github_release_evolution",
+  "repo": "lobehub/lobehub",
+  "source_type": "release_note",
+  "window_title": "lobehub/lobehub recent release evolution",
+  "window_summary": "This window tracks the recent lobehub/lobehub release stream, including stable releases v2.1.58, v2.2.0, v2.2.1, and a series of canary builds and nightly PR builds that introduce features like the Chief Agent Operator, heterogeneous platform agents, and onboarding improvements.",
+  "chunks": [
+    {
+      "memory_node_id": "lobehub__lobehub__release__v2_1_58",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.1.58",
+      "tag_name": "v2.1.58",
+      "title": "🚀 Release v2.1.58",
+      "time_hint": "2026-05-13",
+      "published_at": "2026-05-13T02:02:15Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v2.1.58",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: 🚀 Release v2.1.58\nTag: v2.1.58; draft: False; prerelease: False; published_at: 2026-05-13T02:02:15Z; created_at: 2026-05-13T02:02:13Z\nRelease notes:\n## 📦 Release v2.1.58\nThis release was automatically published from PR #14739.\n### Changes\nSee PR description: https://github.com/lobehub/lobehub/pull/14739\n### Commit Message\n# 🚀 LobeHub Release (20260513)\n**Hotfix Scope:** Ship the canary backlog (111 PRs) onto main as a fast-tracked patch — operator-focused, no weekly-style write-up.\n> Brings the accumulated canary work into main: agent/task improvements, hetero-agent fixes, desktop & onboarding polish, and several reliability caps.\n## ✨ What's Included\n- **Agent & tasks** — Self-review proposal-to-action automation, sub-agent dispatch consolidated to `lobe-agent`, AskUserQuestion wiring for Claude Code, scheduler/hotkey/TodoList polish. (#14583, #14657, #14715, #14639, #14732, #14707, #14713)\n- **Home & onboarding** — Daily brief with linkable welcome + paired input hint, inline skill auth in recommended task templates, cleanup of captcha-on-signin and marketplace early-exit. (#14589, #14676, #14573, #14598)\n- **Bots & integrations** — Slack MPIM support, Discord DM fix, slash-command + connect-error fixes, gateway client-tool plugin state. (#14733, #14591, #14596)\n- **Desktop & CLI** — Windows `.cmd` shim detection for `claude` / `codex` CLIs, auth focus & pending-login reset fixes. (#14720, #14694, #14695)\n- **Reliability** — Cap web-crawler body size and image binary at safe limits, attach error listeners to Neon/Node pools, reject inactive OIDC access. (#14660, #14711, #14606, #14674)\n- **Database** — `agent_operations` table + persist agent operations from the runtime; switch user memory search to `paradedb.match(...)`. (#14416, #14736, #14590)\n## ⚙️ Upgrade\n- **Self-hosted:** pull the latest image and restart. Drizzle migrations (including the new `agent_operations` table) run automatically on boot.\n- **Cloud:** applied automatically on deploy.\n---\n**Full Changelog**: https://github.com/lobehub/lobehub/compare/v2.1.57...hotfix/v2.1.57-ce08b9b1",
+      "memory_unit_text": "In the lobehub/lobehub release v2.1.58, published on 2026-05-13, the release is a hotfix that ships the canary backlog of 111 PRs onto main. It includes agent and task improvements such as self-review proposal-to-action automation, sub-agent dispatch consolidation, AskUserQuestion wiring for Claude Code, and scheduler/hotkey/TodoList polish. Home and onboarding updates include a daily brief with linkable welcome and paired input hint, inline skill auth in recommended task templates, and cleanup of captcha-on-signin and marketplace early-exit. Bot and integration fixes cover Slack MPIM support, Discord DM fix, and slash-command fixes. Desktop and CLI improvements include Windows .cmd shim detection for claude/codex CLIs and auth focus fixes. Reliability caps include web-crawler body size and image binary limits, error listeners on Neon/Node pools, and inactive OIDC access rejection. A new agent_operations table is added and user memory search switches to paradedb.match."
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v2_2_0",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.2.0",
+      "tag_name": "v2.2.0",
+      "title": "🚀 Release v2.2.0",
+      "time_hint": "2026-05-18",
+      "published_at": "2026-05-18T04:44:53Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v2.2.0",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: 🚀 Release v2.2.0\nTag: v2.2.0; draft: False; prerelease: False; published_at: 2026-05-18T04:44:53Z; created_at: 2026-05-18T04:44:51Z\nRelease notes:\n## 📦 Release v2.2.0\nThis release was automatically published from PR #14915.\n### Changes\nSee PR description: https://github.com/lobehub/lobehub/pull/14915\n### Commit Message\n# 🚀 LobeHub Release (20260518)\n**Release Date:** May 18, 2026\n**Since v2.1.58:** 208 merged PRs · 209 commits · 16 contributors\n> v2.2.0 introduces the **Chief Agent Operator** — an agent that runs itself end-to-end. It self-iterates against its own output, assembles sub-agent teams on demand through the heterogeneous runtime, and drives a unified task system that knows when to pause for a human. Self-review, AssistantGroup, and tasks/scheduling all converge into one operator surface.\n---\n## ✨ Highlights\n### 🎩 Chief Agent Operator\n- **Self-iteration exits Lab** — Agent Signal's self-review pipeline ships proposal actions straight into briefs and auto-executes the approved follow-ups, with prompts hardened against eval. The operator now critiques and re-runs its own work without a human in the loop. (#14769, #14583, #14647, #14882)\n- **Auto-formed agent teams** — Heterogeneous AssistantGroup gains Monitor-style signal callbacks, read-only SubAgent threads with breadcrumb headers, and a thread switcher. The operator dispatches sub-agents and you can step into any branch to see what the team is doing. (#14859, #14658, #14845, #14715)\n- **Task system as the operator's runway** — Claude Code surfaces task tools, AskUserQuestion freeform notes, and a dedicated `waitingForHuman` topic status; `lobe-task` exposes `setTaskSchedule`; the scheduler is hardened (maxExecutions cap, sub-10min heartbeat block, race-free SchedulerForm). Long-running operator runs no longer go silent and stop themselves when human input is needed. (#14870, #14639, #14713, #14865, #14853)\n### 🚀 Cloud & runtime\n- **Cloud Claude Code V3** — Repo picker, GitHub token flow, and sandbox-aware context bring cloud-hosted Claude Code to feature parity with local; cloud sandbox completion now triggers the task lifecycle end-to-end. (#14568, #14822, #14681)\n- **Heterogeneous agent multi-replica safety** — Subagent threads, ingest refresh, and parallel-tool counts now survive replica swaps without losing parent_id or rolling back tool state. (#14897, #14631, #14806, #14838)\n- **Built-in tool lifecycle hooks** — `onBeforeCall` / `onAfterCall` land on the built-in tool runtime; sub-agent dispatch moves to `lobe-agent`; self-iteration aligns with the shared inspector pattern. (#14719, #14715, #14827)\n- **Knowledge base RAG unified** — Client and server share one `KnowledgeBaseSearchService`; KB files preserved on `NoSuchKey` instead of silently lost. (#14673, #14501)\n### 💬 Workspace experience\n- **Home daily brief + recommendations** — The home screen opens with a linkable welcome, paired input hint, and a recommendations module sourced from the operator's hetero action library. (#14589, #14645, #14770)\n- **Chat mode + redesigned action bar** — The chat input gains a Chat/Agent mode toggle and a re-pitched action bar with icon-and-color action tag chips. (#14774, #14903, #14846)\n- **Documents tree, optimistic** — Document tree creates, deletes, and inline renames now apply optimistically; the agent-documents index hides web crawls and switches to a table layout. (#14714, #14292)\n- **Branded MCP inspectors** — Linear MCP tool calls render with the same branded inspector as the built-in Linear skill; CC MCP and built-in skills now share inspector code. (#14864, #14884)\n- **Bot identity gating** — Device tools are gated by sender identity, the activator bypass is closed, and Slack mpim plus Discord DM regressions are fixed. (#14634, #14664, #14733)\n---\n## 🏗️ Core Agent & Signal Pipeline\n### Self-iteration & Agent Signal\n- Self-iteration graduates out of Lab, with service, tool, name, and concept structure unified across `ag...",
+      "memory_unit_text": "In the lobehub/lobehub release v2.2.0, published on 2026-05-18, the Chief Agent Operator is introduced, enabling an agent that runs itself end-to-end. It self-iterates against its own output, assembles sub-agent teams on demand through the heterogeneous runtime, and drives a unified task system that pauses for human input. Self-review exits Lab, with proposal actions fed into briefs and auto-executed. Heterogeneous AssistantGroup gains Monitor-style signal callbacks, read-only SubAgent threads with breadcrumb headers, and a thread switcher. The task system surfaces Claude Code task tools, AskUserQuestion freeform notes, and a waitingForHuman topic status; the scheduler is hardened with maxExecutions cap and sub-10min heartbeat block. Cloud Claude Code V3 adds repo picker, GitHub token flow, and sandbox-aware context. Heterogeneous agent multi-replica safety ensures subagent threads survive replica swaps. Built-in tool lifecycle hooks onBeforeCall/onAfterCall are added. Knowledge base RAG is unified with a shared KnowledgeBaseSearchService. The home screen gains a daily brief and recommendations module. Chat mode adds a Chat/Agent mode toggle and redesigned action bar. Document tree operations become optimistic. Branded MCP inspectors are introduced for Linear MCP tool calls. Bot identity gating restricts device tools by sender identity."
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v2_2_1",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.2.1",
+      "tag_name": "v2.2.1",
+      "title": "🚀 Release v2.2.1",
+      "time_hint": "2026-05-29",
+      "published_at": "2026-05-29T01:55:40Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v2.2.1",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: 🚀 Release v2.2.1\nTag: v2.2.1; draft: False; prerelease: False; published_at: 2026-05-29T01:55:40Z; created_at: 2026-05-29T01:55:38Z\nRelease notes:\n## 📦 Release v2.2.1\nThis release was automatically published from PR #15302.\n### Changes\nSee PR description: https://github.com/lobehub/lobehub/pull/15302\n### Commit Message\n# 🚀 LobeHub Release (20260528)\n**Release Date:** May 28, 2026\n**Since v2.2.0:** 220 merged PRs · 15 contributors\n> This cycle brings heterogeneous \"platform agents\" you can dispatch to local or remote devices, a rebuilt onboarding flow, document-centric chat, and a unified model-runtime error model — with new DeepSeek V4 and Gemini 3.5 Flash support along the way.\n---\n## ✨ Highlights\n- **More Hetero Agents (OpenClaw / Hermes)** — Create heterogeneous agents and dispatch them to local or remote devices through the device gateway, with an execution-target switcher in the composer and persistent CLI sessions. (#15065, #15179, #15022)\n- **iMessage on Desktop** — New iMessage setup and bridge on desktop, plus bot attachments across every platform. (#15228, #15227, #15029)\n- **Skills in the Composer** — Drag skill chips into chat, trigger installed skills from the slash menu mid-line, and surface project-level skills in the homogeneous agent runtime. (#15095, #15061, #15110)\n- **New Models** — DeepSeek V4 Flash/Pro and Gemini 3.5 Flash across providers, with thinking params for structured output and chat cost estimates. (#15031, #15001, #15051, #14876)\n- **Agent Runtime Observability** — OpenTelemetry GenAI semantic conventions plus per-call generation tracing. (#15123, #15124)\n---\n## 🤖 Agents & Heterogeneous Runtime\n- **Platform agent creation** — OpenClaw/Hermes creation UI, device guard, and remote dispatch backend. (#15065)\n- **Execution-target switcher** — Pick local vs remote execution directly in the composer; device-selection UX with actionable guidance. (#15179, #15111)\n- **CLI hetero dispatch** — OpenClaw/Hermes dispatch with persistent sessions and a notify protocol. (#15022)\n- **Gateway snapshot as source of truth** — Consume the gateway `uiMessages` snapshot at step boundaries to keep chat state consistent. (#15153, #15152)\n- **Client sub-agent as a normal tool call** — Simplifies the sub-agent execution path. (#15281)\n- **Hermes agent chain** — Implements the Hermes agent chain logic. (#15189)\n- **Device registry** — TRPC endpoints to register, list, update, and remove devices. (#15299)\n- **Desktop device routing** — Route gateway agent runs through `lh hetero exec`; restore `userId` in gateway dispatch and gate local-system by execution target. (#15132, #15232)\n- **Agent signals** — Anchor agent-signal receipts to messages and isolate memory-agent messages into a child thread. (#14969, #14921)\n---\n## 🚀 Onboarding\n- **Simplified first screen** — Defer topic creation to first send. (#15090)\n- **Market Agent Picker** — Added as a classic onboarding step, with template prefetch. (#14980, #15041)\n- **Welcome guidance** — Show agent welcome guidance on first run. (#15098)\n- **Mobile** — Adapt agent onboarding UI and restore Classic-step padding on mobile. (#15019, #15032)\n- **Discovery** — Streamline discovery to a single profession question. (#14987)\n- **Analytics** — Track onboarding step events and create-agent modal source. (#15133, #15028)\n---\n## 📄 Documents, Pages & Knowledge\n- **Thread chat in preview** — Embed thread chat in the document preview portal. (#15216)\n- **Non-markdown rendering** — Render non-markdown docs as a read-only highlight. (#15272)\n- **Multi-select** — Multi-select delete in the document tree. (#15125)\n- **Page-agent streaming** — Preview `initPage` streaming arguments. (#15039)\n- **Per-agent topics** — Per-agent topic management page. (#15207)\n- **Server-side category** — Derive document category server-side and drop frontend predicates. (#15076)\n---\n## 🧩 Skills & Tools\n- **Drag skill chips** — Drag skills into chat input and register agent-...",
+      "memory_unit_text": "In the lobehub/lobehub release v2.2.1, published on 2026-05-29, heterogeneous platform agents (OpenClaw/Hermes) can be created and dispatched to local or remote devices through the device gateway, with an execution-target switcher in the composer and persistent CLI sessions. iMessage setup and bridge are added on desktop, along with bot attachments across platforms. Skills can be dragged into chat as chips, triggered from the slash menu mid-line, and project-level skills are surfaced in the homogeneous agent runtime. New models DeepSeek V4 Flash/Pro and Gemini 3.5 Flash are supported with thinking params and chat cost estimates. Agent runtime observability is added with OpenTelemetry GenAI semantic conventions and per-call generation tracing. Onboarding is simplified with a deferred topic creation first screen, a Market Agent Picker step, welcome guidance, and streamlined discovery to a single profession question. Document and knowledge improvements include thread chat in preview, non-markdown rendering, multi-select delete, page-agent streaming, per-agent topic management, and server-side document category derivation. Skills and tools are enhanced with drag skill chips, and the composer gains skill integration."
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v2_2_2_canary_10",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.2.2-canary.10",
+      "tag_name": "v2.2.2-canary.10",
+      "title": "Desktop Canary v2.2.2-canary.10",
+      "time_hint": "2026-06-01",
+      "published_at": "2026-06-01T07:59:46Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v2.2.2-canary.10",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: Desktop Canary v2.2.2-canary.10\nTag: v2.2.2-canary.10; draft: False; prerelease: True; published_at: 2026-06-01T07:59:46Z; created_at: 2026-06-01T07:18:06Z\nRelease notes:\n## 🐤 Canary Build — v2.2.2-canary.10\n> Automated canary build from `canary` branch.\n### Commit Information\n- Based on changes since `v2.2.2-canary.9`\n- Commit count: 1\n- `818e67d1f0` 🐛 fix(gateway): prevent duplicate streaming from stale reconnects (#15354) (LiJian)\n### ⚠️ Important Notes\n- **This is an automated canary build and is NOT intended for production use.**\n- Canary builds are triggered by `build`/`fix`/`style` commits on the `canary` branch.\n- May contain **unstable or incomplete changes**. **Use at your own risk.**\n- It is strongly recommended to **back up your data** before using a canary build.\n### 📦 Installation\nDownload the appropriate installer for your platform from the assets below.\n| Platform | File |\n|----------|------|\n| macOS (Apple Silicon) | `.dmg` (arm64) |\n| macOS (Intel) | `.dmg` (x64) |\n| Windows | `.exe` |\n| Linux | `.AppImage` / `.deb` |",
+      "memory_unit_text": "In the lobehub/lobehub release Desktop Canary v2.2.2-canary.10, published on 2026-06-01, this automated canary build from the canary branch includes a fix to prevent duplicate streaming from stale reconnects in the gateway."
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v2_2_2_canary_11",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.2.2-canary.11",
+      "tag_name": "v2.2.2-canary.11",
+      "title": "Desktop Canary v2.2.2-canary.11",
+      "time_hint": "2026-06-01",
+      "published_at": "2026-06-01T08:45:38Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v2.2.2-canary.11",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: Desktop Canary v2.2.2-canary.11\nTag: v2.2.2-canary.11; draft: False; prerelease: True; published_at: 2026-06-01T08:45:38Z; created_at: 2026-06-01T08:03:14Z\nRelease notes:\n## 🐤 Canary Build — v2.2.2-canary.11\n> Automated canary build from `canary` branch.\n### Commit Information\n- Based on changes since `v2.2.2-canary.10`\n- Commit count: 2\n- `56ce192c61` 🐛 fix: default provider setup in business mode (#15379) (YuTengjing)\n- `21a73b22b2` ✨ feat: support MiniMax M3 Anthropic video runtime (#15380) (YuTengjing)\n### ⚠️ Important Notes\n- **This is an automated canary build and is NOT intended for production use.**\n- Canary builds are triggered by `build`/`fix`/`style` commits on the `canary` branch.\n- May contain **unstable or incomplete changes**. **Use at your own risk.**\n- It is strongly recommended to **back up your data** before using a canary build.\n### 📦 Installation\nDownload the appropriate installer for your platform from the assets below.\n| Platform | File |\n|----------|------|\n| macOS (Apple Silicon) | `.dmg` (arm64) |\n| macOS (Intel) | `.dmg` (x64) |\n| Windows | `.exe` |\n| Linux | `.AppImage` / `.deb` |",
+      "memory_unit_text": "In the lobehub/lobehub release Desktop Canary v2.2.2-canary.11, published on 2026-06-01, this automated canary build includes a fix for default provider setup in business mode and adds support for MiniMax M3 Anthropic video runtime."
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v2_2_2_canary_12",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.2.2-canary.12",
+      "tag_name": "v2.2.2-canary.12",
+      "title": "Desktop Canary v2.2.2-canary.12",
+      "time_hint": "2026-06-01",
+      "published_at": "2026-06-01T10:23:02Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v2.2.2-canary.12",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: Desktop Canary v2.2.2-canary.12\nTag: v2.2.2-canary.12; draft: False; prerelease: True; published_at: 2026-06-01T10:23:02Z; created_at: 2026-06-01T09:39:54Z\nRelease notes:\n## 🐤 Canary Build — v2.2.2-canary.12\n> Automated canary build from `canary` branch.\n### Commit Information\n- Based on changes since `v2.2.2-canary.11`\n- Commit count: 3\n- `5f0fa7bf50` 🐛 fix: block disabling official provider (#15382) (YuTengjing)\n- `c50d790feb` 🔨 chore: pin Vitest 3.2.4 (#15383) (YuTengjing)\n- `4d030e9db1` 🐛 fix(agent-manager): guard createAgent against LLM double-encoded array fields (#15381) (LiJian)\n### ⚠️ Important Notes\n- **This is an automated canary build and is NOT intended for production use.**\n- Canary builds are triggered by `build`/`fix`/`style` commits on the `canary` branch.\n- May contain **unstable or incomplete changes**. **Use at your own risk.**\n- It is strongly recommended to **back up your data** before using a canary build.\n### 📦 Installation\nDownload the appropriate installer for your platform from the assets below.\n| Platform | File |\n|----------|------|\n| macOS (Apple Silicon) | `.dmg` (arm64) |\n| macOS (Intel) | `.dmg` (x64) |\n| Windows | `.exe` |\n| Linux | `.AppImage` / `.deb` |",
+      "memory_unit_text": "In the lobehub/lobehub release Desktop Canary v2.2.2-canary.12, published on 2026-06-01, this automated canary build includes a fix to block disabling official provider, a chore to pin Vitest 3.2.4, and a fix to guard createAgent against LLM double-encoded array fields in the agent manager."
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v2_2_2_canary_13",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.2.2-canary.13",
+      "tag_name": "v2.2.2-canary.13",
+      "title": "Desktop Canary v2.2.2-canary.13",
+      "time_hint": "2026-06-01",
+      "published_at": "2026-06-01T11:29:00Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v2.2.2-canary.13",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: Desktop Canary v2.2.2-canary.13\nTag: v2.2.2-canary.13; draft: False; prerelease: True; published_at: 2026-06-01T11:29:00Z; created_at: 2026-06-01T10:46:00Z\nRelease notes:\n## 🐤 Canary Build — v2.2.2-canary.13\n> Automated canary build from `canary` branch.\n### Commit Information\n- Based on changes since `v2.2.2-canary.12`\n- Commit count: 1\n- `dda527926d` ✨ feat: support configurable model routing and starters (#15384) (YuTengjing)\n### ⚠️ Important Notes\n- **This is an automated canary build and is NOT intended for production use.**\n- Canary builds are triggered by `build`/`fix`/`style` commits on the `canary` branch.\n- May contain **unstable or incomplete changes**. **Use at your own risk.**\n- It is strongly recommended to **back up your data** before using a canary build.\n### 📦 Installation\nDownload the appropriate installer for your platform from the assets below.\n| Platform | File |\n|----------|------|\n| macOS (Apple Silicon) | `.dmg` (arm64) |\n| macOS (Intel) | `.dmg` (x64) |\n| Windows | `.exe` |\n| Linux | `.AppImage` / `.deb` |",
+      "memory_unit_text": "In the lobehub/lobehub release Desktop Canary v2.2.2-canary.13, published on 2026-06-01, this automated canary build adds support for configurable model routing and starters."
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v2_2_2_canary_14",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.2.2-canary.14",
+      "tag_name": "v2.2.2-canary.14",
+      "title": "Desktop Canary v2.2.2-canary.14",
+      "time_hint": "2026-06-01",
+      "published_at": "2026-06-01T16:07:23Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v2.2.2-canary.14",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: Desktop Canary v2.2.2-canary.14\nTag: v2.2.2-canary.14; draft: False; prerelease: True; published_at: 2026-06-01T16:07:23Z; created_at: 2026-06-01T15:22:46Z\nRelease notes:\n## 🐤 Canary Build — v2.2.2-canary.14\n> Automated canary build from `canary` branch.\n### Commit Information\n- Based on changes since `v2.2.2-canary.13`\n- Commit count: 7\n- `5119c0802d` 🐛 fix(topic): strip markdown tokens from fallback titles (#15372) (Innei)\n- `3e51b87b1e` 💄 style(sidebar): group spacer with recents and agents (#15373) (Innei)\n- `1e8b5959da` ♻️ refactor(topic): drop legacy session→agentId compatibility from topic queries (#15378) (Arvin Xu)\n- `5b25b8d8bb` ⚡️ perf: skip user count on api key checks (#15385) (Rylan Cai)\n- `fd82f6fd0e` 🐛 fix: add restore subscription copy (#15388) (YuTengjing)\n- `80c11a09e2` 🐛 fix: stabilize home starter loading (#15386) (YuTengjing)\n- `c8096590c4` ✨ feat(topic): add group-by-status mode to topic sidebar (#15366) (Arvin Xu)\n### ⚠️ Important Notes\n- **This is an automated canary build and is NOT intended for production use.**\n- Canary builds are triggered by `build`/`fix`/`style` commits on the `canary` branch.\n- May contain **unstable or incomplete changes**. **Use at your own risk.**\n- It is strongly recommended to **back up your data** before using a canary build.\n### 📦 Installation\nDownload the appropriate installer for your platform from the assets below.\n| Platform | File |\n|----------|------|\n| macOS (Apple Silicon) | `.dmg` (arm64) |\n| macOS (Intel) | `.dmg` (x64) |\n| Windows | `.exe` |\n| Linux | `.AppImage` / `.deb` |",
+      "memory_unit_text": "In the lobehub/lobehub release Desktop Canary v2.2.2-canary.14, published on 2026-06-01, this automated canary build includes a fix to strip markdown tokens from fallback titles in topics, a style change to group spacer with recents and agents in the sidebar, a refactor to drop legacy session-to-agentId compatibility from topic queries, a performance improvement to skip user count on API key checks, a fix to add restore subscription copy, a fix to stabilize home starter loading, and a feature to add group-by-status mode to the topic sidebar."
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v2_2_2_canary_15",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.2.2-canary.15",
+      "tag_name": "v2.2.2-canary.15",
+      "title": "Desktop Canary v2.2.2-canary.15",
+      "time_hint": "2026-06-02",
+      "published_at": "2026-06-02T04:08:03Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v2.2.2-canary.15",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: Desktop Canary v2.2.2-canary.15\nTag: v2.2.2-canary.15; draft: False; prerelease: True; published_at: 2026-06-02T04:08:03Z; created_at: 2026-06-02T03:29:57Z\nRelease notes:\n## 🐤 Canary Build — v2.2.2-canary.15\n> Automated canary build from `canary` branch.\n### Commit Information\n- Based on changes since `v2.2.2-canary.14`\n- Commit count: 9\n- `66c9339e98` fix(desktop): resolve CLI tools from shell PATH (#15368) (qybaihe)\n- `857aaf4766` ✨ feat(chat-input): show execution-device switcher for all agents (#15371) (LiJian)\n- `4e91a3181d` ♻️ refactor(modal): convert create custom model modal to base-ui imperative API (#15401) (Innei)\n- `c9ca46e1e0` chore: remove LOBE-XXX annotations from code comments (#15398) (Arvin Xu)\n- `37db828c17` ♻️ refactor(modal): convert feedback & changelog modals to base-ui imperative API (Innei)\n- `0208c0adfe` 🐛 fix(chat-input): restore editor focus after file picker closes (#15394) (Innei)\n- `09a57d4618` 🐛 fix: clarify local command session handling (#15389) (Rylan Cai)\n- `73dd0ef136` 🔖 chore(cli): bump @lobehub/cli to 0.0.24 (#15393) (Arvin Xu)\n- `d2e4833f1e` 🐛 fix(chat-input): close skill dropdown before navigating to settings (#15391) (Innei)\n### ⚠️ Important Notes\n- **This is an automated canary build and is NOT intended for production use.**\n- Canary builds are triggered by `build`/`fix`/`style` commits on the `canary` branch.\n- May contain **unstable or incomplete changes**. **Use at your own risk.**\n- It is strongly recommended to **back up your data** before using a canary build.\n### 📦 Installation\nDownload the appropriate installer for your platform from the assets below.\n| Platform | File |\n|----------|------|\n| macOS (Apple Silicon) | `.dmg` (arm64) |\n| macOS (Intel) | `.dmg` (x64) |\n| Windows | `.exe` |\n| Linux | `.AppImage` / `.deb` |",
+      "memory_unit_text": "In the lobehub/lobehub release Desktop Canary v2.2.2-canary.15, published on 2026-06-02, this automated canary build includes a fix to resolve CLI tools from shell PATH on desktop, a feature to show execution-device switcher for all agents in chat input, a refactor to convert create custom model modal to base-ui imperative API, removal of LOBE-XXX annotations from code comments, refactors of feedback and changelog modals to base-ui imperative API, a fix to restore editor focus after file picker closes, a fix to clarify local command session handling, a chore to bump @lobehub/cli to 0.0.24, and a fix to close skill dropdown before navigating to settings."
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v2_2_2_canary_16",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.2.2-canary.16",
+      "tag_name": "v2.2.2-canary.16",
+      "title": "Desktop Canary v2.2.2-canary.16",
+      "time_hint": "2026-06-02",
+      "published_at": "2026-06-02T09:51:11Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v2.2.2-canary.16",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: Desktop Canary v2.2.2-canary.16\nTag: v2.2.2-canary.16; draft: False; prerelease: True; published_at: 2026-06-02T09:51:11Z; created_at: 2026-06-02T09:10:30Z\nRelease notes:\n## 🐤 Canary Build — v2.2.2-canary.16\n> Automated canary build from `canary` branch.\n### Commit Information\n- Based on changes since `v2.2.2-canary.15`\n- Commit count: 5\n- `359b348989` ✨ feat(agent-builder): add skill priority instruction and server runtime (#15409) (LiJian)\n- `0c3450de7c` ✅ test(model-runtime): classify ollamacloud \"context window exceeds limit\" as ExceededContextWindow (#15411) (Arvin Xu)\n- `cbc259094d` 📝 docs: add Codex & Claude Code agent guides; merge image+video generation (#15407) (René Wang)\n- `ccf33e8b98` 🐛 fix(agent-runtime): classify topic/agent/session FK violations as ConversationParentMissing (#15408) (Arvin Xu)\n- `d1a6ffaf30` 🔨 chore: tighten skill descriptions for triggering (#15397) (YuTengjing)\n### ⚠️ Important Notes\n- **This is an automated canary build and is NOT intended for production use.**\n- Canary builds are triggered by `build`/`fix`/`style` commits on the `canary` branch.\n- May contain **unstable or incomplete changes**. **Use at your own risk.**\n- It is strongly recommended to **back up your data** before using a canary build.\n### 📦 Installation\nDownload the appropriate installer for your platform from the assets below.\n| Platform | File |\n|----------|------|\n| macOS (Apple Silicon) | `.dmg` (arm64) |\n| macOS (Intel) | `.dmg` (x64) |\n| Windows | `.exe` |\n| Linux | `.AppImage` / `.deb` |",
+      "memory_unit_text": "In the lobehub/lobehub release Desktop Canary v2.2.2-canary.16, published on 2026-06-02, this automated canary build includes a feature to add skill priority instruction and server runtime in the agent builder, a test to classify ollamacloud context window exceeds limit as ExceededContextWindow, documentation to add Codex and Claude Code agent guides and merge image+video generation, a fix to classify topic/agent/session FK violations as ConversationParentMissing in the agent runtime, and a chore to tighten skill descriptions for triggering."
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v0_0_0_nightly_pr14735_11577",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.0.0-nightly.pr14735.11577",
+      "tag_name": "v0.0.0-nightly.pr14735.11577",
+      "title": "PR Build v0.0.0-nightly.pr14735.11577",
+      "time_hint": "2026-05-12",
+      "published_at": "2026-05-12T18:59:57Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v0.0.0-nightly.pr14735.11577",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: PR Build v0.0.0-nightly.pr14735.11577\nTag: v0.0.0-nightly.pr14735.11577; draft: False; prerelease: True; published_at: 2026-05-12T18:59:57Z; created_at: 2026-05-12T18:53:35Z\nRelease notes:\n## PR Build Information\n**Version**: `0.0.0-nightly.pr14735.11577`\n**Release Time**: `2026-05-12T18:59:56.738Z`\n**PR**: [#14735](https://github.com/lobehub/lobe-chat/pull/14735)\n## ⚠️ Important Notice\nThis is a **development build** specifically created for testing purposes. Please note:\n- This build is **NOT** intended for production use\n- Features may be incomplete or unstable\n- Use only for validating PR changes in a desktop environment\n- May contain experimental code that hasn't been fully reviewed\n- No guarantees are provided regarding stability or reliability\n### Intended Use\n- Focused testing of specific PR changes\n- Verification of desktop-specific behaviors\n- UI/UX validation on desktop platforms\n- Performance testing on target devices\nPlease report any issues found in this build directly in the PR discussion.\n---\n## PR 构建信息\n**版本**: `0.0.0-nightly.pr14735.11577`\n**发布时间**: `2026-05-12T18:59:56.738Z`\n**PR**: [#14735](https://github.com/lobehub/lobe-chat/pull/14735)\n## ⚠️ 重要提示\n这是专为测试目的创建的**开发构建版本**。请注意:\n- 本构建**不适用于**生产环境\n- 功能可能不完整或不稳定\n- 仅用于在桌面环境中验证 PR 更改\n- 可能包含尚未完全审核的实验性代码\n- 不对稳定性或可靠性提供任何保证\n### 适用场景\n- 针对性测试特定 PR 变更\n- 验证桌面特定的行为表现\n- 在桌面平台上进行 UI/UX 验证\n- 在目标设备上进行性能测试\n如发现任何问题，请直接在 PR 讨论中报告。",
+      "memory_unit_text": ""
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v0_0_0_nightly_pr14739_11589",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.0.0-nightly.pr14739.11589",
+      "tag_name": "v0.0.0-nightly.pr14739.11589",
+      "title": "PR Build v0.0.0-nightly.pr14739.11589",
+      "time_hint": "2026-05-12",
+      "published_at": "2026-05-12T19:57:33Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v0.0.0-nightly.pr14739.11589",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: PR Build v0.0.0-nightly.pr14739.11589\nTag: v0.0.0-nightly.pr14739.11589; draft: False; prerelease: True; published_at: 2026-05-12T19:57:33Z; created_at: 2026-05-12T19:08:55Z\nRelease notes:\n## PR Build Information\n**Version**: `0.0.0-nightly.pr14739.11589`\n**Release Time**: `2026-05-12T19:57:32.032Z`\n**PR**: [#14739](https://github.com/lobehub/lobe-chat/pull/14739)\n## ⚠️ Important Notice\nThis is a **development build** specifically created for testing purposes. Please note:\n- This build is **NOT** intended for production use\n- Features may be incomplete or unstable\n- Use only for validating PR changes in a desktop environment\n- May contain experimental code that hasn't been fully reviewed\n- No guarantees are provided regarding stability or reliability\n### Intended Use\n- Focused testing of specific PR changes\n- Verification of desktop-specific behaviors\n- UI/UX validation on desktop platforms\n- Performance testing on target devices\nPlease report any issues found in this build directly in the PR discussion.\n---\n## PR 构建信息\n**版本**: `0.0.0-nightly.pr14739.11589`\n**发布时间**: `2026-05-12T19:57:32.032Z`\n**PR**: [#14739](https://github.com/lobehub/lobe-chat/pull/14739)\n## ⚠️ 重要提示\n这是专为测试目的创建的**开发构建版本**。请注意:\n- 本构建**不适用于**生产环境\n- 功能可能不完整或不稳定\n- 仅用于在桌面环境中验证 PR 更改\n- 可能包含尚未完全审核的实验性代码\n- 不对稳定性或可靠性提供任何保证\n### 适用场景\n- 针对性测试特定 PR 变更\n- 验证桌面特定的行为表现\n- 在桌面平台上进行 UI/UX 验证\n- 在目标设备上进行性能测试\n如发现任何问题，请直接在 PR 讨论中报告。",
+      "memory_unit_text": ""
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v0_0_0_nightly_pr14735_11630",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.0.0-nightly.pr14735.11630",
+      "tag_name": "v0.0.0-nightly.pr14735.11630",
+      "title": "PR Build v0.0.0-nightly.pr14735.11630",
+      "time_hint": "2026-05-13",
+      "published_at": "2026-05-13T08:07:36Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v0.0.0-nightly.pr14735.11630",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: PR Build v0.0.0-nightly.pr14735.11630\nTag: v0.0.0-nightly.pr14735.11630; draft: False; prerelease: True; published_at: 2026-05-13T08:07:36Z; created_at: 2026-05-13T07:34:53Z\nRelease notes:\n## PR Build Information\n**Version**: `0.0.0-nightly.pr14735.11630`\n**Release Time**: `2026-05-13T08:07:35.634Z`\n**PR**: [#14735](https://github.com/lobehub/lobe-chat/pull/14735)\n## ⚠️ Important Notice\nThis is a **development build** specifically created for testing purposes. Please note:\n- This build is **NOT** intended for production use\n- Features may be incomplete or unstable\n- Use only for validating PR changes in a desktop environment\n- May contain experimental code that hasn't been fully reviewed\n- No guarantees are provided regarding stability or reliability\n### Intended Use\n- Focused testing of specific PR changes\n- Verification of desktop-specific behaviors\n- UI/UX validation on desktop platforms\n- Performance testing on target devices\nPlease report any issues found in this build directly in the PR discussion.\n---\n## PR 构建信息\n**版本**: `0.0.0-nightly.pr14735.11630`\n**发布时间**: `2026-05-13T08:07:35.635Z`\n**PR**: [#14735](https://github.com/lobehub/lobe-chat/pull/14735)\n## ⚠️ 重要提示\n这是专为测试目的创建的**开发构建版本**。请注意:\n- 本构建**不适用于**生产环境\n- 功能可能不完整或不稳定\n- 仅用于在桌面环境中验证 PR 更改\n- 可能包含尚未完全审核的实验性代码\n- 不对稳定性或可靠性提供任何保证\n### 适用场景\n- 针对性测试特定 PR 变更\n- 验证桌面特定的行为表现\n- 在桌面平台上进行 UI/UX 验证\n- 在目标设备上进行性能测试\n如发现任何问题，请直接在 PR 讨论中报告。",
+      "memory_unit_text": ""
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v0_0_0_nightly_pr14735_11667",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.0.0-nightly.pr14735.11667",
+      "tag_name": "v0.0.0-nightly.pr14735.11667",
+      "title": "PR Build v0.0.0-nightly.pr14735.11667",
+      "time_hint": "2026-05-13",
+      "published_at": "2026-05-13T16:00:06Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v0.0.0-nightly.pr14735.11667",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: PR Build v0.0.0-nightly.pr14735.11667\nTag: v0.0.0-nightly.pr14735.11667; draft: False; prerelease: True; published_at: 2026-05-13T16:00:06Z; created_at: 2026-05-13T14:32:28Z\nRelease notes:\n## PR Build Information\n**Version**: `0.0.0-nightly.pr14735.11667`\n**Release Time**: `2026-05-13T16:00:05.053Z`\n**PR**: [#14735](https://github.com/lobehub/lobe-chat/pull/14735)\n## ⚠️ Important Notice\nThis is a **development build** specifically created for testing purposes. Please note:\n- This build is **NOT** intended for production use\n- Features may be incomplete or unstable\n- Use only for validating PR changes in a desktop environment\n- May contain experimental code that hasn't been fully reviewed\n- No guarantees are provided regarding stability or reliability\n### Intended Use\n- Focused testing of specific PR changes\n- Verification of desktop-specific behaviors\n- UI/UX validation on desktop platforms\n- Performance testing on target devices\nPlease report any issues found in this build directly in the PR discussion.\n---\n## PR 构建信息\n**版本**: `0.0.0-nightly.pr14735.11667`\n**发布时间**: `2026-05-13T16:00:05.053Z`\n**PR**: [#14735](https://github.com/lobehub/lobe-chat/pull/14735)\n## ⚠️ 重要提示\n这是专为测试目的创建的**开发构建版本**。请注意:\n- 本构建**不适用于**生产环境\n- 功能可能不完整或不稳定\n- 仅用于在桌面环境中验证 PR 更改\n- 可能包含尚未完全审核的实验性代码\n- 不对稳定性或可靠性提供任何保证\n### 适用场景\n- 针对性测试特定 PR 变更\n- 验证桌面特定的行为表现\n- 在桌面平台上进行 UI/UX 验证\n- 在目标设备上进行性能测试\n如发现任何问题，请直接在 PR 讨论中报告。",
+      "memory_unit_text": ""
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v0_0_0_nightly_pr14735_11696",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.0.0-nightly.pr14735.11696",
+      "tag_name": "v0.0.0-nightly.pr14735.11696",
+      "title": "PR Build v0.0.0-nightly.pr14735.11696",
+      "time_hint": "2026-05-13",
+      "published_at": "2026-05-13T17:44:59Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v0.0.0-nightly.pr14735.11696",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: PR Build v0.0.0-nightly.pr14735.11696\nTag: v0.0.0-nightly.pr14735.11696; draft: False; prerelease: True; published_at: 2026-05-13T17:44:59Z; created_at: 2026-05-13T16:32:26Z\nRelease notes:\n## PR Build Information\n**Version**: `0.0.0-nightly.pr14735.11696`\n**Release Time**: `2026-05-13T17:44:58.698Z`\n**PR**: [#14735](https://github.com/lobehub/lobe-chat/pull/14735)\n## ⚠️ Important Notice\nThis is a **development build** specifically created for testing purposes. Please note:\n- This build is **NOT** intended for production use\n- Features may be incomplete or unstable\n- Use only for validating PR changes in a desktop environment\n- May contain experimental code that hasn't been fully reviewed\n- No guarantees are provided regarding stability or reliability\n### Intended Use\n- Focused testing of specific PR changes\n- Verification of desktop-specific behaviors\n- UI/UX validation on desktop platforms\n- Performance testing on target devices\nPlease report any issues found in this build directly in the PR discussion.\n---\n## PR 构建信息\n**版本**: `0.0.0-nightly.pr14735.11696`\n**发布时间**: `2026-05-13T17:44:58.699Z`\n**PR**: [#14735](https://github.com/lobehub/lobe-chat/pull/14735)\n## ⚠️ 重要提示\n这是专为测试目的创建的**开发构建版本**。请注意:\n- 本构建**不适用于**生产环境\n- 功能可能不完整或不稳定\n- 仅用于在桌面环境中验证 PR 更改\n- 可能包含尚未完全审核的实验性代码\n- 不对稳定性或可靠性提供任何保证\n### 适用场景\n- 针对性测试特定 PR 变更\n- 验证桌面特定的行为表现\n- 在桌面平台上进行 UI/UX 验证\n- 在目标设备上进行性能测试\n如发现任何问题，请直接在 PR 讨论中报告。",
+      "memory_unit_text": ""
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v0_0_0_nightly_pr14776_11699",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.0.0-nightly.pr14776.11699",
+      "tag_name": "v0.0.0-nightly.pr14776.11699",
+      "title": "PR Build v0.0.0-nightly.pr14776.11699",
+      "time_hint": "2026-05-13",
+      "published_at": "2026-05-13T18:21:29Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v0.0.0-nightly.pr14776.11699",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: PR Build v0.0.0-nightly.pr14776.11699\nTag: v0.0.0-nightly.pr14776.11699; draft: False; prerelease: True; published_at: 2026-05-13T18:21:29Z; created_at: 2026-05-13T17:57:46Z\nRelease notes:\n## PR Build Information\n**Version**: `0.0.0-nightly.pr14776.11699`\n**Release Time**: `2026-05-13T18:21:28.030Z`\n**PR**: [#14776](https://github.com/lobehub/lobe-chat/pull/14776)\n## ⚠️ Important Notice\nThis is a **development build** specifically created for testing purposes. Please note:\n- This build is **NOT** intended for production use\n- Features may be incomplete or unstable\n- Use only for validating PR changes in a desktop environment\n- May contain experimental code that hasn't been fully reviewed\n- No guarantees are provided regarding stability or reliability\n### Intended Use\n- Focused testing of specific PR changes\n- Verification of desktop-specific behaviors\n- UI/UX validation on desktop platforms\n- Performance testing on target devices\nPlease report any issues found in this build directly in the PR discussion.\n---\n## PR 构建信息\n**版本**: `0.0.0-nightly.pr14776.11699`\n**发布时间**: `2026-05-13T18:21:28.030Z`\n**PR**: [#14776](https://github.com/lobehub/lobe-chat/pull/14776)\n## ⚠️ 重要提示\n这是专为测试目的创建的**开发构建版本**。请注意:\n- 本构建**不适用于**生产环境\n- 功能可能不完整或不稳定\n- 仅用于在桌面环境中验证 PR 更改\n- 可能包含尚未完全审核的实验性代码\n- 不对稳定性或可靠性提供任何保证\n### 适用场景\n- 针对性测试特定 PR 变更\n- 验证桌面特定的行为表现\n- 在桌面平台上进行 UI/UX 验证\n- 在目标设备上进行性能测试\n如发现任何问题，请直接在 PR 讨论中报告。",
+      "memory_unit_text": ""
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v0_0_0_nightly_pr14915_12315",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.0.0-nightly.pr14915.12315",
+      "tag_name": "v0.0.0-nightly.pr14915.12315",
+      "title": "PR Build v0.0.0-nightly.pr14915.12315",
+      "time_hint": "2026-05-18",
+      "published_at": "2026-05-18T04:23:22Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v0.0.0-nightly.pr14915.12315",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: PR Build v0.0.0-nightly.pr14915.12315\nTag: v0.0.0-nightly.pr14915.12315; draft: False; prerelease: True; published_at: 2026-05-18T04:23:22Z; created_at: 2026-05-18T03:41:33Z\nRelease notes:\n## PR Build Information\n**Version**: `0.0.0-nightly.pr14915.12315`\n**Release Time**: `2026-05-18T04:23:21.297Z`\n**PR**: [#14915](https://github.com/lobehub/lobe-chat/pull/14915)\n## ⚠️ Important Notice\nThis is a **development build** specifically created for testing purposes. Please note:\n- This build is **NOT** intended for production use\n- Features may be incomplete or unstable\n- Use only for validating PR changes in a desktop environment\n- May contain experimental code that hasn't been fully reviewed\n- No guarantees are provided regarding stability or reliability\n### Intended Use\n- Focused testing of specific PR changes\n- Verification of desktop-specific behaviors\n- UI/UX validation on desktop platforms\n- Performance testing on target devices\nPlease report any issues found in this build directly in the PR discussion.\n---\n## PR 构建信息\n**版本**: `0.0.0-nightly.pr14915.12315`\n**发布时间**: `2026-05-18T04:23:21.297Z`\n**PR**: [#14915](https://github.com/lobehub/lobe-chat/pull/14915)\n## ⚠️ 重要提示\n这是专为测试目的创建的**开发构建版本**。请注意:\n- 本构建**不适用于**生产环境\n- 功能可能不完整或不稳定\n- 仅用于在桌面环境中验证 PR 更改\n- 可能包含尚未完全审核的实验性代码\n- 不对稳定性或可靠性提供任何保证\n### 适用场景\n- 针对性测试特定 PR 变更\n- 验证桌面特定的行为表现\n- 在桌面平台上进行 UI/UX 验证\n- 在目标设备上进行性能测试\n如发现任何问题，请直接在 PR 讨论中报告。",
+      "memory_unit_text": ""
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v0_0_0_nightly_pr15036_12751",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.0.0-nightly.pr15036.12751",
+      "tag_name": "v0.0.0-nightly.pr15036.12751",
+      "title": "PR Build v0.0.0-nightly.pr15036.12751",
+      "time_hint": "2026-05-20",
+      "published_at": "2026-05-20T17:03:43Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v0.0.0-nightly.pr15036.12751",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: PR Build v0.0.0-nightly.pr15036.12751\nTag: v0.0.0-nightly.pr15036.12751; draft: False; prerelease: True; published_at: 2026-05-20T17:03:43Z; created_at: 2026-05-20T16:56:57Z\nRelease notes:\n## PR Build Information\n**Version**: `0.0.0-nightly.pr15036.12751`\n**Release Time**: `2026-05-20T17:03:42.241Z`\n**PR**: [#15036](https://github.com/lobehub/lobe-chat/pull/15036)\n## ⚠️ Important Notice\nThis is a **development build** specifically created for testing purposes. Please note:\n- This build is **NOT** intended for production use\n- Features may be incomplete or unstable\n- Use only for validating PR changes in a desktop environment\n- May contain experimental code that hasn't been fully reviewed\n- No guarantees are provided regarding stability or reliability\n### Intended Use\n- Focused testing of specific PR changes\n- Verification of desktop-specific behaviors\n- UI/UX validation on desktop platforms\n- Performance testing on target devices\nPlease report any issues found in this build directly in the PR discussion.\n---\n## PR 构建信息\n**版本**: `0.0.0-nightly.pr15036.12751`\n**发布时间**: `2026-05-20T17:03:42.241Z`\n**PR**: [#15036](https://github.com/lobehub/lobe-chat/pull/15036)\n## ⚠️ 重要提示\n这是专为测试目的创建的**开发构建版本**。请注意:\n- 本构建**不适用于**生产环境\n- 功能可能不完整或不稳定\n- 仅用于在桌面环境中验证 PR 更改\n- 可能包含尚未完全审核的实验性代码\n- 不对稳定性或可靠性提供任何保证\n### 适用场景\n- 针对性测试特定 PR 变更\n- 验证桌面特定的行为表现\n- 在桌面平台上进行 UI/UX 验证\n- 在目标设备上进行性能测试\n如发现任何问题，请直接在 PR 讨论中报告。",
+      "memory_unit_text": ""
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v0_0_0_nightly_pr14498_12868",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.0.0-nightly.pr14498.12868",
+      "tag_name": "v0.0.0-nightly.pr14498.12868",
+      "title": "PR Build v0.0.0-nightly.pr14498.12868",
+      "time_hint": "2026-05-21",
+      "published_at": "2026-05-21T13:42:48Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v0.0.0-nightly.pr14498.12868",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: PR Build v0.0.0-nightly.pr14498.12868\nTag: v0.0.0-nightly.pr14498.12868; draft: False; prerelease: True; published_at: 2026-05-21T13:42:48Z; created_at: 2026-05-21T13:09:43Z\nRelease notes:\n## PR Build Information\n**Version**: `0.0.0-nightly.pr14498.12868`\n**Release Time**: `2026-05-21T13:42:46.942Z`\n**PR**: [#14498](https://github.com/lobehub/lobe-chat/pull/14498)\n## ⚠️ Important Notice\nThis is a **development build** specifically created for testing purposes. Please note:\n- This build is **NOT** intended for production use\n- Features may be incomplete or unstable\n- Use only for validating PR changes in a desktop environment\n- May contain experimental code that hasn't been fully reviewed\n- No guarantees are provided regarding stability or reliability\n### Intended Use\n- Focused testing of specific PR changes\n- Verification of desktop-specific behaviors\n- UI/UX validation on desktop platforms\n- Performance testing on target devices\nPlease report any issues found in this build directly in the PR discussion.\n---\n## PR 构建信息\n**版本**: `0.0.0-nightly.pr14498.12868`\n**发布时间**: `2026-05-21T13:42:46.942Z`\n**PR**: [#14498](https://github.com/lobehub/lobe-chat/pull/14498)\n## ⚠️ 重要提示\n这是专为测试目的创建的**开发构建版本**。请注意:\n- 本构建**不适用于**生产环境\n- 功能可能不完整或不稳定\n- 仅用于在桌面环境中验证 PR 更改\n- 可能包含尚未完全审核的实验性代码\n- 不对稳定性或可靠性提供任何保证\n### 适用场景\n- 针对性测试特定 PR 变更\n- 验证桌面特定的行为表现\n- 在桌面平台上进行 UI/UX 验证\n- 在目标设备上进行性能测试\n如发现任何问题，请直接在 PR 讨论中报告。",
+      "memory_unit_text": ""
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v0_0_0_nightly_pr14498_12892",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.0.0-nightly.pr14498.12892",
+      "tag_name": "v0.0.0-nightly.pr14498.12892",
+      "title": "PR Build v0.0.0-nightly.pr14498.12892",
+      "time_hint": "2026-05-21",
+      "published_at": "2026-05-21T16:35:54Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v0.0.0-nightly.pr14498.12892",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: PR Build v0.0.0-nightly.pr14498.12892\nTag: v0.0.0-nightly.pr14498.12892; draft: False; prerelease: True; published_at: 2026-05-21T16:35:54Z; created_at: 2026-05-21T15:36:08Z\nRelease notes:\n## PR Build Information\n**Version**: `0.0.0-nightly.pr14498.12892`\n**Release Time**: `2026-05-21T16:35:53.766Z`\n**PR**: [#14498](https://github.com/lobehub/lobe-chat/pull/14498)\n## ⚠️ Important Notice\nThis is a **development build** specifically created for testing purposes. Please note:\n- This build is **NOT** intended for production use\n- Features may be incomplete or unstable\n- Use only for validating PR changes in a desktop environment\n- May contain experimental code that hasn't been fully reviewed\n- No guarantees are provided regarding stability or reliability\n### Intended Use\n- Focused testing of specific PR changes\n- Verification of desktop-specific behaviors\n- UI/UX validation on desktop platforms\n- Performance testing on target devices\nPlease report any issues found in this build directly in the PR discussion.\n---\n## PR 构建信息\n**版本**: `0.0.0-nightly.pr14498.12892`\n**发布时间**: `2026-05-21T16:35:53.766Z`\n**PR**: [#14498](https://github.com/lobehub/lobe-chat/pull/14498)\n## ⚠️ 重要提示\n这是专为测试目的创建的**开发构建版本**。请注意:\n- 本构建**不适用于**生产环境\n- 功能可能不完整或不稳定\n- 仅用于在桌面环境中验证 PR 更改\n- 可能包含尚未完全审核的实验性代码\n- 不对稳定性或可靠性提供任何保证\n### 适用场景\n- 针对性测试特定 PR 变更\n- 验证桌面特定的行为表现\n- 在桌面平台上进行 UI/UX 验证\n- 在目标设备上进行性能测试\n如发现任何问题，请直接在 PR 讨论中报告。",
+      "memory_unit_text": ""
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v0_0_0_nightly_pr14498_12949",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.0.0-nightly.pr14498.12949",
+      "tag_name": "v0.0.0-nightly.pr14498.12949",
+      "title": "PR Build v0.0.0-nightly.pr14498.12949",
+      "time_hint": "2026-05-21",
+      "published_at": "2026-05-21T18:43:47Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v0.0.0-nightly.pr14498.12949",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: PR Build v0.0.0-nightly.pr14498.12949\nTag: v0.0.0-nightly.pr14498.12949; draft: False; prerelease: True; published_at: 2026-05-21T18:43:47Z; created_at: 2026-05-21T18:18:26Z\nRelease notes:\n## PR Build Information\n**Version**: `0.0.0-nightly.pr14498.12949`\n**Release Time**: `2026-05-21T18:43:46.658Z`\n**PR**: [#14498](https://github.com/lobehub/lobe-chat/pull/14498)\n## ⚠️ Important Notice\nThis is a **development build** specifically created for testing purposes. Please note:\n- This build is **NOT** intended for production use\n- Features may be incomplete or unstable\n- Use only for validating PR changes in a desktop environment\n- May contain experimental code that hasn't been fully reviewed\n- No guarantees are provided regarding stability or reliability\n### Intended Use\n- Focused testing of specific PR changes\n- Verification of desktop-specific behaviors\n- UI/UX validation on desktop platforms\n- Performance testing on target devices\nPlease report any issues found in this build directly in the PR discussion.\n---\n## PR 构建信息\n**版本**: `0.0.0-nightly.pr14498.12949`\n**发布时间**: `2026-05-21T18:43:46.658Z`\n**PR**: [#14498](https://github.com/lobehub/lobe-chat/pull/14498)\n## ⚠️ 重要提示\n这是专为测试目的创建的**开发构建版本**。请注意:\n- 本构建**不适用于**生产环境\n- 功能可能不完整或不稳定\n- 仅用于在桌面环境中验证 PR 更改\n- 可能包含尚未完全审核的实验性代码\n- 不对稳定性或可靠性提供任何保证\n### 适用场景\n- 针对性测试特定 PR 变更\n- 验证桌面特定的行为表现\n- 在桌面平台上进行 UI/UX 验证\n- 在目标设备上进行性能测试\n如发现任何问题，请直接在 PR 讨论中报告。",
+      "memory_unit_text": ""
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v0_0_0_nightly_pr15168_13425",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.0.0-nightly.pr15168.13425",
+      "tag_name": "v0.0.0-nightly.pr15168.13425",
+      "title": "PR Build v0.0.0-nightly.pr15168.13425",
+      "time_hint": "2026-05-24",
+      "published_at": "2026-05-24T11:33:43Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v0.0.0-nightly.pr15168.13425",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: PR Build v0.0.0-nightly.pr15168.13425\nTag: v0.0.0-nightly.pr15168.13425; draft: False; prerelease: True; published_at: 2026-05-24T11:33:43Z; created_at: 2026-05-24T10:39:05Z\nRelease notes:\n## PR Build Information\n**Version**: `0.0.0-nightly.pr15168.13425`\n**Release Time**: `2026-05-24T11:33:42.367Z`\n**PR**: [#15168](https://github.com/lobehub/lobe-chat/pull/15168)\n## ⚠️ Important Notice\nThis is a **development build** specifically created for testing purposes. Please note:\n- This build is **NOT** intended for production use\n- Features may be incomplete or unstable\n- Use only for validating PR changes in a desktop environment\n- May contain experimental code that hasn't been fully reviewed\n- No guarantees are provided regarding stability or reliability\n### Intended Use\n- Focused testing of specific PR changes\n- Verification of desktop-specific behaviors\n- UI/UX validation on desktop platforms\n- Performance testing on target devices\nPlease report any issues found in this build directly in the PR discussion.\n---\n## PR 构建信息\n**版本**: `0.0.0-nightly.pr15168.13425`\n**发布时间**: `2026-05-24T11:33:42.367Z`\n**PR**: [#15168](https://github.com/lobehub/lobe-chat/pull/15168)\n## ⚠️ 重要提示\n这是专为测试目的创建的**开发构建版本**。请注意:\n- 本构建**不适用于**生产环境\n- 功能可能不完整或不稳定\n- 仅用于在桌面环境中验证 PR 更改\n- 可能包含尚未完全审核的实验性代码\n- 不对稳定性或可靠性提供任何保证\n### 适用场景\n- 针对性测试特定 PR 变更\n- 验证桌面特定的行为表现\n- 在桌面平台上进行 UI/UX 验证\n- 在目标设备上进行性能测试\n如发现任何问题，请直接在 PR 讨论中报告。",
+      "memory_unit_text": ""
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v0_0_0_nightly_pr15168_13454",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.0.0-nightly.pr15168.13454",
+      "tag_name": "v0.0.0-nightly.pr15168.13454",
+      "title": "PR Build v0.0.0-nightly.pr15168.13454",
+      "time_hint": "2026-05-24",
+      "published_at": "2026-05-24T15:55:41Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v0.0.0-nightly.pr15168.13454",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: PR Build v0.0.0-nightly.pr15168.13454\nTag: v0.0.0-nightly.pr15168.13454; draft: False; prerelease: True; published_at: 2026-05-24T15:55:41Z; created_at: 2026-05-24T15:01:12Z\nRelease notes:\n## PR Build Information\n**Version**: `0.0.0-nightly.pr15168.13454`\n**Release Time**: `2026-05-24T15:55:40.930Z`\n**PR**: [#15168](https://github.com/lobehub/lobe-chat/pull/15168)\n## ⚠️ Important Notice\nThis is a **development build** specifically created for testing purposes. Please note:\n- This build is **NOT** intended for production use\n- Features may be incomplete or unstable\n- Use only for validating PR changes in a desktop environment\n- May contain experimental code that hasn't been fully reviewed\n- No guarantees are provided regarding stability or reliability\n### Intended Use\n- Focused testing of specific PR changes\n- Verification of desktop-specific behaviors\n- UI/UX validation on desktop platforms\n- Performance testing on target devices\nPlease report any issues found in this build directly in the PR discussion.\n---\n## PR 构建信息\n**版本**: `0.0.0-nightly.pr15168.13454`\n**发布时间**: `2026-05-24T15:55:40.930Z`\n**PR**: [#15168](https://github.com/lobehub/lobe-chat/pull/15168)\n## ⚠️ 重要提示\n这是专为测试目的创建的**开发构建版本**。请注意:\n- 本构建**不适用于**生产环境\n- 功能可能不完整或不稳定\n- 仅用于在桌面环境中验证 PR 更改\n- 可能包含尚未完全审核的实验性代码\n- 不对稳定性或可靠性提供任何保证\n### 适用场景\n- 针对性测试特定 PR 变更\n- 验证桌面特定的行为表现\n- 在桌面平台上进行 UI/UX 验证\n- 在目标设备上进行性能测试\n如发现任何问题，请直接在 PR 讨论中报告。",
+      "memory_unit_text": ""
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v0_0_0_nightly_pr15241_13723",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.0.0-nightly.pr15241.13723",
+      "tag_name": "v0.0.0-nightly.pr15241.13723",
+      "title": "PR Build v0.0.0-nightly.pr15241.13723",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T10:29:57Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v0.0.0-nightly.pr15241.13723",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: PR Build v0.0.0-nightly.pr15241.13723\nTag: v0.0.0-nightly.pr15241.13723; draft: False; prerelease: True; published_at: 2026-05-26T10:29:57Z; created_at: 2026-05-26T10:11:24Z\nRelease notes:\n## PR Build Information\n**Version**: `0.0.0-nightly.pr15241.13723`\n**Release Time**: `2026-05-26T10:29:56.201Z`\n**PR**: [#15241](https://github.com/lobehub/lobe-chat/pull/15241)\n## ⚠️ Important Notice\nThis is a **development build** specifically created for testing purposes. Please note:\n- This build is **NOT** intended for production use\n- Features may be incomplete or unstable\n- Use only for validating PR changes in a desktop environment\n- May contain experimental code that hasn't been fully reviewed\n- No guarantees are provided regarding stability or reliability\n### Intended Use\n- Focused testing of specific PR changes\n- Verification of desktop-specific behaviors\n- UI/UX validation on desktop platforms\n- Performance testing on target devices\nPlease report any issues found in this build directly in the PR discussion.\n---\n## PR 构建信息\n**版本**: `0.0.0-nightly.pr15241.13723`\n**发布时间**: `2026-05-26T10:29:56.201Z`\n**PR**: [#15241](https://github.com/lobehub/lobe-chat/pull/15241)\n## ⚠️ 重要提示\n这是专为测试目的创建的**开发构建版本**。请注意:\n- 本构建**不适用于**生产环境\n- 功能可能不完整或不稳定\n- 仅用于在桌面环境中验证 PR 更改\n- 可能包含尚未完全审核的实验性代码\n- 不对稳定性或可靠性提供任何保证\n### 适用场景\n- 针对性测试特定 PR 变更\n- 验证桌面特定的行为表现\n- 在桌面平台上进行 UI/UX 验证\n- 在目标设备上进行性能测试\n如发现任何问题，请直接在 PR 讨论中报告。",
+      "memory_unit_text": ""
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v0_0_0_nightly_pr15241_13821",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.0.0-nightly.pr15241.13821",
+      "tag_name": "v0.0.0-nightly.pr15241.13821",
+      "title": "PR Build v0.0.0-nightly.pr15241.13821",
+      "time_hint": "2026-05-27",
+      "published_at": "2026-05-27T12:16:31Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v0.0.0-nightly.pr15241.13821",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: PR Build v0.0.0-nightly.pr15241.13821\nTag: v0.0.0-nightly.pr15241.13821; draft: False; prerelease: True; published_at: 2026-05-27T12:16:31Z; created_at: 2026-05-27T11:22:35Z\nRelease notes:\n## PR Build Information\n**Version**: `0.0.0-nightly.pr15241.13821`\n**Release Time**: `2026-05-27T12:16:30.253Z`\n**PR**: [#15241](https://github.com/lobehub/lobe-chat/pull/15241)\n## ⚠️ Important Notice\nThis is a **development build** specifically created for testing purposes. Please note:\n- This build is **NOT** intended for production use\n- Features may be incomplete or unstable\n- Use only for validating PR changes in a desktop environment\n- May contain experimental code that hasn't been fully reviewed\n- No guarantees are provided regarding stability or reliability\n### Intended Use\n- Focused testing of specific PR changes\n- Verification of desktop-specific behaviors\n- UI/UX validation on desktop platforms\n- Performance testing on target devices\nPlease report any issues found in this build directly in the PR discussion.\n---\n## PR 构建信息\n**版本**: `0.0.0-nightly.pr15241.13821`\n**发布时间**: `2026-05-27T12:16:30.254Z`\n**PR**: [#15241](https://github.com/lobehub/lobe-chat/pull/15241)\n## ⚠️ 重要提示\n这是专为测试目的创建的**开发构建版本**。请注意:\n- 本构建**不适用于**生产环境\n- 功能可能不完整或不稳定\n- 仅用于在桌面环境中验证 PR 更改\n- 可能包含尚未完全审核的实验性代码\n- 不对稳定性或可靠性提供任何保证\n### 适用场景\n- 针对性测试特定 PR 变更\n- 验证桌面特定的行为表现\n- 在桌面平台上进行 UI/UX 验证\n- 在目标设备上进行性能测试\n如发现任何问题，请直接在 PR 讨论中报告。",
+      "memory_unit_text": ""
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v0_0_0_nightly_pr15228_13999",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.0.0-nightly.pr15228.13999",
+      "tag_name": "v0.0.0-nightly.pr15228.13999",
+      "title": "PR Build v0.0.0-nightly.pr15228.13999",
+      "time_hint": "2026-05-28",
+      "published_at": "2026-05-28T12:43:45Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v0.0.0-nightly.pr15228.13999",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: PR Build v0.0.0-nightly.pr15228.13999\nTag: v0.0.0-nightly.pr15228.13999; draft: False; prerelease: True; published_at: 2026-05-28T12:43:45Z; created_at: 2026-05-28T12:26:46Z\nRelease notes:\n## PR Build Information\n**Version**: `0.0.0-nightly.pr15228.13999`\n**Release Time**: `2026-05-28T12:43:44.113Z`\n**PR**: [#15228](https://github.com/lobehub/lobe-chat/pull/15228)\n## ⚠️ Important Notice\nThis is a **development build** specifically created for testing purposes. Please note:\n- This build is **NOT** intended for production use\n- Features may be incomplete or unstable\n- Use only for validating PR changes in a desktop environment\n- May contain experimental code that hasn't been fully reviewed\n- No guarantees are provided regarding stability or reliability\n### Intended Use\n- Focused testing of specific PR changes\n- Verification of desktop-specific behaviors\n- UI/UX validation on desktop platforms\n- Performance testing on target devices\nPlease report any issues found in this build directly in the PR discussion.\n---\n## PR 构建信息\n**版本**: `0.0.0-nightly.pr15228.13999`\n**发布时间**: `2026-05-28T12:43:44.114Z`\n**PR**: [#15228](https://github.com/lobehub/lobe-chat/pull/15228)\n## ⚠️ 重要提示\n这是专为测试目的创建的**开发构建版本**。请注意:\n- 本构建**不适用于**生产环境\n- 功能可能不完整或不稳定\n- 仅用于在桌面环境中验证 PR 更改\n- 可能包含尚未完全审核的实验性代码\n- 不对稳定性或可靠性提供任何保证\n### 适用场景\n- 针对性测试特定 PR 变更\n- 验证桌面特定的行为表现\n- 在桌面平台上进行 UI/UX 验证\n- 在目标设备上进行性能测试\n如发现任何问题，请直接在 PR 讨论中报告。",
+      "memory_unit_text": ""
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v0_0_0_nightly_pr15302_14064",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.0.0-nightly.pr15302.14064",
+      "tag_name": "v0.0.0-nightly.pr15302.14064",
+      "title": "PR Build v0.0.0-nightly.pr15302.14064",
+      "time_hint": "2026-05-28",
+      "published_at": "2026-05-28T16:36:01Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v0.0.0-nightly.pr15302.14064",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: PR Build v0.0.0-nightly.pr15302.14064\nTag: v0.0.0-nightly.pr15302.14064; draft: False; prerelease: True; published_at: 2026-05-28T16:36:01Z; created_at: 2026-05-28T14:51:32Z\nRelease notes:\n## PR Build Information\n**Version**: `0.0.0-nightly.pr15302.14064`\n**Release Time**: `2026-05-28T16:36:00.176Z`\n**PR**: [#15302](https://github.com/lobehub/lobe-chat/pull/15302)\n## ⚠️ Important Notice\nThis is a **development build** specifically created for testing purposes. Please note:\n- This build is **NOT** intended for production use\n- Features may be incomplete or unstable\n- Use only for validating PR changes in a desktop environment\n- May contain experimental code that hasn't been fully reviewed\n- No guarantees are provided regarding stability or reliability\n### Intended Use\n- Focused testing of specific PR changes\n- Verification of desktop-specific behaviors\n- UI/UX validation on desktop platforms\n- Performance testing on target devices\nPlease report any issues found in this build directly in the PR discussion.\n---\n## PR 构建信息\n**版本**: `0.0.0-nightly.pr15302.14064`\n**发布时间**: `2026-05-28T16:36:00.176Z`\n**PR**: [#15302](https://github.com/lobehub/lobe-chat/pull/15302)\n## ⚠️ 重要提示\n这是专为测试目的创建的**开发构建版本**。请注意:\n- 本构建**不适用于**生产环境\n- 功能可能不完整或不稳定\n- 仅用于在桌面环境中验证 PR 更改\n- 可能包含尚未完全审核的实验性代码\n- 不对稳定性或可靠性提供任何保证\n### 适用场景\n- 针对性测试特定 PR 变更\n- 验证桌面特定的行为表现\n- 在桌面平台上进行 UI/UX 验证\n- 在目标设备上进行性能测试\n如发现任何问题，请直接在 PR 讨论中报告。",
+      "memory_unit_text": ""
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v0_0_0_nightly_pr15311_14106",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.0.0-nightly.pr15311.14106",
+      "tag_name": "v0.0.0-nightly.pr15311.14106",
+      "title": "PR Build v0.0.0-nightly.pr15311.14106",
+      "time_hint": "2026-05-28",
+      "published_at": "2026-05-28T18:07:19Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v0.0.0-nightly.pr15311.14106",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: PR Build v0.0.0-nightly.pr15311.14106\nTag: v0.0.0-nightly.pr15311.14106; draft: False; prerelease: True; published_at: 2026-05-28T18:07:19Z; created_at: 2026-05-28T17:31:41Z\nRelease notes:\n## PR Build Information\n**Version**: `0.0.0-nightly.pr15311.14106`\n**Release Time**: `2026-05-28T18:07:17.999Z`\n**PR**: [#15311](https://github.com/lobehub/lobe-chat/pull/15311)\n## ⚠️ Important Notice\nThis is a **development build** specifically created for testing purposes. Please note:\n- This build is **NOT** intended for production use\n- Features may be incomplete or unstable\n- Use only for validating PR changes in a desktop environment\n- May contain experimental code that hasn't been fully reviewed\n- No guarantees are provided regarding stability or reliability\n### Intended Use\n- Focused testing of specific PR changes\n- Verification of desktop-specific behaviors\n- UI/UX validation on desktop platforms\n- Performance testing on target devices\nPlease report any issues found in this build directly in the PR discussion.\n---\n## PR 构建信息\n**版本**: `0.0.0-nightly.pr15311.14106`\n**发布时间**: `2026-05-28T18:07:17.999Z`\n**PR**: [#15311](https://github.com/lobehub/lobe-chat/pull/15311)\n## ⚠️ 重要提示\n这是专为测试目的创建的**开发构建版本**。请注意:\n- 本构建**不适用于**生产环境\n- 功能可能不完整或不稳定\n- 仅用于在桌面环境中验证 PR 更改\n- 可能包含尚未完全审核的实验性代码\n- 不对稳定性或可靠性提供任何保证\n### 适用场景\n- 针对性测试特定 PR 变更\n- 验证桌面特定的行为表现\n- 在桌面平台上进行 UI/UX 验证\n- 在目标设备上进行性能测试\n如发现任何问题，请直接在 PR 讨论中报告。",
+      "memory_unit_text": ""
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v0_0_0_nightly_pr15326_14204",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.0.0-nightly.pr15326.14204",
+      "tag_name": "v0.0.0-nightly.pr15326.14204",
+      "title": "PR Build v0.0.0-nightly.pr15326.14204",
+      "time_hint": "2026-05-29",
+      "published_at": "2026-05-29T10:11:46Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v0.0.0-nightly.pr15326.14204",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: PR Build v0.0.0-nightly.pr15326.14204\nTag: v0.0.0-nightly.pr15326.14204; draft: False; prerelease: True; published_at: 2026-05-29T10:11:46Z; created_at: 2026-05-29T09:50:41Z\nRelease notes:\n## PR Build Information\n**Version**: `0.0.0-nightly.pr15326.14204`\n**Release Time**: `2026-05-29T10:11:45.734Z`\n**PR**: [#15326](https://github.com/lobehub/lobe-chat/pull/15326)\n## ⚠️ Important Notice\nThis is a **development build** specifically created for testing purposes. Please note:\n- This build is **NOT** intended for production use\n- Features may be incomplete or unstable\n- Use only for validating PR changes in a desktop environment\n- May contain experimental code that hasn't been fully reviewed\n- No guarantees are provided regarding stability or reliability\n### Intended Use\n- Focused testing of specific PR changes\n- Verification of desktop-specific behaviors\n- UI/UX validation on desktop platforms\n- Performance testing on target devices\nPlease report any issues found in this build directly in the PR discussion.\n---\n## PR 构建信息\n**版本**: `0.0.0-nightly.pr15326.14204`\n**发布时间**: `2026-05-29T10:11:45.734Z`\n**PR**: [#15326](https://github.com/lobehub/lobe-chat/pull/15326)\n## ⚠️ 重要提示\n这是专为测试目的创建的**开发构建版本**。请注意:\n- 本构建**不适用于**生产环境\n- 功能可能不完整或不稳定\n- 仅用于在桌面环境中验证 PR 更改\n- 可能包含尚未完全审核的实验性代码\n- 不对稳定性或可靠性提供任何保证\n### 适用场景\n- 针对性测试特定 PR 变更\n- 验证桌面特定的行为表现\n- 在桌面平台上进行 UI/UX 验证\n- 在目标设备上进行性能测试\n如发现任何问题，请直接在 PR 讨论中报告。",
+      "memory_unit_text": ""
+    },
+    {
+      "memory_node_id": "lobehub__lobehub__release__v0_0_0_nightly_pr15304_14595",
+      "repo": "lobehub/lobehub",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.0.0-nightly.pr15304.14595",
+      "tag_name": "v0.0.0-nightly.pr15304.14595",
+      "title": "PR Build v0.0.0-nightly.pr15304.14595",
+      "time_hint": "2026-06-02",
+      "published_at": "2026-06-02T02:36:02Z",
+      "source_url": "https://github.com/lobehub/lobehub/releases/tag/v0.0.0-nightly.pr15304.14595",
+      "raw_text": "Repository: lobehub/lobehub\nRelease: PR Build v0.0.0-nightly.pr15304.14595\nTag: v0.0.0-nightly.pr15304.14595; draft: False; prerelease: True; published_at: 2026-06-02T02:36:02Z; created_at: 2026-06-01T18:00:48Z\nRelease notes:\n## PR Build Information\n**Version**: `0.0.0-nightly.pr15304.14595`\n**Release Time**: `2026-06-02T02:36:01.830Z`\n**PR**: [#15304](https://github.com/lobehub/lobe-chat/pull/15304)\n## ⚠️ Important Notice\nThis is a **development build** specifically created for testing purposes. Please note:\n- This build is **NOT** intended for production use\n- Features may be incomplete or unstable\n- Use only for validating PR changes in a desktop environment\n- May contain experimental code that hasn't been fully reviewed\n- No guarantees are provided regarding stability or reliability\n### Intended Use\n- Focused testing of specific PR changes\n- Verification of desktop-specific behaviors\n- UI/UX validation on desktop platforms\n- Performance testing on target devices\nPlease report any issues found in this build directly in the PR discussion.\n---\n## PR 构建信息\n**版本**: `0.0.0-nightly.pr15304.14595`\n**发布时间**: `2026-06-02T02:36:01.830Z`\n**PR**: [#15304](https://github.com/lobehub/lobe-chat/pull/15304)\n## ⚠️ 重要提示\n这是专为测试目的创建的**开发构建版本**。请注意:\n- 本构建**不适用于**生产环境\n- 功能可能不完整或不稳定\n- 仅用于在桌面环境中验证 PR 更改\n- 可能包含尚未完全审核的实验性代码\n- 不对稳定性或可靠性提供任何保证\n### 适用场景\n- 针对性测试特定 PR 变更\n- 验证桌面特定的行为表现\n- 在桌面平台上进行 UI/UX 验证\n- 在目标设备上进行性能测试\n如发现任何问题，请直接在 PR 讨论中报告。",
+      "memory_unit_text": ""
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the lobehub/lobehub releases, which release introduces the Chief Agent Operator that self-iterates and assembles sub-agent teams?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v2.1.58"
+        },
+        {
+          "option_id": "B",
+          "text": "v2.2.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v2.2.1"
+        },
+        {
+          "option_id": "D",
+          "text": "v2.2.2-canary.10"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v2.2.0",
+      "source_chunk_ids": [
+        "lobehub__lobehub__release__v2_2_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "lobehub__lobehub__release__v2_2_0",
+          "answer_text": "the Chief Agent Operator is introduced, enabling an agent that runs itself end-to-end. It self-iterates against its own output, assembles sub-agent teams on demand through the heterogeneous runtime"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the lobehub/lobehub releases, how does the agent-related change in v2.2.0 differ from the agent-related change in v2.2.1?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v2.2.0 introduces the Chief Agent Operator with self-iteration and sub-agent team assembly, while v2.2.1 adds heterogeneous platform agents (OpenClaw/Hermes) that can be dispatched to local or remote devices."
+        },
+        {
+          "option_id": "B",
+          "text": "v2.2.0 adds iMessage support, while v2.2.1 introduces the Chief Agent Operator."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only update the task scheduler without agent changes."
+        },
+        {
+          "option_id": "D",
+          "text": "v2.2.0 removes sub-agent dispatch, while v2.2.1 adds self-iteration."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v2.2.0 introduces the Chief Agent Operator with self-iteration and sub-agent team assembly, while v2.2.1 adds heterogeneous platform agents (OpenClaw/Hermes) that can be dispatched to local or remote devices.",
+      "source_chunk_ids": [
+        "lobehub__lobehub__release__v2_2_0",
+        "lobehub__lobehub__release__v2_2_1"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "lobehub__lobehub__release__v2_2_0",
+          "answer_text": "the Chief Agent Operator is introduced, enabling an agent that runs itself end-to-end. It self-iterates against its own output, assembles sub-agent teams on demand through the heterogeneous runtime"
+        },
+        {
+          "memory_node_id": "lobehub__lobehub__release__v2_2_1",
+          "answer_text": "heterogeneous platform agents (OpenClaw/Hermes) can be created and dispatched to local or remote devices through the device gateway"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the lobehub/lobehub release window, order the following release-content states from earliest to latest: (1) a release that adds support for configurable model routing and starters, (2) a release that introduces the Chief Agent Operator, (3) a release that adds heterogeneous platform agents (OpenClaw/Hermes) with device dispatch, (4) a release that includes a fix to prevent duplicate streaming from stale reconnects in the gateway.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2 -> 3 -> 4 -> 1"
+        },
+        {
+          "option_id": "B",
+          "text": "3 -> 2 -> 1 -> 4"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2 -> 3 -> 4 -> 1",
+      "source_chunk_ids": [
+        "lobehub__lobehub__release__v2_2_0",
+        "lobehub__lobehub__release__v2_2_1",
+        "lobehub__lobehub__release__v2_2_2_canary_10",
+        "lobehub__lobehub__release__v2_2_2_canary_13"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "lobehub__lobehub__release__v2_2_0",
+          "answer_text": "the Chief Agent Operator is introduced"
+        },
+        {
+          "memory_node_id": "lobehub__lobehub__release__v2_2_1",
+          "answer_text": "heterogeneous platform agents (OpenClaw/Hermes) can be created and dispatched to local or remote devices"
+        },
+        {
+          "memory_node_id": "lobehub__lobehub__release__v2_2_2_canary_10",
+          "answer_text": "fix to prevent duplicate streaming from stale reconnects in the gateway"
+        },
+        {
+          "memory_node_id": "lobehub__lobehub__release__v2_2_2_canary_13",
+          "answer_text": "adds support for configurable model routing and starters"
+        }
+      ]
+    }
+  ]
+}

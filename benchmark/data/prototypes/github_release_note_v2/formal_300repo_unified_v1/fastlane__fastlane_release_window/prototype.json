@@ -1,0 +1,530 @@
+{
+  "prototype_id": "fastlane__fastlane_release_window",
+  "domain": "github_release_evolution",
+  "repo": "fastlane/fastlane",
+  "source_type": "release_note",
+  "window_title": "fastlane/fastlane recent release evolution",
+  "window_summary": "This window tracks the recent fastlane/fastlane release stream from version 2.215.1 through 2.235.0, covering workarounds for Google Play API instability, match GitLab storage fixes, numerous improvements across tools like spaceship, deliver, gym, scan, and match, Apple authentication updates, and support for new Apple platforms and Xcode versions.",
+  "chunks": [
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_215_1",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.215.1",
+      "tag_name": "2.215.1",
+      "title": "2.215.1 Workaround for Google Play API instability",
+      "time_hint": "2023-09-17",
+      "published_at": "2023-09-17T16:17:40Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.215.1",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.215.1 Workaround for Google Play API instability\nTag: 2.215.1; draft: False; prerelease: False; published_at: 2023-09-17T16:17:40Z; created_at: 2023-09-17T15:58:10Z\nRelease notes:\n* [supply] add new SUPPLY_UPLOAD_MAX_RETRIES env var to attempt to solve failed Google API calls (#21518) via Josh Holtz (@joshdholtz)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.215.1, a new SUPPLY_UPLOAD_MAX_RETRIES environment variable is added to supply to help work around failed Google Play API calls."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_216_0",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.216.0",
+      "tag_name": "2.216.0",
+      "title": "2.216.0 Fix for match GitLab storage",
+      "time_hint": "2023-09-19",
+      "published_at": "2023-09-19T02:43:28Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.216.0",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.216.0 Fix for match GitLab storage\nTag: 2.216.0; draft: False; prerelease: False; published_at: 2023-09-19T02:43:28Z; created_at: 2023-09-19T02:36:09Z\nRelease notes:\n* [match] fixes missing job-token error in GitLab storage mode (#21520) via Darby Frey (@darbyfrey)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.216.0, match fixes a missing job-token error that occurred in GitLab storage mode."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_217_0",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.217.0",
+      "tag_name": "2.217.0",
+      "title": "2.217.0 Improvements",
+      "time_hint": "2023-11-15",
+      "published_at": "2023-11-15T02:43:07Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.217.0",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.217.0 Improvements\nTag: 2.217.0; draft: False; prerelease: False; published_at: 2023-11-15T02:43:07Z; created_at: 2023-11-15T02:28:13Z\nRelease notes:\n* [spaceship] work around deliver issue #21105 (#21633) via Jerome Lacoste (@lacostej)\n* [action][slather] add support for slather's new --ymlfile option (#21613) via jarrodlombardo-EventBase (@jarrodlombardo-EventBase)\n* [action][notarize] printing log on error (#21609) via Csaba Szigeti (@szigetics)\n* [tests] fix test being potentially muddied by local ENV (#21586) via Olivier Halligon (@AliSoftware)\n* [match] remove redundant fetching of profile devices and certificates (#21409) via Vitalii Budnik (@nekrich)\n* [match] hide sensitive information in match output (#21603) via Duncan MacDonald (@oct0f1sh)\n* [supple] fix issue with releases containing retained versions (#20997) (#20998) via Mariano Miani (@mmiani)\n* [action][git_branch] add `FL_GIT_BRANCH_DONT_USE_ENV_VARS` env var to `git_branch` (#21597) via Oguz Kocer (@oguzkocer)\n* [tests] Make error message expectation more flexible in `runner_spec.rb` to support Ruby 2.6 error message format (#21591) via Olivier Halligon (@AliSoftware)\n* [docs] fix typo `practies` → `practices` based on feedback from fastlane/docs (#21589) via Roger Oba (@rogerluan)\n* [fastlane] add support for keyword arguments for lanes in Ruby 3 (#21587) via Olivier Halligon (@AliSoftware)\n* [tests] update `fakefs` to fix test failures on Ruby 3.2.2 (#21588) via Olivier Halligon (@AliSoftware)\n* [deliver] Add Watch Ultra screen size (#21106) via Aoi Takahashi (@xiii111)\n* [docs] update a bit of the documentation of install_on_device.rb (#21196) via ls-1N (@ls-1N)\n* [precheck] print the HTTP status as the failure reason when it's not 200 (#21051) via Roger Oba (@rogerluan)\n* [supply] parallel uploads for meta per language (#21474) via Cristian Caruceru (@ccaruceru)\n* [action][nexus_upload] Mark Nexus password as a sensitive field (#21564) via Liam Jones (@liamjones)\n* [trainer] check specifically for file url in failure_message, fixing crash in Xcode 15 when running in Apple Silicon (#21493) via Jason Hagglund (@TheMetalCode)\n* [gym] fix error message for catalyst_platform option (#21332) via Sebastian Staudt (@koraktor)\n* [deliver] show file type correctly in user_error (#21403) via Aru Hyunseung Jeon (@Dogdriip)\n* [gym] fix multiplatform iOS builds (#21319) via Zach Waugh (@zachwaugh)\n* [match] make git_private_key path absolute (#21360) via Marko Samec (@msamec)\n* [snapshot] Add Missing Older iPhone & iPad models to Generated Snapshot Reports (#21557) via Kyle Howells (@kylehowells)\n* [deliver] Capturing NoMethodError exception when fetching live app info (#21553) via Ignacio Calderon (@kronenthaler)\n* [snapshot] support Strict Concurrency for SnapshotHelper (#21400) via Kohki Miki (@giginet)\n* [match] added selection of certificate and p12 key by certificate id (#21428) via Ivan Sorokoletov (@slacklab)\n* [spaceship] allow to specify fetched fields (#21528) via Vitalii Budnik (@nekrich)\n* [snapshot] add Support for New Apple Devices in Snapshot Generator (#21554) via Sandeep Joshi (@isandeepj)\n* [deliver] fetch live app info if no edit info is present, fixing scenario of having both macOS and iOS apps present (#21472) via Lorenzo Mattei (@loremattei)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.217.0, multiple improvements are introduced: spaceship works around a deliver issue, slather gains a --ymlfile option, notarize prints logs on error, match removes redundant fetching of profile devices and certificates and hides sensitive information, supply fixes an issue with releases containing retained versions, git_branch adds FL_GIT_BRANCH_DONT_USE_ENV_VARS, fastlane adds support for keyword arguments for lanes in Ruby 3, deliver adds Watch Ultra screen size, precheck prints HTTP status on failure, supply supports parallel uploads for meta per language, nexus_upload marks password as sensitive, trainer fixes a crash in Xcode 15 on Apple Silicon, gym fixes catalyst_platform error message and multiplatform iOS builds, match makes git_private_key path absolute, snapshot adds missing older iPhone and iPad models and supports Strict Concurrency for SnapshotHelper, match allows selection of certificate and p12 key by certificate id, spaceship allows specifying fetched fields, snapshot adds support for new Apple devices, and deliver fetches live app info when no edit info is present."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_218_0",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.218.0",
+      "tag_name": "2.218.0",
+      "title": "2.218.0 Improvements",
+      "time_hint": "2024-01-02",
+      "published_at": "2024-01-02T13:44:35Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.218.0",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.218.0 Improvements\nTag: 2.218.0; draft: False; prerelease: False; published_at: 2024-01-02T13:44:35Z; created_at: 2024-01-02T13:19:33Z\nRelease notes:\nAuto-generated by fastlane 🤖\n**Changes since release '2.217.0':**\n* [action][sonar] replace deprecated sonar.login parameter with sonar.token (#21736) via Panajev (@Panajev)\n* [action][spm] add simulator flag for swift compiler (#21707) via Mohammad Gharari (@gharary)\n* [security] update `sinatra` dev dependency to resolve dependabot alert (#21709) via Jerome Lacoste (@lacostej)\n* [fastlane-core] recommends to retry uploading when AltoolTransporterExecutor crashes (#21536) via Jason Hagglund (@TheMetalCode)\n* [Fastlane.swift] fix Unexpected duplicate tasks error message in Fastlane Swift (#21621) via Daniel Jankowski (@mollyIV)\n* [scan] Filter simulators with version greater than SDK version of active Xcode installation when choosing default (#21677) via wuaar1003 (@wuaar1003)\n* [plugin_generator] move development dependencies from `*.gemspec.erb` to `Gemfile.erb` (#21726) via Roger Oba (@rogerluan)\n* [match] add caching layer to significantly improve performance by up to 100x (#21694) via Vitalii Budnik (@nekrich)\n* [fastlane_core] add support to Ruby 3.3 (#21683) via Jerome Lacoste (@lacostej)\n* [fastlane] remove some unused method parameters (#21722) via Jerome Lacoste (@lacostej)\n* [action][spm] deprecate `build_path` option in favor of `scratch_path`, as recommended by Swift CLI (#20814) via Victor Carvalho Tavernari (@Tavernari)\n* [match] git storage: allow simultaneous usage of clone_branch_directly and shallow_clone (#21716) via Vitalii Budnik (@nekrich)\n* [action][spm] add `parallel` option (#21665) via Bram Schulting (@bramschulting)\n* [fastlane_core] remove expired WWDR G1 certificate from cert_checker (#21098) via janwiebe-jump (@janwiebe-jump)\n* [action][upload_symbols_to_crashlytics] allow '~' in binary path (#21032) via GevaZeichner (@GevaZeichner)\n* [scan] replace the `simctl boot` command with `simctl bootstatus`, potentially fixing signal kill before running tests (#21026) via Alexey Alter-Pesotskiy (@testableapple)\n* [spaceship] add `Spaceship::ConnectAPI::AppPreviewSet::PreviewType::IPHONE_67` (#21710) via Sergei Sevkovich (@drcreazy)\n* [action][ensure_no_debug_code] detect binding.irb in `ensure_no_debug_code` during build. (#21635) via Takuma Homma (@mataku)\n* CONTRIBUTING.md: remove Google CLA section (#21646) via Jay Soffian (@jaysoffian)\n* [fastlane_core] hide xcodebuild stderr to solve #21672 (#21673) via Jerome Lacoste (@lacostej)\n* [scan] fix misleading error message when no devices are found (#21650) via Miles Thompson (@MagnificentMiles)\n* [deliver][spaceship][scan] fix build warnings in rspec (#21660) via Jerome Lacoste (@lacostej)\n* [deliver] fix regression where changes made to the privacy URL fail to upload (#21657) via Owen Hart (@owjsub)\n* [fastlane_core] let FastlanePty detect when externally invoked programs crash, harden it when using popen, and expose process statuses. (#21618) via Jerome Lacoste (@lacostej)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.218.0, changes include: sonar action replaces deprecated sonar.login with sonar.token, spm action adds simulator flag and parallel option and deprecates build_path in favor of scratch_path, sinatra dev dependency is updated for security, fastlane-core recommends retrying on AltoolTransporterExecutor crash, Fastlane.swift fixes duplicate tasks error, scan filters simulators with version greater than SDK version, plugin_generator moves development dependencies to Gemfile.erb, match adds a caching layer for up to 100x performance improvement and allows simultaneous usage of clone_branch_directly and shallow_clone, fastlane_core adds Ruby 3.3 support and removes expired WWDR G1 certificate, upload_symbols_to_crashlytics allows '~' in binary path, scan replaces simctl boot with simctl bootstatus, spaceship adds IPHONE_67 preview type, ensure_no_debug_code detects binding.irb, CONTRIBUTING.md removes Google CLA section, fastlane_core hides xcodebuild stderr, scan fixes misleading error message when no devices found, deliver fixes regression in privacy URL upload, and fastlane_core enhances FastlanePty crash detection."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_219_0",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.219.0",
+      "tag_name": "2.219.0",
+      "title": "2.219.0 Improvements",
+      "time_hint": "2024-01-04",
+      "published_at": "2024-01-04T16:32:45Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.219.0",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.219.0 Improvements\nTag: 2.219.0; draft: False; prerelease: False; published_at: 2024-01-04T16:32:45Z; created_at: 2024-01-04T16:24:52Z\nRelease notes:\n* [fastlane][ci] Lock google-cloud-env < 2.0.0 for Ruby 2.6 and fix CI to use specified ruby versions (#21777) via Josh Holtz (@joshdholtz)\n* [sigh] prevent crashes in `fetch_profiles` when profiles have no `bundle_id` (#21758) via jonas2808 (@jonas2808)\n* [scan] Fix device selection issue fallback scenario (#21772) via arc-v2 (@arc-v2)\n* [sigh] fix cache parameters validation (#21766) via Vitalii Budnik (@nekrich)\n* [match] fix cache issues in read-only mode (#21767) via Vitalii Budnik (@nekrich)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.219.0, fastlane locks google-cloud-env for Ruby 2.6 and fixes CI, sigh prevents crashes when profiles have no bundle_id, scan fixes a device selection fallback issue, sigh fixes cache parameters validation, and match fixes cache issues in read-only mode."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_220_0",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.220.0",
+      "tag_name": "2.220.0",
+      "title": "2.220.0 Improvements",
+      "time_hint": "2024-04-04",
+      "published_at": "2024-04-04T05:57:06Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.220.0",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.220.0 Improvements\nTag: 2.220.0; draft: False; prerelease: False; published_at: 2024-04-04T05:57:06Z; created_at: 2024-04-04T05:39:45Z\nRelease notes:\n* [action][sh] fix undefined sh_enabled? method when using Action.sh from a plugin Action (#21408) via Vitalii Budnik (@nekrich)\n* [match] Include visionOS devices in provisioning profiles  (#21871) via peter-gyarmati (@peter-gyarmati)\n* [spaceship] Fix filtering of Mac devices when trying to create a macOS profile (#21915) via Olivier Halligon (@AliSoftware)\n* [core] update simctl command in device_manager.rb [21893] (#21894) via David Nedrow (@dnedrow)\n* [fastlane] remove dependency on unmaintained rest-client library (#21898) via Jerome Lacoste (@lacostej)\n* [spaceship] handle new app status (#21890) via Lukasz Grabowski (@lucgrabowski)\n* [spaceship] Update Model: beta_tester (#21799) via mlch911 (@mlch911)\n* [fix] drop old code made for ruby < 2.6 (#21878) via Jerome Lacoste (@lacostej)\n* [fastlane_core] fix the display of non-unicode characters when printing lane context (#21857) via Jerome Lacoste (@lacostej)\n* [spaceship] `create_certificate_signing_request`: update from SHA-1 to SHA-256 (#21644) via Jay Soffian (@jaysoffian)\n* [match][hotfix] remove the `renew_expired_certs` option introduced in #21691 and revert the default behavior while we address issues with it (#21812) via Vitalii Budnik (@nekrich)\n* [action][appetize] Raise error when the API returns an unsuccessful response (#21816) via Ben Ferris (@benferris-tl)\n* [action][git_add] Add `force` option (#21850) via Tomoki Yamashita (@tomorrowkey)\n* [pilot] add xros as valid option for pilot upload (#21841) via Damian Monogue (@demonnic)\n* [match] fix devices fetch for tvOS platform (#21828) via Vitalii Budnik (@nekrich)\n* [deliver] increase chances of success when creating a new app version even when Apple servers are degraded (#21742) via Roger Oba (@rogerluan)\n* [action][OneSignal] Update to use v11.0 REST API (#21839) via Mohammed Akram Hussain (@Akramhussain4)\n* [snapshot] fix regression introduced in 2.218.0 caused by extraneous method argument in snapshot setup (#21832) via Jerome Lacoste (@lacostej)\n* [spec] fix the loading of certain passwords from the keychain (fixes #21817) (#21818) via Ryan Pendleton (@rpendleton)\n* [gym][fastlane_core] add platform support for visionOS (#21574) via Philipp Resch (@PinkidG)\n* [match] improve encryption internals, solving flaky test (#21663) (#21790) via Jerome Lacoste (@lacostej)\n* [frameit] iPhone 14 Frames (#21727) via sathoeni (@sathoeni)\n* [spaceship] decrease App Store Connect API token `issued-at-time` to prevent server rejection (#21583) via Jason Moore (@xinsight)\n* [match][sigh] add option to automatically renew expired certificates (defaults to enabled) (#21691) via Vitalii Budnik (@nekrich)\n* [pilot] do not advertise the `skip_waiting_for_build_processing` option when it is already set (#21730) via Robin Kunde (@robinkunde)\n* [match] propagate keychain when installing wwdr certificates (#21578) via rabbitinspace (@rabbitinspace)\n* [deliver] introduce `timeout` for screenshots processing waiting time (#21693) via Mikhail Maslo (@mikhailmaslo)\n* [frameit] facebook.design doesn't work anymore (#20915) via Guglielmo Faglioni (@guidev)\n* [core] add an interactive console for users as well (#21803) via Jerome Lacoste (@lacostej)\n* [trainer] fix issues where number of failures would always be zero (#21432) via Mahmood Tahir (@tahirmt)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.220.0, sh action fixes undefined sh_enabled? method, match includes visionOS devices in provisioning profiles, spaceship fixes filtering of Mac devices for macOS profiles, core updates simctl command, fastlane removes dependency on rest-client, spaceship handles new app status and updates beta_tester model, old Ruby <2.6 code is dropped, fastlane_core fixes display of non-unicode characters, spaceship updates create_certificate_signing_request to SHA-256, match removes renew_expired_certs option and reverts default behavior, appetize action raises error on unsuccessful API response, git_add adds force option, pilot adds xros as valid upload option, match fixes devices fetch for tvOS, deliver increases success chance when creating new app version, OneSignal action updates to v11.0 REST API, snapshot fixes regression from 2.218.0, spec fixes loading of certain keychain passwords, gym and fastlane_core add visionOS platform support, match improves encryption internals, frameit adds iPhone 14 frames, spaceship decreases App Store Connect API token issued-at-time, match and sigh add option to automatically renew expired certificates, pilot stops advertising skip_waiting_for_build_processing when already set, match propagates keychain when installing WWDR certificates, deliver introduces timeout for screenshots processing, frameit addresses facebook.design unavailability, core adds an interactive console, and trainer fixes issue where number of failures was always zero."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_221_0",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.221.0",
+      "tag_name": "2.221.0",
+      "title": "2.221.0 Improvements",
+      "time_hint": "2024-06-18",
+      "published_at": "2024-06-18T02:37:22Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.221.0",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.221.0 Improvements\nTag: 2.221.0; draft: False; prerelease: False; published_at: 2024-06-18T02:37:22Z; created_at: 2024-06-11T12:47:37Z\nRelease notes:\n* [produce] fix produce passing incorrect teamId when modifying capabilities (#21885) via Hiroto Nakamura (@Hiroto-N)\n* [spaceship] support individual API key (#21987) via Ryosuke Ito (@manicmaniac)\n* [pilot] fix ASC API error when `reject_build_waiting_for_review: true` (#21995) via Olivier Halligon (@AliSoftware)\n* [spaceship] use new app store statuses to filter app versions and app infos (#21895) via Lukasz Grabowski (@lucgrabowski)\n* [spaceship] move endpoint version from hostname to path (#21900) via Lukasz Grabowski (@lucgrabowski)\n* [fastlane] print better errors when exception occurring in Fastfile  (#21977) via Olivier Halligon (@AliSoftware)\n* [action][spm] add `--very-verbose` option (#21128) via Atsuto Yamashita (@att55)\n* [match] fix `fetch_provisioning_profile` when `output_path` is provided as a match option (#21946) via Jason Hagglund (@TheMetalCode)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.221.0, produce fixes passing incorrect teamId when modifying capabilities, spaceship supports individual API key, pilot fixes ASC API error when reject_build_waiting_for_review is true, spaceship uses new app store statuses to filter app versions and infos and moves endpoint version from hostname to path, fastlane prints better errors for Fastfile exceptions, spm action adds --very-verbose option, and match fixes fetch_provisioning_profile when output_path is provided as a match option."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_221_1",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.221.1",
+      "tag_name": "2.221.1",
+      "title": "2.221.1 Improvements",
+      "time_hint": "2024-06-19",
+      "published_at": "2024-06-19T19:33:07Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.221.1",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.221.1 Improvements\nTag: 2.221.1; draft: False; prerelease: False; published_at: 2024-06-19T19:33:07Z; created_at: 2024-06-19T19:11:40Z\nRelease notes:\n* [deliver][spaceship] remove IDFA declarations for Apple App Store submission process (#22003) via Vyacheslav Frolov (@fr0l)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.221.1, deliver and spaceship remove IDFA declarations for the Apple App Store submission process."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_222_0",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.222.0",
+      "tag_name": "2.222.0",
+      "title": "2.222.0 Improvements",
+      "time_hint": "2024-07-26",
+      "published_at": "2024-07-26T20:38:39Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.222.0",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.222.0 Improvements\nTag: 2.222.0; draft: False; prerelease: False; published_at: 2024-07-26T20:38:39Z; created_at: 2024-07-26T20:25:21Z\nRelease notes:\n* [action][sh] fastlane sh with log set to false should respect a step name (#22151) via Daniel Jankowski (@mollyIV)\n* [scan][trainer] hotfix for float-type version acquisition of `xcresulttool version` fails (#22157) via David Dongkyu Kim (@dokimyj)\n* [gym] fix default result bundle path name (#22154) via Ignacio Calderon (@kronenthaler)\n* [scan][trainer] hotfix for xcresulttool spec changes >= XC16b3 (#22147) via David Dongkyu Kim (@dokimyj)\n* [action][ensure_git_status_clean] support empty spaces in `ignore_files` file paths (#21566) via Daniel Jankowski (@mollyIV)\n* [spaceship] add visionOS support for Connect API (#22032) via Frederik Seiffert (@triplef)\n* [spaceship] Add get app availabilities v2 request (#21901) via Lukasz Grabowski (@lucgrabowski)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.222.0, sh action with log set to false respects a step name, scan and trainer hotfix float-type version acquisition of xcresulttool version, gym fixes default result bundle path name, scan and trainer hotfix for xcresulttool spec changes in XC16b3, ensure_git_status_clean supports empty spaces in ignore_files file paths, spaceship adds visionOS support for Connect API, and spaceship adds get app availabilities v2 request."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_223_0",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.223.0",
+      "tag_name": "2.223.0",
+      "title": "2.223.0 Improvements",
+      "time_hint": "2024-09-26",
+      "published_at": "2024-09-26T17:26:29Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.223.0",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.223.0 Improvements\nTag: 2.223.0; draft: False; prerelease: False; published_at: 2024-09-26T17:26:29Z; created_at: 2024-09-26T15:57:04Z\nRelease notes:\n* [ci] fix changelog generation when no author (#22250) via Josh Holtz (@joshdholtz)\n* [core] add -packageAuthorizationProvider flag for xcodebuild (#22227) via Yarden Eitan (@yarneo)\n* [deliver][pilot] add ability to use Individual API key in deliver and pilot (#22128) via Ryosuke Ito (@manicmaniac)\n* [match] allow using legacy encryption mode when writing to storage (#22228) via Hiroto Nakamura (@Hiroto-N)\n* [action][import_from_git] fix import_from_git when specifying a tag and cache_path (#22133) via Jens Kuhr Jørgensen (@jenskuhrjorgensen)\n* [slack] enable emoji-based icons in Slack action by adding icon_emoji parameter (#22235) via Luka Hristic (@lukeleleh)\n* [action][testfairy] add tags parameter to TestFairy upload action (#22119) via Duncan MacDonald (@oct0f1sh)\n* [action][changelog_from_git_commits] add app_path parameter to changelog_from_git_commits (#22149) via John Pignata (@jpignata)\n* [scan] improve performance by change order of checks in `building_mac_catalyst_for_mac` function (#20898) via TomoXD (@ghost)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.223.0, CI fixes changelog generation when no author, core adds -packageAuthorizationProvider flag for xcodebuild, deliver and pilot add ability to use Individual API key, match allows using legacy encryption mode when writing to storage, import_from_git fixes import when specifying a tag and cache_path, slack action enables emoji-based icons with icon_emoji parameter, testfairy action adds tags parameter, changelog_from_git_commits adds app_path parameter, and scan improves performance by changing order of checks in building_mac_catalyst_for_mac function."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_223_1",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.223.1",
+      "tag_name": "2.223.1",
+      "title": "2.223.1 Improvements",
+      "time_hint": "2024-09-27",
+      "published_at": "2024-09-27T06:17:47Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.223.1",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.223.1 Improvements\nTag: 2.223.1; draft: False; prerelease: False; published_at: 2024-09-27T06:17:47Z; created_at: 2024-09-27T06:05:43Z\nRelease notes:\n* [core] fix duplicate builds being matched in BuildWatcher (#22256) via Josh Holtz (@joshdholtz)\n* [ci] adding one more github auth call to CI release process (#22253) via Josh Holtz (@joshdholtz)\n* [c] prevent rate limited when releasing fastlane on GitHub Actions (#22252) via Josh Holtz (@joshdholtz)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.223.1, core fixes duplicate builds being matched in BuildWatcher, and CI adds one more github auth call and prevents rate limiting when releasing fastlane on GitHub Actions."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_224_0",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.224.0",
+      "tag_name": "2.224.0",
+      "title": "2.224.0 Improvements",
+      "time_hint": "2024-10-03",
+      "published_at": "2024-10-03T20:45:36Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.224.0",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.224.0 Improvements\nTag: 2.224.0; draft: False; prerelease: False; published_at: 2024-10-03T20:45:36Z; created_at: 2024-10-03T20:28:44Z\nRelease notes:\n* [spaceship] Add support for Enterprise Program API (#22215) via GevaZeichner (@GevaZeichner)\n* Make test pass standalone (#22268) via Jerome Lacoste (@lacostej)\n* Add missing require 'ostruct' in erb_template_helper.rb to solve uninitialized constant Fastlane::OpenStruct (NameError)  (#21950) via Nicolas G (@nicgodoy)\n* [Fastlane.Swift] Allow overriding LaneFileProtocol lifecycles when subclassing LaneFile (#20563) via Sven Tiigi (@SvenTiigi)\n* [Match][S3] Only download (and decrypt) files in the subfolder of the provided TeamID (#22199) via Olivier Halligon (@AliSoftware)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.224.0, spaceship adds support for Enterprise Program API, a test is made to pass standalone, a missing require 'ostruct' is added to erb_template_helper.rb, Fastlane.Swift allows overriding LaneFileProtocol lifecycles when subclassing LaneFile, and Match S3 storage only downloads and decrypts files in the subfolder of the provided TeamID."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_225_0",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.225.0",
+      "tag_name": "2.225.0",
+      "title": "2.225.0 Improvements",
+      "time_hint": "2024-10-21",
+      "published_at": "2024-10-21T01:40:54Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.225.0",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.225.0 Improvements\nTag: 2.225.0; draft: False; prerelease: False; published_at: 2024-10-21T01:40:54Z; created_at: 2024-10-21T01:23:42Z\nRelease notes:\nThis version has a required fix for authenticating with Apple via Apple ID. Apple started using their own variant of SRP (Secure Remote Password) using SHA-256 and 2048 bit hashing in the sign in flow. Any previous _fastlane_ versions will likely response a \"503 Service Temporarily Unavailable\" when authenicating with an Apple ID.\n* [spaceship] New AppleID Auth with SRP (#26415) via Josh Holtz (@snatchev and @joshdholtz)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.225.0, spaceship introduces new Apple ID authentication with SRP using SHA-256 and 2048 bit hashing, required because Apple changed its sign-in flow; previous versions may respond with a 503 error."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_226_0",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.226.0",
+      "tag_name": "2.226.0",
+      "title": "2.226.0 Improvements",
+      "time_hint": "2024-12-10",
+      "published_at": "2024-12-10T10:50:20Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.226.0",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.226.0 Improvements\nTag: 2.226.0; draft: False; prerelease: False; published_at: 2024-12-10T10:50:20Z; created_at: 2024-12-10T10:41:04Z\nRelease notes:\n* [Supply] Allow promoting draft release to inProgress with initial rollout (#28960) via Olivier Halligon (@AliSoftware)\n* Fix incomplete options being allowed for some parameters (#28804) via Iulian Onofrei (@revolter)\n* [testfairy] Added support for folder_name and other parameters (#22290) via Gil Megidish (@gmegidish-saucelabs)\n* Bump xcpretty to version 0.4.0 (#26657) via Iulian Onofrei (@revolter)\n* [import_from_git] Add Git basic authorization support (#22135) via Jens Kuhr Jørgensen (@jenskuhrjorgensen)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.226.0, supply allows promoting draft release to inProgress with initial rollout, incomplete options being allowed for some parameters is fixed, testfairy adds support for folder_name and other parameters, xcpretty is bumped to version 0.4.0, and import_from_git adds Git basic authorization support."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_227_0",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.227.0",
+      "tag_name": "2.227.0",
+      "title": "2.227.0 Improvements",
+      "time_hint": "2025-03-13",
+      "published_at": "2025-03-13T13:39:42Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.227.0",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.227.0 Improvements\nTag: 2.227.0; draft: False; prerelease: False; published_at: 2025-03-13T13:39:42Z; created_at: 2025-03-13T13:22:54Z\nRelease notes:\n* Fix - Handle nil expiration_date in valid? method for pending certifi… (#29352) via Tamilarasu (@iTamilan)\n* Switch Onesignal to use the new Organization keys (#29229) via Michael Neeley (@redreceipt)\n* Make sure verbose logging shows logs from the notarytool (#27546) via Paul Taykalo (@PaulTaykalo)\n* Update AppStoreConnect Documentation to account for language change (#27624) via Adam St. Onge (@Adam0101)\n* [docs] Remove app review times link (#27549) via Michal Šrůtek (@michalsrutek)\n* moves note about being overwritten to top of README (#27961) via Justin Vallely (@justinvallely)\n* Update testfairy.rb (#29472) via lee-snyder133 (@lee-snyder133)\n* Add keychain_name param to setup_ci action (#29482) via Bram Schulting (@bramschulting)\n* [trainer] Support parsing test results from SwiftTesting (#29463) via Olivier Halligon (@AliSoftware)\n* [supply] Fix #28995 and `release_status` vs `rollout` parameters (#29484) via Olivier Halligon (@AliSoftware)\n* [cert] Allow generate_certificates on non-macos (#21254) via Ras (@rasberik)\n* [unlock_keychain] fix crash when not having a default keychain (#29173) via Jens Kuhr Hansen (@jenskuhrjorgensen)\n* [fastlane_core] recognize AWS CodeBuild CI service as a CI environment (#29237) via Jigar Bhatt (@jigar-lab)\n* [match][enterprise] Fix undefined method `in_house?' for nil (#27460) via Ras (@rasberik)\n* [supply] Handle case where there are more than one release in a track during `update_rollout` (#29134) via Olivier Halligon (@AliSoftware)\n* Fix \"tvos\" platform option not being allowed anymore for some actions (#28962) via Iulian Onofrei (@revolter)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.227.0, a nil expiration_date in valid? method for pending certificates is handled, OneSignal switches to new Organization keys, verbose logging shows logs from notarytool, AppStoreConnect documentation is updated for language change, app review times link is removed from docs, a note about being overwritten is moved to top of README, testfairy is updated, setup_ci action adds keychain_name param, trainer supports parsing test results from SwiftTesting, supply fixes release_status vs rollout parameters, cert allows generate_certificates on non-macos, unlock_keychain fixes crash when no default keychain, fastlane_core recognizes AWS CodeBuild as CI environment, match enterprise fixes undefined method in_house? for nil, supply handles more than one release in a track during update_rollout, and tvos platform option is fixed for some actions."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_227_1",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.227.1",
+      "tag_name": "2.227.1",
+      "title": "2.227.1 Improvements",
+      "time_hint": "2025-04-09",
+      "published_at": "2025-04-09T01:31:14Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.227.1",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.227.1 Improvements\nTag: 2.227.1; draft: False; prerelease: False; published_at: 2025-04-09T01:31:14Z; created_at: 2025-04-09T01:15:48Z\nRelease notes:\n* [match] fix error with universal provisioning filter (\"'UNIVERSAL' is not a valid filter value\") (#29500) via Michael Neeley (@redreceipt)\n* Bump xcpretty to version 0.4.1 (#29516) via Iulian Onofrei (@revolter)\n* [scan] Remove unnecessary shellescape when generating -resultBundlePath option (#22285) via Junfeng (@hujunfeng)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.227.1, match fixes an error with universal provisioning filter ('UNIVERSAL' is not a valid filter value), xcpretty is bumped to version 0.4.1, and scan removes unnecessary shellescape when generating -resultBundlePath option."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_227_2",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.227.2",
+      "tag_name": "2.227.2",
+      "title": "2.227.2 Improvements",
+      "time_hint": "2025-05-05",
+      "published_at": "2025-05-05T13:30:50Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.227.2",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.227.2 Improvements\nTag: 2.227.2; draft: False; prerelease: False; published_at: 2025-05-05T13:30:50Z; created_at: 2025-05-05T13:18:30Z\nRelease notes:\n* [deliver] Fix altool not logging errors (#29545) via TCROC (@TCROC)\n* [precheck] fix typo in precheck error (#22086) via Hans Knöchel (@hansemannn)\n* [pilot] ability to upload ipas to Testflight from Linux (#22014) via Cristian Caruceru (@ccaruceru)\n* [docs] Clarify only-testing/skip-testing format (#27585) via Ben LaVerriere (@benlaverriere)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.227.2, deliver fixes altool not logging errors, precheck fixes a typo in error message, pilot gains ability to upload ipas to Testflight from Linux, and docs clarify only-testing/skip-testing format."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_228_0",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.228.0",
+      "tag_name": "2.228.0",
+      "title": "2.228.0 Improvements",
+      "time_hint": "2025-06-10",
+      "published_at": "2025-06-10T02:35:38Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.228.0",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.228.0 Improvements\nTag: 2.228.0; draft: False; prerelease: False; published_at: 2025-06-10T02:35:38Z; created_at: 2025-06-10T02:31:58Z\nRelease notes:\n* [sigh][match] fix issue where unknown attribute `template_name` is being sent when creating provisioning profiles (#29591) via Florentin Luca Rieger (@visuallization)\n* [action][hipchat] remove hipchat action (#29558) via Eitan Adler (@grimreaper)\n---\n> [!IMPORTANT]\n> If your app relies on managed capabilities (previously referred to as custom entitlements or the `template_name` parameter in _match_), you are impacted by a change that Apple made to their APIs in the last 2 weeks.\n> Please check out the ongoing discussion at https://github.com/fastlane/fastlane/discussions/29609 for the latest updates. Your insights and contributions are welcome!",
+      "memory_unit_text": "In the fastlane/fastlane release 2.228.0, sigh and match fix an issue where unknown attribute template_name is sent when creating provisioning profiles, and the hipchat action is removed. An important note warns that apps relying on managed capabilities may be impacted by an Apple API change."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_229_0",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.229.0",
+      "tag_name": "2.229.0",
+      "title": "2.229.0 Improvements",
+      "time_hint": "2025-11-21",
+      "published_at": "2025-11-21T21:24:44Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.229.0",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.229.0 Improvements\nTag: 2.229.0; draft: False; prerelease: False; published_at: 2025-11-21T21:24:44Z; created_at: 2025-11-21T21:09:24Z\nRelease notes:\n* [ci] lock standard gem openssl to non-affected version(s) to support OpenSSL 3.6.0+ (#29763) via Connor Tumbleson (@iBotPeaches)\n* [ci] downgrade to 2.4.22 bundler for 2.6.x Ruby support (#29762) via Connor Tumbleson (@iBotPeaches)\n* Bump actions/checkout from 2 to 4 (#22089) via dependabot[bot] (@dependabot[bot])\n* [ci] Fix CircleCI & modernize AppVeyor & Add Ruby 3.4 CI (#29753) via Connor Tumbleson (@iBotPeaches)\n* chore(workflows): remove `tags` (#29665) via Rui Chen (@chenrui333)\n* Support Ruby 3.4 (#29184) via Takuma Homma (@mataku)\n* [match] Fix `Aws::S3::Object#download_file` deprecation (#29704) via Olivier Halligon (@AliSoftware)\n* docs: update fastlane's relationship section with MNF (#29747) via Connor Tumbleson (@iBotPeaches)\n* fix: store generated available-actions in /generated on docs (#29729) via Connor Tumbleson (@iBotPeaches)\n* [deliver] update ageRatingDeclaration (#29643) via Yuki Y (@redryerye)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.229.0, CI locks standard gem openssl to non-affected versions for OpenSSL 3.6.0+, downgrades bundler for Ruby 2.6.x support, bumps actions/checkout from 2 to 4, fixes CircleCI and modernizes AppVeyor, adds Ruby 3.4 CI, removes tags from workflows, supports Ruby 3.4, fixes Aws::S3::Object#download_file deprecation in match, updates fastlane's relationship section with MNF in docs, stores generated available-actions in /generated on docs, and deliver updates ageRatingDeclaration."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_229_1",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.229.1",
+      "tag_name": "2.229.1",
+      "title": "2.229.1 Improvements",
+      "time_hint": "2025-11-24",
+      "published_at": "2025-11-24T19:53:42Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.229.1",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.229.1 Improvements\nTag: 2.229.1; draft: False; prerelease: False; published_at: 2025-11-24T19:53:42Z; created_at: 2025-11-24T19:41:01Z\nRelease notes:\n* [ci] Restore a regular 'bunde install' during releases (#29775) via Connor Tumbleson (@iBotPeaches)\n* build: releases should ignore changes to .bundle/config (#29774) via Connor Tumbleson (@iBotPeaches)\n* [core] add support for more gems removed from stdlib (ruby 3.4) (#29767) via Connor Tumbleson (@iBotPeaches)\n* [ci] speed up release actions + fix gha publishing (#29765) via Connor Tumbleson (@iBotPeaches)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.229.1, CI restores regular 'bundle install' during releases, builds ignore changes to .bundle/config, core adds support for more gems removed from stdlib for Ruby 3.4, and CI speeds up release actions and fixes GHA publishing."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_230_0",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.230.0",
+      "tag_name": "2.230.0",
+      "title": "2.230.0 Improvements",
+      "time_hint": "2025-12-18",
+      "published_at": "2025-12-18T10:27:24Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.230.0",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.230.0 Improvements\nTag: 2.230.0; draft: False; prerelease: False; published_at: 2025-12-18T10:27:24Z; created_at: 2025-12-18T10:07:39Z\nRelease notes:\n* [gym] evaluate building for .ipa or .pkg beyond iOS and macOS (#22145) via Davide (@keeshux)\n* [sigh][match] fix: provisioning profiles location for Xcode 16 (#29508) via Vitalii Budnik (@nekrich)\n* [install_xcode_plugin] hardening sh() to properly handle repo URL (#29811) via Grzegorz Siewruk (@siewer)\n* [gym][pilot] Add `AppStoreInfo.plist` support for TestFlight uploads on non-macOS platforms (#29717) via Cristian Caruceru (@ccaruceru)\n* [frameit] fix: iPhone-14-pro off by one pixel (#29539) via Mark Heijnekamp (@TheHunterDog)\n* [core] Fix Xcode 26 altool zero exit code confusion. (#29740) via Connor Tumbleson (@iBotPeaches)\n* [deliver] skips age rating upload when necessary (#29503) via Michael Neeley (@redreceipt)\n* [produce] add declared_age_range capability (#29720) via Tim Shedor (@tshedor)\n* [deliver] update age rating declaration attributes (#29804) via Yuki Y (@redryerye)\n* [deliver] Check only locales that have screenshots to upload when deleting from ASC (#29800) via Sergiu Todirașcu (@sirghi)\n* [rake] remove unused rake tasks, fix github issue one (#29798) via Connor Tumbleson (@iBotPeaches)\n* CONTRIBUTING.md: remove Google CLA callout (#29805) via Connor Tumbleson (@iBotPeaches)\n* Upgrade xcov to v1.9.0 and remove 2016 monkey patch. (#29769) via Connor Tumbleson (@iBotPeaches)\n* [ci] build: force circleci to previous resource_class (#29801) via Connor Tumbleson (@iBotPeaches)\n* build: update plugin template for GitHub Actions (#29758) via Connor Tumbleson (@iBotPeaches)\n* Fix pty not fully flushing output and causing flaky tests #21792 (#21793) via Jerome Lacoste (@lacostej)\n* [supply] Fix missing_email error when using external account credentials (#29796) via Oliver Binns (@Oliver-Binns)\n* [team] add 'ibotpeaches' to team.json (#29782) via Connor Tumbleson (@iBotPeaches)\n* Fix `notarize` action with `verbose` option (#29495) via Olivier Halligon (@AliSoftware)\n* [ci] remove houndci config (#29793) via Connor Tumbleson (@iBotPeaches)\n* [ci] chore: fix spacing on step 2 release job (#29792) via Connor Tumbleson (@iBotPeaches)\n* build: generate plugin robocop config during rake tasks (#29791) via Connor Tumbleson (@iBotPeaches)\n* [spaceship] The provided entity includes an unknown relationship - 'capability' is not a relationship on the resource 'bundleIdCapabilities' (#29596) via Hugo (@hugomarisco)\n* Bump actions/checkout from 5 to 6 (#29794) via dependabot[bot] (@dependabot[bot])\n* [sigh] Take 'cert_id' parameter into account while fetching provision… (#29780) via AbbyM (@AbbyM)\n* [scan, gym] SwiftPM `clonedSourcePackagesDirPath` fixes & `packageCachePath` support (#29679) via Brett Best (@Brett-Best)\n* [ci] fix: allow Dependabot to manage Ruby deps (#29756) via Connor Tumbleson (@iBotPeaches)\n* build: enhance update_docs workflow (#29770) via Connor Tumbleson (@iBotPeaches)\n* [ci] fix module tests regression + migrate module tests to gha (#29768) via Connor Tumbleson (@iBotPeaches)\n* build: remove dependency ci config (#29786) via Connor Tumbleson (@iBotPeaches)\n* [ci] Cleanup of unused and broken GitHub Actions (#29728) via Connor Tumbleson (@iBotPeaches)\n* [ci] swap to github action token instead of pat for meta workflows (#29788) via Connor Tumbleson (@iBotPeaches)\n* [deliver][frameit] support the latest devices and resolutions. (#29760) via Sergiu Todirașcu (@sirghi)\n* ci: add Ruby 2.6/7 test jobs to CircleCI workflow (#29777) via Jan Piotrowski (@janpio)\n* Bump actions/checkout from 5 to 6 (#29772) via dependabot[bot] (@dependabot[bot])\n* Bump actions/labeler from 5 to 6 (#29771) via dependabot[bot] (@dependabot[bot])",
+      "memory_unit_text": "In the fastlane/fastlane release 2.230.0, gym evaluates building for .ipa or .pkg beyond iOS and macOS, sigh and match fix provisioning profiles location for Xcode 16, install_xcode_plugin hardens sh() to handle repo URL, gym and pilot add AppStoreInfo.plist support for TestFlight uploads on non-macOS, frameit fixes iPhone-14-pro off by one pixel, core fixes Xcode 26 altool zero exit code confusion, deliver skips age rating upload when necessary, produce adds declared_age_range capability, deliver updates age rating declaration attributes and checks only locales with screenshots to upload when deleting from ASC, unused rake tasks are removed, CONTRIBUTING.md removes Google CLA callout, xcov is upgraded to v1.9.0, CI forces circleci to previous resource_class, plugin template is updated for GitHub Actions, pty flushing is fixed, supply fixes missing_email error with external account credentials, team.json adds 'ibotpeaches', notarize action with verbose option is fixed, houndci config is removed, CI spacing is fixed, plugin robocop config is generated during rake tasks, spaceship fixes unknown relationship 'capability' on bundleIdCapabilities, actions/checkout is bumped from 5 to 6, sigh takes cert_id parameter into account, scan and gym fix SwiftPM clonedSourcePackagesDirPath and add packageCachePath support, CI allows Dependabot to manage Ruby deps, update_docs workflow is enhanced, module tests regression is fixed and migrated to GHA, dependency CI config is removed, unused and broken GitHub Actions are cleaned up, meta workflows swap to GitHub action token, deliver and frameit support latest devices and resolutions, Ruby 2.6/7 test jobs are added to CircleCI, and actions/checkout and actions/labeler are bumped."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_231_0",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.231.0",
+      "tag_name": "2.231.0",
+      "title": "2.231.0 Improvements",
+      "time_hint": "2026-01-16",
+      "published_at": "2026-01-16T16:54:28Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.231.0",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.231.0 Improvements\nTag: 2.231.0; draft: False; prerelease: False; published_at: 2026-01-16T16:54:28Z; created_at: 2026-01-16T16:35:06Z\nRelease notes:\n> [!IMPORTANT]\n> _fastlane_ will begin warning if you are using a Ruby version we will no longer support in future.\n---\n* [core] chore: rename key (ruby_min) key to remove \"VERSION\" from it (#29864) via Connor Tumbleson (@iBotPeaches)\n* [scan] Handle Xcode26 test failure (#29854) via Yusuf Özgül (@yusufozgul)\n* [spaceship] add support for key creation scope in portal client (#29458) via Daniel Costa (@danicunhac)\n* [ci] chore: remove slack train plugin (#29830) via Connor Tumbleson (@iBotPeaches)\n* [action] Fix target selection in `get_version_number` (#22178) via Sven Münnich (@svenmuennich)\n* [core] feat: add warning to output on unsupported Ruby version (#29840) via Connor Tumbleson (@iBotPeaches)\n* [snapshot] Fix status bar time format to use HH:MM instead of ISO8601 (#29846) via Philip Niedertscheider (@philprime)\n* [core] build: move to xcodeproj 1.27.0 (from 1.22.0) (#29836) via Connor Tumbleson (@iBotPeaches)\n* [action] increment_build_number supports xros (#29827) via Connor Tumbleson (@iBotPeaches)\n* [spaceship] feat: support webhook integration API (#29844) via Tim Shedor (@tshedor)\n* [spaceship] Add support for legacy 2sk_fo (SRP) logins (#27461) via Matt Kiazyk (@MattKiazyk)\n* docs: remove IMAGE_GUIDELINES as Google remnant (#29835) via Connor Tumbleson (@iBotPeaches)\n* [spaceship] add robust handling around sirp api calls (#29821) via Connor Tumbleson (@iBotPeaches)\n* [spaceship, match] fix: developer_id_application_g2 certificate filter (#29784) via Vitalii Budnik (@nekrich)\n* [core] build: support bundler v4 (#29813) via Connor Tumbleson (@iBotPeaches)\n* [snapshot] Fix device configuration being overwritten for iOS+Mac projects (#29834) via Abhishek Mahanti (@amahanti)\n* [ci] build: automate messages on released prs (#29819) via Connor Tumbleson (@iBotPeaches)\n* [produce] Add declared age range option to commands generator (#29815) via Stefan Herold (@stherold)\n* [ci] build: reduce confusion in compilation by renaming things (#29826) via Connor Tumbleson (@iBotPeaches)\n* [action] Add `xros` to upload_to_app_store.rb (#29460) via Luca Ban (@mesqueeb)\n* [ci] restore SLACK_URL to Automation pipeline (#29825) via Connor Tumbleson (@iBotPeaches)\n* [ci] remove unused release lanes. (#29785) via Connor Tumbleson (@iBotPeaches)\n* [GitHub Actions] Enable pull-requests.yml workflow (#29823) via Connor Tumbleson (@iBotPeaches)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.231.0, fastlane will begin warning on unsupported Ruby versions. Core renames ruby_min key, scan handles Xcode26 test failure, spaceship adds support for key creation scope in portal client, CI removes slack train plugin, get_version_number action fixes target selection, core adds warning on unsupported Ruby version, snapshot fixes status bar time format to HH:MM, core moves to xcodeproj 1.27.0, increment_build_number supports xros, spaceship supports webhook integration API and legacy 2sk_fo (SRP) logins, docs remove IMAGE_GUIDELINES, spaceship adds robust handling around sirp api calls, spaceship and match fix developer_id_application_g2 certificate filter, core supports bundler v4, snapshot fixes device configuration overwriting for iOS+Mac projects, CI automates messages on released PRs, produce adds declared age range option to commands generator, CI renames things to reduce confusion, upload_to_app_store adds xros, CI restores SLACK_URL, unused release lanes are removed, and pull-requests.yml workflow is enabled."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_231_1",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.231.1",
+      "tag_name": "2.231.1",
+      "title": "2.231.1 Improvements",
+      "time_hint": "2026-01-20",
+      "published_at": "2026-01-20T19:41:31Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.231.1",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.231.1 Improvements\nTag: 2.231.1; draft: False; prerelease: False; published_at: 2026-01-20T19:41:31Z; created_at: 2026-01-20T19:26:28Z\nRelease notes:\n> [!IMPORTANT]\n> _fastlane_ will begin warning if you are using a Ruby version we will no longer support in future.\n* [core] build: move to modern plist for Ruby 3.4 frozen strings (#29851) via Connor Tumbleson (@iBotPeaches)\n* [ci] always record latest_fl_version during part 2 release (#29866) via Connor Tumbleson (@iBotPeaches)\n* [core] add support for stdgem changes in Ruby 4 (#29869) via Connor Tumbleson (@iBotPeaches)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.231.1, fastlane continues to warn on unsupported Ruby versions. Core moves to modern plist for Ruby 3.4 frozen strings, CI always records latest_fl_version during part 2 release, and core adds support for stdgem changes in Ruby 4."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_232_0",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.232.0",
+      "tag_name": "2.232.0",
+      "title": "2.232.0 Improvements",
+      "time_hint": "2026-02-06",
+      "published_at": "2026-02-06T15:27:06Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.232.0",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.232.0 Improvements\nTag: 2.232.0; draft: False; prerelease: False; published_at: 2026-02-06T15:27:06Z; created_at: 2026-02-06T15:09:30Z\nRelease notes:\n* Revert \"[pilot] Add Support of the BuildAudienceType Field (#29859)\" (#29881) via Connor Tumbleson (@iBotPeaches)\n* [match] Download Apple's new Developer ID intermediate certificates (#29890) via Ian G. Maia (@iangmaia)\n* [match] Bump minimum version of `aws-sdk-s3` dependency to `~> 1.197` (#29750) via Olivier Halligon (@AliSoftware)\n* [action] Switch to \"build uploads\" api for app_store_build_number and latest_testflight_build_number action (#29879) via Kai Leonhardt (@Mik4sa)\n* [appium] Fix appium driver usage (#29882) via Naveed Ahmad (@naveed-ahmad)\n* [gym, scan, snapshot] Allow disabling swift packages fetches when using xcodebuild (#29862) via Alexandre Podlewski (@alexandre-pod)\n* [ci] build: move to m4 runners (#29802) via Connor Tumbleson (@iBotPeaches)\n* [Ruby] Ruby 2.7 is now the minimum (dropping Ruby 2.6) (#29779) via Connor Tumbleson (@iBotPeaches)\n* [ci] Fix CI pipeline to actually lint shell/bash scripts. (#29757) via Connor Tumbleson (@iBotPeaches)\n* [action] Add format switch to the import_certificate action (#29868) via Kai Leonhardt (@Mik4sa)\n* [pilot] Add Support of the BuildAudienceType Field (#29859) via YuantongLu (@YuantongL)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.232.0, a pilot change for BuildAudienceType is reverted, match downloads Apple's new Developer ID intermediate certificates and bumps minimum aws-sdk-s3 dependency, app_store_build_number and latest_testflight_build_number actions switch to build uploads API, appium driver usage is fixed, gym, scan, and snapshot allow disabling swift packages fetches, CI moves to m4 runners, Ruby 2.7 becomes the minimum (dropping 2.6), CI fixes linting of shell/bash scripts, import_certificate action adds format switch, and pilot adds support for BuildAudienceType field."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_232_1",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.232.1",
+      "tag_name": "2.232.1",
+      "title": "2.232.1 Improvements",
+      "time_hint": "2026-02-10",
+      "published_at": "2026-02-10T21:55:48Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.232.1",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.232.1 Improvements\nTag: 2.232.1; draft: False; prerelease: False; published_at: 2026-02-10T21:55:48Z; created_at: 2026-02-10T21:45:18Z\nRelease notes:\n* [action] Revert to \"-uploadedDate\" sort order for app_store_build_num… (#29899) via Kai Leonhardt (@Mik4sa)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.232.1, the app_store_build_number action reverts to \"-uploadedDate\" sort order."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_232_2",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.232.2",
+      "tag_name": "2.232.2",
+      "title": "2.232.2 Improvements",
+      "time_hint": "2026-02-27",
+      "published_at": "2026-02-27T12:27:36Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.232.2",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.232.2 Improvements\nTag: 2.232.2; draft: False; prerelease: False; published_at: 2026-02-27T12:27:36Z; created_at: 2026-02-27T12:17:43Z\nRelease notes:\n* [sigh] fix: prevent empty string as input to codesign on VERBOSE (#29910) via Connor Tumbleson (@iBotPeaches)\n* Fix console command compatibility with Ruby 3.3+ (#29925) via Jerome Lacoste (@lacostej)\n* cli: do not hide the original exception when failing in our ensure block (#29923) via Jerome Lacoste (@lacostej)\n* [core] Fix gemspec bin/console exclusion to subtract \"console\" not \"bin/console\" (#29914) via Tachibana waita (@whywaita)\n* [core] Upgrade rack transitive dep to please dependabot (#29911) via Jerome Lacoste (@lacostej)\n* build: move to faraday 1.10.5 (#29906) via Connor Tumbleson (@iBotPeaches)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.232.2, sigh prevents empty string as input to codesign on VERBOSE, console command compatibility with Ruby 3.3+ is fixed, CLI does not hide original exception in ensure block, core fixes gemspec bin/console exclusion, core upgrades rack transitive dep, and build moves to faraday 1.10.5."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_233_0",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.233.0",
+      "tag_name": "2.233.0",
+      "title": "2.233.0 Improvements",
+      "time_hint": "2026-04-19",
+      "published_at": "2026-04-19T11:59:52Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.233.0",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.233.0 Improvements\nTag: 2.233.0; draft: False; prerelease: False; published_at: 2026-04-19T11:59:52Z; created_at: 2026-04-19T11:49:17Z\nRelease notes:\n* [scan] Fix default_os_version when xcodebuild sdkVersion differs from simctl sdkVersion (#29977) via Felix Lisczyk (@FelixLisczyk)\n* [core] build: move to fastlane-sirp 1.1.0 (#29973) via Connor Tumbleson (@iBotPeaches)\n* fix: use certificate id param on match (#29966) via James Collins (@java-james)\n* [action][swiftlint] Adds '--progress' flag (#21922) via Erik Lippmann (@ObjectiveCesar)\n* [sigh, match] Pass keychain_path through Sigh::Manager to ProvisioningProfile (#29963) via Dmitry Pchelintsev (@Pchol)\n* Support individual api tokens in altool (#29961) via Oliver Fox (@foxware00)\n* [spaceship] Fix getting App Preview Sets with new endpoint (#29960) via Cristian Caruceru (@ccaruceru)\n* [frameit] Change the default iPhone 14 Pro/Pro Max frame colors from `PURPLE` to `BLACK`. (#21927) via Michael Lenaghan (@michaellenaghan)\n* [gym] Add app_name parameter to skip xcodebuild -showBuildSettings (#29953) via 정고은 (@Goeun1001)\n* [deliver, pilot] Add provider_public_id option for altool uploads (#29898) via Hasancan Akgündüz (@hasancanakgunduz)\n* [sigh] add: introduce ability to control codesign page_size (#29952) via Aliaksei Siauko (@asevko)\n* build: assert bin/* contents in built gem to prevent global pollution. (#29915) via Connor Tumbleson (@iBotPeaches)\n* [match] feat(s3_storage): add support for AWS STS credentials (#22139) via monholm (@monholm)\n* [deliver] Initial App Preview (video) upload support for iPhone and iPad (#29831) via Cristian Caruceru (@ccaruceru)\n* [scan] output_remove_retry_attempts should also remove retries when the test is skipped (#29887) via Oliver Fox (@foxware00)\n* [precheck] add 'nsfw' as blocklisted term (#29937) via Jamie (@jtlthe2)\n* [scan] Fix simulator selection when runtime build is missing from installed runtimes (#29894) via Felix Lisczyk (@FelixLisczyk)\n* [gem] move to faraday-retry 1.0.4 (#29944) via Connor Tumbleson (@iBotPeaches)\n* [precheck] document `rules/rules_data/curse_word_hashes` (#29941) via Jamie (@jtlthe2)\n* Add RSpec tests for resign.sh bash functions (#29934) via Sergei Selivanov (@cergfix)\n* build(deps): bump actions/download-artifact from 7 to 8 (#29930) via dependabot[bot] (@dependabot[bot])\n* build(deps): bump actions/upload-artifact from 6 to 7 (#29931) via dependabot[bot] (@dependabot[bot])\n* [ci] remove AppVeyor for Windows tests on GitHub Actions (#29876) via Connor Tumbleson (@iBotPeaches)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.233.0, scan fixes default_os_version when xcodebuild sdkVersion differs from simctl sdkVersion, core moves to fastlane-sirp 1.1.0, match uses certificate id param, swiftlint action adds --progress flag, sigh and match pass keychain_path through to ProvisioningProfile, altool supports individual api tokens, spaceship fixes getting App Preview Sets with new endpoint, frameit changes default iPhone 14 Pro/Pro Max frame colors from PURPLE to BLACK, gym adds app_name parameter to skip xcodebuild -showBuildSettings, deliver and pilot add provider_public_id option for altool uploads, sigh introduces ability to control codesign page_size, build asserts bin/* contents in built gem, match s3_storage adds support for AWS STS credentials, deliver adds initial App Preview (video) upload support for iPhone and iPad, scan output_remove_retry_attempts also removes retries when test is skipped, precheck adds 'nsfw' as blocklisted term, scan fixes simulator selection when runtime build is missing, gem moves to faraday-retry 1.0.4, precheck documents curse_word_hashes, RSpec tests are added for resign.sh bash functions, actions/download-artifact and upload-artifact are bumped, and AppVeyor is removed for Windows tests on GitHub Actions."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_233_1",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.233.1",
+      "tag_name": "2.233.1",
+      "title": "2.233.1 Improvements",
+      "time_hint": "2026-04-29",
+      "published_at": "2026-04-29T11:03:38Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.233.1",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.233.1 Improvements\nTag: 2.233.1; draft: False; prerelease: False; published_at: 2026-04-29T11:03:38Z; created_at: 2026-04-29T10:44:38Z\nRelease notes:\n* [deliver] fix app previews always running during usage. (#29989) via Connor Tumbleson (@iBotPeaches)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.233.1, deliver fixes app previews always running during usage."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_234_0",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.234.0",
+      "tag_name": "2.234.0",
+      "title": "2.234.0 Improvements",
+      "time_hint": "2026-05-10",
+      "published_at": "2026-05-10T23:14:47Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.234.0",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.234.0 Improvements\nTag: 2.234.0; draft: False; prerelease: False; published_at: 2026-05-10T23:14:47Z; created_at: 2026-05-10T23:01:17Z\nRelease notes:\n> [!TIP]\n> Appreciate fastlane? Want to support further development? Donate via OpenCollective - https://opencollective.com/fastlane\n* [docs] adjust CoC contact email away from Google (#30024) via Connor Tumbleson (@iBotPeaches)\n* [spaceship] fix provisioning profile repair when certificates include nil (#29935) via via-guy (@via-guy)\n* build(deps): bump rubygems/configure-rubygems-credentials from 1.0.0 to 2.0.0 (#30013) via dependabot[bot] (@dependabot[bot])\n* [supply] Fix issue when playstore production track doesn't have any release (#21506) via Fadel Trivandi Dipantara (@fadeltd)\n* [deliver] improve documentation & clarify on territory_ids behavior for upload_price_tier (#30019) via orbisai0security (@orbisai0security)\n* [match] Fix match_nuke certificate_id filtering (#30022) via Nakshatra Singh (@nakshatrasinghh)\n* [sigh] fix: prevent empty string as input to codesign on KEYCHAIN_FLAG (#30018) via zengchunshan (@zengchunshan)\n* [scan] default_derived_data supports build for running off (#22231) via Jozsef Mihalicza (@jmihaliczas3d)\n* Add support for 11 new App Store Connect locales (#29959) via Ryu (@Ryu0118)\n* [match] Fix match nuke deletion for provisioning profiles with wildcard filenames (#30014) via Nakshatra Singh (@nakshatrasinghh)\n* [increment_version_number] support MARKETING_VERSION resolving. (#30011) via Connor Tumbleson (@iBotPeaches)\n* [robocop] suppress suggestions for new extensions (#30005) via Connor Tumbleson (@iBotPeaches)\n* [core] relax constraint on abbrev, base64, mutex_m and nfk (#30009) via Connor Tumbleson (@iBotPeaches)\n* fix: migrate to standard which() helper to prevent ci spam (#29933) via Connor Tumbleson (@iBotPeaches)\n* [app_store_connect_api_key] Trim `key_id` / `issuer_id` to prevent malformed JWT claims (#29986) via Copilot (@Copilot)\n* [gem] allow CFPropertyList > 4 (#29993) via Connor Tumbleson (@iBotPeaches)\n* chore: ruby 3.2 is eol, 3.3 is suggested (#29979) via Connor Tumbleson (@iBotPeaches)\n* feat: add funding (opencollective) (#29972) via Connor Tumbleson (@iBotPeaches)\n* [frameit] Add iPhone 16 and iPhone 17 device frame support (#29921) via Events-Mate-Apps (@Events-Mate-Apps)\n* [Fastlane Swift] Update Runner Project to 14.6 (#29990) via Ethan Pippin (@LePips)\n* [supply] Support authorized_user and Application Default Credentials for Google authentication (#29982) via Tyler Renslow (@trenslow)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.234.0, docs adjust CoC contact email away from Google, spaceship fixes provisioning profile repair when certificates include nil, rubygems/configure-rubygems-credentials is bumped, supply fixes issue when playstore production track has no release, deliver improves documentation on territory_ids behavior for upload_price_tier, match fixes match_nuke certificate_id filtering, sigh prevents empty string as input to codesign on KEYCHAIN_FLAG, scan default_derived_data supports build for running off, 11 new App Store Connect locales are added, match fixes match nuke deletion for provisioning profiles with wildcard filenames, increment_version_number supports MARKETING_VERSION resolving, robocop suppresses suggestions for new extensions, core relaxes constraint on abbrev, base64, mutex_m and nfk, a standard which() helper is migrated to prevent CI spam, app_store_connect_api_key trims key_id/issuer_id to prevent malformed JWT claims, gem allows CFPropertyList > 4, Ruby 3.2 is EOL and 3.3 is suggested, funding via OpenCollective is added, frameit adds iPhone 16 and iPhone 17 device frame support, Fastlane Swift updates Runner Project to 14.6, and supply supports authorized_user and Application Default Credentials for Google authentication."
+    },
+    {
+      "memory_node_id": "fastlane__fastlane__release__2_235_0",
+      "repo": "fastlane/fastlane",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.235.0",
+      "tag_name": "2.235.0",
+      "title": "2.235.0 Improvements",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T10:14:10Z",
+      "source_url": "https://github.com/fastlane/fastlane/releases/tag/2.235.0",
+      "raw_text": "Repository: fastlane/fastlane\nRelease: 2.235.0 Improvements\nTag: 2.235.0; draft: False; prerelease: False; published_at: 2026-05-26T10:14:10Z; created_at: 2026-05-26T10:04:59Z\nRelease notes:\n* [docs] allow deletion of no longer existing docs (#30020) via Connor Tumbleson (@iBotPeaches)\n* [increment_version_number] update MARKETING_VERSION build setting (#30031) via André Destro (@andredestro)\n* [match] nuke respects \"skip_confirmation\" (#30023) via Connor Tumbleson (@iBotPeaches)\n* [screengrab] Fix screenshot copy count and path probe output (#30038) via Nakshatra Singh (@nakshatrasinghh)\n* [chore] remove top level dirs of \"rakelib\" and \"rubocop\" (#30045) via Connor Tumbleson (@iBotPeaches)\n* [ci] fix flaky test due to time shift (#30030) via Connor Tumbleson (@iBotPeaches)\n* [supply] fix crash if no release on track (#30029) via Connor Tumbleson (@iBotPeaches)\n* [frameit] add sanitized device name to error message (#30028) via Connor Tumbleson (@iBotPeaches)\n* [match] strip nbsp; from return of phone 2fa (#30004) via Connor Tumbleson (@iBotPeaches)\n* [snapshot] fix: keep 'stderr' during simulator configuration/launch (#29839) via Connor Tumbleson (@iBotPeaches)\n* [ci] test on Xcode 26.5 (#30044) via Connor Tumbleson (@iBotPeaches)\n* [notarize] Remove legacy altool flow (#29896) via Hasancan Akgündüz (@hasancanakgunduz)\n* [supply] add google play endpoint for track meta (#29999) via Tim Shedor (@tshedor)\n* [core] Upgraded jwt gem dependency range to include v3 series (#30042) via Siddharth Bhatt (@sidbhatt11)\n* [pilot] Fix FrozenError when whats_new is a frozen string (#30039) via Eyüp Can Akman (@eyupcanakman)\n* [match] Expand range of valid characters in app name (#30036) via Michal Mazur (@michalm-st)\n* [spaceship][deliver][pilot] Add support for App Clips default experience metadata and review information (#30010) via Krystian Łabanowski (@Krych)\n* [test] skip VisionOS test if sdk not installed (#30032) via Connor Tumbleson (@iBotPeaches)\n* [Ruby] Ruby 3.0 is now the minimum (dropping Ruby 2.7) (#29942) via Connor Tumbleson (@iBotPeaches)\n* [slack] support thread_ts for slack messages (#29904) via Tim Shedor (@tshedor)",
+      "memory_unit_text": "In the fastlane/fastlane release 2.235.0, docs allow deletion of no longer existing docs, increment_version_number updates MARKETING_VERSION build setting, match nuke respects skip_confirmation, screengrab fixes screenshot copy count and path probe output, top level dirs rakelib and rubocop are removed, CI fixes flaky test due to time shift, supply fixes crash if no release on track, frameit adds sanitized device name to error message, match strips nbsp; from return of phone 2fa, snapshot keeps stderr during simulator configuration/launch, CI tests on Xcode 26.5, notarize removes legacy altool flow, supply adds google play endpoint for track meta, core upgrades jwt gem dependency range to include v3 series, pilot fixes FrozenError when whats_new is a frozen string, match expands range of valid characters in app name, spaceship, deliver, and pilot add support for App Clips default experience metadata and review information, a VisionOS test is skipped if SDK not installed, Ruby 3.0 becomes the minimum (dropping 2.7), and slack supports thread_ts for messages."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the fastlane/fastlane releases, which release introduces a new Apple ID authentication method using SRP with SHA-256 and 2048 bit hashing?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2.225.0"
+        },
+        {
+          "option_id": "B",
+          "text": "2.220.0"
+        },
+        {
+          "option_id": "C",
+          "text": "2.230.0"
+        },
+        {
+          "option_id": "D",
+          "text": "2.215.1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2.225.0",
+      "source_chunk_ids": [
+        "fastlane__fastlane__release__2_225_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "fastlane__fastlane__release__2_225_0",
+          "answer_text": "spaceship introduces new Apple ID authentication with SRP using SHA-256 and 2048 bit hashing"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the fastlane/fastlane releases, how does the match caching improvement in 2.218.0 differ from the match performance change in 2.220.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2.218.0 adds a caching layer for up to 100x performance improvement, while 2.220.0 removes the renew_expired_certs option and reverts default behavior."
+        },
+        {
+          "option_id": "B",
+          "text": "2.218.0 removes the caching layer, while 2.220.0 adds it back."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only update documentation for match."
+        },
+        {
+          "option_id": "D",
+          "text": "2.218.0 fixes a missing job-token error, while 2.220.0 adds visionOS device support."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2.218.0 adds a caching layer for up to 100x performance improvement, while 2.220.0 removes the renew_expired_certs option and reverts default behavior.",
+      "source_chunk_ids": [
+        "fastlane__fastlane__release__2_218_0",
+        "fastlane__fastlane__release__2_220_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "fastlane__fastlane__release__2_218_0",
+          "answer_text": "match adds a caching layer to significantly improve performance by up to 100x"
+        },
+        {
+          "memory_node_id": "fastlane__fastlane__release__2_220_0",
+          "answer_text": "match removes the renew_expired_certs option introduced in #21691 and reverts the default behavior"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the fastlane/fastlane release window, order the following release-content states from earliest to latest: (1) a release that adds a caching layer to match for up to 100x performance improvement, (2) a release that introduces new Apple ID authentication with SRP, (3) a release that removes the hipchat action and fixes an issue with template_name in provisioning profiles, (4) a release that adds support for App Clips default experience metadata.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 1 -> 2 -> 4"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "fastlane__fastlane__release__2_218_0",
+        "fastlane__fastlane__release__2_225_0",
+        "fastlane__fastlane__release__2_228_0",
+        "fastlane__fastlane__release__2_235_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "fastlane__fastlane__release__2_218_0",
+          "answer_text": "match adds a caching layer to significantly improve performance by up to 100x"
+        },
+        {
+          "memory_node_id": "fastlane__fastlane__release__2_225_0",
+          "answer_text": "spaceship introduces new Apple ID authentication with SRP"
+        },
+        {
+          "memory_node_id": "fastlane__fastlane__release__2_228_0",
+          "answer_text": "hipchat action is removed and sigh and match fix issue where unknown attribute template_name is sent"
+        },
+        {
+          "memory_node_id": "fastlane__fastlane__release__2_235_0",
+          "answer_text": "spaceship, deliver, and pilot add support for App Clips default experience metadata"
+        }
+      ]
+    }
+  ]
+}

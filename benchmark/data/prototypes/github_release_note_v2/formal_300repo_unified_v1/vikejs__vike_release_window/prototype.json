@@ -1,0 +1,530 @@
+{
+  "prototype_id": "vikejs__vike_release_window",
+  "domain": "github_release_evolution",
+  "repo": "vikejs/vike",
+  "source_type": "release_note",
+  "window_title": "vikejs/vike recent release evolution",
+  "window_summary": "This window tracks the recent vikejs/vike release stream from v0.4.229 through v0.4.259, covering bug fixes, new features like +onData and +headersResponse, and minor breaking changes such as Vite 6+ and Node.js 20+ requirements.",
+  "chunks": [
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_229",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.229",
+      "tag_name": "v0.4.229",
+      "title": "v0.4.229",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:50:49Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.229",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.229\nTag: v0.4.229; draft: False; prerelease: False; published_at: 2026-05-08T13:50:49Z; created_at: 2025-04-24T21:47:27Z\nRelease notes:\n### Bug Fixes\n* [vike:pluginModuleBanner] escape star in path (fix [#2377](https://github.com/vikejs/vike/issues/2377)) ([f3eb7f0](https://github.com/vikejs/vike/commit/f3eb7f05f8d74bfe4dd727aa751635edd27adf02))\n* @brillout/vite-plugin-server-entry@^0.7.6 ([1522ab1](https://github.com/vikejs/vike/commit/1522ab1c4fa020c68e1c0f8f5294ce6f52f2a072))\n* @brillout/vite-plugin-server-entry@^0.7.8 ([#2399](https://github.com/vikejs/vike/issues/2399)) ([37d5eed](https://github.com/vikejs/vike/commit/37d5eed07c02f13fe6735736c4a91422996c97b7))\n* add safe  operations to decodeURI. ([#2367](https://github.com/vikejs/vike/issues/2367)) ([6ee96a7](https://github.com/vikejs/vike/commit/6ee96a7f190b9e17059162ac5ee7b6f2bbf75b03))\n* add warning upon unexpected Vitest setup + docs ([a72f1a3](https://github.com/vikejs/vike/commit/a72f1a3776adbd48ceafa4d815b14b17fd4c7ffe))\n* don't show server entry warning upon pre-rendering ([4d4a0e1](https://github.com/vikejs/vike/commit/4d4a0e19a73fa3b0cc442f4c830a5863afa37d8c))\n* don't show Vite CLI/API deprecation warning upon Vitest ([333f22c](https://github.com/vikejs/vike/commit/333f22c178434da26b30bbce21dd886944a11713))\n* don't throw error upon side exports (fix [#2359](https://github.com/vikejs/vike/issues/2359)) ([#2360](https://github.com/vikejs/vike/issues/2360)) ([d423e4f](https://github.com/vikejs/vike/commit/d423e4f000b63019922c341b5142ee26fb6a9e2c))\n* fix unknown config error message (vikejs/vike-cloudflare[#56](https://github.com/vikejs/vike/issues/56)) ([13824ea](https://github.com/vikejs/vike/commit/13824eab7af6dedfaabe499e574eb2ddcac62f21))\n* fix windows path bug at transpileWithEsbuild() (fix [#2362](https://github.com/vikejs/vike/issues/2362)) ([67e28cd](https://github.com/vikejs/vike/commit/67e28cd536f70abb53065f9dc32617047cd3fcea))\n* ignore .history/ from crawling ([a6f1033](https://github.com/vikejs/vike/commit/a6f103347955c514bb0799e021751560691ae0d1))\n* improve error message upon wrong getVikeConfig() usage ([1bb742f](https://github.com/vikejs/vike/commit/1bb742f808c97210071c20bc06b49176da4470fe))\n* improve error upon infinite rendering loop (fix [#2386](https://github.com/vikejs/vike/issues/2386)) ([5edda14](https://github.com/vikejs/vike/commit/5edda1465e8ba78ead46de16069ef59d578ce83e))\n* inject module banners if build.minify is false ([33ab2a3](https://github.com/vikejs/vike/commit/33ab2a3f26811edf25e7f8b503bd3997d0bd561d))\n* more robust import resolving ([#2401](https://github.com/vikejs/vike/issues/2401)) ([2b33e36](https://github.com/vikejs/vike/commit/2b33e36d7bb197e8d1fb2b946e076e600c5697d7))\n* optimistic esbuild semver range (fix [#2356](https://github.com/vikejs/vike/issues/2356)) ([#2357](https://github.com/vikejs/vike/issues/2357)) ([51f0080](https://github.com/vikejs/vike/commit/51f0080f4fe3676f5738fa72e5350d32b521154f))\n* pageContext.globalContext only defined on server-side ([aea95e3](https://github.com/vikejs/vike/commit/aea95e313a5c9af5f8afb96a97ed71480964f48d))\n* remove faulty assertion (fix [#2410](https://github.com/vikejs/vike/issues/2410)) ([1bb55f1](https://github.com/vikejs/vike/commit/1bb55f1342d540e4e930eefaa9d916cc90b8b1fc))\n* show stack traces upon infinite rendering loop warning ([#2386](https://github.com/vikejs/vike/issues/2386)) ([b13b2fc](https://github.com/vikejs/vike/commit/b13b2fc91335a03219b43e070a108c61381aea35))\n* simplify Vike namespace JSDocs ([d75ed11](https://github.com/vikejs/vike/commit/d75ed1153b071c5549e05d6bf8db0fc2425809ff))\n* tolerate missing __VITE_ASSETS_MANIFEST__ in server builds ([1553dee](https://github.com/vikejs/vike/commit/1553dee70d624800bcc623273fa3441d798b3016))\n* workaround monorepo resolve quirk ([#2395](https://github.com/vikejs/vike/issues/2395)) ([9121415](https://github.com/vikejs/vike/commit/9121415e4803b8732839f70359aecac60a80cd8c))\n### Features...",
+      "memory_unit_text": "In the vikejs/vike release v0.4.229, the release note includes bug fixes such as escaping a star in the pluginModuleBanner path, adding safe operations to decodeURI, fixing side exports errors, improving error messages for wrong getVikeConfig() usage, and addressing infinite rendering loops. It also updates @brillout/vite-plugin-server-entry to ^0.7.8 and adds warnings for unexpected Vitest setup."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_230",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.230",
+      "tag_name": "v0.4.230",
+      "title": "v0.4.230",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:50:50Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.230",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.230\nTag: v0.4.230; draft: False; prerelease: False; published_at: 2026-05-08T13:50:50Z; created_at: 2025-05-20T14:54:24Z\nRelease notes:\n### Bug Fixes\n* [Server Routing] make local configs override global configs (fix [#2420](https://github.com/vikejs/vike/issues/2420)) ([58f7ed0](https://github.com/vikejs/vike/commit/58f7ed04515cab5e9273b399a91ce400e66b6236))\n* do not close web stream prematurly ([#2435](https://github.com/vikejs/vike/issues/2435)) ([3128b28](https://github.com/vikejs/vike/commit/3128b2867cbad0a89ed46dc0cc63fa2bc341cbfa))\n* don't execute +onData twice ([e1ca16d](https://github.com/vikejs/vike/commit/e1ca16d880d67f37e4fb3e1aa873c840ca2a5b41))\n* fix configEntries and exportsAll for cumulative values ([a60ad89](https://github.com/vikejs/vike/commit/a60ad8987e4c56201ed138758095bc874c14568e))\n* fix providePageContext() type ([847f1b6](https://github.com/vikejs/vike/commit/847f1b6bced868e4dddc409b25eba31245951689))\n* further respect optimizeDeps.exclude ([#2429](https://github.com/vikejs/vike/issues/2429)) ([44bc6f3](https://github.com/vikejs/vike/commit/44bc6f3848965889264b1a3727347d6916c18aee))\n* improve redirection support (closes [#2462](https://github.com/vikejs/vike/issues/2462)) ([b8889db](https://github.com/vikejs/vike/commit/b8889dbcf4fa7255231957b61ccc113fd5eb235b))\n* new debug flag DEBUG=vike:resolve ([#2436](https://github.com/vikejs/vike/issues/2436)) ([a19745d](https://github.com/vikejs/vike/commit/a19745da745975586531551a17460e9d8006fe60))\n* polish DEBUG logs ([d5f03ab](https://github.com/vikejs/vike/commit/d5f03ab3955c422ecd94a5481672329e07b9891d))\n* skip  requests .well-known/appspecific/com.chrome.devtools.json ([79b14d4](https://github.com/vikejs/vike/commit/79b14d4b39055cb4c2e5bbe49ec228c8c8973c40))\n* support resolving paths with white spaces (fix [#2436](https://github.com/vikejs/vike/issues/2436)) ([2dbbc8d](https://github.com/vikejs/vike/commit/2dbbc8d332dd27590d6111d17e3aec5d750f4d8f))\n* tolerate missing pageId for cache control header ([26460c9](https://github.com/vikejs/vike/commit/26460c9353f4ed16eb6c7ceee6ee0a556adeedfc))\n* upon DEBUG flag maximize stack trace length ([69af823](https://github.com/vikejs/vike/commit/69af823a3968318695ecdfd06854866d103121d2))\n* warn when accessing internal `pageContext` properties ([#2451](https://github.com/vikejs/vike/issues/2451)) ([c9311ce](https://github.com/vikejs/vike/commit/c9311ce83004402442cc09db8a8f70b5039db540))\n### Features\n* [+onData](http://vike.dev/onData) ([#2443](https://github.com/vikejs/vike/issues/2443)) ([5846ebc](https://github.com/vikejs/vike/commit/5846ebce792813e0ff6867e99ca03a707fbdae0b))\n* add globalContext fallback upon pageContext access ([a46271b](https://github.com/vikejs/vike/commit/a46271baf60c413d68d12571ee9de8e5a0ba0f9c))\n* tree-shake pageContext.isClientSide (fix [#2413](https://github.com/vikejs/vike/issues/2413)) ([#2417](https://github.com/vikejs/vike/issues/2417)) ([08a1ff5](https://github.com/vikejs/vike/commit/08a1ff55c80ddca64ca6d4417fefd45fefeb4ffb))",
+      "memory_unit_text": "In the vikejs/vike release v0.4.230, the release note introduces the +onData feature and tree-shaking of pageContext.isClientSide. Bug fixes include making local configs override global configs in Server Routing, preventing premature web stream closure, fixing configEntries and exportsAll for cumulative values, improving redirection support, and adding a new debug flag DEBUG=vike:resolve."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_231",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.231",
+      "tag_name": "v0.4.231",
+      "title": "v0.4.231",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:50:52Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.231",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.231\nTag: v0.4.231; draft: False; prerelease: False; published_at: 2026-05-08T13:50:52Z; created_at: 2025-05-30T12:59:31Z\nRelease notes:\n### Bug Fixes\n* apply +require earlier ([dd11364](https://github.com/vikejs/vike/commit/dd113643a315603e1acf5edbe2dcc4d692331f67))\n* simplify useConfig() serialization error message ([653fc76](https://github.com/vikejs/vike/commit/653fc76adb7fdbd4db54b3fabc2af9d622ec192f))\n### Features\n* +meta.isDefinedByPeerDependency ([f07cc20](https://github.com/vikejs/vike/commit/f07cc203e4428823da7c9dbc6e6e9ff3495a1c1c))\n* +require.optional ([9b1a5c3](https://github.com/vikejs/vike/commit/9b1a5c30f25e1bbe7afcb39176b56e7d76480f43))",
+      "memory_unit_text": "In the vikejs/vike release v0.4.231, the release note adds features +meta.isDefinedByPeerDependency and +require.optional, and includes bug fixes for applying +require earlier and simplifying the useConfig() serialization error message."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_232",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.232",
+      "tag_name": "v0.4.232",
+      "title": "v0.4.232",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:50:53Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.232",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.232\nTag: v0.4.232; draft: False; prerelease: False; published_at: 2026-05-08T13:50:53Z; created_at: 2025-06-16T07:39:58Z\nRelease notes:\n### Bug Fixes\n* add promise timeout warning ([5930bc8](https://github.com/vikejs/vike/commit/5930bc84b538af98edaa54d9465b3c5f5b09914d))\n* allow Vike extension configs to be defined at root directory ([#2493](https://github.com/vikejs/vike/issues/2493)) ([c0e9710](https://github.com/vikejs/vike/commit/c0e97106948ae13a4de9023fde91866023a65e6a))\n* avoid build error swallowing ([0048696](https://github.com/vikejs/vike/commit/0048696fcf4585f1dd3f66f794e4e27b418f2fba))\n* avoid hanging upon Vike config changes ([e31b0e5](https://github.com/vikejs/vike/commit/e31b0e51622885d18605c5ec142a5f56726edb07))\n* avoid server shutdown upon config runtime error ([#2479](https://github.com/vikejs/vike/issues/2479)) ([ad755a3](https://github.com/vikejs/vike/commit/ad755a34eaf5e6f23158b347e9804e987ca466d6))\n* error message typo ([e3418a9](https://github.com/vikejs/vike/commit/e3418a929b832ca7a73b4e48f9bb149dbf9cee48))\n* fix file env error message (fix [#2483](https://github.com/vikejs/vike/issues/2483)) ([#2489](https://github.com/vikejs/vike/issues/2489)) ([e1c3295](https://github.com/vikejs/vike/commit/e1c329521c343c96a65cb118ecfe15509545978f))\n* fix HMR recover upon config error ([cc06ca9](https://github.com/vikejs/vike/commit/cc06ca971e121a0092f294957163d2cc52f1e4fd))\n* fix HMR recover upon config error concurrent ([b1a8dcd](https://github.com/vikejs/vike/commit/b1a8dcd012699bc7ce50b7c61473d807596db427))\n* fix pre-render force exit assert (fix [#2475](https://github.com/vikejs/vike/issues/2475)) ([#2488](https://github.com/vikejs/vike/issues/2488)) ([8978b32](https://github.com/vikejs/vike/commit/8978b325c6b87184f553338f010764ab8071242d))\n* implement HMR for +onCreateGlobalContext ([8656aa1](https://github.com/vikejs/vike/commit/8656aa1d20ab5b38b4cea546ff40ac3b70efb793))\n* improve error message upon HMR race condition ([506499b](https://github.com/vikejs/vike/commit/506499ba77f7434557bd733439503fcfdb18304b))\n* improve HMR upon vike config dependency file removal/creation ([#2482](https://github.com/vikejs/vike/issues/2482)) ([912fa75](https://github.com/vikejs/vike/commit/912fa75c1a501da24abeb90f681d7af0b4d54445))\n* polish bug error message ([ec77c11](https://github.com/vikejs/vike/commit/ec77c1187c8362bb3f0748191bda3064e6115cba))\n* prettify runtime config build error ([5fcdc4d](https://github.com/vikejs/vike/commit/5fcdc4d5094f1a4dcbefc0b481cdd30a205aef2d))\n* workaraound bug upon Vike's Vite plugin applied twice ([1997d53](https://github.com/vikejs/vike/commit/1997d53d2591d6ecb9dc9ab2847f5c2a3dce2fe2))\n### Features\n* pre-render static +redirects ([#2497](https://github.com/vikejs/vike/issues/2497)) ([4a6ad3e](https://github.com/vikejs/vike/commit/4a6ad3e19e50e743b2305e8c436b23d1619d2876))\n### MINOR BREAKING CHANGES\n> [!NOTE]\n> We recommend ignoring `MINOR BREAKING CHANGES` unless this version breaks your app, see [Vike Versioning](https://vike.dev/versioning).\n* The `pages/` directories are now also ignored by config inheritance, see [Filesystem Routing > Ignored directories](https://vike.dev/filesystem-routing#ignored-directories)",
+      "memory_unit_text": "In the vikejs/vike release v0.4.232, the release note adds pre-rendering of static +redirects and includes numerous bug fixes such as allowing Vike extension configs at the root directory, avoiding build error swallowing, fixing HMR recovery upon config errors, and implementing HMR for +onCreateGlobalContext. A minor breaking change notes that pages/ directories are now ignored by config inheritance."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_233",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.233",
+      "tag_name": "v0.4.233",
+      "title": "v0.4.233",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:50:55Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.233",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.233\nTag: v0.4.233; draft: False; prerelease: False; published_at: 2026-05-08T13:50:55Z; created_at: 2025-06-19T14:57:15Z\nRelease notes:\n### Bug Fixes\n* execute +onCreatePageContext after routing ([#2512](https://github.com/vikejs/vike/issues/2512)) ([80769cd](https://github.com/vikejs/vike/commit/80769cd3838bff28bcbaa452e4f2ae864e246a7f))\n* fix pageContext.globalContext for +onBeforeRender and +data ([523eb02](https://github.com/vikejs/vike/commit/523eb0291d9ad3893139e596535097d8c2d698e9))\n* improve pre-rendered +redirects ([85d9057](https://github.com/vikejs/vike/commit/85d90570184794e621722a3f396d3b38951d811c))\n### MINOR BREAKING CHANGES\n> [!NOTE]\n> We recommend ignoring `MINOR BREAKING CHANGES` unless this version breaks your app, see [Vike Versioning](https://vike.dev/versioning).\n* `+onCreatePageContext` is now called after routing",
+      "memory_unit_text": "In the vikejs/vike release v0.4.233, the release note fixes the execution order of +onCreatePageContext to occur after routing, fixes pageContext.globalContext for +onBeforeRender and +data, and improves pre-rendered +redirects. A minor breaking change states that +onCreatePageContext is now called after routing."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_234",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.234",
+      "tag_name": "v0.4.234",
+      "title": "v0.4.234",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:50:56Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.234",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.234\nTag: v0.4.234; draft: False; prerelease: False; published_at: 2026-05-08T13:50:56Z; created_at: 2025-06-19T21:47:18Z\nRelease notes:\n### Bug Fixes\n* avoid HMR preamble race condition ([#2513](https://github.com/vikejs/vike/issues/2513)) ([e534fd6](https://github.com/vikejs/vike/commit/e534fd6a997745cc1bd7c72d9e599869bf32c71b))",
+      "memory_unit_text": "In the vikejs/vike release v0.4.234, the release note contains a single bug fix to avoid an HMR preamble race condition."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_235",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.235",
+      "tag_name": "v0.4.235",
+      "title": "v0.4.235",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:50:57Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.235",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.235\nTag: v0.4.235; draft: False; prerelease: False; published_at: 2026-05-08T13:50:57Z; created_at: 2025-06-20T11:29:28Z\nRelease notes:\n### Bug Fixes\n* reload Vike config upon new + file ([#2517](https://github.com/vikejs/vike/issues/2517)) ([a87c48e](https://github.com/vikejs/vike/commit/a87c48ef66f5b0b7a980746e522692687d6152ee))",
+      "memory_unit_text": "In the vikejs/vike release v0.4.235, the release note fixes a bug to reload Vike config upon the addition of a new + file."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_236",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.236",
+      "tag_name": "v0.4.236",
+      "title": "v0.4.236",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:50:59Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.236",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.236\nTag: v0.4.236; draft: False; prerelease: False; published_at: 2026-05-08T13:50:59Z; created_at: 2025-07-18T05:13:33Z\nRelease notes:\n### Bug Fixes\n* eagerly set globalContext [enabling early `getGlobalContextSync()` calls] ([#2560](https://github.com/vikejs/vike/issues/2560)) ([7db9617](https://github.com/vikejs/vike/commit/7db9617d0836eeac630563f2d5c68d82712697e7))\n* improve error upon runtime code defined inside config file (fix [#1805](https://github.com/vikejs/vike/issues/1805)) ([dcb6976](https://github.com/vikejs/vike/commit/dcb69769e246002c625a77d0f71d9f51acd62f0b))\n* prevent Google from crawling URLs in JSON ([#2277](https://github.com/vikejs/vike/issues/2277), [#2541](https://github.com/vikejs/vike/issues/2541)) ([#2542](https://github.com/vikejs/vike/issues/2542)) ([8f42b16](https://github.com/vikejs/vike/commit/8f42b1628280ae41afda0795cd0a0603b3c94720))\n### Features\n* `+headersResponse` and `pageContext.headersResponse` ([#2555](https://github.com/vikejs/vike/issues/2555)) ([53eaa9b](https://github.com/vikejs/vike/commit/53eaa9be966f96116e793abb3e23d05d9f1fa7be))\n* allow getGlobalContextSync() to be used in production ([#2534](https://github.com/vikejs/vike/issues/2534)) ([16164c3](https://github.com/vikejs/vike/commit/16164c3b1f12a58f3972205a41dac4cece108aaa))\n* passToClient once (closes [#2551](https://github.com/vikejs/vike/issues/2551), [#1842](https://github.com/vikejs/vike/issues/1842)) ([#2557](https://github.com/vikejs/vike/issues/2557)) ([d2ac38a](https://github.com/vikejs/vike/commit/d2ac38a64b80198efdfeae6529d2d1d598ae73ba))",
+      "memory_unit_text": "In the vikejs/vike release v0.4.236, the release note introduces features +headersResponse and pageContext.headersResponse, allows getGlobalContextSync() in production, and implements passToClient once. Bug fixes include eagerly setting globalContext, improving error messages for runtime code in config files, and preventing Google from crawling URLs in JSON."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_237",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.237",
+      "tag_name": "v0.4.237",
+      "title": "v0.4.237",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:51:00Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.237",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.237\nTag: v0.4.237; draft: False; prerelease: False; published_at: 2026-05-08T13:51:00Z; created_at: 2025-08-15T08:24:30Z\nRelease notes:\n### Bug Fixes\n* `modifyUrl()` — setting a `search` value to `undefined` should be a no-op ([aa91aa3](https://github.com/vikejs/vike/commit/aa91aa338adcbc4ddd19b346ae6de7b9429e4851))\n* also execute `onBeforeRoute()` upon hydration (fix [#2580](https://github.com/vikejs/vike/issues/2580)) ([#2590](https://github.com/vikejs/vike/issues/2590)) ([08fbc10](https://github.com/vikejs/vike/commit/08fbc1055a2a529af3b20f72553efcbc997f37e9))\n* define builder.buildApp() in pre hook ([1c35f48](https://github.com/vikejs/vike/commit/1c35f48f337439efeb52d7cd7867532431892770))\n* deprecate hook types ([#2620](https://github.com/vikejs/vike/issues/2620)) ([9758c70](https://github.com/vikejs/vike/commit/9758c70cd1da78c3c6abac2c970006439647623c))\n* deprecate passToClient once setting ([#2632](https://github.com/vikejs/vike/issues/2632)) ([e352999](https://github.com/vikejs/vike/commit/e352999decd18fbae7e6bf0acff99caa5b4564b3))\n* determine dist/ file names more reliably ([fe899d4](https://github.com/vikejs/vike/commit/fe899d4c3e2fc4d192fbbee68594c90a02f82f1f))\n* don't set `isClosed` too soon ([05b8467](https://github.com/vikejs/vike/commit/05b8467edb28e345d53410ebf889ae740dd2aee8))\n* export PrerenderContext ([e3c7ea6](https://github.com/vikejs/vike/commit/e3c7ea6d542a00e0411b4cbf82c7bd37cc6f0f8d))\n* fix `globalContext` re-initialization race condition ([#2599](https://github.com/vikejs/vike/issues/2599)) ([043684e](https://github.com/vikejs/vike/commit/043684ee8032afba3e88a87d93aa5f9df89e962b))\n* fix DEBUG=vike:crawl ([#2568](https://github.com/vikejs/vike/issues/2568)) ([85d361d](https://github.com/vikejs/vike/commit/85d361d0745bbecd99eb7c691d2d22882faf6133))\n* fix dist/ file name resolving upon @ in path ([#2587](https://github.com/vikejs/vike/issues/2587)) ([c79b787](https://github.com/vikejs/vike/commit/c79b787552b4418dee123622c161673945915d60))\n* fix globalContext HMR caching behavior ([#2592](https://github.com/vikejs/vike/issues/2592)) ([79f1ef0](https://github.com/vikejs/vike/commit/79f1ef0503d34f1a4556f19ae6261c075cf02ea2))\n* further prevent Google from crawling URLs in JSON ([#2277](https://github.com/vikejs/vike/issues/2277), [#2541](https://github.com/vikejs/vike/issues/2541)) ([#2603](https://github.com/vikejs/vike/issues/2603)) ([eab75f6](https://github.com/vikejs/vike/commit/eab75f606168529d756a69b5440a16badf4cee62))\n* improve error message upon wrong import resolve ([9cdfcb2](https://github.com/vikejs/vike/commit/9cdfcb28e950231c154f1f782d9a14801bd0f862))\n* improve warnings & docs about `NODE_ENV` and setup ([2724d4e](https://github.com/vikejs/vike/commit/2724d4e61198be1cfecb12d5a091d1a40bac8f95))\n* make pageContext.json request if +onCreatePageContext.server.js exists ([#2630](https://github.com/vikejs/vike/issues/2630)) ([29020c4](https://github.com/vikejs/vike/commit/29020c441c17ec8dda224e245e210e0499146e84))\n* resilient browsing history management ([#2504](https://github.com/vikejs/vike/issues/2504)) ([#2536](https://github.com/vikejs/vike/issues/2536)) ([e08f1ad](https://github.com/vikejs/vike/commit/e08f1add444613838027bb997c98d18fb452563f))\n* set ssr.optimizeDeps ([#2579](https://github.com/vikejs/vike/issues/2579)) ([233f462](https://github.com/vikejs/vike/commit/233f46212ce47d088596c90f82d4fb19b933590e))\n* skip Vike's virtual file global entry from module graph analysis ([#2576](https://github.com/vikejs/vike/issues/2576)) ([3d7fbf9](https://github.com/vikejs/vike/commit/3d7fbf93a8803cb8419d135121f5b210bdab20eb))\n* support @cloudflare/vite-plugin ([#2569](https://github.com/vikejs/vike/issues/2569)) ([7d5d0a6](https://github.com/vikejs/vike/commit/7d5d0a642c127246dce0570e87ec6c3a3ae6e16d))\n* update @brillout/vite-plugin-server-entry ([#2591](https://github.com/vikejs/vike/issues/2591)) ([73e7152](https://github.com/vikejs/vike/commit/73e7152b85afd179b...",
+      "memory_unit_text": "In the vikejs/vike release v0.4.237, the release note includes bug fixes for modifyUrl() handling undefined search, executing onBeforeRoute() upon hydration, deprecating hook types and passToClient once setting, fixing globalContext re-initialization race condition, and supporting @cloudflare/vite-plugin. It also improves warnings about NODE_ENV and setup."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_238",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.238",
+      "tag_name": "v0.4.238",
+      "title": "v0.4.238",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:51:02Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.238",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.238\nTag: v0.4.238; draft: False; prerelease: False; published_at: 2026-05-08T13:51:02Z; created_at: 2025-08-27T09:35:00Z\nRelease notes:\n### Bug Fixes\n* avoid empty any interfaces ([#2638](https://github.com/vikejs/vike/issues/2638)) ([67d0c87](https://github.com/vikejs/vike/commit/67d0c8761831be4fe3cfdebffcd505d5e4411211))\n* enable assertSetup again ([#2661](https://github.com/vikejs/vike/issues/2661)) ([5f3c2b8](https://github.com/vikejs/vike/commit/5f3c2b8d91a0de7de5c99d89a63bfbdc7e0a8433))\n* ensure globalContext is available early ([#2654](https://github.com/vikejs/vike/issues/2654)) ([a72463c](https://github.com/vikejs/vike/commit/a72463c967757244c83c2a5872f3a520f5d94ec7))\n* fix & refactor build.outDir handling ([#2642](https://github.com/vikejs/vike/issues/2642)) ([5ed75b6](https://github.com/vikejs/vike/commit/5ed75b6cb1a25a5c48e1e820b0a3a0690c41f9aa))\n* fix assertSetup for @cloudflare/vite-plugin ([#2663](https://github.com/vikejs/vike/issues/2663)) ([33e34e7](https://github.com/vikejs/vike/commit/33e34e7afbcb1e25cbf01db7c7dda8d95a01a73f))\n* fix server/client Vite check ([#2651](https://github.com/vikejs/vike/issues/2651)) ([aabd39e](https://github.com/vikejs/vike/commit/aabd39e4ddcf818f4d3d14d3a8159d48fb3b068d))\n* stop assuming modules to be instanciated only once ([#2646](https://github.com/vikejs/vike/issues/2646)) ([ef1635e](https://github.com/vikejs/vike/commit/ef1635eef52a255046092e6a599d3af6be9ff069))\n* update @brillout/json-serializer ([#2647](https://github.com/vikejs/vike/issues/2647)) ([ca5f7e0](https://github.com/vikejs/vike/commit/ca5f7e022bfc31d0b3b5eb97c8fd2f11d3bbadd1))\n* update @brillout/vite-plugin-server-entry ([#2652](https://github.com/vikejs/vike/issues/2652)) ([a4c45af](https://github.com/vikejs/vike/commit/a4c45afbb3653b1e064f5c8dc0598631635c05b4))\n### Features\n* support `.clear.js` and `.default.js` (closes [#1692](https://github.com/vikejs/vike/issues/1692)) ([#2641](https://github.com/vikejs/vike/issues/2641)) ([92dc549](https://github.com/vikejs/vike/commit/92dc5490d641d8e8832f26105e05d1f9015efbde))\n### MINOR BREAKING CHANGES\n> [!NOTE]\n> We recommend ignoring `MINOR BREAKING CHANGES` unless this version breaks your app, see [Vike Versioning](https://vike.dev/versioning).\n* Update to Vite 6 or above.\n* Update to Node.js 20 or above (or use Bun/Deno). See also: [`require(esm)`](https://gist.github.com/brillout/8e0133716e169b981b6c4e8a938b0134).\n* Update Vike extensions (`vike-react-zustand` and `vike-server`) to their latest version.",
+      "memory_unit_text": "In the vikejs/vike release v0.4.238, the release note adds support for .clear.js and .default.js files. Bug fixes include avoiding empty any interfaces, enabling assertSetup again, ensuring globalContext is available early, and fixing build.outDir handling. Minor breaking changes require updating to Vite 6 or above, Node.js 20 or above, and updating Vike extensions."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_239",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.239",
+      "tag_name": "v0.4.239",
+      "title": "v0.4.239",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:51:03Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.239",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.239\nTag: v0.4.239; draft: False; prerelease: False; published_at: 2026-05-08T13:51:03Z; created_at: 2025-09-03T14:01:48Z\nRelease notes:\n### Bug Fixes\n* Cache-Control header for 5xx HTTP responses ([#2669](https://github.com/vikejs/vike/issues/2669)) ([a3fb52e](https://github.com/vikejs/vike/commit/a3fb52e3934a1e2063516be1b337fb92778e17fa))\n* ensure proper replacement of __VIKE__IS_NON_RUNNABLE_DEV ([#2682](https://github.com/vikejs/vike/issues/2682)) ([d48a597](https://github.com/vikejs/vike/commit/d48a5976751413318ced7dfd1ddc8d79cd81aee8))\n* improve error message upon wrong +prerender local value (fix [#2676](https://github.com/vikejs/vike/issues/2676)) ([b5a0803](https://github.com/vikejs/vike/commit/b5a08039c628153ae7c75e6675a1a56db443fb2a))\n* remove outdated VikePackages namespace ([8b9433e](https://github.com/vikejs/vike/commit/8b9433e2c01b87bc077a42b86e8375a6cfe47bfb))\n* remove too sensitive assert upon weirdly formatted error ([4c6aa0d](https://github.com/vikejs/vike/commit/4c6aa0d742e5c59be41a9e47331deeb5190ba7b1))\n* require correct Node.js version ([#2683](https://github.com/vikejs/vike/issues/2683)) ([a375c6b](https://github.com/vikejs/vike/commit/a375c6bfb0dfe11a2a9e3fb2c8826465ac61e7f2))\n### Features\n* +headersResponse(pageContext) ([#2667](https://github.com/vikejs/vike/issues/2667)) ([3c1a09d](https://github.com/vikejs/vike/commit/3c1a09d00a83a762551b75f8af4de390945d09a6))\n* CSP support (closes [#1554](https://github.com/vikejs/vike/issues/1554)) ([#2664](https://github.com/vikejs/vike/issues/2664)) ([5762291](https://github.com/vikejs/vike/commit/576229110b71f5271f9fbdd58659a97574f0944d))\n### MINOR BREAKING CHANGES\n> [!NOTE]\n> We recommend ignoring `MINOR BREAKING CHANGES` unless this version breaks your app, see [Vike Versioning](https://vike.dev/versioning).\n* Very old vike-react/vike-vue/vike-solid versions aren't supported anymore, update to a more recent version.",
+      "memory_unit_text": "In the vikejs/vike release v0.4.239, the release note introduces CSP support and +headersResponse(pageContext). Bug fixes include setting Cache-Control header for 5xx responses, ensuring proper replacement of __VIKE__IS_NON_RUNNABLE_DEV, and requiring correct Node.js version. A minor breaking change notes that very old vike-react/vike-vue/vike-solid versions are no longer supported."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_240",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.240",
+      "tag_name": "v0.4.240",
+      "title": "v0.4.240",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:51:05Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.240",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.240\nTag: v0.4.240; draft: False; prerelease: False; published_at: 2026-05-08T13:51:05Z; created_at: 2025-09-11T23:49:21Z\nRelease notes:\n### Bug Fixes\n* [HMR] re-render whole page if error page is shown (fix [#2511](https://github.com/vikejs/vike/issues/2511)) ([#2700](https://github.com/vikejs/vike/issues/2700)) ([59f1017](https://github.com/vikejs/vike/commit/59f10178939a3d896183bcaf4e8ba43775035732))\n* await file reloading in handleHotUpdate() hook ([1bac7f6](https://github.com/vikejs/vike/commit/1bac7f6d2fe8af894b8caf15a76d926cf4bb5967))\n* correctly replace `pageContext.isClientSide` ([#2705](https://github.com/vikejs/vike/issues/2705)) ([28b4664](https://github.com/vikejs/vike/commit/28b4664d6f84ecf2bd339759eaa340557e32e04a))\n* ensure consistent cssTarget ([#2698](https://github.com/vikejs/vike/issues/2698)) ([6016387](https://github.com/vikejs/vike/commit/60163875a4d62ef56a333584477bc5a7b921c7a8))\n* fix @cloudflare/vite-plugin support when vike isn't linked ([#2712](https://github.com/vikejs/vike/issues/2712)) ([e3b8ab7](https://github.com/vikejs/vike/commit/e3b8ab79b8da6eba91831a1ae96c830e5c31b76e))\n* fix HMR in worker env ([#2686](https://github.com/vikejs/vike/issues/2686)) ([050a4a3](https://github.com/vikejs/vike/commit/050a4a3b2d17ae8659f3bb900d932933b1a6029c))\n* fix HMR when importing `navigate()`, `prefetch()`, or `reload()` (break import cycle) ([#1934](https://github.com/vikejs/vike/issues/1934)) ([#2708](https://github.com/vikejs/vike/issues/2708)) ([4d0d950](https://github.com/vikejs/vike/commit/4d0d9503c56867182a5379f719807444cb33b6e0))\n* improve `{pageContext,globalContext}.isClientSide` JSDocs ([1977bf2](https://github.com/vikejs/vike/commit/1977bf298a0dbfcb42ff064546c35e74c2491f29))\n* improve JSDocs & warning about recommended render() status codes ([#1008](https://github.com/vikejs/vike/issues/1008)) ([#2702](https://github.com/vikejs/vike/issues/2702)) ([c26a079](https://github.com/vikejs/vike/commit/c26a079622ddb446cbe23b7c4962a9592a36f04d))\n* include canonical link in prerendered redirect ([#2711](https://github.com/vikejs/vike/issues/2711)) ([9dcde6d](https://github.com/vikejs/vike/commit/9dcde6d03220d73d94d3643cff049e761dd5f1f7))\n* remove CJS build ([#2701](https://github.com/vikejs/vike/issues/2701)) ([fe5bd51](https://github.com/vikejs/vike/commit/fe5bd514af0d499017f87edcf0c4555f08e951e0))\n* remove CJS warning ([074c0e5](https://github.com/vikejs/vike/commit/074c0e54fb9ecb33b2fa893924d58a1e1e77f184))\n* stop showing Vite CLI/API deprecation warning ([3279ec1](https://github.com/vikejs/vike/commit/3279ec1e349f90e38a21b6f2256c5f635554d82a))\n* update @brillout/vite-plugin-server-entry ([#2691](https://github.com/vikejs/vike/issues/2691)) ([4345699](https://github.com/vikejs/vike/commit/4345699ceda5caca9c952e017109d9de624c5836))\n### Features\n* `globalContext.prerenderContext` ([#2692](https://github.com/vikejs/vike/issues/2692)) ([33e55d4](https://github.com/vikejs/vike/commit/33e55d4c8965bb14831249dcd2d92f759db91aa0))\n### Performance Improvements\n* start using hook filters ([#2688](https://github.com/vikejs/vike/issues/2688)) ([c1acee7](https://github.com/vikejs/vike/commit/c1acee74796b3e0a395a02132f613e41e018d969))\n### MINOR BREAKING CHANGES\n> [!NOTE]\n> We recommend ignoring `MINOR BREAKING CHANGES` unless this version breaks your app, see [Vike Versioning](https://vike.dev/versioning).\n* Update to Vite `6.3.0` or above.",
+      "memory_unit_text": "In the vikejs/vike release v0.4.240, the release note adds globalContext.prerenderContext and starts using hook filters for performance. Bug fixes include HMR re-rendering the whole page if an error page is shown, fixing HMR in worker env, and removing the CJS build. A minor breaking change requires updating to Vite 6.3.0 or above."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_241",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.241",
+      "tag_name": "v0.4.241",
+      "title": "v0.4.241",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:51:07Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.241",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.241\nTag: v0.4.241; draft: False; prerelease: False; published_at: 2026-05-08T13:51:07Z; created_at: 2025-09-30T19:53:47Z\nRelease notes:\n### Bug Fixes\n* add info log upon rendering error page ([a80417c](https://github.com/vikejs/vike/commit/a80417cc7d0761f0d0353caf6695795d1972975a))\n* assert onRenderClient error isn't nullish ([aa64331](https://github.com/vikejs/vike/commit/aa64331c903b7101cbeb5b75bb1b80f822457e23))\n* don't dedupe error logging on the client-side ([098ff81](https://github.com/vikejs/vike/commit/098ff81daf5ac79d1aa3a519f8c5ccf9679d95f4))\n* enable Vike extensions to override error logging ([82bb0c2](https://github.com/vikejs/vike/commit/82bb0c2171003367836e812ceb468ffcc31c66c3))\n* enable Vike extensions to prettify server-side errors ([64b95cc](https://github.com/vikejs/vike/commit/64b95cc30e2b87ffd5098a0e0f59f691d5c6cec9))\n* fix +extends type ([ac3f1ec](https://github.com/vikejs/vike/commit/ac3f1ec1606a60f6ff4d372bda427cb5b76e3d46))\n* fix serialization non-JSON types ([#2715](https://github.com/vikejs/vike/issues/2715)) ([#2722](https://github.com/vikejs/vike/issues/2722)) ([9ba5428](https://github.com/vikejs/vike/commit/9ba5428d7342670f48c601b1022c6c72f0ac348f))\n* improve file env error message ([a11b13b](https://github.com/vikejs/vike/commit/a11b13b990933bb660d74f90543236c202ed1185))\n* remove false warning about Vitest setup ([39fc350](https://github.com/vikejs/vike/commit/39fc3502a77f3a256d981beb70bd3feb0bfa7c82))\n* remove prettifyThisError() support ([f8f0bcb](https://github.com/vikejs/vike/commit/f8f0bcb2d24e2041f8669a5dda0e9aef003f5c8e))\n* remove too sensitive pluginFileEnv assertion (fix [#2740](https://github.com/vikejs/vike/issues/2740)) ([95fc969](https://github.com/vikejs/vike/commit/95fc96905d06e26179459488b7f69ab2526babc1))\n* support `+data.server.js` (closes [#2724](https://github.com/vikejs/vike/issues/2724)) ([#2727](https://github.com/vikejs/vike/issues/2727)) ([bac5dee](https://github.com/vikejs/vike/commit/bac5dee2ae3164fc643c54734400282652dc70a0))\n* support calling `build()` multiple times (fix [#2733](https://github.com/vikejs/vike/issues/2733)) ([#2736](https://github.com/vikejs/vike/issues/2736)) ([309067c](https://github.com/vikejs/vike/commit/309067ca5c80e3607225599d24afe22a15828877))\n* support constants like `import.meta.env.DEV` in Vitest ([#2734](https://github.com/vikejs/vike/issues/2734)) ([3d03e90](https://github.com/vikejs/vike/commit/3d03e9038de37971c82cbfaed0f918f7472144e9))\n* update CLI command description ([4323b0b](https://github.com/vikejs/vike/commit/4323b0becaf6f5b75b64417291d98573021efc31))\n### Features\n* `+force` (alias for Vite's `--force`) (closes [#2743](https://github.com/vikejs/vike/issues/2743)) ([#2744](https://github.com/vikejs/vike/issues/2744)) ([42b44bb](https://github.com/vikejs/vike/commit/42b44bb78f76592f2dd85bea370d33dfe7429952))\n* new hook +onError ([#2731](https://github.com/vikejs/vike/issues/2731)) ([6f66174](https://github.com/vikejs/vike/commit/6f66174d13cf8b7582c21821a83d409e4abe57e7))\n### Performance Improvements\n* remove debugging code in client-side production ([#2726](https://github.com/vikejs/vike/issues/2726)) ([b1603be](https://github.com/vikejs/vike/commit/b1603bec56799f0255eb314fa8fdf36291f3a8ec))",
+      "memory_unit_text": "In the vikejs/vike release v0.4.241, the release note introduces the +onError hook and +force (alias for Vite's --force). Bug fixes include adding info log upon rendering error page, enabling Vike extensions to override error logging, fixing serialization of non-JSON types, and supporting +data.server.js. Performance improvements remove debugging code in client-side production."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_242",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.242",
+      "tag_name": "v0.4.242",
+      "title": "v0.4.242",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:51:08Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.242",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.242\nTag: v0.4.242; draft: False; prerelease: False; published_at: 2026-05-08T13:51:08Z; created_at: 2025-10-07T09:49:12Z\nRelease notes:\n### Bug Fixes\n* allow omitting vite.config.js for Vike-based frameworks ([a6ddc2d](https://github.com/vikejs/vike/commit/a6ddc2dad79160c45d02650a64c1434d5bd0a2bd))\n* automatically load `globalThis.__VIKE__IS_*` types ([31ee8cc](https://github.com/vikejs/vike/commit/31ee8ccf91149ba885ee6974df781f1e15560ffb))\n* deprecate omitting Vike's Vite plugin inside vite.config.js ([#2763](https://github.com/vikejs/vike/issues/2763)) ([247c80a](https://github.com/vikejs/vike/commit/247c80a769609e7f4d6e2e19a4cbf6c683bff96e))\n* fix Vite's CLI args support ([#2762](https://github.com/vikejs/vike/issues/2762)) ([70ef50f](https://github.com/vikejs/vike/commit/70ef50fd6341f541579c74ee81a7e7c6e9515d14))\n* full-fledged support for third-party CLIs (Vite, Vite Plus, Vitest, Storybook, ...) ([#2760](https://github.com/vikejs/vike/issues/2760)) ([b071c2e](https://github.com/vikejs/vike/commit/b071c2e5071605c3c77e10446b76e7b4b3766e74))\n* skip Vike's Vite pugin for Vitest ([#2761](https://github.com/vikejs/vike/issues/2761)) ([a2ea963](https://github.com/vikejs/vike/commit/a2ea963de660617fb56c2ce837a295086d095609))\n* support getEnhancedError() ([6d5ed71](https://github.com/vikejs/vike/commit/6d5ed71068a95e5a2a7c28647de460b833e4e185))\n* support imoprting built-in modules in config files (fix [#2766](https://github.com/vikejs/vike/issues/2766)) ([60b0676](https://github.com/vikejs/vike/commit/60b06765ab692e40f46f5af12a035cc7e1f61b4a))\n* update Vite's CLI args support ([7e4b4e9](https://github.com/vikejs/vike/commit/7e4b4e9b74f3d1852dbf73c446fe78634f6a2d17))\n### MINOR BREAKING CHANGES\n> [!NOTE]\n> We recommend ignoring `MINOR BREAKING CHANGES` unless this version breaks your app, see [Vike Versioning](https://vike.dev/versioning).\n* By default, Vike's Vite plugin now removes itself when it detects Vitest, see https://vike.dev/vitest",
+      "memory_unit_text": "In the vikejs/vike release v0.4.242, the release note provides full-fledged support for third-party CLIs (Vite, Vite Plus, Vitest, Storybook) and fixes Vite's CLI args support. Bug fixes include allowing omission of vite.config.js for Vike-based frameworks and automatically loading globalThis.__VIKE__IS_* types. A minor breaking change notes that Vike's Vite plugin now removes itself when it detects Vitest by default."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_243",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.243",
+      "tag_name": "v0.4.243",
+      "title": "v0.4.243",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:51:09Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.243",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.243\nTag: v0.4.243; draft: False; prerelease: False; published_at: 2026-05-08T13:51:09Z; created_at: 2025-10-20T19:17:20Z\nRelease notes:\n### Bug Fixes\n* allow pageContext.urlLogical to contain origin (fix vikejs/vike-server[#139](https://github.com/vikejs/vike/issues/139)) ([33026dc](https://github.com/vikejs/vike/commit/33026dc37e87c037f50df2cea06fac018f9cb69d))\n* fix meta isDefinedByPeerDependency (fix [#2788](https://github.com/vikejs/vike/issues/2788)) ([#2790](https://github.com/vikejs/vike/issues/2790)) ([6c8d6a3](https://github.com/vikejs/vike/commit/6c8d6a3ece7ffc7553a7015ab02dd122ede724bc))\n* further ensure consistent CSS target (fix [#2778](https://github.com/vikejs/vike/issues/2778)) ([#2780](https://github.com/vikejs/vike/issues/2780)) ([4a9fae0](https://github.com/vikejs/vike/commit/4a9fae0bbbd21f8dc5162a29344f4ee5938e712f))\n### Features\n* skip Vike from handling links by setting `<a data-vike=\"false\">` ([490a945](https://github.com/vikejs/vike/commit/490a945f453fa08fec14d12d478cd2b23524aeff))",
+      "memory_unit_text": "In the vikejs/vike release v0.4.243, the release note adds the ability to skip Vike from handling links by setting <a data-vike=\"false\">. Bug fixes include allowing pageContext.urlLogical to contain origin, fixing meta isDefinedByPeerDependency, and further ensuring consistent CSS target."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_244",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.244",
+      "tag_name": "v0.4.244",
+      "title": "v0.4.244",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:51:11Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.244",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.244\nTag: v0.4.244; draft: False; prerelease: False; published_at: 2026-05-08T13:51:11Z; created_at: 2025-10-22T15:13:22Z\nRelease notes:\n### Features\n* +cli.preview ([#2792](https://github.com/vikejs/vike/issues/2792)) ([a61466a](https://github.com/vikejs/vike/commit/a61466a5c8ed714ffd8300cbd004202c20ebd7e4))\n* allow +cli.preview to be async function ([#2795](https://github.com/vikejs/vike/issues/2795)) ([946b673](https://github.com/vikejs/vike/commit/946b673a42eef1fa8827d2236072bf461e4ee1a4))\n* pageContext.dangerouslyUseInternals._* ([#2794](https://github.com/vikejs/vike/issues/2794)) ([0440637](https://github.com/vikejs/vike/commit/04406378b7e339779b6b6ec21440bc71acae0003))\n### Performance Improvements\n* further tree-shake client runtime code ([a70ea31](https://github.com/vikejs/vike/commit/a70ea318b7b857ab10e0b729ded6bdc59ceaad9c))",
+      "memory_unit_text": "In the vikejs/vike release v0.4.244, the release note introduces +cli.preview, allows it to be an async function, and adds pageContext.dangerouslyUseInternals._*. Performance improvements further tree-shake client runtime code."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_245",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.245",
+      "tag_name": "v0.4.245",
+      "title": "v0.4.245",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:51:12Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.245",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.245\nTag: v0.4.245; draft: False; prerelease: False; published_at: 2026-05-08T13:51:12Z; created_at: 2025-11-04T18:50:44Z\nRelease notes:\n### Bug Fixes\n* allow +vite to be a function for lazy evaluation ([#2809](https://github.com/vikejs/vike/issues/2809)) ([aae383f](https://github.com/vikejs/vike/commit/aae383fa43f1d6408ccf25cf27c27d1776d16a75))\n* deprecate getVikeConfig() argument and make it optional ([6ac0cba](https://github.com/vikejs/vike/commit/6ac0cba5e69c5d0df6707d442f1cbb31722e6aad))\n* fix cssTarget assert (fix [#2778](https://github.com/vikejs/vike/issues/2778)) ([a8703f7](https://github.com/vikejs/vike/commit/a8703f79ab8295ecad84f11694c753fd28c04fb9))\n* improve hook types migration (fix [#2806](https://github.com/vikejs/vike/issues/2806)) ([#2811](https://github.com/vikejs/vike/issues/2811)) ([5fd99d8](https://github.com/vikejs/vike/commit/5fd99d83618779f3a227e47cbb7670d140ee8c6f))",
+      "memory_unit_text": "In the vikejs/vike release v0.4.245, the release note includes bug fixes such as allowing +vite to be a function for lazy evaluation, deprecating the getVikeConfig() argument, fixing cssTarget assert, and improving hook types migration."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_246",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.246",
+      "tag_name": "v0.4.246",
+      "title": "v0.4.246",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:51:14Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.246",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.246\nTag: v0.4.246; draft: False; prerelease: False; published_at: 2026-05-08T13:51:14Z; created_at: 2025-11-10T22:58:07Z\nRelease notes:\n### Bug Fixes\n* config effects can now change both value and env simultaneously (fix [#2822](https://github.com/vikejs/vike/issues/2822), closes [#2821](https://github.com/vikejs/vike/issues/2821)) ([#2825](https://github.com/vikejs/vike/issues/2825)) ([6880dc7](https://github.com/vikejs/vike/commit/6880dc7b114bb2679db013dad22c3055205a6591))\n* forbid wrong `pageContext.routeParams` usage (closes [#2813](https://github.com/vikejs/vike/issues/2813)) ([#2816](https://github.com/vikejs/vike/issues/2816)) ([687cea2](https://github.com/vikejs/vike/commit/687cea2a71e6c28c06ff3752948ba5e0562fa486))\n* set NODE_ENV to 'production' if undefined in production ([#2829](https://github.com/vikejs/vike/issues/2829)) ([3344364](https://github.com/vikejs/vike/commit/3344364a2c0bf20607f49f4e355fd510af836156))\n* support other SPA frameworks within same domain (fix [#2801](https://github.com/vikejs/vike/issues/2801)) ([#2805](https://github.com/vikejs/vike/issues/2805)) ([189d2b8](https://github.com/vikejs/vike/commit/189d2b8ec0c765bcaf1a0360c38ad46797881f11))\n### Features\n* `pageContext.isHistoryNavigation` (fix [#2818](https://github.com/vikejs/vike/issues/2818)) ([#2819](https://github.com/vikejs/vike/issues/2819)) ([4d0629e](https://github.com/vikejs/vike/commit/4d0629e0596846be0ad8cfbb0732441b43fcde9b))",
+      "memory_unit_text": "In the vikejs/vike release v0.4.246, the release note adds pageContext.isHistoryNavigation. Bug fixes include allowing config effects to change both value and env simultaneously, forbidding wrong pageContext.routeParams usage, setting NODE_ENV to 'production' if undefined in production, and supporting other SPA frameworks within the same domain."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_247",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.247",
+      "tag_name": "v0.4.247",
+      "title": "v0.4.247",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:51:15Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.247",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.247\nTag: v0.4.247; draft: False; prerelease: False; published_at: 2026-05-08T13:51:15Z; created_at: 2025-11-17T19:51:50Z\nRelease notes:\n### Bug Fixes\n* clear error message instead of inifinite loop upon self-adding Vike's Vite plugin ([bb4b6db](https://github.com/vikejs/vike/commit/bb4b6dbca2b4126557d7b29ad335b2a5859f0037))\n* don't try to pre-bundle react/jsx-dev-runtime for Vue apps ([#2832](https://github.com/vikejs/vike/issues/2832)) ([b97cec3](https://github.com/vikejs/vike/commit/b97cec30e9c058e65a55d480eb20e27af6a8838c))\n* fix `defineConfig()` (fix [#2834](https://github.com/vikejs/vike/issues/2834)) ([#2836](https://github.com/vikejs/vike/issues/2836)) ([0dbb3ec](https://github.com/vikejs/vike/commit/0dbb3ece932771525b68f346b67818951c0c2786))\n* fix warning when omitting adding Vike's Vite plugin ([47703fd](https://github.com/vikejs/vike/commit/47703fd02cdcc1cbe60544aad2cd62eadee6dc5b))\n* improve optimizeDeps ([#2842](https://github.com/vikejs/vike/issues/2842)) ([907d605](https://github.com/vikejs/vike/commit/907d605e718e134333de6e86f9e869659738d4e3))\n* polish bug error message ([b3b0e98](https://github.com/vikejs/vike/commit/b3b0e985b429a41f096eb9700ebe682d4fc5bb0f))\n* remove too sensitive assertion ([#2840](https://github.com/vikejs/vike/issues/2840)) ([8038581](https://github.com/vikejs/vike/commit/8038581861f4f08312bbadfbbe064133e58a250d))\n* workaround compiled runtime lazy optimizeDeps ([#2831](https://github.com/vikejs/vike/issues/2831)) ([62f5b1f](https://github.com/vikejs/vike/commit/62f5b1ffab38f09e0abaadb8af5d3e85c28db928))",
+      "memory_unit_text": "In the vikejs/vike release v0.4.247, the release note includes bug fixes such as providing a clear error message instead of an infinite loop upon self-adding Vike's Vite plugin, not trying to pre-bundle react/jsx-dev-runtime for Vue apps, fixing defineConfig(), and improving optimizeDeps."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_248",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.248",
+      "tag_name": "v0.4.248",
+      "title": "v0.4.248",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:51:17Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.248",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.248\nTag: v0.4.248; draft: False; prerelease: False; published_at: 2026-05-08T13:51:17Z; created_at: 2025-12-14T21:57:01Z\nRelease notes:\n### Bug Fixes\n* add missing `BREAKING CHANGE:` for 903de25aa32172c132bc82e0305b2d81d6fe29c0 ([878698c](https://github.com/vikejs/vike/commit/878698cc97722491872631f8e3f9c794453952a8))\n* add Vike dependencies to ssr.optimizeDeps.exclude ([897b89e](https://github.com/vikejs/vike/commit/897b89e5b26ced79ab328fdab9ac78b0d3aa0df8))\n* also call +guard.client.js on first render (fix [#1916](https://github.com/vikejs/vike/issues/1916)) ([#2848](https://github.com/vikejs/vike/issues/2848)) ([903de25](https://github.com/vikejs/vike/commit/903de25aa32172c132bc82e0305b2d81d6fe29c0))\n* avoid breaking ssrFixStacktrace (vitejs/vite[#21269](https://github.com/vikejs/vike/issues/21269)) ([#2942](https://github.com/vikejs/vike/issues/2942)) ([5831f8b](https://github.com/vikejs/vike/commit/5831f8b56c95ba44f713354f24d645150dc3a80b))\n* avoid history state collision with other libraries (fix [#2894](https://github.com/vikejs/vike/issues/2894)) ([#2901](https://github.com/vikejs/vike/issues/2901)) ([dbcfa58](https://github.com/vikejs/vike/commit/dbcfa58edd27a1654fbca7c987a3429f5438cf4f))\n* expose Vike's history data ([e331796](https://github.com/vikejs/vike/commit/e331796f8b6da11a4daecb564670130fa03196b2))\n* fix auto-reloading of resolved runtime error in + file ([#2920](https://github.com/vikejs/vike/issues/2920)) ([dae98ec](https://github.com/vikejs/vike/commit/dae98ecb64618aa8c25732887d706a2d44b859a8))\n* fix module banner ([908fc62](https://github.com/vikejs/vike/commit/908fc62c099a952bcec5c19914bff8034d558f49))\n* fix RPC timeout ([4a392fb](https://github.com/vikejs/vike/commit/4a392fb804620ec8c7dd43e81108094c4f0a84b8))\n* fix utils/debug.js tree-shaking (fix [#2879](https://github.com/vikejs/vike/issues/2879)) ([c3d567b](https://github.com/vikejs/vike/commit/c3d567b97e148c30a8d8b2e7727eed3178b156f6))\n* fix Vite config early resolve (fix [#2850](https://github.com/vikejs/vike/issues/2850)) ([#2865](https://github.com/vikejs/vike/issues/2865)) ([cdee1c4](https://github.com/vikejs/vike/commit/cdee1c4790f5bda56a8ba43c238a9d81c5b7d1ee))\n* improve debug logs upon virtual module missing export (closes [#2903](https://github.com/vikejs/vike/issues/2903)) ([f7a3fb8](https://github.com/vikejs/vike/commit/f7a3fb8338decc1105b4189bbe29ec8ed427ebe1))\n* improve error message upon using old Vite version (fix [#2853](https://github.com/vikejs/vike/issues/2853)) ([b624f37](https://github.com/vikejs/vike/commit/b624f3718568648468fd172347a23570743e1c0e))\n* improve Vike's logs aesthetics ([#2895](https://github.com/vikejs/vike/issues/2895)) ([a1e7c11](https://github.com/vikejs/vike/commit/a1e7c11c8827a9c281b320649aaf00df80d9989f))\n* properly handle file changes upon non-runnable process (fix [#2898](https://github.com/vikejs/vike/issues/2898)) ([6ebbe6d](https://github.com/vikejs/vike/commit/6ebbe6dfd9887b536804f141a8776b4ce78feb8b))\n* virtual client entry for root location ([#2846](https://github.com/vikejs/vike/issues/2846)) ([3961797](https://github.com/vikejs/vike/commit/396179763ac64cdf1cdb95ce448c4d7594712aeb))\n### Features\n* `.ssr.js` ([#2939](https://github.com/vikejs/vike/issues/2939)) ([385fcb1](https://github.com/vikejs/vike/commit/385fcb1e1f26a7710afaf4b7840367e593803da6))\n* `getPageContext({ asyncHook: true })` ([#2877](https://github.com/vikejs/vike/issues/2877)) ([e5ba0b6](https://github.com/vikejs/vike/commit/e5ba0b6e6032ef00fd1535403ff52704854f28b0))\n* `pageContext.pageContextsAborted` ([#2849](https://github.com/vikejs/vike/issues/2849)) ([65b0f88](https://github.com/vikejs/vike/commit/65b0f88d96d00b8d620121d19be7d31d67725aa0))\n* add `.env` values to `process.env` ([#1726](https://github.com/vikejs/vike/issues/1726)) ([#2866](https://github.com/vikejs/vike/issues/2866)) ([6117108](https://github.com/vikejs/vike/commit/6117108e5fe3a6bce56964d10c995a363c2e8739))\n* pass `pageCont...",
+      "memory_unit_text": "In the vikejs/vike release v0.4.248, the release note introduces .ssr.js, getPageContext({ asyncHook: true }), pageContext.pageContextsAborted, and adds .env values to process.env. Bug fixes include calling +guard.client.js on first render, avoiding history state collision with other libraries, fixing auto-reloading of resolved runtime errors in + files, and improving Vike's logs aesthetics."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_249",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.249",
+      "tag_name": "v0.4.249",
+      "title": "v0.4.249",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:51:18Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.249",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.249\nTag: v0.4.249; draft: False; prerelease: False; published_at: 2026-05-08T13:51:18Z; created_at: 2025-12-14T22:28:01Z\nRelease notes:\n### Bug Fixes\n* fix project version ([6dc8484](https://github.com/vikejs/vike/commit/6dc8484173f4fa07821b20452b42555ca1590f09))",
+      "memory_unit_text": "In the vikejs/vike release v0.4.249, the release note contains a single bug fix for the project version."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_250",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.250",
+      "tag_name": "v0.4.250",
+      "title": "v0.4.250",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:51:19Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.250",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.250\nTag: v0.4.250; draft: False; prerelease: False; published_at: 2026-05-08T13:51:19Z; created_at: 2025-12-22T10:14:26Z\nRelease notes:\n### Bug Fixes\n* @brillout/picocolors@^1.0.30 ([2203df7](https://github.com/vikejs/vike/commit/2203df7ca7c6ed305ba1856a5a74b9f25a87a0f4))\n* don't overwrite the URL changed by ohter tools (fix [#2894](https://github.com/vikejs/vike/issues/2894)) ([bcdf291](https://github.com/vikejs/vike/commit/bcdf291ec5441ff355b91b8473d5c61cbba45c1b))\n* properly handle stream cancellation (fix [#2954](https://github.com/vikejs/vike/issues/2954)) ([#2965](https://github.com/vikejs/vike/issues/2965)) ([55681da](https://github.com/vikejs/vike/commit/55681dae6a7d947008c8e344486a530433d8789e))\n* replace Acorn with Babel ([#2973](https://github.com/vikejs/vike/issues/2973)) ([edd603a](https://github.com/vikejs/vike/commit/edd603a4226ebd1827158e89e9c792f0a6f22b10))\n* simplify & fix HMR ([0c30315](https://github.com/vikejs/vike/commit/0c303152a378b86e35a2a6222d2576f79ded547b))\n* simplify history third-party overwrite workaround ([#2504](https://github.com/vikejs/vike/issues/2504)) ([f416149](https://github.com/vikejs/vike/commit/f4161495237f20c9856eee82240b4b25bf10d5d1))\n* support list of import strings ([#2950](https://github.com/vikejs/vike/issues/2950)) ([775a43e](https://github.com/vikejs/vike/commit/775a43e10a96e47fc8c9e80c3a3c749dde44d4f5))\n### Features\n* +staticReplace ([#2976](https://github.com/vikejs/vike/issues/2976)) ([567e1a9](https://github.com/vikejs/vike/commit/567e1a946d492278b7025cad86717e800cf3ae38))",
+      "memory_unit_text": "In the vikejs/vike release v0.4.250, the release note introduces +staticReplace. Bug fixes include updating @brillout/picocolors, not overwriting the URL changed by other tools, properly handling stream cancellation, replacing Acorn with Babel, and simplifying HMR."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_251",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.251",
+      "tag_name": "v0.4.251",
+      "title": "v0.4.251",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:51:21Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.251",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.251\nTag: v0.4.251; draft: False; prerelease: False; published_at: 2026-05-08T13:51:21Z; created_at: 2026-01-11T13:21:59Z\nRelease notes:\n### Bug Fixes\n* @brillout/vite-plugin-server-entry@^0.7.16 ([8e5a6cd](https://github.com/vikejs/vike/commit/8e5a6cd2ec71fd1abd87d114b4709fea6726ce73))\n* @brillout/vite-plugin-server-entry@^0.7.17 (fix [#3006](https://github.com/vikejs/vike/issues/3006)) ([#3009](https://github.com/vikejs/vike/issues/3009)) ([e88cc77](https://github.com/vikejs/vike/commit/e88cc774a7963fb6f191306b2d7c1bbad50ff651))\n* avoid server shut down upon uncaught errors ([57b9979](https://github.com/vikejs/vike/commit/57b997978397389f20ff36ffb0b855368c8c8534))\n* callable +prerender ([#3002](https://github.com/vikejs/vike/issues/3002)) ([#3007](https://github.com/vikejs/vike/issues/3007)) ([2686732](https://github.com/vikejs/vike/commit/26867324e3ad040041126b9b89405cc2172aed12))\n* don't force optimize upon Vite restart ([413c0ec](https://github.com/vikejs/vike/commit/413c0ecd13b13e7f412cfb3154bee8ce8ae202a6))\n* fix HTTP response upon server-side error without error page ([7401d2a](https://github.com/vikejs/vike/commit/7401d2a1cc247ec9454d4b7bddf9cd2c04257f05))\n* fix infinite loop catcher (fix [#3028](https://github.com/vikejs/vike/issues/3028)) ([#3029](https://github.com/vikejs/vike/issues/3029)) ([7552006](https://github.com/vikejs/vike/commit/755200652879891593b4c385832a7cd1ca8f0339))\n* fix skipping .ssr.js from server-only hooks check ([193dea3](https://github.com/vikejs/vike/commit/193dea3bb494c0a75d86f73c2b9cfbaf0e6b9b34))\n* trigger Vite reload when Vite config changed via Vike config ([#3017](https://github.com/vikejs/vike/issues/3017)) ([106e738](https://github.com/vikejs/vike/commit/106e738bfd37dbf56f1b3f4efbd951da59e0790c))\n* validate vite.build.ssr (fix [#3010](https://github.com/vikejs/vike/issues/3010)) ([#3021](https://github.com/vikejs/vike/issues/3021)) ([daad3d1](https://github.com/vikejs/vike/commit/daad3d18eede56a80fabb0cf2612c4e082691d85))\n### Features\n* [+onHookCall](http://vike.dev/onHookCall) ([#2978](https://github.com/vikejs/vike/issues/2978)) ([6161324](https://github.com/vikejs/vike/commit/6161324d78745e6a76ed503714df38f3ea4f36ed))\n### MINOR BREAKING CHANGES\n> [!NOTE]\n> We recommend ignoring `MINOR BREAKING CHANGES` unless this version breaks your app, see [Vike Versioning](https://vike.dev/versioning).\n* If uncaught errors are logged twice, stop logging them in your `uncaughtException` and `unhandledRejection` handlers. (Vike now always handles these and logs uncaught errors.)",
+      "memory_unit_text": "In the vikejs/vike release v0.4.251, the release note introduces +onHookCall. Bug fixes include updating @brillout/vite-plugin-server-entry, avoiding server shutdown upon uncaught errors, making +prerender callable, fixing infinite loop catcher, and triggering Vite reload when Vite config changes via Vike config. A minor breaking change notes that Vike now always handles uncaught errors and logs them."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_252",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.252",
+      "tag_name": "v0.4.252",
+      "title": "v0.4.252",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:51:22Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.252",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.252\nTag: v0.4.252; draft: False; prerelease: False; published_at: 2026-05-08T13:51:22Z; created_at: 2026-01-12T15:31:34Z\nRelease notes:\n### Bug Fixes\n* fix pageContext.dangerouslyUseInternals type ([6669f13](https://github.com/vikejs/vike/commit/6669f13af51ab64479148e14e5a7fdb569939cd9))",
+      "memory_unit_text": "In the vikejs/vike release v0.4.252, the release note contains a single bug fix for the pageContext.dangerouslyUseInternals type."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_253",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.253",
+      "tag_name": "v0.4.253",
+      "title": "v0.4.253",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:51:24Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.253",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.253\nTag: v0.4.253; draft: False; prerelease: False; published_at: 2026-05-08T13:51:24Z; created_at: 2026-02-02T10:24:46Z\nRelease notes:\n### Bug Fixes\n* apply import.meta.env static replacement also for node_modules/ code ([7f781cf](https://github.com/vikejs/vike/commit/7f781cf0a08a7f8cd9e54cbf35c4576f2b98949f))\n* avoid race condition between hydration and fast subsequent render ([#3056](https://github.com/vikejs/vike/issues/3056)) ([a555bc6](https://github.com/vikejs/vike/commit/a555bc631cc7ca10e5bb4e25d26247979d2ba3d8))\n* fix scroll restoration race condition (fix [#3050](https://github.com/vikejs/vike/issues/3050)) ([#3053](https://github.com/vikejs/vike/issues/3053)) ([45fd585](https://github.com/vikejs/vike/commit/45fd58584daa90f54c07ddcd13ef5eb299007511))\n* fix temporary console.log patch (fix [#3067](https://github.com/vikejs/vike/issues/3067)) ([3ea247f](https://github.com/vikejs/vike/commit/3ea247f0c01cc263b35839799257eb9bb66e9afd))\n* improve browser check (fix [#3036](https://github.com/vikejs/vike/issues/3036)) ([1d0a050](https://github.com/vikejs/vike/commit/1d0a05096b4a067074528403c27df085f3aeca74))\n* make `DEBUG` flag work on the edge (e.g. Cloudflare) (fix [#3067](https://github.com/vikejs/vike/issues/3067)) ([#3069](https://github.com/vikejs/vike/issues/3069)) ([4fa40ed](https://github.com/vikejs/vike/commit/4fa40edae0a52b544cbf83c0ce1f3ab3fe464ec4))\n* make +onHookCall server-only by default ([#3049](https://github.com/vikejs/vike/issues/3049)) ([3c0065c](https://github.com/vikejs/vike/commit/3c0065c51488364083655f3e448d11eb6b798c20))\n* move export types to first entry ([1a26d5b](https://github.com/vikejs/vike/commit/1a26d5bffc68920ad3bcb2012e3ad20cf86e14b2))\n* skip malformed `.pageContext.json` requests (fix [#3052](https://github.com/vikejs/vike/issues/3052)) ([e3a6e9d](https://github.com/vikejs/vike/commit/e3a6e9d0dff4bad56b3b6de703c1387b702c534a))\n* support file being both a runtime and config file (brillout/docpress[#86](https://github.com/vikejs/vike/issues/86)) ([3d92f08](https://github.com/vikejs/vike/commit/3d92f086484a9c391697baf39dfa25a8de273b5a))\n### MINOR BREAKING CHANGES\n> [!NOTE]\n> We recommend ignoring `MINOR BREAKING CHANGES` unless this version breaks your app, see [Vike Versioning](https://vike.dev/versioning).\n* `+onHookCall` is now server-only by default, use `.client.js` or `.shared.js` to execute it on the client. (Note that `+onHookCall` is in beta — breaking changes are expected.)",
+      "memory_unit_text": "In the vikejs/vike release v0.4.253, the release note includes bug fixes such as applying import.meta.env static replacement for node_modules/ code, avoiding race condition between hydration and fast subsequent render, fixing scroll restoration race condition, making the DEBUG flag work on the edge, and making +onHookCall server-only by default. A minor breaking change notes that +onHookCall is now server-only by default."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_254",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.254",
+      "tag_name": "v0.4.254",
+      "title": "v0.4.254",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:51:25Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.254",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.254\nTag: v0.4.254; draft: False; prerelease: False; published_at: 2026-05-08T13:51:25Z; created_at: 2026-02-26T22:54:19Z\nRelease notes:\n### Bug Fixes\n* @brillout/vite-plugin-server-entry@^0.7.18 ([#3114](https://github.com/vikejs/vike/issues/3114)) ([a6d5391](https://github.com/vikejs/vike/commit/a6d5391001ee07d3add87bd11dca3d596f28205b))\n* `export type { EarlyHint }` ([2e9ec60](https://github.com/vikejs/vike/commit/2e9ec601bca5e22b1474bf4c37e8b7a989771f79))\n* exclude `*.spec.*` and `*.test.*` files from vike `+` file processing (fix [#3124](https://github.com/vikejs/vike/issues/3124)) ([#3125](https://github.com/vikejs/vike/issues/3125)) ([56475f3](https://github.com/vikejs/vike/commit/56475f31fac9932a574e040eed93d86d14633dee))\n* migrate glob \"as\" option to \"query\" ([eba39fd](https://github.com/vikejs/vike/commit/eba39fd3ce720b4c2efe98cb037bd4aaf294c13f))\n* more reliable tool CLI test ([cd1c053](https://github.com/vikejs/vike/commit/cd1c053fe122a2b9245c9899da2931f5ccb2e2a9))\n* reduce pre-render dependency on Vite ([#3113](https://github.com/vikejs/vike/issues/3113)) ([#3118](https://github.com/vikejs/vike/issues/3118)) ([2d3be47](https://github.com/vikejs/vike/commit/2d3be474441707f05a7932240f3506517a735f0d))\n* remove @brillout/require-shim ([#3091](https://github.com/vikejs/vike/issues/3091)) ([164918b](https://github.com/vikejs/vike/commit/164918b76d6aa8ad7a40da1aca9af806d9f86e02))\n* remove config.build.ssr assert ([#3096](https://github.com/vikejs/vike/issues/3096)) ([6cfeda2](https://github.com/vikejs/vike/commit/6cfeda2ec9c305ac7eaacb7265d3b4883f904229))\n* remove Vike's Vite plugin when running storybook ([98040ab](https://github.com/vikejs/vike/commit/98040abfd8eb895a7b7fb733b0bf618f7b1dd2ce))\n* replace `import.meta.env` with `null` (closes [#3078](https://github.com/vikejs/vike/issues/3078)) ([#3082](https://github.com/vikejs/vike/issues/3082)) ([c061f58](https://github.com/vikejs/vike/commit/c061f58e313eddede7ef3d67956818ff1d1e8645))\n* revive server-only pageContext types such as pageContext.headers (fix [#3087](https://github.com/vikejs/vike/issues/3087)) ([1658209](https://github.com/vikejs/vike/commit/165820957d784db7c92e4565d65ebaa4b38a79e8))\n* Safari WebKit TDZ bug in loadAndParseVirtualFilePageEntry (fix [#3121](https://github.com/vikejs/vike/issues/3121)) ([#3122](https://github.com/vikejs/vike/issues/3122)) ([1d110cc](https://github.com/vikejs/vike/commit/1d110cc54c75ab5afa48f94155f687bf2ca7f5d2))\n* stop showing warning when using vite.createServer() ([#3096](https://github.com/vikejs/vike/issues/3096)) ([c34c417](https://github.com/vikejs/vike/commit/c34c417b8a8480938e45d13183b9dbf3b89b10ad))\n* swallow noisy Vitest error ([0e038aa](https://github.com/vikejs/vike/commit/0e038aafc99293005efe9b69be6985687d0b8fe0))\n* tolerate `import { prerender } from 'vike/api'` in production (fix [#3094](https://github.com/vikejs/vike/issues/3094)) ([e3b56da](https://github.com/vikejs/vike/commit/e3b56da488b5d869cf590f158a7e3124608931f8))\n* tolerate importing Vike's Vite plugin in server runtime (fix [#3113](https://github.com/vikejs/vike/issues/3113)) ([#3115](https://github.com/vikejs/vike/issues/3115)) ([d6e725f](https://github.com/vikejs/vike/commit/d6e725f8ce89c5486e08069a8f91719b3475ee11))\n* tolerate static file imports in config files (brillout/docpress[#86](https://github.com/vikejs/vike/issues/86)) ([#3123](https://github.com/vikejs/vike/issues/3123)) ([b170368](https://github.com/vikejs/vike/commit/b170368938446da4fa8cba8f388e856230ee483d))\n* update glob pattern to work with Vite 8 ([22182f2](https://github.com/vikejs/vike/commit/22182f2dc8a4e8d258ed624582f7d72bea2dffe6))\n### Features\n* `vikeConfig._extensions` ([#3120](https://github.com/vikejs/vike/issues/3120)) ([d6aa272](https://github.com/vikejs/vike/commit/d6aa272952037b5fe4b6b9f678cbb783289f4f78))\n* `with { type: 'vike-pointer' }` (closes [#1500](https://github.com/vikejs/vike/issues/1500)) ([#3126](https://github.com/v...",
+      "memory_unit_text": "In the vikejs/vike release v0.4.254, the release note introduces vikeConfig._extensions and with { type: 'vike-pointer' }. Bug fixes include updating @brillout/vite-plugin-server-entry, excluding *.spec.* and *.test.* files from + file processing, reducing pre-render dependency on Vite, removing @brillout/require-shim, and reviving server-only pageContext types."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_255",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.255",
+      "tag_name": "v0.4.255",
+      "title": "v0.4.255",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:51:27Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.255",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.255\nTag: v0.4.255; draft: False; prerelease: False; published_at: 2026-05-08T13:51:27Z; created_at: 2026-02-27T12:55:37Z\nRelease notes:\n### Bug Fixes\n* hoist pointer imports ([#3132](https://github.com/vikejs/vike/issues/3132)) ([bc71fe9](https://github.com/vikejs/vike/commit/bc71fe95362bcdafb4078fa20693cce70fd4f83d))\n* improve config external heuristic ([#3130](https://github.com/vikejs/vike/issues/3130)) ([e8f42ac](https://github.com/vikejs/vike/commit/e8f42ac6f64777bcfddef6ec59c5645442ffe4a3))\n* rename vike-pointer => vike:pointer ([31aa0e3](https://github.com/vikejs/vike/commit/31aa0e3d2303dd840cfbe353788a5abd5525dbf2))\n### MINOR BREAKING CHANGES\n> [!NOTE]\n> We recommend ignoring `MINOR BREAKING CHANGES` unless this version breaks your app, see [Vike Versioning](https://vike.dev/versioning).\n* `with { type: 'vike-pointer' }` renamed to `with { type: 'vike:pointer' }`",
+      "memory_unit_text": "In the vikejs/vike release v0.4.255, the release note includes bug fixes for hoisting pointer imports and improving config external heuristic. A minor breaking change renames with { type: 'vike-pointer' } to with { type: 'vike:pointer' }."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_256",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.256",
+      "tag_name": "v0.4.256",
+      "title": "v0.4.256",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:51:28Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.256",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.256\nTag: v0.4.256; draft: False; prerelease: False; published_at: 2026-05-08T13:51:28Z; created_at: 2026-03-31T20:36:27Z\nRelease notes:\n### Bug Fixes\n* duplicate URL verification on pre-rendering ([#3156](https://github.com/vikejs/vike/issues/3156)) ([7723d45](https://github.com/vikejs/vike/commit/7723d45ec06b51a0f1077ee6e88eb73f92ebc2f9))\n* polish node unsupported version error ([#3148](https://github.com/vikejs/vike/issues/3148)) ([279f79c](https://github.com/vikejs/vike/commit/279f79c89c44a57e11e409bd571df8cc41efd2ad))\n### Performance Improvements\n* remove slow plugin when not needed (fix [#3086](https://github.com/vikejs/vike/issues/3086)) ([#3187](https://github.com/vikejs/vike/issues/3187)) ([567fe61](https://github.com/vikejs/vike/commit/567fe61f1d7a0c9854219cc1bdf9add967d4bf05))",
+      "memory_unit_text": "In the vikejs/vike release v0.4.256, the release note includes bug fixes for duplicate URL verification on pre-rendering and polishing the node unsupported version error. Performance improvements remove a slow plugin when not needed."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_257",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.257",
+      "tag_name": "v0.4.257",
+      "title": "v0.4.257",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:51:29Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.257",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.257\nTag: v0.4.257; draft: False; prerelease: False; published_at: 2026-05-08T13:51:29Z; created_at: 2026-04-09T13:26:41Z\nRelease notes:\n### Bug Fixes\n* improve +meta.eager jsdocs ([2e38a9b](https://github.com/vikejs/vike/commit/2e38a9b749ed3dfedce7edf995ae7fc5d237dccc))\n### Features\n* built-in +server support (via Universal Deploy, deprecating `vike-photon`) ([#3106](https://github.com/vikejs/vike/issues/3106)) ([5449ce0](https://github.com/vikejs/vike/commit/5449ce09122b9e169c8c7281350acad72b6dcdaa))",
+      "memory_unit_text": "In the vikejs/vike release v0.4.257, the release note introduces built-in +server support via Universal Deploy, deprecating vike-photon. A bug fix improves +meta.eager jsdocs."
+    },
+    {
+      "memory_node_id": "vikejs__vike__release__v0_4_259",
+      "repo": "vikejs/vike",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.259",
+      "tag_name": "v0.4.259",
+      "title": "v0.4.259",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T13:51:31Z",
+      "source_url": "https://github.com/vikejs/vike/releases/tag/v0.4.259",
+      "raw_text": "Repository: vikejs/vike\nRelease: v0.4.259\nTag: v0.4.259; draft: False; prerelease: False; published_at: 2026-05-08T13:51:31Z; created_at: 2026-05-06T09:11:58Z\nRelease notes:\n### Bug Fixes\n* bump @universal-deploy/store@^0.2.1 @universal-deploy/vite@^0.1.8 ([a5ce88c](https://github.com/vikejs/vike/commit/a5ce88c385e0864437eac9dcb6e7e05882dbbcb8))\n* implement CSS duplication workaround for Vite 8 + `codeSplitting` (fix [#3227](https://github.com/vikejs/vike/issues/3227)) ([#3236](https://github.com/vikejs/vike/issues/3236)) ([9593ea2](https://github.com/vikejs/vike/commit/9593ea27e4d9edd0f414f594c2dd5ee70eaca15f))\n* skip `manualChunks` if Vite 8's `codeSplitting` is used ([#3227](https://github.com/vikejs/vike/issues/3227)) ([#3230](https://github.com/vikejs/vike/issues/3230)) ([e168602](https://github.com/vikejs/vike/commit/e168602edfd9123d18edc1b8d6e1cd45f0ffd6c0))\n* workaround Deno asynclocalstorage bug (fix [#3240](https://github.com/vikejs/vike/issues/3240)) ([040eb9f](https://github.com/vikejs/vike/commit/040eb9fe16ac54f27694dcd189feef2886ecd315))",
+      "memory_unit_text": "In the vikejs/vike release v0.4.259, the release note includes bug fixes such as bumping @universal-deploy/store and @universal-deploy/vite, implementing a CSS duplication workaround for Vite 8 with codeSplitting, skipping manualChunks if Vite 8's codeSplitting is used, and working around a Deno asynclocalstorage bug."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the vikejs/vike releases, which release introduces the +onData feature?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.4.229"
+        },
+        {
+          "option_id": "B",
+          "text": "v0.4.230"
+        },
+        {
+          "option_id": "C",
+          "text": "v0.4.231"
+        },
+        {
+          "option_id": "D",
+          "text": "v0.4.232"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v0.4.230",
+      "source_chunk_ids": [
+        "vikejs__vike__release__v0_4_230"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "vikejs__vike__release__v0_4_230",
+          "answer_text": "introduces the +onData feature"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the vikejs/vike releases, how does the change to +onCreatePageContext in v0.4.233 differ from the change to +onHookCall in v0.4.253?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.4.233 makes +onCreatePageContext execute after routing, while v0.4.253 makes +onHookCall server-only by default."
+        },
+        {
+          "option_id": "B",
+          "text": "v0.4.233 makes +onCreatePageContext execute before routing, while v0.4.253 makes +onHookCall client-only by default."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases remove the respective hooks entirely."
+        },
+        {
+          "option_id": "D",
+          "text": "v0.4.233 adds +onCreatePageContext, while v0.4.253 removes +onHookCall."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v0.4.233 makes +onCreatePageContext execute after routing, while v0.4.253 makes +onHookCall server-only by default.",
+      "source_chunk_ids": [
+        "vikejs__vike__release__v0_4_233",
+        "vikejs__vike__release__v0_4_253"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "vikejs__vike__release__v0_4_233",
+          "answer_text": "+onCreatePageContext is now called after routing"
+        },
+        {
+          "memory_node_id": "vikejs__vike__release__v0_4_253",
+          "answer_text": "+onHookCall is now server-only by default"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the vikejs/vike release window, order the following release-content states from earliest to latest: (1) a release that introduces +headersResponse and pageContext.headersResponse, (2) a release that introduces +onHookCall, (3) a release that introduces built-in +server support via Universal Deploy, (4) a release that introduces +staticReplace.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 4 -> 3"
+        },
+        {
+          "option_id": "B",
+          "text": "1 -> 4 -> 2 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 1 -> 3 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 1 -> 2 -> 3"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "1 -> 4 -> 2 -> 3",
+      "source_chunk_ids": [
+        "vikejs__vike__release__v0_4_236",
+        "vikejs__vike__release__v0_4_250",
+        "vikejs__vike__release__v0_4_251",
+        "vikejs__vike__release__v0_4_257"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "vikejs__vike__release__v0_4_236",
+          "answer_text": "introduces +headersResponse and pageContext.headersResponse"
+        },
+        {
+          "memory_node_id": "vikejs__vike__release__v0_4_250",
+          "answer_text": "introduces +staticReplace"
+        },
+        {
+          "memory_node_id": "vikejs__vike__release__v0_4_251",
+          "answer_text": "introduces +onHookCall"
+        },
+        {
+          "memory_node_id": "vikejs__vike__release__v0_4_257",
+          "answer_text": "introduces built-in +server support via Universal Deploy"
+        }
+      ]
+    }
+  ]
+}

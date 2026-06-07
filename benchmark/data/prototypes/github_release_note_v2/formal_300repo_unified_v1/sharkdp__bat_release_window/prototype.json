@@ -1,0 +1,530 @@
+{
+  "prototype_id": "sharkdp__bat_release_window",
+  "domain": "github_release_evolution",
+  "repo": "sharkdp/bat",
+  "source_type": "release_note",
+  "window_title": "sharkdp/bat recent release evolution",
+  "window_summary": "This window tracks the recent sharkdp/bat release stream from v0.8.0 through v0.26.1, covering new features, syntax additions, bugfixes, and library API changes across multiple versions.",
+  "chunks": [
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_8_0",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.8.0",
+      "tag_name": "v0.8.0",
+      "title": "v0.8.0",
+      "time_hint": "2018-10-17",
+      "published_at": "2018-10-17T22:04:35Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.8.0",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.8.0\nTag: v0.8.0; draft: False; prerelease: False; published_at: 2018-10-17T22:04:35Z; created_at: 2018-10-17T21:27:44Z\nRelease notes:\n## Features\n- Support for a configuration file with the following simple format:\n```bash\n--tabs=4\n--theme=\"Sublime Snazzy\"\n# A line-comment\n--map-syntax .ignore:.gitignore\n--map-syntax PKGBUILD:bash\n--map-syntax Podfile:ruby\n# Flags and options can also be on a single line:\n--wrap=never --paging=never\n```\nThe configuration file path can be accessed via `bat --config-file`. On Linux,\nit is stored in `~/.config/bat/config`.\n- Support for the `BAT_OPTS` environment variable with the same format as specified\nabove (in a single line). This takes precedence over the configuration file.\nSee also #310.\n- Support for custom syntax mappings via the `-m`/`--max-syntax` option.\nThis allows users to (re)map certain file extensions or file names to an existing syntax:\n``` bash\nbat --map-syntax .config:json ...\n```\nThe option can be use multiple times. Note that you can easily make these mappings permanent by using bats new configuration file.\nSee #169\n- Support pager command-line arguments in `PAGER` and `BAT_PAGER`, see #352 (@Foxboron)\n- Add support for wildcards in Windows CMD, see #309 (@zxey)\n- First-line syntax detection for all input types, see #205\n- Encoding support for UTF-16LE and UTF-16BE, see #285\n- New syntaxes: Robot framework (@sanga)\n## Changes\n- Binary files are now detected and not displayed when the output goes to an interactive terminal, see #205\n## Bugfixes\n- JavaDoc comments break syntax highlighting in .java files, see #81\n- Bat Panics on Haskell Source Code, see #314\n## Other\n- Better `-h` and `--help` texts.\n- Updated documentation on how to configure `bat`s pager\n- Updated documentation for light backgrounds, see #328 (@russtaylor)\n- Generate shell completions during build, see #115 (@davideGiovannini)\n- A lot of new tests have been written\n- `bat` is now available via [Termux](https://termux.com/), see #341 (@fornwall)\n- `bat` is now available via [nix](https://nixos.org/nix), see #344 (@mgttlinger)\n- `bat` is now available via [Docker](https://hub.docker.com/r/danlynn/bat/), see #331 (@danlynn)",
+      "memory_unit_text": "In the sharkdp/bat release v0.8.0, the project introduces support for a configuration file with a simple format, the BAT_OPTS environment variable, custom syntax mappings via the -m/--map-syntax option, pager command-line arguments in PAGER and BAT_PAGER, wildcard support in Windows CMD, first-line syntax detection for all input types, encoding support for UTF-16LE and UTF-16BE, and a new syntax for Robot framework. Binary files are now detected and not displayed when output goes to an interactive terminal. Bugfixes address JavaDoc comments breaking syntax highlighting in .java files and a panic on Haskell source code. Other improvements include better help texts, updated documentation, shell completion generation during build, and new distribution channels via Termux, nix, and Docker."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_9_0",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.9.0",
+      "tag_name": "v0.9.0",
+      "title": "v0.9.0",
+      "time_hint": "2018-11-11",
+      "published_at": "2018-11-11T12:23:58Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.9.0",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.9.0\nTag: v0.9.0; draft: False; prerelease: False; published_at: 2018-11-11T12:23:58Z; created_at: 2018-11-11T12:19:34Z\nRelease notes:\n## Features\n- A new `-A`/`--show-all` option has been added to show and highlight non-printable characters (in analogy to GNU `cat`s option):\n![](https://camo.githubusercontent.com/c3e769482ef3184f6be6adaa34bdc8d19c378254/68747470733a2f2f692e696d6775722e636f6d2f324b54486859542e706e67)\nsee #395 and #381 for more details.\n- Added `--pager` option (to configure the pager from the configuration file), see #362 (@majecty)\n- Added `BAT_CONFIG_PATH` environment variable to set a non-default path for `bat`s configuration file, see #375 (@deg4uss3r)\n- Allow for multiple occurences of `--style` to allow for the configuration\nof styles from the config file, see #367 (@sindreij)\n- Allow for multiple `--line-range` arguments, see #23\n- The `--terminal-width` option can now also accept offsets, see #376\n## Changes\n- Use of italics is now *disabled by default* (see #389 for details). They can be\nre-enabled by adding `--italic-text=always` to your configuration file.\n- The default tab-width has been set to 4.\n- Added new \"Sublime Snazzy\" theme.\n- Shell completions are currently *not* shipped anymore, see #372 for details.\n## Bugfixes\n- Avoid endless recursion when `PAGER=\"bat\"`, see #383 (@rodorgas)\n## Other\n- `bat` is now available on openSUSE, see #405 (@dmarcoux)\n- Added section about the new configuration file in the README (@deg4uss3r)\n- Chinese translation of README (@chinanf-boy)\n- Re-written tests for `--tabs` (@choznerol)\n- Speed up integration tests, see #394",
+      "memory_unit_text": "In the sharkdp/bat release v0.9.0, a new -A/--show-all option is added to show and highlight non-printable characters. The --pager option allows configuring the pager from the configuration file. The BAT_CONFIG_PATH environment variable sets a non-default path for the configuration file. Multiple occurrences of --style and --line-range are now allowed. The --terminal-width option can accept offsets. Changes include disabling italics by default, setting the default tab-width to 4, adding a new Sublime Snazzy theme, and no longer shipping shell completions. Bugfixes prevent endless recursion when PAGER is set to bat. Other updates include availability on openSUSE, a Chinese translation of the README, and re-written tests."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_10_0",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.10.0",
+      "tag_name": "v0.10.0",
+      "title": "v0.10.0",
+      "time_hint": "2019-02-07",
+      "published_at": "2019-02-07T22:50:32Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.10.0",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.10.0\nTag: v0.10.0; draft: False; prerelease: False; published_at: 2019-02-07T22:50:32Z; created_at: 2019-02-07T22:27:53Z\nRelease notes:\n## Features\n- Added new `--highlight-line <N>` option, see #453, #346 and #175 (@tskinn and @sharkdp)\n## Changes\n- **Change the default configuration directory on macOS** to `~/.config/bat`, see #442 (@lavifb). If you are on macOS, you need to copy your configuration directory from the previous place (`~/Library/Preferences/bat`) to the new place (`~/.config/bat`).\n- Completely disabled the generation of shell completion files, see #372\n- Properly set arguments to `less` if `PAGER` environment variable contains something like `less -F` (which is missing the `-R` option), see #430 (@majecty)\n- Report the name of missing files, see #444 (@ufuji1984)\n- Don't start pager if file doesn't exist, see #387\n- Rename `bat cache --init` to `bat cache --build`, see #498\n- Move the `--config-dir` and `--cache-dir` options from `bat cache` to `bat` and hide them from the help text.\n## Bugfixes\n- Blank line at the end of output when using `--style=plain`, see #379\n- EOF must be sent twice on stdin if no other input is sent, see #477 (@reidwagner)\n## New syntaxes\n- Twig (@ahmedelgabri)\n- `.desktop` files (@jleclanche)\n- AsciiDoc (@markusthoemmes)\n- Assembly (x86_64 and ARM)\n- Log files (@caos21)\n- Protobuf and ProtobufText (@caos21)\n- Terraform (@caos21)\n- Jsonnet (@hfm)\n- Varlink (@haraldh)\n## Other\n- Added Japanese version of README (@sh-tech and @object1037)\n- Code improvements (@barskern)",
+      "memory_unit_text": "In the sharkdp/bat release v0.10.0, a new --highlight-line <N> option is added. Changes include moving the default configuration directory on macOS to ~/.config/bat, completely disabling shell completion file generation, properly setting arguments to less when PAGER contains options, reporting missing file names, not starting the pager if a file doesn't exist, renaming bat cache --init to bat cache --build, and moving --config-dir and --cache-dir options. Bugfixes address a blank line at the end of output with --style=plain and requiring EOF twice on stdin. New syntaxes are added for Twig, .desktop files, AsciiDoc, Assembly, Log files, Protobuf, Terraform, Jsonnet, and Varlink. Other improvements include a Japanese README and code improvements."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_11_0",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.11.0",
+      "tag_name": "v0.11.0",
+      "title": "v0.11.0",
+      "time_hint": "2019-05-15",
+      "published_at": "2019-05-15T21:25:19Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.11.0",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.11.0\nTag: v0.11.0; draft: False; prerelease: False; published_at: 2019-05-15T21:25:19Z; created_at: 2019-05-15T21:24:37Z\nRelease notes:\n## Features\n- Three new special color themes are available: `ansi-light`, `ansi-dark` and `base16`. These\nare useful for people that often switch from dark to light themes in their terminal emulator\nor for people that want the colors to match their terminal theme colors. For more details,\nsee #543 and #490 (@mk12, implementation idea by @trishume)\n- Hand-written auto completion script for Fish shell, see #524 and #555 (@ev-dev and @eth-p)\n- The `-p`/`--plain` option can now be used twice (typically `-pp`). The first `-p` switches the\n`--style` to \"plain\". The second `-p` disables the pager. See #560 and #552 (@eth-p)\n## Bugfixes\n- Do not replace arguments to `less` when using `--pager`, see #509\n- Binary files will now be indicated by a warning in interactive mode, see #530 #466 #550 (@maxfilov)\n- Empty files are (once again) printed with a single header line, see #504 and #566 (@reidwagner\nand @sharkdp)\n- `--terminal-width=0` is now disallowed, see #559 (@eth-p)\n- Accidental printing of files named `cache`, see #557\n## Other\n- New integration tests, see #500 and #502 (@reidwagner and @sharkdp)\n- New [\"Integration with other tools\"](https://github.com/sharkdp/bat#integration-with-other-tools) section in the README.\n- Migrated to Rust 2018 (@expobrain)\n## New syntaxes\n- F# syntax has been updated, see #531 (@stroborobo)\n- Fish shell, see #548 (@sanga)\n## Packaging\n- `bat` is now available on Chocolatey, see #541 (@rasmuskriest)",
+      "memory_unit_text": "In the sharkdp/bat release v0.11.0, three new special color themes are available: ansi-light, ansi-dark, and base16. A hand-written auto completion script for Fish shell is added. The -p/--plain option can now be used twice (-pp) to also disable the pager. Bugfixes include not replacing arguments to less when using --pager, indicating binary files with a warning in interactive mode, printing empty files with a single header line, disallowing --terminal-width=0, and preventing accidental printing of files named cache. Other updates include new integration tests, a new Integration with other tools section in the README, migration to Rust 2018, updated F# syntax, and Fish shell syntax. Packaging: bat is now available on Chocolatey."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_12_0",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.0",
+      "tag_name": "v0.12.0",
+      "title": "v0.12.0",
+      "time_hint": "2019-08-31",
+      "published_at": "2019-08-31T19:18:32Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.12.0",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.12.0\nTag: v0.12.0; draft: False; prerelease: False; published_at: 2019-08-31T19:18:32Z; created_at: 2019-08-31T18:58:16Z\nRelease notes:\n## Features\n- Binary file content can now be viewed with `bat -A`, see #623, #640 (@pjsier and @sharkdp)\n- `bat` can now be used as a man pager. Take a look at the README and #523 for more details.\n- Add new style component to separate multiple `--line-range`s, see #570 (@eth-p)\n- Added `-L` as an alias for `--list-languages`\n## Bugfixes\n- Output looks unbalanced when using '--style=grid,numbers' without 'header', see #571 (@eth-p)\n- issues with filenames starting with \"cache\", see #584\n- Can't build cache with new theme without creating cache dir, see #576 (@frm)\n- `--terminal-width -10` is parsed incorrectly, see #611\n## Other\n- Added fish completions to DEB package, see #554\n## New syntaxes\n- Emacs Org mode, see #36 (@bricewge)\n- `requirements.txt`\n- DotENV `.env`\n- SSH config syntax (`-l ssh_config`), see #582 (@issmirnov)\n- `/etc/hosts`, see #583 (@issmirnov)\n- GraphQL, see #625 (@dandavison)\n- Verilog, see #616\n- SCSS and Sass, see #637\n- `strace` syntax, see #599\n## Packaging\n- `bat` is now in the official Gentoo repositories, see #588 (@toku-sa-n)\n- `bat` is now in the official Alpine Linux repositories, see #586 (@5paceToast)\n- `bat` is in the official Fedora repositories, see #610 (@ignatenkobrain)",
+      "memory_unit_text": "In the sharkdp/bat release v0.12.0, binary file content can now be viewed with bat -A. bat can be used as a man pager. A new style component separates multiple --line-range arguments. -L is added as an alias for --list-languages. Bugfixes address unbalanced output with --style=grid,numbers without header, issues with filenames starting with cache, inability to build cache with a new theme without creating the cache dir, and incorrect parsing of --terminal-width -10. Other improvements include adding fish completions to the DEB package. New syntaxes are added for Emacs Org mode, requirements.txt, DotENV, SSH config, /etc/hosts, GraphQL, Verilog, SCSS and Sass, and strace. Packaging: bat is now in the official Gentoo, Alpine Linux, and Fedora repositories."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_12_1",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.1",
+      "tag_name": "v0.12.1",
+      "title": "v0.12.1",
+      "time_hint": "2019-09-03",
+      "published_at": "2019-09-03T06:13:01Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.12.1",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.12.1\nTag: v0.12.1; draft: False; prerelease: False; published_at: 2019-09-03T06:13:01Z; created_at: 2019-09-03T06:07:42Z\nRelease notes:\n## Bugfixes\n- Fixes a bug for older Windows versions (*\"The procedure entry point `CreateFile2` could not be located\"*), see #643 (@rivy)",
+      "memory_unit_text": "In the sharkdp/bat release v0.12.1, a bug is fixed for older Windows versions where the procedure entry point CreateFile2 could not be located."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_13_0",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.13.0",
+      "tag_name": "v0.13.0",
+      "title": "v0.13.0",
+      "time_hint": "2020-03-22",
+      "published_at": "2020-03-22T12:25:23Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.13.0",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.13.0\nTag: v0.13.0; draft: False; prerelease: False; published_at: 2020-03-22T12:25:23Z; created_at: 2020-03-22T12:16:47Z\nRelease notes:\n## `bat` as a library\nBeginning with this release, `bat` can be used as a library (#423).\nThis was a huge effort and I want to thank all people who made this possible: @DrSensor, @mitsuhiko, @mre, @eth-p!\n- Initial attempt in #469 (@mitsuhiko)\n- Second attempt, complete restructuring of the `bat` crate, see #679 (@DrSensor)\n- Updates to example, public API, error handling, further refactoring: #693 #873 #875 (@sharkdp)\nI want to stress that this is the very first release of the library. Things are very likely to change. A lot of things are still missing (including the documentation).\nThat being said, you can start using it! See the example programs in [`examples/`](https://github.com/sharkdp/bat/tree/master/examples).\nYou can see the API documentation here: https://docs.rs/bat/\n## Features\n- (**Breaking change**) Glob-based syntax mapping, see #877 and #592. With this change,\nusers need to update their bat config files (`bat --config-file`), if they have any `--map-syntax` settings\npresent.\nThe option now works like this:\n```bash\n--map-syntax <glob-pattern>:<syntax-name>\n```\nFor more information, see the `--help` text, the man page or the README.\nThis new feature allows us to properly highlight files like:\n* `/etc/profile`\n* `~/.ssh/config`\n- `--highlight-line` now accepts line ranges, see #809 (@lkalir)\n- Proper wrapping support for output with wide Unicode characters, see #811 #787 and #815 (@Kogia-sima)\n- A lot of updates to existing syntaxes via #644 (@benwaffle, @keith-hall)\n- `BAT_CACHE_PATH` can be used to place cached `bat` assets in a non-standard path, see #829 (@neuronull)\n- Support combination of multiple styles at the same time, see #857 (@aslpavel)\n## Bugfixes\n- Do not pass '--no-init' on newer less versions, see #749 and #786 (@sharkdp)\n- 'bat cache' still takes precedence over existing files, see #666 (@sharkdp)\n- `.sc` files should be treated as scala files, see #443 (@benwaffle)\n- Allow underscores and dashes in page names, see #670 (@LunarLambda)\n- Keep empty lines empty, see #601 (@mbarbar)\n- Wrapping does not work when piping, see #758 (@fusillicode, @allevo, @gildo)\n- Allow for non-unicode filenames, see #225 (@sharkdp)\n- Empty file without header produces incomplete grid, see #798 (@eth-p)\n- Files named `build` don't respect shebang lines, see #685 (@sharkdp)\n## Other\n- Parametrizable names for man page and shell completion files, see #659 #673 #656 (@eth-p)\n- Enabled LTO, making `bat` about 10% faster, see #719 (@bolinfest, @sharkdp)\n- Suggestions non how to configure `bat` for MacOS dark mode, see README (@jerguslejko)\n- Extended [\"Integration with other tools\"](https://github.com/sharkdp/bat#integration-with-other-tools) section (@eth-p)\n- Updated [instrutions on how to use `bat` as a `man`-pager](https://github.com/sharkdp/bat#man), see #652, see #667 (@sharkdp)\n- Add section concerning file encodings, see #688 and #568 (@sharkdp)\n- Updated sort order of command-line options in `--help` text and manpage, see #653 and #700 (@hrlmartins)\n- Updates to the man page syntax, see #718 (@sharkdp)\n- Japanese documentation updates, see #863 (@k-ta-yamada, @sorairolake and @wt-l00)\n- Accept \"default\" as a theme, see #757 (@fvictorio)\n- Updated Windows installation instructions, see #852 (@sorenbug)\n- Updated man page, see #573 (@sharkdp)\n## New syntaxes\n- Jinja2, see #648 (@Martin819)\n- SaltStack SLS, see #658 (@Martin819)\n- `/etc/fstab`, see #696 (@flopp and @eth-p)\n- `/etc/group` and `/etc/passwd`, see #698 (@argentite)\n- `/proc/cpuinfo` and `/proc/meminfo`, see #593 (@sharkdp)\n- Nim, see #542 (@sharkdp)\n- Vue, see #826 (@chaaaaarlotte)\n- CoffeScript, see #833 (@sharkdp)\n## New themes\n- Dracula, see #687 (@clarfon)\n- Nord, see #760 (@crabique)\n- Solarized light and dark, see #768 (@hakamadare)\n## Packaging\n- `bat` is now in the official...",
+      "memory_unit_text": "In the sharkdp/bat release v0.13.0, bat can now be used as a library. A breaking change introduces glob-based syntax mapping, requiring users to update their config files. --highlight-line now accepts line ranges. Proper wrapping support for output with wide Unicode characters is added. Many existing syntaxes are updated. BAT_CACHE_PATH can be used to place cached assets in a non-standard path. Support for combining multiple styles at the same time is added. Bugfixes include not passing --no-init on newer less versions, bat cache taking precedence over existing files, treating .sc files as Scala, allowing underscores and dashes in page names, keeping empty lines empty, fixing wrapping when piping, allowing non-unicode filenames, fixing empty file without header producing incomplete grid, and respecting shebang lines for files named build. Other improvements include parametrizable names for man page and shell completion files, enabling LTO for about 10% faster performance, suggestions for macOS dark mode, extended integration section, updated man pager instructions, file encodings section, updated sort order of options, man page syntax updates, Japanese documentation updates, accepting default as a theme, and updated Windows installation instructions. New syntaxes: Jinja2, SaltStack SLS, /etc/fstab, /etc/group and /etc/passwd, /proc/cpuinfo and /proc/meminfo, Nim, Vue, CoffeeScript. New themes: Dracula, Nord, Solarized light and dark. Packaging: bat is now in the official..."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_14_0",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.14.0",
+      "tag_name": "v0.14.0",
+      "title": "v0.14.0",
+      "time_hint": "2020-04-22",
+      "published_at": "2020-04-22T22:31:31Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.14.0",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.14.0\nTag: v0.14.0; draft: False; prerelease: False; published_at: 2020-04-22T22:31:31Z; created_at: 2020-04-22T21:59:35Z\nRelease notes:\n## Features\n- Added a new `--file-name <name>…` option to overwrite the displayed filename(s)\nin the header. This is useful when piping input into `bat`. See #654 and #892 (@neuronull).\n- Added a new `--generate-config-file` option to create an initial configuration file\nat the right place. See #870 (@jmick414)\n## Bugfixes\n- Performance problems with C# source code have been fixed, see #677 (@keith-hall)\n- Performance problems with Makefiles have been fixed, see #750 (@keith-hall)\n- Fix bug when highlighting Ruby files with unindented heredocs, see #914 (@keith-hall)\n- A highlighting problem with Rust source code has been fixed, see #924 (@keith-hall)\n- Windows: short files that do not require paging are displayed and then lost, see #887\n- `--highlight-line` did not work correctly in combination with `--tabs=0` and `--wrap=never`,\nsee #937\n## Other\n- When saving/reading user-provided syntaxes or themes, `bat` will now maintain a\n`metadata.yaml` file which includes information about the `bat` version which was\nused to create the cached files. When loading cached files, we now print an error\nif they have been created with an incompatible version. See #882\n- Updated `liquid` dependency to 0.20, see #880 (@ignatenkobrain)\n## `bat` as a library\n- A completely new [\"high level\" API](https://docs.rs/bat/0.14.0/bat/struct.PrettyPrinter.html) has been added that is much more convenient\nto use. See the `examples` folder for the updated code. The older \"low level\"\nAPI is still available (basically everything that is not in the root `bat`\nmodule), but has been refactored quite a bit. It is recommended to only use\nthe new \"high level\" API, if possible. This will be much easier to keep stable.\nNote that this should still be considered a \"beta\" release of `bat`-as-a-library.\nFor more details and some screenshots of the example programs, see #936.\n- Stripped out a lot of binary-only dependencies, see #895 and #899 (@dtolnay)\nThis introduces a `features = [\"application\"]` which is enabled by default and pulls in\neverything required by `bat` the application. When depending on bat as a library, downstream\n`Cargo.toml` should disable this feature to cut out inapplicable heavy dependencies:\n``` toml\n[dependencies]\nbat = { version = \"0.14\", default-features = false, features = [\"regex-onig\"] }\n```\nOther optional functionality has also been put behind features: `paging` and `git` support.\n- Allow using the library with older syntect, see #896 and #898 (@dtolnay)\n## New syntaxes\n- Rego, see #872 (@patrick-east)\n- Stylo, see #917\n## Thanks\nMany thanks to @keith-hall for all the help with various Sublime syntax problems!",
+      "memory_unit_text": "In the sharkdp/bat release v0.14.0, a new --file-name <name>… option overwrites displayed filenames in the header, useful when piping input. A --generate-config-file option creates an initial configuration file at the right place. Bugfixes address performance problems with C# and Makefiles, a highlighting bug in Ruby files with unindented heredocs, a highlighting problem in Rust source code, Windows short files not requiring paging being lost, and --highlight-line not working correctly with --tabs=0 and --wrap=never. Other changes include maintaining a metadata.yaml file for cached syntaxes/themes with version info and printing an error for incompatible versions, and updating the liquid dependency. As a library, a new high-level API is added, binary-only dependencies are stripped out with a features = [\"application\"] default, and optional functionality is put behind features. New syntaxes: Rego, Stylo."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_15_0",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.15.0",
+      "tag_name": "v0.15.0",
+      "title": "v0.15.0",
+      "time_hint": "2020-04-25",
+      "published_at": "2020-04-25T11:30:22Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.15.0",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.15.0\nTag: v0.15.0; draft: False; prerelease: False; published_at: 2020-04-25T11:30:22Z; created_at: 2020-04-25T11:17:07Z\nRelease notes:\n## Features\n- This release adds a new `--diff`/`-d` option that can be used to *only* show lines surrounding Git changes, i.e. added, removed or modified lines. The amount of additional context can be controlled with `--diff-context=N`. See #23 and #940\nYou can use a bash function like\n``` bash\nbatdiff() {\ngit diff --name-only --diff-filter=d 2>/dev/null | xargs bat --diff\n}\n```\nto essentially get a version of `git diff` with syntax highlighting (but without being able to see the old version).\n![image](https://user-images.githubusercontent.com/4209276/80278731-f940b400-86f8-11ea-9f86-bf22f72a9857.png)\n## Bugfixes\n- Error message printed in the middle of the output for another file, see #946\n- Performance improvements when using custom caches (via `bat cache --build`): the `bat` startup time should now be twice as fast (@lzutao).\n## Themes\n- Updated version of the Solarized dark/light themes, see #941\n## `bat` as a library\n- There are a few changes in the \"low level\" API (the `Config` struct has changed and\nthe error handler needs a new `&mut dyn Write` argument). The high-level API is not\naffected.",
+      "memory_unit_text": "In the sharkdp/bat release v0.15.0, a new --diff/-d option shows only lines surrounding Git changes, with --diff-context=N to control context. Bugfixes include an error message printed in the middle of output for another file and performance improvements when using custom caches, making startup twice as fast. The Solarized dark/light themes are updated. As a library, there are changes in the low-level API (Config struct and error handler), while the high-level API is unaffected."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_15_1",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.15.1",
+      "tag_name": "v0.15.1",
+      "title": "v0.15.1",
+      "time_hint": "2020-05-11",
+      "published_at": "2020-05-11T18:36:53Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.15.1",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.15.1\nTag: v0.15.1; draft: False; prerelease: False; published_at: 2020-05-11T18:36:53Z; created_at: 2020-05-11T18:30:45Z\nRelease notes:\n## Bugfixes\n- Fix highlighting of Markdown files, see #963 and #977\n- Fix `base16` theme (was broken since in v0.14), see #972, #934 and #979 (@mk12).\nUsers suffering from #865 (\"no color for bat in ssh from a Windows client\") can use the `ansi-dark` and `ansi-light` themes from now on.\n## New syntaxes\n- Fortran, see #957\n- Email (@mariozaizar)\n- QML, see #962 (@pylipp)",
+      "memory_unit_text": "In the sharkdp/bat release v0.15.1, bugfixes address highlighting of Markdown files and fix the base16 theme (broken since v0.14). Users suffering from no color for bat in ssh from a Windows client can use the ansi-dark and ansi-light themes. New syntaxes: Fortran, Email, QML."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_15_2",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.15.2",
+      "tag_name": "v0.15.2",
+      "title": "v0.15.2",
+      "time_hint": "2020-05-25",
+      "published_at": "2020-05-25T15:30:03Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.15.2",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.15.2\nTag: v0.15.2; draft: False; prerelease: False; published_at: 2020-05-25T15:30:03Z; created_at: 2020-05-25T15:27:27Z\nRelease notes:\n**Warning**: this release suffers from #1022. `bat` will panic when called with a relative file path.\n## Bugfixes\n- `--map-syntax` doesn't work with names provided through `--file-name` (@eth-p)\n- Fix syntax detection for files called 'rails', see #1008\n- Fix potential errors with syntax detection for symlinked files, see #1001\n## Other\n- Add padding above headers when not using a grid, see #968 and #981 (@pt2121)\n- bat now prints an error if an invalid syntax is specified via `-l` or `--map-syntax`, see #1004 (@eth-p)\n## `bat` as a library\n- `PrettyPrinter::vcs_modification_markers` has been marked deprecated when building without the `git` feature, see #997 and #1020 (@eth-p, @sharkdp)\n## Packaging\n- Compilation problems with `onig_sys` on various platforms have been resolved by upgrading to `syntect 4.2`, which includes a new `onig` version that allows to build `onig_sys` without the `bindgen` dependency. This removes the need for `libclang(-dev)` to be installed to compile `bat`. Package maintainers might want to remove `clang` as a build dependency. See #650 for more details.",
+      "memory_unit_text": "In the sharkdp/bat release v0.15.2, a warning notes that this release suffers from a panic when called with a relative file path. Bugfixes address --map-syntax not working with names provided through --file-name, syntax detection for files called 'rails', and potential errors with syntax detection for symlinked files. Other changes include adding padding above headers when not using a grid, printing an error if an invalid syntax is specified via -l or --map-syntax. As a library, PrettyPrinter::vcs_modification_markers is deprecated when building without the git feature. Packaging: compilation problems with onig_sys are resolved by upgrading to syntect 4.2, removing the need for libclang(-dev)."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_15_3",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.15.3",
+      "tag_name": "v0.15.3",
+      "title": "v0.15.3",
+      "time_hint": "2020-05-26",
+      "published_at": "2020-05-26T06:27:31Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.15.3",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.15.3\nTag: v0.15.3; draft: False; prerelease: False; published_at: 2020-05-26T06:27:31Z; created_at: 2020-05-26T06:11:41Z\nRelease notes:\n## Bugfixes\n- Cannot run `bat` with relative paths, see #1022\n- bat mishighlights Users that start with digits in SSH config, see #984\n## New syntaxes\n- SML, see #1005 (@kopecs)\n## Other\n- Some syntaxes and themes have been updated to the latest version",
+      "memory_unit_text": "In the sharkdp/bat release v0.15.3, bugfixes address the inability to run bat with relative paths and mishighlighting of Users that start with digits in SSH config. A new syntax for SML is added. Some syntaxes and themes are updated to the latest version."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_15_4",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.15.4",
+      "tag_name": "v0.15.4",
+      "title": "v0.15.4",
+      "time_hint": "2020-05-27",
+      "published_at": "2020-05-27T10:04:56Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.15.4",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.15.4\nTag: v0.15.4; draft: False; prerelease: False; published_at: 2020-05-27T10:04:56Z; created_at: 2020-05-27T08:14:32Z\nRelease notes:\n## Bugfixes\n- Added missing Solarized themes, see #1027\n- Fixed highlighting bug in Haskell source files, see #1026",
+      "memory_unit_text": "In the sharkdp/bat release v0.15.4, bugfixes add missing Solarized themes and fix a highlighting bug in Haskell source files."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_16_0",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.16.0",
+      "tag_name": "v0.16.0",
+      "title": "v0.16.0",
+      "time_hint": "2020-10-02",
+      "published_at": "2020-10-02T21:28:00Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.16.0",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.16.0\nTag: v0.16.0; draft: False; prerelease: False; published_at: 2020-10-02T21:28:00Z; created_at: 2020-10-02T21:27:29Z\nRelease notes:\n## Features\n- Added support for the `NO_COLOR` environment variable, see #1021 and #1031 (@eth-p)\n- Added `-P` short flag to disable paging, see #1075 and #1082 (@LordFlashmeow)\n- Added `--force-colorization`/`-f` flag to provide an alias for forced color and decoration output, see #1141 (@alexanderkarlis)\n## Bugfixes\n- Fixed non-printable characters display for redirected output, see #1061 (@gsomix)\n- Handle file extension conflicts in `--list-languages`, see #1076 and #1135 (@Kienyew)\n## Other\n- Switched to \"·\" (U+00B7) Middle Dot from \"•\" (U+2022) Bullet for non-printing spaces, see #1056 and #1100 (@LordFlashmeow)\n- Added zsh shell completion script, see #1136 (@Kienyew)\n- Improved `--help` text (@sharkdp)\n- Added custom languages/themes sections to manpage (@eth-p)\n## Syntaxes\n- Update AsciiDoc syntax, see #1034 (@rxt1077)\n- GLSL (@caioalonso)\n- Add Nginx and Apache config file syntax, see #1137 (@kjmph, @niklasmohrin)\n- Use `fstab` syntax for `crypttab` files, see #1073 (@sharkdp)\n- Support syntax highlighting for files in `$XDG_CONFIG_HOME/git/`, see #1191 (@ahmedelgabri)\n## New themes\n- Gruvbox, see #1069 (@kyleondy)\n- base16-256 for [base16-shell](https://github.com/chriskempson/base16-shell) users, see #1111 (@mk12)\n## `bat` as a library\n- Add APIs to provide `Input` descriptions with `InputDescription` (@eth-p)\n- Add function to directly provide `Input`s to `PrettyPrinter` (@eth-p)\n- **Breaking:** `Input::theme_preview_file` is no longer available. (@eth-p)\n## Packaging\n- Package maintainers: note that we now include zsh shell completion files\n- Removed build dependency on `liquid` (@sharkdp).\n## Thanks\nSpecial thanks to @rivy for porting our CI/CD workflows to Github Actions. Also, many thanks to @Kienyew and @eth-p for major contributions!",
+      "memory_unit_text": "In the sharkdp/bat release v0.16.0, support for the NO_COLOR environment variable is added. -P short flag disables paging. --force-colorization/-f flag provides an alias for forced color and decoration output. Bugfixes address non-printable characters display for redirected output, file extension conflicts in --list-languages. Other changes include switching to Middle Dot for non-printing spaces, adding zsh shell completion script, improved --help text, and adding custom languages/themes sections to manpage. Syntaxes: update AsciiDoc, add GLSL, Nginx and Apache config file syntax, use fstab syntax for crypttab files, support syntax highlighting for files in $XDG_CONFIG_HOME/git/. New themes: Gruvbox, base16-256. As a library, APIs to provide Input descriptions and directly provide Inputs to PrettyPrinter are added; Input::theme_preview_file is removed. Packaging: zsh shell completion files are included, build dependency on liquid is removed."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_17_0",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.17.0",
+      "tag_name": "v0.17.0",
+      "title": "v0.17.0",
+      "time_hint": "2020-11-23",
+      "published_at": "2020-11-23T15:57:41Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.17.0",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.17.0\nTag: v0.17.0; draft: False; prerelease: False; published_at: 2020-11-23T15:57:41Z; created_at: 2020-11-23T14:43:58Z\nRelease notes:\n## Features\n- Added a new `--style` value, `rule`, which adds a simple horizontal ruled line between files, see #1276 (@tommilligan)\n- Pass `-S` (\"chop long lines\") to `less` if `--wrap=never` is set in `bat`, see #1255 (@gahag)\n## Bugfixes\n- Detect infinite loop when input and output are the same, see #1193 and #1197 (@niklasmohrin)\n- Throw an error when `bat` is being used as `pager`, see #1343 (@adrian-rivera)\n- Bash syntax highlighting not selected for `*.ebuild` and `*.eclass` files, see #1292 (@sharkdp)\n- Fix `zsh` completion when using `-p`, see #1320 (@xzfc)\n## Other\n- Add note to refer to see detailed help with `--help` (and vice versa with `-h`), see #1215 (@henil)\n- Add a `Contributors` section to `README`, see #1348 (@adrian-rivera)\n## Syntaxes\n- Manpage syntax highlighting has been improved, see #1315 (@keith-hall)\n- Add Svelte file syntax, see #1285 (@kjmph)\n## New themes\n- Coldark, see #1329 (@armandphilippot)",
+      "memory_unit_text": "In the sharkdp/bat release v0.17.0, a new --style value rule adds a simple horizontal ruled line between files. Pass -S (chop long lines) to less if --wrap=never is set. Bugfixes detect infinite loop when input and output are the same, throw an error when bat is used as pager, fix Bash syntax highlighting not selected for *.ebuild and *.eclass files, and fix zsh completion when using -p. Other changes include adding a note to refer to detailed help, adding a Contributors section to README. Syntaxes: improved Manpage syntax highlighting, add Svelte file syntax. New theme: Coldark."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_17_1",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.17.1",
+      "tag_name": "v0.17.1",
+      "title": "v0.17.1",
+      "time_hint": "2020-11-24",
+      "published_at": "2020-11-24T20:42:18Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.17.1",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.17.1\nTag: v0.17.1; draft: False; prerelease: False; published_at: 2020-11-24T20:42:18Z; created_at: 2020-11-24T20:40:11Z\nRelease notes:\n## Bugfixes\n- Running `bat` without arguments fails (\"output file is also an input\"), see #1396",
+      "memory_unit_text": "In the sharkdp/bat release v0.17.1, a bugfix addresses running bat without arguments failing with \"output file is also an input\"."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_18_0",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.18.0",
+      "tag_name": "v0.18.0",
+      "title": "v0.18.0",
+      "time_hint": "2021-02-28",
+      "published_at": "2021-02-28T22:25:07Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.18.0",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.18.0\nTag: v0.18.0; draft: False; prerelease: False; published_at: 2021-02-28T22:25:07Z; created_at: 2021-02-28T22:04:49Z\nRelease notes:\n## Features\n- Use a pager when `bat --list-languages` is called, see #1394 (@stku1985)\n## Bugfixes\n- If the last line doesn't end with a newline character, don't add it if `--style=plain`, see #1438 (@Enselic)\n- Only print themes hint in interactive mode (`bat --list-themes`), see #1439 (@rsteube)\n- Make ./tests/syntax-tests/regression_test.sh work on recent versions of macOS, see #1443 (@Enselic)\n- VimL syntax highlighting fix, see #1450 (@esensar)\n- Print an 'Invalid syntax theme settings' error message if a custom theme is broken, see #614 (@Enselic)\n- If plain mode is set and wrap is not explicitly opted in, long lines will no be truncated, see #1426\n- If `PAGER` (but not `BAT_PAGER` or `--pager`) is `more` or `most`, silently use `less` instead to ensure support for colors, see #1063 (@Enselic)\n- If `PAGER` is `bat`, silently use `less` to prevent recursion. For `BAT_PAGER` or `--pager`, exit with error, see #1413 (@Enselic)\n- Manpage highlighting fix, see #1511 (@keith-hall)\n- `BAT_CONFIG_PATH` ignored by `bat` if non-existent, see #1550 (@sharkdp)\n## Other\n- Performance improvements, see #1421 (@LovecraftianHorror)\n- Added a new `--diagnostic` option to collect information for bug reports, see #1459 (@sharkdp)\n- Modified default theme colors to differentiate between a JSON key and a string value, see #1400 (@keith-hall)\n- Upped min required Rust version to 1.42\n## Syntaxes\n- Added Zig syntax, see #1470 (@paulsmith)\n- Added Lean syntax, see #1446 (@Julian)\n- Added `.resource` extension for Robot Framework files, see #1386\n- Added `gnuplot` syntax, see #1431 (@sharkdp)\n- Highlight *.pac (Proxy auto-config) files as JavaScript, see #1515 (@sharkdp)\n## New themes\n- `ansi` replaces `ansi-dark` and `ansi-light`, see #1104 and #1412 (@mk12). **Breaking change:** users that were previously using one of the `ansi-*` themes should switch to `ansi`.\n- The Gruvbox theme has been updated, see #1291 (@j0hnmeow). **Breaking change:** users that were previously using `gruvbox` or `gruvbox-white` should update and use `gruvbox-dark`/`gruvbox-light` instead.\n## `bat` as a library\n- The following `PrettyPrinter` methods have been removed (they were previously deprecated):\n- `input_stdin_with_name`\n- `input_from_bytes_with_name`\n- `input_from_reader_with_name`\n- `vcs_modification_markers` (if the `git` feature is not enabled)",
+      "memory_unit_text": "In the sharkdp/bat release v0.18.0, a pager is used when bat --list-languages is called. Bugfixes include not adding a newline if the last line doesn't end with one when using --style=plain, only printing themes hint in interactive mode, making regression tests work on recent macOS, fixing VimL syntax highlighting, printing an error message if a custom theme is broken, truncating long lines in plain mode if wrap is not explicitly opted in, silently using less instead of more or most to ensure color support, silently using less if PAGER is bat to prevent recursion, fixing Manpage highlighting, and fixing BAT_CONFIG_PATH ignored if non-existent. Other improvements include performance improvements, a new --diagnostic option, modified default theme colors, and upping min required Rust version to 1.42. Syntaxes: added Zig, Lean, .resource extension for Robot Framework, gnuplot, highlight *.pac as JavaScript. New themes: ansi replaces ansi-dark and ansi-light (breaking change); Gruvbox theme updated (breaking change). As a library, several deprecated PrettyPrinter methods are removed."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_18_1",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.18.1",
+      "tag_name": "v0.18.1",
+      "title": "v0.18.1",
+      "time_hint": "2021-05-13",
+      "published_at": "2021-05-13T08:08:47Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.18.1",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.18.1\nTag: v0.18.1; draft: False; prerelease: False; published_at: 2021-05-13T08:08:47Z; created_at: 2021-05-13T08:06:50Z\nRelease notes:\n## Bugfixes\n- Mouse support and screen clearing broken for `less` versions with minor version number (581.2), see #1629 and #1639 (@aswild)\n## Other\n- `Input::ordinary_file` and `Input::with_name` now accept `Path` rather than `OsStr` see #1571 (@matklad)\n- The `LESS` environment variable is now included in `bat --diagnostic`, see #1589 (@Enselic)\n- Increased min. required Rust version to 1.45\n## Syntaxes\n- Improved the Syslog syntax highlighting, see #1606 (@keith-hall)\n- Replaced \"Advanced CSV\" with a custom CSV syntax definition written especially for `bat`; see #1574 (@keith-hall)\n- Added SystemVerilog file syntax, see #1580 (@SeanMcLoughlin)\n- Added Solidity and Vyper syntax, see #1602 (@Ersikan)\n## New themes\n- Dark+ VS Code theme, see #1588 and #1598 (@PatriotRossii)",
+      "memory_unit_text": "In the sharkdp/bat release v0.18.1, a bugfix addresses mouse support and screen clearing broken for less versions with minor version number (581.2). Other changes include Input::ordinary_file and Input::with_name now accepting Path, the LESS environment variable included in bat --diagnostic, and increased min. required Rust version to 1.45. Syntaxes: improved Syslog highlighting, replaced Advanced CSV with a custom CSV syntax, added SystemVerilog, Solidity and Vyper. New theme: Dark+ VS Code theme."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_18_2",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.18.2",
+      "tag_name": "v0.18.2",
+      "title": "v0.18.2",
+      "time_hint": "2021-07-13",
+      "published_at": "2021-07-13T10:01:53Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.18.2",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.18.2\nTag: v0.18.2; draft: False; prerelease: False; published_at: 2021-07-13T10:01:53Z; created_at: 2021-07-13T09:00:36Z\nRelease notes:\n## Features\n- Ignore known backup/template filename suffixes when selecting the syntax, see #1687 (@scop)\n## Bugfixes\n- Fix for a security vulnerability on Windows ([CVE-2021-36753](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-36753)). Prior to this release, `bat` would execute programs called `less`/`less.exe` from the current working directory (instead of the one from `PATH`) with priority. An attacker might be able to use this by placing a malicious program in a shared directory where the user would execute `bat`. `bat` users on Windows are advised to upgrade to this version. See #1724 and #1472 (@Ry0taK).\n## Other\n- Add bash completion, see #1678 (@scop)\n- Fix Clippy lints, see #1661 (@mohamed-abdelnour)\n- Add syntax highlighting test files, see #1213 and #1668 (@mohamed-abdelnour)\n## Syntaxes\n- Upgraded Julia syntax to fix a highlighting bug, see #1692\n- Added support for `dash` syntax, see #1654 (@mohamed-abdelnour)\n- Added support for `XAML` syntax, see #1590 and #1655 (@mohamed-abdelnour)\n- Apply `DotENV` syntax also for `.env.default` and `.env.defaults` files, see #1669",
+      "memory_unit_text": "In the sharkdp/bat release v0.18.2, a feature ignores known backup/template filename suffixes when selecting syntax. A security vulnerability fix (CVE-2021-36753) prevents bat from executing programs called less/less.exe from the current working directory on Windows. Other changes include adding bash completion, fixing Clippy lints, and adding syntax highlighting test files. Syntaxes: upgraded Julia syntax, added dash and XAML syntax, apply DotENV syntax also for .env.default and .env.defaults files."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_18_3",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.18.3",
+      "tag_name": "v0.18.3",
+      "title": "v0.18.3",
+      "time_hint": "2021-08-22",
+      "published_at": "2021-08-22T16:48:44Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.18.3",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.18.3\nTag: v0.18.3; draft: False; prerelease: False; published_at: 2021-08-22T16:48:44Z; created_at: 2021-08-22T15:47:12Z\nRelease notes:\n## Bugfixes\n- Bump `git2` dependency to fix build with Rust 1.54, see #1761",
+      "memory_unit_text": "In the sharkdp/bat release v0.18.3, a bugfix bumps the git2 dependency to fix build with Rust 1.54."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_19_0",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.19.0",
+      "tag_name": "v0.19.0",
+      "title": "v0.19.0",
+      "time_hint": "2022-01-08",
+      "published_at": "2022-01-08T17:02:57Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.19.0",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.19.0\nTag: v0.19.0; draft: False; prerelease: False; published_at: 2022-01-08T17:02:57Z; created_at: 2022-01-08T16:01:20Z\nRelease notes:\n## Performance\n- Reduce startup time in loop-through mode (e.g. when redirecting output) by 90%. See #1747 (@Enselic)\n- Load themes lazily to make bat start 25% faster when disregarding syntax load time. See #1969 (@Enselic)\n- Python syntax highlighting no longer suffers from abysmal performance in specific scenarios. See #1688 (@keith-hall)\n- Fix for poor performance when ANSI escape sequences are piped to `bat`, see #1596 (@eth-p)\n- Fix for incorrect handling of ANSI escape sequences when using `--wrap=never`, see #1596 (@eth-p)\n- Load custom assets as fast as integrated assets, see #1753 (@Enselic)\n## Features\n- Support for `x:-delta` (minus) syntax in line ranges (e.g. `20:-10`). See  #1901 (@bojan88)\n- Support for `--ignored-suffix` argument. See #1892 (@bojan88)\n- `$BAT_CONFIG_DIR` is now a recognized environment variable. It has precedence over `$XDG_CONFIG_HOME`, see #1727 (@billrisher)\n- Support for `x:+delta` syntax in line ranges (e.g. `20:+10`). See  #1810 (@bojan88)\n- Add new `--acknowledgements` option that gives credit to theme and syntax definition authors. See #1971 (@Enselic)\n- Include git hash in `bat -V` and `bat --version` output if present. See #1921 (@Enselic)\n## Bugfixes\n- First line not shown in diff context. See #1891 (@divagant-martian)\n- Do not ignore syntaxes that handle file names with a `*.conf` extension. See #1703 (@cbolgiano)\n## Other\n- Add PowerShell completion, see #1826 (@rashil2000)\n- Minimum supported Rust version (MSRV) bumped to 1.51, see #1994 (@mdibaiee)\n## Syntaxes\n- Groff, see #1685 (@scop)\n- HTTP Requests and Responses, see #1748 (@keith-hall)\n- LLVM, see #1777 (@ioncodes)\n- Highlight for `vimrc` and `gvimrc` files, see #1763 (@SuperSandro2000)\n- Syslog highlighting improvements, see #1793 (@scop)\n- Added support for `slim` syntax, see #1693 (@mfinelli)\n- Racket, see #1884 (@jubnzv)\n- LiveScript, see #1915 (@Enselic)\n- MediaWiki, see #1925 (@sorairolake)\n- The `requirements.txt` syntax has been removed due to incompatible license requirements.\n- Dart, new highlighter, see #1959 (@Ersikan)\n- SCSS and Sass syntaxes updated, see #1766 (@Enselic)\n- PowerShell syntax updated, see #1935 (@Enselic)\n- TypeScript syntax updated, see #1834 (@Enselic)\n## `bat` as a library\n- Deprecate `HighlightingAssets::syntaxes()` and `HighlightingAssets::syntax_for_file_name()`. Use `HighlightingAssets::get_syntaxes()` and `HighlightingAssets::get_syntax_for_path()` instead. They return a `Result` which is needed for upcoming lazy-loading work to improve startup performance. They also return which `SyntaxSet` the returned `SyntaxReference` belongs to. See #1747, #1755, #1776, #1862 (@Enselic)\n- Remove `HighlightingAssets::from_files` and `HighlightingAssets::save_to_cache`. Instead of calling the former and then the latter you now make a single call to `bat::assets::build`. See #1802, #1971 (@Enselic)\n- Replace  the `error::Error(error::ErrorKind, _)` struct and enum with an `error::Error` enum. `Error(ErrorKind::UnknownSyntax, _)` becomes `Error::UnknownSyntax`, etc. Also remove the `error::ResultExt` trait. These changes stem from replacing `error-chain` with `thiserror`. See #1820 (@Enselic)\n- Add new `MappingTarget` enum variant `MapExtensionToUnknown`. Refer to its documentation for more information. Also mark `MappingTarget` as `#[non_exhaustive]` since more enum variants might be added in the future. See #1703 (@cbolgiano), #2012 (@Enselic)",
+      "memory_unit_text": "In the sharkdp/bat release v0.19.0, performance improvements reduce startup time in loop-through mode by 90%, load themes lazily for 25% faster start, fix abysmal Python syntax highlighting performance, fix poor performance when ANSI escape sequences are piped, fix incorrect handling of ANSI escape sequences with --wrap=never, and load custom assets as fast as integrated assets. Features include support for x:-delta and x:+delta syntax in line ranges, --ignored-suffix argument, $BAT_CONFIG_DIR environment variable, --acknowledgements option, and including git hash in bat -V output. Bugfixes address first line not shown in diff context and not ignoring syntaxes that handle file names with *.conf extension. Other changes include adding PowerShell completion and bumping MSRV to 1.51. Syntaxes: Groff, HTTP Requests and Responses, LLVM, highlight for vimrc and gvimrc files, Syslog improvements, slim, Racket, LiveScript, MediaWiki; requirements.txt syntax removed; Dart new highlighter; SCSS, Sass, PowerShell, TypeScript syntaxes updated. As a library, deprecate some HighlightingAssets methods, remove from_files and save_to_cache, replace error struct with enum, add MappingTarget::MapExtensionToUnknown."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_20_0",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.20.0",
+      "tag_name": "v0.20.0",
+      "title": "v0.20.0",
+      "time_hint": "2022-02-27",
+      "published_at": "2022-02-27T07:16:14Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.20.0",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.20.0\nTag: v0.20.0; draft: False; prerelease: False; published_at: 2022-02-27T07:16:14Z; created_at: 2022-02-27T06:39:22Z\nRelease notes:\n## Features\n- New style component `header-filesize` to show size of the displayed file in the header. See #1988 (@mdibaiee)\n- Use underline for line highlighting on ANSI, see #1730 (@mdibaiee)\n## Bugfixes\n- Fix bash completion on bash 3.x and bash-completion 1.x. See #2066 (@joshpencheon)\n## Syntaxes\n- `GraphQL`: Add support for interfaces implementing interfaces and consider ampersand an operator. See #2000\n- Associate `_vimrc` and `_gvimrc` files with the `VimL` syntax. See #2002\n- Associate `poetry.lock` files with the `TOML` syntax. See #2049\n- Associate `.mesh`, `.task`, `.rgen`, `.rint`, `.rahit`, `.rchit`, `.rmiss`, and `.rcall` with the `GLSL` syntax. See #2050\n- Added support for `JQ` syntax, see #2072 (@clarfonthey)\n- Properly associate global git config files rooted in `$XDG_CONFIG_HOME/git/` or `$HOME/.config/git/`. See #2067 (@cyqsimon)\n## `bat` as a library\n- Exposed `get_syntax_set` and `get_theme` methods on `HighlightingAssets`. See #2030 (@dandavison)\n- Added `HeaderFilename` and `HeaderFilesize` to `StyleComponent` enum, and mark it `#[non_exhaustive]`. See #1988 (@mdibaiee)",
+      "memory_unit_text": "In the sharkdp/bat release v0.20.0, new style component header-filesize shows file size in the header. Underline is used for line highlighting on ANSI. Bugfixes address bash completion on bash 3.x and bash-completion 1.x. Syntaxes: GraphQL support for interfaces and ampersand operator, associate _vimrc and _gvimrc with VimL, poetry.lock with TOML, various extensions with GLSL, add JQ syntax, properly associate global git config files. As a library, expose get_syntax_set and get_theme methods on HighlightingAssets, add HeaderFilename and HeaderFilesize to StyleComponent enum."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_21_0",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.21.0",
+      "tag_name": "v0.21.0",
+      "title": "v0.21.0",
+      "time_hint": "2022-05-12",
+      "published_at": "2022-05-12T11:39:22Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.21.0",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.21.0\nTag: v0.21.0; draft: False; prerelease: False; published_at: 2022-05-12T11:39:22Z; created_at: 2022-05-12T10:12:49Z\nRelease notes:\n## Features\n- Correctly render tab stops in `--show-all`, see #2038 (@Synthetica9)\n- Add a `--style=default` option and make it the default. It is less verbose than `full`, see #2061 (@IsaacHorvath)\n- Enable BusyBox `less` as pager, see #2162 (@nfisher1226)\n- File extensions are now matched case-insensitively. See #1854, #2181 (@Enselic)\n## Bugfixes\n- Bump `regex` dependency from 1.5.4 to 1.5.5 to fix [CVE-2022-24713](https://blog.rust-lang.org/2022/03/08/cve-2022-24713.html), see #2145, #2139 (@Enselic)\n- `bat` no longer crashes when encountering files that references missing syntaxes. See #915, #2181 (@Enselic)\n## Performance\n- Skip syntax highlighting on long lines (> 16384 chars) to help improve performance. See #2165 (@keith-hall)\n- Vastly improve startup time by lazy-loading syntaxes via syntect 5.0.0. This makes bat display small files ~75% faster than before. See #951, #2181 (@Enselic)\n## Other\n- Include info about custom assets in `--diagnostics` if used. See #2107, #2144 (@Enselic)\n## Syntaxes\n- Mapped clang-format config file (.clang-format) to YAML syntax (@TruncatedDinosour)\n- log syntax: improved handling of escape characters in double quoted strings. See #2123 (@keith-hall)\n- Associate `/var/spool/mail/*` and `/var/mail/*` with the `Email` syntax. See #2156 (@cyqsimon)\n- Added cmd-help syntax to scope --help messages. See #2148 (@victor-gp)\n- Slightly adjust Zig syntax. See #2136 (@Enselic)\n- Associate `.inf` files with the `INI` syntax. See #2190 (@Enselic)\n## `bat` as a library\n- Allow configuration of `show_nonprintable` with `PrettyPrinter`, see #2142\n- The binary format of syntaxes.bin has been changed due to syntaxes now being lazy-loaded via syntect 5.0.0. See #2181 (@Enselic)\n- Mark `bat::error::Error` enum as `#[non_exhaustive]` to allow adding new variants without future semver breakage. See #2181 (@Enselic)\n- Change `Error::SyntectError(syntect::LoadingError)` to `Error::SyntectError(syntect::Error)`. See #2181 (@Enselic)\n- Add `Error::SyntectLoadingError(syntect::LoadingError)` enum variant. See #2181 (@Enselic)",
+      "memory_unit_text": "In the sharkdp/bat release v0.21.0, features include correctly rendering tab stops in --show-all, adding --style=default as the new default (less verbose than full), enabling BusyBox less as pager, and case-insensitive file extension matching. Bugfixes bump regex dependency to fix CVE-2022-24713 and prevent crashes when encountering files referencing missing syntaxes. Performance improvements skip syntax highlighting on long lines (> 16384 chars) and vastly improve startup time by lazy-loading syntaxes via syntect 5.0.0, making bat display small files ~75% faster. Other changes include info about custom assets in --diagnostics. Syntaxes: map clang-format config to YAML, improve log syntax, associate /var/spool/mail/* and /var/mail/* with Email, add cmd-help syntax, adjust Zig syntax, associate .inf files with INI. As a library, allow configuration of show_nonprintable with PrettyPrinter, change binary format of syntaxes.bin, mark Error enum as non_exhaustive, change Error::SyntectError variant, add Error::SyntectLoadingError."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_22_0",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.22.0",
+      "tag_name": "v0.22.0",
+      "title": "v0.22.0",
+      "time_hint": "2022-09-06",
+      "published_at": "2022-09-06T20:55:52Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.22.0",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.22.0\nTag: v0.22.0; draft: False; prerelease: False; published_at: 2022-09-06T20:55:52Z; created_at: 2022-09-06T20:54:20Z\nRelease notes:\n## Features\n- Make the default macOS theme depend on Dark Mode. See #2197, #1746 (@Enselic)\n- Support for separate system and user config files. See #668 (@patrickpichler)\n## Bugfixes\n- Prevent fork nightmare with `PAGER=batcat`. See #2235 (@johnmatthiggins)\n- Make `--no-paging`/`-P` override `--paging=...` if passed as a later arg, see #2201 (@themkat)\n- `--map-syntax` and `--ignored-suffix` now works together, see #2093 (@czzrr)\n- Strips byte order mark from output when in non-loop-through mode. See #1922 (@dag-h)\n## Other\n- Relaxed glibc requirements on amd64, see #2106 and #2194 (@sharkdp)\n- Improved fish completions. See #2275 (@zgracem)\n- Stop pre-processing ANSI escape characters. Syntax highlighting on ANSI escaped input is not supported. See #2185 and #2189 (@Enselic)\n## Syntaxes\n- NSE (Nmap Scripting Engine) is mapped to Lua, see #2151 (@Cre3per)\n- Correctly color `fstab` dump and pass fields, see #2246 (@yuvalmo)\n- Update `Command Help` syntax, see #2255\n- `Julia`: Fix syntax highlighting for function name starting with `struct`, see #2230\n- Minor update to `LiveScript`, see #2291\n- Associate `.mts` and `.cts` files with the `TypeScript` syntax. See #2236 (@kidonng)\n- Fish history is mapped to YAML. See #2237 (@kidonng)\n## `bat` as a library\n- Make `bat::PrettyPrinter::syntaxes()` iterate over new `bat::Syntax` struct instead of `&syntect::parsing::SyntaxReference`. See #2222 (@Enselic)\n- Clear highlights after printing, see #1919 and #1920 (@rhysd)",
+      "memory_unit_text": "In the sharkdp/bat release v0.22.0, features make the default macOS theme depend on Dark Mode and support separate system and user config files. Bugfixes prevent fork nightmare with PAGER=batcat, make --no-paging/-P override --paging=... if passed later, make --map-syntax and --ignored-suffix work together, and strip byte order mark from output in non-loop-through mode. Other changes include relaxed glibc requirements on amd64, improved fish completions, and stopping pre-processing of ANSI escape characters. Syntaxes: NSE mapped to Lua, correctly color fstab dump and pass fields, update Command Help syntax, fix Julia syntax highlighting for function name starting with struct, minor update to LiveScript, associate .mts and .cts with TypeScript, map Fish history to YAML. As a library, make PrettyPrinter::syntaxes() iterate over new Syntax struct, clear highlights after printing."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_22_1",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.22.1",
+      "tag_name": "v0.22.1",
+      "title": "v0.22.1",
+      "time_hint": "2022-09-10",
+      "published_at": "2022-09-10T18:09:14Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.22.1",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.22.1\nTag: v0.22.1; draft: False; prerelease: False; published_at: 2022-09-10T18:09:14Z; created_at: 2022-09-10T15:59:33Z\nRelease notes:\n## Bugfixes\n- Bring back pre-processing of ANSI escape characters to so that some common `bat` use cases starts working again. See [#2308](https://github.com/sharkdp/bat/pull/2308) (@Enselic)",
+      "memory_unit_text": "In the sharkdp/bat release v0.22.1, a bugfix brings back pre-processing of ANSI escape characters so that some common bat use cases start working again."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_23_0",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.23.0",
+      "tag_name": "v0.23.0",
+      "title": "v0.23.0",
+      "time_hint": "2023-03-25",
+      "published_at": "2023-03-25T09:33:05Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.23.0",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.23.0\nTag: v0.23.0; draft: False; prerelease: False; published_at: 2023-03-25T09:33:05Z; created_at: 2023-03-25T09:31:31Z\nRelease notes:\n## Features\n- Implemented `-S` and `--chop-long-lines` flags as aliases for `--wrap=never`. See #2309 (@johnmatthiggins)\n- Breaking change: Environment variables can now override config file settings (but command-line arguments still have the highest precedence), see #1152, #1281, and #2381 (@aaronkollasch)\n- Implemented `--nonprintable-notation=caret` to support showing non-printable characters using caret notation. See #2429 (@einfachIrgendwer0815)\n## Bugfixes\n- Fix `bat cache --clear` not clearing the `--target` dir if specified. See #2393 (@miles170)\n## Other\n- Various bash completion improvements, see #2310 (@scop)\n- Disable completion of `cache` subcommand, see #2399 (@cyqsimon)\n- Signifigantly improve startup performance on macOS, see #2442 (@BlackHoleFox)\n- Bump MSRV to 1.62, see #2496 (@Enselic)\n## Syntaxes\n- Added support for Ada, see #1300 and #2316 (@dkm)\n- Added `todo.txt` syntax, see #2375 (@BANOnotIT)\n- Improve Manpage.sublime-syntax. See #2364 (@Freed-Wu) and #2461 (@keith-hall)\n- Added a new `requirements.txt` syntax, see #2361 (@Freed-Wu)\n- Added a new VimHelp syntax, see #2366 (@Freed-Wu)\n- Associate `pdm.lock` with `TOML` syntax, see #2410\n- `Todo.txt`: Fix highlighting of contexts and projects at beginning of done.txt, see #2411\n- `cmd-help`: overhaul scope names (colors) to improve theme support; misc syntax improvements. See #2419 (@victor-gp)\n- Added support for Crontab, see #2509 (@keith-hall)",
+      "memory_unit_text": "In the sharkdp/bat release v0.23.0, features implement -S and --chop-long-lines as aliases for --wrap=never, make environment variables override config file settings (breaking change), and implement --nonprintable-notation=caret for showing non-printable characters using caret notation. Bugfixes address bat cache --clear not clearing the --target dir if specified. Other changes include various bash completion improvements, disabling completion of cache subcommand, significantly improving startup performance on macOS, and bumping MSRV to 1.62. Syntaxes: added Ada, todo.txt, improve Manpage.sublime-syntax, add new requirements.txt syntax, add VimHelp syntax, associate pdm.lock with TOML, fix Todo.txt highlighting, overhaul cmd-help scope names, add Crontab support."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_24_0",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.24.0",
+      "tag_name": "v0.24.0",
+      "title": "v0.24.0",
+      "time_hint": "2023-10-11",
+      "published_at": "2023-10-11T18:20:46Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.24.0",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.24.0\nTag: v0.24.0; draft: False; prerelease: False; published_at: 2023-10-11T18:20:46Z; created_at: 2023-10-11T17:14:12Z\nRelease notes:\n# v0.24.0\n## Features\n- Add environment variable `BAT_PAGING`, see #2629 (@einfachIrgendwer0815)\n- Add opt-in (`--features lessopen`) support for `LESSOPEN` and `LESSCLOSE`. See #1597, #1739, #2444, #2602, and #2662 (@Anomalocaridid)\n## Bugfixes\n- Fix `more` not being found on Windows when provided via `BAT_PAGER`, see #2570, #2580, and #2651 (@mataha)\n- Switched default behavior of `--map-syntax` to be case insensitive #2520\n- Updated version of `serde_yaml` to `0.9`. See #2627 (@Raghav-Bell)\n- Fix arithmetic overflow in `LineRange::from` and `LineRange::parse_range`, see #2674, #2698 (@skoriop)\n- Fix paging not happening when stdout is interactive but stdin is not, see #2574 (@Nigecat)\n- Make `-pp` override `--paging` and vice versa when passed as a later argument, see #2660 (@J-Kappes)\n## Other\n- Output directory for generated assets (completion, manual) can be customized, see #2515 (@tranzystorek-io)\n- Use the `is-terminal` crate instead of `atty`, see #2530 (@nickelc)\n- Add Winget Releaser workflow, see #2519 (@sitiom)\n- Bump MSRV to 1.70, see #2651 (@mataha)\n## Syntaxes\n- Associate `os-release` with `bash` syntax, see #2587 (@cyqsimon)\n- Associate `Containerfile` with `Dockerfile` syntax, see #2606 (@einfachIrgendwer0815)\n- Replaced quotes with double quotes so fzf integration example script works on windows and linux. see #2095 (@johnmatthiggins)\n- Associate `ksh` files with `bash` syntax, see #2633 (@johnmatthiggins)\n- Associate `sarif` files with `JSON` syntax, see #2695 (@rhysd)\n- Associate `ron` files with `rust` syntax, see #2427 (@YeungOnion)\n- Add support for [WebGPU Shader Language](https://www.w3.org/TR/WGSL/), see #2692 (@rhysd)\n- Add `.dpkg-new` and `.dpkg-tmp` to ignored suffixe, see #2595 (@scop)\n- fix: Add syntax mapping `*.jsonl` => `json`, see #2539 (@WinterCore)\n- Update `Julia` syntax, see #2553 (@dependabot)\n- add `NSIS` support, see #2577 (@idleberg)\n- Update `ssh-config`, see #2697 (@mrmeszaros)\n## `bat` as a library\n- Add optional output_buffer arg to `Controller::run()` and `Controller::run_with_error_handler()`, see #2618 (@Piturnah)",
+      "memory_unit_text": "In the sharkdp/bat release v0.24.0, features add environment variable BAT_PAGING and opt-in support for LESSOPEN and LESSCLOSE. Bugfixes fix more not being found on Windows when provided via BAT_PAGER, switch default behavior of --map-syntax to case insensitive, update serde_yaml to 0.9, fix arithmetic overflow in LineRange, fix paging not happening when stdout is interactive but stdin is not, and make -pp override --paging and vice versa when passed later. Other changes include customizable output directory for generated assets, using is-terminal crate instead of atty, adding Winget Releaser workflow, and bumping MSRV to 1.70. Syntaxes: associate os-release with bash, Containerfile with Dockerfile, replace quotes in fzf integration example, associate ksh with bash, sarif with JSON, ron with rust, add WebGPU Shader Language support, add .dpkg-new and .dpkg-tmp to ignored suffixes, add syntax mapping *.jsonl => json, update Julia syntax, add NSIS support, update ssh-config. As a library, add optional output_buffer arg to Controller::run()."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_25_0",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.25.0",
+      "tag_name": "v0.25.0",
+      "title": "v0.25.0",
+      "time_hint": "2025-01-07",
+      "published_at": "2025-01-07T19:08:22Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.25.0",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.25.0\nTag: v0.25.0; draft: False; prerelease: False; published_at: 2025-01-07T19:08:22Z; created_at: 2025-01-07T19:07:05Z\nRelease notes:\n# v0.25.0\n## Features\n- Set terminal title to file names when Paging is not Paging::Never #2807 (@Oliver-Looney)\n- `bat --squeeze-blank`/`bat -s` will now squeeze consecutive empty lines, see #1441 (@eth-p) and #2665 (@einfachIrgendwer0815)\n- `bat --squeeze-limit` to set the maximum number of empty consecutive when using `--squeeze-blank`, see #1441 (@eth-p) and #2665 (@einfachIrgendwer0815)\n- `PrettyPrinter::squeeze_empty_lines` to support line squeezing for bat as a library, see #1441 (@eth-p) and #2665 (@einfachIrgendwer0815)\n- Syntax highlighting for JavaScript files that start with `#!/usr/bin/env bun` #2913 (@sharunkumar)\n- `bat --strip-ansi={never,always,auto}` to remove ANSI escape sequences from bat's input, see #2999 (@eth-p)\n- Add or remove individual style components without replacing all styles #2929 (@eth-p)\n- Automatically choose theme based on the terminal's color scheme, see #2896 (@bash)\n- Add option `--binary=as-text` for printing binary content, see issue #2974 and PR #2976 (@einfachIrgendwer0815)\n- Make shell completions available via `--completion <shell>`, see issue #2057 and PR #3126 (@einfachIrgendwer0815)\n- Syntax highlighting for puppet code blocks within Markdown files, see #3152 (@liliwilson)\n## Bugfixes\n- Fix long file name wrapping in header, see #2835 (@FilipRazek)\n- Fix `NO_COLOR` support, see #2767 (@acuteenvy)\n- Fix handling of inputs with OSC ANSI escape sequences, see #2541 and #2544 (@eth-p)\n- Fix handling of inputs with combined ANSI color and attribute sequences, see #2185 and #2856 (@eth-p)\n- Fix panel width when line 10000 wraps, see #2854 (@eth-p)\n- Fix compile issue of `time` dependency caused by standard library regression #3045 (@cyqsimon)\n- Fix override behavior of --plain and --paging, see issue #2731 and PR #3108 (@einfachIrgendwer0815)\n- Fix bugs in `$LESSOPEN` support, see #2805 (@Anomalocaridid)\n## Other\n- Upgrade to Rust 2021 edition #2748 (@cyqsimon)\n- Refactor and cleanup build script #2756 (@cyqsimon)\n- Checks changelog has been written to for PRs in CI #2766 (@cyqsimon)\n- Use GitHub API to get correct PR submitter #2791 (@cyqsimon)\n- Minor benchmark script improvements #2768 (@cyqsimon)\n- Update Arch Linux package URL in README files #2779 (@brunobell)\n- Update and improve `zsh` completion, see #2772 (@okapia)\n- More extensible syntax mapping mechanism #2755 (@cyqsimon)\n- Use proper Architecture for Debian packages built for musl, see #2811 (@Enselic)\n- Pull in fix for unsafe-libyaml security advisory, see #2812 (@dtolnay)\n- Update git-version dependency to use Syn v2, see #2816 (@dtolnay)\n- Update git2 dependency to v0.18.2, see #2852 (@eth-p)\n- Improve performance when color output disabled, see #2397 and #2857 (@eth-p)\n- Relax syntax mapping rule restrictions to allow brace expansion #2865 (@cyqsimon)\n- Apply clippy fixes #2864 (@cyqsimon)\n- Faster startup by offloading glob matcher building to a worker thread #2868 (@cyqsimon)\n- Display which theme is the default one in basic output (no colors), see #2937 (@sblondon)\n- Display which theme is the default one in colored output, see #2838 (@sblondon)\n- Add aarch64-apple-darwin (\"Apple Silicon\") binary tarballs to releases, see #2967 (@someposer)\n- Update the Lisp syntax, see #2970 (@ccqpein)\n- Use bat's ANSI iterator during tab expansion, see #2998 (@eth-p)\n- Support 'statically linked binary' for aarch64 in 'Release' page, see #2992 (@tzq0301)\n- Update options in shell completions and the man page of `bat`, see #2995 (@akinomyoga)\n- Update nix dev-dependency to v0.29.0, see #3112 (@decathorpe)\n- Bump MSRV to [1.74](https://blog.rust-lang.org/2023/11/16/Rust-1.74.0.html), see #3154 (@keith-hall)\n- Update clircle dependency to remove winapi transitive dependency, see #3113 (@niklasmohrin)\n## Syntaxes\n- `cmd-help`: scope subcommands followed by other...",
+      "memory_unit_text": "In the sharkdp/bat release v0.25.0, features set terminal title to file names when paging is not Never, add --squeeze-blank/-s to squeeze consecutive empty lines, --squeeze-limit to set maximum empty lines, PrettyPrinter::squeeze_empty_lines for library use, syntax highlighting for JavaScript files with #!/usr/bin/env bun, --strip-ansi={never,always,auto} to remove ANSI escape sequences, ability to add or remove individual style components without replacing all styles, automatically choose theme based on terminal's color scheme, --binary=as-text for printing binary content, make shell completions available via --completion <shell>, and syntax highlighting for puppet code blocks within Markdown files. Bugfixes address long file name wrapping in header, NO_COLOR support, handling of inputs with OSC ANSI escape sequences, combined ANSI color and attribute sequences, panel width when line 10000 wraps, compile issue of time dependency, override behavior of --plain and --paging, and bugs in $LESSOPEN support. Other changes include upgrading to Rust 2021 edition, various CI and build improvements, updating dependencies, improving performance when color output disabled, relaxing syntax mapping rule restrictions, faster startup by offloading glob matcher building, displaying default theme info, adding aarch64-apple-darwin binary tarballs, updating Lisp syntax, using bat's ANSI iterator during tab expansion, supporting statically linked binary for aarch64, updating options in shell completions and man page, bumping MSRV to 1.74, and updating clircle dependency. Syntaxes: cmd-help scope subcommands followed by other..."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_26_0",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.26.0",
+      "tag_name": "v0.26.0",
+      "title": "v0.26.0",
+      "time_hint": "2025-10-19",
+      "published_at": "2025-10-19T18:22:55Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.26.0",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.26.0\nTag: v0.26.0; draft: False; prerelease: False; published_at: 2025-10-19T18:22:55Z; created_at: 2025-10-19T18:20:43Z\nRelease notes:\n# v0.26.0\n## Features\n- Add build for windows/ARM64 platform. #3190 (@alcroito)\n- Add paging to `--list-themes`, see PR #3239 (@einfachIrgendwer0815)\n- Support negative relative line ranges, e.g. `bat -r :-10` / `bat -r='-10:'`, see #3068 (@ajesipow)\n- Support context in line ranges, e.g. `bat -r 30::5` /  `bat -r 30:40:5`, see #3345 (@cavanaug)\n- Add built-in 'minus' pager, e.g. `bat --pager=builtin` see PR #3402 (@academician)\n## Bugfixes\n- Fix UTF-8 BOM not being stripped for syntax detection, see #3314 (@krikera)\n- Fix `BAT_THEME_DARK` and `BAT_THEME_LIGHT` being ignored, see issue #3171 and PR #3168 (@bash)\n- Prevent `--list-themes` from outputting default theme info to stdout when it is piped, see #3189 (@einfachIrgendwer0815)\n- Rename some submodules to fix Dependabot submodule updates, see issue #3198 and PR #3201 (@victor-gp)\n- Make highlight tests fail when new syntaxes don't have fixtures PR #3255 (@dan-hipschman)\n- Fix crash for multibyte characters in file path, see issue #3230 and PR #3245 (@HSM95)\n- Add missing mappings for various bash/zsh files, see PR #3262 (@AdamGaskins)\n- Send all bat errors to stderr by default, see #3336 (@JerryImMouse)\n- Make --map-syntax target case insensitive to match --language, see #3206 (@keith-hall)\n- Correctly determine the end of the line in UTF16LE/BE input #3369 (@keith-hall)\n- `--style=changes` no longer prints a two-space indent when the file is unmodified, see issue #2710 and PR #3406 (@jyn514)\n- Add missing shell completions, see #3411 (@keith-hall)\n- Execute help/version/diagnostic commands even with invalid config/arguments present, see #3414 (@keith-hall)\n- Fixed line numbers (`-n`) and style components not printing when piping output, see issue #2935 and PR #3438 (@lmmx)\n## Other\n- Update base16 README links to community driven base16 work #2871 (@JamyGolden)\n- Work around build failures when building `bat` from vendored sources #3179 (@dtolnay)\n- CICD: Stop building for x86_64-pc-windows-gnu which fails #3261 (Enselic)\n- CICD:  CICD: replace windows-2019 runners with windows-2025 #3339 (@cyqsimon)\n- Build script: replace string-based codegen with quote-based codegen #3340 (@cyqsimon)\n- Improve code coverage of `--list-languages` parameter #2942 (@sblondon)\n- Only start offload worker thread when there's more than 1 core #2956 (@cyqsimon)\n- Update terminal-colorsaurus (the library used for dark/light detection) to 1.0, see #3347 (@bash)\n- Update console dependency to 0.16, see #3351 (@musicinmybrain)\n- Fixed some typos #3244 (@ssbarnea)\n- Update onig_sys dependency to 69.9.1 to fix a gcc build failure #3400 (@CosmicHorrorDev)\n- Add a cargo feature (`vendored-libgit2`) to build with vendored libgit2 version without depending on the system's one #3426 (@0x61nas)\n- Update syntect dependency to v5.3.0 to fix a few minor bugs, see #3410 (@keith-hall)\n## Syntaxes\n- Add syntax mapping for `paru` configuration files #3182 (@cyqsimon)\n- Add support for [Idris 2 programming language](https://www.idris-lang.org/) #3150 (@buzden)\n- Add syntax mapping for `nix`'s '`flake.lock` lockfiles #3196 (@odilf)\n- Improvements to CSV/TSV highlighting, with autodetection of delimiter and support for TSV files, see #3186 (@keith-\n- Improve (Sys)log error highlighting, see #3205 (@keith-hall)\n- Map `ndjson` extension to JSON syntax, see #3209 (@keith-hall)\n- Map files with `csproj`, `vbproj`, `props` and `targets` extensions to XML syntax, see #3213 (@keith-hall)\n- Add debsources syntax to highlight `/etc/apt/sources.list` files, see #3215 (@keith-hall)\n- Add syntax definition and test file for GDScript highlighting, see #3236 (@chetanjangir0)\n- Add syntax test file for Odin highlighting, see #3241 (@chetanjangir0)\n- Update quadlet syntax mapping rules to cover quadlets in subdirectories #3299 (@cyqsimon)\n- Add syntax Typst...",
+      "memory_unit_text": "In the sharkdp/bat release v0.26.0, features add build for windows/ARM64 platform, paging to --list-themes, support negative relative line ranges, support context in line ranges, and a built-in 'minus' pager. Bugfixes fix UTF-8 BOM not being stripped for syntax detection, BAT_THEME_DARK and BAT_THEME_LIGHT being ignored, prevent --list-themes from outputting default theme info to stdout when piped, rename submodules to fix Dependabot updates, make highlight tests fail when new syntaxes don't have fixtures, fix crash for multibyte characters in file path, add missing mappings for various bash/zsh files, send all bat errors to stderr by default, make --map-syntax target case insensitive, correctly determine end of line in UTF16LE/BE input, fix --style=changes printing two-space indent when file is unmodified, add missing shell completions, execute help/version/diagnostic commands even with invalid config/arguments, and fix line numbers and style components not printing when piping output. Other changes include updating base16 README links, working around build failures from vendored sources, stopping building for x86_64-pc-windows-gnu, replacing windows-2019 runners with windows-2025, replacing string-based codegen with quote-based codegen, improving code coverage of --list-languages, only starting offload worker thread when more than 1 core, updating terminal-colorsaurus to 1.0, updating console dependency to 0.16, fixing typos, updating onig_sys dependency, adding vendored-libgit2 feature, and updating syntect to v5.3.0. Syntaxes: add mapping for paru config files, Idris 2, nix flake.lock, improvements to CSV/TSV highlighting, improve (Sys)log error highlighting, map ndjson to JSON, map csproj/vbproj/props/targets to XML, add debsources syntax, add GDScript highlighting, add Odin highlighting test file, update quadlet syntax mapping rules, add Typst..."
+    },
+    {
+      "memory_node_id": "sharkdp__bat__release__v0_26_1",
+      "repo": "sharkdp/bat",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.26.1",
+      "tag_name": "v0.26.1",
+      "title": "v0.26.1",
+      "time_hint": "2025-12-02",
+      "published_at": "2025-12-02T20:48:10Z",
+      "source_url": "https://github.com/sharkdp/bat/releases/tag/v0.26.1",
+      "raw_text": "Repository: sharkdp/bat\nRelease: v0.26.1\nTag: v0.26.1; draft: False; prerelease: False; published_at: 2025-12-02T20:48:10Z; created_at: 2025-12-02T20:44:14Z\nRelease notes:\n# v0.26.1\n## Features\n- Add paging to '-h' and '--help' see PR #3478 (@MuntasirSZN)\n## Bugfixes\n- Fix hang when using `--list-themes` with an explicit pager, see #3457 (@abhinavcool42)\n- Fix negative values of N not being parsed in <N:M> line ranges without `=` flag value separator, see #3442 (@lmmx)\n- Fix broken Docker syntax preventing use of custom assets, see #3476 (@keith-hall)\n- Fix decorations being applied unexpectedly when piping. Now only line numbers explicitly required on the command line should be applied in auto decorations mode for `cat` compatibility. See #3496 (@keith-hall)\n- Fix diagnostics attempting to find the version of an executable named builtin when builtin pager is used. See #3498 (@keith-hall)\n- `--help` now correctly reads the config file for theme information etc. See #3507 (@keith-hall)\n## Other\n- Improve README documentation on pager options passed to less, see #3443 (@injust)\n- Make PowerShell completions compatible with PowerShell v5.1, see #3495 (@keith-hall)\n- Use more robust approach to escaping in Bash completions, see #3448 (@akinomyoga)\n## Syntaxes\n- Update quadlet syntax mapping to include *.{build,pod} files #3484 (@cyqsimon)\n- Fix inconsistencies in Ada syntax, see #3481 (@AldanTanneo)\n- Add syntax mapping for podman's `artifact` quadlet files, see #3497 (@xduugu)\n- Highlight Korn Shell scripts (i.e. with a shebang of ...`ksh`) using Bash syntax, see #3509 (@keith-hall)",
+      "memory_unit_text": "In the sharkdp/bat release v0.26.1, features add paging to -h and --help. Bugfixes fix hang when using --list-themes with an explicit pager, fix negative values of N not being parsed in <N:M> line ranges without = flag value separator, fix broken Docker syntax preventing use of custom assets, fix decorations being applied unexpectedly when piping, fix diagnostics attempting to find version of executable named builtin when builtin pager is used, and fix --help not correctly reading config file for theme information. Other changes include improving README documentation on pager options passed to less, making PowerShell completions compatible with PowerShell v5.1, and using more robust escaping in Bash completions. Syntaxes: update quadlet syntax mapping to include *.{build,pod} files, fix inconsistencies in Ada syntax, add syntax mapping for podman's artifact quadlet files, and highlight Korn Shell scripts using Bash syntax."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the sharkdp/bat releases, which release introduces the --diff option to show only lines surrounding Git changes?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.14.0"
+        },
+        {
+          "option_id": "B",
+          "text": "v0.15.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v0.16.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v0.17.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v0.15.0",
+      "source_chunk_ids": [
+        "sharkdp__bat__release__v0_15_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "sharkdp__bat__release__v0_15_0",
+          "answer_text": "This release adds a new --diff/-d option that can be used to only show lines surrounding Git changes"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the sharkdp/bat releases, how does the paging-related change in v0.26.0 differ from the paging-related change in v0.26.1?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.26.0 adds paging to --list-themes, while v0.26.1 adds paging to -h and --help."
+        },
+        {
+          "option_id": "B",
+          "text": "v0.26.0 adds a built-in pager, while v0.26.1 removes paging from --list-themes."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases add paging to --list-themes."
+        },
+        {
+          "option_id": "D",
+          "text": "v0.26.0 adds paging to --help, while v0.26.1 adds paging to --list-themes."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v0.26.0 adds paging to --list-themes, while v0.26.1 adds paging to -h and --help.",
+      "source_chunk_ids": [
+        "sharkdp__bat__release__v0_26_0",
+        "sharkdp__bat__release__v0_26_1"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "sharkdp__bat__release__v0_26_0",
+          "answer_text": "Add paging to --list-themes"
+        },
+        {
+          "memory_node_id": "sharkdp__bat__release__v0_26_1",
+          "answer_text": "Add paging to '-h' and '--help'"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the sharkdp/bat release window, order the following release-content states from earliest to latest: (1) a release that adds the --highlight-line option, (2) a release that makes environment variables override config file settings, (3) a release that adds the --squeeze-blank option, (4) a release that adds a built-in 'minus' pager.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "sharkdp__bat__release__v0_10_0",
+        "sharkdp__bat__release__v0_23_0",
+        "sharkdp__bat__release__v0_25_0",
+        "sharkdp__bat__release__v0_26_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "sharkdp__bat__release__v0_10_0",
+          "answer_text": "Added new --highlight-line <N> option"
+        },
+        {
+          "memory_node_id": "sharkdp__bat__release__v0_23_0",
+          "answer_text": "Breaking change: Environment variables can now override config file settings"
+        },
+        {
+          "memory_node_id": "sharkdp__bat__release__v0_25_0",
+          "answer_text": "bat --squeeze-blank/bat -s will now squeeze consecutive empty lines"
+        },
+        {
+          "memory_node_id": "sharkdp__bat__release__v0_26_0",
+          "answer_text": "Add built-in 'minus' pager"
+        }
+      ]
+    }
+  ]
+}

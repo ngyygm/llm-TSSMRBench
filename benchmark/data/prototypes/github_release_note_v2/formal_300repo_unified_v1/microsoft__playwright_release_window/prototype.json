@@ -1,0 +1,530 @@
+{
+  "prototype_id": "microsoft__playwright_release_window",
+  "domain": "github_release_evolution",
+  "repo": "microsoft/playwright",
+  "source_type": "release_note",
+  "window_title": "microsoft/playwright recent release evolution",
+  "window_summary": "This window tracks the recent microsoft/playwright release stream from v1.47.0 through v1.60.0, covering new features like WebSocket routing, aria snapshots, screencast API, and Playwright Agents, along with patch releases addressing regressions.",
+  "chunks": [
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_47_0",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.47.0",
+      "tag_name": "v1.47.0",
+      "title": "v1.47.0",
+      "time_hint": "2024-09-05",
+      "published_at": "2024-09-05T21:13:02Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.47.0",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.47.0\nTag: v1.47.0; draft: False; prerelease: False; published_at: 2024-09-05T21:13:02Z; created_at: 2024-09-05T21:07:57Z\nRelease notes:\n## Network Tab improvements\nThe Network tab in the UI mode and trace viewer has several nice improvements:\n- filtering by asset type and URL\n- better display of query string parameters\n- preview of font assets\n![Network tab now has filters](https://github.com/user-attachments/assets/4bd1b67d-90bd-438b-a227-00b9e86872e2)\nCredit to @kubajanik for these wonderful improvements!\n## `--tsconfig` CLI option\nBy default, Playwright will look up the closest tsconfig for each imported file using a heuristic. You can now specify a single tsconfig file in the command line, and Playwright will use it for all imported files, not only test files:\n```sh\n# Pass a specific tsconfig\nnpx playwright test --tsconfig tsconfig.test.json\n```\n## [APIRequestContext](https://playwright.dev/docs/api/class-apirequestcontext) now accepts [`URLSearchParams`](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) and `string` as query parameters\nYou can now pass [`URLSearchParams`](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams) and `string` as query parameters to [APIRequestContext](https://playwright.dev/docs/api/class-apirequestcontext):\n```ts\ntest('query params', async ({ request }) => {\nconst searchParams = new URLSearchParams();\nsearchParams.set('userId', 1);\nconst response = await request.get(\n'https://jsonplaceholder.typicode.com/posts',\n{\nparams: searchParams // or as a string: 'userId=1'\n}\n);\n// ...\n});\n```\n## Miscellaneous\n- The `mcr.microsoft.com/playwright:v1.47.0` now serves a Playwright image based on Ubuntu 24.04 Noble.\nTo use the 22.04 jammy-based image, please use `mcr.microsoft.com/playwright:v1.47.0-jammy` instead.\n- The `:latest`/`:focal`/`:jammy` tag for Playwright Docker images is no longer being published. Pin to a specific version for better stability and reproducibility.\n- New option `behavior` in [page.removeAllListeners()](https://playwright.dev/docs/api/class-page#page-remove-all-listeners), [browser.removeAllListeners()](https://playwright.dev/docs/api/class-browser#browser-remove-all-listeners) and [browserContext.removeAllListeners()](https://playwright.dev/docs/api/class-browsercontext#browser-context-remove-all-listeners) to wait for ongoing listeners to complete.\n- TLS client certificates can now be passed from memory by passing `cert` and `key` as buffers instead of file paths.\n- Attachments with a `text/html` content type can now be opened in a new tab in the HTML report. This is useful for including third-party reports or other HTML content in the Playwright test report and distributing it to your team.\n- `noWaitAfter` in [locator.selectOption()](https://playwright.dev/docs/api/class-locator#locator-select-option) was deprecated.\n- We've seen reports of WebGL in Webkit misbehaving on GitHub Actions `macos-13`. We recommend upgrading GitHub Actions to `macos-14`.\n## Browser Versions\n- Chromium 129.0.6668.29\n- Mozilla Firefox 130.0\n- WebKit 18.0\nThis version was also tested against the following stable channels:\n- Google Chrome 128\n- Microsoft Edge 128",
+      "memory_unit_text": "In the microsoft/playwright release v1.47.0, the Network tab in UI mode and trace viewer gains filtering by asset type and URL, better display of query string parameters, and font asset preview. A new --tsconfig CLI option allows specifying a single tsconfig file for all imported files. APIRequestContext now accepts URLSearchParams and string as query parameters. The Docker image is updated to Ubuntu 24.04 Noble, with a jammy-based alternative available. The :latest/:focal/:jammy Docker tags are no longer published. New behavior option in removeAllListeners methods waits for ongoing listeners. TLS client certificates can be passed as buffers. HTML attachments can be opened in a new tab in the report. noWaitAfter in locator.selectOption() is deprecated. Browser versions: Chromium 129.0.6668.29, Firefox 130.0, WebKit 18.0."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_47_1",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.47.1",
+      "tag_name": "v1.47.1",
+      "title": "v1.47.1",
+      "time_hint": "2024-09-13",
+      "published_at": "2024-09-13T17:30:30Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.47.1",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.47.1\nTag: v1.47.1; draft: False; prerelease: False; published_at: 2024-09-13T17:30:30Z; created_at: 2024-09-13T17:17:37Z\nRelease notes:\n### Highlights\nhttps://github.com/microsoft/playwright/issues/32480 - [REGRESSION]: tsconfig.json's compilerOptions.paths no longer working in 1.47\nhttps://github.com/microsoft/playwright/issues/32552 - [REGRESSION]: broken UI in Trace Viewer while showing network response body\n## Browser Versions\n- Chromium 129.0.6668.29\n- Mozilla Firefox 130.0\n- WebKit 18.0\nThis version was also tested against the following stable channels:\n- Google Chrome 128\n- Microsoft Edge 128",
+      "memory_unit_text": "In the microsoft/playwright release v1.47.1, highlights include a regression fix for tsconfig.json's compilerOptions.paths not working in 1.47, and a regression fix for broken UI in Trace Viewer while showing network response body. Browser versions: Chromium 129.0.6668.29, Firefox 130.0, WebKit 18.0."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_47_2",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.47.2",
+      "tag_name": "v1.47.2",
+      "title": "v1.47.2",
+      "time_hint": "2024-09-20",
+      "published_at": "2024-09-20T17:35:50Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.47.2",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.47.2\nTag: v1.47.2; draft: False; prerelease: False; published_at: 2024-09-20T17:35:50Z; created_at: 2024-09-20T17:21:03Z\nRelease notes:\n### Highlights\nhttps://github.com/microsoft/playwright/pull/32699- [REGRESSION]: fix(codegen): use content_frame property in python/.NET\nhttps://github.com/microsoft/playwright/issues/32706- [REGRESSION]: page.pause() does not pause test timeout after 1.47\nhttps://github.com/microsoft/playwright/pull/32661 - fix(trace-viewer): time delta between local and remote actions\n## Browser Versions\n- Chromium 129.0.6668.29\n- Mozilla Firefox 130.0\n- WebKit 18.0\nThis version was also tested against the following stable channels:\n- Google Chrome 128\n- Microsoft Edge 128",
+      "memory_unit_text": "In the microsoft/playwright release v1.47.2, highlights include a regression fix for codegen to use content_frame property in python/.NET, a regression fix for page.pause() not pausing test timeout after 1.47, and a fix for time delta between local and remote actions in trace viewer. Browser versions: Chromium 129.0.6668.29, Firefox 130.0, WebKit 18.0."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_48_0",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.48.0",
+      "tag_name": "v1.48.0",
+      "title": "v1.48.0",
+      "time_hint": "2024-10-08",
+      "published_at": "2024-10-08T12:59:42Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.48.0",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.48.0\nTag: v1.48.0; draft: False; prerelease: False; published_at: 2024-10-08T12:59:42Z; created_at: 2024-10-08T12:37:38Z\nRelease notes:\n## WebSocket routing\nNew methods [page.routeWebSocket()](https://playwright.dev/docs/api/class-page#page-route-web-socket) and [browserContext.routeWebSocket()](https://playwright.dev/docs/api/class-browsercontext#browser-context-route-web-socket) allow to intercept, modify and mock WebSocket connections initiated in the page. Below is a simple example that mocks WebSocket communication by responding to a `\"request\"` with a `\"response\"`.\n```js\nawait page.routeWebSocket('/ws', ws => {\nws.onMessage(message => {\nif (message === 'request')\nws.send('response');\n});\n});\n```\nSee [WebSocketRoute](https://playwright.dev/docs/api/class-websocketroute) for more details.\n## UI updates\n- New \"copy\" buttons for annotations and test location in the HTML report.\n- Route method calls like [route.fulfill()](https://playwright.dev/docs/api/class-route#route-fulfill) are not shown in the report and trace viewer anymore. You can see which network requests were routed in the network tab instead.\n- New \"Copy as cURL\" and \"Copy as fetch\" buttons for requests in the network tab.\n## Miscellaneous\n- Option [`form`](https://playwright.dev/docs/api/class-apirequestcontext#api-request-context-fetch-option-form) and similar ones now accept [FormData](https://playwright.dev/docs/api/class-formdata).\n- New method [page.requestGC()](https://playwright.dev/docs/api/class-page#page-request-gc) may help detect memory leaks.\n- New option [`location`](https://playwright.dev/docs/api/class-test#test-step-option-location) to pass custom step location.\n- Requests made by [APIRequestContext](https://playwright.dev/docs/api/class-apirequestcontext) now record detailed timing and security information in the HAR.\n## Browser Versions\n- Chromium 130.0.6723.19\n- Mozilla Firefox 130.0\n- WebKit 18.0\nThis version was also tested against the following stable channels:\n- Google Chrome 129\n- Microsoft Edge 129",
+      "memory_unit_text": "In the microsoft/playwright release v1.48.0, new page.routeWebSocket() and browserContext.routeWebSocket() methods allow intercepting, modifying, and mocking WebSocket connections. UI updates include copy buttons for annotations and test location in the HTML report, hiding route method calls in report and trace viewer, and new 'Copy as cURL' and 'Copy as fetch' buttons in the network tab. APIRequestContext now accepts FormData. New page.requestGC() method helps detect memory leaks. New location option for custom step location. APIRequestContext requests now record detailed timing and security information in HAR. Browser versions: Chromium 130.0.6723.19, Firefox 130.0, WebKit 18.0."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_48_1",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.48.1",
+      "tag_name": "v1.48.1",
+      "title": "v1.48.1",
+      "time_hint": "2024-10-16",
+      "published_at": "2024-10-16T09:32:16Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.48.1",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.48.1\nTag: v1.48.1; draft: False; prerelease: False; published_at: 2024-10-16T09:32:16Z; created_at: 2024-10-16T09:31:18Z\nRelease notes:\n### Highlights\nhttps://github.com/microsoft/playwright/issues/33023 - [Bug]: command line flag --headed has no effect in ui mode\nhttps://github.com/microsoft/playwright/issues/33107 - [REGRESSION]: page.waitForRequest does not get resolved since 1.48.0\nhttps://github.com/microsoft/playwright/issues/33085 - [Bug]: WebSocket route does not handle full URLs in Playwright\nhttps://github.com/microsoft/playwright/issues/33052 - [Regression]: Inspector not showing recorded steps\nhttps://github.com/microsoft/playwright/issues/33132 - [Bug]: Wrong Ubuntu release name in Dockerfile.noble\nhttps://github.com/microsoft/playwright/pull/32996 - [BUG] Trace attachments have small unusable height\n## Browser Versions\n- Chromium 130.0.6723.19\n- Mozilla Firefox 130.0\n- WebKit 18.0\nThis version was also tested against the following stable channels:\n- Google Chrome 129\n- Microsoft Edge 129",
+      "memory_unit_text": "In the microsoft/playwright release v1.48.1, highlights include a bug fix for --headed flag having no effect in UI mode, a regression fix for page.waitForRequest not resolving since 1.48.0, a bug fix for WebSocket route not handling full URLs, a regression fix for Inspector not showing recorded steps, a bug fix for wrong Ubuntu release name in Dockerfile.noble, and a bug fix for trace attachments having small unusable height. Browser versions: Chromium 130.0.6723.19, Firefox 130.0, WebKit 18.0."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_48_2",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.48.2",
+      "tag_name": "v1.48.2",
+      "title": "v1.48.2",
+      "time_hint": "2024-10-25",
+      "published_at": "2024-10-25T20:42:45Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.48.2",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.48.2\nTag: v1.48.2; draft: False; prerelease: False; published_at: 2024-10-25T20:42:45Z; created_at: 2024-10-25T20:23:05Z\nRelease notes:\n### Highlights\nhttps://github.com/microsoft/playwright/issues/33141 - [Bug]: UI Mode crashed\nhttps://github.com/microsoft/playwright/issues/33219 - [BUG] Trace Viewer PWA crashes with \"Aw, Snap!\"\nhttps://github.com/microsoft/playwright/issues/33086 - [Bug]: UI Mode Memory problem\nhttps://github.com/microsoft/playwright/issues/33000 - [Regression]: Inspector and Browser doesn't close on CTRL+C\nhttps://github.com/microsoft/playwright/issues/33204 - [Bug]: Chrome tab and inspector not closing after terminating session in terminal\n## Browser Versions\n- Chromium 130.0.6723.19\n- Mozilla Firefox 130.0\n- WebKit 18.0\nThis version was also tested against the following stable channels:\n- Google Chrome 129\n- Microsoft Edge 129",
+      "memory_unit_text": "In the microsoft/playwright release v1.48.2, highlights include a bug fix for UI Mode crashing, a bug fix for Trace Viewer PWA crashing with 'Aw, Snap!', a bug fix for UI Mode memory problem, a regression fix for Inspector and Browser not closing on CTRL+C, and a bug fix for Chrome tab and inspector not closing after terminating session in terminal. Browser versions: Chromium 130.0.6723.19, Firefox 130.0, WebKit 18.0."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_49_0",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.49.0",
+      "tag_name": "v1.49.0",
+      "title": "v1.49.0",
+      "time_hint": "2024-11-18",
+      "published_at": "2024-11-18T18:33:25Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.49.0",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.49.0\nTag: v1.49.0; draft: False; prerelease: False; published_at: 2024-11-18T18:33:25Z; created_at: 2024-11-18T18:31:20Z\nRelease notes:\n## Aria snapshots\nNew assertion [expect(locator).toMatchAriaSnapshot()](https://playwright.dev/docs/api/class-locatorassertions#locator-assertions-to-match-aria-snapshot) verifies page structure by comparing to an expected accessibility tree, represented as YAML.\n```js\nawait page.goto('https://playwright.dev');\nawait expect(page.locator('body')).toMatchAriaSnapshot(`\n- banner:\n- heading /Playwright enables reliable/ [level=1]\n- link \"Get started\"\n- link \"Star microsoft/playwright on GitHub\"\n- main:\n- img \"Browsers (Chromium, Firefox, WebKit)\"\n- heading \"Any browser • Any platform • One API\"\n`);\n```\nYou can generate this assertion with [Test Generator](https://playwright.dev/docs/codegen) and update the expected snapshot with `--update-snapshots` command line flag.\nLearn more in the [aria snapshots guide](https://playwright.dev/docs/aria-snapshots).\n## Test runner\n- New option [testConfig.tsconfig](https://playwright.dev/docs/api/class-testconfig#test-config-tsconfig) allows to specify a single `tsconfig` to be used for all tests.\n- New method [test.fail.only()](https://playwright.dev/docs/api/class-test#test-fail-only) to focus on a failing test.\n- Options [testConfig.globalSetup](https://playwright.dev/docs/api/class-testconfig#test-config-global-setup) and [testConfig.globalTeardown](https://playwright.dev/docs/api/class-testconfig#test-config-global-teardown) now support multiple setups/teardowns.\n- New value `'on-first-failure'` for [testOptions.screenshot](https://playwright.dev/docs/api/class-testoptions#test-options-screenshot).\n- Added \"previous\" and \"next\" buttons to the HTML report to quickly switch between test cases.\n- New properties [testInfoError.cause](https://playwright.dev/docs/api/class-testinfoerror#test-info-error-cause) and [testError.cause](https://playwright.dev/docs/api/class-testerror#test-error-cause) mirroring [`Error.cause`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause).\n## Breaking: channels `chrome`, `msedge` and similar switch to new headless\nThis change affects you if you're using one of the following channels in your `playwright.config.ts`:\n- `chrome`, `chrome-dev`, `chrome-beta`, or `chrome-canary`\n- `msedge`, `msedge-dev`, `msedge-beta`, or `msedge-canary`\n### What do I need to do?\nAfter updating to Playwright v1.49, run your test suite. If it still passes, you're good to go. If not, you will probably need to update your snapshots, and adapt some of your test code around PDF viewers and extensions. See [issue #33566](https://github.com/microsoft/playwright/issues/33566) for more details.\n## Other breaking changes\n- There will be no more updates for WebKit on Ubuntu 20.04 and Debian 11. We recommend updating your OS to a later version.\n- Package `@playwright/experimental-ct-vue2` will no longer be updated.\n- Package `@playwright/experimental-ct-solid` will no longer be updated.\n## Try new Chromium headless\nYou can opt into the new headless mode by using `'chromium'` channel. As [official Chrome documentation puts it](https://developer.chrome.com/blog/chrome-headless-shell):\n> New Headless on the other hand is the real Chrome browser, and is thus more authentic, reliable, and offers more features. This makes it more suitable for high-accuracy end-to-end web app testing or browser extension testing.\nSee [issue #33566](https://github.com/microsoft/playwright/issues/33566) for the list of possible breakages you could encounter and more details on Chromium headless. Please file an issue if you see any problems after opting in.\n```js\nimport { defineConfig, devices } from '@playwright/test';\nexport default defineConfig({\nprojects: [\n{\nname: 'chromium',\nuse: { ...devices['Desktop Chrome'], channel: 'chromium' },\n},\n],\n});\n```\n## Miscellaneous\n- `<canvas>` elements inside a...",
+      "memory_unit_text": "In the microsoft/playwright release v1.49.0, new expect(locator).toMatchAriaSnapshot() assertion verifies page structure against an expected accessibility tree in YAML. Test runner additions include testConfig.tsconfig option, test.fail.only() method, support for multiple global setups/teardowns, 'on-first-failure' screenshot option, previous/next buttons in HTML report, and testInfoError.cause/testError.cause properties. Breaking changes: chrome, msedge and similar channels switch to new headless; no more WebKit updates on Ubuntu 20.04 and Debian 11; @playwright/experimental-ct-vue2 and @playwright/experimental-ct-solid packages no longer updated. New Chromium headless can be opted into via 'chromium' channel. Browser versions: Chromium 131.0.6778.33, Firefox 132.0, WebKit 18.2."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_49_1",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.49.1",
+      "tag_name": "v1.49.1",
+      "title": "v1.49.1",
+      "time_hint": "2024-12-10",
+      "published_at": "2024-12-10T02:15:58Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.49.1",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.49.1\nTag: v1.49.1; draft: False; prerelease: False; published_at: 2024-12-10T02:15:58Z; created_at: 2024-12-10T01:25:25Z\nRelease notes:\n### Highlights\nhttps://github.com/microsoft/playwright/issues/33802 - [Bug]: Codegen's Clear button doesn't work if not recording\nhttps://github.com/microsoft/playwright/issues/33806 - [Bug]: playwright hangs while waiting for pending navigations\nhttps://github.com/microsoft/playwright/issues/33787 - [Bug]: VSC extension isn't capturing all entered text\nhttps://github.com/microsoft/playwright/issues/33788 - [Regression]: Double clicking the steps in trace viewer doesn't filter actions\nhttps://github.com/microsoft/playwright/issues/33772 - [Bug]: aria_snapshot generates invalid yaml when combined with an aria-label attribut\nhttps://github.com/microsoft/playwright/issues/33791 - [Bug]: text input with number value raises \"container is not iterable\" with to_match_aria_snapshot\nhttps://github.com/microsoft/playwright/issues/33644 - [Bug]: getByRole can't find element with the accessible name from label element when aria-labelledby is not valid\nhttps://github.com/microsoft/playwright/issues/33660 - [Regression]: Unable to open Playwright UI in Dark Mode\n## Browser Versions\n- Chromium 131.0.6778.33\n- Mozilla Firefox 132.0\n- WebKit 18.2\nThis version was also tested against the following stable channels:\n- Google Chrome 130\n- Microsoft Edge 130",
+      "memory_unit_text": "In the microsoft/playwright release v1.49.1, highlights include bug fixes for Codegen's Clear button not working if not recording, playwright hanging while waiting for pending navigations, VSC extension not capturing all entered text, regression fix for double clicking steps in trace viewer not filtering actions, bug fix for aria_snapshot generating invalid yaml with aria-label attribute, bug fix for text input with number value raising 'container is not iterable' with to_match_aria_snapshot, bug fix for getByRole not finding element with accessible name from label element when aria-labelledby is invalid, and regression fix for unable to open Playwright UI in Dark Mode. Browser versions: Chromium 131.0.6778.33, Firefox 132.0, WebKit 18.2."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_50_0",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.50.0",
+      "tag_name": "v1.50.0",
+      "title": "v1.50.0",
+      "time_hint": "2025-01-23",
+      "published_at": "2025-01-23T14:26:41Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.50.0",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.50.0\nTag: v1.50.0; draft: False; prerelease: False; published_at: 2025-01-23T14:26:41Z; created_at: 2025-01-23T13:38:26Z\nRelease notes:\n## Test runner\n* New option [`timeout`](https://playwright.dev/docs/api/class-test#test-step-option-timeout) allows specifying a maximum run time for an individual test step. A timed-out step will fail the execution of the test.\n```js\ntest('some test', async ({ page }) => {\nawait test.step('a step', async () => {\n// This step can time out separately from the test\n}, { timeout: 1000 });\n});\n```\n* New method [test.step.skip()](https://playwright.dev/docs/api/class-test#test-step-skip) to disable execution of a test step.\n```js\ntest('some test', async ({ page }) => {\nawait test.step('before running step', async () => {\n// Normal step\n});\nawait test.step.skip('not yet ready', async () => {\n// This step is skipped\n});\nawait test.step('after running step', async () => {\n// This step still runs even though the previous one was skipped\n});\n});\n```\n* Expanded [expect(locator).toMatchAriaSnapshot()](https://playwright.dev/docs/api/class-locatorassertions#locator-assertions-to-match-aria-snapshot-2) to allow storing of aria snapshots in separate YAML files.\n* Added method [expect(locator).toHaveAccessibleErrorMessage()](https://playwright.dev/docs/api/class-locatorassertions#locator-assertions-to-have-accessible-error-message) to assert the Locator points to an element with a given [aria errormessage](https://w3c.github.io/aria/#aria-errormessage).\n* Option [testConfig.updateSnapshots](https://playwright.dev/docs/api/class-testconfig#test-config-update-snapshots) added the configuration enum `changed`. `changed` updates only the snapshots that have changed, whereas `all` now updates all snapshots, regardless of whether there are any differences.\n* New option [testConfig.updateSourceMethod](https://playwright.dev/docs/api/class-testconfig#test-config-update-source-method) defines the way source code is updated when [testConfig.updateSnapshots](https://playwright.dev/docs/api/class-testconfig#test-config-update-snapshots) is configured. Added `overwrite` and `3-way` modes that write the changes into source code, on top of existing `patch` mode that creates a patch file.\n```bash\nnpx playwright test --update-snapshots=changed --update-source-method=3way\n```\n* Option [testConfig.webServer](https://playwright.dev/docs/api/class-testconfig#test-config-web-server) added a `gracefulShutdown` field for specifying a process kill signal other than the default `SIGKILL`.\n* Exposed [testStep.attachments](https://playwright.dev/docs/api/class-teststep#test-step-attachments) from the reporter API to allow retrieval of all attachments created by that step.\n* New option `pathTemplate` for `toHaveScreenshot` and `toMatchAriaSnapshot` assertions in the [testConfig.expect](https://playwright.dev/docs/api/class-testconfig#test-config-expect) configuration.\n## UI updates\n* Updated default HTML reporter to improve display of attachments.\n* New button for picking elements to produce aria snapshots.\n* Additional details (such as keys pressed) are now displayed alongside action API calls in traces.\n* Display of `canvas` content in traces is error-prone. Display is now disabled by default, and can be enabled via the `Display canvas content` UI setting.\n* `Call` and `Network` panels now display additional time information.\n## Breaking\n* [expect(locator).toBeEditable()](https://playwright.dev/docs/api/class-locatorassertions#locator-assertions-to-be-editable) and [locator.isEditable()](https://playwright.dev/docs/api/class-locator#locator-is-editable) now throw if the target element is not `<input>`, `<select>`, or a number of other editable elements.\n* Option [testConfig.updateSnapshots](https://playwright.dev/docs/api/class-testconfig#test-config-update-snapshots) now updates all snapshots when set to `all`, rather than only the failed/changed snapshots. Use the new enum `changed` to...",
+      "memory_unit_text": "In the microsoft/playwright release v1.50.0, test runner adds timeout option for individual test steps, test.step.skip() method, expanded toMatchAriaSnapshot() to store snapshots in YAML files, toHaveAccessibleErrorMessage() assertion, testConfig.updateSnapshots with 'changed' enum, testConfig.updateSourceMethod with 'overwrite' and '3-way' modes, gracefulShutdown for webServer, testStep.attachments in reporter API, and pathTemplate for screenshot and aria snapshot assertions. UI updates include improved attachment display, new button for picking elements for aria snapshots, additional details in traces, disabled canvas content display by default, and additional time information in Call and Network panels. Breaking changes: toBeEditable() and isEditable() throw if target element is not an editable element; updateSnapshots 'all' now updates all snapshots. Browser versions: Chromium 133.0.6943.16, Firefox 134.0, WebKit 18.2."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_50_1",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.50.1",
+      "tag_name": "v1.50.1",
+      "title": "v1.50.1",
+      "time_hint": "2025-01-31",
+      "published_at": "2025-01-31T16:33:00Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.50.1",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.50.1\nTag: v1.50.1; draft: False; prerelease: False; published_at: 2025-01-31T16:33:00Z; created_at: 2025-01-31T16:02:33Z\nRelease notes:\n### Highlights\nhttps://github.com/microsoft/playwright/issues/34483 - [Feature]: single aria snapshot for different engines/browsers\nhttps://github.com/microsoft/playwright/issues/34497 - [Bug]: Firefox not handling keepalive: true fetch requests\nhttps://github.com/microsoft/playwright/issues/34504 - [Bug]: update snapshots not creating good diffs\nhttps://github.com/microsoft/playwright/issues/34507 - [Bug]: snapshotPathTemplate doesnt work when multiple projects\nhttps://github.com/microsoft/playwright/issues/34462 - [Bug]: updateSnapshots \"changed\" throws an error\n## Browser Versions\n* Chromium 133.0.6943.16\n* Mozilla Firefox 134.0\n* WebKit 18.2\nThis version was also tested against the following stable channels:\n* Google Chrome 132\n* Microsoft Edge 132",
+      "memory_unit_text": "In the microsoft/playwright release v1.50.1, highlights include a feature request for single aria snapshot for different engines/browsers, bug fixes for Firefox not handling keepalive fetch requests, update snapshots not creating good diffs, snapshotPathTemplate not working with multiple projects, and updateSnapshots 'changed' throwing an error. Browser versions: Chromium 133.0.6943.16, Firefox 134.0, WebKit 18.2."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_51_0",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.51.0",
+      "tag_name": "v1.51.0",
+      "title": "v1.51.0",
+      "time_hint": "2025-03-06",
+      "published_at": "2025-03-06T17:44:49Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.51.0",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.51.0\nTag: v1.51.0; draft: False; prerelease: False; published_at: 2025-03-06T17:44:49Z; created_at: 2025-03-06T11:43:05Z\nRelease notes:\n## StorageState for indexedDB\n* New option [`indexedDB`](https://playwright.dev/docs/api/class-browsercontext#browser-context-storage-state-option-indexed-db) for [browserContext.storageState()](https://playwright.dev/docs/api/class-browsercontext#browser-context-storage-state) allows to save and restore IndexedDB contents. Useful when your application uses [IndexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) to store authentication tokens, like Firebase Authentication.\nHere is an example following the [authentication guide](https://playwright.dev/docs/auth#basic-shared-account-in-all-tests):\n```js\n// tests/auth.setup.ts\nimport { test as setup, expect } from '@playwright/test';\nimport path from 'path';\nconst authFile = path.join(__dirname, '../playwright/.auth/user.json');\nsetup('authenticate', async ({ page }) => {\nawait page.goto('/');\n// ... perform authentication steps ...\n// make sure to save indexedDB\nawait page.context().storageState({ path: authFile, indexedDB: true });\n});\n```\n## Copy prompt\nNew \"Copy prompt\" button on errors in the HTML report, trace viewer and UI mode. Click to copy a pre-filled LLM prompt that contains the error message and useful context for fixing the error.\n![Copy prompt](https://github.com/user-attachments/assets/f3654407-dd6d-4240-9845-0d96df2bf30a)\n## Filter visible elements\nNew option [`visible`](https://playwright.dev/docs/api/class-locator#locator-filter-option-visible) for [locator.filter()](https://playwright.dev/docs/api/class-locator#locator-filter) allows matching only visible elements.\n```js\n// example.spec.ts\ntest('some test', async ({ page }) => {\n// Ignore invisible todo items.\nconst todoItems = page.getByTestId('todo-item').filter({ visible: true });\n// Check there are exactly 3 visible ones.\nawait expect(todoItems).toHaveCount(3);\n});\n```\n## Git information in HTML report\nSet option [testConfig.captureGitInfo](https://playwright.dev/docs/api/class-testconfig#test-config-capture-git-info) to capture git information into [testConfig.metadata](https://playwright.dev/docs/api/class-testconfig#test-config-metadata).\n```js\n// playwright.config.ts\nimport { defineConfig } from '@playwright/test';\nexport default defineConfig({\ncaptureGitInfo: { commit: true, diff: true }\n});\n```\nHTML report will show this information when available:\n![Git information in the report](https://github.com/user-attachments/assets/f5b3f6f4-aa08-4a24-816c-7edf33ef0c37)\n## Test Step improvements\nA new [TestStepInfo](https://playwright.dev/docs/api/class-teststepinfo) object is now available in test steps. You can add step attachments or skip the step under some conditions.\n```js\ntest('some test', async ({ page, isMobile }) => {\n// Note the new \"step\" argument:\nawait test.step('here is my step', async step => {\nstep.skip(isMobile, 'not relevant on mobile layouts');\n// ...\nawait step.attach('my attachment', { body: 'some text' });\n// ...\n});\n});\n```\n## Miscellaneous\n* New option `contrast` for methods [page.emulateMedia()](https://playwright.dev/docs/api/class-page#page-emulate-media) and [browser.newContext()](https://playwright.dev/docs/api/class-browser#browser-new-context) allows to emulate the `prefers-contrast` media feature.\n* New option [`failOnStatusCode`](https://playwright.dev/docs/api/class-apirequest#api-request-new-context-option-fail-on-status-code) makes all fetch requests made through the [APIRequestContext](https://playwright.dev/docs/api/class-apirequestcontext) throw on response codes other than 2xx and 3xx.\n* Assertion [expect(page).toHaveURL()](https://playwright.dev/docs/api/class-pageassertions#page-assertions-to-have-url) now supports a predicate.\n## Browser Versions\n* Chromium 134.0.6998.35\n* Mozilla Firefox 135.0\n* WebKit 18.4\nThis version was also tested against the following stab...",
+      "memory_unit_text": "In the microsoft/playwright release v1.51.0, new indexedDB option for browserContext.storageState() allows saving and restoring IndexedDB contents. A 'Copy prompt' button on errors in HTML report, trace viewer, and UI mode copies a pre-filled LLM prompt. New visible option for locator.filter() matches only visible elements. testConfig.captureGitInfo captures git information into metadata for HTML report. Test steps now provide a TestStepInfo object for adding attachments or skipping steps. Miscellaneous: contrast option for emulateMedia and newContext, failOnStatusCode option for APIRequestContext, and toHaveURL() assertion supports a predicate. Browser versions: Chromium 134.0.6998.35, Firefox 135.0, WebKit 18.4."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_51_1",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.51.1",
+      "tag_name": "v1.51.1",
+      "title": "v1.51.1",
+      "time_hint": "2025-03-17",
+      "published_at": "2025-03-17T17:00:47Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.51.1",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.51.1\nTag: v1.51.1; draft: False; prerelease: False; published_at: 2025-03-17T17:00:47Z; created_at: 2025-03-17T13:36:57Z\nRelease notes:\n### Highlights\nhttps://github.com/microsoft/playwright/issues/35093 - [Regression]: TimeoutOverflowWarning: 2149630296.634 does not fit into a 32-bit signed integer\nhttps://github.com/microsoft/playwright/issues/35138 - [Regression]: TypeError: Cannot read properties of undefined (reading 'expectInfo')\n## Browser Versions\n* Chromium 134.0.6998.35\n* Mozilla Firefox 135.0\n* WebKit 18.4\nThis version was also tested against the following stable channels:\n* Google Chrome 133\n* Microsoft Edge 133",
+      "memory_unit_text": "In the microsoft/playwright release v1.51.1, highlights include regression fixes for TimeoutOverflowWarning and TypeError: Cannot read properties of undefined (reading 'expectInfo'). Browser versions: Chromium 134.0.6998.35, Firefox 135.0, WebKit 18.4."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_52_0",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.52.0",
+      "tag_name": "v1.52.0",
+      "title": "v1.52.0",
+      "time_hint": "2025-04-17",
+      "published_at": "2025-04-17T17:08:18Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.52.0",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.52.0\nTag: v1.52.0; draft: False; prerelease: False; published_at: 2025-04-17T17:08:18Z; created_at: 2025-04-17T16:33:33Z\nRelease notes:\n## Highlights\n- New method [expect(locator).toContainClass()](https://playwright.dev/docs/api/class-locatorassertions#locator-assertions-to-contain-class) to ergonomically assert individual class names on the element.\n```ts\nawait expect(page.getByRole('listitem', { name: 'Ship v1.52' })).toContainClass('done');\n```\n- [Aria Snapshots](https://playwright.dev/docs/aria-snapshots) got two new properties: [`/children`](https://playwright.dev/docs/aria-snapshots#strict-matching) for strict matching and `/url` for links.\n```ts\nawait expect(locator).toMatchAriaSnapshot(`\n- list\n- /children: equal\n- listitem: Feature A\n- listitem:\n- link \"Feature B\":\n- /url: \"https://playwright.dev\"\n`);\n```\n## Test Runner\n- New property [testProject.workers](https://playwright.dev/docs/api/class-testproject#test-project-workers) allows to specify the number of concurrent worker processes to use for a test project. The global limit of property [testConfig.workers](https://playwright.dev/docs/api/class-testconfig#test-config-workers) still applies.\n- New [testConfig.failOnFlakyTests](https://playwright.dev/docs/api/class-testconfig#test-config-fail-on-flaky-tests) option to fail the test run if any flaky tests are detected, similarly to `--fail-on-flaky-tests`. This is useful for CI/CD environments where you want to ensure that all tests are stable before deploying.\n- New property [testResult.annotations](https://playwright.dev/docs/api/class-testresult#test-result-annotations) contains annotations for each test retry.\n## Miscellaneous\n- New option [`maxRedirects`](https://playwright.dev/docs/api/class-apirequest#api-request-new-context-option-max-redirects) in [apiRequest.newContext()](https://playwright.dev/docs/api/class-apirequest#api-request-new-context) to control the maximum number of redirects.\n- HTML reporter now supports *NOT filtering* via `!@my-tag` or `!my-file.spec.ts` or `!p:my-project`.\n## Breaking Changes\n- Changes to glob URL patterns in methods like [page.route()](https://playwright.dev/docs/api/class-page#page-route):\n- `?` wildcard is not supported any more, it will always match question mark `?` character.\n- Ranges/sets `[]` are not supported anymore. We recommend using regular expressions instead.\n- Method [route.continue()](https://playwright.dev/docs/api/class-route#route-continue) does not allow to override the `Cookie` header anymore. If a `Cookie` header is provided, it will be ignored, and the cookie will be loaded from the browser's cookie store. To set custom cookies, use [browserContext.addCookies()](https://playwright.dev/docs/api/class-browsercontext#browser-context-add-cookies).\n- macOS 13 is now deprecated and will no longer receive WebKit updates. Please upgrade to a more recent macOS version to continue benefiting from the latest WebKit improvements.\n## Browser Versions\n- Chromium 136.0.7103.25\n- Mozilla Firefox 137.0\n- WebKit 18.4\nThis version was also tested against the following stable channels:\n- Google Chrome 135\n- Microsoft Edge 135",
+      "memory_unit_text": "In the microsoft/playwright release v1.52.0, new expect(locator).toContainClass() assertion checks individual class names. Aria Snapshots gain /children for strict matching and /url for links. Test runner adds testProject.workers, testConfig.failOnFlakyTests, and testResult.annotations. Miscellaneous: maxRedirects option in apiRequest.newContext(), HTML reporter supports NOT filtering. Breaking changes: glob URL patterns no longer support ? wildcard or ranges/sets; route.continue() cannot override Cookie header; macOS 13 deprecated for WebKit updates. Browser versions: Chromium 136.0.7103.25, Firefox 137.0, WebKit 18.4."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_53_0",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.53.0",
+      "tag_name": "v1.53.0",
+      "title": "v1.53.0",
+      "time_hint": "2025-06-10",
+      "published_at": "2025-06-10T18:08:58Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.53.0",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.53.0\nTag: v1.53.0; draft: False; prerelease: False; published_at: 2025-06-10T18:08:58Z; created_at: 2025-06-10T17:36:17Z\nRelease notes:\n## Trace Viewer and HTML Reporter Updates\n- New Steps in Trace Viewer and HTML reporter:\n<img src=\"https://github.com/user-attachments/assets/1963ff7d-4070-41be-a79b-4333176921a2\" alt=\"New Trace Viewer Steps\"  height=\"500\">\n- New option in `'html'` reporter to set the title of a specific test run:\n```js\nimport { defineConfig } from '@playwright/test';\nexport default defineConfig({\nreporter: [['html', { title: 'Custom test run #1028' }]]\n});\n```\n## Miscellaneous\n- New option [`kind`](https://playwright.dev/docs/api/class-testinfo#test-info-snapshot-path-option-kind) in [testInfo.snapshotPath()](https://playwright.dev/docs/api/class-testinfo#test-info-snapshot-path) controls which snapshot path template is used.\n- New method [locator.describe()](https://playwright.dev/docs/api/class-locator#locator-describe) to describe a locator. Used for trace viewer and reports.\n```js\nconst button = page.getByTestId('btn-sub').describe('Subscribe button');\nawait button.click();\n```\n- `npx playwright install --list` will now list all installed browsers, versions and locations.\n## Browser Versions\n- Chromium 138.0.7204.4\n- Mozilla Firefox 139.0\n- WebKit 18.5\nThis version was also tested against the following stable channels:\n- Google Chrome 137\n- Microsoft Edge 137",
+      "memory_unit_text": "In the microsoft/playwright release v1.53.0, Trace Viewer and HTML Reporter get new Steps display and an option to set a custom title for a test run in the HTML reporter. Miscellaneous: new kind option in testInfo.snapshotPath(), new locator.describe() method, and 'npx playwright install --list' lists installed browsers. Browser versions: Chromium 138.0.7204.4, Firefox 139.0, WebKit 18.5."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_53_1",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.53.1",
+      "tag_name": "v1.53.1",
+      "title": "v1.53.1",
+      "time_hint": "2025-06-18",
+      "published_at": "2025-06-18T18:02:57Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.53.1",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.53.1\nTag: v1.53.1; draft: False; prerelease: False; published_at: 2025-06-18T18:02:57Z; created_at: 2025-06-18T17:06:05Z\nRelease notes:\n### Highlights\nhttps://github.com/microsoft/playwright/issues/36339 - [Regression]: Click can fail when scrolling required\nhttps://github.com/microsoft/playwright/issues/36307 - [Regression (Chromium)]: Under some scenarios filling a `textarea` doesn't fill\nhttps://github.com/microsoft/playwright/issues/36294 - [Regression (Firefox)]: `setViewportSize` times out\nhttps://github.com/microsoft/playwright/pull/36350 - [Fix]: Display HTTP method for fetch trace entries\n## Browser Versions\n- Chromium 138.0.7204.23\n- Mozilla Firefox 139.0\n- WebKit 18.5\nThis version was also tested against the following stable channels:\n- Google Chrome 137\n- Microsoft Edge 137",
+      "memory_unit_text": "In the microsoft/playwright release v1.53.1, highlights include regression fixes for click failing when scrolling required, filling a textarea not filling under some scenarios in Chromium, setViewportSize timing out in Firefox, and a fix to display HTTP method for fetch trace entries. Browser versions: Chromium 138.0.7204.23, Firefox 139.0, WebKit 18.5."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_53_2",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.53.2",
+      "tag_name": "v1.53.2",
+      "title": "v1.53.2",
+      "time_hint": "2025-06-30",
+      "published_at": "2025-06-30T18:46:21Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.53.2",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.53.2\nTag: v1.53.2; draft: False; prerelease: False; published_at: 2025-06-30T18:46:21Z; created_at: 2025-06-30T17:26:55Z\nRelease notes:\n### Highlights\nhttps://github.com/microsoft/playwright/issues/36317 - [Regression]: Merging pre-1.53 blob reports loses attachments\nhttps://github.com/microsoft/playwright/pull/36357 - [Regression (Chromium)]: CDP missing trailing slash\nhttps://github.com/microsoft/playwright/issues/36292 - [Bug (MSEdge)]: Edge fails to launch when using `msRelaunchNoCompatLayer`\n## Browser Versions\n- Chromium 138.0.7204.23\n- Mozilla Firefox 139.0\n- WebKit 18.5\nThis version was also tested against the following stable channels:\n- Google Chrome 137\n- Microsoft Edge 137",
+      "memory_unit_text": "In the microsoft/playwright release v1.53.2, highlights include a regression fix for merging pre-1.53 blob reports losing attachments, a regression fix for CDP missing trailing slash in Chromium, and a bug fix for Edge failing to launch when using msRelaunchNoCompatLayer. Browser versions: Chromium 138.0.7204.23, Firefox 139.0, WebKit 18.5."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_54_0",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.54.0",
+      "tag_name": "v1.54.0",
+      "title": "v1.54.0",
+      "time_hint": "2025-07-10",
+      "published_at": "2025-07-10T10:56:12Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.54.0",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.54.0\nTag: v1.54.0; draft: False; prerelease: False; published_at: 2025-07-10T10:56:12Z; created_at: 2025-07-09T20:30:08Z\nRelease notes:\n## Highlights\n- New cookie property `partitionKey` in [browserContext.cookies()](https://playwright.dev/docs/api/class-browsercontext#browser-context-cookies) and [browserContext.addCookies()](https://playwright.dev/docs/api/class-browsercontext#browser-context-add-cookies). This property allows to save and restore partitioned cookies. See [CHIPS MDN article](https://developer.mozilla.org/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) for more information. Note that browsers have different support and defaults for cookie partitioning.\n- New option `noSnippets` to disable code snippets in the html report.\n```js\nimport { defineConfig } from '@playwright/test';\nexport default defineConfig({\nreporter: [['html', { noSnippets: true }]]\n});\n```\n- New property `location` in test annotations, for example in [testResult.annotations](https://playwright.dev/docs/api/class-testresult#test-result-annotations) and [testInfo.annotations](https://playwright.dev/docs/api/class-testinfo#test-info-annotations). It shows where the annotation like `test.skip` or `test.fixme` was added.\n## Command Line\n- New option `--user-data-dir` in multiple commands. You can specify the same user data dir to reuse browsing state, like authentication, between sessions.\n```bash\nnpx playwright codegen --user-data-dir=./user-data\n```\n- Option `-gv` has been removed from the `npx playwright test` command. Use `--grep-invert` instead.\n- `npx playwright open` does not open the test recorder anymore. Use `npx playwright codegen` instead.\n## Miscellaneous\n- Support for Node.js 16 has been removed.\n- Support for Node.js 18 has been deprecated, and will be removed in the future.\n## Browser Versions\n- Chromium 139.0.7258.5\n- Mozilla Firefox 140.0.2\n- WebKit 26.0\nThis version was also tested against the following stable channels:\n- Google Chrome 140\n- Microsoft Edge 140",
+      "memory_unit_text": "In the microsoft/playwright release v1.54.0, new cookie property partitionKey in browserContext.cookies() and addCookies() supports partitioned cookies. New noSnippets option disables code snippets in HTML report. New location property in test annotations. Command line: new --user-data-dir option, -gv removed, 'npx playwright open' no longer opens test recorder. Miscellaneous: Node.js 16 support removed, Node.js 18 deprecated. Browser versions: Chromium 139.0.7258.5, Firefox 140.0.2, WebKit 26.0."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_54_1",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.54.1",
+      "tag_name": "v1.54.1",
+      "title": "v1.54.1",
+      "time_hint": "2025-07-11",
+      "published_at": "2025-07-11T14:06:28Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.54.1",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.54.1\nTag: v1.54.1; draft: False; prerelease: False; published_at: 2025-07-11T14:06:28Z; created_at: 2025-07-11T12:34:47Z\nRelease notes:\n### Highlights\nhttps://github.com/microsoft/playwright/issues/36650 - [Regression]: 1.54.0 breaks downloading browsers when an HTTP(S) proxy is used\n## Browser Versions\n- Chromium 139.0.7258.5\n- Mozilla Firefox 140.0.2\n- WebKit 26.0\nThis version was also tested against the following stable channels:\n- Google Chrome 140\n- Microsoft Edge 140",
+      "memory_unit_text": "In the microsoft/playwright release v1.54.1, highlights include a regression fix for 1.54.0 breaking downloading browsers when an HTTP(S) proxy is used. Browser versions: Chromium 139.0.7258.5, Firefox 140.0.2, WebKit 26.0."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_54_2",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.54.2",
+      "tag_name": "v1.54.2",
+      "title": "v1.54.2",
+      "time_hint": "2025-08-01",
+      "published_at": "2025-08-01T07:01:13Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.54.2",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.54.2\nTag: v1.54.2; draft: False; prerelease: False; published_at: 2025-08-01T07:01:13Z; created_at: 2025-08-01T07:00:38Z\nRelease notes:\n### Highlights\nhttps://github.com/microsoft/playwright/issues/36714 - [Regression]: Codegen is not able to launch in Administrator Terminal on Windows (ProtocolError: Protocol error)\nhttps://github.com/microsoft/playwright/issues/36828 - [Regression]: Playwright Codegen keeps spamming with selected option\nhttps://github.com/microsoft/playwright/issues/36810 - [Regression]: Starting Codegen with target language doesn't work anymore\n## Browser Versions\n- Chromium 139.0.7258.5\n- Mozilla Firefox 140.0.2\n- WebKit 26.0\nThis version was also tested against the following stable channels:\n- Google Chrome 140\n- Microsoft Edge 140",
+      "memory_unit_text": "In the microsoft/playwright release v1.54.2, highlights include regression fixes for Codegen not launching in Administrator Terminal on Windows, Codegen spamming with selected option, and starting Codegen with target language not working. Browser versions: Chromium 139.0.7258.5, Firefox 140.0.2, WebKit 26.0."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_55_0",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.55.0",
+      "tag_name": "v1.55.0",
+      "title": "v1.55.0",
+      "time_hint": "2025-08-20",
+      "published_at": "2025-08-20T10:26:40Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.55.0",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.55.0\nTag: v1.55.0; draft: False; prerelease: False; published_at: 2025-08-20T10:26:40Z; created_at: 2025-08-20T10:26:07Z\nRelease notes:\n## New APIs\n- New Property [testStepInfo.titlePath](https://playwright.dev/docs/api/class-teststepinfo#test-step-info-title-path) Returns the full title path starting from the test file, including test and step titles.\n## Codegen\n- Automatic `toBeVisible()` assertions: Codegen can now generate automatic `toBeVisible()` assertions for common UI interactions. This feature can be enabled in the Codegen settings UI.\n## Breaking Changes\n- ⚠️ Dropped support for Chromium extension manifest v2.\n## Miscellaneous\n- Added support for Debian 13 \"Trixie\".\n## Browser Versions\n- Chromium 140.0.7339.16\n- Mozilla Firefox 141.0\n- WebKit 26.0\nThis version was also tested against the following stable channels:\n- Google Chrome 139\n- Microsoft Edge 139",
+      "memory_unit_text": "In the microsoft/playwright release v1.55.0, new testStepInfo.titlePath property returns full title path. Codegen can generate automatic toBeVisible() assertions. Breaking change: dropped support for Chromium extension manifest v2. Miscellaneous: added support for Debian 13 'Trixie'. Browser versions: Chromium 140.0.7339.16, Firefox 141.0, WebKit 26.0."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_55_1",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.55.1",
+      "tag_name": "v1.55.1",
+      "title": "v1.55.1",
+      "time_hint": "2025-09-23",
+      "published_at": "2025-09-23T09:56:01Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.55.1",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.55.1\nTag: v1.55.1; draft: False; prerelease: False; published_at: 2025-09-23T09:56:01Z; created_at: 2025-09-23T08:34:18Z\nRelease notes:\n### Highlights\nhttps://github.com/microsoft/playwright/issues/37479 - [Bug]: Upgrade Chromium to 140.0.7339.186.\nhttps://github.com/microsoft/playwright/issues/37147 - [Regression]: Internal error: step id not found.\nhttps://github.com/microsoft/playwright/issues/37146 - [Regression]: HTML reporter displays a broken chip link when there are no projects.\nhttps://github.com/microsoft/playwright/pull/37137 - Revert \"fix(a11y): track inert elements as hidden\".\nhttps://github.com/microsoft/playwright/pull/37532 - chore: do not use -k option\n## Browser Versions\n- Chromium 140.0.7339.186\n- Mozilla Firefox 141.0\n- WebKit 26.0\nThis version was also tested against the following stable channels:\n- Google Chrome 139\n- Microsoft Edge 139",
+      "memory_unit_text": "In the microsoft/playwright release v1.55.1, highlights include a bug fix to upgrade Chromium to 140.0.7339.186, regression fixes for internal error step id not found and HTML reporter displaying broken chip link when no projects, a revert of tracking inert elements as hidden, and a chore to not use -k option. Browser versions: Chromium 140.0.7339.186, Firefox 141.0, WebKit 26.0."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_56_0",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.56.0",
+      "tag_name": "v1.56.0",
+      "title": "v1.56.0",
+      "time_hint": "2025-10-06",
+      "published_at": "2025-10-06T14:53:30Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.56.0",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.56.0\nTag: v1.56.0; draft: False; prerelease: False; published_at: 2025-10-06T14:53:30Z; created_at: 2025-10-06T14:31:49Z\nRelease notes:\n## Playwright Agents\nIntroducing Playwright Agents, three custom agent definitions designed to guide LLMs through the core process of building a Playwright test:\n* **🎭 planner** explores the app and produces a Markdown test plan\n* **🎭 generator** transforms the Markdown plan into the Playwright Test files\n* **🎭 healer** executes the test suite and automatically repairs failing tests\nRun `npx playwright init-agents` with your client of choice to generate the latest agent definitions:\n```bash\n# Generate agent files for each agentic loop\n# Visual Studio Code\nnpx playwright init-agents --loop=vscode\n# Claude Code\nnpx playwright init-agents --loop=claude\n# opencode\nnpx playwright init-agents --loop=opencode\n```\n> [!NOTE]\n> VS Code v1.105 (currently on the VS Code Insiders channel) is needed for the agentic experience in VS Code. It will become stable shortly, we are a bit ahead of times with this functionality!\n[Learn more about Playwright Agents](https://playwright.dev/docs/test-agents)\n## New APIs\n- New methods [page.consoleMessages()](https://playwright.dev/docs/api/class-page#page-console-messages) and [page.pageErrors()](https://playwright.dev/docs/api/class-page#page-page-errors) for retrieving the most recent console messages from the page\n- New method [page.requests()](https://playwright.dev/docs/api/class-page#page-requests) for retrieving the most recent network requests from the page\n- Added [`--test-list` and `--test-list-invert`](https://playwright.dev/docs/test-cli#test-list) to allow manual specification of specific tests from a file\n## UI Mode and HTML Reporter\n- Added option to `'html'` reporter to disable the \"Copy prompt\" button\n- Added option to `'html'` reporter and UI Mode to merge files, collapsing test and describe blocks into a single unified list\n- Added option to UI Mode mirroring the `--update-snapshots` options\n- Added option to UI Mode to run only a single worker at a time\n## Breaking Changes\n- Event [browserContext.on('backgroundpage')](https://playwright.dev/docs/api/class-browsercontext#browser-context-event-background-page) has been deprecated and will not be emitted. Method [browserContext.backgroundPages()](https://playwright.dev/docs/api/class-browsercontext#browser-context-background-pages) will return an empty list\n## Miscellaneous\n- Aria snapshots render and compare `input` `placeholder`\n- Added environment variable `PLAYWRIGHT_TEST` to Playwright worker processes to allow discriminating on testing status\n## Browser Versions\n- Chromium 141.0.7390.37\n- Mozilla Firefox 142.0.1\n- WebKit 26.0",
+      "memory_unit_text": "In the microsoft/playwright release v1.56.0, Playwright Agents are introduced: planner, generator, and healer agents for building Playwright tests. New APIs: page.consoleMessages(), page.pageErrors(), page.requests(), --test-list and --test-list-invert CLI options. UI Mode and HTML Reporter: option to disable 'Copy prompt' button, merge files option, --update-snapshots mirroring, single worker mode. Breaking change: browserContext.on('backgroundpage') deprecated. Miscellaneous: aria snapshots render input placeholder, PLAYWRIGHT_TEST environment variable added. Browser versions: Chromium 141.0.7390.37, Firefox 142.0.1, WebKit 26.0."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_56_1",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.56.1",
+      "tag_name": "v1.56.1",
+      "title": "v1.56.1",
+      "time_hint": "2025-10-17",
+      "published_at": "2025-10-17T00:50:36Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.56.1",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.56.1\nTag: v1.56.1; draft: False; prerelease: False; published_at: 2025-10-17T00:50:36Z; created_at: 2025-10-17T00:48:28Z\nRelease notes:\n## Highlights\n#37871 chore: allow local-network-access permission in chromium\n#37891 fix(agents): remove workspaceFolder ref from vscode mcp\n#37759 chore: rename agents to test agents\n#37757 chore(mcp): fallback to cwd when resolving test config\n## Browser Versions\n- Chromium 141.0.7390.37\n- Mozilla Firefox 142.0.1\n- WebKit 26.0",
+      "memory_unit_text": "In the microsoft/playwright release v1.56.1, highlights include allowing local-network-access permission in chromium, removing workspaceFolder ref from vscode mcp, renaming agents to test agents, and falling back to cwd when resolving test config in mcp. Browser versions: Chromium 141.0.7390.37, Firefox 142.0.1, WebKit 26.0."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_57_0",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.57.0",
+      "tag_name": "v1.57.0",
+      "title": "v1.57.0",
+      "time_hint": "2025-11-25",
+      "published_at": "2025-11-25T11:16:13Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.57.0",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.57.0\nTag: v1.57.0; draft: False; prerelease: False; published_at: 2025-11-25T11:16:13Z; created_at: 2025-11-25T11:10:17Z\nRelease notes:\n## Speedboard\nIn HTML reporter, there's a new tab we call \"Speedboard\":\n<img width=\"600\" alt=\"speedboard\" src=\"https://github.com/user-attachments/assets/4ba117ea-ea94-4b6a-82b2-8bbd00dfe81c\" />\nIt shows you all your executed tests sorted by slowness,\nand can help you understand where your test suite is taking longer than expected.\nTake a look at yours - maybe you'll find some tests that are spending a longer time waiting than they should!\n## Chrome for Testing\nStarting with this release, Playwright switches from Chromium, to using [Chrome for Testing](https://developer.chrome.com/blog/chrome-for-testing/) builds. Both headed and headless browsers are subject to this. Your tests should still be passing after upgrading to Playwright 1.57.\nWe're expecting no functional changes to come from this switch. The biggest change is the new icon and title in your toolbar.\n<img width=\"500\" alt=\"new and old logo\" src=\"https://github.com/user-attachments/assets/e9a5c4f2-9f35-4c27-9382-0f5eda377097\" />\nIf you still see an unexpected behaviour change, please [file an issue](https://github.com/microsoft/playwright/issues/new).\nOn Arm64 Linux, Playwright continues to use Chromium.\n## Waiting for webserver output\n[testConfig.webServer](https://playwright.dev/docs/api/class-testconfig#test-config-web-server) added a `wait` field. Pass a regular expression, and Playwright will wait until the webserver logs match it.\n```js\nimport { defineConfig } from '@playwright/test';\nexport default defineConfig({\nwebServer: {\ncommand: 'npm run start',\nwait: {\nstdout: '/Listening on port (?<my_server_port>\\\\d+)/'\n},\n},\n});\n```\nIf you include a named capture group into the expression, then Playwright will provide the capture group contents via environment variables:\n```js\nimport { test, expect } from '@playwright/test';\ntest.use({ baseUrl: `http://localhost:${process.env.MY_SERVER_PORT ?? 3000}` });\ntest('homepage', async ({ page }) => {\nawait page.goto('/');\n});\n```\nThis is not just useful for capturing varying ports of dev servers. You can also use it to wait for readiness of a service that doesn't expose an HTTP readiness check, but instead prints a readiness message to stdout or stderr.\n## Breaking Change\nAfter 3 years of being deprecated, we removed `Page#accessibility` from our API. Please use other libraries such as [Axe](https://www.deque.com/axe/) if you need to test page accessibility. See our Node.js [guide](https://playwright.dev/docs/accessibility-testing) for integration with Axe.\n## New APIs\n- New property [testConfig.tag](https://playwright.dev/docs/api/class-testconfig#test-config-tag) adds a tag to all tests in this run. This is useful when using [merge-reports](https://playwright.dev/docs/test-sharding#merging-reports-from-multiple-shards).\n- [worker.on('console')](https://playwright.dev/docs/api/class-worker#worker-event-console) event is emitted when JavaScript within the worker calls one of console API methods, e.g. console.log or console.dir. [worker.waitForEvent()](https://playwright.dev/docs/api/class-worker#worker-wait-for-event) can be used to wait for it.\n- [locator.description()](https://playwright.dev/docs/api/class-locator#locator-description) returns locator description previously set with [locator.describe()](https://playwright.dev/docs/api/class-locator#locator-describe), and `Locator.toString()` now uses the description when available.\n- New option [`steps`](https://playwright.dev/docs/api/class-locator#locator-click-option-steps) in [locator.click()](https://playwright.dev/docs/api/class-locator#locator-click) and [locator.dragTo()](https://playwright.dev/docs/api/class-locator#locator-drag-to) that configures the number of `mousemove` events emitted while moving the mouse pointer to the target element.\n- Network requests issued by [Service Worker...",
+      "memory_unit_text": "In the microsoft/playwright release v1.57.0, a new Speedboard tab in HTML reporter shows tests sorted by slowness. Playwright switches from Chromium to Chrome for Testing builds. testConfig.webServer adds a wait field with regex to wait for server output. Breaking change: Page#accessibility removed. New APIs: testConfig.tag, worker.on('console'), locator.description(), steps option in click and dragTo, and network requests from Service Workers are now recorded. Browser versions: Chromium 145.0.7632.6, Firefox 146.0.1, WebKit 26.0."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_58_0",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.58.0",
+      "tag_name": "v1.58.0",
+      "title": "v1.58.0",
+      "time_hint": "2026-01-23",
+      "published_at": "2026-01-23T11:53:47Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.58.0",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.58.0\nTag: v1.58.0; draft: False; prerelease: False; published_at: 2026-01-23T11:53:47Z; created_at: 2026-01-23T10:37:04Z\nRelease notes:\n## 📣 Playwright CLI+SKILLs 📣\nWe are adding a new token-efficient CLI mode of operation to Playwright with the skills located at [playwright-cli](https://github.com/microsoft/playwright-cli). This brings the long-awaited official SKILL-focused CLI mode to our story and makes it more coding agent-friendly.\n> It is the first snapshot with the essential command set (which is already larger than the original MCP!), but we expect it to grow rapidly. Unlike the token use, that one we expect to go down since snapshots are no longer forced into the LLM!\n## Timeline\nIf you're using [merged reports](https://playwright.dev/docs/test-sharding#merging-reports-from-multiple-environments), the HTML report Speedboard tab now shows the Timeline:\n![Timeline chart in the HTML report](https://github.com/microsoft/playwright/blob/main/docs/src/images/timeline.png?raw=true)\n## UI Mode and Trace Viewer Improvements\n- New 'system' theme option follows your OS dark/light mode preference\n- Search functionality (Cmd/Ctrl+F) is now available in code editors\n- Network details panel has been reorganized for better usability\n- JSON responses are now automatically formatted for readability\nThanks to [@cpAdm](https://github.com/cpAdm) for contributing these improvements!\n## Miscellaneous\n[browserType.connectOverCDP()](https://playwright.dev/docs/api/class-browsertype#browser-type-connect-over-cdp) now accepts an `isLocal` option. When set to `true`, it tells Playwright that it runs on the same host as the CDP server, enabling file system optimizations.\n## Breaking Changes ⚠️\n- Removed `_react` and `_vue` selectors. See [locators guide](https://playwright.dev/docs/locators) for alternatives.\n- Removed `:light` selector engine suffix. Use standard CSS selectors instead.\n- Option `devtools` from [browserType.launch()](https://playwright.dev/docs/api/class-browsertype#browser-type-launch) has been removed. Use `args: ['--auto-open-devtools-for-tabs']` instead.\n- Removed macOS 13 support for WebKit. We recommend to upgrade your macOS version, or keep using an older Playwright version.\n## Browser Versions\n- Chromium 145.0.7632.6\n- Mozilla Firefox 146.0.1\n- WebKit 26.0\nThis version was also tested against the following stable channels:\n- Google Chrome 144\n- Microsoft Edge 144",
+      "memory_unit_text": "In the microsoft/playwright release v1.58.0, a new token-efficient CLI mode with skills is introduced. HTML report Speedboard tab now shows Timeline for merged reports. UI Mode and Trace Viewer improvements: system theme option, search in code editors, reorganized network details panel, auto-formatted JSON responses. browserType.connectOverCDP() accepts isLocal option. Breaking changes: removed _react and _vue selectors, :light selector engine suffix, devtools option from launch, and macOS 13 support for WebKit. Browser versions: Chromium 145.0.7632.6, Firefox 146.0.1, WebKit 26.0."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_58_1",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.58.1",
+      "tag_name": "v1.58.1",
+      "title": "v1.58.1",
+      "time_hint": "2026-01-30",
+      "published_at": "2026-01-30T18:23:42Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.58.1",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.58.1\nTag: v1.58.1; draft: False; prerelease: False; published_at: 2026-01-30T18:23:42Z; created_at: 2026-01-30T16:36:32Z\nRelease notes:\n## Highlights\n#39036 fix(msedge): fix local network permissions\n#39037 chore: update cft download location\n#38995 chore(webkit): disable frame sessions on fronzen builds\n## Browser Versions\n- Chromium 145.0.7632.6\n- Mozilla Firefox 146.0.1\n- WebKit 26.0",
+      "memory_unit_text": "In the microsoft/playwright release v1.58.1, highlights include fixes for local network permissions in msedge, updating cft download location, and disabling frame sessions on frozen builds in webkit. Browser versions: Chromium 145.0.7632.6, Firefox 146.0.1, WebKit 26.0."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_58_2",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.58.2",
+      "tag_name": "v1.58.2",
+      "title": "v1.58.2",
+      "time_hint": "2026-02-06",
+      "published_at": "2026-02-06T16:41:43Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.58.2",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.58.2\nTag: v1.58.2; draft: False; prerelease: False; published_at: 2026-02-06T16:41:43Z; created_at: 2026-02-06T13:42:15Z\nRelease notes:\n## Highlights\n#39121 fix(trace viewer): make paths via stdin work\n#39129 fix: do not force swiftshader on chromium mac\n## Browser Versions\n- Chromium 145.0.7632.6\n- Mozilla Firefox 146.0.1\n- WebKit 26.0",
+      "memory_unit_text": "In the microsoft/playwright release v1.58.2, highlights include fixes for trace viewer paths via stdin and not forcing swiftshader on chromium mac. Browser versions: Chromium 145.0.7632.6, Firefox 146.0.1, WebKit 26.0."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_59_0",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.59.0",
+      "tag_name": "v1.59.0",
+      "title": "v1.59.0",
+      "time_hint": "2026-04-01",
+      "published_at": "2026-04-01T00:27:06Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.59.0",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.59.0\nTag: v1.59.0; draft: False; prerelease: False; published_at: 2026-04-01T00:27:06Z; created_at: 2026-03-31T23:22:51Z\nRelease notes:\n## 🎬 Screencast\nNew [page.screencast](https://playwright.dev/docs/api/class-page#page-screencast) API provides a unified interface for capturing page content with:\n- Screencast recordings\n- Action annotations\n- Visual overlays\n- Real-time frame capture\n- Agentic video receipts\n<center>\n<img src=\"https://raw.githubusercontent.com/microsoft/playwright/main/docs/src/images/release-notes-1.59-screencast-demo.gif\" alt=\"Demo\" width=\"500\" height=\"313\" />\n</center>\n**Screencast recording** — record video with precise start/stop control, as an alternative to the [`recordVideo`](https://playwright.dev/docs/api/class-browser#browser-new-context-option-record-video) option:\n```js\nawait page.screencast.start({ path: 'video.webm' });\n// ... perform actions ...\nawait page.screencast.stop();\n```\n**Action annotations** — enable built-in visual annotations that highlight interacted elements and display action titles during recording:\n```js\nawait page.screencast.showActions({ position: 'top-right' });\n```\n[screencast.showActions()](https://playwright.dev/docs/api/class-screencast#screencast-show-actions) accepts `position` (`'top-left'`, `'top'`, `'top-right'`, `'bottom-left'`, `'bottom'`, `'bottom-right'`), `duration` (ms per annotation), and `fontSize` (px). Returns a disposable to stop showing actions.\nAction annotations can also be enabled in test fixtures via the `video` option:\n```js\n// playwright.config.ts\nexport default defineConfig({\nuse: {\nvideo: {\nmode: 'on',\nshow: {\nactions: { position: 'top-left' },\ntest: { position: 'top-right' },\n},\n},\n},\n});\n```\n**Visual overlays** — add chapter titles and custom HTML overlays on top of the page for richer narration:\n```js\nawait page.screencast.showChapter('Adding TODOs', {\ndescription: 'Type and press enter for each TODO',\nduration: 1000,\n});\nawait page.screencast.showOverlay('<div style=\"color: red\">Recording</div>');\n```\n**Real-time frame capture** — stream JPEG-encoded frames for custom processing like thumbnails, live previews, AI vision, and more:\n```js\nawait page.screencast.start({\nonFrame: ({ data }) => sendToVisionModel(data),\nsize: { width: 800, height: 600 },\n});\n```\n**Agentic video receipts** — coding agents can produce video evidence of their work. After completing a task, an agent can record a walkthrough video with rich annotations for human review:\n```js\nawait page.screencast.start({ path: 'receipt.webm' });\nawait page.screencast.showActions({ position: 'top-right' });\nawait page.screencast.showChapter('Verifying checkout flow', {\ndescription: 'Added coupon code support per ticket #1234',\n});\n// Agent performs the verification steps...\nawait page.locator('#coupon').fill('SAVE20');\nawait page.locator('#apply-coupon').click();\nawait expect(page.locator('.discount')).toContainText('20%');\nawait page.screencast.showChapter('Done', {\ndescription: 'Coupon applied, discount reflected in total',\n});\nawait page.screencast.stop();\n```\nThe resulting video serves as a receipt: chapter titles provide context, action annotations highlight each interaction, and the visual walkthrough is faster to review than text logs.\n## 🔗 Interoperability\nNew [browser.bind()](https://playwright.dev/docs/api/class-browser#browser-bind) API makes a launched browser available for `playwright-cli`, `@playwright/mcp`, and other clients to connect to.\n**Bind a browser** — start a browser and bind it so others can connect:\n```js\nconst { endpoint } = await browser.bind('my-session', {\nworkspaceDir: '/my/project',\n});\n```\n**Connect from playwright-cli** — connect to the running browser from your favorite coding agent.\n```bash\nplaywright-cli attach my-session\nplaywright-cli -s my-session snapshot\n```\n**Connect from @playwright/mcp** — or point your MCP server to the running browser.\n```bash\n@playwright/mcp --endpoint=my-session\n```\n**Conne...",
+      "memory_unit_text": "In the microsoft/playwright release v1.59.0, new page.screencast API provides screencast recordings, action annotations, visual overlays, real-time frame capture, and agentic video receipts. New browser.bind() API enables interoperability with playwright-cli and @playwright/mcp. Browser versions: Chromium 145.0.7632.6, Firefox 146.0.1, WebKit 26.0."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_59_1",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.59.1",
+      "tag_name": "v1.59.1",
+      "title": "v1.59.1",
+      "time_hint": "2026-04-01",
+      "published_at": "2026-04-01T17:55:35Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.59.1",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.59.1\nTag: v1.59.1; draft: False; prerelease: False; published_at: 2026-04-01T17:55:35Z; created_at: 2026-04-01T17:07:55Z\nRelease notes:\n### Bug Fixes\n- **[Windows]** Reverted hiding console window when spawning browser processes, which caused regressions including broken `codegen`, `--ui` and `show` commands ([#39990](https://github.com/microsoft/playwright/issues/39990))",
+      "memory_unit_text": "In the microsoft/playwright release v1.59.1, a bug fix reverts hiding console window when spawning browser processes on Windows, which caused regressions including broken codegen, --ui and show commands."
+    },
+    {
+      "memory_node_id": "microsoft__playwright__release__v1_60_0",
+      "repo": "microsoft/playwright",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.60.0",
+      "tag_name": "v1.60.0",
+      "title": "v1.60.0",
+      "time_hint": "2026-05-11",
+      "published_at": "2026-05-11T19:08:18Z",
+      "source_url": "https://github.com/microsoft/playwright/releases/tag/v1.60.0",
+      "raw_text": "Repository: microsoft/playwright\nRelease: v1.60.0\nTag: v1.60.0; draft: False; prerelease: False; published_at: 2026-05-11T19:08:18Z; created_at: 2026-05-11T17:00:25Z\nRelease notes:\n## 🌐 HAR recording on Tracing\n[tracing.startHar()](https://playwright.dev/docs/api/class-tracing#tracing-start-har) / [tracing.stopHar()](https://playwright.dev/docs/api/class-tracing#tracing-stop-har) expose HAR recording as a first-class tracing API, with the same `content`, `mode` and `urlFilter` options as `recordHar`. The returned [Disposable](https://playwright.dev/docs/api/class-disposable) makes it easy to scope a recording with `await using`:\n```js\nawait using har = await context.tracing.startHar('trace.har');\nconst page = await context.newPage();\nawait page.goto('https://playwright.dev');\n// HAR is finalized when `har` goes out of scope.\n```\n## 🪝 Drop API\nNew [locator.drop()](https://playwright.dev/docs/api/class-locator#locator-drop) simulates an external drag-and-drop of files or clipboard-like data onto an element. Playwright dispatches `dragenter`, `dragover`, and `drop` with a synthetic [DataTransfer] in the page context — works cross-browser and is great for testing upload zones:\n```js\nawait page.locator('#dropzone').drop({\nfiles: { name: 'note.txt', mimeType: 'text/plain', buffer: Buffer.from('hello') },\n});\nawait page.locator('#dropzone').drop({\ndata: {\n'text/plain': 'hello world',\n'text/uri-list': 'https://example.com',\n},\n});\n```\n## 🎯 Aria snapshots\n- [expect(page).toMatchAriaSnapshot()](https://playwright.dev/docs/api/class-pageassertions#page-assertions-to-match-aria-snapshot) now works on a [Page](https://playwright.dev/docs/api/class-page), in addition to a [Locator](https://playwright.dev/docs/api/class-locator) — equivalent to asserting against `page.locator('body')`.\n- New `boxes` option on [locator.ariaSnapshot()](https://playwright.dev/docs/api/class-locator#locator-aria-snapshot) / [page.ariaSnapshot()](https://playwright.dev/docs/api/class-page#page-aria-snapshot) appends each element's bounding box as `[box=x,y,width,height]`, useful for AI consumption.\n## 🛑 test.abort()\nNew [test.abort()](https://playwright.dev/docs/api/class-test#test-abort) aborts the currently running test from a fixture, hook, or route handler with an optional message. Use it when you have detected an unrecoverable misuse and want to fail the test right away:\n```js\ntest('does not publish to the shared page', async ({ page }) => {\nawait page.route('**/publish', route => {\ntest.abort('Tests must not publish to the shared page. Use the `clone` option.');\nreturn route.abort();\n});\n// ...\n});\n```\n## New APIs\n### Browser, Context and Page\n- Event [browser.on('context')](https://playwright.dev/docs/api/class-browser#browser-event-context) — fired when a new context is created on the browser.\n- [BrowserContext](https://playwright.dev/docs/api/class-browsercontext) now mirrors lifecycle events from its pages: [browserContext.on('download')](https://playwright.dev/docs/api/class-browsercontext#browser-context-event-download), [browserContext.on('frameattached')](https://playwright.dev/docs/api/class-browsercontext#browser-context-event-frame-attached), [browserContext.on('framedetached')](https://playwright.dev/docs/api/class-browsercontext#browser-context-event-frame-detached), [browserContext.on('framenavigated')](https://playwright.dev/docs/api/class-browsercontext#browser-context-event-frame-navigated), [browserContext.on('pageclose')](https://playwright.dev/docs/api/class-browsercontext#browser-context-event-page-close), [browserContext.on('pageload')](https://playwright.dev/docs/api/class-browsercontext#browser-context-event-page-load).\n### Locators and Assertions\n- New option `description` in [page.getByRole()](https://playwright.dev/docs/api/class-page#page-get-by-role) / [locator.getByRole()](https://playwright.dev/docs/api/class-locator#locator-get-by-role) / [frame.getByRole()](https://playwright.dev/docs/api/class-frame#frame-get-by-role) /...",
+      "memory_unit_text": "In the microsoft/playwright release v1.60.0, tracing.startHar()/stopHar() expose HAR recording as a first-class tracing API. New locator.drop() simulates external drag-and-drop. Aria snapshots: toMatchAriaSnapshot() works on Page, new boxes option for bounding boxes. New test.abort() aborts the current test. New APIs: browser.on('context'), BrowserContext mirrors lifecycle events, description option in getByRole, and more. Browser versions: Chromium 145.0.7632.6, Firefox 146.0.1, WebKit 26.0."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the microsoft/playwright releases, which release introduces the page.screencast API for screencast recordings, action annotations, and visual overlays?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v1.57.0"
+        },
+        {
+          "option_id": "B",
+          "text": "v1.58.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v1.59.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v1.60.0"
+        }
+      ],
+      "correct_option_id": "C",
+      "expected_answer": "v1.59.0",
+      "source_chunk_ids": [
+        "microsoft__playwright__release__v1_59_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "microsoft__playwright__release__v1_59_0",
+          "answer_text": "new page.screencast API provides screencast recordings, action annotations, visual overlays, real-time frame capture, and agentic video receipts"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the microsoft/playwright releases, how does the WebSocket-related change in v1.48.0 differ from the WebSocket-related change in v1.48.1?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v1.48.0 introduces page.routeWebSocket() and browserContext.routeWebSocket() for intercepting WebSocket connections, while v1.48.1 fixes a bug where WebSocket route did not handle full URLs."
+        },
+        {
+          "option_id": "B",
+          "text": "v1.48.0 removes WebSocket support, while v1.48.1 adds it back."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only update WebSocket-related documentation without functional changes."
+        },
+        {
+          "option_id": "D",
+          "text": "v1.48.0 deprecates WebSocket routing, and v1.48.1 removes it entirely."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v1.48.0 introduces page.routeWebSocket() and browserContext.routeWebSocket() for intercepting WebSocket connections, while v1.48.1 fixes a bug where WebSocket route did not handle full URLs.",
+      "source_chunk_ids": [
+        "microsoft__playwright__release__v1_48_0",
+        "microsoft__playwright__release__v1_48_1"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "microsoft__playwright__release__v1_48_0",
+          "answer_text": "new page.routeWebSocket() and browserContext.routeWebSocket() methods allow intercepting, modifying, and mocking WebSocket connections"
+        },
+        {
+          "memory_node_id": "microsoft__playwright__release__v1_48_1",
+          "answer_text": "a bug fix for WebSocket route not handling full URLs"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the microsoft/playwright release window, order the following release-content states from earliest to latest: (1) a release that introduces the page.screencast API, (2) a release that introduces Playwright Agents (planner, generator, healer), (3) a release that switches from Chromium to Chrome for Testing builds, (4) a release that introduces WebSocket routing with page.routeWebSocket().",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "4 -> 2 -> 3 -> 1"
+        },
+        {
+          "option_id": "B",
+          "text": "4 -> 3 -> 2 -> 1"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 4 -> 3 -> 1"
+        },
+        {
+          "option_id": "D",
+          "text": "1 -> 2 -> 3 -> 4"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "4 -> 2 -> 3 -> 1",
+      "source_chunk_ids": [
+        "microsoft__playwright__release__v1_48_0",
+        "microsoft__playwright__release__v1_56_0",
+        "microsoft__playwright__release__v1_57_0",
+        "microsoft__playwright__release__v1_59_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "microsoft__playwright__release__v1_48_0",
+          "answer_text": "new page.routeWebSocket() and browserContext.routeWebSocket() methods allow intercepting, modifying, and mocking WebSocket connections"
+        },
+        {
+          "memory_node_id": "microsoft__playwright__release__v1_56_0",
+          "answer_text": "Playwright Agents are introduced: planner, generator, and healer agents"
+        },
+        {
+          "memory_node_id": "microsoft__playwright__release__v1_57_0",
+          "answer_text": "Playwright switches from Chromium to Chrome for Testing builds"
+        },
+        {
+          "memory_node_id": "microsoft__playwright__release__v1_59_0",
+          "answer_text": "new page.screencast API provides screencast recordings, action annotations, visual overlays"
+        }
+      ]
+    }
+  ]
+}

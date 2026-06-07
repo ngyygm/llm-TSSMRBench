@@ -1,0 +1,530 @@
+{
+  "prototype_id": "google__zx_release_window",
+  "domain": "github_release_evolution",
+  "repo": "google/zx",
+  "source_type": "release_note",
+  "window_title": "google/zx recent release evolution",
+  "window_summary": "This window tracks the recent google/zx release stream from version 8.1.9 through 8.8.5, highlighting pipe API enhancements, new features like delayed piping and stream picking, and infrastructure improvements including distribution channels and legacy maintenance.",
+  "chunks": [
+    {
+      "memory_node_id": "google__zx__release__8_1_9",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.1.9",
+      "tag_name": "8.1.9",
+      "title": "8.1.9",
+      "time_hint": "2024-10-06",
+      "published_at": "2024-10-06T19:34:05Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.1.9",
+      "raw_text": "Repository: google/zx\nRelease: 8.1.9\nTag: 8.1.9; draft: False; prerelease: False; published_at: 2024-10-06T19:34:05Z; created_at: 2024-10-06T19:04:05Z\nRelease notes:\nToday's release is a minor update that includes:\n## Enhancements\n* We have replaced `ProcessOutput` fields with lazy getters to reduce mem consumption [#903](https://github.com/google/zx/pull/903), [#908](https://github.com/google/zx/pull/908)\n* Reduced ReDos risks for codeblock patterns [#906](https://github.com/google/zx/pull/906)\n* Kept `argv` reference on update [#916](https://github.com/google/zx/pull/916)\n* Strengthened `Shell` interface to properly handle `sync` mode [#915](https://github.com/google/zx/pull/915):\n```ts\nexpectType<ProcessPromise>($`cmd`)\nexpectType<ProcessPromise>($({ sync: false })`cmd`)\nexpectType<ProcessOutput>($({ sync: true })`cmd`)\nexpectType<ProcessOutput>($.sync`cmd`)\n```\n## Fixes\n* Corrected `stdall` fill for `$.sync` calls: [#911](https://github.com/google/zx/pull/911), [#912](https://github.com/google/zx/pull/912)",
+      "memory_unit_text": "In the google/zx release 8.1.9, the project delivers a minor update that replaces ProcessOutput fields with lazy getters to reduce memory consumption, reduces ReDoS risks for codeblock patterns, keeps argv reference on update, strengthens the Shell interface to properly handle sync mode, and corrects stdall fill for $.sync calls."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_2_0",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.2.0",
+      "tag_name": "8.2.0",
+      "title": "8.2.0",
+      "time_hint": "2024-10-31",
+      "published_at": "2024-10-31T20:01:25Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.2.0",
+      "raw_text": "Repository: google/zx\nRelease: 8.2.0\nTag: 8.2.0; draft: False; prerelease: False; published_at: 2024-10-31T20:01:25Z; created_at: 2024-10-31T13:22:44Z\nRelease notes:\nPipes supercharge today! 🚀\n## Features\n* Delayed piping. You can fill dependent streams at any time during the origin process lifecycle (even when finished) without losing data. [#914](https://github.com/google/zx/pull/914)\n```ts\nconst result = $`echo 1; sleep 1; echo 2; sleep 1; echo 3`\nconst piped1 = result.pipe`cat`\nlet piped2\nsetTimeout(() => {\npiped2 = result.pipe`cat`\n}, 1500)\nawait piped1\nassert.equal((await piped1).toString(), '1\\n2\\n3\\n')\nassert.equal((await piped2).toString(), '1\\n2\\n3\\n')\n```\n* Promisified streams.  [#921](https://github.com/google/zx/pull/921) [#922](https://github.com/google/zx/pull/922) [#923](https://github.com/google/zx/pull/923) [#928](https://github.com/google/zx/pull/928)\n```ts\nconst file = tempfile()\nconst fileStream = fs.createWriteStream(file)\nconst p = $`echo \"hello\"`\n.pipe(\nnew Transform({\ntransform(chunk, encoding, callback) {\ncallback(null, String(chunk).toUpperCase())\n},\n})\n)\n.pipe(fileStream)\np instanceof WriteStream             // true\nawait p === fileStream               // true\n(await fs.readFile(file)).toString() // 'HELLO\\n'\n```\n## Chore\n* Code improvements [#924](https://github.com/google/zx/pull/924) [#925](https://github.com/google/zx/pull/925)\n* Tests enhancements [#919](https://github.com/google/zx/pull/919) [#920](https://github.com/google/zx/pull/920) [#926](https://github.com/google/zx/pull/926) [#927](https://github.com/google/zx/pull/927)",
+      "memory_unit_text": "In the google/zx release 8.2.0, the project introduces delayed piping that allows filling dependent streams at any time during the origin process lifecycle without losing data, and promisified streams enabling direct piping to writable streams with promise-like behavior."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_2_1",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.2.1",
+      "tag_name": "8.2.1",
+      "title": "8.2.1",
+      "time_hint": "2024-11-08",
+      "published_at": "2024-11-08T13:41:05Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.2.1",
+      "raw_text": "Repository: google/zx\nRelease: 8.2.1\nTag: 8.2.1; draft: False; prerelease: False; published_at: 2024-11-08T13:41:05Z; created_at: 2024-11-08T13:33:26Z\nRelease notes:\n* [#936](https://github.com/google/zx/pull/936) fixes endless streams piping\n* [#930](https://github.com/google/zx/pull/930) enables custom extensions support",
+      "memory_unit_text": "In the google/zx release 8.2.1, the project fixes endless streams piping and enables custom extensions support."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_2_2",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.2.2",
+      "tag_name": "8.2.2",
+      "title": "8.2.2",
+      "time_hint": "2024-11-12",
+      "published_at": "2024-11-12T16:52:21Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.2.2",
+      "raw_text": "Repository: google/zx\nRelease: 8.2.2\nTag: 8.2.2; draft: False; prerelease: False; published_at: 2024-11-12T16:52:21Z; created_at: 2024-11-10T22:46:41Z\nRelease notes:\n## What's Changed\n* test: stdio inherit by @antongolub in https://github.com/google/zx/pull/941\n* fix: handle nullable stdout/stderr by @antongolub in https://github.com/google/zx/pull/943\n**Full Changelog**: https://github.com/google/zx/compare/8.2.1...8.2.2",
+      "memory_unit_text": "In the google/zx release 8.2.2, the project adds a test for stdio inherit and fixes handling of nullable stdout/stderr."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_2_3",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.2.3",
+      "tag_name": "8.2.3",
+      "title": "8.2.3 – Golden Wrench",
+      "time_hint": "2024-11-28",
+      "published_at": "2024-11-28T12:20:00Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.2.3",
+      "raw_text": "Repository: google/zx\nRelease: 8.2.3 – Golden Wrench\nTag: 8.2.3; draft: False; prerelease: False; published_at: 2024-11-28T12:20:00Z; created_at: 2024-11-27T07:42:56Z\nRelease notes:\nThis release continues the work on [pipe API enhancements](https://github.com/google/zx/releases/tag/8.2.0):\n* Autorun halted processes on the entire pipe run [#951](https://github.com/google/zx/pull/951) [#950](https://github.com/google/zx/pull/950)\n```ts\nconst { stdout } = await $({ halt: true })`echo \"hello\"`\n.pipe`awk '{print $1\" world\"}'`\n.pipe`tr '[a-z]' '[A-Z]'`\n.run()\nstdout // 'HELLO WORLD'\n```\n* Let $ be piped directly from streams [#953](https://github.com/google/zx/pull/953)\n```ts\nconst getUpperCaseTransform = () =>\nnew Transform({\ntransform(chunk, encoding, callback) {\ncallback(null, String(chunk).toUpperCase())\n},\n})\n// $ > stream (promisified) > $\nconst o1 = await $`echo \"hello\"`\n.pipe(getUpperCaseTransform())\n.pipe($`cat`)\no1.stdout //  'HELLO\\n'\n// stream > $\nconst file = tempfile()\nawait fs.writeFile(file, 'test')\nconst o2 = await fs\n.createReadStream(file)\n.pipe(getUpperCaseTransform())\n.pipe($`cat`)\no2.stdout //  'TEST'\n```\n* Mixin `ProcessOutput` data to promisified pipe values [#954](https://github.com/google/zx/pull/954) [#949](https://github.com/google/zx/issues/949)\n```ts\nconst file = tempfile()\nconst fileStream = fs.createWriteStream(file)\nconst p = $`echo \"hello\"`\n.pipe(getUpperCaseTransform())\n.pipe(fileStream)\nconst o = await p\np instanceof WriteStream             // true\no instanceof WriteStream             // true\no.stdout                             // 'hello\\n'\no.exitCode;                          // 0\n(await fs.readFile(file)).toString() // 'HELLO\\n'\n```\nWe've also slightly tweaked up dist contents for better compatibility with bundlers [#957](https://github.com/google/zx/issues/957)",
+      "memory_unit_text": "In the google/zx release 8.2.3 (Golden Wrench), the project continues pipe API enhancements by autorunning halted processes on the entire pipe run, allowing $ to be piped directly from streams, mixing ProcessOutput data into promisified pipe values, and tweaking dist contents for better bundler compatibility."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_2_4",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.2.4",
+      "tag_name": "8.2.4",
+      "title": "8.2.4 – Leaky Faucet",
+      "time_hint": "2024-11-28",
+      "published_at": "2024-11-28T20:35:45Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.2.4",
+      "raw_text": "Repository: google/zx\nRelease: 8.2.4 – Leaky Faucet\nTag: 8.2.4; draft: False; prerelease: False; published_at: 2024-11-28T20:35:45Z; created_at: 2024-11-28T20:31:16Z\nRelease notes:\n- Fixed bun async_hooks compatibility [#959](https://github.com/google/zx/pull/959)",
+      "memory_unit_text": "In the google/zx release 8.2.4 (Leaky Faucet), the project fixes bun async_hooks compatibility."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_3_0",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.3.0",
+      "tag_name": "8.3.0",
+      "title": "8.3.0 – Pipes of Steel",
+      "time_hint": "2024-12-24",
+      "published_at": "2024-12-24T08:56:21Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.3.0",
+      "raw_text": "Repository: google/zx\nRelease: 8.3.0 – Pipes of Steel\nTag: 8.3.0; draft: False; prerelease: False; published_at: 2024-12-24T08:56:21Z; created_at: 2024-12-24T08:49:07Z\nRelease notes:\nA few weeks ago zx took a part in **OSS Library Night** 🎉\nMany thanks to the organizers and contributors who have boosted the project with their pull requests!\nToday we are releasing the zx with a huge bunch of new features and improvements.\n## Features\n### API\n* Implemented `[Symbol.asyncIterator]` API for `ProcessPromise` [#984](https://github.com/google/zx/pull/984) [#998](https://github.com/google/zx/pull/998) [#1000](https://github.com/google/zx/pull/1000)\nNow you can iterate over the process output using `for await` loop from any point of the process execution.\n```ts\nconst process = $`sleep 0.1; echo Chunk1; sleep 0.1; echo Chunk2; sleep 0.2; echo Chunk3; sleep 0.1; echo Chunk4;`\nconst chunks = []\nawait new Promise((resolve) => setTimeout(resolve, 250))\nfor await (const chunk of process) {\nchunks.push(chunk)\n}\nchunks.length //  4\nchunks[0]     // 'Chunk1'\nchunks[3]     // 'Chunk4'\n```\n* zx version is available via JS API [#986](https://github.com/google/zx/pull/986)\n```ts\nimport { version } from 'zx'\nconst [major] = (version || '').split('.').map(Number)\nif (major < 6)\nthrow new Error('zx >= 6 is required')\n```\n### Pipes\n* Enabled stream picking for `pipe()` [#1023](https://github.com/google/zx/pull/1023)\n```ts\nconst p = $`echo foo >&2; echo bar`\nconst o1 = (await p.pipe.stderr`cat`).toString()\nconst o2 = (await p.pipe.stdout`cat`).toString()\nassert.equal(o1, 'foo\\n')  // <- piped from stderr\nassert.equal(o2, 'bar\\n')  // <- stdout\n```\n* Added `signal` handling on piping [#992](https://github.com/google/zx/pull/992)\n```js\nconst ac = new AbortController()\nconst { signal } = ac\nconst p = $({ signal, nothrow: true })`echo test`.pipe`sleep 999`\nsetTimeout(() => ac.abort(), 50)\ntry {\nawait p\n} catch ({ message }) {\nmessage // The operation was aborted\n}\n```\n* Added direct piping to file shortcut [#1001](https://github.com/google/zx/pull/1001)\n```js\n// before\nawait $`echo \"Hello, stdout!\"`.pipe(fs.createWriteStream('/tmp/output.txt'))\n// after\nawait $`echo \"Hello, stdout!\"`.pipe('/tmp/output.txt')\n```\n### CLI\n* Provided `$.defaults` setting via `ZX_`-prefixed environment variables [#988](https://github.com/google/zx/pull/988) [#998](https://github.com/google/zx/pull/998)\n```bash\nZX_VERBOSE=true ZX_SHELL='/bin/bash' zx script.mjs\n```\n* Introduced `--env` option to load dotenvs [1022](https://github.com/google/zx/pull/1022) [#1030](https://github.com/google/zx/pull/1030)\n```bash\nzx --env=/path/to/some.env script\n```\n* Landed installation registry customization [#994](https://github.com/google/zx/pull/994)\n```bash\nzx --install --registry=https://registry.yarnpkg.com script.mjs\n```\n* Added `--prefer-local` option [#1015](https://github.com/google/zx/pull/1015)\n## Fixes\n* Fixed temp assets clutter on `process.exit()` [#993](https://github.com/google/zx/issues/993) [#997](https://github.com/google/zx/pull/997)\n* Handle tslib-generated string templates [#966](https://github.com/google/zx/issues/966)\n* Disabled spinner on CI and in quiet mode [#1008](https://github.com/google/zx/pull/1008) [#1009](https://github.com/google/zx/pull/1009) [#1017](https://github.com/google/zx/pull/1017)\n* Added missing `ZX_SHELL` env handling [#1024](https://github.com/google/zx/pull/1024)\n## Docs\n* Contribution guide updated [#983](https://github.com/google/zx/pull/983)\n* Documentation is now built from the `main` branch [#985](https://github.com/google/zx/pull/985)\n* Finally synced with the current API [#1025](https://github.com/google/zx/pull/1025) [#1026](https://github.com/google/zx/pull/1026)\n## Chores\n* Added autotest generation for 3rd party libs export [#987](https://github.com/google/zx/pull/987) [#990](https://github.com/google/zx/pull/990) [#1007](https://github.com/google/zx/pull/1007) [#1021](https://github.com/google/zx/pull/1021)\n* Added some [jsr.io](http...",
+      "memory_unit_text": "In the google/zx release 8.3.0 (Pipes of Steel), the project implements Symbol.asyncIterator for ProcessPromise, makes zx version available via JS API, enables stream picking for pipe(), adds signal handling on piping, provides direct piping to file shortcut, allows $.defaults setting via ZX_-prefixed environment variables, introduces --env option to load dotenvs, lands installation registry customization, adds --prefer-local option, fixes temp assets clutter on process.exit(), handles tslib-generated string templates, disables spinner on CI and in quiet mode, adds missing ZX_SHELL env handling, updates contribution guide, builds documentation from main branch, and syncs docs with current API."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_3_1",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.3.1",
+      "tag_name": "8.3.1",
+      "title": "8.3.1 – Perfect Seal",
+      "time_hint": "2025-01-29",
+      "published_at": "2025-01-29T09:24:10Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.3.1",
+      "raw_text": "Repository: google/zx\nRelease: 8.3.1 – Perfect Seal\nTag: 8.3.1; draft: False; prerelease: False; published_at: 2025-01-29T09:24:10Z; created_at: 2025-01-29T08:48:32Z\nRelease notes:\nThe release essence: introduced full-featured `.env` support [#461](https://github.com/google/zx/issues/461) → [#1060](https://github.com/google/zx/pull/1060) [#1052](https://github.com/google/zx/pull/1052) [#1043](https://github.com/google/zx/pull/1043) [#1037](https://github.com/google/zx/pull/1037) [#1032](https://github.com/google/zx/pull/1032) [#1030](https://github.com/google/zx/pull/1030) [#1022](https://github.com/google/zx/pull/1022)\n### API\n[envapi](https://github.com/webpod/envapi) is a tiny 100 LOC [dotenv](https://github.com/motdotla/dotenv)-inspired parser and serializer that we've integrated into zx.\n```ts\nimport { dotenv, fs } from 'zx'\n// parse\nconst env = dotenv.parse('A=A\\nFOO=BAR') // { A: 'A', FOO: 'BAR' }\n// serialize\nconst raw = dotenv.stringify(env) // A=A\\nFOO=BAR\nawait fs.writeFile('.env', raw)\n// load\ndotenv.load('.env') // { A: 'A', FOO: 'BAR' }\n// update the process.env\ndotenv.config('.env')\nprocess.env.A // A\n```\n### CLI\n```sh\nzx --env .env script.mjs\nzx --env-file .env script.mjs\n```\n### QnA\n— Why not use `dotenv` directly?\n— 1) Size does matter  2) We'd like to avoid internal vaults.\n— Why not load `.env` by default?\n— 1) Explicit is better than implicit 2) Runtime itself (like bun) may provide the feature.\n## Chore\n* Provided `stdall` piping [#1033](https://github.com/google/zx/pull/1033)\n* Exposed ProcessPromise `fullCmd` and unique `id` [#1035](https://github.com/google/zx/pull/1035)\n* Simplified internal regexps [#1040](https://github.com/google/zx/pull/1040) [#1038](https://github.com/google/zx/pull/1038)\n* Removed zx globals from unit tests scope [#1039](https://github.com/google/zx/pull/1039)\n* Added check if tempfile exists [#1041](https://github.com/google/zx/pull/1041)\n* Added ts support in markdown [#1042](https://github.com/google/zx/pull/1042)\n* Enabled CodeQL and OSV scanners [#1011](https://github.com/google/zx/pull/1011)\n* Configured pre-push git hooks [#1044](https://github.com/google/zx/pull/1044)\n* Explicitly declared permissions for test.yml [#1045](https://github.com/google/zx/pull/1045)\n* Mentioned `halt` and `run` API in docs [#1046](https://github.com/google/zx/pull/1046)\n* Fixed `timeout` option handling for corner cases [#1049](https://github.com/google/zx/pull/1049)\n* Allowed `killSignal` setting via env vars [#1054](https://github.com/google/zx/pull/1054)\n* Added `diagnostic_channel` to built-ins list [#1056](https://github.com/google/zx/pull/1056)\n* Enhanced logger: added `id` field and introduced `end` event [#1057](https://github.com/google/zx/pull/1057) [#1058](https://github.com/google/zx/pull/1058)\n* Made `nothrown()` toggleable [#1066](https://github.com/google/zx/pull/1066) [#1029](https://github.com/google/zx/issues/1029)\n* Handle `ZX_REPL_HISTORY` envvar [#1065](https://github.com/google/zx/pull/1065)\n* Fixed `file://` protocol check [#1064](https://github.com/google/zx/pull/1064)\n* Accept `mode` option for `tmpdir` and `tmpfile` [#1063](https://github.com/google/zx/pull/1063)\n* Enhanced deno support [#1062](https://github.com/google/zx/pull/1062) [#1061](https://github.com/google/zx/pull/1061)\n* Optimized markdown parser [#1068](https://github.com/google/zx/pull/1068)\n* Applied [zizmor](https://github.com/woodruffw/zizmor) suggestions [#1067](https://github.com/google/zx/pull/1067)\n* Minor code improvements [#1070](https://github.com/google/zx/pull/1070) [#1069](https://github.com/google/zx/pull/1069)\n* Optimized output buffers joining [#1072](https://github.com/google/zx/pull/1072)\n* Fixed predefined `_timeoutSignal` override [#1075](https://github.com/google/zx/pull/1075)\n* Exposed `ProcessPromise` stage [#1077](https://github.com/google/zx/pull/1077) [#967](https://github.com/google/zx/pull/967)\n* Aligned script processing flows (CLI) [#1078](https://github.com/google/zx/pu...",
+      "memory_unit_text": "In the google/zx release 8.3.1 (Perfect Seal), the project introduces full-featured .env support via a tiny dotenv-inspired parser and serializer, provides stdall piping, exposes ProcessPromise fullCmd and unique id, simplifies internal regexps, removes zx globals from unit tests scope, adds check if tempfile exists, adds ts support in markdown, enables CodeQL and OSV scanners, configures pre-push git hooks, explicitly declares permissions for test.yml, mentions halt and run API in docs, fixes timeout option handling for corner cases, allows killSignal setting via env vars, adds diagnostic_channel to built-ins list, enhances logger with id field and end event, makes nothrown() toggleable, handles ZX_REPL_HISTORY envvar, fixes file:// protocol check, accepts mode option for tmpdir and tmpfile, enhances deno support, optimizes markdown parser, applies zizmor suggestions, makes minor code improvements, optimizes output buffers joining, fixes predefined _timeoutSignal override, exposes ProcessPromise stage, and aligns script processing flows (CLI)."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_3_2",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.3.2",
+      "tag_name": "8.3.2",
+      "title": "8.3.2 – Clogged Drain",
+      "time_hint": "2025-02-01",
+      "published_at": "2025-02-01T10:26:55Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.3.2",
+      "raw_text": "Repository: google/zx\nRelease: 8.3.2 – Clogged Drain\nTag: 8.3.2; draft: False; prerelease: False; published_at: 2025-02-01T10:26:55Z; created_at: 2025-02-01T10:18:12Z\nRelease notes:\nRestrics unsafe vals usage on `dotenv.stringify` [#1093](https://github.com/google/zx/issues/1093) [#1094](https://github.com/google/zx/pull/1094)",
+      "memory_unit_text": "In the google/zx release 8.3.2 (Clogged Drain), the project restricts unsafe values usage on dotenv.stringify."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_4_0",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.4.0",
+      "tag_name": "8.4.0",
+      "title": "8.4.0 – Drip Detective",
+      "time_hint": "2025-03-04",
+      "published_at": "2025-03-04T12:41:28Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.4.0",
+      "raw_text": "Repository: google/zx\nRelease: 8.4.0 – Drip Detective\nTag: 8.4.0; draft: False; prerelease: False; published_at: 2025-03-04T12:41:28Z; created_at: 2025-03-04T10:02:02Z\nRelease notes:\nTry the new batch of enhancements: `npm i zx@8.4.0` https://www.npmjs.com/package/zx/v/8.4.0\n## Changes\n* The CLI option `--prefer-local` now allows linking both external binaries and packages [#1116](https://github.com/google/zx/pull/1116) [#1117](https://github.com/google/zx/pull/1117)\n```js\nconst cwd = tmpdir()\nconst external = tmpdir()\nawait fs.outputJson(path.join(external, 'node_modules/a/package.json'), {\nname: 'a',\nversion: '1.0.0',\ntype: 'module',\nexports: './index.js',\n})\nawait fs.outputFile(\npath.join(external, 'node_modules/a/index.js'),\n`\nexport const a = 'AAA'\n`\n)\nconst script = `\nimport {a} from 'a'\nconsole.log(a);\n`\nconst out = await $`zx --cwd=${cwd} --prefer-local=${external} --test <<< ${script}`\nassert.equal(out.stdout, 'AAA\\n')\n```\n* The `quote` has been slightly changed for a conner case, when zx literal gets an array.\n[#999](https://github.com/google/zx/issues/999) [#1113](https://github.com/google/zx/issues/1113)\n```js\nconst p = $({prefix: '', postfix: ''})`echo ${[1, '', '*', '2']}`\n// before\np.cmd //  `echo 1  $'*' 2`)\n// after\np.cmd //  `echo 1 $'' $'*' 2`)\n```\n* Provided support for custom script extensions via CLI [#1104](https://github.com/google/zx/pull/1104) [#1105](https://github.com/google/zx/pull/1105)\n```bash\nzx script.zx           # Unknown file extension \"\\.zx\"\nzx --ext=mjs script.zx # OK\n```\n* Enhanced `nothrow` option to suppress any errors [#1108](https://github.com/google/zx/pull/1108) [#1109](https://github.com/google/zx/pull/1109)\n```js\nconst err = new Error('BrokenSpawn')\nconst o = await $({\nnothrow: true,\nspawn() {\nthrow err\n},\n})`echo foo`\no.ok       // false\no.exitCode // null\no.message  // BrokenSpawn...\no.cause    // err\n```\n* `@types/node` and `@types/fs-extra` deps replaced with triple-slash typing refs [#1102](https://github.com/google/zx/pull/1102)\n* Made `ProcessOutput` iterable [#1101](https://github.com/google/zx/pull/1101)\n* Handle inappropriate `ProcessPromise` instantiation [#1097](https://github.com/google/zx/pull/1097) [#1098](https://github.com/google/zx/pull/1098)\n* Pass origin error as `ProcessOuput` cause [#1110](https://github.com/google/zx/pull/1110)\n* Separated build and release steps [#1106](https://github.com/google/zx/pull/1106)\n* Internal improvements\n* Introduced API bus [#1083](https://github.com/google/zx/pull/1083)\n* Optimized `ProcessOutput` inners [#1096](https://github.com/google/zx/pull/1096) [#1095](https://github.com/google/zx/pull/1095)\n* Pinned deps [#1099](https://github.com/google/zx/pull/1099) [#1100](https://github.com/google/zx/pull/1100)\n* Switched to explicit `.ts` extensions for relative imports [#1111](https://github.com/google/zx/pull/1111)",
+      "memory_unit_text": "In the google/zx release 8.4.0 (Drip Detective), the project allows --prefer-local to link both external binaries and packages, slightly changes quote for array corner case, provides support for custom script extensions via CLI, enhances nothrow option to suppress any errors, replaces @types/node and @types/fs-extra deps with triple-slash typing refs, makes ProcessOutput iterable, handles inappropriate ProcessPromise instantiation, passes origin error as ProcessOutput cause, separates build and release steps, introduces API bus, optimizes ProcessOutput inners, pins deps, and switches to explicit .ts extensions for relative imports."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_4_1",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.4.1",
+      "tag_name": "8.4.1",
+      "title": "8.4.1 – Rusty Elbow",
+      "time_hint": "2025-03-12",
+      "published_at": "2025-03-12T09:23:27Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.4.1",
+      "raw_text": "Repository: google/zx\nRelease: 8.4.1 – Rusty Elbow\nTag: 8.4.1; draft: False; prerelease: False; published_at: 2025-03-12T09:23:27Z; created_at: 2025-03-12T09:21:55Z\nRelease notes:\nLogger enhancements are arriving in this release.  [#1119](https://github.com/google/zx/issues/1119) [#1122](https://github.com/google/zx/pull/1122) [#1123](https://github.com/google/zx/pull/1123) [#1125](https://github.com/google/zx/pull/1125)\n* You can customize the output by defining your own formatters for each log entry kind.\n```ts\n$.log.formatters = {\ncmd: (entry: LogEntry) => `CMD: ${entry.cmd}`,\nfetch: (entry: LogEntry) => `FETCH: ${entry.url}`\n//...\n}\n```\n* Cmd highlighter now _should_ properly detect bins and arguments. If still not, please report it in [#1122](https://github.com/google/zx/pull/1122)\n* Switched to TS 5.8 [#1120](https://github.com/google/zx/pull/1120)\n* Applied [zizmor](https://woodruffw.github.io/zizmor/) to check GHA workflows [#1126](https://github.com/google/zx/pull/1126)\n* Prettier is now enabled as a pre-commit hook [#1118](https://github.com/google/zx/pull/1118)",
+      "memory_unit_text": "In the google/zx release 8.4.1 (Rusty Elbow), the project enhances logger by allowing custom formatters for each log entry kind, improves cmd highlighter to properly detect bins and arguments, switches to TS 5.8, applies zizmor to check GHA workflows, and enables prettier as a pre-commit hook."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_5_0",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.5.0",
+      "tag_name": "8.5.0",
+      "title": "8.5.0 — Flow Splitter",
+      "time_hint": "2025-04-01",
+      "published_at": "2025-04-01T08:17:06Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.5.0",
+      "raw_text": "Repository: google/zx\nRelease: 8.5.0 — Flow Splitter\nTag: 8.5.0; draft: False; prerelease: False; published_at: 2025-04-01T08:17:06Z; created_at: 2025-04-01T08:03:03Z\nRelease notes:\nIn this release we're significantly expanding the zx setup capabilities.\n## zx@lite\nJust core functions without extras, ~7x smaller than the full version.\n[#1131](https://github.com/google/zx/pull/1131)\n```shell\nnpm i zx@lite\nnpm i zx@8.5.0-lite\n```\nDetailed comparison: [zx/versions](https://google.github.io/zx/versions)\n```ts\nimport { $ } from 'zx'\nawait $`echo foo`\n```\n## Channels\nWe have completely reforged the distribution flow. Now zx is available in multiple formats:\n* [npmjs](https://www.npmjs.com/package/zx)\n* [GH npm](https://github.com/google/zx/pkgs/npm/zx)\n* [GH repo](https://github.com/google/zx)\n* [GH docker](https://github.com/google/zx/pkgs/container/zx)\n* [JSR](https://jsr.io/@webpod/zx)\n* [Homebrew](https://github.com/Homebrew/homebrew-core/blob/master/Formula/z/zx.rb)\n```shell\n# npm pkg from registry.npmjs.org\nnpm i zx\n# install directly from the GH\nnpm i google/zx\n# from GH the npm registry\nnpm i --registry=https://npm.pkg.github.com @google/zx\n# fetch from the JSR\n# https://jsr.io/docs/using-packages\n# @webpod is temporary JSR scope until @google/zx becomes ready, we'll migrate later\nnpx jsr add @webpod/zx\ndeno add jsr:@webpod/zx\n# homebrew formula\n# https://github.com/Homebrew/homebrew-core/blob/master/Formula/z/zx.rb\nbrew install zx\n```\n[#1141](https://github.com/google/zx/pull/1141)...\n[#1157](https://github.com/google/zx/pull/1157)\n## Docker\nIf you'd prefer to run zx in a container, you can pull the image from the GH docker registry.\n[node:22-alpine](https://hub.docker.com/_/node) is used as a base. [#1142](https://github.com/google/zx/pull/1142) [#1145](https://github.com/google/zx/pull/1145)\n```shell\ndocker pull ghcr.io/google/zx:8.5.0\ndocker run -t ghcr.io/google/zx:8.5.0 -e=\"await \\$({verbose: true})\\`echo foo\\`\"\ndocker run -t -i -v ./:/script ghcr.io/google/zx:8.5.0 script/t.js\n```\n## Chores\n* Introduced fetch pipe helper to bypass string size limits [#1130](https://github.com/google/zx/pull/1130) [#977](https://github.com/google/zx/issues/977)\n```ts\nconst p1 = fetch('https://example.com').pipe($`cat`)\nconst p2 = fetch('https://example.com').pipe`cat`\n```\n* Added `glob.sync` shortcut [#1135](https://github.com/google/zx/pull/1135)\n```ts\nimport { glob } from 'zx'\nconst packages = glob.sync(['package.json', 'packages/*/package.json'])\n```\n* Restored CLI flags and envars symmetry [#1137](https://github.com/google/zx/pull/1137) [#1138](https://github.com/google/zx/pull/1138)\n```shell\nZX_REGISTRY='https://custom-registry.example.com' zx script.js\n```\n* Enhanced errors stacktrace formatting [#1166](https://github.com/google/zx/pull/1166)\n* Improved 3rd party licenses digest [#1140](https://github.com/google/zx/pull/1140)\n* Enabled zizmor checks [#1126](https://github.com/google/zx/pull/1126)\n* Docs improvements [#1128](https://github.com/google/zx/pull/1128) [#1134](https://github.com/google/zx/pull/1134) [#1136](https://github.com/google/zx/pull/1136) [#1164](https://github.com/google/zx/pull/1164)",
+      "memory_unit_text": "In the google/zx release 8.5.0 (Flow Splitter), the project introduces zx@lite, a ~7x smaller version with only core functions, expands distribution channels to npmjs, GH npm, GH repo, GH docker, JSR, and Homebrew, provides a Docker image based on node:22-alpine, adds fetch pipe helper to bypass string size limits, adds glob.sync shortcut, restores CLI flags and envars symmetry, enhances errors stacktrace formatting, improves 3rd party licenses digest, enables zizmor checks, and makes docs improvements."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_5_2",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.5.2",
+      "tag_name": "8.5.2",
+      "title": "8.5.2 — Threaded Perfection",
+      "time_hint": "2025-04-09",
+      "published_at": "2025-04-09T14:29:31Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.5.2",
+      "raw_text": "Repository: google/zx\nRelease: 8.5.2 — Threaded Perfection\nTag: 8.5.2; draft: False; prerelease: False; published_at: 2025-04-09T14:29:31Z; created_at: 2025-04-09T07:51:25Z\nRelease notes:\n* Various JSR fixes [#1189](https://github.com/google/zx/pull/1189) [#1186](https://github.com/google/zx/pull/1186) [#1179](https://github.com/google/zx/pull/1179) [#1187](https://github.com/google/zx/pull/1187)\n* Docs improvements [#1185](https://github.com/google/zx/pull/1185) [#1181](https://github.com/google/zx/pull/1181)",
+      "memory_unit_text": "In the google/zx release 8.5.2 (Threaded Perfection), the project applies various JSR fixes and makes docs improvements."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_5_3",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.5.3",
+      "tag_name": "8.5.3",
+      "title": "8.5.3 — Trap Master",
+      "time_hint": "2025-04-16",
+      "published_at": "2025-04-16T20:37:21Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.5.3",
+      "raw_text": "Repository: google/zx\nRelease: 8.5.3 — Trap Master\nTag: 8.5.3; draft: False; prerelease: False; published_at: 2025-04-16T20:37:21Z; created_at: 2025-04-16T08:12:03Z\nRelease notes:\n* Another portion of JSR related improvements [#1193](https://github.com/google/zx/pull/1193) [#1192](https://github.com/google/zx/pull/1192)\n* Goods refactoring [#1195](https://github.com/google/zx/pull/1195)\n* Fixes `expBackoff` implementation\n* Sets `$.log.output` as default `spinner()` output\n* Makes configurable `question()` I/O\n* Added [Graaljs](https://www.graalvm.org/latest/reference-manual/js/NodeJS/) compatability test [#1194](https://github.com/google/zx/pull/1194)\n* Docs improvements, usage examples updates [#1198](https://github.com/google/zx/pull/1198)",
+      "memory_unit_text": "In the google/zx release 8.5.3 (Trap Master), the project delivers another portion of JSR related improvements, refactors goods by fixing expBackoff implementation, setting $.log.output as default spinner() output, making question() I/O configurable, adds Graaljs compatibility test, and updates docs and usage examples."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_5_4",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.5.4",
+      "tag_name": "8.5.4",
+      "title": "8.5.4 — Pipe Dreamer",
+      "time_hint": "2025-05-09",
+      "published_at": "2025-05-09T12:39:28Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.5.4",
+      "raw_text": "Repository: google/zx\nRelease: 8.5.4 — Pipe Dreamer\nTag: 8.5.4; draft: False; prerelease: False; published_at: 2025-05-09T12:39:28Z; created_at: 2025-05-06T18:42:10Z\nRelease notes:\n- Fixed the `pipe(file: string)` signature type declaration #1208 #1209",
+      "memory_unit_text": "In the google/zx release 8.5.4 (Pipe Dreamer), the project fixes the pipe(file: string) signature type declaration."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_5_5",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.5.5",
+      "tag_name": "8.5.5",
+      "title": "8.5.5 — PVC Wizard",
+      "time_hint": "2025-06-04",
+      "published_at": "2025-06-04T09:12:28Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.5.5",
+      "raw_text": "Repository: google/zx\nRelease: 8.5.5 — PVC Wizard\nTag: 8.5.5; draft: False; prerelease: False; published_at: 2025-06-04T09:12:28Z; created_at: 2025-06-04T09:01:04Z\nRelease notes:\nMinor feature polish.\n* `ProcessPromise` and `ProcessOutput` `lines()` getters now accept a custom delimiter [#1220](https://github.com/google/zx/issues/1220) [#1218](https://github.com/google/zx/issues/1218)\n```ts\nconst cwd = tempdir()\nconst delimiter = '\\0'\nconst p1 = $({\ncwd\n})`touch foo bar baz; find ./ -type f -print0 -maxdepth 1`\n(await p1.lines(delimiter)).sort() // ['./bar', './baz', './foo']\n// or via options\nconst lines = []\nconst p2 = $({\ndelimiter,\ncwd,\n})`find ./ -type f -print0 -maxdepth 1`\nfor await (const line of p2) {\nlines.push(line)\n}\nlines.sort() // ['./bar', './baz', './foo']\n```\n* Handle `.nothrow()` option in `ProcessProcess[AsyncIterator]` [#1216](https://github.com/google/zx/pull/1216) [#1217](https://github.com/google/zx/pull/1217)\n* Updates yaml to [v2.8.0](https://github.com/eemeli/yaml/releases/tag/v2.8.0) [#1221](https://github.com/google/zx/pull/1221)",
+      "memory_unit_text": "In the google/zx release 8.5.5 (PVC Wizard), the project allows ProcessPromise and ProcessOutput lines() getters to accept a custom delimiter, handles .nothrow() option in ProcessPromise[AsyncIterator], and updates yaml to v2.8.0."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_6_0",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.6.0",
+      "tag_name": "8.6.0",
+      "title": "8.6.0 — Valve Vanguard",
+      "time_hint": "2025-06-23",
+      "published_at": "2025-06-23T10:10:56Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.6.0",
+      "raw_text": "Repository: google/zx\nRelease: 8.6.0 — Valve Vanguard\nTag: 8.6.0; draft: False; prerelease: False; published_at: 2025-06-23T10:10:56Z; created_at: 2025-06-23T09:11:37Z\nRelease notes:\n* Enabled `thenable` params processing for `$` literals [#1237](https://github.com/google/zx/pull/1237)\n```js\nconst a1 = $`echo foo`\nconst a2 = new Promise((resolve) => setTimeout(resolve, 20, ['bar', 'baz']))\nawait $`echo ${a1} ${a2}` // foo bar baz\n```\n* A dozen of internal refactorings [#1225](https://github.com/google/zx/pull/1225) [#1226](https://github.com/google/zx/pull/1226) [#1228](https://github.com/google/zx/pull/1228) [#1229](https://github.com/google/zx/pull/1229) [#1230](https://github.com/google/zx/pull/1230) [#1231](https://github.com/google/zx/pull/1231) [#1232](https://github.com/google/zx/pull/1232) [#1233](https://github.com/google/zx/pull/1233) [#1234](https://github.com/google/zx/pull/1234) [#1235](https://github.com/google/zx/pull/1235) [#1236](https://github.com/google/zx/pull/1236) [#1238](https://github.com/google/zx/pull/1238) [#1239](https://github.com/google/zx/pull/1239)\n* Deps bumping\n* Bytes shrinking\n* Docs improvements",
+      "memory_unit_text": "In the google/zx release 8.6.0 (Valve Vanguard), the project enables thenable params processing for $ literals, performs a dozen internal refactorings, bumps deps, shrinks bytes, and improves docs."
+    },
+    {
+      "memory_node_id": "google__zx__release__7_2_4",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:7.2.4",
+      "tag_name": "7.2.4",
+      "title": "7.2.4 — Legacy Maintenance",
+      "time_hint": "2025-06-25",
+      "published_at": "2025-06-25T11:58:35Z",
+      "source_url": "https://github.com/google/zx/releases/tag/7.2.4",
+      "raw_text": "Repository: google/zx\nRelease: 7.2.4 — Legacy Maintenance\nTag: 7.2.4; draft: False; prerelease: False; published_at: 2025-06-25T11:58:35Z; created_at: 2025-06-25T08:13:21Z\nRelease notes:\nIt's more than a year since the last release of [**zx@7**](https://github.com/google/zx/releases/tag/7.2.3), and we are now moving to a legacy maintenance mode (critical bugfixes). We encourage everyone to upgrade to the latest version for new [features and improvements](https://github.com/google/zx/releases). Here's [the migration guide](https://google.github.io/zx/migration-from-v7). Anyway, our legacy users, we're still here for you!\n## Changes\n* Switched publishing to `legacy` channel [#1241](https://github.com/google/zx/pull/1241)\n* Updated deps, fixed vulnerabilities [#1240](https://github.com/google/zx/pull/1240)\n* [Fixed `expBackoff`](https://github.com/google/zx/pull/1245/files#diff-cf4b762742e2e76327970366bd3144ba7e260a8641856217072234200e48a62f) helper\n```\n@types/fs-extra  ^11.0.1  →  ^11.0.4\n@types/minimist  ^1.2.2   →  ^1.2.5\n@types/node      ^18.16.3 →  ^24.0.3\n@types/ps-tree   ^1.1.2   →  ^1.1.6\n@types/which     ^3.0.0   →  ^3.0.4\nchalk            ^5.2.0   →  ^5.4.1\nfs-extra         ^11.1.1  →  ^11.3.0\nnode-fetch        3.3.1   →   3.3.2\nyaml             ^2.2.2\"  →  ^2.8.0\n```",
+      "memory_unit_text": "In the google/zx release 7.2.4 (Legacy Maintenance), the project moves zx@7 to legacy maintenance mode, switches publishing to legacy channel, updates deps, and fixes vulnerabilities."
+    },
+    {
+      "memory_node_id": "google__zx__release__6_2_6",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:6.2.6",
+      "tag_name": "6.2.6",
+      "title": "6.2.6 — Leak Inspection",
+      "time_hint": "2025-07-01",
+      "published_at": "2025-07-01T12:05:32Z",
+      "source_url": "https://github.com/google/zx/releases/tag/6.2.6",
+      "raw_text": "Repository: google/zx\nRelease: 6.2.6 — Leak Inspection\nTag: 6.2.6; draft: False; prerelease: False; published_at: 2025-07-01T12:05:32Z; created_at: 2025-06-26T10:36:09Z\nRelease notes:\n**zx@6** development has been discontinued. Critical bug fixes and vulnerability fixes only considered.\nBut the project is moving forward. [There are a lot](https://github.com/google/zx/releases) of cool features, improvements, compatibility enhancements 🚀\nWe encourage everyone to upgrade to the latest. If something doesn't work, feel free to start a new [issue](https://github.com/google/zx/issues) or [discussion](https://github.com/google/zx/discussions).\nAnyway, v6 users, some tweak ups just for you!\n## Changes\n* Switched publishing to `legacy` channel [#1247](https://github.com/google/zx/pull/1247)\n* Updated deps [#1247](https://github.com/google/zx/pull/1247)\n```\n@types/minimist  ^1.2.2   →  ^1.2.5\n@types/node      ^17.0    →  ^18.19.112\n@types/ps-tree   ^1.1.2   →  ^1.1.6\nchalk            ^5.0.1   →  ^5.4.1\nignore           ^5.2.0   →  ^7.0.5\nminimist         ^1.2.6   →  ^1.2.8\nnode-fetch       ^3.2.5   →  ^3.3.2\nyaml             ^2.1.1   →  ^2.8.0\n```",
+      "memory_unit_text": "In the google/zx release 6.2.6 (Leak Inspection), the project discontinues zx@6 development, switches publishing to legacy channel, and updates deps."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_6_1",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.6.1",
+      "tag_name": "8.6.1",
+      "title": "8.6.1 — Drain Hero",
+      "time_hint": "2025-07-01",
+      "published_at": "2025-07-01T12:19:08Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.6.1",
+      "raw_text": "Repository: google/zx\nRelease: 8.6.1 — Drain Hero\nTag: 8.6.1; draft: False; prerelease: False; published_at: 2025-07-01T12:19:08Z; created_at: 2025-07-01T07:15:33Z\nRelease notes:\n* Use `process.env.SHELL` as default shell if defined [#1252](https://github.com/google/zx/pull/1252)\n```bash\nSHELL=/bin/zsh zx script.js\n```\n* Accept numeric strings as `parseDuration()` arg [#1249](https://github.com/google/zx/pull/1249)\n```js\nawait sleep(1000)   // 1 second\nawait sleep('1000') // 1 second\n```\n* Update docker base image to `node:24-alpine` [#1239](https://github.com/google/zx/pull/1239)\n* Docs improvements [#1242](https://github.com/google/zx/pull/1242) [#1243](https://github.com/google/zx/pull/1243) [#1246](https://github.com/google/zx/pull/1246) [#1248](https://github.com/google/zx/pull/1248) [#1251](https://github.com/google/zx/pull/1251)",
+      "memory_unit_text": "In the google/zx release 8.6.1 (Drain Hero), the project uses process.env.SHELL as default shell if defined, accepts numeric strings as parseDuration() arg, updates docker base image to node:24-alpine, and makes docs improvements."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_6_2",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.6.2",
+      "tag_name": "8.6.2",
+      "title": "8.6.2 — Flow Unstoppable",
+      "time_hint": "2025-07-09",
+      "published_at": "2025-07-09T14:10:57Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.6.2",
+      "raw_text": "Repository: google/zx\nRelease: 8.6.2 — Flow Unstoppable\nTag: 8.6.2; draft: False; prerelease: False; published_at: 2025-07-09T14:10:57Z; created_at: 2025-07-09T10:36:25Z\nRelease notes:\nFixes `$.prefix` & `$.postfix` values settings via env variables [#1261](https://github.com/google/zx/pull/1261) [#1260](https://github.com/google/zx/issues/1260)",
+      "memory_unit_text": "In the google/zx release 8.6.2 (Flow Unstoppable), the project fixes $.prefix and $.postfix values settings via env variables."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_7_0",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.7.0",
+      "tag_name": "8.7.0",
+      "title": "8.7.0 — Solder Savior",
+      "time_hint": "2025-07-11",
+      "published_at": "2025-07-11T20:12:38Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.7.0",
+      "raw_text": "Repository: google/zx\nRelease: 8.7.0 — Solder Savior\nTag: 8.7.0; draft: False; prerelease: False; published_at: 2025-07-11T20:12:38Z; created_at: 2025-07-11T14:34:07Z\nRelease notes:\nImportant fixes for annoying flaky bugs\n## kill() 🐞\nWe've found an interesting case [#1262](https://github.com/google/zx/pull/1262)\n```js\nconst p = $`sleep 1000`\nconst {pid} = p // 12345\nawait p.kill()\n```\nIf we kill the process again, the result might be unexpected:\n```js\nawait ps({pid}) // {pid: 12345, ppid: 67890, command: 'another command', ...}\np.kill()\n```\nThis happens because the `pid` may be reused by the system for another process, so we've added extra assertions to prevent indeterminacy:\n```js\np.kill()  // Error: Too late to kill the process.\np.abort() // Error: Too late to abort the process.\n```\n## ps() 🐛\n* `ps()` uses **[wmic](https://en.wikipedia.org/wiki/Windows_Management_Instrumentation)** internally on Windows, it relies on _fragile_ heuristics to parse the output. We have improved this logic to handle more format variants, but over time (in v9 maybe) we're planning to change the approach.\n[#1256](https://github.com/google/zx/pull/1256) [#1263](https://github.com/google/zx/issues/1263) [webpod/ps#12](https://github.com/webpod/ps/pull/12) [webpod/ingrid#6](https://github.com/webpod/ingrid/pull/6)\n```js\nconst [root] = await ps.lookup({ pid: process.pid })\nassert.equal(root.pid, process.pid)\n```",
+      "memory_unit_text": "In the google/zx release 8.7.0 (Solder Savior), the project adds extra assertions to prevent indeterminacy when killing a process whose pid may have been reused, and improves ps() heuristics on Windows to handle more format variants."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_7_1",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.7.1",
+      "tag_name": "8.7.1",
+      "title": "8.7.1 — Pipe Whisperer",
+      "time_hint": "2025-07-14",
+      "published_at": "2025-07-14T14:30:24Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.7.1",
+      "raw_text": "Repository: google/zx\nRelease: 8.7.1 — Pipe Whisperer\nTag: 8.7.1; draft: False; prerelease: False; published_at: 2025-07-14T14:30:24Z; created_at: 2025-07-14T13:08:59Z\nRelease notes:\nContinues [v8.7.0](https://github.com/google/zx/releases/tag/8.7.0): handles new `ps()` corner case and improves `$.kill` mechanics on Windows [#1266](https://github.com/google/zx/issues/1266) [#1267](https://github.com/google/zx/pull/1267) [#1269](https://github.com/google/zx/pull/1269) [webpod/ps#14](https://github.com/webpod/ps/pull/14)",
+      "memory_unit_text": "In the google/zx release 8.7.1 (Pipe Whisperer), the project handles a new ps() corner case and improves $.kill mechanics on Windows."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_7_2",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.7.2",
+      "tag_name": "8.7.2",
+      "title": "8.7.2 — Copper Crafter",
+      "time_hint": "2025-07-29",
+      "published_at": "2025-07-29T12:40:57Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.7.2",
+      "raw_text": "Repository: google/zx\nRelease: 8.7.2 — Copper Crafter\nTag: 8.7.2; draft: False; prerelease: False; published_at: 2025-07-29T12:40:57Z; created_at: 2025-07-29T10:41:57Z\nRelease notes:\nStability and customizability improvements\n* Handle `nothrow` option on `ProcessPromise` init stage [#1288](https://github.com/google/zx/pull/1288)\n```ts\nconst o = await $({ nothrow: true })`\\033`\no.ok      // false\no.cause   // Error\n```\n* Handle `_snapshot.killSignal` value on `kill()` [#1287](https://github.com/google/zx/pull/1287)\n```ts\nconst p = $({killSignal: 'SIGKILL'})`sleep 10`\nawait p.kill()\np.signal  // 'SIGKILL'\n```\n* Introduced `Fail` class [#1285](https://github.com/google/zx/pull/1285)\n```ts\nimport { Fail } from 'zx'\nFail.EXIT_CODES['2'] = 'Custom error message'\nFail.formatErrorMessage = (err: Error, from: string): string =>\n`${err.message} (${from})`\n```\n* Expose `$` as type [#1283](https://github.com/google/zx/pull/1283)\n```ts\nimport type { $, Options } from 'zx'\nconst custom$: $ = (pieces: TemplateStringsArray | Partial<Options>, ...args: any[]) => {\n// ... custom implementation\n}\n```\n* Internal tweak ups [#1276](https://github.com/google/zx/pull/1276) [#1277](https://github.com/google/zx/pull/1277) [#1278](https://github.com/google/zx/pull/1278) [#1279](https://github.com/google/zx/pull/1279) [#1280](https://github.com/google/zx/pull/1280) [#1281](https://github.com/google/zx/pull/1281) [#1282](https://github.com/google/zx/pull/1282) [#1286](https://github.com/google/zx/pull/1286) [#1289](https://github.com/google/zx/pull/1289)\n* Described the zx architecture basics. This section helps to better understand the zx concepts and internal logic, and will be useful for those who want to become a project contributor, make tools based on it, or create something similar from scratch. [#1290](https://github.com/google/zx/pull/1290) [#1291](https://github.com/google/zx/pull/1291) [#1292](https://github.com/google/zx/pull/1292)",
+      "memory_unit_text": "In the google/zx release 8.7.2 (Copper Crafter), the project handles nothrow option on ProcessPromise init stage, handles _snapshot.killSignal value on kill(), introduces Fail class, exposes $ as type, performs internal tweak ups, and describes zx architecture basics."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_8_0",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.8.0",
+      "tag_name": "8.8.0",
+      "title": "8.8.0 — Pressure Tested",
+      "time_hint": "2025-08-05",
+      "published_at": "2025-08-05T14:01:02Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.8.0",
+      "raw_text": "Repository: google/zx\nRelease: 8.8.0 — Pressure Tested\nTag: 8.8.0; draft: False; prerelease: False; published_at: 2025-08-05T14:01:02Z; created_at: 2025-08-02T10:56:15Z\nRelease notes:\nThis release enhances the coherence between the **ProcessPromise** and the **Streams API**, eliminating the need for certain script-level workarounds.\n## ✨ New Features\n### `unpipe()` — Selectively stop piping\nYou can now call `.unpipe()` to stop data transfer from a source to a destination without closing any of the pair. [#1302](https://github.com/google/zx/pull/1302)\n```ts\nconst p1 = $`echo foo && sleep 0.1 && echo bar && sleep 0.1 && echo baz && sleep 0.1 && echo qux`\nconst p2 = $`echo 1 && sleep 0.15 && echo 2 && sleep 0.1 && echo 3`\nconst p3 = $`cat`\np1.pipe(p3)\np2.pipe(p3)\nsetTimeout(() => p1.unpipe(p3), 150)\nconst { stdout } = await p3\n// 'foo\\n1\\nbar\\n2\\n3\\n'\n```\n### Many-to-one piping\nMultiple sources can now stream into a single destination. All sources complete before the destination closes. [#1300](https://github.com/google/zx/pull/1300)\n```ts\nconst $h = $({ halt: true })\nconst p1 = $`echo foo`\nconst p2 = $h`echo a && sleep 0.1 && echo c && sleep 0.2 && echo e`\nconst p3 = $h`sleep 0.05 && echo b && sleep 0.1 && echo d`\nconst p4 = $`sleep 0.4 && echo bar`\nconst p5 = $h`cat`\nawait p1\np1.pipe(p5)\np2.pipe(p5)\np3.pipe(p5)\np4.pipe(p5)\nconst { stdout } = await p5.run()\n// 'foo\\na\\nb\\nc\\nd\\ne\\nbar\\n'\n```\n### Piping from rejected processes\nProcesses that exit with errors can now still pipe their output. The internal recorder retains their stream, status, and exit code. [#1296](https://github.com/google/zx/pull/1296)\n```ts\nconst p1 = $({ nothrow: true })`echo foo && exit 1`\nawait p1\nconst p2 = p1.pipe($({ nothrow: true })`cat`)\nawait p2\np1.output.toString() // 'foo\\n'\np1.output.ok         // false\np1.output.exitCode   // 1\np2.output.toString() // 'foo\\n'\np2.output.ok         // false\np2.output.exitCode   // 1\n```\n### Components versions\nSince zx bundles third-party libraries without their package.jsons, their versions weren’t previously visible. You can now access them via the `versions` static map — including zx itself. [#1298](https://github.com/google/zx/pull/1298) [#1295](https://github.com/google/zx/pull/1295)\n```ts\nimport { versions } from 'zx'\nversions.zx     // 8.7.2\nversions.chalk  // 5.4.1\n```",
+      "memory_unit_text": "In the google/zx release 8.8.0 (Pressure Tested), the project introduces unpipe() to selectively stop piping, enables many-to-one piping from multiple sources to a single destination, allows piping from rejected processes, and provides a versions static map to access component versions including zx itself."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_8_1",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.8.1",
+      "tag_name": "8.8.1",
+      "title": "8.8.1 — Turbo Flush",
+      "time_hint": "2025-08-20",
+      "published_at": "2025-08-20T16:22:41Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.8.1",
+      "raw_text": "Repository: google/zx\nRelease: 8.8.1 — Turbo Flush\nTag: 8.8.1; draft: False; prerelease: False; published_at: 2025-08-20T16:22:41Z; created_at: 2025-08-20T12:56:34Z\nRelease notes:\nWe keep improving the projects internal infra to bring more stability, safety and performance for artifacts.\n## Featfixes\n* Applied flags filtration for CLI-driven deps install [#1308](https://github.com/google/zx/pull/1308)\n* Added `kill()` event logging [#1312](https://github.com/google/zx/pull/1312)\n* Set `SIGTERM` as `kill()` fallback signal [#1313](https://github.com/google/zx/pull/1313)\n* Allowed `stdio()` arg be an array [#1311](https://github.com/google/zx/pull/1311)\n```ts\nconst p = $({halt: true})`cmd`\np.stdio([stream, 'ignore', 'pipe'])\n```\n## Enhancements\n* Added check for **zx@lite** pkg contents [#1317](https://github.com/google/zx/pull/1317) [#1316](https://github.com/google/zx/issues/1316)\n* Simplified `ProcessPromise[asyncIterator]` inners [#1307](https://github.com/google/zx/pull/1307)\n* Updated deps: chalk 5.6.0, fs-extra 11.3.1, yaml 2.8.1 [#1309](https://github.com/google/zx/pull/1309) [#1323](https://github.com/google/zx/pull/1323) [#1326](https://github.com/google/zx/pull/1326)\n* Added TS@next to the test matrix [#1310](https://github.com/google/zx/pull/1310)\n* Optimized internal `shell` setters [#1314](https://github.com/google/zx/pull/1314)\n* Refactored build-publish pipelines and scripts [#1319](https://github.com/google/zx/pull/1319) [#1320](https://github.com/google/zx/pull/1320) [#1321](https://github.com/google/zx/pull/1321) [#1322](https://github.com/google/zx/pull/1322) [#1324](https://github.com/google/zx/pull/1324) [#1325](https://github.com/google/zx/pull/1325) [#1327](https://github.com/google/zx/pull/1327)",
+      "memory_unit_text": "In the google/zx release 8.8.1 (Turbo Flush), the project applies flags filtration for CLI-driven deps install, adds kill() event logging, sets SIGTERM as kill() fallback signal, allows stdio() arg to be an array, adds check for zx@lite pkg contents, simplifies ProcessPromise[asyncIterator] inners, updates deps, adds TS@next to test matrix, optimizes internal shell setters, and refactors build-publish pipelines and scripts."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_8_2",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.8.2",
+      "tag_name": "8.8.2",
+      "title": "8.8.2 — Leaking Valve",
+      "time_hint": "2025-09-19",
+      "published_at": "2025-09-19T21:09:40Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.8.2",
+      "raw_text": "Repository: google/zx\nRelease: 8.8.2 — Leaking Valve\nTag: 8.8.2; draft: False; prerelease: False; published_at: 2025-09-19T21:09:40Z; created_at: 2025-09-19T21:08:17Z\nRelease notes:\nFixes potential cmd injection via `kill()` method for Windows platform. [#1337](https://github.com/google/zx/issues/1337) [#1339](https://github.com/google/zx/pull/1339). Affects the versions range `8.7.1...8.8.1`.",
+      "memory_unit_text": "In the google/zx release 8.8.2 (Leaking Valve), the project fixes potential cmd injection via kill() method for Windows platform, affecting versions 8.7.1 through 8.8.1."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_8_3",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.8.3",
+      "tag_name": "8.8.3",
+      "title": "8.8.3 — Sealing Gasket",
+      "time_hint": "2025-09-20",
+      "published_at": "2025-09-20T13:25:03Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.8.3",
+      "raw_text": "Repository: google/zx\nRelease: 8.8.3 — Sealing Gasket\nTag: 8.8.3; draft: False; prerelease: False; published_at: 2025-09-20T13:25:03Z; created_at: 2025-09-20T11:39:46Z\nRelease notes:\nContinues [#1339](https://github.com/google/zx/pull/1339) to prevent injections via `Proxy` input or custom `toString()` manipulations.",
+      "memory_unit_text": "In the google/zx release 8.8.3 (Sealing Gasket), the project continues to prevent injections via Proxy input or custom toString() manipulations."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_8_4",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.8.4",
+      "tag_name": "8.8.4",
+      "title": "8.8.4 — Flange Coupling",
+      "time_hint": "2025-09-26",
+      "published_at": "2025-09-26T20:56:26Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.8.4",
+      "raw_text": "Repository: google/zx\nRelease: 8.8.4 — Flange Coupling\nTag: 8.8.4; draft: False; prerelease: False; published_at: 2025-09-26T20:56:26Z; created_at: 2025-09-26T14:50:47Z\nRelease notes:\nIt's time. This release updates zx internals to make [the `ps` API](https://google.github.io/zx/api#ps) and related methods `ProcessPromise.kill()`, `kill()` work on Windows systems without [`wmic`](https://learn.microsoft.com/en-us/windows/win32/wmisdk/wmic).\n[#1344](https://github.com/google/zx/pull/1344) [webpod/ps#15](https://github.com/webpod/ps/pull/15)\n> 1. WMIC will be missing in Windows 11 25H2 (kernel >= 26000)\n> 2. The windows-latest label in GitHub Actions will migrate from Windows Server 2022 to Windows Server 2025 beginning September 2, 2025 and finishing by September 30, 2025.\nhttps://github.blog/changelog/2025-07-31-github-actions-new-apis-and-windows-latest-migration-notice/#windows-latest-image-label-migration",
+      "memory_unit_text": "In the google/zx release 8.8.4 (Flange Coupling), the project updates zx internals to make the ps API and related methods work on Windows systems without wmic, in response to wmic being missing in Windows 11 25H2 and GitHub Actions windows-latest migration."
+    },
+    {
+      "memory_node_id": "google__zx__release__8_8_5",
+      "repo": "google/zx",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.8.5",
+      "tag_name": "8.8.5",
+      "title": "8.8.5 — Temporary Reservoir",
+      "time_hint": "2025-10-19",
+      "published_at": "2025-10-19T13:47:33Z",
+      "source_url": "https://github.com/google/zx/releases/tag/8.8.5",
+      "raw_text": "Repository: google/zx\nRelease: 8.8.5 — Temporary Reservoir\nTag: 8.8.5; draft: False; prerelease: False; published_at: 2025-10-19T13:47:33Z; created_at: 2025-10-15T11:10:45Z\nRelease notes:\nThis release fixes the issue, when zx flushes external `node_modules` on linking  [#1348](https://github.com/google/zx/issues/1348) [#1349](https://github.com/google/zx/issues/1349) [#1355](https://github.com/google/zx/issues/1355)\nAlso [`globby@15.0.0`](https://github.com/sindresorhus/globby/releases/tag/v15.0.0) arrives here.",
+      "memory_unit_text": "In the google/zx release 8.8.5 (Temporary Reservoir), the project fixes an issue where zx flushes external node_modules on linking, and updates globby to 15.0.0."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the google/zx releases, which release introduces delayed piping that allows filling dependent streams at any time during the origin process lifecycle without losing data?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "8.1.9"
+        },
+        {
+          "option_id": "B",
+          "text": "8.2.0"
+        },
+        {
+          "option_id": "C",
+          "text": "8.2.3"
+        },
+        {
+          "option_id": "D",
+          "text": "8.3.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "8.2.0",
+      "source_chunk_ids": [
+        "google__zx__release__8_2_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "google__zx__release__8_2_0",
+          "answer_text": "introduces delayed piping that allows filling dependent streams at any time during the origin process lifecycle without losing data"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the google/zx releases, how does the pipe-related change in release 8.2.0 differ from the pipe-related change in release 8.8.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "8.2.0 introduces delayed piping and promisified streams, while 8.8.0 introduces unpipe(), many-to-one piping, and piping from rejected processes."
+        },
+        {
+          "option_id": "B",
+          "text": "8.2.0 removes piping support, while 8.8.0 restores it."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only fix bugs in existing pipe functionality without adding new features."
+        },
+        {
+          "option_id": "D",
+          "text": "8.2.0 adds stream picking, while 8.8.0 adds direct piping to file shortcut."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "8.2.0 introduces delayed piping and promisified streams, while 8.8.0 introduces unpipe(), many-to-one piping, and piping from rejected processes.",
+      "source_chunk_ids": [
+        "google__zx__release__8_2_0",
+        "google__zx__release__8_8_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "google__zx__release__8_2_0",
+          "answer_text": "introduces delayed piping ... and promisified streams"
+        },
+        {
+          "memory_node_id": "google__zx__release__8_8_0",
+          "answer_text": "introduces unpipe() ... many-to-one piping ... piping from rejected processes"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the google/zx release window, order the following release-content states from earliest to latest: (1) a release that introduces full-featured .env support via a tiny dotenv-inspired parser and serializer, (2) a release that introduces zx@lite, a ~7x smaller version with only core functions, (3) a release that introduces unpipe() to selectively stop piping, (4) a release that fixes potential cmd injection via kill() method for Windows platform.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "google__zx__release__8_3_1",
+        "google__zx__release__8_5_0",
+        "google__zx__release__8_8_0",
+        "google__zx__release__8_8_2"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "google__zx__release__8_3_1",
+          "answer_text": "introduces full-featured .env support via a tiny dotenv-inspired parser and serializer"
+        },
+        {
+          "memory_node_id": "google__zx__release__8_5_0",
+          "answer_text": "introduces zx@lite, a ~7x smaller version with only core functions"
+        },
+        {
+          "memory_node_id": "google__zx__release__8_8_0",
+          "answer_text": "introduces unpipe() to selectively stop piping"
+        },
+        {
+          "memory_node_id": "google__zx__release__8_8_2",
+          "answer_text": "fixes potential cmd injection via kill() method for Windows platform"
+        }
+      ]
+    }
+  ]
+}

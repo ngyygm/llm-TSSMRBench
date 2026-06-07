@@ -1,0 +1,530 @@
+{
+  "prototype_id": "moby__moby_release_window",
+  "domain": "github_release_evolution",
+  "repo": "moby/moby",
+  "source_type": "release_note",
+  "window_title": "moby/moby recent release evolution",
+  "window_summary": "This window tracks the recent moby/moby release stream across core Docker Engine releases and related API/client artifacts, covering security fixes, networking improvements, new features like NRI support and rootless gvisor-tap-vsock driver, and packaging updates.",
+  "chunks": [
+    {
+      "memory_node_id": "moby__moby__release__docker_v29_1_0",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:docker-v29.1.0",
+      "tag_name": "docker-v29.1.0",
+      "title": "v29.1.0",
+      "time_hint": "2025-11-27",
+      "published_at": "2025-11-27T17:35:17Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/docker-v29.1.0",
+      "raw_text": "Repository: moby/moby\nRelease: v29.1.0\nTag: docker-v29.1.0; draft: False; prerelease: False; published_at: 2025-11-27T17:35:17Z; created_at: 2025-11-27T16:40:23Z\nRelease notes:\n## 29.1.0\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\n- [docker/cli, 29.1.0 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.1.0)\n- [moby/moby, 29.1.0 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.1.0)\n### Packaging updates\n- Update BuildKit to [v0.26.1](https://github.com/moby/buildkit/releases/tag/v0.26.1). [moby/moby#51551](https://github.com/moby/moby/pull/51551)\n- Update containerd binary to v2.2.0 (static binaries). [moby/moby#51271](https://github.com/moby/moby/pull/51271)\n### Networking\n- Do not overwrite user-modified `/etc/resolv.conf` across container restarts. [moby/moby#51507](https://github.com/moby/moby/pull/51507)\n- fix `--publish-all` / `-P` for Windows containers. [moby/moby#51586](https://github.com/moby/moby/pull/51586)\n- Fix an issue that prevented container restart or network reconnection when gateway configuration failed during container stop or network disconnect. [moby/moby#51592](https://github.com/moby/moby/pull/51592)\n- Windows containers: don't display an IPv6-mapped IPv4 address in port mappings. For example, `[::ffff:0.0.0.0]:8080->80/tcp` instead of `0.0.0.0:8080->80/tcp`. [moby/moby#51587](https://github.com/moby/moby/pull/51587)",
+      "memory_unit_text": "In the moby/moby release v29.1.0 (tag: docker-v29.1.0), the release includes packaging updates to BuildKit v0.26.1 and containerd v2.2.0, networking fixes such as preserving user-modified /etc/resolv.conf across container restarts, fixing --publish-all for Windows containers, fixing container restart or network reconnection when gateway configuration fails, and correcting IPv6-mapped IPv4 address display in port mappings for Windows containers."
+    },
+    {
+      "memory_node_id": "moby__moby__release__docker_v29_1_1",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:docker-v29.1.1",
+      "tag_name": "docker-v29.1.1",
+      "title": "v29.1.1",
+      "time_hint": "2025-11-28",
+      "published_at": "2025-11-28T13:08:46Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/docker-v29.1.1",
+      "raw_text": "Repository: moby/moby\nRelease: v29.1.1\nTag: docker-v29.1.1; draft: False; prerelease: False; published_at: 2025-11-28T13:08:46Z; created_at: 2025-11-28T11:30:50Z\nRelease notes:\n## 29.1.1\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\n- [docker/cli, 29.1.1 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.1.1)\n- [moby/moby, 29.1.1 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.1.1)\n### Networking\n- Revert a PR breaking external DNS resolution on all custom bridge networks. [moby/moby#51615](https://github.com/moby/moby/pull/51615)",
+      "memory_unit_text": "In the moby/moby release v29.1.1 (tag: docker-v29.1.1), the release reverts a PR that broke external DNS resolution on all custom bridge networks."
+    },
+    {
+      "memory_node_id": "moby__moby__release__docker_v29_1_2",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:docker-v29.1.2",
+      "tag_name": "docker-v29.1.2",
+      "title": "v29.1.2",
+      "time_hint": "2025-12-02",
+      "published_at": "2025-12-02T22:36:58Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/docker-v29.1.2",
+      "raw_text": "Repository: moby/moby\nRelease: v29.1.2\nTag: docker-v29.1.2; draft: False; prerelease: False; published_at: 2025-12-02T22:36:58Z; created_at: 2025-12-02T21:52:42Z\nRelease notes:\n## 29.1.2\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\n- [docker/cli, 29.1.2 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.1.2)\n- [moby/moby, 29.1.2 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.1.2)\n### Security\n- Update Go runtime to [1.25.5](https://go.dev/doc/devel/release#go1.25.5). [moby/moby#51648](https://github.com/moby/moby/pull/51648), [docker/cli#6688](https://github.com/docker/cli/pull/6688)\n- Fixes a potential DoS via excessive resource usage when formatting hostname validation errors [**CVE-2025-61729**](https://nvd.nist.gov/vuln/detail/CVE-2025-61729)\n- Fixes incorrect enforcement of excluded subdomain constraints for wildcard SANs, which could allow improperly trusted certificates [**CVE-2025-61727**](https://nvd.nist.gov/vuln/detail/CVE-2025-22874)\n### Bug fixes and enhancements\n- containerd image store: Fix `docker image inspect` failing to return available image data in case where not all distributable blobs are available locally. [moby/moby#51629](https://github.com/moby/moby/pull/51629)\n- dockerd-rootless-setuptool.sh: fix `nsenter: no namespace specified`. [moby/moby#51622](https://github.com/moby/moby/pull/51622)\n- Fix `docker system df` showing `N/A` for shared size and unique size when using graph-drivers as storage. [moby/moby#51631](https://github.com/moby/moby/pull/51631)\n### Packaging updates\n- Update runc (in static binaries) to [v1.3.4](https://github.com/opencontainers/runc/releases/tag/v1.3.4). [moby/moby#51633](https://github.com/moby/moby/pull/51633)\n### Networking\n- Fix a bug preventing port mappings in rootless mode when slirp4netns is used. [moby/moby#51616](https://github.com/moby/moby/pull/51616)\n- Prevent a crash when making an API request with `HostConfig.PublishAllPorts` set (`-P`), and no port bindings. [moby/moby#51621](https://github.com/moby/moby/pull/51621)",
+      "memory_unit_text": "In the moby/moby release v29.1.2 (tag: docker-v29.1.2), the release updates Go runtime to 1.25.5, fixes potential DoS via excessive resource usage when formatting hostname validation errors (CVE-2025-61729), fixes incorrect enforcement of excluded subdomain constraints for wildcard SANs (CVE-2025-61727), fixes containerd image store image inspect when not all blobs are available locally, fixes dockerd-rootless-setuptool.sh nsenter error, fixes docker system df showing N/A for shared/unique size with graph-drivers, updates runc to v1.3.4, fixes port mappings in rootless mode with slirp4netns, and prevents crash when making API request with PublishAllPorts and no port bindings."
+    },
+    {
+      "memory_node_id": "moby__moby__release__docker_v29_1_3",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:docker-v29.1.3",
+      "tag_name": "docker-v29.1.3",
+      "title": "v29.1.3",
+      "time_hint": "2025-12-12",
+      "published_at": "2025-12-12T15:56:35Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/docker-v29.1.3",
+      "raw_text": "Repository: moby/moby\nRelease: v29.1.3\nTag: docker-v29.1.3; draft: False; prerelease: False; published_at: 2025-12-12T15:56:35Z; created_at: 2025-12-12T14:47:14Z\nRelease notes:\n## 29.1.3\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\n- [docker/cli, 29.1.3 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.1.3)\n- [moby/moby, 29.1.3 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.1.3)\n### Bug fixes and enhancements\n- Add shell completion for `docker stack deploy --compose-file`. [docker/cli#6690](https://github.com/docker/cli/pull/6690)\n- containerd image store: Fix a bug causing `docker build` to ignore the explicitly set `unpack` image exporter option. [moby/moby#51514](https://github.com/moby/moby/pull/51514)\n- Fix `docker image ls` dangling image handling. [docker/cli#6704](https://github.com/docker/cli/pull/6704)\n- Fix a bug that could cause the Engine to leave containers with autoremove set in 'dead' state on shutdown, and never reclaim them. [moby/moby#51693](https://github.com/moby/moby/pull/51693)\n- Fix build on i386. [moby/moby#51528](https://github.com/moby/moby/pull/51528)\n- Fix explicit graphdriver configuration (`\"storage-driver\"`) being treated as containerd snapshotter when prior graphdriver state exists. [moby/moby#51516](https://github.com/moby/moby/pull/51516)\n- Fix potential creation of orphaned overlay2 layers. [moby/moby#51703](https://github.com/moby/moby/pull/51703)\n### Networking\n- Allow creation of a container with a specific IP address when its networks were not configured with a specific subnet. [moby/moby#51583](https://github.com/moby/moby/pull/51583)\n- Don't crash when starting a container created via the API before upgrade to v29.1.2, with `PublishAll` and a nil `PortBindings` map. [moby/moby#51691](https://github.com/moby/moby/pull/51691)\n- Fix a bug preventing DNS resolution of containers attached to non swarm-scoped networks once the node has joined a Swarm cluster. [moby/moby#51515](https://github.com/moby/moby/pull/51515)\n- Fix an issue that caused daemon crash when using a remote network driver plugin. [moby/moby#51558](https://github.com/moby/moby/pull/51558)\n- Fix an issue that could lead to an \"endpoint not found\" error when creating a container with multiple network connections, when one of the networks is non-internal but does not have its own external IP connectivity. [moby/moby#51538](https://github.com/moby/moby/pull/51538)\n- Fix an issue that prevented rootless Docker from starting on a host with IPv6 disabled. [moby/moby#51543](https://github.com/moby/moby/pull/51543)\n- Return an error when a container is created with a port-mapping pointing to container port 0. [moby/moby#51695](https://github.com/moby/moby/pull/51695)",
+      "memory_unit_text": "In the moby/moby release v29.1.3 (tag: docker-v29.1.3), the release adds shell completion for docker stack deploy --compose-file, fixes containerd image store ignoring unpack image exporter option, fixes docker image ls dangling image handling, fixes engine leaving autoremove containers in dead state on shutdown, fixes build on i386, fixes explicit graphdriver configuration being treated as containerd snapshotter, fixes potential creation of orphaned overlay2 layers, allows container creation with specific IP when networks lack specific subnet, prevents crash when starting container with PublishAll and nil PortBindings, fixes DNS resolution of containers on non-swarm networks after joining swarm, fixes daemon crash with remote network driver plugin, fixes endpoint not found error with multiple network connections, fixes rootless Docker start with IPv6 disabled, and returns error for port-mapping to container port 0."
+    },
+    {
+      "memory_node_id": "moby__moby__release__docker_v29_2_0_rc_1",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:docker-v29.2.0-rc.1",
+      "tag_name": "docker-v29.2.0-rc.1",
+      "title": "v29.2.0-rc.1",
+      "time_hint": "2025-12-17",
+      "published_at": "2025-12-17T17:51:43Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/docker-v29.2.0-rc.1",
+      "raw_text": "Repository: moby/moby\nRelease: v29.2.0-rc.1\nTag: docker-v29.2.0-rc.1; draft: False; prerelease: True; published_at: 2025-12-17T17:51:43Z; created_at: 2025-12-17T16:53:58Z\nRelease notes:\n## 29.2.0-rc.1\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\n- [docker/cli, 29.2.0 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.2.0)\n- [moby/moby, 29.2.0 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.2.0)\n### New\n- `docker info` now includes `NRI` section. [docker/cli#6710](https://github.com/docker/cli/pull/6710)\n- Add experimental NRI support. [moby/moby#51711](https://github.com/moby/moby/pull/51711), [moby/moby#51712](https://github.com/moby/moby/pull/51712), [moby/moby#51675](https://github.com/moby/moby/pull/51675), [moby/moby#51674](https://github.com/moby/moby/pull/51674), [moby/moby#51636](https://github.com/moby/moby/pull/51636), [moby/moby#51634](https://github.com/moby/moby/pull/51634)\n### Packaging updates\n- Update BuildKit to [v0.26.3](https://github.com/moby/buildkit/releases/tag/v0.26.3). [moby/moby#51740](https://github.com/moby/moby/pull/51740)\n### Rootless\n- Rootless: Consider  `$XDG_CONFIG_HOME/cdi` and `$XDG_RUNTIME_DIR/cdi` when looking for CDI devices. [moby/moby#51624](https://github.com/moby/moby/pull/51624)\n### API\n- Natively support gRPC on the listening socket. [moby/moby#50744](https://github.com/moby/moby/pull/50744)",
+      "memory_unit_text": "In the moby/moby release v29.2.0-rc.1 (tag: docker-v29.2.0-rc.1), the release adds NRI section to docker info, adds experimental NRI support, updates BuildKit to v0.26.3, considers XDG_CONFIG_HOME/cdi and XDG_RUNTIME_DIR/cdi for CDI devices in rootless mode, and natively supports gRPC on the listening socket."
+    },
+    {
+      "memory_node_id": "moby__moby__release__docker_v29_1_4",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:docker-v29.1.4",
+      "tag_name": "docker-v29.1.4",
+      "title": "v29.1.4",
+      "time_hint": "2026-01-09",
+      "published_at": "2026-01-09T09:33:14Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/docker-v29.1.4",
+      "raw_text": "Repository: moby/moby\nRelease: v29.1.4\nTag: docker-v29.1.4; draft: False; prerelease: False; published_at: 2026-01-09T09:33:14Z; created_at: 2026-01-08T19:47:09Z\nRelease notes:\n## 29.1.4\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\n- [docker/cli, 29.1.4 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.1.4)\n- [moby/moby, 29.1.4 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.1.4)\n### Bug fixes and enhancements\n- Fix `docker run --network none` panic on Windows. [moby/moby#51830](https://github.com/moby/moby/pull/51830)\n- Fix image mounts failing with \"file name too long\" for long mount paths. [moby/moby#51829](https://github.com/moby/moby/pull/51829)\n- Fix potential creation of orphaned overlay2 layers. [moby/moby#51826](https://github.com/moby/moby/pull/51826), [moby/moby#51824](https://github.com/moby/moby/pull/51824)\n### Packaging updates\n- Update BuildKit to [v0.26.3](https://github.com/moby/buildkit/releases/tag/v0.26.3). [moby/moby#51821](https://github.com/moby/moby/pull/51821)",
+      "memory_unit_text": "In the moby/moby release v29.1.4 (tag: docker-v29.1.4), the release fixes docker run --network none panic on Windows, fixes image mounts failing with file name too long, fixes potential creation of orphaned overlay2 layers, and updates BuildKit to v0.26.3."
+    },
+    {
+      "memory_node_id": "moby__moby__release__docker_v29_1_5",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:docker-v29.1.5",
+      "tag_name": "docker-v29.1.5",
+      "title": "v29.1.5",
+      "time_hint": "2026-01-16",
+      "published_at": "2026-01-16T14:08:54Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/docker-v29.1.5",
+      "raw_text": "Repository: moby/moby\nRelease: v29.1.5\nTag: docker-v29.1.5; draft: False; prerelease: False; published_at: 2026-01-16T14:08:54Z; created_at: 2026-01-16T12:46:10Z\nRelease notes:\n## 29.1.5\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\n- [docker/cli, 29.1.5 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.1.5)\n- [moby/moby, 29.1.5 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.1.5)\n### Packaging updates\n- Update Go runtime to [1.25.6](https://go.dev/doc/devel/release#go1.25.6). [moby/moby#51860](https://github.com/moby/moby/pull/51860), [docker/cli#6750](https://github.com/docker/cli/pull/6750)\n### Networking\n- Fixed a regression where established network connections could be disrupted during a container's shutdown grace period. [moby/moby#51843](https://github.com/moby/moby/pull/51843)",
+      "memory_unit_text": "In the moby/moby release v29.1.5 (tag: docker-v29.1.5), the release updates Go runtime to 1.25.6 and fixes a regression where established network connections could be disrupted during a container's shutdown grace period."
+    },
+    {
+      "memory_node_id": "moby__moby__release__docker_v29_2_0_rc_2",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:docker-v29.2.0-rc.2",
+      "tag_name": "docker-v29.2.0-rc.2",
+      "title": "v29.2.0-rc.2",
+      "time_hint": "2026-01-19",
+      "published_at": "2026-01-19T13:49:55Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/docker-v29.2.0-rc.2",
+      "raw_text": "Repository: moby/moby\nRelease: v29.2.0-rc.2\nTag: docker-v29.2.0-rc.2; draft: False; prerelease: True; published_at: 2026-01-19T13:49:55Z; created_at: 2026-01-19T12:03:22Z\nRelease notes:\n## 29.2.0-rc.2\nFor a full list of changes from the last release candidate refer to the diff:\n- [moby/moby, 29.2.0-rc.1...29.2.0-rc.2](https://github.com/moby/moby/compare/docker-v29.2.0-rc.1...docker-v29.2.0-rc.2)\n- [docker/cli, 29.2.0-rc.1...29.2.0-rc.2](https://github.com/docker/cli/compare/v29.2.0-rc.1...v29.2.0-rc.2)\n### New\n- `GET /info` now includes an `NRI` field. If the Node Resource Interface (NRI) is enabled, this field contains information describing it. [moby/moby#51713](https://github.com/moby/moby/pull/51713)\n- New `Identity` field has been added to the inspect endpoint to show trusted origin information about the image. This includes build ref for locally built images, remote registry repository for pulled images, and verified signature information for images that contain a valid signed provenance attestation. [moby/moby#51737](https://github.com/moby/moby/pull/51737)\n### Bug fixes and enhancements\n- Improve validation of `--detach-keys` command-line options. [docker/cli#6742](https://github.com/docker/cli/pull/6742)\n- Prevent a potential panic on daemon shutdown after an incomplete initialization. [moby/moby#51797](https://github.com/moby/moby/pull/51797)\n- Remove restriction on anonymous read-only volumes. [moby/moby#51682](https://github.com/moby/moby/pull/51682)\n### Packaging updates\n- Update BuildKit to [v0.27.0-rc2](https://github.com/moby/buildkit/releases/tag/v0.27.0-rc2). [moby/moby#51864](https://github.com/moby/moby/pull/51864)\n- Update containerd (static binaries only) to [v2.2.1](https://github.com/containerd/containerd/releases/tag/v2.2.1). [moby/moby#51765](https://github.com/moby/moby/pull/51765)\n### Rootless\n- Update RootlessKit to [v2.3.6](https://github.com/rootless-containers/rootlesskit/releases/tag/v2.3.6). [moby/moby#51757](https://github.com/moby/moby/pull/51757)\n### Go SDK\n- cli/command: add WithAPIClientOptions option. [docker/cli#6740](https://github.com/docker/cli/pull/6740)\n### Deprecations\n- Remove `%PROGRAMDATA%\\Docker\\cli-plugins` from the list of paths used for CLI plugins on Windows. This path was present for backward compatibility with old installation, but replaced by `%ProgramFiles%\\Docker\\cli-plugins`. [docker/cli#6713](https://github.com/docker/cli/pull/6713)",
+      "memory_unit_text": "In the moby/moby release v29.2.0-rc.2 (tag: docker-v29.2.0-rc.2), the release adds NRI field to GET /info, adds Identity field to inspect endpoint for trusted origin information, improves validation of --detach-keys, prevents potential panic on daemon shutdown after incomplete initialization, removes restriction on anonymous read-only volumes, updates BuildKit to v0.27.0-rc2, updates containerd to v2.2.1, updates RootlessKit to v2.3.6, adds WithAPIClientOptions option to cli/command, and removes %PROGRAMDATA%\\Docker\\cli-plugins from CLI plugin paths on Windows."
+    },
+    {
+      "memory_node_id": "moby__moby__release__api_v1_53_0",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:api/v1.53.0",
+      "tag_name": "api/v1.53.0",
+      "title": "api/v1.53.0",
+      "time_hint": "2026-01-26",
+      "published_at": "2026-01-26T18:54:35Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/api/v1.53.0",
+      "raw_text": "Repository: moby/moby\nRelease: api/v1.53.0\nTag: api/v1.53.0; draft: False; prerelease: False; published_at: 2026-01-26T18:54:35Z; created_at: 2026-01-26T18:48:59Z\nRelease notes:\n## api/v1.53.0\n### New\n- `GET /info` now includes an `NRI` field. If the Node Resource Interface (NRI) is enabled, this field contains information describing it. [moby/moby#51713](https://github.com/moby/moby/pull/51713)\n- New `Identity` field has been added to the inspect endpoint to show trusted origin information about the image. This includes build ref for locally built images, remote registry repository for pulled images, and verified signature information for images that contain a valid signed provenance attestation. [moby/moby#51737](https://github.com/moby/moby/pull/51737)\n### Bug fixes and enhancements\n- `GET /events` now also supports [`application/jsonl`](https://jsonlines.org/) when negotiating content-type. [moby/moby#51668](https://github.com/moby/moby/pull/51668)\n- Explicitly reject multiple `AuthConfig` values being passed instead of ignoring them silently. [moby/moby#51919](https://github.com/moby/moby/pull/51919)\n- Fix some empty fields not being omitted in API responses. [moby/moby#51932](https://github.com/moby/moby/pull/51932)\n- Update `MaxAPIVersion` to 1.53. [moby/moby#51725](https://github.com/moby/moby/pull/51725)\n### Deprecations\n- `POST /grpc` and `POST /sessions` are deprecated and will be removed in future. [moby/moby#51721](https://github.com/moby/moby/pull/51721)",
+      "memory_unit_text": "In the moby/moby release api/v1.53.0 (tag: api/v1.53.0), the release adds NRI field to GET /info, adds Identity field to inspect endpoint, supports application/jsonl for GET /events, explicitly rejects multiple AuthConfig values, fixes empty fields not being omitted in API responses, updates MaxAPIVersion to 1.53, and deprecates POST /grpc and POST /sessions."
+    },
+    {
+      "memory_node_id": "moby__moby__release__client_v0_2_2",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:client/v0.2.2",
+      "tag_name": "client/v0.2.2",
+      "title": "client/v0.2.2",
+      "time_hint": "2026-01-26",
+      "published_at": "2026-01-26T19:06:49Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/client/v0.2.2",
+      "raw_text": "Repository: moby/moby\nRelease: client/v0.2.2\nTag: client/v0.2.2; draft: False; prerelease: False; published_at: 2026-01-26T19:06:49Z; created_at: 2026-01-26T19:04:48Z\nRelease notes:\n## client/v0.2.2\n### Bug fixes and enhancements\n- `GET /events` now also supports [`application/jsonl`](https://jsonlines.org/) when negotiating content-type. [moby/moby#51668](https://github.com/moby/moby/pull/51668)\n- The http.Client value passed to client.WithHTTPClient() is now copied rather than mutated in-place. [moby/moby#51817](https://github.com/moby/moby/pull/51817)\n### API\n- Update `MaxAPIVersion` to 1.53. [moby/moby#51725](https://github.com/moby/moby/pull/51725)\n### Deprecations\n- client: ContainerListOptions: deprecate `Since`, `Before`, and `Latest` fields. [moby/moby#51908](https://github.com/moby/moby/pull/51908)",
+      "memory_unit_text": "In the moby/moby release client/v0.2.2 (tag: client/v0.2.2), the release supports application/jsonl for GET /events, copies http.Client instead of mutating in-place, updates MaxAPIVersion to 1.53, and deprecates Since, Before, and Latest fields in ContainerListOptions."
+    },
+    {
+      "memory_node_id": "moby__moby__release__docker_v29_2_0",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:docker-v29.2.0",
+      "tag_name": "docker-v29.2.0",
+      "title": "v29.2.0",
+      "time_hint": "2026-01-26",
+      "published_at": "2026-01-26T21:09:53Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/docker-v29.2.0",
+      "raw_text": "Repository: moby/moby\nRelease: v29.2.0\nTag: docker-v29.2.0; draft: False; prerelease: False; published_at: 2026-01-26T21:09:53Z; created_at: 2026-01-26T19:23:50Z\nRelease notes:\n## 29.2.0\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\n- [docker/cli, 29.2.0 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.2.0)\n- [moby/moby, 29.2.0 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.2.0)\n### New\n- `docker info` now includes `NRI` section. [docker/cli#6710](https://github.com/docker/cli/pull/6710)\n- Add experimental NRI support. [moby/moby#51711](https://github.com/moby/moby/pull/51711), [moby/moby#51712](https://github.com/moby/moby/pull/51712), [moby/moby#51675](https://github.com/moby/moby/pull/51675), [moby/moby#51674](https://github.com/moby/moby/pull/51674), [moby/moby#51636](https://github.com/moby/moby/pull/51636), [moby/moby#51634](https://github.com/moby/moby/pull/51634)\n- New `Identity` field has been added to the inspect endpoint to show trusted origin information about the image. This includes build ref for locally built images, remote registry repository for pulled images, and verified signature information for images that contain a valid signed provenance attestation. [moby/moby#51737](https://github.com/moby/moby/pull/51737)\n### Bug fixes and enhancements\n- Improve validation of `--detach-keys` command-line options. [docker/cli#6742](https://github.com/docker/cli/pull/6742)\n- Prevent a potential panic on daemon shutdown after an incomplete initialization. [moby/moby#51797](https://github.com/moby/moby/pull/51797)\n- Remove restriction on anonymous read-only volumes. [moby/moby#51682](https://github.com/moby/moby/pull/51682)\n- The `--validate` flag on dockerd now also verifies system requirements, allowing for system requirements to be checked before starting the daemon. [moby/moby#51868](https://github.com/moby/moby/pull/51868)\n- Handle `--gpus` requests for NVIDIA devices using CDI if possible. [moby/moby#50228](https://github.com/moby/moby/pull/50228)\n### Packaging updates\n- Update BuildKit to [v0.27.0](https://github.com/moby/buildkit/releases/tag/v0.27.0). [moby/moby#51886](https://github.com/moby/moby/pull/51886)\n- Update containerd (static binaries only) to [v2.2.1](https://github.com/containerd/containerd/releases/tag/v2.2.1). [moby/moby#51765](https://github.com/moby/moby/pull/51765)\n### Rootless\n- Rootless: Consider `$XDG_CONFIG_HOME/cdi` and `$XDG_RUNTIME_DIR/cdi` when looking for CDI devices. [moby/moby#51624](https://github.com/moby/moby/pull/51624)\n- Update RootlessKit to [v2.3.6](https://github.com/rootless-containers/rootlesskit/releases/tag/v2.3.6). [moby/moby#51757](https://github.com/moby/moby/pull/51757)\n### API\n- Natively support gRPC on the listening socket. [moby/moby#50744](https://github.com/moby/moby/pull/50744)\n### Go SDK\n- cli/command: add WithAPIClientOptions option. [docker/cli#6740](https://github.com/docker/cli/pull/6740)\n### Deprecations\n- Remove `%PROGRAMDATA%\\Docker\\cli-plugins` from the list of paths used for CLI plugins on Windows. This path was present for backward compatibility with old installation, but replaced by `%ProgramFiles%\\Docker\\cli-plugins`. [docker/cli#6713](https://github.com/docker/cli/pull/6713)",
+      "memory_unit_text": "In the moby/moby release v29.2.0 (tag: docker-v29.2.0), the release adds NRI section to docker info, adds experimental NRI support, adds Identity field to inspect endpoint, improves validation of --detach-keys, prevents potential panic on daemon shutdown after incomplete initialization, removes restriction on anonymous read-only volumes, adds --validate flag to dockerd for system requirements check, handles --gpus requests for NVIDIA devices using CDI, updates BuildKit to v0.27.0, updates containerd to v2.2.1, considers XDG_CONFIG_HOME/cdi and XDG_RUNTIME_DIR/cdi for CDI devices in rootless mode, updates RootlessKit to v2.3.6, natively supports gRPC on the listening socket, adds WithAPIClientOptions option to cli/command, and removes %PROGRAMDATA%\\Docker\\cli-plugins from CLI plugin paths on Windows."
+    },
+    {
+      "memory_node_id": "moby__moby__release__docker_v29_2_1",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:docker-v29.2.1",
+      "tag_name": "docker-v29.2.1",
+      "title": "v29.2.1",
+      "time_hint": "2026-02-02",
+      "published_at": "2026-02-02T18:16:53Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/docker-v29.2.1",
+      "raw_text": "Repository: moby/moby\nRelease: v29.2.1\nTag: docker-v29.2.1; draft: False; prerelease: False; published_at: 2026-02-02T18:16:53Z; created_at: 2026-02-02T17:14:59Z\nRelease notes:\n## 29.2.1\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\n- [docker/cli, 29.2.1 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.2.1)\n- [moby/moby, 29.2.1 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.2.1)\n### Bug fixes and enhancements\n- Update BuildKit to [v0.27.1](https://github.com/moby/buildkit/releases/tag/v0.27.1). [moby/moby#51962](https://github.com/moby/moby/pull/51962)\n- Fix `docker system df` failing when run concurrently with `docker system prune`. [moby/moby#51979](https://github.com/moby/moby/pull/51979)\n- Fix daemon handling of duplicate container exit events to avoid repeated cleanup and state transitions. [moby/moby#51925](https://github.com/moby/moby/pull/51925)\n- Fix panic after failed daemon initialization. [moby/moby#51943](https://github.com/moby/moby/pull/51943)\n- Fix encrypted overlay networks not passing traffic to containers on v28 and older Engines. Encrypted overlay networks will no longer pass traffic to containers on v29.2.0 thru v29.0.0, v28.2.2, v25.0.14 or v25.0.13. [moby/moby#51951](https://github.com/moby/moby/pull/51951)\n- Fix potential panic on `docker network prune`. [moby/moby#51966](https://github.com/moby/moby/pull/51966)",
+      "memory_unit_text": "In the moby/moby release v29.2.1 (tag: docker-v29.2.1), the release updates BuildKit to v0.27.1, fixes docker system df failing when run concurrently with docker system prune, fixes daemon handling of duplicate container exit events, fixes panic after failed daemon initialization, fixes encrypted overlay networks not passing traffic to containers on older engines, and fixes potential panic on docker network prune."
+    },
+    {
+      "memory_node_id": "moby__moby__release__docker_v29_3_0_rc_1",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:docker-v29.3.0-rc.1",
+      "tag_name": "docker-v29.3.0-rc.1",
+      "title": "v29.3.0-rc.1",
+      "time_hint": "2026-02-27",
+      "published_at": "2026-02-27T20:26:30Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/docker-v29.3.0-rc.1",
+      "raw_text": "Repository: moby/moby\nRelease: v29.3.0-rc.1\nTag: docker-v29.3.0-rc.1; draft: False; prerelease: True; published_at: 2026-02-27T20:26:30Z; created_at: 2026-02-27T19:44:23Z\nRelease notes:\n## 29.3.0-rc.1\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\n- [docker/cli, 29.3.0 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.3.0)\n- [moby/moby, 29.3.0 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.3.0)\n### Packaging updates\n- Update BuildKit to [v0.28.0-rc2](https://github.com/moby/buildkit/releases/tag/v0.28.0-rc2). [moby/moby#52103](https://github.com/moby/moby/pull/52103)\n### Bug fixes and enhancements\n- Add sd_notify [\"RELOADING\"](https://www.freedesktop.org/software/systemd/man/latest/sd_notify.html#RELOADING=1) notifications when signalling the daemon to reload its configuration. [moby/moby#52041](https://github.com/moby/moby/pull/52041)\n- Add support for the systemd 253 `Type=notify-reload` service reload protocol. [moby/moby#52041](https://github.com/moby/moby/pull/52041)\n- Don't log \"failed to determine if container is already mounted \" warnings for stopped containers during startup. [moby/moby#52076](https://github.com/moby/moby/pull/52076)\n- Fix `docker system prune` failing with \"rw layer snapshot not found\" when a container is concurrently removed. [moby/moby#52090](https://github.com/moby/moby/pull/52090)\n- Fix a panic when running `docker top` on a non-running Windows container. [moby/moby#52025](https://github.com/moby/moby/pull/52025)\n- Fix a regression in v29.2.0 that prevented registering the dockerd service on Windows if system requirements were not yet installed. [moby/moby#52006](https://github.com/moby/moby/pull/52006)\n- Fix spurious \"ShouldRestart failed\" warning on shutdown. [moby/moby#52079](https://github.com/moby/moby/pull/52079)\n- Prevent logging \"not found\" warnings when calculating volume sizes. [moby/moby#52018](https://github.com/moby/moby/pull/52018)\n- Send sd_notify [\"READY\"](https://www.freedesktop.org/software/systemd/man/latest/sd_notify.html#READY=1) and [\"STOPPING\"](https://www.freedesktop.org/software/systemd/man/latest/sd_notify.html#STOPPING=1) synchronously to make sure they are sent before we proceed. [moby/moby#52041](https://github.com/moby/moby/pull/52041)\n- Update Go runtime to [1.25.7](https://go.dev/doc/devel/release#go1.25.7). [docker/cli#6780](https://github.com/docker/cli/pull/6780)\n### Networking\n- Fix DNS config corruption on daemon reload. [moby/moby#52060](https://github.com/moby/moby/pull/52060)",
+      "memory_unit_text": "In the moby/moby release v29.3.0-rc.1 (tag: docker-v29.3.0-rc.1), the release updates BuildKit to v0.28.0-rc2, adds sd_notify RELOADING notifications and support for systemd Type=notify-reload, stops logging warnings for stopped containers during startup, fixes docker system prune failing with rw layer snapshot not found, fixes panic on docker top for non-running Windows container, fixes regression preventing dockerd service registration on Windows without system requirements, fixes spurious ShouldRestart failed warning on shutdown, prevents logging not found warnings for volume sizes, sends sd_notify READY and STOPPING synchronously, updates Go runtime to 1.25.7, and fixes DNS config corruption on daemon reload."
+    },
+    {
+      "memory_node_id": "moby__moby__release__api_v1_54_0",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:api/v1.54.0",
+      "tag_name": "api/v1.54.0",
+      "title": "api/v1.54.0",
+      "time_hint": "2026-03-05",
+      "published_at": "2026-03-05T13:53:53Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/api/v1.54.0",
+      "raw_text": "Repository: moby/moby\nRelease: api/v1.54.0\nTag: api/v1.54.0; draft: False; prerelease: False; published_at: 2026-03-05T13:53:53Z; created_at: 2026-03-05T13:33:15Z\nRelease notes:\n## 1.54.0\n### New\n- `GET /images/json` now supports an `identity` query parameter. When set, the response includes manifest summaries and may include an `Identity` field for each manifest with trusted identity and origin information. [moby/moby#52030](https://github.com/moby/moby/pull/52030)\n### Bug fixes and enhancements\n- api/types/swarm: PortConfig: add Compare method. [moby/moby#52047](https://github.com/moby/moby/pull/52047)\n- api: swagger: document \"platform\" param for `GET /image/{name}/json`. [moby/moby#52082](https://github.com/moby/moby/pull/52082)\n- Fix swagger/OpenAPI return value specification for /system/df endpoint. [moby/moby#52124](https://github.com/moby/moby/pull/52124)\n- Add a `MediaType` pseudo-type to help discoverability of available mediatypes. [moby/moby#52089](https://github.com/moby/moby/pull/52089)\n- api/types/jsonstream: Add sanity-check for Message marshaling. [moby/moby#52059](https://github.com/moby/moby/pull/52059)\n- api/types/jsonstream: Prevent panic on nil-Error. [moby/moby#52059](https://github.com/moby/moby/pull/52059)",
+      "memory_unit_text": "In the moby/moby release api/v1.54.0 (tag: api/v1.54.0), the release adds identity query parameter to GET /images/json, adds Compare method to PortConfig, documents platform param for GET /image/{name}/json, fixes swagger return value for /system/df, adds MediaType pseudo-type, and adds sanity-check and nil-Error prevention to jsonstream."
+    },
+    {
+      "memory_node_id": "moby__moby__release__client_v0_3_0",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:client/v0.3.0",
+      "tag_name": "client/v0.3.0",
+      "title": "client/v0.3.0",
+      "time_hint": "2026-03-05",
+      "published_at": "2026-03-05T13:54:51Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/client/v0.3.0",
+      "raw_text": "Repository: moby/moby\nRelease: client/v0.3.0\nTag: client/v0.3.0; draft: False; prerelease: False; published_at: 2026-03-05T13:54:51Z; created_at: 2026-03-05T13:51:00Z\nRelease notes:\n## 0.3.0\n### New\n- client: `ImageListOptions` now supports `Identity` field. When set, the response includes manifest summaries and may include an `Identity` field for each manifest with trusted identity and origin information. [moby/moby#52030](https://github.com/moby/moby/pull/52030)\n### Bug fixes and enhancements\n- Lower minimum API version from v1.44. to v1.40 (Docker 19.03). [moby/moby#52067](https://github.com/moby/moby/pull/52067)\n- client/pkg/jsonmessage.DisplayJSONMessages now accepts an `iter.Seq2[jsonstream.Message, error]` instead of only a `JSONMessagesStream`,. [moby/moby#52062](https://github.com/moby/moby/pull/52062)",
+      "memory_unit_text": "In the moby/moby release client/v0.3.0 (tag: client/v0.3.0), the release adds Identity field to ImageListOptions, lowers minimum API version to v1.40, and changes DisplayJSONMessages to accept iter.Seq2."
+    },
+    {
+      "memory_node_id": "moby__moby__release__docker_v29_3_0",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:docker-v29.3.0",
+      "tag_name": "docker-v29.3.0",
+      "title": "v29.3.0",
+      "time_hint": "2026-03-05",
+      "published_at": "2026-03-05T15:27:21Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/docker-v29.3.0",
+      "raw_text": "Repository: moby/moby\nRelease: v29.3.0\nTag: docker-v29.3.0; draft: False; prerelease: False; published_at: 2026-03-05T15:27:21Z; created_at: 2026-03-05T14:23:14Z\nRelease notes:\n## 29.3.0\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\n- [docker/cli, 29.3.0 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.3.0)\n- [moby/moby, 29.3.0 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.3.0)\n### New\n- Add `bind-create-src` option to `--mount` flag for bind mounts. [docker/cli#6792](https://github.com/docker/cli/pull/6792)\n- CLI plugin hooks now fire on command failure (not just success), and plugins can use \"error-hooks\" to show hints only when commands fail. [docker/cli#6794](https://github.com/docker/cli/pull/6794)\n- Lower minimum API version from v1.44 to v1.40 (Docker 19.03). [moby/moby#52067](https://github.com/moby/moby/pull/52067)\n### Packaging updates\n- Update BuildKit to [v0.28.0](https://github.com/moby/buildkit/releases/tag/v0.28.0). [moby/moby#52135](https://github.com/moby/moby/pull/52135)\n### Networking\n- Fix DNS config corruption on daemon reload. [moby/moby#52060](https://github.com/moby/moby/pull/52060)\n### API\n- `POST /networks/{id}/connect` now correctly applies the `MacAddress` field in `EndpointSettings`. This field was added in API v1.44, but was previously ignored. [moby/moby#52040](https://github.com/moby/moby/pull/52040)\n- `GET /images/json` now supports an `identity` query parameter. When set, the response includes manifest summaries and may include an `Identity` field for each manifest with trusted identity and origin information. [moby/moby#52030](https://github.com/moby/moby/pull/52030)\n### Bug fixes and enhancements\n- The `--gpus` option now uses CDI-based injection for AMD GPUs. [moby/moby#52048](https://github.com/moby/moby/pull/52048)\n- Add `sd_notify` [\"RELOADING\"](https://www.freedesktop.org/software/systemd/man/latest/sd_notify.html#RELOADING=1) notifications when signalling the daemon to reload its configuration. [moby/moby#52041](https://github.com/moby/moby/pull/52041)\n- Send sd\\_notify [\"READY\"](https://www.freedesktop.org/software/systemd/man/latest/sd_notify.html#READY=1) and [\"STOPPING\"](https://www.freedesktop.org/software/systemd/man/latest/sd_notify.html#STOPPING=1) synchronously to make sure they are sent before we proceed. [moby/moby#52041](https://github.com/moby/moby/pull/52041)\n- Add support for the systemd 253 `Type=notify-reload` service reload protocol. [moby/moby#52041](https://github.com/moby/moby/pull/52041)\n- Don't log \"failed to determine if container is already mounted\" warnings for stopped containers during startup. [moby/moby#52076](https://github.com/moby/moby/pull/52076)\n- Fix `docker system prune` failing with \"rw layer snapshot not found\" when a container is concurrently removed. [moby/moby#52090](https://github.com/moby/moby/pull/52090)\n- Fix a panic when running `docker top` on a non-running Windows container. [moby/moby#52025](https://github.com/moby/moby/pull/52025)\n- Fix a regression in v29.2.0 that prevented registering the dockerd service on Windows if system requirements were not yet installed. [moby/moby#52006](https://github.com/moby/moby/pull/52006)\n- Fix shared mount detection for paths mounted multiple times, which caused \"not a shared mount\" errors when using bind propagation. [moby/moby#51787](https://github.com/moby/moby/pull/51787)\n- Fix spurious \"ShouldRestart failed\" warning on shutdown. [moby/moby#52079](https://github.com/moby/moby/pull/52079)\n- Preserve leading and trailing whitespace when storing registry passwords. [docker/cli#6784](https://github.com/docker/cli/pull/6784)\n- Prevent logging \"not found\" warnings when calculating volume sizes. [moby/moby#52018](https://github.com/moby/moby/pull/52018)\n- Update Go runtime to [1.25.7](https://go.dev/doc/devel/release#go1.25.7). [moby/moby#52003](https://github.com/moby/moby/pull/52003), [do...",
+      "memory_unit_text": "In the moby/moby release v29.3.0 (tag: docker-v29.3.0), the release adds bind-create-src option to --mount, fires CLI plugin hooks on command failure, lowers minimum API version to v1.40, updates BuildKit to v0.28.0, fixes DNS config corruption on daemon reload, applies MacAddress field in POST /networks/{id}/connect, adds identity query parameter to GET /images/json, uses CDI-based injection for AMD GPUs with --gpus, adds sd_notify RELOADING and support for systemd Type=notify-reload, sends sd_notify READY and STOPPING synchronously, stops logging warnings for stopped containers during startup, fixes docker system prune rw layer snapshot not found, fixes panic on docker top for non-running Windows container, fixes regression preventing dockerd service registration on Windows, fixes shared mount detection for paths mounted multiple times, fixes spurious ShouldRestart failed warning, preserves leading/trailing whitespace in registry passwords, prevents logging not found warnings for volume sizes, and updates Go runtime to 1.25.7."
+    },
+    {
+      "memory_node_id": "moby__moby__release__docker_v29_3_1",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:docker-v29.3.1",
+      "tag_name": "docker-v29.3.1",
+      "title": "v29.3.1",
+      "time_hint": "2026-03-25",
+      "published_at": "2026-03-25T17:46:19Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/docker-v29.3.1",
+      "raw_text": "Repository: moby/moby\nRelease: v29.3.1\nTag: docker-v29.3.1; draft: False; prerelease: False; published_at: 2026-03-25T17:46:19Z; created_at: 2026-03-25T16:08:17Z\nRelease notes:\n## 29.3.1\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\n- [docker/cli, 29.3.1 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.3.1)\n- [moby/moby, 29.3.1 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.3.1)\n### Security\nThis release includes fixes for multiple security vulnerabilities affecting Docker Engine and related components.\n- **CVE-2026-34040** Fix an authorization bypass in AuthZ plugins that could allow authorization plugins to be bypassed under specific conditions.\n[GHSA-x744-4wpc-v9h2](https://github.com/moby/moby/security/advisories/GHSA-x744-4wpc-v9h2)\n- **CVE-2026-33997** Fix a flaw in `docker plugin install` where privilege validation could be partially bypassed, potentially leading to unauthorized privilege escalation.\n[GHSA-pxq6-2prw-chj9](https://github.com/moby/moby/security/advisories/GHSA-pxq6-2prw-chj9)\n- **CVE-2026-33748** Fix insufficient validation of Git URL `#ref:subdir` fragments in BuildKit, which could allow access to files outside the intended repository scope.\n[GHSA-4vrq-3vrq-g6gg](https://github.com/moby/buildkit/security/advisories/GHSA-4vrq-3vrq-g6gg)\n- **CVE-2026-33747** Fix a vulnerability in BuildKit where an untrusted frontend could cause files to be written outside the BuildKit state directory.\n[GHSA-3c29-8rgm-jvjj](https://github.com/moby/buildkit/security/advisories/GHSA-4c29-8rgm-jvjj)\n### Bug fixes and enhancements\n- Fix a daemon crash during docker build if `.dockerignore` contained an invalid pattern. [moby/moby#52214](https://github.com/moby/moby/pull/52214)\n- Fix a panic when the containerd client uses a closed stream. [moby/moby#52211](https://github.com/moby/moby/pull/52211)\n### Packaging updates\n- Update containerd (static binaries) to [v2.2.2](https://github.com/containerd/containerd/releases/tag/v2.2.2). [moby/moby#52213](https://github.com/moby/moby/pull/52213)\n- Update Go runtime to [1.25.8](https://go.dev/doc/devel/release#go1.25.8). [moby/moby#52210](https://github.com/moby/moby/pull/52210), [docker/cli#6883](https://github.com/docker/cli/pull/6883)\n### Go SDK\n- Add missing build-tag, which could cause `cannot range over 10 (untyped int constant)`  when importing the `cli/command` package. [docker/cli#6884](https://github.com/docker/cli/pull/6884)",
+      "memory_unit_text": "In the moby/moby release v29.3.1 (tag: docker-v29.3.1), the release fixes authorization bypass in AuthZ plugins (CVE-2026-34040), fixes privilege validation bypass in docker plugin install (CVE-2026-33997), fixes insufficient validation of Git URL fragments in BuildKit (CVE-2026-33748), fixes vulnerability in BuildKit allowing files to be written outside state directory (CVE-2026-33747), fixes daemon crash during docker build with invalid .dockerignore pattern, fixes panic when containerd client uses closed stream, updates containerd to v2.2.2, updates Go runtime to 1.25.8, and adds missing build-tag for cli/command package."
+    },
+    {
+      "memory_node_id": "moby__moby__release__api_v1_54_1",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:api/v1.54.1",
+      "tag_name": "api/v1.54.1",
+      "title": "api/v1.54.1",
+      "time_hint": "2026-04-03",
+      "published_at": "2026-04-03T13:06:45Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/api/v1.54.1",
+      "raw_text": "Repository: moby/moby\nRelease: api/v1.54.1\nTag: api/v1.54.1; draft: False; prerelease: False; published_at: 2026-04-03T13:06:45Z; created_at: 2026-04-03T12:11:33Z\nRelease notes:\n### Changelog\n- api/types/network: add `Port.Port()` method to return the port-number as a string. [moby/moby#52165](https://github.com/moby/moby/pull/52165)\n- api, client: add //go:fix inline directives to deprecated functions. [moby/moby#52178](https://github.com/moby/moby/pull/52178)\n- api, client: go.mod: remove patch version. [moby/moby#52174](https://github.com/moby/moby/pull/52174)\n- api/types/network: fix handling of unmapped ports (ephemeral ports). [moby/moby#52288](https://github.com/moby/moby/pull/52288)\n**Full Changelog**: https://github.com/moby/moby/compare/api/v1.54.0...api/v1.54.1",
+      "memory_unit_text": "In the moby/moby release api/v1.54.1 (tag: api/v1.54.1), the release adds Port.Port() method, adds go:fix inline directives to deprecated functions, removes patch version from go.mod, and fixes handling of unmapped ports."
+    },
+    {
+      "memory_node_id": "moby__moby__release__client_v0_4_0",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:client/v0.4.0",
+      "tag_name": "client/v0.4.0",
+      "title": "client/v0.4.0",
+      "time_hint": "2026-04-03",
+      "published_at": "2026-04-03T14:06:43Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/client/v0.4.0",
+      "raw_text": "Repository: moby/moby\nRelease: client/v0.4.0\nTag: client/v0.4.0; draft: False; prerelease: False; published_at: 2026-04-03T14:06:43Z; created_at: 2026-04-03T13:50:48Z\nRelease notes:\n## v0.4.0\n### Bug fixes and enhancements\n- api, client: add `//go:fix inline` directives to deprecated functions to help automatically migrating using `go fix`. [moby/moby#52178](https://github.com/moby/moby/pull/52178)\n- client/pkg/jsonmessage: add `DisplayStream` and `DisplayMessages` utils. [moby/moby#52273](https://github.com/moby/moby/pull/52273)\n- client/pkg/jsonmessage: use functional options for display funcs. [moby/moby#52285](https://github.com/moby/moby/pull/52285)\n- client: prevent panic when passing `nil` Opts to `client.New`. [moby/moby#52184](https://github.com/moby/moby/pull/52184)\n- client: the client now sets a default User-Agent if none was set, to prevent Go's default (`Go-http-client/1.1`) from being used. [moby/moby#52167](https://github.com/moby/moby/pull/52167)\n- Fix  `/system/df` reporting in-use images as reclaimable. [moby/moby#51778](https://github.com/moby/moby/pull/51778)\n- Go SDK: client.WithHTTPHeaders now detects if duplicate headers are set, and produces an error. Previously, duplicate errors would be randomized, resulting in undefined behavior. [moby/moby#52204](https://github.com/moby/moby/pull/52204)\n**Full Changelog**: https://github.com/moby/moby/compare/client/v0.3.0...client/v0.4.0",
+      "memory_unit_text": "In the moby/moby release client/v0.4.0 (tag: client/v0.4.0), the release adds go:fix inline directives, adds DisplayStream and DisplayMessages utils, uses functional options for display funcs, prevents panic when passing nil Opts to client.New, sets default User-Agent, fixes /system/df reporting in-use images as reclaimable, and detects duplicate headers in WithHTTPHeaders."
+    },
+    {
+      "memory_node_id": "moby__moby__release__docker_v29_4_0_rc_1",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:docker-v29.4.0-rc.1",
+      "tag_name": "docker-v29.4.0-rc.1",
+      "title": "v29.4.0-rc.1",
+      "time_hint": "2026-04-03",
+      "published_at": "2026-04-03T15:34:09Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/docker-v29.4.0-rc.1",
+      "raw_text": "Repository: moby/moby\nRelease: v29.4.0-rc.1\nTag: docker-v29.4.0-rc.1; draft: False; prerelease: True; published_at: 2026-04-03T15:34:09Z; created_at: 2026-04-03T14:38:44Z\nRelease notes:\n## 29.4.0-rc.1\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\n- [docker/cli, 29.4.0 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.4.0)\n- [moby/moby, 29.4.0 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.4.0)\n### Bug fixes and enhancements\n- docker cp: report both content size and transferred size. [docker/cli#6800](https://github.com/docker/cli/pull/6800)\n- Fix `docker stats --all` still showing containers that were removed. [docker/cli#6863](https://github.com/docker/cli/pull/6863)\n- Fix a rare bug that could cause containers to become unremovable. [moby/moby#51724](https://github.com/moby/moby/pull/51724)\n- Fixed privileged containers losing their explicit AppArmor profile (`--security-opt apparmor=<profile>`) after a container restart. [moby/moby#52215](https://github.com/moby/moby/pull/52215)\n- Improved duplicate container-exit handling by using live containerd task state (not timestamps). [moby/moby#52156](https://github.com/moby/moby/pull/52156)\n- Improved image pull and push performance by enabling HTTP keep-alive for registry connections, avoiding redundant TCP and TLS handshakes. [moby/moby#52198](https://github.com/moby/moby/pull/52198)\n- shell completions: add shell completion for `docker rm --link` and exclude legacy links for container names. [docker/cli#6872](https://github.com/docker/cli/pull/6872)\n- shell completions: don't provide completions that were already used. [docker/cli#6871](https://github.com/docker/cli/pull/6871)\n- Update runc (in static binaries) to [v1.3.5](https://github.com/opencontainers/runc/releases/tag/v1.3.5). [moby/moby#52244](https://github.com/moby/moby/pull/52244)\n- Windows: Fix `DOCKER_TMPDIR` not being respected. [moby/moby#52181](https://github.com/moby/moby/pull/52181)\n### Packaging updates\n- Update BuildKit to [v0.29.0](https://github.com/moby/buildkit/releases/tag/v0.29.0). [moby/moby#52272](https://github.com/moby/moby/pull/52272)\n### Networking\n- Prevent a daemon crash during startup after upgrading if a container config containers a malformed IP-address. [moby/moby#52275](https://github.com/moby/moby/pull/52275)",
+      "memory_unit_text": "In the moby/moby release v29.4.0-rc.1 (tag: docker-v29.4.0-rc.1), the release reports both content size and transferred size in docker cp, fixes docker stats --all showing removed containers, fixes rare bug causing containers to become unremovable, fixes privileged containers losing explicit AppArmor profile after restart, improves duplicate container-exit handling using live containerd task state, improves image pull/push performance with HTTP keep-alive, adds shell completion for docker rm --link and excludes legacy links, prevents providing already used completions, updates runc to v1.3.5, fixes DOCKER_TMPDIR not being respected on Windows, updates BuildKit to v0.29.0, and prevents daemon crash during startup with malformed IP-address in container config."
+    },
+    {
+      "memory_node_id": "moby__moby__release__docker_v29_4_0",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:docker-v29.4.0",
+      "tag_name": "docker-v29.4.0",
+      "title": "v29.4.0",
+      "time_hint": "2026-04-07",
+      "published_at": "2026-04-07T09:22:47Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/docker-v29.4.0",
+      "raw_text": "Repository: moby/moby\nRelease: v29.4.0\nTag: docker-v29.4.0; draft: False; prerelease: False; published_at: 2026-04-07T09:22:47Z; created_at: 2026-04-07T08:33:10Z\nRelease notes:\n## 29.4.0\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\n- [docker/cli, 29.4.0 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.4.0)\n- [moby/moby, 29.4.0 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.4.0)\n### Bug fixes and enhancements\n- docker cp: report both content size and transferred size. [docker/cli#6800](https://github.com/docker/cli/pull/6800)\n- Fix `docker stats --all` still showing containers that were removed. [docker/cli#6863](https://github.com/docker/cli/pull/6863)\n- Fix a rare bug that could cause containers to become unremovable. [moby/moby#51724](https://github.com/moby/moby/pull/51724)\n- Fixed privileged containers losing their explicit AppArmor profile (`--security-opt apparmor=<profile>`) after a container restart. [moby/moby#52215](https://github.com/moby/moby/pull/52215)\n- Improved duplicate container-exit handling by using live containerd task state (not timestamps). [moby/moby#52156](https://github.com/moby/moby/pull/52156)\n- Improved image pull and push performance by enabling HTTP keep-alive for registry connections, avoiding redundant TCP and TLS handshakes. [moby/moby#52198](https://github.com/moby/moby/pull/52198)\n- shell completions: add shell completion for `docker rm --link` and exclude legacy links for container names. [docker/cli#6872](https://github.com/docker/cli/pull/6872)\n- shell completions: don't provide completions that were already used. [docker/cli#6871](https://github.com/docker/cli/pull/6871)\n- Update runc (in static binaries) to [v1.3.5](https://github.com/opencontainers/runc/releases/tag/v1.3.5). [moby/moby#52244](https://github.com/moby/moby/pull/52244)\n- Windows: Fix `DOCKER_TMPDIR` not being respected. [moby/moby#52181](https://github.com/moby/moby/pull/52181)\n### Packaging updates\n- Update BuildKit to [v0.29.0](https://github.com/moby/buildkit/releases/tag/v0.29.0). [moby/moby#52272](https://github.com/moby/moby/pull/52272)\n### Networking\n- Prevent a daemon crash during startup after upgrading if a container config containers a malformed IP-address. [moby/moby#52275](https://github.com/moby/moby/pull/52275)\n### Go SDK\n- cli/streams: Out, In: preserve original os.File when available. [docker/cli#6906](https://github.com/docker/cli/pull/6906)\n- Update minimum go version to go1.25. [docker/cli#6897](https://github.com/docker/cli/pull/6897)\n### Deprecations\n- Go SDK: cli-plugins/hooks: deprecate `HookMessage ` and rename to `cli-plugins/hooks.Response`. [docker/cli#6859](https://github.com/docker/cli/pull/6859)\n- Go SDK: cli-plugins/hooks: deprecate `HookType` and rename to `cli-plugins/hooks.ResponseType`. [docker/cli#6859](https://github.com/docker/cli/pull/6859)\n- Go SDK: cli-plugins/manager: deprecate `HookPluginData` and move to `cli-plugins/hooks.Request`. [docker/cli#6859](https://github.com/docker/cli/pull/6859)",
+      "memory_unit_text": "In the moby/moby release v29.4.0 (tag: docker-v29.4.0), the release reports both content size and transferred size in docker cp, fixes docker stats --all showing removed containers, fixes rare bug causing containers to become unremovable, fixes privileged containers losing explicit AppArmor profile after restart, improves duplicate container-exit handling using live containerd task state, improves image pull/push performance with HTTP keep-alive, adds shell completion for docker rm --link and excludes legacy links, prevents providing already used completions, updates runc to v1.3.5, fixes DOCKER_TMPDIR not being respected on Windows, updates BuildKit to v0.29.0, prevents daemon crash during startup with malformed IP-address, preserves original os.File in cli/streams, updates minimum go version to go1.25, and deprecates HookMessage, HookType, and HookPluginData in Go SDK."
+    },
+    {
+      "memory_node_id": "moby__moby__release__api_v1_54_2",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:api/v1.54.2",
+      "tag_name": "api/v1.54.2",
+      "title": "api/v1.54.2",
+      "time_hint": "2026-04-20",
+      "published_at": "2026-04-20T14:33:48Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/api/v1.54.2",
+      "raw_text": "Repository: moby/moby\nRelease: api/v1.54.2\nTag: api/v1.54.2; draft: False; prerelease: False; published_at: 2026-04-20T14:33:48Z; created_at: 2026-04-20T14:27:40Z\nRelease notes:\n### Changelog\n- api/docs: cleanup changelog. [moby/moby#52379](https://github.com/moby/moby/pull/52379)\n- api/docs: lower deprecation heading to a h4. [moby/moby#52315](https://github.com/moby/moby/pull/52315)\n- api/docs: restore API docs and change-logs for API v1.0 - v1.23. [moby/moby#52312](https://github.com/moby/moby/pull/52312)\n- api: align Topology swagger with Segments JSON shape. [moby/moby#52358](https://github.com/moby/moby/pull/52358)\n**Full Changelog**: https://github.com/moby/moby/compare/api/v1.54.1...api/v1.54.2",
+      "memory_unit_text": "In the moby/moby release api/v1.54.2 (tag: api/v1.54.2), the release cleans up changelog, lowers deprecation heading to h4, restores API docs and changelogs for v1.0-v1.23, and aligns Topology swagger with Segments JSON shape."
+    },
+    {
+      "memory_node_id": "moby__moby__release__client_v0_4_1",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:client/v0.4.1",
+      "tag_name": "client/v0.4.1",
+      "title": "client/v0.4.1",
+      "time_hint": "2026-04-20",
+      "published_at": "2026-04-20T14:49:11Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/client/v0.4.1",
+      "raw_text": "Repository: moby/moby\nRelease: client/v0.4.1\nTag: client/v0.4.1; draft: False; prerelease: False; published_at: 2026-04-20T14:49:11Z; created_at: 2026-04-20T14:46:26Z\nRelease notes:\n### Bug fixes\n- client: fix `ImagePullResponse.Wait`, `ImagePushResponse.Wait` not returning an error if pull/push errors happend during the pull operation. [moby/moby#52305](https://github.com/moby/moby/pull/52305)\n### Other\n- daemon, client: diskUsage: explicitly exclude \"-1\" for containers. [moby/moby#52309](https://github.com/moby/moby/pull/52309)\n- go.mod: add back replace rules. [moby/moby#52325](https://github.com/moby/moby/pull/52325)\n- vendor: github.com/docker/go-connections v0.7.0. [moby/moby#51311](https://github.com/moby/moby/pull/51311)\n- vendor: github.com/moby/moby/api v1.54.2. [moby/moby#52416](https://github.com/moby/moby/pull/52416)",
+      "memory_unit_text": "In the moby/moby release client/v0.4.1 (tag: client/v0.4.1), the release fixes ImagePullResponse.Wait and ImagePushResponse.Wait not returning errors, explicitly excludes -1 for containers in diskUsage, adds back replace rules in go.mod, vendors docker/go-connections v0.7.0, and vendors moby/moby/api v1.54.2."
+    },
+    {
+      "memory_node_id": "moby__moby__release__docker_v29_4_1",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:docker-v29.4.1",
+      "tag_name": "docker-v29.4.1",
+      "title": "v29.4.1",
+      "time_hint": "2026-04-20",
+      "published_at": "2026-04-20T16:45:55Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/docker-v29.4.1",
+      "raw_text": "Repository: moby/moby\nRelease: v29.4.1\nTag: docker-v29.4.1; draft: False; prerelease: False; published_at: 2026-04-20T16:45:55Z; created_at: 2026-04-20T16:24:17Z\nRelease notes:\n## 29.4.1\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\n- [docker/cli, 29.4.1 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.4.1)\n- [moby/moby, 29.4.1 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.4.1)\n### Bug fixes and enhancements\n- containerd image store: Fix `docker image prune --filter label!=key=value` incorrectly skipping images that don't have the specified label. [moby/moby#52338](https://github.com/moby/moby/pull/52338)\n- Fix `--log-opt \"tag={{.ImageID}}\"` not stripping the digest's algorithm. [moby/moby#52343](https://github.com/moby/moby/pull/52343)\n- Fix intermittent container start failures (`EBUSY` on secrets/configs remount) on busy Swarm nodes by retrying the read-only remount. [moby/moby#52235](https://github.com/moby/moby/pull/52235)\n### Packaging updates\n- Update containerd (static binaries only) to [v2.2.3](https://github.com/containerd/containerd/releases/tag/v2.2.3). [moby/moby#52360](https://github.com/moby/moby/pull/52360)\n- Update Go runtime to [1.26.2](https://go.dev/doc/devel/release#go1.26.2). [docker/cli#6920](https://github.com/docker/cli/pull/6920), [moby/moby#52329](https://github.com/moby/moby/pull/52329)\n### Networking\n- if a container has an IPv4-only or an IPv6-only endpoint with higher \"gateway priority\" than a dual stack endpoint, the single stack endpoint will now be used as the default gateway for its address family. [moby/moby#52328](https://github.com/moby/moby/pull/52328)",
+      "memory_unit_text": "In the moby/moby release v29.4.1 (tag: docker-v29.4.1), the release fixes docker image prune --filter label!=key=value incorrectly skipping images, fixes --log-opt tag={{.ImageID}} not stripping digest algorithm, fixes intermittent container start failures on busy Swarm nodes by retrying read-only remount, updates containerd to v2.2.3, updates Go runtime to 1.26.2, and uses single stack endpoint as default gateway for its address family when it has higher priority than a dual stack endpoint."
+    },
+    {
+      "memory_node_id": "moby__moby__release__docker_v29_4_2",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:docker-v29.4.2",
+      "tag_name": "docker-v29.4.2",
+      "title": "v29.4.2",
+      "time_hint": "2026-05-01",
+      "published_at": "2026-05-01T07:40:30Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/docker-v29.4.2",
+      "raw_text": "Repository: moby/moby\nRelease: v29.4.2\nTag: docker-v29.4.2; draft: False; prerelease: False; published_at: 2026-05-01T07:40:30Z; created_at: 2026-05-01T01:21:39Z\nRelease notes:\n## 29.4.2\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\n- [docker/cli, 29.4.2 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.4.2)\n- [moby/moby, 29.4.2 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.4.2)\n### Security\nThis release includes hardening for **CVE-2026-31431**.\n- Block `AF_ALG` sockets and the `socketcall(2)` multiplexer in the default seccomp profile to prevent in-container privilege escalation via the kernel crypto API (\"Copy Fail\"). [moby/moby#52501](https://github.com/moby/moby/pull/52501)\n### Known issues\nThe hardening can break 32-bit programs and i386 images, including SteamCMD and some Wine-based workloads. [moby/moby#52506](https://github.com/moby/moby/issues/52506)\n#### Workaround\n> [!WARNING]\n> Don't use `--security-opt seccomp=unconfined` to work around this issue.\n> Don't use the `seccomp/v0.2.0` profile.\nIf you need a workaround, use the `seccomp/v0.2.1` profile from `moby/profiles`.\nMake sure you use a kernel that includes the fix for CVE-2026-31431.\nThis profile unblocks `socketcall` while keeping `AF_ALG` blocked for `socket`.\n> [!IMPORTANT]\n> Use this workaround only for containers that require it.\n> Containers that use this profile can still exploit CVE-2026-31431 through the `socketcall` syscall.\nDownload the `seccomp/v0.2.1` profile:\n```console\n$ curl -fsSL https://raw.githubusercontent.com/moby/profiles/refs/tags/seccomp/v0.2.1/seccomp/default.json \\\n-o /etc/docker/seccomp-profile-v0.2.1.json\n```\nUse one of these options. You don't need both.\n1. To use the profile for a specific container when you control the `docker run` command, use `--security-opt`:\n```console\n$ docker run --security-opt seccomp=<path> ...\n```\n2. To use the profile as the default for containers created by the daemon, add `seccomp-profile` to your `daemon.json`:\n```json\n{\n\"seccomp-profile\": \"/etc/docker/seccomp-profile-v0.2.1.json\"\n}\n```",
+      "memory_unit_text": "In the moby/moby release v29.4.2 (tag: docker-v29.4.2), the release hardens against CVE-2026-31431 by blocking AF_ALG sockets and socketcall(2) multiplexer in the default seccomp profile, with known issues breaking 32-bit programs and i386 images, and provides a workaround using seccomp/v0.2.1 profile from moby/profiles."
+    },
+    {
+      "memory_node_id": "moby__moby__release__docker_v29_4_3",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:docker-v29.4.3",
+      "tag_name": "docker-v29.4.3",
+      "title": "v29.4.3",
+      "time_hint": "2026-05-06",
+      "published_at": "2026-05-06T17:48:41Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/docker-v29.4.3",
+      "raw_text": "Repository: moby/moby\nRelease: v29.4.3\nTag: docker-v29.4.3; draft: False; prerelease: False; published_at: 2026-05-06T17:48:41Z; created_at: 2026-05-06T15:54:26Z\nRelease notes:\n## 29.4.3\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\n- [docker/cli, 29.4.3 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.4.3)\n- [moby/moby, 29.4.3 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.4.3)\n### Bug fixes\n- **CVE-2026-31431**: Fix the 29.4.2 regression that broke 32-bit programs and i386 images. The broad socketcall(2) seccomp deny is replaced with targeted AppArmor (deny network alg) and SELinux (alg_socket) rules that block AF_ALG at the LSM layer, covering both socket(2) and socketcall(2) paths without disrupting legitimate 32-bit workloads. [moby/moby#52537](https://github.com/moby/moby/pull/52537)\nOn SELinux-based systems, the SELinux mitigation requires the daemon to be configured with `selinux-enabled: true` (via `daemon.json` or the `--selinux-enabled` CLI flag). This option is not enabled by default.\n- Fix the default AppArmor profile not being updated on daemon restart, requiring a system reboot to pick up profile changes from daemon upgrades. [moby/moby#52537](https://github.com/moby/moby/pull/52537)",
+      "memory_unit_text": "In the moby/moby release v29.4.3 (tag: docker-v29.4.3), the release fixes the 29.4.2 regression that broke 32-bit programs and i386 images by replacing the broad socketcall(2) seccomp deny with targeted AppArmor and SELinux rules blocking AF_ALG, and fixes the default AppArmor profile not being updated on daemon restart."
+    },
+    {
+      "memory_node_id": "moby__moby__release__docker_v29_5_0_rc_1",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:docker-v29.5.0-rc.1",
+      "tag_name": "docker-v29.5.0-rc.1",
+      "title": "v29.5.0-rc.1",
+      "time_hint": "2026-05-11",
+      "published_at": "2026-05-11T20:07:07Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/docker-v29.5.0-rc.1",
+      "raw_text": "Repository: moby/moby\nRelease: v29.5.0-rc.1\nTag: docker-v29.5.0-rc.1; draft: False; prerelease: True; published_at: 2026-05-11T20:07:07Z; created_at: 2026-05-11T18:19:49Z\nRelease notes:\n## 29.5.0-rc.1\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\n- [docker/cli, 29.5.0 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.5.0)\n- [moby/moby, 29.5.0 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.5.0)\n### New\n- Enable private time namespace for containers by default on supported kernels. [moby/moby#52326](https://github.com/moby/moby/pull/52326)\n- The `local` logging-driver now has support for custom attributes, adding support for the `label`, `label-regex`, `env`, `env-regex`, and `tag` log-options. [moby/moby#52348](https://github.com/moby/moby/pull/52348)\n- Windows: The daemon now supports listening on a Unix socket (`-H unix://...`), with optional group-based access control via `--group`. [moby/moby#52365](https://github.com/moby/moby/pull/52365)\n### Security\n- CVE-2026-32288: Fix a denial of service where pulling a maliciously crafted image could cause the daemon to allocate unbounded memory when processing sparse tar archives. [GHSA-x4jj-h2v8-hqqv](https://github.com/advisories/GHSA-x4jj-h2v8-hqqv). [moby/moby#52478](https://github.com/moby/moby/pull/52478)\n### Bug fixes and enhancements\n- Add \"time-namespaces\" feature-flag to disable time-namespaces. [moby/moby#52577](https://github.com/moby/moby/pull/52577)\n- Daemon reload events now signify that the daemon reload has fully completed. [moby/moby#52589](https://github.com/moby/moby/pull/52589)\n- Expose diagnostic data about userland proxy in `docker info`. [moby/moby#52321](https://github.com/moby/moby/pull/52321)\n- Fix `docker image ls --filter reference=...` (`GET /images/json`) to also match fully qualified canonical image names (e.g. `docker.io/library/alpine`), not only the familiar short form. [moby/moby#52333](https://github.com/moby/moby/pull/52333)\n- Fix a bug where leaving an autolock-enabled swarm could leave orphaned state, causing subsequent swarm init to fail with \"Swarm is encrypted and needs to be unlocked\". [moby/moby#52479](https://github.com/moby/moby/pull/52479)\n- Fix an issue where logging errors logged to the daemon log show an empty string instead of the log message that failed to be logged. [moby/moby#52442](https://github.com/moby/moby/pull/52442)\n- Fix incorrect SHARED SIZE and UNIQUE SIZE reporting in `docker system df -v` by including shared content blobs in size calculation. [moby/moby#52482](https://github.com/moby/moby/pull/52482)\n- Fix volume subpath file mounts over an existing file in the image failing container creation with \"not a directory\". [moby/moby#52584](https://github.com/moby/moby/pull/52584)\n- Sort labels in `volume`, `network`, `config`, and `secret` formatters for deterministic output. [docker/cli#6954](https://github.com/docker/cli/pull/6954)\n- Swarm: Prevent corruption of Raft snapshots when swarm state is large. [moby/moby#52441](https://github.com/moby/moby/pull/52441)\n### Packaging updates\n- Update BuildKit to [v0.30.0-rc1](https://github.com/moby/buildkit/releases/tag/v0.30.0-rc1). [moby/moby#52559](https://github.com/moby/moby/pull/52559)\n- Update Go runtime to [1.26.3](https://go.dev/doc/devel/release#go1.26.3). [moby/moby#52572](https://github.com/moby/moby/pull/52572), [docker/cli#6967](https://github.com/docker/cli/pull/6967)\n### Networking\n- Fix conntrack entries being incorrectly deleted for UDP containers sharing the same port on different IPs when one container is restarted. [moby/moby#52423](https://github.com/moby/moby/pull/52423)\n- Fix the userland proxy silently dropping UDP datagrams when a previous write to an unavailable backend left a stale ECONNREFUSED error on the socket. [moby/moby#52483](https://github.com/moby/moby/pull/52483)\n- Rootless: Properly support `--net=host` and localhost registri...",
+      "memory_unit_text": "In the moby/moby release v29.5.0-rc.1 (tag: docker-v29.5.0-rc.1), the release enables private time namespace for containers by default, adds custom attributes support to local logging driver, supports Unix socket listening on Windows, fixes denial of service from maliciously crafted sparse tar archives (CVE-2026-32288), adds time-namespaces feature flag, signifies daemon reload completion in events, exposes userland proxy diagnostic data in docker info, fixes docker image ls --filter reference to match fully qualified names, fixes orphaned state after leaving autolock-enabled swarm, fixes logging errors showing empty strings, fixes incorrect SHARED SIZE and UNIQUE SIZE in docker system df -v, fixes volume subpath file mounts over existing file, sorts labels in volume/network/config/secret formatters, prevents corruption of Raft snapshots in large swarm state, updates BuildKit to v0.30.0-rc1, updates Go runtime to 1.26.3, fixes conntrack entries incorrectly deleted for UDP containers, fixes userland proxy silently dropping UDP datagrams, and properly supports --net=host and localhost registries in rootless mode."
+    },
+    {
+      "memory_node_id": "moby__moby__release__docker_v29_5_0",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:docker-v29.5.0",
+      "tag_name": "docker-v29.5.0",
+      "title": "v29.5.0",
+      "time_hint": "2026-05-14",
+      "published_at": "2026-05-14T21:37:30Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/docker-v29.5.0",
+      "raw_text": "Repository: moby/moby\nRelease: v29.5.0\nTag: docker-v29.5.0; draft: False; prerelease: False; published_at: 2026-05-14T21:37:30Z; created_at: 2026-05-14T14:38:01Z\nRelease notes:\n## 29.5.0\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\n- [docker/cli, 29.5.0 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.5.0)\n- [moby/moby, 29.5.0 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.5.0)\n>[!NOTE]\n> Rootless: `gvisor-tap-vsock` is now the new default rootless network driver and should be preferred over `slirp4netns` which is no longer installed via Docker packaging.\n### New\n- Rootless: Add new default  `gvisor-tap-vsock` network driver. [moby/moby#52319](https://github.com/moby/moby/pull/52319)\n- Enable private time namespace for containers by default on supported kernels. [moby/moby#52326](https://github.com/moby/moby/pull/52326)\n- The `local` logging driver now has support for custom attributes, adding support for the `label`, `label-regex`, `env`, `env-regex`, and `tag` log options. [moby/moby#52348](https://github.com/moby/moby/pull/52348)\n- Windows: The daemon now supports listening on a Unix socket (`-H unix://...`), with optional group-based access control via `--group`. [moby/moby#52365](https://github.com/moby/moby/pull/52365)\n### Security\n- CVE-2026-32288: Fix a denial of service where pulling a maliciously crafted image could cause the daemon to allocate unbounded memory when processing sparse tar archives. [GHSA-x4jj-h2v8-hqqv](https://github.com/advisories/GHSA-x4jj-h2v8-hqqv). [moby/moby#52478](https://github.com/moby/moby/pull/52478)\n### Bug fixes and enhancements\n- `docker ps --format` now supports a `.HealthStatus` placeholder to print container health state (`starting`, `healthy`, `unhealthy`) as a dedicated field. [docker/cli#6913](https://github.com/docker/cli/pull/6913)\n- Add \"time-namespaces\" feature flag to disable time-namespaces. [moby/moby#52577](https://github.com/moby/moby/pull/52577)\n- containerd integration: Fix auth token requests ignoring per-host TLS settings (custom CAs, insecure-registries). [moby/moby#52600](https://github.com/moby/moby/pull/52600)\n- Daemon reload events now signify that the daemon reload has fully completed. [moby/moby#52589](https://github.com/moby/moby/pull/52589)\n- Expose diagnostic data about userland proxy in `docker info`. [moby/moby#52321](https://github.com/moby/moby/pull/52321)\n- Fix `docker image ls --filter reference=...` (`GET /images/json`) to also match fully qualified canonical image names (e.g. `docker.io/library/alpine`), not only the familiar short form. [moby/moby#52333](https://github.com/moby/moby/pull/52333)\n- Fix a bug where leaving an autolock-enabled swarm could leave orphaned state, causing subsequent swarm init to fail with \"Swarm is encrypted and needs to be unlocked\". [moby/moby#52479](https://github.com/moby/moby/pull/52479)\n- Fix an issue where logging errors appeared as empty strings in the daemon log instead of the message that failed to write. [moby/moby#52442](https://github.com/moby/moby/pull/52442)\n- Fix incorrect SHARED SIZE and UNIQUE SIZE reporting in `docker system df -v` by including shared content blobs in size calculation. [moby/moby#52482](https://github.com/moby/moby/pull/52482)\n- Fix support for CDI specifications that request additional group IDs. [moby/moby#52579](https://github.com/moby/moby/pull/52579)\n- Fix volume subpath file mounts over an existing file in the image failing container creation with \"not a directory\". [moby/moby#52584](https://github.com/moby/moby/pull/52584)\n- Sort labels in `volume`, `network`, `config`, and `secret` formatters for deterministic output. [docker/cli#6954](https://github.com/docker/cli/pull/6954)\n- Swarm: Prevent corruption of Raft snapshots when swarm state is large. [moby/moby#52441](https://github.com/moby/moby/pull/52441)\n### Packaging updates\n- Update BuildKit to [v0.30.0](https:...",
+      "memory_unit_text": "In the moby/moby release v29.5.0 (tag: docker-v29.5.0), the release adds new default gvisor-tap-vsock rootless network driver, enables private time namespace for containers by default, adds custom attributes support to local logging driver, supports Unix socket listening on Windows, fixes denial of service from maliciously crafted sparse tar archives (CVE-2026-32288), adds .HealthStatus placeholder to docker ps --format, adds time-namespaces feature flag, fixes containerd auth token requests ignoring per-host TLS settings, signifies daemon reload completion in events, exposes userland proxy diagnostic data in docker info, fixes docker image ls --filter reference to match fully qualified names, fixes orphaned state after leaving autolock-enabled swarm, fixes logging errors showing empty strings, fixes incorrect SHARED SIZE and UNIQUE SIZE in docker system df -v, fixes support for CDI specifications requesting additional group IDs, fixes volume subpath file mounts over existing file, sorts labels in volume/network/config/secret formatters, prevents corruption of Raft snapshots in large swarm state, updates BuildKit to v0.30.0, and updates Go runtime to 1.26.3."
+    },
+    {
+      "memory_node_id": "moby__moby__release__docker_v29_5_1",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:docker-v29.5.1",
+      "tag_name": "docker-v29.5.1",
+      "title": "v29.5.1",
+      "time_hint": "2026-05-18",
+      "published_at": "2026-05-18T17:10:35Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/docker-v29.5.1",
+      "raw_text": "Repository: moby/moby\nRelease: v29.5.1\nTag: docker-v29.5.1; draft: False; prerelease: False; published_at: 2026-05-18T17:10:35Z; created_at: 2026-05-18T14:59:19Z\nRelease notes:\n## 29.5.1\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\n- [docker/cli, 29.5.1 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.5.1)\n- [moby/moby, 29.5.1 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.5.1)\n### Security\nThis release includes fixes for multiple security vulnerabilities affecting Docker Engine.\n- **CVE-2026-41567** Fix a vulnerability in `docker cp` where archive decompression binaries (e.g. `xz`, `unpigz`) were resolved via `PATH` inside the container filesystem while running as host root, allowing a malicious container to execute arbitrary binaries with host root privileges.\n[GHSA-x86f-5xw2-fm2r](https://github.com/moby/moby/security/advisories/GHSA-x86f-5xw2-fm2r)\n- **CVE-2026-41568** Fix a TOCTOU vulnerability in `docker cp` that allowed a container process to create files or directories at arbitrary locations on the host filesystem.\n[GHSA-vp62-88p7-qqf5](https://github.com/moby/moby/security/advisories/GHSA-vp62-88p7-qqf5)\n- **CVE-2026-42306** Fix a TOCTOU vulnerability in `docker cp` that allowed a container process to redirect a bind mount to an arbitrary location on the host filesystem.\n[GHSA-rg2x-37c3-w2rh](https://github.com/moby/moby/security/advisories/GHSA-rg2x-37c3-w2rh)\n### Networking\n- Fix UDP conntrack entries not being deleted when not bound to a specific IP address. [moby/moby#52640](https://github.com/moby/moby/pull/52640)",
+      "memory_unit_text": "In the moby/moby release v29.5.1 (tag: docker-v29.5.1), the release fixes a vulnerability in docker cp where archive decompression binaries were resolved via PATH inside the container filesystem (CVE-2026-41567), fixes a TOCTOU vulnerability in docker cp allowing creation of files/directories at arbitrary host locations (CVE-2026-41568), fixes a TOCTOU vulnerability in docker cp allowing redirect of bind mount to arbitrary host location (CVE-2026-42306), and fixes UDP conntrack entries not being deleted when not bound to a specific IP address."
+    },
+    {
+      "memory_node_id": "moby__moby__release__docker_v29_5_2",
+      "repo": "moby/moby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:docker-v29.5.2",
+      "tag_name": "docker-v29.5.2",
+      "title": "v29.5.2",
+      "time_hint": "2026-05-20",
+      "published_at": "2026-05-20T18:02:30Z",
+      "source_url": "https://github.com/moby/moby/releases/tag/docker-v29.5.2",
+      "raw_text": "Repository: moby/moby\nRelease: v29.5.2\nTag: docker-v29.5.2; draft: False; prerelease: False; published_at: 2026-05-20T18:02:30Z; created_at: 2026-05-20T14:35:30Z\nRelease notes:\n## 29.5.2\nFor a full list of pull requests and changes in this release, refer to the relevant GitHub milestones:\n- [docker/cli, 29.5.2 milestone](https://github.com/docker/cli/issues?q=is%3Aclosed+milestone%3A29.5.2)\n- [moby/moby, 29.5.2 milestone](https://github.com/moby/moby/issues?q=is%3Aclosed+milestone%3A29.5.2)\n### Bug fixes and enhancements\n- Fix `docker cp` failing with \"mkdirat: file exists\" when a container has a bind mount whose target traverses an in-container symlink (e.g. `/var/run -> /run`). [moby/moby#52655](https://github.com/moby/moby/pull/52655)",
+      "memory_unit_text": "In the moby/moby release v29.5.2 (tag: docker-v29.5.2), the release fixes docker cp failing with mkdirat: file exists when a container has a bind mount whose target traverses an in-container symlink."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the moby/moby releases, which release adds experimental NRI support and natively supports gRPC on the listening socket?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v29.2.0-rc.1"
+        },
+        {
+          "option_id": "B",
+          "text": "v29.2.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v29.3.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v29.5.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v29.2.0",
+      "source_chunk_ids": [
+        "moby__moby__release__docker_v29_2_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "moby__moby__release__docker_v29_2_0",
+          "answer_text": "adds experimental NRI support ... natively supports gRPC on the listening socket"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the moby/moby releases, how does the networking fix in v29.1.1 differ from the networking fix in v29.1.5?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v29.1.1 reverts a PR that broke external DNS resolution on custom bridge networks, while v29.1.5 fixes a regression where established network connections could be disrupted during a container's shutdown grace period."
+        },
+        {
+          "option_id": "B",
+          "text": "v29.1.1 fixes port mappings in rootless mode, while v29.1.5 fixes DNS config corruption on daemon reload."
+        },
+        {
+          "option_id": "C",
+          "text": "v29.1.1 fixes --publish-all for Windows containers, while v29.1.5 fixes UDP conntrack entries not being deleted."
+        },
+        {
+          "option_id": "D",
+          "text": "v29.1.1 fixes container restart when gateway configuration fails, while v29.1.5 fixes encrypted overlay networks not passing traffic."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v29.1.1 reverts a PR that broke external DNS resolution on custom bridge networks, while v29.1.5 fixes a regression where established network connections could be disrupted during a container's shutdown grace period.",
+      "source_chunk_ids": [
+        "moby__moby__release__docker_v29_1_1",
+        "moby__moby__release__docker_v29_1_5"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "moby__moby__release__docker_v29_1_1",
+          "answer_text": "reverts a PR breaking external DNS resolution on all custom bridge networks"
+        },
+        {
+          "memory_node_id": "moby__moby__release__docker_v29_1_5",
+          "answer_text": "Fixed a regression where established network connections could be disrupted during a container's shutdown grace period"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the moby/moby release window, order the following release-content states from earliest to latest: (1) a release that updates BuildKit to v0.26.3 and fixes docker run --network none panic on Windows, (2) a release that adds experimental NRI support and natively supports gRPC on the listening socket, (3) a release that fixes a regression where established network connections could be disrupted during a container's shutdown grace period, (4) a release that adds new default gvisor-tap-vsock rootless network driver.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 1 -> 3 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 1 -> 2 -> 4"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 3 -> 2 -> 4",
+      "source_chunk_ids": [
+        "moby__moby__release__docker_v29_1_4",
+        "moby__moby__release__docker_v29_1_5",
+        "moby__moby__release__docker_v29_2_0",
+        "moby__moby__release__docker_v29_5_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "moby__moby__release__docker_v29_1_4",
+          "answer_text": "updates BuildKit to v0.26.3 ... fixes docker run --network none panic on Windows"
+        },
+        {
+          "memory_node_id": "moby__moby__release__docker_v29_1_5",
+          "answer_text": "Fixed a regression where established network connections could be disrupted during a container's shutdown grace period"
+        },
+        {
+          "memory_node_id": "moby__moby__release__docker_v29_2_0",
+          "answer_text": "adds experimental NRI support ... natively supports gRPC on the listening socket"
+        },
+        {
+          "memory_node_id": "moby__moby__release__docker_v29_5_0",
+          "answer_text": "Add new default gvisor-tap-vsock network driver"
+        }
+      ]
+    }
+  ]
+}

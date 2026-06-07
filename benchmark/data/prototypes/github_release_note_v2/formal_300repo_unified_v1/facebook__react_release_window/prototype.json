@@ -1,0 +1,525 @@
+{
+  "prototype_id": "facebook__react_release_window",
+  "domain": "github_release_evolution",
+  "repo": "facebook/react",
+  "source_type": "release_note",
+  "window_title": "facebook/react recent release evolution",
+  "window_summary": "This window tracks the recent facebook/react release stream from v18.3.0 through v19.2.7, including related eslint-plugin-react-hooks releases. It covers new features like Actions, useActionState, Owner Stacks, and Activity, along with numerous React Server Components security and performance improvements.",
+  "chunks": [
+    {
+      "memory_node_id": "facebook__react__release__v18_3_0",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v18.3.0",
+      "tag_name": "v18.3.0",
+      "title": "18.3.0 (April 25, 2024)",
+      "time_hint": "2024-04-26",
+      "published_at": "2024-04-26T19:48:51Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v18.3.0",
+      "raw_text": "Repository: facebook/react\nRelease: 18.3.0 (April 25, 2024)\nTag: v18.3.0; draft: False; prerelease: False; published_at: 2024-04-26T19:48:51Z; created_at: 2024-04-25T16:22:01Z\nRelease notes:\nThis release is identical to 18.2 but adds warnings for deprecated APIs and other changes that are needed for React 19.\nRead the [React 19 Upgrade Guide](https://react.dev/blog/2024/04/25/react-19-upgrade-guide) for more info.\n### React\n- Allow writing to `this.refs` to support string ref codemod [909071](https://github.com/facebook/react/commit/9090712fd3ca4e1099e1f92e67933c2cb4f32552)\n- Warn for deprecated `findDOMNode` outside StrictMode [c3b283](https://github.com/facebook/react/commit/c3b283964108b0e8dbcf1f9eb2e7e67815e39dfb)\n- Warn for deprecated `test-utils` methods [d4ea75](https://github.com/facebook/react/commit/d4ea75dc4258095593b6ac764289f42bddeb835c)\n- Warn for deprecated Legacy Context outside StrictMode [415ee0](https://github.com/facebook/react/commit/415ee0e6ea0fe3e288e65868df2e3241143d5f7f)\n- Warn for deprecated string refs outside StrictMode [#25383](https://github.com/facebook/react/pull/25383)\n- Warn for deprecated `defaultProps` for function components [#25699](https://github.com/facebook/react/pull/25699)\n- Warn when spreading `key` [#25697](https://github.com/facebook/react/pull/25697)\n- Warn when using `act` from `test-utils` [d4ea75](https://github.com/facebook/react/commit/d4ea75dc4258095593b6ac764289f42bddeb835c)\n### React DOM\n- Warn for deprecated `unmountComponentAtNode` [8a015b](https://github.com/facebook/react/commit/8a015b68cc060079878e426610e64e86fb328f8d)\n- Warn for deprecated `renderToStaticNodeStream` [#28874](https://github.com/facebook/react/pull/28874)",
+      "memory_unit_text": "In the facebook/react release v18.3.0, the release is identical to 18.2 but adds warnings for deprecated APIs and other changes needed for React 19. It warns for deprecated findDOMNode, test-utils methods, Legacy Context, string refs, defaultProps for function components, spreading key, and using act from test-utils. In React DOM, it warns for deprecated unmountComponentAtNode and renderToStaticNodeStream."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v18_3_1",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v18.3.1",
+      "tag_name": "v18.3.1",
+      "title": "18.3.1 (April 26, 2024)",
+      "time_hint": "2024-04-26",
+      "published_at": "2024-04-26T19:53:42Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v18.3.1",
+      "raw_text": "Repository: facebook/react\nRelease: 18.3.1 (April 26, 2024)\nTag: v18.3.1; draft: False; prerelease: False; published_at: 2024-04-26T19:53:42Z; created_at: 2024-04-26T16:17:57Z\nRelease notes:\n- Export `act` from `react` [f1338f](https://github.com/facebook/react/commit/f1338f8080abd1386454a10bbf93d67bfe37ce85)",
+      "memory_unit_text": "In the facebook/react release v18.3.1, the release exports act from react."
+    },
+    {
+      "memory_node_id": "facebook__react__release__eslint_plugin_react_hooks_5_0_0",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:eslint-plugin-react-hooks@5.0.0",
+      "tag_name": "eslint-plugin-react-hooks@5.0.0",
+      "title": "eslint-plugin-react-hooks@5.0.0 (Oct 11, 2024)",
+      "time_hint": "2024-10-11",
+      "published_at": "2024-10-11T13:32:09Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/eslint-plugin-react-hooks%405.0.0",
+      "raw_text": "Repository: facebook/react\nRelease: eslint-plugin-react-hooks@5.0.0 (Oct 11, 2024)\nTag: eslint-plugin-react-hooks@5.0.0; draft: False; prerelease: False; published_at: 2024-10-11T13:32:09Z; created_at: 2024-10-11T13:20:25Z\nRelease notes:\nThis release only contains `eslint-plugin-react-hooks`. Notably, new violations and support for ESLint v9 were added.\n## `eslint-plugin-react-hooks`\n* **New Violations:** Component names now need to start with an uppercase letter instead of a non-lowercase letter. This means `_Button` or `_component` are no longer valid. ([@kassens](https://github.com/kassens)) in [#25162](https://github.com/facebook/react/pull/25162)\nFor example, in\n```tsx\nfunction _Component() {\nuseState()\n^^^^^^^^ A React Hook \"useState\" is called in function \"_Component\" which is neither a Component nor a custom React Hook function.\n}\n```\n`_Component` should be renamed to `Component`.\n- Add support for ESLint v9. ([@eps1lon](https://github.com/eps1lon) in [#28773](https://github.com/facebook/react/pull/28773))\n- Consider dispatch from `useActionState` stable. ([@eps1lon](https://github.com/eps1lon) in [#29665](https://github.com/facebook/react/pull/29665))\n- Accept `as` expression in callback. ([@StyleShit](https://github.com/StyleShit) in [#28202](https://github.com/facebook/react/pull/28202))\n- Accept `as` expressions in deps array. ([@StyleShit](https://github.com/StyleShit) in [#28189](https://github.com/facebook/react/pull/28189))\n- Treat `React.use()` the same as `use()`. ([@kassens](https://github.com/kassens) in [#27769](https://github.com/facebook/react/pull/27769))\n- Move `use()` lint to non-experimental. ([@kassens](https://github.com/kassens) in [#27768](https://github.com/facebook/react/pull/27768))\n- Support Flow `as` expressions. ([@cpojer](https://github.com/cpojer) in [#27590](https://github.com/facebook/react/pull/27590))\n- Allow `useEffect(fn, undefined)`. ([@kassens](https://github.com/kassens) in [#27525](https://github.com/facebook/react/pull/27525))\n- Disallow hooks in async functions. ([@acdlite](https://github.com/acdlite) in [#27045](https://github.com/facebook/react/pull/27045))\n- Rename experimental `useEvent` to `useEffectEvent`. ([@sebmarkbage](https://github.com/sebmarkbage) in [#25881](https://github.com/facebook/react/pull/25881))\n- Lint for presence of `useEvent` functions in dependency lists. ([@poteto](https://github.com/poteto) in [#25512](https://github.com/facebook/react/pull/25512))\n- Check `useEvent` references instead. ([@poteto](https://github.com/poteto) in [#25319](https://github.com/facebook/react/pull/25319))\n- Update `RulesOfHooks` with `useEvent` rules. ([@poteto](https://github.com/poteto) in [#25285](https://github.com/facebook/react/pull/25285))",
+      "memory_unit_text": "In the facebook/react release eslint-plugin-react-hooks@5.0.0, this release only contains eslint-plugin-react-hooks. It adds new violations requiring component names to start with an uppercase letter, support for ESLint v9, considers dispatch from useActionState stable, accepts as expressions in callbacks and deps arrays, treats React.use() the same as use(), moves use() lint to non-experimental, supports Flow as expressions, allows useEffect(fn, undefined), disallows hooks in async functions, renames experimental useEvent to useEffectEvent, and adds linting for useEvent functions in dependency lists."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_0_0",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.0.0",
+      "tag_name": "v19.0.0",
+      "title": "19.0.0 (December 5, 2024)",
+      "time_hint": "2024-12-05",
+      "published_at": "2024-12-05T21:05:14Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.0.0",
+      "raw_text": "Repository: facebook/react\nRelease: 19.0.0 (December 5, 2024)\nTag: v19.0.0; draft: False; prerelease: False; published_at: 2024-12-05T21:05:14Z; created_at: 2024-11-14T16:48:33Z\nRelease notes:\nBelow is a list of all new features, APIs, deprecations, and breaking changes. Read [React 19 release post](https://react.dev/blog/2024/04/25/react-19) and [React 19 upgrade guide](https://react.dev/blog/2024/04/25/react-19-upgrade-guide) for more information.\n> Note: To help make the upgrade to React 19 easier, we’ve published a react@18.3 release that is identical to 18.2 but adds warnings for deprecated APIs and other changes that are needed for React 19. We recommend upgrading to React 18.3.1 first to help identify any issues before upgrading to React 19.\n## New Features\n### React\n* Actions: `startTransition` can now accept async functions. Functions passed to `startTransition` are called “Actions”. A given Transition can include one or more Actions which update state in the background and update the UI with one commit. In addition to updating state, Actions can now perform side effects including async requests, and the Action will wait for the work to finish before finishing the Transition. This feature allows Transitions to include side effects like `fetch()` in the pending state, and provides support for error handling, and optimistic updates.\n* `useActionState`: is a new hook to order Actions inside of a Transition with access to the state of the action, and the pending state. It accepts a reducer that can call Actions, and the initial state used for first render. It also accepts an optional string that is used if the action is passed to a form `action` prop to support progressive enhancement in forms.\n* `useOptimistic`: is a new hook to update state while a Transition is in progress. It returns the state, and a set function that can be called inside a transition to “optimistically” update the state to expected final value immediately while the Transition completes in the background. When the transition finishes, the state is updated to the new value.\n* `use`: is a new API that allows reading resources in render. In React 19, `use` accepts a promise or Context. If provided a promise, `use` will suspend until a value is resolved. `use` can only be used in render but can be called conditionally.\n* `ref` as a prop: Refs can now be used as props, removing the need for `forwardRef`.\n* **Suspense sibling pre-warming**: When a component suspends, React will immediately commit the fallback of the nearest Suspense boundary, without waiting for the entire sibling tree to render. After the fallback commits, React will schedule another render for the suspended siblings to “pre-warm” lazy requests.\n### React DOM Client\n* `<form> action` prop: Form Actions allow you to manage forms automatically and integrate with `useFormStatus`. When a `<form> action` succeeds, React will automatically reset the form for uncontrolled components. The form can be reset manually with the new `requestFormReset` API.\n* `<button> and <input> formAction` prop: Actions can be passed to the `formAction` prop to configure form submission behavior. This allows using different Actions depending on the input.\n* `useFormStatus`: is a new hook that provides the status of the parent `<form> action`, as if the form was a Context provider. The hook returns the values: `pending`, `data`, `method`, and `action`.\n* Support for Document Metadata: We’ve added support for rendering document metadata tags in components natively. React will automatically hoist them into the `<head>` section of the document.\n* Support for Stylesheets: React 19 will ensure stylesheets are inserted into the `<head>` on the client before revealing the content of a Suspense boundary that depends on that stylesheet.\n* Support for async scripts: Async scripts can be rendered anywhere in the component tree and React will handle ordering and deduplication.\n* Support for preloading resources: React 19 ships...",
+      "memory_unit_text": "In the facebook/react release v19.0.0, new features include Actions allowing async functions in startTransition, useActionState hook, useOptimistic hook, use API for reading resources in render, ref as a prop, Suspense sibling pre-warming. React DOM Client adds form action prop, useFormStatus hook, support for document metadata, stylesheets, async scripts, and preloading resources."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_1_0",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.1.0",
+      "tag_name": "v19.1.0",
+      "title": "19.1.0 (March 28, 2025)",
+      "time_hint": "2025-03-28",
+      "published_at": "2025-03-28T21:02:48Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.1.0",
+      "raw_text": "Repository: facebook/react\nRelease: 19.1.0 (March 28, 2025)\nTag: v19.1.0; draft: False; prerelease: False; published_at: 2025-03-28T21:02:48Z; created_at: 2025-03-28T20:31:52Z\nRelease notes:\n### Owner Stack\nAn Owner Stack is a string representing the components that are directly responsible for rendering a particular component. You can log Owner Stacks when debugging or use Owner Stacks to enhance error overlays or other development tools. Owner Stacks are only available in development builds. Component Stacks in production are unchanged.\n* An Owner Stack is a development-only stack trace that helps identify which components are responsible for rendering a particular component. An Owner Stack is distinct from a Component Stacks, which shows the hierarchy of components leading to an error.\n* The [captureOwnerStack API](https://react.dev/reference/react/captureOwnerStack) is only available in development mode and returns a Owner Stack, if available. The API can be used to enhance error overlays or log component relationships when debugging. [#29923](https://github.com/facebook/react/pull/29923), [#32353](https://github.com/facebook/react/pull/32353), [#30306](https://github.com/facebook/react/pull/30306),\n[#32538](https://github.com/facebook/react/pull/32538), [#32529](https://github.com/facebook/react/pull/32529), [#32538](https://github.com/facebook/react/pull/32538)\n### React\n* Enhanced support for Suspense boundaries to be used anywhere, including the client, server, and during hydration. [#32069](https://github.com/facebook/react/pull/32069), [#32163](https://github.com/facebook/react/pull/32163), [#32224](https://github.com/facebook/react/pull/32224), [#32252](https://github.com/facebook/react/pull/32252)\n* Reduced unnecessary client rendering through improved hydration scheduling [#31751](https://github.com/facebook/react/pull/31751)\n* Increased priority of client rendered Suspense boundaries [#31776](https://github.com/facebook/react/pull/31776)\n* Fixed frozen fallback states by rendering unfinished Suspense boundaries on the client. [#31620](https://github.com/facebook/react/pull/31620)\n* Reduced garbage collection pressure by improving Suspense boundary retries. [#31667](https://github.com/facebook/react/pull/31667)\n* Fixed erroneous “Waiting for Paint” log when the passive effect phase was not delayed [#31526](https://github.com/facebook/react/pull/31526)\n* Fixed a regression causing key warnings for flattened positional children in development mode. [#32117](https://github.com/facebook/react/pull/32117)\n* Updated `useId` to use valid CSS selectors, changing format from `:r123:` to `«r123»`. [#32001](https://github.com/facebook/react/pull/32001)\n* Added a dev-only warning for null/undefined created in useEffect, useInsertionEffect, and useLayoutEffect. [#32355](https://github.com/facebook/react/pull/32355)\n* Fixed a bug where dev-only methods were exported in production builds. React.act is no longer available in production builds. [#32200](https://github.com/facebook/react/pull/32200)\n* Improved consistency across prod and dev to improve compatibility with Google Closure Complier and bindings [#31808](https://github.com/facebook/react/pull/31808)\n* Improve passive effect scheduling for consistent task yielding. [#31785](https://github.com/facebook/react/pull/31785)\n* Fixed asserts in React Native when passChildrenWhenCloningPersistedNodes is enabled for OffscreenComponent rendering. [#32528](https://github.com/facebook/react/pull/32528)\n* Fixed component name resolution for Portal [#32640](https://github.com/facebook/react/pull/32640)\n* Added support for beforetoggle and toggle events on the dialog element. #32479 [#32479](https://github.com/facebook/react/pull/32479)\n### React DOM\n* Fixed double warning when the `href` attribute is an empty string [#31783](https://github.com/facebook/react/pull/31783)\n* Fixed an edge case where `getHoistableRoot()` didn’t work properly when the container was a Document [#32321](h...",
+      "memory_unit_text": "In the facebook/react release v19.1.0, it introduces Owner Stack, a development-only stack trace identifying components responsible for rendering. It enhances Suspense boundaries for use anywhere, reduces unnecessary client rendering, increases priority of client rendered Suspense boundaries, fixes frozen fallback states, reduces garbage collection pressure, fixes erroneous 'Waiting for Paint' log, fixes key warnings regression, updates useId format, adds dev-only warning for null/undefined in effects, fixes dev-only methods in production, improves consistency across prod and dev, improves passive effect scheduling, fixes asserts in React Native, fixes component name resolution for Portal, and adds support for beforetoggle and toggle events on dialog element. React DOM fixes double warning for empty href and an edge case with getHoistableRoot()."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_1_1",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.1.1",
+      "tag_name": "v19.1.1",
+      "title": "19.1.1 (July 28, 2025)",
+      "time_hint": "2025-07-28",
+      "published_at": "2025-07-28T15:04:10Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.1.1",
+      "raw_text": "Repository: facebook/react\nRelease: 19.1.1 (July 28, 2025)\nTag: v19.1.1; draft: False; prerelease: False; published_at: 2025-07-28T15:04:10Z; created_at: 2025-07-28T15:00:14Z\nRelease notes:\n### React\n- Fixed Owner Stacks to work with ES2015 function.name semantics ([#33680](https://github.com/facebook/react/pull/33680) by @hoxyq)",
+      "memory_unit_text": "In the facebook/react release v19.1.1, it fixes Owner Stacks to work with ES2015 function.name semantics."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_2_0",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.2.0",
+      "tag_name": "v19.2.0",
+      "title": "19.2.0 (Oct 1, 2025)",
+      "time_hint": "2025-10-01",
+      "published_at": "2025-10-01T21:50:48Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.2.0",
+      "raw_text": "Repository: facebook/react\nRelease: 19.2.0 (Oct 1, 2025)\nTag: v19.2.0; draft: False; prerelease: False; published_at: 2025-10-01T21:50:48Z; created_at: 2025-10-01T21:46:31Z\nRelease notes:\nBelow is a list of all new features, APIs, and bug fixes.\nRead the [React 19.2 release post](https://react.dev/blog/2025/10/01/react-19-2) for more information.\n## New React Features\n- [`<Activity>`](https://react.dev/reference/react/Activity): A new API to hide and restore the UI and internal state of its children.\n- [`useEffectEvent`](https://react.dev/reference/react/useEffectEvent) is a React Hook that lets you extract non-reactive logic into an [Effect Event](https://react.dev/learn/separating-events-from-effects#declaring-an-effect-event).\n- [`cacheSignal`](https://react.dev/reference/react/cacheSignal) (for RSCs) lets your know when the `cache()` lifetime is over.\n- [React Performance tracks](https://react.dev/reference/developer-tooling/react-performance-tracks) appear on the Performance panel’s timeline in your browser developer tools\n## New React DOM Features\n- Added resume APIs for partial pre-rendering with Web Streams:\n- [`resume`](https://react.dev/reference/react-dom/server/resume): to resume a prerender to a stream.\n- [`resumeAndPrerender`](https://react.dev/reference/react-dom/static/resumeAndPrerender): to resume a prerender to HTML.\n- Added resume APIs for partial pre-rendering with Node Streams:\n- [`resumeToPipeableStream`](https://react.dev/reference/react-dom/server/resumeToPipeableStream): to resume a prerender to a stream.\n- [`resumeAndPrerenderToNodeStream`](https://react.dev/reference/react-dom/static/resumeAndPrerenderToNodeStream): to resume a prerender to HTML.\n- Updated [`prerender`](https://react.dev/reference/react-dom/static/prerender) APIs to return a `postponed` state that can be passed to the `resume` APIs.\n## Notable changes\n- React DOM now batches suspense boundary reveals, matching the behavior of client side rendering. This change is especially noticeable when animating the reveal of Suspense boundaries e.g. with the upcoming `<ViewTransition>` Component. React will batch as much reveals as possible before the first paint while trying to hit popular first-contentful paint metrics.\n- Add Node Web Streams (`prerender`, `renderToReadableStream`) to server-side-rendering APIs for Node.js\n- Use underscore instead of `:` IDs generated by useId\n## All Changes\n### React\n- `<Activity />` was developed over many years, starting before `ClassComponent.setState` (@acdlite @sebmarkbage and many others)\n- Stringify context as \"SomeContext\" instead of \"SomeContext.Provider\" (@kassens [#33507](https://github.com/facebook/react/pull/33507))\n- Include stack of cause of React instrumentation errors with `%o` placeholder (@eps1lon [#34198](https://github.com/facebook/react/pull/34198))\n- Fix infinite `useDeferredValue` loop in popstate event (@acdlite [#32821](https://github.com/facebook/react/pull/32821))\n- Fix a bug when an initial value was passed to `useDeferredValue` (@acdlite [#34376](https://github.com/facebook/react/pull/34376))\n- Fix a crash when submitting forms with Client Actions (@sebmarkbage [#33055](https://github.com/facebook/react/pull/33055))\n- Hide/unhide the content of dehydrated suspense boundaries if they resuspend (@sebmarkbage [#32900](https://github.com/facebook/react/pull/32900))\n- Avoid stack overflow on wide trees during Hot Reload (@sophiebits [#34145](https://github.com/facebook/react/pull/34145))\n- Improve Owner and Component stacks in various places (@sebmarkbage, @eps1lon: [#33629](https://github.com/facebook/react/pull/33629), [#33724](https://github.com/facebook/react/pull/33724), [#32735](https://github.com/facebook/react/pull/32735), [#33723](https://github.com/facebook/react/pull/33723))\n- Add `cacheSignal` (@sebmarkbage [#33557](https://github.com/facebook/react/pull/33557))\n### React DOM\n- Block on Suspensey Fonts during reveal of server-side-rendered content (@sebmarkbage [#33342...",
+      "memory_unit_text": "In the facebook/react release v19.2.0, new React features include Activity API to hide and restore UI and internal state, useEffectEvent hook, cacheSignal for RSCs, and React Performance tracks. New React DOM features include resume APIs for partial pre-rendering with Web Streams and Node Streams, and updated prerender APIs returning postponed state. Notable changes include batching suspense boundary reveals, adding Node Web Streams to SSR APIs, and using underscore instead of colon in useId IDs."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_0_1",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.0.1",
+      "tag_name": "v19.0.1",
+      "title": "19.0.1 (December 3rd, 2025)",
+      "time_hint": "2025-12-03",
+      "published_at": "2025-12-03T15:45:53Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.0.1",
+      "raw_text": "Repository: facebook/react\nRelease: 19.0.1 (December 3rd, 2025)\nTag: v19.0.1; draft: False; prerelease: False; published_at: 2025-12-03T15:45:53Z; created_at: 2025-12-03T15:42:54Z\nRelease notes:\n## React Server Components\n- Bring React Server Component fixes to Server Actions (@sebmarkbage [#35277](https://github.com/facebook/react/pull/35277))",
+      "memory_unit_text": "In the facebook/react release v19.0.1, it brings React Server Component fixes to Server Actions."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_1_2",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.1.2",
+      "tag_name": "v19.1.2",
+      "title": "19.1.2 (December 3rd, 2025)",
+      "time_hint": "2025-12-03",
+      "published_at": "2025-12-03T15:45:57Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.1.2",
+      "raw_text": "Repository: facebook/react\nRelease: 19.1.2 (December 3rd, 2025)\nTag: v19.1.2; draft: False; prerelease: False; published_at: 2025-12-03T15:45:57Z; created_at: 2025-12-03T15:42:19Z\nRelease notes:\n## React Server Components\n- Bring React Server Component fixes to Server Actions (@sebmarkbage [#35277](https://github.com/facebook/react/pull/35277))",
+      "memory_unit_text": "In the facebook/react release v19.1.2, it brings React Server Component fixes to Server Actions."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_2_1",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.2.1",
+      "tag_name": "v19.2.1",
+      "title": "19.2.1 (December 3rd, 2025)",
+      "time_hint": "2025-12-03",
+      "published_at": "2025-12-03T15:46:02Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.2.1",
+      "raw_text": "Repository: facebook/react\nRelease: 19.2.1 (December 3rd, 2025)\nTag: v19.2.1; draft: False; prerelease: False; published_at: 2025-12-03T15:46:02Z; created_at: 2025-12-03T15:38:19Z\nRelease notes:\n## React Server Components\n- Bring React Server Component fixes to Server Actions (@sebmarkbage [#35277](https://github.com/facebook/react/pull/35277))",
+      "memory_unit_text": "In the facebook/react release v19.2.1, it brings React Server Component fixes to Server Actions."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_2_2",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.2.2",
+      "tag_name": "v19.2.2",
+      "title": "19.2.2 (December 11th, 2025)",
+      "time_hint": "2025-12-11",
+      "published_at": "2025-12-11T20:15:52Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.2.2",
+      "raw_text": "Repository: facebook/react\nRelease: 19.2.2 (December 11th, 2025)\nTag: v19.2.2; draft: False; prerelease: False; published_at: 2025-12-11T20:15:52Z; created_at: 2025-12-11T20:14:38Z\nRelease notes:\n## React Server Components\n- Move `react-server-dom-webpack/*.unbundled` to private `react-server-dom-unbundled` (@eps1lon https://github.com/facebook/react/pull/35290)\n- Patch Promise cycles and toString on Server Functions (@sebmarkbage, @unstubbable [#35289](https://github.com/facebook/react/pull/35289), [#35345](https://github.com/facebook/react/pull/35345))",
+      "memory_unit_text": "In the facebook/react release v19.2.2, it moves react-server-dom-webpack/*.unbundled to private react-server-dom-unbundled and patches Promise cycles and toString on Server Functions."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_1_3",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.1.3",
+      "tag_name": "v19.1.3",
+      "title": "19.1.3 (December 11th, 2025)",
+      "time_hint": "2025-12-11",
+      "published_at": "2025-12-11T20:26:39Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.1.3",
+      "raw_text": "Repository: facebook/react\nRelease: 19.1.3 (December 11th, 2025)\nTag: v19.1.3; draft: False; prerelease: False; published_at: 2025-12-11T20:26:39Z; created_at: 2025-12-11T20:16:40Z\nRelease notes:\n## React Server Components\n- Move `react-server-dom-webpack/*.unbundled` to private `react-server-dom-unbundled` (@eps1lon [#35290](https://github.com/facebook/react/pull/35290))\n- Patch Promise cycles and toString on Server Functions (@sebmarkbage, @unstubbable [#35289](https://github.com/facebook/react/pull/35289), [#35345](https://github.com/facebook/react/pull/35345))",
+      "memory_unit_text": "In the facebook/react release v19.1.3, it moves react-server-dom-webpack/*.unbundled to private react-server-dom-unbundled and patches Promise cycles and toString on Server Functions."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_0_2",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.0.2",
+      "tag_name": "v19.0.2",
+      "title": "19.0.2 (December 11th, 2025)",
+      "time_hint": "2025-12-11",
+      "published_at": "2025-12-11T20:27:21Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.0.2",
+      "raw_text": "Repository: facebook/react\nRelease: 19.0.2 (December 11th, 2025)\nTag: v19.0.2; draft: False; prerelease: False; published_at: 2025-12-11T20:27:21Z; created_at: 2025-12-11T20:22:03Z\nRelease notes:\n## React Server Components\n- Patch Promise cycles and toString on Server Functions (@sebmarkbage, @unstubbable [#35289](https://github.com/facebook/react/pull/35289), [#35345](https://github.com/facebook/react/pull/35345))",
+      "memory_unit_text": "In the facebook/react release v19.0.2, it patches Promise cycles and toString on Server Functions."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_2_3",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.2.3",
+      "tag_name": "v19.2.3",
+      "title": "19.2.3 (December 11th, 2025)",
+      "time_hint": "2025-12-11",
+      "published_at": "2025-12-11T23:57:59Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.2.3",
+      "raw_text": "Repository: facebook/react\nRelease: 19.2.3 (December 11th, 2025)\nTag: v19.2.3; draft: False; prerelease: False; published_at: 2025-12-11T23:57:59Z; created_at: 2025-12-11T23:56:08Z\nRelease notes:\n## React Server Components\n- Add extra loop protection to React Server Functions (@sebmarkbage [#35351](https://github.com/facebook/react/pull/35351))",
+      "memory_unit_text": "In the facebook/react release v19.2.3, it adds extra loop protection to React Server Functions."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_1_4",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.1.4",
+      "tag_name": "v19.1.4",
+      "title": "19.1.4 (December 11th, 2025)",
+      "time_hint": "2025-12-12",
+      "published_at": "2025-12-12T00:11:45Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.1.4",
+      "raw_text": "Repository: facebook/react\nRelease: 19.1.4 (December 11th, 2025)\nTag: v19.1.4; draft: False; prerelease: False; published_at: 2025-12-12T00:11:45Z; created_at: 2025-12-12T00:07:35Z\nRelease notes:\n## React Server Components\n- Add extra loop protection to React Server Functions (@sebmarkbage [#35351](https://github.com/facebook/react/pull/35351))",
+      "memory_unit_text": "In the facebook/react release v19.1.4, it adds extra loop protection to React Server Functions."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_0_3",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.0.3",
+      "tag_name": "v19.0.3",
+      "title": "19.0.3 (December 11th, 2025)",
+      "time_hint": "2025-12-12",
+      "published_at": "2025-12-12T00:12:32Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.0.3",
+      "raw_text": "Repository: facebook/react\nRelease: 19.0.3 (December 11th, 2025)\nTag: v19.0.3; draft: False; prerelease: False; published_at: 2025-12-12T00:12:32Z; created_at: 2025-12-12T00:10:39Z\nRelease notes:\n## React Server Components\n- Add extra loop protection to React Server Functions (@sebmarkbage [#35351](https://github.com/facebook/react/pull/35351))",
+      "memory_unit_text": "In the facebook/react release v19.0.3, it adds extra loop protection to React Server Functions."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_0_4",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.0.4",
+      "tag_name": "v19.0.4",
+      "title": "19.0.4 (January 26th, 2026)",
+      "time_hint": "2026-01-26",
+      "published_at": "2026-01-26T18:29:19Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.0.4",
+      "raw_text": "Repository: facebook/react\nRelease: 19.0.4 (January 26th, 2026)\nTag: v19.0.4; draft: False; prerelease: False; published_at: 2026-01-26T18:29:19Z; created_at: 2026-01-26T17:04:38Z\nRelease notes:\n## React Server Components\n- Add more DoS mitigations to Server Actions, and harden Server Components ([#35632](https://github.com/facebook/react/pull/35632) by @gnoff, @lubieowoce, @sebmarkbage, @unstubbable)",
+      "memory_unit_text": "In the facebook/react release v19.0.4, it adds more DoS mitigations to Server Actions and hardens Server Components."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_1_5",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.1.5",
+      "tag_name": "v19.1.5",
+      "title": "19.1.5 (January 26th, 2026)",
+      "time_hint": "2026-01-26",
+      "published_at": "2026-01-26T18:29:34Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.1.5",
+      "raw_text": "Repository: facebook/react\nRelease: 19.1.5 (January 26th, 2026)\nTag: v19.1.5; draft: False; prerelease: False; published_at: 2026-01-26T18:29:34Z; created_at: 2026-01-26T17:04:46Z\nRelease notes:\n## React Server Components\n- Add more DoS mitigations to Server Actions, and harden Server Components ([#35632](https://github.com/facebook/react/pull/35632) by @gnoff, @lubieowoce, @sebmarkbage, @unstubbable)",
+      "memory_unit_text": "In the facebook/react release v19.1.5, it adds more DoS mitigations to Server Actions and hardens Server Components."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_2_4",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.2.4",
+      "tag_name": "v19.2.4",
+      "title": "19.2.4 (January 26th, 2026)",
+      "time_hint": "2026-01-26",
+      "published_at": "2026-01-26T18:29:43Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.2.4",
+      "raw_text": "Repository: facebook/react\nRelease: 19.2.4 (January 26th, 2026)\nTag: v19.2.4; draft: False; prerelease: False; published_at: 2026-01-26T18:29:43Z; created_at: 2026-01-26T17:04:55Z\nRelease notes:\n## React Server Components\n- Add more DoS mitigations to Server Actions, and harden Server Components ([#35632](https://github.com/facebook/react/pull/35632) by @gnoff, @lubieowoce, @sebmarkbage, @unstubbable)",
+      "memory_unit_text": "In the facebook/react release v19.2.4, it adds more DoS mitigations to Server Actions and hardens Server Components."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_0_5",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.0.5",
+      "tag_name": "v19.0.5",
+      "title": "19.0.5 (April 8th, 2026)",
+      "time_hint": "2026-04-08",
+      "published_at": "2026-04-08T18:49:11Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.0.5",
+      "raw_text": "Repository: facebook/react\nRelease: 19.0.5 (April 8th, 2026)\nTag: v19.0.5; draft: False; prerelease: False; published_at: 2026-04-08T18:49:11Z; created_at: 2026-04-08T14:18:28Z\nRelease notes:\n## React Server Components\n- Add more cycle protections ([#36236](https://github.com/facebook/react/pull/36236) by @eps1lon and @unstubbable)",
+      "memory_unit_text": "In the facebook/react release v19.0.5, it adds more cycle protections."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_1_6",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.1.6",
+      "tag_name": "v19.1.6",
+      "title": "19.1.6 (April 8th, 2026)",
+      "time_hint": "2026-04-08",
+      "published_at": "2026-04-08T18:49:16Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.1.6",
+      "raw_text": "Repository: facebook/react\nRelease: 19.1.6 (April 8th, 2026)\nTag: v19.1.6; draft: False; prerelease: False; published_at: 2026-04-08T18:49:16Z; created_at: 2026-04-08T14:18:23Z\nRelease notes:\n## React Server Components\n- Add more cycle protections ([#36236](https://github.com/facebook/react/pull/36236) by @eps1lon and @unstubbable)",
+      "memory_unit_text": "In the facebook/react release v19.1.6, it adds more cycle protections."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_2_5",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.2.5",
+      "tag_name": "v19.2.5",
+      "title": "19.2.5 (April 8th, 2026)",
+      "time_hint": "2026-04-08",
+      "published_at": "2026-04-08T18:49:20Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.2.5",
+      "raw_text": "Repository: facebook/react\nRelease: 19.2.5 (April 8th, 2026)\nTag: v19.2.5; draft: False; prerelease: False; published_at: 2026-04-08T18:49:20Z; created_at: 2026-04-08T14:18:18Z\nRelease notes:\n## React Server Components\n- Add more cycle protections ([#36236](https://github.com/facebook/react/pull/36236) by @eps1lon and @unstubbable)",
+      "memory_unit_text": "In the facebook/react release v19.2.5, it adds more cycle protections."
+    },
+    {
+      "memory_node_id": "facebook__react__release__eslint_plugin_react_hooks_7_1_0",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:eslint-plugin-react-hooks@7.1.0",
+      "tag_name": "eslint-plugin-react-hooks@7.1.0",
+      "title": "eslint-plugin-react-hooks@7.1.0 (April 16, 2026)",
+      "time_hint": "2026-04-17",
+      "published_at": "2026-04-17T19:41:40Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/eslint-plugin-react-hooks%407.1.0",
+      "raw_text": "Repository: facebook/react\nRelease: eslint-plugin-react-hooks@7.1.0 (April 16, 2026)\nTag: eslint-plugin-react-hooks@7.1.0; draft: False; prerelease: False; published_at: 2026-04-17T19:41:40Z; created_at: 2026-04-16T22:03:13Z\nRelease notes:\nThis release adds ESLint v10 support, improves performance by skipping compilation for non-React files, and includes compiler lint improvements including better `set-state-in-effect` detection, improved ref validation, and more helpful error reporting.\n- Add ESLint v10 support. ([@azat-io](https://github.com/azat-io) in [#35720](https://github.com/facebook/react/pull/35720))\n- Skip compilation for non-React files to improve performance. ([@josephsavona](https://github.com/josephsavona) in [#35589](https://github.com/facebook/react/pull/35589))\n- Fix exhaustive deps bug with Flow type casting. ([@jorge-cab](https://github.com/jorge-cab) in [#35691](https://github.com/facebook/react/pull/35691))\n- Fix `useEffectEvent` checks in component syntax. ([@jbrown215](https://github.com/jbrown215) in [#35041](https://github.com/facebook/react/pull/35041))\n- Improved `set-state-in-effect` validation with fewer false negatives. ([@jorge-cab](https://github.com/jorge-cab) in [#35134](https://github.com/facebook/react/pull/35134), [@josephsavona](https://github.com/josephsavona) in [#35147](https://github.com/facebook/react/pull/35147), [@jackpope](https://github.com/jackpope) in [#35214](https://github.com/facebook/react/pull/35214), [@chesnokov-tony](https://github.com/chesnokov-tony) in [#35419](https://github.com/facebook/react/pull/35419), [@jsleitor](https://github.com/jsleitor) in [#36107](https://github.com/facebook/react/pull/36107))\n- Improved ref validation for non-mutating functions and event handler props. ([@josephsavona](https://github.com/josephsavona) in [#35893](https://github.com/facebook/react/pull/35893), [@kolvian](https://github.com/kolvian) in [#35062](https://github.com/facebook/react/pull/35062))\n- Compiler now reports all errors instead of stopping at the first. ([@josephsavona](https://github.com/josephsavona) in [#35873](https://github.com/facebook/react/pull/35873)–[#35884](https://github.com/facebook/react/pull/35884))\n- Improved source locations and error display in compiler diagnostics. ([@nathanmarks](https://github.com/nathanmarks) in [#35348](https://github.com/facebook/react/pull/35348), [@josephsavona](https://github.com/josephsavona) in [#34963](https://github.com/facebook/react/pull/34963))",
+      "memory_unit_text": "In the facebook/react release eslint-plugin-react-hooks@7.1.0, it adds ESLint v10 support, skips compilation for non-React files to improve performance, fixes exhaustive deps bug with Flow type casting, fixes useEffectEvent checks in component syntax, improves set-state-in-effect validation with fewer false negatives, improves ref validation for non-mutating functions and event handler props, makes compiler report all errors instead of stopping at the first, and improves source locations and error display in compiler diagnostics."
+    },
+    {
+      "memory_node_id": "facebook__react__release__eslint_plugin_react_hooks_7_1_1",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:eslint-plugin-react-hooks@7.1.1",
+      "tag_name": "eslint-plugin-react-hooks@7.1.1",
+      "title": "eslint-plugin-react-hooks@7.1.1 (April 17, 2026)",
+      "time_hint": "2026-04-17",
+      "published_at": "2026-04-17T20:51:48Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/eslint-plugin-react-hooks%407.1.1",
+      "raw_text": "Repository: facebook/react\nRelease: eslint-plugin-react-hooks@7.1.1 (April 17, 2026)\nTag: eslint-plugin-react-hooks@7.1.1; draft: False; prerelease: False; published_at: 2026-04-17T20:51:48Z; created_at: 2026-04-17T16:43:35Z\nRelease notes:\n**Note:** 7.1.0 accidentally removed the `component-hook-factories` rule, causing errors for users who referenced it in their ESLint config. This is now fixed.\n- Add deprecated no-op `component-hook-factories` rule for backwards compatibility. ([@mofeiZ](https://github.com/mofeiZ) in [#36307](https://github.com/facebook/react/pull/36307))",
+      "memory_unit_text": "In the facebook/react release eslint-plugin-react-hooks@7.1.1, it adds a deprecated no-op component-hook-factories rule for backwards compatibility, fixing the accidental removal in 7.1.0."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_0_6",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.0.6",
+      "tag_name": "v19.0.6",
+      "title": "19.0.6 (May 6th, 2026)",
+      "time_hint": "2026-05-06",
+      "published_at": "2026-05-06T16:27:36Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.0.6",
+      "raw_text": "Repository: facebook/react\nRelease: 19.0.6 (May 6th, 2026)\nTag: v19.0.6; draft: False; prerelease: False; published_at: 2026-05-06T16:27:36Z; created_at: 2026-05-06T14:24:43Z\nRelease notes:\n## React Server Components\n- Type hardening and performance improvements\n([#36425](https://github.com/facebook/react/pull/36425) by @eps1lon and @unstubbable)",
+      "memory_unit_text": "In the facebook/react release v19.0.6, it includes type hardening and performance improvements for React Server Components."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_1_7",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.1.7",
+      "tag_name": "v19.1.7",
+      "title": "19.1.7 (May 6th, 2026)",
+      "time_hint": "2026-05-06",
+      "published_at": "2026-05-06T16:27:39Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.1.7",
+      "raw_text": "Repository: facebook/react\nRelease: 19.1.7 (May 6th, 2026)\nTag: v19.1.7; draft: False; prerelease: False; published_at: 2026-05-06T16:27:39Z; created_at: 2026-05-06T14:24:18Z\nRelease notes:\n## React Server Components\n- Type hardening and performance improvements\n([#36425](https://github.com/facebook/react/pull/36425) by @eps1lon and @unstubbable)",
+      "memory_unit_text": "In the facebook/react release v19.1.7, it includes type hardening and performance improvements for React Server Components."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_2_6",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.2.6",
+      "tag_name": "v19.2.6",
+      "title": "19.2.6 (May 6th, 2026)",
+      "time_hint": "2026-05-06",
+      "published_at": "2026-05-06T16:27:45Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.2.6",
+      "raw_text": "Repository: facebook/react\nRelease: 19.2.6 (May 6th, 2026)\nTag: v19.2.6; draft: False; prerelease: False; published_at: 2026-05-06T16:27:45Z; created_at: 2026-05-06T14:23:32Z\nRelease notes:\n## React Server Components\n- Type hardening and performance improvements\n([#36425](https://github.com/facebook/react/pull/36425) by @eps1lon and @unstubbable)",
+      "memory_unit_text": "In the facebook/react release v19.2.6, it includes type hardening and performance improvements for React Server Components."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_0_7",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.0.7",
+      "tag_name": "v19.0.7",
+      "title": "19.0.7 (June 1st, 2026)",
+      "time_hint": "2026-06-01",
+      "published_at": "2026-06-01T18:04:09Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.0.7",
+      "raw_text": "Repository: facebook/react\nRelease: 19.0.7 (June 1st, 2026)\nTag: v19.0.7; draft: False; prerelease: False; published_at: 2026-06-01T18:04:09Z; created_at: 2026-06-01T17:44:35Z\nRelease notes:\n## React Server Components\n- Fixed missing `FormData` entries in Server Actions which regressed in 19.0.6\n([#36568](https://github.com/facebook/react/pull/36568) by @unstubbable)",
+      "memory_unit_text": "In the facebook/react release v19.0.7, it fixes missing FormData entries in Server Actions which regressed in 19.0.6."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_1_8",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.1.8",
+      "tag_name": "v19.1.8",
+      "title": "19.1.8 (June 1st, 2026)",
+      "time_hint": "2026-06-01",
+      "published_at": "2026-06-01T18:04:14Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.1.8",
+      "raw_text": "Repository: facebook/react\nRelease: 19.1.8 (June 1st, 2026)\nTag: v19.1.8; draft: False; prerelease: False; published_at: 2026-06-01T18:04:14Z; created_at: 2026-06-01T17:44:40Z\nRelease notes:\n## React Server Components\n- Fixed missing `FormData` entries in Server Actions which regressed in 19.1.7\n([#36567](https://github.com/facebook/react/pull/36567) by @unstubbable)",
+      "memory_unit_text": "In the facebook/react release v19.1.8, it fixes missing FormData entries in Server Actions which regressed in 19.1.7."
+    },
+    {
+      "memory_node_id": "facebook__react__release__v19_2_7",
+      "repo": "facebook/react",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v19.2.7",
+      "tag_name": "v19.2.7",
+      "title": "19.2.7 (June 1st, 2026)",
+      "time_hint": "2026-06-01",
+      "published_at": "2026-06-01T18:04:24Z",
+      "source_url": "https://github.com/facebook/react/releases/tag/v19.2.7",
+      "raw_text": "Repository: facebook/react\nRelease: 19.2.7 (June 1st, 2026)\nTag: v19.2.7; draft: False; prerelease: False; published_at: 2026-06-01T18:04:24Z; created_at: 2026-06-01T17:44:50Z\nRelease notes:\n## React Server Components\n- Fixed missing `FormData` entries in Server Actions which regressed in 19.2.6\n([#36566](https://github.com/facebook/react/pull/36566) by @unstubbable)",
+      "memory_unit_text": "In the facebook/react release v19.2.7, it fixes missing FormData entries in Server Actions which regressed in 19.2.6."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the facebook/react releases, which release introduces the Owner Stack feature?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v19.0.0"
+        },
+        {
+          "option_id": "B",
+          "text": "v19.1.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v19.2.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v18.3.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v19.1.0",
+      "source_chunk_ids": [
+        "facebook__react__release__v19_1_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "facebook__react__release__v19_1_0",
+          "answer_text": "introduces Owner Stack, a development-only stack trace identifying components responsible for rendering"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the facebook/react releases, how does the eslint-plugin-react-hooks@5.0.0 release differ from the eslint-plugin-react-hooks@7.1.0 release?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "5.0.0 adds support for ESLint v9 and renames useEvent to useEffectEvent, while 7.1.0 adds ESLint v10 support and improves set-state-in-effect validation."
+        },
+        {
+          "option_id": "B",
+          "text": "5.0.0 introduces the Owner Stack feature, while 7.1.0 adds the Activity API."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only update the React core without changes to the ESLint plugin."
+        },
+        {
+          "option_id": "D",
+          "text": "5.0.0 removes the component-hook-factories rule, while 7.1.0 adds it back."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "5.0.0 adds support for ESLint v9 and renames useEvent to useEffectEvent, while 7.1.0 adds ESLint v10 support and improves set-state-in-effect validation.",
+      "source_chunk_ids": [
+        "facebook__react__release__eslint_plugin_react_hooks_5_0_0",
+        "facebook__react__release__eslint_plugin_react_hooks_7_1_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "facebook__react__release__eslint_plugin_react_hooks_5_0_0",
+          "answer_text": "adds support for ESLint v9, renames experimental useEvent to useEffectEvent"
+        },
+        {
+          "memory_node_id": "facebook__react__release__eslint_plugin_react_hooks_7_1_0",
+          "answer_text": "adds ESLint v10 support, improved set-state-in-effect validation with fewer false negatives"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the facebook/react release window, order the following release-content states from earliest to latest: (1) a release that adds extra loop protection to React Server Functions, (2) a release that adds more DoS mitigations to Server Actions and hardens Server Components, (3) a release that includes type hardening and performance improvements for React Server Components.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 3 -> 1"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "2 -> 1 -> 3",
+      "source_chunk_ids": [
+        "facebook__react__release__v19_0_4",
+        "facebook__react__release__v19_0_3",
+        "facebook__react__release__v19_0_6"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "facebook__react__release__v19_0_4",
+          "answer_text": "adds more DoS mitigations to Server Actions, and hardens Server Components"
+        },
+        {
+          "memory_node_id": "facebook__react__release__v19_0_3",
+          "answer_text": "adds extra loop protection to React Server Functions"
+        },
+        {
+          "memory_node_id": "facebook__react__release__v19_0_6",
+          "answer_text": "Type hardening and performance improvements"
+        }
+      ]
+    }
+  ]
+}

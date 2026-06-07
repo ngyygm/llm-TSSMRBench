@@ -1,0 +1,530 @@
+{
+  "prototype_id": "meilisearch__meilisearch_release_window",
+  "domain": "github_release_evolution",
+  "repo": "meilisearch/meilisearch",
+  "source_type": "release_note",
+  "window_title": "meilisearch/meilisearch recent release evolution",
+  "window_summary": "This window tracks the recent meilisearch/meilisearch release stream from v1.29.0 through v1.45.1, covering new features like network scaling, vector store improvements, ranking rule enhancements, and security fixes.",
+  "chunks": [
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_29_0",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.29.0",
+      "tag_name": "v1.29.0",
+      "title": "v1.29.0 🐑",
+      "time_hint": "2025-12-08",
+      "published_at": "2025-12-08T09:36:26Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.29.0",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.29.0 🐑\nTag: v1.29.0; draft: False; prerelease: False; published_at: 2025-12-08T09:36:26Z; created_at: 2025-12-08T08:01:41Z\nRelease notes:\n## Build compatibility note\nThe git binary must now be present at build time to populate the `commitSha1` field of the `/version` field.\nThis change was made for build performance reasons.\nby @dureuill in  https://github.com/meilisearch/meilisearch/pull/6030\n## 🌈 Improvements\n### Another piece of the settings indexer is available: searchable and exact attributes\nThe new settings indexer scales better, supports near-instant cancellations and displays the progress of the indexing operation.\nPreviously, the new settings indexer was enabled only if the **only** changes in a settings batch were to embedder settings. In Meilisearch v1.29.0, the new settings indexer will be enabled if the change is any combination of:\n- `searchableAttributes`\n- `exactAttributes`\n- `proximityPrecision`\n- `embedders` (as before)\nAny other change to settings appearing in a batch will cause the batch to use the legacy settings indexer.\nAdditionally, the new settings indexer is currently disabled by default for Cloud users.\nOSS users who would like to disable the new settings indexer should pass the `MEILI_EXPERIMENTAL_NO_EDITION_2024_FOR_SETTINGS` environment variable to `true`.\nby @Kerollmops in https://github.com/meilisearch/meilisearch/pull/5983\n### Enable the new vector store by default for new indexes\n[Meilisearch v1.21.0](https://github.com/meilisearch/meilisearch/releases/tag/v1.21.0) introduced a new vector store backend providing better performance and relevancy.\nStarting with v1.29.0, any newly created index will default to the new backend.\nExisting indexes will be left unchanged.\nIt is still possible to explicitly choose the vector store backend, please refer to [the relevant experimental feature discussion page](https://github.com/orgs/meilisearch/discussions/860).\nby @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6004\n### Support more models for `huggingFace` embedder\nYou can now select models with the XLM Roberta architecture when generating embeddings locally on CPU or GPU with the `huggingFace` embedder.\nby @qdequele in https://github.com/meilisearch/meilisearch/pull/6018\n## 🦋 Bug fixes\n* Fix rare internal error in the experimental vector store by @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6032\n## 🔧 Maintenance and Misc.\nLast week was a Quality of Life week, and while we still had improvements in the pipe, the bulk of our work was dedicated to maintenance tasks.\nMost notably, the CI is now faster, going from over one hour to less than 30 minutes, and also more reliable as it automatically tests the dumpless upgrade.\n* New workload to run declarative tests. This is, in particular, very useful to automatically test the dumpless upgrade. By @Mubelotix in https://github.com/meilisearch/meilisearch/pull/5861\n* The code that applies the dumpless upgrade migrations was rewritten to make it easier to maintain. By @dureuill in https://github.com/meilisearch/meilisearch/pull/6029\n* We no longer run macOS and Windows tests at PR time. These CI jobs were very slow and given their limited impact they will only be run on the nightly builds. Ny @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6021\n* Send notifications for Kubernetes integration when releasing by @curquiza in https://github.com/meilisearch/meilisearch/pull/6023\n* Introduce `xtask` sub-command to generate prototype tag names with the expected nomenclature by @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6022\n* Fix misc. CI issues by @dureuill in https://github.com/meilisearch/meilisearch/pull/6026\n## Asset availability note\n⚠️ The Meilisearch binary is not available for `meilisearch-enterprise-macos-amd64` and `meilisearch-macos-amd64` due to [a compilation oversight](https://github.com/meilisearch/meilisearch/actions/runs/20023402416/jo...",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.29.0, the new settings indexer is extended to support searchableAttributes, exactAttributes, and proximityPrecision in addition to embedders. The new vector store backend becomes the default for newly created indexes. Support for XLM Roberta architecture models is added for the huggingFace embedder. A build compatibility note requires the git binary at build time to populate the commitSha1 field. Bug fixes include a rare internal error in the experimental vector store. Maintenance work improves CI speed and reliability."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_30_0",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.30.0",
+      "tag_name": "v1.30.0",
+      "title": "v1.30.0 🐸",
+      "time_hint": "2025-12-15",
+      "published_at": "2025-12-15T13:03:19Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.30.0",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.30.0 🐸\nTag: v1.30.0; draft: False; prerelease: False; published_at: 2025-12-15T13:03:19Z; created_at: 2025-12-15T11:09:56Z\nRelease notes:\n# 🌈 Improvements\n## Up and down network scaling\nSince [v1.19.0](https://github.com/meilisearch/meilisearch/releases/tag/v1.19.0), Meilisearch [Enterprise Edition](https://github.com/meilisearch/meilisearch/blob/main/README.md#-enterprise-edition-ee) allows the automatic sharding of documents over multiple Meilisearch instances, enabling scaling to more documents than a single instance would accommodate.\nMeilisearch v1.30.0 adds the ability to modify the number of participants in sharding, without having to start over sending documents to a new cluster containing the number of desired machines.\nTo make this possible, Meilisearch v1.30.0 introduces _breaking changes_. These breaking changes only affect the users of the experimental `network` feature who enabled automatic sharding (`network.sharding = true`). Users of the stable features are not affected.\n### Usage\n<details>\n<summary>Setting up the initial network</summary>\n1. Pick a leader machine that will receive all tasks. Calling a route that creates a dcument, settings or network-related task on a machine that is not the leader will now return an error.\n2. Send your network topology to the leader by calling `PATCH /network`:\n```jsonc\n// PATCH /network\n{\n\"self\": \"ms0\",\n\"leader\": \"ms0\", // must be equal to `self`\n\"remotes\": {\n\"ms0\": {\n\"url\": \"URL_OF_MS0\",\n\"searchApiKey\": \"SEARCH_API_KEY_OF_MS0\",\n\"writeApiKey\": \"WRITE_API_KEY_OF_MS0\",\n},\n\"ms1\": {\n\"url\": \"URL_OF_MS1\",\n\"searchApiKey\": \"SEARCH_API_KEY_OF_MS1\",\n\"writeApiKey\": \"WRITE_API_KEY_OF_MS1\",\n}\n}\n}\n```\n3. The network is automatically propagated to other members of the network.\n4. Send settings and documents as usual, but exclusively to the leader. They will be propagated to all participants in the network, and each participant will process a piece of the documents.\n</details>\n<details>\n<details>\n<summary>Upgrading from v1.29 or earlier</summary>\n1. We recommend using the experimental dumpless upgrade feature to go from Meilisearch v1.13+ to Meilisearch v1.29.\n2. When using the experimental dumpless upgrade and the Meilisearch instance already has a `network` instance with `sharding` set to `true`, then the `network` object will be modified so that the leader is the first remote in alphabetic order. For instance, if you network contains remotes: `A`, `B`, `C`, the leader will be set to `A`.\n</details>\n<summary>Adding a new remote</summary>\n1. Call `PATCH /network` on the leader with the information about the new remote:\n```jsonc\n{\n\"remotes\": {\n// add information about the new remote\n\"ms2\": {\n\"url\": \"URL_OF_MS2\",\n\"searchApiKey\": \"SEARCH_API_KEY_OF_MS2\",\n\"writeApiKey\": \"WRITE_API_KEY_OF_MS2\",\n}\n// information about existing remotes does not need to be repeated\n}\n```\n4. The new network will be propagated from the leader to all remotes (including the new remote `ms2`).\n5. All remotes will register a new `networkTopologyChange` task that will \"rebalance\" the documents between the existing remotes and the new remote, that is, `ms0` and `ms1` will send parts of their documents to `ms2`\n</details>\n<details>\n<summary>Removing a remote</summary>\n1. Call `PATCH /network` on the leader by setting any removed remote to `null`:\n```jsonc\n{\n\"remotes\": {\n// set removed remote to null\n\"ms2\": null\n// information about existing remotes does not need to be repeated\n}\n```\n2. The new network will be propagated from the leader to all remotes (including to the old remote `ms2` that will then no longer participate in the network).\n3. All remotes will register a new `networkTopologyChange` task that will \"rebalance\" the documents between the remaining remotes, that is, `ms2` will send its documents between `ms0` and `ms1`\n</details>\n### List of changes\n<details>\n<summary>List of changes, some of which are breaking</summary>\n1. Breaking change: The `Network` object r...",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.30.0, the Enterprise Edition adds the ability to modify the number of participants in sharding without starting over, introducing breaking changes for users of the experimental network feature with automatic sharding. The release details how to set up the initial network, upgrade from earlier versions, add a new remote, and remove a remote. The Network object is restructured, and a leader machine must receive all tasks."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_30_1",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.30.1",
+      "tag_name": "v1.30.1",
+      "title": "v1.30.1 🐸",
+      "time_hint": "2025-12-18",
+      "published_at": "2025-12-18T16:38:20Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.30.1",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.30.1 🐸\nTag: v1.30.1; draft: False; prerelease: False; published_at: 2025-12-18T16:38:20Z; created_at: 2025-12-18T16:28:33Z\nRelease notes:\n# What's Changed\n## 🐛 Bug Fixes\n### Fix task attribution during index swap to prevent cross-index task loss by @YoEight in https://github.com/meilisearch/meilisearch/pull/6059\nThis change fixes the parenting of the tasks when doing an index swap.\n### Hotfix: log a warning when FieldidsWeightsMap is missing entry by @ManyTheFish in https://github.com/meilisearch/meilisearch/pull/6064\nThis hotfix avoids the encounter of following error during a search request:\n```json\n{\n\"message\": \"Inside `<query>`: Index `<index_uid>`: internal: missing <field_id> in the fieldids weights mapping.\",\n\"code\": \"internal\",\n\"type\": \"internal\",\n\"link\": \"https://docs.meilisearch.com/errors#internal\"\n}\n```\n## 🫂 New Contributors\n- @YoEight made their first contribution in https://github.com/meilisearch/meilisearch/pull/6059",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.30.1, a bug fix corrects task attribution during index swap to prevent cross-index task loss. A hotfix logs a warning when FieldidsWeightsMap is missing an entry, avoiding an internal error during search requests."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_31_0",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.31.0",
+      "tag_name": "v1.31.0",
+      "title": "v1.31.0 🦃",
+      "time_hint": "2025-12-22",
+      "published_at": "2025-12-22T16:21:02Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.31.0",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.31.0 🦃\nTag: v1.31.0; draft: False; prerelease: False; published_at: 2025-12-22T16:21:02Z; created_at: 2025-12-22T13:33:28Z\nRelease notes:\n# 🌈 Improvements\n## 🗄️ [Enterprise Edition] Make the S3-streaming snapshots an Enterprise Edition feature\nThe recently introduced S3-streaming snapshots feature is now available as an Enterprise Edition feature. From now on, you'll need a license to use this feature when using Meilisearch as a self-hosted solution. Note that this version introduces a breaking change regarding the S3-streaming snapshot feature, which is no longer available in the Community Edition; however, on-disk snapshots remain accessible. You can read our BUSL license for contact information, if you like. Note that if you are using the Community Edition of Meilisearch between [version 1.25](https://github.com/meilisearch/meilisearch/releases/tag/v1.25.0) and this release, you can freely use the S3 Streaming feature without an Enterprise Edition license.\n> by @Kerollmops in [https://github.com/meilisearch/meilisearch/pull/6057](https://github.com/meilisearch/meilisearch/pull/6057)\n## 🔏 [Enterprise Edition] Support AWS IRSA to authenticate to S3 for snapshotting\nWe just introduced support for IRSA authentication to do snapshots on AWS. IRSA allows the use of short-lived access and secret keys to upload snapshots through S3. This feature is available under the Enterprise Edition and can be accessed through two experimental CLI parameters.\n>  by @paulden in [https://github.com/meilisearch/meilisearch/pull/6044](https://github.com/meilisearch/meilisearch/pull/6044)\n## ✍️ Allow strict document update without creating missing documents\nAdds an optional `skipCreation` boolean query parameter to `POST` and `PUT` on `/indexes/{index}/documents`. When set to `true`, documents that don't exist in the index are silently ignored rather than created. Default is `false`, preserving existing behavior.\n>  by @YoEight in https://github.com/meilisearch/meilisearch/pull/6053\n## 🐛 Bug fixes\n* Fix actix payload error handling by @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6052\n* Bump hannoy to v0.1.2 by @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6063\n## 🛠️ Maintenance and Misc.\n* Run windows in the PR CI by @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6058\n* Make CI test titles more human friendly by @curquiza in https://github.com/meilisearch/meilisearch/pull/6062",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.31.0, S3-streaming snapshots become an Enterprise Edition feature, requiring a license for self-hosted use. Support for AWS IRSA authentication for S3 snapshots is added under Enterprise Edition. A new skipCreation query parameter allows strict document updates without creating missing documents. Bug fixes address actix payload error handling and bump hannoy to v0.1.2. Maintenance includes running Windows in PR CI and making CI test titles more human-friendly."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_32_0",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.32.0",
+      "tag_name": "v1.32.0",
+      "title": "v1.32.0 🐟",
+      "time_hint": "2026-01-12",
+      "published_at": "2026-01-12T13:25:43Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.32.0",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.32.0 🐟\nTag: v1.32.0; draft: False; prerelease: False; published_at: 2026-01-12T13:25:43Z; created_at: 2026-01-12T08:52:12Z\nRelease notes:\n## 🌈 Improvements\n### Log Search performance trace\nIntroduces comprehensive progress tracking and logging for search operations in Meilisearch. It adds detailed timing information for each step of the search process, enabling better observability and performance analysis.\n>  by @ManyTheFish in https://github.com/meilisearch/meilisearch/pull/6072\n### Extract document operations from payloads in parallel\nWe accelerate document indexing by processing a large number of tasks in batches or a large number of records in parallel. We expedited the preparation of the payloads by extracting the various changes and assigning internal IDs in parallel. We achieved a 7x speedup on a four-million-document insertion using four CPUs, and the performance scales with the number of CPUs.\nThe `indexedDocuments` field in tasks using skipCreation no longer precisely reflects the number of document operations performed, specifically for `POST` and `PUT` operations. This count may be higher than the actual number of operations, but it doesn't affect the computation; only the reported count is impacted. We prioritize speed over perfect accuracy here, and the documents are still correctly indexed as before.\n> by @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6080\n## 🐛 Bug fixes\n### Vector sort: Bucket documents with same similarity\nFixed vector sort bucketing so documents with identical similarity scores are grouped together, ensuring subsequent ranking rules are applied correctly.\n> by @dureuill in https://github.com/meilisearch/meilisearch/pull/6081\n### Properly Delete Documents from FID-Based Databases\nFixes a bug where changing searchableAttributes from [\"*\"] to a subset of fields left orphaned data in fid-based databases, causing corruption and warnings during search.\n> by @ManyTheFish in https://github.com/meilisearch/meilisearch/pull/6076\n### Rebuild the graph links when dumpless-upgrading\nBumps [hannoy to v0.1.3-nested-rtxns](https://github.com/nnethercott/hannoy/releases/tag/v0.1.3-nested-rtxns)￼, which fixes graph-related recall issues and adds a method to rebuild graph links to recover previously malformed graphs. Also fixes a minor issue in the dumpless upgrade flow where the upgrade description was not displayed correctly and related operations were not properly associated with the upgrade.\n> by @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6055\n## 🛠️ Maintenance and Misc.\n### Update JS SDKs tests to use `pnpm` instead of `yarn`\nUpdated the JavaScript SDK tests to use pnpm instead of yarn in CI workflows, switching the package manager across test configurations to ensure the SDK test suite runs correctly and consistently with the current tooling.\n> by @Strift in https://github.com/meilisearch/meilisearch/pull/6075\n### Adapt JS tests in SDK tests CI\nUpdated the SDK tests CI workflow for the JavaScript SDKs\n> by @curquiza in https://github.com/meilisearch/meilisearch/pull/6050\n### Bump lru from 0.16.2 to 0.16.3\nFix Stacked Borrows violation in `IterMut`.\n> by @dependabot[bot] in https://github.com/meilisearch/meilisearch/pull/6087\n**Full Changelog**: https://github.com/meilisearch/meilisearch/compare/v1.31.0...v1.32.0",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.32.0, comprehensive progress tracking and logging for search operations is introduced. Document indexing is accelerated by extracting document operations from payloads in parallel, achieving a 7x speedup on four-million-document insertion using four CPUs. Bug fixes include vector sort bucketing for identical similarity scores, proper deletion of documents from FID-based databases, and rebuilding graph links during dumpless upgrade. Maintenance updates JS SDK tests to use pnpm and bumps lru from 0.16.2 to 0.16.3."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_32_1",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.32.1",
+      "tag_name": "v1.32.1",
+      "title": "v1.32.1 🐟",
+      "time_hint": "2026-01-14",
+      "published_at": "2026-01-14T11:24:03Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.32.1",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.32.1 🐟\nTag: v1.32.1; draft: False; prerelease: False; published_at: 2026-01-14T11:24:03Z; created_at: 2026-01-14T11:20:57Z\nRelease notes:\n## 🌈 Improvements\n### Skip cleaning up the field-ID-based databases\nIntroduce a `MEILI_EXPERIMENTAL_DISABLE_FID_BASED_DATABASES_CLEANUP` env var to opt out of the field ID-based database cleanup when upgrading a Meilisearch from versions inferior to 1.32.0.\n>  by @ManyTheFish in https://github.com/meilisearch/meilisearch/pull/6096\n**Full Changelog**: https://github.com/meilisearch/meilisearch/compare/v1.32.0...v1.32.1",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.32.1, an environment variable MEILI_EXPERIMENTAL_DISABLE_FID_BASED_DATABASES_CLEANUP is introduced to opt out of the field ID-based database cleanup when upgrading from versions inferior to 1.32.0."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_32_2",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.32.2",
+      "tag_name": "v1.32.2",
+      "title": "v1.32.2 🐟",
+      "time_hint": "2026-01-15",
+      "published_at": "2026-01-15T09:49:07Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.32.2",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.32.2 🐟\nTag: v1.32.2; draft: False; prerelease: False; published_at: 2026-01-15T09:49:07Z; created_at: 2026-01-15T09:42:26Z\nRelease notes:\n## 🐛 Bug fixes\n* Do not panic when doing a dumpless upgrade on empty indexes with configured embeddings by @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6102\n**Full Changelog**: https://github.com/meilisearch/meilisearch/compare/v1.32.1...v1.32.2",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.32.2, a bug fix prevents a panic when doing a dumpless upgrade on empty indexes with configured embeddings."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_33_0",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.33.0",
+      "tag_name": "v1.33.0",
+      "title": "v1.33.0 🐞",
+      "time_hint": "2026-01-19",
+      "published_at": "2026-01-19T09:33:12Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.33.0",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.33.0 🐞\nTag: v1.33.0; draft: False; prerelease: False; published_at: 2026-01-19T09:33:12Z; created_at: 2026-01-19T08:56:20Z\nRelease notes:\n### ✨ Enhancement\n- **Add `/fields` route to get all the fields of an index** by @YoEight in https://github.com/meilisearch/meilisearch/pull/6082\nAdds a new POST `/indexes/{indexUid}/fields` endpoint that returns detailed metadata about all fields in an index. This endpoint provides comprehensive information about each field's configuration, including display, search, filtering, and localization settings.\n- **Implement parallel cleanup of old field IDs** by @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6100\nWe reduce the time required to perform the dumpless upgrade for instances before v1.32.0 by multi-threading database fetches. By doing that, we noticed improvements from 2 hours and 50 minutes to a bit less than 7 minutes.\n- **Bump hannoy to 0.1.4-nested-rtxns** by @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6103\nWe updated our internal vector store to speed up the dumpless upgrade by improving the graph rebuilding and improving the speed and relevance of the search by using the explore factor as a limit to stop document searches rather than the query limit.\n### 🪲 Bug fixes\n- **Meilisearch can now rescale when the index reaches 2 TB** by @Vipul-045 in https://github.com/meilisearch/meilisearch/pull/6095\n### 🔒 Security\n- **Upgrade mini-dashboard to benefit security vulnerability fixes** by @curquiza in https://github.com/meilisearch/meilisearch/pull/6091\n### 🔩 Miscellaneous\n- Fix tests by @dureuill in https://github.com/meilisearch/meilisearch/pull/6090\n- Add verbose OpenAPI schema descriptions for documentation by @qdequele in https://github.com/meilisearch/meilisearch/pull/6071\n- Add code samples to the generated openAPI file by @curquiza in https://github.com/meilisearch/meilisearch/pull/6028\nThank you @Vipul-045 for your first contribution ❤️",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.33.0, a new POST /indexes/{indexUid}/fields endpoint returns detailed metadata about all fields in an index. Parallel cleanup of old field IDs reduces dumpless upgrade time from 2 hours 50 minutes to under 7 minutes. The internal vector store is updated to hannoy 0.1.4-nested-rtxns for faster upgrades and improved search relevance. A bug fix allows Meilisearch to rescale when the index reaches 2 TB. Security updates upgrade the mini-dashboard. Miscellaneous changes include verbose OpenAPI schema descriptions and code samples in the generated OpenAPI file."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_33_1",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.33.1",
+      "tag_name": "v1.33.1",
+      "title": "v1.33.1 🐞",
+      "time_hint": "2026-01-20",
+      "published_at": "2026-01-20T14:24:56Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.33.1",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.33.1 🐞\nTag: v1.33.1; draft: False; prerelease: False; published_at: 2026-01-20T14:24:56Z; created_at: 2026-01-20T14:23:18Z\nRelease notes:\nIn Meilisearch v1.33.1, we released a security fix that affected the dump import, improvements to vector store relevance in massive databases, and a fix related to ranking scores.\n### 🔐 Security Fix\n- Cloud users: you don't need to do anything. We found no evidence of exploitation of this vulnerability on Meilisearch Cloud.\n- Open-source users: if you allow importing dumps from an untrusted source, we recommend you update to v1.33.1\nAll versions of Meilisearch before v1.33.0 are vulnerable to a path traversal vulnerability involving the dump import functionality.\nImporting a specially crafted dump could result in giving access to the Meilisearch instance to arbitrary, specifically formatted files, present on the file system of the Meilisearch instance.\n### ✨ Enhancements\n* We updated the vector store to trigger linear scanning even on bigger databases, leading to improved performance and so better result quality when the search cutoff is reached. This applies in particular when the number of filtered candidates is small relative to the number of documents in the index by @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6113.\n### 🐛 Bug Fixes\n* We fixed a bug where only the first non-blocking buckets were taken for the non-final ranking rules. This improves the quality of search results when the search cutoff triggers, especially when vector search and a sort are involved by @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6113.\n**Full Changelog**: https://github.com/meilisearch/meilisearch/compare/v1.33.0...v1.33.1",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.33.1, a security fix addresses a path traversal vulnerability in dump import. Enhancements update the vector store to trigger linear scanning on bigger databases for better result quality when the search cutoff is reached. A bug fix ensures non-final ranking rules consider all non-blocking buckets, improving search result quality when the search cutoff triggers, especially with vector search and sort."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_34_0",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.34.0",
+      "tag_name": "v1.34.0",
+      "title": "v1.34.0",
+      "time_hint": "2026-01-26",
+      "published_at": "2026-01-26T09:29:45Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.34.0",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.34.0\nTag: v1.34.0; draft: False; prerelease: False; published_at: 2026-01-26T09:29:45Z; created_at: 2026-01-26T08:49:46Z\nRelease notes:\n# 🌈 Improvements\n## Easy search over your network of machines\n### `useNetwork` field in `POST /indexes/{:indexUid}/search`\nThe search query object passed in the body of `POST /indexes/{:indexUid}/search` now accepts an optional boolean `useNetwork`. When present and set to `true`, the search is executed \"as-if\" it was a remote federated search over all remotes in the network.\nThat is, the following:\n<details>\n<summary>Search request</summary>\n```jsonc\n// POST /indexes/movies/search\n{\n\"q\": \"Batman dark knight returns 1\",\n\"filter\": \"genres IN [Action, Adventure]\",\n\"facets\": [\"genres\"],\n\"useNetwork\": true, // ✨ NEW\n\"limit\": 5\n}\n```\n</details>\nIs executed by Meilisearch as if it was the following, assuming a network of 3 Meilisearch instances with names `\"0\", \"1\" and \"2\"`:\n<details>\n<summary>Equivalent multi-search request</summary>\n```jsonc\n// POST /multi-search\n{\n\"federation\": {\n\"limit\": 5,\n\"facetsByIndex\": {\n\"movies\": [\n\"genres\"\n]\n},\n\"merge\": {}\n},\n\"queries\": [\n{\n\"indexUid\": \"movies\",\n\"federationOptions\": {\n\"remote\": \"0\"\n},\n\"q\": \"Batman dark knight returns 1\",\n\"filter\": \"genres IN [Action, Adventure]\"\n},\n{\n\"indexUid\": \"movies\",\n\"federationOptions\": {\n\"remote\": \"1\"\n},\n\"q\": \"Batman dark knight returns 1\",\n\"filter\": \"genres IN [Action, Adventure]\"\n},\n{\n\"indexUid\": \"movies\",\n\"federationOptions\": {\n\"remote\": \"2\"\n},\n\"q\": \"Batman dark knight returns 1\",\n\"filter\": \"genres IN [Action, Adventure]\"\n}\n]\n}\n```\n</details>\nResulting in:\n<details>\n<summary>Search Response</summary>\n```jsonc\n{\n\"hits\": [\n{\n\"id\": 123025,\n\"title\": \"Batman: The Dark Knight Returns, Part 1\",\n\"overview\": \"Batman has not been seen for ten years. A new breed of criminal ravages Gotham City, forcing 55-year-old Bruce Wayne back into the cape and cowl. But, does he still have what it takes to fight crime in a new era?\",\n\"genres\": [\n\"Action\",\n\"Animation\",\n\"Mystery\"\n],\n\"poster\": \"https://image.tmdb.org/t/p/w500/kkjTbwV1Xnj8wBL52PjOcXzTbnb.jpg\",\n\"release_date\": 1345507200,\n\"_federation\": {\n\"indexUid\": \"mieli\",\n\"queriesPosition\": 2,\n\"weightedRankingScore\": 0.9894586894586894,\n\"remote\": \"2\"\n}\n},\n{\n\"id\": 142061,\n\"title\": \"Batman: The Dark Knight Returns, Part 2\",\n\"overview\": \"Batman has stopped the reign of terror that The Mutants had cast upon his city.  Now an old foe wants a reunion and the government wants The Man of Steel to put a stop to Batman.\",\n\"genres\": [\n\"Action\",\n\"Animation\",\n\"Mystery\"\n],\n\"poster\": \"https://image.tmdb.org/t/p/w500/arEZYd6uMOFTILne9Ux0A8qctMe.jpg\",\n\"release_date\": 1357171200,\n\"_federation\": {\n\"indexUid\": \"mieli\",\n\"queriesPosition\": 1,\n\"weightedRankingScore\": 0.9894558963186414,\n\"remote\": \"1\"\n}\n},\n{\n\"id\": 16234,\n\"title\": \"Batman Beyond: Return of the Joker\",\n\"overview\": \"The Joker is back with a vengeance, and Gotham's newest Dark Knight needs answers as he stands alone to face Gotham's most infamous Clown Prince of Crime.\",\n\"genres\": [\n\"Animation\",\n\"Family\",\n\"Action\",\n\"Science Fiction\"\n],\n\"poster\": \"https://image.tmdb.org/t/p/w500/7RlBs0An83fqAuKfwH5gKMcqgMc.jpg\",\n\"release_date\": 976579200,\n\"_federation\": {\n\"indexUid\": \"mieli\",\n\"queriesPosition\": 1,\n\"weightedRankingScore\": 0.9427964918160996,\n\"remote\": \"1\"\n}\n},\n{\n\"id\": 155,\n\"title\": \"The Dark Knight\",\n\"overview\": \"Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they soon find themselves prey to a reign of chaos unleashed by a rising criminal mastermind known to the terrified citizens of Gotham as the Joker.\",\n\"genres\": [\n\"Drama\",\n\"Action\",\n\"Crime\",\n\"Thriller\"\n],\n\"poster\": \"https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg\",\n\"release_date\": 1216166400,\n\"_federation\": {\n\"indexUid\": \"mieli\",\n\"queriesPosition\"...",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.34.0, a new useNetwork field in POST /indexes/{:indexUid}/search allows easy search over a network of machines by executing a remote federated search over all remotes. The release provides detailed examples of search requests and responses, showing how the feature works with a network of three instances."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_34_1",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.34.1",
+      "tag_name": "v1.34.1",
+      "title": "v1.34.1",
+      "time_hint": "2026-01-27",
+      "published_at": "2026-01-27T09:32:44Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.34.1",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.34.1\nTag: v1.34.1; draft: False; prerelease: False; published_at: 2026-01-27T09:32:44Z; created_at: 2026-01-27T09:14:29Z\nRelease notes:\nIn Meilisearch v1.34.1, we released a security fix that affect web queries initiated by Meilisearch.\n# 🔐 Security\n- Cloud users: no action is needed. We found no evidence of exploitation on Meilisearch Cloud and the Cloud is protected at the infrastructure level.\n- Open-source users: if you allow untrusted users to configure webhooks, embedders or network of machines, we recommend you update to Meilisearch v1.34.1\nIn Meilisearch versions v1.8 to v1.34.0, a user with an API key with *write permissions* to the configuration of the Meilisearch instance could set up Meilisearch to send POST or GET requests to domains and IPs local to the private network of the Meilisearch instance, effectively bypassing the firewall. The vulnerability has not yet been assigned a CVE number; it has CVE Request 1975471 for CVE ID.\nMeilisearch v1.34.1 fixes the vulnerability by forbidding Meilisearch from making any requests to a host resolving to a non-global IP, in the sense of the [IANA IPv4 Special-Purpose Address Registry](https://www.iana.org/assignments/iana-ipv4-special-registry/iana-ipv4-special-registry.xhtml) or the [IANA IPv6 Special-Purpose Address Registry](https://www.iana.org/assignments/iana-ipv6-special-registry/iana-ipv6-special-registry.xhtml). If you need this functionality in your Meilisearch instance, you can set private IP networks as allowed with the `--experimental-allowed-ip-networks` parameter after reviewing the security implications.\n**This is a breaking change**, which is allowed for security reasons.\n## Allowing non-global IP networks\nThe `--experimental-allowed-ip-networks` CLI flag and the `MEILI_EXPERIMENTAL_ALLOWED_IP_NETWORKS` environment variable control the behavior of Meilisearch with regards to non-global IP networks, with the CLI flag taking precedence over the environment variable when both are specified.\n- When missing, the default is to reject all web requests resolving to a non-global IP.\n- When set to a comma-separated list of CIDR-formatted networks (e.g. `192.168.0.0/16,10.0.0.0`), then web requests to the networks from the list will be permitted. Web requests to the non-global IPs not part of the list will still be rejected.\n- When set to `any`, all web requests will be permitted regardless of the target IP, similar to the behavior of Meilisearch v1.34.0 and lower. Use this option when you control both the machine and the configuration of the deployed Meilisearch instance.\n## Acknowledgments\nThanks to Gabriel Rodrigues (aka Texugo), for reporting this vulnerability and for helping us improve the security of Meilisearch.",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.34.1, a security fix prevents authenticated users with write permissions from bypassing the firewall by forbidding requests to non-global IPs. A new --experimental-allowed-ip-networks CLI flag and environment variable allow specifying allowed private IP networks. This is a breaking change for security reasons."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_34_2",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.34.2",
+      "tag_name": "v1.34.2",
+      "title": "v1.34.2",
+      "time_hint": "2026-01-28",
+      "published_at": "2026-01-28T08:20:49Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.34.2",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.34.2\nTag: v1.34.2; draft: False; prerelease: False; published_at: 2026-01-28T08:20:49Z; created_at: 2026-01-27T15:28:38Z\nRelease notes:\nThis patch fixes an accidental breaking change in v1.34.1 where Meilisearch would not start with a configuration file if `experimental_allowed_ip_networks` was not defined.\n- Meilisearch Cloud users do not need to update as they were not affected by this regression\n- We recommend that OSS users upgrade to v1.34.2\n**Full Changelog**: https://github.com/meilisearch/meilisearch/compare/v1.34.1...v1.34.2",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.34.2, a patch fixes an accidental breaking change in v1.34.1 where Meilisearch would not start with a configuration file if experimental_allowed_ip_networks was not defined."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_34_3",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.34.3",
+      "tag_name": "v1.34.3",
+      "title": "v1.34.3",
+      "time_hint": "2026-01-28",
+      "published_at": "2026-01-28T17:52:24Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.34.3",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.34.3\nTag: v1.34.3; draft: False; prerelease: False; published_at: 2026-01-28T17:52:24Z; created_at: 2026-01-28T17:49:52Z\nRelease notes:\n## 🐛 Bug Fixes\n* Increase the auth store database size to 2 GiB so that we can index more keys by @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6134\n**Full Changelog**: https://github.com/meilisearch/meilisearch/compare/v1.34.2...v1.34.3",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.34.3, a bug fix increases the auth store database size to 2 GiB to allow indexing more keys."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_35_0",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.35.0",
+      "tag_name": "v1.35.0",
+      "title": "v1.35.0",
+      "time_hint": "2026-02-02",
+      "published_at": "2026-02-02T09:57:03Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.35.0",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.35.0\nTag: v1.35.0; draft: False; prerelease: False; published_at: 2026-02-02T09:57:03Z; created_at: 2026-02-02T08:26:11Z\nRelease notes:\nMeilisearch v1.35.0 contains improvements to the observability of the search performance, a breaking change to the recently introduced `POST /indexes/<index_uid>/fields` route, and other bugfixes and improvements.\n# 🌈 Improvements\n## Observe the search performance\nThe search routes accept a new field named `showPerformanceDetails`. When set to `true`, the search response contains a performance trace, allowing the user to better\nunderstand what takes time during a search query.\n**impacted routes:**\n- `POST /indexes/<index_uid>/search`\n- `GET /indexes/<index_uid>/search`\n- `POST /multi-search`\n- `POST /indexes/<index_uid>/similar`\n- `GET /indexes/<index_uid>/similar`\n### Search\nroutes: `POST /indexes/<index_uid>/search` and `GET /indexes/<index_uid>/search`\n#### Request\nnew request parameters:\n- `showPerformanceDetails`: `true`/`false` (boolean)\n<details>\n<summary>example</summary>\n```jsonc\n{\n\"q\": \"glass\",\n\"showPerformanceDetails\": true\n}\n```\n</details>\n#### Response\nnew response field:\n- `performanceDetails`: `{\"<span>\": \"<human_duration>\", .. }` (map)\n<details>\n<summary>example</summary>\n```jsonc\n{\n\"hits\": [\n// hits ..\n],\n\"query\": \"glass\",\n\"processingTimeMs\": 5,\n\"limit\": 20,\n\"offset\": 0,\n\"estimatedTotalHits\": 1,\n\"requestUid\": \"<uuid>\",\n\"performanceDetails\": {\n\"wait for permit\": \"295.29µs\",\n\"search > tokenize\": \"436.67µs\",\n\"search > resolve universe\": \"649.00µs\",\n\"search > keyword search\": \"515.71µs\",\n\"search > format\": \"288.54µs\",\n\"search\": \"3.56ms\"\n}\n}\n```\n</details>\n### Multi-search\nroute: `POST /multi-search`\n#### Request\nnew request parameters:\n- `queries.showPerformanceDetails`: `true`/`false` (boolean)\n<details>\n<summary>example</summary>\n```jsonc\n\"queries\": [\n{\n\"indexUid\": \"<index_uid>\",\n\"q\": \"glass\",\n\"showPerformanceDetails\": true\n}\n]\n```\n</details>\n#### Response\nnew response field:\n- `results.performanceDetails`: `{\"<span>\": \"<human_duration>\", .. }` (map)\n<details>\n<summary>example</summary>\n```jsonc\n{\n\"results\": [\n{\n\"indexUid\": \"<index_uid>\",\n\"hits\": [\n// hits ..\n],\n\"query\": \"glass\",\n\"processingTimeMs\": 5,\n\"limit\": 20,\n\"offset\": 0,\n\"estimatedTotalHits\": 1,\n\"requestUid\": \"<uuid>\",\n\"performanceDetails\": {\n\"wait for permit\": \"295.29µs\",\n\"search > tokenize\": \"436.67µs\",\n\"search > resolve universe\": \"649.00µs\",\n\"search > keyword search\": \"515.71µs\",\n\"search > format\": \"288.54µs\",\n\"search\": \"3.56ms\"\n}\n}\n]\n}\n```\n</details>\n### Federated Search\nroute: `POST /multi-search`\n#### Request\nnew request parameters:\n- `federation.showPerformanceDetails`: `true`/`false` (boolean)\n<details>\n<summary>example</summary>\n```jsonc\n{\n\"federation\": { \"showPerformanceDetails\": true },\n\"queries\": [\n{\n\"indexUid\": \"<index_uid>\",\n\"q\": \"glass\"\n}\n]\n}\n```\n</details>\n#### Response\nnew response field:\n- `performanceDetails`: `{\"<span>\": \"<human_duration>\", .. }` (map)\n<details>\n<summary>example</summary>\n```jsonc\n{\n\"hits\": [\n// hits ..\n],\n\"query\": \"glass\",\n\"processingTimeMs\": 5,\n\"limit\": 20,\n\"offset\": 0,\n\"estimatedTotalHits\": 1,\n\"requestUid\": \"<uuid>\",\n\"performanceDetails\": {\n\"wait for permit\": \"213.83µs\",\n\"search > tokenize\": \"171.67µs\",\n\"search > resolve universe\": \"257.63µs\",\n\"search > keyword search\": \"577.71µs\",\n\"search > format\": \"114.96µs\",\n\"search > federation > wait for remote results\": \"62.71µs\",\n\"search > federation > merge results\": \"120.04µs\",\n\"search > federation > merge facets\": \"53.42µs\",\n\"search > federation\": \"237.04µs\",\n\"search\": \"289.08ms\"\n}\n}\n```\n</details>\n### Similar\nroutes: `POST /indexes/<index_uid>/similar` and `GET /indexes/<index_uid>/similar`\n#### Request\nnew request parameters:\n- `showPerformanceDetails`: `true`/`false` (boolean)\n<details>\n<summary>example</summary>\n```jsonc\n{\n\"id\": 143,\n\"embedder\": \"manual\",\n\"showPerformanceDetails\": true\n}\n```\n</details>\n#### Response\nnew response field:\n- `performanceDetails`: `{\"<span>\": \"<human_dura...",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.35.0, search routes accept a new showPerformanceDetails field that returns a performance trace in the response, detailing timing for each step of the search process. This applies to search, multi-search, federated search, and similar routes. A breaking change modifies the POST /indexes/<index_uid>/fields route."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_35_1",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.35.1",
+      "tag_name": "v1.35.1",
+      "title": "v1.35.1",
+      "time_hint": "2026-02-16",
+      "published_at": "2026-02-16T17:01:17Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.35.1",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.35.1\nTag: v1.35.1; draft: False; prerelease: False; published_at: 2026-02-16T17:01:17Z; created_at: 2026-02-16T16:59:35Z\nRelease notes:\n# 🦋 Bug fixes\nMeilisearch v1.35.1 fixes a possible task database corruption issue that would occur when using the S3 streaming snapshot method.\n- Users of the Community Edition do not need to upgrade as this feature is Enterprise Edition only\n- Affected users of the Cloud have been contacted.\n## Details\nWhile snapshotting the task database, sending a task to Meilisearch could corrupt it. Index DBs were not affected, so manually rebuilding the task database fixes the corruption.\nBy @dureuill in #6160\n**Full Changelog**: https://github.com/meilisearch/meilisearch/compare/v1.35.0...v1.35.1",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.35.1, a bug fix addresses a possible task database corruption issue when using the S3 streaming snapshot method, which could occur if a task was sent while snapshotting the task database."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_36_0",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.36.0",
+      "tag_name": "v1.36.0",
+      "title": "v1.36.0 🐙",
+      "time_hint": "2026-02-23",
+      "published_at": "2026-02-23T08:13:32Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.36.0",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.36.0 🐙\nTag: v1.36.0; draft: False; prerelease: False; published_at: 2026-02-23T08:13:32Z; created_at: 2026-02-19T17:24:56Z\nRelease notes:\nVersion v1.36.0 introduces an exciting update to the ranking rules to improve the engine's relevance. It's actually the first time we've made such a change since v1.0, and we're really happy about this improvement!\n### ✨ Enhancement\n- Introduce the `attributeRank` and `wordPosition` criteria by @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6154, https://github.com/meilisearch/meilisearch/pull/6155, and https://github.com/meilisearch/meilisearch/pull/6164\nWe released two new ranking rules that Meilisearch had already been using internally for the `attribute` one, which is basically both ranking rules applied one after the other:\n- `attributeRank`: A document is considered better if the query words match in a higher searchable attribute. It ignores the position of the query words in this attribute.\n- `wordPosition`: A document is considered better if the query words match closer to the beginning of an attribute. The attribute rank is ignored by this rule.\n- We continue our policy of migrating everyone to use a homemade HNSW by introducing a new dumpless upgrade step that migrates index uses the old annoy vector store to the new Hannoy one. Changing the vector store backend affects the ranking score. This step can take a couple of minutes when the number of embeddings is high, and we recommend changing the vector store backend beforehand to gain more control if needed. To do so, you must enable the `vectorStoreSetting` experimental feature and set the `vectorStore` root setting to `experimental`.\n### 🪲 Bug fixes\n- Fix search failing when using `attributesToSearchOn` on an empty index by @zen-zap in https://github.com/meilisearch/meilisearch/pull/5944\n### 🔒 Security\n- Bump bytes from 1.11.0 to 1.11.1 by @dependabot[bot] in https://github.com/meilisearch/meilisearch/pull/6142\n- Bump jsonwebtoken from 9.3.1 to 10.3.0 by @dependabot[bot] in https://github.com/meilisearch/meilisearch/pull/6141\n- Bump time from 0.3.44 to 0.3.47 by @dependabot[bot] in https://github.com/meilisearch/meilisearch/pull/6144\n- Bump rsa from 0.9.9 to 0.9.10 by @dependabot[bot] in https://github.com/meilisearch/meilisearch/pull/6149\n### 🔩 Miscellaneous\n- Improve OpenAPI docs and CIs to improve documentation experience by @curquiza in https://github.com/meilisearch/meilisearch/pull/6145\n> [!WARNING]\n> Breaking change: the `meilisearch-openapi-mintlify.json` file will not be available in the release assets anymore. If you were using it, please refer to the one that is now available [in our public documentation repository](https://github.com/meilisearch/documentation/blob/main/assets/open-api/meilisearch-openapi-mintlify.json).\n- GenAI contributing and PR template changes by @dureuill in https://github.com/meilisearch/meilisearch/pull/6140\n- Fix \"test with almost all features\" by @dureuill in https://github.com/meilisearch/meilisearch/pull/6139 and https://github.com/meilisearch/meilisearch/pull/6148\n- Allow any IP for SDK tests by @Strift in https://github.com/meilisearch/meilisearch/pull/6151\n- Improve output of the declarative tests, also in https://github.com/meilisearch/meilisearch/pull/6164\n❤️ Thanks to @zen-zap for contributing to this release!",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.36.0, two new ranking rules are introduced: attributeRank and wordPosition, improving relevance. A dumpless upgrade step migrates indexes from the old annoy vector store to the new Hannoy one. Bug fixes include search failing when using attributesToSearchOn on an empty index. Security bumps include bytes, jsonwebtoken, time, and rsa. A breaking change removes the meilisearch-openapi-mintlify.json file from release assets."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_37_0",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.37.0",
+      "tag_name": "v1.37.0",
+      "title": "v1.37.0",
+      "time_hint": "2026-03-02",
+      "published_at": "2026-03-02T09:16:36Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.37.0",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.37.0\nTag: v1.37.0; draft: False; prerelease: False; published_at: 2026-03-02T09:16:36Z; created_at: 2026-02-26T11:11:29Z\nRelease notes:\n> [!IMPORTANT]\n> This release contains [**breaking changes**](#v137-replicated-sharding-breaking-changes) for users of the `network` experimental feature.\nMeilisearch v1.37 introduces [replicated sharding](#v137-replicated-sharding), removes the [`vectorStoreSetting` experimental feature](#v137-vector-store), stabilizes our new vector store for best performance, adds a [security fix](#v137-security) and [miscellaneous improvements](#v137-misc).\n# ✨ Improvements\n## <a id=\"v137-replicated-sharding\" href=\"#v137-replicated-sharding\">§</a> Replicated sharding\n> [!NOTE]\n> Replicated sharding requires Meilisearch Enterprise Edition (EE).\n> - Users of Meilisearch Cloud, please contact support if you need replicated sharding.\n> - Users of the Community Edition, please contact the sales if you want to use replicated sharding in production.\n### <a id=\"v137-replicated-sharding-breaking-changes\" href=\"#v137-replicated-sharding-breaking-changes\">§</a> Breaking changes\n- `network` objects sent to the `PATCH /network` route must now contain at least one `shard` object containing at least one remote when `leader` is not `null`.\nExisting databases will be migrated automatically when upgraded with `--experimental-dumpless-upgrade` when `leader` is not `null`, such that for each remote:\n1. A shard with the same name as the remote is created\n2. This shard has exactly one remote in its `remotes` list: the remote with the same name as the shard.\nThis change will not cause any document to be resharded.\nTo be able to upgrade without resharding, the migration uses the same name for remotes and for shards. However, in new configurations, we recommend using different names for shards and remotes.\n<details>\n<summary>Example of migration</summary>\nFor instance, the following network object:\n```jsonc\n{\n\"leader\": \"ms-00\",\n\"self\": \"ms-01\",\n\"remotes\": {\n\"ms-00\": { /* .. */ },\n\"ms-01\": { /* .. */ }\n}\n}\n```\nis converted to:\n```jsonc\n{\n\"leader\": \"ms-00\",\n\"self\": \"ms-01\",\n\"remotes\": {\n\"ms-00\": { /* .. */ },\n\"ms-01\": { /* .. */ }\n},\n\"shards\": {  // ✨ NEW\n\"ms-00\": {  // shard named like the remote\n\"remotes\": [\"ms-00\"] // is owned by the remote\n},\n\"ms-01\": {\n\"remotes\": [\"ms-01\"]\n}\n}\n}\n```\n</details>\n### Addition of `network.shards`\nThe `network` object for routes `PATCH /network`  and `GET /network` now contains the new field `shards`, which is an object whose values are `shard` objects, and keys the name of each shard.\nEach `shard` object contains a single field `remotes`, which is an array of strings, each string representing the name of an existing remote.\n#### Convenience fields\nThe `shard` objects in `PATCH /network` contain the additional fields `addRemotes` and `removeRemotes` meant for convenience:\n- pass an array of remote names to `shard.addRemotes` to add these remotes to the list of remotes of a shard.\n- pass an array of remote names to `shard.removeRemotes` to remove these remotes from the list of remotes of a shard.\n- if present and non-`null`, `shard.remotes` will completely override the existing list of remotes for a shard.\n- if several of these options are present and non-`null`, then the order of application is  `shard.remotes`, then `shard.addRemotes`, then `shard.removeShards`.\n<details>\n<summary>Adding a new shard with some remotes</summary>\n```jsonc\n// PATCH /network\n{\n// assuming that remotes `ms-0`, `ms-1`, `ms-2` where sent in a previous call to PATCH /network\n\"shards\": {\n\"s-a\": { // new shard\n\"remotes\": [\"ms-0\", \"ms-1\"]\n}\n}\n}\n```\nRemotes `ms-0` and `ms-1` own the new shard `s-a`.\n</details>\n<details>\n<summary>Fully overriding the list of remotes owning a shard</summary>\n```jsonc\n// PATCH /network\n{\n// assuming remotes `ms-0`, `ms-1`, `ms-2`\n// assuming shard `s-a`, owned by `ms-0` and `ms-1`\n\"shards\": {\n\"s-a\": {\n\"remotes\": [\"ms-2\"]\n}\n}\n}\n```\n`ms-2` is now th...",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.37.0, replicated sharding is introduced for Enterprise Edition, with breaking changes requiring network objects to contain at least one shard object. The vectorStoreSetting experimental feature is removed, and the new vector store is stabilized. A security fix is included. The release details the new network.shards field and convenience fields for adding/removing remotes."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_38_0",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.38.0",
+      "tag_name": "v1.38.0",
+      "title": "v1.38.0 🐍",
+      "time_hint": "2026-03-09",
+      "published_at": "2026-03-09T08:06:29Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.38.0",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.38.0 🐍\nTag: v1.38.0; draft: False; prerelease: False; published_at: 2026-03-09T08:06:29Z; created_at: 2026-03-06T14:45:06Z\nRelease notes:\nMeilisearch v1.38 drastically improves indexing performance for embeddings, cleans up the task queue of orphan tasks and batches, ensures they are correctly deleted now, fixes issues users may encounter with OpenAI or VoyageAI when generating embeddings, and improves the tooling for generating routes in the documentation.\n### **✨ Enhancement**\n- Embeddings: Use the latest version of hannoy with improved performances by @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6184\nWe drastically reduced embedding indexing time by eliminating full database scans. It is more efficient to add a couple of embeddings to a large database now.\n- Tasks: Optimize and fix task deletion by @Mubelotix and @kerollmops in https://github.com/meilisearch/meilisearch/pull/5828\n### 🪲 Bug fixes\n- Embedders: Fix the intermittent `connection reset by peer` errors when embedding documents or search queries using a remote embedder.  By @dureuill in https://github.com/meilisearch/meilisearch/pull/6191\n### 🔩 Miscellaneous\n- Enforce that routes appear in the reference documentation by @dureuill and @manythefish in https://github.com/meilisearch/meilisearch/pull/6200\n[The reference API](https://www.meilisearch.com/docs/reference/api/) is now generated from the source code, but it used to miss some actix-declared routes. It is now mandatory to attach a route when using the newly-provided `routes::routes` and `routes::path` macros, which ensures the route is added to the reference. Please refer to the documentation of the individual macros and the many examples throughout the codebase for more details.\n- Chore: remove verbose debug log on list documents by @StephaneRob in https://github.com/meilisearch/meilisearch/pull/6198\n- Add guide to [CONTRIBUTING.md](http://contributing.md/) to test doc locally by @curquiza in https://github.com/meilisearch/meilisearch/pull/6180\n- Docs: capitalize LangChain and MCP in README by @24f1000637 in https://github.com/meilisearch/meilisearch/pull/6183\n- Docs: improve documentation of the parameters of the search route by @curquiza in https://github.com/meilisearch/meilisearch/pull/6194\n### New Contributors\n- @StephaneRob made their first contribution in https://github.com/meilisearch/meilisearch/pull/6198\n- @24f1000637 made their first contribution in https://github.com/meilisearch/meilisearch/pull/6183",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.38.0, embedding indexing performance is drastically improved by eliminating full database scans. Task deletion is optimized and fixed. A bug fix addresses intermittent connection reset by peer errors with remote embedders. Miscellaneous changes enforce that routes appear in the reference documentation and remove a verbose debug log on list documents."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_38_1",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.38.1",
+      "tag_name": "v1.38.1",
+      "title": "v1.38.1 🐍",
+      "time_hint": "2026-03-11",
+      "published_at": "2026-03-11T10:11:22Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.38.1",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.38.1 🐍\nTag: v1.38.1; draft: False; prerelease: False; published_at: 2026-03-11T10:11:22Z; created_at: 2026-03-11T10:08:48Z\nRelease notes:\nMeilisearch v1.38.1 fixes a regression we have seen in task processing, which caused the engine to stop processing tasks.\n### 🪲 Bug fixes\n- Revert, optimize, and fix task deletion. By @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6219\n**Full Changelog**: https://github.com/meilisearch/meilisearch/compare/v1.38.0...v1.38.1",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.38.1, a bug fix reverts, optimizes, and fixes task deletion to address a regression that caused the engine to stop processing tasks."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_38_2",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.38.2",
+      "tag_name": "v1.38.2",
+      "title": "v1.38.2 🐍",
+      "time_hint": "2026-03-11",
+      "published_at": "2026-03-11T11:36:01Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.38.2",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.38.2 🐍\nTag: v1.38.2; draft: False; prerelease: False; published_at: 2026-03-11T11:36:01Z; created_at: 2026-03-11T11:32:04Z\nRelease notes:\nMeilisearch v1.38.2 fixes a regression introduced in Meilisearch v1.38.0 where Meilisearch could sometimes stop processing tasks after an automatic task queue cleanup performed while more tasks where being added.\nWe recommend that all users in v1.38.0 and v1.38.1 migrate to v1.38.2.\nNote that the dumpless upgrade process can take up to one minute before the HTTP server becomes available when migrating from a previous v1.38 version.\n**Full Changelog**: https://github.com/meilisearch/meilisearch/compare/v1.38.1...v1.38.2",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.38.2, a bug fix addresses a regression introduced in v1.38.0 where Meilisearch could sometimes stop processing tasks after an automatic task queue cleanup while more tasks were being added. The dumpless upgrade process may take up to one minute before the HTTP server becomes available when migrating from a previous v1.38 version."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_39_0",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.39.0",
+      "tag_name": "v1.39.0",
+      "title": "v1.39.0 🐳​",
+      "time_hint": "2026-03-16",
+      "published_at": "2026-03-16T12:54:55Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.39.0",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.39.0 🐳​\nTag: v1.39.0; draft: False; prerelease: False; published_at: 2026-03-16T12:54:55Z; created_at: 2026-03-16T10:28:24Z\nRelease notes:\n# What's Changed\n## **✨ Enhancement**\n### 🔬 Cross-index document hydration\nAdd a new `ForeignKeys` setting allowing to hydrate documents with documents coming from other indexes.\n> 📓 Note: This implementation doesn't support a remote sharding environment\n#### `foreignKeys` experimental feature\nA new experimental feature, `foreignKeys`, has been added to the `/experimental-feature` route that must be set to true to activate the hydration.\n```\ncurl -X PATCH 'http://127.0.0.1:7700/experimental-features' \\\n-H 'Content-Type: application/json' \\\n--data-binary '{\"foreignKeys\": true}'\n```\n#### `foreignKeys` index setting\nA new index setting, `foreignKeys`, has been added to the `/indexes/{index_uid}/settings`:\n```jsonc\n// new setting, an array of foreign keys that allows multiple foreign relationships between indexes\n\"foreignKeys\":  [\n{\n// the path in the JSON document containing foreign document ids\n\"fieldName\": \"actors\",\n// the UID of the foreign index containing the documents to fetch during hydration\n\"foreignIndexUid\": \"actors\"\n}\n]\n```\n<details>\n<summary>\n#### Example\n</summary>\nWith this new feature, a document shaped as follows:\n```jsonc\n{\n\"id\": 1,\n\"title\": \"Forrest Gump\",\n// Document IDs in foreign index\n\"actors\": [\n1\n]\n}\n```\nWill be hydrated as follows in a search response:\n```jsonc\n{\n\"id\": 1,\n\"title\": \"Forrest Gump\",\n\"actors\": [\n{\n\"id\": 1,\n\"name\": \"Tom\",\n\"familyName\": \"Hanks\",\n\"birthDate\": \"1956-07-09\"\n}\n]\n}\n```\n</details>\nBy @ManyTheFish in #6047\n### Disable proxy response buffering on Server-Sent Events (SSE)\nAdd `X-Accel-Buffering: no` on `POST /chats/{workspace_uid}/chat/completions` when the streaming mode is activated.\nBy **[@YoEight](https://github.com/YoEight)** in [#6228](https://github.com/meilisearch/meilisearch/pull/6228)\n## 🪲 Bug fixes\n- Fix a memory leak in the indexation pipeline by **[@Kerollmops](https://github.com/Kerollmops)** in [#6212](https://github.com/meilisearch/meilisearch/pull/6212)\nWe fixed an important memory leak caused by an invalid use of bumpalo. If you've seen Meilisearch using more and more memory over time, this issue is no longer visible in the latest version. If you want to read more about the bumpalo-trap we felt in, [here is a good summary](https://docs.rs/bumpalo/latest/bumpalo/#deallocation-en-masse-but-no-drop). It looks like this leak was introduced in v1.12, so approximately a year ago...\n- Avoid losing tasks by applying deltas on the wtxn view by **[@Kerollmops](https://github.com/Kerollmops)** in [#6222](https://github.com/meilisearch/meilisearch/pull/6222)\nWe addressed a small performance regression introduced in v1.38.1 that affected sending updates to the engine during task deletion. We've restored the task deletion performance to match v1.38.0 levels and ensured no race conditions occur while still allowing updates during deletion.\n## **🔩 Miscellaneous**\n- Ignore flaky test on windows by **[@dureuill](https://github.com/dureuill)** in [#6226](https://github.com/meilisearch/meilisearch/pull/6226)\n- Fix small documentation mistakes by **[@ManyTheFish](https://github.com/ManyTheFish)** in [#6205](https://github.com/meilisearch/meilisearch/pull/6205)\n- Improve messaging when field is missing in the settings indexing pipeline by **[@Kerollmops](https://github.com/Kerollmops)** in [#6213](https://github.com/meilisearch/meilisearch/pull/6213)\n**Full Changelog**: https://github.com/meilisearch/meilisearch/compare/v1.38.0...v1.39.0",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.39.0, a new ForeignKeys setting allows cross-index document hydration, enabling documents to be enriched with data from other indexes. The feature is behind the foreignKeys experimental feature flag. Disable proxy response buffering on Server-Sent Events is added. Bug fixes address a memory leak in the indexation pipeline and avoid losing tasks by applying deltas on the wtxn view."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_40_0",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.40.0",
+      "tag_name": "v1.40.0",
+      "title": "v1.40.0 🦈",
+      "time_hint": "2026-03-23",
+      "published_at": "2026-03-23T10:30:56Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.40.0",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.40.0 🦈\nTag: v1.40.0; draft: False; prerelease: False; published_at: 2026-03-23T10:30:56Z; created_at: 2026-03-23T10:00:57Z\nRelease notes:\nThis release introduced support for the `distinct` attribute in federated search, enabling cross-index distinct attributes with facet distribution support. Additionally, significant performance improvements were delivered, including faster federated search (approximately 100ms faster), optimized JSON document generation for better handling of large documents and a much better memory usage for large workloads.\n### ✨ Enhancement\n- **Support `distinct` in federated search** by @dureuill in https://github.com/meilisearch/meilisearch/pull/6214\nThe `distinct` attribute can now be passed to the `federation` object in federated search to apply a global, cross-index and cross-remote distinct computation to the results.\n<details>\n<summary>Example of a federated search request with distinct</summary>\n```json\n{\n\"federation\": {\n\"distinct\": \"genres\", // ✨ NEW\n\"facetsByIndex\": { // recovering facet distribution is also supported with distinct\n\"comics\": [\n\"genres\"\n],\n\"movies\": [\n\"genres\"\n]\n},\n\"mergeFacets\": {} // merging facet distributions is also supported with distinct\n},\n\"queries\": [\n{\n\"indexUid\": \"comics\",\n\"q\": \"batman\",\n\"attributesToRetrieve\": [\"title\", \"genres\"],\n\"useNetwork\": true // distinct is also supported with network queries\n},\n{\n\"indexUid\": \"movies\",\n\"q\": \"superman\",\n\"attributesToRetrieve\": [\"title\", \"genres\"],\n\"useNetwork\": true\n}\n]\n}\n```\n</details>\n<details>\n<summary>Sample response to a federated search request with distinct</summary>\n```json\n{\n\"hits\": [\n{\n\"title\": \"Batman\",\n\"genres\": [\n\"Family\",\n\"Adventure\",\n\"Comedy\",\n\"Science Fiction\",\n\"Crime\"\n],\n\"_federation\": {\n\"indexUid\": \"comics\",\n\"queriesPosition\": 0,\n\"weightedRankingScore\": 1.0,\n\"remote\": \"ms2\"\n}\n},\n{\n\"title\": \"Batman\",\n\"genres\": [\n\"Fantasy\",\n\"Action\"\n],\n\"_federation\": {\n\"indexUid\": \"comics\",\n\"queriesPosition\": 0,\n\"weightedRankingScore\": 1.0,\n\"remote\": \"ms1\"\n}\n},\n{\n\"title\": \"Batman & Bill\",\n\"genres\": [\n\"Documentary\"\n],\n\"_federation\": {\n\"indexUid\": \"comics\",\n\"queriesPosition\": 0,\n\"weightedRankingScore\": 0.9848484848484848,\n\"remote\": \"ms1\"\n}\n},\n{\n\"title\": \"Superman: Red Son\",\n\"genres\": [],\n\"_federation\": {\n\"indexUid\": \"movies\",\n\"queriesPosition\": 1,\n\"weightedRankingScore\": 0.9848484848484849,\n\"remote\": \"ms0\"\n}\n},\n{\n\"title\": \"Superman, Spider-Man or Batman\",\n\"genres\": [\n\"Drama\"\n],\n\"_federation\": {\n\"indexUid\": \"movies\",\n\"queriesPosition\": 1,\n\"weightedRankingScore\": 0.9848484848484849,\n\"remote\": \"ms0\"\n}\n}\n],\n\"processingTimeMs\": 15,\n\"limit\": 5,\n\"offset\": 0,\n\"estimatedTotalHits\": 11,\n\"facetDistribution\": {\n\"genres\": {\n\"Action\": 1,\n\"Adventure\": 1,\n\"Comedy\": 3,\n\"Crime\": 2,\n\"Documentary\": 1,\n\"Drama\": 1,\n\"Family\": 1,\n\"Fantasy\": 1,\n\"Horror\": 2,\n\"Romance\": 1,\n\"Science Fiction\": 1,\n\"Thriller\": 1,\n\"Western\": 1\n}\n},\n\"facetStats\": {},\n\"requestUid\": \"019d05c7-ea65-77a1-8274-22a8ba9e26db\",\n\"remoteErrors\": {}\n}\n```\n</details>\nNote the following to apply the distinct attribute at the federation level:\n1. Applying `distinct` at the query level at the same time as the federation level is disallowed and will return a HTTP 400 error.\n2. The chosen distinct field will apply to all remotes and indexes, so it must be a filterable attribute for all participating remotes and indexes.\n3. While Meilisearch attempts to compute the most accurate facet distribution, in distributed contexts this cannot be guaranteed as the distinct algorithm is not applied on all of the remote documents.\n- **Improve performance of federated search** by @dureuill in https://github.com/meilisearch/meilisearch/pull/6229\nImproves performance of federated search: about 100ms faster for all requests. Improves reliability of the HTTP server: the server will no longer be blocked when too many federated search requests are being processed.\n- **Optimize the generation of JSON documents** by @Kerollmops in https://github.com/meilisearch/meilise...",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.40.0, support for the distinct attribute in federated search is added, enabling cross-index distinct attributes with facet distribution support. Performance improvements include faster federated search (about 100ms faster), optimized JSON document generation, and better memory usage for large workloads."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_41_0",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.41.0",
+      "tag_name": "v1.41.0",
+      "title": "v1.41.0 🏈",
+      "time_hint": "2026-03-30",
+      "published_at": "2026-03-30T13:55:39Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.41.0",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.41.0 🏈\nTag: v1.41.0; draft: False; prerelease: False; published_at: 2026-03-30T13:55:39Z; created_at: 2026-03-26T16:31:06Z\nRelease notes:\n### ✨ Enhancement\n- **Support dynamic search rules with pinning** by @YoEight in https://github.com/meilisearch/meilisearch/pull/6182\nIntroduce the  Dynamic Search Rules (DSR) experimental feature, making it easy to promote the right content for the right searches with flexible, condition-based pinning. In this first version, rules can be triggered by query-based conditions such as empty queries or literal substring matches, as well as time windows. Multiple documents can be pinned in a defined order, and pins still work with filtering, pagination, facet distribution, hybrid search, and federated search. This feature is behind the `dynamicSearchRules` experimental feature flag.\nRules can be created or updated with `PATCH /dynamic-search-rules/{uid}` and removed with `DELETE /dynamic-search-rules/{uid}`. In this first version, a rule can define query- or time-based conditions and pin specific documents at fixed positions in the results list.\n<details>\n<summary>Example of rule creation/update</summary>\n// PATCH /dynamic-search-rules/featured-wireless-headphones\n{\n\"description\": \"Promote featured products for wireless headphone searches\",\n\"active\": true,\n\"conditions\": [\n{ \"scope\": \"query\", \"contains\": \"headphone\" }\n],\n\"actions\": [\n{\n\"selector\": { \"indexUid\": \"products\", \"id\": \"featured-headphones-001\" },\n\"action\": { \"type\": \"pin\", \"position\": 0 }\n},\n{\n\"selector\": { \"indexUid\": \"products\", \"id\": \"featured-headphones-002\" },\n\"action\": { \"type\": \"pin\", \"position\": 1 }\n}\n]\n}\n</details>\n- **Default to `useNetwork: true` in sharded instances by** @dureuill in https://github.com/meilisearch/meilisearch/pull/6278\n> This release contains [**breaking changes**](#search-requests-breaking-changes) for users of the `network` experimental feature.\n##### Search requests now use the network by default when (replicated) sharding is enabled\n##### <a id=\"search-requests-breaking-changes\">§</a> Breaking changes\nWhen `network.leader` is set in the instance, `useNetwork` now defaults to `true` in search requests when omitted.\nSo, when a network is configured, the following:\n<details>\n<summary>Search request without an explicit useNetwork</summary>\n```jsonc\n// POST /indexes/movies/search\n{\n\"q\": \"Batman dark knight returns 1\",\n\"filter\": \"genres IN [Action, Adventure]\",\n\"facets\": [\"genres\"],\n\"limit\": 5\n// No `useNetwork` is passed\n}\n```\n</details>\nis now equivalent to a federated search over multiples remotes so that all shards in the network are covered exactly once.\n<details>\n<summary>Equivalent federated search request</summary>\n```jsonc\n// POST /multi-search\n{\n\"federation\": {\n\"limit\": 5,\n\"facetsByIndex\": {\n\"movies\": [\n\"genres\"\n]\n},\n\"merge\": {}\n},\n// assuming 3 remotes 0, 1, 2 and 3 shards a, b, c such that\n// 0 owns a, b\n// 1 owns b, c\n// 2 owns c, a\n\"queries\": [\n{\n\"indexUid\": \"movies\",\n\"federationOptions\": {\n\"remote\": \"0\"\n},\n\"q\": \"Batman dark knight returns 1\",\n\"filter\": [\"genres IN [Action, Adventure]\", \"_shard = a\"]\n},\n{\n\"indexUid\": \"movies\",\n\"federationOptions\": {\n\"remote\": \"0\" // useNetwork picked remote 0 for both shard a and b\n},\n\"q\": \"Batman dark knight returns 1\",\n\"filter\": [\"genres IN [Action, Adventure]\", \"_shard = b\"]\n},\n{\n\"indexUid\": \"movies\",\n\"federationOptions\": {\n\"remote\": \"2\"\n},\n\"q\": \"Batman dark knight returns 1\",\n\"filter\": [\"genres IN [Action, Adventure]\", \"_shard = c\"]\n}\n]\n}\n```\n</details>\nResponding with documents from all the shards:\n<details>\n<summary>Response</summary>\n```jsonc\n{\n\"hits\": [\n{\n\"id\": 123025,\n\"title\": \"Batman: The Dark Knight Returns, Part 1\",\n\"overview\": \"Batman has not been seen for ten years. A new breed of criminal ravages Gotham City, forcing 55-year-old Bruce Wayne back into the cape and cowl. But, does he still have what it takes to fight crime in a new era?\",\n\"genres\": [\n\"Action\",\n\"Animation\",\n\"Mystery\"\n],\n\"poster\": \"htt...",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.41.0, dynamic search rules with pinning are introduced as an experimental feature, allowing condition-based pinning of documents. Search requests now default to useNetwork: true when sharding is enabled, a breaking change for network feature users."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_42_0",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.42.0",
+      "tag_name": "v1.42.0",
+      "title": "v1.42.0 🦑​",
+      "time_hint": "2026-04-13",
+      "published_at": "2026-04-13T09:08:41Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.42.0",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.42.0 🦑​\nTag: v1.42.0; draft: False; prerelease: False; published_at: 2026-04-13T09:08:41Z; created_at: 2026-04-13T08:12:08Z\nRelease notes:\n# **✨ Enhancement**\n## Support search fallback on remote unavailability\nBy @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6306\nWe introduce a new fallback system for the sharding and replication enterprise edition feature, along with a way to determine which remote is available. The engine can avoid machines that are unavailable for a period and resume querying them once they're back online.\nThe following snippet shows what the /network route looks like now that this PR exposes the remote statuses/availabilities.\n```json\n\"remotes\": {\n\"prod2\": {\n\"url\": \"http://localhost:7702\",\n\"searchApiKey\": \"mykey\",\n\"writeApiKey\": \"mykey\",\n\"status\": \"available\"\n},\n\"prod3\": {\n\"url\": \"http://localhost:7703\",\n\"searchApiKey\": \"mykey\",\n\"writeApiKey\": \"mykey\",\n\"status\": \"unavailable\"\n}\n}\n```\n## 🔬 Experimental: Document join Filtering\nBy @ManyTheFish in https://github.com/meilisearch/meilisearch/pull/6314\nThis enhancement extends the `Cross-index document hydration introduced` in [v1.39.0](https://github.com/meilisearch/meilisearch/releases/tag/v1.39.0) by allowing the user to filter on the foreign indexes to retrieve the documents.\n> 📓 Note: This implementation doesn't support a remote sharding environment\n### `foreignKeys` experimental feature\nThe`foreignKeys` experimental feature must be activated to use the foreign filters:\n```\ncurl -X PATCH 'http://127.0.0.1:7700/experimental-features' \\\n-H 'Content-Type: application/json' \\\n--data-binary '{\"foreignKeys\": true}'\n```\n### `foreignKeys` + `filter` index setting\nTo be able to use the foreign filters, the related field must be set as a foreignKey and as a filterableAttribute in `/indexes/{index_uid}/settings`:\n```jsonc\n{\n// new setting, an array of foreign keys that allows multiple foreign relationships between indexes\n\"foreignKeys\":  [\n{\n// the path in the JSON document containing foreign document ids\n\"fieldName\": \"actors\",\n// the UID of the foreign index containing the documents to fetch during hydration\n\"foreignIndexUid\": \"actors\"\n}\n],\n// the actors field must be filterable on equality\n\"filterableAttributes\": [\n{\n\"attributePatterns\": [\"actors\"],\n\"features\": {\n\"facetSearch\": false,\n\"filter\": {\n\"equality\": true,\n\"comparison\": false\n}\n}\n}\n]\n}\n```\n### filtering using the `_foreign` filter\nOn the search route, a new `_foreign` verb has been introduced and should be used as follows:\n```jsonc\n{\n\"q\": \"<query>\",\n// filters on the movie index:\n// genres = action\n// AND\n// the foreign documents from the actor index match:  birthday STARTS WITH \\\"1958-\\\" AND popularity >= 3.5\n\"filter\": \"genres = action AND _foreign(actors, birthday STARTS WITH \\\"1958-\\\" AND popularity >= 3.5)\"\n}\n```\n> Note: nesting foreign filters is not supported and will return an error\n<details>\n<summary>\n### Example of usage\n</summary>\n#### Prerequisites\n* Meilisearch running on `127.0.0.1:7700` on the `document-join-hydration` branch.\n#### Step 1: Enable Foreign Keys Feature\n```bash\ncurl -X PATCH 'http://127.0.0.1:7700/experimental-features' \\\n-H 'Content-Type: application/json' \\\n--data-binary '{\"foreignKeys\": true}'\n```\n#### Step 2: Create Indexes\n##### Create the `actors` index\n```bash\ncurl -X POST 'http://127.0.0.1:7700/indexes' \\\n-H 'Content-Type: application/json' \\\n--data-binary '{\"uid\": \"actors\", \"primaryKey\": \"id\"}'\n```\n##### Create the `movies` index\n```bash\ncurl -X POST 'http://127.0.0.1:7700/indexes' \\\n-H 'Content-Type: application/json' \\\n--data-binary '{\"uid\": \"movies\", \"primaryKey\": \"id\"}'\n```\n#### Step 3: Add Documents to the `actors` Index\n```bash\ncurl -X POST 'http://127.0.0.1:7700/indexes/actors/documents' \\\n-H 'Content-Type: application/json' \\\n--data-binary '[\n{\"id\": 1, \"name\": \"Tom\", \"familyName\": \"Hanks\", \"birthDate\": \"1956-07-09\"},\n{\"id\": 2, \"name\": \"Meryl\", \"familyName\": \"Streep\", \"birthDate\": \"1949-06-22\"},\n{...",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.42.0, a fallback system for sharding and replication is introduced, allowing the engine to avoid unavailable machines and resume querying them when back online. Experimental document join filtering extends cross-index document hydration by allowing filtering on foreign indexes using the _foreign filter."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_42_1",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.42.1",
+      "tag_name": "v1.42.1",
+      "title": "v1.42.1 🦑​",
+      "time_hint": "2026-04-14",
+      "published_at": "2026-04-14T15:06:51Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.42.1",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.42.1 🦑​\nTag: v1.42.1; draft: False; prerelease: False; published_at: 2026-04-14T15:06:51Z; created_at: 2026-04-14T14:23:30Z\nRelease notes:\n## 🪲 Bug fixes\n### Fix issues when using the legacy settings indexer\nBy @dureuill and @ManyTheFish in https://github.com/meilisearch/meilisearch/pull/6331\n- When using the experimental feature \"multimodal\", removing a fragment would cause an internal error in subsequent search requests\n- When using the experimental feature \"multimodal\", modifying fragments would sometimes cause an internal error at indexing time\n- `regenerate: false` would be ignored when modifying embedder settings\n- When a nested field was declared as searchable, it would not be indexed if its parents were not declared as searchable\n## 🔩 Miscellaneous\n- Add new CI run that tests the stable settings indexer by @dureuill in https://github.com/meilisearch/meilisearch/pull/6331",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.42.1, bug fixes address issues when using the legacy settings indexer, including internal errors with multimodal fragments, ignored regenerate:false, and nested field indexing. A new CI run tests the stable settings indexer."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_43_0",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.43.0",
+      "tag_name": "v1.43.0",
+      "title": "v1.43.0",
+      "time_hint": "2026-05-04",
+      "published_at": "2026-05-04T09:43:19Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.43.0",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.43.0\nTag: v1.43.0; draft: False; prerelease: False; published_at: 2026-05-04T09:43:19Z; created_at: 2026-05-04T09:15:34Z\nRelease notes:\n# 🌈 Enhancements\n## New settings indexer\nThe new settings indexer, a more efficient version of our internal indexer for index settings modifications, now supports filterable, sortable, facet search, and custom (asc/desc) attributes in addition to the already-supported searchable, exact, proximity precision, and embedders.\n- For Meilisearch Cloud users, the new settings indexer is disabled by default and can be enabled on a case-by-case basis for scaling purposes.\n- For OSS users, the new settings indexer can be disabled by setting the `MEILI_EXPERIMENTAL_NO_EDITION_2024_FOR_SETTINGS` to `true`.\nBy @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6124\n## Improve facet search indexing performance\nWe reduced the time to generate the internal data structures for the facet search to work. We were previously doing a couple of full scans on the internal entries and replaced these with scans on specific entries, only the ones dedicated to the facet searchable fields.\nBy @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6325\n## Improve task queue compaction integration\nThe `GET /health` route now returns HTTP 500 after a successful task queue compaction, to signal that Meilisearch should be restarted so that tasks can be enqueued again.\nFor Meilisearch Cloud users, this ensures that compacting the task queue will automatically restart the instance after the compaction.\n# 🦋 Fixes\n## Fix lexicographic filters on strings\nFixes a bug where string facet values appearing in `<, <=, >, >=` and `IN` filters were not normalized before comparison to facet values.\nThis would cause some values in documents (e.g. `2026-01-01T00:00:00`) to appear to be higher than their filter counterpart, due to being normalized (e.g. like `2026-01-01t00:00:00`).\nThanks to @njaard for [reporting the issue](https://github.com/meilisearch/meilisearch/issues/6335) ❤️\nBy @dureuill in https://github.com/meilisearch/meilisearch/pull/6340\n## Fix typo tolerance v1.41 regression\nFixes the `WordDelta::added_or_deleted_words` function.\nBy @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6350.\nThanks to @vladradin99 and @snurfer0 for reporting the issue in https://github.com/meilisearch/meilisearch/issues/6349 and https://github.com/meilisearch/meilisearch/issues/6324 :heart:\n# 🔩 Miscellaneous\n- Introduce a meilitool command to export an index words FST by @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6332\n- Add riscv64 to release binary matrix via cross-rs by @gounthar in https://github.com/meilisearch/meilisearch/pull/6296\n- Fix docs related to task cancelation and deletion by @curquiza in https://github.com/meilisearch/meilisearch/pull/6353\n- Bump actions/checkout from 5 to 6 by @dependabot[bot] in https://github.com/meilisearch/meilisearch/pull/6303\n- Bump actions/setup-node from 4 to 6 by @dependabot[bot] in https://github.com/meilisearch/meilisearch/pull/5964\n- Bump thin-vec from 0.2.14 to 0.2.16 by @dependabot[bot] in https://github.com/meilisearch/meilisearch/pull/6339\n- Bump docker/setup-buildx-action from 3 to 4 by @dependabot[bot] in https://github.com/meilisearch/meilisearch/pull/6304\n- Bump rustls-webpki from 0.103.10 to 0.103.13 by @dependabot[bot] in https://github.com/meilisearch/meilisearch/pull/6347\n- Bump actix-http from 3.11.2 to 3.12.1 by @dependabot[bot] in https://github.com/meilisearch/meilisearch/pull/6348\n- Bump sigstore/cosign-installer from 3.10.0 to 4.1.1 by @dependabot[bot] in https://github.com/meilisearch/meilisearch/pull/6301\n- Bump supercharge/mongodb-github-action from 1.12.0 to 1.12.1 by @dependabot[bot] in https://github.com/meilisearch/meilisearch/pull/6302\nThanks again @gounthar, @njaard, @vladradin99 and @snurfer0 for your contributions ❤️\n**Full Changelog**: https://github.com/meilisearch/meilise...",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.43.0, the new settings indexer now supports filterable, sortable, facet search, and custom attributes. Facet search indexing performance is improved. The GET /health route returns HTTP 500 after task queue compaction to signal a restart is needed. Bug fixes include lexicographic filters on strings and a typo tolerance regression from v1.41."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_43_1",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.43.1",
+      "tag_name": "v1.43.1",
+      "title": "v1.43.1",
+      "time_hint": "2026-05-12",
+      "published_at": "2026-05-12T12:29:49Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.43.1",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.43.1\nTag: v1.43.1; draft: False; prerelease: False; published_at: 2026-05-12T12:29:49Z; created_at: 2026-05-12T09:48:02Z\nRelease notes:\nMeilisearch v1.43.1 contains a security fix for an authenticated SSRF vulnerability.\nNo exploitation was found on Meilisearch Cloud. Cloud users are not required to update.\nWe recommend that self-hosting users upgrade if they allow third parties to configure Meilisearch instances.\nWe thank Sion Park (@tldhs1144), who reported the issue and suggested a fix, for improving the security of Meilisearch ❤️",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.43.1, a security fix addresses an authenticated SSRF vulnerability."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_44_0",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.44.0",
+      "tag_name": "v1.44.0",
+      "title": "v1.44.0",
+      "time_hint": "2026-05-18",
+      "published_at": "2026-05-18T08:20:04Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.44.0",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.44.0\nTag: v1.44.0; draft: False; prerelease: False; published_at: 2026-05-18T08:20:04Z; created_at: 2026-05-18T07:11:23Z\nRelease notes:\nMeilisearch v1.44.0 adds remote federated facet search, indexing performance improvements, and other improvements and bugfixes. It also contains a couple of breaking changes, detailed below.\n# Breaking changes\n- When using the `network` experimental feature, with sharding enabled (`leader` is not `null` in the network configuration), `POST /indexes/{indexUid}/facet-search` calls now default to a remote federated facet search, fetching and merging results from all shards in the network.\n- The timeout for calling an external REST embedder at search time is now tied to the `searchCutOffMs` defined in the index, rather than fixed.\n- If you observe missing semantic results after upgrading, or HTTP 500 errors for pure semantic search, please increase the value of the search cutoff in the index settings.\n- By @dureuill in https://github.com/meilisearch/meilisearch/pull/6377\n# 🌈 Improvements\n## Remote facet search\nMeilisearch now has the ability to search across all shards of a network during facet search via the existing dedicated facet search route.\n- If you are using the `network` experimental feature and have a `leader` defined for your network, **remote calls are now the default** for calls to `POST /indexes/{indexUid}/facet-search`\n- The behavior can be controlled explicitly via the new `useNetwork` parameter of the [facet search object](https://www.meilisearch.com/docs/reference/api/facet-search/search-in-facets#body-facet-name).\nBy @dureuill in https://github.com/meilisearch/meilisearch/pull/6375\n## Reduce memory usage of the indexing\nReduces allocated memory when computing prefixes and speeds up some operations to avoid unnecessary deserialization.\nIf you still see high memory usage while the engine is post-processing, we recommend using the `--experimental-reduce-indexing-memory-usage` option.\nBy @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6334\n## Improve GeoJSON indexing performance\nThis PR upgrades the `cellulite` library to a version that includes a GeoJSON indexing optimization. With this change, GeoJSON indexing avoids reprocessing documents that were already indexed in dense cells, and only handles newly added documents incrementally as they descend through the recursive cell tree.\nBy @YoEight in https://github.com/meilisearch/meilisearch/pull/6374\n## Human-formatted sizes and detailed DB sizes in stats\nAdds two new query parameters to `GET /indexes/{indexUid}/stats` and `GET /stats`:\n- `showInternalDatabaseSizes`: boolean, optional, defaults to `false`. When present, the index stat objects in responses of the stat routes now contain an additional `internalDatabaseSizes` key, whose value  is a dictionary of the internal database names and their current size in the index, like in the stats object of a batch.\n- `sizeFormat`: `human` or `raw`: optional, defaults to `raw`. When present and set to `human`, then all database sizes in responses of the stat routes will be returned as a string containing an appropriate unit (MiB, GiB, etc). When missing or set to `raw`, then the current behavior of expressing the size in bytes as a number is retained.\nNote for integrations: The keys in `internalDatabaseSizes` are subject to change and should not be exposed as a strongly typed object. This is the same as the existing `internalDatabaseSizes` in batch stats.\n<details>\n<summary>\nAdding `showInternalDatabaseSizes` to an index stats\n</summary>\n```jsonc\n// curl -X GET \"http://localhost:7700/indexes/movies/stats?showInternalDatabaseSizes=true\"\n{\n\"numberOfDocuments\": 31944,\n\"rawDocumentDbSize\": 20594688,\n\"avgDocumentSize\": 636,\n\"isIndexing\": false,\n\"internalDatabaseSizes\": {\n\"wordPairProximityDocids\": 100827136,\n\"documents\": 20594688,\n\"wordPositionDocids\": 18694144,\n\"wordFidDocids\": 10715136,\n\"wordPrefixPositionDocids\": 10256384,\n\"wor...",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.44.0, remote federated facet search is added, defaulting to network-wide facet search when sharding is enabled. Indexing memory usage is reduced, GeoJSON indexing performance is improved, and human-formatted sizes and detailed DB sizes are added to stats. Breaking changes include the facet search default and embedder timeout tied to searchCutOffMs."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_45_0",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.45.0",
+      "tag_name": "v1.45.0",
+      "title": "v1.45.0 🦒",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T08:38:12Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.45.0",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.45.0 🦒\nTag: v1.45.0; draft: False; prerelease: False; published_at: 2026-05-26T08:38:12Z; created_at: 2026-05-26T06:56:43Z\nRelease notes:\nMeilisearch v1.45.0 mainly improves indexing performance when changing settings and also improves document fetch performance.\n### ✨ Enhancement\n- **Autobatch deletions by filter with additions** by @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6389\nWhile Meilisearch tries to improve indexing speed when users add documents and mix those additions with deletions via a filter, it is still an anti-pattern to interleave both. It is recommended to delete documents by ID whenever possible, as the engine is optimized to merge them, thereby drastically speeding up indexation.\n- **Improve settings indexing performance & visibility**\nWe are introducing support for more settings in the nez settings indexer. If you find any bugs, please report them on GitHub. You can disable the new settings indexer by setting the environment variable like this: `MEILI_EXPERIMENTAL_NO_EDITION_2024_FOR_SETTINGS=true` or use the equivalent dedicated CLI parameter.\n- **Support non-extracting parameters** by @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6393\nChanging one of the following settings is now directly handled by the new settings indexer: displayed fields, synonyms, the primary key, authorize typos, min word len one and two typos, max values per facet, sort facet values by, pagination max total hits, search cut off, chat, and foreign keys.\n- **Support the global facet search** by @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6390\nMeilisearch can use the new settings indexer when the settings change the facet search root boolean parameter.\n### 🪲 Bug Fixes\n- **Fetching documents no longer blocks the actix worker** @dureuill in https://github.com/meilisearch/meilisearch/pull/6402\n- **Fix an internal error when changing the binary quantization** by @Kerollmops in https://github.com/meilisearch/meilisearch/pull/6396\nWe fixed an issue where users were changing the binary-quantized boolean in embedder configurations. The change corrupted the database, making it impossible to change the quantization in the future. Users had to create a binary-quantized embedder from scratch, or they could never change it again.\n### 🔩 Miscellaneous\n- Make timeout test less flaky on Windows by @dureuill in https://github.com/meilisearch/meilisearch/pull/6388\n**Full Changelog**: https://github.com/meilisearch/meilisearch/compare/v1.44.0...v1.45.0",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.45.0, autobatch deletions by filter with additions is introduced to improve indexing speed. The new settings indexer is extended to support non-extracting parameters and global facet search. Bug fixes include non-blocking document fetching and an internal error when changing binary quantization."
+    },
+    {
+      "memory_node_id": "meilisearch__meilisearch__release__v1_45_1",
+      "repo": "meilisearch/meilisearch",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.45.1",
+      "tag_name": "v1.45.1",
+      "title": "v1.45.1 🦒",
+      "time_hint": "2026-05-28",
+      "published_at": "2026-05-28T15:24:33Z",
+      "source_url": "https://github.com/meilisearch/meilisearch/releases/tag/v1.45.1",
+      "raw_text": "Repository: meilisearch/meilisearch\nRelease: v1.45.1 🦒\nTag: v1.45.1; draft: False; prerelease: False; published_at: 2026-05-28T15:24:33Z; created_at: 2026-05-28T15:17:30Z\nRelease notes:\n### 🪲 Bug Fixes\n* Revert autobatch deletions by filter with additions by @kerollmops in https://github.com/meilisearch/meilisearch/pull/6412\n**Full Changelog**: https://github.com/meilisearch/meilisearch/compare/v1.45.0...v1.45.1",
+      "memory_unit_text": "In the meilisearch/meilisearch release v1.45.1, a bug fix reverts the autobatch deletions by filter with additions feature introduced in v1.45.0."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the meilisearch/meilisearch releases, which release introduces the `attributeRank` and `wordPosition` ranking rules?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v1.36.0"
+        },
+        {
+          "option_id": "B",
+          "text": "v1.35.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v1.37.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v1.34.0"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v1.36.0",
+      "source_chunk_ids": [
+        "meilisearch__meilisearch__release__v1_36_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "meilisearch__meilisearch__release__v1_36_0",
+          "answer_text": "Introduce the `attributeRank` and `wordPosition` criteria"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the meilisearch/meilisearch releases, how does the vector store change in v1.29.0 differ from the vector store change in v1.36.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v1.29.0 makes the new vector store backend the default for new indexes, while v1.36.0 migrates existing indexes from the old annoy vector store to the new Hannoy one via a dumpless upgrade step."
+        },
+        {
+          "option_id": "B",
+          "text": "v1.29.0 removes the vector store entirely, while v1.36.0 reintroduces it with a different backend."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only update the vector store to support XLM Roberta models."
+        },
+        {
+          "option_id": "D",
+          "text": "v1.29.0 migrates all indexes to Hannoy, while v1.36.0 makes the new backend default for new indexes."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v1.29.0 makes the new vector store backend the default for new indexes, while v1.36.0 migrates existing indexes from the old annoy vector store to the new Hannoy one via a dumpless upgrade step.",
+      "source_chunk_ids": [
+        "meilisearch__meilisearch__release__v1_29_0",
+        "meilisearch__meilisearch__release__v1_36_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "meilisearch__meilisearch__release__v1_29_0",
+          "answer_text": "Enable the new vector store by default for new indexes"
+        },
+        {
+          "memory_node_id": "meilisearch__meilisearch__release__v1_36_0",
+          "answer_text": "introducing a new dumpless upgrade step that migrates index uses the old annoy vector store to the new Hannoy one"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the meilisearch/meilisearch release window, order the following release-content states from earliest to latest: (1) a release that introduces the `useNetwork` field for easy search over a network of machines, (2) a release that adds the ability to modify the number of participants in sharding without starting over, (3) a release that introduces replicated sharding with breaking changes to the network object, (4) a release that adds a fallback system for sharding and replication to avoid unavailable machines.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2 -> 1 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 3 -> 1 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 2 -> 1 -> 4"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2 -> 1 -> 3 -> 4",
+      "source_chunk_ids": [
+        "meilisearch__meilisearch__release__v1_30_0",
+        "meilisearch__meilisearch__release__v1_34_0",
+        "meilisearch__meilisearch__release__v1_37_0",
+        "meilisearch__meilisearch__release__v1_42_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "meilisearch__meilisearch__release__v1_30_0",
+          "answer_text": "adds the ability to modify the number of participants in sharding, without having to start over"
+        },
+        {
+          "memory_node_id": "meilisearch__meilisearch__release__v1_34_0",
+          "answer_text": "`useNetwork` field in `POST /indexes/{:indexUid}/search`"
+        },
+        {
+          "memory_node_id": "meilisearch__meilisearch__release__v1_37_0",
+          "answer_text": "Replicated sharding ... Breaking changes ... network objects sent to the PATCH /network route must now contain at least one shard object"
+        },
+        {
+          "memory_node_id": "meilisearch__meilisearch__release__v1_42_0",
+          "answer_text": "Support search fallback on remote unavailability ... fallback system for the sharding and replication enterprise edition feature"
+        }
+      ]
+    }
+  ]
+}

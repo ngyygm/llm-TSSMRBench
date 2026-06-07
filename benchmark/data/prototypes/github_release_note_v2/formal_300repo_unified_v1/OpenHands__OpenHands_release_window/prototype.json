@@ -1,0 +1,525 @@
+{
+  "prototype_id": "OpenHands__OpenHands_release_window",
+  "domain": "github_release_evolution",
+  "repo": "OpenHands/OpenHands",
+  "source_type": "release_note",
+  "window_title": "OpenHands/OpenHands recent release evolution",
+  "window_summary": "This window tracks the recent OpenHands/OpenHands release stream from version 0.51.0 through 1.7.0, including CLI-specific releases. It covers new features, model support additions, UI improvements, bug fixes, and architectural changes across the evolution of the platform.",
+  "chunks": [
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__0_51_0",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:0.51.0",
+      "tag_name": "0.51.0",
+      "title": "0.51.0 - 2025-07-31",
+      "time_hint": "2025-07-31",
+      "published_at": "2025-07-31T13:55:12Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/0.51.0",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 0.51.0 - 2025-07-31\nTag: 0.51.0; draft: False; prerelease: False; published_at: 2025-07-31T13:55:12Z; created_at: 2025-07-30T12:56:30Z\nRelease notes:\n## What's Changed\n### Added\n* Add MCP support for CLI by @ryanhoangt in https://github.com/All-Hands-AI/OpenHands/pull/9519\n### Changed\n* Improved the resolver summary generation by instructing the agent to focus only on new changes since the last summary, preventing repetitive information in consecutive summaries by @malhotra5 in https://github.com/All-Hands-AI/OpenHands/pull/9834\n* Optimized git change detection in the `Changes` tab with performance improvement and multi-repository support by @tofarr in https://github.com/All-Hands-AI/OpenHands/pull/9870\n### Fixed\n* Fixed an issue where the agent would stop due to per-minute rate limit errors by increasing retry delays by @llamantino in https://github.com/All-Hands-AI/OpenHands/pull/9489\n* Fixed configuration precedence in CLI mode (from low to high: settings.json < workspace config.toml < command line parameters) by @enyst in https://github.com/All-Hands-AI/OpenHands/pull/9911\n* Resolved an issue where the terminal, VSCode, Jupyter, and other tabs would show a \"Waiting for runtime to start...\" message when the agent was stopped, instead of displaying their actual content by @amanape in https://github.com/All-Hands-AI/OpenHands/pull/9941\n* Fixed MCP configuration merging where settings from config.toml files were not properly combined with frontend UI settings. Previously, MCP servers defined in config.toml could be overwritten by frontend settings by @xingyaoww in https://github.com/All-Hands-AI/OpenHands/pull/9237\n## New Contributors\n* @ckavili made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/9877\n* @C9luster made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/9840\n**Full Changelog**: https://github.com/All-Hands-AI/OpenHands/compare/0.50.0...0.51.0",
+      "memory_unit_text": "In the OpenHands/OpenHands release 0.51.0, the project adds MCP support for CLI, improves resolver summary generation to focus on new changes, optimizes git change detection with multi-repository support, fixes agent rate limit errors, fixes configuration precedence in CLI mode, resolves tab display issues when agent is stopped, and fixes MCP configuration merging between config.toml and frontend settings."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__0_52_0",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:0.52.0",
+      "tag_name": "0.52.0",
+      "title": "0.52.0 - 2025-08-13",
+      "time_hint": "2025-08-13",
+      "published_at": "2025-08-13T13:53:26Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/0.52.0",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 0.52.0 - 2025-08-13\nTag: 0.52.0; draft: False; prerelease: False; published_at: 2025-08-13T13:53:26Z; created_at: 2025-08-12T17:32:45Z\nRelease notes:\n## What's Changed\n### Added\n* Added qwen-3-coder-480b to OpenHands provider by @xingyaoww in https://github.com/All-Hands-AI/OpenHands/pull/9985\n* Added gpt-5-2025-08-07 to OpenHands provider by @xingyaoww in https://github.com/All-Hands-AI/OpenHands/pull/10172\n* Added support for model `claude-opus-4-1-20250805` by @KennyDizi in https://github.com/All-Hands-AI/OpenHands/pull/10120\n* Added search API key settings to CLI by @xingyaoww in https://github.com/All-Hands-AI/OpenHands/pull/9976\n* Added support for launching the OpenHands UI using the CLI by @xingyaoww in https://github.com/All-Hands-AI/OpenHands/pull/9783\n* Added support for overlay mounts in the Docker runtime by @olyashok in https://github.com/All-Hands-AI/OpenHands/pull/10222\n* Added a switch to enable or disable additional solvability analysis in the resolver on OpenHands Cloud by @csmith49 in https://github.com/All-Hands-AI/OpenHands/pull/9727\n* Added branch information to repository context by @malhotra5 in https://github.com/All-Hands-AI/OpenHands/pull/9833\n* Added auto-pagination for conversation list with infinite scroll by @xingyaoww  in https://github.com/All-Hands-AI/OpenHands/pull/10129\n### Changed\n* Improved the conversation card context menu by @llamantino in https://github.com/All-Hands-AI/OpenHands/pull/9917\n* Improved handling of the `/resume` command in CLI by adding validation by @aeft in https://github.com/All-Hands-AI/OpenHands/pull/10066\n* Changed the conversation history limit from 20 to 100 by @xingyaoww in https://github.com/All-Hands-AI/OpenHands/pull/10128\n* Improved repository loading reliability for OpenHands App by @malhotra5 in https://github.com/All-Hands-AI/OpenHands/pull/9826\n* Enhanced the CLI interface by adding proper markdown rendering for agent messages and final thoughts by @xingyaoww in https://github.com/All-Hands-AI/OpenHands/pull/10193\n### Fixed\n* Fixed an issue where user input commands were echoed twice in the terminal by @erkinalp in https://github.com/All-Hands-AI/OpenHands/pull/9959\n* Improved the reliability of models through the OpenHands provider by @xingyaoww in https://github.com/All-Hands-AI/OpenHands/pull/10009\n* Fixed an issue where `git clone` during workspace creation sometimes caused the server to hang by @denysvitali in https://github.com/All-Hands-AI/OpenHands/pull/9334\n* Fixed the `ports are not available` error message on Windows by @llamantino in https://github.com/All-Hands-AI/OpenHands/pull/9924\n* Fixed an issue where CodeActAgent system prompts and in-context learning examples referenced \"bash\" on Windows platforms, which should have been \"powershell\" for consistency with the Windows runtime environment by @li-boxuan in https://github.com/All-Hands-AI/OpenHands/pull/10179\n* Fixed an issue where Global Microagents did not work in OpenHands Cloud by @xingyaoww in https://github.com/All-Hands-AI/OpenHands/pull/10245\n* Fixed CLI errorno21 warning by @ryanhoangt in https://github.com/All-Hands-AI/OpenHands/pull/9990\n*\n## New Contributors\n* @denysvitali made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/9334\n* @greese-insight made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/9915\n* @aeft made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10054\n* @izyuumi made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/9757\n* @chasefarmer-pixee made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10078\n* @JamesZ12b made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/9895\n* @insop made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10241\n* @ibragim-bad made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/102...",
+      "memory_unit_text": "In the OpenHands/OpenHands release 0.52.0, the project adds support for models qwen-3-coder-480b, gpt-5-2025-08-07, and claude-opus-4-1-20250805; adds search API key settings to CLI, support for launching OpenHands UI using CLI, overlay mounts in Docker runtime, a switch for additional solvability analysis in resolver, branch information to repository context, and auto-pagination for conversation list. It improves conversation card context menu, /resume command validation, conversation history limit from 20 to 100, repository loading reliability, and CLI markdown rendering. It fixes echoed user input commands, model reliability, git clone hanging, ports error on Windows, CodeActAgent prompts on Windows, Global Microagents in Cloud, and CLI errno21 warning."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__0_53_0",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:0.53.0",
+      "tag_name": "0.53.0",
+      "title": "0.53.0",
+      "time_hint": "2025-08-14",
+      "published_at": "2025-08-14T20:43:07Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/0.53.0",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 0.53.0\nTag: 0.53.0; draft: False; prerelease: False; published_at: 2025-08-14T20:43:07Z; created_at: 2025-08-14T11:06:06Z\nRelease notes:\n## What's Changed\n### Added\n* Added support for binding named Docker volumes into the runtime by @olyashok in https://github.com/All-Hands-AI/OpenHands/pull/10268\n* Allowed partial modification of CLI settings by @aeft in https://github.com/All-Hands-AI/OpenHands/pull/10240\n* Added ability to specify the user OpenHands should commit as by @xingyaoww in https://github.com/All-Hands-AI/OpenHands/pull/10293\n### Changed\n* Added explicit instructions for OpenHands resolver to encourage pushing code changes by @xingyaoww in https://github.com/All-Hands-AI/OpenHands/pull/10290\n## New Contributors\n* @createthis made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10274\n* @787627858 made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10089\n**Full Changelog**: https://github.com/All-Hands-AI/OpenHands/compare/0.52.0...0.53.0",
+      "memory_unit_text": "In the OpenHands/OpenHands release 0.53.0, the project adds support for binding named Docker volumes into the runtime, allows partial modification of CLI settings, adds ability to specify the user OpenHands should commit as, and adds explicit instructions for the resolver to encourage pushing code changes."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__0_54_0",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:0.54.0",
+      "tag_name": "0.54.0",
+      "title": "0.54.0 - 2025-08-20",
+      "time_hint": "2025-08-20",
+      "published_at": "2025-08-20T14:29:20Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/0.54.0",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 0.54.0 - 2025-08-20\nTag: 0.54.0; draft: False; prerelease: False; published_at: 2025-08-20T14:29:20Z; created_at: 2025-08-18T22:39:23Z\nRelease notes:\n## What's Changed\n### Added\n* Added task tracking tool and planning mode for long-horizon tasks by @ryanhoangt in https://github.com/All-Hands-AI/OpenHands/pull/10166\n* Added a new feedback reason: \"The agent didn't finish the job\" by @xingyaoww in https://github.com/All-Hands-AI/OpenHands/pull/10417\n* Enabled MCP in OpenHands Cloud by @xingyaoww in https://github.com/All-Hands-AI/OpenHands/pull/10480\n### Changed\n* Improved the MCP config UI with add, edit, and delete functionality by @xingyaoww in https://github.com/All-Hands-AI/OpenHands/pull/10145\n### Fixed\n* Fixed an issue where the UI would sometimes flash repeatedly by @hieptl in https://github.com/All-Hands-AI/OpenHands/pull/10352\n* Fixed an issue where the browser tab title could revert to a previous conversation title by @enyst in https://github.com/All-Hands-AI/OpenHands/pull/10406\n## New Contributors\n* @ZhonghaoJiang made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10229\n* @KevinMusgrave made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10270\n* @suixinio made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10454\n**Full Changelog**: https://github.com/All-Hands-AI/OpenHands/compare/0.53.0...0.54.0",
+      "memory_unit_text": "In the OpenHands/OpenHands release 0.54.0, the project adds a task tracking tool and planning mode for long-horizon tasks, a new feedback reason 'The agent didn't finish the job', and enables MCP in OpenHands Cloud. It improves the MCP config UI with add, edit, and delete functionality. It fixes UI flashing and browser tab title reversion."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__0_55_0",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:0.55.0",
+      "tag_name": "0.55.0",
+      "title": "0.55.0",
+      "time_hint": "2025-09-02",
+      "published_at": "2025-09-02T17:49:07Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/0.55.0",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 0.55.0\nTag: 0.55.0; draft: False; prerelease: False; published_at: 2025-09-02T17:49:07Z; created_at: 2025-09-02T13:56:37Z\nRelease notes:\n## What's Changed\n### Added\n* Added LLM risk analyzer by @xingyaoww in https://github.com/All-Hands-AI/OpenHands/pull/9349\n* Added setting for condenser max history size by @enyst in https://github.com/All-Hands-AI/OpenHands/pull/10591\n### Changed\n* Improved performance and user experience when working with repositories that have many branches by @malhotra5 in https://github.com/All-Hands-AI/OpenHands/pull/10588\n### Fixed\n* Fixed usage of some reasoning models by @enyst in https://github.com/All-Hands-AI/OpenHands/pull/10414\n* Resolved visual formatting issues in the OpenHands CLI where markdown content was not properly rendered with adequate spacing by @xingyaoww in https://github.com/All-Hands-AI/OpenHands/pull/10538\n* Fixed cases where GitHub Cloud Resolver doesn't consider context around comments by @malhotra5 in https://github.com/All-Hands-AI/OpenHands/pull/10517\n* Fixed cases where GitLab cloud resolver doesn't consider context around comments by @malhotra5 in https://github.com/All-Hands-AI/OpenHands/pull/10509\n* Fixed tokens expiring in the middle of a running conversation by @malhotra5 in https://github.com/All-Hands-AI/OpenHands/pull/10637\n* Resolved an issue where API requests with very long or malformed conversation IDs would return a `500 Internal Server Error` instead of a proper `400 Bad Request` error by @amanape in https://github.com/All-Hands-AI/OpenHands/pull/10496\n## New Contributors\n* @Zacharias030 made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10476\n* @Joeoc2001 made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/9566\n* @hereisok made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10033\n* @danieljbruntz made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10255\n* @jamiechicago312 made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10485\n* @underth-moon99 made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10644\n**Full Changelog**: https://github.com/All-Hands-AI/OpenHands/compare/0.54.0...0.55.0",
+      "memory_unit_text": "In the OpenHands/OpenHands release 0.55.0, the project adds an LLM risk analyzer and a setting for condenser max history size. It improves performance when working with repositories that have many branches. It fixes usage of some reasoning models, CLI markdown rendering spacing, GitHub Cloud Resolver context around comments, GitLab cloud resolver context around comments, tokens expiring mid-conversation, and API requests with malformed conversation IDs returning 500 instead of 400."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__0_56_0",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:0.56.0",
+      "tag_name": "0.56.0",
+      "title": "0.56.0 - 2025-09-09",
+      "time_hint": "2025-09-09",
+      "published_at": "2025-09-09T14:30:54Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/0.56.0",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 0.56.0 - 2025-09-09\nTag: 0.56.0; draft: False; prerelease: False; published_at: 2025-09-09T14:30:54Z; created_at: 2025-09-08T13:18:07Z\nRelease notes:\n## What's Changed\n### Added\n* Added support for [AGENTS.md](https://agents.md/) files in microagents by @ryanhoangt in https://github.com/All-Hands-AI/OpenHands/pull/10528\n* Added new microagent management feature by @hieptl in https://github.com/All-Hands-AI/OpenHands/pull/10769\n* Added support for routing between different LLMs in an agent trajectory by @ryanhoangt in https://github.com/All-Hands-AI/OpenHands/pull/9738\n### Fixed\n* Fixed wrong working dir in local runtime by @li-boxuan in https://github.com/All-Hands-AI/OpenHands/pull/10801\n## New Contributors\n* @linhaowei1 made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10724\n* @AnkitKrYadav made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10779\n* @loyx made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10757\n* @embersax made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10832\n* @JAxeAddepar made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10573\n**Full Changelog**: https://github.com/All-Hands-AI/OpenHands/compare/0.55.0...0.56.0",
+      "memory_unit_text": "In the OpenHands/OpenHands release 0.56.0, the project adds support for AGENTS.md files in microagents, a new microagent management feature, and support for routing between different LLMs in an agent trajectory. It fixes wrong working directory in local runtime."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__0_57_0",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:0.57.0",
+      "tag_name": "0.57.0",
+      "title": "0.57.0 - 2025-09-19",
+      "time_hint": "2025-09-19",
+      "published_at": "2025-09-19T16:41:07Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/0.57.0",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 0.57.0 - 2025-09-19\nTag: 0.57.0; draft: False; prerelease: False; published_at: 2025-09-19T16:41:07Z; created_at: 2025-09-18T18:44:24Z\nRelease notes:\n## What's Changed\n### Added\n* New UI for landing and conversation pages\n* New bring your own key (BYOK) feature in OpenHands Cloud\n## New Contributors\n* @AshwinKumarBV-git made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10866\n* @jrobles98 made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10702\n* @tksrmz made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10948\n* @kashodiya made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10908\n* @eliotjones1 made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10898\n**Full Changelog**: https://github.com/All-Hands-AI/OpenHands/compare/0.56.0...0.57.0",
+      "memory_unit_text": "In the OpenHands/OpenHands release 0.57.0, the project introduces a new UI for landing and conversation pages and a new bring your own key (BYOK) feature in OpenHands Cloud."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__0_57_2",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:0.57.2",
+      "tag_name": "0.57.2",
+      "title": "0.57.2 - 2025-09-25",
+      "time_hint": "2025-09-25",
+      "published_at": "2025-09-25T13:04:19Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/0.57.2",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 0.57.2 - 2025-09-25\nTag: 0.57.2; draft: False; prerelease: False; published_at: 2025-09-25T13:04:19Z; created_at: 2025-09-25T12:36:21Z\nRelease notes:\n## What's Changed\n### Fixed\n* Pinned litellm version to fix dependency issues\n* Set Claude Sonnet output token limit",
+      "memory_unit_text": "In the OpenHands/OpenHands release 0.57.2, the project pins litellm version to fix dependency issues and sets Claude Sonnet output token limit."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__0_58_0",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:0.58.0",
+      "tag_name": "0.58.0",
+      "title": "0.58.0 - 2025-10-01",
+      "time_hint": "2025-10-01",
+      "published_at": "2025-10-01T17:19:04Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/0.58.0",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 0.58.0 - 2025-10-01\nTag: 0.58.0; draft: False; prerelease: False; published_at: 2025-10-01T17:19:04Z; created_at: 2025-10-01T12:49:15Z\nRelease notes:\n## What's Changed\n### Added\n* Added configurable timeout settings for SHTTP MCP servers to prevent tool calls from hanging by @tejas-goyal in https://github.com/All-Hands-AI/OpenHands/pull/11029\n* Added claude-sonnet-4-5 model support\n### Changed\n* Converted settings to vertical sidebar layout\n### Fixed\n* Significantly improved the security of the OpenHands enterprise Docker image by fixing multiple critical and high-severity security vulnerabilities (CVEs)\n* Fixed issue with users sometimes getting stuck in the initializing agent step on a resume attempt\n* Fixed multiple UI bugs\n## New Contributors\n* @ak684 made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/11026\n* @Betty1202 made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10246\n* @BenYao21 made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10450\n* @tejas-goyal made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/11029\n**Full Changelog**: https://github.com/All-Hands-AI/OpenHands/compare/0.57.2...0.58.0",
+      "memory_unit_text": "In the OpenHands/OpenHands release 0.58.0, the project adds configurable timeout settings for SHTTP MCP servers, adds claude-sonnet-4-5 model support, converts settings to vertical sidebar layout, significantly improves security of the enterprise Docker image by fixing multiple CVEs, fixes users getting stuck in initializing agent step on resume, and fixes multiple UI bugs."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__1_0_0_cli",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.0.0-cli",
+      "tag_name": "1.0.0-cli",
+      "title": "1.0.0-CLI - 2025-10-10",
+      "time_hint": "2025-10-10",
+      "published_at": "2025-10-10T15:32:26Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/1.0.0-cli",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 1.0.0-CLI - 2025-10-10\nTag: 1.0.0-cli; draft: False; prerelease: False; published_at: 2025-10-10T15:32:26Z; created_at: 2025-10-10T14:10:41Z\nRelease notes:\nV1 CLI\n- Multi-platform standalone executable binaries to run CLI without additional setup\n- Faster startup time running CLI using `uv`, `pip`, etc\n- New and refreshed UI\n- Simplified JSON MCP configuration + mcp oauth support",
+      "memory_unit_text": "In the OpenHands/OpenHands release 1.0.0-CLI, the project delivers V1 CLI with multi-platform standalone executable binaries, faster startup time using uv or pip, a new and refreshed UI, and simplified JSON MCP configuration plus MCP OAuth support."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__0_59_0",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:0.59.0",
+      "tag_name": "0.59.0",
+      "title": "0.59.0 - 2025-10-10",
+      "time_hint": "2025-10-10",
+      "published_at": "2025-10-10T19:31:46Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/0.59.0",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 0.59.0 - 2025-10-10\nTag: 0.59.0; draft: False; prerelease: False; published_at: 2025-10-10T19:31:46Z; created_at: 2025-10-10T12:25:01Z\nRelease notes:\n## What's Changed\n### Added\n* Added support for Lemonade Provider by @eddierichter-amd in https://github.com/All-Hands-AI/OpenHands/pull/11181\n### Fixed\n* Improvement to the searching of repositories by @hieptl in https://github.com/All-Hands-AI/OpenHands/pull/11203\n* Fixed file ownership on mounted volumes by @YakshithK in https://github.com/All-Hands-AI/OpenHands/pull/11231\n* Fixed prompt box resizing behavior (fixes #11025) by @patilatharv in https://github.com/All-Hands-AI/OpenHands/pull/11035\n* Multiple UI bug fixes\n## New Contributors\n* @YakshithK made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/11202\n* @caocao-sys made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/10875\n* @patilatharv made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/11035\n* @eddierichter-amd made their first contribution in https://github.com/All-Hands-AI/OpenHands/pull/11181\n**Full Changelog**: https://github.com/All-Hands-AI/OpenHands/compare/0.58.0...0.59.0",
+      "memory_unit_text": "In the OpenHands/OpenHands release 0.59.0, the project adds support for Lemonade Provider, improves searching of repositories, fixes file ownership on mounted volumes, fixes prompt box resizing behavior, and fixes multiple UI bugs."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__1_0_1_cli",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.0.1-cli",
+      "tag_name": "1.0.1-cli",
+      "title": "1.0.1-cli - 2025-10-13",
+      "time_hint": "2025-10-13",
+      "published_at": "2025-10-13T21:12:20Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/1.0.1-cli",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 1.0.1-cli - 2025-10-13\nTag: 1.0.1-cli; draft: False; prerelease: False; published_at: 2025-10-13T21:12:20Z; created_at: 2025-10-13T21:05:46Z\nRelease notes:\n## What's Changed\n### Fixed\n- CLI binary GLIBC compatibility for older Linux systems\n- Unexpected/unrecoverable crashes when disabling confirmation mode mid conversation\n- Existing API key disappearing from CLI settings when updating settings",
+      "memory_unit_text": "In the OpenHands/OpenHands release 1.0.1-cli, the project fixes CLI binary GLIBC compatibility for older Linux systems, fixes unexpected crashes when disabling confirmation mode mid-conversation, and fixes existing API key disappearing from CLI settings when updating settings."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__1_0_2_cli",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.0.2-cli",
+      "tag_name": "1.0.2-cli",
+      "title": "1.0.2-cli - 2025-10-21",
+      "time_hint": "2025-10-21",
+      "published_at": "2025-10-21T15:03:08Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/1.0.2-cli",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 1.0.2-cli - 2025-10-21\nTag: 1.0.2-cli; draft: False; prerelease: False; published_at: 2025-10-21T15:03:08Z; created_at: 2025-10-21T14:53:01Z\nRelease notes:\n## What's Changed\n### Changed\n- Simplified option to reject agent action in confirmation mode in #11443\n### Fixed\n- Broken CLI entrypoint when using package managers (e.g `uvx --python 3.12 openhands`) in #11411",
+      "memory_unit_text": "In the OpenHands/OpenHands release 1.0.2-cli, the project simplifies the option to reject agent action in confirmation mode and fixes broken CLI entrypoint when using package managers like uvx."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__0_60_0",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:0.60.0",
+      "tag_name": "0.60.0",
+      "title": "0.60.0 - 2025-10-29",
+      "time_hint": "2025-10-29",
+      "published_at": "2025-10-29T20:18:09Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/0.60.0",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 0.60.0 - 2025-10-29\nTag: 0.60.0; draft: False; prerelease: False; published_at: 2025-10-29T20:18:09Z; created_at: 2025-10-29T15:40:34Z\nRelease notes:\n## What's Changed\n### Breaking\n* Removed V0 CLI. V0 CLI is officially unsupported by @malhotra5 in https://github.com/OpenHands/OpenHands/pull/11538\n### Added\n* Added support for Clarifai provider\n* Added automatic sandbox lifecycle management to prevent resource exhaustion by limiting the number of running sandboxes by @tofarr in https://github.com/OpenHands/OpenHands/pull/11399\n### Changed\n* Simplified security analyzer confirmation interface by replacing two reject options with a single \"Reject\" option that prompts for optional reason by @malhotra5 in https://github.com/OpenHands/OpenHands/pull/11443\n### Fixed\n* Implemented graceful shutdown for headless mode by @li-boxuan in https://github.com/OpenHands/OpenHands/pull/11401\n* Improved VSCode integration in sandbox environments with proper authentication and working directory support by @tofarr in https://github.com/OpenHands/OpenHands/pull/11426\n* Fixed an issue where git operations would sometimes fail on resuming a conversation after some time by @ak684 in https://github.com/OpenHands/OpenHands/pull/11296\n* Fixed an issue where config.toml was not respected by the swe-bench/run_infer.py entrypoint by @Zacharias030 in https://github.com/OpenHands/OpenHands/pull/11091\n* Fixed terminal not rendering input commands by @amanape in https://github.com/OpenHands/OpenHands/pull/11537\n* Fixed multiple UI issues\n## New Contributors\n* @Papadopulus made their first contribution in https://github.com/OpenHands/OpenHands/pull/10913\n* @rstar327 made their first contribution in https://github.com/OpenHands/OpenHands/pull/11325\n* @Chesars made their first contribution in https://github.com/OpenHands/OpenHands/pull/11366\n* @mogith-pn made their first contribution in https://github.com/OpenHands/OpenHands/pull/11324\n* @softpudding made their first contribution in https://github.com/OpenHands/OpenHands/pull/11439\n* @Akindotcome made their first contribution in https://github.com/OpenHands/OpenHands/pull/11430\n* @wolfspyre made their first contribution in https://github.com/OpenHands/OpenHands/pull/10863\n* @CLFutureX made their first contribution in https://github.com/OpenHands/OpenHands/pull/11332\n* @jpshackelford made their first contribution in https://github.com/OpenHands/OpenHands/pull/11478\n* @Alex42006 made their first contribution in https://github.com/OpenHands/OpenHands/pull/11227\n* @ludwig-n made their first contribution in https://github.com/OpenHands/OpenHands/pull/11423\n* @Evelyn-Colon made their first contribution in https://github.com/OpenHands/OpenHands/pull/11230\n**Full Changelog**: https://github.com/OpenHands/OpenHands/compare/0.59.0...0.60.0",
+      "memory_unit_text": "In the OpenHands/OpenHands release 0.60.0, the project removes V0 CLI as officially unsupported, adds support for Clarifai provider, adds automatic sandbox lifecycle management to prevent resource exhaustion, simplifies security analyzer confirmation interface, implements graceful shutdown for headless mode, improves VSCode integration in sandbox environments, fixes git operations failing on resume, fixes config.toml not respected by swe-bench entrypoint, fixes terminal not rendering input commands, and fixes multiple UI issues."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__1_0_3_cli",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.0.3-cli",
+      "tag_name": "1.0.3-cli",
+      "title": "1.0.3-cli - 2025-10-30",
+      "time_hint": "2025-10-30",
+      "published_at": "2025-10-30T13:58:03Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/1.0.3-cli",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 1.0.3-cli - 2025-10-30\nTag: 1.0.3-cli; draft: False; prerelease: False; published_at: 2025-10-30T13:58:03Z; created_at: 2025-10-30T13:29:15Z\nRelease notes:\n### Fixed\n- Fixed LLM args to remove deprecation warnings https://github.com/OpenHands/OpenHands/pull/11568\n- Fixes from OpenHands SDK dependency for MCP tool validation error  https://github.com/OpenHands/OpenHands/pull/11566",
+      "memory_unit_text": "In the OpenHands/OpenHands release 1.0.3-cli, the project fixes LLM args to remove deprecation warnings and fixes MCP tool validation error from OpenHands SDK dependency."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__1_0_4_cli",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.0.4-cli",
+      "tag_name": "1.0.4-cli",
+      "title": "1.0.4-cli - 2025-10-31",
+      "time_hint": "2025-10-31",
+      "published_at": "2025-10-31T14:54:24Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/1.0.4-cli",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 1.0.4-cli - 2025-10-31\nTag: 1.0.4-cli; draft: False; prerelease: False; published_at: 2025-10-31T14:54:24Z; created_at: 2025-10-31T13:53:31Z\nRelease notes:\n### Fixed\n- CLI command to launch OpenHands GUI (`openhands serve` command) #11584",
+      "memory_unit_text": "In the OpenHands/OpenHands release 1.0.4-cli, the project fixes the CLI command to launch OpenHands GUI (openhands serve command)."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__1_0_5_cli",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.0.5-cli",
+      "tag_name": "1.0.5-cli",
+      "title": "1.0.5-cli - 2025-10-31",
+      "time_hint": "2025-10-31",
+      "published_at": "2025-10-31T19:28:45Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/1.0.5-cli",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 1.0.5-cli - 2025-10-31\nTag: 1.0.5-cli; draft: False; prerelease: False; published_at: 2025-10-31T19:28:45Z; created_at: 2025-10-31T19:12:26Z\nRelease notes:\n### Fixes\n- Allow users to configure settings before conversation has started #11588\n- Fix conversation ending abruptly with error when invoking condenser (requires users to re-configure llm settings) #11587",
+      "memory_unit_text": "In the OpenHands/OpenHands release 1.0.5-cli, the project allows users to configure settings before conversation has started and fixes conversation ending abruptly with error when invoking condenser."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__0_61_0",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:0.61.0",
+      "tag_name": "0.61.0",
+      "title": "0.61.0 - 2025-11-05",
+      "time_hint": "2025-11-05",
+      "published_at": "2025-11-05T20:20:15Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/0.61.0",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 0.61.0 - 2025-11-05\nTag: 0.61.0; draft: False; prerelease: False; published_at: 2025-11-05T20:20:15Z; created_at: 2025-11-04T14:05:49Z\nRelease notes:\n## What's Changed\n### Changed\n* Made terminal tab read-only by @amanape in https://github.com/OpenHands/OpenHands/pull/11546\n* Removed Jupyter tab by @amanape in https://github.com/OpenHands/OpenHands/pull/11563\n## New Contributors\n* @aphix made their first contribution in https://github.com/OpenHands/OpenHands/pull/11044\n* @jarrycyx made their first contribution in https://github.com/OpenHands/OpenHands/pull/11419\n* @jessitron made their first contribution in https://github.com/OpenHands/OpenHands/pull/11610\n**Full Changelog**: https://github.com/OpenHands/OpenHands/compare/0.60.0...0.61.0",
+      "memory_unit_text": "In the OpenHands/OpenHands release 0.61.0, the project makes the terminal tab read-only and removes the Jupyter tab."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__1_0_6_cli",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.0.6-cli",
+      "tag_name": "1.0.6-cli",
+      "title": "1.0.6-cli - 2025-11-7",
+      "time_hint": "2025-11-07",
+      "published_at": "2025-11-07T17:25:38Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/1.0.6-cli",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 1.0.6-cli - 2025-11-7\nTag: 1.0.6-cli; draft: False; prerelease: False; published_at: 2025-11-07T17:25:38Z; created_at: 2025-11-07T16:41:13Z\nRelease notes:\n### Fixes\n- Fix broken entrypoint when using UV #11643\n- Fix MCP settings persisting even after removal #11602\n- Remove preset MCPs from upstream package agent-sdk #11602\n- Lazy load conversation when calling `/new` command #11601\n- Remove noisy logs when loading conversations #11603",
+      "memory_unit_text": "In the OpenHands/OpenHands release 1.0.6-cli, the project fixes broken entrypoint when using UV, fixes MCP settings persisting after removal, removes preset MCPs from upstream package agent-sdk, lazy loads conversation when calling /new command, and removes noisy logs when loading conversations."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__0_62_0",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:0.62.0",
+      "tag_name": "0.62.0",
+      "title": "0.62.0 - 2025-11-11",
+      "time_hint": "2025-11-11",
+      "published_at": "2025-11-11T19:57:23Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/0.62.0",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 0.62.0 - 2025-11-11\nTag: 0.62.0; draft: False; prerelease: False; published_at: 2025-11-11T19:57:23Z; created_at: 2025-11-11T14:58:32Z\nRelease notes:\n## What's Changed\n### Added\n* Allow pinning and unpinning of conversation tabs by @hieptl in https://github.com/OpenHands/OpenHands/pull/11659\n* Add Documentation link to profile menu by @jpshackelford in https://github.com/OpenHands/OpenHands/pull/11583\n## New Contributors\n* @jeis4wpi made their first contribution in https://github.com/OpenHands/OpenHands/pull/11701\n**Full Changelog**: https://github.com/OpenHands/OpenHands/compare/0.61.0...0.62.0",
+      "memory_unit_text": "In the OpenHands/OpenHands release 0.62.0, the project allows pinning and unpinning of conversation tabs and adds a Documentation link to the profile menu."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__1_0_7_cli",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.0.7-cli",
+      "tag_name": "1.0.7-cli",
+      "title": "1.0.7-cli - 25-11-11",
+      "time_hint": "2025-11-11",
+      "published_at": "2025-11-11T21:48:39Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/1.0.7-cli",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 1.0.7-cli - 25-11-11\nTag: 1.0.7-cli; draft: False; prerelease: False; published_at: 2025-11-11T21:48:39Z; created_at: 2025-11-11T21:06:42Z\nRelease notes:\n### Fixes\n- Cleanup CLI outputs when conversation is first started #11677\n- Prevent tool calls with `security_risk` parameter from crashing conversations #11710",
+      "memory_unit_text": "In the OpenHands/OpenHands release 1.0.7-cli, the project cleans up CLI outputs when conversation is first started and prevents tool calls with security_risk parameter from crashing conversations."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__1_0_0",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.0.0",
+      "tag_name": "1.0.0",
+      "title": "1.0.0 - 2025-12-16",
+      "time_hint": "2025-12-16",
+      "published_at": "2025-12-16T16:03:32Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/1.0.0",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 1.0.0 - 2025-12-16\nTag: 1.0.0; draft: False; prerelease: False; published_at: 2025-12-16T16:03:32Z; created_at: 2025-12-15T18:00:46Z\nRelease notes:\n## What's Changed\nNew OpenHands 1.0.0 using the [new software-agent-sdk](https://github.com/OpenHands/software-agent-sdk) with many optimizations across the app. Check out the documentation on [how the OpenHands V1 uses the software-agent-sdk](https://docs.openhands.dev/sdk/arch/overview#relationship-with-openhands-applications).\n### Added\n* Chat messages are queued during runtime connection by @naaa760 in https://github.com/OpenHands/OpenHands/pull/11687\n* Implemented new task tracker interface by @hieptl in https://github.com/OpenHands/OpenHands/pull/11692\n* Added Azure DevOps integration support by @zerofltexx in https://github.com/OpenHands/OpenHands/pull/11243\n### Changed\n* Enabled native tool calling for gemini-3-pro-preview by @enyst in https://github.com/OpenHands/OpenHands/pull/11774\n### Fixed\n* Fixed many UI issues\n### Notes\n* OpenHands CLI has been moved to its own repo - https://github.com/OpenHands/OpenHands-CLI\n## New Contributors\n* @naaa760 made their first contribution in https://github.com/OpenHands/OpenHands/pull/11687\n* @TuringND made their first contribution in https://github.com/OpenHands/OpenHands/pull/11719\n* @rodneyaquino made their first contribution in https://github.com/OpenHands/OpenHands/pull/11783\n* @zerofltexx made their first contribution in https://github.com/OpenHands/OpenHands/pull/11243\n* @aoi127 made their first contribution in https://github.com/OpenHands/OpenHands/pull/11767\n* @18jeffreyma made their first contribution in https://github.com/OpenHands/OpenHands/pull/11716\n* @adshrc made their first contribution in https://github.com/OpenHands/OpenHands/pull/11841\n* @AVBharath10 made their first contribution in https://github.com/OpenHands/OpenHands/pull/11958\n* @VascoSch92 made their first contribution in https://github.com/OpenHands/OpenHands/pull/11947\n* @HeyItsChloe made their first contribution in https://github.com/OpenHands/OpenHands/pull/11981\n* @KyeongJooni made their first contribution in https://github.com/OpenHands/OpenHands/pull/11980\n* @nathannewyen made their first contribution in https://github.com/OpenHands/OpenHands/pull/12001\n**Full Changelog**: https://github.com/OpenHands/OpenHands/compare/0.62.0...1.0.0",
+      "memory_unit_text": "In the OpenHands/OpenHands release 1.0.0, the project introduces the new software-agent-sdk with many optimizations, queues chat messages during runtime connection, implements a new task tracker interface, adds Azure DevOps integration support, enables native tool calling for gemini-3-pro-preview, fixes many UI issues, and notes that OpenHands CLI has been moved to its own repo."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__1_1_0",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.1.0",
+      "tag_name": "1.1.0",
+      "title": "1.1.0 - 2025-12-30",
+      "time_hint": "2025-12-30",
+      "published_at": "2025-12-30T16:35:22Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/1.1.0",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 1.1.0 - 2025-12-30\nTag: 1.1.0; draft: False; prerelease: False; published_at: 2025-12-30T16:35:22Z; created_at: 2025-12-30T14:28:57Z\nRelease notes:\n## What's Changed\n### Added\n* Added OAuth 2.0 Device Flow for CLI authentication by @malhotra5 in https://github.com/OpenHands/OpenHands/pull/11984\n* Added refresh button to the Changes tab by @hieptl in https://github.com/OpenHands/OpenHands/pull/12036\n* Added `Export Conversation` button for conversations in the conversation panel by @tofarr in https://github.com/OpenHands/OpenHands/pull/12030\n* Added Forgejo integration by @johba37 in https://github.com/OpenHands/OpenHands/pull/11111\n### Changed\n* Changed the init process for each runtime container from micromamba to tini so that child processes of tmux get reaped properly by @GuyPaddock in https://github.com/OpenHands/OpenHands/pull/12133\n### Fixed\n* Local (non‑Docker) runs now use host‑writable paths by default and keep Playwright downloads out of /workspace, preventing permissions errors and making it easier to find your files on the host by @Wangmerlyn in https://github.com/OpenHands/OpenHands/pull/12015\n* Fixed multiple UI and performance issues\n## New Contributors\n* @Mariam-Saeed made their first contribution in https://github.com/OpenHands/OpenHands/pull/12041\n* @Wangmerlyn made their first contribution in https://github.com/OpenHands/OpenHands/pull/12015\n* @aditya-gaharawar made their first contribution in https://github.com/OpenHands/OpenHands/pull/12103\n* @majiayu000 made their first contribution in https://github.com/OpenHands/OpenHands/pull/12117\n* @shanemort1982 made their first contribution in https://github.com/OpenHands/OpenHands/pull/12113\n* @GuyPaddock made their first contribution in https://github.com/OpenHands/OpenHands/pull/12133\n* @johba37 made their first contribution in https://github.com/OpenHands/OpenHands/pull/11111\n* @phenric26 made their first contribution in https://github.com/OpenHands/OpenHands/pull/11600\n**Full Changelog**: https://github.com/OpenHands/OpenHands/compare/1.0.0...1.1.0",
+      "memory_unit_text": "In the OpenHands/OpenHands release 1.1.0, the project adds OAuth 2.0 Device Flow for CLI authentication, a refresh button to the Changes tab, an Export Conversation button, Forgejo integration, changes the init process from micromamba to tini for proper child process reaping, fixes local runs to use host-writable paths and keep Playwright downloads out of /workspace, and fixes multiple UI and performance issues."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__1_2_0",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.2.0",
+      "tag_name": "1.2.0",
+      "title": "1.2.0 - 2026-01-15",
+      "time_hint": "2026-01-16",
+      "published_at": "2026-01-16T14:34:01Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/1.2.0",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 1.2.0 - 2026-01-15\nTag: 1.2.0; draft: False; prerelease: False; published_at: 2026-01-16T14:34:01Z; created_at: 2026-01-15T15:08:32Z\nRelease notes:\n## What's Changed\n### Added\n* Adding a status indicator above the chat until the conversation is ready by @HeyItsChloe in https://github.com/OpenHands/OpenHands/pull/12111\n### Changed\n* Conversation title is now displayed in delete confirmation modal by @naaa760 in https://github.com/OpenHands/OpenHands/pull/11818\n* Bumped condenser defaults max_size from 120 to 240 by @xingyaoww in https://github.com/OpenHands/OpenHands/pull/12267\n### Fixed\n* Fixed a bug where the Search API Key was getting reset when saving other settings by @sarva-20 in https://github.com/OpenHands/OpenHands/pull/12243\n* Many bug fixes and improvements\n## New Contributors\n* @all-hands-bot made their first contribution in https://github.com/OpenHands/OpenHands/pull/12218\n* @aaron-seq made their first contribution in https://github.com/OpenHands/OpenHands/pull/11953\n* @kub938 made their first contribution in https://github.com/OpenHands/OpenHands/pull/12215\n* @O2sa made their first contribution in https://github.com/OpenHands/OpenHands/pull/12174\n* @Ryanakml made their first contribution in https://github.com/OpenHands/OpenHands/pull/12219\n* @adithya-naik made their first contribution in https://github.com/OpenHands/OpenHands/pull/12230\n* @pdaxt made their first contribution in https://github.com/OpenHands/OpenHands/pull/12256\n* @sarva-20 made their first contribution in https://github.com/OpenHands/OpenHands/pull/12243\n* @zxkane made their first contribution in https://github.com/OpenHands/OpenHands/pull/12284\n* @leonace924 made their first contribution in https://github.com/OpenHands/OpenHands/pull/12400\n**Full Changelog**: https://github.com/OpenHands/OpenHands/compare/1.1.0...1.2.0",
+      "memory_unit_text": "In the OpenHands/OpenHands release 1.2.0, the project adds a status indicator above the chat until conversation is ready, displays conversation title in delete confirmation modal, bumps condenser defaults max_size from 120 to 240, fixes a bug where Search API Key was reset when saving other settings, and includes many bug fixes and improvements."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__1_2_1",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.2.1",
+      "tag_name": "1.2.1",
+      "title": "1.2.1 - 2026-01-16",
+      "time_hint": "2026-01-16",
+      "published_at": "2026-01-16T14:34:06Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/1.2.1",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 1.2.1 - 2026-01-16\nTag: 1.2.1; draft: False; prerelease: False; published_at: 2026-01-16T14:34:06Z; created_at: 2026-01-15T21:32:50Z\nRelease notes:\n## What's Changed\n### Fixed\n* Error messages in the chat interface now include a dismiss button and automatically truncate long messages with a \"View More\" toggle by @VedantMadane in https://github.com/OpenHands/OpenHands/pull/12354\n## New Contributors\n* @MkDev11 made their first contribution in https://github.com/OpenHands/OpenHands/pull/12439\n* @VedantMadane made their first contribution in https://github.com/OpenHands/OpenHands/pull/12354\n**Full Changelog**: https://github.com/OpenHands/OpenHands/compare/1.2.0...1.2.1",
+      "memory_unit_text": "In the OpenHands/OpenHands release 1.2.1, the project fixes error messages in the chat interface to include a dismiss button and automatically truncate long messages with a 'View More' toggle."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__1_3_0",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.3.0",
+      "tag_name": "1.3.0",
+      "title": "1.3.0 - 2026-02-02",
+      "time_hint": "2026-02-02",
+      "published_at": "2026-02-02T21:17:37Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/1.3.0",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 1.3.0 - 2026-02-02\nTag: 1.3.0; draft: False; prerelease: False; published_at: 2026-02-02T21:17:37Z; created_at: 2026-02-02T16:05:29Z\nRelease notes:\n## What's Changed\n### Added\n* Added CORS support to Docker sandbox service for remote browser access. Users running OpenHands on remote servers should set `WEB_HOST` environment variable (e.g., WEB_HOST=192.168.1.100:3000) along with `SANDBOX_CONTAINER_URL_PATTERN` for proper remote access configuration by @tofarr in https://github.com/OpenHands/OpenHands/pull/12489\n* Added support for host networking mode via `OH_SANDBOX_USE_HOST_NETWORK=true`. This enables reverse proxy setups to access user-launched applications on any port, not just the predefined worker ports by @MkDev11 in https://github.com/OpenHands/OpenHands/pull/12445\n### Fixed\n* Fixed a bug in the UI where the agent's thought content from ThinkAction was not displayed by @abhayymishraa in https://github.com/OpenHands/OpenHands/pull/12597\n* Fixed cursor jumping to end of input when editing branch or repository names in dropdown search fields by @abhayymishraa in https://github.com/OpenHands/OpenHands/pull/12501\n* Fixed `Display Cost` for conversations by @tofarr in https://github.com/OpenHands/OpenHands/pull/12678\n## New Contributors\n* @timon0305 made their first contribution in https://github.com/OpenHands/OpenHands/pull/12527\n**Full Changelog**: https://github.com/OpenHands/OpenHands/compare/1.2.1...1.3.0",
+      "memory_unit_text": "In the OpenHands/OpenHands release 1.3.0, the project adds CORS support to Docker sandbox service for remote browser access, adds support for host networking mode via OH_SANDBOX_USE_HOST_NETWORK, fixes UI not displaying agent thought content from ThinkAction, fixes cursor jumping in dropdown search fields, and fixes Display Cost for conversations."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__1_4_0",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.4.0",
+      "tag_name": "1.4.0",
+      "title": "1.4.0 - 2026-02-17",
+      "time_hint": "2026-02-18",
+      "published_at": "2026-02-18T15:42:57Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/1.4.0",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 1.4.0 - 2026-02-17\nTag: 1.4.0; draft: False; prerelease: False; published_at: 2026-02-18T15:42:57Z; created_at: 2026-02-17T14:15:14Z\nRelease notes:\n## What's Changed\n### Added\n* Add MiniMax-M2.5 model support by @neubig in https://github.com/OpenHands/OpenHands/pull/12835\n### Fixed\n* Fixed an issue where resumed conversations would incorrectly display an error status during startup by @tofarr in https://github.com/OpenHands/OpenHands/pull/12718\n## New Contributors\n* @huangkevin-apr made their first contribution in https://github.com/OpenHands/OpenHands/pull/12728\n* @agrattan0820 made their first contribution in https://github.com/OpenHands/OpenHands/pull/12809\n**Full Changelog**: https://github.com/OpenHands/OpenHands/compare/1.3.0...1.4.0",
+      "memory_unit_text": "In the OpenHands/OpenHands release 1.4.0, the project adds MiniMax-M2.5 model support and fixes an issue where resumed conversations incorrectly displayed an error status during startup."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__1_5_0",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.5.0",
+      "tag_name": "1.5.0",
+      "title": "1.5.0 - 2026-03-11",
+      "time_hint": "2026-03-11",
+      "published_at": "2026-03-11T18:50:28Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/1.5.0",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 1.5.0 - 2026-03-11\nTag: 1.5.0; draft: False; prerelease: False; published_at: 2026-03-11T18:50:28Z; created_at: 2026-03-10T21:00:51Z\nRelease notes:\n## What's Changed\n### Added\n* Added ability to attach or change the Git repository for existing conversations by @MkDev11 in https://github.com/OpenHands/OpenHands/pull/12671\n* Added a `Task List` tab in the right panel that shows the agent's current task list with real-time status updates by @eureka928 in https://github.com/OpenHands/OpenHands/pull/13065\n* Added planning agent by @hieptl in https://github.com/OpenHands/OpenHands/pull/12880\n* Added a slash command menu to the chat input that displays available agent skills and commands when typing `/` by @eureka928 in https://github.com/OpenHands/OpenHands/pull/12982\n* Added support for Bitbucket datacenter by @phymbert in https://github.com/OpenHands/OpenHands/pull/11052\n* Added support for the following models: Claude Opus 4.6, GLM-4.7, Claude-Sonnet-4-6, GLM-5, Kimi-K2.5, Qwen3-Coder-Next, Gemini-3.1-Pro-Preview\n### Changed\n* Hid the microagent management ui by @hieptl in https://github.com/OpenHands/OpenHands/pull/13060\n### Fixed\n* Fixed the pinning and unpinning functionality of tabs by @bendarte in https://github.com/OpenHands/OpenHands/pull/12932\n* Many CVEs fixed through dependency updates\n* Fixed multiple UI issues\n## New Contributors\n* @314clay made their first contribution in https://github.com/OpenHands/OpenHands/pull/12874\n* @hobostay made their first contribution in https://github.com/OpenHands/OpenHands/pull/12810\n* @machov made their first contribution in https://github.com/OpenHands/OpenHands/pull/12941\n* @aivong-openhands made their first contribution in https://github.com/OpenHands/OpenHands/pull/13016\n* @bittoby made their first contribution in https://github.com/OpenHands/OpenHands/pull/12833\n* @Fieldnote-Echo made their first contribution in https://github.com/OpenHands/OpenHands/pull/12870\n* @cbagwell made their first contribution in https://github.com/OpenHands/OpenHands/pull/12595\n* @Shruti1128 made their first contribution in https://github.com/OpenHands/OpenHands/pull/12557\n* @bendarte made their first contribution in https://github.com/OpenHands/OpenHands/pull/12932\n* @phymbert made their first contribution in https://github.com/OpenHands/OpenHands/pull/11052\n* @04cb made their first contribution in https://github.com/OpenHands/OpenHands/pull/13236\n* @Povo-43 made their first contribution in https://github.com/OpenHands/OpenHands/pull/13261\n* @jlav made their first contribution in https://github.com/OpenHands/OpenHands/pull/13228\n**Full Changelog**: https://github.com/OpenHands/OpenHands/compare/1.4.0...1.5.0",
+      "memory_unit_text": "In the OpenHands/OpenHands release 1.5.0, the project adds ability to attach or change Git repository for existing conversations, a Task List tab with real-time status updates, a planning agent, a slash command menu, Bitbucket datacenter support, and support for models Claude Opus 4.6, GLM-4.7, Claude-Sonnet-4-6, GLM-5, Kimi-K2.5, Qwen3-Coder-Next, Gemini-3.1-Pro-Preview. It hides the microagent management UI, fixes tab pinning/unpinning, fixes many CVEs, and fixes multiple UI issues."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__1_6_0",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.6.0",
+      "tag_name": "1.6.0",
+      "title": "1.6.0 - 2026-03-30",
+      "time_hint": "2026-03-30",
+      "published_at": "2026-03-30T16:01:39Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/1.6.0",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 1.6.0 - 2026-03-30\nTag: 1.6.0; draft: False; prerelease: False; published_at: 2026-03-30T16:01:39Z; created_at: 2026-03-30T14:20:58Z\nRelease notes:\n## What's Changed\n### Added\n* Added support for hooks by @xingyaoww in https://github.com/OpenHands/OpenHands/pull/12773\n* Added Catalan language by @jordimas in https://github.com/OpenHands/OpenHands/pull/13299\n* Added /clear command for V1 conversations. Typing /clear in the chat creates a new conversation that inherits the current sandbox and configuration, giving you a fresh chat history while keeping your runtime state intact by @MkDev11 in https://github.com/OpenHands/OpenHands/pull/12786\n* Added copy button to code blocks by @VascoSch92 in https://github.com/OpenHands/OpenHands/pull/13458\n* Added support to enable/disable default global skills by @statxc in https://github.com/OpenHands/OpenHands/pull/13046\n* Added the `/new` slash command to the slash command menu by @karanjaxyz in https://github.com/OpenHands/OpenHands/pull/13599\n### Fixed\n* Fixed an issue where sometimes conversations were not persisted by @tofarr in https://github.com/OpenHands/OpenHands/pull/13629\n* Fixed a bug in `Export Conversation` that caused events to be duplicated multiple times by @tofarr in https://github.com/OpenHands/OpenHands/pull/13364\n* Multiple CVE fixes through dependency updates\n## New Contributors\n* @ankit2235 made their first contribution in https://github.com/OpenHands/OpenHands/pull/12596\n* @travellingsoldier85 made their first contribution in https://github.com/OpenHands/OpenHands/pull/13444\n* @stakeswky made their first contribution in https://github.com/OpenHands/OpenHands/pull/13039\n* @jordimas made their first contribution in https://github.com/OpenHands/OpenHands/pull/13299\n* @veeceey made their first contribution in https://github.com/OpenHands/OpenHands/pull/12792\n* @LarytheLord made their first contribution in https://github.com/OpenHands/OpenHands/pull/13471\n* @sjathin made their first contribution in https://github.com/OpenHands/OpenHands/pull/13522\n* @erisfully made their first contribution in https://github.com/OpenHands/OpenHands/pull/13549\n* @statxc made their first contribution in https://github.com/OpenHands/OpenHands/pull/13046\n* @karanjaxyz made their first contribution in https://github.com/OpenHands/OpenHands/pull/13599\n**Full Changelog**: https://github.com/OpenHands/OpenHands/compare/1.5.0...1.6.0",
+      "memory_unit_text": "In the OpenHands/OpenHands release 1.6.0, the project adds support for hooks, Catalan language, /clear command for V1 conversations, copy button to code blocks, support to enable/disable default global skills, and the /new slash command to the slash command menu. It fixes conversations not being persisted, Export Conversation event duplication, and multiple CVEs."
+    },
+    {
+      "memory_node_id": "OpenHands__OpenHands__release__1_7_0",
+      "repo": "OpenHands/OpenHands",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.7.0",
+      "tag_name": "1.7.0",
+      "title": "1.7.0 - 2026-05-01",
+      "time_hint": "2026-05-01",
+      "published_at": "2026-05-01T14:52:47Z",
+      "source_url": "https://github.com/OpenHands/OpenHands/releases/tag/1.7.0",
+      "raw_text": "Repository: OpenHands/OpenHands\nRelease: 1.7.0 - 2026-05-01\nTag: 1.7.0; draft: False; prerelease: False; published_at: 2026-05-01T14:52:47Z; created_at: 2026-04-30T19:10:02Z\nRelease notes:\n## What's Changed\n### Added\n* Added LLM model on conversation cards and header by @sjathin in https://github.com/OpenHands/OpenHands/pull/13616\n* Added SANDBOX_KVM_ENABLED environment variable to enable passing /dev/kvm to sandbox containers. When enabled, sandboxes can run KVM-accelerated virtual machines instead of using slower emulation by @gpothier in https://github.com/OpenHands/OpenHands/pull/13618\n* Exposed SDK settings schema to OpenHands by @neubig in https://github.com/OpenHands/OpenHands/pull/13306\n### Changed\n* Moved Tavily search key to MCP settings by @neubig in https://github.com/OpenHands/OpenHands/pull/14000\n### Fixed\n* Resolved multiple CVEs through dependency updates\n* Fixed multiple UI issues\n## New Contributors\n* @gpothier made their first contribution in https://github.com/OpenHands/OpenHands/pull/13618\n* @Ricardo-M-L made their first contribution in https://github.com/OpenHands/OpenHands/pull/13817\n* @buyua9 made their first contribution in https://github.com/OpenHands/OpenHands/pull/13802\n* @octo-patch made their first contribution in https://github.com/OpenHands/OpenHands/pull/13996\n* @JefferyLiu6 made their first contribution in https://github.com/OpenHands/OpenHands/pull/13890\n* @xsfX20 made their first contribution in https://github.com/OpenHands/OpenHands/pull/13708\n**Full Changelog**: https://github.com/OpenHands/OpenHands/compare/1.6.0...1.7.0",
+      "memory_unit_text": "In the OpenHands/OpenHands release 1.7.0, the project adds LLM model on conversation cards and header, SANDBOX_KVM_ENABLED environment variable for KVM acceleration, exposes SDK settings schema, moves Tavily search key to MCP settings, resolves multiple CVEs, and fixes multiple UI issues."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the OpenHands/OpenHands releases, which release introduces a new UI for landing and conversation pages along with a bring your own key (BYOK) feature in OpenHands Cloud?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "0.56.0"
+        },
+        {
+          "option_id": "B",
+          "text": "0.57.0"
+        },
+        {
+          "option_id": "C",
+          "text": "0.58.0"
+        },
+        {
+          "option_id": "D",
+          "text": "0.59.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "0.57.0",
+      "source_chunk_ids": [
+        "OpenHands__OpenHands__release__0_57_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "OpenHands__OpenHands__release__0_57_0",
+          "answer_text": "introduces a new UI for landing and conversation pages and a new bring your own key (BYOK) feature in OpenHands Cloud"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the OpenHands/OpenHands releases, how does the change to the terminal tab in release 0.61.0 differ from the change to the Jupyter tab in the same release?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "0.61.0 makes the terminal tab read-only and removes the Jupyter tab."
+        },
+        {
+          "option_id": "B",
+          "text": "0.61.0 makes the terminal tab editable and adds a new Jupyter tab."
+        },
+        {
+          "option_id": "C",
+          "text": "0.61.0 removes both the terminal and Jupyter tabs."
+        },
+        {
+          "option_id": "D",
+          "text": "0.61.0 makes the Jupyter tab read-only and keeps the terminal tab unchanged."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "0.61.0 makes the terminal tab read-only and removes the Jupyter tab.",
+      "source_chunk_ids": [
+        "OpenHands__OpenHands__release__0_61_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "OpenHands__OpenHands__release__0_61_0",
+          "answer_text": "makes the terminal tab read-only and removes the Jupyter tab"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the OpenHands/OpenHands release window, order the following release-content states from earliest to latest: (1) a release that adds support for AGENTS.md files in microagents, (2) a release that adds a task tracking tool and planning mode for long-horizon tasks, (3) a release that adds an LLM risk analyzer, (4) a release that adds MCP support for CLI.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "4 -> 2 -> 3 -> 1"
+        },
+        {
+          "option_id": "B",
+          "text": "4 -> 3 -> 2 -> 1"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "2 -> 1 -> 4 -> 3"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "4 -> 2 -> 3 -> 1",
+      "source_chunk_ids": [
+        "OpenHands__OpenHands__release__0_51_0",
+        "OpenHands__OpenHands__release__0_54_0",
+        "OpenHands__OpenHands__release__0_55_0",
+        "OpenHands__OpenHands__release__0_56_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "OpenHands__OpenHands__release__0_51_0",
+          "answer_text": "Add MCP support for CLI"
+        },
+        {
+          "memory_node_id": "OpenHands__OpenHands__release__0_54_0",
+          "answer_text": "Added task tracking tool and planning mode for long-horizon tasks"
+        },
+        {
+          "memory_node_id": "OpenHands__OpenHands__release__0_55_0",
+          "answer_text": "Added LLM risk analyzer"
+        },
+        {
+          "memory_node_id": "OpenHands__OpenHands__release__0_56_0",
+          "answer_text": "Added support for AGENTS.md files in microagents"
+        }
+      ]
+    }
+  ]
+}
