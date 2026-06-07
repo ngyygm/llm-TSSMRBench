@@ -1,0 +1,525 @@
+{
+  "prototype_id": "valkey_io__valkey_release_window",
+  "domain": "github_release_evolution",
+  "repo": "valkey-io/valkey",
+  "source_type": "release_note",
+  "window_title": "valkey-io/valkey recent release evolution",
+  "window_summary": "This window tracks the recent valkey-io/valkey release stream across major versions 7.2, 8.0, 8.1, 9.0, and 9.1, including patch releases and release candidates. It covers security fixes, performance improvements, new features like atomic slot migration and hash field expiration, and bug fixes across the evolution of the Valkey in-memory data store.",
+  "chunks": [
+    {
+      "memory_node_id": "valkey_io__valkey__release__8_1_0",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.1.0",
+      "tag_name": "8.1.0",
+      "title": "8.1.0",
+      "time_hint": "2025-03-31",
+      "published_at": "2025-03-31T15:46:26Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/8.1.0",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 8.1.0\nTag: 8.1.0; draft: False; prerelease: False; published_at: 2025-03-31T15:46:26Z; created_at: 2025-03-31T15:36:08Z\nRelease notes:\nValkey 8.1 release notes\n========================\nUpgrade urgency levels:\nLOW:      No need to upgrade unless there are new features you want to use.\nMODERATE: Program an upgrade of the server, but it's not urgent.\nHIGH:     There is a critical bug that may affect a subset of users. Upgrade!\nCRITICAL: There is a critical bug affecting MOST USERS. Upgrade ASAP.\nSECURITY: There are security fixes in the release.\nValkey 8.1.0 GA  -  Released Mon 31 March 2025\n================================================================================\nUpgrade urgency LOW: This is the first release of Valkey 8.1,\na minor version update designed to further enhance performance, reliability, observability and usability\nover Valkey 8.0 for all Valkey installations. This release is fully compatible with all previous Valkey releases\nas well as Redis OSS 7.2.4.\nBehavior Changes\n----------------\n* Hide input buffer data from being logged on protocol error when hide-user-data-from-log is enabled (#1889)\nBug fixes\n---------\n* Fix a bug in VM_GetCurrentUserName which leads to engine crash when no valid username provided (#1885)\nValkey 8.1.0 RC2  -  Released Thu 20 March 2025\n================================================================================\nUpgrade urgency LOW: This is the second release candidate of Valkey 8.1, with several bug fixes,\ncontrol on manual-failover timeout and expended module API to reduce module executed commands overhead.\nPerformance/Efficiency Improvements - Core\n-------------------\n* Optimize bitcount command by using x86 SIMD instructions (#1741)\n* Embed hash value in hash data type entries to reduce memory footprint (#1579)\nCluster modifications\n-------------------\n* Add cluster-manual-failover-timeout configuration to control the timeout for manual failover (#1690)\n* Improve error message reporting when invalid port is provided for cluster meet command. (#1686)\n* broadcast epoch ASAP when configEpoch changed (#1813)\nModule Improvements\n-------------------\n* Add new module API flag to bypass command validation in order to reduce processing overhead (#1357)\nBehavior Changes\n-------------------\n* Enable TCP_NODELAY for engine initiated cluster and replication connections (#1763)\nBug Fixes\n-------------------\n* Fix `ACL LOAD` crash on a connected replica node (#1842)\n* Fix bug where no tracking-redir-broken is issued when the redirect client is in the process of getting closed. (#1823)\n* Fix replica sometimes disconnecting when replication is using TLS. (#1737)\n* Fix file descriptor leak when aborting dual channel replication due to error (#1721)\n* Fix rax crash when using keys larger than 512MB (#1722)\n* Fix RANDOMKEY command leading to infinite loop during when all CLIENT are PAUSED and all keys are with expiry (#1850)\n* Removing unicode optimization in Lua cjson library to avoid OOM when very large strings are used. (#1785)\n* Fix update large-reply in COMMANDLOG when reply is deferred (#1760)\n* Avoid setting TCP/TLS specific options for UNIX Domain Socket connections (#1706)\n* Fix a bug in the valkey-cli which would incorrectly render commands with text output in multi/exec (#1782)\nBuild and Packaging changes\n-------------------\n* Check both arm64 and aarch64 for ARM based system architecture during CMake builds (#1829)\n* Cleanup lua object files on make distclean (#1812)\n* Fixed build error with CMake when using clang v19 (#1806)\nValkey 8.1.0 RC1  -  Released Thu 11 Feb 2025\n================================================================================\nUpgrade urgency LOW: This is the first release candidate of Valkey 8.1, with\nperformance improvements, extended observability and cluster improvements and different bug fixes.\nIt includes a new implementation of the Valkey dictionary which is more memory and cache efficient,\nbetter performance for...",
+      "memory_unit_text": "In the valkey-io/valkey release 8.1.0, the project announces the general availability of Valkey 8.1, a minor version update designed to further enhance performance, reliability, observability and usability over Valkey 8.0. This release is fully compatible with all previous Valkey releases as well as Redis OSS 7.2.4. Behavior changes include hiding input buffer data from being logged on protocol error when hide-user-data-from-log is enabled. Bug fixes address a crash in VM_GetCurrentUserName when no valid username is provided. The release also includes performance improvements such as optimizing bitcount command by using x86 SIMD instructions and embedding hash value in hash data type entries to reduce memory footprint. Cluster modifications add cluster-manual-failover-timeout configuration, improve error message reporting for invalid port in cluster meet command, and broadcast epoch ASAP when configEpoch changes. Module improvements add a new module API flag to bypass command validation to reduce processing overhead. Additional behavior changes enable TCP_NODELAY for engine initiated cluster and replication connections. Further bug fixes resolve ACL LOAD crash on a connected replica node, missing tracking-redir-broken when redirect client is closing, replica disconnection with TLS, file descriptor leak during dual channel replication abort, rax crash with keys larger than 512MB, RANDOMKEY infinite loop during CLIENT PAUSE, OOM in Lua cjson library, large-reply update in COMMANDLOG, setting TCP/TLS options for UNIX Domain Socket connections, and incorrect command rendering in valkey-cli with text output in multi/exec. Build and packaging changes check both arm64 and aarch64 for ARM architecture, cleanup lua object files on make distclean, and fix build error with CMake when using clang v19."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__7_2_9",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:7.2.9",
+      "tag_name": "7.2.9",
+      "title": "7.2.9",
+      "time_hint": "2025-04-23",
+      "published_at": "2025-04-23T20:56:14Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/7.2.9",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 7.2.9\nTag: 7.2.9; draft: False; prerelease: False; published_at: 2025-04-23T20:56:14Z; created_at: 2025-04-23T20:01:14Z\nRelease notes:\nUpgrade urgency SECURITY: This release includes security fixes we recommend you apply as soon as possible.\nSecurity fixes\n==============\n* (CVE-2025-21605) Limit output buffer for unauthenticated clients (#1992)\nBug fixes\n=========\n* Fix defrag crash when using FLUSHDB ASYNC in cluster mode (#1873)\n* Fix memory leak in forgotten node ping ext code path (#1576)\n* Fix module LatencyAddSample still work when latency-monitor-threshold is 0 (#1541)\n* Fix potential crash in radix tree recompression of huge keys (#1722)\n* Fix error \"SSL routines::bad length\" when connTLSWrite is called second time with smaller buffer (#1737)\n* Fix RANDOMKEY infinite loop during CLIENT PAUSE (#1850)\n* fix: add samples to stream object consumer trees (#1825)\n* Fix panic in primary when blocking shutdown after previous block with timeout (#1948)\n* Fix incorrect lag reported in XINFO GROUPS (#1952)\n**Full Changelog**: https://github.com/valkey-io/valkey/compare/7.2.8...7.2.9",
+      "memory_unit_text": "In the valkey-io/valkey release 7.2.9, the upgrade urgency is SECURITY due to a fix for CVE-2025-21605 which limits output buffer for unauthenticated clients. Bug fixes include fixing defrag crash when using FLUSHDB ASYNC in cluster mode, memory leak in forgotten node ping ext code path, module LatencyAddSample still working when latency-monitor-threshold is 0, potential crash in radix tree recompression of huge keys, error \"SSL routines::bad length\" when connTLSWrite is called second time with smaller buffer, RANDOMKEY infinite loop during CLIENT PAUSE, adding samples to stream object consumer trees, panic in primary when blocking shutdown after previous block with timeout, and incorrect lag reported in XINFO GROUPS."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__8_0_3",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.0.3",
+      "tag_name": "8.0.3",
+      "title": "8.0.3",
+      "time_hint": "2025-04-23",
+      "published_at": "2025-04-23T20:58:03Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/8.0.3",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 8.0.3\nTag: 8.0.3; draft: False; prerelease: False; published_at: 2025-04-23T20:58:03Z; created_at: 2025-04-23T20:41:26Z\nRelease notes:\nUpgrade urgency SECURITY: This release includes security fixes we recommend you apply as soon as possible.\nSecurity fixes\n==============\n* (CVE-2025-21605) Limit output buffer for unauthenticated clients (#1993)\nBug fixes\n=========\n* Optimize RDB load performance and fix cluster mode resizing on replica side (#1199)\n* Fix memory leak in forgotten node ping ext code path (#1574)\n* Fix cluster info sent stats for message with light header (#1563)\n* Fix module LatencyAddSample still work when latency-monitor-threshold is 0 (#1541)\n* Fix potential crash in radix tree recompression of huge keys (#1722)\n* Fix error \"SSL routines::bad length\" when connTLSWrite is called second time with smaller buffer (#1737)\n* Fix temp file leak druing replication error handling (#1721)\n* Fix ACL LOAD crash on replica since the primary client don't has a user (#1842)\n* Fix RANDOMKEY infinite loop during CLIENT PAUSE (#1850)\n* fix: add samples to stream object consumer trees (#1825)\n* Fix cluster slot stats assertion during promotion of replica (#1950)\n* Fix panic in primary when blocking shutdown after previous block with timeout (#1948)\n* Ignore stale gossip packets that arrive out of order (#1777)\n* Fix incorrect lag reported in XINFO GROUPS (#1952)\n* Avoid shard id update of replica if not matching with primary shard id (#573)\n**Full Changelog**: https://github.com/valkey-io/valkey/compare/8.0.2...8.0.3",
+      "memory_unit_text": "In the valkey-io/valkey release 8.0.3, the upgrade urgency is SECURITY due to a fix for CVE-2025-21605 which limits output buffer for unauthenticated clients. Bug fixes include optimizing RDB load performance and fixing cluster mode resizing on replica side, memory leak in forgotten node ping ext code path, cluster info sent stats for message with light header, module LatencyAddSample still working when latency-monitor-threshold is 0, potential crash in radix tree recompression of huge keys, error \"SSL routines::bad length\" when connTLSWrite is called second time with smaller buffer, temp file leak during replication error handling, ACL LOAD crash on replica since the primary client doesn't have a user, RANDOMKEY infinite loop during CLIENT PAUSE, adding samples to stream object consumer trees, cluster slot stats assertion during promotion of replica, panic in primary when blocking shutdown after previous block with timeout, ignoring stale gossip packets that arrive out of order, incorrect lag reported in XINFO GROUPS, and avoiding shard id update of replica if not matching with primary shard id."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__8_1_1",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.1.1",
+      "tag_name": "8.1.1",
+      "title": "8.1.1",
+      "time_hint": "2025-04-23",
+      "published_at": "2025-04-23T20:59:34Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/8.1.1",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 8.1.1\nTag: 8.1.1; draft: False; prerelease: False; published_at: 2025-04-23T20:59:34Z; created_at: 2025-04-23T20:38:09Z\nRelease notes:\nUpgrade urgency SECURITY: This release includes security fixes we recommend you apply as soon as possible.\nSecurity fixes\n==============\n* (CVE-2025-21605) Limit output buffer for unauthenticated clients (#1994)\nBug fixes\n=========\n* Fix the build on less common platforms in zmalloc.c (#1922)\n* fix: add samples to stream object consumer trees (#1825)\n* Fix crash during TLS handshake with I/O threads (#1955)\n* Fix cluster slot stats assertion during promotion of replica (#1950)\n* Fix panic in primary when blocking shutdown after previous block with timeout (#1948)\n* Ignore stale gossip packets that arrive out of order (#1777)\n* Fix incorrect lag reported in XINFO GROUPS (#1952)\n* Fix engine crash on module client blocking during keyspace events (#1819)\n* Avoid shard id update of replica if not matching with primary shard id (#573)\n* Only enable defrag for vendored jemalloc (#1985)\n* Allow scripts to support null characters again (#1984)\n**Full Changelog**: https://github.com/valkey-io/valkey/compare/8.1.0...8.1.1",
+      "memory_unit_text": "In the valkey-io/valkey release 8.1.1, the upgrade urgency is SECURITY due to a fix for CVE-2025-21605 which limits output buffer for unauthenticated clients. Bug fixes include fixing the build on less common platforms in zmalloc.c, adding samples to stream object consumer trees, crash during TLS handshake with I/O threads, cluster slot stats assertion during promotion of replica, panic in primary when blocking shutdown after previous block with timeout, ignoring stale gossip packets that arrive out of order, incorrect lag reported in XINFO GROUPS, engine crash on module client blocking during keyspace events, avoiding shard id update of replica if not matching with primary shard id, only enabling defrag for vendored jemalloc, and allowing scripts to support null characters again."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__8_1_2",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.1.2",
+      "tag_name": "8.1.2",
+      "title": "8.1.2",
+      "time_hint": "2025-06-11",
+      "published_at": "2025-06-11T21:03:34Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/8.1.2",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 8.1.2\nTag: 8.1.2; draft: False; prerelease: False; published_at: 2025-06-11T21:03:34Z; created_at: 2025-06-11T20:15:00Z\nRelease notes:\nUpgrade urgency HIGH: This release includes CVE fix for valkey-check-aof tool, we recommend you\napply as soon as possible if you use the tool.\nSecurity fixes\n==============\n* CVE-2025-27151 Check length of AOF file name in valkey-check-aof (#2146)\nBug fixes\n=========\n* Properly escape double quotes and backslash in `MONITOR` command (#2036)\n* Fix high CPU usage when fetching a random element in skewed sparse hash table (#2085)\n* Fix a bug that allowed clients to process commands when the server has paused command processing (#2109)\n* Fix a crash where the wrong slot is used when processing sharded pubsub unsubscribe events  (#2137)\n* Fix a crash when a module attempts to write auxiliary data with AOF enabled  (#2132)\n* Fix a bug where the engine may crash when establishing new outbound TLS connections (#2140)\n* Fix a bug where a cluster bus packet may be incorrectly marked as invalid (#2144)\n* Fix a bug where CLUSTER SLOTS/NODES information can be stale after updating node port/tls-port (#2186)\n* Fix a bug where replica in cluster mode can't finish failover when config epoch is outdated (#2178)\n* Fix a bug to avoid CLIENT UNBLOCK command to unblock paused clients (#2117)\n**Full Changelog**: https://github.com/valkey-io/valkey/compare/8.1.1...8.1.2",
+      "memory_unit_text": "In the valkey-io/valkey release 8.1.2, the upgrade urgency is HIGH due to a CVE fix for valkey-check-aof tool (CVE-2025-27151) which checks length of AOF file name. Bug fixes include properly escaping double quotes and backslash in MONITOR command, fixing high CPU usage when fetching a random element in skewed sparse hash table, a bug that allowed clients to process commands when the server has paused command processing, a crash where the wrong slot is used when processing sharded pubsub unsubscribe events, a crash when a module attempts to write auxiliary data with AOF enabled, a bug where the engine may crash when establishing new outbound TLS connections, a bug where a cluster bus packet may be incorrectly marked as invalid, a bug where CLUSTER SLOTS/NODES information can be stale after updating node port/tls-port, a bug where replica in cluster mode can't finish failover when config epoch is outdated, and a bug to avoid CLIENT UNBLOCK command to unblock paused clients."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__8_1_3",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.1.3",
+      "tag_name": "8.1.3",
+      "title": "8.1.3",
+      "time_hint": "2025-07-07",
+      "published_at": "2025-07-07T14:11:28Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/8.1.3",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 8.1.3\nTag: 8.1.3; draft: False; prerelease: False; published_at: 2025-07-07T14:11:28Z; created_at: 2025-07-07T07:18:20Z\nRelease notes:\nUpgrade urgency SECURITY: This release includes security fixes we recommend you\napply as soon as possible.\nBug fixes\n=========\n* Fix missing response when AUTH is errored inside a transaction (#2287)\nSecurity fixes\n==============\n* CVE-2025-32023 prevent out-of-bounds write during hyperloglog operations (#2146)\n* CVE-2025-48367 retry accept on transient errors (#2315)",
+      "memory_unit_text": "In the valkey-io/valkey release 8.1.3, the upgrade urgency is SECURITY due to fixes for CVE-2025-32023 preventing out-of-bounds write during hyperloglog operations and CVE-2025-48367 retrying accept on transient errors. Bug fixes include fixing missing response when AUTH is errored inside a transaction."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__8_0_4",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.0.4",
+      "tag_name": "8.0.4",
+      "title": "Valkey patch release 8.0.4",
+      "time_hint": "2025-07-07",
+      "published_at": "2025-07-07T14:13:06Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/8.0.4",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: Valkey patch release 8.0.4\nTag: 8.0.4; draft: False; prerelease: False; published_at: 2025-07-07T14:13:06Z; created_at: 2025-07-07T07:22:40Z\nRelease notes:\nUpgrade urgency SECURITY: This release includes security fixes we recommend you\napply as soon as possible.\nSecurity fixes\n==============\n* CVE-2025-32023 prevent out-of-bounds write during hyperloglog operations (#2146)\n* CVE-2025-48367 retry accept on transient errors (#2315)",
+      "memory_unit_text": "In the valkey-io/valkey release 8.0.4, the upgrade urgency is SECURITY due to fixes for CVE-2025-32023 preventing out-of-bounds write during hyperloglog operations and CVE-2025-48367 retrying accept on transient errors."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__7_2_10",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:7.2.10",
+      "tag_name": "7.2.10",
+      "title": "Valkey patch release 7.2.10",
+      "time_hint": "2025-07-07",
+      "published_at": "2025-07-07T14:52:06Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/7.2.10",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: Valkey patch release 7.2.10\nTag: 7.2.10; draft: False; prerelease: False; published_at: 2025-07-07T14:52:06Z; created_at: 2025-07-07T14:45:35Z\nRelease notes:\nUpgrade urgency SECURITY: This release includes security fixes we recommend you\napply as soon as possible.\nBug fixes\n=========\n* Fix a bug that allowed clients to process commands when the server has paused command processing (#2231)\n* Fix a crash when a module attempts to write auxiliary data with AOF enabled  (#2132)\n* Fix a bug where the engine may crash when establishing new outbound TLS connections (#2140)\n* Fix a bug where a cluster bus packet may be incorrectly marked as invalid (#2144)\n* Fix a bug where CLUSTER SLOTS/NODES information can be stale after updating node port/tls-port (#2186)\n* Fix a bug where replica in cluster mode can't finish failover when config epoch is outdated (#2232)\n* Fix a bug to avoid CLIENT UNBLOCK command to unblock paused clients (#2117)\nSecurity fixes\n==============\n* CVE-2025-27151 Check length of AOF file name in valkey-check-aof (#2146)\n* CVE-2025-32023 prevent out-of-bounds write during hyperloglog operations (#2314)\n* CVE-2025-48367 retry accept on transient errors (#2315)",
+      "memory_unit_text": "In the valkey-io/valkey release 7.2.10, the upgrade urgency is SECURITY. Bug fixes include fixing a bug that allowed clients to process commands when the server has paused command processing, a crash when a module attempts to write auxiliary data with AOF enabled, a bug where the engine may crash when establishing new outbound TLS connections, a bug where a cluster bus packet may be incorrectly marked as invalid, a bug where CLUSTER SLOTS/NODES information can be stale after updating node port/tls-port, a bug where replica in cluster mode can't finish failover when config epoch is outdated, and a bug to avoid CLIENT UNBLOCK command to unblock paused clients. Security fixes include CVE-2025-27151 (check length of AOF file name in valkey-check-aof), CVE-2025-32023 (prevent out-of-bounds write during hyperloglog operations), and CVE-2025-48367 (retry accept on transient errors)."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__9_0_0_rc1",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:9.0.0-rc1",
+      "tag_name": "9.0.0-rc1",
+      "title": "Valkey 9.0.0-rc1",
+      "time_hint": "2025-08-14",
+      "published_at": "2025-08-14T19:53:56Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/9.0.0-rc1",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: Valkey 9.0.0-rc1\nTag: 9.0.0-rc1; draft: False; prerelease: True; published_at: 2025-08-14T19:53:56Z; created_at: 2025-08-14T19:41:17Z\nRelease notes:\nValkey 9.0 release notes\n========================\nUpgrade urgency levels:\n| Level    | Meaning                                                             |\n|----------|---------------------------------------------------------------------|\n| LOW      | No need to upgrade unless there are new features you want to use.   |\n| MODERATE | Program an upgrade of the server, but it's not urgent.              |\n| HIGH     | There is a critical bug that may affect a subset of users. Upgrade! |\n| CRITICAL | There is a critical bug affecting MOST USERS. Upgrade ASAP.         |\n| SECURITY | There are security fixes in the release.                            |\nValkey 9.0.0-rc1 - August 14, 2025\n----------------------------------\nUpgrade urgency LOW: This is the first release candidate of Valkey 9.0.0, with\nperformance improvements, atomic slot migrations, hash field expiration, and numbered databases in cluster mode,\nas well as a whole host of new items as listed below.\n### New Features\n* Client Commands Extended Filtering by @sarthakaggarwal97 (#1466)\n* Add multi-database support to cluster mode by @xbasel (#1671)\n* Support BYPOLYGON option for GEOSEARCH by @KarthikSubbarao (#1809)\n* Introduce MPTCP by @pizhenwei (#1811)\n* Add sentinel_total_tilt to sentinel INFO sentinel by @carlosfu (#1904)\n* Add support for automatic client authentication via TLS certificate fields by @omanges (#1920)\n* Add --hotkeys-count option for valkey-cli by @hwware (#1933)\n* Introduce atomic slot migration by @murphyjacob4 (#1949)\n* Introduce MPTCP for replica by @pizhenwei (#1961)\n* Add DELIFEQ command by @LinusU (#1975)\n* Allow dynamic modification of io-threads num by @ayush933 (#2033)\n* Introduce HASH items expiration by @ranshid (#2089)\n* Add SAFE option to SHUTDOWN to reject shutdown in unsafe situations by @enjoy-binbin (#2195)\n* Support negative filtering for client command filters by @soloestoy (#2378)\n### New Configs\n* Auto-failover on shutdown unified config by @zuiderkwast (#2292)\n### Logging and Tooling Improvements\n* Add node pfail and fail count to cluster info metrics by @hpatro (#1910)\n* Introduce support for lttng based tracing by @artikell (#2070)\n### Performance/Efficiency Improvements\n* Optimize bitcount command by SIMD by @chzhoo (#1741)\n* Save RDB file to disk using a background thread on replica(s) (#1784)\n* Improve replication stability by prioritizing replication traffic in the replica by @xbasel (#1838)\n* Optimize hyperloglog commands with ARM NEON SIMD instructions by @xbasel (#1859)\n* Optimize BITCOUNT using ARM NEON SIMD by @xbasel (#1867)\n* Optimize string-to-integer performance using AVX512 by @zhulipeng (#1944)\n* Improve system responsiveness by limiting number of new cluster link connections per cycle by @hpatro (#2009)\n* Optimize hash table performance using SIMD by @zhulipeng (#2030)\n* Improve performance of network operations by directly writing responses to clients by @xbasel (#2078)\n* Allow shrinking hashtables in low memory situations by @Fusl (#2095)\n* Optimize string2ll with load-time CPU feature check using IFUNC resolver by @zhulipeng (#2099)\n* Optimize WATCH by equalStringObjects early length check by @vitahlin (#2107)\n* Optimize GEORADIUS command performance with pre-allocated buffer by @chzhoo (#2116)\n* Improve zcount performance by combing range element ranks calculation with range elements search to @SoftlyRaining (#2129)\n* Optimize scan/sscan/hscan/zscan commands by replacing list with vector by @chzhoo (#2160)\n### Cluster\n* Trigger manual failover on SIGTERM / shutdown to cluster primary by @enjoy-binbin (#1091)\n* Add CLUSTER FLUSHSLOT command by @wuranxx (#1384)\n* Allow replicas to become primaries without data by using CLUSTER REPLICATE NO ONE by @skolosov-snap (#1674)\n* Add cluster bus port out of range error message for CL...",
+      "memory_unit_text": "In the valkey-io/valkey release 9.0.0-rc1, the upgrade urgency is LOW. This is the first release candidate of Valkey 9.0.0, with performance improvements, atomic slot migrations, hash field expiration, and numbered databases in cluster mode. New features include client commands extended filtering, multi-database support in cluster mode, BYPOLYGON option for GEOSEARCH, MPTCP introduction, sentinel_total_tilt in sentinel INFO, automatic client authentication via TLS certificate fields, --hotkeys-count option for valkey-cli, atomic slot migration, MPTCP for replica, DELIFEQ command, dynamic modification of io-threads num, HASH items expiration, SAFE option to SHUTDOWN, and negative filtering for client command filters. New configs include auto-failover on shutdown unified config. Logging and tooling improvements add node pfail and fail count to cluster info metrics and support for lttng based tracing. Performance/efficiency improvements include optimizing bitcount command by SIMD, saving RDB file to disk using a background thread on replica(s), improving replication stability by prioritizing replication traffic, optimizing hyperloglog commands with ARM NEON SIMD, optimizing BITCOUNT using ARM NEON SIMD, optimizing string-to-integer performance using AVX512, improving system responsiveness by limiting new cluster link connections per cycle, optimizing hash table performance using SIMD, improving performance of network operations by directly writing responses to clients, allowing shrinking hashtables in low memory situations, optimizing string2ll with load-time CPU feature check using IFUNC resolver, optimizing WATCH by equalStringObjects early length check, optimizing GEORADIUS command performance with pre-allocated buffer, improving zcount performance, and optimizing scan/sscan/hscan/zscan commands by replacing list with vector. Cluster changes include triggering manual failover on SIGTERM/shutdown to cluster primary, CLUSTER FLUSHSLOT command, allowing replicas to become primaries without data using CLUSTER REPLICATE NO ONE, and adding cluster bus port out of range error message."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__8_0_5",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.0.5",
+      "tag_name": "8.0.5",
+      "title": "8.0.5",
+      "time_hint": "2025-08-22",
+      "published_at": "2025-08-22T13:37:16Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/8.0.5",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 8.0.5\nTag: 8.0.5; draft: False; prerelease: False; published_at: 2025-08-22T13:37:16Z; created_at: 2025-08-22T13:30:45Z\nRelease notes:\nUpgrade urgency SECURITY: This release includes security fixes we recommend you\napply as soon as possible.\nBug fixes\n---------\n* Fix clients remaining blocked when reprocessing commands after certain blocking operations (#2109)\n* Fix a memory corruption issue in the sharded pub/sub unsubscribe logic (#2137)\n* Fix potential memory leak by ensuring module context is freed when `aux_save2` callback writes no data (#2132)\n* Fix `CLIENT UNBLOCK` triggering unexpected errors when used on paused clients (#2117)\n* Fix missing NULL check on `SSL_new()` when creating outgoing TLS connections (#2140)\n* Fix incorrect casting of ping extension lengths to prevent silent packet drops (#2144)\n* Fix replica failover stall due to outdated config epoch (#2178)\n* Fix incorrect port/tls-port info in `CLUSTER SLOTS`/`CLUSTER NODES` after dynamic config change (#2186)\n* Ensure empty error tables in Lua scripts don't crash Valkey (#2229)\n* Fix client tracking memory overhead calculation (#2360)\n* Handle divergent shard-id from nodes.conf and reconcile to the primary node's shard-id (#2174)\n* Fix pre-size hashtables per slot when reading RDB files (#2466)\nBehavior changes\n----------------\n* Trigger election immediately during a forced manual failover (`CLUSTER FAILOVER FORCE`) to avoid delay (#1067)\n* Reset ongoing election state when initiating a new manual failover (#1274)\nLogging and Tooling Improvements\n--------------------------------\n* Add support to drop all cluster packets (#1252)\n* Improve log clarity in failover auth denial message (#1341)\nSecurity fixes\n--------------\n* CVE-2025-27151: Check length of AOF file name in valkey-check-aof and reject paths longer than `PATH_MAX` (#2146)\n**Full Changelog:** [8.0.4...8.0.5](https://github.com/valkey-io/valkey/compare/8.0.4...8.0.5)",
+      "memory_unit_text": "In the valkey-io/valkey release 8.0.5, the upgrade urgency is SECURITY. Bug fixes include fixing clients remaining blocked when reprocessing commands after certain blocking operations, a memory corruption issue in the sharded pub/sub unsubscribe logic, potential memory leak by ensuring module context is freed when aux_save2 callback writes no data, CLIENT UNBLOCK triggering unexpected errors when used on paused clients, missing NULL check on SSL_new() when creating outgoing TLS connections, incorrect casting of ping extension lengths to prevent silent packet drops, replica failover stall due to outdated config epoch, incorrect port/tls-port info in CLUSTER SLOTS/CLUSTER NODES after dynamic config change, ensuring empty error tables in Lua scripts don't crash Valkey, client tracking memory overhead calculation, handling divergent shard-id from nodes.conf and reconciling to the primary node's shard-id, and pre-size hashtables per slot when reading RDB files. Behavior changes include triggering election immediately during a forced manual failover (CLUSTER FAILOVER FORCE) to avoid delay and resetting ongoing election state when initiating a new manual failover. Logging and tooling improvements add support to drop all cluster packets and improve log clarity in failover auth denial message. Security fixes include CVE-2025-27151 checking length of AOF file name in valkey-check-aof and rejecting paths longer than PATH_MAX."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__9_0_0_rc2",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:9.0.0-rc2",
+      "tag_name": "9.0.0-rc2",
+      "title": "9.0.0-rc2",
+      "time_hint": "2025-09-23",
+      "published_at": "2025-09-23T11:44:26Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/9.0.0-rc2",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 9.0.0-rc2\nTag: 9.0.0-rc2; draft: False; prerelease: True; published_at: 2025-09-23T11:44:26Z; created_at: 2025-09-23T11:30:50Z\nRelease notes:\nValkey 9.0.0-rc2 release notes\n========================\nUpgrade urgency levels:\n| Level    | Meaning                                                             |\n|----------|---------------------------------------------------------------------|\n| LOW      | No need to upgrade unless there are new features you want to use.   |\n| MODERATE | Program an upgrade of the server, but it's not urgent.              |\n| HIGH     | There is a critical bug that may affect a subset of users. Upgrade! |\n| CRITICAL | There is a critical bug affecting MOST USERS. Upgrade ASAP.         |\n| SECURITY | There are security fixes in the release.                            |\nUpgrade urgency LOW: This is the second release candidate of Valkey 9.0.0,\nfocused on stability, bug fixes, and incremental improvements.\n**Attention Valkey Module maintainers**: There is a new module option to\nindicate support for the Atomic Slot Migration (ASM) feature. Modules must\nexplicitly opt in to ASM; otherwise, this feature will be disabled in clusters\nthat load modules without ASM support.\n### Bug Fixes\n* Fix module context object re-use in scripting engines (#2358)\n* Fix pre-size hashtables per slot when reading RDB files (#2466)\n* Do not migrate script functions in atomic slot migration (#2547)\n* Don't use AVX2 instructions if the CPU don't support it (#2571)\n### Performance/Efficiency\n* Optimized pipelining by parsing and prefetching multiple commands (#2092)\n### Cluster and Replication\n* Make cluster failover delay relative to node timeout (#2449)\n* Separate RDB snapshotting from atomic slot migration (#2533)\n### Module API\n* Added new module API event for tracking authentication attempts (#2237)\n* Added READONLY flag to ClientInfo.flags output structure (#2522)\n* Make modules opt-in to atomic slot migration and add server events (#2593)\n### Configuration\n* Added new cluster-announce-client-(port|tls-port) configs (#2429)\n* CONFIG RESETSTATS now also resets cluster related stats (#2458)\n* Make CONFIG GET command return sorted output (#2493)\n### Commands\n* Update reply schema for LMOVE and BLMOVE (#2541)\n* Most deprecated commands are now un-deprecated (#2546)\n### Upgrade\n* Relaxed RDB check for foreign RDB formats (#2543)\n### CLI\n* Added word-jump navigation (Alt/Option/Ctrl + ←/→) to valkey-cli (#2583)",
+      "memory_unit_text": "In the valkey-io/valkey release 9.0.0-rc2, the upgrade urgency is LOW. This is the second release candidate of Valkey 9.0.0, focused on stability, bug fixes, and incremental improvements. Attention to Valkey Module maintainers: there is a new module option to indicate support for the Atomic Slot Migration (ASM) feature; modules must explicitly opt in to ASM, otherwise this feature will be disabled in clusters that load modules without ASM support. Bug fixes include fixing module context object re-use in scripting engines, pre-size hashtables per slot when reading RDB files, not migrating script functions in atomic slot migration, and not using AVX2 instructions if the CPU doesn't support it. Performance/efficiency improvements include optimized pipelining by parsing and prefetching multiple commands. Cluster and replication changes include making cluster failover delay relative to node timeout and separating RDB snapshotting from atomic slot migration. Module API additions include a new module API event for tracking authentication attempts, READONLY flag to ClientInfo.flags output structure, and making modules opt-in to atomic slot migration with server events. Configuration changes include new cluster-announce-client-(port|tls-port) configs, CONFIG RESETSTATS now also resets cluster related stats, and CONFIG GET command returns sorted output. Command updates include updating reply schema for LMOVE and BLMOVE and un-deprecating most deprecated commands. Upgrade changes include relaxing RDB check for foreign RDB formats. CLI changes include adding word-jump navigation (Alt/Option/Ctrl + ←/→) to valkey-cli."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__7_2_11",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:7.2.11",
+      "tag_name": "7.2.11",
+      "title": "7.2.11",
+      "time_hint": "2025-10-03",
+      "published_at": "2025-10-03T19:24:22Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/7.2.11",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 7.2.11\nTag: 7.2.11; draft: False; prerelease: False; published_at: 2025-10-03T19:24:22Z; created_at: 2025-10-03T19:16:58Z\nRelease notes:\n# Valkey 7.2.11\nUpgrade urgency SECURITY: This release includes security fixes we recommend you\napply as soon as possible.\n## Security fixes\n* (CVE-2025-49844) A Lua script may lead to remote code execution\n* (CVE-2025-46817) A Lua script may lead to integer overflow and potential RCE\n* (CVE-2025-46818) A Lua script can be executed in the context of another user\n* (CVE-2025-46819) LUA out-of-bound read\n## Bug fixes\n* Ensure empty error tables in Lua scripts don't crash Valkey (#2229)\n* Fix client tracking memory overhead calculation (#2360)\n**Full Changelog**: https://github.com/valkey-io/valkey/compare/7.2.10...7.2.11",
+      "memory_unit_text": "In the valkey-io/valkey release 7.2.11, the upgrade urgency is SECURITY. Security fixes include CVE-2025-49844 (a Lua script may lead to remote code execution), CVE-2025-46817 (a Lua script may lead to integer overflow and potential RCE), CVE-2025-46818 (a Lua script can be executed in the context of another user), and CVE-2025-46819 (LUA out-of-bound read). Bug fixes include ensuring empty error tables in Lua scripts don't crash Valkey and fixing client tracking memory overhead calculation."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__8_1_4",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.1.4",
+      "tag_name": "8.1.4",
+      "title": "8.1.4",
+      "time_hint": "2025-10-03",
+      "published_at": "2025-10-03T19:27:55Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/8.1.4",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 8.1.4\nTag: 8.1.4; draft: False; prerelease: False; published_at: 2025-10-03T19:27:55Z; created_at: 2025-10-03T19:17:43Z\nRelease notes:\n# Valkey 8.1.4\nUpgrade urgency SECURITY: This release includes security fixes we recommend you\napply as soon as possible.\n## Security fixes\n* (CVE-2025-49844) A Lua script may lead to remote code execution\n* (CVE-2025-46817) A Lua script may lead to integer overflow and potential RCE\n* (CVE-2025-46818) A Lua script can be executed in the context of another user\n* (CVE-2025-46819) LUA out-of-bound read\n## Bug fixes\n* Fix accounting for dual channel RDB bytes in replication stats (#2614)\n* Fix EVAL to report unknown error when empty error table is provided (#2229)\n* Fix use-after-free when active expiration triggers hashtable to shrink (#2257)\n* Fix MEMORY USAGE to account for embedded keys (#2290)\n* Fix memory leak when shrinking a hashtable without entries (#2288)\n* Prevent potential assertion in active defrag handling large allocations (#2353)\n* Prevent bad memory access when NOTOUCH client gets unblocked (#2347)\n* Converge divergent shard-id persisted in nodes.conf to primary's shard id (#2174)\n* Fix client tracking memory overhead calculation (#2360)\n* Fix RDB load per slot memory pre-allocation when loading from RDB snapshot (#2466)\n* Don't use AVX2 instructions if the CPU doesn't support it (#2571)\n* Fix bug where active defrag may be unable to defrag sparsely filled pages (#2656)\n**Full Changelog**: https://github.com/valkey-io/valkey/compare/8.1.3...8.1.4",
+      "memory_unit_text": "In the valkey-io/valkey release 8.1.4, the upgrade urgency is SECURITY. Security fixes include CVE-2025-49844 (a Lua script may lead to remote code execution), CVE-2025-46817 (a Lua script may lead to integer overflow and potential RCE), CVE-2025-46818 (a Lua script can be executed in the context of another user), and CVE-2025-46819 (LUA out-of-bound read). Bug fixes include fixing accounting for dual channel RDB bytes in replication stats, EVAL to report unknown error when empty error table is provided, use-after-free when active expiration triggers hashtable to shrink, MEMORY USAGE to account for embedded keys, memory leak when shrinking a hashtable without entries, preventing potential assertion in active defrag handling large allocations, preventing bad memory access when NOTOUCH client gets unblocked, converging divergent shard-id persisted in nodes.conf to primary's shard id, client tracking memory overhead calculation, RDB load per slot memory pre-allocation when loading from RDB snapshot, not using AVX2 instructions if the CPU doesn't support it, and a bug where active defrag may be unable to defrag sparsely filled pages."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__8_0_6",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.0.6",
+      "tag_name": "8.0.6",
+      "title": "8.0.6",
+      "time_hint": "2025-10-03",
+      "published_at": "2025-10-03T20:30:26Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/8.0.6",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 8.0.6\nTag: 8.0.6; draft: False; prerelease: False; published_at: 2025-10-03T20:30:26Z; created_at: 2025-10-03T20:27:36Z\nRelease notes:\n# Valkey 8.0.6\nUpgrade urgency SECURITY: This release includes security fixes we recommend you\napply as soon as possible.\n## Security fixes\n* (CVE-2025-49844) A Lua script may lead to remote code execution\n* (CVE-2025-46817) A Lua script may lead to integer overflow and potential RCE\n* (CVE-2025-46818) A Lua script can be executed in the context of another user\n* (CVE-2025-46819) LUA out-of-bound read\n## Bug fixes\n* Fix accounting for dual channel RDB bytes in replication stats (#2616)\n* Minor fix for dual rdb channel connection conn error log (#2658)\n* Fix unsigned difference expression compared to zero (#2101)\n**Full Changelog**: https://github.com/valkey-io/valkey/compare/8.0.5...8.0.6",
+      "memory_unit_text": "In the valkey-io/valkey release 8.0.6, the upgrade urgency is SECURITY. Security fixes include CVE-2025-49844 (a Lua script may lead to remote code execution), CVE-2025-46817 (a Lua script may lead to integer overflow and potential RCE), CVE-2025-46818 (a Lua script can be executed in the context of another user), and CVE-2025-46819 (LUA out-of-bound read). Bug fixes include fixing accounting for dual channel RDB bytes in replication stats, minor fix for dual rdb channel connection conn error log, and fixing unsigned difference expression compared to zero."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__9_0_0_rc3",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:9.0.0-rc3",
+      "tag_name": "9.0.0-rc3",
+      "title": "9.0.0-rc3",
+      "time_hint": "2025-10-08",
+      "published_at": "2025-10-08T20:24:04Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/9.0.0-rc3",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 9.0.0-rc3\nTag: 9.0.0-rc3; draft: False; prerelease: True; published_at: 2025-10-08T20:24:04Z; created_at: 2025-10-08T20:19:23Z\nRelease notes:\nUpgrade urgency LOW: This is the third release candidate of Valkey 9.0.0,\nfocused on stability, bug fixes, and incremental improvements.\n## Security fixes\n* (CVE-2025-49844) A Lua script may lead to remote code execution\n* (CVE-2025-46817) A Lua script may lead to integer overflow and potential RCE\n* (CVE-2025-46818) A Lua script can be executed in the context of another user\n* (CVE-2025-46819) LUA out-of-bound read\n## Performance/Efficiency\n* Optimize skiplist random level generation logic (#2631)\n## Cluster and Replication\n* Redirect blocked clients after failover (#2329)\n* Prevent exposure of importing keys on replicas during atomic slot migration (#2635)\n* Add slot migration client flags and module context flags (#2639)\n* Introduce SYNCSLOTS CAPA for forwards compatibility (#2688)\n## Bug Fixes\n* Fix atomic slot migration snapshot never proceeding with hz 1 (#2636)\n* Defrag if slab 1/8 full to fix defrag didn't stop issue (#2656)\n* Fix module key memory usage accounting (#2661)\n* Fix dual rdb channel connection error log (#2658)\n## Commands\n* Implement a lolwut for version 9 (#2646)",
+      "memory_unit_text": "In the valkey-io/valkey release 9.0.0-rc3, the upgrade urgency is LOW. This is the third release candidate of Valkey 9.0.0, focused on stability, bug fixes, and incremental improvements. Security fixes include CVE-2025-49844 (a Lua script may lead to remote code execution), CVE-2025-46817 (a Lua script may lead to integer overflow and potential RCE), CVE-2025-46818 (a Lua script can be executed in the context of another user), and CVE-2025-46819 (LUA out-of-bound read). Performance/efficiency improvements include optimizing skiplist random level generation logic. Cluster and replication changes include redirecting blocked clients after failover, preventing exposure of importing keys on replicas during atomic slot migration, adding slot migration client flags and module context flags, and introducing SYNCSLOTS CAPA for forwards compatibility. Bug fixes include fixing atomic slot migration snapshot never proceeding with hz 1, defrag if slab 1/8 full to fix defrag didn't stop issue, module key memory usage accounting, and dual rdb channel connection error log. Command changes include implementing a lolwut for version 9."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__9_0_0",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:9.0.0",
+      "tag_name": "9.0.0",
+      "title": "9.0.0",
+      "time_hint": "2025-10-21",
+      "published_at": "2025-10-21T16:08:31Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/9.0.0",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 9.0.0\nTag: 9.0.0; draft: False; prerelease: False; published_at: 2025-10-21T16:08:31Z; created_at: 2025-10-21T16:05:42Z\nRelease notes:\nValkey 9.0.0 GA - October 21, 2025\n----------------------------------\nUpgrade urgency LOW: This is the first release of Valkey 9.0 which\nincludes stability, bug fixes, and incremental improvements over the third release candidate.\n### Bug fixes\n* HSETEX with FXX should not create an object if it does not exist (#2716)\n* Fix crash when aborting a slot migration while child snapshot is active (#2721)\n* Fix double MOVED reply on unblock at failover (#2734)\n* Fix memory leak with CLIENT LIST/KILL duplicate filters (#2362)\n* Fix incorrect accounting after completed atomic slot migration (#2749)\n* Fix Lua VM crash after FUNCTION FLUSH ASYNC + FUNCTION LOAD (#1826, #2750)\n* Fix invalid memory address caused by hashtable shrinking during safe iteration (#2753)\nFor a high level overview of the release, you can checkout [release blog](https://valkey.io/blog/introducing-valkey-9/)\nFor the full set of changes for the releases, please review the previous release candidates [rc1](https://github.com/valkey-io/valkey/releases/tag/9.0.0-rc1), [rc2](https://github.com/valkey-io/valkey/releases/tag/9.0.0-rc2) and [rc3](https://github.com/valkey-io/valkey/releases/tag/9.0.0-rc3).",
+      "memory_unit_text": "In the valkey-io/valkey release 9.0.0, the upgrade urgency is LOW. This is the first release of Valkey 9.0 which includes stability, bug fixes, and incremental improvements over the third release candidate. Bug fixes include HSETEX with FXX should not create an object if it does not exist, crash when aborting a slot migration while child snapshot is active, double MOVED reply on unblock at failover, memory leak with CLIENT LIST/KILL duplicate filters, incorrect accounting after completed atomic slot migration, Lua VM crash after FUNCTION FLUSH ASYNC + FUNCTION LOAD, and invalid memory address caused by hashtable shrinking during safe iteration."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__8_1_5",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.1.5",
+      "tag_name": "8.1.5",
+      "title": "8.1.5",
+      "time_hint": "2025-12-04",
+      "published_at": "2025-12-04T15:26:01Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/8.1.5",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 8.1.5\nTag: 8.1.5; draft: False; prerelease: False; published_at: 2025-12-04T15:26:01Z; created_at: 2025-12-04T13:38:43Z\nRelease notes:\nUpgrade urgency MODERATE: Program an upgrade of the server, but it's not urgent.\nBug fixes\n---------\n* Fix Lua VM crash after FUNCTION FLUSH ASYNC + FUNCTION LOAD (#1826)\n* Fix invalid memory address caused by hashtable shrinking during safe iteration (#2753)\n* Cluster: Avoid usage of light weight messages to nodes with not ready bidirectional links (#2817)\n* Send duplicate multi meet packet only for node which supports it (#2840)\n* Fix loading AOF files from future Valkey versions (#2899)\n**Full Changelog**: https://github.com/valkey-io/valkey/compare/8.1.4...8.1.5",
+      "memory_unit_text": "In the valkey-io/valkey release 8.1.5, the upgrade urgency is MODERATE. Bug fixes include fixing Lua VM crash after FUNCTION FLUSH ASYNC + FUNCTION LOAD, invalid memory address caused by hashtable shrinking during safe iteration, cluster: avoiding usage of light weight messages to nodes with not ready bidirectional links, sending duplicate multi meet packet only for node which supports it, and fixing loading AOF files from future Valkey versions."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__9_0_1",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:9.0.1",
+      "tag_name": "9.0.1",
+      "title": "9.0.1",
+      "time_hint": "2025-12-09",
+      "published_at": "2025-12-09T18:13:25Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/9.0.1",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 9.0.1\nTag: 9.0.1; draft: False; prerelease: False; published_at: 2025-12-09T18:13:25Z; created_at: 2025-12-09T18:03:34Z\nRelease notes:\nUpgrade urgency MODERATE: Program an upgrade of the server, but it's not urgent.\nBug fixes\n---------\n* Authenticate slot migration client on source node to internal user (#2785)\n* Bug fix: reset io_last_written on c->buf resize to prevent stale pointers (#2786)\n* Sentinel: fix regression requiring \"+failover\" ACL in failover path (#2780)\n* Cluster: Avoid usage of light weight messages to nodes with not ready bidirectional links (#2817)\n* Send duplicate multi meet packet only for node which supports it in mixed clusters (#2840)\n* Fix: LTRIM should not call signalModifiedKey when no elements are removed (#2787)\n* Fix build on some 32-bit ARM by only using NEON on AArch64 (#2873)\n* Fix deadlock in IO-thread shutdown during panic (#2898)\n* Fix COMMANDLOG large-reply when using reply copy avoidance (#2652)\n* Fix CLUSTER SLOTS crash when called from module timer callback (#2915)\n**Full Changelog**: https://github.com/valkey-io/valkey/compare/9.0.0...9.0.1",
+      "memory_unit_text": "In the valkey-io/valkey release 9.0.1, the upgrade urgency is MODERATE. Bug fixes include authenticating slot migration client on source node to internal user, resetting io_last_written on c->buf resize to prevent stale pointers, sentinel: fix regression requiring \"+failover\" ACL in failover path, cluster: avoiding usage of light weight messages to nodes with not ready bidirectional links, sending duplicate multi meet packet only for node which supports it in mixed clusters, LTRIM should not call signalModifiedKey when no elements are removed, fixing build on some 32-bit ARM by only using NEON on AArch64, deadlock in IO-thread shutdown during panic, COMMANDLOG large-reply when using reply copy avoidance, and CLUSTER SLOTS crash when called from module timer callback."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__9_0_2",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:9.0.2",
+      "tag_name": "9.0.2",
+      "title": "9.0.2",
+      "time_hint": "2026-02-03",
+      "published_at": "2026-02-03T12:53:37Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/9.0.2",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 9.0.2\nTag: 9.0.2; draft: False; prerelease: False; published_at: 2026-02-03T12:53:37Z; created_at: 2026-02-03T11:01:39Z\nRelease notes:\nUpgrade urgency HIGH: There are critical bugs that may affect a subset of users.\nBug fixes\n---------\n* Avoid memory leak of new argv when HEXPIRE commands target only non-exiting fields (#2973)\n* Fix HINCRBY and HINCRBYFLOAT to update volatile key tracking (#2974)\n* Avoid empty hash object when HSETEX added no fields (#2998)\n* Fix case-sensitive check for the FNX and FXX arguments in HSETEX (#3000)\n* Prevent assertion in active expiration job after a hash with volatile fields is overwritten (#3003, #3007)\n* Fix HRANDFIELD to return null response when no field could be found (#3022)\n* Fix HEXPIRE to not delete items when validation rules fail and expiration is in the past (#3023, #3048)\n* Fix how hash is handling overriding of expired fields overwrite (#3060)\n* HSETEX - Always issue keyspace notifications after validation (#3001)\n* Make zero a valid TTL for hash fields during import mode and data loading (#3006)\n* Trigger prepareCommand on argc change in module command filters (#2945)\n* Restrict TTL from being negative and avoid crash in import-mode (#2944)\n* Fix chained replica crash when doing dual channel replication (#2983)\n* Skip slot cache optimization for AOF client to prevent key duplication and data corruption (#3004)\n* Fix used_memory_dataset underflow due to miscalculated used_memory_overhead (#3005)\n* Avoid duplicate calculations of network-bytes-out in slot stats with copy-avoidance (#3046)\n* Fix XREAD returning error on empty stream with + ID (#2742)\nPerformance/Efficiency Improvements\n-----------------------------------\n* Track reply bytes in I/O threads if commandlog-reply-larger-than is -1 (#3086, #3126).\nThis makes it possible to mitigate a performance regression in 9.0.1 caused by the bug fix #2652.\n**Full Changelog**: https://github.com/valkey-io/valkey/compare/9.0.1...9.0.2",
+      "memory_unit_text": "In the valkey-io/valkey release 9.0.2, the upgrade urgency is HIGH due to critical bugs that may affect a subset of users. Bug fixes include avoiding memory leak of new argv when HEXPIRE commands target only non-existing fields, fixing HINCRBY and HINCRBYFLOAT to update volatile key tracking, avoiding empty hash object when HSETEX added no fields, fixing case-sensitive check for the FNX and FXX arguments in HSETEX, preventing assertion in active expiration job after a hash with volatile fields is overwritten, fixing HRANDFIELD to return null response when no field could be found, fixing HEXPIRE to not delete items when validation rules fail and expiration is in the past, fixing how hash is handling overriding of expired fields overwrite, HSETEX always issuing keyspace notifications after validation, making zero a valid TTL for hash fields during import mode and data loading, triggering prepareCommand on argc change in module command filters, restricting TTL from being negative and avoiding crash in import-mode, fixing chained replica crash when doing dual channel replication, skipping slot cache optimization for AOF client to prevent key duplication and data corruption, fixing used_memory_dataset underflow due to miscalculated used_memory_overhead, avoiding duplicate calculations of network-bytes-out in slot stats with copy-avoidance, and fixing XREAD returning error on empty stream with + ID. Performance/efficiency improvements include tracking reply bytes in I/O threads if commandlog-reply-larger-than is -1, which makes it possible to mitigate a performance regression in 9.0.1 caused by a previous bug fix."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__7_2_12",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:7.2.12",
+      "tag_name": "7.2.12",
+      "title": "7.2.12",
+      "time_hint": "2026-02-24",
+      "published_at": "2026-02-24T02:03:12Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/7.2.12",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 7.2.12\nTag: 7.2.12; draft: False; prerelease: False; published_at: 2026-02-24T02:03:12Z; created_at: 2026-02-24T01:59:54Z\nRelease notes:\nUpgrade urgency SECURITY: This release includes security fixes we recommend you\napply as soon as possible.\nSecurity fixes\n==============\n* (CVE-2026-21863) Remote DoS with malformed Valkey Cluster bus message (https://github.com/valkey-io/valkey/pull/3249)\n* (CVE-2025-67733) RESP Protocol Injection via Lua error_reply (https://github.com/valkey-io/valkey/pull/3249)\nBug fixes\n=========\n* Fix ltrim should not call signalModifiedKey when no elements are removed (#2787)\n* Fix potential infinite loop in clusterNodeGetMaster (#2830)\n* Avoids crash during MODULE UNLOAD when ACL rules reference a module command and subcommand (#3160)\nFull changelog: https://github.com/valkey-io/valkey/compare/7.2.11...7.2.12",
+      "memory_unit_text": "In the valkey-io/valkey release 7.2.12, the upgrade urgency is SECURITY. Security fixes include CVE-2026-21863 (Remote DoS with malformed Valkey Cluster bus message) and CVE-2025-67733 (RESP Protocol Injection via Lua error_reply). Bug fixes include fixing ltrim should not call signalModifiedKey when no elements are removed, potential infinite loop in clusterNodeGetMaster, and avoiding crash during MODULE UNLOAD when ACL rules reference a module command and subcommand."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__8_0_7",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.0.7",
+      "tag_name": "8.0.7",
+      "title": "8.0.7",
+      "time_hint": "2026-02-24",
+      "published_at": "2026-02-24T03:54:23Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/8.0.7",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 8.0.7\nTag: 8.0.7; draft: False; prerelease: False; published_at: 2026-02-24T03:54:23Z; created_at: 2026-02-24T03:51:42Z\nRelease notes:\n# Valkey 8.0.7\nUpgrade urgency SECURITY: This release includes security fixes we recommend you\napply as soon as possible.\n## Security fixes\n* (CVE-2026-21863) Remote DoS with malformed Valkey Cluster bus message\n* (CVE-2025-67733) RESP Protocol Injection via Lua error_reply\n## Bug fixes\n* Fix ltrim should not call signalModifiedKey when no elements are removed (#2787)\n* Fix chained replica crash when doing dual channel replication (#2983)\n* Fix used_memory_dataset underflow due to miscalculated used_memory_overhead (#3005)\n* Avoids crash during MODULE UNLOAD when ACL rules reference a module command and subcommand (#3160)\n* Fix server assert on ACL LOAD and resetchannels (#3182)\n* Fix bug causing no response flush sometimes when IO threads are busy (#3205)",
+      "memory_unit_text": "In the valkey-io/valkey release 8.0.7, the upgrade urgency is SECURITY. Security fixes include CVE-2026-21863 (Remote DoS with malformed Valkey Cluster bus message) and CVE-2025-67733 (RESP Protocol Injection via Lua error_reply). Bug fixes include fixing ltrim should not call signalModifiedKey when no elements are removed, chained replica crash when doing dual channel replication, used_memory_dataset underflow due to miscalculated used_memory_overhead, avoiding crash during MODULE UNLOAD when ACL rules reference a module command and subcommand, server assert on ACL LOAD and resetchannels, and bug causing no response flush sometimes when IO threads are busy."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__8_1_6",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.1.6",
+      "tag_name": "8.1.6",
+      "title": "8.1.6",
+      "time_hint": "2026-02-24",
+      "published_at": "2026-02-24T04:00:30Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/8.1.6",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 8.1.6\nTag: 8.1.6; draft: False; prerelease: False; published_at: 2026-02-24T04:00:30Z; created_at: 2026-02-24T03:56:52Z\nRelease notes:\n# Valkey 8.1.6\nUpgrade urgency SECURITY: This release includes security fixes we recommend you\napply as soon as possible.\n## Security fixes\n* (CVE-2026-21863) Remote DoS with malformed Valkey Cluster bus message\n* (CVE-2025-67733) RESP Protocol Injection via Lua error_reply\n## Bug fixes\n* Restrict ttl from being negative and avoid crash in import-mode (#2944)\n* Fix chained replica crash when doing dual channel replication (#2983)\n* Fix used_memory_dataset underflow due to miscalculated used_memory_overhead (#3005)\n* Fix crashing while MODULE UNLOAD when ACL rules reference a module command or subcommand (#3160)\n* Fix server assert on ACL LOAD and resetchannels (#3182)\n* Fix bug causing no response flush sometimes when IO threads are busy (#3205)",
+      "memory_unit_text": "In the valkey-io/valkey release 8.1.6, the upgrade urgency is SECURITY. Security fixes include CVE-2026-21863 (Remote DoS with malformed Valkey Cluster bus message) and CVE-2025-67733 (RESP Protocol Injection via Lua error_reply). Bug fixes include restricting ttl from being negative and avoiding crash in import-mode, chained replica crash when doing dual channel replication, used_memory_dataset underflow due to miscalculated used_memory_overhead, crashing while MODULE UNLOAD when ACL rules reference a module command or subcommand, server assert on ACL LOAD and resetchannels, and bug causing no response flush sometimes when IO threads are busy."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__9_0_3",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:9.0.3",
+      "tag_name": "9.0.3",
+      "title": "9.0.3",
+      "time_hint": "2026-02-24",
+      "published_at": "2026-02-24T04:06:53Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/9.0.3",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 9.0.3\nTag: 9.0.3; draft: False; prerelease: False; published_at: 2026-02-24T04:06:53Z; created_at: 2026-02-24T04:04:11Z\nRelease notes:\n# Valkey 9.0.3\nUpgrade urgency SECURITY: This release includes security fixes we recommend you\napply as soon as possible.\n### Security fixes\n* (CVE-2025-67733) RESP Protocol Injection via Lua error_reply\n* (CVE-2026-21863) Remote DoS with malformed Valkey Cluster bus message\n* (CVE-2026-27623) Reset request type after handling empty requests\n### Bug fixes\n* Avoids crash during MODULE UNLOAD when ACL rules reference a module command and subcommand (#3160)\n* Fix server assert on ACL LOAD when current user loses permission to channels (#3182)\n* Fix bug causing no response flush sometimes when IO threads are busy (#3205)",
+      "memory_unit_text": "In the valkey-io/valkey release 9.0.3, the upgrade urgency is SECURITY. Security fixes include CVE-2025-67733 (RESP Protocol Injection via Lua error_reply), CVE-2026-21863 (Remote DoS with malformed Valkey Cluster bus message), and CVE-2026-27623 (Reset request type after handling empty requests). Bug fixes include avoiding crash during MODULE UNLOAD when ACL rules reference a module command and subcommand, server assert on ACL LOAD when current user loses permission to channels, and bug causing no response flush sometimes when IO threads are busy."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__9_1_0_rc1",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:9.1.0-rc1",
+      "tag_name": "9.1.0-rc1",
+      "title": "9.1.0-rc1",
+      "time_hint": "2026-03-16",
+      "published_at": "2026-03-16T23:42:03Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/9.1.0-rc1",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 9.1.0-rc1\nTag: 9.1.0-rc1; draft: False; prerelease: True; published_at: 2026-03-16T23:42:03Z; created_at: 2026-03-16T23:39:41Z\nRelease notes:\n# Valkey 9.1.0-rc1\nUpgrade urgency LOW: This is the first release candidate of Valkey 9.1.0, with\nnew features, performance improvements, and bug fixes.\n### New Features and enhanced behavior\n* Database-level access control by @dvkashapov (#2309)\n* Move Lua scripting engine into a Valkey module by @rjd15372 (#2858)\n* Support cross node consistency for `SCAN` commands through configurable DB hash seed by @sarthakaggarwal97 (#2608)\n* Support automatic TLS reload by @yang-z-o (#3020)\n* Support TLS authentication using SAN URI by @yang-z-o (#3078)\n* Prevent invalid TLS certificates from being loaded by @yang-z-o (#2999)\n* Failing to save the cluster config file will no longer exit the process by @enjoy-binbin (#1032)\n### Command and API updates\n* Makes `CLUSTER KEYSLOT` available in standalone mode by @stockholmux (#3040)\n* Update HSETEX so that it always issue keyspace notifications after validation by @ranshid (#3001)\n* Adds HGETDEL command by @roshkhatri (#2851)\n* Support NX/XX flag in HSETEX command by @hanxizh9910 (#2668)\n* New `CLUSTERSCAN` command for cluster-wide key scanning across nodes by @nmvk (#2934)\n* New `MSETEX` command to set multiple keys with a shared expiration by @enjoy-binbin (#3121)\n* `CLUSTER SHARDS`/`CLUSTER SLOTS` now include an `availability-zone` field by @bandalgomsu (#3156)\n### Performance and Efficiency improvements\n* Optimize zset memory usage by embedding element in skiplist by @chzhoo (#2508)\n* Remove internal server object pointer overhead in small strings by @rainsupreme (#2516)\n* Optimize skiplist query efficiency by embedding the skiplist header by @chzhoo (#2867)\n* Improve performance during rehashing by @chzhoo (#3073)\n* Optimize SREM/ZREM/HDEL to pause auto shrink when deleting multiple items by @enjoy-binbin (#3144)\n* Abort and swap the tables if ht1 is very full during the hashtable shrink rehashing by @enjoy-binbin (#3175)\n* Improve performance of copy avoidance when command reply tracking is disabled by @dvkashapov (#3086)\n* Enable hardware clock by default by @dvkashapov (#3103)\n* Improve `COMMAND` performance by caching responses by @ebarskiy (#2839)\n* Add support for asynchronous freeing of keys on writable replicas by @Scut-Corgis (#2849)\n* Faster `XRANGE`/`XREVRANGE` via stream range hot-path optimization by @nesty92 (#3002)\n* Replicas can reuse the RDB file as AOF preamble after disk-based full sync by @RayaCoo (#1901)\n### Module API changes\n* Add ValkeyModule_ClusterKeySlotC by @bandalgomsu (#2984)\n* Add more client info flags to module API by @martinrvisser (#2868)\n* Add prefix-aware ACL permission checks and new module API by @eifrah-aws (#2796)\n* Support unsigned 64-bit numeric config values in module API by @artikell (#1546)\n### Observability and logging\n* Cumulative metrics for active I/O threads usage by @deepakrn (#2463)\n* Cumulative metric for active main thread usage by @dvkashapov (#2931)\n* Support whole cluster info for INFO command in cluster_info section by @soloestoy, @ranshid (#2876, #2964)\n* Add remaining_repl_size field in `CLUSTER GETSLOTMIGRATIONS` output by @enjoy-binbin (#3135)\n* Add logging helper function to print node's ip:port when nodename not explicitly set by @zhijun42 (#2777)\n* Dual-channel-replication announces itself at replica-announce-ip if configured by @jdheyburn (#2846)\n* Show replica dual-channel replication buffer memory in `INFO MEMORY` and `MEMORY STATS` by @enjoy-binbin (#2924)\n* Add `rdb_transmitted` state to replica state in `INFO` by @enjoy-binbin (#2833)\n* New INFO section for scripting engines by @rjd15372 (#2738)\n* Adding json support for log-format config by @jbergstroem (#1791)\n* Add server side TLS certificate expiry tracking and INFO telemetry by @YiwenZhang12 (#2913)\n* Add option to use libbacktrace for backtraces in crash reports by @rainsupreme (#...",
+      "memory_unit_text": "In the valkey-io/valkey release 9.1.0-rc1, the upgrade urgency is LOW. This is the first release candidate of Valkey 9.1.0, with new features, performance improvements, and bug fixes. New features and enhanced behavior include database-level access control, moving Lua scripting engine into a Valkey module, supporting cross node consistency for SCAN commands through configurable DB hash seed, supporting automatic TLS reload, supporting TLS authentication using SAN URI, preventing invalid TLS certificates from being loaded, and failing to save the cluster config file will no longer exit the process. Command and API updates include making CLUSTER KEYSLOT available in standalone mode, updating HSETEX to always issue keyspace notifications after validation, adding HGETDEL command, supporting NX/XX flag in HSETEX command, new CLUSTERSCAN command for cluster-wide key scanning across nodes, new MSETEX command to set multiple keys with a shared expiration, and CLUSTER SHARDS/CLUSTER SLOTS now include an availability-zone field. Performance and efficiency improvements include optimizing zset memory usage by embedding element in skiplist, removing internal server object pointer overhead in small strings, optimizing skiplist query efficiency by embedding the skiplist header, improving performance during rehashing, optimizing SREM/ZREM/HDEL to pause auto shrink when deleting multiple items, aborting and swapping the tables if ht1 is very full during the hashtable shrink rehashing, improving performance of copy avoidance when command reply tracking is disabled, enabling hardware clock by default, improving COMMAND performance by caching responses, adding support for asynchronous freeing of keys on writable replicas, faster XRANGE/XREVRANGE via stream range hot-path optimization, and replicas can reuse the RDB file as AOF preamble after disk-based full sync. Module API changes include adding ValkeyModule_ClusterKeySlotC, more client info flags to module API, prefix-aware ACL permission checks and new module API, and supporting unsigned 64-bit numeric config values in module API. Observability and logging improvements include cumulative metrics for active I/O threads usage, cumulative metric for active main thread usage, supporting whole cluster info for INFO command in cluster_info section, adding remaining_repl_size field in CLUSTER GETSLOTMIGRATIONS output, adding logging helper function to print node's ip:port when nodename not explicitly set, dual-channel-replication announces itself at replica-announce-ip if configured, showing replica dual-channel replication buffer memory in INFO MEMORY and MEMORY STATS, adding rdb_transmitted state to replica state in INFO, new INFO section for scripting engines, adding json support for log-format config, adding server side TLS certificate expiry tracking and INFO telemetry, and adding option to use libbacktrace for backtraces in crash reports."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__9_1_0_rc2",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:9.1.0-rc2",
+      "tag_name": "9.1.0-rc2",
+      "title": "9.1.0-rc2",
+      "time_hint": "2026-04-28",
+      "published_at": "2026-04-28T17:33:18Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/9.1.0-rc2",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 9.1.0-rc2\nTag: 9.1.0-rc2; draft: False; prerelease: True; published_at: 2026-04-28T17:33:18Z; created_at: 2026-04-28T16:32:37Z\nRelease notes:\nValkey 9.1.0-rc2 release notes\n========================\nUpgrade urgency LOW: This is the second release candidate of Valkey 9.1.0.\n### Behavior Changes\n* Revert strict TLS certificate validation at config load as it is a breaking change, deferred to next major version (#3572)\n### New Features and enhanced behavior\n* Do the failover immediately if the replica is the best ranked replica by @enjoy-binbin (#2227)\n* Add `cluster-config-save-behavior` option to control nodes.conf save behavior by @enjoy-binbin (#3372)\n* Lua scripting engine is now statically linked by default instead of dynamically linked by @eifrah-aws (#3392)\n* Module command result callback addition by @martinrvisser (#2936)\n### Performance and Efficiency improvements\n* Redesign IO threading communication model with lock-free queues (8-17% throughput gain) by @akashkgit (#3324)\n* Increase embedded string threshold from 64 to 128 bytes (30% GET throughput gain) by @Nikhil-Manglore (#3397)\n* ARM NEON SIMD optimization for pvFind() in vset.c (2-3x speedup) by @ahmadbelb (#3033)\n* Optimize WATCH duplicate key check from O(N) to O(1) using per-db hashtable by @enjoy-binbin (#3360)\n* Optimize `CLUSTERSCAN MATCH` so that it uses a specific slot if given by @nmvk (#3380)\n* Improve COB memory tracking with copy avoidance by @dvkashapov (#3306)\n### Bug Fixes\n* Fix `valkey-cli --cluster del-node` for unreachable nodes by @yang-z-o (#3209)\n* Enhance cluster stale packet detection to prevent sub-replica and empty primary by @zhijun42 (#2811)\n* Big endian bitmap byte order mismatch fix by @nmvk (#3401)\n* Fix slot-migration-max-failover-repl-bytes unable to accept -1 by @enjoy-binbin (#3443)\n* Fix config rewrite producing negative values for unsigned memory configs by @enjoy-binbin (#3440)\n* Fix HPERSIST RESP protocol violation on wrong-type key by @madolson (#3516)\n* Fix lua-enable-insecure-api default value cannot be changed to yes by @enjoy-binbin (#3548)\n**Full Changelog**: https://github.com/valkey-io/valkey/compare/9.1.0-rc1...9.1.0-rc2",
+      "memory_unit_text": "In the valkey-io/valkey release 9.1.0-rc2, the upgrade urgency is LOW. This is the second release candidate of Valkey 9.1.0. Behavior changes include reverting strict TLS certificate validation at config load as it is a breaking change, deferred to next major version. New features and enhanced behavior include doing the failover immediately if the replica is the best ranked replica, adding cluster-config-save-behavior option to control nodes.conf save behavior, Lua scripting engine is now statically linked by default instead of dynamically linked, and module command result callback addition. Performance and efficiency improvements include redesigning IO threading communication model with lock-free queues (8-17% throughput gain), increasing embedded string threshold from 64 to 128 bytes (30% GET throughput gain), ARM NEON SIMD optimization for pvFind() in vset.c (2-3x speedup), optimizing WATCH duplicate key check from O(N) to O(1) using per-db hashtable, optimizing CLUSTERSCAN MATCH so that it uses a specific slot if given, and improving COB memory tracking with copy avoidance. Bug fixes include fixing valkey-cli --cluster del-node for unreachable nodes, enhancing cluster stale packet detection to prevent sub-replica and empty primary, big endian bitmap byte order mismatch fix, fixing slot-migration-max-failover-repl-bytes unable to accept -1, fixing config rewrite producing negative values for unsigned memory configs, fixing HPERSIST RESP protocol violation on wrong-type key, and fixing lua-enable-insecure-api default value cannot be changed to yes."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__9_0_4",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:9.0.4",
+      "tag_name": "9.0.4",
+      "title": "9.0.4",
+      "time_hint": "2026-05-06",
+      "published_at": "2026-05-06T04:00:07Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/9.0.4",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 9.0.4\nTag: 9.0.4; draft: False; prerelease: False; published_at: 2026-05-06T04:00:07Z; created_at: 2026-05-06T03:56:46Z\nRelease notes:\nUpgrade urgency SECURITY: This release includes security fixes we recommend you\napply as soon as possible.\n### Security fixes\n* (CVE-2026-23479) Use-After-Free in unblock client flow\n* (CVE-2026-25243) Invalid Memory Access in RESTORE command\n* (CVE-2026-23631) Use-after-free when full sync occurs during a yielding Lua/function execution",
+      "memory_unit_text": "In the valkey-io/valkey release 9.0.4, the upgrade urgency is SECURITY. Security fixes include CVE-2026-23479 (Use-After-Free in unblock client flow), CVE-2026-25243 (Invalid Memory Access in RESTORE command), and CVE-2026-23631 (Use-after-free when full sync occurs during a yielding Lua/function execution)."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__8_1_7",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.1.7",
+      "tag_name": "8.1.7",
+      "title": "8.1.7",
+      "time_hint": "2026-05-06",
+      "published_at": "2026-05-06T04:00:12Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/8.1.7",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 8.1.7\nTag: 8.1.7; draft: False; prerelease: False; published_at: 2026-05-06T04:00:12Z; created_at: 2026-05-06T03:56:35Z\nRelease notes:\nUpgrade urgency SECURITY: This release includes security fixes we recommend you\napply as soon as possible.\n### Security fixes\n* (CVE-2026-23479) Use-After-Free in unblock client flow\n* (CVE-2026-25243) Invalid Memory Access in RESTORE command\n* (CVE-2026-23631) Use-after-free when full sync occurs during a yielding Lua/function execution",
+      "memory_unit_text": "In the valkey-io/valkey release 8.1.7, the upgrade urgency is SECURITY. Security fixes include CVE-2026-23479 (Use-After-Free in unblock client flow), CVE-2026-25243 (Invalid Memory Access in RESTORE command), and CVE-2026-23631 (Use-after-free when full sync occurs during a yielding Lua/function execution)."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__8_0_8",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:8.0.8",
+      "tag_name": "8.0.8",
+      "title": "8.0.8 (revoked)",
+      "time_hint": "2026-05-06",
+      "published_at": "2026-05-06T04:00:15Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/8.0.8",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 8.0.8 (revoked)\nTag: 8.0.8; draft: False; prerelease: False; published_at: 2026-05-06T04:00:15Z; created_at: 2026-05-05T23:48:38Z\nRelease notes:\n**NOTICE:** This release has been revoked. The 8.0.8 tag was placed on a commit that is\nnot part of the 8.0 release branch. Users should upgrade to 8.0.9 instead.",
+      "memory_unit_text": "In the valkey-io/valkey release 8.0.8 (revoked), the release has been revoked. The 8.0.8 tag was placed on a commit that is not part of the 8.0 release branch. Users should upgrade to 8.0.9 instead."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__7_2_13",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:7.2.13",
+      "tag_name": "7.2.13",
+      "title": "7.2.13",
+      "time_hint": "2026-05-06",
+      "published_at": "2026-05-06T04:00:21Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/7.2.13",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 7.2.13\nTag: 7.2.13; draft: False; prerelease: False; published_at: 2026-05-06T04:00:21Z; created_at: 2026-05-06T03:56:13Z\nRelease notes:\nUpgrade urgency SECURITY: This release includes security fixes we recommend you\napply as soon as possible.\n### Security fixes\n* (CVE-2026-23479) Use-After-Free in unblock client flow\n* (CVE-2026-25243) Invalid Memory Access in RESTORE command\n* (CVE-2026-23631) Use-after-free when full sync occurs during a yielding Lua/function execution",
+      "memory_unit_text": "In the valkey-io/valkey release 7.2.13, the upgrade urgency is SECURITY. Security fixes include CVE-2026-23479 (Use-After-Free in unblock client flow), CVE-2026-25243 (Invalid Memory Access in RESTORE command), and CVE-2026-23631 (Use-after-free when full sync occurs during a yielding Lua/function execution)."
+    },
+    {
+      "memory_node_id": "valkey_io__valkey__release__9_1_0",
+      "repo": "valkey-io/valkey",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:9.1.0",
+      "tag_name": "9.1.0",
+      "title": "9.1.0",
+      "time_hint": "2026-05-19",
+      "published_at": "2026-05-19T15:05:52Z",
+      "source_url": "https://github.com/valkey-io/valkey/releases/tag/9.1.0",
+      "raw_text": "Repository: valkey-io/valkey\nRelease: 9.1.0\nTag: 9.1.0; draft: False; prerelease: False; published_at: 2026-05-19T15:05:52Z; created_at: 2026-05-19T15:03:27Z\nRelease notes:\nUpgrade urgency LOW: This is the first stable release of Valkey 9.1.\n### Security fixes\n* (CVE-2026-23479) Use-After-Free in unblock client flow\n* (CVE-2026-25243) Invalid Memory Access in RESTORE command\n* (CVE-2026-23631) Use-after-free when full sync occurs during a yielding Lua/function execution\n### New Features and enhanced behavior\n* Add cluster bus network traffic usage metric in bytes by @hpatro (#3396)\n* Reduce latency spikes during rehashing via incremental page release by @chzhoo (#3481)\n### Bug Fixes\n* Fix(syncio): Set errno on EOF in syncRead and propagate to conn->last by @abmathur-ie (#3580)\n* Fix GEOSEARCH BYPOLYGON leak on invalid COUNT by @bandalgomsu (#3568)\n* Handle NULL pointer in streamTrim listpack delta calculation by @smkher (#3591)\n* Fixes server crash when RDMA benchmark clients disconnect by @quanyeyang (#3448)\n* Fix the memory leak in valkey-benchmark by @nmvk (#3643)",
+      "memory_unit_text": "In the valkey-io/valkey release 9.1.0, the upgrade urgency is LOW. This is the first stable release of Valkey 9.1. Security fixes include CVE-2026-23479 (Use-After-Free in unblock client flow), CVE-2026-25243 (Invalid Memory Access in RESTORE command), and CVE-2026-23631 (Use-after-free when full sync occurs during a yielding Lua/function execution). New features and enhanced behavior include adding cluster bus network traffic usage metric in bytes and reducing latency spikes during rehashing via incremental page release. Bug fixes include fixing syncio: set errno on EOF in syncRead and propagate to conn->last, GEOSEARCH BYPOLYGON leak on invalid COUNT, handling NULL pointer in streamTrim listpack delta calculation, server crash when RDMA benchmark clients disconnect, and memory leak in valkey-benchmark."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the valkey-io/valkey releases, which release introduces atomic slot migration and hash field expiration?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "Valkey 8.1.0"
+        },
+        {
+          "option_id": "B",
+          "text": "Valkey 9.0.0-rc1"
+        },
+        {
+          "option_id": "C",
+          "text": "Valkey 9.0.0"
+        },
+        {
+          "option_id": "D",
+          "text": "Valkey 9.1.0-rc1"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "Valkey 9.0.0-rc1",
+      "source_chunk_ids": [
+        "valkey_io__valkey__release__9_0_0_rc1"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "valkey_io__valkey__release__9_0_0_rc1",
+          "answer_text": "This is the first release candidate of Valkey 9.0.0, with performance improvements, atomic slot migrations, hash field expiration, and numbered databases in cluster mode."
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the valkey-io/valkey releases, how does the security fix in release 7.2.9 differ from the security fix in release 8.1.1?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "7.2.9 fixes CVE-2025-21605 by limiting output buffer for unauthenticated clients, while 8.1.1 also fixes CVE-2025-21605 but additionally includes other bug fixes like crash during TLS handshake with I/O threads."
+        },
+        {
+          "option_id": "B",
+          "text": "7.2.9 fixes CVE-2025-32023, while 8.1.1 fixes CVE-2025-48367."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases fix the same set of CVEs but 8.1.1 has a higher upgrade urgency."
+        },
+        {
+          "option_id": "D",
+          "text": "7.2.9 fixes a Lua scripting vulnerability, while 8.1.1 fixes a cluster bus DoS."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "7.2.9 fixes CVE-2025-21605 by limiting output buffer for unauthenticated clients, while 8.1.1 also fixes CVE-2025-21605 but additionally includes other bug fixes like crash during TLS handshake with I/O threads.",
+      "source_chunk_ids": [
+        "valkey_io__valkey__release__7_2_9",
+        "valkey_io__valkey__release__8_1_1"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "valkey_io__valkey__release__7_2_9",
+          "answer_text": "Upgrade urgency SECURITY: This release includes security fixes we recommend you apply as soon as possible. Security fixes: (CVE-2025-21605) Limit output buffer for unauthenticated clients."
+        },
+        {
+          "memory_node_id": "valkey_io__valkey__release__8_1_1",
+          "answer_text": "Upgrade urgency SECURITY: This release includes security fixes we recommend you apply as soon as possible. Security fixes: (CVE-2025-21605) Limit output buffer for unauthenticated clients. Bug fixes include ... crash during TLS handshake with I/O threads."
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the valkey-io/valkey release window, order the following release-content states from earliest to latest: (1) a release that introduces atomic slot migration and hash field expiration, (2) a release that fixes CVE-2025-21605 by limiting output buffer for unauthenticated clients and also fixes a crash during TLS handshake with I/O threads, (3) a release that includes security fixes for CVE-2025-49844, CVE-2025-46817, CVE-2025-46818, and CVE-2025-46819, and also fixes a use-after-free when active expiration triggers hashtable to shrink.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 3 -> 1"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "2 -> 1 -> 3",
+      "source_chunk_ids": [
+        "valkey_io__valkey__release__8_1_1",
+        "valkey_io__valkey__release__9_0_0_rc1",
+        "valkey_io__valkey__release__8_1_4"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "valkey_io__valkey__release__8_1_1",
+          "answer_text": "Upgrade urgency SECURITY: This release includes security fixes we recommend you apply as soon as possible. Security fixes: (CVE-2025-21605) Limit output buffer for unauthenticated clients. Bug fixes include ... crash during TLS handshake with I/O threads."
+        },
+        {
+          "memory_node_id": "valkey_io__valkey__release__9_0_0_rc1",
+          "answer_text": "This is the first release candidate of Valkey 9.0.0, with performance improvements, atomic slot migrations, hash field expiration, and numbered databases in cluster mode."
+        },
+        {
+          "memory_node_id": "valkey_io__valkey__release__8_1_4",
+          "answer_text": "Security fixes include CVE-2025-49844 ... CVE-2025-46817 ... CVE-2025-46818 ... CVE-2025-46819 ... Bug fixes include ... use-after-free when active expiration triggers hashtable to shrink."
+        }
+      ]
+    }
+  ]
+}

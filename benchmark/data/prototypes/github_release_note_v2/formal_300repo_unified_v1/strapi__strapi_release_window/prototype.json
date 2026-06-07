@@ -1,0 +1,530 @@
+{
+  "prototype_id": "strapi__strapi_release_window",
+  "domain": "github_release_evolution",
+  "repo": "strapi/strapi",
+  "source_type": "release_note",
+  "window_title": "strapi/strapi recent release evolution",
+  "window_summary": "This window tracks the recent strapi/strapi release stream from v5.31.2 through v5.47.0, covering hotfixes, new features, bug fixes, and security patches across multiple minor and patch versions.",
+  "chunks": [
+    {
+      "memory_node_id": "strapi__strapi__release__v5_31_2",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.31.2",
+      "tag_name": "v5.31.2",
+      "title": "v5.31.2",
+      "time_hint": "2025-11-20",
+      "published_at": "2025-11-20T13:27:16Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.31.2",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.31.2\nTag: v5.31.2; draft: False; prerelease: False; published_at: 2025-11-20T13:27:16Z; created_at: 2025-11-20T13:27:14Z\nRelease notes:\n## 5.31.2 (2025-11-20)\n### 🔥 Hotfix\n- revert: discard drafts migration (https://github.com/strapi/strapi/pull/24895)",
+      "memory_unit_text": "In the strapi/strapi release v5.31.2, a hotfix reverts the discard drafts migration."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_31_3",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.31.3",
+      "tag_name": "v5.31.3",
+      "title": "v5.31.3",
+      "time_hint": "2025-12-03",
+      "published_at": "2025-12-03T14:24:28Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.31.3",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.31.3\nTag: v5.31.3; draft: False; prerelease: False; published_at: 2025-12-03T14:24:28Z; created_at: 2025-12-03T14:24:26Z\nRelease notes:\n## 5.31.3 (2025-12-03)\n### 🔥 Bug fix\n- enter key trigger in edit view form ([#24744](https://github.com/strapi/strapi/pull/24744))\n- **cli:** transfer command ignores CLI flags and prompts unnecessarily ([#24879](https://github.com/strapi/strapi/pull/24879))\n- **content-type-builder:** ai chat message width and submit behavior ([#24918](https://github.com/strapi/strapi/pull/24918))\n- **docs:** enable contributor docs website to build locally ([#24878](https://github.com/strapi/strapi/pull/24878))\n- **graphql:** scope status filter inheritance to query tree ([#24826](https://github.com/strapi/strapi/pull/24826))\n### ⚙️ Chore\n- update DS version to stable ([18948ab6b4](https://github.com/strapi/strapi/commit/18948ab6b4))\n- update new Vietnamese keys and translations for the admin panel ([#23710](https://github.com/strapi/strapi/pull/23710))\n- replace deprecated Buffer.slice() with subarray() in encryption utils ([#24904](https://github.com/strapi/strapi/pull/24904))\n- **admin:** isolate ai apis to ee folder ([#24834](https://github.com/strapi/strapi/pull/24834))\n### ❤️ Thank You\n- Adrien L\n- Bassel Kanso @Bassel17\n- HichamELBSI\n- James Villarrubia @jamesvillarrubia\n- markkaylor\n- Nico André\n- VitaHoang",
+      "memory_unit_text": "In the strapi/strapi release v5.31.3, bug fixes include enter key trigger in edit view form, CLI transfer command ignoring flags, AI chat message width and submit behavior, contributor docs website build, and GraphQL scope status filter inheritance. Chores update DS version, Vietnamese translations, replace deprecated Buffer.slice(), and isolate AI APIs to EE folder."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_32_0",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.32.0",
+      "tag_name": "v5.32.0",
+      "title": "v5.32.0",
+      "time_hint": "2025-12-10",
+      "published_at": "2025-12-10T15:18:17Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.32.0",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.32.0\nTag: v5.32.0; draft: False; prerelease: False; published_at: 2025-12-10T15:18:17Z; created_at: 2025-12-10T15:18:15Z\nRelease notes:\n## 5.32.0 (2025-12-10)\n### 🚀 New feature\n- **core:** adding clear button to boolean toggle ([#24836](https://github.com/strapi/strapi/pull/24836))\n- **users-permissions:** add refresh and logout actions to default permissions ([#24877](https://github.com/strapi/strapi/pull/24877))\n### 🔥 Bug fix\n- playwright storage state ([416a81b44e](https://github.com/strapi/strapi/commit/416a81b44e))\n- don't translate enums with ai ([#24965](https://github.com/strapi/strapi/pull/24965))\n- change several file field types from string to text ([#24931](https://github.com/strapi/strapi/pull/24931))\n- added media to list of non localized fields ([#24967](https://github.com/strapi/strapi/pull/24967))\n- **content-manager:** blocks editor state always contains at least a paragraph block ([#24990](https://github.com/strapi/strapi/pull/24990))\n- **content-type-builder:** disable display of invisible content types ([#24970](https://github.com/strapi/strapi/pull/24970))\n- **core/upload:** rollback file name to string ([#25004](https://github.com/strapi/strapi/pull/25004))\n- **graphql:** graphql performance regression ([#25017](https://github.com/strapi/strapi/pull/25017))\n### 📚 Documentation Changes\n- readme files explain shared code ([dfcffa7413](https://github.com/strapi/strapi/commit/dfcffa7413))\n### ⚙️ Chore\n- fix paths ([099999c1d0](https://github.com/strapi/strapi/commit/099999c1d0))\n- merge test runners ([bb00d5e691](https://github.com/strapi/strapi/commit/bb00d5e691))\n- adding claude Reviewer ([88b966db48](https://github.com/strapi/strapi/commit/88b966db48))\n- bump testing library dependencies ([16b0f3c011](https://github.com/strapi/strapi/commit/16b0f3c011))\n- update pinned axios, glob, form-data, and sha.js ([#25005](https://github.com/strapi/strapi/pull/25005))\n- **admin:** guided tour should only display in development ([#24907](https://github.com/strapi/strapi/pull/24907))\n### ❤️ Thank You\n- Adrien L\n- Araksya Gevorgyan @araksyagevorgyan\n- Bassel Kanso\n- Ben Irvin\n- DMehaffy\n- HichamELBSI\n- Jamie Howard @jhoward1994\n- markkaylor\n- Nico André\n- Rémi de Juvigny @remidej\n- Simon Norris",
+      "memory_unit_text": "In the strapi/strapi release v5.32.0, new features add a clear button to boolean toggle and refresh/logout actions to default permissions. Bug fixes address Playwright storage state, AI enum translation, file field types, media localization, blocks editor state, invisible content types, upload file name rollback, and GraphQL performance regression. Documentation changes explain shared code in readme files. Chores fix paths, merge test runners, add Claude reviewer, bump testing library dependencies, update pinned dependencies, and restrict guided tour to development."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_33_0",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.33.0",
+      "tag_name": "v5.33.0",
+      "title": "v5.33.0",
+      "time_hint": "2025-12-17",
+      "published_at": "2025-12-17T13:18:04Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.33.0",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.33.0\nTag: v5.33.0; draft: False; prerelease: False; published_at: 2025-12-17T13:18:04Z; created_at: 2025-12-17T13:18:02Z\nRelease notes:\n## 5.33.0 (2025-12-17)\n### 🚀 New feature\n- update iso-locales.json with pap & regional variants ([#25000](https://github.com/strapi/strapi/pull/25000))\n- **core/core:** content-type id schema is number | string ([#24978](https://github.com/strapi/strapi/pull/24978))\n- **i18n:** add Russian translations for all admin components ([#24077](https://github.com/strapi/strapi/pull/24077))\n- **plugins/i18n:** add missing locale for Luxembourgish (lb-LU) ([#22551](https://github.com/strapi/strapi/pull/22551))\n### 🔥 Bug fix\n- added scrollbar in media modal ([#24856](https://github.com/strapi/strapi/pull/24856))\n- layout header to properly handle long text without breaking the layout ([#24191](https://github.com/strapi/strapi/pull/24191))\n- edit views configuration not clear ([#24980](https://github.com/strapi/strapi/pull/24980))\n- **admin:** guidedTourMeta can be undefined and error ([#25021](https://github.com/strapi/strapi/pull/25021))\n- **graphql:** precompute built-in query fields at schema build ([#25017](https://github.com/strapi/strapi/pull/25017))\n- **tests/scripts:** disable gpgsign for e2e commits ([#24959](https://github.com/strapi/strapi/pull/24959))\n### ⚙️ Chore\n- **.cursor:** add worktrees support ([#25025](https://github.com/strapi/strapi/pull/25025))\n- **docs:** reference contributor docs link ([#25026](https://github.com/strapi/strapi/pull/25026))\n### ❤️ Thank You\n- Adrien Foulon @Tofandel\n- Bassel Kanso @Bassel17\n- Deepak gupta @guptadeepak8\n- Jerry @flammangj\n- kajgiesbersflavour @kajgiesbersflavour\n- Maksim Zhukau @MaksZhukov\n- mathildeleg @mathildeleg\n- Mohamed osama @mooka95\n- Nico André",
+      "memory_unit_text": "In the strapi/strapi release v5.33.0, new features update iso-locales.json with pap and regional variants, allow content-type ID schema as number or string, add Russian translations for admin components, and add Luxembourgish locale. Bug fixes add scrollbar in media modal, handle long text in layout header, clear edit views configuration, handle undefined guidedTourMeta, precompute built-in GraphQL query fields, and disable gpgsign for e2e commits. Chores add worktrees support and reference contributor docs link."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_33_1",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.33.1",
+      "tag_name": "v5.33.1",
+      "title": "v5.33.1",
+      "time_hint": "2025-12-29",
+      "published_at": "2025-12-29T09:50:23Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.33.1",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.33.1\nTag: v5.33.1; draft: False; prerelease: False; published_at: 2025-12-29T09:50:23Z; created_at: 2025-12-29T09:50:20Z\nRelease notes:\n## 5.33.1 (2025-12-29)\n### 🔥 Bug fix\n- update cloud request limit ([#25040](https://github.com/strapi/strapi/pull/25040))\n- adapt header height when title changes ([#25028](https://github.com/strapi/strapi/pull/25028))\n- excessive rerenders on edit view ([#25029](https://github.com/strapi/strapi/pull/25029))\n- dynamically replace favicon if provided in app config ([#25012](https://github.com/strapi/strapi/pull/25012))\n- update iso-locales.json with en-mm ([#24261](https://github.com/strapi/strapi/pull/24261))\n- subnav height cutting list when too many elements ([#24753](https://github.com/strapi/strapi/pull/24753))\n- globe icon is shown even if field is not localized ([#24890](https://github.com/strapi/strapi/pull/24890))\n- validation issue in hidden fields when publishing ([#24482](https://github.com/strapi/strapi/pull/24482))\n- optimize images ([#25047](https://github.com/strapi/strapi/pull/25047))\n- **types:** adding missing config types ([#24905](https://github.com/strapi/strapi/pull/24905))\n### ⚙️ Chore\n- add i18 languages ([#23845](https://github.com/strapi/strapi/pull/23845))\n- add Bosnian and Mongolian Cyrillic language support ([#23928](https://github.com/strapi/strapi/pull/23928))\n### 💅 Enhancement\n- make the publishedAt attribute visible ([#24619](https://github.com/strapi/strapi/pull/24619))\n### ❤️ Thank You\n- adarshjayan7574 @adarshjayan7574\n- Adrien L\n- Bassel Kanso @Bassel17\n- Boaz Poolman\n- James @Davda-James\n- lintoncaldecott\n- mathildeleg @mathildeleg\n- Omid Astaraki @electather\n- Rémi de Juvigny @remidej\n- Vitaliy Podushkin",
+      "memory_unit_text": "In the strapi/strapi release v5.33.1, bug fixes update cloud request limit, adapt header height on title change, reduce excessive rerenders on edit view, dynamically replace favicon, update iso-locales.json with en-mm, fix subnav height, hide globe icon for non-localized fields, fix validation in hidden fields on publish, optimize images, and add missing config types. Chores add i18 languages and Bosnian and Mongolian Cyrillic support. Enhancement makes publishedAt attribute visible."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_33_2",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.33.2",
+      "tag_name": "v5.33.2",
+      "title": "v5.33.2",
+      "time_hint": "2026-01-08",
+      "published_at": "2026-01-08T08:54:20Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.33.2",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.33.2\nTag: v5.33.2; draft: False; prerelease: False; published_at: 2026-01-08T08:54:20Z; created_at: 2026-01-08T08:54:18Z\nRelease notes:\n### :warning: Security Warning and Notice :warning:\nStrapi was made aware of a vulnerably that were patched in this release, for now we are going to delay the detailed disclosure of the exact details on how to exploit it and how it was patched to give time for users to upgrade before we do public disclosure.\n## 5.33.2 (2026-01-08)\n### 🔥 Bug fix\n- **content-type-builder:** make write APIs accessible in devMode only ([#25132](https://github.com/strapi/strapi/pull/25132))\n### ⚙️ Chore\n- remove unused media lib files ([115aba1855](https://github.com/strapi/strapi/commit/115aba1855))\n- use design-system variables for preview ([#25064](https://github.com/strapi/strapi/pull/25064))\n### ❤️ Thank You\n- HichamELBSI\n- mathildeleg @mathildeleg\n- Nico André",
+      "memory_unit_text": "In the strapi/strapi release v5.33.2, a security warning is issued for a patched vulnerability with delayed disclosure. Bug fix makes content-type-builder write APIs accessible in devMode only. Chores remove unused media lib files and use design-system variables for preview."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v4_26_1",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.26.1",
+      "tag_name": "v4.26.1",
+      "title": "v4.26.1",
+      "time_hint": "2026-01-08",
+      "published_at": "2026-01-08T11:18:31Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v4.26.1",
+      "raw_text": "Repository: strapi/strapi\nRelease: v4.26.1\nTag: v4.26.1; draft: False; prerelease: False; published_at: 2026-01-08T11:18:31Z; created_at: 2026-01-08T11:12:07Z\nRelease notes:\n### :warning: Security Warning and Notice :warning:\nStrapi was made aware of a vulnerably that were patched in this release, for now we are going to delay the detailed disclosure of the exact details on how to exploit it and how it was patched to give time for users to upgrade before we do public disclosure.\n## What's Changed\n* fix(content-type-builder): make write APIs accessible in devMode only by @nclsndr in https://github.com/strapi/strapi/pull/25133\n**Full Changelog**: https://github.com/strapi/strapi/compare/v4.26.0...v4.26.1",
+      "memory_unit_text": "In the strapi/strapi release v4.26.1, a security warning is issued for a patched vulnerability with delayed disclosure. The fix makes content-type-builder write APIs accessible in devMode only."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_33_3",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.33.3",
+      "tag_name": "v5.33.3",
+      "title": "v5.33.3",
+      "time_hint": "2026-01-14",
+      "published_at": "2026-01-14T11:12:27Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.33.3",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.33.3\nTag: v5.33.3; draft: False; prerelease: False; published_at: 2026-01-14T11:12:27Z; created_at: 2026-01-14T11:12:25Z\nRelease notes:\n## 5.33.3 (2026-01-14)\n### 🔥 Bug fix\n- add token refresh logic for react query ([#25053](https://github.com/strapi/strapi/pull/25053))\n- `env` helper default and generic types ([#24881](https://github.com/strapi/strapi/pull/24881))\n- **documentation:** align with Data.ID ([#24976](https://github.com/strapi/strapi/pull/24976))\n- **upload:** content-api does not check file type restriction config ([#25167](https://github.com/strapi/strapi/pull/25167))\n- **users-permissions:** implement session revocation on password changes ([#25168](https://github.com/strapi/strapi/pull/25168))\n### 📚 Documentation Changes\n- add blocks editor contributor docs ([#25135](https://github.com/strapi/strapi/pull/25135))\n- add live preview contributor docs ([#25152](https://github.com/strapi/strapi/pull/25152))\n- fix typo 'recieve' -> 'receive' in layouts documentation ([#25170](https://github.com/strapi/strapi/pull/25170))\n### ⚙️ Chore\n- update multiple packages to resolve vuln warnings ([#25137](https://github.com/strapi/strapi/pull/25137))\n- update security policy for strapi version 4 ([#24751](https://github.com/strapi/strapi/pull/24751))\n### ❤️ Thank You\n- Ayoub Hidri @ayhid\n- DMehaffy\n- Eric Ferreira\n- Jamie Howard @jhoward1994\n- markkaylor\n- Nico André\n- Rémi de Juvigny @remidej\n- Ziyi @butcherZ",
+      "memory_unit_text": "In the strapi/strapi release v5.33.3, bug fixes add token refresh logic for react query, fix env helper default and generic types, align documentation with Data.ID, check file type restriction in upload content-api, and implement session revocation on password changes. Documentation changes add blocks editor and live preview contributor docs and fix a typo. Chores update multiple packages for vulnerability warnings and update security policy for version 4."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_33_4",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.33.4",
+      "tag_name": "v5.33.4",
+      "title": "v5.33.4",
+      "time_hint": "2026-01-21",
+      "published_at": "2026-01-21T11:50:16Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.33.4",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.33.4\nTag: v5.33.4; draft: False; prerelease: False; published_at: 2026-01-21T11:50:16Z; created_at: 2026-01-21T11:50:14Z\nRelease notes:\n## 5.33.4 (2026-01-21)\n### 🔥 Bug fix\n- await the async map inside v5 release actions migration ([#25125](https://github.com/strapi/strapi/pull/25125))\n- paste multi line code in blocks editor ([#25184](https://github.com/strapi/strapi/pull/25184))\n- reorder components and dz on mobile ([#25197](https://github.com/strapi/strapi/pull/25197))\n- missing property breaking build ([#25205](https://github.com/strapi/strapi/pull/25205))\n- added multiple prop for medialibrarydialog ([#25069](https://github.com/strapi/strapi/pull/25069))\n- handle component structure properly for conditional fields ([#25219](https://github.com/strapi/strapi/pull/25219))\n### ⚙️ Chore\n- refactor blocks editor block api ([#25176](https://github.com/strapi/strapi/pull/25176))\n- bump design-system to v2.1.2 ([#25174](https://github.com/strapi/strapi/pull/25174))\n- remove all occurances of aiLicenseKey ([#24908](https://github.com/strapi/strapi/pull/24908))\n- refining the API request tracker to record success and statusCode ([#24906](https://github.com/strapi/strapi/pull/24906))\n- update pinned undici ([#25211](https://github.com/strapi/strapi/pull/25211))\n- integrate subscription info in backend trackers ([#24909](https://github.com/strapi/strapi/pull/24909))\n- **deps:** bump undici from 6.21.2 to 6.23.0 ([#25193](https://github.com/strapi/strapi/pull/25193))\n### 💅 Enhancement\n- responsiveness consistency for main nav ([#25104](https://github.com/strapi/strapi/pull/25104))\n### ❤️ Thank You\n- Adrien L\n- Bassel Kanso @Bassel17\n- Ben Irvin\n- Garrett Heaver @garrettheaver\n- Maksim Zhukau @MaksZhukov\n- Marco A.\n- mathildeleg @mathildeleg\n- Rémi de Juvigny @remidej",
+      "memory_unit_text": "In the strapi/strapi release v5.33.4, bug fixes await async map in v5 release actions migration, fix paste multi-line code in blocks editor, reorder components and DZ on mobile, fix missing property breaking build, add multiple prop for media library dialog, and handle component structure for conditional fields. Chores refactor blocks editor block API, bump design-system to v2.1.2, remove aiLicenseKey occurrences, refine API request tracker, update pinned undici, integrate subscription info in backend trackers, and bump undici. Enhancement improves responsiveness consistency for main nav."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_34_0",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.34.0",
+      "tag_name": "v5.34.0",
+      "title": "v5.34.0",
+      "time_hint": "2026-01-28",
+      "published_at": "2026-01-28T15:02:10Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.34.0",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.34.0\nTag: v5.34.0; draft: False; prerelease: False; published_at: 2026-01-28T15:02:10Z; created_at: 2026-01-28T15:02:08Z\nRelease notes:\n## 5.34.0 (2026-01-28)\n### 🚀 New feature\n- update german translations for various components ([#24143](https://github.com/strapi/strapi/pull/24143))\n- **upload:** add retroactive ai metadata generation ([#25066](https://github.com/strapi/strapi/pull/25066))\n### 🔥 Bug fix\n- add missing labels to IT locale ([#25217](https://github.com/strapi/strapi/pull/25217))\n- form elements mobile adjustments ([#25202](https://github.com/strapi/strapi/pull/25202))\n- responsive cm header ([#25203](https://github.com/strapi/strapi/pull/25203))\n- run orphan removal for the 'related_type' column ([#24833](https://github.com/strapi/strapi/pull/24833))\n- adjust padding for cm subnav ([#25253](https://github.com/strapi/strapi/pull/25253))\n- **admin:** format input error message with values ([#23932](https://github.com/strapi/strapi/pull/23932))\n- **i18n:** ai translation losing unsupported fields ([#25247](https://github.com/strapi/strapi/pull/25247))\n- **menu:** render external links as anchors ([#25269](https://github.com/strapi/strapi/pull/25269))\n### 📚 Documentation Changes\n- clarify strapi installation instructions in README ([#25016](https://github.com/strapi/strapi/pull/25016))\n- **CONTRIBUTING:** set link to latest version of .commitlintrc.ts ([#25224](https://github.com/strapi/strapi/pull/25224))\n### ⚙️ Chore\n- update pinned elliptic ([#25206](https://github.com/strapi/strapi/pull/25206))\n- remove unused imports from react and @strapi/design-system ([#25222](https://github.com/strapi/strapi/pull/25222))\n- update pinned dependencies express, qs, body-parser ([#25209](https://github.com/strapi/strapi/pull/25209))\n- remove in-app marketplace ([#24958](https://github.com/strapi/strapi/pull/24958))\n- update lodash to 4.17.23 ([#25244](https://github.com/strapi/strapi/pull/25244))\n- **deps:** bump lodash-es from 4.17.21 to 4.17.23 ([#25239](https://github.com/strapi/strapi/pull/25239))\n- **upload:** setup future flag for media lib redesign work ([#25229](https://github.com/strapi/strapi/pull/25229))\n- **‎.github/workflows:** bump outdated GitHub Actions versions ([#25233](https://github.com/strapi/strapi/pull/25233))\n### 💅 Enhancement\n- responsiveness consistency for subnav ([#25107](https://github.com/strapi/strapi/pull/25107))\n### 🚨 Security\n- update pinned mdast-utils ([#25227](https://github.com/strapi/strapi/pull/25227))\n- update pinned js-yaml, node-forge, tmp, and more ([#25228](https://github.com/strapi/strapi/pull/25228))\n### ❤️ Thank You\n- Adrien L\n- Ben Irvin\n- Boaz Poolman\n- Jair Ortiz @JairOrtizGutierrez\n- Jamie Howard @jhoward1994\n- Leonid Vinogradov @leon-win\n- Lukas Eipert\n- markkaylor\n- mathildeleg @mathildeleg\n- Nidhi Sharma @Nidhisharma4399\n- Pádraic Slattery @pgoslatara\n- Ziyi @butcherZ",
+      "memory_unit_text": "In the strapi/strapi release v5.34.0, new features update German translations and add retroactive AI metadata generation for upload. Bug fixes add missing IT locale labels, adjust form elements and responsive CM header, run orphan removal for related_type column, adjust CM subnav padding, format input error messages, fix AI translation losing unsupported fields, and render external links as anchors. Documentation changes clarify installation instructions and set link to latest .commitlintrc.ts. Chores update pinned elliptic, remove unused imports, update pinned dependencies, remove in-app marketplace, update lodash, bump lodash-es, setup future flag for media lib redesign, and bump outdated GitHub Actions versions. Enhancement improves responsiveness consistency for subnav. Security updates pinned mdast-utils, js-yaml, node-forge, tmp, and more."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_35_0",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.35.0",
+      "tag_name": "v5.35.0",
+      "title": "v5.35.0",
+      "time_hint": "2026-02-04",
+      "published_at": "2026-02-04T12:55:24Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.35.0",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.35.0\nTag: v5.35.0; draft: False; prerelease: False; published_at: 2026-02-04T12:55:24Z; created_at: 2026-02-04T12:55:21Z\nRelease notes:\n## 5.35.0 (2026-02-04)\n### 🚀 New feature\n- **upload:** add focal point picker for images ([#25267](https://github.com/strapi/strapi/pull/25267))\n### 🔥 Bug fix\n- prevent bulk publish modal from closing during API refetch ([#24632](https://github.com/strapi/strapi/pull/24632))\n- update ko.json ([#23501](https://github.com/strapi/strapi/pull/23501))\n- mobile actions drawer in content manager edit view ([#25243](https://github.com/strapi/strapi/pull/25243))\n- **upload:** prevent asset deletion when clicking cancel on EditAssetDialog ([#25318](https://github.com/strapi/strapi/pull/25318))\n### ⚙️ Chore\n- bump yarn 4.5 to 4.12 ([#25284](https://github.com/strapi/strapi/pull/25284))\n### 💅 Enhancement\n- improve mobile design for content history forms ([#25338](https://github.com/strapi/strapi/pull/25338))\n### 🚨 Security\n- update multiple subdependencies ([#25337](https://github.com/strapi/strapi/pull/25337))\n### ❤️ Thank You\n- Adrien L\n- Ben Irvin\n- Dhruv Maradiya @Dhruv-Maradiya\n- jayesh70599 @jayesh70599\n- mathildeleg @mathildeleg\n- Niceplugin @niceplugin\n- Nico André\n- Schero D. @Schero94",
+      "memory_unit_text": "In the strapi/strapi release v5.35.0, a new feature adds a focal point picker for images in upload. Bug fixes prevent bulk publish modal from closing during API refetch, update ko.json, fix mobile actions drawer in content manager edit view, and prevent asset deletion on cancel in EditAssetDialog. Chore bumps yarn from 4.5 to 4.12. Enhancement improves mobile design for content history forms. Security updates multiple subdependencies."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_36_0",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.36.0",
+      "tag_name": "v5.36.0",
+      "title": "v5.36.0",
+      "time_hint": "2026-02-11",
+      "published_at": "2026-02-11T14:12:21Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.36.0",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.36.0\nTag: v5.36.0; draft: False; prerelease: False; published_at: 2026-02-11T14:12:21Z; created_at: 2026-02-11T14:12:19Z\nRelease notes:\n## 5.36.0 (2026-02-11)\n### 🚀 New feature\n- persistent list view settings ([#24246](https://github.com/strapi/strapi/pull/24246))\n- **strapi/create:** type strapi configs ([#21859](https://github.com/strapi/strapi/pull/21859))\n- **upload-aws-s3:** add extended configuration for S3-compatible providers ([#25263](https://github.com/strapi/strapi/pull/25263))\n### 🔥 Bug fix\n- responsive drawer for content history ([#25344](https://github.com/strapi/strapi/pull/25344))\n- scrolling in sidenav also scroll content ([#25379](https://github.com/strapi/strapi/pull/25379))\n- match database package version ([#25389](https://github.com/strapi/strapi/pull/25389))\n- **content-manager:** preserve origin id when cloning, to fetch relations so they are corrected re-populated ([#25307](https://github.com/strapi/strapi/pull/25307))\n- **preview-config:** allow and await for async handler ([#25396](https://github.com/strapi/strapi/pull/25396))\n- **upload-aws-s3:** use baseUrl even if upload location lacks protocol ([#23400](https://github.com/strapi/strapi/pull/23400))\n### 💅 Enhancement\n- improve mobile design for edit view forms ([#25320](https://github.com/strapi/strapi/pull/25320))\n- **create-strapi-app:** add --non-interactive mode for CI and scripts ([#25373](https://github.com/strapi/strapi/pull/25373))\n### 🚨 Security\n- upgrade apollo to 4.13.0 ([#25375](https://github.com/strapi/strapi/pull/25375))\n### ❤️ Thank You\n- Adrien L\n- Andrei L @unrevised6419\n- Ben Irvin\n- Enrique Carpintero\n- jayesh70599 @jayesh70599\n- Marian Vonsien @mvo-zyres\n- mathildeleg @mathildeleg\n- Paul Bratslavsky @PaulBratslavsky\n- Schero D. @Schero94",
+      "memory_unit_text": "In the strapi/strapi release v5.36.0, new features add persistent list view settings, type strapi configs in create, and extended configuration for S3-compatible providers in upload-aws-s3. Bug fixes address responsive drawer for content history, scrolling in sidenav, database package version match, preserve origin id when cloning, allow async handler in preview-config, and use baseUrl in upload-aws-s3. Enhancements improve mobile design for edit view forms and add --non-interactive mode for create-strapi-app. Security upgrades apollo to 4.13.0."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_36_1",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.36.1",
+      "tag_name": "v5.36.1",
+      "title": "v5.36.1",
+      "time_hint": "2026-02-18",
+      "published_at": "2026-02-18T14:23:14Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.36.1",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.36.1\nTag: v5.36.1; draft: False; prerelease: False; published_at: 2026-02-18T14:23:14Z; created_at: 2026-02-18T14:23:11Z\nRelease notes:\n## 5.36.1 (2026-02-18)\n### 🔥 Bug fix\n- handle undefined tours property ([#25290](https://github.com/strapi/strapi/pull/25290))\n- **core:** handle negative and zero min/max validation for number fields ([#25409](https://github.com/strapi/strapi/pull/25409))\n- **history:** improve error handling and batch deletion in cron jobs ([#25425](https://github.com/strapi/strapi/pull/25425))\n- **migrations:** speed up discard-drafts with bulk batches ([#25293](https://github.com/strapi/strapi/pull/25293))\n- **ts:** ignore generated .strapi folder ([#25086](https://github.com/strapi/strapi/pull/25086))\n- **utils:** bump preferred-pm to fix npm workspace detection ([#25406](https://github.com/strapi/strapi/pull/25406))\n### ⚙️ Chore\n- add --no-build-admin option to 'strapi develop' command ([#25415](https://github.com/strapi/strapi/pull/25415))\n- ***/vitest:** introduce Vitest and vitest-config package ([#25286](https://github.com/strapi/strapi/pull/25286))\n- **ci:** redirect question issues to GitHub Discussions ([#25441](https://github.com/strapi/strapi/pull/25441))\n- **deps:** bump @casl/ability from 6.5.0 to 6.7.5 ([#25430](https://github.com/strapi/strapi/pull/25430))\n- **deps:** bump qs from 6.14.1 to 6.14.2 ([#25444](https://github.com/strapi/strapi/pull/25444))\n### 🚨 Security\n- upgrade to tar 7 ([#25380](https://github.com/strapi/strapi/pull/25380))\n- update react-router ([#25391](https://github.com/strapi/strapi/pull/25391))\n- **deps:** upgrade axios from v1.12.2 to v1.13.5 ([#25427](https://github.com/strapi/strapi/pull/25427))\n### ❤️ Thank You\n- Andrei L @unrevised6419\n- Bassel Kanso @Bassel17\n- Ben Irvin\n- DMehaffy\n- Florent Baldino @Baldinof\n- Jamie Howard @jhoward1994\n- Jonas Thelemann\n- Josh Stuible\n- Nico André\n- SARGUNESH S V @sargunesh25\n- Simen @Eventyret",
+      "memory_unit_text": "In the strapi/strapi release v5.36.1, bug fixes handle undefined tours property, handle negative and zero min/max validation for number fields, improve error handling and batch deletion in history cron jobs, speed up discard-drafts with bulk batches, ignore generated .strapi folder in ts, and bump preferred-pm to fix npm workspace detection. Chores add --no-build-admin option to develop command, introduce Vitest and vitest-config package, redirect question issues to GitHub Discussions, and bump @casl/ability and qs. Security upgrades tar to 7, updates react-router, and upgrades axios."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_37_0",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.37.0",
+      "tag_name": "v5.37.0",
+      "title": "v5.37.0",
+      "time_hint": "2026-02-26",
+      "published_at": "2026-02-26T08:35:28Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.37.0",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.37.0\nTag: v5.37.0; draft: False; prerelease: False; published_at: 2026-02-26T08:35:28Z; created_at: 2026-02-26T08:35:26Z\nRelease notes:\n## 5.37.0 (2026-02-26)\n### 🔥 Bug fix\n- improve subnav on mobile so it works with banner ([#25450](https://github.com/strapi/strapi/pull/25450))\n- layout page broken ([#25501](https://github.com/strapi/strapi/pull/25501))\n- add design-system to config ([#25435](https://github.com/strapi/strapi/pull/25435))\n- radix ui dialog dependency version ([#25549](https://github.com/strapi/strapi/pull/25549))\n### 📚 Documentation Changes\n- fix typos in content-releases frontend intro ([#25471](https://github.com/strapi/strapi/pull/25471))\n### ⚙️ Chore\n- add bot and contributor detection to community-label workflow ([#25497](https://github.com/strapi/strapi/pull/25497))\n(https://github.com/strapi/strapi/pull/25494))\n- **docs:** revise README for AWS S3 provider updates ([#25449](https://github.com/strapi/strapi/pull/25449))\n### 💅 Enhancement\n- improve mobile ux of list view ([#25366](https://github.com/strapi/strapi/pull/25366))\n### 🚨 Security\n- **feature:** add strictParam, addQueryParams, addInputParams ([#25528](https://github.com/strapi/strapi/pull/25528))\n- **deps:** upgrade to tar 7.5.9 ([#25504](https://github.com/strapi/strapi/pull/25504))\n- **deps:** upgrade multiple dependencies ([#25506](https://github.com/strapi/strapi/pull/25506))\n- **deps:** bump bn.js from 4.12.0 to 4.12.3 ([#25521](https://github.com/strapi/strapi/pull/25521))\n- **deps:** bump minimatch from 9.0.3 to 10.2.1 ([#25494]\n### ❤️ Thank You\n- Adrien L\n- Ayoub Hidri @ayhid\n- Ben Irvin\n- mathildeleg @mathildeleg\n- Pierre Wizla\n- Simon Norris @cache-your-dreams\n- Ziyi @butcherZ",
+      "memory_unit_text": "In the strapi/strapi release v5.37.0, bug fixes improve subnav on mobile with banner, fix broken layout page, add design-system to config, and fix radix ui dialog dependency version. Documentation changes fix typos in content-releases frontend intro. Chores add bot and contributor detection to community-label workflow and revise README for AWS S3 provider updates. Enhancement improves mobile UX of list view. Security adds strictParam, addQueryParams, addInputParams, upgrades tar to 7.5.9, upgrades multiple dependencies, bumps bn.js, and bumps minimatch."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_37_1",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.37.1",
+      "tag_name": "v5.37.1",
+      "title": "v5.37.1",
+      "time_hint": "2026-02-26",
+      "published_at": "2026-02-26T14:58:00Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.37.1",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.37.1\nTag: v5.37.1; draft: False; prerelease: False; published_at: 2026-02-26T14:58:00Z; created_at: 2026-02-26T14:57:58Z\nRelease notes:\n## 5.37.1 (2026-02-26)\n### 🔥 Bug fix\n- **core:** preserve component clone integrity in discard-drafts migration\n### ❤️ Thank You\n- Bassel Kanso @Bassel17\n- Ben Irvin",
+      "memory_unit_text": "In the strapi/strapi release v5.37.1, a bug fix preserves component clone integrity in discard-drafts migration."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_38_0",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.38.0",
+      "tag_name": "v5.38.0",
+      "title": "v5.38.0",
+      "time_hint": "2026-03-04",
+      "published_at": "2026-03-04T13:17:31Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.38.0",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.38.0\nTag: v5.38.0; draft: False; prerelease: False; published_at: 2026-03-04T13:17:31Z; created_at: 2026-03-04T13:17:29Z\nRelease notes:\n## 5.38.0 (2026-03-04)\n### 🚀 New feature\n- **content-manager:** add relationOpenMode setting (modal/page/newTab) ([#25433](https://github.com/strapi/strapi/pull/25433))\n- **email-nodemailer:** upgrade to Nodemailer v8 with advanced email features and Admin UI capabilities ([#25392](https://github.com/strapi/strapi/pull/25392))\n- **i18n:** add missing french translations ([#23093](https://github.com/strapi/strapi/pull/23093))\n### 🔥 Bug fix\n- typo 'recieved' to 'received' across codebase ([#25541](https://github.com/strapi/strapi/pull/25541))\n- markdown editor number list is created with wrong numbers ([#24631](https://github.com/strapi/strapi/pull/24631))\n- add i18n for boolean cell values ([#22314](https://github.com/strapi/strapi/pull/22314))\n- folder subtitles for folders without assets or subfolders ([#22694](https://github.com/strapi/strapi/pull/22694))\n- vite and webpack config when linking ds locally ([#25530](https://github.com/strapi/strapi/pull/25530))\n- **types:** add missing typing for proxy.koa config ([#25575](https://github.com/strapi/strapi/pull/25575))\n### ⚙️ Chore\n- bump design-system to v2.2.0 ([#25584](https://github.com/strapi/strapi/pull/25584))\n- **deps:** bump rollup from 4.27.4 to 4.59.0 ([#25566](https://github.com/strapi/strapi/pull/25566))\n- **upload:** add import from url ([#25496](https://github.com/strapi/strapi/pull/25496))\n### ❤️ Thank You\n- Adrien L\n- Altay Akkus\n- Ayoub Hidri @ayhid\n- Daniel Garcia @dagadevelop\n- Grégory Boutte\n- Jorrit Schippers\n- markkaylor\n- mathildeleg @mathildeleg\n- Schero D. @Schero94\n- Tewson Seeoun @tewson",
+      "memory_unit_text": "In the strapi/strapi release v5.38.0, new features add relationOpenMode setting (modal/page/newTab) in content-manager, upgrade email-nodemailer to Nodemailer v8 with advanced email features and Admin UI capabilities, and add missing French translations. Bug fixes correct typo 'recieved' to 'received', fix markdown editor number list, add i18n for boolean cell values, fix folder subtitles, fix vite and webpack config when linking DS locally, and add missing typing for proxy.koa config. Chores bump design-system to v2.2.0, bump rollup, and add import from url in upload."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_38_1",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.38.1",
+      "tag_name": "v5.38.1",
+      "title": "v5.38.1",
+      "time_hint": "2026-03-11",
+      "published_at": "2026-03-11T10:04:04Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.38.1",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.38.1\nTag: v5.38.1; draft: False; prerelease: False; published_at: 2026-03-11T10:04:04Z; created_at: 2026-03-11T10:04:02Z\nRelease notes:\n## 5.38.1 (2026-03-11)\n> Superseded on March 11, 2026 by `v5.39.0` due to versioning mistake.\n> Please use `v5.39.0`.",
+      "memory_unit_text": "In the strapi/strapi release v5.38.1, the release is superseded on March 11, 2026 by v5.39.0 due to a versioning mistake. Users are advised to use v5.39.0."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_39_0",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.39.0",
+      "tag_name": "v5.39.0",
+      "title": "v5.39.0",
+      "time_hint": "2026-03-11",
+      "published_at": "2026-03-11T10:21:11Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.39.0",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.39.0\nTag: v5.39.0; draft: False; prerelease: False; published_at: 2026-03-11T10:21:11Z; created_at: 2026-03-11T10:21:08Z\nRelease notes:\n## 5.39.0 (2026-03-11)\n### 🚀 New feature\n- expand accordion by default when inserting a new component in a document ([#24230](https://github.com/strapi/strapi/pull/24230))\n- **content-manager:** filter list view by publication status ([#25510](https://github.com/strapi/strapi/pull/25510))\n### 🔥 Bug fix\n- added shift+tab to blocks editors ([#24122](https://github.com/strapi/strapi/pull/24122))\n- single type publish permission error ([#24754](https://github.com/strapi/strapi/pull/24754))\n- es translations ([#25655](https://github.com/strapi/strapi/pull/25655))\n- typo 'compatability' to 'compatibility' in error messages ([#25535](https://github.com/strapi/strapi/pull/25535))\n- **content-manager:** export ContentManagerPlugin type for plugin dev… ([#24149](https://github.com/strapi/strapi/pull/24149))\n- **content-manager:** reduce excessive rerendering in relation fields ([#25623](https://github.com/strapi/strapi/pull/25623))\n- **content-manager:** reduce rerenders for conditional fields ([#25617](https://github.com/strapi/strapi/pull/25617))\n- **content-releases:** publish in right order to preserve relations ([#25551](https://github.com/strapi/strapi/pull/25551))\n- **guided-tour:** no overlay in dark mode ([#25485](https://github.com/strapi/strapi/pull/25485))\n- **openapi:** correctly merge plugin router prefix with route paths ([#25616](https://github.com/strapi/strapi/pull/25616))\n- **types:** fix document findOne params ([#25613](https://github.com/strapi/strapi/pull/25613))\n- **upload:** add crossOrigin attribute to image preview ([#24946](https://github.com/strapi/strapi/pull/24946))\n### ⚙️ Chore\n- upgrade to glob 13 ([#25610](https://github.com/strapi/strapi/pull/25610))\n- upgrade better-sqlite3  to 12.6.2 ([#25611](https://github.com/strapi/strapi/pull/25611))\n- remove eslint-plugin-rxjs ([#25612](https://github.com/strapi/strapi/pull/25612))\n- upgrade koa to 20.8.4 and minimatch to 10.2.4 ([#25624](https://github.com/strapi/strapi/pull/25624))\n- eslintignore coverage ([#25649](https://github.com/strapi/strapi/pull/25649))\n- stop adding issues to GitHub projects in issues_handleLabel workflow ([#25677](https://github.com/strapi/strapi/pull/25677))\n- update package metadata ([#25599](https://github.com/strapi/strapi/pull/25599))\n- ***:** register vitest dependency in Yarn catalog ([#25400](https://github.com/strapi/strapi/pull/25400))\n- **core/permissions:** ensure engine properly merges conditions ([#25569](https://github.com/strapi/strapi/pull/25569))\n- **deps:** bump js-yaml from 3.14.1 to 3.14.2 ([#24858](https://github.com/strapi/strapi/pull/24858))\n- **deps:** bump qs from 6.14.2 to 6.15.0 ([#25555](https://github.com/strapi/strapi/pull/25555))\n- **deps:** bump jws from 3.2.2 to 3.2.3 ([#24981](https://github.com/strapi/strapi/pull/24981))\n- **deps:** bump elliptic from 6.5.7 to 6.6.1 ([#24803](https://github.com/strapi/strapi/pull/24803))\n- **deps:** bump serialize-javascript from 6.0.1 to 6.0.2 ([#24841](https://github.com/strapi/strapi/pull/24841))\n- **deps:** bump mdast-util-to-hast from 13.2.0 to 13.2.1 ([#24950](https://github.com/strapi/strapi/pull/24950))\n- **deps:** bump jws from 3.2.2 to 3.2.3 ([#25652](https://github.com/strapi/strapi/pull/25652))\n- **deps:** bump tar from 7.5.9 to 7.5.10 ([#25642](https://github.com/strapi/strapi/pull/25642))\n- **deps:** bump serialize-javascript from 6.0.1 to 6.0.2 ([#25653](https://github.com/strapi/strapi/pull/25653))\n### 🚨 Security\n- **upload:** improve mimetype detection for uploads ([#25177](https://github.com/strapi/strapi/pull/25177))\n### ❤️ Thank You\n- Adrien L\n- Akash Santra @Akash504-ai\n- akash-dabhi-qed @akash-dabhi-qed\n- Ayoub Hidri @ayhid\n- Bassel Kanso @Bassel17\n- Ben Irvin\n- Brandon Aaron @brandonaaron\n- Daniel Garcia @dagadevelop\n- Gouttfi @Gouttfi\n- jeanvier\n- markkaylor\n- Nico An...",
+      "memory_unit_text": "In the strapi/strapi release v5.39.0, new features expand accordion by default when inserting a new component in a document and filter list view by publication status in content-manager. Bug fixes add shift+tab to blocks editors, fix single type publish permission error, fix es translations, fix typo 'compatability' to 'compatibility', export ContentManagerPlugin type, reduce excessive rerendering in relation fields and conditional fields, publish in right order to preserve relations, fix guided-tour overlay in dark mode, correctly merge plugin router prefix with route paths in openapi, fix document findOne params, and add crossOrigin attribute to image preview. Chores upgrade glob, better-sqlite3, koa, minimatch, remove eslint-plugin-rxjs, eslintignore coverage, stop adding issues to GitHub projects, update package metadata, register vitest dependency, ensure engine properly merges conditions, and bump multiple dependencies. Security improves mimetype detection for uploads."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_40_0",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.40.0",
+      "tag_name": "v5.40.0",
+      "title": "v5.40.0",
+      "time_hint": "2026-03-18",
+      "published_at": "2026-03-18T13:33:01Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.40.0",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.40.0\nTag: v5.40.0; draft: False; prerelease: False; published_at: 2026-03-18T13:33:01Z; created_at: 2026-03-18T13:32:59Z\nRelease notes:\n## 5.40.0 (2026-03-18)\n### 🚀 New feature\n- add package manager dropdown before version in bug report template ([#25679](https://github.com/strapi/strapi/pull/25679))\n### 🔥 Bug fix\n- add maxwidth to documentactions menu ([#25664](https://github.com/strapi/strapi/pull/25664))\n- formatErrorMessages array values formatting ([#24196](https://github.com/strapi/strapi/pull/24196))\n- **admin:** alias singleton frontend deps in vite ([#25682](https://github.com/strapi/strapi/pull/25682))\n- **content-manager:** reduce excessive rerendering in components and dynamic zones ([#25631](https://github.com/strapi/strapi/pull/25631))\n- **content-manager:** skip non-draftAndPublish relations in countDraftRelations ([#25453](https://github.com/strapi/strapi/pull/25453))\n- **i18n:** show locale key in disabled select when editing locale ([#25124](https://github.com/strapi/strapi/pull/25124))\n### 📚 Documentation Changes\n- fix docs links in README ([#25715](https://github.com/strapi/strapi/pull/25715))\n### ⚙️ Chore\n- use https instead of git url in package.repository.url ([#25698](https://github.com/strapi/strapi/pull/25698))\n- **content-manager:** optimize relations handling in EditView component ([#25683](https://github.com/strapi/strapi/pull/25683))\n- **core:** parallelize and cache dynamic zone populate ([#25685](https://github.com/strapi/strapi/pull/25685))\n### 💅 Enhancement\n- resolved filter editability on clicking filter tag ([#24057](https://github.com/strapi/strapi/pull/24057))\n- **core:** remove beta on Document API, enforce deprecation on EntityService API ([#25744](https://github.com/strapi/strapi/pull/25744))\n### ❤️ Thank You\n- akash-dabhi-qed @akash-dabhi-qed\n- Andrea Cappuccio @hood\n- Bassel Kanso @Bassel17\n- calm @calm329\n- Jamie Howard @jhoward1994\n- markkaylor\n- mathildeleg @mathildeleg\n- Nico André\n- Nikolas Rimikis @Leptopoda\n- Pierre Wizla\n- Varun Chawla @veeceey",
+      "memory_unit_text": "In the strapi/strapi release v5.40.0, a new feature adds a package manager dropdown before version in bug report template. Bug fixes add maxwidth to documentactions menu, formatErrorMessages array values formatting, alias singleton frontend deps in vite, reduce excessive rerendering in components and dynamic zones, skip non-draftAndPublish relations in countDraftRelations, and show locale key in disabled select when editing locale. Documentation changes fix docs links in README. Chores use https instead of git url in package.repository.url, optimize relations handling in EditView component, and parallelize and cache dynamic zone populate. Enhancements resolve filter editability on clicking filter tag and remove beta on Document API, enforce deprecation on EntityService API."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_41_0",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.41.0",
+      "tag_name": "v5.41.0",
+      "title": "v5.41.0",
+      "time_hint": "2026-04-01",
+      "published_at": "2026-04-01T09:17:56Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.41.0",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.41.0\nTag: v5.41.0; draft: False; prerelease: False; published_at: 2026-04-01T09:17:56Z; created_at: 2026-04-01T09:17:48Z\nRelease notes:\n## 5.41.0 (2026-04-01)\n### 🔥 Bug fix\n- use strapi.fetch for remote uploads ([#25661](https://github.com/strapi/strapi/pull/25661))\n- Content types with attributes named filters, sort, fields, or populate no longer cause 400 validation errors on populate queries and countDraftRelations ([#21338](https://github.com/strapi/strapi/pull/21338), [#25762](https://github.com/strapi/strapi/pull/25762))\n- check devDependencies when resolving required admin deps ([#22130](https://github.com/strapi/strapi/pull/22130))\n- use max batch sizes per dialect ([#25390](https://github.com/strapi/strapi/pull/25390))\n- **content-type-builder:** default draftAndPublish to true in AI CTB ([#25781](https://github.com/strapi/strapi/pull/25781))\n- **document-service:** re-insert cascade-deleted bidirectional relations ([#25725](https://github.com/strapi/strapi/pull/25725))\n- **graphql:** expose status and hasPublishedVersion on non–D&P root queries for nested relations ([#25763](https://github.com/strapi/strapi/pull/25763))\n- **homepage:** render widgets progressively and batch permission checks ([#25846](https://github.com/strapi/strapi/pull/25846))\n- **upload:** allow removal of file type filter in media library ([#25399](https://github.com/strapi/strapi/pull/25399))\n- **upload:** row duplicate-key warning ([#25670](https://github.com/strapi/strapi/pull/25670))\n- **upload:** allow upload of files with empty MIME type ([#25844](https://github.com/strapi/strapi/pull/25844))\n### ⚙️ Chore\n- **deps:** bump undici from 6.23.0 to 6.24.0 ([#25731](https://github.com/strapi/strapi/pull/25731))\n- **deps:** bump effect from 3.19.19 to 3.21.0 ([#25796](https://github.com/strapi/strapi/pull/25796))\n- **scripts/check-package-versions:** support Yarn catalog ([#25625](https://github.com/strapi/strapi/pull/25625))\n### 💅 Enhancement\n- add customField parameter to extendFields ([#22521](https://github.com/strapi/strapi/pull/22521))\n- **content-manager:** add documentid in listview and editview ([#25759](https://github.com/strapi/strapi/pull/25759))\n### 🚨 Security\n- package upgrades to remove deprecated versions of boolean, tar, and glob ([#25776](https://github.com/strapi/strapi/pull/25776))\n### ❤️ Thank You\n- Adrien Foulon @Tofandel\n- akash-dabhi-qed @akash-dabhi-qed\n- Bassel Kanso @Bassel17\n- Ben Irvin\n- Daniil Barkov @giollord\n- Kai Gritun\n- mathildeleg @mathildeleg\n- Nico André\n- Shuhrat Dehkanov\n- Ziyi @butcherZ",
+      "memory_unit_text": "In the strapi/strapi release v5.41.0, bug fixes use strapi.fetch for remote uploads, fix content types with attributes named filters, sort, fields, or populate causing 400 validation errors, check devDependencies when resolving required admin deps, use max batch sizes per dialect, default draftAndPublish to true in AI CTB, re-insert cascade-deleted bidirectional relations, expose status and hasPublishedVersion on non-D&P root queries for nested relations in GraphQL, render widgets progressively and batch permission checks on homepage, allow removal of file type filter in media library, fix row duplicate-key warning, and allow upload of files with empty MIME type. Chores bump undici, effect, and support Yarn catalog in check-package-versions. Enhancements add customField parameter to extendFields and add documentid in listview and editview. Security upgrades packages to remove deprecated versions of boolean, tar, and glob."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_41_1",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.41.1",
+      "tag_name": "v5.41.1",
+      "title": "v5.41.1",
+      "time_hint": "2026-04-01",
+      "published_at": "2026-04-01T09:55:43Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.41.1",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.41.1\nTag: v5.41.1; draft: False; prerelease: False; published_at: 2026-04-01T09:55:43Z; created_at: 2026-04-01T09:55:42Z\nRelease notes:\n## 5.41.1 (2026-04-01)\n### 🔥 Bug fix\n- load inquirer async ([043798dbe8](https://github.com/strapi/strapi/commit/043798dbe8))\n### ❤️ Thank You\n- Ben Irvin",
+      "memory_unit_text": "In the strapi/strapi release v5.41.1, a bug fix loads inquirer async."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_42_0",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.42.0",
+      "tag_name": "v5.42.0",
+      "title": "v5.42.0",
+      "time_hint": "2026-04-08",
+      "published_at": "2026-04-08T12:22:34Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.42.0",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.42.0\nTag: v5.42.0; draft: False; prerelease: False; published_at: 2026-04-08T12:22:34Z; created_at: 2026-04-08T12:22:31Z\nRelease notes:\n## 5.42.0 (2026-04-08)\n### 🚀 New feature\n- removing A/B testing from the prompt Currently A/B testing opt-in isn't used, so removing it from the CLI ([8d5b04ece4](https://github.com/strapi/strapi/commit/8d5b04ece4))\n- changing sonar variable ([0d822ade04](https://github.com/strapi/strapi/commit/0d822ade04))\n- **data-transfer:** add directory export/import format ([#25867](https://github.com/strapi/strapi/pull/25867))\n### 🔥 Bug fix\n- change return to continue in deleteRelations when using foreign keys ([#25857](https://github.com/strapi/strapi/pull/25857))\n- hide legacy options ([da9cdfc640](https://github.com/strapi/strapi/commit/da9cdfc640))\n- contains filter no longer returns empty data ([#25810](https://github.com/strapi/strapi/pull/25810))\n- typos in documentation plugin README ([4ff54bff36](https://github.com/strapi/strapi/commit/4ff54bff36))\n- **admin:** p is not function error ([#25663](https://github.com/strapi/strapi/pull/25663))\n- **content-manager:** pass component schemas when rebuilding list view headers ([#25872](https://github.com/strapi/strapi/pull/25872))\n- **content-manager:** wrap single type displayName with formatMessage ([#25880](https://github.com/strapi/strapi/pull/25880))\n- **core:** relation handling preserves order during unpublish/republish cycles ([#25764](https://github.com/strapi/strapi/pull/25764))\n- **create-strapi-app:** generate .yarnrc.yml for Yarn projects ([#25869](https://github.com/strapi/strapi/pull/25869))\n- **documentation:** use dist extensions path in production ([#25863](https://github.com/strapi/strapi/pull/25863))\n### 📚 Documentation Changes\n- fix typos in documentation plugin README ([8e11e41247](https://github.com/strapi/strapi/commit/8e11e41247))\n### ⚙️ Chore\n- add .claude directory to gitignore ([e85aa81cdf](https://github.com/strapi/strapi/commit/e85aa81cdf))\n- sonarqube variables like in their docs ([40f9ecd6c7](https://github.com/strapi/strapi/commit/40f9ecd6c7))\n- **deps:** bump minimatch from 10.2.4 to 10.2.5 ([#25879](https://github.com/strapi/strapi/pull/25879))\n- **deps:** bump @xmldom/xmldom from 0.8.6 to 0.8.12 ([#25877](https://github.com/strapi/strapi/pull/25877))\n- **deps:** bump path-to-regexp from 8.2.0 to 8.4.0 ([#25850](https://github.com/strapi/strapi/pull/25850))\n- **deps:** bump undici from 6.24.0 to 6.24.1 ([#25785](https://github.com/strapi/strapi/pull/25785))\n- **deps:** bump handlebars from 4.7.7 to 4.7.9 ([#25841](https://github.com/strapi/strapi/pull/25841))\n- **deps:** bump yauzl from 3.2.0 to 3.2.1 ([#25729](https://github.com/strapi/strapi/pull/25729))\n- **deps:** bump bn.js from 4.12.0 to 4.12.3 ([#25691](https://github.com/strapi/strapi/pull/25691))\n- **deps:** bump js-yaml from 3.14.1 to 3.14.2 ([#25680](https://github.com/strapi/strapi/pull/25680))\n- **deps:** bump mdast-util-to-hast from 13.2.0 to 13.2.1 ([#25681](https://github.com/strapi/strapi/pull/25681))\n- **deps:** bump path-to-regexp from 8.4.0 to 8.4.1 ([#25888](https://github.com/strapi/strapi/pull/25888))\n- **deps:** bump simple-git from 3.21.0 to 3.32.3 ([#25704](https://github.com/strapi/strapi/pull/25704))\n- **deps:** bump file-type from 21.0.0 to 21.3.2 ([#25728](https://github.com/strapi/strapi/pull/25728))\n- **deps:** bump @octokit/plugin-paginate-rest from 9.2.1 to 9.2.2 ([#25693](https://github.com/strapi/strapi/pull/25693))\n- **deps:** bump @octokit/request from 8.4.0 to 8.4.1 ([#25694](https://github.com/strapi/strapi/pull/25694))\n- **deps:** bump picomatch from 2.3.1 to 2.3.2 ([#25828](https://github.com/strapi/strapi/pull/25828))\n- **deps:** bump nodemailer from 8.0.1 to 8.0.4 ([#25848](https://github.com/strapi/strapi/pull/25848))\n### ❤️ Thank You\n- Adrien L @Adzouz\n- Adrien Lepoutre @Adzouz\n- Alexandre BODIN\n- Bassel Kanso @Bassel17\n- Ben Irvin\n- guoyangzhen\n- Jamie Howard @jhoward1994\n- Joshua...",
+      "memory_unit_text": "In the strapi/strapi release v5.42.0, new features remove A/B testing from the CLI prompt, change sonar variable, and add directory export/import format in data-transfer. Bug fixes change return to continue in deleteRelations when using foreign keys, hide legacy options, fix contains filter returning empty data, fix typos in documentation plugin README, fix 'p is not function' error in admin, pass component schemas when rebuilding list view headers, wrap single type displayName with formatMessage, preserve relation order during unpublish/republish cycles, generate .yarnrc.yml for Yarn projects, and use dist extensions path in production. Documentation changes fix typos in documentation plugin README. Chores add .claude directory to gitignore, update sonarqube variables, and bump multiple dependencies."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_42_1",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.42.1",
+      "tag_name": "v5.42.1",
+      "title": "v5.42.1",
+      "time_hint": "2026-04-15",
+      "published_at": "2026-04-15T11:20:41Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.42.1",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.42.1\nTag: v5.42.1; draft: False; prerelease: False; published_at: 2026-04-15T11:20:41Z; created_at: 2026-04-15T11:20:39Z\nRelease notes:\n## 5.42.1 (2026-04-15)\n### 🔥 Bug fix\n- typo in Russian translation for upload button ([#25946](https://github.com/strapi/strapi/pull/25946))\n- fixed 9 typos, spelling errors, and duplicate words. ([#25936](https://github.com/strapi/strapi/pull/25936))\n- skip form onChange when markdown updates come from setValue ([#25955](https://github.com/strapi/strapi/pull/25955))\n- adjust typo in test ([#25960](https://github.com/strapi/strapi/pull/25960))\n- update snapshot ([9b2501ceeb](https://github.com/strapi/strapi/commit/9b2501ceeb))\n- increase test timeout ([f50134dbae](https://github.com/strapi/strapi/commit/f50134dbae))\n- preserve relations in fill from another locale ([#25703](https://github.com/strapi/strapi/pull/25703))\n- enable save button when re-ordering components or dynamic zones ([#25959](https://github.com/strapi/strapi/pull/25959))\n- made changes to resolve Firefox timepicker issue ([#25129](https://github.com/strapi/strapi/pull/25129), [#25438](https://github.com/strapi/strapi/pull/25438))\n- **admin:** batch content manager permission checks and reuse session ability ([#25911](https://github.com/strapi/strapi/pull/25911))\n- **core:** add firstPublishedAt field to draft ([#25947](https://github.com/strapi/strapi/pull/25947))\n- **document-service:** preserve relations during publish ([#25909](https://github.com/strapi/strapi/pull/25909))\n- **tests:** type errors cause build to fail which cause tests to fail ([072ad0d801](https://github.com/strapi/strapi/commit/072ad0d801))\n- **upload:** cache busting for cross-origin images in crop ([#25950](https://github.com/strapi/strapi/pull/25950))\n- **upload-aws-s3:** trust S3 response Location URL for compatible providers ([#25939](https://github.com/strapi/strapi/pull/25939))\n### ⚙️ Chore\n- fix typos in comments and docs ([12dfbe97c9](https://github.com/strapi/strapi/commit/12dfbe97c9))\n- adding finnish translation to Strapi Admin ([#25620](https://github.com/strapi/strapi/pull/25620))\n- fix typos in comments and docs ([91407798c4](https://github.com/strapi/strapi/commit/91407798c4))\n- update Polish language translations ([#23762](https://github.com/strapi/strapi/pull/23762))\n- **deps:** bump lodash from 4.17.23 to 4.18.1 ([#25919](https://github.com/strapi/strapi/pull/25919))\n- **deps:** bump lodash-es from 4.17.23 to 4.18.1 ([#25906](https://github.com/strapi/strapi/pull/25906))\n- **deps:** bump nodemailer from 8.0.4 to 8.0.5 ([#25963](https://github.com/strapi/strapi/pull/25963))\n- **deps:** bump axios from 1.13.5 to 1.15.0 ([#25980](https://github.com/strapi/strapi/pull/25980))\n- **deps:** bump path-to-regexp from 8.4.1 to 8.4.2 ([#25901](https://github.com/strapi/strapi/pull/25901))\n- **examples:** delete config.server.url to restore port override capability ([#26011](https://github.com/strapi/strapi/pull/26011))\n### ❤️ Thank You\n- Adrien L @Adzouz\n- akash-dabhi-qed @akash-dabhi-qed\n- Antti Tuppurainen\n- Bassel Kanso @Bassel17\n- Jamie Howard @jhoward1994\n- Mark Kaylor @markkaylor\n- mathildeleg @mathildeleg\n- Michał Kleszczyński @Magiczne\n- Nico André @nclsndr\n- Shalabh Gupta @coding-shalabh\n- Tony @tonytkachenko\n- Yohaan Narayanan @yohaann196\n- Yohei Yamamoto @NAM-MAN",
+      "memory_unit_text": "In the strapi/strapi release v5.42.1, bug fixes correct typo in Russian translation for upload button, fix 9 typos/spelling errors/duplicate words, skip form onChange when markdown updates come from setValue, adjust typo in test, update snapshot, increase test timeout, preserve relations in fill from another locale, enable save button when re-ordering components or dynamic zones, resolve Firefox timepicker issue, batch content manager permission checks and reuse session ability, add firstPublishedAt field to draft, preserve relations during publish, fix type errors causing build failure, cache busting for cross-origin images in crop, and trust S3 response Location URL for compatible providers. Chores fix typos in comments and docs, add Finnish translation, update Polish translations, and bump lodash, lodash-es, nodemailer, axios, path-to-regexp, and delete config.server.url to restore port override capability."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_43_0",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.43.0",
+      "tag_name": "v5.43.0",
+      "title": "v5.43.0",
+      "time_hint": "2026-04-22",
+      "published_at": "2026-04-22T14:37:45Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.43.0",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.43.0\nTag: v5.43.0; draft: False; prerelease: False; published_at: 2026-04-22T14:37:45Z; created_at: 2026-04-22T14:37:43Z\nRelease notes:\n## 5.43.0 (2026-04-22)\n### 🚀 New feature\n- **core/*:** introduce strapi.ai namespace ([#25886](https://github.com/strapi/strapi/pull/25886))\n- **i18n:** complete Dutch (nl) translations for admin panel ([#25932](https://github.com/strapi/strapi/pull/25932))\n### 🔥 Bug fix\n- date picker sends date-only format to avoid deprecation warning ([1508d5d8f3](https://github.com/strapi/strapi/commit/1508d5d8f3))\n- bulk publish validation on required components in dz ([#25687](https://github.com/strapi/strapi/pull/25687))\n- use admin basename for 401 redirect path ([#25458](https://github.com/strapi/strapi/pull/25458))\n- auth providers generate unique username on conflict ([#23853](https://github.com/strapi/strapi/pull/23853))\n- webpack public path was missing a slash at the end ([#22654](https://github.com/strapi/strapi/pull/22654))\n- handle potential null userPermissions in Protect component ([#24444](https://github.com/strapi/strapi/pull/24444))\n- **admin:** add cursor pointer and fix click behavior on sortable table headers ([#25418](https://github.com/strapi/strapi/pull/25418))\n- **admin:** eliminate several browser race conditions ([#26020](https://github.com/strapi/strapi/pull/26020))\n- **content-manager:** blocks editor errors when image has formats: null ([#26015](https://github.com/strapi/strapi/pull/26015))\n- **content-manager:** use RBAC-aware populate in countDraftRelations ([#25977](https://github.com/strapi/strapi/pull/25977))\n- **content-manager:** don't allow locale to overwrite list view settings ([#25437](https://github.com/strapi/strapi/pull/25437))\n- **content-manager:** render ID column without number grouping ([#25996](https://github.com/strapi/strapi/pull/25996))\n- **content-manager:** apply i18n translations to dynamic zone component names ([#25417](https://github.com/strapi/strapi/pull/25417))\n- **data-transfer:** fix large transfer crashes; show transfer progress ([#23479](https://github.com/strapi/strapi/pull/23479))\n- **upload:** content-api does not return signed urls ([#26034](https://github.com/strapi/strapi/pull/26034))\n- **upload-aws-s3:** support root-level credentials and update AWS SDK ([#25914](https://github.com/strapi/strapi/pull/25914))\n### ⚙️ Chore\n- update main README content ([#25618](https://github.com/strapi/strapi/pull/25618))\n- **data-transfer:** isIgnoredContentType helper for filtering ([#26004](https://github.com/strapi/strapi/pull/26004))\n- **deps:** bump undici from 6.24.1 to 6.25.0 ([#26022](https://github.com/strapi/strapi/pull/26022))\n- **deps:** bump follow-redirects from 1.15.11 to 1.16.0 ([#26025](https://github.com/strapi/strapi/pull/26025))\n### 💅 Enhancement\n- strapi dev continue watching on build error ([#25514](https://github.com/strapi/strapi/pull/25514))\n- add list & delete admin user cli commands ([#23022](https://github.com/strapi/strapi/pull/23022))\n- **data-transfer:** improve progress UX ([#25921](https://github.com/strapi/strapi/pull/25921))\n### 🚨 Security\n- upgrade to axios 1.15.1 ([#26072](https://github.com/strapi/strapi/pull/26072))\n### ❤️ Thank You\n- Adrien L @Adzouz\n- Akash Santra @Akash504-ai\n- Bellian @Bellian\n- Ben Irvin @innerdvations\n- Benedikt Rötsch @axe312ger\n- DMehaffy @derrickmehaffy\n- Jamie Howard @jhoward1994\n- Jan Willem Keizer @janwillemkeizer\n- Jayesh Patel @itsmejay80\n- Jesús Villar @Callm3thebreeze\n- kdt523 @kdt523\n- Marian Vonsien @mvo-zyres\n- markkaylor @markkaylor\n- Nico André @nclsndr\n- Nikola Dinevski @ndinevski\n- Paul Bratslavsky @PaulBratslavsky\n- Schero D. @Schero94\n- Simen @Eventyret\n- Varun Chawla @veeceey",
+      "memory_unit_text": "In the strapi/strapi release v5.43.0, new features introduce strapi.ai namespace and complete Dutch (nl) translations for admin panel. Bug fixes send date-only format from date picker, fix bulk publish validation on required components in DZ, use admin basename for 401 redirect path, generate unique username on conflict for auth providers, fix webpack public path missing slash, handle potential null userPermissions in Protect component, add cursor pointer and fix click behavior on sortable table headers, eliminate several browser race conditions, fix blocks editor errors when image has formats: null, use RBAC-aware populate in countDraftRelations, don't allow locale to overwrite list view settings, render ID column without number grouping, apply i18n translations to dynamic zone component names, fix large transfer crashes and show transfer progress, fix content-api not returning signed urls, and support root-level credentials and update AWS SDK in upload-aws-s3. Chores update main README content, add isIgnoredContentType helper, bump undici and follow-redirects. Enhancements make strapi dev continue watching on build error, add list & delete admin user CLI commands, and improve progress UX in data-transfer. Security upgrades to axios 1.15.1."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_44_0",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.44.0",
+      "tag_name": "v5.44.0",
+      "title": "v5.44.0",
+      "time_hint": "2026-04-29",
+      "published_at": "2026-04-29T13:17:43Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.44.0",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.44.0\nTag: v5.44.0; draft: False; prerelease: False; published_at: 2026-04-29T13:17:43Z; created_at: 2026-04-29T13:17:40Z\nRelease notes:\n## 5.44.0 (2026-04-29)\n### 🚀 New feature\n- deploy to cloud homepage widget ([#25774](https://github.com/strapi/strapi/pull/25774))\n### 🔥 Bug fix\n- add responseType to getFetchClient for non-JSON responses ([#25974](https://github.com/strapi/strapi/pull/25974))\n- prevent browser defaults for Ctrl+I and other modifier shortcuts in Firefox ([#26050](https://github.com/strapi/strapi/pull/26050))\n- contain absolute descendants in OverflowingItem ([#26133](https://github.com/strapi/strapi/pull/26133))\n- **content-manager:** prevent duplicate React key in homepage recent-documents widget ([#26084](https://github.com/strapi/strapi/pull/26084))\n- **content-manager:** optimize document layout hooks ([#26005](https://github.com/strapi/strapi/pull/26005))\n- **database:** make 5.0.0-02-created-document-id migration idempotent ([#26045](https://github.com/strapi/strapi/pull/26045))\n- **document-service:** support delete selection params ([#25097](https://github.com/strapi/strapi/pull/25097))\n- **document-service:** preserve self-referential relations during publish and discard ([#25890](https://github.com/strapi/strapi/pull/25890))\n- **document-service:** discard-draft 500 on self-referential manyToMany relations ([#26152](https://github.com/strapi/strapi/pull/26152))\n- **i18n:** preserve non-localized media when creating a locale ([#26031](https://github.com/strapi/strapi/pull/26031))\n- **openapi:** documentation plugin generates OpenAPI with incorrect ID parameter ([#26067](https://github.com/strapi/strapi/pull/26067))\n- **review-workflows:** pass locale params to useDocument in StageSelect and AssigneeSelect ([#26104](https://github.com/strapi/strapi/pull/26104))\n- **types:** align Service.Generic index signature with Controller.Generic ([#25475](https://github.com/strapi/strapi/pull/25475))\n### 📚 Documentation Changes\n- add AGENTS.md universal agent guide ([#26018](https://github.com/strapi/strapi/pull/26018))\n### ⚙️ Chore\n- release v5.43.0 update develop ([#26100](https://github.com/strapi/strapi/pull/26100))\n- upgrade contributor docs dependencies ([#26073](https://github.com/strapi/strapi/pull/26073))\n- **deps:** bump multiple dependencies ([#26103](https://github.com/strapi/strapi/pull/26103))\n- **deps:** bump @xmldom/xmldom from 0.8.12 to 0.8.13 ([#26098](https://github.com/strapi/strapi/pull/26098))\n- **deps:** bump and dedupe pinned subdeps ([#26139](https://github.com/strapi/strapi/pull/26139))\n- **examples:** migration performance benchmark harness + mariadb/sqlite + anti-pattern schemas ([#26036](https://github.com/strapi/strapi/pull/26036))\n- **scripts/release:** fix experimental peer dependencies install ([#26083](https://github.com/strapi/strapi/pull/26083))\n### 💅 Enhancement\n- add ESM syntax support for Vite .mts config file ([#25238](https://github.com/strapi/strapi/pull/25238))\n- **i18n:** improve Russian translations of tours section in admin package ([#25221](https://github.com/strapi/strapi/pull/25221))\n- **translations:** update czech translations ([#25824](https://github.com/strapi/strapi/pull/25824))\n### ❤️ Thank You\n- Adrien L @Adzouz\n- akash-dabhi-qed @akash-dabhi-qed\n- Ayoub Hidri @ayhid\n- Bassel Kanso @Bassel17\n- Ben Irvin\n- DMehaffy\n- Filip Ónodi @fonodi\n- Jamie Howard @jhoward1994\n- Kellen Bolger\n- Laurens Kling @laurenskling\n- Leonid Vinogradov\n- Nico André\n- otociulis @otociulis\n- Simon Norris @cache-your-dreams\n- Ziyi @butcherZ",
+      "memory_unit_text": "In the strapi/strapi release v5.44.0, a new feature adds a deploy to cloud homepage widget. Bug fixes add responseType to getFetchClient for non-JSON responses, prevent browser defaults for Ctrl+I and other modifier shortcuts in Firefox, contain absolute descendants in OverflowingItem, prevent duplicate React key in homepage recent-documents widget, optimize document layout hooks, make 5.0.0-02-created-document-id migration idempotent, support delete selection params, preserve self-referential relations during publish and discard, fix discard-draft 500 on self-referential manyToMany relations, preserve non-localized media when creating a locale, fix documentation plugin generating OpenAPI with incorrect ID parameter, pass locale params to useDocument in StageSelect and AssigneeSelect, and align Service.Generic index signature with Controller.Generic. Documentation changes add AGENTS.md universal agent guide. Chores release v5.43.0 update develop, upgrade contributor docs dependencies, bump multiple dependencies, bump @xmldom/xmldom, bump and dedupe pinned subdeps, add migration performance benchmark harness, and fix experimental peer dependencies install. Enhancements add ESM syntax support for Vite .mts config file, improve Russian translations of tours section, and update Czech translations."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_45_0",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.45.0",
+      "tag_name": "v5.45.0",
+      "title": "v5.45.0",
+      "time_hint": "2026-05-06",
+      "published_at": "2026-05-06T10:14:21Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.45.0",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.45.0\nTag: v5.45.0; draft: False; prerelease: False; published_at: 2026-05-06T10:14:21Z; created_at: 2026-05-06T10:14:18Z\nRelease notes:\n## 5.45.0 (2026-05-06)\n### 🚀 New feature\n- extended ctb api for plugins ([ad7cb5d5d7](https://github.com/strapi/strapi/commit/ad7cb5d5d7))\n- sort based on publish status ([#25689](https://github.com/strapi/strapi/pull/25689))\n- **admin:** api token supports admin permissions and admin user ownership ([#25657](https://github.com/strapi/strapi/pull/25657))\n- **content-manager:** add Zod 4 foundation utilities ([#25574](https://github.com/strapi/strapi/pull/25574))\n### 🔥 Bug fix\n- issue with plugin content type uid ([f768670d38](https://github.com/strapi/strapi/commit/f768670d38))\n- style issues ([2f42e5fe44](https://github.com/strapi/strapi/commit/2f42e5fe44))\n- opt out of the ct backup strategy for plugin content types ([5936814932](https://github.com/strapi/strapi/commit/5936814932))\n- build errors ([520ecfc6d5](https://github.com/strapi/strapi/commit/520ecfc6d5))\n- enforce minimum length ([f2b6c2bcd0](https://github.com/strapi/strapi/commit/f2b6c2bcd0))\n- prevent trailing ? in URL when params is empty object ([#25724](https://github.com/strapi/strapi/pull/25724), [#25900](https://github.com/strapi/strapi/pull/25900))\n- dynamically update rate limit prefix key based on route ([#24818](https://github.com/strapi/strapi/pull/24818))\n- **admin:** clean up lazy component registration warnings ([#25015](https://github.com/strapi/strapi/pull/25015))\n- **admin:** type addMenuLink with optional Component for menu-only links ([#26198](https://github.com/strapi/strapi/pull/26198))\n- **content-manager:** prevent crash on detached DZ component ([#26148](https://github.com/strapi/strapi/pull/26148))\n- **content-type-builder:** preserve plugin CT identity in AI chat transform ([0be48848fa](https://github.com/strapi/strapi/commit/0be48848fa))\n- **database:** run cleanOrderColumns updates sequentially ([#26134](https://github.com/strapi/strapi/pull/26134))\n- **database:** run cleanOrderColumns updates sequentially ([#26134](https://github.com/strapi/strapi/pull/26134))\n- **review-workflows:** implement incremental loading in assignee dropdown ([#25967](https://github.com/strapi/strapi/pull/25967))\n- **upload:** sharp concurrency and cache leads to OOM ([#26046](https://github.com/strapi/strapi/pull/26046))\n### ❤️ Thank You\n- Adrien L @Adzouz\n- Andrei L @unrevised6419\n- Ben Irvin\n- Boaz Poolman\n- DMehaffy\n- Dominik Juriga @dominik-juriga\n- guoyangzhen\n- Jamie Howard\n- markkaylor\n- Nico André\n- Niels Kaspers @nielskaspers\n- Pierre Wizla\n- Ziyi @butcherZ",
+      "memory_unit_text": "In the strapi/strapi release v5.45.0, new features extend CTB API for plugins, sort based on publish status, support admin permissions and admin user ownership for API tokens, and add Zod 4 foundation utilities in content-manager. Bug fixes address plugin content type uid, style issues, opt out of CT backup strategy for plugin content types, build errors, enforce minimum length, prevent trailing ? in URL when params is empty object, dynamically update rate limit prefix key based on route, clean up lazy component registration warnings, type addMenuLink with optional Component for menu-only links, prevent crash on detached DZ component, preserve plugin CT identity in AI chat transform, run cleanOrderColumns updates sequentially, implement incremental loading in assignee dropdown, and fix sharp concurrency and cache leading to OOM."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_45_1",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.45.1",
+      "tag_name": "v5.45.1",
+      "title": "v5.45.1",
+      "time_hint": "2026-05-11",
+      "published_at": "2026-05-11T10:49:20Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.45.1",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.45.1\nTag: v5.45.1; draft: False; prerelease: False; published_at: 2026-05-11T10:49:20Z; created_at: 2026-05-11T10:49:17Z\nRelease notes:\n## 5.45.1 (2026-05-11)\n### 🔥 Bug fix\n- prevent single-type switch crashes and refresh schema after CTB updates ([c9db1321d837f8024f0f9f2c4ab38645b535613c](https://github.com/strapi/strapi/commit/c9db1321d837f8024f0f9f2c4ab38645b535613c))\n### ❤️ Thank You\n- Adrien L @Adzouz\n- Ben Irvin\n- Jamie Howard",
+      "memory_unit_text": "In the strapi/strapi release v5.45.1, a bug fix prevents single-type switch crashes and refreshes schema after CTB updates."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_46_0",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.46.0",
+      "tag_name": "v5.46.0",
+      "title": "v5.46.0",
+      "time_hint": "2026-05-13",
+      "published_at": "2026-05-13T13:46:03Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.46.0",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.46.0\nTag: v5.46.0; draft: False; prerelease: False; published_at: 2026-05-13T13:46:03Z; created_at: 2026-05-13T13:46:00Z\nRelease notes:\n## 5.46.0 (2026-05-13)\n### 🚀 New feature\n- close button for the trial banner ([3fd5f9fd56](https://github.com/strapi/strapi/commit/3fd5f9fd56))\n- adding collapse button ([901465b1e2](https://github.com/strapi/strapi/commit/901465b1e2))\n- updating design after Claude comments ([d1cb08f76e](https://github.com/strapi/strapi/commit/d1cb08f76e))\n- getting that button to stick while the banner doesn't ([f04fe97a75](https://github.com/strapi/strapi/commit/f04fe97a75))\n- add preview support to images and videos ([#25216](https://github.com/strapi/strapi/pull/25216))\n- **content-manager:** add possibility to customize blocks ([#22063](https://github.com/strapi/strapi/pull/22063))\n- **email:** replace sendmail package with nodemailer in provider ([#25893](https://github.com/strapi/strapi/pull/25893))\n### 🔥 Bug fix\n- making button float better ([c5396f1c18](https://github.com/strapi/strapi/commit/c5396f1c18))\n- using isValid & adding translations ([59498861f7](https://github.com/strapi/strapi/commit/59498861f7))\n- auto-expand and scroll to newly added dynamic zone components ([#26044](https://github.com/strapi/strapi/pull/26044))\n- keep draft link on x-to-one relations non-dp to dp ([#26179](https://github.com/strapi/strapi/pull/26179))\n- long component names overflow in dynamic zone picker ([#26010](https://github.com/strapi/strapi/pull/26010))\n- remove await from several telemetry calls to prevent blocking ([#24743](https://github.com/strapi/strapi/pull/24743))\n- **admin:** resolve prism is not defined ([#25660](https://github.com/strapi/strapi/pull/25660))\n- **admin:** handle 204 no-content response in fetch client ([#25416](https://github.com/strapi/strapi/pull/25416))\n- **content-manager:** local-storage was not updated if filters were removed ([#26240](https://github.com/strapi/strapi/pull/26240))\n- **content-manager:** skip draft/modified count queries for non-D&P content types ([#26049](https://github.com/strapi/strapi/pull/26049))\n- **core/admin:** admin and content api tokens retro-compatibility ([#26313](https://github.com/strapi/strapi/pull/26313))\n- **core/core:** validation uses injected strapi instance ([#26211](https://github.com/strapi/strapi/pull/26211))\n- **database:** morph typeField wins over same-name fields in populate ([#26120](https://github.com/strapi/strapi/pull/26120))\n- **database:** append primary key to ORDER BY for paginated selects ([#26032](https://github.com/strapi/strapi/pull/26032))\n- **db:** deterministic schema hash by sorting tables before hashing ([#26202](https://github.com/strapi/strapi/pull/26202))\n- **graphql:** isolate root query args per root field ([#26178](https://github.com/strapi/strapi/pull/26178))\n- **test:** check button attribute differently ([#26212](https://github.com/strapi/strapi/pull/26212))\n- **utils:** throw ValidationError for all invalid query params (not just sort) ([#25894](https://github.com/strapi/strapi/pull/25894))\n### ⚙️ Chore\n- adding translations for the banner ([e696d94627](https://github.com/strapi/strapi/commit/e696d94627))\n- turkish translations for cloud ([#26223](https://github.com/strapi/strapi/pull/26223))\n- **.github:** bump CI runners to node 24 ([#26231](https://github.com/strapi/strapi/pull/26231))\n- **ai:** ignore .agents/local-skills and .agents/local-state for local only harness ([#26276](https://github.com/strapi/strapi/pull/26276))\n- **deps:** bump eslint-plugin-react ([#26227](https://github.com/strapi/strapi/pull/26227))\n- **deps:** migrate msw 1.x → 2.13.4 across admin test suites ([#26065](https://github.com/strapi/strapi/pull/26065))\n- **deps:** upgrade typedoc to 0.28.19 and related plugins ([#26082](https://github.com/strapi/strapi/pull/26082))\n- **security:** mark Strapi v4 as End of Life ([#26162](https://github.com/strapi/strapi/pull/26162))\n- **upload:** add concur...",
+      "memory_unit_text": "In the strapi/strapi release v5.46.0, new features add a close button for the trial banner, a collapse button, update design after Claude comments, make the button stick while the banner doesn't, add preview support to images and videos, add possibility to customize blocks in content-manager, and replace sendmail package with nodemailer in email provider. Bug fixes make button float better, use isValid and add translations, auto-expand and scroll to newly added dynamic zone components, keep draft link on x-to-one relations non-dp to dp, fix long component names overflow in dynamic zone picker, remove await from several telemetry calls to prevent blocking, resolve prism is not defined, handle 204 no-content response in fetch client, fix local-storage not updated if filters were removed, skip draft/modified count queries for non-D&P content types, fix admin and content api tokens retro-compatibility, use injected strapi instance for validation, fix morph typeField wins over same-name fields in populate, append primary key to ORDER BY for paginated selects, make schema hash deterministic by sorting tables before hashing, isolate root query args per root field in GraphQL, check button attribute differently in test, and throw ValidationError for all invalid query params. Chores add translations for the banner, Turkish translations for cloud, bump CI runners to node 24, ignore .agents/local-skills and .agents/local-state for local only harness, bump eslint-plugin-react, migrate msw 1.x to 2.13.4, upgrade typedoc, mark Strapi v4 as End of Life, and add concurrency to upload."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_46_1",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.46.1",
+      "tag_name": "v5.46.1",
+      "title": "v5.46.1",
+      "time_hint": "2026-05-20",
+      "published_at": "2026-05-20T09:15:38Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.46.1",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.46.1\nTag: v5.46.1; draft: False; prerelease: False; published_at: 2026-05-20T09:15:38Z; created_at: 2026-05-20T09:15:34Z\nRelease notes:\n## 5.46.1 (2026-05-20)\n### 🔥 Bug fix\n- FK violation publishing self-relation parent & child in one release ([#26147](https://github.com/strapi/strapi/pull/26147))\n- move session-manager jwt check from register to bootstrap ([#25412](https://github.com/strapi/strapi/pull/25412))\n- **admin:** remove year 2041 limit on date/datetime pickers ([#26209](https://github.com/strapi/strapi/pull/26209))\n- **content-manager:** fix getMainField context for component list/edit configure views ([#25509](https://github.com/strapi/strapi/pull/25509), [#26124](https://github.com/strapi/strapi/pull/26124))\n- **database:** respect nested sort in populate for join-table relations ([#26361](https://github.com/strapi/strapi/pull/26361))\n- **graphql:** inherit publication state for i18n localizations ([#22163](https://github.com/strapi/strapi/pull/22163))\n- **migrations:** guard inverseJoinColumn access in discard-drafts migration ([#26331](https://github.com/strapi/strapi/pull/26331))\n- **review-workflows:** add assignee and review stage to list view filters ([#26171](https://github.com/strapi/strapi/pull/26171))\n- **review-workflows:** message when single stage ([#26229](https://github.com/strapi/strapi/pull/26229))\n- **upgrade:** use pnpm install when project prefers pnpm ([#26246](https://github.com/strapi/strapi/pull/26246))\n- **upgrade:** align scoped @strapi packages in devDependencies ([#26248](https://github.com/strapi/strapi/pull/26248))\n### ⚙️ Chore\n- sonarcloud security review ([#25949](https://github.com/strapi/strapi/pull/25949))\n- **deps:** bump ip-address from 10.1.0 to 10.2.0 ([#26222](https://github.com/strapi/strapi/pull/26222))\n- **deps:** bump @protobufjs/utf8 from 1.1.0 to 1.1.1 ([#26311](https://github.com/strapi/strapi/pull/26311))\n- **deps:** bump axios from 1.15.1 to 1.15.2 ([#26177](https://github.com/strapi/strapi/pull/26177))\n- **deps:** bump fast-xml-builder from 1.1.4 to 1.2.0 ([#26253](https://github.com/strapi/strapi/pull/26253))\n- **deps:** bump fast-uri from 3.0.1 to 3.1.2 ([#26254](https://github.com/strapi/strapi/pull/26254))\n- **eslint:** migrate .eslintrc + .eslintignore to .eslintrc.cjs ([#26216](https://github.com/strapi/strapi/pull/26216))\n### 🚨 Security\n- **deps:** upgrade multiple dependencies ([#26326](https://github.com/strapi/strapi/pull/26326))\n### ❤️ Thank You\n- Adrien L @Adzouz\n- Andrei L @unrevised6419\n- Ben Irvin\n- Garrett Heaver @garrettheaver\n- jmichalec-vl\n- Maksim Zhukau @MaksZhukov\n- Simen @Eventyret\n- Simon Norris @cache-your-dreams\n- Westley Marchment",
+      "memory_unit_text": "In the strapi/strapi release v5.46.1, bug fixes address FK violation publishing self-relation parent & child in one release, move session-manager jwt check from register to bootstrap, remove year 2041 limit on date/datetime pickers, fix getMainField context for component list/edit configure views, respect nested sort in populate for join-table relations, inherit publication state for i18n localizations in GraphQL, guard inverseJoinColumn access in discard-drafts migration, add assignee and review stage to list view filters, message when single stage, use pnpm install when project prefers pnpm, and align scoped @strapi packages in devDependencies. Chores include sonarcloud security review, bump ip-address, @protobufjs/utf8, axios, fast-xml-builder, fast-uri, and migrate .eslintrc + .eslintignore to .eslintrc.cjs. Security upgrades multiple dependencies."
+    },
+    {
+      "memory_node_id": "strapi__strapi__release__v5_47_0",
+      "repo": "strapi/strapi",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.47.0",
+      "tag_name": "v5.47.0",
+      "title": "v5.47.0",
+      "time_hint": "2026-05-28",
+      "published_at": "2026-05-28T11:28:31Z",
+      "source_url": "https://github.com/strapi/strapi/releases/tag/v5.47.0",
+      "raw_text": "Repository: strapi/strapi\nRelease: v5.47.0\nTag: v5.47.0; draft: False; prerelease: False; published_at: 2026-05-28T11:28:31Z; created_at: 2026-05-28T11:28:27Z\nRelease notes:\n## 5.47.0 (2026-05-28)\n### 🚀 New feature\n- **BETA:** MCP server ([#26371](https://github.com/strapi/strapi/pull/26371))\n- publicationFilter param in REST and document service ([#25793](https://github.com/strapi/strapi/pull/25793))\n- **admin-tokens:** remove adminTokens future flag ([#26391](https://github.com/strapi/strapi/pull/26391))\n- **admin:** add documentation helper link in HeaderLayout ([#26422](https://github.com/strapi/strapi/pull/26422))\n### 🔥 Bug fix\n- Relation Search in Nested Components ([#26023](https://github.com/strapi/strapi/pull/26023))\n- unable to access content manager page with required and private … ([#24101](https://github.com/strapi/strapi/pull/24101))\n- **admin:** gate expiresIn deprecation on user auth options ([#26298](https://github.com/strapi/strapi/pull/26298))\n- **admin:** redirect active tab to login on session expiry ([#26165](https://github.com/strapi/strapi/pull/26165))\n- **admin:** avoid serving extensionless admin paths as static files ([#26368](https://github.com/strapi/strapi/pull/26368))\n- **content-manager:** content history crash on deleted relations ([#26245](https://github.com/strapi/strapi/pull/26245))\n- **core:** preserve createdBy/updatedBy on drafts created by discard-drafts migration ([#26461](https://github.com/strapi/strapi/pull/26461))\n- **core/core:** codeBlockValidator uses language instead of syntax ([#26392](https://github.com/strapi/strapi/pull/26392))\n- **graphql:** inherit publicationFilter into populated relations ([#26400](https://github.com/strapi/strapi/pull/26400))\n### ⚙️ Chore\n- dedupe yarn.lock file ([#26376](https://github.com/strapi/strapi/pull/26376))\n- fix dependabot cooldown config for github-actions ([#26438](https://github.com/strapi/strapi/pull/26438))\n- **ci:** improve dependabot security grouping and version update policy ([#26408](https://github.com/strapi/strapi/pull/26408))\n- **commitlint:** disable body-max-line-length rule ([#26406](https://github.com/strapi/strapi/pull/26406))\n- **deps:** bump simple-git from 3.32.3 to 3.36.0 ([#26220](https://github.com/strapi/strapi/pull/26220))\n- **deps:** bump sanitize-html from 2.13.0 to 2.17.4 ([#26342](https://github.com/strapi/strapi/pull/26342))\n- **deps:** bump ws from 8.17.1 to 8.20.1 in @strapi/data-transfer ([#26379](https://github.com/strapi/strapi/pull/26379))\n- **examples:** remove sdk-plugin from todo-example plugin ([#26341](https://github.com/strapi/strapi/pull/26341))\n- **strapi:** upgrade webpack ecosystem dependencies ([#26385](https://github.com/strapi/strapi/pull/26385))\n### 💅 Enhancement\n- **db:** migration performance improvements ([#25988](https://github.com/strapi/strapi/pull/25988))\n- **provider-amazon-ses:** replace node-ses with AWS SDK SESClient ([#26054](https://github.com/strapi/strapi/pull/26054))\n- **i18n:** update and create Slovak translations ([#25831](https://github.com/strapi/strapi/pull/25831))\n### ❤️ Thank You\n- Adrien L @Adzouz\n- Andrei L @unrevised6419\n- Arav Menon @Arav-Menon\n- bartsmartshore @bartsmartshore\n- Bassel Kanso @Bassel17\n- Ben Irvin @innerdvations\n- Dhruv Chheda @chhedadhruv\n- DMehaffy @derrickmehaffy\n- Filip Ónodi @fonodi\n- Nico André @nclsndr\n- Sjouke de Vries @sjoukedv\n- Vishal Kumar Singh @singhvishalkr",
+      "memory_unit_text": "In the strapi/strapi release v5.47.0, new features introduce a BETA MCP server, publicationFilter param in REST and document service, remove adminTokens future flag, and add documentation helper link in HeaderLayout. Bug fixes address relation search in nested components, unable to access content manager page with required and private fields, gate expiresIn deprecation on user auth options, redirect active tab to login on session expiry, avoid serving extensionless admin paths as static files, fix content history crash on deleted relations, preserve createdBy/updatedBy on drafts created by discard-drafts migration, fix codeBlockValidator uses language instead of syntax, and inherit publicationFilter into populated relations in GraphQL. Chores dedupe yarn.lock, fix dependabot cooldown config, improve dependabot security grouping and version update policy, disable body-max-line-length rule in commitlint, bump simple-git, sanitize-html, ws, remove sdk-plugin from todo-example plugin, and upgrade webpack ecosystem dependencies. Enhancements improve migration performance, replace node-ses with AWS SDK SESClient in provider-amazon-ses, and update and create Slovak translations."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the strapi/strapi releases, which release adds a clear button to boolean toggle and refresh/logout actions to default permissions?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v5.31.3"
+        },
+        {
+          "option_id": "B",
+          "text": "v5.32.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v5.33.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v5.34.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v5.32.0",
+      "source_chunk_ids": [
+        "strapi__strapi__release__v5_32_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "strapi__strapi__release__v5_32_0",
+          "answer_text": "new features add a clear button to boolean toggle and refresh/logout actions to default permissions"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the strapi/strapi releases, how does the security-related change in v5.33.2 differ from the security-related change in v4.26.1?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v5.33.2 makes content-type-builder write APIs accessible in devMode only, while v4.26.1 makes the same fix but for the v4 branch."
+        },
+        {
+          "option_id": "B",
+          "text": "v5.33.2 adds a new authentication method, while v4.26.1 removes an old one."
+        },
+        {
+          "option_id": "C",
+          "text": "v5.33.2 updates the database schema, while v4.26.1 updates the admin panel."
+        },
+        {
+          "option_id": "D",
+          "text": "v5.33.2 fixes a GraphQL vulnerability, while v4.26.1 fixes a REST vulnerability."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v5.33.2 makes content-type-builder write APIs accessible in devMode only, while v4.26.1 makes the same fix but for the v4 branch.",
+      "source_chunk_ids": [
+        "strapi__strapi__release__v5_33_2",
+        "strapi__strapi__release__v4_26_1"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "strapi__strapi__release__v5_33_2",
+          "answer_text": "Bug fix makes content-type-builder write APIs accessible in devMode only"
+        },
+        {
+          "memory_node_id": "strapi__strapi__release__v4_26_1",
+          "answer_text": "fix(content-type-builder): make write APIs accessible in devMode only"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the strapi/strapi release window, order the following release-content states from earliest to latest: (1) a release that adds a focal point picker for images, (2) a release that adds persistent list view settings, (3) a release that adds a clear button to boolean toggle and refresh/logout actions to default permissions, (4) a release that adds a deploy to cloud homepage widget.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "3 -> 1 -> 2 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 3 -> 1 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 2 -> 1 -> 4"
+        }
+      ],
+      "correct_option_id": "D",
+      "expected_answer": "3 -> 2 -> 1 -> 4",
+      "source_chunk_ids": [
+        "strapi__strapi__release__v5_32_0",
+        "strapi__strapi__release__v5_36_0",
+        "strapi__strapi__release__v5_35_0",
+        "strapi__strapi__release__v5_44_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "strapi__strapi__release__v5_32_0",
+          "answer_text": "new features add a clear button to boolean toggle and refresh/logout actions to default permissions"
+        },
+        {
+          "memory_node_id": "strapi__strapi__release__v5_36_0",
+          "answer_text": "new features add persistent list view settings"
+        },
+        {
+          "memory_node_id": "strapi__strapi__release__v5_35_0",
+          "answer_text": "a new feature adds a focal point picker for images in upload"
+        },
+        {
+          "memory_node_id": "strapi__strapi__release__v5_44_0",
+          "answer_text": "a new feature adds a deploy to cloud homepage widget"
+        }
+      ]
+    }
+  ]
+}

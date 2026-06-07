@@ -1,0 +1,530 @@
+{
+  "prototype_id": "hakimel__reveal_js_release_window",
+  "domain": "github_release_evolution",
+  "repo": "hakimel/reveal.js",
+  "source_type": "release_note",
+  "window_title": "hakimel/reveal.js recent release evolution",
+  "window_summary": "This window tracks the recent hakimel/reveal.js release stream from version 3.5.0 through 6.0.1, covering major feature additions like auto-animate, scroll view, lightbox, and the React wrapper, along with numerous bug fixes and plugin improvements.",
+  "chunks": [
+    {
+      "memory_node_id": "hakimel__reveal_js__release__3_5_0",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:3.5.0",
+      "tag_name": "3.5.0",
+      "title": "3.5.0",
+      "time_hint": "2017-05-05",
+      "published_at": "2017-05-05T12:22:40Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/3.5.0",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 3.5.0\nTag: 3.5.0; draft: False; prerelease: False; published_at: 2017-05-05T12:22:40Z; created_at: 2017-04-27T16:49:20Z\nRelease notes:\n**Changes:**\n- Add `display` config option to control the display mode slide section elements. (#1324 by @mojavelinux)\n- Add `Reveal.toggleHelp()`for toggling the help overlay. (#1816 by @frazer)\n- Slide fragments can now hold their own speaker notes. (#1636 by @traff)\n- The speaker view can now provide pacing advice. This makes it easy to detect if you're running out of time, or going too quickly. (#1564 by @aspiers, [more info](https://github.com/hakimel/reveal.js#speaker-notes-clock-and-timers))\n- Switch to a `<textarea data-template></textarea>` wrapper for Markdown to avoid HTML parsing issues. (#1780 by @ccqgithub)\n- Background videos now autoplay in iOS. (#1851 by @astone123)\n- Background iframes are now interactive when there is no content in the slide or `data-background-interactive` is present on the slide element.\n- Shift `dependencies` to `devDependencies` (#1764 by @demoneaux)\n- MathJax is now loaded from cdnjs since cdn.mathjax.org was shut down. (#1866 by @christianp)\n**Bug fixes:**\n- Fix multiple issues with autoplaying `<video>` and `<audio>`, particularly on slow connections.\n- Fix overview rendering issues in Firefox.\n[And more...](https://github.com/hakimel/reveal.js/compare/3.4.1...3.5.0)",
+      "memory_unit_text": "In the hakimel/reveal.js release 3.5.0, the project introduces a display config option for controlling slide section display mode, a toggleHelp() method, speaker notes support for slide fragments, pacing advice in the speaker view, a textarea data-template wrapper for Markdown, autoplay for background videos in iOS, interactive background iframes when no content or data-background-interactive is present, shifting dependencies to devDependencies, and loading MathJax from cdnjs. Bug fixes address multiple autoplay issues with video and audio, and overview rendering in Firefox."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__3_6_0",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:3.6.0",
+      "tag_name": "3.6.0",
+      "title": "3.6.0",
+      "time_hint": "2017-11-23",
+      "published_at": "2017-11-23T10:41:29Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/3.6.0",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 3.6.0\nTag: 3.6.0; draft: False; prerelease: False; published_at: 2017-11-23T10:41:29Z; created_at: 2017-11-22T13:46:55Z\nRelease notes:\n**Changes:**\n- New project domain: [revealjs.com](http://revealjs.com).\n- New presentation control arrows:\n- Redesigned for improved aesthetics and clarity.\n- Arrows bounce to attract attention until the viewer first navigates. The downwards arrow bounces the first time you arrive at a vertical stack too, making vertical slides harder to miss. This can be turned off by setting the `controlsTutorial` config option to false.\n- Arrows automatically change color to contrast the slide background. [Step left/right here to test.](https://revealjs.com/#/10)\n- Initialize reveal.js with `controlsLayout: \"edges\"` to have the controls appear along the edges of the screen instead of the bottom right corner. [Try it out](http://revealjs.com/?controlsLayout=edges).\n![revealjs-controls](https://user-images.githubusercontent.com/629429/33168688-15280bac-d042-11e7-8d51-9d7bf7d44ccd.gif)\n- New mobile-friendly layout for presentations shared with visible speaker notes.\n- The `showNotes` config option no longer shows the notes UI if there are no notes.\n- Improved search plugin: added CTRL+SHIFT+F shortcut, now searches inside of `<span>`. (#1909 by @linux-man)\n- Lazy-loaded videos are now unloaded when they move out of view.\n- Set the `autoSlide` option to false to prevent ALL auto-sliding (including `data-autoslide` attributes).\n- New API method `Reveal.isSpeakerNotes()` to  check if the current instance of reveal.js is running inside of the speaker view.\n- New API methods `Reveal.loadSlide()`/`Reveal.unloadSlide()` for manually triggering the content on a slide to load or unload.\n- Always show video/audio controls on mobile devices.\n- Themes now use default quotation marks for `<q>`.\n**Bug fixes:**\n- Fixed an issue that prevented `Reveal.configure()` from being called directly before or after `Reveal.initialize()`.\n- Don't apply text-transform uppercase inside of code tags. (#1978 by @sfairchild)\n- Mobile Safari browser chrome no longer covers presentation content in landscape mode.\n- Fixed a feature test exception that prevented speaker notes from working in Safari.\n[And more...](https://github.com/hakimel/reveal.js/compare/3.5.0...3.6.0)",
+      "memory_unit_text": "In the hakimel/reveal.js release 3.6.0, the project moves to a new domain revealjs.com, introduces redesigned presentation control arrows that bounce to attract attention and auto-contrast with the background, a controlsLayout option for edge-aligned controls, a mobile-friendly layout for shared speaker notes, improved search plugin with CTRL+SHIFT+F shortcut, lazy-loaded video unloading, an autoSlide option to prevent all auto-sliding, new API methods isSpeakerNotes(), loadSlide(), and unloadSlide(), always-visible video/audio controls on mobile, and default quotation marks for <q> in themes. Bug fixes include preventing configure() from being called before or after initialize(), not applying text-transform uppercase inside code tags, fixing Mobile Safari chrome covering content in landscape, and a feature test exception for speaker notes in Safari."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__3_7_0",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:3.7.0",
+      "tag_name": "3.7.0",
+      "title": "3.7.0",
+      "time_hint": "2018-08-01",
+      "published_at": "2018-08-01T09:38:42Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/3.7.0",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 3.7.0\nTag: 3.7.0; draft: False; prerelease: False; published_at: 2018-08-01T09:38:42Z; created_at: 2018-08-01T08:37:51Z\nRelease notes:\n**Changes:**\n- [Key Binding API](https://github.com/hakimel/reveal.js#custom-key-bindings) (#1885 by @ denehyg)\n- Adds `pdfSeparateFragments` option for exporting fragments on separate PDF pages (@koehlma)\n- Adds `fragmentInURL` option for including fragments in the URL (@dougalsutherland)\n- Adds `hashOneBasedIndex` option for switching slide URLs from 0 to 1-based index (@sean-parent)\n- Adds `data-background-opacity` attribute for fading out background media\n- Adds a \"Resume presentation\" button to the pause overlay\n- Adds two new fragment styles\n- `semi-fade-out`: starts fully visible and fades out to 50% opacity\n- `fade-in-then-semi-out`: fades in like a normal fragment and remains visible but faded out when you move to the next fragment\n- New API method `Reveal.syncSlide`: same use as `Reveal.sync` but more efficient when you've only made changes to one specific slide\n- New API method `Reveal.syncFragments`: same use as `Reveal.sync` but more efficient when you've only made changes to fragments on one specific slide\n- Removes arbitrary restrictions on slide IDs, all IDs are now valid\n- The slide number is now an anchor pointing to the current hash, making it possible to copy the current slide URL even when `history` is disabled (#2133 by @sean-parent)\n- Whitespace is now allowed in background image names (@RobertBaron)\n**Bug fixes:**\n- The left/right navigation arrows no longer appear when there are no horizontal slides\n- Navigating to the same slide twice in a row no longer drops its \"present\" class\n- The loop option now works correctly in presentations with only vertical slides\n- More graceful error handling of duplicate slide IDs\n- Interactive iframe backgrounds now work in vertical slides\n[And more...](https://github.com/hakimel/reveal.js/compare/3.6.0...3.7.0)",
+      "memory_unit_text": "In the hakimel/reveal.js release 3.7.0, the project adds a Key Binding API, pdfSeparateFragments option for exporting fragments on separate PDF pages, fragmentInURL option, hashOneBasedIndex option, data-background-opacity attribute, a Resume presentation button on the pause overlay, two new fragment styles (semi-fade-out and fade-in-then-semi-out), new API methods syncSlide and syncFragments, removal of arbitrary restrictions on slide IDs, the slide number as an anchor pointing to the current hash, and whitespace allowed in background image names. Bug fixes include hiding left/right arrows when no horizontal slides, preserving present class on same-slide navigation, loop option working with only vertical slides, graceful error handling for duplicate slide IDs, and interactive iframe backgrounds in vertical slides."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__3_8_0",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:3.8.0",
+      "tag_name": "3.8.0",
+      "title": "3.8.0",
+      "time_hint": "2019-04-01",
+      "published_at": "2019-04-01T13:17:36Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/3.8.0",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 3.8.0\nTag: 3.8.0; draft: False; prerelease: False; published_at: 2019-04-01T13:17:36Z; created_at: 2019-04-01T12:34:10Z\nRelease notes:\n**Changes:**\n- The cursor is now automatically hidden after five seconds of inactivity. The timeout can be adjusted with `hideCursorTime: <milliseconds>`, or you can disable the feature entirely with `hideInactiveCursor: false`.\n- Presentations can be zoomed on touch devices using the standard pinch-to-zoom gestures.\n- New `navigationMode: <default/linear/grid>` config option. Set to \"grid\" to navigate across adjacent vertical stacks. [Learn more in the docs](https://github.com/hakimel/reveal.js/blob/master/README.md#navigation-mode). (#2307)\n- New `hash: <boolean>` config option. When set to true, reveal.js will reflect the current slide in the address bar **without** pushing each slide change to the browser history. (#2286 by @asottile)\n- New `preloadIframes` config option for flagging if iframes should be preloaded or not. Can be set per-frame using the `data-preload` attribute. [More info](https://github.com/hakimel/reveal.js/blob/master/README.md#lazy-loading-iframes). (#2354 by @maxrothman)\n- A `resize` event is now dispatched anytime the presentation scale changes. (#2300 by @mw75)\n- The \"Resume\" button in the pause overlay is hidden if `controls` are set to false. (#2215 by @anderslemke)\n- New keyboard shortcut: CMD/CTRL + left or right arrow to go to first or last slide.\n- Adds `Reveal.getRevealElement()` for retrieving the presentation's root element (`<div class=\"reveal\">`).\n- Removes Head JS as it is no longer required to load dependencies.\n- Removes classList polyfill since browser support caught up.\n- Removes the reset styles from reveal.css to make styles easier to override. Reset styles are now included as a separate reset.css file. (6abc6e00581e66690416978de118145e854c3c1e #1952 & #2248)\n- The zoom transition now zooms between all slides, previously it zoomed between horizontal slides and used a slide transition between vertical.\n- Upgrade to Socket.IO 2.2.0.\n**Plugin Changes:**\n- Adds a new API for registering plugins `Reveal.registerPlugin( 'myPlugin', MyPluginInstance )`. If a registered plugin returns a promise when initialized, reveal.js will wait for that promise to be fulfilled before firing the ready event. [Learn more in the docs.](https://github.com/hakimel/reveal.js/blob/master/README.md#plugins)\n- Code highlighting: Support for [line numbers](https://github.com/hakimel/reveal.js/blob/master/README.md#line-numbers--highlights)! Just add `data-line-numbers` to your code blocks.\n- Code highlighting: Highlight specific lines by providing a comma separated list of line numbers to `data-line-numbers`. Line ranges, like 5-15, are supported too.\n- Speaker view: No longer requires a web server, it now works when opened directly from the filesystem. (#2104 by @jurca)\n- Markdown: External .md files are now loaded asynchronously.\n- Markdown: Upgrade to marked 0.6.0. (@sestegra)\n- MathJax config options can now be set via the reveal.js `math` config option. (#2090 by @bnjmnt4n)\n**Bug fixes:**\n- Fixes npm security warnings by updating all dependencies.\n- Fixes an issue that prevented the same internal link from being clicked twice. (#2350 by @rparree)\n- Fixes an issue with data-transition not working on vertical slides. (b6ce0a9724f123396b59e9b7b90ab2d44dda2534 #1947)\n- Fixes an issue that needless caused the slide method—and all of its corresponding performance heavy DOM operations—to be invoked twice for each slide change. (#2263 by @mbotsch)\n- Fixes a layout bug with overlaid speaker notes when reveal.js is smaller than the browser window.\n- Fixes an error that caused `Reveal.getProgress()` to return a value higher than 1 when there were fragments on the last slide.\n- The speaker view no longer stops working when opened multiple times. (#2251 by @oyron)\n- Prevents presentations from overflowing vertically in some mobile browsers.\n- Ele...",
+      "memory_unit_text": "In the hakimel/reveal.js release 3.8.0, the project introduces automatic cursor hiding after inactivity, pinch-to-zoom on touch devices, a navigationMode config option (default/linear/grid), a hash config option for reflecting the current slide in the address bar without pushing history, a preloadIframes config option, a resize event dispatched on scale changes, hiding the Resume button when controls are false, a new keyboard shortcut CMD/CTRL + left/right for first/last slide, getRevealElement() API method, removal of Head JS and classList polyfill, separation of reset styles into reset.css, zoom transition now zooms between all slides, and upgrade to Socket.IO 2.2.0. Plugin changes include a new plugin registration API, code highlighting with line numbers and line highlights, speaker view working from filesystem, asynchronous external Markdown loading, marked 0.6.0 upgrade, and configurable MathJax options. Bug fixes address npm security warnings, internal link double-click, data-transition on vertical slides, double slide method invocation, speaker notes layout, getProgress() exceeding 1, speaker view multiple openings, vertical overflow in mobile browsers, and more."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__3_9_0",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:3.9.0",
+      "tag_name": "3.9.0",
+      "title": "3.9.0",
+      "time_hint": "2020-01-29",
+      "published_at": "2020-01-29T13:54:24Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/3.9.0",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 3.9.0\nTag: 3.9.0; draft: False; prerelease: False; published_at: 2020-01-29T13:54:24Z; created_at: 2020-01-29T13:51:28Z\nRelease notes:\n**Changes:**\n- Adds [step-by-step code highlights](https://github.com/hakimel/reveal.js/blob/master/README.md#step-by-step-highlights)! Step through multiple line highlights on the same code block.\n- Adds [postMessage callbacks](https://github.com/hakimel/reveal.js#postmessage-callbacks). Makes it possible to use the postMessage API to invoke reveal.js methods with return values.\n- The pacing timer functionality now accepts a total time for the whole presentation. Timing was previously worked out on a per-slide level. (#2400 by longtime reveal.js contributor @fghaas!)\n- Background iframes no longer preload by default. They load when you arrive at the given slide. This unifies the behavior of in-slide and background iframes. [Learn how to turn on preloading](https://github.com/hakimel/reveal.js#lazy-loading-iframes).\n- The slide number format specified through `slideNumber` is now honored in PDF exports. (#2337 by @dougalsutherland)\n(4c557a5959b3ad909056df6cb46c5bf56a0da8ee)\n- Adds `data-fragment=<index>` to any slide <section>with fragments in it. This lets you target specific fragment states with CSS like `section[data-fragment=\"2\"] { ... }`.\n- Adds `Reveal.getHorizontalSlides()` and `Reveal. getVerticalSlides()` for getting all horizontal/vertical slides in a deck.\n- Adds `Reveal.hasHorizontalSlides()` and `Reveal. hasVerticalSlides()` for checking whether or not a deck contains any horizontal or vertical slides.\n- Adds `mobileViewDistance` configuration option. Mobile view distance was previously hardcoded at 2. (#2513 by @TuurDutoit)\n- Adds `allow=\"autoplay\"` to iframes to comply with Chrome's [Autoplay Policy Changes](https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#iframe) (#2437 by @TehDmitry)\n- Switches to CSS transforms to scale decks up on HDPI displays. Previous use of CSS zoom produced sharper results but led to side effects such as iframes not scaling with the deck content.\n- Switches first/last slide keyboard shortcuts from ⌘←/⌘→ to Shift←/Shift→. The old shortcut conflicted with browser back/forward.\n- Updates highlight.js from 9.11.0 to 9.18.0\n**Bug fixes:**\n- Fixes an issue where the navigation down-arrow was blocked by the progress bar (#2410 by @NoriSte).\n- Fixes swipe navigation for decks with `navigationMode` set to `linear` (#2416 by @earboxer).\n- Fixes vertical overflow in iPadOS Safari.\n- Fixes inconsistent fragment slide animations by translating by a fixed unit.\n- Fixes failing npm install because of outdated dependencies.\n- Fixes exception when highlighting empty code blocks.\n[And more...](https://github.com/hakimel/reveal.js/compare/3.8.0...3.9.0)",
+      "memory_unit_text": "In the hakimel/reveal.js release 3.9.0, the project adds step-by-step code highlights, postMessage callbacks, pacing timer accepting total presentation time, background iframes no longer preloading by default, honoring slideNumber format in PDF exports, data-fragment attribute on slide sections, getHorizontalSlides() and getVerticalSlides() API methods, hasHorizontalSlides() and hasVerticalSlides() API methods, mobileViewDistance config option, allow=\"autoplay\" on iframes for Chrome autoplay policy, switching to CSS transforms for HDPI scaling, changing first/last slide shortcuts to Shift+left/right, and updating highlight.js to 9.18.0. Bug fixes include navigation down-arrow blocked by progress bar, swipe navigation in linear mode, vertical overflow in iPadOS Safari, inconsistent fragment slide animations, failing npm install, and exception on empty code blocks."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__3_9_1",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:3.9.1",
+      "tag_name": "3.9.1",
+      "title": "3.9.1",
+      "time_hint": "2020-01-29",
+      "published_at": "2020-01-29T14:26:11Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/3.9.1",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 3.9.1\nTag: 3.9.1; draft: False; prerelease: False; published_at: 2020-01-29T14:26:11Z; created_at: 2020-01-29T14:11:49Z\nRelease notes:\nThis version contains no changes. It was only released to bump the published version on npm.\n3.9.0 was published to npm with local edits 🤦‍♂️",
+      "memory_unit_text": "In the hakimel/reveal.js release 3.9.1, the release contains no changes and was only published to bump the npm version after 3.9.0 was published with local edits."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__3_9_2",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:3.9.2",
+      "tag_name": "3.9.2",
+      "title": "3.9.2",
+      "time_hint": "2020-01-31",
+      "published_at": "2020-01-31T10:14:21Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/3.9.2",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 3.9.2\nTag: 3.9.2; draft: False; prerelease: False; published_at: 2020-01-31T10:14:21Z; created_at: 2020-01-31T10:11:23Z\nRelease notes:\nFixes a security vulnerability in the postMessage API. The follow methods are now blacklisted and can not be called via the postMessage API: `registerPlugin`, `registerKeyboardShortcut`, `addKeyBinding`, `addEventListener`.",
+      "memory_unit_text": "In the hakimel/reveal.js release 3.9.2, the project fixes a security vulnerability in the postMessage API by blacklisting the methods registerPlugin, registerKeyboardShortcut, addKeyBinding, and addEventListener."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__4_0_0",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.0.0",
+      "tag_name": "4.0.0",
+      "title": "4.0.0",
+      "time_hint": "2020-05-20",
+      "published_at": "2020-05-20T10:55:12Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/4.0.0",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 4.0.0\nTag: 4.0.0; draft: False; prerelease: False; published_at: 2020-05-20T10:55:12Z; created_at: 2020-05-20T10:09:03Z\nRelease notes:\n#### Breaking Changes 🚨\nThis release includes a small number of breaking changes. Please read the [Upgrade Instructions](https://revealjs.com/upgrading/) if you want to migrate an existing presentation.\n### Highlights\n- New website, docs and logo! https://revealjs.com/ 🚀\n- [Auto-Animate](https://revealjs.com/auto-animate/) lets you create complex animations by automatically transitioning between matched elements across slides. [Duration, delay and easing](https://revealjs.com/auto-animate/#animation-settings) can be set on a per-slide or per-element basis.\n- We now support [multiple presentations](https://revealjs.com/initialization/#multiple-presentations) on the same page.\n- This also introduces a new [embedded](https://revealjs.com/presentation-size/#embedded) config option, which allows presentations to reside within a portion of a page. Previously reveal.js always covered 100% of the page width and height.\n- The new `keyboardCondition: 'focused'` config option lets presentations capture keyboard events only when they're focused by the viewer.\n- The reveal.js core and built-in plugins have been rewritten as ES modules. This makes the project easier to maintain and makes reveal.js itself easier to include in a bundle. Two bundles are provided:\n- **dist/reveal.js** uses UMD and has broad cross browser support (ES5).\n- **dist/reveal.esm.js** is an ES module. [More info](https://revealjs.com/initialization/#es-module)\n- Code highlights are now automatically scrolled into view and it looks soooo good. You've got to [try it out](https://revealjs.com/#/4).\n### Changes\n- The `Reveal.initialize` method now returns a promise that resolves once reveal.js is ready and all plugins have finished initializing.\n- Switches build systems from to gulp, using rollup for bundling.\n- Moves all compiled CSS (reveal.css, reset.css and themes) from css/ to dist/. See [Upgrade Instructions](https://revealjs.com/upgrading/).\n- Moves all print CSS into reveal.js. The old [script-based print styles](https://github.com/hakimel/reveal.js/blob/00b0ace3863952ce95df4430d203686fd27bfc20/index.html#L16-L23) can be removed. by @quilicicf\n- Adds a new `slidetransitionend` event.\n- Adds a new [r-stack](https://revealjs.com/layout/#stack) layout helper for placing elements on top of each other.\n- Adds support for `data-visibility=\"uncounted\"` to exclude slides from the progress bar and slide number count. #2543 by @lassepe\n- Adds `Reveal.getComputedSlideSize` API method.\n- Renames the `Reveal.addEventListener` and `Reveal.removeEventListener` API methods to `Reveal.on` and `Reveal.off`. Old names are aliased for backwards compatibility.\n- Removes the default border style from `<img>`s. Can be added with the `r-frame` class.\n- Removes bower.json.\n### Plugins\n- New syntax for [registering plugins](https://revealjs.com/plugins/).\n- All built-in plugins—such as markdown and highlight—are now available as ES modules. [More info](https://revealjs.com/plugins/)\n- Notes: No longer depends on resolving an external notes.html file to work. Everything is baked into the plugin JS.\n- Highlight: Upgraded to highlight.js 10.0.1.\n- Highlight: Moved highlight themes from lib/css/monokai.css to plugin/highlight/monokai.css.\n- Highlight: 'highlight.js' library is now installed from npm instead of being saved in the repo.\n- Markdown: Support for [line numbers and highlights](https://revealjs.com/markdown/#syntax-highlighting) in syntax highlighted code.\n- Markdown: Support for boolean data- attributes. by @Bagira80\n- Markdown: 'marked' library is now installed from npm instead of being saved in the repo.\n- Multiplex: Moved out to https://github.com/reveal/multiplex\n- Notes Server: Moved out to https://github.com/reveal/notes-server\n### Bug fixes\n- Fixes a bug that prevented links from working in exported PDF...",
+      "memory_unit_text": "In the hakimel/reveal.js release 4.0.0, the project introduces breaking changes and highlights including a new website, docs, and logo, Auto-Animate for complex animations, support for multiple presentations on the same page, an embedded config option, keyboardCondition 'focused' option, rewriting core and plugins as ES modules with UMD and ES module bundles, auto-scrolling code highlights, initialize() returning a promise, switching build system to gulp with rollup, moving compiled CSS to dist/, moving print CSS into reveal.js, adding slidetransitionend event, r-stack layout helper, data-visibility=\"uncounted\", getComputedSlideSize API, renaming add/removeEventListener to on/off, removing default border from images, and removing bower.json. Plugin changes include new registration syntax, built-in plugins as ES modules, notes plugin no longer needing external notes.html, highlight.js 10.0.1, moving highlight themes, installing highlight.js and marked from npm, Markdown support for line numbers and highlights, boolean data- attributes, and moving multiplex and notes server to separate repos. Bug fixes include links not working in exported PDF."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__4_0_1",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.0.1",
+      "tag_name": "4.0.1",
+      "title": "4.0.1",
+      "time_hint": "2020-05-25",
+      "published_at": "2020-05-25T14:26:19Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/4.0.1",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 4.0.1\nTag: 4.0.1; draft: False; prerelease: False; published_at: 2020-05-25T14:26:19Z; created_at: 2020-05-25T14:21:41Z\nRelease notes:\n### Bug fixes\n- Fixed issues when printing speaker notes to PDF (#2671 by @s-l-lee)\n- Fixed incorrect auto-animations when there are multiple auto-animated presentations on the same page",
+      "memory_unit_text": "In the hakimel/reveal.js release 4.0.1, the project fixes issues with printing speaker notes to PDF and incorrect auto-animations when multiple auto-animated presentations are on the same page."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__4_0_2",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.0.2",
+      "tag_name": "4.0.2",
+      "title": "4.0.2",
+      "time_hint": "2020-05-29",
+      "published_at": "2020-05-29T10:19:24Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/4.0.2",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 4.0.2\nTag: 4.0.2; draft: False; prerelease: False; published_at: 2020-05-29T10:19:24Z; created_at: 2020-05-29T10:10:28Z\nRelease notes:\n### Changes\n- Enables caching for JavaScript builds, making subsequent builds ~50% faster.\n- In auto-sliding presentations, the `data-autoslide` attribute now takes precedence over automatic detection of `<video>` durations.\n- Remove overzealous reset styles when printing to PDF.\n- `Reveal.configure` and `Reveal.isReady` are now available in the pre-initialized reveal.js API, to match v3.x behavior.\n- Switches to serving demo presentation assets from a CDN.\n### Bug fixes\n- Fixes polyfills and adds IE 11 support.\n- Fixes the progress bar direction in right-to-left mode.",
+      "memory_unit_text": "In the hakimel/reveal.js release 4.0.2, the project enables caching for JavaScript builds, makes data-autoslide take precedence over video duration detection in auto-sliding, removes overzealous reset styles when printing to PDF, makes configure and isReady available pre-initialization, switches to serving demo assets from a CDN, fixes polyfills and adds IE 11 support, and fixes the progress bar direction in right-to-left mode."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__4_1_0",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.1.0",
+      "tag_name": "4.1.0",
+      "title": "4.1.0",
+      "time_hint": "2020-10-12",
+      "published_at": "2020-10-12T09:51:39Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/4.1.0",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 4.1.0\nTag: 4.1.0; draft: False; prerelease: False; published_at: 2020-10-12T09:51:39Z; created_at: 2020-10-12T09:51:04Z\nRelease notes:\n### Changes\n- New: Add `data-visibility=\"hidden\"` to a slide to hide it from view. [Docs & examples](https://revealjs.com/slide-visibility)\n- New: Add the `r-fit-text` class to make a text node grow to be as large as possible without overflowing the slide. [Docs & examples](https://revealjs.com/layout/#fit-text)\n- The configured slide width/height is now exposed as CSS variables (`--slide-width`/`--slide-height`).\n- The shuffle config option now shuffles vertical slides as well.\n- All themes now invert the text color based on the current slide background color.\n- Include /css and /js in npm package.\n### Fixes\n- Don't append #/ to the URL on first slide.\n- Don't fill the progress bar when there's only one slide in a deck\n- Correct slide count when using data-visibility=\"uncounted\" (#2675)",
+      "memory_unit_text": "In the hakimel/reveal.js release 4.1.0, the project adds data-visibility=\"hidden\" to hide slides, r-fit-text class for auto-sizing text, exposes slide width/height as CSS variables, shuffles vertical slides with shuffle config, inverts text color based on background in all themes, includes /css and /js in npm package, and fixes not appending #/ to URL on first slide, not filling progress bar with one slide, and correct slide count with data-visibility=\"uncounted\"."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__4_1_1",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.1.1",
+      "tag_name": "4.1.1",
+      "title": "4.1.1",
+      "time_hint": "2021-05-20",
+      "published_at": "2021-05-20T17:13:03Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/4.1.1",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 4.1.1\nTag: 4.1.1; draft: False; prerelease: False; published_at: 2021-05-20T17:13:03Z; created_at: 2021-05-20T17:12:45Z\nRelease notes:\nMostly bug fixes and enhancements 🐛\n### Changes\n- Adds support for Node.js 16.\n- `data-background-image` now accepts multiple images (#2940).\n- New Markdown config option `animateLists` — automatically turns all lists into stepped fragments (#2956).\n- Reduce the tab size in code blocks from 8 to 2.\n- More accurate calculation of which slide to jump to when clicking on the progress bar (#2836).\n- Optimize DOM interactions and reduce forced layouts when exporting to PDF (#2843).\n### Fixes\n- Video/audio inside of a fragment now stop playing when the fragment is hidden.\n- Markdown is now split into individual slides by the default separator (`---`) as advertised.\n- The `r-fit-text` layout helper now sizes text correctly in PDF exports.\n- Fixes an issue where some slide-specific transitions were incorrectly overridden by the global transition setting.\n- The `has-dark-background` helper class now works when using named colors for `data-background-color ` (#2933).",
+      "memory_unit_text": "In the hakimel/reveal.js release 4.1.1, the project adds support for Node.js 16, multiple images in data-background-image, Markdown animateLists config option, reduces tab size in code blocks to 2, improves progress bar click accuracy, optimizes DOM interactions for PDF export, and fixes video/audio stopping when fragment hidden, Markdown splitting by default separator, r-fit-text sizing in PDF exports, slide-specific transitions overridden by global, and has-dark-background with named colors."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__4_1_2",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.1.2",
+      "tag_name": "4.1.2",
+      "title": "4.1.2",
+      "time_hint": "2021-06-09",
+      "published_at": "2021-06-09T12:30:43Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/4.1.2",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 4.1.2\nTag: 4.1.2; draft: False; prerelease: False; published_at: 2021-06-09T12:30:43Z; created_at: 2021-06-09T12:14:55Z\nRelease notes:\n### Changes\n- Adds support for `data-auto-animate-restart` and `data-auto-animate-id`. These properties give you finer control over which slides that should auto-animate between each other (@coffeenotfound in #2896).\n- Theme properties are now available as CSS variables, making them easy to override. [Full list of variables](https://github.com/hakimel/reveal.js/blob/master/css/theme/template/exposer.scss) (#2740 + #2968).\nHere's an example you can drop into your presentation's HTML:\n```html\n<style type=\"text/css\">\n:root {\n--r-background-color: indigo;\n--r-main-color: #f5f5f5;\n--r-main-font: monospace;\n}\n</style>\n```\n### Fixes\n- Markdown enabled speaker notes (`<aside class=\"notes\" data-markdown>`) are no longer visible on-slide.",
+      "memory_unit_text": "In the hakimel/reveal.js release 4.1.2, the project adds support for data-auto-animate-restart and data-auto-animate-id for finer auto-animate control, exposes theme properties as CSS variables, and fixes Markdown-enabled speaker notes being visible on-slide."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__4_2_0",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.2.0",
+      "tag_name": "4.2.0",
+      "title": "4.2.0",
+      "time_hint": "2021-11-12",
+      "published_at": "2021-11-12T11:12:13Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/4.2.0",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 4.2.0\nTag: 4.2.0; draft: False; prerelease: False; published_at: 2021-11-12T11:12:13Z; created_at: 2021-11-12T11:11:10Z\nRelease notes:\n## Changes\n* The math plugin now supports three typesetting libraries: KaTeX, MathJax 2 and MathJax 3.  We continue to use MathJax 2 as our default so this is fully backwards compatible. Learn how to choose between typesetters and how to configure them in the docs at <https://revealjs.com/math#typesetting-libraries> (@burgerga in #2559).\n* New event: `beforeslidechange` (#3003). This makes it possible to conditionally prevent navigations:\n```js\n// This prevents all slide changes\nReveal.addEventListener( 'beforeslidechange', e => e.preventDefault() );\n```\n* New keyboard shortcut for skipping fragments while navigating: alt + ←/↑/→/↓.\n* New API option for skipping fragments in directional navigation `Reveal.right({ skipFragments: true })`.\n* Adds a `beforeHighlight` callback to the highlight plugin (@rajgoel in #3026).\n```js\nReveal.initialize({\nhighlight: {\nbeforeHighlight: (hljs) => {\n// interact with highlight.js, for example to register a new language\n}\n}\n})\n```\n* Code line numbers can now start from an offset (#3050). For example, this code block would begin its line numbering from 10: `<code data-ln-start-from=\"10\">`.\n* Better error messaging when the `.reveal` or `.slides` containers are missing #2217.\n## Fixes\n* The last slide keyboard shortcut now works for looped presentations (#3007).\n* Markdown code blocks can be turned into fragments (@nicojs in #2982).\n* Unit tests can now run in Windows (@Vandivier in #3027).\n* Restored support for base64 background images, broken since 4.1.1 (#2978).\n* Fixes an issue that prevented presentations from looping when `navigationMode` was set to `linear`.\n* Internal links leading to a slide with video/audio element will now correctly start media playback. This issue only affected mobile browsers.",
+      "memory_unit_text": "In the hakimel/reveal.js release 4.2.0, the project adds support for three math typesetting libraries (KaTeX, MathJax 2, MathJax 3), a beforeslidechange event, keyboard shortcut for skipping fragments (alt + arrows), API option for skipping fragments in directional navigation, beforeHighlight callback in highlight plugin, code line numbers starting from an offset, better error messaging for missing containers, and fixes last slide shortcut in looped presentations, Markdown code blocks as fragments, unit tests on Windows, base64 background images, looping with linear navigationMode, and internal links starting media playback on mobile."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__4_2_1",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.2.1",
+      "tag_name": "4.2.1",
+      "title": "4.2.1",
+      "time_hint": "2021-12-06",
+      "published_at": "2021-12-06T11:36:27Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/4.2.1",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 4.2.1\nTag: 4.2.1; draft: False; prerelease: False; published_at: 2021-12-06T11:36:27Z; created_at: 2021-12-06T11:35:52Z\nRelease notes:\nBug fix release 🐛\n### Fixes\n- Fix an issue where some slides disappeared (fully or partially) after slide transitions in Chrome (9e583b8df4edecb94cb89f012ae5c80014a859ee @hakimel)\n- Fix an issue that caused double-navigations and impacted presentation performance (@hakimel #3079)\n- Fix `--host` not working in `npm start -- --host=0.0.0.0` (@cashcat #3075)\n- Fix incorrect sizing of auto-sized text in PDF exports (https://github.com/hakimel/reveal.js/issues/2865#issuecomment-970258829 @hakimel)\n- Fix background video playback issue in some browsers by inferring MIME type from file extension (#3078 @vanch3d)",
+      "memory_unit_text": "In the hakimel/reveal.js release 4.2.1, the project fixes slides disappearing after transitions in Chrome, double-navigations impacting performance, --host not working in npm start, incorrect auto-sized text sizing in PDF exports, and background video playback by inferring MIME type from file extension."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__4_3_0",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.3.0",
+      "tag_name": "4.3.0",
+      "title": "4.3.0",
+      "time_hint": "2022-02-28",
+      "published_at": "2022-02-28T09:24:13Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/4.3.0",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 4.3.0\nTag: 4.3.0; draft: False; prerelease: False; published_at: 2022-02-28T09:24:13Z; created_at: 2022-02-28T09:03:16Z\nRelease notes:\ntldr — self-destruction and bug fixes 💣\n## Changes\n- It's now possible to destroy/uninitialize a reveal.js presentation. This will remove all event listeners and roll back all changes made to the DOM. It will also unregister all plugins and destroy them if they expose a destroy method. (#1145 / @hakimel)\n```js\nReveal.destroy();\n```\n- You can now provide an absolute URL to the presentation that should be loaded in the speaker view. This is useful if you have a presentation integrated as part of a web page but still want the speaker view to work.\n```js\nReveal.initialize({ url: 'https://example.com/my-reveal-presentation' })\n```\n- Source maps are now included in dist (#3082 / @dabrahams)\n## Fixes\n- Fix the speaker view no longer goes out of sync with your presentation after live-reloading (#2822 / @hakimel).\n- Fix XSS vulnerability in speaker view (#3137 / @r0hanSH)\n- Fix issues with scaling embedded presentations when entering fullscreen mode in Safari (#3080 / @Martinomagnifico)",
+      "memory_unit_text": "In the hakimel/reveal.js release 4.3.0, the project adds the ability to destroy/uninitialize a presentation, support for an absolute URL in speaker view, includes source maps in dist, and fixes speaker view going out of sync after live-reloading, XSS vulnerability in speaker view, and scaling issues with embedded presentations in Safari fullscreen."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__4_3_1",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.3.1",
+      "tag_name": "4.3.1",
+      "title": "4.3.1",
+      "time_hint": "2022-03-21",
+      "published_at": "2022-03-21T09:46:57Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/4.3.1",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 4.3.1\nTag: 4.3.1; draft: False; prerelease: False; published_at: 2022-03-21T09:46:57Z; created_at: 2022-03-21T09:39:51Z\nRelease notes:\n## What's Changed\n- Fix bug that prevented speaker view from working from `file://` protocol (@hakimel #3158)\n- Fix console errors attempting to parse postMessage events from sources other than reveal.js (@hakimel)\n- Fix issue with providing your own config for MathJax3 plugin (@eric-wieser in https://github.com/hakimel/reveal.js/pull/3157)\n- Fix ZIP package gulp task (@dennybiasiolli in https://github.com/hakimel/reveal.js/pull/3156)\n- Replace deprecated String.prototype.substr() (@CommanderRoot in https://github.com/hakimel/reveal.js/pull/3165)\n**Full Changelog**: https://github.com/hakimel/reveal.js/compare/4.3.0...4.3.1",
+      "memory_unit_text": "In the hakimel/reveal.js release 4.3.1, the project fixes speaker view not working from file:// protocol, console errors from non-reveal.js postMessage events, providing custom config for MathJax3 plugin, ZIP package gulp task, and replaces deprecated String.prototype.substr()."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__4_4_0",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.4.0",
+      "tag_name": "4.4.0",
+      "title": "4.4.0",
+      "time_hint": "2022-10-17",
+      "published_at": "2022-10-17T07:47:28Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/4.4.0",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 4.4.0\nTag: 4.4.0; draft: False; prerelease: False; published_at: 2022-10-17T07:47:28Z; created_at: 2022-10-17T07:46:41Z\nRelease notes:\n## Changes\n- Gradient slide backgrounds, [read the docs](https://revealjs.com/backgrounds/#gradient-backgrounds) 🌈 (@gcmznt in #2510)\n- If multiple separate notes are provided for the same slide they will now all show in the speaker view (@lechten in #3010)\n- Updated browser targets from `> 0.5%, IE 11, not dead` to `> 2%, not dead`\n- Stop using `zoom` for presentation scaling. Zoom produced sharper upsizing than CSS transforms but it's a non-standard CSS property with a few too many quirks. e281b3234e7991283ce4dcca705dd9a6a9ebe5d2\n## Fixes\n- Fix issue where speaker view wasn't syncing (@hakimel #3285)\n- Fix incorrect slide numbers when exporting vertical slides to PDF (@chivongv in 3182)\n- Fix inconsistent fragment visibility in looped presentations (@hakimel in #3123)\n- Fix bug where `r-fit-text` caused text to truncate in PDF exports (@hakimel in #3120)\n- Fix bug where auto-animate could interfere with inherited line-height (@hakimel)\n**Full Changelog**: https://github.com/hakimel/reveal.js/compare/4.3.1...4.4.0",
+      "memory_unit_text": "In the hakimel/reveal.js release 4.4.0, the project adds gradient slide backgrounds, shows multiple separate notes for the same slide in speaker view, updates browser targets, stops using zoom for presentation scaling, and fixes speaker view syncing, incorrect slide numbers in PDF exports of vertical slides, inconsistent fragment visibility in looped presentations, r-fit-text truncation in PDF exports, and auto-animate interfering with inherited line-height."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__4_5_0",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.5.0",
+      "tag_name": "4.5.0",
+      "title": "4.5.0",
+      "time_hint": "2023-04-13",
+      "published_at": "2023-04-13T12:23:52Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/4.5.0",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 4.5.0\nTag: 4.5.0; draft: False; prerelease: False; published_at: 2023-04-13T12:23:52Z; created_at: 2023-04-13T11:50:05Z\nRelease notes:\n## Changes\n- Add support for jump-to-slide! 🚀 Press the G key and type a slide number or title. [Read the docs](https://revealjs.com/jump-to-slide/) (@hakimel)\n- Add `dracula` theme (@iiska #3324)\n- Add two new high contrast themes: `black-contrast` and `white-contrast` (@peter-kehl @hakimel #3367)\n- Add default lang attribute to index.html (@sojinsamuel)\n- It's now easier to define custom fragment styles via a new `.custom` class and reduced specificity. [Read the docs](https://revealjs.com/fragments/#custom-fragments) (@hakimel)\n- Live reload now works with `.html`/`.md` files in subfolders (@lolmaus #3305)\n## Fixes\n- Update dependencies and fix all npm audit warnings (@hakimel)\n- Fix issue with special characters in slide background image URLs (@Martinomagnifico #3315)\n- Fix an issue where leading whitespace was sometimes incorrectly stripped from Markdown (@jerrykan #3358)\n- Fix spacing between slides in overview mode when `disableLayout: true` (@Proliecan #3291)\n- The reveal.js print styles will no longer apply to content outside of reveal.js (@hakimel #3348)\n- Improve selection color contrast for black theme (@hakimel)\n**Full Changelog**: https://github.com/hakimel/reveal.js/compare/4.4.0...4.5.0",
+      "memory_unit_text": "In the hakimel/reveal.js release 4.5.0, the project adds jump-to-slide functionality, dracula theme, black-contrast and white-contrast high contrast themes, default lang attribute, easier custom fragment styles via .custom class, live reload for files in subfolders, and fixes npm audit warnings, special characters in background image URLs, leading whitespace stripped from Markdown, spacing in overview mode with disableLayout, print styles applying outside reveal.js, and selection color contrast for black theme."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__4_6_0",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.6.0",
+      "tag_name": "4.6.0",
+      "title": "4.6.0",
+      "time_hint": "2023-09-12",
+      "published_at": "2023-09-12T07:39:42Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/4.6.0",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 4.6.0\nTag: 4.6.0; draft: False; prerelease: False; published_at: 2023-09-12T07:39:42Z; created_at: 2023-09-12T07:16:24Z\nRelease notes:\n## Changes\n* Add support for line number offsets in Markdown code blocks. [Read the docs](https://revealjs.com/markdown/#line-number-offset) (@flowolf #3409)\n* Significantly speed up livereload (@t-fritsch #3446)\n* Add support for links to the id of an element nested inside slide (@t-fritsch #3444)\n* Adds ability to override Markdown plugin default options (@t-fritsch #3443)\n* Allow theme subfolders (@t-fritsch #3442)\n* Refactored Markdown plugin to use let/const and strict equality (@grgprarup #3454)\n## Fixes\n* Auto-slide duration falls back on global setting `autoSlide` instead of using first fragment auto-slide (@hakimel)\n* When a fragment sets `data-autoslide`, all fragments of the same index will now use the same auto-slide timing (@hakimel)\n* Fix code block auto-animate bug that caused unmatched lines to appear without fading in (@hakimel)\n* Fix livereload when using root CLI param (@t-fritsch #3441)\n* Fix scss watch tasks broken on syntax error (@t-fritsch #3445)\n* Fix typos in variable names (@individual-it #3453)\n* Fix code blocks font when printing pdf (@t-fritsch #3457)\n* Fix dracula's theme list-style on sub-items (@gildasio #3450)\n* Fix dracula li markers (@t-fritsch #3464)\n**Full Changelog**: https://github.com/hakimel/reveal.js/compare/4.5.0...4.6.0",
+      "memory_unit_text": "In the hakimel/reveal.js release 4.6.0, the project adds line number offsets in Markdown code blocks, speeds up livereload, supports links to nested element IDs, ability to override Markdown plugin default options, allows theme subfolders, refactors Markdown plugin, and fixes auto-slide duration fallback, fragment data-autoslide timing, code block auto-animate unmatched lines, livereload with root CLI param, scss watch tasks, typos, code block font when printing PDF, dracula theme list-style and li markers."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__5_0_0",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.0.0",
+      "tag_name": "5.0.0",
+      "title": "5.0.0",
+      "time_hint": "2023-10-27",
+      "published_at": "2023-10-27T13:58:41Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/5.0.0",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 5.0.0\nTag: 5.0.0; draft: False; prerelease: False; published_at: 2023-10-27T13:58:41Z; created_at: 2023-10-27T12:57:55Z\nRelease notes:\n## Scroll view\nreveal.js 5.0 comes with a groundbreaking new feature; scroll view! (https://github.com/hakimel/reveal.js/pull/3482)\nSlide decks are a great format for giving presentations, but scrollable web pages are easier for viewers to read on their own.\nThe scroll view gives you the best of both worlds—without any extra effort. Present in the format best suited for presenting, share in the format best suited for consumption.\nHere's what it looks in action:\nhttps://github.com/hakimel/reveal.js/assets/629429/bd0e35ed-a859-4703-84ed-aac87702a6b6\nWant to try it out yourself? Check out the announcement deck I put together for slides.com 👉 <https://slides.com/news/scroll-mode/scroll>\n### How to use it\nThe scroll view is enabled by initializing reveal.js with `view: \"scroll\"` or by appending `?view=scroll` to a deck URL.\n```js\nReveal.initialize({ view: 'scroll' });\n```\nIt's possible to fine tune this view through multiple new config options. Full documentation available at <https://revealjs.com/scroll-view>.\n## Breaking change\nThe scroll view is automatically enabled for viewports below 435px wide. This is done because I believe the scroll view to be a superior way to browse any deck on a mobile device. If you want to revert this behavior and always paginate between slides, see `scrollActivationWidth`:\n```js\nReveal.initialize({ scrollActivationWidth: null })\n```\n## Changes\n* The PDF print view can now be activated via config `Reveal.initialize({ view: 'print' })` (@hakimel in #3482)\n* The new URL query for activating the print view is `?view=print`. It used to be `?print-pdf`, which is still supported for backwards compatibility. (@hakimel in #3482)\n## Fixes\n* Notes from `data-notes` were not working on the slide-level (@skyboyer in https://github.com/hakimel/reveal.js/pull/3477)\n* Add 'wheel' event listener, remove deprecated `mousewheel` & 'DOMMouseScroll` (@quochuy in https://github.com/hakimel/reveal.js/pull/3489)\n**Full Changelog**: https://github.com/hakimel/reveal.js/compare/4.6.0...5.0.0",
+      "memory_unit_text": "In the hakimel/reveal.js release 5.0.0, the project introduces scroll view as a groundbreaking new feature, automatically enabled for viewports below 435px wide, with config options for fine-tuning. Breaking change: scroll view auto-enabled on mobile. Also adds PDF print view via config or ?view=print query, and fixes notes from data-notes not working on slide-level and replaces deprecated mousewheel/DOMMouseScroll with wheel event listener."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__5_0_2",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.0.2",
+      "tag_name": "5.0.2",
+      "title": "5.0.2",
+      "time_hint": "2023-11-09",
+      "published_at": "2023-11-09T08:11:24Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/5.0.2",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 5.0.2\nTag: 5.0.2; draft: False; prerelease: False; published_at: 2023-11-09T08:11:24Z; created_at: 2023-11-09T08:05:58Z\nRelease notes:\n## Changes\n* Upgrade dependencies (@Mister-Hope in https://github.com/hakimel/reveal.js/pull/3505)\n* Make Markdown plugin callable without a reveal deck instance (@hakimel in https://github.com/hakimel/reveal.js/issues/3517)\n* Fix exception in speaker view (@hakimel #2512)\n* Fix issue where a future vertical slide background sometimes flashed into view prematurely (@hakimel in https://github.com/hakimel/reveal.js/issues/3520)\n**Full Changelog**: https://github.com/hakimel/reveal.js/compare/5.0.0...5.0.2",
+      "memory_unit_text": "In the hakimel/reveal.js release 5.0.2, the project upgrades dependencies, makes Markdown plugin callable without a reveal deck instance, fixes an exception in speaker view, and fixes a future vertical slide background flashing prematurely."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__5_0_3",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.0.3",
+      "tag_name": "5.0.3",
+      "title": "5.0.3",
+      "time_hint": "2023-12-18",
+      "published_at": "2023-12-18T09:19:10Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/5.0.3",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 5.0.3\nTag: 5.0.3; draft: False; prerelease: False; published_at: 2023-12-18T09:19:10Z; created_at: 2023-12-15T08:03:32Z\nRelease notes:\n## Changes\n* Search plugin now supports searching for diacritics and searches full phrases (@t-fritsch in #3532)\n* Jump-to-slide now adapts to the configured slide number format (@hakimel in #3501)\n* Slide background XSS prevention (@EastSun5566 in https://github.com/hakimel/reveal.js/pull/3548)\n## Fixes\n* Fix speaker notes not appearing in PDF exports (@hakimel in #3535)\n* Fix exception when stepping backwards through code highlights (@hakimel in #3524)\n* Fix exception when navigating decks in mobile browsers (@hakimel in #3539)\n* Fix pause/help overlay position in scroll view (@hakimel in #3542)\n* Fix mobile scroll view navigation when fragments began at a index higher than 1 (@hakimel #3540)\n**Full Changelog**: https://github.com/hakimel/reveal.js/compare/5.0.2...5.0.3",
+      "memory_unit_text": "In the hakimel/reveal.js release 5.0.3, the project adds search plugin support for diacritics and full phrases, jump-to-slide adapting to slide number format, slide background XSS prevention, and fixes speaker notes not appearing in PDF exports, exception when stepping backwards through code highlights, exception when navigating decks in mobile browsers, pause/help overlay position in scroll view, and mobile scroll view navigation when fragments begin at index higher than 1."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__5_0_4",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.0.4",
+      "tag_name": "5.0.4",
+      "title": "5.0.4",
+      "time_hint": "2023-12-22",
+      "published_at": "2023-12-22T12:21:58Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/5.0.4",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 5.0.4\nTag: 5.0.4; draft: False; prerelease: False; published_at: 2023-12-22T12:21:58Z; created_at: 2023-12-22T12:18:06Z\nRelease notes:\n## Fixes\n- Missing slide backgrounds in mobile scroll view (#3554)",
+      "memory_unit_text": "In the hakimel/reveal.js release 5.0.4, the project fixes missing slide backgrounds in mobile scroll view."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__5_0_5",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.0.5",
+      "tag_name": "5.0.5",
+      "title": "5.0.5",
+      "time_hint": "2024-02-26",
+      "published_at": "2024-02-26T10:23:13Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/5.0.5",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 5.0.5\nTag: 5.0.5; draft: False; prerelease: False; published_at: 2024-02-26T10:23:13Z; created_at: 2024-02-26T10:17:44Z\nRelease notes:\n## Changes\n* Keyboard navigation support in scroll view (@hakimel in #3515)\n* Add F1 shortcut for showing help overlay (@gchriz in #3570)\n## Fixes\n* Fix postMessage XSS exploit (@hakimel in 3dade6117628beb7706b4abdc61c268ce281abbc)\n* Fix stack backgrounds not working in scroll view (@bouzidanas in #3568)\n* Fix `fragmentshown` and `fragmenthidden` not firing in scroll view (@bouzidanas, @ hakimel in #3580)\n**Full Changelog**: https://github.com/hakimel/reveal.js/compare/5.0.4...5.0.5",
+      "memory_unit_text": "In the hakimel/reveal.js release 5.0.5, the project adds keyboard navigation support in scroll view, F1 shortcut for help overlay, and fixes postMessage XSS exploit, stack backgrounds not working in scroll view, and fragmentshown/fragmenthidden events not firing in scroll view."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__5_1_0",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.1.0",
+      "tag_name": "5.1.0",
+      "title": "5.1.0",
+      "time_hint": "2024-04-11",
+      "published_at": "2024-04-11T07:03:04Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/5.1.0",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 5.1.0\nTag: 5.1.0; draft: False; prerelease: False; published_at: 2024-04-11T07:03:04Z; created_at: 2024-04-11T06:45:27Z\nRelease notes:\n## Changes\n* Add the `enter-fullscreen` class to any element in your presentation to turn it into fullscreen trigger (@hakimel)\n* Video backgrounds now continue to play seamlessly across multiple slides (@hakimel)\nhttps://github.com/hakimel/reveal.js/assets/629429/d1bcbced-5ede-4e2d-83fb-d3f3804eb674\n## Fixes\n* MathJax3 plugin now works with in non-singleton reveal.js instances (@jokester in https://github.com/hakimel/reveal.js/pull/3595)\n* Changing slides via swipe gestures now works when swiping on videos—unless their controls are visible (@hakimel)\n* Fix exception when destroying uninitialized reveal.js instance (@hakimel in #3593)\n* Fix videos restarting each time a fragment is shown (@hakimel in #2882)\n* Fix broken backwards navigation in RTL mode (@hakimel)\n* Fix error when the notes plugin receives a non-string message (@NatKarmios in https://github.com/hakimel/reveal.js/pull/3588)\n* Fix question mark shortcut on non-English keyboard layouts (@lechten in https://github.com/hakimel/reveal.js/pull/3603)\n* Fix `r-stack` overflow behavior in Chromium browsers (@alifeee in https://github.com/hakimel/reveal.js/pull/3598)\n**Full Changelog**: https://github.com/hakimel/reveal.js/compare/5.0.5...5.1.0",
+      "memory_unit_text": "In the hakimel/reveal.js release 5.1.0, the project adds enter-fullscreen class for fullscreen triggers, seamless video backgrounds across slides, and fixes MathJax3 plugin with non-singleton instances, swipe gestures on videos, exception when destroying uninitialized instance, videos restarting on fragment show, broken backwards navigation in RTL mode, error on non-string message in notes plugin, question mark shortcut on non-English keyboards, and r-stack overflow in Chromium."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__5_2_0",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.2.0",
+      "tag_name": "5.2.0",
+      "title": "5.2.0",
+      "time_hint": "2025-03-19",
+      "published_at": "2025-03-19T11:03:56Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/5.2.0",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 5.2.0\nTag: 5.2.0; draft: False; prerelease: False; published_at: 2025-03-19T11:03:56Z; created_at: 2025-03-19T11:03:33Z\nRelease notes:\n## New Feature: Lightbox\nAny element in your presentation can now be turned into an image/video lightbox trigger. Clicking reveals a full-size lightbox overlay where users can view your image or video. This is great for things like clickable thumbnails in a gallery.\n```html\n<!-- Click to show \"A.png\" in an overlay -->\n<img src=\"A.png\" data-preview-image>\n<!-- Click show \"B.png\" in an overlay -->\n<img src=\"A.png\" data-preview-image=\"B.png\">\n<!-- Click to show \"C.mp4\" in an overlay and scale it to \"cover\" -->\n<img src=\"A.png\" data-preview-video=\"C.mp4\" data-preview-fit=\"cover\">\n<!-- Works with any element type -->\n<button data-preview-video=\"C.mp4\">Play video</button>\n```\nDocs: [revealjs.com/lightbox](https://revealjs.com/lightbox/).\nHere's what it looks like in action:\nhttps://github.com/user-attachments/assets/3d7d5885-8099-412c-b26d-ef294adbbb3d\n## Changes\n* Upgrade to gulp 5.0.\n* Add `controls: \"speaker-only\"` config option for only showing controls in speaker view (@gpotter2 in https://github.com/hakimel/reveal.js/pull/3716)\n* Extend search API to include `closeSearch` and `toggleSearch` (@lechten in https://github.com/hakimel/reveal.js/pull/3685)\n* Automatic source code spellcheck via GitHub action (@yarikoptic in https://github.com/hakimel/reveal.js/pull/3602)\n* Math plugin now ignores `code` tags by default (@hakimel in 0d02d8a303a39b02c919d86c94ec477d1e1b107d)\n* Muted background videos now autoplay in the speaker view.\n* Prevent `initialize` from being called twice (@hakimel in 16ac4b00671a8ac6433091118c4ebd9b00255545)\n* Auto-animate no longer skips matching fragments on adjacent slides (@hakimel in 6dea2a50941bf3be6824b3eadc5cb17feb87eb5b)\n## Bug fixes\n* Fix reveal.js not covering full viewport height in iOS by switching to `100dvh` (@hakimel in 6cebb771eec18e244a23719f94baf0e70242abe7)\n* Fix background video restarting when switching fragments from notes view (https://github.com/hakimel/reveal.js/issues/3633)\n* Fix gulp package not working in gulp 5 (@dennybiasiolli in https://github.com/hakimel/reveal.js/pull/3701)\n* Fix last slide not triggering `slidechange` event in scroll view (@hakimel in fe4a6e82b01df923085fa867656cf11180490465)\n**Full Changelog**: https://github.com/hakimel/reveal.js/compare/5.1.0...5.2.0",
+      "memory_unit_text": "In the hakimel/reveal.js release 5.2.0, the project introduces the Lightbox feature for image/video overlays, upgrades to gulp 5.0, adds controls: \"speaker-only\" config option, extends search API with closeSearch and toggleSearch, automatic source code spellcheck via GitHub action, math plugin ignoring code tags by default, muted background videos autoplay in speaker view, prevents initialize from being called twice, auto-animate no longer skips matching fragments on adjacent slides, and fixes reveal.js not covering full viewport height in iOS, background video restarting when switching fragments from notes view, gulp package not working in gulp 5, and last slide not triggering slidechange event in scroll view."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__5_2_1",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.2.1",
+      "tag_name": "5.2.1",
+      "title": "5.2.1",
+      "time_hint": "2025-03-28",
+      "published_at": "2025-03-28T13:00:23Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/5.2.1",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 5.2.1\nTag: 5.2.1; draft: False; prerelease: False; published_at: 2025-03-28T13:00:23Z; created_at: 2025-03-28T12:51:23Z\nRelease notes:\n## Lightbox bug fixes and improvements\n* Prevent reveal.js keyboard shortcuts while lightbox is open (@tobi-or-not-tobi in https://github.com/hakimel/reveal.js/pull/3767)\n* Opening iframe lightboxes via `[data-preview-link]` now works all element types, not just `<a>` (@hakimel)\n* Lightbox state is now persisted/restored when calling `Reveal.getState` and `Reveal.setState` (@hakimel)\n* Lightbox now syncs between speaker view and main window (@hakimel)\n* Fix pause overlay/lightbox layering conflict (@tobi-or-not-tobi in https://github.com/hakimel/reveal.js/pull/3768)\n* Added lightbox example to demo.html\n**Full Changelog**: https://github.com/hakimel/reveal.js/compare/5.2.0...5.2.1",
+      "memory_unit_text": "In the hakimel/reveal.js release 5.2.1, the project provides lightbox bug fixes and improvements: preventing reveal.js keyboard shortcuts while lightbox is open, opening iframe lightboxes via data-preview-link on all element types, persisting/restoring lightbox state with getState/setState, syncing lightbox between speaker view and main window, fixing pause overlay/lightbox layering conflict, and adding a lightbox example to demo.html."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__6_0_0",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:6.0.0",
+      "tag_name": "6.0.0",
+      "title": "6.0.0",
+      "time_hint": "2026-03-11",
+      "published_at": "2026-03-11T11:54:59Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/6.0.0",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 6.0.0\nTag: 6.0.0; draft: False; prerelease: False; published_at: 2026-03-11T11:54:59Z; created_at: 2026-03-11T11:59:53Z\nRelease notes:\n## New Package: @revealjs/react\nreveal.js now has an official React wrapper! The [`@revealjs/react`](https://www.npmjs.com/package/@revealjs/react) package lets you build presentations using React components—`<Deck>`, `<Slide>`, `<Stack>`, `<Fragment>`, and `<Code>`. Learn more over at [revealjs.com/react](https://revealjs.com/react/).\n```jsx\nimport { Deck, Slide, Fragment } from '@revealjs/react';\n<Deck>\n<Slide>\n<h1>Hello World</h1>\n<Fragment asChild>\n<h2>Appears on click</h2>\n</Fragment>\n</Slide>\n</Deck>\n```\nTry it out by pulling reveal.js master and running `npm run react:demo`.\n## Breaking Changes\nSee the full [upgrade guide](https://revealjs.com/upgrading/) for step-by-step instructions. The short version:\n- **Plugin paths have moved** —if your presentation HTML loads plugins directly from the file system or via CDN, update your paths from `plugin/<name>/plugin.js` to `dist/plugin/<name>.js` (e.g. `plugin/notes/notes.js` → `dist/plugin/notes.js`, `plugin/highlight/monokai.css` → `dist/plugin/highlight/monokai.css`)\n- **ES module paths renamed** — `.esm.js` files are now `.mjs` (e.g. `dist/reveal.esm.js` → `dist/reveal.mjs`). If you import via bare module specifiers this doesn't affect you.\n- **CSS paths changed** — if you install via npm, the `dist/` prefix has been dropped from the public package API (e.g. `reveal.js/dist/reveal.css` → `reveal.js/reveal.css`).\n- **TypeScript** — reveal.js now ships with types included. If you were previously using `@types/reveal.js` you can remove it and migrate. Note that the type names are slightly different, more info in the [upgrade guide](https://revealjs.com/upgrading/).\n## Changes\n* Switch from gulp to [Vite](https://vite.dev/) for building and running reveal.js (@hakimel)\n* Add official React wrapper for reveal.js — [@revealjs/react](react/README.md) (@hakimel)\n* TypeScript types are now published as part of the package, based on the great work over at [@types/reveal](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/reveal.js)\n* Dark mode and llms.txt support for [revealjs.com](https://revealjs.com).\n* Add `controls: 'speaker'` config option to show controls only in speaker view (@hakimel in #3853)\n* Videos blocked from autoplaying with audio will now play muted with an unmute button, replacing the previous browser-dependent blocked state (@hakimel)\n* MathJax 4 support in the math plugin (@Khlick in #3811)\n* Accessibility improvements: `alt` tags on images and videos are now announced by screen readers, and slide content is better punctuated for screen reader text (@hakimel in #3757, #3772)\n* `sync()` now also updates slide classes, fixing issues when adding or removing slides and then calling sync (@hakimel)\n* A `sync` event is now dispatched when reveal.js syncs (@hakimel)\n* Add `removeHiddenSlides()` to the API (@hakimel)\n* `data-id` is now supported for slide links (@hakimel)\n* `data-preview-link` value now takes precedence over the anchor's `href` (@hakimel in #3854)\n* Prevent iframes from stealing keyboard focus, controllable via the new `preventIframeAutoFocus` config option (@hakimel)\n* Pressing Enter on the active slide in overview mode now exits the overview and opens that slide (@tobi-or-not-tobi)\n* The `display` config option now supports `!important` (@boba-beba)\n* Distinct active/hover state difference in overview mode (@hakimel in #3780)\n## Fixes\n* Fix videos not autoplaying when navigating with control arrows on Android (@hakimel)\n* Fix initial video autoplay not working on Android (@hakimel)\n* Fix multiple videos started simultaneously sometimes failing to render in Mobile Safari (@hakimel)\n* Fix overview mode missing slide thumbnails in adjacent stacks with more than 10 vertical slides (closes #3754) (@hakimel)\n* Fix missing font in dracula theme (fixes #3781) (@hakime...",
+      "memory_unit_text": "In the hakimel/reveal.js release 6.0.0, the project introduces a new official React wrapper package @revealjs/react, breaking changes including plugin path moves, ES module path renames, CSS path changes, and TypeScript types included. Other changes: switch from gulp to Vite, dark mode and llms.txt support for revealjs.com, controls: 'speaker' config option, videos blocked from autoplaying play muted with unmute button, MathJax 4 support, accessibility improvements, sync() updates slide classes, sync event dispatched, removeHiddenSlides() API, data-id support for slide links, data-preview-link value precedence, preventIframeAutoFocus config option, Enter on active slide in overview exits overview, display config supports !important, distinct active/hover state in overview. Fixes include videos not autoplaying on Android, initial video autoplay on Android, multiple videos failing to render in Mobile Safari, overview missing thumbnails in adjacent stacks, missing font in dracula theme, and more."
+    },
+    {
+      "memory_node_id": "hakimel__reveal_js__release__6_0_1",
+      "repo": "hakimel/reveal.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:6.0.1",
+      "tag_name": "6.0.1",
+      "title": "6.0.1",
+      "time_hint": "2026-04-11",
+      "published_at": "2026-04-11T07:23:10Z",
+      "source_url": "https://github.com/hakimel/reveal.js/releases/tag/6.0.1",
+      "raw_text": "Repository: hakimel/reveal.js\nRelease: 6.0.1\nTag: 6.0.1; draft: False; prerelease: False; published_at: 2026-04-11T07:23:10Z; created_at: 2026-04-11T07:16:58Z\nRelease notes:\n## Changes\n* Upgrade to Vite 8 and TS 6\n* Blacklist `previewIframe` in postMessage API #3887\n* Fix exception in media control removal during PDF exports #3888\n**Full Changelog**: https://github.com/hakimel/reveal.js/compare/6.0.0...6.0.1",
+      "memory_unit_text": "In the hakimel/reveal.js release 6.0.1, the project upgrades to Vite 8 and TS 6, blacklists previewIframe in postMessage API, and fixes an exception in media control removal during PDF exports."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the hakimel/reveal.js releases, which release introduces the scroll view feature?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "4.5.0"
+        },
+        {
+          "option_id": "B",
+          "text": "5.0.0"
+        },
+        {
+          "option_id": "C",
+          "text": "5.1.0"
+        },
+        {
+          "option_id": "D",
+          "text": "6.0.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "5.0.0",
+      "source_chunk_ids": [
+        "hakimel__reveal_js__release__5_0_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "hakimel__reveal_js__release__5_0_0",
+          "answer_text": "introduces scroll view as a groundbreaking new feature"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the hakimel/reveal.js releases, how does the new feature introduced in 5.2.0 differ from the new feature introduced in 6.0.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "5.2.0 introduces the Lightbox feature for image/video overlays, while 6.0.0 introduces an official React wrapper package @revealjs/react."
+        },
+        {
+          "option_id": "B",
+          "text": "5.2.0 introduces scroll view, while 6.0.0 introduces auto-animate."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases introduce the same feature: jump-to-slide."
+        },
+        {
+          "option_id": "D",
+          "text": "5.2.0 introduces the React wrapper, while 6.0.0 introduces the Lightbox."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "5.2.0 introduces the Lightbox feature for image/video overlays, while 6.0.0 introduces an official React wrapper package @revealjs/react.",
+      "source_chunk_ids": [
+        "hakimel__reveal_js__release__5_2_0",
+        "hakimel__reveal_js__release__6_0_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "hakimel__reveal_js__release__5_2_0",
+          "answer_text": "introduces the Lightbox feature for image/video overlays"
+        },
+        {
+          "memory_node_id": "hakimel__reveal_js__release__6_0_0",
+          "answer_text": "introduces a new official React wrapper package @revealjs/react"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the hakimel/reveal.js release window, order the following release-content states from earliest to latest: (1) a release that adds the ability to destroy/uninitialize a presentation, (2) a release that introduces the scroll view feature, (3) a release that introduces the Lightbox feature, (4) a release that introduces an official React wrapper package.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "hakimel__reveal_js__release__4_3_0",
+        "hakimel__reveal_js__release__5_0_0",
+        "hakimel__reveal_js__release__5_2_0",
+        "hakimel__reveal_js__release__6_0_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "hakimel__reveal_js__release__4_3_0",
+          "answer_text": "adds the ability to destroy/uninitialize a presentation"
+        },
+        {
+          "memory_node_id": "hakimel__reveal_js__release__5_0_0",
+          "answer_text": "introduces scroll view as a groundbreaking new feature"
+        },
+        {
+          "memory_node_id": "hakimel__reveal_js__release__5_2_0",
+          "answer_text": "introduces the Lightbox feature for image/video overlays"
+        },
+        {
+          "memory_node_id": "hakimel__reveal_js__release__6_0_0",
+          "answer_text": "introduces a new official React wrapper package @revealjs/react"
+        }
+      ]
+    }
+  ]
+}

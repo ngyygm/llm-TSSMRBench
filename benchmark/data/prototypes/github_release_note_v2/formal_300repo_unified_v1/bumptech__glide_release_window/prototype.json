@@ -1,0 +1,530 @@
+{
+  "prototype_id": "bumptech__glide_release_window",
+  "domain": "github_release_evolution",
+  "repo": "bumptech/glide",
+  "source_type": "release_note",
+  "window_title": "bumptech/glide recent release evolution",
+  "window_summary": "This window tracks the recent bumptech/glide release stream from v4.4.0 through v5.0.7, including major feature additions like animated AVIF support, Compose integration, and KSP processor support, as well as numerous bug fixes and build improvements.",
+  "chunks": [
+    {
+      "memory_node_id": "bumptech__glide__release__v4_4_0",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.4.0",
+      "tag_name": "v4.4.0",
+      "title": "Glide 4.4.0",
+      "time_hint": "2017-12-04",
+      "published_at": "2017-12-04T16:51:57Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v4.4.0",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide 4.4.0\nTag: v4.4.0; draft: False; prerelease: False; published_at: 2017-12-04T16:51:57Z; created_at: 2017-12-04T16:34:34Z\nRelease notes:\nThis is the November release of Glide.\n## Features\n* Updated Glide's generated API to allow RequestOptions return values and avoid a bunch of ``@CheckResult`` warnings (e78f2ee1153f5b810242ff9a31fad398357623b7, 7fccb32a139edcc3e316fedde57b36e6f65ba435)\n* Enabled cache sizes > ``Integer.MAX_VALUE`` (d402780a638da1662b0190b918a578c391ddeb01, thanks to @bhargavms)\n* Added an API to ``ViewTarget`` called [``clearOnDetach()``][1] that allows you to optionally clear and restart requests when the corresponding view is detached and reattached to its window (#2520, d0fd96780dccf00b5cffa43befa2d5566cacd1db):\n```java\nGlide.with(fragment)\n.load(url)\n.into(imageView)\n.clearOnDetach();\n```\n* Added an API to ``ViewTarget`` called [``waitForLayout()``][2] that simplifies the previous mechanism for forcing Glide's ``ViewTargets`` to wait for a layout pass before determining the size of the view they wrap (05b885422624170dd39c89ef55b802f3b63ffc44):\n```java\nGlide.with(fragment)\n.load(url)\n.into(imageView)\n.waitForLayout();\n```\n* Added a MockGlideExecutor that could be used as part of a future testing compat library (6cee6d2c155f9dda7857df6d9c060713f4e5b2ca, thanks to azlatin@)\n* Added an API to specify a custom executor to use when decoding GIF frames (6837543ca446660d74812ad26dd7a096e4fa66ac)\n## Bugs\n* Improved trimming behavior with inconsistent resource sizes (#2550, thanks to @unverbraucht)\n* Fixed overly aggressive escaping of some valid characters in http urls (#2583, 014bf4482637f7fb7abe1febb0e6796d3e04a2dc)\n* Added a direct dependency on support-fragment in Glide's pom (#2547, c1c9be203e6dd031c970f49abf1de60cd043c096)\n* Fixed an issue where dereferencing a ``Target`` without clearing it would result in the loaded resource never being returned to Glide's memory cache (#2560, 02096625b38f5c5fd6c820752a2fc4f0ae2b07ea, 7e317c049f25423f46c4651d8d0b476d457ff3c0)\n* Fixed an IllegalStateException when ``RequestManagers`` are memoized and then used to start a new load after ``onDestroy`` of the corresponding ``Activity`` or ``Fragment`` (#2262,  811983799a1815f06cdac91165d8a4aad88facc8)\n* Fixed an NPE when using GifDrawables as thumbnails due to a bug that can fail to clear thumbnails in ``onStop()`` (#2555, 9c82c42)\n* Fixed a ``SecurityException`` on some devices when trying to register a connectivity receiver (#1417, 6bc908bef3ed57827227efdb0c3b06d1e72d71d8)\n* Fixed a ``SecurityException`` on some devices when trying to obtain connectivity status (#1405, bcd6cc2d72f50f84aa97b1098d465114cd0678c2)\n* Fixed a couple of cases where ``GifDrawable``s could continue to animate after ``clear()`` or ``onStop()`` (#1087, 3dad44975a9af3f1765d30d98ca1a694f77ed4e8, 9d87deaf34f06c147f69550cdf9b2289f315a325)\n* Improved decode times for GIF frames on earlier versions of ART and some lower end devices by up to 40% (#2471, e7a494253187f14bc73a909f522e4da2ce093920, fa2ebfe255be99c9cf5b5edab0f7d8d2ae8a0545, 7c0cd6379c23d5a9cdf8893ad993edce3feda064, 4db20db0486f97ec9c5ca67b5d08c6b3b700581b, 65e550618c0f991aafe7062d33e8fd443faa5cad)\n* Eliminated a few unnecessary object allocations in Glide's request path (b4d778bc66ec9683157e5c5e46f9a999362d4564)\n* Fixed an issue on some devices where ``ExternalPreferredCacheDiskCacheFactory.java`` might attempt (and fail) to use external storage if the external storage directory exists but isn't writable (#2641, 5580e517d05d178946369e178eb16022224dd362, thanks to @ANPez)\n* Ensure that requests started with ``onlyRetrieveFromCache`` don't block on already running equivalent requests that aren't using ``onlyRetrieveFromCache`` (#2428, 108a0621d1fa970aa83e28c8700c04c2dbc1a8cf)\n* Fixed a couple of cases where calling ``load(Bitmap)`` or ``load(Drawable)`` could cause Glide to re-use or recycle the given ``Bitmap`` or ``Drawable`` (cff4f2cc3398daa21e00f76e2c5...",
+      "memory_unit_text": "In the bumptech/glide release v4.4.0, the November release of Glide introduces features such as updated generated API to allow RequestOptions return values, support for cache sizes larger than Integer.MAX_VALUE, a clearOnDetach() API on ViewTarget, a waitForLayout() API on ViewTarget, a MockGlideExecutor for testing, and a custom executor for decoding GIF frames. Bug fixes include improved trimming behavior, fixed URL escaping, added direct dependency on support-fragment, fixed resource return to memory cache, fixed IllegalStateException with memoized RequestManagers, fixed NPE with GifDrawables as thumbnails, fixed SecurityException on connectivity receiver and status, fixed GifDrawable animation after clear/onStop, improved GIF frame decode times by up to 40%, eliminated unnecessary object allocations, fixed ExternalPreferredCacheDiskCacheFactory external storage issue, ensured onlyRetrieveFromCache requests don't block, and fixed re-use/recycle of Bitmap/Drawable in load methods."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v4_5_0",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.5.0",
+      "tag_name": "v4.5.0",
+      "title": "Glide 4.5.0",
+      "time_hint": "2018-01-05",
+      "published_at": "2018-01-05T18:53:36Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v4.5.0",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide 4.5.0\nTag: v4.5.0; draft: False; prerelease: False; published_at: 2018-01-05T18:53:36Z; created_at: 2018-01-05T17:22:17Z\nRelease notes:\nThis is the December release of Glide.\n## Features\n* Add an API to pause all requests for a given `Activity` or `Fragment` to allow callers to manually reduce memory when their Fragment or Application is backgrounded (@kurtisnelson, 09e33a2133eb1d4005b227439c0c53c9c4e8c89b)\n* Fully support Bitmap re-use for `RGBA_F16` `Bitmap`s. Previously Glide supported decoding `RGBA_F16` `Bitmap`s, but would not re-use any stored in the `BitmapPool` when doing so (cc0288c3b4bfb82a109a3f279af52c57fc5e1499)\n* Support decoding Videos from resources as `AssetFileDescriptor`s (6e9866b5a19d06625006a9a8c605db21047df74b)\n* Added support for the [`MediaMetadataRetriever#getScaledFrameAtTime`][2] method added in OMR1 to marginally reduce memory usage when decoding video frames (ded8f77c9f2471e3c3413aa234656df8cf72dd2f)\n* Support transcoding `BitmapDrawable`s to `byte[]`s (015d2659a9ea7438ab72b94500a0921f8ff35aa3)\n## Bugs\n* Cleaned up old and incorrect `@TargetApi` annoatations (@SUPERCILEX, 67783961c71639871cc3687894976e6caeb6609e)\n* Added `@Nullable` and `@NonNull` annotations to many of Glide's APIs (@SUPERCILEX, dc12b60c8f0a21eb9b3ab2164471c93d2e20ae25, c3dafde00a061bafcd43a739336ca3503af13a7d, 0cffd1da977e9ca334032ebc1d798213a177aab7, f541b65e596a49d252ba6b80d3b05a111ce93461, 36e0b802c3a1e564caf230b351a6438fa32100ac, 650bb7770d08b279c2a7f00e25337618da54f7f3, bd2f21595d3404e6aadf1f4333bef369509c4a56, e35a73b4e78f2f05dc5c1163b8083ac1b662b02f, f37ced1512f7eabf37f6c93b1b7ffb32c3629b72, bb96b633174184965cd1bdf9027ef3843f59c54f, 276d4ff4bdce85763c985c90a87ea5e858a1ffe4, c3107801dab8ccbe121157bee7dba29b7d9723e6, )\n* Fixed a case where restarting an identical request with `skipMemoryCache(true)` would complete the load from the memory cache (#2663, 3dc1d18da75b44d8d97f4161fe0d330e4993e537)\n* Fixed decoding interlaced and downsampled GIFs as static images (#2698, b64f23de2a7ba38fceac1cda85f05158e80132f9)\n* Added more models to the list of devices requiring a lock when decoding or drawing Bitmaps (@strooooke, #738, c809f7ec03bbfc2c529f2c211cfc644c2073aab0, e923554b10fa9625f4fa6fe706f3d5a553843ab9)\n* Fixed a race condition where starting multiple loads simultaneously the first time any request is made for a given model and resource could lead to NPEs (#2708, d427cbd33206cbcc88ac4a0f0c29ef831d4bb5b5)\n* Make the annotation processor tests pass on Windows (@SUPERCILEX, #2709, 2b4be8b8c210abb34740f0778434679b644a6525)\n* Fix NPE and RuntimeExceptions thrown in `DefaultConnectivityMonitor` on some devices (c902730b75085cecdd40cd5817453d8af0eff4e9)\n* Only trim to half of the memory cache maximum size, not the current size, when background the app (@kurtisnelson, 429b7e2d9854da549eb0b852e2e08de176f05fbf)\n* Fix a `StateVerifier` exception thrown when `ResourceEncoder` implementations unexpectedly throw exceptions while writing resources to Glide's disk cache (6c7cf3f8cae998469a7e7df8c70c459311479a38)\n* Fix an NPE error message when `ResourceDrawableDecoder` fails to decode an image (d522ac7249ca1bf71f6de30e62d71a1faa8d4c4c)\n* Fix an `IllegalStateException` if a request using [`.error()`][3] is cleared while the error request is running (#2767, 9c70aa5f92f523c6bac29628554fdde5428e0cdd)\n* Cleaned up a number of accessor classes generated by unnecessarily strict visibility in inner classes (@TWiStErRob, e02969417a75048af0fcb61c5fbf6ea94bd2c4aa)\n* Updated OkHttp and removed a no longer necessary workaround for `ClassCastException`s thrown by the Android framework on O (#2355, 642b2dc431e54cb677088e934743d78f1ad84810)\n* Added missing annotations to overrides on some of Glide's generated classes (@TWiStErRob, 62d7464fb4f874897121591815ecb7503f7bc01b, 9fde00628f223e96372aeceadcb3e35a0635cb6d, d7bb6f956b34dd00ad0dbcb64f15f4b9c2fb0538)\n* Avoid throwing exceptions when `LruBitmapPool` was asked to...",
+      "memory_unit_text": "In the bumptech/glide release v4.5.0, the December release of Glide adds features including an API to pause all requests for a given Activity or Fragment, full support for Bitmap re-use for RGBA_F16 Bitmaps, support for decoding videos from resources as AssetFileDescriptors, support for MediaMetadataRetriever.getScaledFrameAtTime to reduce memory usage when decoding video frames, and support for transcoding BitmapDrawables to byte arrays. Bug fixes include cleaning up @TargetApi annotations, adding @Nullable/@NonNull annotations, fixing skipMemoryCache(true) completing from memory cache, fixing decoding interlaced and downsampled GIFs as static images, adding more devices requiring lock for Bitmap operations, fixing race condition NPE on simultaneous first loads, making annotation processor tests pass on Windows, fixing NPE and RuntimeExceptions in DefaultConnectivityMonitor, trimming memory cache to half of maximum size on background, fixing StateVerifier exception in ResourceEncoder, fixing NPE error message in ResourceDrawableDecoder, fixing IllegalStateException when error request is cleared while running, cleaning up accessor classes, updating OkHttp and removing workaround for ClassCastException on O, adding missing annotations to generated classes, and avoiding exceptions in LruBitmapPool."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v4_6_0",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.6.0",
+      "tag_name": "v4.6.0",
+      "title": "Glide 4.6.0",
+      "time_hint": "2018-02-01",
+      "published_at": "2018-02-01T16:59:08Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v4.6.0",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide 4.6.0\nTag: v4.6.0; draft: False; prerelease: False; published_at: 2018-02-01T16:59:08Z; created_at: 2018-02-01T16:28:34Z\nRelease notes:\nThis is the January release of Glide.\n## Features\n* Use buffered streams when writing Bitmap data (860f7d041dd00e6032d71ff8483ac2a9d30441ec)\n* Allow re-using ARGB_8888 and RGBA_F16 Bitmaps via re-configuration (2cd953c63cf266bae37293ce536de4fb04b8e7e0, 17e0943fdc9e24ce4f105df53e91c7cdea60edf6)\n## Bugs\n* Return the correct size of RGBA_F16 Bitmaps in Util.getBitmapByteSize to avoid obtaining incorrectly sized Bitmaps for re-use in Downsampler (a198ef627d3537d460d2eb5d64d15de1803f0f6c)\n* Avoid converting RGBA_F16 Bitmaps to ARGB_8888 when running transformations that add transparent pixels (73277df1debcf894aece03f0d1b2852281c266a5)\n* Avoid an exception when loading remote images that aren't yet in the cache as Files with ``DiskCacheStrategy.AUTOMATIC`` (0917ef365ea35ca3e0f1eb12a2b7c843c84042f3, #2824)\n* Avoid inefficiently trying identical parts of load paths multiple times (9d3a6ff872c0c0d753fd8f37ba0a80d487277d76, thanks to `paulsowden@`)\n## Behavior Changes\n* Wide gamut PNGs that were decoded as RGBA_F16 even when BitmapFactory’s inConfig was set to ARGB_8888 may be affected by improved handling of RGBA_F16 when decoding and transforming images. If you see any issues decoding or transforming PNGs on Android O or higher, please file an issue so we can investigate.\n## Breaking Changes\n* Added correct Nullable annotations to all generated classes (35f6a0a43bf8ac645c8c5d0cb82f2936f172f7f9, thanks to @SUPERCILEX)\n* Added correct Nullable annotations to RequestManager and other manager classes (bfa237c19a7d742a4911e2744d174ae82f420ac0, thanks to @SUPERCILEX)\n* Add Nullable annotations to the load package (e9f682f9586a68f9322d978dda4856957167ff0b, thanks to @SUPERCILEX)\n## Build Changes\n* Cut build times for Glide by around a factor of two by parallelizing static analysis and unit test tasks on the main library package and removing the redundant release variants across all modules (3968ccbc8815409165cec630f28bb44ce350b30a, 1c7434aced9e9c9ad1bd8a90bc1c08eeb7587a4a, 3af80f43b8c7d4dd36ad149f7a5dc647b258330a, 95637cfcf37a4d9acf05aa3e46dff6f7799f763a)",
+      "memory_unit_text": "In the bumptech/glide release v4.6.0, the January release of Glide features using buffered streams when writing Bitmap data and allowing re-use of ARGB_8888 and RGBA_F16 Bitmaps via re-configuration. Bug fixes include returning correct size of RGBA_F16 Bitmaps in Util.getBitmapByteSize, avoiding conversion of RGBA_F16 to ARGB_8888 during transformations adding transparent pixels, avoiding exception when loading remote images not in cache as Files with DiskCacheStrategy.AUTOMATIC, and avoiding inefficiently trying identical load path parts multiple times. Behavior changes note that wide gamut PNGs decoded as RGBA_F16 may be affected by improved handling. Breaking changes add correct Nullable annotations to generated classes, RequestManager, and load package. Build changes cut build times by parallelizing tasks and removing redundant release variants."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v4_6_1",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.6.1",
+      "tag_name": "v4.6.1",
+      "title": "Glide 4.6.1",
+      "time_hint": "2018-02-02",
+      "published_at": "2018-02-02T15:42:27Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v4.6.1",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide 4.6.1\nTag: v4.6.1; draft: False; prerelease: False; published_at: 2018-02-02T15:42:27Z; created_at: 2018-02-02T15:21:28Z\nRelease notes:\nThis is a bugfix release of Glide 4.6.0\n## Bugs\nFixes an issue where pom files in the 4.6.0 release did not list the appropriate dependencies for Glide's various components (#2863)",
+      "memory_unit_text": "In the bumptech/glide release v4.6.1, a bugfix release for Glide 4.6.0, the only fix addresses an issue where pom files in the 4.6.0 release did not list the appropriate dependencies for Glide's various components."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v4_7_0",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.7.0",
+      "tag_name": "v4.7.0",
+      "title": "Glide 4.7.0",
+      "time_hint": "2018-04-10",
+      "published_at": "2018-04-10T22:21:40Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v4.7.0",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide 4.7.0\nTag: v4.7.0; draft: False; prerelease: False; published_at: 2018-04-10T22:21:40Z; created_at: 2018-04-10T20:20:18Z\nRelease notes:\n## Features\n* Added support for data Uris when they're provided as Uris (17c1c3d5781e953379904a60bae08524632e5053)\n* Improved scrolling performance by optimizing some Glide internal calls (7664c826ef2a55c67a4b55fbe61e33203355f2ee, d7635bda9105dbeb27ed8a3fbda69832396960f5, 7ff3bdeed52d6047e8e9f879ccb3f67afe50fa2d, thanks to paulsowden@)\n* Added support for downsampling in `VideoBitmapDecoder` (97d130d338349220cc8158141bbae1dfda496efe)\n* Provide better default names for annotation generated classes (58bcf53681e8944add93c8680578fa7fdd617785, thanks to @SUPERCILEX)\n## Bugs\n* Improved handling of cancellation in `VolleyStreamFetcher` (a690f38859ebf5f4f06172060596842a35cc16d8)\n* Improved handling of `TRIM_MEMORY_RUNNING_CRITICAL` (d939314e04b26709e7e890ba8f88494551111e23, thanks to @ygnessin)\n* Avoid delaying the first few requests started in Fragments or Activities by defaulting `RequestManagers` to started when the containing Activity or Fragment is started (7d1898e92600a6a2698d72e12ec26c6715fb8fc5)\n* Fixed failures in annotation processor for classes with `_` in the package name (99723e3e7e14eecd908685da630d522e0e304b40, thanks to @TWiStErRob)\n* Obey themes when retrieving drawables when the appcompat support library is present (5212e953ff8fb0db390214eafb5a89b826884142, thanks to @julianostarek)\n* Fixed a bug that could cause loading another application's launcher icon to fail if the calling application's support library version didn't match exactly (f508d7cce947a8075806e088e798cfb6593647b0)\n* Fixed a bug where a pixel was swapped in the output of `GifDecoder` (7fb8b1258a3aabbedad3b8d15f59c8091498160a, thanks to @mtopolnik)\n## Behavior Changes\n* VideoBitmapDecoder will now obey `DownsampleStrategy` (97d130d338349220cc8158141bbae1dfda496efe)\n* Preload ahead the first page when using the `RecyclerView` or `ListView` preloader before the user scrolls for the first time (dd7fe186e0eb4ea2b17f8611317a2714b81ff03b, thanks to Anton111111)\n## Breaking Changes\n* Made `GlideBuilder.build` package private (914060e00a9a766017560276a2dd9a42dc9b2874)\n* Deprecated non-support fragments (29d481ccdc8a0f0d7135359d970de071f73b6922, thanks to @jaredsburrows)\n* Removed deprecated constructors in transformation implementations (05e3215ceca003ee295ed373f86e17caa3568c10, b68ba436aa8d022fdf906c010fabb0d690f3d18a, 2d0bc2de5c86d7f56ca77748733511669f80d32a)\n* Removed `ComponentsCallbacks` from `RequestManager` (1937b055db40557206cb7ea8499c37e43d9ec22f)\n## Build Changes\n* Updated to Gradle 4.6 (3a7e262fe4c530a86c8064fb5d22a4fb0cc73e84, 86f327664c456360dc1d3f403e88c62059561969, thanks to @jaredsburrows)\n* Improved `NonNull` checks for Kotlin (a1f5f1008d4e9588ad37acd731d73bd63903440c, thanks fo @mariotaku)",
+      "memory_unit_text": "In the bumptech/glide release v4.7.0, Glide adds support for data Uris when provided as Uris, improves scrolling performance by optimizing internal calls, adds support for downsampling in VideoBitmapDecoder, and provides better default names for annotation generated classes. Bug fixes include improved cancellation handling in VolleyStreamFetcher, improved handling of TRIM_MEMORY_RUNNING_CRITICAL, avoiding delay of first requests in Fragments/Activities by defaulting RequestManagers to started, fixing annotation processor failures for classes with '_' in package name, obeying themes when retrieving drawables with appcompat, fixing loading another application's launcher icon with mismatched support library version, and fixing a pixel swap in GifDecoder output. Behavior changes include VideoBitmapDecoder obeying DownsampleStrategy and preloading ahead the first page in RecyclerView/ListView preloader. Breaking changes make GlideBuilder.build package private, deprecate non-support fragments, remove deprecated constructors in transformation implementations, and remove ComponentsCallbacks from RequestManager. Build changes update to Gradle 4.6 and improve NonNull checks for Kotlin."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v4_8_0",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.8.0",
+      "tag_name": "v4.8.0",
+      "title": "Glide 4.8.0",
+      "time_hint": "2018-08-16",
+      "published_at": "2018-08-16T17:10:41Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v4.8.0",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide 4.8.0\nTag: v4.8.0; draft: False; prerelease: False; published_at: 2018-08-16T17:10:41Z; created_at: 2018-08-16T16:05:58Z\nRelease notes:\n## Features\n* Multiple `RequestListener`s can be added to a single request (93289994a4ba59c6251aad0ccdf332c0d758d9c7, thanks to Adrian)\n* Added a safer version of Glide's base target methods that force callers to implement `onLoadCleared` and deprecated the unsafe versions. Failing to implement onLoadCleared in\na Target can lead to UIs displaying incorrect images, runtime exceptions, or various other [resource re-use errors](http://bumptech.github.io/glide/doc/resourcereuse.html#common-errors) (3a7060777d17fa4d9ca2b68b019fd2d448f54ea6, thanks to azlatin@).\n## Bugs\n* HEIF orientation is supported on O MR1 and higher via ExifInterface (a3f8114d015be983d365410fa0655de95fb80fef)\n* Improved error message for network failures (#2894, ff463d779ef8bccffc224e3647dbaf6dbc27fd57)\n* Placeholder/error/fallback drawable and id variants now replace previous calls to the same method with the other variant. For example, placeholder(Drawable) will replace previous calls to .placeholder(R.id.xyz)(2dccb5c2fb265cbfa67b328cea30e922c67feb9e)\n* Improved synchronization in ModelLoaderRegistry (62e6c11e6e4e4d0cf5f4c380219fe10129bb2694, thanks to @jnlopar)\n## Deprecations\n* Deprecated `SimpleTarget` and `ViewTarget`, see the `CustomViewTarget` description in Features in these release notes for more detail.\n## Behavior Changes\n* Requests that are started with a paused RequestManager, usually in a paused Activity or Fragment, are immediately paused so that they display a placeholder instead of nothing (a55e935eba859b9ea4f6e4357b8ac4e7e4a8327f)\n## Breaking Changes\n* The deprecated `PREFER_ARGB_8888_DISALLOW_HARDWARE ` `DecodeFormat` has been removed. Use `RequestOptions#disallowHardwareConfig()` instead (7eb59f7f217adc7b0e017d586ea0814bf75c53d0)\n* Remove `pause()` and `isPaused()` from the internal `Request` interface (9089752d2a4f4ccd6e7a6a7bbf7ea85db3f0949b)\n* Glide now uses resource ids (in `CustomViewTarget`) and therefore can no longer be released as a straight jar.\n## Build Changes\n* Added support for androidx annotations (c3328fe63214c0aedefca3d5496bb222a2fd29ef, thanks to @colinrtwhite)\n* Updated to Android Gradle 3.1.3.",
+      "memory_unit_text": "In the bumptech/glide release v4.8.0, Glide features allowing multiple RequestListeners on a single request and adding a safer version of base target methods that force callers to implement onLoadCleared, deprecating unsafe versions. Bug fixes include supporting HEIF orientation on O MR1+ via ExifInterface, improving error message for network failures, making placeholder/error/fallback drawable and id variants replace previous calls to the same method with the other variant, and improving synchronization in ModelLoaderRegistry. Deprecations include SimpleTarget and ViewTarget in favor of CustomViewTarget. Behavior changes include immediately pausing requests started with a paused RequestManager. Breaking changes remove deprecated PREFER_ARGB_8888_DISALLOW_HARDWARE DecodeFormat, remove pause() and isPaused() from internal Request interface, and note that Glide now uses resource ids and can no longer be released as a straight jar. Build changes add support for androidx annotations and update to Android Gradle 3.1.3."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v4_9_0",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.9.0",
+      "tag_name": "v4.9.0",
+      "title": "Glide 4.9.0",
+      "time_hint": "2019-02-14",
+      "published_at": "2019-02-14T20:53:02Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v4.9.0",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide 4.9.0\nTag: v4.9.0; draft: False; prerelease: False; published_at: 2019-02-14T20:53:02Z; created_at: 2019-02-14T20:13:32Z\nRelease notes:\n## Features\n* Allow applying RequestOptions directly in a RequestBuilder without the generated API (ed20643)\nFor example previously to apply centerCrop you'd have use a static method and `apply()`:\n```java\nGlide.with(fragment)\n.load(url)\n.apply(centerCropTransform())\n.into(imageView);\n```\nOr use the generated API and the annotation processor:\n```java\nGlideApp.with(fragment)\n.load(url)\n.centerCrop()\n.into(imageView);\n```\nAfter this change, even without the generated API/annotation processor you can access standard RequestOptions methods directly:\n```java\nGlide.with(fragment)\n.load(url)\n.centerCrop()\n.into(imageView);\n```\nThe generated API is still required for API extensions and to include integration libraries. Hopefully this makes it easier for users who do not include integration libraries and for developers of libraries that are currently unable to use the generated API to use Glide.\n* Add Global/Activity/Fragment scoped RequestListeners (37127f0)\n* Add a CustomTarget class to make it easier to reduce some non-essential boilerplate when implementing custom  `Target`s. onLoadCleared still must be implemented by subclasses of CustomTarget (b3b2d7a)\n* Support loading resources from dynamic modules (#3308, b57ef34, thanks to @SUPERCILEX)\n* Add a varargs `.transform()` method to replace the equivalent `.transforms()` method (#2875, #3365, 8a26a6b8d93cc629d423a316b1838b841e672099, thanks to @aleien)\n* Make proguard rules consumable by users of the library (f7d8604, thanks to @rehlma)\n* Stop forcing all requests to be posted to the main thread to avoid unnecessary UI thread work and avoid delays caused by UI thread processing time for images loaded on background threads (8f1ea5c)\n* Add Animatable2Compat callbacks to GifDrawable so that users can be notified when a GIF animation with a non infinite loop count finishes (#3438, a150301, thanks to @AnwarShahriar)\n## Bugs\n* Fixed an issue where different types of requested resources (Bitmap vs Drawable etc) could share a cache key (cad83d2)\n* Work around an odd compiler bug creating new `ArrayList`s from other collections on some devices/versions of Android (#3296, 2ca790a)\n* Add Nullable/NonNull annotations to LazyHeaders.Builder (#3446, d6345fbbf19f9eb8434587f76a5c38e2232149cf, thanks to @r-ralph)\n* Add a transformation to rotate images (other than from EXIF) (1878585429e0579bfd1c2ca8af12a831fb23903d, thanks to @Gnzlt)\n* Fix a race that could lead to doing useless work in MultiModelLoader after cancellation (3c9f92f)\n* Fix a bug in SizeConfigStrategy that could lead to a returned Bitmap having an incorrect config (be51b4e)\n* Avoid classifying all images with non-0 exif orientations as having transparency to allow them to be cached as JPEGs instead of PNGs (e515f47)\n* Add a debug API that allows apps to attach a stack trace showing where a Glide request originated from. Note that this is fairly expensive and isn't meant to be used in production (114b885)\n* Fix bugs handling resource Uris that point to resources in other applications (e2df4d068840ea04b9e448347f062b964eb0b0b7)\n## Deprecations\n* Deprecated `.transforms()`, it's replaced with the identical `.transform()` method (8a26a6b8d93cc629d423a316b1838b841e672099)\n## Behavior Changes\n* RequestListeners for requests started on background threads can now be called on a background thread (8f1ea5c)\n## Breaking Changes\n* Subclasses of RequestBuilder/RequestOptions may be broken by ed20643. Typically the breakage is relatively simple to fix, but the exact methods that need to be called or that are exposed may have changed for subclasses.\n## Build Changes\n* Add support for incremental annotation processing (#3508, a16a1baa140c9b87b9a68a2a3b91047fd60ba5d8, thanks to @technoir42)",
+      "memory_unit_text": "In the bumptech/glide release v4.9.0, Glide allows applying RequestOptions directly in a RequestBuilder without the generated API, adds Global/Activity/Fragment scoped RequestListeners, adds a CustomTarget class to reduce boilerplate, supports loading resources from dynamic modules, adds a varargs .transform() method, makes proguard rules consumable, stops forcing all requests to be posted to the main thread, and adds Animatable2Compat callbacks to GifDrawable. Bug fixes include fixing different resource types sharing a cache key, working around an ArrayList compiler bug, adding Nullable/NonNull annotations to LazyHeaders.Builder, adding a transformation to rotate images, fixing a race in MultiModelLoader after cancellation, fixing a bug in SizeConfigStrategy returning incorrect config, avoiding classifying non-0 exif orientation images as having transparency, adding a debug API to attach stack traces to requests, and fixing handling of resource Uris pointing to other applications. Deprecations include .transforms() replaced by .transform(). Behavior changes note that RequestListeners for background thread requests can be called on background threads. Breaking changes may affect subclasses of RequestBuilder/RequestOptions. Build changes add support for incremental annotation processing."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v4_10_0",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.10.0",
+      "tag_name": "v4.10.0",
+      "title": "Glide 4.10.0",
+      "time_hint": "2019-09-18",
+      "published_at": "2019-09-18T22:44:32Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v4.10.0",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide 4.10.0\nTag: v4.10.0; draft: False; prerelease: False; published_at: 2019-09-18T22:44:32Z; created_at: 2019-09-18T16:16:41Z\nRelease notes:\n## Features\n* Added a Mocks library to mock GlideExecutor in unit/emulator tests (e021f6bf83c909a7511c8182cce0af9c58912834)\n* Added an integration library to integrate with [Guava's ListenableFuture class](https://github.com/google/guava/wiki/ListenableFutureExplained) (9fb1036645ec4e7cb159e7ca215f85375d8e4f67)\n* Add granular options for rounded corners (f36a9fa9182227d7cebb3b5eaa6cc26e7d26aea5, thanks to dlos@)\n* Include day/night mode in resource id cache keys (1b391c42f22e967c070a6a105b1e37730ab6ea6e)\n* Add an API that can be called on Glide manually to clear memory, especially when apps are backgrounded (8a094e972e686ddd1223371c268f0a4758e0b1ef, thanks to mikewallstedt@)\n* Add simple support for wide gamut color spaces (15a21b125d0d131df7bc405a947e69b4d40709ae, 7910f68b31c5f3fb465a2834b6b579464ef0f1c6)\n* Release more memory in the background on M+ (525e7ba82ec883fb518087879269836f888bd584)\n* Support Fragments not hosted by Acitivities (71359c7e385dc7d287f0da5d9e6d533ca41c76e4, thanks to Daniel Tomasiewicz)\n* Handle contexts with null application contexts (31b501d1955a7bbc1d3a6ed92307a2aa8c43e392, thanks to Daniel Tomasiewicz)\n## Bugs\n* Fixed incorrect downsampling for rotated images when using Target.SIZE_ORIGINAL (79dac0d1f522cab3d254f0fb91264e06e09568c6, thanks to sonyamollinger@)\n* Fixed returning negative byte values converting ByteBuffers to InputStreams (24f9c28eadc0a54d034bd0b75b4b3d7809f3c3b6, thanks to sonyamollinger@)\n* Make sure to cancel all preload requests in `cancelAll()` (047c22d77ebb497db29cf329c2388274ee413f20, thanks @paynemiller92)\n* Fixed a series of concurrency bugs introduced by allowing requests to start on background threads (bee634818cff229570d0fd392130cd76ea2c3639, 5cccdfba8bbced57669629f93c92a59eb0439382, 01ea6a544d6159ed986e4f8628a4d962a7aa520d, b2a46ef7a385abd5df38ee11b8be85868768739e, 6dc03d84d5a009e6a4535381f5b3ec8aeced2912, 4de2cda0a2a5ed08273b11b8796c2c2d1327e788, b96b00096607cee23763e4dd049a297d85b89911, 890712279a997ded1b22d64ea6059c911b2f8a55, 53438b90f982d27652c2bae7cd9daf9be8d5a03a)\n* Make sure the specified numbers of threads are actually used in the animation executor (#3575, ac4aa53c6b8e4f7fa4b014ee84b858610106ec4e, thanks to @yuriy-budiyev)\n* Avoid blinking when calling `RequestManager#pause` when the thumbnail portion of a request is complete the full portion is still running (2f561534cd49171d0e372f1c613d1aa4ddcae36d)\n* Make it less likely to mix support and non-support fragments (219330630652a6d9bd088c0a7e971cf796872de1, thanks to @limuyang2)\n* Avoid downsampling incorrectly in FitCenter and CenterInside when there was\nan exact power of 2 match in one dimension but not the other (3df54453089c5ec02af552c713d5907985aee12a)\n* Always use orientation corrected sizes in `Downsampler` (#3673, ebdf8beb59df8d62c0a978ad967098dae8f666cf)\n* Fix transparency in GifDecoder when using RGB_565 (29c553df470401211dd080c2b3c8b69916e7ea25, thanks to @lihongyu)\n* Handle security exceptions trying to open MediaStore Uris when applications are given access to a MediaStore Uri via an Intent (#3504, 9c48b48eb17d8d1c005352730d66d0dc85da5efe)\n* Fix an unused AnimationExecutor (7bb6f11c43c245a4e150d93d293a40c75fe99796, thanks to @phxnirvana)\n## Deprecations\n* Deprecate method to set custom tags in `CustomViewTarget` (c8d646ebf857a676a6b682b5e78d382c52b8c5ab)\n## Behavior Changes\n* Custom tags in `CustomViewTarget` are now ignored because they cause Glide to ignore calls to `clear()` (c8d646ebf857a676a6b682b5e78d382c52b8c5ab)\n## Breaking Changes\n## Build Changes\n* Updated target SDK to 28 (#3880, thanks to @prempalsingh)\n* Disable BuildConfig generation (4039981e719071473fa66515027188bdb71313ad, thanks to @technoir42)\n* Update Truth (5bb469166d49ddb49d7e164fded2b58b48d45916, cd37a54f076392402af6df7b80bda07d96e012c7, thanks to @c...",
+      "memory_unit_text": "In the bumptech/glide release v4.10.0, Glide adds a Mocks library to mock GlideExecutor in tests, an integration library for Guava's ListenableFuture, granular options for rounded corners, day/night mode in resource id cache keys, an API to manually clear memory, simple support for wide gamut color spaces, releasing more memory in background on M+, support for Fragments not hosted by Activities, and handling contexts with null application contexts. Bug fixes include fixing incorrect downsampling for rotated images with Target.SIZE_ORIGINAL, fixing negative byte values converting ByteBuffers to InputStreams, canceling all preload requests in cancelAll(), fixing concurrency bugs from background thread requests, ensuring specified numbers of threads are used in animation executor, avoiding blinking when pausing requests with thumbnail, making it less likely to mix support and non-support fragments, avoiding incorrect downsampling in FitCenter and CenterInside, always using orientation corrected sizes in Downsampler, fixing transparency in GifDecoder with RGB_565, handling security exceptions with MediaStore Uris, and fixing an unused AnimationExecutor. Deprecations include custom tags in CustomViewTarget. Behavior changes ignore custom tags in CustomViewTarget. Build changes update target SDK to 28, disable BuildConfig generation, and update Truth."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v4_11_0",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.11.0",
+      "tag_name": "v4.11.0",
+      "title": "Glide 4.11.0",
+      "time_hint": "2020-01-08",
+      "published_at": "2020-01-08T23:50:21Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v4.11.0",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide 4.11.0\nTag: v4.11.0; draft: False; prerelease: False; published_at: 2020-01-08T23:50:21Z; created_at: 2020-01-08T17:50:22Z\nRelease notes:\n## Features\n* Add a thread timeout for Glide's threads to reduce memory when Glide is infrequently used in an application (db3acef)\n* Add getters to Bitmap Pool for cache statistics (1382e56, thanks to vtsuei@)\n* Add methods to concurrent integration libraries that allow releasing resources back to Glide's pool (277765705)\n* Allow decoding videos from ByteBuffers so that remote videos can be decoded when using a disk cache strategy other than the default (9190698, #4021)\n## Bugs\n* Improve ModelLoader error text (83ba102)\n* Fix errors with thumbnail loaders that could cause flashing to placeholders (690f815)\n* Fix an exception using Arrays.addAll on some devices/versions of Android (42d3f07)\n* Work around framework bug that breaks heic/heif decoding on Android Q for applications that opt in to legacy storage or request ACCESS_MEDIA_LOCATION (1c51b24)\n* Improve hardware bitmap use on P+ where more file descriptors are available (e8c841c)\n* Avoid removing caller added listeners in GlideFutures (0acd87c)\n* Avoid propagating unexpected callbacks from cancelled or failed model loaders (7e750ca)\n* Switch to the support exif library to avoid spurious logs (bd6f894, #3851)\n* Fix deadlock when recursively clearing resources, typically GIFs (100ac4a)\n## Deprecations\n## Behavior Changes\n* Allow decoding files via FileDescriptors when all other types fail so that files with headers exceeding the buffer size can be decoded (typically DNGs with metadata at the end of the file (9281d8e, thanks to timurrrr@)\n## Breaking Changes\n## Build Changes",
+      "memory_unit_text": "In the bumptech/glide release v4.11.0, Glide adds a thread timeout for Glide's threads to reduce memory, getters to Bitmap Pool for cache statistics, methods to concurrent integration libraries to release resources back to Glide's pool, and support for decoding videos from ByteBuffers. Bug fixes include improving ModelLoader error text, fixing errors with thumbnail loaders causing flashing, fixing an exception using Arrays.addAll on some devices, working around a framework bug breaking heic/heif decoding on Android Q, improving hardware bitmap use on P+, avoiding removing caller added listeners in GlideFutures, avoiding propagating unexpected callbacks from cancelled or failed model loaders, switching to the support exif library to avoid spurious logs, and fixing a deadlock when recursively clearing resources. Behavior changes allow decoding files via FileDescriptors when all other types fail. No deprecations or breaking changes."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v4_12_0",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.12.0",
+      "tag_name": "v4.12.0",
+      "title": "Glide 4.12.0",
+      "time_hint": "2021-01-29",
+      "published_at": "2021-01-29T23:54:07Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v4.12.0",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide 4.12.0\nTag: v4.12.0; draft: False; prerelease: False; published_at: 2021-01-29T23:54:07Z; created_at: 2021-01-29T22:56:52Z\nRelease notes:\n## Features\n* Add a [Cronet](https://developer.android.com/guide/topics/connectivity/cronet) integration library (ba995829f495379df82653bc07542006c15f4cb9, ff2984963cbf0f31e374228c7f702f27b5753336, 114251e6ce43fb67ca1528a0f24dc3c7e73eb0bf, 1dd0576f8d133e26a525a746b2454d1ee5c74762, 3d54ef50ea4fa41694695971b7d858435c784057)\n* Add support for width/height to the SvgDecoder in the sample app (@chggr, 5a814a1ca472c6a174cefec7c2cb60a66a53321c)\n* Add a thumbnail method that takes a list of RequestBuilders so that you don't have to nest a long series of requests (67b01f62c0e98bb4f517708128be3107b22367cb)\n* Add a .error() method that takes a model to more easily start a fallback request. There's a bit of nuance with how this is treated, so if you use it, please read the javadoc carefully (d1aacb5e116a94f70b7f5e4531ece93ab08a4cd4, e442557fc5ff640e9988c850bfe4d7be73c09b18)\n## Bugs\n* Hardcode disallowed device models for hardware Bitmaps (0647c410a0a6dc918f56ff3a4105557dc5313477, 90a657b6591fb97fc47a8444ab778a348cef0fcb, ddb3934a3d1f43dd184b3b9534a8e621fabff713)\n* Fix flickr sample by allowing non-https urls (@landicefu, b2a361a8faf3ba56d433bb476b892672911dfaa2)\n* Fix a verificatio nerror in ParcelFileDescriptorRewinder on API levels < 21 (@mkj-gram , 5b117b315a3bd90ae96d7eda61badb94e78c3613)\n* Fix never returning larger size keys in Flickr sample (@valentinilk, 78ecfd2212015d0ad650562652dfe44b76409789)\n* Fix bugs caused by items changing sizes while in Glide's LruCache (5090b6d004fabbc0ae50e0295fd50e2f13cb6357)\n* Fix annotation processor with more than 5 library modules on some platforms (#4106, 7cc865ac1a0141707aa3318bcd9b0250594d7464)\n* Fix ConcurrentModificationException due to race in Glide's trimMemory method (#4162, cce9375713d989cdd0958890b277150e61374135)\n* Note that RequestListener.onLoadFailed's model is Nullable (@opayen, 621e2d5ba6ee563f396c0b46521b3ce22fd8d226)\n* Fix an IllegalArgumentException in GifFrameLoader if the GIF is started before it's visible (@dalinaum, 1ae9a2af4e52afbeb4a9927fb535481cf39d7c21)\n* Avoid adding both support and non-support RequestManagers when Glide is used with a FragmentActivity as both a FragmentActivity and a regular Activity (8f354dc527b46a69a47713e6e625cee2750eb6a0)\n* Avoid a memory leak when starting RequestManagers in some cases (14a0e1acd07d76bc161de6d211f9cd7484918f61)\n* Workaround a JDK bug triggered sometimes by Registry (6aa7ad274ac6ec586997efcf0d51dd2091e8fadc)\n* Progress on some workarounds to avoid obscure Hardware Bitmap issues on versions of Android< P (edd96d80024a6a3cf2f6966664ff8543006967bb, 8584b450f3af6c18e0393a3bff015a62a08d5eb5, a3a3a6573addd83a5be031bbd55d29e7514ca446, b0a7efecf54723506bcaac2d801e29845f04f229, 7d7042c4f14d0f825f49183cd840ea22525bdf14, b451065702ff452349f3f08deb2f937fb3a83ab5)\n* Avoid claiming annotations in Glide's processor (@cushon, e9e5a2e0948ef1a8152953fc3f4de58f979b23b2)\n* Fix issues with clone/autoclone in RequestBuilder (332807aed4641967ef47cf3a1a61e57b0689aa17, 11530fd76903ea4c6b63d5b0697b42af6393476b)\n* Fix a bug where we could decode partial images for large PNG files where obtaining the metadata caused us to skip past the limit of our buffer (danfang@, 2b61482baa90175e0efdf4ec90f06a5051e1b370)\n* Make sure to rethrow in our exception handling streams to workaround an infinite loop in ExifInterface (59ec98c505c17b3efa882522c3312022d1ca88da)\n* Reduce the number of stat() syscalls in Glide's startup (5acc99f8fc7e772aeef8aa959ff2a9c203ab1aa6)\n## Deprecations\n## Behavior Changes\n* Better http status codes in HttpUrlFetcher failures (efe8023aed474e4bf1a596faf15ca1e4c5f9e34f)\n## Breaking Changes\n## Build Changes\n* Add a Gradle Wrapper Validation Github Action (@JLLeitschuh, d75bb3070797daaeae95be90af1e8c72084cdb1a)\n* Removed Monkeyrunner (5aa0b4f8e9d4c5b468b39db33c7e6eb2137...",
+      "memory_unit_text": "In the bumptech/glide release v4.12.0, Glide adds a Cronet integration library, support for width/height in SvgDecoder sample, a thumbnail method taking a list of RequestBuilders, and an .error() method taking a model for fallback requests. Bug fixes include hardcoding disallowed device models for hardware Bitmaps, fixing flickr sample by allowing non-https urls, fixing a verification error in ParcelFileDescriptorRewinder on API < 21, fixing never returning larger size keys in Flickr sample, fixing bugs caused by items changing sizes in LruCache, fixing annotation processor with more than 5 library modules, fixing ConcurrentModificationException in trimMemory, noting RequestListener.onLoadFailed's model is Nullable, fixing an IllegalArgumentException in GifFrameLoader if GIF started before visible, avoiding adding both support and non-support RequestManagers, avoiding a memory leak when starting RequestManagers, working around a JDK bug in Registry, progress on workarounds for obscure Hardware Bitmap issues on Android < P, avoiding claiming annotations in Glide's processor, fixing issues with clone/autoclone in RequestBuilder, fixing a bug decoding partial images for large PNG files, rethrowing in exception handling streams to workaround infinite loop in ExifInterface, and reducing stat() syscalls in startup. Behavior changes include better http status codes in HttpUrlFetcher failures. Build changes add a Gradle Wrapper Validation Github Action and remove Monkeyrunner."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v4_13_0",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.13.0",
+      "tag_name": "v4.13.0",
+      "title": "Glide 4.13.0",
+      "time_hint": "2022-02-08",
+      "published_at": "2022-02-08T00:43:25Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v4.13.0",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide 4.13.0\nTag: v4.13.0; draft: False; prerelease: False; published_at: 2022-02-08T00:43:25Z; created_at: 2022-02-07T23:21:36Z\nRelease notes:\n## Features\n* Add an integration library to support decoding AVIF (3fd8e777e2be6a3fedc5f5c5f688970a212a285f, f5e78ed03c99a9804285360b36b04d3089c80cff, 2b52437cd52bbacf0376d84aa2eec5b63ba53ac4)\n## Bugs\n* Improve performance of canceling pending requests (https://github.com/bumptech/glide/commit/627d04af1ec5d81c23908c27e1a646806dce7b30, thanks @yorickhenning)\n* Improve memory overhead when decoding byte[] and ByteBuffer (https://github.com/bumptech/glide/commit/042f6b57d511c9d1652d280f5d385d5fef071647)\n* Avoid returning duplicate transcode classes in the registry (https://github.com/bumptech/glide/commit/ce8b5e31d7c8ee8e98725142b9c22c478f78cefd, thanks @fightyz)\n* Avoid cancelling higher tier (usually higher resolution) preload requests when a lower tier completes (https://github.com/bumptech/glide/commit/4733d1d3309e0f9af1e751f266c5fb0f9fd3a9ce)\n* Decrease the maximum FD size limit for certain devices to avoid native crashes (808a685f3c538621d5dfecd9928d2f75a4b7f68e)\n* Fix memory leak caused by unusual activity/fragment lifecycle interactions (8bebf71e80c2cd1f260d919e6b0697436da6e302)\n* Fix decoding videos from assets (52a8cf84a9c10123777db805b235bf47e18ec234)\n## Deprecations\n* Deprecate .thumbnail(float) to simplify the thumbnail logic, particularly around request listeners. The same behavior can be easily reproduced by using .thumbnail() with a RequestBuilder on which you set size multiplier. (https://github.com/bumptech/glide/commit/aa23eedb79196c29c61b366d8c9b93c34564fe09)\n## Behavior Changes\n* Set the default color space to null instead of SRGB (https://github.com/bumptech/glide/commit/ce6852d372b2b6fe6d52fe039b7003b1891a8435, https://github.com/bumptech/glide/commit/9dc1f608540039c29931c22e7c7512caa842fe90, thanks @skyinu)\n* Fallback to decoding data from source if possible when writing the source to the disk cache fails (https://github.com/bumptech/glide/commit/755c39fb1ff49895ada9f13d808fa46153112980)\n* Avoid using deprecated APIs for detecting connectivity state on API 24+ (dbdae568a37e9aabdab4ceb0ab9c7294de53861d, 833ef21d4edd9f907cecbdc9e780fc88058bf66f)\n* Added support for detecting animated webp's to Glide's ImageHeaderParser (42654b298ebf2d2931a1b6d099f9f2b901dc37b1)\n## Breaking Changes\n## Build Changes\n* Bump Gradle version once, then replace gradle version with a checked internal one (https://github.com/bumptech/glide/pull/4484, https://github.com/bumptech/glide/commit/9f813390646d2cdaecece8fd96fa7fd8b8605217, https://github.com/bumptech/glide/commit/15d96483d36099a1d088cef4a5bccc234fc66ec4, thanks @EwoutH)\n* Replace Jcenter with Maven Central (https://github.com/bumptech/glide/commit/0d3204907f09c713e9dcf104e879b4dea8c2f5f6, https://github.com/bumptech/glide/commit/87a77cea15a0eed253fabc57ff36a1f9b3556fff)",
+      "memory_unit_text": "In the bumptech/glide release v4.13.0, Glide adds an integration library to support decoding AVIF. Bug fixes include improving performance of canceling pending requests, improving memory overhead when decoding byte[] and ByteBuffer, avoiding returning duplicate transcode classes in the registry, avoiding cancelling higher tier preload requests when a lower tier completes, decreasing the maximum FD size limit for certain devices to avoid native crashes, fixing a memory leak caused by unusual activity/fragment lifecycle interactions, and fixing decoding videos from assets. Deprecations include .thumbnail(float) to simplify thumbnail logic. Behavior changes set the default color space to null instead of SRGB, fallback to decoding data from source if writing to disk cache fails, avoid using deprecated APIs for detecting connectivity state on API 24+, and add support for detecting animated webp's to ImageHeaderParser. Build changes bump Gradle version and replace Jcenter with Maven Central."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v4_13_1",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.13.1",
+      "tag_name": "v4.13.1",
+      "title": "Glide v4.13.1",
+      "time_hint": "2022-02-23",
+      "published_at": "2022-02-23T20:07:42Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v4.13.1",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide v4.13.1\nTag: v4.13.1; draft: False; prerelease: False; published_at: 2022-02-23T20:07:42Z; created_at: 2022-02-23T18:57:11Z\nRelease notes:\n## Bugs\n* Fix a missing dependency in the AVIF integration library (#4751, thanks @vigneshvg, @msisuzney, @wangxuyang518)",
+      "memory_unit_text": "In the bumptech/glide release v4.13.1, a bugfix release, the only fix addresses a missing dependency in the AVIF integration library."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v4_13_2",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.13.2",
+      "tag_name": "v4.13.2",
+      "title": "Glide v4.13.2",
+      "time_hint": "2022-05-04",
+      "published_at": "2022-05-04T21:10:52Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v4.13.2",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide v4.13.2\nTag: v4.13.2; draft: False; prerelease: False; published_at: 2022-05-04T21:10:52Z; created_at: 2022-05-04T20:39:28Z\nRelease notes:\n### Bugs\n* Update AVIF dependency to fix proguard stripping code erroneously (https://github.com/bumptech/glide/issues/4761, e2b488c30d27138fecc7a3adc353c66b3756147f)",
+      "memory_unit_text": "In the bumptech/glide release v4.13.2, a bugfix release, the only fix updates the AVIF dependency to fix proguard stripping code erroneously."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v4_14_0",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.14.0",
+      "tag_name": "v4.14.0",
+      "title": "Glide v4.14.0",
+      "time_hint": "2022-09-28",
+      "published_at": "2022-09-28T17:52:48Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v4.14.0",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide v4.14.0\nTag: v4.14.0; draft: False; prerelease: False; published_at: 2022-09-28T17:52:48Z; created_at: 2022-09-27T23:46:17Z\nRelease notes:\n## Features\n* Add support for KSP (See [Download and Setup](https://bumptech.github.io/glide/doc/download-setup.html#kotlin---ksp) and [Generated API Deprecation](https://bumptech.github.io/glide/doc/generatedapi.html#this-page-and-the-generated-api-are-deprecated) for details on how to use the KSP processor and the features it does and does not support, 2a787b9ba4287dd1f1efd19b1139794ee8b530b6, 8bef56e2588a371363079a9e33053a9f1f663849, 272c6c390938189972767168a754c01d909810bc, 9f04fd005925ffc39c3e103e9e88a1a85977bee0, 4016448fc56179ac5fa6eaf352113617f04847a5, c35ad1351ee47314f69ad5ecc405a28fbf919298).\n* Add an alpha version of a Compose integration ([Docs](https://bumptech.github.io/glide/int/compose.html))\n* To support the Compose integration, add an alpha version of general Kotlin support, starting with utilities to convert a Glide request into a Flow ([Docs](https://bumptech.github.io/glide/javadocs/4140/integration/ktx/com.bumptech.glide.integration.ktx/index.html), 7d9e1a3659a23c58457338ce449a37cdcddc62fb)\n* Enable animated WebP Decoding on P+ using framework APIs (ad35f5e4fcd2e34750289fa1f9820579b2661f0c)\n* Allow Drawables to be loaded with specific themes (17cae33fd8a966f741495e5c8604661629821006)\n## Bugs\n* Register connectivity listeners on API < 24 on background threads  (96596ae9269e85f31d5c6a158c2ab92c16677703)\n* Disable ParcelFileDescriptor rewinding in Robolectric (9840c91e1b2d358d9c9367654eacd4b4719ed849)\n* Rewind ByteBuffers in between each image header parser to avoid spurious failures when multiple parsers read data (4f29adab64f6b43a10652f4d26ba3ecdaf0b5e47)\n* Avoid duplicate notifications of Targets when an error request builder is set (5c232dd12b5710c9bb8d940313e77351a39bc6a6)\n* Use the correct run reason in DecodeJob (1a2cfe36bf32a8b3d8f155cf8e66e145fcfc3ba7)\n## Deprecations\n* Deprecate Glide's Extensions, GlideApp, GlideRequest and GlideRequests. Extensions seem to be rarely used and add a lot of complexity to the otherwise fairly simple annotation processor. They're also trivially replicated with Kotlin's extension functions for people who're already using Kotlin. Without Extensions, GlideApp, GlideRequest and GlideRequests serve no additional purpose. Prior to Glide 4.9.0 they were used to merge RequestBuilder and RequestOptions, but now that's done in the library without codegen. See [Generated API Deprecation](https://bumptech.github.io/glide/doc/generatedapi.html#this-page-and-the-generated-api-are-deprecated) for details.\n* Deprecate Android framework Fragment support. Applications should use androidx Fragments instead, which we'll continue to support (e802964ddc838b4db776d45689e9dfd6f46a5b2c)\n## Behavior Changes\n* Initialize Glide's registry on a background thread to avoid some work on the main thread (6ba4b548cae12f3aa53634a59025069834c0ea14)\n* Update the state of a Request before calling Targets or RequestListeners. Request is generally treated as an internal API but it's possible this could result in some changes to the behavior of custom Targets or RequestListeners that try to use Request to introspect state (c38ce36cd6827251fbc5e49b79d4e83dec8d71be)\n## Breaking Changes\n## Build Changes\n* Removed Spotless (edf9d32aa4ea7c9ff7a9ddd346b6609ef9423deb)\n* gradle.properties versioning cleanup (3633e95064405744485ce469870bdfdb9428fbd9, 8875d30ee10d5432d8c872d45792678da01781eb, fd5e7df9fc8d43522a32b3be966f5895e78a8d15, b8fb588c2dcba0792747ccc1374b923bd9e1926a, thanks @TacoTheDank)\n* Update to Gradle 7+ (fdbb694e68d117553cdc89f32932e0a129c2c75f)\n* Fix some deprecation warnings in Gradle (31e7ce34ebad92ecebb7ec9d6288be30c748b830, 2895b351fa6dde68ab5dc85c591f47bd4a395475, thanks @TacoTheDank)\n* Use a version of jarjar from maven rather than embedding a jar (faf85ec4351893eef81b52e982fa1067af1e8fdd)\n* Removed the exif orientat...",
+      "memory_unit_text": "In the bumptech/glide release v4.14.0, Glide adds support for KSP, an alpha version of a Compose integration, an alpha version of general Kotlin support including converting a Glide request into a Flow, enabling animated WebP decoding on P+ using framework APIs, and allowing Drawables to be loaded with specific themes. Bug fixes include registering connectivity listeners on API < 24 on background threads, disabling ParcelFileDescriptor rewinding in Robolectric, rewinding ByteBuffers between image header parsers, avoiding duplicate notifications of Targets when an error request builder is set, and using the correct run reason in DecodeJob. Deprecations include Glide's Extensions, GlideApp, GlideRequest, GlideRequests, and Android framework Fragment support. Behavior changes include initializing Glide's registry on a background thread and updating the state of a Request before calling Targets or RequestListeners. Build changes remove Spotless, clean up gradle.properties versioning, update to Gradle 7+, fix deprecation warnings, use jarjar from maven, and remove the exif orientation."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v4_14_1",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.14.1",
+      "tag_name": "v4.14.1",
+      "title": "Glide v4.14.1",
+      "time_hint": "2022-09-30",
+      "published_at": "2022-09-30T00:25:13Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v4.14.1",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide v4.14.1\nTag: v4.14.1; draft: False; prerelease: False; published_at: 2022-09-30T00:25:13Z; created_at: 2022-09-29T23:49:58Z\nRelease notes:\n## Bugs\n* Fixes an incorrect dependency in the ksp modules POM file (https://github.com/bumptech/glide/issues/4908, 4d4f3ebe4b8d4aeb7dc833d1787442f04cf8d785)",
+      "memory_unit_text": "In the bumptech/glide release v4.14.1, a bugfix release, the only fix addresses an incorrect dependency in the ksp modules POM file."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v4_14_2",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.14.2",
+      "tag_name": "v4.14.2",
+      "title": "Glide v4.14.2",
+      "time_hint": "2022-10-07",
+      "published_at": "2022-10-07T19:40:04Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v4.14.2",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide v4.14.2\nTag: v4.14.2; draft: False; prerelease: False; published_at: 2022-10-07T19:40:04Z; created_at: 2022-10-07T19:19:52Z\nRelease notes:\n## Bugs\n* Allow LibraryGlideModules to be processed in separate code modules when using KSP (#4911, 5245e821e0b61a99685dc129ac83e1bb044275d2)\n* Fix recomposition when properties of RequestBuilder change (#4916, f3d6ff7603e4759a89ba7bd9a8b1a77281e3a4b0)\n## Behavior Changes\n* Proper implementation of equals/hashcode for BaseRequestOptions and TransitionOptions subclasses. Previously comparing these objects was either not symmetric or certain properties were not included in `equals()` and `hashCode()`. Code that relied on the equals/hashcode methods may break if it accidentally relies on the old bad behavior. (f3d6ff7603e4759a89ba7bd9a8b1a77281e3a4b0)",
+      "memory_unit_text": "In the bumptech/glide release v4.14.2, bug fixes include allowing LibraryGlideModules to be processed in separate code modules when using KSP and fixing recomposition when properties of RequestBuilder change. Behavior changes include a proper implementation of equals/hashcode for BaseRequestOptions and TransitionOptions subclasses, which may break code relying on the old behavior."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v4_15_0",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.15.0",
+      "tag_name": "v4.15.0",
+      "title": "Glide v4.15.0",
+      "time_hint": "2023-02-24",
+      "published_at": "2023-02-24T18:45:40Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v4.15.0",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide v4.15.0\nTag: v4.15.0; draft: False; prerelease: False; published_at: 2023-02-24T18:45:40Z; created_at: 2023-02-24T18:08:45Z\nRelease notes:\n## Features\n* Improved support for dark mode, RTL and other theme attributes on resources loaded with Glide (eab4c3742d02ad9f173773007ffc0077b8ace98d, 04f198eb186bf7bc800f056a5fc104eff88b59f1, e6f5eec4ff0d70be28e17c040ee0177edafd8da7, a912e0fba1142da4f939c12852d79bdf6192666e, 966815704feedc6d524a9724c74b88a28ba8b40e, 31821f5ee0556560f5ee85552f6bfe92e52a178d, f73f00344b31bdad87ea90c722174895389904e5)\n* Robolectric shadow and legacy cleanup (4298bb7609eb97094406919189c5b147ab6af822, 26a393bb3745977ea4e75fde7dbf06d2b7fbb5b4, 330b9a888e762dac3b2a0d7ec321a088fa90be8b, e247bb7f486a9c36a0f8dec2e3441195b26be727, c283043e722466142d026609ab2599ece6eac247, thanks @hoisie)\n* Add support for okhttp4 (464002b62496fc7b4c913563ae9496ee2f7764c1)\n* Add support for animated AVIF (895e2f7bb2b060cb88d460d0660a68ca0d9dec6c, d704c8954ae667483afa9a8efdb8b0059e1e979e, 62654be8ba337afa24e235d23902129f787e87d8, e58802e60b36ba76ece309a2c00fb66226498655, thanks @vigneshvg)\n* Add support for RGB_565 in Avif (098c1a40d9e85398f9a16d4683c510c665664d4b, thanks @vigneshvg)\n## Compose\n* Add loading and failure composable parameters so you can set a custom composable while Glide is loading or after an image load fails (d5fc241c21bfbf5c162e5109e48a4af113aa39cb)\n* Make automatic transformations based on ContentScale optional (89472a35df81ca8924ad31870ccd17a5a800674e, #4943)\n* Avoid throwing exceptions when Composables have unexpected sizes (6cb9486abc77d2fd37eda7de3f5a01c88725682d)\n* Simplify the preloading API by providing a data wrapper that triggers preloading based on access (e63c5d216520baecaaad9273699765b8c02b28be)\n* Show placeholder resources in Compose previews (01ed966e24ae26fac1dff9ef46b509e6d607b621, 0f9aea2979fbb5ea2cf763182fe13c9785a227d7)\n## Bugs\n* Workaround VP8 decoding issues on ARC devices (4bfda588b628389134c7a1269cc8202bb69510bf)\n* Improve error messages when Glide is recursively initialized or application code throws during Glide's initialization (00e8c233a1ddf65092d840e96e94a11ff9d8b26f)\n* Fix a race that can result in RequestManagers leaking (4affb8d2d9f4ca15c7953ca7322c52fb1e2dab1b)\n## Deprecations\n## Behavior Changes\n* Use Android's Lifecycle for androidx Fragments / Activities instead of adding a hidden Fragment (18bba927a5e5fe7d07ada9667e9e503b9f0596a2)\n## Breaking Changes\n## Build Changes",
+      "memory_unit_text": "In the bumptech/glide release v4.15.0, Glide improves support for dark mode, RTL and other theme attributes on loaded resources, adds Robolectric shadow and legacy cleanup, adds support for okhttp4, adds support for animated AVIF, and adds support for RGB_565 in Avif. Compose-specific features include adding loading and failure composable parameters, making automatic transformations based on ContentScale optional, avoiding exceptions when Composables have unexpected sizes, simplifying the preloading API, and showing placeholder resources in Compose previews. Bug fixes include working around VP8 decoding issues on ARC devices, improving error messages when Glide is recursively initialized or application code throws during initialization, and fixing a race that can result in RequestManagers leaking. Behavior changes use Android's Lifecycle for androidx Fragments/Activities instead of adding a hidden Fragment."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v4_15_1",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.15.1",
+      "tag_name": "v4.15.1",
+      "title": "Glide v4.15.1",
+      "time_hint": "2023-03-13",
+      "published_at": "2023-03-13T19:03:29Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v4.15.1",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide v4.15.1\nTag: v4.15.1; draft: False; prerelease: False; published_at: 2023-03-13T19:03:29Z; created_at: 2023-03-13T18:53:13Z\nRelease notes:\n## Features\n## Compose\n## Bugs\n* Fix a bug in the KSP processor preventing it from recognizing or including any of Glide's library modules, or any other library module compiled with Glide's java annotation processor (com.github.bumptech.glide:compiler:X.XX.X). (#5043, 16306e89dece9908e9ada2382f4b94b591120ea5)\n## Deprecations\n## Behavior Changes\n## Breaking Changes\n## Build Changes",
+      "memory_unit_text": "In the bumptech/glide release v4.15.1, a bugfix release, the only fix addresses a bug in the KSP processor preventing it from recognizing or including any of Glide's library modules, or any other library module compiled with Glide's java annotation processor."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v4_16_0",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.16.0",
+      "tag_name": "v4.16.0",
+      "title": "Glide 4.16.0",
+      "time_hint": "2023-08-21",
+      "published_at": "2023-08-21T07:07:23Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v4.16.0",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide 4.16.0\nTag: v4.16.0; draft: False; prerelease: False; published_at: 2023-08-21T07:07:23Z; created_at: 2023-08-21T04:33:34Z\nRelease notes:\nThis release focuses on some build improvements and Compose. The two major Compose improvements are adding support for Compose specific transitions (e.g. cross fade) and supporting recomposition based on request state using `GlideSubcomposition`. There's also been a bunch of internal refactoring to move away from Painters to Modifier nodes based on feedback from the Compose team. This is still an alpha release of Compose, but barring unexpectedly negative feedback, the next release should be beta.\nThis should be the last release of Glide that targets Java 7. That probably means our next release will be a major version change.\n## Features\n* Allow passing an executor into ChromiumRequestSerializer in https://github.com/bumptech/glide/pull/5077\n* Allow host app to provide a way to clear all resources onStop() by @osamaaftab in https://github.com/bumptech/glide/pull/5145\n## Compose\n* Add a Transition API and a CrossFade Transition for Compose by @sjudd in https://github.com/bumptech/glide/pull/5235\n* Influence layout using intrinsics in GlideNode by @sjudd in https://github.com/bumptech/glide/pull/5240 * Log instead of throwing parsing manifests to fix compose previews by @sjudd in https://github.com/bumptech/glide/pull/5167\n* Launch no more than one request per onRemembered by @sjudd in https://github.com/bumptech/glide/pull/5062\n* Remove GlidePainter in favor of Modifier nodes / Flows by @sjudd in https://github.com/bumptech/glide/pull/5230\n* Replace flows in GlideSubcomposition with a listener on GlideNode by @sjudd in https://github.com/bumptech/glide/pull/5238\n## Bugs\n* Read library glide module names from Java indexes by @sjudd in https://github.com/bumptech/glide/pull/5052\n* Fix typo. anay -> any in GlideSymbolProcessor.kt. by @trevorhackman in https://github.com/bumptech/glide/pull/5029\n* Include URL in error log by @paulsowden in https://github.com/bumptech/glide/pull/5164\n* Add `isInitialized` visible for testing method by @paulsowden in https://github.com/bumptech/glide/pull/5163\n* Use onIdle to avoid a race in FlowTests by @sjudd in https://github.com/bumptech/glide/pull/5202\n* Add a isEquivalentTo method to correctly check equality by @mori-atsushi in https://github.com/bumptech/glide/pull/5232\n* Add @RequiresPermission to NotificationTarget by @TWiStErRob in https://github.com/bumptech/glide/pull/5220\n## Deprecations\n* `placeholderOf(@Composable)` in `GlideImage` is deprecated, use `GlideSubcomposition` instead. Keep in mind that using either forces a recomposition each time the state of the image load changes. Recomposition will have a significant performance penalty in scrolling lists and should be avoided.\n## Behavior Changes\n* Hard code disabling hardware bitmaps on O/OMR1. by @sjudd in https://github.com/bumptech/glide/pull/5115\n* Do not set requireOriginal on Android photo picker uris. by @phoenixli in https://github.com/bumptech/glide/pull/5162\n## Breaking Changes\n* [Late edit, sorry!]: Added `@Nullable` and `@NonNull` annotations to `RequestListener` via 60b567e5feec70ba810a663e56a10d837f26c56c. This will break Kotlin implementations that make different assumptions about nullability.\n## Build Changes\n* Add integration tests for ksp library modules. by @sjudd in https://github.com/bumptech/glide/pull/5054\n* Update README.md to use https by @simoarpe in https://github.com/bumptech/glide/pull/5058\n* Use dokka to build scripts/update_javadocs.sh by @sjudd in https://github.com/bumptech/glide/pull/5104\n* avif integration: Update libavif dependency by @vigneshvg in https://github.com/bumptech/glide/pull/5128\n* Disable java 7 source obsolete warning. by @sjudd in https://github.com/bumptech/glide/pull/5168\n* Update mockito version to fix j16 compilation. by @sjudd in https://github.com/bumptech/glide/pull/5169\n* Switch Glide's dependenc...",
+      "memory_unit_text": "In the bumptech/glide release v4.16.0, Glide focuses on build improvements and Compose, adding support for Compose specific transitions like cross fade and supporting recomposition based on request state using GlideSubcomposition. Features include allowing passing an executor into ChromiumRequestSerializer and allowing the host app to provide a way to clear all resources onStop(). Compose additions include a Transition API and CrossFade Transition, influencing layout using intrinsics in GlideNode, logging instead of throwing parsing manifests to fix compose previews, launching no more than one request per onRemembered, removing GlidePainter in favor of Modifier nodes/Flows, and replacing flows in GlideSubcomposition with a listener on GlideNode. Bug fixes include reading library glide module names from Java indexes, fixing a typo, including URL in error log, adding isInitialized visible for testing method, using onIdle to avoid a race in FlowTests, adding an isEquivalentTo method, and adding @RequiresPermission to NotificationTarget. Deprecations include placeholderOf(@Composable) in GlideImage. Behavior changes include hard coding disabling hardware bitmaps on O/OMR1 and not setting requireOriginal on Android photo picker uris. Breaking changes add @Nullable and @NonNull annotations to RequestListener. Build changes include integration tests for ksp library modules, updating README.md to use https, using dokka to build scripts/update_javadocs.sh, updating libavif dependency, disabling java 7 source obsolete warning, updating mockito version, and switching Glide's dependency."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__compose_alpha6",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:compose-alpha6",
+      "tag_name": "compose-alpha6",
+      "title": "Glide Compose alpha6",
+      "time_hint": "2023-09-03",
+      "published_at": "2023-09-03T16:37:15Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/compose-alpha6",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide Compose alpha6\nTag: compose-alpha6; draft: False; prerelease: False; published_at: 2023-09-03T16:37:15Z; created_at: 2023-09-03T16:28:46Z\nRelease notes:\nWe're trying something new - releasing just a dot release of the compose integration library without any changes to the rest of Glide. The new version of the compose library should continue to depend on Glide 4.16.0.\n## Bugs\n* Fix Drawables not animated in `GlideImage` (59c2d9b00510f6c66100bbe4e637b0bd3627d930, #5273, thanks @ag2s20150909 )\n* Fix issues with duplicate padding, draw order due to duplicate Modifier nodes (830fd11cc66be6849f7f86d3f3f04558e1d54b74, #5272, thanks @lyh8577)\n**Full Changelog**: https://github.com/bumptech/glide/compare/v4.16.0...compose-alpha6",
+      "memory_unit_text": "In the bumptech/glide release compose-alpha6, a dot release of the compose integration library without changes to the rest of Glide, bug fixes include fixing Drawables not animated in GlideImage and fixing issues with duplicate padding and draw order due to duplicate Modifier nodes."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v5_0_0_rc01",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.0-rc01",
+      "tag_name": "v5.0.0-rc01",
+      "title": "Glide 5.0.0-rc01, Compose 1.0.0-beta01",
+      "time_hint": "2023-09-26",
+      "published_at": "2023-09-26T17:19:44Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v5.0.0-rc01",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide 5.0.0-rc01, Compose 1.0.0-beta01\nTag: v5.0.0-rc01; draft: False; prerelease: False; published_at: 2023-09-26T17:19:44Z; created_at: 2023-09-26T16:33:53Z\nRelease notes:\nGlide 5.0 contains no major changes from Glide 4.16 except that we now compile against Java 8 and Kotlin 1.8.\n## Compose\n* Add a Painter variant of the placeholder APIs in the Compose integration by @sjudd in https://github.com/bumptech/glide/pull/5296\n* Avoid modifying constraints when a scale factor can't be computed by @sjudd in https://github.com/bumptech/glide/pull/5264\n* Avoid duplicating Modifiers in GlideModifer by @sjudd in https://github.com/bumptech/glide/pull/5276\n* Finish animation ignoring cancellation. by @kanelbulle in https://github.com/bumptech/glide/pull/5279\n## Build Changes\n* Update Glide to java 8, AGP to 8.1.0, Gradle to 8.3 #5284 by @sjudd in https://github.com/bumptech/glide/pull/5285\n* Update to AGP 8.1.1 by @sjudd in https://github.com/bumptech/glide/pull/5295\n* Remove custom MediaMetadataRetriever shadow in GlideTest by @hoisie in https://github.com/bumptech/glide/pull/5292\n## Breaking Changes\n* Updated Glide to build against Java 8 and Kotlin 1.8. We may update to compile against Kotlin 1.9 before releasing 5.0 / Compose 1.0\n* 4.16 added `@Nullable` and `@NonNull` annotations to `RequestListener` via 60b567e5feec70ba810a663e56a10d837f26c56c. This was not mentioned in the 4.16 release notes, but it will break Kotlin implementations that make different assumptions about nullability.\n**Full Changelog**: https://github.com/bumptech/glide/compare/v4.16.0...v5.0.0-rc01",
+      "memory_unit_text": "In the bumptech/glide release v5.0.0-rc01, Glide 5.0 contains no major changes from Glide 4.16 except compiling against Java 8 and Kotlin 1.8. Compose additions include a Painter variant of the placeholder APIs, avoiding modifying constraints when a scale factor can't be computed, avoiding duplicating Modifiers in GlideModifer, and finishing animation ignoring cancellation. Build changes update Glide to java 8, AGP to 8.1.0, Gradle to 8.3, update to AGP 8.1.1, and remove custom MediaMetadataRetriever shadow in GlideTest. Breaking changes include building against Java 8 and Kotlin 1.8, and the addition of @Nullable and @NonNull annotations to RequestListener from 4.16."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v5_0_0_rc05",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.0-rc05",
+      "tag_name": "v5.0.0-rc05",
+      "title": "Glide v5.0.0-rc05",
+      "time_hint": "2025-08-30",
+      "published_at": "2025-08-30T00:25:02Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v5.0.0-rc05",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide v5.0.0-rc05\nTag: v5.0.0-rc05; draft: False; prerelease: False; published_at: 2025-08-30T00:25:02Z; created_at: 2025-08-30T00:24:01Z\nRelease notes:\n## Compose\n- Reverting recent Compose updates. See https://github.com/bumptech/glide/issues/5512\n- Version bump to 1.0.0-beta03\n## KTX\n- Version bump to 1.0.0-beta03\n## Build Changes\n- Update Glide to java 8, AGP to 8.1.0, Gradle to 8.3. See https://github.com/bumptech/glide/pull/5285\n- Update to AGP 8.1.1. See https://github.com/bumptech/glide/pull/5295\n- Fix outdated JavaDoc for BitmapPoolAdapter. See https://github.com/bumptech/glide/pull/5309\n- Update AVIF dependency to latest version to align with 16KB page size. See https://github.com/bumptech/glide/pull/5465\n## Bugs\n- Use the correct bucket for AVIF GlideModule. See https://github.com/bumptech/glide/pull/5326\n- Update TransformationUtils#rotateImageExif to preserve gainmap. See https://github.com/bumptech/glide/pull/5334 by @falhassen\n- Add workaround for AOSP bug with decoding single channel hardware gainmaps. See https://github.com/bumptech/glide/pull/5357\n- Clean up `preserveGainmapAndColorSpaceForTransformations` flag. See https://github.com/bumptech/glide/pull/5366\n- Clean up `setEnableHardwareGainmapFixOnU` flag. See https://github.com/bumptech/glide/pull/5386 by @falhassen\n- Avoid referencing resource names within Resource Loader. See https://github.com/bumptech/glide/pull/5388 by @benjaminRomano\n**Full Changelog**: https://github.com/bumptech/glide/compare/v5.0.0-rc01...v5.0.0-rc05",
+      "memory_unit_text": "In the bumptech/glide release v5.0.0-rc05, Compose reverts recent updates and bumps version to 1.0.0-beta03, KTX bumps version to 1.0.0-beta03. Build changes update Glide to java 8, AGP to 8.1.0, Gradle to 8.3, update to AGP 8.1.1, fix outdated JavaDoc for BitmapPoolAdapter, and update AVIF dependency to align with 16KB page size. Bug fixes include using the correct bucket for AVIF GlideModule, updating TransformationUtils#rotateImageExif to preserve gainmap, adding workaround for AOSP bug with decoding single channel hardware gainmaps, cleaning up preserveGainmapAndColorSpaceForTransformations flag, cleaning up setEnableHardwareGainmapFixOnU flag, and avoiding referencing resource names within Resource Loader."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v5_0_1",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.1",
+      "tag_name": "v5.0.1",
+      "title": "Glide v5.0.1",
+      "time_hint": "2025-08-31",
+      "published_at": "2025-08-31T19:33:41Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v5.0.1",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide v5.0.1\nTag: v5.0.1; draft: False; prerelease: False; published_at: 2025-08-31T19:33:41Z; created_at: 2025-08-31T19:31:16Z\nRelease notes:\n## Compose\n- Version bump to 1.0.0-beta04\n## KTX\n- Version bump to 1.0.0-beta04\n## Build Changes\nN/A\n## Bugs\n- Doesn't fix missing gifdecoder and disklrucache modules. See #5580. Going to go to 5.0.2.\n**Full Changelog**: https://github.com/bumptech/glide/compare/v5.0.0-rc05...v5.0.1",
+      "memory_unit_text": "In the bumptech/glide release v5.0.1, Compose bumps version to 1.0.0-beta04, KTX bumps version to 1.0.0-beta04. Bugs note that it doesn't fix missing gifdecoder and disklrucache modules, which will be addressed in 5.0.2."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v_5_0_0",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v.5.0.0",
+      "tag_name": "v.5.0.0",
+      "title": "Glide v.5.0.0",
+      "time_hint": "2025-08-31",
+      "published_at": "2025-08-31T20:38:04Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v.5.0.0",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide v.5.0.0\nTag: v.5.0.0; draft: False; prerelease: False; published_at: 2025-08-31T20:38:04Z; created_at: 2025-08-28T23:57:23Z\nRelease notes:\nGlide 5.0 contains no major changes from Glide 4.16 except that we now compile against Java 8 and Kotlin 1.8.\nNote that version was accidentally published and has issue #5580 that prevents its usage.\n## Compose\n* Add a Painter variant of the placeholder APIs in the Compose integration by @sjudd in https://github.com/bumptech/glide/pull/5296\n* Avoid modifying constraints when a scale factor can't be computed by @sjudd in https://github.com/bumptech/glide/pull/5264\n* Avoid duplicating Modifiers in GlideModifer by @sjudd in https://github.com/bumptech/glide/pull/5276\n* Finish animation ignoring cancellation. by @kanelbulle in https://github.com/bumptech/glide/pull/5279\n## Build Changes\n* Update Glide to java 8, AGP to 8.1.0, Gradle to 8.3 #5284 by @sjudd in https://github.com/bumptech/glide/pull/5285\n* Update to AGP 8.1.1 by @sjudd in https://github.com/bumptech/glide/pull/5295\n* Remove custom MediaMetadataRetriever shadow in GlideTest by @hoisie in https://github.com/bumptech/glide/pull/5292\n## Breaking Changes\n* Updated Glide to build against Java 8 and Kotlin 1.8. We may update to compile against Kotlin 1.9 before releasing 5.0 / Compose 1.0\n* 4.16 added `@Nullable` and `@NonNull` annotations to `RequestListener` via 60b567e5feec70ba810a663e56a10d837f26c56c. This was not mentioned in the 4.16 release notes, but it will break Kotlin implementations that make different assumptions about nullability.\n**Full Changelog**: https://github.com/bumptech/glide/compare/v4.16.0...v5.0.0",
+      "memory_unit_text": "In the bumptech/glide release v.5.0.0, Glide 5.0 contains no major changes from Glide 4.16 except compiling against Java 8 and Kotlin 1.8. Note that this version was accidentally published and has issue #5580 preventing its usage. Compose additions include a Painter variant of the placeholder APIs, avoiding modifying constraints when a scale factor can't be computed, avoiding duplicating Modifiers in GlideModifer, and finishing animation ignoring cancellation. Build changes update Glide to java 8, AGP to 8.1.0, Gradle to 8.3, update to AGP 8.1.1, and remove custom MediaMetadataRetriever shadow in GlideTest. Breaking changes include building against Java 8 and Kotlin 1.8, and the addition of @Nullable and @NonNull annotations to RequestListener from 4.16."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v5_0_2",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.2",
+      "tag_name": "v5.0.2",
+      "title": "Glide v5.0.2",
+      "time_hint": "2025-08-31",
+      "published_at": "2025-08-31T20:38:57Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v5.0.2",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide v5.0.2\nTag: v5.0.2; draft: False; prerelease: False; published_at: 2025-08-31T20:38:57Z; created_at: 2025-08-31T20:36:41Z\nRelease notes:\n## Compose\n- Version bump to 1.0.0-beta05\n## KTX\n- Version bump to 1.0.0-beta05\n## Build Changes\nN/A\n## Bugs\n- Fixes missing gifdecoder and disklrucache modules. See #5580.\n**Full Changelog**: https://github.com/bumptech/glide/compare/v5.0.1...v5.0.2",
+      "memory_unit_text": "In the bumptech/glide release v5.0.2, Compose bumps version to 1.0.0-beta05, KTX bumps version to 1.0.0-beta05. Bugs fix missing gifdecoder and disklrucache modules."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v5_0_3",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.3",
+      "tag_name": "v5.0.3",
+      "title": "Glide v5.0.3",
+      "time_hint": "2025-08-31",
+      "published_at": "2025-08-31T21:55:37Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v5.0.3",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide v5.0.3\nTag: v5.0.3; draft: False; prerelease: False; published_at: 2025-08-31T21:55:37Z; created_at: 2025-08-31T21:54:25Z\nRelease notes:\n## Compose\n- Version bump to 1.0.0-beta06\n## KTX\n- Version bump to 1.0.0-beta06\n## Build Changes\nN/A\n## Bugs\n- Fixes missing gif_decoder modules. See #5580.\n**Full Changelog**: https://github.com/bumptech/glide/compare/v5.0.2...v5.0.3",
+      "memory_unit_text": "In the bumptech/glide release v5.0.3, Compose bumps version to 1.0.0-beta06, KTX bumps version to 1.0.0-beta06. Bugs fix missing gif_decoder modules."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v5_0_4",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.4",
+      "tag_name": "v5.0.4",
+      "title": "Glide v5.0.4",
+      "time_hint": "2025-09-01",
+      "published_at": "2025-09-01T23:03:30Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v5.0.4",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide v5.0.4\nTag: v5.0.4; draft: False; prerelease: False; published_at: 2025-09-01T23:03:30Z; created_at: 2025-09-01T23:01:52Z\nRelease notes:\n## Compose\n- Version bump to 1.0.0-beta07\n## KTX\n- Version bump to 1.0.0-beta07\n## Build Changes\nN/A\n## Bugs\n- Fixes compiler module missing in published artifacts. See #5591.\n**Full Changelog**: https://github.com/bumptech/glide/compare/v5.0.3...v5.0.4",
+      "memory_unit_text": "In the bumptech/glide release v5.0.4, Compose bumps version to 1.0.0-beta07, KTX bumps version to 1.0.0-beta07. Bugs fix compiler module missing in published artifacts."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v5_0_5",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.5",
+      "tag_name": "v5.0.5",
+      "title": "Glide v5.0.5",
+      "time_hint": "2025-09-13",
+      "published_at": "2025-09-13T00:10:43Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v5.0.5",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide v5.0.5\nTag: v5.0.5; draft: False; prerelease: False; published_at: 2025-09-13T00:10:43Z; created_at: 2025-09-12T23:52:54Z\nRelease notes:\n## Compose\n- Version bump to 1.0.0-beta08\n## KTX\n- Version bump to 1.0.0-beta08\n## Build Changes\nN/A\n## Bugs\n- Restores GlideUrl fix for urls with IPV6 addresses fix that was accidentally reverted in 5.0.4. See https://github.com/bumptech/glide/pull/5444 for details\n**Full Changelog**: https://github.com/bumptech/glide/compare/v5.0.4...v5.0.5",
+      "memory_unit_text": "In the bumptech/glide release v5.0.5, Compose bumps version to 1.0.0-beta08, KTX bumps version to 1.0.0-beta08. Bugs restore the GlideUrl fix for urls with IPV6 addresses that was accidentally reverted in 5.0.4."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v5_0_6",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.6",
+      "tag_name": "v5.0.6",
+      "title": "Glide v5.0.6",
+      "time_hint": "2026-04-18",
+      "published_at": "2026-04-18T03:22:23Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v5.0.6",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide v5.0.6\nTag: v5.0.6; draft: False; prerelease: False; published_at: 2026-04-18T03:22:23Z; created_at: 2026-04-18T02:25:34Z\nRelease notes:\n## Compose\n- Version bump to 1.0.0-beta09\n## KTX\n- Version bump to 1.0.0-beta09\n## Build Changes\nN/A\n## Changes\n- Set the background memory category only when trim level is higher than TRIM_MEMORY_UI_HIDDEN. See https://github.com/bumptech/glide/pull/5669\n- Stop appending requireOriginal to URIs loaded by Glide on Android R+. See https://github.com/bumptech/glide/pull/5668\n- Converting a second set of Groovy Gradle files to Kotlin DSL. See https://github.com/bumptech/glide/pull/5639\n- Migrate from Robolectric's Util.readBytes to Guava ByteStreams. See https://github.com/bumptech/glide/pull/5636\n**Full Changelog**: https://github.com/bumptech/glide/compare/v5.0.5...v5.0.6",
+      "memory_unit_text": "In the bumptech/glide release v5.0.6, Compose bumps version to 1.0.0-beta09, KTX bumps version to 1.0.0-beta09. Changes include setting the background memory category only when trim level is higher than TRIM_MEMORY_UI_HIDDEN, stopping appending requireOriginal to URIs loaded by Glide on Android R+, converting Groovy Gradle files to Kotlin DSL, and migrating from Robolectric's Util.readBytes to Guava ByteStreams."
+    },
+    {
+      "memory_node_id": "bumptech__glide__release__v5_0_7",
+      "repo": "bumptech/glide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.7",
+      "tag_name": "v5.0.7",
+      "title": "Glide v5.0.7",
+      "time_hint": "2026-04-19",
+      "published_at": "2026-04-19T03:18:35Z",
+      "source_url": "https://github.com/bumptech/glide/releases/tag/v5.0.7",
+      "raw_text": "Repository: bumptech/glide\nRelease: Glide v5.0.7\nTag: v5.0.7; draft: False; prerelease: False; published_at: 2026-04-19T03:18:35Z; created_at: 2026-04-19T03:16:30Z\nRelease notes:\n## Compose\nN/A\n## KTX\nN/A\n## Build Changes\n- Add missing version bump\n## Changes\nN/A\n**Full Changelog**: https://github.com/bumptech/glide/compare/v5.0.6...v5.0.7",
+      "memory_unit_text": "In the bumptech/glide release v5.0.7, a build change adds a missing version bump. No other changes."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the bumptech/glide releases, which release introduces a clearOnDetach() API on ViewTarget and a waitForLayout() API on ViewTarget?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v4.4.0"
+        },
+        {
+          "option_id": "B",
+          "text": "v4.5.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v4.6.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v4.7.0"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v4.4.0",
+      "source_chunk_ids": [
+        "bumptech__glide__release__v4_4_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "bumptech__glide__release__v4_4_0",
+          "answer_text": "Added an API to ViewTarget called clearOnDetach() ... Added an API to ViewTarget called waitForLayout()"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the bumptech/glide releases, how does the AVIF support introduced in v4.13.0 differ from the AVIF support added in v4.15.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v4.13.0 adds an integration library for AVIF decoding, while v4.15.0 adds support for animated AVIF and RGB_565 in Avif."
+        },
+        {
+          "option_id": "B",
+          "text": "v4.13.0 adds animated AVIF support, while v4.15.0 adds an integration library for AVIF decoding."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only fix AVIF dependency issues without adding new AVIF features."
+        },
+        {
+          "option_id": "D",
+          "text": "v4.13.0 adds AVIF support for Compose, while v4.15.0 adds AVIF support for Views."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v4.13.0 adds an integration library for AVIF decoding, while v4.15.0 adds support for animated AVIF and RGB_565 in Avif.",
+      "source_chunk_ids": [
+        "bumptech__glide__release__v4_13_0",
+        "bumptech__glide__release__v4_15_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "bumptech__glide__release__v4_13_0",
+          "answer_text": "Add an integration library to support decoding AVIF"
+        },
+        {
+          "memory_node_id": "bumptech__glide__release__v4_15_0",
+          "answer_text": "adds support for animated AVIF, and adds support for RGB_565 in Avif"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the bumptech/glide release window, order the following release-content states from earliest to latest: (1) a release that adds a Cronet integration library, (2) a release that adds an alpha version of a Compose integration, (3) a release that adds a Compose Transition API and CrossFade Transition, (4) a release that adds a Painter variant of the placeholder APIs in the Compose integration.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "bumptech__glide__release__v4_12_0",
+        "bumptech__glide__release__v4_14_0",
+        "bumptech__glide__release__v4_16_0",
+        "bumptech__glide__release__v5_0_0_rc01"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "bumptech__glide__release__v4_12_0",
+          "answer_text": "Add a Cronet integration library"
+        },
+        {
+          "memory_node_id": "bumptech__glide__release__v4_14_0",
+          "answer_text": "Add an alpha version of a Compose integration"
+        },
+        {
+          "memory_node_id": "bumptech__glide__release__v4_16_0",
+          "answer_text": "Add a Transition API and a CrossFade Transition for Compose"
+        },
+        {
+          "memory_node_id": "bumptech__glide__release__v5_0_0_rc01",
+          "answer_text": "Add a Painter variant of the placeholder APIs in the Compose integration"
+        }
+      ]
+    }
+  ]
+}

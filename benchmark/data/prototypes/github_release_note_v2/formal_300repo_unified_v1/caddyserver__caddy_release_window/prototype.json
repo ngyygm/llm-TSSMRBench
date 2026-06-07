@@ -1,0 +1,530 @@
+{
+  "prototype_id": "caddyserver__caddy_release_window",
+  "domain": "github_release_evolution",
+  "repo": "caddyserver/caddy",
+  "source_type": "release_note",
+  "window_title": "caddyserver/caddy recent release evolution",
+  "window_summary": "This window tracks the recent caddyserver/caddy release stream from v2.7.0 through v2.11.3, including major feature releases, patch fixes, and beta versions. It highlights key milestones such as the introduction of Encrypted ClientHello (ECH) and post-quantum key exchange in v2.10.0, and the automated release process in v2.11.0.",
+  "chunks": [
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_7_0",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.7.0",
+      "tag_name": "v2.7.0",
+      "title": "v2.7.0",
+      "time_hint": "2023-08-02",
+      "published_at": "2023-08-02T21:01:17Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.7.0",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.7.0\nTag: v2.7.0; draft: False; prerelease: False; published_at: 2023-08-02T21:01:17Z; created_at: 2023-08-02T20:04:47Z\nRelease notes:\nDo not use this release, use [v2.7.3](https://github.com/caddyserver/caddy/releases/tag/v2.7.3) instead which contains hot fixes.",
+      "memory_unit_text": "In the caddyserver/caddy release v2.7.0, the release note advises users not to use this release and instead use v2.7.3 which contains hot fixes."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_7_1",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.7.1",
+      "tag_name": "v2.7.1",
+      "title": "v2.7.1",
+      "time_hint": "2023-08-03",
+      "published_at": "2023-08-03T01:17:47Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.7.1",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.7.1\nTag: v2.7.1; draft: False; prerelease: False; published_at: 2023-08-03T01:17:47Z; created_at: 2023-08-03T00:42:46Z\nRelease notes:\nDo not use this release; use [v2.7.3](https://github.com/caddyserver/caddy/releases/tag/v2.7.3) instead. It contains a hotfix for a WebSocket issue.",
+      "memory_unit_text": "In the caddyserver/caddy release v2.7.1, the release note advises users not to use this release and instead use v2.7.3, which contains a hotfix for a WebSocket issue."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_7_2",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.7.2",
+      "tag_name": "v2.7.2",
+      "title": "v2.7.2",
+      "time_hint": "2023-08-03",
+      "published_at": "2023-08-03T04:43:42Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.7.2",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.7.2\nTag: v2.7.2; draft: False; prerelease: False; published_at: 2023-08-03T04:43:42Z; created_at: 2023-08-03T04:13:26Z\nRelease notes:\nDo not use this release, use [v2.7.3](https://github.com/caddyserver/caddy/releases/tag/v2.7.3) instead which contains several hot fixes.",
+      "memory_unit_text": "In the caddyserver/caddy release v2.7.2, the release note advises users not to use this release and instead use v2.7.3 which contains several hot fixes."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_7_3",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.7.3",
+      "tag_name": "v2.7.3",
+      "title": "v2.7.3",
+      "time_hint": "2023-08-06",
+      "published_at": "2023-08-06T00:49:45Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.7.3",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.7.3\nTag: v2.7.3; draft: False; prerelease: False; published_at: 2023-08-06T00:49:45Z; created_at: 2023-08-06T00:18:41Z\nRelease notes:\nWe're pleased to present Caddy 2.7, which makes significant strides in areas of scaling, performance, and niche features.\nSpecial thank-you to @francislavoie, @Mohammed90, and other core team members for the ongoing dedication of their time to help maintain the project and help in our forums.\nAnd a big thank-you to everyone else who contributed! You're awesome, and we're glad this project has so many contributors and [sponsors](https://github.com/sponsors/mholt) to make it possible.\nDocs are being updated and will be pushed live shortly. Thank you for your patience and for using Caddy!\n_(Note: Versions 2.7.0-2.7.2 contain bugs that were hotfixed within minutes and hours and a day of the release. Thank you to everyone who helped with that! And sorry for the trouble, we have learned lessons to help mitigate that in the future.)_\n## Highlights\n- The in-memory TLS certificate cache is no longer purged and recreated during config reloads, making reloads extremely lightweight even when managing thousands of certificates.\n- Significant HTTP/3 performance improvements (upstream in quic-go) including enabling 0-RTT. Caddy users should notice significantly better throughput for HTTP/3. Thanks for the fantastic work, @marten-seemann!\n- New default template for the file server's \"browse\" listings - more modern, easier to use, grid view, filetype-specific icons, and better dark mode (see #5427 for more screenshots and info)\n![list view](https://user-images.githubusercontent.com/1128849/224117088-886bf9e5-6c48-47b8-9863-fbaa5a984327.png)\n![grid view](https://user-images.githubusercontent.com/1128849/224121253-43db1e17-a958-4cb7-80a3-777d4127adcf.png)\n- The reverse proxy now supports the PROXY protocol. Using external modules is no longer required; specifically, the plugin by @mastercactapus is now built-in. (#5424)\n- Caddyfile now supports Heredoc syntax for long embedded strings/documents. (#5385)\n- @francislavoie implemented a suite of enhancements to bring you more reliable, trustworthy client IP information, even through proxies and CDNs (#5104)\n- Certificate private keys will no longer be reused when renewing certificates.\n- Caddyfile import arg placeholders support slice syntax, e.g. `{args[2:]}` (#5249)\n- Customizable \"fallback\" policy for reverse proxy in case the primary policy isn't applicable. (#5488)\n- Etags are generated more sensibly for NixOS environments which all have Modified time of 1; and if you set your own Etag, it will not be overwritten.\n- EXPERIMENTAL: New short flags for the CLI. (#5379)\n- EXPERIMENTAL: The reverse proxy may be configured to keep hijacked connections (streams, WebSockets, etc.) open through config reloads. (#5567)\n- EXPERIMENTAL: Define \"named routes\" to reuse them without copying. Caddyfile snippets are useful for reusing config, but reusing the same HTTP routes involves lots of copied config and memory bloat. Named routes let you define a route once and reuse it throughout your HTTP server without copying. It is available for JSON and Caddyfile configs. (#5107)\n- EXPERIMENTAL: You can specify permissions for unix sockets. (#4741)\n- Many many bug fixes you may or may not notice :upside_down_face:\nDeprecations and possible breaking changes for some:\n- :warning: The `ask` endpoint is now **required** to enable On-Demand TLS (b97c76fb4789b8da0b80f5a2c1c1c5bebba163b5) for catch-all or wildcard hosts. Our docs have always mentioned this is required in production environments, but now the code enforces it. The `ask` endpoint is not required for local-only or internal-only names (#5384 and a7af7c486e5240da974e02b7dfee9d265aaa654a).\n- :warning: The on-demand config's throttle options are now deprecated because the 'ask' endpoint is required. Additionally, the 'ask' endpoint is checked and the throttle is applied _before_ storage...",
+      "memory_unit_text": "In the caddyserver/caddy release v2.7.3, the release note presents Caddy 2.7 with significant strides in scaling, performance, and niche features. Highlights include: in-memory TLS certificate cache no longer purged during config reloads; significant HTTP/3 performance improvements including 0-RTT; new default template for file server browse listings; reverse proxy now supports PROXY protocol; Caddyfile supports Heredoc syntax; enhanced client IP information; certificate private keys no longer reused when renewing; Caddyfile import arg placeholders support slice syntax; customizable fallback policy for reverse proxy; Etags generated more sensibly for NixOS; experimental short CLI flags; experimental reverse proxy keep hijacked connections open through config reloads; experimental named routes; experimental permissions for unix sockets. Deprecations include: the ask endpoint is now required to enable On-Demand TLS for catch-all or wildcard hosts; on-demand config throttle options deprecated."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_7_4",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.7.4",
+      "tag_name": "v2.7.4",
+      "title": "v2.7.4",
+      "time_hint": "2023-08-17",
+      "published_at": "2023-08-17T18:20:54Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.7.4",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.7.4\nTag: v2.7.4; draft: False; prerelease: False; published_at: 2023-08-17T18:20:54Z; created_at: 2023-08-17T17:48:13Z\nRelease notes:\nCaddy 2.7.4 rounds out some bug fixes from the 2.7 release. For example, [Go made a last-minute breaking change to a new API](https://github.com/quic-go/quic-go/releases/tag/v0.37.4) that broke quic-go (HTTP/3) on Go 1.21 just before Go 1.21 was released; we resolved a few issues with on-demand TLS that are now much improved from the 2.6 tree; a couple race conditions were fixed in dynamic reverse proxy upstreams. We hope you will be pleased with this new version!\n[Caddy is on feature freeze until after 2.8](https://github.com/caddyserver/caddy/issues/5704) so we can improve our testing situation. These patches have all been tried to ensure they work as intended, but if you notice any issues please report them!\nWe encourage all users to test this new version and then upgrade. Thanks to all who get involved!\n## Changelog\n* 080db938 caddytls: Update docs for on-demand config\n* d8135505 cmd: Require config for caddy validate (fix #5612) (#5614)\n* a8492c06 fileserver: Don't repeat error for invalid method inside error context (#5705)\n* 2d7d806f fileserver: Slightly more fitting icons\n* f11c3c9f go.mod: Upgrade CertMagic and quic-go\n* 5b9c850a go.mod: Upgrade golang.org/x/net to 0.14.0 (#5718)\n* 936ee918 reverseproxy: Always return new upstreams (fix #5736) (#5752)\n* 431adc09 templates: Fix httpInclude (fix #5698)\n## New Contributors\n* @faddat made their first contribution in https://github.com/caddyserver/caddy/pull/5707\n* @shyim made their first contribution in https://github.com/caddyserver/caddy/pull/5718\n* @AaronDewes made their first contribution in https://github.com/caddyserver/caddy/pull/5720\n**Full Changelog**: https://github.com/caddyserver/caddy/compare/v2.7.3...v2.7.4",
+      "memory_unit_text": "In the caddyserver/caddy release v2.7.4, the release note rounds out some bug fixes from the 2.7 release. It resolves issues with on-demand TLS, fixes race conditions in dynamic reverse proxy upstreams, and addresses a last-minute breaking change in Go 1.21 that broke quic-go (HTTP/3). The changelog includes updates to CertMagic and quic-go, and fixes for file server error handling, reverse proxy upstreams, and templates httpInclude."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_7_5",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.7.5",
+      "tag_name": "v2.7.5",
+      "title": "v2.7.5",
+      "time_hint": "2023-10-11",
+      "published_at": "2023-10-11T22:27:06Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.7.5",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.7.5\nTag: v2.7.5; draft: False; prerelease: False; published_at: 2023-10-11T22:27:06Z; created_at: 2023-10-11T21:47:36Z\nRelease notes:\nIn this release, we've fixed quite a few small bugs and annoyances, including HTTP/2 Rapid Reset which affected most HTTP/2 implementations.\n_On a personal note (from @mholt): I recently became a dad! I want to thank our maintainers for helping in so many ways while I've been taking extra time for family. Francis, Matthew, Mohammed, and others -- including all the contributors below, and then some -- are to thank for shipping this release._\n## Highlights\n- Updated https://github.com/quic-go/quic-go from v0.37.5 to v0.39.0, including many performance improvements. GSO and ECN are now enabled by default, but you may turn them off by setting the `QUIC_GO_DISABLE_GSO=true` and `QUIC_GO_DISABLE_ECN=true` environment variables respectively, if they cause you problems. See the [`quic-go` release notes](https://github.com/quic-go/quic-go/releases) for more details.\n- The file server's `fileserver.BrowseTemplate` is now exported, so it may be customized by programs embedding Caddy. (ed8bb13c5df7656647ca7fc1fd09237631a6767c)\n- Environment variables loaded with `--envfile` no longer override existing variables. (#5803)\n- The `encode` handler now compresses `application/wasm*` content types by default. (#5869)\n- The `reverse_proxy` handler can now emit very detailed logs for debugging streaming and buffering. To enable it, set the `verbose_logs` subdirective, and set logging to `debug` level. Since the logs from this are very noisy, using `verbose_logs` to opt-in is necessary. We may ask you to enable this when asking for support! (#5793)\n- You can now check the version with `caddy -v`, like most other CLI utilities! (#5874)\n[Caddy is on feature freeze until after 2.8](https://github.com/caddyserver/caddy/issues/5704) so we can improve our testing situation. These patches have all been tried to ensure they work as intended, but if you notice any issues please report them!\n## Changelog\n* 0e204b73 admin: Respond with 4xx on non-existing config path (#5870)\n* 89c407aa build(deps): bump actions/checkout from 3 to 4 (#5846)\n* 1405683c build(deps): bump goreleaser/goreleaser-action from 4 to 5 (#5847)\n* 38a7b6b3 caddyfile: Adjust error formatting (#5765)\n* 7103ea09 caddyfile: Fix case where heredoc marker is empty after newline (#5769)\n* 10053f75 caddyfile: Loosen heredoc parsing (#5761)\n* 58ab3a01 caddyhttp: Use LimitedReader for HTTPRedirectListener _(thank you to Bartek Nowotarski for reporting)_\n* 9c419f1e cmd: Fix exiting with custom status code, add `caddy -v` (#5874)\n* f2ab7099 cmd: Prevent overwriting existing env vars with `--envfile` (#5803)\n* e0aaefab encode: Add `application/wasm*` to the default content types (#5869)\n* fa5a579b fileserver: Add command shortcuts `-l` and `-a` (#5854)\n* ed8bb13c fileserver: Export BrowseTemplate\n* 130f6d1f fileserver: Set canonical URL on browse template (#5867)\n* a306c5f7 fileserver: browse template SVG icons and UI tweaks (#5812)\n* 0a6d3333 fileserver: docs: clarify the ability to produce JSON array with `browse` (#5751)\n* 82c356f2 fix: caddytest.AssertResponseCode error message (#5853)\n* 888c6d7e go.mod: Update quic-go to v0.38.0 (#5772)\n* 88b4fbf2 go.mod: Upgrade dependencies incl. x/net/http\n* df995029 httpcaddyfile: Enable TLS for catch-all site if `tls` directive is specified (#5808)\n* 33d8d2c6 httpcaddyfile: Sort TLS SNI matcher for deterministic JSON output (#5860)\n* 288216e1 httpcaddyfile: Stricter errors for site and upstream address schemes (#5757)\n* 2cac3c54 httpcaddyfile: fix placeholder shorthands in named routes (#5791)\n* c46ec3b5 logging: Clone array on log filters, prevent side-effects (#5786)\n* 1b73e386 logging: query filter for array of strings (#5779)\n* 4776f62c replacer: change timezone to UTC for \"time.now.http\" placeholders (#5774)\n* a8586b05 reverseproxy: Add logging for dynamic A upstreams (#5857)\n*...",
+      "memory_unit_text": "In the caddyserver/caddy release v2.7.5, the release note fixes many small bugs and annoyances, including HTTP/2 Rapid Reset. Highlights include: updated quic-go to v0.39.0 with performance improvements (GSO and ECN enabled by default); file server's BrowseTemplate exported; environment variables loaded with --envfile no longer override existing variables; encode handler compresses application/wasm* by default; reverse_proxy can emit verbose logs for debugging streaming and buffering; caddy -v now works. The changelog includes fixes for Caddyfile heredoc parsing, admin responses, encode defaults, file server browse template, and various other improvements."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_7_6",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.7.6",
+      "tag_name": "v2.7.6",
+      "title": "v2.7.6",
+      "time_hint": "2023-12-08",
+      "published_at": "2023-12-08T01:03:36Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.7.6",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.7.6\nTag: v2.7.6; draft: False; prerelease: False; published_at: 2023-12-08T01:03:36Z; created_at: 2023-12-08T00:27:21Z\nRelease notes:\nIn this version we've made several fixes and enhancements with help from several contributors. Most changes are small, but some notable ones:\n- The `templates` middleware is now officially extensible (experimentally). This means modules can add custom functions/actions for templates to execute.\n- TLS storage cleaning is now synchronized across the cluster and remembered across restarts. This should greatly lower costs for expensive storage backends like DynamoDB.\n- Placeholders are now evaluated in config for certificate loaders.\n- Numerous bug fixes.\nThank you to everyone who contributed!\n## Changelog\n* 65c489a0  Upgrade acmeserver to github.com/go-chi/chi/v5 (#5913)\n* ae5e2d96 caddyfile: Fix variadic placeholder false positive when token contains `:` (#5883)\n* db55da59 caddyhttp: Adjust `scheme` placeholder docs (#5910)\n* df5edf6b caddytls: Context to DecisionFunc (#5923)\n* 6d9a8337 caddytls: Sync distributed storage cleaning (#5940)\n* 11a082c0 cmd: Add newline character to version string in CLI output (#5895)\n* 979c413f cmd: upgrade: resolve symlink of the executable (#5891)\n* 64820706 core: Apply SO_REUSEPORT to UDP sockets (#5725)\n* 15adb893 core: quic listener will manage the underlying socket by itself (#5749)\n* 801ec756 fileserver: Add .m4v for browse template icon\n* b809ed71 go.mod: CVE-2023-45142 Update opentelemetry (#5908)\n* b4c7313c go.mod: Upgrade quic-go to v0.39.1\n* 36fce3fa go.mod: update quic-go version to v0.40.0 (#5922)\n* ec2de22a httpcaddyfile: Fix TLS automation policy merging with get_certificate (#5896)\n* f0ea489d httpcaddyfile: Remove port from logger names (#5881)\n* 87f63b12 httpredirectlistener: Only set read limit for when request is HTTP (#5917)\n* 16834d64 templates: Clarify `include` args docs, add `.ClientIP` (#5898)\n* 0259853a templates: Delete headers on `httpError` to reset to clean slate (#5905)\n* 2f7ceb57 templates: Offically make templates extensible (#5939)\n* 908e9569 tls: accept placeholders in string values of certificate loaders (#5963)\n**Full Changelog**: https://github.com/caddyserver/caddy/compare/v2.7.5...v2.7.6",
+      "memory_unit_text": "In the caddyserver/caddy release v2.7.6, the release note includes several fixes and enhancements. Notable changes: the templates middleware is now officially extensible (experimentally); TLS storage cleaning is synchronized across the cluster and remembered across restarts; placeholders are now evaluated in config for certificate loaders. The changelog includes upgrades to acmeserver, quic-go, and fixes for Caddyfile variadic placeholders, TLS automation policy merging, and other bug fixes."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_8_0_beta_1",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.8.0-beta.1",
+      "tag_name": "v2.8.0-beta.1",
+      "title": "v2.8.0 beta 1",
+      "time_hint": "2024-05-01",
+      "published_at": "2024-05-01T00:27:01Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.8.0-beta.1",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.8.0 beta 1\nTag: v2.8.0-beta.1; draft: False; prerelease: True; published_at: 2024-05-01T00:27:01Z; created_at: 2024-04-30T22:37:05Z\nRelease notes:\nThis release is obsolete. Please see the next release for the notes.",
+      "memory_unit_text": "In the caddyserver/caddy release v2.8.0-beta.1, the release note states that this release is obsolete and to see the next release for notes."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_8_0_beta_2",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.8.0-beta.2",
+      "tag_name": "v2.8.0-beta.2",
+      "title": "v2.8.0-beta.2",
+      "time_hint": "2024-05-07",
+      "published_at": "2024-05-07T16:53:37Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.8.0-beta.2",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.8.0-beta.2\nTag: v2.8.0-beta.2; draft: False; prerelease: True; published_at: 2024-05-07T16:53:37Z; created_at: 2024-05-07T16:24:10Z\nRelease notes:\nThis release is obsolete. Please see the next release for the notes.",
+      "memory_unit_text": "In the caddyserver/caddy release v2.8.0-beta.2, the release note states that this release is obsolete and to see the next release for notes."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_8_0_rc_1",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.8.0-rc.1",
+      "tag_name": "v2.8.0-rc.1",
+      "title": "v2.8.0-rc.1",
+      "time_hint": "2024-05-20",
+      "published_at": "2024-05-20T19:58:32Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.8.0-rc.1",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.8.0-rc.1\nTag: v2.8.0-rc.1; draft: False; prerelease: True; published_at: 2024-05-20T19:58:32Z; created_at: 2024-05-20T19:28:08Z\nRelease notes:\nThis release is obsolete. Please see the next release for the notes.",
+      "memory_unit_text": "In the caddyserver/caddy release v2.8.0-rc.1, the release note states that this release is obsolete and to see the next release for notes."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_8_0",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.8.0",
+      "tag_name": "v2.8.0",
+      "title": "v2.8.0",
+      "time_hint": "2024-05-29",
+      "published_at": "2024-05-29T20:36:47Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.8.0",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.8.0\nTag: v2.8.0; draft: False; prerelease: False; published_at: 2024-05-29T20:36:47Z; created_at: 2024-05-29T19:36:00Z\nRelease notes:\nCaddy 2.8 is here! With hundreds of improvements, Caddy is more scalable and capable than ever before. Featuring ACME Renewal Information (ARI) support, HTTP/3 to proxy backends, and so much more than we can list in a sentence, we are pleased to bring you one of the biggest Caddy updates yet. Documentation on our website will be updated in the coming days.\nWe've implemented a _ton_ of improvements, fixes, and awesome new features based on your feedback. While some of them aren't particularly visible changes, they allow Caddy to scale better and be more reliable in demanding deployments. Many of the changes are quality-of-life improvements we hope you'll appreciate. Then there's improvements to [ACMEz](https://github.com/mholt/acmez), [CertMagic](https://github.com/caddyserver/certmagic), and other dependencies which make Caddy better that may not show up in this list.\nThere was a lot of code that had been documented as _deprecated_ in place for a long time, so this version introduces a few more breaking changes than usual; please review the notes below.\nThank you to our sponsors and everyone in the community who contributed -- over 40 of you made your first contribution for this release. We couldn't have done it without your help. In particular, we'd like to recognize sponsors **Stripe**, **Framer**, and **ZeroSSL** for their positive influence which have greatly enhanced the project. Caddy 2.8 is already being used in our sponsors' large-scale, multi-region production deployments.\nWant to join those ranks? [Sponsor the Caddy project](https://caddyserver.com/sponsor) and benefit from development priority, dedicated private support, and much more.\nAs with any server upgrades, please be sure to test and validate your configurations in a staging or test environment before deploying to production. Thank you and have a great day!\n**:warning: Breaking changes:**\n- ZeroSSL (#6229) (this is _one_ overall change, but requires some explanation):\n- Up to now, Caddy used both Let's Encrypt and ZeroSSL by default to get certificates without any configuration. In 2.8, this is changing slightly. Due to upcoming changes to ZeroSSL accounting policies, ZeroSSL now requires your email address to be able to access their free ACME endpoint.\n- As such, Caddy will only implicitly add the ZeroSSL issuer to your config if you provide an email address in your Caddyfile using the [`email` global option](https://caddyserver.com/docs/caddyfile/options#email). (We have already recommended this for years.) If you already do this, you don't have to make any changes and you'll still get Let's Encrypt and ZeroSSL automatically as defaults.\n- If you use JSON to configure certificate automation policies, you will need to ensure you use the [`acme` issuer with your `email` filled out](https://caddyserver.com/docs/json/apps/tls/automation/policies/issuers/acme/#email), and the [`ca` field](https://caddyserver.com/docs/json/apps/tls/automation/policies/issuers/acme/#ca) set to [ZeroSSL's ACME server URL](https://zerossl.com/documentation/acme/). If you want redundancy with Let's Encrypt, be sure to specify another `acme` issuer as well (defaults OK, but we recommend setting an email there too).\n- The [`zerossl` issuer](https://caddyserver.com/docs/modules/tls.issuance.zerossl) module is no longer ACME-capable and is now exclusively for the [ZeroSSL API](https://zerossl.com/developer/). An API key from your ZeroSSL account is required. (The [ZeroSSL ACME server](https://zerossl.com/features/acme/) can still be used with the [`acme` module](https://caddyserver.com/docs/modules/tls.issuance.acme) pointed to ZeroSSL's ACME server. You can provide your account email and/or EAB as well.) **If you were using the ZeroSSL issuer with an API key, it will now start using ZeroSSL's API,** which was p...",
+      "memory_unit_text": "In the caddyserver/caddy release v2.8.0, the release note announces Caddy 2.8 with hundreds of improvements, including ACME Renewal Information (ARI) support, HTTP/3 to proxy backends, and more. Breaking changes: ZeroSSL now requires an email address for free ACME endpoint; the zerossl issuer module is no longer ACME-capable and is exclusively for ZeroSSL API. Other highlights include: Encrypted ClientHello (ECH) support, post-quantum key exchange, ACME profiles, Via header in reverse proxy, global DNS provider option, wildcards used by default, libdns 1.0 APIs, and global dns config. The release also notes that only the latest minor Go version is now supported."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_8_1",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.8.1",
+      "tag_name": "v2.8.1",
+      "title": "v2.8.1",
+      "time_hint": "2024-05-30",
+      "published_at": "2024-05-30T14:31:22Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.8.1",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.8.1\nTag: v2.8.1; draft: False; prerelease: False; published_at: 2024-05-30T14:31:22Z; created_at: 2024-05-30T13:34:32Z\nRelease notes:\nQuick fixes for a few users related to directory permissions and matcher parsing.\n## Changelog\n* 40c582ce caddyhttp: Fix merging consecutive `client_ip` or `remote_ip` matchers (#6350)\n* a52917a3 core: MkdirAll appDataDir in InstanceID with 0o700 (#6340)",
+      "memory_unit_text": "In the caddyserver/caddy release v2.8.1, the release note provides quick fixes for a few users related to directory permissions and matcher parsing. The changelog includes fixes for merging consecutive client_ip or remote_ip matchers and creating appDataDir with 0o700 permissions."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_8_2",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.8.2",
+      "tag_name": "v2.8.2",
+      "title": "v2.8.2",
+      "time_hint": "2024-06-02",
+      "published_at": "2024-06-02T04:46:25Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.8.2",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.8.2\nTag: v2.8.2; draft: False; prerelease: False; published_at: 2024-06-02T04:46:25Z; created_at: 2024-06-02T04:18:29Z\nRelease notes:\nA few more fixes of reported bugs related to ARI, `try_files` with the root path (`/`), and Caddyfile adapter detection on the CLI. See 2.8.0 release notes for details on 2.8.\n## Changelog\n* 01308b4b I'm so tired of typos\n* a63767d3 build(deps): bump golangci/golangci-lint-action from 5 to 6 (#6361)\n* f8a2c602 caddyhttp: properly sanitize requests for root path (#6360)\n* b7280e69 caddytls: Implement certmagic.RenewalInfoGetter\n* 15faeacb cmd: fix auto-detetction of .caddyfile extension (#6356)\n**Full Changelog**: https://github.com/caddyserver/caddy/compare/v2.8.1...v2.8.2",
+      "memory_unit_text": "In the caddyserver/caddy release v2.8.2, the release note provides a few more fixes of reported bugs related to ARI, try_files with the root path, and Caddyfile adapter detection on the CLI. The changelog includes fixes for sanitizing requests for root path, implementing certmagic.RenewalInfoGetter, and fixing auto-detection of .caddyfile extension."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_8_4",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.8.4",
+      "tag_name": "v2.8.4",
+      "title": "v2.8.4",
+      "time_hint": "2024-06-02",
+      "published_at": "2024-06-02T12:24:47Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.8.4",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.8.4\nTag: v2.8.4; draft: False; prerelease: False; published_at: 2024-06-02T12:24:47Z; created_at: 2024-06-02T12:06:36Z\nRelease notes:\nHotfix for the Caddyfile detection regression in v2.8.2. The v2.8.3 tag was mistakenly made on the wrong commit and is skipped.\n## Changelog\n* 7088605c cmd: fix regression in auto-detect of Caddyfile (#6362)",
+      "memory_unit_text": "In the caddyserver/caddy release v2.8.4, the release note is a hotfix for the Caddyfile detection regression in v2.8.2. The v2.8.3 tag was mistakenly made on the wrong commit and is skipped. The changelog includes a fix for regression in auto-detect of Caddyfile."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_9_0_beta_2",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.9.0-beta.2",
+      "tag_name": "v2.9.0-beta.2",
+      "title": "v2.9.0-beta.2",
+      "time_hint": "2024-10-02",
+      "published_at": "2024-10-02T22:33:58Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.9.0-beta.2",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.9.0-beta.2\nTag: v2.9.0-beta.2; draft: False; prerelease: True; published_at: 2024-10-02T22:33:58Z; created_at: 2024-10-02T16:55:25Z\nRelease notes:\nThis beta is outdated, please use the latest version.",
+      "memory_unit_text": "In the caddyserver/caddy release v2.9.0-beta.2, the release note states that this beta is outdated and to use the latest version."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_9_0_beta_3",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.9.0-beta.3",
+      "tag_name": "v2.9.0-beta.3",
+      "title": "v2.9.0-beta.3",
+      "time_hint": "2024-11-05",
+      "published_at": "2024-11-05T18:32:38Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.9.0-beta.3",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.9.0-beta.3\nTag: v2.9.0-beta.3; draft: False; prerelease: True; published_at: 2024-11-05T18:32:38Z; created_at: 2024-11-05T18:11:34Z\nRelease notes:\nThis release has been superseded by v2.9.0 stable.",
+      "memory_unit_text": "In the caddyserver/caddy release v2.9.0-beta.3, the release note states that this release has been superseded by v2.9.0 stable."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_9_0",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.9.0",
+      "tag_name": "v2.9.0",
+      "title": "v2.9.0",
+      "time_hint": "2024-12-31",
+      "published_at": "2024-12-31T17:34:20Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.9.0",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.9.0\nTag: v2.9.0; draft: False; prerelease: False; published_at: 2024-12-31T17:34:20Z; created_at: 2024-12-31T17:03:26Z\nRelease notes:\nHappy New Year! We're pleased to release Caddy 2.9. Aside from some minor new features, this release is mainly focused on refinements and bug fixes in many areas, including:\n- Config loading\n- Events\n- Logging\n- Placeholders\n- Reverse proxy and HTTP server performance\n- Matchers\n- HTTP (esp. HTTP/3)\n- Metrics (per-host metrics)\n- Security\n- TLS automation & ACME ARI\nWe realize there is extensive interest in Encrypted Client Hello (ECH) and post-quantum ciphers. These are slated to be supported in Go 1.24, which is scheduled for a stable release in approximately February. We did not want to force users to go through the inconvenience of installing pre-release, non-stock installations of Go, even though the RCs are quite stable and production-ready, in order to even compile Caddy, which is quite common given our plugin ecosystem. We anticipate a Caddy 2.10 release in the near future with these capabilities, built on Go 1.24.\nWe hope you will enjoy the 2.9 release. Thanks to all contributors, bug reporters, and helpers, and those organizations which deployed pre-release versions to production to help verify patches and features.\n## Changelog\n* ef4e0224a8495fc29847d865087febdee8736e3b caddyfile: Fix comma edgecase in address parsing (#6616)\n* b116dcea3d022cd2b060a978c499ac17e5d0a2e1 caddyhttp: Add `{?query}` placeholder (#6714)\n* c216cf551dcbd2de1da1b9fe8a7e179b76827753 caddyhttp: Allow matching Transfer-Encoding, add to access logs (#6629)\n* 197c564f2032becba14aeec0152fe5eeb639d6c1 caddyhttp: Set default ReadHeaderTimeout (1 min)\n* 09b2cbcf4d839adec91b189fea549d64a69e0595 caddyhttp: Add `MatchWithError` to replace SetVar hack (#6596)\n* c6f2979986d87d7236b132c687c8887c92248dd8 caddyhttp: Close http3 server gracefully (#6213)\n* 88fd5f3491ab888f69f0be02cea68a49164298eb caddyhttp: Use internal issuer for IPs when no APs configured\n* 5c8dc344181c49bc7feade4a293bb4eed882b838 caddytls: Allow disabling storage cleaning, avoids writing two files (#6593)\n* d7564d632fbed209e81978c5c2c529a7bf1836f7 caddytls: Drop `rate_limit` and `burst`, has been deprecated (#6611)\n* d398898b352a6a7e8ac5c24da01dd948fc334d77 cmd: Allow `add-package` to select version of package (#6665)\n* 66c80caf236e2d98e61bf1bc8bb062d7b8c25430 cmd: Disable go1.23 tlskyber=1 experiment\n* fb72793269d419b2b37b5f1db8141c63818be514 cmd: Reject multiple configs for fmt command (#6717)\n* b3ce260389a88a35c9b0e0a19a93abfe92fb6e9f cmd: ignore missing keys during storage export (#6697)\n* 0182fb87fa7276463086c2360431a1c0dc797edf core: addresses.go funcs renames (#6622)\n* e76405d55058b0a3e5ba222b44b5ef00516116aa core: Change ListenerFunc signature (#6651)\n* 315715e90ffa25c4ad0d8a96e828dbdf6f638583 core: Implement FastAbs to avoid repeated os.Getwd calls (#6687)\n* d0e209e1da6cd6d7d61e83b851f2913ee31454f8 encode: good defaults (#6737)\n* 5ba1e06fd661aac2cbaab6d4a2ef63a9eb877a46 encode: try to use sendfile when compression is not used (#6749)\n* bcaa8aaf114629031d10dcef0ca7680ae8163e32 encode: write status immediate for success response for CONNECT requests (#6738)\n* 1d156527ea8fef0a96faa54d7ff61244e4be4094 events: Use `WithLazy` to prevent eager serialization of the event data (#6671)\n* 6790c0e38abcc534c4b3365b6e438148001fd6df fastcgi: check for CONTENT_LENGTH when sending requests (#6661)\n* eddbccd298f637c4785c891f5f96dbf103580fa8 fastcgi: remove dir redirection when useless in php_fastcgi (#6698)\n* efd9251ad38a4fd9f7d900445400ac3c8e564c28 fileserver: Add `first_exist_fallback` strategy for `try_files` (#6699)\n* d0123bd760f6c140f3b935159a55ba64899c84f8 fileserver: Fix policy `Validate()` oversight (#6727)\n* 290cfea08f2486fb86dbc11eec96d79751180eda fileserver: add a test for precompressed defaults (#6743)\n* 5c2617ebf9303100fc8c6be2a80b966b2c7fb7f1 fileserver: good default for precompressed (#6736)\n* cc23ad6402e6dac...",
+      "memory_unit_text": "In the caddyserver/caddy release v2.9.0, the release note announces Caddy 2.9, focused on refinements and bug fixes in config loading, events, logging, placeholders, reverse proxy and HTTP server performance, matchers, HTTP/3, metrics (per-host metrics), security, TLS automation & ACME ARI. It notes that Encrypted ClientHello (ECH) and post-quantum ciphers are slated for Go 1.24 and a future Caddy 2.10 release. The changelog includes numerous fixes and enhancements such as adding {?query} placeholder, allowing matching Transfer-Encoding, setting default ReadHeaderTimeout, adding MatchWithError, closing http3 server gracefully, allowing disabling storage cleaning, dropping deprecated rate_limit and burst, allowing add-package to select version, and many more."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_9_1",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.9.1",
+      "tag_name": "v2.9.1",
+      "title": "v2.9.1",
+      "time_hint": "2025-01-08",
+      "published_at": "2025-01-08T15:22:53Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.9.1",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.9.1\nTag: v2.9.1; draft: False; prerelease: False; published_at: 2025-01-08T15:22:53Z; created_at: 2025-01-08T14:47:01Z\nRelease notes:\nThis is a patch release fixing a few issues related to FastCGI, HTTP/3 and unix sockets, log file permissions, repeated TERM signals, and an ARI edge case. It also adds Caddyfile support for response matching in the `header` directive.\nThanks to everyone who reported bugs and helped with fixes!\n## Changelog\n* 34cff4af7db1365bba6decc647ccfb6bf1b21afd core: Only initiate exit once (should fix #6707)\n* 50778b55425d378f709599c0d424b0138af592f4 fix: disable h3 for unix domain socket (#6769)\n* 0e570e0cc717f02cf3800ae741df70cd074c7275 go.mod: Upgrade CertMagic to 0.21.6 (fix ARI handshake maintenance)\n* e48b75843b7eff2948b573391fb41535b5e333ef header: `match` subdirective for response matching (#6765)\n* 1f927d6b07d52d7cf46f1f3020c1ea5993a3e5e8 log: Only chmod if permission bits differ; make log dir (#6761)\n* 1bd567d7ad41d5509e2aa60cf36e749f195ad83c reverseproxy: buffer requests for fastcgi by default (#6759)\n## What's Changed\n* reverse proxy: fastcgi buffer requests for fastcgi by default by @WeidiDeng in https://github.com/caddyserver/caddy/pull/6759\n* fix: disable h3 for unix domain socket by @Geun-Oh in https://github.com/caddyserver/caddy/pull/6769\n* log: Only chmod if permission bits differ by @mholt in https://github.com/caddyserver/caddy/pull/6761\n* header: `match` subdirective for response matching by @lilnasy in https://github.com/caddyserver/caddy/pull/6765\n## New Contributors\n* @Geun-Oh made their first contribution in https://github.com/caddyserver/caddy/pull/6769\n* @lilnasy made their first contribution in https://github.com/caddyserver/caddy/pull/6765\n**Full Changelog**: https://github.com/caddyserver/caddy/compare/v2.9.0...v2.9.1",
+      "memory_unit_text": "In the caddyserver/caddy release v2.9.1, the release note is a patch release fixing issues related to FastCGI, HTTP/3 and unix sockets, log file permissions, repeated TERM signals, and an ARI edge case. It also adds Caddyfile support for response matching in the header directive. The changelog includes fixes for initiating exit only once, disabling h3 for unix domain socket, upgrading CertMagic to fix ARI handshake maintenance, adding match subdirective for response matching, and chmod for log files."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_10_0_beta_1",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.10.0-beta.1",
+      "tag_name": "v2.10.0-beta.1",
+      "title": "v2.10.0-beta.1",
+      "time_hint": "2025-03-06",
+      "published_at": "2025-03-06T18:23:58Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.10.0-beta.1",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.10.0-beta.1\nTag: v2.10.0-beta.1; draft: False; prerelease: True; published_at: 2025-03-06T18:23:58Z; created_at: 2025-03-06T17:08:12Z\nRelease notes:\nThis prerelease is outdated. Please see the latest release for notes. Thanks!",
+      "memory_unit_text": "In the caddyserver/caddy release v2.10.0-beta.1, the release note states that this prerelease is outdated and to see the latest release for notes."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_10_0_beta_2",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.10.0-beta.2",
+      "tag_name": "v2.10.0-beta.2",
+      "title": "v2.10.0-beta.2",
+      "time_hint": "2025-03-09",
+      "published_at": "2025-03-09T13:51:09Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.10.0-beta.2",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.10.0-beta.2\nTag: v2.10.0-beta.2; draft: False; prerelease: True; published_at: 2025-03-09T13:51:09Z; created_at: 2025-03-08T23:16:58Z\nRelease notes:\nThis prerelease is outdated. Please see the latest release for notes. Thanks!",
+      "memory_unit_text": "In the caddyserver/caddy release v2.10.0-beta.2, the release note states that this prerelease is outdated and to see the latest release for notes."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_10_0_beta_3",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.10.0-beta.3",
+      "tag_name": "v2.10.0-beta.3",
+      "title": "v2.10.0-beta.3",
+      "time_hint": "2025-03-24",
+      "published_at": "2025-03-24T22:46:51Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.10.0-beta.3",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.10.0-beta.3\nTag: v2.10.0-beta.3; draft: False; prerelease: True; published_at: 2025-03-24T22:46:51Z; created_at: 2025-03-24T22:20:41Z\nRelease notes:\nThis prerelease is outdated. Please see the latest release for notes and a hotfix for a regression. Thanks!",
+      "memory_unit_text": "In the caddyserver/caddy release v2.10.0-beta.3, the release note states that this prerelease is outdated and to see the latest release for notes and a hotfix for a regression."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_10_0_beta_4",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.10.0-beta.4",
+      "tag_name": "v2.10.0-beta.4",
+      "title": "v2.10.0-beta.4",
+      "time_hint": "2025-03-25",
+      "published_at": "2025-03-25T03:33:16Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.10.0-beta.4",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.10.0-beta.4\nTag: v2.10.0-beta.4; draft: False; prerelease: True; published_at: 2025-03-25T03:33:16Z; created_at: 2025-03-25T02:51:36Z\nRelease notes:\nThis prerelease is outdated. Please see the latest release for notes. Thanks!",
+      "memory_unit_text": "In the caddyserver/caddy release v2.10.0-beta.4, the release note states that this prerelease is outdated and to see the latest release for notes."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_10_0",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.10.0",
+      "tag_name": "v2.10.0",
+      "title": "v2.10.0",
+      "time_hint": "2025-04-18",
+      "published_at": "2025-04-18T20:46:28Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.10.0",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.10.0\nTag: v2.10.0; draft: False; prerelease: False; published_at: 2025-04-18T20:46:28Z; created_at: 2025-04-18T18:26:09Z\nRelease notes:\nCaddy 2.10 is here! Aside from bug fixes, this release features:\n- **Encrypted ClientHello (ECH):** This new technology encrypts the last plaintext portion of a TLS connection: the ClientHello, which includes the domain name being connected to. The [draft spec](https://www.ietf.org/archive/id/draft-ietf-tls-esni-24.html) for ECH is almost finalized, so we can now support this privacy feature for TLS. This is a powerful but nuanced capability; we highly recommend reading [the ECH documentation](https://caddyserver.com/docs/automatic-https#encrypted-clienthello-ech) on our website.\n- **Post-quantum (PQC) key exchange:** Caddy now supports the standardized `x25519mlkem768` cryptographic group by default.\n- **ACME profiles:** ACME profiles are an experimental draft that allow you to choose properties of your certificates with more flexibility than traditional CSR methods. For example, [Let's Encrypt will issue 6-day certificates](https://letsencrypt.org/2025/01/16/6-day-and-ip-certs/) under a certain profile. Caddy may eventually use that profile by default.\n- **Via header:** The reverse proxy now sets a Via header instead of a duplicate Server header.\n- **Global DNS provider:** You can now specify a default \"global\" DNS module to use instead of having to configure it locally in every part of your config that requires a DNS provider (for example, ACME DNS challenges, and ECH). This is the `dns` global option in the Caddyfile, or in JSON config, it's the `dns` parameter in the `tls` app configuration.\n- **Wildcards used by default:** Previously, Caddy would obtain individual certificates for every domain in your config literally; now wildcards, if present, will be utilized for subdomains, rather than obtaining individual certificates. This change was motivated by the novel possibility for subdomain privacy afforded by ECH. It can be overridden with `tls force_automate` in the Caddyfile. The experimental `auto_https prefer_wildcard` option has been removed.\n- **libdns 1.0 APIs:** Many of you use [DNS provider modules](https://github.com/caddy-dns) to solve ACME DNS challenges or to enable dynamic DNS. They implement interfaces defined by [libdns](https://github.com/libdns/libdns) to get, set, append, and delete DNS records. After 5 years of production experience, including lessons learned with ECH, libdns APIs have been updated and 1.0 beta has been tagged. DNS provider packages will need to update their code to be compatible, which will help ensure stability and well-defined semantics for the future. Several packages have already updated or are in the process of updating (cloudflare, rfc2136, and desec to name a few).\n- **Global `dns` config:** Now that several components of Caddy configuration may affect DNS records (ACME challenges, ECH publication, etc.), there is a new `dns` global option that can be used to specify your DNS provider config in a single place. This prevents repetition of credentials for servers where all the domains are managed by a single DNS provider.\n**Thank you to the many contributors who have helped to make this possible!** :tada: :partying_face: :champagne:\n:warning: While have traditionally supported the last 2 minor Go versions to accommodate some distribution / package manager policies, we now only support the latest minor Go version. The privacy and security benefits added in new Go versions (such as post-quantum cryptography) are worth making available to everyone as soon as possible, rather than holding back the entire user base or maintaining multiple code compilation configurations.\n## Encrypted ClientHello (ECH) details\n(This is a brief overview. We recommend reading [the full documentation](https://caddyserver.com/docs/automatic-https#encrypted-clienthello-ech).)\nTypically, server names (domain names, or \"SNI\") are se...",
+      "memory_unit_text": "In the caddyserver/caddy release v2.10.0, the release note announces Caddy 2.10 featuring Encrypted ClientHello (ECH), post-quantum (PQC) key exchange with x25519mlkem768, ACME profiles, Via header in reverse proxy, global DNS provider, wildcards used by default, and libdns 1.0 APIs. It also notes that only the latest minor Go version is supported. The release includes detailed ECH documentation and thanks contributors."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_10_1",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.10.1",
+      "tag_name": "v2.10.1",
+      "title": "v2.10.1",
+      "time_hint": "2025-08-22",
+      "published_at": "2025-08-22T16:14:52Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.10.1",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.10.1\nTag: v2.10.1; draft: False; prerelease: False; published_at: 2025-08-22T16:14:52Z; created_at: 2025-08-22T15:42:01Z\nRelease notes:\nThis is probably our biggest patch release ever -- not that lots of things were broken, but there's lots of refinement happening thanks to broader adoption and contributions from many more people. Just look at the New Contributors below!\nAnyway, this release does contain some bug fixes and dependency upgrades which we hope will serve you well. Let us know if there's any issues! And thank you to all who contributed, especially our reliable maintainer team!\nThis version of Caddy requires [Go v1.25.0 or newer](https://golang.org/dl/).\n## What's Changed\n* update quic-go to v0.51.0 by @marten-seemann in https://github.com/caddyserver/caddy/pull/6972\n* forwardproxy: reference correct field name in LoadModule by @mohammed90 in https://github.com/caddyserver/caddy/pull/6978\n* fix: Remove `nil` arg from `zapslog.NewHandler` call by @IndraGunawan in https://github.com/caddyserver/caddy/pull/6984\n* fileserver: Add support for .avif image format by @steffenbusch in https://github.com/caddyserver/caddy/pull/6988\n* reverseproxy: use DialTLSContext for TLS if servername has placeholder by @WeidiDeng in https://github.com/caddyserver/caddy/pull/6955\n* admin: Make sure that any admin routers are provisioned when local/re… by @Compy in https://github.com/caddyserver/caddy/pull/6997\n* log: default logger should respect `{in,ex}clude` by @mohammed90 in https://github.com/caddyserver/caddy/pull/6995\n* Move local admin server replacement logic below data structure initia… by @Compy in https://github.com/caddyserver/caddy/pull/7004\n* acme_server: fix policy parsing in caddyfile by @mohammed90 in https://github.com/caddyserver/caddy/pull/7006\n* implement Unwrap for interceptedResponseHandler by @WeidiDeng in https://github.com/caddyserver/caddy/pull/7016\n* fileserver: map invalid path errors to fs.ErrInvalid, and return 400 … by @Compy in https://github.com/caddyserver/caddy/pull/7017\n* caddyhttp: fix route sort by comparing paths without wildcard if they don't shar… by @WeidiDeng in https://github.com/caddyserver/caddy/pull/7015\n* refactor: use maps.Copy for cleaner map handling by @eveneast in https://github.com/caddyserver/caddy/pull/7009\n* refactor: use slices.Contains to simplify code by @tongjicoder in https://github.com/caddyserver/caddy/pull/7039\n* chore: upgrade .golangci.yml and workflow to v2 by @mohammed90 in https://github.com/caddyserver/caddy/pull/6924\n* build(deps): bump golangci/golangci-lint-action from 6 to 8 by @dependabot[bot] in https://github.com/caddyserver/caddy/pull/7044\n* fix: crash - null check on event origin by @suxatcode in https://github.com/caddyserver/caddy/pull/7047\n* fix: prevent error handler from overriding sub handler matchers by @Hellio404 in https://github.com/caddyserver/caddy/pull/6999\n* client_auth: wire up leaf verifier Caddyfile by @mohammed90 in https://github.com/caddyserver/caddy/pull/6772\n* caddyfile: reject blocks in log_skip directive by @IwatsukaYura in https://github.com/caddyserver/caddy/pull/7056\n* build(deps): bump github.com/cloudflare/circl from 1.6.0 to 1.6.1 by @dependabot[bot] in https://github.com/caddyserver/caddy/pull/7058\n* cmd: fix `Commands` function not returning all registered commands by @hslatman in https://github.com/caddyserver/caddy/pull/7059\n* ci: add dep review, OSSF scorecard actions by @mohammed90 in https://github.com/caddyserver/caddy/pull/7063\n* ci: add `{base,head}-ref` to  dep review check by @mohammed90 in https://github.com/caddyserver/caddy/pull/7064\n* core: clean up new config if it failed to run by @WeidiDeng in https://github.com/caddyserver/caddy/pull/7068\n* chore: apply security best practices for CI by @mohammed90 in https://github.com/caddyserver/caddy/pull/7066\n* refactor: use the built-in max/min to simplify the code by @xiaoxiangirl in https://github.com/caddyserver/caddy/pull/...",
+      "memory_unit_text": "In the caddyserver/caddy release v2.10.1, the release note is a large patch release with bug fixes and dependency upgrades. It requires Go v1.25.0 or newer. Changes include updating quic-go to v0.51.0, fixing forwardproxy LoadModule, adding .avif support in file server, using DialTLSContext for TLS with placeholder servername, ensuring admin routers are provisioned, fixing default logger exclude/include, moving local admin server replacement logic, fixing acme_server policy parsing, implementing Unwrap for interceptedResponseHandler, mapping invalid path errors to fs.ErrInvalid, fixing route sort, and many refactors and dependency bumps."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_10_2",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.10.2",
+      "tag_name": "v2.10.2",
+      "title": "v2.10.2",
+      "time_hint": "2025-08-23",
+      "published_at": "2025-08-23T03:10:31Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.10.2",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.10.2\nTag: v2.10.2; draft: False; prerelease: False; published_at: 2025-08-23T03:10:31Z; created_at: 2025-08-23T01:46:14Z\nRelease notes:\nThis is a hotfix release to fix a couple critical issues from v2.10.1\n## What's Changed\n* http: Make logger first, before TLS provisioning by @francislavoie in https://github.com/caddyserver/caddy/pull/7198\n* httpcaddyfile: Fix `acme_dns` regression by @francislavoie in https://github.com/caddyserver/caddy/pull/7199\n* caddyfile: Fix importing nested tokens for `{block}` by @BeeJay28 in https://github.com/caddyserver/caddy/pull/7189\n## Changelog\n* 551f793700fe1550845c824470b623fd1aa03d36 caddyfile: Fix importing nested tokens for `{block}` (#7189)\n* 16fe83c7afe2152b0bb53ae35078a28f87e6dcf2 http: Make logger first, before TLS provisioning (#7198)\n* 4564261d8350f8010b7e001e646e260e9bba5746 httpcaddyfile: Fix `acme_dns` regression (#7199)\n## New Contributors\n* @BeeJay28 made their first contribution in https://github.com/caddyserver/caddy/pull/7189\n**Full Changelog**: https://github.com/caddyserver/caddy/compare/v2.10.1...v2.10.2",
+      "memory_unit_text": "In the caddyserver/caddy release v2.10.2, the release note is a hotfix release to fix critical issues from v2.10.1. Changes include making logger first before TLS provisioning, fixing acme_dns regression, and fixing importing nested tokens for {block}."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_11_0_beta_1",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.11.0-beta.1",
+      "tag_name": "v2.11.0-beta.1",
+      "title": "v2.11.0-beta.1",
+      "time_hint": "2025-12-04",
+      "published_at": "2025-12-04T20:48:19Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.11.0-beta.1",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.11.0-beta.1\nTag: v2.11.0-beta.1; draft: False; prerelease: True; published_at: 2025-12-04T20:48:19Z; created_at: 2025-12-03T17:23:02Z\nRelease notes:\nWelcome to the beta version of 2.11. This is the first release made by our [new, automated release process](https://github.com/caddyserver/caddy/pull/7383) developed by @Mohammed90 that was carried out and approved entirely by our maintainer team (together with @francislavoie) without intervention from @mholt, the original Caddy author. This represents a significant step forward in [project autonomy and growth](https://caddy.community/t/next-steps-for-the-caddy-project-maintainership/33076), ensuring that the project's stability and longevity is not reliant upon a single person.\nThis first beta release was primarily to test our new workflow, so there's still a couple things left to do before the stable release.\nFeatured here are numerous, mostly minor, bug fixes and enhancements, mostly affecting edge cases or niche corners of the software; for example, proxying H2C or HTTP/3, obscure Caddyfile scenarios, and named socket activation.\nSome notable changes:\n- SIGUSR1 can be used to reload configuration only if it was loaded from a file using the CLI, and not changed by the API since then.\n- We replaced \"lumberjack\", our logging library, with a fork \"timberjack\" that supports the oft-requested time-rolling ability.\n- Caddy can now bind listeners with named socket activation.\nBefore the final release, we expect ECH key rotation to be enabled as well as a few other patches/features\nThank you to our sponsors and contributors for all that you do!\n## Changelog\n* 5473eb95d8e94505b8c06955bd200f37179c54a2  encode: fix response corruption when handle_errors is used (#7235)\n* 13a4ec7597f8e9ebe105b0ee89102ba521f21173 basicauth: Implement argon2id (#7186)\n* 6d90c7707dac3026c1b28fba615b1962d2cd45e1 build(deps): bump github.com/slackhq/nebula from 1.9.5 to 1.9.7 (#7315)\n* eead249382ac14c29d82ec75f30df7638e879567 build(deps): bump golang.org/x/crypto from 0.43.0 to 0.45.0 (#7355)\n* 2d0f3f887bc1f70c52fc183ebcc6225f7f91c041 build(deps): bump the actions-deps group with 5 updates (#7237)\n* afbdcec08bbd7471b9b5e5ed209881dfcc51bd6c build(deps): bump the actions-deps group with 8 updates (#7284)\n* cd1c203777e89a64c8426c049727c58fbebc1276 build(deps): bump the all-updates group across 1 directory with 2 updates (#7307)\n* 39357d3e5cb6124e8af651460cc8ab6975c637b8 build(deps): bump the all-updates group with 17 updates (#7236)\n* 786d5378771d068440b7ddd8c310851bb7b9afe0 build(deps): bump the all-updates group with 3 updates (#7376)\n* 07d2aaf22ef8225575b9557640806bc895067905 build(deps): bump the all-updates group with 4 updates (#7333)\n* 0ba8786b35eaec5ec53f8562bec9587e6b1e6a8b caddyfile: Allow `block` to do nothing if nothing passed to `import` (#7206)\n* 92c8bc73228aad9eb0b396fdb687c024124d8dbd caddyfile: fix nested quotes formatted incorrectly by fmt (#7045)\n* 6d73d85c1fd3d20acaaadc0fb69e3f562d92f685 caddyfile: prevent adding trailing space on line before env variable (#7215)\n* d7185fd002a2c57d20a98d3e94442da7b259b3ad caddyhttp: Add `trusted_proxies_unix` for trusting unix socket `X-Forwarded-*` headers (#7265)\n* de6b78009b840eb395c33b8d65c5d32746df38b6 caddyhttp: Add server options `keepalive_idle` and `keepalive_count` (#7298)\n* e0a8f9541d155b7385b78d2b8bbe2fad53bb6295 caddyhttp: Normalize (lowercase) {label.N} placeholders\n* 5e2953670ed7eecbc34146b5d12cca7dd85ac580 caddyhttp: add replacer placeholders for escaped values (#7181)\n* 8285eba8426e3c75ed81d6a8c5cd6ec685430d47 caddyhttp: allow customizing the Server header (#7338)\n* bc0e1841305b2cc82aeaf9953e527d9819a88c83 caddyhttp: omit unnecessary reassignment (#7276)\n* 3553cfb6adb2954a53d559c1841c8072b9921e61 caddyhttp: remove redundant middleware next copy (#7217)\n* 1ce2a13ad10eab5693b425056c571621f5d860e9 caddyhttp: wrap accepted connection to suppress tls.ConnectionState (#7247)\n* d9cc24f3df663e1bab58dc08ac12b...",
+      "memory_unit_text": "In the caddyserver/caddy release v2.11.0-beta.1, the release note announces the first beta of 2.11, made by a new automated release process carried out by the maintainer team without intervention from the original author. Notable changes: SIGUSR1 can reload configuration if loaded from a file and not changed by API; replaced lumberjack with timberjack for time-rolling logs; Caddy can bind listeners with named socket activation. The changelog includes fixes for encode response corruption, basicauth argon2id, various dependency bumps, Caddyfile block and import fixes, trusted_proxies_unix, keepalive options, placeholder normalization, and many other enhancements."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_11_0_beta_2",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.11.0-beta.2",
+      "tag_name": "v2.11.0-beta.2",
+      "title": "v2.11.0-beta.2",
+      "time_hint": "2026-01-06",
+      "published_at": "2026-01-06T18:02:07Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.11.0-beta.2",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.11.0-beta.2\nTag: v2.11.0-beta.2; draft: False; prerelease: True; published_at: 2026-01-06T18:02:07Z; created_at: 2026-01-06T17:29:43Z\nRelease notes:\nWelcome to the second beta version of 2.11. We are closer to a final release. This includes some minor new features and enhancements, and a fix for the ZeroSSL API issuer.\nThank you to everyone who contributed!\n## Changelog\n* 8a87bb3ffb8706bbfcaada1d52008a8eb07ad790 build(deps): bump github.com/smallstep/certificates (#7381)\n* 7b031e1eb5bc0bae9a8394d93f20399932ebd4d3 build(deps): bump the all-updates group across 1 directory with 12 updates (#7421)\n* be5f49fbeb046fb123583e5887ddf576a312a8e4 caddyhttp: Fix logging on wildcard sites when SkipUnmappedHosts is true (#7372)\n* 6e0cbd0fa0d3022b41fc2c17b80f15402e685643 caddyhttp: create a placeholder for and log ech status (#7328)\n* 4037d0576094c5f9f570825601615b62cb8d85b1 caddyhttp: {http.request.body_base64} placeholder (#7367)\n* 7ebe72bbfe342688a325325ea79e46970d017eb7 caddypki: Add support for multiple intermediates in signing chain (#7057)\n* 3c9c67e804eb3db9a3ac6532ddd2434246058cd5 caddytls: ECH key rotation (#7356)\n* 374b7a637f2b6f8d0f2723ad2e7908a41023e8d5 caddytls: fix preferred chains options by appending values instead of replacing (#7387)\n* 6a4296b1a45d81f52bf8ab01d0bcaa4423fee3ff caddytls: panic when using tls.ca_pool.source.http -> tls.ca (#7393)\n* 9eabd443cb170ed846a70a84acf87002683ad29b cmd: Add --json flag to list-modules command (#7409)\n* b2d21f650a7ecd61d0a7ee85f3d423b89cddc371 go.mod: Upgrade CertMagic and ZeroSSL deps\n* 34fd2dfcff4a9533bd3b63da56edb782effe561d go.mod: update tscert package to latest (aea342f6) (#7397)\n* decc8a4d6fc476b21165400ddc3c02d94ee9f47f logging: `log_append` Early option, Supports `{http.response.body}` (#7368)\n* 409a0721354354a2d13e5c110be0f7f03363652b notify: implement windows service status and error notifications (#7389)\n* 1f1be3f4fe281643fd4ac8c1217d5ade7f82f6b9 tracing: Add span attributes to tracing module (#7269)\n## What's Changed\n* build(deps): bump github.com/smallstep/certificates from 0.28.4 to 0.29.0 by @dependabot[bot] in https://github.com/caddyserver/caddy/pull/7381\n* caddypki: Add support for multiple intermediates in signing chain by @hslatman in https://github.com/caddyserver/caddy/pull/7057\n* caddyhttp: Fix logging on wildcard sites when SkipUnmappedHosts is true by @francislavoie in https://github.com/caddyserver/caddy/pull/7372\n* multiplexing: Introduce packet conn wrappers by @vnxme in https://github.com/caddyserver/caddy/pull/7180\n* docs: add maybe template function documentation by @steffenbusch in https://github.com/caddyserver/caddy/pull/7388\n* caddyhttp: create a placeholder for and log ech status by @WeidiDeng in https://github.com/caddyserver/caddy/pull/7328\n* caddytls: fix preferred chains options by appending values instead of replacing by @okrc in https://github.com/caddyserver/caddy/pull/7387\n* feat: mark Assert* functions as test helpers by @dunglas in https://github.com/caddyserver/caddy/pull/7380\n* caddytls: ECH key rotation by @mholt in https://github.com/caddyserver/caddy/pull/7356\n* caddytls: panic when using tls.ca_pool.source.http -> tls.ca by @Zenexer in https://github.com/caddyserver/caddy/pull/7393\n* notify: implement windows service status and error notifications by @FreyreCorona in https://github.com/caddyserver/caddy/pull/7389\n* caddyhttp: `{http.request.body_base64}` placeholder by @francislavoie in https://github.com/caddyserver/caddy/pull/7367\n* chore: update tscert package to latest (aea342f6) by @willnorris in https://github.com/caddyserver/caddy/pull/7397\n* logging: `log_append` Early option, Supports `{http.response.body}` by @francislavoie in https://github.com/caddyserver/caddy/pull/7368\n* update quic-go to v0.58.0 by @marten-seemann in https://github.com/caddyserver/caddy/pull/7404\n* cmd: add --json flag to list-modules by @pauloappbr in https://github.com/caddyserver/caddy/pull/7409\n* Add span...",
+      "memory_unit_text": "In the caddyserver/caddy release v2.11.0-beta.2, the release note is the second beta of 2.11, closer to final release. It includes minor new features and enhancements, and a fix for the ZeroSSL API issuer. Changes include: ECH key rotation, logging on wildcard sites fix, {http.request.body_base64} placeholder, support for multiple intermediates in signing chain, preferred chains options fix, --json flag for list-modules, log_append Early option, tracing span attributes, and various dependency updates."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_11_1",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.11.1",
+      "tag_name": "v2.11.1",
+      "title": "v2.11.1",
+      "time_hint": "2026-02-23",
+      "published_at": "2026-02-23T04:21:44Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.11.1",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.11.1\nTag: v2.11.1; draft: False; prerelease: False; published_at: 2026-02-23T04:21:44Z; created_at: 2026-02-20T22:55:33Z\nRelease notes:\nOur community is pleased to announce Caddy 2.11! Of note are new features, numerous bug fixes including several security patches, and various QoL (\"quality-of-life\") enhancements.\nThere are no code changes from v2.11.0 other than to a CI job. Due to a recent external change that broke our release process, the first release of 2.11 is v2.11.1.\n## Special Sponsor Shoutout\nExtra big thanks to our major sponsors:\n- [ZeroSSL](https://zerossl.com)\n- [Stripe](https://stripe.com)\n- [Railway](https://railway.com/?utm_medium=sponsor&utm_source=oss&utm_campaign=caddy)\nThey, along with dozens of smaller sponsors, make this project and new releases possible, together with our maintainer team. Thank you all!\n## Notable changes\n- Encrypted ClientHello (ECH) keys are rotated automatically.\n- Time-rolling options for logs.\n- `SIGUSR1` can now reload configuration if it was initially loaded from a file on the command line and did not get changed via the API.\n- Reverse proxy now automatically rewrites the Host header to the address of the upstream when the upstream is HTTPS (#7454)\n- `log_append` can now log request and response bodies, useful for debugging.\n- Our project now implements and requires Assistance Disclosures (for AI/LLMs) on issues, PRs, comments, replies, reviews, etc.\n- Many, many other minor improvements and bug fixes.\nThank you to everyone who was involved this release!\n### :warning: Security patches\n- fastcgi: `CVE-2026-27590` by @dunglas and @AbdrrahimDahmani - Unicode case-folding length expansion causes incorrect split_path index (SCRIPT_NAME/PATH_INFO confusion) in FastCGI transport.\n- admin: `CVE-2026-27589` by @1seal - Cross-origin requests attempted with `no-cors` mode could cause some API requests to succeed; such requests are now blocked. (In order for this to be practically exploitable, a web browser executing a malicious web page must be running locally to a production Caddy process.)\n- caddyhttp:  `CVE-2026-27588` by Asim Viladi Oglu Manizada - The Host matcher becomes case-sensitive for large host lists (>100), enabling host-based route/auth bypass.\n- caddyhttp: `CVE-2026-27587` by Asim Viladi Oglu Manizada - The Path matcher skips case normalization for escape sequences, enabling path-based route/auth bypass.\n- caddytls: `CVE-2026-27586` by @moscowchill - TLS client authentication silently fails open when CA certificate file is missing or malformed.\n- caddyhttp: `CVE-2026-27585` by @parrot409 - Improper sanitization of glob characters in file matcher may lead to bypassing security protections.\n:rotating_light:  **Notice for Caddy plugin maintainers: Dependabot will probably alert you to the security fixes in Caddy and urge you to upgrade it in your `go.mod` file. Please ONLY upgrade the Caddy dependency if there's a change to an exported API your plugin uses.** (Then, [turn Dependabot off](https://words.filippo.io/dependabot/).)\n## What's Changed\n* caddyhttp: add replacer placeholders for escaped values by @Qusic in https://github.com/caddyserver/caddy/pull/7181\n* AI assistance disclosure by @mholt in https://github.com/caddyserver/caddy/pull/7212\n* caddyfile: Prevent trailing space on line before env variable - Fixes #6881 by @arpansaha13 in https://github.com/caddyserver/caddy/pull/7215\n* add: encode header Content-Type graphql-response by @aro-lew in https://github.com/caddyserver/caddy/pull/7214\n* caddyhttp: Removing redundant middleware next copy by @maxcelant in https://github.com/caddyserver/caddy/pull/7217\n* build(deps): bump the all-updates group with 17 updates by @dependabot[bot] in https://github.com/caddyserver/caddy/pull/7236\n* build(deps): bump the actions-deps group with 5 updates by @dependabot[bot] in https://github.com/caddyserver/caddy/pull/7237\n* encode: fix response corruption when handle_errors is used by @Siomac...",
+      "memory_unit_text": "In the caddyserver/caddy release v2.11.1, the release note announces Caddy 2.11 with new features, bug fixes, and security patches. Notable changes: ECH keys rotated automatically, time-rolling options for logs, SIGUSR1 reload, reverse proxy rewrites Host header to upstream when HTTPS, log_append can log request/response bodies, AI assistance disclosures required. Security patches include CVEs for FastCGI, admin, caddyhttp Host and Path matchers, caddytls client authentication, and file matcher glob sanitization. The release also thanks sponsors and contributors."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_11_2",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.11.2",
+      "tag_name": "v2.11.2",
+      "title": "v2.11.2",
+      "time_hint": "2026-03-06",
+      "published_at": "2026-03-06T02:43:43Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.11.2",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.11.2\nTag: v2.11.2; draft: False; prerelease: False; published_at: 2026-03-06T02:43:43Z; created_at: 2026-03-06T01:54:56Z\nRelease notes:\nCaddy 2.11.2 contains numerous bug fixes and enhancements! I know that's a lame summary but it's really all over the place.\n## Highlights\n- Reverse proxy got a lot of love with certain edge cases related to PROXY protocol, health check port, and closing body on retries. Dynamic upstreams are now tracked which enables passive health checking.\n- Performance improvements for metrics.\n- New `tls_resolvers` global option to control DNS resolvers for all sites when using the ACME DNS challenge.\n- Log rolling now supports `zstd` compression; deprecated `roll_gzip`, which will be removed in the future. Use `roll_compression` instead.\n- Refined logging and some error messages.\n- Fixed a bug in rewrite handler that could cause some URIs to not be rewritten when URI path is an escaped form of target path. Thanks to @MaherAzzouzi for the report.\n## Security fixes\nThis release fixes two CVEs.\n- @NucleiAv reported a bug in the `forward_auth` directive that could permit identity injection and potential privilege escalation.\n- @sammiee5311 reported that `vars_regexp` double-expanded placeholders, allowing some unusual configs to reveal secrets.\nIn addition:\n- Built on Go 1.26.1 (also released today) which patches several CVEs.\n- Our documentation has been updated to note that file system case sensitivity may affect the behavior of the `hide` option of the `file_server` handler.\nThank you to everyone who contributed, and for our ongoing sponsorships that make this development possible!\n## Changelog\n* 88616e86e6e656738426bb86b4a42dcc20a59f77 api: Add all in-flight requests /reverse_proxy/upstreams (Fixes #7277) (#7517)\n* d935a6956c16902623b8e8f6d1aafec4f6124f46 autohttps: Ensure CertMagic config is recreated after autohttps runs (#7510)\n* 5d20adc7a97f70d6fe722099356cca2027908576 build(deps): bump github.com/smallstep/certificates (#7535)\n* 9371ee67c64d2d2c81f9530be0d9749ecdbd2b00 build(deps): bump the actions-deps group across 1 directory with 12 updates (#7536)\n* 9798f6964d58eb5703d1498804962faca2dae4ea caddyhttp: Avoid nil pointer dereference in proxyWrapper (#7521)\n* dc360828598440beb1dfdb21c0ba14e09bcd565b caddyhttp: Collect metrics once per route instead of per handler (#7492)\n* 174fa2ddb93f830370b05058d1ea51ad1512597d caddyhttp: Evaluate tls.client placeholders more accurately (fix #7530) (#7534)\n* eac02ee98f9f61d79ae774aa49aa102ddf2076ba caddyhttp: Limit empty Host check to HTTP/1.1\n* f283062d37c50627d53ca682ebae2ce219b35515 cmd: Custom binary names through `CustomBinaryName` and `CustomLongDescription` (#7513)\n* cd9e1660aa454e6536ad740c9d1aaecf3c3552ed cmd: Pass configFile, not configFlag, for reload command (#7532)\n* 7b34e3107eb6071fea3a3f94a5c913c32a55afd0 core: Check whether @id is unique (#7002)\n* 566e710991a6b752933178e2c6126181efc563aa fileserver: document hide case-sensitivity (F-CADDY-FILESERVER-HIDE-CASE-001) (#7548)\n* 2dd3852416e2b04bc90b98643673ec9e131c32e6 fix(caddyfile): Prevent parser to panic when no token were added by empty {block} (#7543)\n* 2dbcdefbbee68e7b4a31ac66361a0f4e3bcd2eea forward_auth: `copy_headers` does not strip client-supplied identity headers (Fixes GHSA-7r4p-vjf4-gxv4) (#7545)\n* ce203aa9e1ff2686777019f45c36c283debb7986 go.mod: Upgrade x/net\n* 76b198f586e4e2482a0278ba52c176cff70af8cf http: Sort auto-HTTPS redirect routes by host specificity (fixes #7390) (#7502)\n* 7ffb640a4da666203ab43396eaeb2b6b84bb983f httpcaddyfile: Fix missing TLS connection policies when auto_https is default (#7325) (#7507)\n* 45cf61b1276b2cf79ce0147df8fa48c96e8e5356 logging: Ensure `slog` error level logs don't print stack traces (#7512)\n* 987375297862d9cd0a3fa33cfb199c25e504ad1b logging: Support `zstd` roll compression (#7515)\n* 294dfff4435c31b7c8d20d26067365b0a0016610 logging: add DirMode options and propagate FileMode to rotations (#7335)\n* a6acb3902cb...",
+      "memory_unit_text": "In the caddyserver/caddy release v2.11.2, the release note contains numerous bug fixes and enhancements. Highlights: reverse proxy fixes for PROXY protocol, health check port, and body closing on retries; dynamic upstreams tracked for passive health checking; performance improvements for metrics; new tls_resolvers global option; log rolling supports zstd compression; refined logging and error messages; fixed rewrite handler URI bug. Security fixes include CVEs for forward_auth identity injection and vars_regexp double-expansion. Built on Go 1.26.1."
+    },
+    {
+      "memory_node_id": "caddyserver__caddy__release__v2_11_3",
+      "repo": "caddyserver/caddy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.11.3",
+      "tag_name": "v2.11.3",
+      "title": "v2.11.3",
+      "time_hint": "2026-05-12",
+      "published_at": "2026-05-12T15:18:58Z",
+      "source_url": "https://github.com/caddyserver/caddy/releases/tag/v2.11.3",
+      "raw_text": "Repository: caddyserver/caddy\nRelease: v2.11.3\nTag: v2.11.3; draft: False; prerelease: False; published_at: 2026-05-12T15:18:58Z; created_at: 2026-05-12T02:55:07Z\nRelease notes:\nThis release improves several aspects of Caddy with minor features, bug fixes, and security patches. Thank you to everyone and their bots who contributed to help make this release the best one yet!\n**Security patches:**\n- fastcgi: Carrying over a patch from FrankenPHP for a bug that could allow non-PHP files to be executed; collaborated on by @dunglas, @KC1zs4, and @chenjj.\n- vars: A more thorough fix for https://github.com/advisories/GHSA-m2w3-8f23-hxxf, collaborated by @everping and @vnxme.\n- admin: Array index normalization to prevent remote admin socket auth bypass, by @Amemoyoi and bot.\n- admin: More rigorous path prefix matching to prevent remote admin socket auth bypass, by @Amemoyoi and bot.\nWe've also merged a couple PRs that fix upstream security bugs in other projects like quic-go and CertMagic. Thank you to @marten-seemann for maintaining quic-go so diligently!\n## What's Changed\n* caddyhttp: Sync placeholder expansion in `vars` and `vars_regexp` by @vnxme in https://github.com/caddyserver/caddy/pull/7573\n* caddytls: Avoid ACME fallback for implicit Tailscale *.ts.net policies by @steadytao in https://github.com/caddyserver/caddy/pull/7577\n* chore: Resolve recent CI failures by @mholt in https://github.com/caddyserver/caddy/pull/7593\n* caddytls: Consolidate empty APs more smartly by @mholt in https://github.com/caddyserver/caddy/pull/7567\n* rewrite: skip query rename when source key is absent by @steadytao in https://github.com/caddyserver/caddy/pull/7599\n* root: introduce down-propagating Helper.BlockState for other directives/plugins to use by @henderkes in https://github.com/caddyserver/caddy/pull/7594\n* http: make zstd checksum configurable by @ottenhoff in https://github.com/caddyserver/caddy/pull/7586\n* notify: Always send \"READY=1\" even after an error by @francislavoie in https://github.com/caddyserver/caddy/pull/7597\n* reverseproxy: Fix check for `header_up Host {upstream_hostport}` redundancy by @yubiuser in https://github.com/caddyserver/caddy/pull/7564\n* caddytls: Expand placeholders in dns_challenge override_domain tls parameter by @pberkel in https://github.com/caddyserver/caddy/pull/7609\n* tls: add system and combined CA pool modules by @HarshPatel5940 in https://github.com/caddyserver/caddy/pull/7406\n* vars: Don't expand placeholders in values by @vnxme in https://github.com/caddyserver/caddy/pull/7629\n* build(deps): bump go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp from 1.42.0 to 1.43.0 by @dependabot[bot] in https://github.com/caddyserver/caddy/pull/7637\n* build(deps): bump the all-updates group across 1 directory with 11 updates by @dependabot[bot] in https://github.com/caddyserver/caddy/pull/7641\n* reverseproxy: make stream copy buffer size configurable by @steadytao in https://github.com/caddyserver/caddy/pull/7627\n* vars: Add matcher placeholder handling tests by @steadytao in https://github.com/caddyserver/caddy/pull/7640\n* build(deps): bump github.com/go-jose/go-jose/v4 from 4.1.3 to 4.1.4 by @dependabot[bot] in https://github.com/caddyserver/caddy/pull/7621\n* logging: Add journald encoder wrapper by @steadytao in https://github.com/caddyserver/caddy/pull/7623\n* caddyfile: Improve import/global options UX for imports before global options by @steadytao in https://github.com/caddyserver/caddy/pull/7642\n* chore: replace `interface{}` with `any` for modernization by @tsinglua in https://github.com/caddyserver/caddy/pull/7571\n* chore: bump timberjack to v1.4.1 by @DeRuina in https://github.com/caddyserver/caddy/pull/7618\n* logging: Preserve ts for journald-wrapped JSON logs by @steadytao in https://github.com/caddyserver/caddy/pull/7644\n* fileserver: show symlink targets verbatim (#7476) by @maxtruxa in https://github.com/caddyserver/caddy/pull/7579\n* fix(caddyfile): {block} in snippet by @prettysun...",
+      "memory_unit_text": "In the caddyserver/caddy release v2.11.3, the release note improves several aspects with minor features, bug fixes, and security patches. Security patches: fastcgi non-PHP file execution fix, vars placeholder expansion fix, admin array index normalization and path prefix matching fixes. Other changes include syncing placeholder expansion in vars and vars_regexp, avoiding ACME fallback for Tailscale policies, consolidating empty automation policies, skip query rename when source key absent, introducing down-propagating Helper.BlockState, making zstd checksum configurable, always sending READY=1, fixing header_up Host redundancy check, expanding placeholders in dns_challenge override_domain, adding system and combined CA pool modules, and various dependency updates and refactors."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the caddyserver/caddy releases, which release introduces Encrypted ClientHello (ECH) and post-quantum key exchange with x25519mlkem768?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v2.8.0"
+        },
+        {
+          "option_id": "B",
+          "text": "v2.9.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v2.10.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v2.11.1"
+        }
+      ],
+      "correct_option_id": "C",
+      "expected_answer": "v2.10.0",
+      "source_chunk_ids": [
+        "caddyserver__caddy__release__v2_10_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "caddyserver__caddy__release__v2_10_0",
+          "answer_text": "Caddy 2.10 featuring Encrypted ClientHello (ECH), post-quantum (PQC) key exchange with x25519mlkem768"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the caddyserver/caddy releases, how does the TLS certificate cache behavior described in v2.7.3 differ from the TLS storage cleaning behavior described in v2.7.6?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v2.7.3 purges and recreates the in-memory TLS certificate cache during config reloads, while v2.7.6 synchronizes TLS storage cleaning across the cluster and remembers it across restarts."
+        },
+        {
+          "option_id": "B",
+          "text": "v2.7.3 introduces synchronized TLS storage cleaning, while v2.7.6 makes the in-memory TLS certificate cache no longer purged during reloads."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases remove the TLS certificate cache entirely."
+        },
+        {
+          "option_id": "D",
+          "text": "v2.7.3 adds post-quantum key exchange, while v2.7.6 adds Encrypted ClientHello."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v2.7.3 purges and recreates the in-memory TLS certificate cache during config reloads, while v2.7.6 synchronizes TLS storage cleaning across the cluster and remembers it across restarts.",
+      "source_chunk_ids": [
+        "caddyserver__caddy__release__v2_7_3",
+        "caddyserver__caddy__release__v2_7_6"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "caddyserver__caddy__release__v2_7_3",
+          "answer_text": "The in-memory TLS certificate cache is no longer purged and recreated during config reloads"
+        },
+        {
+          "memory_node_id": "caddyserver__caddy__release__v2_7_6",
+          "answer_text": "TLS storage cleaning is now synchronized across the cluster and remembered across restarts"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the caddyserver/caddy release window, order the following release-content states from earliest to latest: (1) a release that introduces the new default template for the file server's browse listings, (2) a release that adds Caddyfile support for response matching in the header directive, (3) a release that introduces Encrypted ClientHello (ECH) and post-quantum key exchange, (4) a release that adds the tls_resolvers global option to control DNS resolvers for all sites when using the ACME DNS challenge.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "caddyserver__caddy__release__v2_7_3",
+        "caddyserver__caddy__release__v2_9_1",
+        "caddyserver__caddy__release__v2_10_0",
+        "caddyserver__caddy__release__v2_11_2"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "caddyserver__caddy__release__v2_7_3",
+          "answer_text": "New default template for the file server's \"browse\" listings"
+        },
+        {
+          "memory_node_id": "caddyserver__caddy__release__v2_9_1",
+          "answer_text": "adds Caddyfile support for response matching in the header directive"
+        },
+        {
+          "memory_node_id": "caddyserver__caddy__release__v2_10_0",
+          "answer_text": "Encrypted ClientHello (ECH), post-quantum (PQC) key exchange"
+        },
+        {
+          "memory_node_id": "caddyserver__caddy__release__v2_11_2",
+          "answer_text": "new tls_resolvers global option to control DNS resolvers for all sites when using the ACME DNS challenge"
+        }
+      ]
+    }
+  ]
+}

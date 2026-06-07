@@ -1,0 +1,525 @@
+{
+  "prototype_id": "hasura__graphql_engine_release_window",
+  "domain": "github_release_evolution",
+  "repo": "hasura/graphql-engine",
+  "source_type": "release_note",
+  "window_title": "hasura/graphql-engine recent release evolution",
+  "window_summary": "This window tracks the recent hasura/graphql-engine release stream across patch and minor releases, including security fixes, server improvements, console updates, and data connector enhancements.",
+  "chunks": [
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_45_0",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.45.0",
+      "tag_name": "v2.45.0",
+      "title": "v2.45.0",
+      "time_hint": "2024-12-02",
+      "published_at": "2024-12-02T07:47:03Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.45.0",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.45.0\nTag: v2.45.0; draft: False; prerelease: False; published_at: 2024-12-02T07:47:03Z; created_at: 2024-11-29T09:33:32Z\nRelease notes:\n## Changelog\n### Bug fixes and improvements\n#### Server\n- Fix issue where websocket connections did not time out when clients failed to initialize the protocol.\n- When using GraphQL schema introspection to introspect directives, the `isRepeatable` field now returns a valid value instead of `null`.\n- Update `--http-log-query-only-on-error` flag / `HASURA_GRAPHQL_HTTP_LOG_QUERY_ONLY_ON_ERROR` env var behavior to include `operationName` in the `query` field of `http-log` for successful requests when set to `true`.\n- Add `--http-log-query-only-on-error` flag / `HASURA_GRAPHQL_HTTP_LOG_QUERY_ONLY_ON_ERROR` env var (default `false`) to include query field in `http-log` only when the request results in an error.\n- Only show internal actions errors in logs if `HASURA_GRAPHQL_DEV_MODE` or `HASURA_GRAPHQL_ADMIN_INTERNAL_ERRORS` are switched on.\n- Add `hasura_postgres_connection_error_total` metric to count the number of Postgres connection errors. _(Cloud / Enterprise edition only)_\n- Fix Postgres URI label in metrics. _(Cloud / Enterprise edition only)_\n#### Console\n- Fix permission builder crash while using relationships defined via composite foreign-keys.\n- Add support for session variables for the `_in` and `_nin` operators while creating permissions in data tab performance mode.",
+      "memory_unit_text": "In the hasura/graphql-engine release v2.45.0, the server fixes a websocket connection timeout issue, corrects the isRepeatable field in directive introspection, and updates the http-log-query-only-on-error flag behavior. It also adds a new flag to include query field in http-log only on error, hides internal action errors unless dev mode or admin internal errors are enabled, and introduces a hasura_postgres_connection_error_total metric (Cloud/Enterprise). The console fixes a permission builder crash with composite foreign keys and adds session variable support for _in and _nin operators in performance mode."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_45_1",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.45.1",
+      "tag_name": "v2.45.1",
+      "title": "v2.45.1",
+      "time_hint": "2024-12-06",
+      "published_at": "2024-12-06T14:31:50Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.45.1",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.45.1\nTag: v2.45.1; draft: False; prerelease: False; published_at: 2024-12-06T14:31:50Z; created_at: 2024-12-05T15:37:08Z\nRelease notes:\n## Changelog\nThis is a patch release for `v2.45`.\n### Bug fixes and improvements\n#### CLI\n- Allow migration directories with 14 digit numeric prefixes to be picked up when running `hasura scripts update-project-v3`.",
+      "memory_unit_text": "In the hasura/graphql-engine patch release v2.45.1, the CLI allows migration directories with 14-digit numeric prefixes to be picked up when running 'hasura scripts update-project-v3'."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_44_1",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.44.1",
+      "tag_name": "v2.44.1",
+      "title": "v2.44.1",
+      "time_hint": "2024-12-09",
+      "published_at": "2024-12-09T08:26:30Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.44.1",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.44.1\nTag: v2.44.1; draft: False; prerelease: False; published_at: 2024-12-09T08:26:30Z; created_at: 2024-12-03T15:02:34Z\nRelease notes:\n## Changelog\nThis is a patch release for `v2.44`.\n### Bug fixes and improvements\n### Console\n- Add support for session variables for the `_in` and `_nin` operators while creating permissions in data tab performance mode.\n### Build\n- Update ubi9 image for security vulnerabilities for GraphQL engine.",
+      "memory_unit_text": "In the hasura/graphql-engine patch release v2.44.1, the console adds support for session variables for the _in and _nin operators while creating permissions in data tab performance mode. The build updates the ubi9 image for security vulnerabilities for the GraphQL engine."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_45_2",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.45.2",
+      "tag_name": "v2.45.2",
+      "title": "v2.45.2",
+      "time_hint": "2025-02-21",
+      "published_at": "2025-02-21T10:36:57Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.45.2",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.45.2\nTag: v2.45.2; draft: False; prerelease: False; published_at: 2025-02-21T10:36:57Z; created_at: 2025-02-20T06:26:22Z\nRelease notes:\n## Changelog\nThis is a patch release for `v2.45`.\n### Bug fixes and improvements\n#### Server\n- Fix `ConnectionClosed` error during metadata apply, and silence some other websockets related messages incorrectly logged as errors and report-as-bugs.\n#### Console\n- Fix Model Summary for MongoDB databases in the data tab.\n- Fix email alerts modal crash in Schema Registry. _(Cloud only)_\n#### Build\n- Update RH, Quarkus, Kotlin and Snowflake to get the latest security updates.\n- Update Ubuntu Jammy base image and ubi9 image to get the latest security updates.",
+      "memory_unit_text": "In the hasura/graphql-engine patch release v2.45.2, the server fixes a ConnectionClosed error during metadata apply and silences some websocket messages incorrectly logged as errors. The console fixes the Model Summary for MongoDB databases and an email alerts modal crash in Schema Registry (Cloud only). The build updates RH, Quarkus, Kotlin, Snowflake, Ubuntu Jammy base image, and ubi9 image for security updates."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_46_0_beta_1",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.46.0-beta.1",
+      "tag_name": "v2.46.0-beta.1",
+      "title": "v2.46.0-beta.1",
+      "time_hint": "2025-02-27",
+      "published_at": "2025-02-27T07:46:24Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.46.0-beta.1",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.46.0-beta.1\nTag: v2.46.0-beta.1; draft: False; prerelease: True; published_at: 2025-02-27T07:46:24Z; created_at: 2025-02-21T19:37:52Z\nRelease notes:\n## Changelog\n### Bug fixes and improvements\n#### Server\n- Fix an issue where Postgres reset JSON parameters to empty strings after a transaction, causing event trigger failures when executing mutations outside Hasura. The `insert_event_log` trigger function now correctly handles empty strings.\n- Attempt to set Haskell runtime threads based on cgroup CPU limits, when present, for better automatic sizing in Docker and Kubernetes environments. Users with small CPU limits on servers with many cores should expect to see somewhat lower memory usage and possibly improved performance.\n- Add optional `no_transaction` flag (default `false`) to `run_sql` API (Postgres)  to execute SQL statements outside transaction blocks, with support for splitting multiple statements. Useful for operations like `CREATE INDEX CONCURRENTLY`.\n- Fix an issue where a source's metadata would be erased if the source was inconsistent and then a source update was performed.\n- Mark remote schemas as inconsistent when type conflicts occur with the existing schema.\n- Only show internal actions errors in logs if `HASURA_GRAPHQL_DEV_MODE` or `HASURA_GRAPHQL_ADMIN_INTERNAL_ERRORS` are switched on.\n- Fix the `hasura_active_subscriptions` metric becoming inconsistent (e.g. showing a negative value). _(Cloud / Enterprise edition only)_\n- Increase upper bound of execution time metrics to 100s. _(Cloud / Enterprise edition only)_\n- Add metrics `hasura_events_fetch_query_time` and `hasura_events_fetched_total`. _(Cloud / Enterprise edition only)_\n- Fix metrics label for DB with non-standard URI. _(Cloud / Enterprise edition only)_",
+      "memory_unit_text": "In the hasura/graphql-engine beta release v2.46.0-beta.1, the server fixes an issue where Postgres reset JSON parameters to empty strings after a transaction, causing event trigger failures. It attempts to set Haskell runtime threads based on cgroup CPU limits for better sizing in Docker/Kubernetes, adds an optional no_transaction flag to run_sql API for executing SQL outside transaction blocks, fixes source metadata erasure on inconsistent source update, marks remote schemas as inconsistent on type conflicts, and hides internal action errors unless dev mode or admin internal errors are enabled. It also fixes the hasura_active_subscriptions metric inconsistency, increases execution time metrics upper bound to 100s, adds hasura_events_fetch_query_time and hasura_events_fetched_total metrics, and fixes metrics label for DB with non-standard URI (Cloud/Enterprise)."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_46_0",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.46.0",
+      "tag_name": "v2.46.0",
+      "title": "v2.46.0",
+      "time_hint": "2025-03-05",
+      "published_at": "2025-03-05T07:35:00Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.46.0",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.46.0\nTag: v2.46.0; draft: False; prerelease: False; published_at: 2025-03-05T07:35:00Z; created_at: 2025-02-27T16:43:35Z\nRelease notes:\n## Changelog\n### Bug fixes and improvements\n#### Server\n- Fix an issue where Postgres reset JSON parameters to empty strings after a transaction, causing event trigger failures when executing mutations outside Hasura. The `insert_event_log` trigger function now correctly handles empty strings.\n- Attempt to set Haskell runtime threads based on cgroup CPU limits, when present, for better automatic sizing in Docker and Kubernetes environments. Users with small CPU limits on servers with many cores should expect to see somewhat lower memory usage and possibly improved performance.\n- Add optional `no_transaction` flag (default `false`) to `run_sql` API (Postgres)  to execute SQL statements outside transaction blocks, with support for splitting multiple statements. Useful for operations like `CREATE INDEX CONCURRENTLY`.\n- Fix the `hasura_active_subscriptions` metric becoming inconsistent (e.g. showing a negative value).\n- Fix an issue where a source's metadata would be erased if the source was inconsistent and then a source update was performed.\n- Mark remote schemas as inconsistent when type conflicts occur with the existing schema.\n- Only show internal actions errors in logs if `HASURA_GRAPHQL_DEV_MODE` or `HASURA_GRAPHQL_ADMIN_INTERNAL_ERRORS` are switched on.\n- Increase upper bound of execution time metrics to 100s. _(Cloud / Enterprise edition only)_\n- Add metrics `hasura_events_fetch_query_time` and `hasura_events_fetched_total`. _(Cloud / Enterprise edition only)_\n- Fix metrics label for DB with non-standard URI. _(Cloud / Enterprise edition only)_",
+      "memory_unit_text": "In the hasura/graphql-engine release v2.46.0, the server includes the same fixes and features as v2.46.0-beta.1: fixing Postgres JSON parameter reset, setting Haskell runtime threads based on cgroup CPU limits, adding no_transaction flag to run_sql API, fixing hasura_active_subscriptions metric inconsistency, fixing source metadata erasure, marking remote schemas inconsistent on type conflicts, hiding internal action errors, increasing execution time metrics upper bound to 100s, adding event fetch metrics, and fixing metrics label for non-standard URI (Cloud/Enterprise)."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_36_10",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.36.10",
+      "tag_name": "v2.36.10",
+      "title": "v2.36.10",
+      "time_hint": "2025-03-11",
+      "published_at": "2025-03-11T15:39:52Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.36.10",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.36.10\nTag: v2.36.10; draft: False; prerelease: False; published_at: 2025-03-11T15:39:52Z; created_at: 2025-03-07T10:48:32Z\nRelease notes:\n## Changelog\nThis is a patch release for v2.36\n### Bug fixes and improvements\n#### Build\n- Update Ubuntu Jammy base image and RH image to get the latest security updates.",
+      "memory_unit_text": "In the hasura/graphql-engine patch release v2.36.10, the build updates the Ubuntu Jammy base image and RH image to get the latest security updates."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_47_0_beta_1",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.47.0-beta.1",
+      "tag_name": "v2.47.0-beta.1",
+      "title": "v2.47.0-beta.1",
+      "time_hint": "2025-03-25",
+      "published_at": "2025-03-25T08:45:33Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.47.0-beta.1",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.47.0-beta.1\nTag: v2.47.0-beta.1; draft: False; prerelease: True; published_at: 2025-03-25T08:45:33Z; created_at: 2025-03-24T11:08:20Z\nRelease notes:\n## Changelog\n### Bug fixes and improvements\n#### Server\n- Don't attempt to `CREATE EXTENSION pgcrypto` if it already exists, so users on Azure using an unprivileged Postgres user in Hasura can create the extension manually prior to startup.\n- Add new `HASURA_GRAPHQL_REDIS_NO_FAIL_ON_STARTUP` option, allowing the engine to start up normally, but with rate limiting and caching disabled,  if there are errors with redis during startup. _(Enterprise edition only)_\n#### Console\n- Fix connection template and Dynamic Routing settings being reset when editing database in Connection Details page.  _(Cloud / Enterprise edition only)_\n#### CLI\n- Add a flag `--no-transaction` to `migrate apply` command.\n#### Build\n- Update `libpq` version in UBI9 base image.",
+      "memory_unit_text": "In the hasura/graphql-engine beta release v2.47.0-beta.1, the server avoids attempting to CREATE EXTENSION pgcrypto if it already exists, aiding Azure users with unprivileged Postgres users. It adds a HASURA_GRAPHQL_REDIS_NO_FAIL_ON_STARTUP option to allow startup with rate limiting and caching disabled on Redis errors (Enterprise). The console fixes connection template and Dynamic Routing settings reset when editing database in Connection Details page (Cloud/Enterprise). The CLI adds a --no-transaction flag to migrate apply command. The build updates libpq version in UBI9 base image."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_47_0",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.47.0",
+      "tag_name": "v2.47.0",
+      "title": "v2.47.0",
+      "time_hint": "2025-04-15",
+      "published_at": "2025-04-15T14:24:39Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.47.0",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.47.0\nTag: v2.47.0; draft: False; prerelease: False; published_at: 2025-04-15T14:24:39Z; created_at: 2025-04-09T17:20:25Z\nRelease notes:\n## Changelog\n### Bug fixes and improvements\n#### Server\n- Don't attempt to `CREATE EXTENSION pgcrypto` if it already exists, so users on Azure using an unprivileged Postgres user in Hasura can create the extension manually prior to startup.\n- Add new `HASURA_GRAPHQL_REDIS_NO_FAIL_ON_STARTUP` option, allowing the engine to start up normally, but with rate limiting and caching disabled,  if there are errors with redis during startup. _(Enterprise edition only)_\n#### Console\n- Fix connection template and Dynamic Routing settings being reset when editing database in Connection Details page.  _(Cloud / Enterprise edition only)_\n#### CLI\n- Add a flag `--no-transaction` to `migrate apply` command.\n#### Build\n- Update `libpq` version in UBI9 base image.\n### Security fixes\n#### Server\n##### Fixed Nested Inherited Roles Permission Propagation\nFixed an issue where permissions were not properly propagated through multiple levels of role inheritance. This affects both queries and mutations:\n- **For Queries**: Previously, when Role D inherited from Role C, which inherited from Roles A and B, the row filters and column restrictions from Role A were not properly applied to Role D. This could allow Role D to access data that should have been restricted.\n- **For Mutations**: Mutations using nested inherited roles now correctly enforce permission constraints. For example:\nIf Role A restricts \"salary\" with `{\"user_id\": \"X-Hasura-User-Id\"}`\nRole D (inheriting from Role C, which inherits from Role A)\nnow requires `X-Hasura-User-Id` when filtering on salary:\n```graphql\nmutation {\ndelete_employees(where: {salary: {_gt: 100000}}) {\naffected_rows\n}\n}\n```\n**Note**: If you're using nested inherited roles in your application, you may need to update mutations to include the appropriate session variables that were previously bypassed.\nFor more details on how inherited roles work, see the [documentation](https://hasura.io/docs/latest/auth/authorization/inherited-roles/).",
+      "memory_unit_text": "In the hasura/graphql-engine release v2.47.0, the server includes the same features as v2.47.0-beta.1: avoiding duplicate pgcrypto extension creation, adding HASURA_GRAPHQL_REDIS_NO_FAIL_ON_STARTUP option (Enterprise), console fix for connection template and Dynamic Routing settings reset (Cloud/Enterprise), CLI --no-transaction flag for migrate apply, and libpq update. Additionally, it includes a security fix for nested inherited roles permission propagation, ensuring permissions are properly applied through multiple levels of role inheritance for both queries and mutations."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_36_12",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.36.12",
+      "tag_name": "v2.36.12",
+      "title": "v2.36.12",
+      "time_hint": "2025-04-30",
+      "published_at": "2025-04-30T07:19:32Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.36.12",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.36.12\nTag: v2.36.12; draft: False; prerelease: False; published_at: 2025-04-30T07:19:32Z; created_at: 2025-04-29T17:15:13Z\nRelease notes:\n## Changelog",
+      "memory_unit_text": "In the hasura/graphql-engine patch release v2.36.12, the changelog is empty."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_48_0_beta_1",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.48.0-beta.1",
+      "tag_name": "v2.48.0-beta.1",
+      "title": "v2.48.0-beta.1",
+      "time_hint": "2025-05-07",
+      "published_at": "2025-05-07T08:18:54Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.48.0-beta.1",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.48.0-beta.1\nTag: v2.48.0-beta.1; draft: False; prerelease: False; published_at: 2025-05-07T08:18:54Z; created_at: 2025-05-06T17:19:52Z\nRelease notes:\n## Changelog\n### Bug fixes and improvements\n#### Server\n- Add a new query tag format `standard_prepended`, which puts the metadata tag comment _before_ the SQL query. This might help when scanning logs, or when log lines might be truncated.\n- Add `HASURA_GRAPHQL_PRESERVE_401_ERRORS` option to propagate `401 (Unauthorized)` status codes back to the client. Currently a 200 status is returned for all errors.\n- Add `HASURA_GRAPHQL_SERVER_TIMEOUT` option to configure request timeouts.  _(Community / Enterprise edition only)_\n#### Console\n- REST endpoints with GET method now properly handle query parameters in the console.\n#### Data Connectors\n- Fix an issue in the SuperConnector Snowflake adapter which caused errors when performing queries that selected the same relationship more than once. _(Cloud / Enterprise edition only)_",
+      "memory_unit_text": "In the hasura/graphql-engine beta release v2.48.0-beta.1, the server adds a new query tag format 'standard_prepended' that puts the metadata tag comment before the SQL query, adds HASURA_GRAPHQL_PRESERVE_401_ERRORS option to propagate 401 status codes, and adds HASURA_GRAPHQL_SERVER_TIMEOUT option to configure request timeouts (Community/Enterprise). The console fixes REST endpoints with GET method to properly handle query parameters. Data connectors fix an issue in the SuperConnector Snowflake adapter causing errors when selecting the same relationship more than once (Cloud/Enterprise)."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_48_0",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.48.0",
+      "tag_name": "v2.48.0",
+      "title": "v2.48.0",
+      "time_hint": "2025-05-20",
+      "published_at": "2025-05-20T07:32:05Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.48.0",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.48.0\nTag: v2.48.0; draft: False; prerelease: False; published_at: 2025-05-20T07:32:05Z; created_at: 2025-05-14T17:45:30Z\nRelease notes:\n## Changelog\n### Bug fixes and improvements\n#### Server\n- Add a new query tag format `standard_prepended`, which puts the metadata tag comment _before_ the SQL query. This might help when scanning logs, or when log lines might be truncated.\n- Add `HASURA_GRAPHQL_PRESERVE_401_ERRORS` option to propagate `401 (Unauthorized)` status codes back to the client. Currently a 200 status is returned for all errors.\n- Add `HASURA_GRAPHQL_SERVER_TIMEOUT` option to configure request timeouts.  _(Community / Enterprise edition only)_\n#### Console\n- REST endpoints with GET method now properly handle query parameters in the console.\n#### Data Connectors\n- Fix an issue in the SuperConnector Snowflake adapter which caused errors when performing queries that selected the same relationship more than once. _(Cloud / Enterprise edition only)_",
+      "memory_unit_text": "In the hasura/graphql-engine release v2.48.0, the server includes the same features as v2.48.0-beta.1: new query tag format 'standard_prepended', HASURA_GRAPHQL_PRESERVE_401_ERRORS option, HASURA_GRAPHQL_SERVER_TIMEOUT option (Community/Enterprise), console fix for REST endpoints GET query parameters, and data connector fix for Snowflake adapter relationship selection error (Cloud/Enterprise)."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_48_1",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.48.1",
+      "tag_name": "v2.48.1",
+      "title": "v2.48.1",
+      "time_hint": "2025-05-23",
+      "published_at": "2025-05-23T07:32:49Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.48.1",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.48.1\nTag: v2.48.1; draft: False; prerelease: False; published_at: 2025-05-23T07:32:49Z; created_at: 2025-05-20T20:50:07Z\nRelease notes:\n## Changelog\nThis is a patch release for `v2.48`.\n### Bug fixes and improvements\n#### Data Connectors\n- Fix queries which select self-referential relationships in Snowflake. Previously, queries such as `employee.reports_to <-> employee.employee_id` would cause errors. _(Cloud / Enterprise edition only)_",
+      "memory_unit_text": "In the hasura/graphql-engine patch release v2.48.1, data connectors fix queries selecting self-referential relationships in Snowflake, which previously caused errors (Cloud/Enterprise)."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_36_10_2",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.36.10-2",
+      "tag_name": "v2.36.10-2",
+      "title": "v2.36.10-2",
+      "time_hint": "2025-07-10",
+      "published_at": "2025-07-10T07:33:40Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.36.10-2",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.36.10-2\nTag: v2.36.10-2; draft: False; prerelease: False; published_at: 2025-07-10T07:33:40Z; created_at: 2025-07-07T15:17:52Z\nRelease notes:\n## Changelog\n- Base `ubuntu` image updated to `ubuntu:jammy-20250530` to fix security vulnerabilities\n- Base `ubi9` image updated to `ubi9-minimal:9.6-1751286687` to fix security vulnerabilities",
+      "memory_unit_text": "In the hasura/graphql-engine patch release v2.36.10-2, the base ubuntu image is updated to ubuntu:jammy-20250530 and the base ubi9 image is updated to ubi9-minimal:9.6-1751286687 to fix security vulnerabilities."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_45_3",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.45.3",
+      "tag_name": "v2.45.3",
+      "title": "v2.45.3",
+      "time_hint": "2025-07-28",
+      "published_at": "2025-07-28T14:59:03Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.45.3",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.45.3\nTag: v2.45.3; draft: False; prerelease: False; published_at: 2025-07-28T14:59:03Z; created_at: 2025-04-09T17:02:09Z\nRelease notes:\n## Changelog\nThis is a patch release for `v2.45`.\n### Bug fixes and improvements\n#### Server\n- Add optional `no_transaction` flag (default `false`) to `run_sql` API (Postgres)  to execute SQL statements outside transaction blocks, with support for splitting multiple statements. Useful for operations like `CREATE INDEX CONCURRENTLY`.\n#### Console\n- Fix connection template and Dynamic Routing settings being reset when editing database in Connection Details page.\n### Security fixes\n#### Server\n##### Fixed Nested Inherited Roles Permission Propagation\nFixed an issue where permissions were not properly propagated through multiple levels of role inheritance. This affects both queries and mutations:\n- **For Queries**: Previously, when Role D inherited from Role C, which inherited from Roles A and B, the row filters and column restrictions from Role A were not properly applied to Role D. This could allow Role D to access data that should have been restricted.\n- **For Mutations**: Mutations using nested inherited roles now correctly enforce permission constraints. For example:\nIf Role A restricts \"salary\" with `{\"user_id\": \"X-Hasura-User-Id\"}`\nRole D (inheriting from Role C, which inherits from Role A)\nnow requires `X-Hasura-User-Id` when filtering on salary:\n```graphql\nmutation {\ndelete_employees(where: {salary: {_gt: 100000}}) {\naffected_rows\n}\n}\n```\n**Note**: If you're using nested inherited roles in your application, you may need to update mutations to include the appropriate session variables that were previously bypassed.\nFor more details on how inherited roles work, see the [documentation](https://hasura.io/docs/latest/auth/authorization/inherited-roles/).",
+      "memory_unit_text": "In the hasura/graphql-engine patch release v2.45.3, the server adds an optional no_transaction flag to run_sql API for executing SQL outside transaction blocks. The console fixes connection template and Dynamic Routing settings reset when editing database in Connection Details page. It also includes a security fix for nested inherited roles permission propagation, ensuring permissions are properly applied through multiple levels of role inheritance for both queries and mutations."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_48_2",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.48.2",
+      "tag_name": "v2.48.2",
+      "title": "v2.48.2",
+      "time_hint": "2025-07-29",
+      "published_at": "2025-07-29T07:42:46Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.48.2",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.48.2\nTag: v2.48.2; draft: False; prerelease: False; published_at: 2025-07-29T07:42:46Z; created_at: 2025-07-24T17:40:21Z\nRelease notes:\n## Changelog\nThis is a patch release for `v2.48`.\n### Bug fixes and improvements\n#### Server\n- Preserve type and field descriptions from remote schemas in the resulting unified graphql schema.\n- Fix an inconsistency in the CockroachDB backend, where descriptions were populated with an empty string from the database, rather than null.\n#### Console\n- Fix remote schema modification failing when schema names contain spaces.",
+      "memory_unit_text": "In the hasura/graphql-engine patch release v2.48.2, the server preserves type and field descriptions from remote schemas in the unified GraphQL schema and fixes an inconsistency in CockroachDB backend where descriptions were populated with empty string instead of null. The console fixes remote schema modification failing when schema names contain spaces."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_48_3",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.48.3",
+      "tag_name": "v2.48.3",
+      "title": "v2.48.3",
+      "time_hint": "2025-07-29",
+      "published_at": "2025-07-29T07:45:39Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.48.3",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.48.3\nTag: v2.48.3; draft: False; prerelease: False; published_at: 2025-07-29T07:45:39Z; created_at: 2025-07-24T19:22:58Z\nRelease notes:\n## Changelog\nThis is a patch release for `v2.48`.\n### Bug fixes and improvements\n#### Server\n- The experimental feature `remove_empty_subscription_responses` erroneously did not affect streaming subscriptions, only live queries. After this change `--experimental-features=remove_empty_subscription_responses` will also work on streaming subscription fields, resulting in less data transferred between Hasura and Postgres for highly-multiplexed queries which most of the time return no updated data.\n- Add `AGGREGATE_FUNCTION` to BigQuery rest routine types.",
+      "memory_unit_text": "In the hasura/graphql-engine patch release v2.48.3, the server fixes the experimental feature 'remove_empty_subscription_responses' to also work on streaming subscriptions, reducing data transfer for highly-multiplexed queries. It also adds AGGREGATE_FUNCTION to BigQuery rest routine types."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_48_4",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.48.4",
+      "tag_name": "v2.48.4",
+      "title": "v2.48.4",
+      "time_hint": "2025-08-19",
+      "published_at": "2025-08-19T12:12:37Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.48.4",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.48.4\nTag: v2.48.4; draft: False; prerelease: False; published_at: 2025-08-19T12:12:37Z; created_at: 2025-08-14T20:02:46Z\nRelease notes:\n## Changelog\nThis is a patch release for `v2.48`.\n### Bug fixes and improvements\n#### Server\n- Fix non-compliant OpenAPI specs generated when the route used path parameters or was a GET route with parameters.\n- Fix a bug in experimental `remove_empty_subscription_responses` feature resulting in a database query error for non-array-returning live queries.\n- Ignore any unknown key types when parsing JWK-set json: Formerly any JWKs in the list with a `use` field besides `sig` or `enc` would result in an error. Now we silently ignore these irrelevant keys.\n- Set  `JAVA_OPTS=-Dnet.snowflake.jdbc.enableBouncyCastle=true` to bundled super-connector to support RSA key authentication. _(Enterprise edition only)_",
+      "memory_unit_text": "In the hasura/graphql-engine patch release v2.48.4, the server fixes non-compliant OpenAPI specs generated when routes use path parameters or GET with parameters, fixes a bug in experimental 'remove_empty_subscription_responses' causing database query error for non-array-returning live queries, ignores unknown key types when parsing JWK-set JSON, and sets JAVA_OPTS for Snowflake RSA key authentication in bundled super-connector (Enterprise)."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_48_5",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.48.5",
+      "tag_name": "v2.48.5",
+      "title": "v2.48.5",
+      "time_hint": "2025-09-11",
+      "published_at": "2025-09-11T08:30:08Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.48.5",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.48.5\nTag: v2.48.5; draft: False; prerelease: False; published_at: 2025-09-11T08:30:08Z; created_at: 2025-09-10T17:44:33Z\nRelease notes:\n## Changelog\nThis is a patch release for `v2.48`.\n### Bug fixes and improvements\n#### Server\n- Remove all `value_from_env` and known-sensitive header values from event trigger logs, to protect secrets from leaking.\n- Allow JWKs that omit the `use` field.",
+      "memory_unit_text": "In the hasura/graphql-engine patch release v2.48.5, the server removes all value_from_env and known-sensitive header values from event trigger logs to protect secrets, and allows JWKs that omit the 'use' field."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_48_6",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.48.6",
+      "tag_name": "v2.48.6",
+      "title": "v2.48.6",
+      "time_hint": "2025-10-14",
+      "published_at": "2025-10-14T15:20:38Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.48.6",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.48.6\nTag: v2.48.6; draft: False; prerelease: False; published_at: 2025-10-14T15:20:38Z; created_at: 2025-10-01T22:03:56Z\nRelease notes:\n## Changelog\nThis is a patch release for `v2.48`.\n### Bug fixes and improvements\n#### Server\n- Support Postgres version 17. Note that the output of `/v1alpha1/pg_dump` changes slightly for users of the `hasura` Docker container, since we now ship with v17.\n- Fix a bug in which types from two remote joins with different type prefixes and namespaces might be inter-mixed in the schema.\n- Partially fix big in streaming subscriptions on non-unique columns, in which rows may be skipped when the column contains duplicates. The bug is now fixed in Postgres and Citus, but remains for Cockroach and other postgres-likes. In databases that have the fix a batch may now return _more_ rows than the requested `batch_size`, which follows from the behavior of `FETCH ... WITH TIES` which backs these queries.",
+      "memory_unit_text": "In the hasura/graphql-engine patch release v2.48.6, the server supports Postgres version 17, fixes a bug where types from two remote joins with different type prefixes and namespaces might be inter-mixed, and partially fixes a bug in streaming subscriptions on non-unique columns where rows may be skipped when the column contains duplicates (fixed for Postgres and Citus, remains for Cockroach and others)."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_48_9",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.48.9",
+      "tag_name": "v2.48.9",
+      "title": "v2.48.9",
+      "time_hint": "2025-12-24",
+      "published_at": "2025-12-24T09:10:33Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.48.9",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.48.9\nTag: v2.48.9; draft: False; prerelease: False; published_at: 2025-12-24T09:10:33Z; created_at: 2025-12-23T22:33:41Z\nRelease notes:\n## Changelog\nThis is a patch release for `v2.48`.\n### Bug fixes and improvements\n#### Server\n- Fix a bug in which the `connection_lifetime` pool setting was not correctly set, either as a default or manual setting. This fix may result in improvements to memory usage over time (as bloated libpq client buffers are recycled), and better balancing of connections when DNS load balancing is in use.\n- Support PostgreSQL 18 in Docker images.\n- Ignore tracing related headers while caching auth-hook responses.\n- Fix for erroneous \"overloaded functions are not supported\" error due to oid overlap. This may manifest during a database upgrade during which oids are rewritten.\n#### Console\n- Fix a bug where saving permissions for non-admin roles in remote schemas failed.",
+      "memory_unit_text": "In the hasura/graphql-engine patch release v2.48.9, the server fixes a bug where the connection_lifetime pool setting was not correctly set, supports PostgreSQL 18 in Docker images, ignores tracing related headers while caching auth-hook responses, and fixes an erroneous 'overloaded functions are not supported' error due to oid overlap. The console fixes a bug where saving permissions for non-admin roles in remote schemas failed."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_48_10",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.48.10",
+      "tag_name": "v2.48.10",
+      "title": "v2.48.10",
+      "time_hint": "2026-01-15",
+      "published_at": "2026-01-15T08:35:01Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.48.10",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.48.10\nTag: v2.48.10; draft: False; prerelease: False; published_at: 2026-01-15T08:35:01Z; created_at: 2026-01-14T17:43:56Z\nRelease notes:\n## Changelog\nThis is a patch release for `v2.48`.\n### Bug fixes and improvements\n#### Server\n- Improve the performance of BigQuery schema introspection when there are many (e.g. hundreds of) tables in sourced datasets. This should improve performance on startup and during metadata operations, such as changing permissions. In the unexpected event that a BigQuery schema introspection-related bug is observed after upgrading, `HASURA_BIGQUERY_SLOW_INTROSPECTION_FALLBACK=true` can be set in the environment to revert to the previous introspection method.\n- Added `HASURA_GRAPHQL_CACHING_REDIS_POOL_SIZE` and `HASURA_GRAPHQL_RATE_LIMIT_REDIS_POOL_SIZE` options, making the limit of pooled connections to Redis configurable. Set the default to 500 (formerly it was 50).  _(Enterprise edition only)_\n#### Console\n- Fix a bug where deselecting or clearing a column type in the table schema editor causes existing columns to be duplicated in the schema.",
+      "memory_unit_text": "In the hasura/graphql-engine patch release v2.48.10, the server improves BigQuery schema introspection performance when there are many tables, and adds configurable Redis pool size options for caching and rate limiting with default increased to 500 (Enterprise). The console fixes a bug where deselecting or clearing a column type in the table schema editor causes existing columns to be duplicated."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_48_11",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.48.11",
+      "tag_name": "v2.48.11",
+      "title": "v2.48.11",
+      "time_hint": "2026-02-05",
+      "published_at": "2026-02-05T23:19:50Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.48.11",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.48.11\nTag: v2.48.11; draft: False; prerelease: False; published_at: 2026-02-05T23:19:50Z; created_at: 2026-02-04T18:19:44Z\nRelease notes:\n## Changelog\nThis is a patch release for `v2.48`.\n### Bug fixes and improvements\n#### Server\n- SuperConnector: Fixes error caused by permissions in relationships in mutations, where the SQL temp table name was being improperly threaded through as the source table name.\n- Update ubuntu container base image to jammy-20260109\n- Upgrade pgdump in containers to fully support postgres 18",
+      "memory_unit_text": "In the hasura/graphql-engine patch release v2.48.11, the server fixes a SuperConnector error caused by permissions in relationships in mutations where the SQL temp table name was improperly threaded, updates the ubuntu container base image to jammy-20260109, and upgrades pgdump in containers to fully support postgres 18."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_48_12",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.48.12",
+      "tag_name": "v2.48.12",
+      "title": "v2.48.12",
+      "time_hint": "2026-02-24",
+      "published_at": "2026-02-24T17:36:12Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.48.12",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.48.12\nTag: v2.48.12; draft: False; prerelease: False; published_at: 2026-02-24T17:36:12Z; created_at: 2026-02-23T22:23:57Z\nRelease notes:\n## Changelog\nThis is a patch release for `v2.48`.\n### Bug fixes and improvements\n#### Server\n- Fix a performance issue where large gzipped responses were causing long cumulative GC sync phase pauses\n- When an event trigger was moved from one table to another in Hasura metadata, the old trigger on the original table was not removed. This resulted in duplicate triggers firing for the same event.\n#### Data Connector\n- Fix a bug in the super-connector (MySQL) where queries on self-referencing tables fail with `Relation not found` when the SELECT permission filter navigates through the same self-referencing relationship. The internal relationship graph now preserves both the aliased and original table entries during LATERAL subquery generation. _(Enterprise/cloud only)_\n- Fix update mutations on nullable columns via data connectors. Previously, attempting to set a column value to `null` in an update mutation would fail because the row update value was not allowed to be nullable. Nullable values are now correctly handled and translated to SQL `NULL`. _(Enterprise/cloud only)_",
+      "memory_unit_text": "In the hasura/graphql-engine patch release v2.48.12, the server fixes a performance issue where large gzipped responses caused long cumulative GC sync phase pauses, and fixes duplicate event triggers firing when an event trigger was moved from one table to another. Data connectors fix a bug in the super-connector (MySQL) where queries on self-referencing tables fail with 'Relation not found' when SELECT permission filter navigates through the same self-referencing relationship, and fix update mutations on nullable columns via data connectors (Enterprise/cloud)."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_48_13",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.48.13",
+      "tag_name": "v2.48.13",
+      "title": "v2.48.13",
+      "time_hint": "2026-03-17",
+      "published_at": "2026-03-17T18:12:07Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.48.13",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.48.13\nTag: v2.48.13; draft: False; prerelease: False; published_at: 2026-03-17T18:12:07Z; created_at: 2026-03-17T16:51:30Z\nRelease notes:\n## Changelog\nThis is a patch release for `v2.48`.\n### Bug fixes and improvements\n#### Server\n- Set error status and message in OpenTelemetry spans, consistent with reporting in logs. _(Enterprise/cloud only)_\n- Fix active subscriptions EKG gauge going negative due to unconditional decrement in `removeLiveQuery` and `removeStreamingQuery`.",
+      "memory_unit_text": "In the hasura/graphql-engine patch release v2.48.13, the server sets error status and message in OpenTelemetry spans consistent with logs (Enterprise/cloud), and fixes active subscriptions EKG gauge going negative due to unconditional decrement in removeLiveQuery and removeStreamingQuery."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_48_14",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.48.14",
+      "tag_name": "v2.48.14",
+      "title": "v2.48.14",
+      "time_hint": "2026-03-25",
+      "published_at": "2026-03-25T22:48:36Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.48.14",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.48.14\nTag: v2.48.14; draft: False; prerelease: False; published_at: 2026-03-25T22:48:36Z; created_at: 2026-03-25T22:43:50Z\nRelease notes:\n## Changelog\nThis is a patch release for `v2.48`.\n### Bug fixes and improvements\n#### Data Connectors\n- Fix performance issue in oracle introspection of super-connector",
+      "memory_unit_text": "In the hasura/graphql-engine patch release v2.48.14, data connectors fix a performance issue in Oracle introspection of the super-connector."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_48_15",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.48.15",
+      "tag_name": "v2.48.15",
+      "title": "v2.48.15",
+      "time_hint": "2026-04-01",
+      "published_at": "2026-04-01T17:42:22Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.48.15",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.48.15\nTag: v2.48.15; draft: False; prerelease: False; published_at: 2026-04-01T17:42:22Z; created_at: 2026-04-01T17:38:29Z\nRelease notes:\n## Changelog\nThis is a patch release for `v2.48`.\n### Bug fixes and improvements\n#### Data Connectors\n- Fix MariaDB update and delete mutations failing with \"temp table doesn't exist\" error by adding a dedicated MariaDBMutationTranslator with proper temporary table lifecycle management, following the same pattern as the existing Oracle mutation translator.",
+      "memory_unit_text": "In the hasura/graphql-engine patch release v2.48.15, data connectors fix MariaDB update and delete mutations failing with 'temp table doesn't exist' error by adding a dedicated MariaDBMutationTranslator with proper temporary table lifecycle management."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_48_16",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.48.16",
+      "tag_name": "v2.48.16",
+      "title": "v2.48.16",
+      "time_hint": "2026-04-15",
+      "published_at": "2026-04-15T16:48:21Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.48.16",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.48.16\nTag: v2.48.16; draft: False; prerelease: False; published_at: 2026-04-15T16:48:21Z; created_at: 2026-04-15T03:28:24Z\nRelease notes:\n## Changelog\nThis is a patch release for `v2.48`.\n### Bug fixes and improvements\n#### Server\n- Fix the `hasura_http_response_bytes_total` metric so it does not count the size of internal error fields when those fields are not returned to the client.",
+      "memory_unit_text": "In the hasura/graphql-engine patch release v2.48.16, the server fixes the hasura_http_response_bytes_total metric so it does not count the size of internal error fields when those fields are not returned to the client."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_45_4",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.45.4",
+      "tag_name": "v2.45.4",
+      "title": "v2.45.4",
+      "time_hint": "2026-05-14",
+      "published_at": "2026-05-14T14:35:52Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.45.4",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.45.4\nTag: v2.45.4; draft: False; prerelease: False; published_at: 2026-05-14T14:35:52Z; created_at: 2026-05-14T14:25:35Z\nRelease notes:\n## Changelog\nThis is a patch release for `v2.45`.\n### Upgrade notes\nSome compatibility notes\n1. Previously, when remote schema types conflicted with action types, the conflict was silently handled (the remote schema was just excluded). Now it's marked as inconsistent_metadata. Deployments that had conflicting types and appeared to \"work\" before (just missing some fields) will now show metadata inconsistency errors after upgrade.\n2. The event trigger log format has changed\n3. Users who configure the RTS should be aware that this version is now on GHC 9.14.1 (formerly 9.10.1). In particular users of the `--nonmoving-gc` [may wish to tune](https://downloads.haskell.org/ghc/9.12.1/docs/users_guide/9.12.1-notes.html#runtime-system) the `-F` or `-Fd` flags if they set them.\n### Bug fixes and improvements\n#### Server\n- Mark remote schemas as inconsistent when type conflicts occur with the existing schema.\n- Fix the `hasura_http_response_bytes_total` metric so it does not count the size of internal error fields when those fields are not returned to the client.\n- Set error status and message in OpenTelemetry spans, consistent with reporting in logs. _(Enterprise/cloud only)_\n- Fix active subscriptions EKG gauge going negative due to unconditional decrement in `removeLiveQuery` and `removeStreamingQuery`. A race condition between `stopOperation` and `onClose` could cause double-removal of the same subscriber, leading to the gauge drifting negative over time. The gauge decrement is now guarded to only fire when a subscriber is actually found and removed, matching the existing Prometheus metric guard pattern.\n- Fix a performance issue where large gzipped responses were causing long cumulative GC sync phase pauses\n- When an event trigger was moved from one table to another in Hasura metadata, the old trigger on the original table was not removed. This resulted in duplicate triggers firing for the same event.\n- Added `HASURA_GRAPHQL_CACHING_REDIS_POOL_SIZE` and `HASURA_GRAPHQL_RATE_LIMIT_REDIS_POOL_SIZE` options, making the limit of pooled connections to Redis configurable. Set the default to 500 (formerly it was 50). _(Enterprise/cloud only)_\n- Improve the performance of BigQuery schema introspection when there are many (e.g. hundreds of) tables in sourced datasets. This should improve performance on startup and during metadata operations, such as changing permissions. In the unexpected event that a BigQuery schema introspection-related bug is observed after upgrading, `HASURA_BIGQUERY_SLOW_INTROSPECTION_FALLBACK=true` can be set in the environment to revert to the previous introspection method.\n- Fix a bug in which the `connection_lifetime` pool setting was not correctly set, either as a default or manual setting. This fix may result in improvements to memory usage over time (as bloated libpq client buffers are recycled), and better balancing of connections when DNS load balancing is in use. _(Enterprise/cloud only)_\n- Ignore tracing related headers while caching auth-hook responses _(Enterprise/cloud only)_\n- Fix for erroneous \"overloaded functions are not supported\" error due to oid overlap. This may manifest during a database upgrade during which oids are rewritten.\n- Fix a bug in which types from two remote joins with different type prefixes and namespaces might be inter-mixed in the schema.\n- Partially fix big in streaming subscriptions on non-unique columns, in which rows may be skipped when the column contains duplicates. The bug is now fixed in Postgres and Citus, but remains for Cockroach and other postgres-likes. In databases that have the fix a batch may now return _more_ rows than the requested `batch_size`, which follows from the behavior of `FETCH ... WITH TIES` which backs these queries.\n- Allow JWKs that omit the 'use' field, fixing a regres...",
+      "memory_unit_text": "In the hasura/graphql-engine patch release v2.45.4, the server marks remote schemas as inconsistent when type conflicts occur, fixes the hasura_http_response_bytes_total metric, sets error status and message in OpenTelemetry spans (Enterprise/cloud), fixes active subscriptions EKG gauge going negative, fixes a performance issue with large gzipped responses causing GC pauses, fixes duplicate event triggers when moving triggers, adds configurable Redis pool size options (Enterprise/cloud), improves BigQuery schema introspection performance, fixes connection_lifetime pool setting, ignores tracing headers while caching auth-hook responses (Enterprise/cloud), fixes erroneous 'overloaded functions' error due to oid overlap, fixes type inter-mixing from remote joins, partially fixes streaming subscriptions on non-unique columns, and allows JWKs that omit the 'use' field."
+    },
+    {
+      "memory_node_id": "hasura__graphql_engine__release__v2_49_0",
+      "repo": "hasura/graphql-engine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.49.0",
+      "tag_name": "v2.49.0",
+      "title": "v2.49.0",
+      "time_hint": "2026-05-28",
+      "published_at": "2026-05-28T15:19:25Z",
+      "source_url": "https://github.com/hasura/graphql-engine/releases/tag/v2.49.0",
+      "raw_text": "Repository: hasura/graphql-engine\nRelease: v2.49.0\nTag: v2.49.0; draft: False; prerelease: False; published_at: 2026-05-28T15:19:25Z; created_at: 2026-05-26T22:03:15Z\nRelease notes:\n## Changelog\nThis is a patch release for `v2.49`.\n### Bug fixes and improvements\n#### Server\n- feat: promote Relay API to stable `/v1/relay` and deprecate `/v/1beta1/relay` endpoint.\n- feat: add the `--enable-relay` (`HASURA_GRAPHQL_ENABLE_RELAY`) flag to enable/disable Relay API. You can disable Relay to reduce memory usage if it isn't required for your applications. The default value is:\n- Community/Enterprise: `true` for backward compatibility.\n- Cloud: `false`. You need to enable it manually on the project settings.\n- enhancement: improvements to schema memory usage.\n- feat: added `HASURA_GRAPHQL_DISABLE_EVENTING` env var (and `--disable-eventing` CLI flag) to disable the entire eventing subsystem — event triggers, scheduled events, the cron event generator, and async actions — on the OSS / single-tenant build. Previously only multi-tenant cloud had this control. The `cli-migrations` v2 and v3 entrypoints now set this flag on their temporary HGE instance so migration jobs no longer compete with eventing pollers for database resources.\n#### Data Connector\n- fix: MariaDB \\`update\\`/\\`delete\\` mutations still failing with \\`Table 'temp_table_xxx' doesn't exist\\` on v2.48.15. The previous fix (#11473) ran the temp-table CREATE outside the transaction, which made the CREATE and the mutation body race over pooled connections; MariaDB temp tables are session-scoped, so when the mutation body got a different pooled connection the temp table was invisible. The full CREATE / mutation / DROP lifecycle now runs pinned to one JDBC connection. _(Enterprise/cloud only)_",
+      "memory_unit_text": "In the hasura/graphql-engine release v2.49.0, the server promotes the Relay API to stable /v1/relay and deprecates /v/1beta1/relay, adds an --enable-relay flag to enable/disable Relay API with different defaults per edition, improves schema memory usage, and adds HASURA_GRAPHQL_DISABLE_EVENTING env var to disable the entire eventing subsystem on OSS/single-tenant builds. Data connectors fix MariaDB update/delete mutations still failing with 'Table temp_table_xxx doesn't exist' by pinning the full CREATE/mutation/DROP lifecycle to one JDBC connection (Enterprise/cloud)."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the hasura/graphql-engine releases, which release adds a new query tag format 'standard_prepended' that puts the metadata tag comment before the SQL query?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v2.48.0-beta.1"
+        },
+        {
+          "option_id": "B",
+          "text": "v2.47.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v2.46.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v2.45.0"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v2.48.0-beta.1",
+      "source_chunk_ids": [
+        "hasura__graphql_engine__release__v2_48_0_beta_1"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "hasura__graphql_engine__release__v2_48_0_beta_1",
+          "answer_text": "adds a new query tag format 'standard_prepended' that puts the metadata tag comment before the SQL query"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the hasura/graphql-engine releases, how does the handling of remote schema type conflicts differ between v2.46.0-beta.1 and v2.45.4?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v2.46.0-beta.1 marks remote schemas as inconsistent when type conflicts occur, while v2.45.4 does not mention this change."
+        },
+        {
+          "option_id": "B",
+          "text": "v2.46.0-beta.1 silently excludes conflicting remote schemas, while v2.45.4 marks them as inconsistent."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases handle type conflicts by removing the conflicting types from the schema."
+        },
+        {
+          "option_id": "D",
+          "text": "v2.46.0-beta.1 ignores type conflicts, while v2.45.4 logs a warning."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v2.46.0-beta.1 marks remote schemas as inconsistent when type conflicts occur, while v2.45.4 does not mention this change.",
+      "source_chunk_ids": [
+        "hasura__graphql_engine__release__v2_46_0_beta_1",
+        "hasura__graphql_engine__release__v2_45_4"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "hasura__graphql_engine__release__v2_46_0_beta_1",
+          "answer_text": "Mark remote schemas as inconsistent when type conflicts occur with the existing schema."
+        },
+        {
+          "memory_node_id": "hasura__graphql_engine__release__v2_45_4",
+          "answer_text": "Mark remote schemas as inconsistent when type conflicts occur with the existing schema."
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the hasura/graphql-engine release window, order the following release-content states from earliest to latest: (1) a release that adds an optional no_transaction flag to run_sql API, (2) a release that promotes the Relay API to stable /v1/relay, (3) a release that fixes a performance issue where large gzipped responses caused long cumulative GC sync phase pauses.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 3 -> 2"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 3 -> 2",
+      "source_chunk_ids": [
+        "hasura__graphql_engine__release__v2_46_0_beta_1",
+        "hasura__graphql_engine__release__v2_48_12",
+        "hasura__graphql_engine__release__v2_49_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "hasura__graphql_engine__release__v2_46_0_beta_1",
+          "answer_text": "Add optional no_transaction flag (default false) to run_sql API"
+        },
+        {
+          "memory_node_id": "hasura__graphql_engine__release__v2_48_12",
+          "answer_text": "Fix a performance issue where large gzipped responses were causing long cumulative GC sync phase pauses"
+        },
+        {
+          "memory_node_id": "hasura__graphql_engine__release__v2_49_0",
+          "answer_text": "promote Relay API to stable /v1/relay"
+        }
+      ]
+    }
+  ]
+}

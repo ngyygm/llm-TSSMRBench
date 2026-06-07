@@ -1,0 +1,530 @@
+{
+  "prototype_id": "gogs__gogs_release_window",
+  "domain": "github_release_evolution",
+  "repo": "gogs/gogs",
+  "source_type": "release_note",
+  "window_title": "gogs/gogs recent release evolution",
+  "window_summary": "This window tracks the recent gogs/gogs release stream from v0.12.4-rc.1 through v0.14.2, including patch releases, release candidates, and minor version upgrades. It highlights security fixes, new features, configuration changes, and deprecations across the 0.12, 0.13, and 0.14 series.",
+  "chunks": [
+    {
+      "memory_node_id": "gogs__gogs__release__v0_12_4_rc_1",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.4-rc.1",
+      "tag_name": "v0.12.4-rc.1",
+      "title": "0.12.4-rc.1",
+      "time_hint": "2022-01-17",
+      "published_at": "2022-01-17T02:26:49Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.12.4-rc.1",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.12.4-rc.1\nTag: v0.12.4-rc.1; draft: False; prerelease: True; published_at: 2022-01-17T02:26:49Z; created_at: 2022-01-17T02:19:45Z\nRelease notes:\nThis is a release candidate for the 0.12.4 patch release.",
+      "memory_unit_text": "In the gogs/gogs release v0.12.4-rc.1, this is a release candidate for the 0.12.4 patch release."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_12_4",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.4",
+      "tag_name": "v0.12.4",
+      "title": "0.12.4",
+      "time_hint": "2022-01-17",
+      "published_at": "2022-01-17T13:33:31Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.12.4",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.12.4\nTag: v0.12.4; draft: False; prerelease: False; published_at: 2022-01-17T13:33:31Z; created_at: 2022-01-17T02:19:45Z\nRelease notes:\n**ℹ️ Heads up! There is a new patch release [0.12.11](https://github.com/gogs/gogs/releases/tag/v0.12.11) available, we recommend directly installing or upgrading to that version.**\n---\n### Fixed\n- _Security:_ Potential SSRF attack by CRLF injection via repository migration. [#6413](https://github.com/gogs/gogs/issues/6413) by @stypr\n- _Regression:_ Fixed smart links for issues stops rendering. [#6506](https://github.com/gogs/gogs/issues/6506) by @unknwon\n- Added `X-Frame-Options` header to prevent Clickjacking. [#6409](https://github.com/gogs/gogs/issues/6409) by @matheusmosca\n---\n## 0.12.3\n### Fixed\n- _Regression:_ When running Gogs on Windows, push commits no longer fail on a daily basis with the error \"pre-receive hook declined\". [#6316](https://github.com/gogs/gogs/issues/6316)\n- Auto-linked commit SHAs now have correct links. [#6300](https://github.com/gogs/gogs/issues/6300)\n- Git LFS client (with version >= 2.5.0) wasn't able to upload files with known format (e.g. PNG, JPEG), and the server is expecting the HTTP Header `Content-Type` to be `application/octet-stream`. The server now tells the LFS client to always use `Content-Type: application/octet-stream` when upload files.\n## 0.12.2\n### Fixed\n- _Regression_: Pages are correctly rendered when requesting ?go-get=1 for subdirectories. #6314\n- _Regression_: Submodule with a relative path is linked correctly. #6319\n- Backup can be processed when --target is specified on Windows. #6339\n- Commit message contains keywords look like an issue reference no longer fails the push entirely. #6289\n## 0.12.1\n### Fixed\n- The `updated_at` field is now correctly updated when updates an issue. [#6209](https://github.com/gogs/gogs/issues/6209)\n- Fixed a regression which created `login_source.cfg` column to have `VARCHAR(255)` instead of `TEXT` in MySQL. [#6280](https://github.com/gogs/gogs/issues/6280)\n## 0.12.0\n### Added\n- Support for Git LFS, you can read documentation for both [user](https://github.com/gogs/gogs/blob/master/docs/user/lfs.md) and [admin](https://github.com/gogs/gogs/blob/master/docs/admin/lfs.md). [#1322](https://github.com/gogs/gogs/issues/1322)\n- Allow admin to remove observers from the repository. [#5803](https://github.com/gogs/gogs/pull/5803)\n- Use `Last-Modified` HTTP header for raw files. [#5811](https://github.com/gogs/gogs/issues/5811)\n- Support syntax highlighting for SAS code files (i.e. `.r`, `.sas`, `.tex`, `.yaml`). [#5856](https://github.com/gogs/gogs/pull/5856)\n- Able to fill in pull request title with a template. [#5901](https://github.com/gogs/gogs/pull/5901)\n- Able to override static files under `public/` directory, please refer to [documentation](https://gogs.io/docs/features/custom_template) for usage. [#5920](https://github.com/gogs/gogs/pull/5920)\n- New API endpoint `GET /admin/teams/:teamid/members` to list members of a team. [#5877](https://github.com/gogs/gogs/issues/5877)\n- Support backup with retention policy for Docker deployments. [#6140](https://github.com/gogs/gogs/pull/6140)\n### Changed\n- The organization profile page has changed to display at most 12 members. [#5506](https://github.com/gogs/gogs/issues/5506)\n- The required Go version to compile source code changed to 1.14.\n- All assets are now embedded into binary and served from memory by default. Set `[server] LOAD_ASSETS_FROM_DISK = true` to load them from disk. [#5920](https://github.com/gogs/gogs/pull/5920)\n- Application and Go versions are removed from page footer and only show in the admin dashboard.\n- Build tag for running as Windows Service has been changed from `miniwinsvc` to `minwinsvc`.\n- Configuration option `APP_NAME` is deprecated and will end support in 0.13.0, please start using `BRAND_NAME`.\n- Configuration option `[server] ROOT_URL` is deprecated and will end support in 0.13.0, please start using...",
+      "memory_unit_text": "In the gogs/gogs release v0.12.4, the release notes include a security fix for potential SSRF attack by CRLF injection via repository migration, a regression fix for smart links for issues stops rendering, and the addition of X-Frame-Options header to prevent Clickjacking."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_12_5_rc_1",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.5-rc.1",
+      "tag_name": "v0.12.5-rc.1",
+      "title": "0.12.5-rc.1",
+      "time_hint": "2022-03-11",
+      "published_at": "2022-03-11T07:09:31Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.12.5-rc.1",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.12.5-rc.1\nTag: v0.12.5-rc.1; draft: False; prerelease: True; published_at: 2022-03-11T07:09:31Z; created_at: 2022-03-11T06:58:57Z\nRelease notes:\nThis is a release candidate for the 0.12.5 patch release.",
+      "memory_unit_text": "In the gogs/gogs release v0.12.5-rc.1, this is a release candidate for the 0.12.5 patch release."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_12_5",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.5",
+      "tag_name": "v0.12.5",
+      "title": "0.12.5",
+      "time_hint": "2022-03-11",
+      "published_at": "2022-03-11T08:00:59Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.12.5",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.12.5\nTag: v0.12.5; draft: False; prerelease: False; published_at: 2022-03-11T08:00:59Z; created_at: 2022-03-11T06:58:57Z\nRelease notes:\n**ℹ️ Heads up! There is a new patch release [0.12.11](https://github.com/gogs/gogs/releases/tag/v0.12.11) available, we recommend directly installing or upgrading to that version.**\n---\n### Fixed\n- _Security:_ Potential SSRF in repository migration. [#6754](https://github.com/gogs/gogs/issues/6754) by @michaellrowley\n- _Security:_ Improper PAM authorization handling. [#6810](https://github.com/gogs/gogs/issues/6810) by @ysf\n---\n## 0.12.4\n### Fixed\n- _Security:_ Potential SSRF attack by CRLF injection via repository migration. [#6413](https://github.com/gogs/gogs/issues/6413)\n- _Regression:_ Fixed smart links for issues stops rendering. [#6506](https://github.com/gogs/gogs/issues/6506)\n- Added `X-Frame-Options` header to prevent Clickjacking. [#6409](https://github.com/gogs/gogs/issues/6409)\n## 0.12.3\n### Fixed\n- _Regression:_ When running Gogs on Windows, push commits no longer fail on a daily basis with the error \"pre-receive hook declined\". [#6316](https://github.com/gogs/gogs/issues/6316)\n- Auto-linked commit SHAs now have correct links. [#6300](https://github.com/gogs/gogs/issues/6300)\n- Git LFS client (with version >= 2.5.0) wasn't able to upload files with known format (e.g. PNG, JPEG), and the server is expecting the HTTP Header `Content-Type` to be `application/octet-stream`. The server now tells the LFS client to always use `Content-Type: application/octet-stream` when upload files.\n## 0.12.2\n### Fixed\n- _Regression_: Pages are correctly rendered when requesting ?go-get=1 for subdirectories. #6314\n- _Regression_: Submodule with a relative path is linked correctly. #6319\n- Backup can be processed when --target is specified on Windows. #6339\n- Commit message contains keywords look like an issue reference no longer fails the push entirely. #6289\n## 0.12.1\n### Fixed\n- The `updated_at` field is now correctly updated when updates an issue. [#6209](https://github.com/gogs/gogs/issues/6209)\n- Fixed a regression which created `login_source.cfg` column to have `VARCHAR(255)` instead of `TEXT` in MySQL. [#6280](https://github.com/gogs/gogs/issues/6280)\n## 0.12.0\n### Added\n- Support for Git LFS, you can read documentation for both [user](https://github.com/gogs/gogs/blob/master/docs/user/lfs.md) and [admin](https://github.com/gogs/gogs/blob/master/docs/admin/lfs.md). [#1322](https://github.com/gogs/gogs/issues/1322)\n- Allow admin to remove observers from the repository. [#5803](https://github.com/gogs/gogs/pull/5803)\n- Use `Last-Modified` HTTP header for raw files. [#5811](https://github.com/gogs/gogs/issues/5811)\n- Support syntax highlighting for SAS code files (i.e. `.r`, `.sas`, `.tex`, `.yaml`). [#5856](https://github.com/gogs/gogs/pull/5856)\n- Able to fill in pull request title with a template. [#5901](https://github.com/gogs/gogs/pull/5901)\n- Able to override static files under `public/` directory, please refer to [documentation](https://gogs.io/docs/features/custom_template) for usage. [#5920](https://github.com/gogs/gogs/pull/5920)\n- New API endpoint `GET /admin/teams/:teamid/members` to list members of a team. [#5877](https://github.com/gogs/gogs/issues/5877)\n- Support backup with retention policy for Docker deployments. [#6140](https://github.com/gogs/gogs/pull/6140)\n### Changed\n- The organization profile page has changed to display at most 12 members. [#5506](https://github.com/gogs/gogs/issues/5506)\n- The required Go version to compile source code changed to 1.14.\n- All assets are now embedded into binary and served from memory by default. Set `[server] LOAD_ASSETS_FROM_DISK = true` to load them from disk. [#5920](https://github.com/gogs/gogs/pull/5920)\n- Application and Go versions are removed from page footer and only show in the admin dashboard.\n- Build tag for running as Windows Service has been changed from `miniwinsvc` to `minwinsvc`.\n- Config...",
+      "memory_unit_text": "In the gogs/gogs release v0.12.5, the release notes include security fixes for potential SSRF in repository migration and improper PAM authorization handling."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_12_6_rc_1",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.6-rc.1",
+      "tag_name": "v0.12.6-rc.1",
+      "title": "0.12.6-rc.1",
+      "time_hint": "2022-03-19",
+      "published_at": "2022-03-19T06:42:41Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.12.6-rc.1",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.12.6-rc.1\nTag: v0.12.6-rc.1; draft: False; prerelease: True; published_at: 2022-03-19T06:42:41Z; created_at: 2022-03-19T06:39:55Z\nRelease notes:\nThis is a release candidate for the 0.12.6 patch release.",
+      "memory_unit_text": "In the gogs/gogs release v0.12.6-rc.1, this is a release candidate for the 0.12.6 patch release."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_12_6",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.6",
+      "tag_name": "v0.12.6",
+      "title": "0.12.6",
+      "time_hint": "2022-03-19",
+      "published_at": "2022-03-19T07:30:38Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.12.6",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.12.6\nTag: v0.12.6; draft: False; prerelease: False; published_at: 2022-03-19T07:30:38Z; created_at: 2022-03-19T06:39:55Z\nRelease notes:\n**ℹ️ Heads up! There is a new patch release [0.12.11](https://github.com/gogs/gogs/releases/tag/v0.12.11) available, we recommend directly installing or upgrading to that version.**\n---\n### Fixed\n- _Security:_ Remote command execution in file uploading. [#6833](https://github.com/gogs/gogs/issues/6833) by @unknwon\n- _Regression:_ Unable to migrate repository from other local Git hosting. Added a new configuration option `[security] LOCAL_NETWORK_ALLOWLIST`, which is a comma separated list of hostnames that are explicitly allowed to be accessed within the local network. [#6841](https://github.com/gogs/gogs/issues/6841) by @unknwon\n- Slow start of Docker containers using NAS devices. [#6554](https://github.com/gogs/gogs/issues/6554) by @druppy\n---\n## 0.12.5\n### Fixed\n- _Security:_ Potential SSRF in repository migration. [#6754](https://github.com/gogs/gogs/issues/6754)\n- _Security:_ Improper PAM authorization handling. [#6810](https://github.com/gogs/gogs/issues/6810)\n## 0.12.4\n### Fixed\n- _Security:_ Potential SSRF attack by CRLF injection via repository migration. [#6413](https://github.com/gogs/gogs/issues/6413)\n- _Regression:_ Fixed smart links for issues stops rendering. [#6506](https://github.com/gogs/gogs/issues/6506)\n- Added `X-Frame-Options` header to prevent Clickjacking. [#6409](https://github.com/gogs/gogs/issues/6409)\n## 0.12.3\n### Fixed\n- _Regression:_ When running Gogs on Windows, push commits no longer fail on a daily basis with the error \"pre-receive hook declined\". [#6316](https://github.com/gogs/gogs/issues/6316)\n- Auto-linked commit SHAs now have correct links. [#6300](https://github.com/gogs/gogs/issues/6300)\n- Git LFS client (with version >= 2.5.0) wasn't able to upload files with known format (e.g. PNG, JPEG), and the server is expecting the HTTP Header `Content-Type` to be `application/octet-stream`. The server now tells the LFS client to always use `Content-Type: application/octet-stream` when upload files.\n## 0.12.2\n### Fixed\n- _Regression_: Pages are correctly rendered when requesting ?go-get=1 for subdirectories. #6314\n- _Regression_: Submodule with a relative path is linked correctly. #6319\n- Backup can be processed when --target is specified on Windows. #6339\n- Commit message contains keywords look like an issue reference no longer fails the push entirely. #6289\n## 0.12.1\n### Fixed\n- The `updated_at` field is now correctly updated when updates an issue. [#6209](https://github.com/gogs/gogs/issues/6209)\n- Fixed a regression which created `login_source.cfg` column to have `VARCHAR(255)` instead of `TEXT` in MySQL. [#6280](https://github.com/gogs/gogs/issues/6280)\n## 0.12.0\n### Added\n- Support for Git LFS, you can read documentation for both [user](https://github.com/gogs/gogs/blob/master/docs/user/lfs.md) and [admin](https://github.com/gogs/gogs/blob/master/docs/admin/lfs.md). [#1322](https://github.com/gogs/gogs/issues/1322)\n- Allow admin to remove observers from the repository. [#5803](https://github.com/gogs/gogs/pull/5803)\n- Use `Last-Modified` HTTP header for raw files. [#5811](https://github.com/gogs/gogs/issues/5811)\n- Support syntax highlighting for SAS code files (i.e. `.r`, `.sas`, `.tex`, `.yaml`). [#5856](https://github.com/gogs/gogs/pull/5856)\n- Able to fill in pull request title with a template. [#5901](https://github.com/gogs/gogs/pull/5901)\n- Able to override static files under `public/` directory, please refer to [documentation](https://gogs.io/docs/features/custom_template) for usage. [#5920](https://github.com/gogs/gogs/pull/5920)\n- New API endpoint `GET /admin/teams/:teamid/members` to list members of a team. [#5877](https://github.com/gogs/gogs/issues/5877)\n- Support backup with retention policy for Docker deployments. [#6140](https://github.com/gogs/gogs/pull/6140)\n### Changed\n- The organization profile page ha...",
+      "memory_unit_text": "In the gogs/gogs release v0.12.6, the release notes include a security fix for remote command execution in file uploading, a regression fix for inability to migrate repository from other local Git hosting with a new configuration option [security] LOCAL_NETWORK_ALLOWLIST, and a fix for slow start of Docker containers using NAS devices."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_12_7_rc_1",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.7-rc.1",
+      "tag_name": "v0.12.7-rc.1",
+      "title": "0.12.7-rc.1",
+      "time_hint": "2022-05-05",
+      "published_at": "2022-05-05T08:29:53Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.12.7-rc.1",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.12.7-rc.1\nTag: v0.12.7-rc.1; draft: False; prerelease: True; published_at: 2022-05-05T08:29:53Z; created_at: 2022-05-05T08:18:01Z\nRelease notes:\nThis is a release candidate for the 0.12.7 patch release.",
+      "memory_unit_text": "In the gogs/gogs release v0.12.7-rc.1, this is a release candidate for the 0.12.7 patch release."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_12_7",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.7",
+      "tag_name": "v0.12.7",
+      "title": "0.12.7",
+      "time_hint": "2022-05-05",
+      "published_at": "2022-05-05T09:21:04Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.12.7",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.12.7\nTag: v0.12.7; draft: False; prerelease: False; published_at: 2022-05-05T09:21:04Z; created_at: 2022-05-05T08:18:01Z\nRelease notes:\n**ℹ️ Heads up! There is a new patch release [0.12.11](https://github.com/gogs/gogs/releases/tag/v0.12.11) available, we recommend directly installing or upgrading to that version.**\n---\n### Fixed\n- _Security:_ Stored XSS in issues. [#6919](https://github.com/gogs/gogs/issues/6919) by @unknwon\n- Invalid character in `Access-Control-Allow-Credentials` response header. [#4983](https://github.com/gogs/gogs/issues/4983) by @wuhan005\n- Mysterious `ssh: overflow reading version string` errors from builtin SSH server. [#6882](https://github.com/gogs/gogs/issues/6882) by @unknwon\n---\n## 0.12.6\n### Fixed\n- _Security:_ Remote command execution in file uploading. [#6833](https://github.com/gogs/gogs/issues/6833)\n- _Regression:_ Unable to migrate repository from other local Git hosting. Added a new configuration option `[security] LOCAL_NETWORK_ALLOWLIST`, which is a comma separated list of hostnames that are explicitly allowed to be accessed within the local network. [#6841](https://github.com/gogs/gogs/issues/6841)\n- Slow start of Docker containers using NAS devices. [#6554](https://github.com/gogs/gogs/issues/6554)\n## 0.12.5\n### Fixed\n- _Security:_ Potential SSRF in repository migration. [#6754](https://github.com/gogs/gogs/issues/6754)\n- _Security:_ Improper PAM authorization handling. [#6810](https://github.com/gogs/gogs/issues/6810)\n## 0.12.4\n### Fixed\n- _Security:_ Potential SSRF attack by CRLF injection via repository migration. [#6413](https://github.com/gogs/gogs/issues/6413)\n- _Regression:_ Fixed smart links for issues stops rendering. [#6506](https://github.com/gogs/gogs/issues/6506)\n- Added `X-Frame-Options` header to prevent Clickjacking. [#6409](https://github.com/gogs/gogs/issues/6409)\n## 0.12.3\n### Fixed\n- _Regression:_ When running Gogs on Windows, push commits no longer fail on a daily basis with the error \"pre-receive hook declined\". [#6316](https://github.com/gogs/gogs/issues/6316)\n- Auto-linked commit SHAs now have correct links. [#6300](https://github.com/gogs/gogs/issues/6300)\n- Git LFS client (with version >= 2.5.0) wasn't able to upload files with known format (e.g. PNG, JPEG), and the server is expecting the HTTP Header `Content-Type` to be `application/octet-stream`. The server now tells the LFS client to always use `Content-Type: application/octet-stream` when upload files.\n## 0.12.2\n### Fixed\n- _Regression_: Pages are correctly rendered when requesting ?go-get=1 for subdirectories. #6314\n- _Regression_: Submodule with a relative path is linked correctly. #6319\n- Backup can be processed when --target is specified on Windows. #6339\n- Commit message contains keywords look like an issue reference no longer fails the push entirely. #6289\n## 0.12.1\n### Fixed\n- The `updated_at` field is now correctly updated when updates an issue. [#6209](https://github.com/gogs/gogs/issues/6209)\n- Fixed a regression which created `login_source.cfg` column to have `VARCHAR(255)` instead of `TEXT` in MySQL. [#6280](https://github.com/gogs/gogs/issues/6280)\n## 0.12.0\n### Added\n- Support for Git LFS, you can read documentation for both [user](https://github.com/gogs/gogs/blob/master/docs/user/lfs.md) and [admin](https://github.com/gogs/gogs/blob/master/docs/admin/lfs.md). [#1322](https://github.com/gogs/gogs/issues/1322)\n- Allow admin to remove observers from the repository. [#5803](https://github.com/gogs/gogs/pull/5803)\n- Use `Last-Modified` HTTP header for raw files. [#5811](https://github.com/gogs/gogs/issues/5811)\n- Support syntax highlighting for SAS code files (i.e. `.r`, `.sas`, `.tex`, `.yaml`). [#5856](https://github.com/gogs/gogs/pull/5856)\n- Able to fill in pull request title with a template. [#5901](https://github.com/gogs/gogs/pull/5901)\n- Able to override static files under `public/` directory, please refer to [documentation](https://gogs.io/docs/featur...",
+      "memory_unit_text": "In the gogs/gogs release v0.12.7, the release notes include a security fix for stored XSS in issues, a fix for invalid character in Access-Control-Allow-Credentials response header, and a fix for mysterious ssh: overflow reading version string errors from builtin SSH server."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_12_8_rc_1",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.8-rc.1",
+      "tag_name": "v0.12.8-rc.1",
+      "title": "0.12.8-rc.1",
+      "time_hint": "2022-05-31",
+      "published_at": "2022-05-31T08:53:55Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.12.8-rc.1",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.12.8-rc.1\nTag: v0.12.8-rc.1; draft: False; prerelease: True; published_at: 2022-05-31T08:53:55Z; created_at: 2022-05-31T08:47:45Z\nRelease notes:\nThis is a release candidate for the 0.12.8 patch release.",
+      "memory_unit_text": "In the gogs/gogs release v0.12.8-rc.1, this is a release candidate for the 0.12.8 patch release."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_12_8",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.8",
+      "tag_name": "v0.12.8",
+      "title": "0.12.8",
+      "time_hint": "2022-05-31",
+      "published_at": "2022-05-31T09:31:41Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.12.8",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.12.8\nTag: v0.12.8; draft: False; prerelease: False; published_at: 2022-05-31T09:31:41Z; created_at: 2022-05-31T08:47:45Z\nRelease notes:\n**ℹ️ Heads up! There is a new patch release [0.12.11](https://github.com/gogs/gogs/releases/tag/v0.12.11) available, we recommend directly installing or upgrading to that version.**\n---\n### Changed\n- All users (including admins) need to use the configuration option `[security] LOCAL_NETWORK_ALLOWLIST` to allow repository migration and webhooks to be able to access local network addresses, which is a comma separated list of hostnames. [#6988](https://github.com/gogs/gogs/pull/6988)\n### Fixed\n- _Security:_ SSRF in webhook. [#6901](https://github.com/gogs/gogs/issues/6901)\n- _Security:_ XSS in cookies. [#6953](https://github.com/gogs/gogs/issues/6953)\n- _Security:_ OS Command Injection in file uploading. [#6968](https://github.com/gogs/gogs/issues/6968)\n- _Security:_ Remote Command Execution in file editing. [#6555](https://github.com/gogs/gogs/issues/6555)\n---\n## 0.12.7\n### Fixed\n- _Security:_ Stored XSS in issues. [#6919](https://github.com/gogs/gogs/issues/6919)\n- Invalid character in `Access-Control-Allow-Credentials` response header. [#4983](https://github.com/gogs/gogs/issues/4983)\n- Mysterious `ssh: overflow reading version string` errors from builtin SSH server. [#6882](https://github.com/gogs/gogs/issues/6882)\n## 0.12.6\n### Fixed\n- _Security:_ Remote command execution in file uploading. [#6833](https://github.com/gogs/gogs/issues/6833)\n- _Regression:_ Unable to migrate repository from other local Git hosting. Added a new configuration option `[security] LOCAL_NETWORK_ALLOWLIST`, which is a comma separated list of hostnames that are explicitly allowed to be accessed within the local network. [#6841](https://github.com/gogs/gogs/issues/6841)\n- Slow start of Docker containers using NAS devices. [#6554](https://github.com/gogs/gogs/issues/6554)\n## 0.12.5\n### Fixed\n- _Security:_ Potential SSRF in repository migration. [#6754](https://github.com/gogs/gogs/issues/6754)\n- _Security:_ Improper PAM authorization handling. [#6810](https://github.com/gogs/gogs/issues/6810)\n## 0.12.4\n### Fixed\n- _Security:_ Potential SSRF attack by CRLF injection via repository migration. [#6413](https://github.com/gogs/gogs/issues/6413)\n- _Regression:_ Fixed smart links for issues stops rendering. [#6506](https://github.com/gogs/gogs/issues/6506)\n- Added `X-Frame-Options` header to prevent Clickjacking. [#6409](https://github.com/gogs/gogs/issues/6409)\n## 0.12.3\n### Fixed\n- _Regression:_ When running Gogs on Windows, push commits no longer fail on a daily basis with the error \"pre-receive hook declined\". [#6316](https://github.com/gogs/gogs/issues/6316)\n- Auto-linked commit SHAs now have correct links. [#6300](https://github.com/gogs/gogs/issues/6300)\n- Git LFS client (with version >= 2.5.0) wasn't able to upload files with known format (e.g. PNG, JPEG), and the server is expecting the HTTP Header `Content-Type` to be `application/octet-stream`. The server now tells the LFS client to always use `Content-Type: application/octet-stream` when upload files.\n## 0.12.2\n### Fixed\n- _Regression_: Pages are correctly rendered when requesting ?go-get=1 for subdirectories. #6314\n- _Regression_: Submodule with a relative path is linked correctly. #6319\n- Backup can be processed when --target is specified on Windows. #6339\n- Commit message contains keywords look like an issue reference no longer fails the push entirely. #6289\n## 0.12.1\n### Fixed\n- The `updated_at` field is now correctly updated when updates an issue. [#6209](https://github.com/gogs/gogs/issues/6209)\n- Fixed a regression which created `login_source.cfg` column to have `VARCHAR(255)` instead of `TEXT` in MySQL. [#6280](https://github.com/gogs/gogs/issues/6280)\n## 0.12.0\n### Added\n- Support for Git LFS, you can read documentation for both [user](https://github.com/gogs/gogs/blob/master/docs/user/lfs.md) and [admin](https://github...",
+      "memory_unit_text": "In the gogs/gogs release v0.12.8, the release notes include a change that all users need to use the configuration option [security] LOCAL_NETWORK_ALLOWLIST to allow repository migration and webhooks to access local network addresses, and security fixes for SSRF in webhook, XSS in cookies, OS Command Injection in file uploading, and Remote Command Execution in file editing."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_12_9_rc_1",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.9-rc.1",
+      "tag_name": "v0.12.9-rc.1",
+      "title": "0.12.9-rc.1",
+      "time_hint": "2022-06-07",
+      "published_at": "2022-06-07T14:31:40Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.12.9-rc.1",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.12.9-rc.1\nTag: v0.12.9-rc.1; draft: False; prerelease: True; published_at: 2022-06-07T14:31:40Z; created_at: 2022-06-07T13:29:32Z\nRelease notes:\nThis is a release candidate for the 0.12.9 patch release.",
+      "memory_unit_text": "In the gogs/gogs release v0.12.9-rc.1, this is a release candidate for the 0.12.9 patch release."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_12_9",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.9",
+      "tag_name": "v0.12.9",
+      "title": "0.12.9",
+      "time_hint": "2022-06-07",
+      "published_at": "2022-06-07T15:35:01Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.12.9",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.12.9\nTag: v0.12.9; draft: False; prerelease: False; published_at: 2022-06-07T15:35:01Z; created_at: 2022-06-07T13:29:32Z\nRelease notes:\n**ℹ️ Heads up! There is a new patch release [0.12.11](https://github.com/gogs/gogs/releases/tag/v0.12.11) available, we recommend directly installing or upgrading to that version.**\n---\n### Fixed\n- _Security:_ OS Command Injection in file editor. [#7000](https://github.com/gogs/gogs/issues/7000)\n- _Security:_ Sanitize `DisplayName` in repository issue list. [#7009](https://github.com/gogs/gogs/pull/7009)\n- _Security:_ Path Traversal in file editor on Windows. [#7001](https://github.com/gogs/gogs/issues/7001)\n- _Security:_ Path Traversal in Git HTTP endpoints. [#7002](https://github.com/gogs/gogs/issues/7002)\n- Unable to init repository during creation on Windows. [#6967](https://github.com/gogs/gogs/issues/6967)\n- Mysterious panic on `Value not found for type *repo.HTTPContext`. [#6963](https://github.com/gogs/gogs/issues/6963)\n---\n## 0.12.8\n### Changed\n- All users (including admins) need to use the configuration option `[security] LOCAL_NETWORK_ALLOWLIST` to allow repository migration and webhooks to be able to access local network addresses, which is a comma separated list of hostnames. [#6988](https://github.com/gogs/gogs/pull/6988)\n### Fixed\n- _Security:_ SSRF in webhook. [#6901](https://github.com/gogs/gogs/issues/6901)\n- _Security:_ XSS in cookies. [#6953](https://github.com/gogs/gogs/issues/6953)\n- _Security:_ OS Command Injection in file uploading. [#6968](https://github.com/gogs/gogs/issues/6968)\n- _Security:_ Remote Command Execution in file editing. [#6555](https://github.com/gogs/gogs/issues/6555)\n## 0.12.7\n### Fixed\n- _Security:_ Stored XSS in issues. [#6919](https://github.com/gogs/gogs/issues/6919)\n- Invalid character in `Access-Control-Allow-Credentials` response header. [#4983](https://github.com/gogs/gogs/issues/4983)\n- Mysterious `ssh: overflow reading version string` errors from builtin SSH server. [#6882](https://github.com/gogs/gogs/issues/6882)\n## 0.12.6\n### Fixed\n- _Security:_ Remote command execution in file uploading. [#6833](https://github.com/gogs/gogs/issues/6833)\n- _Regression:_ Unable to migrate repository from other local Git hosting. Added a new configuration option `[security] LOCAL_NETWORK_ALLOWLIST`, which is a comma separated list of hostnames that are explicitly allowed to be accessed within the local network. [#6841](https://github.com/gogs/gogs/issues/6841)\n- Slow start of Docker containers using NAS devices. [#6554](https://github.com/gogs/gogs/issues/6554)\n## 0.12.5\n### Fixed\n- _Security:_ Potential SSRF in repository migration. [#6754](https://github.com/gogs/gogs/issues/6754)\n- _Security:_ Improper PAM authorization handling. [#6810](https://github.com/gogs/gogs/issues/6810)\n## 0.12.4\n### Fixed\n- _Security:_ Potential SSRF attack by CRLF injection via repository migration. [#6413](https://github.com/gogs/gogs/issues/6413)\n- _Regression:_ Fixed smart links for issues stops rendering. [#6506](https://github.com/gogs/gogs/issues/6506)\n- Added `X-Frame-Options` header to prevent Clickjacking. [#6409](https://github.com/gogs/gogs/issues/6409)\n## 0.12.3\n### Fixed\n- _Regression:_ When running Gogs on Windows, push commits no longer fail on a daily basis with the error \"pre-receive hook declined\". [#6316](https://github.com/gogs/gogs/issues/6316)\n- Auto-linked commit SHAs now have correct links. [#6300](https://github.com/gogs/gogs/issues/6300)\n- Git LFS client (with version >= 2.5.0) wasn't able to upload files with known format (e.g. PNG, JPEG), and the server is expecting the HTTP Header `Content-Type` to be `application/octet-stream`. The server now tells the LFS client to always use `Content-Type: application/octet-stream` when upload files.\n## 0.12.2\n### Fixed\n- _Regression_: Pages are correctly rendered when requesting ?go-get=1 for subdirectories. #6314\n- _Regression_: Submodule with a relative path is linked corre...",
+      "memory_unit_text": "In the gogs/gogs release v0.12.9, the release notes include security fixes for OS Command Injection in file editor, sanitize DisplayName in repository issue list, Path Traversal in file editor on Windows, Path Traversal in Git HTTP endpoints, and fixes for unable to init repository during creation on Windows and mysterious panic on Value not found for type *repo.HTTPContext."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_12_10_rc_1",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.10-rc.1",
+      "tag_name": "v0.12.10-rc.1",
+      "title": "0.12.10-rc.1",
+      "time_hint": "2022-08-02",
+      "published_at": "2022-08-02T03:11:02Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.12.10-rc.1",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.12.10-rc.1\nTag: v0.12.10-rc.1; draft: False; prerelease: True; published_at: 2022-08-02T03:11:02Z; created_at: 2022-08-02T03:01:04Z\nRelease notes:\nThis is a release candidate for the 0.12.10 patch release.",
+      "memory_unit_text": "In the gogs/gogs release v0.12.10-rc.1, this is a release candidate for the 0.12.10 patch release."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_12_10",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.10",
+      "tag_name": "v0.12.10",
+      "title": "0.12.10",
+      "time_hint": "2022-08-02",
+      "published_at": "2022-08-02T03:46:12Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.12.10",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.12.10\nTag: v0.12.10; draft: False; prerelease: False; published_at: 2022-08-02T03:46:12Z; created_at: 2022-08-02T03:01:04Z\nRelease notes:\n**ℹ️ Heads up! There is a new patch release [0.12.11](https://github.com/gogs/gogs/releases/tag/v0.12.11) available, we recommend directly installing or upgrading to that version.**\n---\n### Changed\n- Support using `[security] LOCAL_NETWORK_ALLOWLIST = *` to allow all hostnames. [#7111](https://github.com/gogs/gogs/pull/7111)\n### Fixed\n- Unable to send webhooks to local network addresses after configured `[security] LOCAL_NETWORK_ALLOWLIST`. [#7074](https://github.com/gogs/gogs/issues/7074)\n<details>\n<summary>Previous patch releases</summary>\n## 0.12.9\n### Fixed\n- _Security:_ OS Command Injection in file editor. [#7000](https://github.com/gogs/gogs/issues/7000)\n- _Security:_ Sanitize `DisplayName` in repository issue list. [#7009](https://github.com/gogs/gogs/pull/7009)\n- _Security:_ Path Traversal in file editor on Windows. [#7001](https://github.com/gogs/gogs/issues/7001)\n- _Security:_ Path Traversal in Git HTTP endpoints. [#7002](https://github.com/gogs/gogs/issues/7002)\n- Unable to init repository during creation on Windows. [#6967](https://github.com/gogs/gogs/issues/6967)\n- Mysterious panic on `Value not found for type *repo.HTTPContext`. [#6963](https://github.com/gogs/gogs/issues/6963)\n## 0.12.8\n### Changed\n- All users (including admins) need to use the configuration option `[security] LOCAL_NETWORK_ALLOWLIST` to allow repository migration and webhooks to be able to access local network addresses, which is a comma separated list of hostnames. [#6988](https://github.com/gogs/gogs/pull/6988)\n### Fixed\n- _Security:_ SSRF in webhook. [#6901](https://github.com/gogs/gogs/issues/6901)\n- _Security:_ XSS in cookies. [#6953](https://github.com/gogs/gogs/issues/6953)\n- _Security:_ OS Command Injection in file uploading. [#6968](https://github.com/gogs/gogs/issues/6968)\n- _Security:_ Remote Command Execution in file editing. [#6555](https://github.com/gogs/gogs/issues/6555)\n## 0.12.7\n### Fixed\n- _Security:_ Stored XSS in issues. [#6919](https://github.com/gogs/gogs/issues/6919)\n- Invalid character in `Access-Control-Allow-Credentials` response header. [#4983](https://github.com/gogs/gogs/issues/4983)\n- Mysterious `ssh: overflow reading version string` errors from builtin SSH server. [#6882](https://github.com/gogs/gogs/issues/6882)\n## 0.12.6\n### Fixed\n- _Security:_ Remote command execution in file uploading. [#6833](https://github.com/gogs/gogs/issues/6833)\n- _Regression:_ Unable to migrate repository from other local Git hosting. Added a new configuration option `[security] LOCAL_NETWORK_ALLOWLIST`, which is a comma separated list of hostnames that are explicitly allowed to be accessed within the local network. [#6841](https://github.com/gogs/gogs/issues/6841)\n- Slow start of Docker containers using NAS devices. [#6554](https://github.com/gogs/gogs/issues/6554)\n## 0.12.5\n### Fixed\n- _Security:_ Potential SSRF in repository migration. [#6754](https://github.com/gogs/gogs/issues/6754)\n- _Security:_ Improper PAM authorization handling. [#6810](https://github.com/gogs/gogs/issues/6810)\n## 0.12.4\n### Fixed\n- _Security:_ Potential SSRF attack by CRLF injection via repository migration. [#6413](https://github.com/gogs/gogs/issues/6413)\n- _Regression:_ Fixed smart links for issues stops rendering. [#6506](https://github.com/gogs/gogs/issues/6506)\n- Added `X-Frame-Options` header to prevent Clickjacking. [#6409](https://github.com/gogs/gogs/issues/6409)\n## 0.12.3\n### Fixed\n- _Regression:_ When running Gogs on Windows, push commits no longer fail on a daily basis with the error \"pre-receive hook declined\". [#6316](https://github.com/gogs/gogs/issues/6316)\n- Auto-linked commit SHAs now have correct links. [#6300](https://github.com/gogs/gogs/issues/6300)\n- Git LFS client (with version >= 2.5.0) wasn't able to upload files with known format (e.g. PNG, JPEG), and the serv...",
+      "memory_unit_text": "In the gogs/gogs release v0.12.10, the release notes include a change to support using [security] LOCAL_NETWORK_ALLOWLIST = * to allow all hostnames, and a fix for unable to send webhooks to local network addresses after configured [security] LOCAL_NETWORK_ALLOWLIST."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_12_11_rc_1",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.11-rc.1",
+      "tag_name": "v0.12.11-rc.1",
+      "title": "0.12.11-rc.1",
+      "time_hint": "2023-02-25",
+      "published_at": "2023-02-25T05:47:38Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.12.11-rc.1",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.12.11-rc.1\nTag: v0.12.11-rc.1; draft: False; prerelease: True; published_at: 2023-02-25T05:47:38Z; created_at: 2023-02-25T05:39:54Z\nRelease notes:\nThis is a release candidate for the 0.12.11 patch release.",
+      "memory_unit_text": "In the gogs/gogs release v0.12.11-rc.1, this is a release candidate for the 0.12.11 patch release."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_12_11",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.11",
+      "tag_name": "v0.12.11",
+      "title": "0.12.11",
+      "time_hint": "2023-02-25",
+      "published_at": "2023-02-25T06:30:41Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.12.11",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.12.11\nTag: v0.12.11; draft: False; prerelease: False; published_at: 2023-02-25T06:30:41Z; created_at: 2023-02-25T05:39:54Z\nRelease notes:\n### Fixed\n- _Security:_ Stored XSS for issue assignees. [#7145](https://github.com/gogs/gogs/issues/7145)\n- _Security:_ OS Command Injection in repo editor on case-insensitive file systems. [#7030](https://github.com/gogs/gogs/issues/7030)\n- Unable to render repository pages with implicit submodules (e.g. `get submodule \"REDACTED\": revision does not exist`). [#6436](https://github.com/gogs/gogs/issues/6436)\n<details>\n<summary>Previous patch releases</summary>\n## 0.12.10\n### Changed\n- Support using `[security] LOCAL_NETWORK_ALLOWLIST = *` to allow all hostnames. [#7111](https://github.com/gogs/gogs/pull/7111)\n### Fixed\n- Unable to send webhooks to local network addresses after configured `[security] LOCAL_NETWORK_ALLOWLIST`. [#7074](https://github.com/gogs/gogs/issues/7074)\n## 0.12.9\n### Fixed\n- _Security:_ OS Command Injection in file editor. [#7000](https://github.com/gogs/gogs/issues/7000)\n- _Security:_ Sanitize `DisplayName` in repository issue list. [#7009](https://github.com/gogs/gogs/pull/7009)\n- _Security:_ Path Traversal in file editor on Windows. [#7001](https://github.com/gogs/gogs/issues/7001)\n- _Security:_ Path Traversal in Git HTTP endpoints. [#7002](https://github.com/gogs/gogs/issues/7002)\n- Unable to init repository during creation on Windows. [#6967](https://github.com/gogs/gogs/issues/6967)\n- Mysterious panic on `Value not found for type *repo.HTTPContext`. [#6963](https://github.com/gogs/gogs/issues/6963)\n## 0.12.8\n### Changed\n- All users (including admins) need to use the configuration option `[security] LOCAL_NETWORK_ALLOWLIST` to allow repository migration and webhooks to be able to access local network addresses, which is a comma separated list of hostnames. [#6988](https://github.com/gogs/gogs/pull/6988)\n### Fixed\n- _Security:_ SSRF in webhook. [#6901](https://github.com/gogs/gogs/issues/6901)\n- _Security:_ XSS in cookies. [#6953](https://github.com/gogs/gogs/issues/6953)\n- _Security:_ OS Command Injection in file uploading. [#6968](https://github.com/gogs/gogs/issues/6968)\n- _Security:_ Remote Command Execution in file editing. [#6555](https://github.com/gogs/gogs/issues/6555)\n## 0.12.7\n### Fixed\n- _Security:_ Stored XSS in issues. [#6919](https://github.com/gogs/gogs/issues/6919)\n- Invalid character in `Access-Control-Allow-Credentials` response header. [#4983](https://github.com/gogs/gogs/issues/4983)\n- Mysterious `ssh: overflow reading version string` errors from builtin SSH server. [#6882](https://github.com/gogs/gogs/issues/6882)\n## 0.12.6\n### Fixed\n- _Security:_ Remote command execution in file uploading. [#6833](https://github.com/gogs/gogs/issues/6833)\n- _Regression:_ Unable to migrate repository from other local Git hosting. Added a new configuration option `[security] LOCAL_NETWORK_ALLOWLIST`, which is a comma separated list of hostnames that are explicitly allowed to be accessed within the local network. [#6841](https://github.com/gogs/gogs/issues/6841)\n- Slow start of Docker containers using NAS devices. [#6554](https://github.com/gogs/gogs/issues/6554)\n## 0.12.5\n### Fixed\n- _Security:_ Potential SSRF in repository migration. [#6754](https://github.com/gogs/gogs/issues/6754)\n- _Security:_ Improper PAM authorization handling. [#6810](https://github.com/gogs/gogs/issues/6810)\n## 0.12.4\n### Fixed\n- _Security:_ Potential SSRF attack by CRLF injection via repository migration. [#6413](https://github.com/gogs/gogs/issues/6413)\n- _Regression:_ Fixed smart links for issues stops rendering. [#6506](https://github.com/gogs/gogs/issues/6506)\n- Added `X-Frame-Options` header to prevent Clickjacking. [#6409](https://github.com/gogs/gogs/issues/6409)\n## 0.12.3\n### Fixed\n- _Regression:_ When running Gogs on Windows, push commits no longer fail on a daily basis with the error \"pre-receive hook declined\". [#6316](https://github.com/gogs...",
+      "memory_unit_text": "In the gogs/gogs release v0.12.11, the release notes include security fixes for stored XSS for issue assignees and OS Command Injection in repo editor on case-insensitive file systems, and a fix for unable to render repository pages with implicit submodules."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_13_0_rc_1",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.13.0-rc.1",
+      "tag_name": "v0.13.0-rc.1",
+      "title": "0.13.0-rc.1",
+      "time_hint": "2023-02-25",
+      "published_at": "2023-02-25T12:52:36Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.13.0-rc.1",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.13.0-rc.1\nTag: v0.13.0-rc.1; draft: False; prerelease: True; published_at: 2023-02-25T12:52:36Z; created_at: 2023-02-25T12:33:19Z\nRelease notes:\nThis is a release candidate for the 0.13.0 minor release.",
+      "memory_unit_text": "In the gogs/gogs release v0.13.0-rc.1, this is a release candidate for the 0.13.0 minor release."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_13_0",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.13.0",
+      "tag_name": "v0.13.0",
+      "title": "0.13.0",
+      "time_hint": "2023-02-25",
+      "published_at": "2023-02-25T13:40:59Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.13.0",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.13.0\nTag: v0.13.0; draft: False; prerelease: False; published_at: 2023-02-25T13:40:59Z; created_at: 2023-02-25T12:33:19Z\nRelease notes:\n**ℹ️ Heads up! There is a new patch release [0.13.4](https://github.com/gogs/gogs/releases/tag/v0.13.4) available, we recommend directly installing or upgrading to that version.**\n### Added\n- Support using personal access token in the password field. [#3866](https://github.com/gogs/gogs/issues/3866)\n- An unlisted option is added when create or migrate a repository. Unlisted repositories are public but not being listed for users without direct access in the UI. [#5733](https://github.com/gogs/gogs/issues/5733)\n- New API endpoint `PUT /repos/:owner/:repo/contents/:path` for creating and update repository contents. [#5967](https://github.com/gogs/gogs/issues/5967)\n- New configuration option `[git.timeout] DIFF` for customizing operation timeout of `git diff`. [#6315](https://github.com/gogs/gogs/issues/6315)\n- New configuration option `[server] SSH_SERVER_MACS` for setting list of accepted MACs for connections to builtin SSH server. [#6434](https://github.com/gogs/gogs/issues/6434)\n- New configuration option `[repository] DEFAULT_BRANCH` for setting default branch name for new repositories. [#7291](https://github.com/gogs/gogs/issues/7291)\n- New configuration option `[server] SSH_SERVER_ALGORITHMS` for specifying the list of accepted key exchange algorithms for connections to builtin SSH server. [#7345](https://github.com/gogs/gogs/pull/7345)\n- Support specifying custom schema for PostgreSQL. [#6695](https://github.com/gogs/gogs/pull/6695)\n- Support rendering Mermaid diagrams in Markdown. [#6776](https://github.com/gogs/gogs/pull/6776)\n- Docker: Allow passing extra arguments to the `backup` command. [#7060](https://github.com/gogs/gogs/pull/7060)\n- New languages support: Mongolian, Romanian. [#6510](https://github.com/gogs/gogs/pull/6510) [#7082](https://github.com/gogs/gogs/pull/7082)\n### Changed\n- The default branch has been changed to `main`. [#6285](https://github.com/gogs/gogs/pull/6285)\n- MSSQL as database backend is deprecated, installation page no longer shows it as an option. Existing installations and manually craft configuration file continue to work. [#6295](https://github.com/gogs/gogs/pull/6295)\n- Use [Task](https://github.com/go-task/task) as the build tool. [#6297](https://github.com/gogs/gogs/pull/6297)\n- The required Go version to compile source code changed to 1.18.\n- Access tokens are now stored using their SHA256 hashes instead of raw values. [#7008](https://github.com/gogs/gogs/pull/7008)\n### Fixed\n- Unable to use LDAP authentication on ARM machines. [#6761](https://github.com/gogs/gogs/issues/6761)\n- Unable to choose \"Lookup Avatar by mail\" in user settings without deleting custom avatar. [#7267](https://github.com/gogs/gogs/pull/7267)\n- Mistakenly include the \"data\" directory under the custom directory in the Docker setup. [#7343](https://github.com/gogs/gogs/pull/7343)\n- Unable to start after data recovery with an outdated migration version. [#7125](https://github.com/gogs/gogs/issues/7125)\n### Removed\n- ⚠️ Migrations before 0.12 are removed, installations not on 0.12 should upgrade to it to run the migrations and then upgrade to 0.13.\n- Configuration section `[mailer]` is no longer used, please use `[email]`.\n- Configuration section `[service]` is no longer used, please use `[auth]`.\n- Configuration option `APP_NAME` is no longer used, please use `BRAND_NAME`.\n- Configuration option `[security] REVERSE_PROXY_AUTHENTICATION_USER` is no longer used, please use `[auth] REVERSE_PROXY_AUTHENTICATION_HEADER`.\n- Configuration option `[auth] ACTIVE_CODE_LIVE_MINUTES` is no longer used, please use `[auth] ACTIVATE_CODE_LIVES`.\n- Configuration option `[auth] RESET_PASSWD_CODE_LIVE_MINUTES` is no longer used, please use `[auth] RESET_PASSWORD_CODE_LIVES`.\n- Configuration option `[auth] ENABLE_CAPTCHA` is no longer used, please use `[auth] ENABLE_...",
+      "memory_unit_text": "In the gogs/gogs release v0.13.0, the release notes include added support for personal access token in the password field, an unlisted option for repositories, new API endpoint PUT /repos/:owner/:repo/contents/:path, new configuration options for git diff timeout, SSH server MACs, default branch, SSH server algorithms, custom PostgreSQL schema, Mermaid diagrams in Markdown, Docker backup extra arguments, and new languages Mongolian and Romanian. Changes include default branch to main, MSSQL deprecation, Task build tool, Go 1.18 requirement, and access tokens stored as SHA256 hashes. Fixes include LDAP authentication on ARM, avatar lookup, custom directory in Docker, and outdated migration version. Removals include pre-0.12 migrations, deprecated configuration sections and options."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_13_1_rc_1",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.13.1-rc.1",
+      "tag_name": "v0.13.1-rc.1",
+      "title": "0.13.1-rc.1",
+      "time_hint": "2024-12-22",
+      "published_at": "2024-12-22T23:32:23Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.13.1-rc.1",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.13.1-rc.1\nTag: v0.13.1-rc.1; draft: False; prerelease: True; published_at: 2024-12-22T23:32:23Z; created_at: 2024-12-22T22:54:57Z\nRelease notes:\nThis is a release candidate for the 0.13.1 patch release.",
+      "memory_unit_text": "In the gogs/gogs release v0.13.1-rc.1, this is a release candidate for the 0.13.1 patch release."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_13_1",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.13.1",
+      "tag_name": "v0.13.1",
+      "title": "0.13.1",
+      "time_hint": "2024-12-23",
+      "published_at": "2024-12-23T00:19:45Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.13.1",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.13.1\nTag: v0.13.1; draft: False; prerelease: False; published_at: 2024-12-23T00:19:45Z; created_at: 2024-12-22T22:54:57Z\nRelease notes:\n>[!CAUTION]\n> This release was pulled back due to issues with pre-compiled release archives, please use [0.13.2](https://github.com/gogs/gogs/releases/tag/v0.13.2) instead.",
+      "memory_unit_text": "In the gogs/gogs release v0.13.1, the release notes indicate that this release was pulled back due to issues with pre-compiled release archives, and users should use 0.13.2 instead."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_13_2_rc_1",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.13.2-rc.1",
+      "tag_name": "v0.13.2-rc.1",
+      "title": "0.13.2-rc.1",
+      "time_hint": "2024-12-23",
+      "published_at": "2024-12-23T16:06:18Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.13.2-rc.1",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.13.2-rc.1\nTag: v0.13.2-rc.1; draft: False; prerelease: True; published_at: 2024-12-23T16:06:18Z; created_at: 2024-12-23T15:57:35Z\nRelease notes:\nThis is a release candidate for the 0.13.2 patch release.",
+      "memory_unit_text": "In the gogs/gogs release v0.13.2-rc.1, this is a release candidate for the 0.13.2 patch release."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_13_2",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.13.2",
+      "tag_name": "v0.13.2",
+      "title": "0.13.2",
+      "time_hint": "2024-12-23",
+      "published_at": "2024-12-23T16:37:18Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.13.2",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.13.2\nTag: v0.13.2; draft: False; prerelease: False; published_at: 2024-12-23T16:37:18Z; created_at: 2024-12-23T15:57:35Z\nRelease notes:\n**ℹ️ Heads up! There is a new patch release [0.13.4](https://github.com/gogs/gogs/releases/tag/v0.13.4) available, we recommend directly installing or upgrading to that version.**\n> [!warning]\n> Due to changes to the release infrastructure, starting this release and going forward, `pam` tag will not be included for release archives that previously had it included.\n### Fixed\n- _Security:_ Path Traversal in file editing UI. [GHSA-r7j8-5h9c-f6fx](https://github.com/gogs/gogs/security/advisories/GHSA-r7j8-5h9c-f6fx)\n- _Security:_ Path Traversal in file update API. [GHSA-qf5v-rp47-55gg](https://github.com/gogs/gogs/security/advisories/GHSA-qf5v-rp47-55gg)\n- _Security:_ Argument Injection in the built-in SSH server. [GHSA-vm62-9jw3-c8w3](https://github.com/gogs/gogs/security/advisories/GHSA-vm62-9jw3-c8w3)\n- _Security:_ Deletion of internal files. [GHSA-ccqv-43vm-4f3w](https://github.com/gogs/gogs/security/advisories/GHSA-ccqv-43vm-4f3w)\n- _Security:_ Argument Injection during changes preview. [GHSA-9pp6-wq8c-3w2c](https://github.com/gogs/gogs/security/advisories/GHSA-9pp6-wq8c-3w2c)\n- _Security:_ Argument Injection when tagging new releases. [GHSA-m27m-h5gj-wwmg](https://github.com/gogs/gogs/security/advisories/GHSA-m27m-h5gj-wwmg)\n- Use the non-deprecated section name `[email]` during installation for email settings. [#7704](https://github.com/gogs/gogs/pull/7704)\n- Use the non-deprecated section name `[email] PASSWORD` during installation for email password. [#7807](https://github.com/gogs/gogs/pull/7807)\n- Make purple template label color to actually use the hexcode of purple. [#7722](https://github.com/gogs/gogs/pull/7722)\n<details>\n<summary>Previous patch releases</summary>\n## 0.13.0\n### Added\n- Support using personal access token in the password field. [#3866](https://github.com/gogs/gogs/issues/3866)\n- An unlisted option is added when create or migrate a repository. Unlisted repositories are public but not being listed for users without direct access in the UI. [#5733](https://github.com/gogs/gogs/issues/5733)\n- New API endpoint `PUT /repos/:owner/:repo/contents/:path` for creating and update repository contents. [#5967](https://github.com/gogs/gogs/issues/5967)\n- New configuration option `[git.timeout] DIFF` for customizing operation timeout of `git diff`. [#6315](https://github.com/gogs/gogs/issues/6315)\n- New configuration option `[server] SSH_SERVER_MACS` for setting list of accepted MACs for connections to builtin SSH server. [#6434](https://github.com/gogs/gogs/issues/6434)\n- New configuration option `[repository] DEFAULT_BRANCH` for setting default branch name for new repositories. [#7291](https://github.com/gogs/gogs/issues/7291)\n- New configuration option `[server] SSH_SERVER_ALGORITHMS` for specifying the list of accepted key exchange algorithms for connections to builtin SSH server. [#7345](https://github.com/gogs/gogs/pull/7345)\n- Support specifying custom schema for PostgreSQL. [#6695](https://github.com/gogs/gogs/pull/6695)\n- Support rendering Mermaid diagrams in Markdown. [#6776](https://github.com/gogs/gogs/pull/6776)\n- Docker: Allow passing extra arguments to the `backup` command. [#7060](https://github.com/gogs/gogs/pull/7060)\n- New languages support: Mongolian, Romanian. [#6510](https://github.com/gogs/gogs/pull/6510) [#7082](https://github.com/gogs/gogs/pull/7082)\n### Changed\n- The default branch has been changed to `main`. [#6285](https://github.com/gogs/gogs/pull/6285)\n- MSSQL as database backend is deprecated, installation page no longer shows it as an option. Existing installations and manually craft configuration file continue to work. [#6295](https://github.com/gogs/gogs/pull/6295)\n- Use [Task](https://github.com/go-task/task) as the build tool. [#6297](https://github.com/gogs/gogs/pull/6297)\n- The required Go version to compile s...",
+      "memory_unit_text": "In the gogs/gogs release v0.13.2, the release notes include security fixes for Path Traversal in file editing UI, Path Traversal in file update API, Argument Injection in the built-in SSH server, Deletion of internal files, Argument Injection during changes preview, Argument Injection when tagging new releases, and fixes for using non-deprecated email section names and purple template label color. It also notes that the pam tag will not be included in release archives going forward."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_13_3",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.13.3",
+      "tag_name": "v0.13.3",
+      "title": "0.13.3",
+      "time_hint": "2025-06-09",
+      "published_at": "2025-06-09T00:43:55Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.13.3",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.13.3\nTag: v0.13.3; draft: False; prerelease: False; published_at: 2025-06-09T00:43:55Z; created_at: 2025-06-08T22:55:56Z\nRelease notes:\n**ℹ️ Heads up! There is a new patch release [0.13.4](https://github.com/gogs/gogs/releases/tag/v0.13.4) available, we recommend directly installing or upgrading to that version.**\n> [!warning]\n> Due to changes to the release infrastructure, starting this release and going forward, `pam` tag will not be included for release archives that previously had it included.\n### Fixed\n- _Security:_ Stored XSS in PDF renderer. [GHSA-xh32-cx6c-cp4v](https://github.com/gogs/gogs/security/advisories/GHSA-xh32-cx6c-cp4v)\n- _Security:_ Path Traversal in file editing UI. [GHSA-wj44-9vcg-wjq7](https://github.com/gogs/gogs/security/advisories/GHSA-wj44-9vcg-wjq7)\n- Randomly timeout on repository file uploads. [#7890](https://github.com/gogs/gogs/pull/7890)\n- Unable to override email templates in custom directory. [#7905](https://github.com/gogs/gogs/pull/7905)\n<details>\n<summary>Previous patch releases</summary>\n## 0.13.2\n### Fixed\n- _Security:_ Path Traversal in file editing UI. [GHSA-r7j8-5h9c-f6fx](https://github.com/gogs/gogs/security/advisories/GHSA-r7j8-5h9c-f6fx)\n- _Security:_ Path Traversal in file update API. [GHSA-qf5v-rp47-55gg](https://github.com/gogs/gogs/security/advisories/GHSA-qf5v-rp47-55gg)\n- _Security:_ Argument Injection in the built-in SSH server. [GHSA-vm62-9jw3-c8w3](https://github.com/gogs/gogs/security/advisories/GHSA-vm62-9jw3-c8w3)\n- _Security:_ Deletion of internal files. [GHSA-ccqv-43vm-4f3w](https://github.com/gogs/gogs/security/advisories/GHSA-ccqv-43vm-4f3w)\n- _Security:_ Argument Injection during changes preview. [GHSA-9pp6-wq8c-3w2c](https://github.com/gogs/gogs/security/advisories/GHSA-9pp6-wq8c-3w2c)\n- _Security:_ Argument Injection when tagging new releases. [GHSA-m27m-h5gj-wwmg](https://github.com/gogs/gogs/security/advisories/GHSA-m27m-h5gj-wwmg)\n- Use the non-deprecated section name `[email]` during installation for email settings. [#7704](https://github.com/gogs/gogs/pull/7704)\n- Use the non-deprecated section name `[email] PASSWORD` during installation for email password. [#7807](https://github.com/gogs/gogs/pull/7807)\n- Make purple template label color to actually use the hexcode of purple. [#7722](https://github.com/gogs/gogs/pull/7722)\n## 0.13.0\n### Added\n- Support using personal access token in the password field. [#3866](https://github.com/gogs/gogs/issues/3866)\n- An unlisted option is added when create or migrate a repository. Unlisted repositories are public but not being listed for users without direct access in the UI. [#5733](https://github.com/gogs/gogs/issues/5733)\n- New API endpoint `PUT /repos/:owner/:repo/contents/:path` for creating and update repository contents. [#5967](https://github.com/gogs/gogs/issues/5967)\n- New configuration option `[git.timeout] DIFF` for customizing operation timeout of `git diff`. [#6315](https://github.com/gogs/gogs/issues/6315)\n- New configuration option `[server] SSH_SERVER_MACS` for setting list of accepted MACs for connections to builtin SSH server. [#6434](https://github.com/gogs/gogs/issues/6434)\n- New configuration option `[repository] DEFAULT_BRANCH` for setting default branch name for new repositories. [#7291](https://github.com/gogs/gogs/issues/7291)\n- New configuration option `[server] SSH_SERVER_ALGORITHMS` for specifying the list of accepted key exchange algorithms for connections to builtin SSH server. [#7345](https://github.com/gogs/gogs/pull/7345)\n- Support specifying custom schema for PostgreSQL. [#6695](https://github.com/gogs/gogs/pull/6695)\n- Support rendering Mermaid diagrams in Markdown. [#6776](https://github.com/gogs/gogs/pull/6776)\n- Docker: Allow passing extra arguments to the `backup` command. [#7060](https://github.com/gogs/gogs/pull/7060)\n- New languages support: Mongolian, Romanian. [#6510](https://github.com/gogs/gogs/pull/6510) [#7082](https://github.com/gogs/g...",
+      "memory_unit_text": "In the gogs/gogs release v0.13.3, the release notes include security fixes for Stored XSS in PDF renderer and Path Traversal in file editing UI, and fixes for randomly timeout on repository file uploads and unable to override email templates in custom directory. It also notes that the pam tag will not be included in release archives going forward."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_13_4",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.13.4",
+      "tag_name": "v0.13.4",
+      "title": "0.13.4",
+      "time_hint": "2026-01-23",
+      "published_at": "2026-01-23T18:32:53Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.13.4",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.13.4\nTag: v0.13.4; draft: False; prerelease: False; published_at: 2026-01-23T18:32:53Z; created_at: 2026-01-23T17:38:11Z\nRelease notes:\n> [!warning]\n> Due to changes to the release infrastructure, starting this release and going forward, `pam` tag will not be included for release archives that previously had it included.\n### Fixed\n- _Security:_ DoS in repository mirror sync. [#8065](https://github.com/gogs/gogs/pull/8065) - [GHSA-cr88-6mqm-4g57](https://github.com/gogs/gogs/security/advisories/GHSA-cr88-6mqm-4g57)\n- _Security:_ RCE in repository put contents API. [#8082](https://github.com/gogs/gogs/pull/8082) - [GHSA-gg64-xxr9-qhjp](https://github.com/gogs/gogs/security/advisories/GHSA-gg64-xxr9-qhjp)\n- _Security:_ Arbitrary file deletion via path traversal in wiki page update. [#8099](https://github.com/gogs/gogs/pull/8099) - [GHSA-jp7c-wj6q-3qf2](https://github.com/gogs/gogs/security/advisories/GHSA-jp7c-wj6q-3qf2)\n- _Security:_ 2FA bypass via recovery code. [#8100](https://github.com/gogs/gogs/pull/8100) - [GHSA-p6x6-9mx6-26wj](https://github.com/gogs/gogs/security/advisories/GHSA-p6x6-9mx6-26wj)\n- _Security:_ Authorization bypass in repository deletion API. [#8101](https://github.com/gogs/gogs/pull/8101) - [GHSA-rjv5-9px2-fqw6](https://github.com/gogs/gogs/security/advisories/GHSA-rjv5-9px2-fqw6)\n- _Security:_ Update repository content via API with read-only permission. [#8102](https://github.com/gogs/gogs/pull/8102) - [GHSA-5qhx-gwfj-6jqr](https://github.com/gogs/gogs/security/advisories/GHSA-5qhx-gwfj-6jqr)\n- _Security:_ Arbitrary file read/write via path traversal in Git hook editing. [#8103](https://github.com/gogs/gogs/pull/8103) - [GHSA-mrph-w4hh-gx3g](https://github.com/gogs/gogs/security/advisories/GHSA-mrph-w4hh-gx3g)\n- _Security:_ Stored XSS via Mermaid diagrams. [`2c88cd4`](https://github.com/gogs/gogs/commit/2c88cd4d9fdc346d8e06d82f5368d657c10e79c2) - [GHSA-26gq-grmh-6xm6](https://github.com/gogs/gogs/security/advisories/GHSA-26gq-grmh-6xm6)\n- Route `GET /api/v1/user/repos` responses 500 when accessible repositories contain forks. [#8069](https://github.com/gogs/gogs/pull/8069)\n- Newer Git versions that uses default branch `main` cause wiki initialization to fail. [#8094](https://github.com/gogs/gogs/pull/8094)\n<details>\n<summary>Previous patch releases</summary>\n## 0.13.3\n### Fixed\n- _Security:_ Stored XSS in PDF renderer. [GHSA-xh32-cx6c-cp4v](https://github.com/gogs/gogs/security/advisories/GHSA-xh32-cx6c-cp4v)\n- _Security:_ Path Traversal in file editing UI. [GHSA-wj44-9vcg-wjq7](https://github.com/gogs/gogs/security/advisories/GHSA-wj44-9vcg-wjq7)\n- Randomly timeout on repository file uploads. [#7890](https://github.com/gogs/gogs/pull/7890)\n- Unable to override email templates in custom directory. [#7905](https://github.com/gogs/gogs/pull/7905)\n## 0.13.2\n### Fixed\n- _Security:_ Path Traversal in file editing UI. [GHSA-r7j8-5h9c-f6fx](https://github.com/gogs/gogs/security/advisories/GHSA-r7j8-5h9c-f6fx)\n- _Security:_ Path Traversal in file update API. [GHSA-qf5v-rp47-55gg](https://github.com/gogs/gogs/security/advisories/GHSA-qf5v-rp47-55gg)\n- _Security:_ Argument Injection in the built-in SSH server. [GHSA-vm62-9jw3-c8w3](https://github.com/gogs/gogs/security/advisories/GHSA-vm62-9jw3-c8w3)\n- _Security:_ Deletion of internal files. [GHSA-ccqv-43vm-4f3w](https://github.com/gogs/gogs/security/advisories/GHSA-ccqv-43vm-4f3w)\n- _Security:_ Argument Injection during changes preview. [GHSA-9pp6-wq8c-3w2c](https://github.com/gogs/gogs/security/advisories/GHSA-9pp6-wq8c-3w2c)\n- _Security:_ Argument Injection when tagging new releases. [GHSA-m27m-h5gj-wwmg](https://github.com/gogs/gogs/security/advisories/GHSA-m27m-h5gj-wwmg)\n- Use the non-deprecated section name `[email]` during installation for email settings. [#7704](https://github.com/gogs/gogs/pull/7704)\n- Use the non-deprecated section name `[email] PASSWORD` during installation for email password. [#7807](https://github.c...",
+      "memory_unit_text": "In the gogs/gogs release v0.13.4, the release notes include security fixes for DoS in repository mirror sync, RCE in repository put contents API, Arbitrary file deletion via path traversal in wiki page update, 2FA bypass via recovery code, Authorization bypass in repository deletion API, Update repository content via API with read-only permission, Arbitrary file read/write via path traversal in Git hook editing, Stored XSS via Mermaid diagrams, and fixes for route GET /api/v1/user/repos responses 500 when accessible repositories contain forks and newer Git versions with default branch main causing wiki initialization to fail. It also notes that the pam tag will not be included in release archives going forward."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__release_archive_testing",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:release-archive-testing",
+      "tag_name": "release-archive-testing",
+      "title": "Release archive testing",
+      "time_hint": "2026-01-31",
+      "published_at": "2026-01-31T14:26:44Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/release-archive-testing",
+      "raw_text": "Repository: gogs/gogs\nRelease: Release archive testing\nTag: release-archive-testing; draft: False; prerelease: True; published_at: 2026-01-31T14:26:44Z; created_at: 2026-05-25T02:46:34Z\nRelease notes:\nAutomated testing release for workflow development.",
+      "memory_unit_text": "In the gogs/gogs release Release archive testing, this is an automated testing release for workflow development."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__latest_commit_build",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:latest-commit-build",
+      "tag_name": "latest-commit-build",
+      "title": "Latest commit build",
+      "time_hint": "2026-01-31",
+      "published_at": "2026-01-31T16:59:47Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/latest-commit-build",
+      "raw_text": "Repository: gogs/gogs\nRelease: Latest commit build\nTag: latest-commit-build; draft: False; prerelease: True; published_at: 2026-01-31T16:59:47Z; created_at: 2026-05-31T17:17:08Z\nRelease notes:\nAutomated build from the latest commit on main branch. This release is updated automatically with every push to main.",
+      "memory_unit_text": "In the gogs/gogs release Latest commit build, this is an automated build from the latest commit on main branch, updated automatically with every push to main."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_14_0",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.14.0",
+      "tag_name": "v0.14.0",
+      "title": "v0.14.0",
+      "time_hint": "2026-02-01",
+      "published_at": "2026-02-01T00:17:15Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.14.0",
+      "raw_text": "Repository: gogs/gogs\nRelease: v0.14.0\nTag: v0.14.0; draft: False; prerelease: False; published_at: 2026-02-01T00:17:15Z; created_at: 2026-01-31T21:32:58Z\nRelease notes:\n>[!CAUTION]\n> This release was pulled back due to issues with builtin SSH server clone hanging, please use [0.14.1](https://github.com/gogs/gogs/releases/tag/v0.14.1) instead.",
+      "memory_unit_text": "In the gogs/gogs release v0.14.0, the release notes indicate that this release was pulled back due to issues with builtin SSH server clone hanging, and users should use 0.14.1 instead."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_14_1",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.14.1",
+      "tag_name": "v0.14.1",
+      "title": "0.14.1",
+      "time_hint": "2026-02-01",
+      "published_at": "2026-02-01T03:32:24Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.14.1",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.14.1\nTag: v0.14.1; draft: False; prerelease: False; published_at: 2026-02-01T03:32:24Z; created_at: 2026-02-01T03:28:11Z\nRelease notes:\n**ℹ️ Heads up! There is a new patch release [0.14.2](https://github.com/gogs/gogs/releases/tag/v0.14.2) available, we recommend directly installing or upgrading to that version.**\n### Added\n- Support comparing tags in addition to branches. [#6141](https://github.com/gogs/gogs/issues/6141)\n- Show file name in browser tab title when viewing files. [#5896](https://github.com/gogs/gogs/pull/5896)\n- Support using TLS for Redis session provider using `[session] PROVIDER_CONFIG = ...,tls=true`. [#7860](https://github.com/gogs/gogs/pull/7860)\n- Support expanading values in `app.ini` from environment variables, e.g. `[database] PASSWORD = ${DATABASE_PASSWORD}`. [#8057](https://github.com/gogs/gogs/pull/8057)\n- Support custom logout URL that users get redirected to after sign out using `[auth] CUSTOM_LOGOUT_URL`. [#8089](https://github.com/gogs/gogs/pull/8089)\n- Start publishing next-generation, security-focused Docker image via `gogs/gogs:next-latest`, which will become the default image distribution (`gogs/gogs:latest`) starting 0.16.0. While not all container options support have been added in the next-generation image, the use of current legacy Docker image is deprecated, it will be published as `gogs/gogs:legacy-latest` starting 0.16.0, and be completely removed no earlier than 0.17.0. [#8061](https://github.com/gogs/gogs/pull/8061)\n### Changed\n- The required Go version to compile source code changed to 1.25.\n- The build tag `cert` has been removed, and the `gogs cert` subcommand is now always available. [#7883](https://github.com/gogs/gogs/pull/7883)\n- Switched to pure-Go SQLite driver, CGO is no longer required to compile Gogs. [#7882](https://github.com/gogs/gogs/issues/7882)\n- Updated Mermaid JS to 11.9.0. [#8009](https://github.com/gogs/gogs/pull/8009)\n- Halt the repository creation and leave the directory untouched if the repository root already exists. [#8091](https://github.com/gogs/gogs/pull/8091)\n### Fixed\n- _Security:_ Unauthenticated file upload. [#8128](https://github.com/gogs/gogs/pull/8128) - [GHSA-fc3h-92p8-h36f](https://github.com/gogs/gogs/security/advisories/GHSA-fc3h-92p8-h36f)\n- _Security:_ Protected branch bypass in web UI. [#8124](https://github.com/gogs/gogs/pull/8124) - [GHSA-2c6v-8r3v-gh6p](https://github.com/gogs/gogs/security/advisories/GHSA-2c6v-8r3v-gh6p)\n- _Security:_ Authorization bypass allows cross-repository label modification. [#8123](https://github.com/gogs/gogs/pull/8123) - [GHSA-cv22-72px-f4gh](https://github.com/gogs/gogs/security/advisories/GHSA-cv22-72px-f4gh)\n- _Security:_ Cross-repository comment deletion. [#8119](https://github.com/gogs/gogs/pull/8119) - [GHSA-jj5m-h57j-5gv7](https://github.com/gogs/gogs/security/advisories/GHSA-jj5m-h57j-5gv7)\n- 500 error on repository watchers and stargazers pages when using MSSQL. [#5482](https://github.com/gogs/gogs/issues/5482)\n- Submodules using `ssh://` protocol and a port number are not rendered correctly. [#4941](https://github.com/gogs/gogs/issues/4941)\n- Missing link to user profile on the first commit in commits history page. [#7404](https://github.com/gogs/gogs/issues/7404)\n- Unable to delete or display files with special characters in their names. [#7596](https://github.com/gogs/gogs/issues/7596)\n- Docker healthcheck fails when `HTTP_PROXY` or `HTTPS_PROXY` environment variables are set. [#7529](https://github.com/gogs/gogs/issues/7529)",
+      "memory_unit_text": "In the gogs/gogs release v0.14.1, the release notes include added support for comparing tags, showing file name in browser tab title, TLS for Redis session provider, expanding values in app.ini from environment variables, custom logout URL, and next-generation Docker image. Changes include Go 1.25 requirement, removal of cert build tag, pure-Go SQLite driver, updated Mermaid JS, and halt repository creation if root exists. Security fixes include unauthenticated file upload, protected branch bypass, authorization bypass for cross-repository label modification, and cross-repository comment deletion. Other fixes include 500 error on watchers/stargazers pages with MSSQL, submodule rendering with ssh:// and port, missing user profile link on first commit, special characters in file names, and Docker healthcheck with HTTP_PROXY."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_14_2_rc_1",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.14.2-rc.1",
+      "tag_name": "v0.14.2-rc.1",
+      "title": "v0.14.2-rc.1",
+      "time_hint": "2026-02-19",
+      "published_at": "2026-02-19T00:27:29Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.14.2-rc.1",
+      "raw_text": "Repository: gogs/gogs\nRelease: v0.14.2-rc.1\nTag: v0.14.2-rc.1; draft: False; prerelease: True; published_at: 2026-02-19T00:27:29Z; created_at: 2026-02-19T00:23:48Z\nRelease notes:\nRelease candidate for v0.14.2.",
+      "memory_unit_text": "In the gogs/gogs release v0.14.2-rc.1, this is a release candidate for v0.14.2."
+    },
+    {
+      "memory_node_id": "gogs__gogs__release__v0_14_2",
+      "repo": "gogs/gogs",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.14.2",
+      "tag_name": "v0.14.2",
+      "title": "0.14.2",
+      "time_hint": "2026-02-19",
+      "published_at": "2026-02-19T03:47:48Z",
+      "source_url": "https://github.com/gogs/gogs/releases/tag/v0.14.2",
+      "raw_text": "Repository: gogs/gogs\nRelease: 0.14.2\nTag: v0.14.2; draft: False; prerelease: False; published_at: 2026-02-19T03:47:48Z; created_at: 2026-02-19T00:23:48Z\nRelease notes:\n### Fixed\n- _Security:_ Cross-repository LFS object overwrite via missing content hash verification. [#8166](https://github.com/gogs/gogs/pull/8166) - [GHSA-gmf8-978x-2fg2](https://github.com/gogs/gogs/security/advisories/GHSA-gmf8-978x-2fg2)\n- _Security:_ Stored XSS via data URI in issue comments. [#8174](https://github.com/gogs/gogs/pull/8174) - [GHSA-xrcr-gmf5-2r8j](https://github.com/gogs/gogs/security/advisories/GHSA-xrcr-gmf5-2r8j)\n- _Security:_ Release tag option injection in release deletion. [#8175](https://github.com/gogs/gogs/pull/8175) - [GHSA-v9vm-r24h-6rqm](https://github.com/gogs/gogs/security/advisories/GHSA-v9vm-r24h-6rqm)\n- _Security:_ Stored XSS in branch and wiki views through author and committer names. [#8176](https://github.com/gogs/gogs/pull/8176) - [GHSA-vgvf-m4fw-938j](https://github.com/gogs/gogs/security/advisories/GHSA-vgvf-m4fw-938j)\n- _Security:_ DOM-based XSS via issue meta selection on the issue page. [#8178](https://github.com/gogs/gogs/pull/8178) - [GHSA-vgjm-2cpf-4g7c](https://github.com/gogs/gogs/security/advisories/GHSA-vgjm-2cpf-4g7c)\n- Unable to update files via web editor and API. [#8184](https://github.com/gogs/gogs/pull/8184)\n### Removed\n- Support for passing API access tokens via URL query parameters (`token`, `access_token`). Use the `Authorization` header instead. [#8177](https://github.com/gogs/gogs/pull/8177) - [GHSA-x9p5-w45c-7ffc](https://github.com/gogs/gogs/security/advisories/GHSA-x9p5-w45c-7ffc)\n<details>\n<summary>Previous patch releases</summary>\n## 0.14.1\n### Added\n- Support comparing tags in addition to branches. [#6141](https://github.com/gogs/gogs/issues/6141)\n- Show file name in browser tab title when viewing files. [#5896](https://github.com/gogs/gogs/pull/5896)\n- Support using TLS for Redis session provider using `[session] PROVIDER_CONFIG = ...,tls=true`. [#7860](https://github.com/gogs/gogs/pull/7860)\n- Support expanading values in `app.ini` from environment variables, e.g. `[database] PASSWORD = ${DATABASE_PASSWORD}`. [#8057](https://github.com/gogs/gogs/pull/8057)\n- Support custom logout URL that users get redirected to after sign out using `[auth] CUSTOM_LOGOUT_URL`. [#8089](https://github.com/gogs/gogs/pull/8089)\n- Start publishing next-generation, security-focused Docker image via `gogs/gogs:next-latest`, which will become the default image distribution (`gogs/gogs:latest`) starting 0.16.0. While not all container options support have been added in the next-generation image, the use of current legacy Docker image is deprecated, it will be published as `gogs/gogs:legacy-latest` starting 0.16.0, and be completely removed no earlier than 0.17.0. [#8061](https://github.com/gogs/gogs/pull/8061)\n### Changed\n- The required Go version to compile source code changed to 1.25.\n- The build tag `cert` has been removed, and the `gogs cert` subcommand is now always available. [#7883](https://github.com/gogs/gogs/pull/7883)\n- Switched to pure-Go SQLite driver, CGO is no longer required to compile Gogs. [#7882](https://github.com/gogs/gogs/issues/7882)\n- Updated Mermaid JS to 11.9.0. [#8009](https://github.com/gogs/gogs/pull/8009)\n- Halt the repository creation and leave the directory untouched if the repository root already exists. [#8091](https://github.com/gogs/gogs/pull/8091)\n### Fixed\n- _Security:_ Unauthenticated file upload. [#8128](https://github.com/gogs/gogs/pull/8128) - [GHSA-fc3h-92p8-h36f](https://github.com/gogs/gogs/security/advisories/GHSA-fc3h-92p8-h36f)\n- _Security:_ Protected branch bypass in web UI. [#8124](https://github.com/gogs/gogs/pull/8124) - [GHSA-2c6v-8r3v-gh6p](https://github.com/gogs/gogs/security/advisories/GHSA-2c6v-8r3v-gh6p)\n- _Security:_ Authorization bypass allows cross-repository label modification. [#8123](https://github.com/gogs/gogs/pull/8123) - [GHSA-cv22-72px-f4gh](...",
+      "memory_unit_text": "In the gogs/gogs release v0.14.2, the release notes include security fixes for cross-repository LFS object overwrite, stored XSS via data URI in issue comments, release tag option injection in release deletion, stored XSS in branch and wiki views through author and committer names, DOM-based XSS via issue meta selection, and a fix for unable to update files via web editor and API. It also removes support for passing API access tokens via URL query parameters."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the gogs/gogs releases, which release introduces the configuration option [security] LOCAL_NETWORK_ALLOWLIST to allow repository migration from local Git hosting?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.12.4"
+        },
+        {
+          "option_id": "B",
+          "text": "v0.12.5"
+        },
+        {
+          "option_id": "C",
+          "text": "v0.12.6"
+        },
+        {
+          "option_id": "D",
+          "text": "v0.12.7"
+        }
+      ],
+      "correct_option_id": "C",
+      "expected_answer": "v0.12.6",
+      "source_chunk_ids": [
+        "gogs__gogs__release__v0_12_6"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "gogs__gogs__release__v0_12_6",
+          "answer_text": "Added a new configuration option [security] LOCAL_NETWORK_ALLOWLIST, which is a comma separated list of hostnames that are explicitly allowed to be accessed within the local network."
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the gogs/gogs releases, how does the security fix in v0.12.4 differ from the security fix in v0.12.5?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.12.4 fixes potential SSRF attack by CRLF injection via repository migration, while v0.12.5 fixes potential SSRF in repository migration and improper PAM authorization handling."
+        },
+        {
+          "option_id": "B",
+          "text": "v0.12.4 fixes remote command execution in file uploading, while v0.12.5 fixes stored XSS in issues."
+        },
+        {
+          "option_id": "C",
+          "text": "v0.12.4 adds X-Frame-Options header, while v0.12.5 adds LOCAL_NETWORK_ALLOWLIST."
+        },
+        {
+          "option_id": "D",
+          "text": "v0.12.4 fixes smart links for issues, while v0.12.5 fixes invalid character in Access-Control-Allow-Credentials."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v0.12.4 fixes potential SSRF attack by CRLF injection via repository migration, while v0.12.5 fixes potential SSRF in repository migration and improper PAM authorization handling.",
+      "source_chunk_ids": [
+        "gogs__gogs__release__v0_12_4",
+        "gogs__gogs__release__v0_12_5"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "gogs__gogs__release__v0_12_4",
+          "answer_text": "Security: Potential SSRF attack by CRLF injection via repository migration."
+        },
+        {
+          "memory_node_id": "gogs__gogs__release__v0_12_5",
+          "answer_text": "Security: Potential SSRF in repository migration. Security: Improper PAM authorization handling."
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the gogs/gogs release window, order the following release-content states from earliest to latest: (1) a release that adds support for comparing tags in addition to branches, (2) a release that adds support for personal access token in the password field, (3) a release that fixes stored XSS for issue assignees, (4) a release that fixes cross-repository LFS object overwrite.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "3 -> 2 -> 1 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 3 -> 1 -> 4"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 1 -> 3 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "1 -> 2 -> 3 -> 4"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "3 -> 2 -> 1 -> 4",
+      "source_chunk_ids": [
+        "gogs__gogs__release__v0_12_11",
+        "gogs__gogs__release__v0_13_0",
+        "gogs__gogs__release__v0_14_1",
+        "gogs__gogs__release__v0_14_2"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "gogs__gogs__release__v0_12_11",
+          "answer_text": "Security: Stored XSS for issue assignees."
+        },
+        {
+          "memory_node_id": "gogs__gogs__release__v0_13_0",
+          "answer_text": "Support using personal access token in the password field."
+        },
+        {
+          "memory_node_id": "gogs__gogs__release__v0_14_1",
+          "answer_text": "Support comparing tags in addition to branches."
+        },
+        {
+          "memory_node_id": "gogs__gogs__release__v0_14_2",
+          "answer_text": "Security: Cross-repository LFS object overwrite via missing content hash verification."
+        }
+      ]
+    }
+  ]
+}

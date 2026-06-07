@@ -1,0 +1,525 @@
+{
+  "prototype_id": "ruvnet__RuView_release_window",
+  "domain": "github_release_evolution",
+  "repo": "ruvnet/RuView",
+  "source_type": "release_note",
+  "window_title": "ruvnet/RuView recent release evolution",
+  "window_summary": "This window tracks the recent ruvnet/RuView release stream, covering HOMECORE web UI iterations, streaming engine trust features, world model integration, and swarm control system additions.",
+  "chunks": [
+    {
+      "memory_node_id": "ruvnet__RuView__release__v0_11_0",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.11.0",
+      "tag_name": "v0.11.0",
+      "title": "v0.11.0 — HOMECORE in Docker + crate-level READMEs",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T04:24:04Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v0.11.0",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: v0.11.0 — HOMECORE in Docker + crate-level READMEs\nTag: v0.11.0; draft: False; prerelease: False; published_at: 2026-05-26T04:24:04Z; created_at: 2026-05-26T03:06:14Z\nRelease notes:\nPolish + packaging release for the v0.10.0 HOMECORE work.\n## What's new since v0.10.0\n### `homecore-server` is now in the published Docker image\n- `docker/Dockerfile.rust` builds three binaries side-by-side: `sensing-server`, `cog-ha-matter`, and now `homecore-server` (HA-wire-compatible REST + WebSocket on port 8123).\n- Multi-arch (amd64 + arm64) build verified end-to-end on Apple Silicon (`ruv-mac-mini`, Darwin arm64).\n- New image digest: `sha256:ae3fbe2011787e782e75200f09afd1e5c49992d698eaac549b484ce36ff270fb`.\n- Operator usage:\n```\ndocker run --network host ruvnet/wifi-densepose:latest homecore\n# serves HA-compat API on :8123, SQLite recorder, automation engine, assist, plugins\n```\n- `docker run … cog-ha-matter` and the default sensing-server path keep working unchanged — three roles, one image, picked at run-time via the first arg.\n### Comprehensive READMEs for every HOMECORE crate\nEight new crate READMEs + the server binary's README. Every one carries:\n- Tagline + badges (crates.io / MSRV / tests / license / ADR link)\n- Honest \"what this is\" (no marketing fluff)\n- Features list — P1 scaffold vs runtime-ready is named at the top, not buried\n- Capabilities table mapping primitives → concrete actions\n- Comparison vs the Home Assistant Python equivalent\n- Performance — measured numbers where they exist, \"TBD / no benchmarks yet\" where they don't (no invented numbers)\n- Runnable usage example (Rust or `cargo run -p …`)\n- Relation-to-other-HOMECORE-crates diagram\n- Reference links to the ADR + workspace root\nCrates with READMEs:\n- `v2/crates/homecore` (ADR-127) — state machine, event bus, registries\n- `v2/crates/homecore-api` (ADR-130) — REST + WebSocket\n- `v2/crates/homecore-plugins` (ADR-128) — Wasmtime + InProcess runtimes\n- `v2/crates/homecore-hap` (ADR-125 §P2) — *P1 scaffold; not a running HAP-1.1 server yet*\n- `v2/crates/homecore-recorder` (ADR-132) — SQLite + ruvector\n- `v2/crates/homecore-automation` (ADR-129) — YAML triggers + MiniJinja\n- `v2/crates/homecore-assist` (ADR-133) — *ships NoopRunner; production runner is P2*\n- `v2/crates/homecore-migrate` (ADR-134) — HA `.storage/` → HOMECORE\n- `v2/crates/homecore-server` — the workspace binary tying the above together\n### Validation\n- All 2,263 workspace tests still green on `main` HEAD\n- Docker workflow `26429908475` succeeded for sha `8cb8a37dc` (the homecore-server inclusion commit)\n- `docker run --rm --entrypoint /app/homecore-server ruvnet/wifi-densepose:latest --help` confirmed in the newly-pulled image\n## Deferred (still)\n- HAP-1.1 server runtime in `homecore-hap` (closes ADR-125 §P2)\n- Production ruflo runner in `homecore-assist`\n- Wasmtime feature-gating is P2 (default-off) per `homecore-plugins` README\n## Release artifacts\n- Docker Hub: `ruvnet/wifi-densepose:latest` (multi-arch, new digest above)\n- ghcr.io: `ghcr.io/ruvnet/wifi-densepose:latest` (same digest)\n## References\n- ADR-125 / ADR-126 / ADR-127 / ADR-128 / ADR-129 / ADR-130 / ADR-132 / ADR-133 / ADR-134\n- Previous release: v0.10.0 (HOMECORE merge)\nCo-Authored-By: claude-flow <ruv@ruv.net>",
+      "memory_unit_text": "In the ruvnet/RuView release v0.11.0, the project publishes a polish and packaging update for the v0.10.0 HOMECORE work. The homecore-server binary is now included in the published Docker image alongside sensing-server and cog-ha-matter, with multi-arch support for amd64 and arm64. Comprehensive READMEs are added for every HOMECORE crate, each containing tagline, badges, feature lists, capability tables, comparisons to Home Assistant Python equivalents, performance notes, usage examples, and relation diagrams. All 2,263 workspace tests remain green."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1397",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1397",
+      "tag_name": "v1397",
+      "title": "Release v1397",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T16:47:04Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1397",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1397\nTag: v1397; draft: False; prerelease: False; published_at: 2026-05-26T16:47:04Z; created_at: 2026-05-26T16:39:33Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nfeat(homecore-ui): wire nav router + States / Services / Settings pages\nBefore: clicking Dashboard / States / Services / Settings highlighted\nthe active nav button but the page content never changed. AppShell\ndispatched `hc-navigate` events but no listener acted on them.\nAfter (~232 LOC across 4 files):\n- main.ts (+20 LOC) tiny router: NAV_TO_TAG maps nav id → page\ncustom element; on `hc-navigate`, swap the AppShell's child.\n- pages/States.ts (~86 LOC) HA-style entity table with 5 s refresh.\n- pages/Services.ts (~82 LOC) domain-grouped service registry,\nfriendly empty state when no services registered.\n- pages/Settings.ts (~90 LOC) backend config readout + bearer-token\neditor (localStorage[\"homecore.token\"]).\nBrowser-verified all 4 nav clicks swap content; 0 console errors.\nDashboard → 10 entity cards; States → 10-row table; Services →\nempty state (0 domains); Settings → config + token editor.\nCo-Authored-By: claude-flow <ruv@ruv.net>\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:4253c0e4fc7007ff8bc3d5b6fa887b977a7d2602`",
+      "memory_unit_text": "In the ruvnet/RuView release v1397, an automated CI pipeline release adds a navigation router and three new pages to the HOMECORE web UI: States, Services, and Settings. The router maps navigation IDs to page custom elements, swapping the AppShell child on hc-navigate events. The States page shows an entity table with 5-second refresh, the Services page displays a domain-grouped service registry with an empty state, and the Settings page provides backend config readout and a bearer-token editor."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v0_12_0",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.0",
+      "tag_name": "v0.12.0",
+      "title": "v0.12.0 — HOMECORE web UI is live + 9-phase verify Trust Kill Switch",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T17:47:01Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v0.12.0",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: v0.12.0 — HOMECORE web UI is live + 9-phase verify Trust Kill Switch\nTag: v0.12.0; draft: False; prerelease: False; published_at: 2026-05-26T17:47:01Z; created_at: 2026-05-26T16:39:33Z\nRelease notes:\nFive small commits since v0.11.0 — the HOMECORE web UI is no longer an empty shell, and the project's Trust Kill Switch now verifies every layer of the stack with a single command.\n## What changed\n### HOMECORE web UI is functional (was: empty shell)\nThe Lit + Vite frontend shipped in v0.10.0 had registered components but no pages mounted, so operators saw the appbar + nav but nothing in `<main>`. Browser-driven testing this session caught it; this release fixes it end-to-end.\n- **`frontend/src/pages/Dashboard.ts`** — new `<hc-dashboard>` Lit component. Reads bearer from `localStorage[\"homecore.token\"]` (or `?token=`, or `<meta>`, with `dev-token` fallback). Fetches `/api/config` + `/api/states`, renders a `.meta` line + responsive grid of `<hc-state-card>`. Polls every 5 s. Surfaces structured backend-unreachable errors instead of a blank page.\n- **`frontend/src/pages/States.ts`** — full HA-style table view of every entity (entity_id / state / last_changed / attributes). 5 s auto-refresh.\n- **`frontend/src/pages/Services.ts`** — domain-grouped service registry from `/api/services`. Friendly empty state when no services are registered (matches a vanilla plugin-less boot).\n- **`frontend/src/pages/Settings.ts`** — backend config readout (location / version / state / components) + bearer-token editor that writes to `localStorage[\"homecore.token\"]`.\n- **`frontend/src/main.ts`** — tiny router: AppShell's `hc-navigate` events swap the page element. Default first paint = Dashboard.\n- **`scripts/homecore-seed.sh`** — populates 10 representative entities (RuView sensing-derived + conventional HA fixtures) so a fresh `homecore-server` boot has demo content. Idempotent. Pulls live numbers from the RuView sensing-server when `RUVIEW_URL` is reachable.\nBrowser-verified all 4 nav clicks swap the rendered page correctly. Zero console errors.\n### Trust Kill Switch covers v1 + v2 + HOMECORE\nThe original `verify` script only validated the v1 Python signal-processing proof. After v0.9.0 (ADR-125) and v0.10.0/v0.11.0 (HOMECORE), the stack has six more proof boundaries. `verify` now runs **9 phases** in one command:\n```\nPASS Phase 1: v1 pipeline hash matches expected\nPASS Phase 2: no random generators in production code\nPASS Phase 3: 2,263 Rust workspace tests pass (real number, no agent claim)\nPASS Phase 4: wifi-densepose-py PyO3 binding compiles\nPASS Phase 5: ADR-125 §2.1.d invariant — identity_risk_score is None\nPASS Phase 6: 12/12 crates on crates.io\nPASS Phase 7: @ruvnet/rvagent v0.1.0 on npm\nPASS Phase 8: multi-arch (amd64 + arm64) Docker manifest live\nSKIP Phase 9: docker pull (skip when CLI absent)\n```\nEach phase reports PASS / FAIL / SKIP independently. SKIP is honest — no false green when an optional tool (cargo / docker / curl) is absent. Flags: `--quick`, `--rust-only`, `--docker-only`, plus the pre-existing `--verbose`, `--audit`, `--generate-hash` pass-through.\n### Pydantic + Windows + numpy-drift fixes\n- `archive/v1/src/config/settings.py` — `extra=\"ignore\"` so the v1 proof tolerates unrelated `.env` keys (NPM_TOKEN, DOCKER_HUB_TOKEN, etc.) used by other tooling. Closes a real secret-leak path where pydantic's error message echoed the offending token value.\n- `archive/v1/data/proof/expected_features.sha256` — regenerated per the documented `verify.py --generate-hash` procedure to match the current numpy/scipy combo.\n- `verify` Phase 3 — fixed three subtle bugs (pipefail killing the script, `0\\n0` arithmetic poisoning, Windows file-lock on cog-pose-estimation's smoke test) so the 2,263-test pass count actually surfaces.\n## Reproduce\n```\n./verify         # full 9-phase proof\n./verify --quick # skip slow phases (Rust workspace tests + Docker pull)\n```\nLocal witness log saved at `dist/verify-witness-9a09...",
+      "memory_unit_text": "In the ruvnet/RuView release v0.12.0, the HOMECORE web UI becomes functional with new Dashboard, States, Services, and Settings pages, replacing the previous empty shell. The Dashboard fetches config and states, renders entity cards, and polls every 5 seconds. The Trust Kill Switch is expanded to a 9-phase verification covering v1, v2, and HOMECORE, including Rust workspace tests, PyO3 binding compilation, ADR-125 invariant checks, crate publishing, npm package, and multi-arch Docker manifest. Additional fixes address Pydantic secret leaks, numpy drift, and verification script bugs."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1402",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1402",
+      "tag_name": "v1402",
+      "title": "Release v1402",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T18:15:17Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1402",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1402\nTag: v1402; draft: False; prerelease: False; published_at: 2026-05-26T18:15:17Z; created_at: 2026-05-26T18:07:52Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nfeat(homecore-server): seed 13 default services across 6 domains on boot\nOperators (and the new web UI) saw \"No services registered\" on every\nvanilla boot because nothing in the boot sequence called\n`ServiceRegistry::register()`. The Assist pipeline registers intent\nhandlers — a different surface — but `/api/services` stayed empty\nuntil a plugin or integration loaded.\nAdds `seed_default_services()` after `HomeCore::new()`. Each handler\nis a `FnHandler` that echoes the call back as a JSON acknowledgement\nso the service registry is exercise-able from day one. Integrations\noverride these by re-registering the same `ServiceName` with a real\nhandler later.\nSeeded set:\nhomeassistant: restart, stop, reload_core_config\nlight:         turn_on, turn_off, toggle\nswitch:        turn_on, turn_off, toggle\nscene:         apply\nautomation:    trigger\nhomecore:      ping, snapshot_state   (HOMECORE-native)\nBoot log now reports:\nService registry seeded with 13 default service(s)\nGET /api/services now returns 6 domains with 13 services total.\nThe HOMECORE web UI's Services page shows them under proper\ndomain headings.\nCo-Authored-By: claude-flow <ruv@ruv.net>\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:75f984e515fe65bdb3d19dbae735513304635b18`",
+      "memory_unit_text": "In the ruvnet/RuView release v1402, the homecore-server seeds 13 default services across 6 domains on boot, so the service registry is no longer empty on a vanilla start. Each handler echoes the call as a JSON acknowledgement. The seeded domains include homeassistant, light, switch, scene, automation, and homecore. The web UI Services page now shows these services under proper domain headings."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1403",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1403",
+      "tag_name": "v1403",
+      "title": "Release v1403",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T18:25:30Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1403",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1403\nTag: v1403; draft: False; prerelease: False; published_at: 2026-05-26T18:25:30Z; created_at: 2026-05-26T18:18:28Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nfeat(homecore-server): seed 10 default entities on boot (--no-seed-entities to opt out)\nCompanion to the seed_default_services() commit. Dashboard + States\npages now have content on every fresh --db :memory: boot, not just\nafter `bash scripts/homecore-seed.sh`.\nAdds:\n- new CLI flag `--no-seed-entities` (default: enabled)\n- `seed_default_entities(hc)` mirroring the bash script's 10-entity\nset (4 RuView sensing-derived + 6 conventional HA fixtures)\n- Boot log:\nService registry seeded with 13 default service(s)\nState machine seeded with 10 default entities\nTwo seeds stay in sync — integrations overwrite the same entity_ids\nvia /api/states/<id> POST. Run with --no-seed-entities when wiring\nreal plugins that populate the state machine themselves.\nEmpirical (after rebuild + fresh restart):\nGET /api/states   → 10 entities\nGET /api/services → 6 domains, 13 services\nhomecore-server --db :memory: is now enough for the web UI to be\nfully populated on first paint.\nCo-Authored-By: claude-flow <ruv@ruv.net>\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:0979faccd4fa3fd6f8d76070371b3846b5b8a7c2`",
+      "memory_unit_text": "In the ruvnet/RuView release v1403, the homecore-server seeds 10 default entities on boot, mirroring the bash seed script, with a new --no-seed-entities CLI flag to opt out. The seeded set includes 4 RuView sensing-derived entities and 6 conventional HA fixtures. After a fresh restart with --db :memory:, the web UI Dashboard and States pages are fully populated on first paint."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1404",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1404",
+      "tag_name": "v1404",
+      "title": "Release v1404",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T18:40:29Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1404",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1404\nTag: v1404; draft: False; prerelease: False; published_at: 2026-05-26T18:40:29Z; created_at: 2026-05-26T18:33:01Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nfeat(homecore-ui iter 1): Modal + EntityForm + Add Entity flow\nFirst CRUD increment. Click \"+ Add entity\" on the Dashboard\ntoolbar → modal opens → form with entity_id / state / attributes\nfields → Create validates client-side then POSTs /api/states/<id>\n→ modal closes, toast confirms, dashboard refreshes.\nNew components:\nfrontend/src/components/Modal.ts (~110 LOC) — reusable accessible\noverlay. open property; closes on Escape and backdrop click.\nHeading prop; default + footer slots.\nfrontend/src/components/EntityForm.ts (~130 LOC) — three-field form\nwith public requestSubmit()/requestCancel() methods. Client-side\nvalidation:\n- entity_id matches /^[a-z][a-z0-9_]*\\.[a-z][a-z0-9_]*$/\n- state non-empty\n- attributes parses as a JSON object (rejects array/scalar)\nEmits hc-entity-submit / hc-entity-cancel events for host to\nhandle. Footer buttons live in the host (modal slot=footer).\nfrontend/src/pages/Dashboard.ts (+60 LOC) — toolbar with\n\"+ Add entity\" button, modal state, POST handler that wraps\nfetch with bearer token, success toast (3 s), refresh().\nBrowser-verified end-to-end (real homecore-server :8123):\n- Toolbar button visible: Y\n- Modal opens: Y\n- 3/3 validation paths fire correctly:\nBadID → \"entity_id must match domain.snake_case\"\nblank state → \"state must not be empty\"\n[1,2,3] attrs → \"attributes must be a JSON object\"\n- Successful create: light.test_bulb POSTed; modal closes; toast\n\"Created light.test_bulb = on\"; grid count went 10 → 11\n- Persistence: hard reload, count stays\n- 0 console errors (Lit dev-mode notices excluded)\nNote: TypeScript caught a name collision — `attributes` is reserved\non HTMLElement (NamedNodeMap). Renamed the Lit @property to\n`entityAttrs` so the class extends LitElement cleanly.\nCo-Authored-By: claude-flow <ruv@ruv.net>\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:e7215a16e57656aa1fe6874ba260fc8844dd665c`",
+      "memory_unit_text": "In the ruvnet/RuView release v1404, the HOMECORE web UI gains an Add Entity flow with a modal and form. A toolbar button opens a modal containing an EntityForm with entity_id, state, and attributes fields. Client-side validation checks entity_id format, non-empty state, and JSON object attributes. On successful creation, the modal closes, a toast confirms, and the dashboard refreshes."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1405",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1405",
+      "tag_name": "v1405",
+      "title": "Release v1405",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T18:55:42Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1405",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1405\nTag: v1405; draft: False; prerelease: False; published_at: 2026-05-26T18:55:42Z; created_at: 2026-05-26T18:48:49Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nfeat(homecore-ui iter 2): Edit Entity modal + shadow-DOM focus delegation\nCRUD increment 2/6 — clicking any state card on the Dashboard opens\nthe Add Entity modal in EDIT mode: pre-populated, entity_id locked,\n\"Save\" primary button, idempotent POST to /api/states/<id> (backend\nreturns 200 if existed, 201 if created — same handler).\nfrontend/src/components/StateCard.ts:\n- card div is now role=\"button\" tabindex=0, dispatches\n`hc-state-card-click` on click + Enter/Space keydown\n- aria-label=\"Edit <entity_id>\" for screen readers\n- shadowRootOptions delegatesFocus=true so the outer Tab sequence\ncan reach the inner focusable div (caught by browser agent —\nwithout this Tab couldn't pierce the shadow root)\nfrontend/src/pages/Dashboard.ts:\n- new state: editingState (null = create, StateView = edit)\n- _openEdit() catches `hc-state-card-click` from the grid container\n- modal heading switches: \"Add entity\" ↔ \"Edit <entity_id>\"\n- primary button text switches: \"Create\" ↔ \"Save\"\n- EntityForm receives .editing=true so entity_id input is disabled\n- submit toast reads \"Updated\" or \"Created\" depending on mode\nBrowser-verified end-to-end (real homecore-server :8123, 12 entities):\n- Click `light.kitchen_ceiling` → modal opens with all 4 attributes\n(brightness=230, color_temp_kelvin=4000, friendly_name,\nsupported_color_modes) pre-populated\n- Change state to \"off\", click Save → toast \"Updated\nlight.kitchen_ceiling = off\", grid card reflects new state\n- Backend curl confirms /api/states/light.kitchen_ceiling.state = \"off\"\n- Enter key on focused card opens the modal too\n- 0 console errors\nCo-Authored-By: claude-flow <ruv@ruv.net>\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:89190b6c2d357dff3ecbe8daaea225b7569032b0`",
+      "memory_unit_text": "In the ruvnet/RuView release v1405, the HOMECORE web UI adds an Edit Entity modal. Clicking a state card on the Dashboard opens the modal in edit mode with pre-populated fields and a locked entity_id. The card is made focusable with shadow-DOM focus delegation. The modal heading and primary button text change based on mode, and the submit toast reflects whether the entity was created or updated."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1406",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1406",
+      "tag_name": "v1406",
+      "title": "Release v1406",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T19:10:51Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1406",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1406\nTag: v1406; draft: False; prerelease: False; published_at: 2026-05-26T19:10:51Z; created_at: 2026-05-26T19:03:40Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nfeat(homecore iter 3): DELETE /api/states/<id> + confirm modal in UI\nCRUD increment 3/6. Full delete path lands end-to-end.\nBackend (homecore-api):\nrest.rs +18 LOC — new `delete_state` handler. Idempotent (matches HA's\nremoval semantics): returns 204 No Content whether the entity existed\nor not. 4xx only for malformed entity_id or auth failure.\napp.rs +6 LOC — adds `.delete(rest::delete_state)` to the\n/api/states/:entity_id route alongside existing GET + POST.\nBackend curl smoke:\nPOST /api/states/sensor.test_delete         201\nDELETE /api/states/sensor.test_delete       204\nGET /api/states/sensor.test_delete          404\nFrontend:\ncomponents/StateCard.ts +25 LOC — small `×` delete button in the\ncard's top-right corner. opacity 0 by default, fades in on hover\nor keyboard focus. dispatches `hc-state-card-delete` (NOT\n`hc-state-card-click`) with stopPropagation so the card's own\nclick-to-edit handler doesn't also fire.\npages/Dashboard.ts +45 LOC — deletingState (StateView | null), a\nconfirm modal that names the entity_id in the body, Cancel /\nDelete buttons in the footer (Delete styled in muted red),\n`_confirmDelete()` dispatches DELETE with bearer, toast on\nsuccess, grid refresh.\nBrowser-verified end-to-end on real homecore-server :8123:\n- Hover card → × button visible\n- Click × → DELETE confirm modal (NOT edit modal — stopPropagation works)\n- Modal names entity_id in code block\n- Cancel: entity preserved, modal closes\n- Delete: backend GET-after-DELETE returns 404, grid card vanishes,\ntoast \"Deleted sensor.delete_target\"\n- 0 unexpected console errors (1 expected 404 from verification fetch)\nCo-Authored-By: claude-flow <ruv@ruv.net>\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:c0bb6f4fc77461e3981dd8f019f8964cf876235d`",
+      "memory_unit_text": "In the ruvnet/RuView release v1406, the HOMECORE web UI implements entity deletion. The backend adds a DELETE /api/states/<id> handler that returns 204 No Content idempotently. The frontend adds a delete button on state cards that appears on hover/focus, a confirmation modal naming the entity, and a toast on successful deletion. The card's click-to-edit handler is prevented from firing when the delete button is clicked."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1407",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1407",
+      "tag_name": "v1407",
+      "title": "Release v1407",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T19:20:46Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1407",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1407\nTag: v1407; draft: False; prerelease: False; published_at: 2026-05-26T19:20:46Z; created_at: 2026-05-26T19:12:48Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nfeat(homecore-ui iter 4): live per-field validation + inline server errors\nCRUD increment 4/6. The form now shows validity feedback on every\nkeystroke instead of only on Create click, makes the warning vs error\ndistinction visible (amber vs red), and propagates backend 4xx\nresponses into the form's own error surface.\nfrontend/src/components/EntityForm.ts (~80 LOC delta):\n- Three new @state fields tracking per-field validity: _idValid,\n_stateValid, _attrsValid (each is `{ok:true} | {ok:false, level:\n'err'|'warn', msg}` or null when untouched).\n- Pure validators outside the class so they can be unit-tested:\nvalidateEntityId, validateState, validateAttrs.\n- validateEntityId now warns (amber, not red) if the domain prefix\nis outside the standard HA set. KNOWN_DOMAINS lists ~40 standard\ndomains (sensor, light, switch, binary_sensor, climate, cover,\nfan, media_player, lock, camera, vacuum, climate, scene, script,\nautomation, input_*, person, device_tracker, zone, weather, etc.)\n+ homecore-native domain. Unknown domains create entities anyway\n(backend regex still passes them) but the operator sees the soft\nsignal.\n- Sigils render below each field: ✓ green when ok, ✗ red on err,\n! amber on warn. Field borders adopt the level color via\n.invalid / .warn classes.\n- New public method `isValid()` so the host can bind a disabled\nstate on its Save button (unused for now; ready for a follow-up).\n- New public method `setSubmitError(msg)` so the host can surface\nserver-side rejection text inline in the form's red error block,\nnot just at the page top.\nfrontend/src/pages/Dashboard.ts (small delta):\n- `_onSubmit()` now calls `this._form?.setSubmitError(null)` before\neach attempt to clear stale text, and on non-2xx responses it\nsurfaces the server's body text inline via `setSubmitError`.\nPage-top error block is no longer hijacked for form errors.\nBrowser-verified end-to-end (real homecore-server :8123):\nentity_id field:\nBadID            → red border + \"must match domain.snake_case…\"\nlight.kitchen_test → green ✓ \"entity_id OK\"\nmadeup_domain.foo → amber border + \"unknown domain 'madeup_domain' — HA-standard…\"\nstate field:\nempty            → red ✗ required\n\"on\"             → green ✓\nattributes field:\nempty            → green ✓ (defaults to {})\n[1,2,3]          → red ✗ \"must be a JSON object…\"\n{\"key\":          → red ✗ \"JSON parse: Unexpected end of JSON input\"\n{\"friendly_name\":\"Test\"} → green ✓\nServer-error inline:\nForce 401 via wrong token → form red block shows\n\"server rejected (401): unauthorized\"\nSuccessful create: still works, toast still shown, 0 console errors.\nCo-Authored-By: claude-flow <ruv@ruv.net>\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:3f5a7411db2d449f603532435c5cc68079ffb222`",
+      "memory_unit_text": "In the ruvnet/RuView release v1407, the HOMECORE web UI adds live per-field validation and inline server error display. The EntityForm shows validity feedback on every keystroke with green checkmarks, red errors, or amber warnings. A warning is shown for unknown entity domains. Server-side rejection text is surfaced inline in the form's error block instead of the page top."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1408",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1408",
+      "tag_name": "v1408",
+      "title": "Release v1408",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T19:35:35Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1408",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1408\nTag: v1408; draft: False; prerelease: False; published_at: 2026-05-26T19:35:35Z; created_at: 2026-05-26T19:27:48Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nfeat(homecore-ui iter 5): Call Service from Services page\nCRUD increment 5/6. Each service pill on the Services page now has\na `▶ Call` button that opens a modal letting the operator POST a\nJSON service_data payload to /api/services/<domain>/<service> and\ninspect the round-tripped response.\nModal contents:\n- heading \"Call <domain>.<service>\"\n- target URL displayed as code (POST /api/services/...)\n- service_data JSON textarea (default `{}`, live-validated as\nJSON object — same rules as EntityForm.attributes)\n- response <pre> block: green border on 2xx, red on non-2xx,\npretty-printed JSON when parseable\n- Close + Call buttons in footer; Call disabled on invalid JSON\nor while pending; renders \"Calling…\" briefly during the POST\nReuses `<hc-modal>` from iter 1. No new components — all of iter 5\nlives in `frontend/src/pages/Services.ts` (~140 LOC delta).\nBrowser-verified end-to-end against homecore-server (13 services\nseeded across 6 domains):\n- 13/13 service pills have a `▶ Call` button\n- Modal opens with correct heading and target URL\n- Live validation: [1,2,3] → red \"must be a JSON object\";\n`{broken json:` → red \"JSON parse: …\"; valid → green ✓\n- Call button disabled on invalid input\n- Successful call: green-bordered response containing\n{\"called\":\"switch.turn_on\", \"acknowledged\":true,\n\"service_data\":{\"entity_id\":\"light.kitchen_ceiling\",\"brightness\":200}}\n- Toast \"Called switch.turn_on → 200\"\n- homecore.ping with empty body (default {}) succeeds too\n- 0 console errors related to this flow\nCo-Authored-By: claude-flow <ruv@ruv.net>\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:99c78f512c7ccc68164544c050ec98bcbaac8822`",
+      "memory_unit_text": "In the ruvnet/RuView release v1408, the HOMECORE web UI Services page adds a Call Service feature. Each service pill has a Call button that opens a modal with a JSON textarea for service_data, live JSON validation, and a response block. The modal displays the target URL, and the Call button is disabled on invalid JSON or while a request is pending. A toast confirms the call result."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1409",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1409",
+      "tag_name": "v1409",
+      "title": "Release v1409",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T19:44:10Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1409",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1409\nTag: v1409; draft: False; prerelease: False; published_at: 2026-05-26T19:44:10Z; created_at: 2026-05-26T19:36:44Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nfeat(homecore-ui iter 6): Settings probe-before-persist token validation\nCRUD increment 6/6 — closes the sprint. Bearer-token editor now\nprobes /api/config with the new value BEFORE writing it to\nlocalStorage, so a typo'd or revoked token can't lock the UI out\nof the backend.\nThree actions:\n- Test token         probe /api/config, no localStorage write\n- Probe & Save       probe; write only on 2xx\n- Clear              remove from localStorage\nInline probe result with sigils:\n✓ token accepted (40 ms) — server v0.1.0-alpha.0\n✗ HTTP 401: unauthorized\n⋯ probing /api/config…\n`currently stored:` line shows masked + length: `dev-…ken (9 chars)`\nso the operator can see what's persisted without exposing the secret.\nEmpty input → red border + disabled Test/Save buttons. Bad probes\ndo NOT persist (this is the whole point — never write a token that\nthe backend rejects).\nfrontend/src/pages/Settings.ts — full rewrite (~190 LOC, +110 vs\nprevious version). No new dependencies.\nBrowser-verified end-to-end:\n- Backend section: Home / 0.1.0-alpha.0 / RUNNING / components OK\n- Test token: probe ✓, 40 ms, version reported\n- Empty input: buttons disabled + red border\n- Probe & Save: persists to localStorage, toast shown,\n`currently stored:` updates to masked new token\n- Clear: localStorage null, `currently stored: (empty)`\n- 0 unexpected console errors\nNote: a clean reload lands on Dashboard (the SPA router has no\nURL-encoded view yet). The token persistence itself survives reload\ncorrectly; route persistence is a small follow-up if you want\ndirect URLs like /?view=settings.\nCRUD sprint summary (6/6 runtime-validated):\niter 1  Add Entity                    e7215a16e\niter 2  Edit Entity                   89190b6c2\niter 3  Delete + DELETE route         c0bb6f4fc\niter 4  Live validation polish        3f5a7411d\niter 5  Call Service                  99c78f512\niter 6  Settings probe-before-persist (this)\nCo-Authored-By: claude-flow <ruv@ruv.net>\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:224689a5bcce61b87ce9f670649569bc2e023f00`",
+      "memory_unit_text": "In the ruvnet/RuView release v1409, the HOMECORE web UI Settings page adds probe-before-persist token validation. The bearer-token editor probes /api/config with the new value before writing to localStorage, preventing lock-out from a typo'd or revoked token. Three actions are provided: Test token, Probe & Save, and Clear. Inline probe results show acceptance, latency, and server version, or an error message."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1421",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1421",
+      "tag_name": "v1421",
+      "title": "Release v1421",
+      "time_hint": "2026-05-27",
+      "published_at": "2026-05-27T16:31:42Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1421",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1421\nTag: v1421; draft: False; prerelease: False; published_at: 2026-05-27T16:31:42Z; created_at: 2026-05-27T16:20:49Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nrefactor: move frontend/ to examples/frontend/\nThe Lit + Vite HOMECORE web UI is an example consumer of the\nsensing stack, not a top-level deliverable — relocate it under\nexamples/ alongside the other sensor and dashboard demos.\nAdd an entry to examples/README.md so it's discoverable.\nCo-Authored-By: claude-flow <ruv@ruv.net>\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:04f205a05e4f5a74ec332d682ae1b029c77dc1e3`",
+      "memory_unit_text": "In the ruvnet/RuView release v1421, the frontend directory is moved to examples/frontend/, reflecting that the Lit + Vite HOMECORE web UI is an example consumer of the sensing stack rather than a top-level deliverable. An entry is added to examples/README.md for discoverability."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1428",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1428",
+      "tag_name": "v1428",
+      "title": "Release v1428",
+      "time_hint": "2026-05-28",
+      "published_at": "2026-05-28T20:35:49Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1428",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1428\nTag: v1428; draft: False; prerelease: False; published_at: 2026-05-28T20:35:49Z; created_at: 2026-05-28T20:24:37Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nfeat(signal): ADR-134 CSI→CIR via ISTA + NeumannSolver warm-start (#837)\n* feat(signal): ADR-134 — CSI→CIR via ISTA + NeumannSolver warm-start\nEnd-to-end first-class Channel Impulse Response estimation in the Rust\nworkspace. Bridges CSI (frequency domain) to CIR (delay domain) so\nmultistatic coherence gating, NLOS/LOS classification, and (at HT40+)\nToF ranging become tractable in `wifi-densepose-signal`.\nAlgorithm: ISTA L1 sparse recovery over a normalized DFT sub-matrix\nsensing operator Φ ∈ ℂ^(K×G) with G = 3K (3× super-resolution). The\nTikhonov-regularised warm start re-uses `ruvector_solver::neumann::\nNeumannSolver` — same call pattern as `fresnel.rs:280` and\n`train/subcarrier.rs:225` — so no new crate dependencies.\nTiers supported: HT20 / HT40 / HE20 (Tier A-HE, C6) / HE40. The C6\nHE-LTF tier is the preferred Tier A target whenever an 11ax AP is in\nrange; firmware substrate already shipped at v0.7.0-esp32 per ADR-110.\nMeasured performance (release, single CirEstimator shared across 12\nlinks): HT20 2.72 ms / HE20 3.20 ms / HT40 13.43 ms / HE40 9.71 ms per\nestimate(). HT20 12-link multistatic 17.7 ms — fits the 50 ms RuvSense\ncycle; HT40 12-link 74 ms exceeds it and is flagged in ADR-134 §2.7 as\nrequiring Rayon parallelism or G=2K super-res reduction.\nMeasured Φ conditioning: κ(Φ) ≈ 1.00 identically across all tiers.\nADR-134 §2.3 was corrected — the C6 advantage is statistical SNR gain\n(√(242/52) ≈ 2.16×) from more independent measurements, not improved\nconditioning.\nWitness: bit-deterministic SHA-256 over CirEstimator output on the\nsynthetic ADR-028 reference signal (100 frames, top-5 taps, 1e-6\nquantization). Hash committed to expected_cir_features.sha256;\nverify-cir-proof.sh wires the check into the existing witness bundle.\nCI: cargo test --features cir + verify-cir-proof.sh added as separate\nsteps under the Rust Workspace Tests job; regressions are unambiguously\nattributable.\nFiles:\n- ADR + WITNESS-LOG-028 row 34 + CLAUDE.md module count (14 → 15)\n- src/ruvsense/cir.rs (~540 LOC) + lib.rs re-exports + multistatic.rs\nwire-up (reversible via `use_cir_gate=false`)\n- 3 integration tests + Criterion bench + 3 deterministic fixtures\n- cir_proof_runner binary + sha256 + verify-cir-proof.sh\nTest rate: 395 pass / 6 ignored (P2 ISTA hyperparameter tuning; see\n#[ignore] reasons) / 0 fail. cargo check clean; verify-cir-proof.sh\nVERDICT: PASS.\nCo-Authored-By: claude-flow <ruv@ruv.net>\n* fix(signal): make CIR witness cross-platform-deterministic\nThe first witness (Windows-generated hash 89704bfd…) failed on Linux CI\nwith a different hash (b36741bf…). Root cause: hashing `re`/`im` parts of\ntop-5 taps at 1e-6 precision is too tight against libm differences in\nsin/cos/sqrt across glibc, MSVC, and Apple-clang. The previous\n\"top-5 sorted by magnitude\" form also suffered from rank instability when\ntaps are near-tied — libm jitter could shuffle the ordering even when the\nalgorithm is unchanged.\nNew canonical form: full per-tap quantised-magnitude profile in natural\nindex order, no sort.\n- 156 taps × 2 bytes (u16 le) per frame = 312 bytes/frame.\n- Quantisation 1e-2 — robust to ~1e-3 float drift while still tripping\non real algorithmic changes (e.g., a 10× lambda shift moves magnitudes\nby >1e-2).\n- No top-K selection — eliminates the unstable magnitude-sort step.\nRegenerated expected_cir_features.sha256 — new hash 120bd7b1…\nIf the next CI run still mismatches, the cause is structural (rustfft SIMD\ncode path selection or NeumannSolver internal ordering), not magnitudes,\nand the witness needs further coarsening or to be made platform-tagged.\nCo-Authored-By: claude-flow <ruv@ruv.net>\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:9e7fa83210cdf05bc245610b732ad2a9c93cc985`",
+      "memory_unit_text": "In the ruvnet/RuView release v1428, ADR-134 is implemented to add first-class Channel Impulse Response estimation in the Rust workspace. The algorithm uses ISTA L1 sparse recovery with a Tikhonov-regularised warm start via NeumannSolver. Performance measurements are provided for HT20, HE20, HT40, and HE40 tiers. A cross-platform deterministic witness is established using a quantised-magnitude profile in natural index order."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v0_3_0_streaming_engine",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.3.0-streaming-engine",
+      "tag_name": "v0.3.0-streaming-engine",
+      "title": "RuView Streaming Engine v0.3.0 — Auditable Environmental Intelligence",
+      "time_hint": "2026-05-29",
+      "published_at": "2026-05-29T13:43:03Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v0.3.0-streaming-engine",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: RuView Streaming Engine v0.3.0 — Auditable Environmental Intelligence\nTag: v0.3.0-streaming-engine; draft: False; prerelease: False; published_at: 2026-05-29T13:43:03Z; created_at: 2026-05-29T13:42:46Z\nRelease notes:\n# RuView Streaming Engine v0.3.0 — Auditable Environmental Intelligence\n## What this is\nMost WiFi-sensing stacks emit a number and hope you trust it. **RuView's streaming\nengine is built so you don't have to.** Every conclusion it reaches — \"someone is\nin the living room,\" \"fall risk elevated,\" \"the room layout changed\" — carries a\nfull evidence trail: which sensors saw it, how much they agreed, which calibration\nand model produced it, and what privacy policy it was emitted under.\nThe throughline is **trust**. If you ask *\"why should I believe this when it says a\nperson fell?\"*, the engine answers with signal evidence, sensor agreement,\ncalibration provenance, and an auditable privacy posture — not just a confidence\nscore.\nThis release lands the ADR-135→146 series: the data contracts, the\ntrust/privacy/audit machinery, and the algorithms — all real, tested, and\ncomposed into one end-to-end pipeline cycle.\n## The two layers that make it auditable\n- **WorldGraph (`wifi-densepose-worldgraph`)** — the *where & why* graph. A typed\ngraph of rooms, sensors, RF links, person tracks, object anchors, events, and\nbeliefs, connected by typed edges: `observes`, `located_in`, `derived_from`,\n`contradicts`, `privacy_limited_by`. The privacy posture is *visible in the\npersisted graph* — an auditor can read exactly what was suppressed and why.\n- **Trusted semantic records** — the *what we believe right now* record. Every\nsemantic state carries model version, calibration version, evidence refs,\nconfidence, expiry, and privacy action. High-stakes actions (caregiver\nescalation) require **multi-signal agreement**, not a single noisy primitive.\n## What's new in v0.3.0\n| Area | Capability |\n|------|-----------|\n| Frame contracts (ADR-136) | `ComplexSample` (LE-canonical), provenance fields on every frame, `CanonicalFrame` BLAKE3 witness, `Stage`/`Versioned`/`QualityScored` traits |\n| Calibration (ADR-135) | `BaselineCalibration::apply()` stamps a deterministic `calibration_id` onto each frame |\n| Fusion quality (ADR-137) | `QualityScore` with per-node weights, evidence refs, and contradiction flags; calibration-mismatch detection |\n| Array coordination (ADR-138) | clock-quality + geometry gating; degraded nodes go \"watch-only\" |\n| WorldGraph (ADR-139) | the typed digital twin + privacy rollup + deterministic persistence |\n| Semantic records (ADR-140) | auditable state records + multi-signal agent routing |\n| Privacy control plane (ADR-141) | named modes + actions + a BLAKE3 hash-chained, tamper-evident attestation |\n| Evolution + VoxelMap (ADR-142) | cross-link \"the room changed\" detection + Bayesian occupancy, privacy-gated to a histogram |\n| RF-SLAM (ADR-143) | persistent reflector discovery → learned static anchors |\n| UWB fusion (ADR-144) | range-constraint refinement with outlier rejection (forward-looking) |\n| Ablation harness (ADR-145) | feature-matrix metrics incl. membership-inference privacy leakage |\n| RF encoder (ADR-146) | multi-task heads with per-head uncertainty + contrastive batcher (forward-looking) |\n| **Engine (`wifi-densepose-engine`)** | the composition root: one `process_cycle()` runs the whole trust pipeline |\n## Quick start\n```rust\nuse wifi_densepose_engine::StreamingEngine;\nuse wifi_densepose_bfld::PrivacyMode;\nuse wifi_densepose_geo::types::GeoRegistration;\nuse wifi_densepose_signal::ruvsense::fusion_quality::CalibrationId;\n// 1. Build the engine with a privacy posture + model version.\nlet mut engine = StreamingEngine::new(PrivacyMode::PrivateHome, 1, GeoRegistration::default());\n// 2. Describe the space (rooms + sensors are WorldGraph nodes).\nlet room = engine.add_room(\"living_room\", \"Living Room\");\nlet sensor = engine.add_sensor(\"esp32-com9\", room);\nengine.register_node_...",
+      "memory_unit_text": "In the ruvnet/RuView release v0.3.0-streaming-engine, the RuView Streaming Engine is introduced with a focus on auditable environmental intelligence. It includes a WorldGraph for typed digital twin representation and trusted semantic records with evidence trails. New capabilities span frame contracts, calibration, fusion quality, array coordination, privacy control, evolution detection, RF-SLAM, UWB fusion, an ablation harness, and an RF encoder. The engine composition root runs the full trust pipeline in one process_cycle()."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1444",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1444",
+      "tag_name": "v1444",
+      "title": "Release v1444",
+      "time_hint": "2026-05-29",
+      "published_at": "2026-05-29T21:08:58Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1444",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1444\nTag: v1444; draft: False; prerelease: False; published_at: 2026-05-29T21:08:58Z; created_at: 2026-05-29T20:53:51Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nfeat(worldmodel): ADR-147 — OccWorld world model integration, wifi-densepose-worldmodel v0.3.0 (#856)\n* feat(worldmodel): ADR-147 — OccWorld integration, wifi-densepose-worldmodel v0.3.0 (#854)\n- New crate `wifi-densepose-worldmodel` v0.3.0: async Unix-socket bridge\nto OccWorld Python inference server; `OccWorldBridge`, `OccupancyGrid3D`,\n`TrajectoryPrior`, `worldgraph_to_occupancy` encoder (14/14 tests pass)\n- `scripts/occworld_server.py`: long-lived Python inference server for\nOccWorld TransVQVAE (72.4M params); applies API-bug patches; dummy mode\nfor CI testing; graceful SIGTERM shutdown\n- `pose_tracker.rs`: `trajectory_prior` soft-blend injection (80/20\nKalman/prior) on torso keypoint; `set_trajectory_prior()` public method\n- CI: added `Run ADR-147 worldmodel tests` step\n- ADR-147: accepted — OccWorld primary (209 ms, 3.37 GB VRAM, RTX 5080);\nCosmos deferred to ADR-148 (32.54 GB VRAM exceeds hardware)\n- Benchmark proof: 208.7 ms P50, 3.37 GB peak VRAM, 12.1 GB headroom\nCo-Authored-By: claude-flow <ruv@ruv.net>\n* chore: update ruvector.db state\nCo-Authored-By: claude-flow <ruv@ruv.net>\n* chore: ruvector.db sync\nCo-Authored-By: claude-flow <ruv@ruv.net>\n* fix(cli): add missing min_frames field to CalibrateArgs test helper\nE0063 in calibrate.rs:448 — CalibrateArgs gained min_frames in ADR-135\nbut the default_args() test helper was not updated. min_frames=0 means\n'use tier default', matching the existing runtime behaviour.\nCo-Authored-By: claude-flow <ruv@ruv.net>\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:c7ddb2d7d195b85f153cd71060cdf01ab2ce8318`",
+      "memory_unit_text": "In the ruvnet/RuView release v1444, ADR-147 integrates the OccWorld world model via a new wifi-densepose-worldmodel v0.3.0 crate. It provides an async Unix-socket bridge to an OccWorld Python inference server, occupancy grid encoding, and trajectory prior injection into the pose tracker. Benchmark proof shows 208.7 ms P50 inference and 3.37 GB peak VRAM on an RTX 5080."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1447",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1447",
+      "tag_name": "v1447",
+      "title": "Release v1447",
+      "time_hint": "2026-05-29",
+      "published_at": "2026-05-29T22:53:14Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1447",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1447\nTag: v1447; draft: False; prerelease: False; published_at: 2026-05-29T22:53:14Z; created_at: 2026-05-29T22:46:56Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nfix(worldmodel): use published worldgraph v0.3.0 instead of path dep (crates.io publish prep)\nCo-Authored-By: claude-flow <ruv@ruv.net>\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:28a27bbfd8186d672091df6a060e3dd17fe631cd`",
+      "memory_unit_text": "In the ruvnet/RuView release v1447, a fix is applied to use the published worldgraph v0.3.0 crate instead of a path dependency, in preparation for publishing to crates.io."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1448",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1448",
+      "tag_name": "v1448",
+      "title": "Release v1448",
+      "time_hint": "2026-05-29",
+      "published_at": "2026-05-29T22:56:35Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1448",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1448\nTag: v1448; draft: False; prerelease: False; published_at: 2026-05-29T22:56:35Z; created_at: 2026-05-29T22:46:56Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nfeat(worldmodel): ADR-147 Phase 3+5 — RuViewOccDataset domain adapter + retraining pipeline\nPhase 3 — scripts/ruview_occ_dataset.py:\n- RuViewOccDataset: WorldGraph JSON snapshots → OccWorld (F,H,W,D) tensors\n- Indoor class remapping: person→7, floor→9, wall→11, furniture→16, free→17\n- Zero ego-poses (fixed indoor sensor, no ego-motion)\n- record_snapshot() helper for training data accumulation\n- Validated: 5 windows, (16,200,200,16) tensor, person+floor voxels confirmed\nPhase 5 — scripts/occworld_retrain.py:\n- record: stream WorldGraph snapshots from sensing server REST API\n- vqvae: fine-tune VQVAE tokenizer on RuView occupancy (200 epochs, AdamW)\n- transformer: fine-tune autoregressive transformer with frozen VQVAE\nwifi-densepose-worldmodel v0.3.0 published to crates.io\nCo-Authored-By: claude-flow <ruv@ruv.net>\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:cd1c391afc815c5e9856f1a4173898357d6171ad`",
+      "memory_unit_text": "In the ruvnet/RuView release v1448, ADR-147 Phase 3 and 5 are implemented, adding a RuViewOccDataset domain adapter that converts WorldGraph JSON snapshots to OccWorld tensors with indoor class remapping, and a retraining pipeline with scripts for recording snapshots, fine-tuning the VQVAE tokenizer, and fine-tuning the autoregressive transformer. The wifi-densepose-worldmodel v0.3.0 crate is published to crates.io."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1449",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1449",
+      "tag_name": "v1449",
+      "title": "Release v1449",
+      "time_hint": "2026-05-29",
+      "published_at": "2026-05-29T23:59:10Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1449",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1449\nTag: v1449; draft: False; prerelease: False; published_at: 2026-05-29T23:59:10Z; created_at: 2026-05-29T23:56:28Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\ndocs: add Phase 3+5 scripts to user guide and README world model row\n- User guide: full retrain workflow (record → vqvae → transformer → serve)\nwith checkpoint path usage\n- README: note fine-tune capability in world model capability row\nCo-Authored-By: claude-flow <ruv@ruv.net>\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:bb7de84cb4d34f73e9382097b084f178a5323c73`",
+      "memory_unit_text": "In the ruvnet/RuView release v1449, documentation is updated to add the Phase 3 and 5 scripts to the user guide and README world model row, describing the full retrain workflow and noting the fine-tune capability."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1450",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1450",
+      "tag_name": "v1450",
+      "title": "Release v1450",
+      "time_hint": "2026-05-30",
+      "published_at": "2026-05-30T00:05:25Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1450",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1450\nTag: v1450; draft: False; prerelease: False; published_at: 2026-05-30T00:05:25Z; created_at: 2026-05-29T23:56:28Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\ndocs(adr-147): add real CSI benchmark — 208ms median, 3.98GB VRAM, 72 frames/sec\nReal data: archive/v1 CSI proof dataset (seed=42, 3rx, 56sc, 100Hz, 1000 frames)\nPipeline: CSI amplitude → presence → ENU position → voxels → OccWorld inference\n20 inference windows, no mocks.\nCo-Authored-By: claude-flow <ruv@ruv.net>\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:da40503a9e47c41086d2acf377ec9496946dfe84`",
+      "memory_unit_text": "In the ruvnet/RuView release v1450, real CSI benchmark results are added to the ADR-147 documentation, showing a median inference time of 208 ms, 3.98 GB VRAM usage, and 72 frames per second using the v1 CSI proof dataset."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1451",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1451",
+      "tag_name": "v1451",
+      "title": "Release v1451",
+      "time_hint": "2026-05-30",
+      "published_at": "2026-05-30T01:04:47Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1451",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1451\nTag: v1451; draft: False; prerelease: False; published_at: 2026-05-30T01:04:47Z; created_at: 2026-05-30T00:52:51Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nfeat(worldmodel): Candle Rust port + GCP GPU scripts (ADR-147 Phase 4+6)\nCandle native port — wifi-densepose-occworld-candle v0.3.0:\n- config.rs: OccWorldConfig (14 params matching occworld.py)\n- vqvae.rs: ClassEmbedding(18→64), VQCodebook(512×512, squared-L2),\nQuantConv/PostQuantConv(1×1 Conv2d), fold_3d_to_2d helpers\nResNet encoder/decoder are documented stubs (Phase 5 checkpoint pending)\n- transformer.rs: full Candle MHA transformer (2 layers, temporal+spatial\ncross-attention, FFN, pre-norm residuals)\n- inference.rs: OccWorldCandle::dummy() + ::load() + predict()\nInferenceOutput: sem_pred(1,15,200,200,16) + trajectory_priors\n- 14/14 tests pass (12 lib + 2 doctests)\nGCP GPU scripts — scripts/gcp/:\n- provision_training.sh: a2-highgpu-8g (8×A100 40GB) for Phase 5 retraining\n- run_training.sh: rsync + torchrun 8-GPU train + checkpoint download\n- provision_cosmos.sh: a2-ultragpu-1g (A100 80GB) for Cosmos evaluation\n- cosmos_eval.sh: run Cosmos-Transfer2.5 inference, download results\n- teardown.sh: safe checkpoint download + instance delete\nCo-Authored-By: claude-flow <ruv@ruv.net>\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:9ad550d95f492a8aa75710bfb9701ede94e13721`",
+      "memory_unit_text": "In the ruvnet/RuView release v1451, ADR-147 Phase 4 and 6 deliver a Candle Rust port of the OccWorld model with VQVAE and transformer components, and GCP GPU scripts for provisioning and running training on A100 GPUs. The Candle port includes 14 passing tests and supports dummy and loaded inference."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1484",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1484",
+      "tag_name": "v1484",
+      "title": "Release v1484",
+      "time_hint": "2026-05-30",
+      "published_at": "2026-05-30T20:15:09Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1484",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1484\nTag: v1484; draft: False; prerelease: False; published_at: 2026-05-30T20:15:09Z; created_at: 2026-05-30T20:00:59Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nfeat(swarm): add ruview-swarm crate — drone swarm control system (ADR-148) (#862)\n* feat(swarm): add wifi-densepose-swarm crate implementing ADR-148 drone swarm control system\nNew crate `wifi-densepose-swarm` with hierarchical-mesh swarm topology,\nRaft consensus, MAPPO MARL, CSI sensing integration, and ITAR-gated\ncoordination features. Closes 3 of 7 milestones (M1, M2, M5) with 5/5\nADR-148 SOTA performance targets met.\n## Modules (45 source files, 14 modules)\n- types: NodeId, DroneState, Position3D, SwarmTask, SwarmError, FailSafeState\n- topology: Raft consensus (leader election, log replication, quorum), Gossip, Mesh\n- formation: VirtualStructure, LeaderFollower, Reynolds flocking (itar-gated)\n- planning: RRT-APF hybrid planner, 3-phase coverage, Bayesian grid, pheromone\n- allocation: Auction + FNN bid scorer (itar-gated)\n- sensing: CsiPayloadPipeline (Live/Synthetic/Replay), MultiViewFusion, OccWorldBridge\n- marl: MAPPO actor (3-layer MLP), LocalObservation (64-dim), RewardCalculator, PPO loop\n- security: MAVLink v2 HMAC-SHA256, UWB anti-spoofing, geofence, Remote ID, FHSS\n- failsafe: 10-state onboard machine, GCS-independent safety transitions\n- config: TOML SwarmConfig with SAR/inspection/agriculture/mine/demo/wi2sar_reference\n- demo: SyntheticCsiGenerator, DemoScenario (SAR/open-field/mine)\n- integration: FlightController trait, MAVLink dialect (50000-50005), SwarmSim\n- orchestrator: SwarmOrchestrator wiring all subsystems end-to-end\n- bench_support: Criterion fixture generators\n## ITAR compliance\nSwarming coordination features gated behind `itar-unrestricted` feature\nper USML Category VIII(h)(12). Default build compiles clean stubs.\n## Benchmark results (criterion, release mode)\n- MARL actor inference: 3.3 µs (target ≤ 5 ms — 1,516× headroom)\n- RRT-APF planning (100 iter): 0.043 ms (target < 300 ms — 6,946× headroom)\n- MultiView CSI fusion (3 UAVs): 58.5 ns (target < 10 ms — 171,000× headroom)\n- 3-view localization: 1.732 m (target ≤ 2 m — beats Wi2SAR SOTA)\n- 4-drone SAR coverage (400×400 m): 223 s (target ≤ 240 s — PASS)\n## Tests\n- --no-default-features: 73/73 passing\n- --features itar-unrestricted: 85/85 passing\nCloses #861\nCo-Authored-By: claude-flow <ruv@ruv.net>\n* refactor(swarm): rename wifi-densepose-swarm → ruview-swarm\nThe swarm control system is a RuView-level capability (drone coordination,\nRaft consensus, MARL) that operates above the wifi-densepose sensing layer\nrather than being a sub-component of it. Rename aligns with the project\nidentity and separates coordination infrastructure from sensing modules.\nCo-Authored-By: claude-flow <ruv@ruv.net>\n* fix(swarm): resolve all clippy warnings + add MARL convergence test\n- planning/probability_grid: map_or(true,…) → is_none_or (clippy::unnecessary_map_or)\n- planning/pheromone: &mut Vec<T> → &mut [T] on evaporate+deposit (clippy::ptr_arg)\n- marl/observation: fix doc lazy-continuation warning on TOTAL line\n- marl/trainer: manual Default impl → #[derive(Default)] + #[default] on Demo variant\nAlso adds test_marl_convergence_improves_mean_return: fills 64-transition\nReplayBuffer with mixed rewards (steps 0-31: negative, 32-63: positive),\nruns ppo_update, asserts mean_return is finite and non-zero.\nResult: 0 clippy warnings · 74/74 tests (default) · 86/86 (itar-unrestricted)\nCo-Authored-By: claude-flow <ruv@ruv.net>\n* feat(swarm): integrate Ruflo AI-agent capabilities into ruview-swarm\nAdds a feature-gated Ruflo integration layer connecting ruview-swarm to the\nclaude-flow daemon's AgentDB, AIDefence, and SONA intelligence subsystems.\nDefault build is unaffected (all paths behind `Option<Box<dyn RufloBackend>>`).\n## New module: src/ruflo/\n- backend.rs: RufloBackend trait (9 async methods) + RufloError, MissionMemoryEntry,\nPatternEntry, MavlinkSc...",
+      "memory_unit_text": "In the ruvnet/RuView release v1484, a new ruview-swarm crate is added implementing ADR-148 drone swarm control with hierarchical-mesh topology, Raft consensus, MAPPO MARL, CSI sensing integration, and ITAR-gated coordination features. It includes modules for types, topology, formation, planning, allocation, sensing, MARL, security, failsafe, configuration, demo, integration, and orchestration. Benchmark results show MARL actor inference at 3.3 µs, RRT-APF planning at 0.043 ms, and 3-view localization accuracy of 1.732 m. The crate is later renamed from wifi-densepose-swarm to ruview-swarm, and Ruflo AI-agent capabilities are integrated behind a feature gate."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1506",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1506",
+      "tag_name": "v1506",
+      "title": "Release v1506",
+      "time_hint": "2026-05-30",
+      "published_at": "2026-05-30T21:53:44Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1506",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1506\nTag: v1506; draft: False; prerelease: False; published_at: 2026-05-30T21:53:44Z; created_at: 2026-05-30T21:38:49Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nfeat(swarm): ADR-149 evaluation harness — GDOP, IQM+bootstrap CI, noise sweep (#875)\nStage-1 kinematic evaluator per ADR-149 (peer-reviewed). Pure Rust, no new deps.\nevals/:\n- gdop.rs: 2D Geometric Dilution of Precision ((HᵀH)⁻¹ trace-sqrt); None for\n<2 observers or collinear/singular geometry\n- stats.rs: IQM (Agarwal 2021) + 95% stratified-bootstrap CI (deterministic LCG)\n+ probability_of_improvement\n- metrics.rs: EpisodeMetrics + AggregateMetrics::from_strata (IQM±CI, seed-stratified)\n- runner.rs: seeded kinematic rollout (FlightPattern-driven), seed×episode matrix,\n3σ×3κ default noise sweep (Gaussian amplitude × von Mises phase)\n- report.rs + eval_swarm bin: generates evals/RESULTS.md leaderboard\nRESULTS.md surfaces the real coverage-vs-localization-precision trade-off via GDOP:\npartitioned wins coverage (100%) but single-drone sightings (GDOP 0 → 7.0m);\npheromone gets multistatic fusion (GDOP 1.6 → 4.1m). Wi2SAR 5m paper-baseline row included.\nStage-2 (Gazebo/PX4 SITL false-alarm + collision on median seeds) is documented follow-on.\nTests: 116 default / 133 full+train (+13 eval tests), 0 failed. Clippy clean (-D warnings).\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:8d64434d21e5fe25cac33bbd6331d9e5a8cc05f0`",
+      "memory_unit_text": "In the ruvnet/RuView release v1506, ADR-149 adds an evaluation harness for the swarm system, including GDOP calculation, IQM with bootstrap confidence intervals, and a noise sweep kinematic evaluator. The harness produces a leaderboard in RESULTS.md, comparing coverage and localization precision across strategies."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1528",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1528",
+      "tag_name": "v1528",
+      "title": "Release v1528",
+      "time_hint": "2026-05-31",
+      "published_at": "2026-05-31T15:47:44Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1528",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1528\nTag: v1528; draft: False; prerelease: False; published_at: 2026-05-31T15:47:44Z; created_at: 2026-05-31T15:32:26Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nMerge pull request #874 from ruvnet/feat/adr-149-aether-arena\nfeat(aether-arena): ADR-149 Spatial-Intelligence Benchmark — scorer + CI harness gate\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:f850d46e9a92d3af50f1c2415c7c61d87f51c882`",
+      "memory_unit_text": "In the ruvnet/RuView release v1528, a pull request merges the ADR-149 Aether Arena spatial-intelligence benchmark, adding a scorer and CI harness gate."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1544",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1544",
+      "tag_name": "v1544",
+      "title": "Release v1544",
+      "time_hint": "2026-06-02",
+      "published_at": "2026-06-02T07:38:39Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1544",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1544\nTag: v1544; draft: False; prerelease: False; published_at: 2026-06-02T07:38:39Z; created_at: 2026-06-02T07:24:02Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nMerge pull request #886 from ruvnet/fix/proof-determinism-numpy-lock\nfix(proof): pin determinism lock to numpy 2.4.2 (match published hash)\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:9c9b137a540070ea04cb590254264a903dc88edc`",
+      "memory_unit_text": "In the ruvnet/RuView release v1544, a fix pins the determinism lock to numpy 2.4.2 to match the published hash, ensuring proof reproducibility."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1548",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1548",
+      "tag_name": "v1548",
+      "title": "Release v1548",
+      "time_hint": "2026-06-02",
+      "published_at": "2026-06-02T08:38:38Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1548",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1548\nTag: v1548; draft: False; prerelease: False; published_at: 2026-06-02T08:38:38Z; created_at: 2026-06-02T08:23:44Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nMerge pull request #906 from ruvnet/fix/893-csi-data-frame-capture\nfix(firmware): capture DATA frames on display-less boards — #893/#866/#897 (yield=0pps root cause)\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:3fec67654aed4efd7c71a40d310714d1968113d3`",
+      "memory_unit_text": "In the ruvnet/RuView release v1548, a firmware fix addresses the capture of DATA frames on display-less boards, resolving the root cause of zero packets per second yield."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1551",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1551",
+      "tag_name": "v1551",
+      "title": "Release v1551",
+      "time_hint": "2026-06-02",
+      "published_at": "2026-06-02T08:53:52Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1551",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1551\nTag: v1551; draft: False; prerelease: False; published_at: 2026-06-02T08:53:52Z; created_at: 2026-06-02T08:53:18Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nMerge pull request #904 from ruvnet/fix/898-mqtt-per-node-devices\nfix(mqtt): one Home-Assistant device per node — closes #898\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:9df908d8981d4a2cbb4b7a5d08cfca602f88938c`",
+      "memory_unit_text": "In the ruvnet/RuView release v1551, an MQTT fix ensures one Home-Assistant device per node, closing issue #898."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1553",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1553",
+      "tag_name": "v1553",
+      "title": "Release v1553",
+      "time_hint": "2026-06-02",
+      "published_at": "2026-06-02T09:08:20Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1553",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1553\nTag: v1553; draft: False; prerelease: False; published_at: 2026-06-02T09:08:20Z; created_at: 2026-06-02T08:53:18Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nMerge pull request #907 from ruvnet/fix/894-occupancy-cap\nfix(occupancy): bound eigenvalue person-count to single-link max — #894\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:8703ade9b61c1cb1e82cb29edfa92c3bdf16f393`",
+      "memory_unit_text": "In the ruvnet/RuView release v1553, an occupancy fix bounds the eigenvalue person-count to the single-link maximum, addressing issue #894."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1555",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1555",
+      "tag_name": "v1555",
+      "title": "Release v1555",
+      "time_hint": "2026-06-02",
+      "published_at": "2026-06-02T09:45:09Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1555",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1555\nTag: v1555; draft: False; prerelease: False; published_at: 2026-06-02T09:45:09Z; created_at: 2026-06-02T09:35:34Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nMerge pull request #908 from ruvnet/fix/893-release-bins-refresh\nrelease(firmware): refresh release_bins with the #893 CSI fix → v0.6.7\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:b7b8c1109bde729334241782c749c8f4dba6f91c`",
+      "memory_unit_text": "In the ruvnet/RuView release v1555, the firmware release bins are refreshed with the CSI fix from issue #893, resulting in version v0.6.7."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1557",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1557",
+      "tag_name": "v1557",
+      "title": "Release v1557",
+      "time_hint": "2026-06-02",
+      "published_at": "2026-06-02T09:59:53Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1557",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1557\nTag: v1557; draft: False; prerelease: False; published_at: 2026-06-02T09:59:53Z; created_at: 2026-06-02T09:50:25Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nMerge pull request #910 from ruvnet/fix/v1-pose-service-densepose-config\nfix(v1-api): pass required config to DensePoseHead — green main CI\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:4d205a05c479af54ddacb1a903e5817424bce07e`",
+      "memory_unit_text": "In the ruvnet/RuView release v1557, a fix passes the required configuration to the DensePoseHead in the v1 API, restoring a green main CI."
+    },
+    {
+      "memory_node_id": "ruvnet__RuView__release__v1560",
+      "repo": "ruvnet/RuView",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1560",
+      "tag_name": "v1560",
+      "title": "Release v1560",
+      "time_hint": "2026-06-02",
+      "published_at": "2026-06-02T10:35:27Z",
+      "source_url": "https://github.com/ruvnet/RuView/releases/tag/v1560",
+      "raw_text": "Repository: ruvnet/RuView\nRelease: Release v1560\nTag: v1560; draft: False; prerelease: False; published_at: 2026-06-02T10:35:27Z; created_at: 2026-06-02T10:20:21Z\nRelease notes:\nAutomated release from CI pipeline\n**Changes:**\nMerge pull request #911 from ruvnet/fix/ci-v1-api-mock-mode\nci(v1-api): MOCK_POSE_DATA + declare psutil — green Performance Tests & API Docs\n**Docker Image:**\n`ghcr.io/ruvnet/RuView:5038e3c8e1c2db609081b253333ea4a186b6da8b`",
+      "memory_unit_text": "In the ruvnet/RuView release v1560, a CI fix adds MOCK_POSE_DATA and declares psutil for the v1 API, resulting in green Performance Tests and API Docs."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the ruvnet/RuView releases, which release adds a navigation router and three new pages (States, Services, Settings) to the HOMECORE web UI?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.11.0"
+        },
+        {
+          "option_id": "B",
+          "text": "v1397"
+        },
+        {
+          "option_id": "C",
+          "text": "v0.12.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v1402"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v1397",
+      "source_chunk_ids": [
+        "ruvnet__RuView__release__v1397"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "ruvnet__RuView__release__v1397",
+          "answer_text": "adds a navigation router and three new pages to the HOMECORE web UI: States, Services, and Settings"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the ruvnet/RuView releases, how does the HOMECORE web UI change from v1397 to v0.12.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v1397 adds a router and three pages, while v0.12.0 makes the UI functional with Dashboard, States, Services, Settings pages and expands the Trust Kill Switch to 9 phases."
+        },
+        {
+          "option_id": "B",
+          "text": "v1397 removes the UI, and v0.12.0 adds it back."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only update Docker images without UI changes."
+        },
+        {
+          "option_id": "D",
+          "text": "v1397 adds entity seeding, and v0.12.0 adds service seeding."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v1397 adds a router and three pages, while v0.12.0 makes the UI functional with Dashboard, States, Services, Settings pages and expands the Trust Kill Switch to 9 phases.",
+      "source_chunk_ids": [
+        "ruvnet__RuView__release__v1397",
+        "ruvnet__RuView__release__v0_12_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "ruvnet__RuView__release__v1397",
+          "answer_text": "adds a navigation router and three new pages to the HOMECORE web UI: States, Services, and Settings"
+        },
+        {
+          "memory_node_id": "ruvnet__RuView__release__v0_12_0",
+          "answer_text": "the HOMECORE web UI becomes functional with new Dashboard, States, Services, and Settings pages ... Trust Kill Switch is expanded to a 9-phase verification"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the ruvnet/RuView release window, order the following release-content states from earliest to latest: (1) a release that seeds 13 default services across 6 domains on boot, (2) a release that adds a navigation router and three new pages to the HOMECORE web UI, (3) a release that adds an Add Entity flow with a modal and form.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2 -> 1 -> 3"
+        },
+        {
+          "option_id": "B",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 3 -> 1"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 1 -> 2"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2 -> 1 -> 3",
+      "source_chunk_ids": [
+        "ruvnet__RuView__release__v1397",
+        "ruvnet__RuView__release__v1402",
+        "ruvnet__RuView__release__v1404"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "ruvnet__RuView__release__v1397",
+          "answer_text": "adds a navigation router and three new pages to the HOMECORE web UI"
+        },
+        {
+          "memory_node_id": "ruvnet__RuView__release__v1402",
+          "answer_text": "seeds 13 default services across 6 domains on boot"
+        },
+        {
+          "memory_node_id": "ruvnet__RuView__release__v1404",
+          "answer_text": "gains an Add Entity flow with a modal and form"
+        }
+      ]
+    }
+  ]
+}

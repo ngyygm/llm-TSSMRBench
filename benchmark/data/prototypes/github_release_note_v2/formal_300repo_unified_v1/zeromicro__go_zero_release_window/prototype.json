@@ -1,0 +1,525 @@
+{
+  "prototype_id": "zeromicro__go_zero_release_window",
+  "domain": "github_release_evolution",
+  "repo": "zeromicro/go-zero",
+  "source_type": "release_note",
+  "window_title": "zeromicro/go-zero recent release evolution",
+  "window_summary": "This window tracks the recent zeromicro/go-zero release stream across core releases and related goctl tool releases, covering features like MCP server SDK, SSE support, SQL read/write splitting, and consistent hash load balancing.",
+  "chunks": [
+    {
+      "memory_node_id": "zeromicro__go_zero__release__v1_8_0",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.8.0",
+      "tag_name": "v1.8.0",
+      "title": "v1.8.0",
+      "time_hint": "2025-01-28",
+      "published_at": "2025-01-28T16:48:03Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/v1.8.0",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: v1.8.0\nTag: v1.8.0; draft: False; prerelease: False; published_at: 2025-01-28T16:48:03Z; created_at: 2025-01-28T16:32:21Z\nRelease notes:\n## ✨ Highlights\n- Added inbound HTTP to outbound HTTP in gateway, previously only inbound HTTP to outbound gRPC\n- Introduced automatic config validation\n- Added FreeBSD support\n- Enhanced logging capabilities with new Debugfn and Infofn functions\n- Added SQL metrics functionality\n- Added Redis user authentication support\n## 🚀 Features\n- Support for HTTP to HTTP in gateway\n- Automatic configuration validation\n- FreeBSD platform support\n- New SQL metrics functionality\n- Added Debugfn and Infofn to logx/logc\n- Redis authentication with new User property in RedisConf\n- Improved metrics collection for MySQL\n## 🐛 Bug Fixes\n- Resolved etcd discovery mechanism on gRPC with idle manager on latest gRPC versions\n- Fixed health check issues, returns OK before server finishing start\n- Fixed httpx.ParseJsonBody error with []byte fields\n- Fixed empty form values handling in HTTP requests\n## 🧹 Chores & Optimizations\n- Updated Go version\n- Multiple dependency updates:\n- golang.org/x/time to v0.9.0\n- golang.org/x/sys to v0.29.0\n- google.golang.org/protobuf to v1.36.4\n- golang.org/x/net to v0.34.0\n- go.mongodb.org/mongo-driver to v1.17.2\n- Optimized error messages for mapping data method\n- Enhanced logging system with more tests\n## 🎉 New Contributors\nWelcome to our new contributors who helped make this release possible:\n* @R1aEnKK made their first contribution in https://github.com/zeromicro/go-zero/pull/4570\n* @sauryniu made their first contribution in https://github.com/zeromicro/go-zero/pull/4490\n* @Nanosk07 made their first contribution in https://github.com/zeromicro/go-zero/pull/4514\n* @studyzy made their first contribution in https://github.com/zeromicro/go-zero/pull/4443\n* @wangshiben made their first contribution in https://github.com/zeromicro/go-zero/pull/4397\n* @xujb977644703 made their first contribution in https://github.com/zeromicro/go-zero/pull/4559\n**Full Changelog**: https://github.com/zeromicro/go-zero/compare/v1.7.6...v1.8.0",
+      "memory_unit_text": "In the zeromicro/go-zero release v1.8.0, the project adds inbound HTTP to outbound HTTP in gateway, automatic config validation, FreeBSD support, SQL metrics functionality, Redis user authentication support, and new Debugfn/Infofn logging functions. Bug fixes include etcd discovery on gRPC with idle manager, health check returning OK before server finish, httpx.ParseJsonBody error with []byte fields, and empty form values handling. Dependencies are updated, and new contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__tools_goctl_v1_7_6",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:tools/goctl/v1.7.6",
+      "tag_name": "tools/goctl/v1.7.6",
+      "title": "goctl/v1.7.6",
+      "time_hint": "2025-01-29",
+      "published_at": "2025-01-29T04:52:08Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/tools/goctl/v1.7.6",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: goctl/v1.7.6\nTag: tools/goctl/v1.7.6; draft: False; prerelease: False; published_at: 2025-01-29T04:52:08Z; created_at: 2025-01-29T04:47:23Z\nRelease notes:\n## Features\n* Added support for generating unit test files for API handlers and logic (#4443)\n- Implemented as per the request in issue #4442\n- Contributed by @studyzy\n## Bug Fixes\n* Fixed syntax of key expression (#4586)\n- Contributed by @kesonan\n* Fixed security vulnerability related to arbitrary file access during archive extraction (\"Zip Slip\") (#4604)\n- Addressed code scanning alert no. 57\n- Contributed by @kevwan\n## Improvements\n* Removed default usage of goproxy (#4613)\n- goproxy should be set by `go env -w` if needed\n- Contributed by @kevwan\n## New Contributors\n* @R1aEnKK made their first contribution in https://github.com/zeromicro/go-zero/pull/4570\n* @sauryniu made their first contribution in https://github.com/zeromicro/go-zero/pull/4490\n* @Nanosk07 made their first contribution in https://github.com/zeromicro/go-zero/pull/4514\n* @studyzy made their first contribution in https://github.com/zeromicro/go-zero/pull/4443\n* @wangshiben made their first contribution in https://github.com/zeromicro/go-zero/pull/4397\n* @xujb977644703 made their first contribution in https://github.com/zeromicro/go-zero/pull/4559\n**Full Changelog**: https://github.com/zeromicro/go-zero/compare/tools/goctl/v1.7.5...tools/goctl/v1.7.6",
+      "memory_unit_text": "In the zeromicro/go-zero release goctl/v1.7.6, the goctl tool adds support for generating unit test files for API handlers and logic. Bug fixes include syntax of key expression and a security vulnerability related to arbitrary file access during archive extraction (Zip Slip). The default usage of goproxy is removed. New contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__tools_goctl_v1_7_7",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:tools/goctl/v1.7.7",
+      "tag_name": "tools/goctl/v1.7.7",
+      "title": "goctl/v1.7.7",
+      "time_hint": "2025-02-12",
+      "published_at": "2025-02-12T16:00:19Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/tools/goctl/v1.7.7",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: goctl/v1.7.7\nTag: tools/goctl/v1.7.7; draft: False; prerelease: False; published_at: 2025-02-12T16:00:19Z; created_at: 2025-02-12T15:48:39Z\nRelease notes:\n## 🚀 Features\n- Added support for `go work` (#4344) [@ningzio]\n- Added support for custom key prefix in cache generation (#4643) [@kesonan]\n## 🐛 Bug Fixes\n- Fixed duplicate path expression handling under different prefixes (#4626) [@youzipi]\n## 📦 Dependencies\n- Bumped `github.com/spf13/pflag` from 1.0.5 to 1.0.6 (#4615)\n- Bumped `golang.org/x/text` from 0.21.0 to 0.22.0 (#4620)\n- Bumped `google.golang.org/protobuf` from 1.36.4 to 1.36.5 (#4628)\n## 🎉 Welcome New Contributors!\nWe're excited to welcome these new contributors to the project:\n- [@ningzio]\n- [@youzipi]\n- [@xuerbujia]\n## Links\n- Full Changelog: [v1.7.6...v1.7.7](https://github.com/zeromicro/go-zero/compare/tools/goctl/v1.7.6...tools/goctl/v1.7.7)\n[//]: # (Contributor Links)\n[@ningzio]: https://github.com/ningzio\n[@youzipi]: https://github.com/youzipi\n[@xuerbujia]: https://github.com/xuerbujia\n[@kesonan]: https://github.com/kesonan",
+      "memory_unit_text": "In the zeromicro/go-zero release goctl/v1.7.7, the goctl tool adds support for 'go work' and custom key prefix in cache generation. A bug fix addresses duplicate path expression handling under different prefixes. Dependencies are bumped, and new contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__v1_8_1",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.8.1",
+      "tag_name": "v1.8.1",
+      "title": "v1.8.1",
+      "time_hint": "2025-03-01",
+      "published_at": "2025-03-01T13:06:02Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/v1.8.1",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: v1.8.1\nTag: v1.8.1; draft: False; prerelease: False; published_at: 2025-03-01T13:06:02Z; created_at: 2025-02-26T11:19:24Z\nRelease notes:\n## 🎉 Celebrating 30,000 Stars Milestone! 🎉\nWe are thrilled to announce that **go-zero** has reached the incredible milestone of **30,000 GitHub stars**! This achievement wouldn't have been possible without our amazing community of developers, contributors, and users who have supported us throughout this journey.\nFrom its humble beginnings, go-zero has grown to become one of the most popular Go microservices frameworks, enabling developers worldwide to build high-performance, reliable, and scalable systems with ease. This milestone is a testament to the value go-zero brings to the Go ecosystem and the trust the community places in our project.\n## ✨ What's New in v1.8.1\nWe're excited to present go-zero v1.8.1, which includes several new features, bug fixes, and performance improvements.\n### 🔑 Key Highlights\n- **Redis v7 Compatibility**: Fixed username not working in Redis v7\n- **Gateway Context Propagation**: Fixed HTTP gateway context propagation\n### 🚀 Features\n* Fixed global fields applying to third-party log modules by @JiChenSSG\n* Simplified HTTP query array parsing by @kevwan\n### 🐛 Fixes\n* Fixed Redis username not working in Redis v7 by @kevwan\n* Fixed HTTP gateway context propagation error by @Suyghur\n* Fixed SlowThreshold configuration not taking effect in logging by @Nanosk07 and @kevwan\n### 🔧 Improvements & Maintenance\n* Performance tuning for stable runner by @kevwan\n* Various dependency updates to keep the project up-to-date\n* Multiple code style improvements and test coverage enhancements\n## 📦 Dependency Updates\nThis release includes several dependency updates:\n* Updated github.com/go-sql-driver/mysql from 1.8.1 to 1.9.0\n* Updated github.com/prometheus/client_golang from 1.20.5 to 1.21.0\n* Updated github.com/redis/go-redis/v9 from 9.7.0 to 9.7.1\n* Updated go.mongodb.org/mongo-driver from 1.17.2 to 1.17.3\n* Updated various golang.org/x packages\n## 👋 Welcome New Contributors\nA special welcome to our new contributor who made their first contribution in this release:\n* @ningzio made their first contribution in https://github.com/zeromicro/go-zero/pull/4344\n* @youzipi made their first contribution in https://github.com/zeromicro/go-zero/pull/4626\n* @xuerbujia made their first contribution in https://github.com/zeromicro/go-zero/pull/4633\n## 🙏 Thank You\nAs we celebrate 30,000 stars, we want to express our deepest gratitude to everyone who has contributed to go-zero, used it in their projects, filed issues, or helped spread the word. This community-driven success pushes us to continue improving and innovating.\nFor a complete list of changes, please check the [full changelog](https://github.com/zeromicro/go-zero/compare/v1.8.0...v1.8.1).",
+      "memory_unit_text": "In the zeromicro/go-zero release v1.8.1, the project celebrates 30,000 GitHub stars. Key highlights include Redis v7 compatibility fix for username and HTTP gateway context propagation fix. Features include fixing global fields applying to third-party log modules and simplifying HTTP query array parsing. Fixes address Redis username not working in Redis v7, HTTP gateway context propagation error, and SlowThreshold configuration not taking effect in logging. Performance tuning for stable runner and dependency updates are included. New contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__tools_goctl_v1_8_1",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:tools/goctl/v1.8.1",
+      "tag_name": "tools/goctl/v1.8.1",
+      "title": "goctl/v1.8.1",
+      "time_hint": "2025-03-01",
+      "published_at": "2025-03-01T13:44:54Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/tools/goctl/v1.8.1",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: goctl/v1.8.1\nTag: tools/goctl/v1.8.1; draft: False; prerelease: False; published_at: 2025-03-01T13:44:54Z; created_at: 2025-03-01T13:23:23Z\nRelease notes:\n### 🐛 Fixes\n* Fixed version to match with the release by @chenrui333\n### 🔧 Improvements & Maintenance\n* Added version check workflow by @kevwan\n* Upgraded go-zero version in goctl by @kevwan\n### 📦 Dependency Updates\nThis release includes several dependency updates:\n* Updated github.com/spf13/cobra from 1.8.1 to 1.9.1\n* Updated github.com/go-sql-driver/mysql from 1.8.1 to 1.9.0\nFor a complete list of changes, please check the [full changelog](https://github.com/zeromicro/go-zero/compare/tools/goctl/v1.7.7...tools/goctl/v1.8.1).",
+      "memory_unit_text": "In the zeromicro/go-zero release goctl/v1.8.1, the goctl tool fixes version to match with the release, adds a version check workflow, and upgrades the go-zero version in goctl. Dependencies are updated."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__v1_8_2",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.8.2",
+      "tag_name": "v1.8.2",
+      "title": "v1.8.2",
+      "time_hint": "2025-04-06",
+      "published_at": "2025-04-06T10:07:35Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/v1.8.2",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: v1.8.2\nTag: v1.8.2; draft: False; prerelease: False; published_at: 2025-04-06T10:07:35Z; created_at: 2025-03-26T14:41:55Z\nRelease notes:\nWe're pleased to announce the release of go-zero v1.8.2. This release includes new features, bug fixes, dependency updates, and code improvements.\n## 🚀 New Features\n- **SSE Support**: Added `rest.WithSSE` to build Server-Sent Events routes more easily ([#4729](https://github.com/zeromicro/go-zero/pull/4729))\n- **Redis Command**: Added support for Redis `GETDEL` command ([#4709](https://github.com/zeromicro/go-zero/pull/4709))\n- **HTTP Client Enhancement**: Added support for serialization of anonymous fields in HTTP client (httpc) ([#4676](https://github.com/zeromicro/go-zero/pull/4676))\n## 🐛 Bug Fixes\n- **PostgreSQL Data Types**: Fixed issues with numeric/decimal data types in PostgreSQL ([#4686](https://github.com/zeromicro/go-zero/pull/4686))\n## 📦 Dependency Updates\n- Bumped github.com/prometheus/client_golang from 1.21.0 to 1.21.1 ([#4683](https://github.com/zeromicro/go-zero/pull/4683))\n- Bumped github.com/fullstorydev/grpcurl from 1.9.2 to 1.9.3 ([#4701](https://github.com/zeromicro/go-zero/pull/4701))\n- Bumped github.com/redis/go-redis/v9 from 9.7.1 to 9.7.3 ([#4722](https://github.com/zeromicro/go-zero/pull/4722))\n- Bumped github.com/golang-jwt/jwt/v4 from 4.5.1 to 4.5.2 ([#4734](https://github.com/zeromicro/go-zero/pull/4734))\n- Bumped github.com/jackc/pgx/v5 from 5.7.2 to 5.7.4 ([#4737](https://github.com/zeromicro/go-zero/pull/4737))\n## 🧹 Code Maintenance\n- Added more tests and refactoring improvements ([#4677](https://github.com/zeromicro/go-zero/pull/4677), [#4718](https://github.com/zeromicro/go-zero/pull/4718))\n## 👋 New Contributors\nWe're excited to welcome the following new contributors to the go-zero project:\n- [@AnlynnLee](https://github.com/AnlynnLee)\n- [@jk2K](https://github.com/jk2K)\n## 🔭 Coming Soon\n- **MCP Server Support**: We'll be adding Model Context Protocol (MCP) server support in the next release.\n## 🔗 Additional Information\n- Full Changelog: [v1.8.1...v1.8.2](https://github.com/zeromicro/go-zero/compare/v1.8.1...v1.8.2)",
+      "memory_unit_text": "In the zeromicro/go-zero release v1.8.2, new features include SSE support via rest.WithSSE, Redis GETDEL command support, and HTTP client serialization of anonymous fields. A bug fix addresses numeric/decimal data types in PostgreSQL. Dependencies are updated, code maintenance is performed, and new contributors are welcomed. The release also announces upcoming MCP server support."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__tools_goctl_v1_8_2",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:tools/goctl/v1.8.2",
+      "tag_name": "tools/goctl/v1.8.2",
+      "title": "goctl/v1.8.2",
+      "time_hint": "2025-04-06",
+      "published_at": "2025-04-06T11:10:42Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/tools/goctl/v1.8.2",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: goctl/v1.8.2\nTag: tools/goctl/v1.8.2; draft: False; prerelease: False; published_at: 2025-04-06T11:10:42Z; created_at: 2025-04-06T11:09:02Z\nRelease notes:\n## 🐛 Bug Fixes\n- **PostgreSQL Data Types**: Fixed issues with numeric/decimal data types in PostgreSQL ([#4686](https://github.com/zeromicro/go-zero/pull/4686))\n## 👋 New Contributors\nWe're excited to welcome the following new contributors to the go-zero project:\n- [@AnlynnLee](https://github.com/AnlynnLee)\n- [@jk2K](https://github.com/jk2K)\n## 🔭 Coming Soon\n- **MCP Server Support**: We'll be adding Model Context Protocol (MCP) server support in the next release.\n## 🔗 Additional Information\n- Full Changelog: [v1.8.1...v1.8.2](https://github.com/zeromicro/go-zero/compare/tools/goctl/v1.8.1...tools/goctl/v1.8.2)",
+      "memory_unit_text": "In the zeromicro/go-zero release goctl/v1.8.2, the goctl tool fixes issues with numeric/decimal data types in PostgreSQL. New contributors are welcomed, and upcoming MCP server support is announced."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__tools_goctl_v1_8_3_beta",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:tools/goctl/v1.8.3-beta",
+      "tag_name": "tools/goctl/v1.8.3-beta",
+      "title": "goctl/v1.8.3-beta",
+      "time_hint": "2025-04-27",
+      "published_at": "2025-04-27T15:55:14Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/tools/goctl/v1.8.3-beta",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: goctl/v1.8.3-beta\nTag: tools/goctl/v1.8.3-beta; draft: False; prerelease: False; published_at: 2025-04-27T15:55:14Z; created_at: 2025-04-27T15:53:49Z\nRelease notes:\nWe are excited to announce the release of **go-zero v1.8.3-beta**, bringing new features, important fixes, and experimental capabilities to enhance your development experience.\n## 🔄 What's Changed\n### ✨ Features\n- **[Experimental] Swagger Enhancements**:\n- Built-in support for generating Swagger documents in `goctl`.\n- **Custom Authentication**: Configure custom Swagger authentication.\n- **Complex Structures**: Generate Swagger definitions for complex structures.\n- **Custom Example Values**: Add custom example values in Swagger.\n- **Custom Response Body Format**: Define response body formats.\n- **Custom Business Error Codes**: Enumerate error codes for business logic.\nFor more details, refer to:\n- [中文文档](https://go-zero.dev/docs/tutorials/cli/swagger) | [English](https://go-zero.dev/en/docs/tutorials/cli/swagger)\n- **[Experimental] API Types File Splitting**:\n- Supports splitting multiple files according to group names in API types.\nFor more details, refer to:\n- [中文文档](https://go-zero.dev/docs/tutorials/api/route/group) | [English](https://go-zero.dev/en/docs/tutorials/api/route/group)\n### 🛠 Fixes\n- Optional form fields in requests. ([#4755](https://github.com/zeromicro/go-zero/pull/4755))\n- Corrected the `required` parameter in generated Swagger documents. ([#4791](https://github.com/zeromicro/go-zero/pull/4791))\n- Fixed Swagger separator issue on Windows OS. ([#4799](https://github.com/zeromicro/go-zero/pull/4799))\n- Resolved incorrect array schema generation. ([#4801](https://github.com/zeromicro/go-zero/pull/4801))\n- Fixed missing security definition and JSON body data error in Swagger. ([#4808](https://github.com/zeromicro/go-zero/pull/4808))\n## 🌟 New Contributors\n- @hthuz made their first contribution in [#4766](https://github.com/zeromicro/go-zero/pull/4766)\n- @dushaoshuai made their first contribution in [#4809](https://github.com/zeromicro/go-zero/pull/4809)\n## 📜 Full Changelog\nFor a detailed list of changes, refer to the [Full Changelog](https://github.com/zeromicro/go-zero/compare/tools/goctl/v1.8.2...tools/goctl/v1.8.3-beta).\n---\nThank you to all the contributors who made this release possible! 🎉",
+      "memory_unit_text": "In the zeromicro/go-zero release goctl/v1.8.3-beta, the goctl tool introduces experimental Swagger enhancements including built-in Swagger document generation, custom authentication, complex structures, custom example values, custom response body format, and custom business error codes. Experimental API types file splitting is also added. Fixes include optional form fields, corrected 'required' parameter in Swagger, Swagger separator on Windows, incorrect array schema generation, and missing security definition and JSON body data error in Swagger. New contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__v1_8_3",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.8.3",
+      "tag_name": "v1.8.3",
+      "title": "v1.8.3",
+      "time_hint": "2025-05-04",
+      "published_at": "2025-05-04T08:09:32Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/v1.8.3",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: v1.8.3\nTag: v1.8.3; draft: False; prerelease: False; published_at: 2025-05-04T08:09:32Z; created_at: 2025-05-04T07:29:14Z\nRelease notes:\n## 🌟 Highlights\n- **MCP Server SDK**: Added comprehensive Model Context Protocol server SDK support with real-time communication, JSON-RPC, prompt management, and more.\n- **API Route Improvements**: Enhanced handling of special characters in API route paths.\n## 🚀 Features\n- **MCP server SDK**:\n- **Real-time Communication**: Robust SSE-based system with persistent client connections\n- **JSON-RPC Support**: Complete implementation with proper request processing and response formatting\n- **Tool System**: Register custom tools with schema validation and support for various return types\n- **Prompt Management**: Static prompts with templating and dynamic prompts with handler functions\n- **Resource Handling**: Register and deliver file resources with proper MIME type support\n- **Embedded Resources**: Include files directly in conversation messages\n- **Content Flexibility**: Support for text, code, images, and binary content\n- **Protocol Features**: Proper initialization sequences and capability negotiation\n- **Comprehensive Error Handling**: Proper error reporting with appropriate error codes\n- **Performance Optimizations**: Configurable timeouts and efficient resource management\n- **Context Awareness**: All handlers receive context for timeout and cancellation support\n⚠️ **API Stability Notice**: Since this is the initial release of the MCP SDK and AI technology is rapidly evolving, the APIs might change in future releases to improve developer experience and adapt to emerging industry standards.\n📚 **Tutorial**: For detailed documentation and usage examples, check out the [MCP Tutorial](https://github.com/zeromicro/go-zero/blob/master/mcp/readme.md)\n- **API Enhancements**:\n- Fixed handling of special characters (like periods) in API route paths\n## 🐛 Bug Fixes\n- Fixed marshaler bug when handling arrays\n## 📦 Dependency Updates\n- Bumped github.com/redis/go-redis/v9 from 9.7.3 to 9.8.0\n## 👋 Welcome to New Contributors\nA warm welcome to our new contributors who made their first contributions to go-zero in this release:\n- @hthuz\n- @Disdjj\n- @hoshi200\n## 🔗 Links\n- **Full Changelog**: https://github.com/zeromicro/go-zero/compare/v1.8.2...v1.8.3\n- **GitHub Release**: https://github.com/zeromicro/go-zero/releases/tag/v1.8.3\n- **MCP Documentation**: https://github.com/zeromicro/go-zero/blob/master/mcp/readme.md",
+      "memory_unit_text": "In the zeromicro/go-zero release v1.8.3, highlights include a comprehensive MCP server SDK with real-time communication, JSON-RPC, tool system, prompt management, resource handling, and more. API route improvements handle special characters in paths. A bug fix addresses marshaler bug when handling arrays. Dependencies are updated, and new contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__tools_goctl_v1_8_3",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:tools/goctl/v1.8.3",
+      "tag_name": "tools/goctl/v1.8.3",
+      "title": "goctl/v1.8.3",
+      "time_hint": "2025-05-04",
+      "published_at": "2025-05-04T08:38:02Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/tools/goctl/v1.8.3",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: goctl/v1.8.3\nTag: tools/goctl/v1.8.3; draft: False; prerelease: False; published_at: 2025-05-04T08:38:02Z; created_at: 2025-05-04T08:18:02Z\nRelease notes:\n### ✨ Swagger Features\n- **Built-in Swagger Support**: Generate Swagger documents in `goctl`. Key features include:\n- **Custom Authentication**: Configure custom Swagger authentication.\n- **Complex Structures**: Generate Swagger definitions for complex structures.\n- **Custom Example Values**: Add custom example values in Swagger.\n- **Custom Response Body Format**: Define response body formats.\n- **Custom Business Error Codes**: Enumerate error codes for business logic.\n- **Custom Generated File**: Specify the generated Swagger file name.\n- For more details, refer to:\n- [中文文档](https://go-zero.dev/docs/tutorials/cli/swagger) | [English](https://go-zero.dev/en/docs/tutorials/cli/swagger)\n### 🔧 Fixes\n- **fix**: Form fields of request optional by @soasurs in [#4755](https://github.com/zeromicro/go-zero/pull/4755)\n- **fix**: The parameter \"required\" in the Swagger document generated for repair is incorrect by @kesonan in [#4791](https://github.com/zeromicro/go-zero/pull/4791)\n- **fix**: Array schema generation incorrect by @kesonan in [#4801](https://github.com/zeromicro/go-zero/pull/4801)\n- **fix**: pg gen model missing cache prefix by @SpectatorNan in [#4788](https://github.com/zeromicro/go-zero/pull/4788)\n- **fix**: goctl api tsgen by @wwwfeng in [#4726](https://github.com/zeromicro/go-zero/pull/4726)\n### 🧹 Chores\n- **chore(deps)**: Bump `github.com/emicklei/proto` from `1.14.0` to `1.14.1` in `/tools/goctl` by @dependabot in [#4817](https://github.com/zeromicro/go-zero/pull/4817)\n- **chore(deps)**: Bump `github.com/redis/go-redis/v9` from `9.7.3` to `9.8.0` by @dependabot in [#4821](https://github.com/zeromicro/go-zero/pull/4821)\n### 🐛 Bug Fixes\n- **Fix**: The issue of generating Swagger `@doc` \"xxx\" that fails and use the right ... by @Rankgice in [#4816](https://github.com/zeromicro/go-zero/pull/4816)\n## 🌟 New Contributors\n- @hthuz made their first contribution in [#4766](https://github.com/zeromicro/go-zero/pull/4766)\n- @dushaoshuai made their first contribution in [#4809](https://github.com/zeromicro/go-zero/pull/4809)\n- @Rankgice made their first contribution in [#4816](https://github.com/zeromicro/go-zero/pull/4816)\n- @Disdjj made their first contribution in [#4790](https://github.com/zeromicro/go-zero/pull/4790)\n- @hoshi200 made their first contribution in [#4741](https://github.com/zeromicro/go-zero/pull/4741)\n- @wwwfeng made their first contribution in [#4726](https://github.com/zeromicro/go-zero/pull/4726)\n**Full Changelog**: [Compare v1.8.2...v1.8.3](https://github.com/zeromicro/go-zero/compare/tools/goctl/v1.8.2...tools/goctl/v1.8.3)",
+      "memory_unit_text": "In the zeromicro/go-zero release goctl/v1.8.3, the goctl tool adds built-in Swagger support with custom authentication, complex structures, custom example values, custom response body format, custom business error codes, and custom generated file name. Fixes include optional form fields, corrected 'required' parameter in Swagger, array schema generation, pg gen model missing cache prefix, and goctl api tsgen. Dependencies are bumped, and new contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__tools_goctl_v1_8_4_alpha",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:tools/goctl/v1.8.4-alpha",
+      "tag_name": "tools/goctl/v1.8.4-alpha",
+      "title": "goctl/v1.8.4-alpha",
+      "time_hint": "2025-05-15",
+      "published_at": "2025-05-15T14:05:40Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/tools/goctl/v1.8.4-alpha",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: goctl/v1.8.4-alpha\nTag: tools/goctl/v1.8.4-alpha; draft: False; prerelease: False; published_at: 2025-05-15T14:05:40Z; created_at: 2025-05-15T13:59:48Z\nRelease notes:\n## What's Changed\n### goctl Features in `1.8.4-alpha`\n- **Swagger Enhancements:**\n- Bug fix: Removed example generation for `query`, `path`, and `header` request bodies, which aren't supported in API spec 2.0.\n- Feature: Added support for response and JSON request body definitions. Enabled via the `useDefinitions` keyword in the API file.\n- **API Code Generation Updates:**\n- Added `--type-group` flag for grouping types by file.\n- Introduced `group` keyword in `@server` block for type separation.\n- **API Parser Improvements:**\n- Added support for identifier values in `info` key-value pairs.\nCheck the [PR description](https://github.com/zeromicro/go-zero/pull/4849) for detailed examples and usage.\n---\n**Full Changelog**: [v1.8.3...v1.8.4-alpha](https://github.com/zeromicro/go-zero/compare/tools/goctl/v1.8.3...tools/goctl/v1.8.4-alpha)",
+      "memory_unit_text": "In the zeromicro/go-zero release goctl/v1.8.4-alpha, the goctl tool includes Swagger enhancements: removed example generation for query, path, and header request bodies; added support for response and JSON request body definitions via 'useDefinitions'. API code generation updates add '--type-group' flag and 'group' keyword in @server block. API parser improvements add support for identifier values in info key-value pairs."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__tools_goctl_v1_8_4_beta",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:tools/goctl/v1.8.4-beta",
+      "tag_name": "tools/goctl/v1.8.4-beta",
+      "title": "tools/goctl/v1.8.4-beta",
+      "time_hint": "2025-05-25",
+      "published_at": "2025-05-25T08:33:18Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/tools/goctl/v1.8.4-beta",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: tools/goctl/v1.8.4-beta\nTag: tools/goctl/v1.8.4-beta; draft: False; prerelease: False; published_at: 2025-05-25T08:33:18Z; created_at: 2025-05-25T07:07:58Z\nRelease notes:\n## Changes\n* Fixed goctl bugs.\n## 👥 New Contributors\nWe welcome our new contributor:\n* @yguilai made their first contribution in https://github.com/zeromicro/go-zero/pull/4874\n## 📋 Full Changelog\n**Full Changelog**: https://github.com/zeromicro/go-zero/compare/tools/goctl/v1.8.3...tools/goctl/v1.8.4-beta\n---\n## 🙏 Acknowledgments\nSpecial thanks to all contributors who made this release possible:\n- @kevwan\n- @dushaoshuai\n- @me-cs\n- @kesonan\n- @yguilai\n- @codeErrorSleep\n- @dependabot\nWe encourage testing this beta release and welcome feedback from the community!",
+      "memory_unit_text": "In the zeromicro/go-zero release tools/goctl/v1.8.4-beta, the goctl tool fixes bugs. New contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__v1_8_4",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.8.4",
+      "tag_name": "v1.8.4",
+      "title": "v1.8.4",
+      "time_hint": "2025-06-08",
+      "published_at": "2025-06-08T16:03:51Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/v1.8.4",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: v1.8.4\nTag: v1.8.4; draft: False; prerelease: False; published_at: 2025-06-08T16:03:51Z; created_at: 2025-06-08T15:14:38Z\nRelease notes:\n## Highlights\n- **Continuous profiling** support ([#4867](https://github.com/zeromicro/go-zero/pull/4867)).\n```yaml\nProfiling:\nServerAddr: http://<pyroscope-server>:<port>\n```\n- **Embedded File Server Enhancements**: Added support to serve files using `embed.FS`, simplifying static file serving ([#4847](https://github.com/zeromicro/go-zero/pull/4847), [#4851](https://github.com/zeromicro/go-zero/pull/4851)).\n- **Performance Optimizations**: Improved performance for hashing and slicing operations ([#4891](https://github.com/zeromicro/go-zero/pull/4891), [#4877](https://github.com/zeromicro/go-zero/pull/4877)).\n## What's Changed\n- **New Features**:\n- File server now supports `embed.FS` ([#4847](https://github.com/zeromicro/go-zero/pull/4847)).\n- Continuous profiling support ([#4867](https://github.com/zeromicro/go-zero/pull/4867)).\n- **Optimizations**:\n- Improved slicing and comparison using Go standard library functions ([#4841](https://github.com/zeromicro/go-zero/pull/4841), [#4840](https://github.com/zeromicro/go-zero/pull/4840), [#4877](https://github.com/zeromicro/go-zero/pull/4877), [#4879](https://github.com/zeromicro/go-zero/pull/4879)).\n- Time formatting standardized with the Go standard library ([#4875](https://github.com/zeromicro/go-zero/pull/4875)).\n- Hashing performance improvements ([#4891](https://github.com/zeromicro/go-zero/pull/4891)).\n## New Contributors\n- @yguilai ([#4874](https://github.com/zeromicro/go-zero/pull/4874))\n- @Caplost ([#4917](https://github.com/zeromicro/go-zero/pull/4917))\n- @smiley-yoyo ([#4907](https://github.com/zeromicro/go-zero/pull/4907))\nThank you to all our contributors!\n**Full Changelog**: https://github.com/zeromicro/go-zero/compare/v1.8.3...v1.8.4",
+      "memory_unit_text": "In the zeromicro/go-zero release v1.8.4, highlights include continuous profiling support, embedded file server enhancements with embed.FS, and performance optimizations for hashing and slicing. New features include file server support for embed.FS and continuous profiling. Optimizations improve slicing, comparison, time formatting, and hashing. New contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__tools_goctl_v1_8_4",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:tools/goctl/v1.8.4",
+      "tag_name": "tools/goctl/v1.8.4",
+      "title": "goctl/v1.8.4",
+      "time_hint": "2025-06-09",
+      "published_at": "2025-06-09T10:37:16Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/tools/goctl/v1.8.4",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: goctl/v1.8.4\nTag: tools/goctl/v1.8.4; draft: False; prerelease: False; published_at: 2025-06-09T10:37:16Z; created_at: 2025-06-09T10:08:20Z\nRelease notes:\n## Highlights\n- **goctl 1.8.4 Features & Beta**: New features and improvements in goctl, including mongo model generation with cache prefix and improved swagger consume types ([#4849](https://github.com/zeromicro/go-zero/pull/4849), [#4869](https://github.com/zeromicro/go-zero/pull/4869), [#4903](https://github.com/zeromicro/go-zero/pull/4903), [#4907](https://github.com/zeromicro/go-zero/pull/4907)).\n- **Bug Fixes & Compatibility**: Multiple bug fixes for backward compatibility, timeout settings, spelling, type handling, and more ([#4852](https://github.com/zeromicro/go-zero/pull/4852), [#4895](https://github.com/zeromicro/go-zero/pull/4895), [#4914](https://github.com/zeromicro/go-zero/pull/4914), [#4916](https://github.com/zeromicro/go-zero/pull/4916), [#4917](https://github.com/zeromicro/go-zero/pull/4917), [#4918](https://github.com/zeromicro/go-zero/pull/4918), [#4920](https://github.com/zeromicro/go-zero/pull/4920), [#4785](https://github.com/zeromicro/go-zero/pull/4785), [#4931](https://github.com/zeromicro/go-zero/pull/4931)).\n## What's Changed\n- goctl features of 1.8.4-alpha by [@kesonan](https://github.com/kesonan) in [#4849](https://github.com/zeromicro/go-zero/pull/4849)\n- goctl: v1.8.4-beta by [@kesonan](https://github.com/kesonan) in [#4890](https://github.com/zeromicro/go-zero/pull/4890)\n- fix(goctl): Fix getting swagger consume types by [@jaronnie](https://github.com/jaronnie) in [#4903](https://github.com/zeromicro/go-zero/pull/4903)\n- feat(goctl): generate mongo model with cache prefix by [@smiley-yoyo](https://github.com/smiley-yoyo) in [#4907](https://github.com/zeromicro/go-zero/pull/4907)\n## New Contributors\n- @yguilai made their first contribution in [#4874](https://github.com/zeromicro/go-zero/pull/4874)\n- @Caplost made their first contribution in [#4917](https://github.com/zeromicro/go-zero/pull/4917)\n- @smiley-yoyo made their first contribution in [#4907](https://github.com/zeromicro/go-zero/pull/4907)\n**Full Changelog**: https://github.com/zeromicro/go-zero/compare/tools/goctl/v1.8.3...tools/goctl/v1.8.4",
+      "memory_unit_text": "In the zeromicro/go-zero release goctl/v1.8.4, the goctl tool includes features from 1.8.4-alpha and beta, mongo model generation with cache prefix, and improved swagger consume types. Bug fixes address backward compatibility, timeout settings, spelling, type handling, and more. New contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__v1_8_5",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.8.5",
+      "tag_name": "v1.8.5",
+      "title": "v1.8.5",
+      "time_hint": "2025-07-12",
+      "published_at": "2025-07-12T16:21:47Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/v1.8.5",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: v1.8.5\nTag: v1.8.5; draft: False; prerelease: False; published_at: 2025-07-12T16:21:47Z; created_at: 2025-07-12T16:00:52Z\nRelease notes:\n## Features\n- **SQL Read/Write Splitting**: Introduced SQL read/write splitting for improved database performance and scalability ([#4976](https://github.com/zeromicro/go-zero/pull/4976), [#4990](https://github.com/zeromicro/go-zero/pull/4990), [#5000](https://github.com/zeromicro/go-zero/pull/5000)).\n- **Serverless Support in REST**: Added support for serverless use in REST services ([#5001](https://github.com/zeromicro/go-zero/pull/5001)).\n## Bug Fixes & Improvements\n- Fixed HTTP SSE method timeout not working when timeout is set by server ([#4932](https://github.com/zeromicro/go-zero/pull/4932))\n- Fixed timeout `0s` not working in API files ([#4932](https://github.com/zeromicro/go-zero/pull/4932))\n- Fixed panic caused by `time.Duration` type with numerical values ([#4944](https://github.com/zeromicro/go-zero/pull/4944))\n- Fixed duration type comparison in environment variable processing ([#4979](https://github.com/zeromicro/go-zero/pull/4979))\n## New Contributors\n- @wanwusangzhi made their first contribution ([#4944](https://github.com/zeromicro/go-zero/pull/4944))\n- @geekeryy made their first contribution ([#4979](https://github.com/zeromicro/go-zero/pull/4979))\n**Full Changelog**: [v1.8.4...v1.8.5](https://github.com/zeromicro/go-zero/compare/v1.8.4...v1.8.5)",
+      "memory_unit_text": "In the zeromicro/go-zero release v1.8.5, features include SQL read/write splitting and serverless support in REST. Bug fixes address HTTP SSE method timeout not working, timeout 0s not working in API files, panic caused by time.Duration type with numerical values, and duration type comparison in environment variable processing. New contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__tools_goctl_v1_8_5",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:tools/goctl/v1.8.5",
+      "tag_name": "tools/goctl/v1.8.5",
+      "title": "goctl/v1.8.5",
+      "time_hint": "2025-07-13",
+      "published_at": "2025-07-13T13:32:19Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/tools/goctl/v1.8.5",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: goctl/v1.8.5\nTag: tools/goctl/v1.8.5; draft: False; prerelease: False; published_at: 2025-07-13T13:32:19Z; created_at: 2025-07-13T03:18:51Z\nRelease notes:\n## What's Changed\n- **Bug Fix:** Fix for issue [#4943](https://github.com/zeromicro/go-zero/pull/4953) — fix goctl api swagger error (@kesonan)\n- **Bug Fix:** Fixed goctl api swagger panic with nil pointer when there is a wrong field tag in the API file ([#4936](https://github.com/zeromicro/go-zero/pull/4936))\n- **Bug Fix:** Resolved issue where `timeout: 0s` was not working in API files ([#4932](https://github.com/zeromicro/go-zero/pull/4932), @kevwan)\n- **Bug Fix:** Corrected PostgreSQL `numeric` type mapping in goctl model generation ([#4992](https://github.com/zeromicro/go-zero/pull/4992), @AnlynnLee)\n- **Enhancement:** Improved POST JSON parameter determination logic in goctl API Swagger and added unit tests ([#4997](https://github.com/zeromicro/go-zero/pull/4997), @Twilikiss)\n## New Contributors\n- @wanwusangzhi made their first contribution ([#4944](https://github.com/zeromicro/go-zero/pull/4944))\n- @geekeryy made their first contribution ([#4979](https://github.com/zeromicro/go-zero/pull/4979))\n- @Twilikiss made their first contribution ([#4997](https://github.com/zeromicro/go-zero/pull/4997))\n**Full Changelog**: [tools/goctl/v1.8.4...tools/goctl/v1.8.5](https://github.com/zeromicro/go-zero/compare/tools/goctl/v1.8.4...tools/goctl/v1.8.5)",
+      "memory_unit_text": "In the zeromicro/go-zero release goctl/v1.8.5, the goctl tool fixes goctl api swagger error, goctl api swagger panic with nil pointer, timeout 0s not working in API files, and PostgreSQL numeric type mapping in goctl model generation. An enhancement improves POST JSON parameter determination logic in goctl API Swagger. New contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__v1_9_0",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.9.0",
+      "tag_name": "v1.9.0",
+      "title": "v1.9.0",
+      "time_hint": "2025-08-17",
+      "published_at": "2025-08-17T04:02:45Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/v1.9.0",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: v1.9.0\nTag: v1.9.0; draft: False; prerelease: False; published_at: 2025-08-17T04:02:45Z; created_at: 2025-08-15T12:08:02Z\nRelease notes:\n## What's Changed\n- **feat: support masking sensitive data in logx** by [@kevwan](https://github.com/kevwan) in [#5003](https://github.com/zeromicro/go-zero/pull/5003)\n- **feat: add field tag (`-`) skip logic in `unwrapFields` in sqlx** by [@charmfocus](https://github.com/charmfocus) in [#5010](https://github.com/zeromicro/go-zero/pull/5010)\n- **feat: upgrade to mongo-driver v2, and move v1 to `zero-contrib`** by [@me-cs](https://github.com/me-cs) in [#4687](https://github.com/zeromicro/go-zero/pull/4687)\n- **feat: add generic Set with 2x performance boost and compile-time** by [@codeErrorSleep](https://github.com/codeErrorSleep) in [#4888](https://github.com/zeromicro/go-zero/pull/4888)\n- **feat: add custom middleware support with onion model in gateway** by [@DengY11](https://github.com/DengY11) in [#5035](https://github.com/zeromicro/go-zero/pull/5035)\n- **feat: redis support consumer groups** by [@jk2K](https://github.com/jk2K) in [#4912](https://github.com/zeromicro/go-zero/pull/4912)\n- **feat: ignore unknown fields in gateway request parsing** by [@guonaihong](https://github.com/guonaihong) in [#5058](https://github.com/zeromicro/go-zero/pull/5058)\n- **fix: issue with etcd key disappearing and unable to auto-re-register** by [@guonaihong](https://github.com/guonaihong) in [#4960](https://github.com/zeromicro/go-zero/pull/4960)\n- **fix: SSE timeout will affected by http.Server's WriteTimeout** by [@csbzy](https://github.com/csbzy) in [#5024](https://github.com/zeromicro/go-zero/pull/5024)\n- **fix: unmarshal problem on env vars for type env string** by [@kevwan](https://github.com/kevwan) in [#5037](https://github.com/zeromicro/go-zero/pull/5037)\n- **fix: large memory usage on detail logging post requests** by [@kevwan](https://github.com/kevwan) in [#5039](https://github.com/zeromicro/go-zero/pull/5039)\n- **fix: Resolve HTML escaping issue during JSON serialization in httpx** by [@Disdjj](https://github.com/Disdjj) in [#5032](https://github.com/zeromicro/go-zero/pull/5032)\n- **fix: resolve concurrent get may lead to empty result in ImmutableResource** by [@sunhao1296](https://github.com/sunhao1296) in [#5065](https://github.com/zeromicro/go-zero/pull/5065)\n- **optimize: logging with fields** by [@kevwan](https://github.com/kevwan) in [#5066](https://github.com/zeromicro/go-zero/pull/5066)\n## New Contributors\n- [@Twilikiss](https://github.com/Twilikiss) made their first contribution in [#4997](https://github.com/zeromicro/go-zero/pull/4997)\n- [@charmfocus](https://github.com/charmfocus) made their first contribution in [#5010](https://github.com/zeromicro/go-zero/pull/5010)\n- [@csbzy](https://github.com/csbzy) made their first contribution in [#5024](https://github.com/zeromicro/go-zero/pull/5024)\n- [@DengY11](https://github.com/DengY11) made their first contribution in [#5035](https://github.com/zeromicro/go-zero/pull/5035)\n- [@queryfast](https://github.com/queryfast) made their first contribution in [#5051](https://github.com/zeromicro/go-zero/pull/5051)\n- [@sunhao1296](https://github.com/sunhao1296) made their first contribution in [#5065](https://github.com/zeromicro/go-zero/pull/5065)\n- [@ipinak](https://github.com/ipinak) made their first contribution in [#5029](https://github.com/zeromicro/go-zero/pull/5029)\n**Detailed Release Notes**: https://go-zero.dev/en/reference/releases/v1.9.0\n**Full Changelog**: https://github.com/zeromicro/go-zero/compare/v1.8.5...v1.9.0",
+      "memory_unit_text": "In the zeromicro/go-zero release v1.9.0, features include masking sensitive data in logx, field tag skip logic in sqlx, upgrade to mongo-driver v2, generic Set with performance boost, custom middleware support with onion model in gateway, Redis consumer groups support, and ignoring unknown fields in gateway request parsing. Fixes address etcd key disappearing, SSE timeout affected by http.Server's WriteTimeout, unmarshal problem on env vars, large memory usage on detail logging post requests, HTML escaping issue during JSON serialization in httpx, and concurrent get leading to empty result in ImmutableResource. Logging with fields is optimized. New contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__tools_goctl_v1_9_0_alpha",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:tools/goctl/v1.9.0-alpha",
+      "tag_name": "tools/goctl/v1.9.0-alpha",
+      "title": "goctl/v1.9.0-alpha",
+      "time_hint": "2025-08-17",
+      "published_at": "2025-08-17T15:20:40Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/tools/goctl/v1.9.0-alpha",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: goctl/v1.9.0-alpha\nTag: tools/goctl/v1.9.0-alpha; draft: False; prerelease: False; published_at: 2025-08-17T15:20:40Z; created_at: 2025-08-17T15:04:32Z\nRelease notes:\n## What's Changed\n* fear: add uuid:varchar to p2m by @hoshi200 in https://github.com/zeromicro/go-zero/pull/5022\n* feat: support sse in api files by @kevwan in https://github.com/zeromicro/go-zero/pull/5074\n* feat: supported sse generation by @kesonan in https://github.com/zeromicro/go-zero/pull/5082\n## New Contributors\n* @charmfocus made their first contribution in https://github.com/zeromicro/go-zero/pull/5010\n* @csbzy made their first contribution in https://github.com/zeromicro/go-zero/pull/5024\n* @DengY11 made their first contribution in https://github.com/zeromicro/go-zero/pull/5035\n* @queryfast made their first contribution in https://github.com/zeromicro/go-zero/pull/5051\n* @sunhao1296 made their first contribution in https://github.com/zeromicro/go-zero/pull/5065\n* @ipinak made their first contribution in https://github.com/zeromicro/go-zero/pull/5029\n**Full Changelog**: https://github.com/zeromicro/go-zero/compare/tools/goctl/v1.8.5...tools/goctl/v1.9.0-alpha",
+      "memory_unit_text": "In the zeromicro/go-zero release goctl/v1.9.0-alpha, the goctl tool adds uuid:varchar to p2m, support for SSE in api files, and supported SSE generation. New contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__tools_goctl_v1_9_0",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:tools/goctl/v1.9.0",
+      "tag_name": "tools/goctl/v1.9.0",
+      "title": "goctl/v1.9.0",
+      "time_hint": "2025-08-31",
+      "published_at": "2025-08-31T15:37:20Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/tools/goctl/v1.9.0",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: goctl/v1.9.0\nTag: tools/goctl/v1.9.0; draft: False; prerelease: False; published_at: 2025-08-31T15:37:20Z; created_at: 2025-08-31T15:37:00Z\nRelease notes:\n## What's Changed\n* fear: add uuid:varchar to p2m by @hoshi200 in https://github.com/zeromicro/go-zero/pull/5022\n* feat: support sse in api files by @kevwan in https://github.com/zeromicro/go-zero/pull/5074\n* feat: supported sse generation by @kesonan in https://github.com/zeromicro/go-zero/pull/5082\n* feat: Support projectPkg template variables in config, handler, logic, main, and svc template files by @geekeryy in https://github.com/zeromicro/go-zero/pull/4939\n* feat: support goctl --module to set go module by @kevwan in https://github.com/zeromicro/go-zero/pull/5135\n## New Contributors\n* @charmfocus made their first contribution in https://github.com/zeromicro/go-zero/pull/5010\n* @csbzy made their first contribution in https://github.com/zeromicro/go-zero/pull/5024\n* @DengY11 made their first contribution in https://github.com/zeromicro/go-zero/pull/5035\n* @queryfast made their first contribution in https://github.com/zeromicro/go-zero/pull/5051\n* @sunhao1296 made their first contribution in https://github.com/zeromicro/go-zero/pull/5065\n* @ipinak made their first contribution in https://github.com/zeromicro/go-zero/pull/5029\n**Full Changelog**: https://github.com/zeromicro/go-zero/compare/tools/goctl/v1.8.5...tools/goctl/v1.9.0",
+      "memory_unit_text": "In the zeromicro/go-zero release goctl/v1.9.0, the goctl tool includes features from v1.9.0-alpha plus support for projectPkg template variables in config, handler, logic, main, and svc template files, and support for goctl --module to set go module. New contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__v1_9_1",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.9.1",
+      "tag_name": "v1.9.1",
+      "title": "v1.9.1",
+      "time_hint": "2025-10-02",
+      "published_at": "2025-10-02T14:34:23Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/v1.9.1",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: v1.9.1\nTag: v1.9.1; draft: False; prerelease: False; published_at: 2025-10-02T14:34:23Z; created_at: 2025-10-02T14:11:18Z\nRelease notes:\n## Highlights\n- Logging enhancements:\n- Customize log key names to fit your log schema and downstream tooling.\n- Prefer `json.Marshaler` over `fmt.Stringer` when emitting JSON logs, improving correctness and structure.\n- REST/SSE stability and operability:\n- Fix SSE handler blocking and reduce noisy logs by downgrading `SetWriteDeadline` errors to debug.\n- Add `SetSSESlowThreshold` to help detect slow clients and long writes.\n- Diagnostics and performance:\n- Improved mapreduce panic stacktraces for faster root-cause analysis.\n- Optimized machine performance data reading to reduce runtime overhead.\n## Detailed Changes\n### Logging\n- Support customizing log keys so you can align emitted fields (e.g., time, level, caller, message) to your organization’s conventions or ingestion pipeline requirements.\nPR: feat: support customize of log keys by @WqyJh ([@5103](https://github.com/zeromicro/go-zero/pull/5103))\n- Prefer `json.Marshaler` over `fmt.Stringer` when generating JSON logs, ensuring structured fields are serialized using their explicit JSON representations rather than ad-hoc strings.\nPR: feat: prefer json.Marshaler over fmt.Stringer for JSON log output by @WqyJh ([@5117](https://github.com/zeromicro/go-zero/pull/5117))\n### REST/SSE\n- Fix SSE handler blocking behavior that could stall responses under certain conditions.\nPR: fix: SSE handler blocking by @wuqinqiang ([@5181](https://github.com/zeromicro/go-zero/pull/5181))\n- Reduce log noise for transient I/O conditions by downgrading `SetWriteDeadline` errors to debug level in REST SSE.\nPR: fix(rest): change SSE SetWriteDeadline error log to debug level by @wuqinqiang ([@5162](https://github.com/zeromicro/go-zero/pull/5162))\n- Add `sseSlowThreshold` to surface slow SSE writes, enabling better observability about backpressure or slow clients.\nPR: feat(handler): add sseSlowThreshold by @wuqinqiang ([@5196](https://github.com/zeromicro/go-zero/pull/5196))\n### MapReduce\n- Improve panic stacktrace reporting in mapreduce, making error contexts clearer and debugging faster.\nPR: optimize: mapreduce panic stacktrace by @kevwan ([@5168](https://github.com/zeromicro/go-zero/pull/5168))\n### Performance and Runtime\n- Optimize machine performance data reading to lower collection overhead and reduce runtime impact.\nPR: opt: optimization of machine performance data reading by @wanwusangzhi ([@5174](https://github.com/zeromicro/go-zero/pull/5174))\n### Bug Fixes\n- Fix gRPC → HTTP mapping issue in gateway.\nPR: fix: issue-5110 by @guonaihong ([@5113](https://github.com/zeromicro/go-zero/pull/5113))\n## Migration and Usage Notes\n- Logging key customization:\n- If you rely on specific field names in log pipelines, consider setting the new custom key configuration to preserve schema consistency.\n- JSON log output:\n- If your types implement `json.Marshaler`, expect more accurate JSON in logs. If you previously depended on stringified representations, review downstream consumers to ensure compatibility.\n- SSE tuning:\n- Consider using `SetSSESlowThreshold` to flag slow clients or network conditions in environments sensitive to latency.\n- The `SetWriteDeadline` log level change reduces noise; adjust logger settings if you still want to surface these events.\n## Acknowledgements\n- Thanks to all contributors in this release: @WqyJh, @guonaihong, @wanwusangzhi, @kevwan, @wuqinqiang, and first-time contributor @Copilot. Your work improves performance, reliability, and developer ergonomics for everyone using go-zero.\n## Full Changelog\n- [v1.9.0...v1.9.1](https://github.com/zeromicro/go-zero/compare/v1.9.0...v1.9.1)",
+      "memory_unit_text": "In the zeromicro/go-zero release v1.9.1, highlights include logging enhancements: customizable log key names and preferring json.Marshaler over fmt.Stringer for JSON logs. REST/SSE stability improvements: fix SSE handler blocking, reduce log noise by downgrading SetWriteDeadline errors to debug, and add SetSSESlowThreshold. MapReduce panic stacktraces are improved. Machine performance data reading is optimized. A bug fix addresses gRPC to HTTP mapping issue in gateway. New contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__tools_goctl_v1_9_1",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:tools/goctl/v1.9.1",
+      "tag_name": "tools/goctl/v1.9.1",
+      "title": "goctl/v1.9.1",
+      "time_hint": "2025-10-02",
+      "published_at": "2025-10-02T14:53:48Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/tools/goctl/v1.9.1",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: goctl/v1.9.1\nTag: tools/goctl/v1.9.1; draft: False; prerelease: False; published_at: 2025-10-02T14:53:48Z; created_at: 2025-10-02T14:48:57Z\nRelease notes:\n## Highlights\n- Code generation ergonomics:\n- Add code generation headers to safe-to-edit files for clearer ownership and customization boundaries.\n- Fix array type generation issues to ensure accurate code output.\n- API developer experience:\n- Add complete test scaffolding for API projects via the `--test` flag.\n- Swagger/OpenAPI correctness:\n- Correct `$ref` placement in array definitions when `useDefinitions` is enabled.\n- Stability and optimizations:\n- Fix SSE handler blocking.\n- Optimize slice lookups and `Unquote` utility function performance.\n## Detailed Changes\n### Code Generation\n- Add code generation headers in safe-to-edit files to clarify which files are intended for user modifications while keeping generated segments intact.\nPR: feat: add code generation headers in safe to edit files by @kevwan ([@5136](https://github.com/zeromicro/go-zero/pull/5136))\n- Fix array type generation error to produce correct types in generated code.\nPR: fix array type generation error by @kesonan ([@5142](https://github.com/zeromicro/go-zero/pull/5142))\n### API/CLI\n- Add complete test scaffolding support for API projects using the `--test` flag, enabling quicker setup of testable services.\nPR: Add complete test scaffolding support with --test flag for API projects by @Copilot ([@5176](https://github.com/zeromicro/go-zero/pull/5176))\n### Swagger/OpenAPI\n- Fix `$ref` placement in array definitions when `useDefinitions` is enabled to align with the OpenAPI/Swagger schema expectations.\nPR: fix(goctl/swagger): correct $ref placement in array definitions when useDefinitions is enabled by @Copilot ([@5199](https://github.com/zeromicro/go-zero/pull/5199))\n### Stability\n- Fix SSE handler blocking behavior that could stall event delivery under certain conditions.\nPR: fix: SSE handler blocking by @wuqinqiang ([@5181](https://github.com/zeromicro/go-zero/pull/5181))\n### Performance and Utilities\n- Optimize slice find routines and the `Unquote` function for better runtime efficiency.\nPR: update: optimize slice find and Unquote func by @me-cs ([@5108](https://github.com/zeromicro/go-zero/pull/5108))\n## Upgrade Notes\n- Swagger regeneration: If you rely on `useDefinitions`, regenerate your Swagger/OpenAPI specs to pick up the corrected `$ref` placement.\n- Codegen headers: Newly generated safe-to-edit files will include headers clarifying edit expectations; no action required, but helpful for code review and maintenance.\n## Acknowledgements\n- Thanks to all contributors in this release: @kevwan, @kesonan, @me-cs, @wuqinqiang, and first-time contributor @Copilot. Your improvements enhance correctness, stability, and developer productivity for goctl users.\n## Full Changelog\n- [tools/goctl v1.9.0 → v1.9.1](https://github.com/zeromicro/go-zero/compare/tools/goctl/v1.9.0...tools/goctl/v1.9.1)",
+      "memory_unit_text": "In the zeromicro/go-zero release goctl/v1.9.1, highlights include code generation ergonomics: adding code generation headers to safe-to-edit files and fixing array type generation. API developer experience: adding complete test scaffolding via --test flag. Swagger/OpenAPI correctness: correcting $ref placement in array definitions when useDefinitions is enabled. Stability: fixing SSE handler blocking. Performance: optimizing slice lookups and Unquote function. New contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__v1_9_2",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.9.2",
+      "tag_name": "v1.9.2",
+      "title": "v1.9.2",
+      "time_hint": "2025-10-11",
+      "published_at": "2025-10-11T08:36:25Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/v1.9.2",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: v1.9.2\nTag: v1.9.2; draft: False; prerelease: False; published_at: 2025-10-11T08:36:25Z; created_at: 2025-10-11T08:20:23Z\nRelease notes:\n### Overview\nThis release is solely focused on addressing a critical problem related to the go-redis dependency. Previous versions of go-redis were retracted, which could cause build failures, dependency resolution issues, or unexpected behavior for downstream projects relying on stable releases.\n### What's Fixed\n- **go-redis Version Issue**: The only change in this release is updating go-redis to circumvent the retracted versions. This ensures that consumers of this library can continue to build and use it reliably without encountering problems from retracted dependencies.\n- Chore: update go-redis for the retracted versions ([#5235](https://github.com/zeromicro/go-zero/pull/5235)) by [@kevwan](https://github.com/kevwan)\n### Impact\n- **No Functional Changes**: There are no new features, bug fixes, or breaking changes in this release. Functionality remains the same as the previous version.\n- **Dependency Stability**: Users should upgrade to this release if they are experiencing issues related to go-redis retractions or want to ensure their dependency tree remains stable.\n### New Contributors\nWhile this release only addresses the go-redis issue, we'd like to acknowledge recent first-time contributors to the project:\n- [@rizkyikiw42](https://github.com/rizkyikiw42) ([#5210](https://github.com/zeromicro/go-zero/pull/5210))\n- [@ZH1995](https://github.com/ZH1995) ([#5233](https://github.com/zeromicro/go-zero/pull/5233))\n### Changelog\nFor a full list of changes between v1.9.1 and v1.9.2, see the [changelog](https://github.com/zeromicro/go-zero/compare/v1.9.1...v1.9.2).\n---\n**Upgrade Recommendation:**\nIf you depend on redis, it is strongly recommended to upgrade to this release to avoid issues caused by the retracted versions.",
+      "memory_unit_text": "In the zeromicro/go-zero release v1.9.2, the release is solely focused on addressing a critical problem related to the go-redis dependency. The only change is updating go-redis to circumvent retracted versions, ensuring build stability. No functional changes are included. New contributors are acknowledged."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__tools_goctl_v1_9_2",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:tools/goctl/v1.9.2",
+      "tag_name": "tools/goctl/v1.9.2",
+      "title": "goctl/v1.9.2",
+      "time_hint": "2025-10-12",
+      "published_at": "2025-10-12T05:33:52Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/tools/goctl/v1.9.2",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: goctl/v1.9.2\nTag: tools/goctl/v1.9.2; draft: False; prerelease: False; published_at: 2025-10-12T05:33:52Z; created_at: 2025-10-12T03:55:57Z\nRelease notes:\n## What's Changed\n- **Swagger Improvements:**\n- Fix swagger path generation: remove trailing slash for root routes with prefix [#5212](https://github.com/zeromicro/go-zero/pull/5212) (@Copilot)\n- Fix swagger generation: info block and server tags not included [#5215](https://github.com/zeromicro/go-zero/pull/5215) (@Copilot)\n- Restore API summaries in swagger generation [#5237](https://github.com/zeromicro/go-zero/pull/5237) (@kevwan)\n- **Other Fixes:**\n- Fix: issue #5154, not using SSE template files [#5220](https://github.com/zeromicro/go-zero/pull/5220) (@kevwan)\n## New Contributors\n- @rizkyikiw42 made their first contribution in [#5210](https://github.com/zeromicro/go-zero/pull/5210)\n- @ZH1995 made their first contribution in [#5233](https://github.com/zeromicro/go-zero/pull/5233)\n---\n**Full Changelog:** [tools/goctl/v1.9.1...tools/goctl/v1.9.2](https://github.com/zeromicro/go-zero/compare/tools/goctl/v1.9.1...tools/goctl/v1.9.2)",
+      "memory_unit_text": "In the zeromicro/go-zero release goctl/v1.9.2, the goctl tool includes Swagger improvements: fix swagger path generation for root routes with prefix, fix swagger generation info block and server tags not included, and restore API summaries in swagger generation. Another fix addresses not using SSE template files. New contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__v1_9_3",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.9.3",
+      "tag_name": "v1.9.3",
+      "title": "v1.9.3",
+      "time_hint": "2025-11-16",
+      "published_at": "2025-11-16T12:44:40Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/v1.9.3",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: v1.9.3\nTag: v1.9.3; draft: False; prerelease: False; published_at: 2025-11-16T12:44:40Z; created_at: 2025-11-16T12:36:49Z\nRelease notes:\nWe are excited to announce the release of go-zero v1.9.3! This release brings several important enhancements and bug fixes that improve the framework's reliability, performance, and alignment with industry best practices.\n## 🎉 Highlights\n- **Consistent Hash Load Balancing**: New gRPC load balancer for session affinity\n- **gRPC Best Practices**: Changed NonBlock default to align with gRPC recommendations\n- **Improved Distributed Tracing**: Fixed gateway trace header propagation\n- **ORM Improvements**: Fixed zero value scanning for pointer destinations\n---\n## ✨ New Features\n### Consistent Hash Balancer Support (#5246)\n**Contributor**: @zhoushuguang\nA new consistent hash load balancer has been added to the zRPC package, enabling session affinity for gRPC services.\n**Key Features**:\n- Hash-based request routing to maintain session affinity\n- Distributes requests based on a hash key from context\n- Minimal request redistribution on node changes\n- Built on go-zero's existing `core/hash/ConsistentHash` implementation\n**Usage Example**:\n```go\n// Set hash key in context\nctx := zrpc.SetHashKey(ctx, \"user_123\")\n// Requests with the same key will be routed to the same backend\nresp, err := client.SomeMethod(ctx, req)\n```\n**Configuration**:\n```go\nc := zrpc.RpcClientConf{\nEndpoints: []string{\"localhost:8080\", \"localhost:8081\"},\nBalancerName: \"consistent_hash\",  // Use consistent hash balancer\n}\n```\n**Benefits**:\n- Enables stateful service interactions\n- Improves cache hit rates on backend services\n- Reduces session data synchronization overhead\n- Maintains load distribution while supporting affinity\n---\n## 🐛 Bug Fixes\n### Fixed Gateway Trace Headers (#5256, #5248)\n**Contributor**: @kevwan\nFixed an issue where OpenTelemetry trace propagation headers were not being properly forwarded through the gateway to upstream gRPC services, breaking distributed tracing.\n**Problem**:\nThe gateway was not forwarding critical W3C Trace Context headers (`traceparent`, `tracestate`, `baggage`) to gRPC metadata, causing trace context to be lost at the gateway boundary.\n**Solution**:\n- Enhanced `ProcessHeaders` function to forward trace propagation headers\n- Headers are now properly converted to lowercase per gRPC metadata conventions\n- Maintains distributed tracing across HTTP → gRPC boundaries\n**Impact**:\n- End-to-end tracing now works correctly through the gateway\n- Improved observability for microservice architectures\n- Better debugging and performance analysis capabilities\n**Technical Details**:\n```go\n// Trace headers now properly forwarded\nvar traceHeaders = map[string]bool{\n\"traceparent\": true,  // W3C Trace Context\n\"tracestate\":  true,  // Additional trace state\n\"baggage\":     true,  // W3C Baggage propagation\n}\n```\n---\n### Fixed Multiple Trace Initialization (#5244)\n**Contributor**: @kevwan\n**Problem**:\nWhen running multiple services (e.g., REST + RPC) in the same process, the trace agent could be initialized multiple times, potentially causing resource leaks or unexpected behavior.\n**Solution**:\n- Used `sync.Once` to ensure trace agent is initialized only once\n- Aligned with similar patterns used in `prometheus.StartAgent` and `logx.SetUp`\n- Added `sync.OnceFunc` for shutdown to prevent double cleanup\n**Code Changes**:\n```go\nvar (\nonce           sync.Once\nshutdownOnceFn = sync.OnceFunc(func() {\nif tp != nil {\n_ = tp.Shutdown(context.Background())\n}\n})\n)\nfunc StartAgent(c Config) {\nif c.Disabled {\nreturn\n}\nonce.Do(func() {\nif err := startAgent(c); err != nil {\nlogx.Error(err)\n}\n})\n}\n```\n**Benefits**:\n- Prevents resource conflicts in multi-server processes\n- Ensures single global tracer provider instance\n- Safer concurrent initialization\n- Proper cleanup on shutdown\n---\n### Fixed ORM Zero Value Scanning for Pointer Destinations (#5270)\n**Contributor**: @lerity-yao (first contribu...",
+      "memory_unit_text": "In the zeromicro/go-zero release v1.9.3, highlights include consistent hash load balancing for gRPC, changing NonBlock default to align with gRPC best practices, improved distributed tracing by fixing gateway trace header propagation, and ORM improvements fixing zero value scanning for pointer destinations. New contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__v1_9_4",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.9.4",
+      "tag_name": "v1.9.4",
+      "title": "v1.9.4",
+      "time_hint": "2025-12-24",
+      "published_at": "2025-12-24T11:10:18Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/v1.9.4",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: v1.9.4\nTag: v1.9.4; draft: False; prerelease: False; published_at: 2025-12-24T11:10:18Z; created_at: 2025-12-23T14:45:33Z\nRelease notes:\nWe're excited to announce go-zero v1.9.4! This release includes important improvements, performance optimizations, and new features to enhance your microservices development experience.\n## New Features\n- **Kubernetes EndpointSlice Support**: Migrated zrpc kube resolver from deprecated Endpoints API to EndpointSlice API for improved scalability and performance in Kubernetes environments (#4987)\n- **Redis GETEX Command**: Added support for Redis GETEX command, enabling atomic get-and-expire operations (#5323)\n## Improvements\n- **Logging Improvements**:\n- Fixed missing color for `levelSevere` in log output formatting (#5281)\n- Resolved test log timing and scheduling issues (#5305)\n- **Timing Wheel**: Added missing `Wait()` call and improved code clarity in timing wheel implementation (#5315)\n- **Service Discovery**: Added retry cooldown mechanism in etcd discovery to prevent CPU/disk exhaustion during authentication errors (#5347)\n- **Configuration Center**: Fixed incorrect value notifications in configuration center updates (#5348)\n- **RPC Metrics**: Corrected slow threshold priority handling in zrpc stat interceptor (#5310)\n## Performance Optimizations\n- Optimized `getFullName` function in configuration module for better efficiency (#5328)\n- Improved bool parsing performance by using `strings.EqualFold` in mapping module (#5324)\n## New Contributors\nWelcome to our new contributors!\n- @YunFy26 made their first contribution in #5281\n- @mmfiRan made their first contribution in #5323\n## Full Changelog\nFor a complete list of changes, see: https://github.com/zeromicro/go-zero/compare/v1.9.3...v1.9.4",
+      "memory_unit_text": "In the zeromicro/go-zero release v1.9.4, new features include Kubernetes EndpointSlice support in zrpc kube resolver and Redis GETEX command support. Improvements include logging fixes, timing wheel improvements, retry cooldown in etcd discovery, configuration center fix, and RPC metrics correction. Performance optimizations target getFullName and bool parsing. New contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__v1_10_0",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.10.0",
+      "tag_name": "v1.10.0",
+      "title": "v1.10.0",
+      "time_hint": "2026-02-15",
+      "published_at": "2026-02-15T08:52:30Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/v1.10.0",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: v1.10.0\nTag: v1.10.0; draft: False; prerelease: False; published_at: 2026-02-15T08:52:30Z; created_at: 2026-02-12T14:42:08Z\nRelease notes:\n## 🎉 Highlights\nThis release brings Go 1.23 support, MCP SDK migration, and several important bug fixes including race condition resolutions.\n## ✨ New Features\n- **Go 1.23 Support**: Upgraded minimum Go version to 1.23 ([#5359](https://github.com/zeromicro/go-zero/pull/5359))\n- **MCP Framework**: Migrated to official go-sdk with simplified API ([#5362](https://github.com/zeromicro/go-zero/pull/5362))\n- **Gateway Enhancement**: Exported `WithDialer` option for custom gRPC client configuration ([#5406](https://github.com/zeromicro/go-zero/pull/5406))\n## 🐛 Bug Fixes\n- **Circuit Breaker**: Fixed context cancellation incorrectly triggering breaker in httpc ([#5360](https://github.com/zeromicro/go-zero/pull/5360))\n- **Service Discovery**: Resolved data race in service discovery map access ([#5408](https://github.com/zeromicro/go-zero/pull/5408))\n- **Configuration**: Fixed support for equal signs in property values ([#5392](https://github.com/zeromicro/go-zero/pull/5392))\n- **Configuration**: Removed redundant validation ([#5372](https://github.com/zeromicro/go-zero/pull/5372))\n## 🔧 Improvements\n- **MCP Routes**: Refactored routes and hardened AddTool implementation ([#5375](https://github.com/zeromicro/go-zero/pull/5375))\n- **Testing**: Added comprehensive validation tests for Load function ([#5388](https://github.com/zeromicro/go-zero/pull/5388))\n## 🗑️ Deprecations\n- **Jaeger Exporter**: Removed due to official deprecation ([#5361](https://github.com/zeromicro/go-zero/pull/5361))\n## 📦 Dependencies\n- Bumped `go.mongodb.org/mongo-driver/v2` from 2.4.1 to 2.5.0 ([#5385](https://github.com/zeromicro/go-zero/pull/5385), [#5393](https://github.com/zeromicro/go-zero/pull/5393))\n- Bumped `github.com/alicebob/miniredis/v2` from 2.35.0 to 2.36.1 ([#5381](https://github.com/zeromicro/go-zero/pull/5381), [#5386](https://github.com/zeromicro/go-zero/pull/5386))\n- Bumped `github.com/redis/go-redis/v9` from 9.17.2 to 9.17.3 ([#5390](https://github.com/zeromicro/go-zero/pull/5390))\n- Bumped `github.com/modelcontextprotocol/go-sdk` from 1.2.0 to 1.3.0 ([#5413](https://github.com/zeromicro/go-zero/pull/5413))\n## 👥 New Contributors\n- @mk0walsk made their first contribution in [#5375](https://github.com/zeromicro/go-zero/pull/5375)\n- @Bension made their first contribution in [#5372](https://github.com/zeromicro/go-zero/pull/5372)\n**Full Changelog**: https://github.com/zeromicro/go-zero/compare/v1.9.4...v1.10.0",
+      "memory_unit_text": "In the zeromicro/go-zero release v1.10.0, highlights include Go 1.23 support, MCP SDK migration to official go-sdk, and gateway enhancement exporting WithDialer option. Bug fixes address circuit breaker context cancellation, data race in service discovery, configuration support for equal signs in property values, and redundant validation removal. Improvements include MCP routes refactoring and testing. Jaeger exporter is removed. Dependencies are updated, and new contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__tools_goctl_v1_10_0",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:tools/goctl/v1.10.0",
+      "tag_name": "tools/goctl/v1.10.0",
+      "title": "goctl/v1.10.0",
+      "time_hint": "2026-02-15",
+      "published_at": "2026-02-15T12:27:02Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/tools/goctl/v1.10.0",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: goctl/v1.10.0\nTag: tools/goctl/v1.10.0; draft: False; prerelease: False; published_at: 2026-02-15T12:27:02Z; created_at: 2026-02-15T12:25:43Z\nRelease notes:\n## 🎉 Highlights\nThis goctl release brings enhanced Swagger support, improved Docker generation, and better multi-proto file handling.\n## ✨ New Features\n- **Proto Package Control**: Added cmdline argument to control package name generation from proto filename ([#5387](https://github.com/zeromicro/go-zero/pull/5387))\n- **Multi-Proto Support**: RPC service now uses `proto.Package.Name` to support multiple proto files ([#5378](https://github.com/zeromicro/go-zero/pull/5378))\n## 🐛 Bug Fixes\n- **Swagger Generation**: Fixed support for PUT, PATCH, DELETE methods with request body definitions ([#5239](https://github.com/zeromicro/go-zero/pull/5239))\n- **Docker Generation**: Ensured Dockerfile includes etc directory and correct CMD based on config ([#4343](https://github.com/zeromicro/go-zero/pull/4343))\n## 🧪 Testing\n- Added comprehensive unit tests for goctl docker command ([#5241](https://github.com/zeromicro/go-zero/pull/5241))\n## 📦 Dependencies\n- Bumped `github.com/spf13/cobra` from 1.10.1 to 1.10.2 ([#5312](https://github.com/zeromicro/go-zero/pull/5312))\n- Bumped `github.com/emicklei/proto` from 1.14.2 to 1.14.3 ([#5403](https://github.com/zeromicro/go-zero/pull/5403))\n## 👥 New Contributors\n- @JackGod001 made their first contribution in [#4343](https://github.com/zeromicro/go-zero/pull/4343)\n- @stemlaud made their first contribution in [#5245](https://github.com/zeromicro/go-zero/pull/5245)\n- @gfischer7 made their first contribution in [#5254](https://github.com/zeromicro/go-zero/pull/5254)\n- @lerity-yao made their first contribution in [#5270](https://github.com/zeromicro/go-zero/pull/5270)\n- @YunFy26 made their first contribution in [#5281](https://github.com/zeromicro/go-zero/pull/5281)\n- @mmfiRan made their first contribution in [#5323](https://github.com/zeromicro/go-zero/pull/5323)\n- @mk0walsk made their first contribution in [#5375](https://github.com/zeromicro/go-zero/pull/5375)\n- @Bension made their first contribution in [#5372](https://github.com/zeromicro/go-zero/pull/5372)\n**Full Changelog**: https://github.com/zeromicro/go-zero/compare/tools/goctl/v1.9.2...tools/goctl/v1.10.0",
+      "memory_unit_text": "In the zeromicro/go-zero release goctl/v1.10.0, the goctl tool adds proto package control via cmdline argument, multi-proto support using proto.Package.Name, Swagger generation fixes for PUT/PATCH/DELETE methods with request body, Docker generation ensuring etc directory and correct CMD, and comprehensive unit tests for docker command. Dependencies are updated, and new contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__v1_10_1",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.10.1",
+      "tag_name": "v1.10.1",
+      "title": "v1.10.1",
+      "time_hint": "2026-03-28",
+      "published_at": "2026-03-28T14:54:16Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/v1.10.1",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: v1.10.1\nTag: v1.10.1; draft: False; prerelease: False; published_at: 2026-03-28T14:54:16Z; created_at: 2026-03-28T14:52:39Z\nRelease notes:\n## 🎉 Highlights\nThis patch release adds JSON5 configuration support, generic Redis command execution via `Do`/`DoCtx`, upgrades Go to 1.24, and includes critical security fixes in `core/codec`.\n## ✨ New Features\n- **core/conf**: Add JSON5 configuration support ([#5433](https://github.com/zeromicro/go-zero/pull/5433))\n- **core/stores/redis**: Add `Do`/`DoCtx` for generic command execution ([#5442](https://github.com/zeromicro/go-zero/pull/5442))\n## 🐛 Bug Fixes\n- **rest/httpc**: Reject request body for HEAD method in `buildRequest` ([#5457](https://github.com/zeromicro/go-zero/pull/5457))\n- **core/codec**: Critical security fixes ([#5479](https://github.com/zeromicro/go-zero/pull/5479))\n## 🔧 Improvements\n- **core**: Replace `TakeOne` usage with `cmp.Or` ([#5461](https://github.com/zeromicro/go-zero/pull/5461))\n- **core/stringx**: Replace manual char filter with `strings.Map` ([#5453](https://github.com/zeromicro/go-zero/pull/5453))\n- **core/stores/redis**: Reorder `Eval`/`EvalCtx` after `Do`/`DoCtx` for consistent method ordering ([#5502](https://github.com/zeromicro/go-zero/pull/5502))\n- **core/mathx**: Add godoc comment to `Numerical` type constraint ([#5470](https://github.com/zeromicro/go-zero/pull/5470))\n- Upgrade Go version to 1.24 and update dependencies ([#5499](https://github.com/zeromicro/go-zero/pull/5499))\n## 🧪 Testing\n- Add missing edge case tests for `CalcEntropy` and string utilities ([#5471](https://github.com/zeromicro/go-zero/pull/5471))\n- Add unit tests for `Hash`, `Hash` determinism, and `Md5Hex` edge cases ([#5469](https://github.com/zeromicro/go-zero/pull/5469))\n## 📦 Dependencies\n- Bumped `github.com/grafana/pyroscope-go` from 1.2.7 to 1.2.8 ([#5513](https://github.com/zeromicro/go-zero/pull/5513))\n- Bumped `github.com/pelletier/go-toml/v2` from 2.2.4 to 2.3.0 ([#5512](https://github.com/zeromicro/go-zero/pull/5512))\n- Bumped `github.com/alicebob/miniredis/v2` from 2.36.1 to 2.37.0 ([#5444](https://github.com/zeromicro/go-zero/pull/5444))\n- Bumped `github.com/modelcontextprotocol/go-sdk` from 1.3.0 to 1.3.1 ([#5435](https://github.com/zeromicro/go-zero/pull/5435))\n- Bumped `github.com/redis/go-redis/v9` from 9.17.3 to 9.18.0 ([#5432](https://github.com/zeromicro/go-zero/pull/5432))\n## 👥 New Contributors\n- @1911860538 made their first contribution in [#5453](https://github.com/zeromicro/go-zero/pull/5453)\n- @amshithnair made their first contribution in [#5469](https://github.com/zeromicro/go-zero/pull/5469)\n- @mmfiRan made their first contribution in [#5442](https://github.com/zeromicro/go-zero/pull/5442)\n**Full Changelog**: https://github.com/zeromicro/go-zero/compare/v1.10.0...v1.10.1",
+      "memory_unit_text": "In the zeromicro/go-zero release v1.10.1, highlights include JSON5 configuration support, generic Redis command execution via Do/DoCtx, Go 1.24 upgrade, and critical security fixes in core/codec. Bug fixes include rejecting request body for HEAD method in httpc. Improvements replace TakeOne with cmp.Or, replace manual char filter with strings.Map, reorder Eval/EvalCtx, add godoc comment, and upgrade Go version. Testing adds edge case tests. Dependencies are updated, and new contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__tools_goctl_v1_10_1",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:tools/goctl/v1.10.1",
+      "tag_name": "tools/goctl/v1.10.1",
+      "title": "goctl/v1.10.1",
+      "time_hint": "2026-03-28",
+      "published_at": "2026-03-28T15:03:09Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/tools/goctl/v1.10.1",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: goctl/v1.10.1\nTag: tools/goctl/v1.10.1; draft: False; prerelease: False; published_at: 2026-03-28T15:03:09Z; created_at: 2026-03-28T15:02:26Z\nRelease notes:\n## 🎉 Highlights\nThis patch release adds a `hasField` method for model generation, supports external proto imports with cross-package types in RPC generation, and fixes several bugs.\n## ✨ New Features\n- **goctl/model**: Add `hasField` method for model generation ([#5484](https://github.com/zeromicro/go-zero/pull/5484))\n- **goctl/rpc**: Support external proto imports with cross-package type resolution ([#5472](https://github.com/zeromicro/go-zero/pull/5472))\n## 🐛 Bug Fixes\n- **goctl/swagger**: Add `example` field to path/form/header parameters ([#5497](https://github.com/zeromicro/go-zero/pull/5497))\n- **goctl**: Fix per-service type alias filtering ([#5482](https://github.com/zeromicro/go-zero/pull/5482))\n- **goctl**: Fix file copy permission missed ([#5475](https://github.com/zeromicro/go-zero/pull/5475))\n## 🧪 Testing\n- Add regression test for per-service type alias filtering ([#5483](https://github.com/zeromicro/go-zero/pull/5483))\n## 🔧 Improvements\n- Upgrade Go version to 1.24 and update dependencies ([#5499](https://github.com/zeromicro/go-zero/pull/5499))\n**Full Changelog**: https://github.com/zeromicro/go-zero/compare/tools/goctl/v1.10.0...tools/goctl/v1.10.1",
+      "memory_unit_text": "In the zeromicro/go-zero release goctl/v1.10.1, the goctl tool adds hasField method for model generation and supports external proto imports with cross-package type resolution in RPC generation. Bug fixes include adding example field to path/form/header parameters in Swagger, fixing per-service type alias filtering, and fixing file copy permission. Testing adds regression test. Go version is upgraded to 1.24. New contributors are welcomed."
+    },
+    {
+      "memory_node_id": "zeromicro__go_zero__release__v1_10_2",
+      "repo": "zeromicro/go-zero",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.10.2",
+      "tag_name": "v1.10.2",
+      "title": "v1.10.2",
+      "time_hint": "2026-05-31",
+      "published_at": "2026-05-31T15:20:18Z",
+      "source_url": "https://github.com/zeromicro/go-zero/releases/tag/v1.10.2",
+      "raw_text": "Repository: zeromicro/go-zero\nRelease: v1.10.2\nTag: v1.10.2; draft: False; prerelease: False; published_at: 2026-05-31T15:20:18Z; created_at: 2026-05-25T11:05:39Z\nRelease notes:\n### New Features\n#### mcp — Opt-in HTTP request metadata bridge for tool handlers ([#5550](https://github.com/zeromicro/go-zero/pull/5550))\nAdded `WithRequestMetadataExtractor` option to the MCP server. When set, HTTP request metadata (headers, query parameters, path variables) is captured and injected into each handler's `context.Context`. Handlers retrieve it via the provided context helpers:\n```go\nserver := mcp.NewMcpServer(conf, mcp.WithRequestMetadataExtractor(mcp.DefaultRequestMetadataExtractor))\nserver.AddTool(tool, func(ctx context.Context, req *mcp.ServerRequest) (*mcp.ToolResult, error) {\ntenantID, _ := mcp.HeaderFromContext(ctx, \"X-Tenant-ID\")\nuserID, _   := mcp.QueryFromContext(ctx, \"user_id\")\n// ...\n})\n```\nAvailable helpers: `RequestMetadataFromContext`, `HeaderFromContext`, `QueryFromContext`, `PathFromContext`. Fully backward-compatible — existing `NewMcpServer(c)` calls are unaffected.\n### Bug Fixes\n#### `discov` — Go 1.26 etcd URI compatibility ([#5548](https://github.com/zeromicro/go-zero/pull/5548))\nGo 1.26 enforces strict RFC 3986 URI parsing and rejects comma-separated hosts in the URI authority component. `BuildDiscovTarget` was producing URIs in the form `etcd://host1:2379,host2:2379/key`, which broke all gRPC services using etcd service discovery with multiple endpoints on Go 1.26+.\nThe etcd target URL format has been updated to place hosts in the path and the etcd key in a query parameter:\n```\n# Before (breaks Go 1.26):\netcd://host1:2379,host2:2379/my-service-key\n# After (RFC 3986 compliant, works on all Go versions):\netcd:///host1:2379,host2:2379?key=my-service-key\n```\n#### `discov` — Unbounded memory growth on duplicate etcd PUT events ([#5580](https://github.com/zeromicro/go-zero/pull/5580))\nFixed two related bugs in discov that caused memory to grow without bound in long-running zRPC services:\n- **Redundant `OnAdd` calls**: `handleWatchEvents` called `OnAdd` on every etcd `PUT` event regardless of whether the value changed (e.g. lease refreshes, watch reconnects). Duplicate PUTs are now skipped; value changes fire `OnDelete(old)` followed by `OnAdd(new)` to keep listeners consistent.\n- **Unbounded slice growth in `addKv`**: Keys were appended to the internal `container.values` slice unconditionally, causing a single etcd key to accumulate thousands of duplicates over time. `addKv` now returns early for exact duplicates, and cleans up stale entries when a key moves to a new server address.\n### New Contributors\n- [@caltechustc](https://github.com/caltechustc) made their first contribution in [#5596](https://github.com/zeromicro/go-zero/pull/5596)\n**Full Changelog**: https://github.com/zeromicro/go-zero/compare/v1.10.1...v1.10.2",
+      "memory_unit_text": "In the zeromicro/go-zero release v1.10.2, new features include an opt-in HTTP request metadata bridge for MCP tool handlers via WithRequestMetadataExtractor. Bug fixes address Go 1.26 etcd URI compatibility by updating etcd target URL format, and unbounded memory growth on duplicate etcd PUT events by skipping redundant OnAdd calls and preventing unbounded slice growth in addKv. New contributors are welcomed."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the zeromicro/go-zero releases, which release introduces a comprehensive MCP server SDK with real-time communication, JSON-RPC, tool system, and prompt management?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v1.8.2"
+        },
+        {
+          "option_id": "B",
+          "text": "v1.8.3"
+        },
+        {
+          "option_id": "C",
+          "text": "v1.9.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v1.10.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v1.8.3",
+      "source_chunk_ids": [
+        "zeromicro__go_zero__release__v1_8_3"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "zeromicro__go_zero__release__v1_8_3",
+          "answer_text": "highlights include a comprehensive MCP server SDK with real-time communication, JSON-RPC, tool system, prompt management, resource handling, and more."
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the zeromicro/go-zero releases, how does the SSE-related change described in v1.8.2 differ from the SSE-related change described in v1.9.1?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v1.8.2 adds SSE support via rest.WithSSE, while v1.9.1 fixes SSE handler blocking and adds SetSSESlowThreshold."
+        },
+        {
+          "option_id": "B",
+          "text": "v1.8.2 fixes SSE handler blocking, while v1.9.1 adds SSE support via rest.WithSSE."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only update dependencies without SSE changes."
+        },
+        {
+          "option_id": "D",
+          "text": "v1.8.2 removes SSE support, while v1.9.1 reintroduces it."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v1.8.2 adds SSE support via rest.WithSSE, while v1.9.1 fixes SSE handler blocking and adds SetSSESlowThreshold.",
+      "source_chunk_ids": [
+        "zeromicro__go_zero__release__v1_8_2",
+        "zeromicro__go_zero__release__v1_9_1"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "zeromicro__go_zero__release__v1_8_2",
+          "answer_text": "new features include SSE support via rest.WithSSE"
+        },
+        {
+          "memory_node_id": "zeromicro__go_zero__release__v1_9_1",
+          "answer_text": "REST/SSE stability improvements: fix SSE handler blocking, reduce log noise by downgrading SetWriteDeadline errors to debug, and add SetSSESlowThreshold."
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the zeromicro/go-zero release window, order the following release-content states from earliest to latest: (1) a release that adds SQL read/write splitting and serverless support in REST, (2) a release that introduces consistent hash load balancing for gRPC and fixes gateway trace header propagation, (3) a release that adds continuous profiling support and embedded file server enhancements with embed.FS.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "3 -> 1 -> 2"
+        },
+        {
+          "option_id": "B",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 3 -> 1"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "3 -> 1 -> 2",
+      "source_chunk_ids": [
+        "zeromicro__go_zero__release__v1_8_4",
+        "zeromicro__go_zero__release__v1_8_5",
+        "zeromicro__go_zero__release__v1_9_3"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "zeromicro__go_zero__release__v1_8_4",
+          "answer_text": "highlights include continuous profiling support, embedded file server enhancements with embed.FS"
+        },
+        {
+          "memory_node_id": "zeromicro__go_zero__release__v1_8_5",
+          "answer_text": "features include SQL read/write splitting and serverless support in REST"
+        },
+        {
+          "memory_node_id": "zeromicro__go_zero__release__v1_9_3",
+          "answer_text": "highlights include consistent hash load balancing for gRPC, changing NonBlock default to align with gRPC best practices, improved distributed tracing by fixing gateway trace header propagation"
+        }
+      ]
+    }
+  ]
+}

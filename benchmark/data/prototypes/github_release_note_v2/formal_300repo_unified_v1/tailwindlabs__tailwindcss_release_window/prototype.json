@@ -1,0 +1,525 @@
+{
+  "prototype_id": "tailwindlabs__tailwindcss_release_window",
+  "domain": "github_release_evolution",
+  "repo": "tailwindlabs/tailwindcss",
+  "source_type": "release_note",
+  "window_title": "tailwindlabs/tailwindcss recent release evolution",
+  "window_summary": "This window tracks the recent tailwindlabs/tailwindcss release stream across v4.0.x, v4.1.x, v4.2.x, v4.3.0, and v3.4.x patches. It covers bug fixes, new utilities, variant additions, and upgrade tool improvements.",
+  "chunks": [
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_0_15",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.15",
+      "tag_name": "v4.0.15",
+      "title": "v4.0.15",
+      "time_hint": "2025-03-20",
+      "published_at": "2025-03-20T20:49:51Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.0.15",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.0.15\nTag: v4.0.15; draft: False; prerelease: False; published_at: 2025-03-20T20:49:51Z; created_at: 2025-03-20T20:38:19Z\nRelease notes:\n### Fixed\n- Fix incorrect angle in `-bg-conic-*` utilities ([#17174](https://github.com/tailwindlabs/tailwindcss/pull/17174))\n- Fix `border-[12px_4px]` being interpreted as a `border-color` instead of a `border-width` ([#17248](https://github.com/tailwindlabs/tailwindcss/pull/17248))\n- Work around a crash in Safari 16.4 and 16.5 when using the default Preflight styles ([#17306](https://github.com/tailwindlabs/tailwindcss/pull/17306))\n- Pre-process `<template lang=\"…\">` in Vue files ([#17252](https://github.com/tailwindlabs/tailwindcss/pull/17252))\n- Ensure that all CSS variables used by Preflight are prefixed ([#17036](https://github.com/tailwindlabs/tailwindcss/pull/17036))\n- Prevent segfault when loaded in a worker thread on Linux ([#17276](https://github.com/tailwindlabs/tailwindcss/pull/17276))\n- Ensure multiple `--value(…)` or `--modifier(…)` calls don't delete subsequent declarations ([#17273](https://github.com/tailwindlabs/tailwindcss/pull/17273))\n- Fix class extraction followed by `(` in Slim ([#17278](https://github.com/tailwindlabs/tailwindcss/pull/17278))\n- Export `PluginUtils` from `tailwindcss/plugin` for compatibility with v3 ([#17299](https://github.com/tailwindlabs/tailwindcss/pull/17299))\n- Remove redundant `line-height: initial` from Preflight ([#15212](https://github.com/tailwindlabs/tailwindcss/pull/15212))\n- Increase Standalone hardware compatibility on macOS x64 builds ([#17267](https://github.com/tailwindlabs/tailwindcss/pull/17267))\n- Ensure that the CSS file rebuilds if a new CSS variable is used from templates ([#17301](https://github.com/tailwindlabs/tailwindcss/pull/17301))\n### Changed\n- The `--theme(…)` function now returns CSS variables from your theme variables unless used inside positions where CSS variables are invalid (e.g. inside `@media` queries) ([#17036](https://github.com/tailwindlabs/tailwindcss/pull/17036))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.0.15, the release note describes fixes for incorrect angle in -bg-conic-* utilities, border-[12px_4px] being interpreted as border-color instead of border-width, a Safari 16.4/16.5 crash with default Preflight styles, pre-processing of <template lang=\"…\"> in Vue files, prefixing of all CSS variables used by Preflight, a segfault when loaded in a worker thread on Linux, multiple --value(…) or --modifier(…) calls deleting subsequent declarations, class extraction followed by '(' in Slim, exporting PluginUtils from tailwindcss/plugin for v3 compatibility, removing redundant line-height: initial from Preflight, increasing Standalone hardware compatibility on macOS x64 builds, and ensuring CSS file rebuilds when a new CSS variable is used from templates. It also changes the --theme(…) function to return CSS variables from theme variables unless used where CSS variables are invalid."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_0_16",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.16",
+      "tag_name": "v4.0.16",
+      "title": "v4.0.16",
+      "time_hint": "2025-03-25",
+      "published_at": "2025-03-25T14:52:19Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.0.16",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.0.16\nTag: v4.0.16; draft: False; prerelease: False; published_at: 2025-03-25T14:52:19Z; created_at: 2025-03-25T14:30:32Z\nRelease notes:\n### Added\n- Add support for literal values in `--value('…')` and `--modifier('…')` ([#17304](https://github.com/tailwindlabs/tailwindcss/pull/17304))\n### Fixed\n- Fix class extraction followed by `(` in Pug ([#17320](https://github.com/tailwindlabs/tailwindcss/pull/17320))\n- Ensure `@keyframes` for theme animations are emitted if they are referenced following a comma ([#17352](https://github.com/tailwindlabs/tailwindcss/pull/17352))\n- Vite: Ensure that updates to an imported CSS file are properly propagated after updating source files ([#17347](https://github.com/tailwindlabs/tailwindcss/pull/17347))\n- Pre process `Slim` templates embedded in Ruby files ([#17336](https://github.com/tailwindlabs/tailwindcss/pull/17336))\n- Error when input and output files resolve to the same file when using the CLI ([#17311](https://github.com/tailwindlabs/tailwindcss/pull/17311))\n- Add missing suggestions when `--spacing(--value(integer, number))` is used ([#17308](https://github.com/tailwindlabs/tailwindcss/pull/17308))\n- Add `::-webkit-details-marker` pseudo to `marker` variant ([#17362](https://github.com/tailwindlabs/tailwindcss/pull/17362))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.0.16, the release note adds support for literal values in --value('…') and --modifier('…'). It fixes class extraction followed by '(' in Pug, ensures @keyframes for theme animations are emitted when referenced after a comma, ensures Vite updates to imported CSS files propagate after source file changes, pre-processes Slim templates embedded in Ruby files, errors when input and output files resolve to the same file in the CLI, adds missing suggestions for --spacing(--value(integer, number)), and adds ::-webkit-details-marker pseudo to the marker variant."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_0_17",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.17",
+      "tag_name": "v4.0.17",
+      "title": "v4.0.17",
+      "time_hint": "2025-03-26",
+      "published_at": "2025-03-26T10:14:26Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.0.17",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.0.17\nTag: v4.0.17; draft: False; prerelease: False; published_at: 2025-03-26T10:14:26Z; created_at: 2025-03-26T10:03:16Z\nRelease notes:\n### Fixed\n- Fix an issue causing the CLI to hang when processing Ruby files ([#17383](https://github.com/tailwindlabs/tailwindcss/pull/17383))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.0.17, the release note fixes an issue causing the CLI to hang when processing Ruby files."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_1_0",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.0",
+      "tag_name": "v4.1.0",
+      "title": "v4.1.0",
+      "time_hint": "2025-04-01",
+      "published_at": "2025-04-01T17:01:24Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.1.0",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.1.0\nTag: v4.1.0; draft: False; prerelease: False; published_at: 2025-04-01T17:01:24Z; created_at: 2025-04-01T16:05:18Z\nRelease notes:\n### Added\n- Add `details-content` variant ([#15319](https://github.com/tailwindlabs/tailwindcss/pull/15319))\n- Add `inverted-colors` variant ([#11693](https://github.com/tailwindlabs/tailwindcss/pull/11693))\n- Add `noscript` variant ([#11929](https://github.com/tailwindlabs/tailwindcss/pull/11929), [#17431](https://github.com/tailwindlabs/tailwindcss/pull/17431))\n- Add `items-baseline-last` and `self-baseline-last` utilities ([#13888](https://github.com/tailwindlabs/tailwindcss/pull/13888), [#17476](https://github.com/tailwindlabs/tailwindcss/pull/17476))\n- Add `pointer-none`, `pointer-coarse`, and `pointer-fine` variants ([#16946](https://github.com/tailwindlabs/tailwindcss/pull/16946))\n- Add `any-pointer-none`, `any-pointer-coarse`, and `any-pointer-fine` variants ([#16941](https://github.com/tailwindlabs/tailwindcss/pull/16941))\n- Add safe alignment utilities ([#14607](https://github.com/tailwindlabs/tailwindcss/pull/14607))\n- Add `user-valid` and `user-invalid` variants ([#12370](https://github.com/tailwindlabs/tailwindcss/pull/12370))\n- Add `wrap-anywhere`, `wrap-break-word`, and `wrap-normal` utilities ([#12128](https://github.com/tailwindlabs/tailwindcss/pull/12128))\n- Add `@source inline(…)` and `@source not inline(…)` ([#17147](https://github.com/tailwindlabs/tailwindcss/pull/17147))\n- Add `@source not \"…\"` ([#17255](https://github.com/tailwindlabs/tailwindcss/pull/17255))\n- Add `text-shadow-*` utilities ([#17389](https://github.com/tailwindlabs/tailwindcss/pull/17389))\n- Add `mask-*` utilities ([#17134](https://github.com/tailwindlabs/tailwindcss/pull/17134))\n- Add `bg-{position,size}-*` utilities for arbitrary values ([#17432](https://github.com/tailwindlabs/tailwindcss/pull/17432))\n- Add `shadow-*/<alpha>`, `inset-shadow-*/<alpha>`, `drop-shadow-*/<alpha>`, and `text-shadow-*/<alpha>` utilities to control shadow opacity ([#17398](https://github.com/tailwindlabs/tailwindcss/pull/17398), [#17434](https://github.com/tailwindlabs/tailwindcss/pull/17434))\n- Add `drop-shadow-<color>` utilities ([#17434](https://github.com/tailwindlabs/tailwindcss/pull/17434))\n- Improve compatibility with older versions of Safari and Firefox ([#17435](https://github.com/tailwindlabs/tailwindcss/pull/17435))\n### Fixed\n- Follow symlinks when resolving `@source` directives ([#17391](https://github.com/tailwindlabs/tailwindcss/pull/17391))\n- Don't scan ignored files for classes when changing an ignored file triggers a rebuild using `@tailwindcss/cli` ([#17255](https://github.com/tailwindlabs/tailwindcss/pull/17255))\n- Support negated `content` rules in legacy JavaScript configuration ([#17255](https://github.com/tailwindlabs/tailwindcss/pull/17255))\n- Interpret syntax like `@(\"@\")md:…` as `@md:…` in Razor files ([#17427](https://github.com/tailwindlabs/tailwindcss/pull/17427))\n- Disallow top-level braces, top-level semicolons, and unbalanced parentheses and brackets in arbitrary values ([#17361](https://github.com/tailwindlabs/tailwindcss/pull/17361))\n- Ensure the `--theme(…)` function still resolves to the CSS variables when using legacy JS plugins ([#17458](https://github.com/tailwindlabs/tailwindcss/pull/17458))\n- Detect used theme variables in CSS module files ([#17433](https://github.com/tailwindlabs/tailwindcss/pull/17433), [#17467](https://github.com/tailwindlabs/tailwindcss/pull/17467))\n### Changed\n- Ignore `node_modules` by default (can be overridden by `@source …` rules) ([#17255](https://github.com/tailwindlabs/tailwindcss/pull/17255))\n- `@source` rules that include file extensions or point inside `node_modules/` folders no longer consider your `.gitignore` rules ([#17255](https://github.com/tailwindlabs/tailwindcss/pull/17255))\n- Deprecate `bg-{left,right}-{top,bottom}` in favor of `bg-{top,bottom}-{left,right}` utilities ([#17378](https://github.c...",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.1.0, the release note adds details-content, inverted-colors, noscript, pointer-none/coarse/fine, any-pointer-none/coarse/fine, user-valid/user-invalid variants, items-baseline-last and self-baseline-last utilities, safe alignment utilities, wrap-anywhere/break-word/normal utilities, @source inline(…) and @source not inline(…), @source not \"…\", text-shadow-* utilities, mask-* utilities, bg-{position,size}-* for arbitrary values, shadow-*/<alpha>, inset-shadow-*/<alpha>, drop-shadow-*/<alpha>, text-shadow-*/<alpha> utilities, drop-shadow-<color> utilities, and improves compatibility with older Safari and Firefox. It fixes symlink following in @source, not scanning ignored files on rebuild, supporting negated content rules in legacy JS config, interpreting @(\"@\")md:… as @md:… in Razor, disallowing top-level braces/semicolons/unbalanced parentheses in arbitrary values, ensuring --theme(…) resolves to CSS variables with legacy JS plugins, and detecting used theme variables in CSS module files. It changes to ignore node_modules by default, @source rules with file extensions or inside node_modules no longer consider .gitignore, and deprecates bg-{left,right}-{top,bottom} in favor of bg-{top,bottom}-{left,right}."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_1_1",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.1",
+      "tag_name": "v4.1.1",
+      "title": "v4.1.1",
+      "time_hint": "2025-04-02",
+      "published_at": "2025-04-02T09:39:33Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.1.1",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.1.1\nTag: v4.1.1; draft: False; prerelease: False; published_at: 2025-04-02T09:39:33Z; created_at: 2025-04-02T09:27:58Z\nRelease notes:\n### Fixed\n- Disable padding in `@source inline(…)` brace expansion ([#17491](https://github.com/tailwindlabs/tailwindcss/pull/17491))\n- Inject polyfills after `@import` and body-less `@layer` ([#17493](https://github.com/tailwindlabs/tailwindcss/pull/17493))\n- Ensure `@tailwindcss/cli` does not contain an import for `jiti` ([#17502](https://github.com/tailwindlabs/tailwindcss/pull/17502))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.1.1, the release note fixes disabling padding in @source inline(…) brace expansion, injecting polyfills after @import and body-less @layer, and ensuring @tailwindcss/cli does not contain an import for jiti."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_1_2",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.2",
+      "tag_name": "v4.1.2",
+      "title": "v4.1.2",
+      "time_hint": "2025-04-03",
+      "published_at": "2025-04-03T17:12:52Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.1.2",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.1.2\nTag: v4.1.2; draft: False; prerelease: False; published_at: 2025-04-03T17:12:52Z; created_at: 2025-04-03T16:50:16Z\nRelease notes:\n### Fixed\n- Don't rely on the presence of `@layer base` to polyfill `@property` ([#17506](https://github.com/tailwindlabs/tailwindcss/pull/17506))\n- Support setting multiple inset shadows as arbitrary values ([#17523](https://github.com/tailwindlabs/tailwindcss/pull/17523))\n- Fix `drop-shadow-*` utilities that are defined with multiple shadows ([#17515](https://github.com/tailwindlabs/tailwindcss/pull/17515))\n- PostCSS: Fix race condition when two changes are queued concurrently ([#17514](https://github.com/tailwindlabs/tailwindcss/pull/17514))\n- PostCSS: Ensure files containing `@tailwind utilities` are processed ([#17514](https://github.com/tailwindlabs/tailwindcss/pull/17514))\n- Ensure the `color-mix(…)` polyfill creates fallbacks even when using colors that cannot be statically analyzed ([#17513](https://github.com/tailwindlabs/tailwindcss/pull/17513))\n- Fix slow incremental builds with `@tailwindcss/vite` and `@tailwindcss/postscss` (especially on Windows) ([#17511](https://github.com/tailwindlabs/tailwindcss/pull/17511))\n- Vite: Fix missing CSS file in Qwik setups ([#17533](https://github.com/tailwindlabs/tailwindcss/pull/17533))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.1.2, the release note fixes not relying on @layer base to polyfill @property, supporting multiple inset shadows as arbitrary values, fixing drop-shadow-* with multiple shadows, a PostCSS race condition with concurrent changes, ensuring files with @tailwind utilities are processed, ensuring color-mix(…) polyfill creates fallbacks for unanalyzable colors, fixing slow incremental builds with @tailwindcss/vite and @tailwindcss/postcss on Windows, and a missing CSS file in Qwik setups with Vite."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_1_3",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.3",
+      "tag_name": "v4.1.3",
+      "title": "v4.1.3",
+      "time_hint": "2025-04-04",
+      "published_at": "2025-04-04T18:02:27Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.1.3",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.1.3\nTag: v4.1.3; draft: False; prerelease: False; published_at: 2025-04-04T18:02:27Z; created_at: 2025-04-04T17:54:23Z\nRelease notes:\n### Fixed\n- Show warning when using unsupported bare value data type in `--value(…)` ([#17464](https://github.com/tailwindlabs/tailwindcss/pull/17464))\n- PostCSS: Ensure changes to the input CSS file don't generate stale output when using Turbopack ([#17554](https://github.com/tailwindlabs/tailwindcss/pull/17554))\n- Ensure classes are detected in Ruby's `%w` syntax in Slim templates ([#17557](https://github.com/tailwindlabs/tailwindcss/pull/17557))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.1.3, the release note fixes showing a warning for unsupported bare value data types in --value(…), ensuring PostCSS changes to input CSS don't generate stale output with Turbopack, and ensuring classes are detected in Ruby's %w syntax in Slim templates."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_1_4",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.4",
+      "tag_name": "v4.1.4",
+      "title": "v4.1.4",
+      "time_hint": "2025-04-14",
+      "published_at": "2025-04-14T17:18:10Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.1.4",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.1.4\nTag: v4.1.4; draft: False; prerelease: False; published_at: 2025-04-14T17:18:10Z; created_at: 2025-04-14T17:06:18Z\nRelease notes:\n### Added\n- Add experimental `@tailwindcss/oxide-wasm32-wasi` target for running Tailwind in browser environments like StackBlitz ([#17558](https://github.com/tailwindlabs/tailwindcss/pull/17558))\n### Fixed\n- Ensure `color-mix(…)` polyfills do not cause used CSS variables to be removed ([#17555](https://github.com/tailwindlabs/tailwindcss/pull/17555))\n- Ensure `color-mix(…)` polyfills create fallbacks for theme variables that reference other theme variables ([#17562](https://github.com/tailwindlabs/tailwindcss/pull/17562))\n- Fix brace expansion in declining ranges like `{10..0..5}` and `{0..10..-5}` ([#17591](https://github.com/tailwindlabs/tailwindcss/pull/17591))\n- Work around a Chrome rendering bug when using the `skew-*` utilities ([#17627](https://github.com/tailwindlabs/tailwindcss/pull/17627))\n- Ensure container query variant names can contain hyphens ([#17628](https://github.com/tailwindlabs/tailwindcss/pull/17628))\n- Ensure `shadow-inherit`, `inset-shadow-inherit`, `drop-shadow-inherit`, and `text-shadow-inherit` inherit the shadow color ([#17647](https://github.com/tailwindlabs/tailwindcss/pull/17647))\n- Ensure compatibility with array tuples used in `fontSize` JS theme keys ([#17630](https://github.com/tailwindlabs/tailwindcss/pull/17630))\n- Ensure folders with binary file extensions in their names are scanned for utilities ([#17595](https://github.com/tailwindlabs/tailwindcss/pull/17595))\n- Upgrade: Convert `fontSize` array tuple syntax to CSS theme variables ([#17630](https://github.com/tailwindlabs/tailwindcss/pull/17630))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.1.4, the release note adds an experimental @tailwindcss/oxide-wasm32-wasi target for browser environments. It fixes ensuring color-mix(…) polyfills don't remove used CSS variables, creating fallbacks for theme variables referencing other theme variables, brace expansion in declining ranges, a Chrome rendering bug with skew-* utilities, container query variant names with hyphens, shadow-inherit/inset-shadow-inherit/drop-shadow-inherit/text-shadow-inherit inheriting shadow color, compatibility with array tuples in fontSize JS theme keys, scanning folders with binary file extensions, and converting fontSize array tuple syntax to CSS theme variables during upgrade."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_1_5",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.5",
+      "tag_name": "v4.1.5",
+      "title": "v4.1.5",
+      "time_hint": "2025-04-30",
+      "published_at": "2025-04-30T15:45:21Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.1.5",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.1.5\nTag: v4.1.5; draft: False; prerelease: False; published_at: 2025-04-30T15:45:21Z; created_at: 2025-04-30T14:57:44Z\nRelease notes:\n### Added\n- Support using `@tailwindcss/upgrade` to upgrade between versions of v4.* ([#17717](https://github.com/tailwindlabs/tailwindcss/pull/17717))\n- Add `h-lh` / `min-h-lh` / `max-h-lh` utilities ([#17790](https://github.com/tailwindlabs/tailwindcss/pull/17790))\n- Transition `display`, `visibility`, `content-visibility`, `overlay`, and `pointer-events` when using `transition` to simplify `@starting-style` usage ([#17812](https://github.com/tailwindlabs/tailwindcss/pull/17812))\n### Fixed\n- Don't scan `.geojson` or `.db` files for classes by default ([#17700](https://github.com/tailwindlabs/tailwindcss/pull/17700), [#17711](https://github.com/tailwindlabs/tailwindcss/pull/17711))\n- Hide default shadow suggestions when missing default shadow theme keys ([#17743](https://github.com/tailwindlabs/tailwindcss/pull/17743))\n- Replace `_` with `.` in theme suggestions for `@utility` if surrounded by digits ([#17733](https://github.com/tailwindlabs/tailwindcss/pull/17733))\n- Skip `color-mix(…)` when opacity is `100%` ([#17815](https://github.com/tailwindlabs/tailwindcss/pull/17815))\n- PostCSS: Ensure that errors in imported stylesheets are recoverable ([#17754](https://github.com/tailwindlabs/tailwindcss/pull/17754))\n- Upgrade: Bump all Tailwind CSS related dependencies during upgrade ([#17763](https://github.com/tailwindlabs/tailwindcss/pull/17763))\n- Upgrade: Don't add `-` to variants starting with `@` ([#17814](https://github.com/tailwindlabs/tailwindcss/pull/17814))\n- Upgrade: Don't format stylesheets that didn't change when upgrading ([#17824](https://github.com/tailwindlabs/tailwindcss/pull/17824))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.1.5, the release note adds support for using @tailwindcss/upgrade between v4.* versions, h-lh/min-h-lh/max-h-lh utilities, and transitioning display/visibility/content-visibility/overlay/pointer-events with transition. It fixes not scanning .geojson or .db files by default, hiding default shadow suggestions when missing theme keys, replacing _ with . in theme suggestions for @utility if surrounded by digits, skipping color-mix(…) when opacity is 100%, ensuring PostCSS errors in imported stylesheets are recoverable, bumping all Tailwind CSS dependencies during upgrade, not adding - to variants starting with @ during upgrade, and not formatting unchanged stylesheets during upgrade."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_1_6",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.6",
+      "tag_name": "v4.1.6",
+      "title": "v4.1.6",
+      "time_hint": "2025-05-09",
+      "published_at": "2025-05-09T13:49:06Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.1.6",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.1.6\nTag: v4.1.6; draft: False; prerelease: False; published_at: 2025-05-09T13:49:06Z; created_at: 2025-05-09T13:39:18Z\nRelease notes:\n### Added\n- Upgrade: Automatically convert arbitrary values to named values when possible (e.g. `h-[1lh]` to `h-lh`) ([#17831](https://github.com/tailwindlabs/tailwindcss/pull/17831), [#17854](https://github.com/tailwindlabs/tailwindcss/pull/17854))\n- Upgrade: Update dependencies in parallel for improved performance ([#17898](https://github.com/tailwindlabs/tailwindcss/pull/17898))\n- Add detailed logging about `@source` directives, discovered files and scanned files when using `DEBUG=*` ([#17906](https://github.com/tailwindlabs/tailwindcss/pull/17906), [#17952](https://github.com/tailwindlabs/tailwindcss/pull/17952))\n- Add support for generating source maps in development ([#17775](https://github.com/tailwindlabs/tailwindcss/pull/17775))\n### Fixed\n- Ensure negative arbitrary `scale` values generate negative values ([#17831](https://github.com/tailwindlabs/tailwindcss/pull/17831))\n- Fix HAML extraction with embedded Ruby ([#17846](https://github.com/tailwindlabs/tailwindcss/pull/17846))\n- Don't scan files for utilities when using `@reference` ([#17836](https://github.com/tailwindlabs/tailwindcss/pull/17836))\n- Fix incorrectly replacing `_` with ` ` in arbitrary modifier shorthand `bg-red-500/(--my_opacity)` ([#17889](https://github.com/tailwindlabs/tailwindcss/pull/17889))\n- Don't scan `.log` files for classes by default ([#17906](https://github.com/tailwindlabs/tailwindcss/pull/17906))\n- Ensure that custom utilities applying other custom utilities don't swallow nested `@apply` rules ([#17925](https://github.com/tailwindlabs/tailwindcss/pull/17925))\n- Download platform specific package if `optionalDependencies` are skipped ([#17929](https://github.com/tailwindlabs/tailwindcss/pull/17929))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.1.6, the release note adds automatic conversion of arbitrary values to named values during upgrade, parallel dependency updates for performance, detailed DEBUG=* logging about @source directives and scanned files, and support for generating source maps in development. It fixes ensuring negative arbitrary scale values generate negative values, HAML extraction with embedded Ruby, not scanning files when using @reference, incorrectly replacing _ with space in arbitrary modifier shorthand, not scanning .log files by default, custom utilities applying other custom utilities not swallowing nested @apply rules, and downloading platform-specific packages if optionalDependencies are skipped."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_1_7",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.7",
+      "tag_name": "v4.1.7",
+      "title": "v4.1.7",
+      "time_hint": "2025-05-15",
+      "published_at": "2025-05-15T14:01:31Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.1.7",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.1.7\nTag: v4.1.7; draft: False; prerelease: False; published_at: 2025-05-15T14:01:31Z; created_at: 2025-05-15T13:31:18Z\nRelease notes:\n### Added\n- Upgrade: Migrate bare values to named values ([#18000](https://github.com/tailwindlabs/tailwindcss/pull/18000))\n- Upgrade: Added cache to improve template migration performance ([#18025](https://github.com/tailwindlabs/tailwindcss/pull/18025))\n### Fixed\n- Allow `_` before numbers during candidate extraction ([#17961](https://github.com/tailwindlabs/tailwindcss/pull/17961))\n- Prevent duplicate suggestions when using `@theme` and `@utility` together ([#17675](https://github.com/tailwindlabs/tailwindcss/pull/17675))\n- Ensure that media queries within `::before` and `::after` pseudo selectors create valid CSS rules in production builds ([#17979](https://github.com/tailwindlabs/tailwindcss/pull/17979))\n- Ensure that the standalone CLI does not leave temporary files behind ([#17981](https://github.com/tailwindlabs/tailwindcss/pull/17981))\n- Ensure `-rotate-*` utilities properly negate arbitrary values ([#18014](https://github.com/tailwindlabs/tailwindcss/pull/18014))\n- Ignore custom variants using `:merge(…)` selectors in legacy JS plugins ([#18020](https://github.com/tailwindlabs/tailwindcss/pull/18020))\n- Ensure classes containing `.` are properly extracted from Clojure files ([#18038](https://github.com/tailwindlabs/tailwindcss/pull/18038))\n- Upgrade: Fix error when using `@import … source(…)` ([#17963](https://github.com/tailwindlabs/tailwindcss/pull/17963))\n- Upgrade: Change casing of utilities with named values to kebab-case to match updated theme variables ([#18017](https://github.com/tailwindlabs/tailwindcss/pull/18017))\n- Upgrade: Don't migrate strings that match utility names in Vue attribute bindings other than `class` ([#18025](https://github.com/tailwindlabs/tailwindcss/pull/18025))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.1.7, the release note adds migration of bare values to named values during upgrade and a cache to improve template migration performance. It fixes allowing _ before numbers during candidate extraction, preventing duplicate suggestions with @theme and @utility, ensuring media queries within ::before/::after pseudo selectors create valid CSS in production, ensuring standalone CLI does not leave temporary files, ensuring -rotate-* utilities properly negate arbitrary values, ignoring custom variants using :merge(…) selectors in legacy JS plugins, extracting classes containing . from Clojure files, fixing upgrade error with @import … source(…), changing casing of utilities with named values to kebab-case, and not migrating strings matching utility names in Vue attribute bindings other than class."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_1_8",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.8",
+      "tag_name": "v4.1.8",
+      "title": "v4.1.8",
+      "time_hint": "2025-05-28",
+      "published_at": "2025-05-28T15:22:00Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.1.8",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.1.8\nTag: v4.1.8; draft: False; prerelease: False; published_at: 2025-05-28T15:22:00Z; created_at: 2025-05-28T15:01:27Z\nRelease notes:\n### Added\n- Improve error messages when `@apply` fails ([#18059](https://github.com/tailwindlabs/tailwindcss/pull/18059))\n### Fixed\n- Upgrade: Do not migrate declarations that look like candidates in `<style>` blocks ([#18057](https://github.com/tailwindlabs/tailwindcss/pull/18057), [18068](https://github.com/tailwindlabs/tailwindcss/pull/18068))\n- Upgrade: Don't error when looking for `tailwindcss` in pnpm monorepos ([#18065](https://github.com/tailwindlabs/tailwindcss/pull/18065))\n- Upgrade: Don't error when updating dependencies in pnpm monorepos ([#18065](https://github.com/tailwindlabs/tailwindcss/pull/18065))\n- Upgrade: Migrate deprecated `order-none` to `order-0` ([#18126](https://github.com/tailwindlabs/tailwindcss/pull/18126))\n- Support Leptos `class:` attributes when extracting classes ([#18093](https://github.com/tailwindlabs/tailwindcss/pull/18093))\n- Fix \"Cannot read properties of undefined\" crash on malformed arbitrary value ([#18133](https://github.com/tailwindlabs/tailwindcss/pull/18133))\n- Upgrade: Migrate `-mt-[0px]` to `mt-[0px]` instead of the other way around ([#18154](https://github.com/tailwindlabs/tailwindcss/pull/18154))\n- Fix Haml pre-processing crash when there is no `\\n` at the end of the file ([#18155](https://github.com/tailwindlabs/tailwindcss/pull/18155))\n- Ignore `.pnpm-store` folders by default (can be overridden by `@source …` rules) ([#18163](https://github.com/tailwindlabs/tailwindcss/pull/18163))\n- Fix PostCSS crash when calling `toJSON()` ([#18083](https://github.com/tailwindlabs/tailwindcss/pull/18083))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.1.8, the release note adds improved error messages when @apply fails. It fixes not migrating declarations that look like candidates in <style> blocks during upgrade, not erroring when looking for tailwindcss or updating dependencies in pnpm monorepos, migrating deprecated order-none to order-0, supporting Leptos class: attributes, fixing a crash on malformed arbitrary values, migrating -mt-[0px] to mt-[0px] correctly, fixing Haml pre-processing crash without newline at end of file, ignoring .pnpm-store folders by default, and fixing a PostCSS crash when calling toJSON()."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_1_9",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.9",
+      "tag_name": "v4.1.9",
+      "title": "v4.1.9",
+      "time_hint": "2025-06-11",
+      "published_at": "2025-06-11T14:27:54Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.1.9",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.1.9\nTag: v4.1.9; draft: False; prerelease: False; published_at: 2025-06-11T14:27:54Z; created_at: 2025-06-11T13:57:38Z\nRelease notes:\n### Fixed\n- Correctly parse custom properties with strings containing semicolons ([#18251](https://github.com/tailwindlabs/tailwindcss/pull/18251))\n- Upgrade: Migrate arbitrary modifiers without percentage signs to bare values (e.g. `/[0.16]` → `/16`) ([#18184](https://github.com/tailwindlabs/tailwindcss/pull/18184))\n- Upgrade: Migrate CSS variable shorthands where fallback value contains function call ([#18184](https://github.com/tailwindlabs/tailwindcss/pull/18184))\n- Upgrade: Migrate negative arbitrary values to negative bare values (e.g. `mb-[-32rem]` → `-mb-128`) ([#18212](https://github.com/tailwindlabs/tailwindcss/pull/18212))\n- Upgrade: Do not migrate `blur` in `wire:model.blur` ([#18216](https://github.com/tailwindlabs/tailwindcss/pull/18216))\n- Don't add spaces around CSS dashed idents when formatting math expressions ([#18220](https://github.com/tailwindlabs/tailwindcss/pull/18220))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.1.9, the release note fixes correctly parsing custom properties with strings containing semicolons, migrating arbitrary modifiers without percentage signs to bare values, migrating CSS variable shorthands with fallback function calls, migrating negative arbitrary values to negative bare values, not migrating blur in wire:model.blur, and not adding spaces around CSS dashed idents when formatting math expressions."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_1_10",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.10",
+      "tag_name": "v4.1.10",
+      "title": "v4.1.10",
+      "time_hint": "2025-06-11",
+      "published_at": "2025-06-11T20:37:12Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.1.10",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.1.10\nTag: v4.1.10; draft: False; prerelease: False; published_at: 2025-06-11T20:37:12Z; created_at: 2025-06-11T20:26:51Z\nRelease notes:\n### Fixed\n- Fix incorrectly generated CSS when using percentages in arbitrary values with calc (e.g. `w-[calc(100%-var(--offset))]`) ([#18289](https://github.com/tailwindlabs/tailwindcss/pull/18289))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.1.10, the release note fixes incorrectly generated CSS when using percentages in arbitrary values with calc, such as w-[calc(100%-var(--offset))]."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_1_11",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.11",
+      "tag_name": "v4.1.11",
+      "title": "v4.1.11",
+      "time_hint": "2025-06-26",
+      "published_at": "2025-06-26T10:52:42Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.1.11",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.1.11\nTag: v4.1.11; draft: False; prerelease: False; published_at: 2025-06-26T10:52:42Z; created_at: 2025-06-26T10:43:17Z\nRelease notes:\n### Fixed\n- Add heuristic to skip candidate migrations inside `emit(…)` ([#18330](https://github.com/tailwindlabs/tailwindcss/pull/18330))\n- Extract candidates with variants in Clojure/ClojureScript keywords ([#18338](https://github.com/tailwindlabs/tailwindcss/pull/18338))\n- Document `--watch=always` in the CLI's usage ([#18337](https://github.com/tailwindlabs/tailwindcss/pull/18337))\n- Add support for Vite 7 to `@tailwindcss/vite` ([#18384](https://github.com/tailwindlabs/tailwindcss/pull/18384))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.1.11, the release note fixes adding a heuristic to skip candidate migrations inside emit(…), extracting candidates with variants in Clojure/ClojureScript keywords, documenting --watch=always in CLI usage, and adding support for Vite 7 to @tailwindcss/vite."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_1_12",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.12",
+      "tag_name": "v4.1.12",
+      "title": "v4.1.12",
+      "time_hint": "2025-08-14",
+      "published_at": "2025-08-14T12:48:21Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.1.12",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.1.12\nTag: v4.1.12; draft: False; prerelease: False; published_at: 2025-08-14T12:48:21Z; created_at: 2025-08-14T12:35:49Z\nRelease notes:\n### Fixed\n- Don't consider the global important state in `@apply` ([#18404](https://github.com/tailwindlabs/tailwindcss/pull/18404))\n- Add missing suggestions for `flex-<number>` utilities ([#18642](https://github.com/tailwindlabs/tailwindcss/pull/18642))\n- Fix trailing `)` from interfering with extraction in Clojure keywords ([#18345](https://github.com/tailwindlabs/tailwindcss/pull/18345))\n- Detect classes inside Elixir charlist, word list, and string sigils ([#18432](https://github.com/tailwindlabs/tailwindcss/pull/18432))\n- Track source locations through `@plugin` and `@config` ([#18345](https://github.com/tailwindlabs/tailwindcss/pull/18345))\n- Allow boolean values of `process.env.DEBUG` in `@tailwindcss/node` ([#18485](https://github.com/tailwindlabs/tailwindcss/pull/18485))\n- Ignore consecutive semicolons in the CSS parser ([#18532](https://github.com/tailwindlabs/tailwindcss/pull/18532))\n- Center the dropdown icon added to an input with a paired datalist by default ([#18511](https://github.com/tailwindlabs/tailwindcss/pull/18511))\n- Extract candidates in Slang templates ([#18565](https://github.com/tailwindlabs/tailwindcss/pull/18565))\n- Improve error messages when encountering invalid functional utility names ([#18568](https://github.com/tailwindlabs/tailwindcss/pull/18568))\n- Discard CSS AST objects with `false` or `undefined` properties ([#18571](https://github.com/tailwindlabs/tailwindcss/pull/18571))\n- Allow users to disable URL rebasing in `@tailwindcss/postcss` via `transformAssetUrls: false` ([#18321](https://github.com/tailwindlabs/tailwindcss/pull/18321))\n- Fix false-positive migrations in `addEventListener` and JavaScript variable names ([#18718](https://github.com/tailwindlabs/tailwindcss/pull/18718))\n- Fix Standalone CLI showing default Bun help when run via symlink on Windows ([#18723](https://github.com/tailwindlabs/tailwindcss/pull/18723))\n- Read from `--border-color-*` theme keys in `divide-*` utilities for backwards compatibility ([#18704](https://github.com/tailwindlabs/tailwindcss/pull/18704/))\n- Don't scan `.hdr` and `.exr` files for classes by default ([#18734](https://github.com/tailwindlabs/tailwindcss/pull/18734))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.1.12, the release note fixes not considering global important state in @apply, adding missing suggestions for flex-<number> utilities, trailing ) interfering with extraction in Clojure keywords, detecting classes inside Elixir charlist/word list/string sigils, tracking source locations through @plugin and @config, allowing boolean values of process.env.DEBUG in @tailwindcss/node, ignoring consecutive semicolons in CSS parser, centering dropdown icon for input with paired datalist, extracting candidates in Slang templates, improving error messages for invalid functional utility names, discarding CSS AST objects with false/undefined properties, allowing users to disable URL rebasing in @tailwindcss/postcss, fixing false-positive migrations in addEventListener and JavaScript variable names, fixing Standalone CLI showing default Bun help via symlink on Windows, reading from --border-color-* theme keys in divide-* utilities, and not scanning .hdr and .exr files by default."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_1_13",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.13",
+      "tag_name": "v4.1.13",
+      "title": "v4.1.13",
+      "time_hint": "2025-09-04",
+      "published_at": "2025-09-04T17:29:16Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.1.13",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.1.13\nTag: v4.1.13; draft: False; prerelease: False; published_at: 2025-09-04T17:29:16Z; created_at: 2025-09-04T17:18:25Z\nRelease notes:\n### Changed\n- Drop warning from browser build ([#18731](https://github.com/tailwindlabs/tailwindcss/issues/18731))\n- Drop exact duplicate declarations when emitting CSS ([#18809](https://github.com/tailwindlabs/tailwindcss/issues/18809))\n### Fixed\n- Don't transition `visibility` when using `transition` ([#18795](https://github.com/tailwindlabs/tailwindcss/pull/18795))\n- Discard matched variants with unknown named values ([#18799](https://github.com/tailwindlabs/tailwindcss/pull/18799))\n- Discard matched variants with non-string values ([#18799](https://github.com/tailwindlabs/tailwindcss/pull/18799))\n- Show suggestions for known `matchVariant` values ([#18798](https://github.com/tailwindlabs/tailwindcss/pull/18798))\n- Replace deprecated `clip` with `clip-path` in `sr-only` ([#18769](https://github.com/tailwindlabs/tailwindcss/pull/18769))\n- Hide internal fields from completions in `matchUtilities` ([#18820](https://github.com/tailwindlabs/tailwindcss/pull/18820))\n- Ignore `.vercel` folders by default (can be overridden by `@source …` rules) ([#18855](https://github.com/tailwindlabs/tailwindcss/pull/18855))\n- Consider variants starting with `@-` to be invalid (e.g. `@-2xl:flex`) ([#18869](https://github.com/tailwindlabs/tailwindcss/pull/18869))\n- Do not allow custom variants to start or end with a `-` or `_` ([#18867](https://github.com/tailwindlabs/tailwindcss/pull/18867), [#18872](https://github.com/tailwindlabs/tailwindcss/pull/18872))\n- Upgrade: Migrate `aria` theme keys to `@custom-variant` ([#18815](https://github.com/tailwindlabs/tailwindcss/pull/18815))\n- Upgrade: Migrate `data` theme keys to `@custom-variant` ([#18816](https://github.com/tailwindlabs/tailwindcss/pull/18816))\n- Upgrade: Migrate `supports` theme keys to `@custom-variant` ([#18817](https://github.com/tailwindlabs/tailwindcss/pull/18817))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.1.13, the release note changes dropping warning from browser build and dropping exact duplicate declarations when emitting CSS. It fixes not transitioning visibility with transition, discarding matched variants with unknown named values or non-string values, showing suggestions for known matchVariant values, replacing deprecated clip with clip-path in sr-only, hiding internal fields from completions in matchUtilities, ignoring .vercel folders by default, considering variants starting with @- invalid, not allowing custom variants to start or end with - or _, and migrating aria/data/supports theme keys to @custom-variant during upgrade."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v3_4_18",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.4.18",
+      "tag_name": "v3.4.18",
+      "title": "v3.4.18",
+      "time_hint": "2025-10-01",
+      "published_at": "2025-10-01T15:29:54Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v3.4.18",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v3.4.18\nTag: v3.4.18; draft: False; prerelease: False; published_at: 2025-10-01T15:29:54Z; created_at: 2025-10-01T15:18:15Z\nRelease notes:\n### Fixed\n- Improve support for raw `supports-[…]` queries in arbitrary values ([#13605](https://github.com/tailwindlabs/tailwindcss/pull/13605))\n- Fix `require.cache` error when loaded through a TypeScript file in Node 22.18+ ([#18665](https://github.com/tailwindlabs/tailwindcss/pull/18665))\n- Support `import.meta.resolve(…)` in configs for new enough Node.js versions ([#18938](https://github.com/tailwindlabs/tailwindcss/pull/18938))\n- Allow using newer versions of `postcss-load-config` for better ESM and TypeScript PostCSS config support with the CLI ([#18938](https://github.com/tailwindlabs/tailwindcss/pull/18938))\n- Remove irrelevant utility rules when matching important classes ([#19030](https://github.com/tailwindlabs/tailwindcss/pull/19030))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v3.4.18, the release note fixes improving support for raw supports-[…] queries in arbitrary values, fixing require.cache error when loaded through TypeScript in Node 22.18+, supporting import.meta.resolve(…) in configs for newer Node.js, allowing newer postcss-load-config for better ESM/TypeScript PostCSS config support with CLI, and removing irrelevant utility rules when matching important classes."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_1_14",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.14",
+      "tag_name": "v4.1.14",
+      "title": "v4.1.14",
+      "time_hint": "2025-10-01",
+      "published_at": "2025-10-01T16:00:08Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.1.14",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.1.14\nTag: v4.1.14; draft: False; prerelease: False; published_at: 2025-10-01T16:00:08Z; created_at: 2025-10-01T15:48:02Z\nRelease notes:\n### Fixed\n- Handle `'` syntax in ClojureScript when extracting classes ([#18888](https://github.com/tailwindlabs/tailwindcss/pull/18888))\n- Handle `@variant` inside `@custom-variant` ([#18885](https://github.com/tailwindlabs/tailwindcss/pull/18885))\n- Merge suggestions when using `@utility` ([#18900](https://github.com/tailwindlabs/tailwindcss/pull/18900))\n- Ensure that file system watchers created when using the CLI are always cleaned up ([#18905](https://github.com/tailwindlabs/tailwindcss/pull/18905))\n- Do not generate `grid-column` utilities when configuring `grid-column-start` or `grid-column-end` ([#18907](https://github.com/tailwindlabs/tailwindcss/pull/18907))\n- Do not generate `grid-row` utilities when configuring `grid-row-start` or `grid-row-end` ([#18907](https://github.com/tailwindlabs/tailwindcss/pull/18907))\n- Prevent duplicate CSS when overwriting a static utility with a theme key ([#18056](https://github.com/tailwindlabs/tailwindcss/pull/18056))\n- Show Lightning CSS warnings (if any) when optimizing/minifying ([#18918](https://github.com/tailwindlabs/tailwindcss/pull/18918))\n- Use `default` export condition for `@tailwindcss/vite` ([#18948](https://github.com/tailwindlabs/tailwindcss/pull/18948))\n- Re-throw errors from PostCSS nodes ([#18373](https://github.com/tailwindlabs/tailwindcss/pull/18373))\n- Detect classes in markdown inline directives ([#18967](https://github.com/tailwindlabs/tailwindcss/pull/18967))\n- Ensure files with only `@theme` produce no output when built ([#18979](https://github.com/tailwindlabs/tailwindcss/pull/18979))\n- Support Maud templates when extracting classes ([#18988](https://github.com/tailwindlabs/tailwindcss/pull/18988))\n- Upgrade: Do not migrate `variant = 'outline'` during upgrades ([#18922](https://github.com/tailwindlabs/tailwindcss/pull/18922))\n- Upgrade: Show version mismatch (if any) when running upgrade tool ([#19028](https://github.com/tailwindlabs/tailwindcss/pull/19028))\n- Upgrade: Ensure first class inside `className` is migrated ([#19031](https://github.com/tailwindlabs/tailwindcss/pull/19031))\n- Upgrade: Migrate classes inside `*ClassName` and `*Class` attributes ([#19031](https://github.com/tailwindlabs/tailwindcss/pull/19031))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.1.14, the release note fixes handling ' syntax in ClojureScript, handling @variant inside @custom-variant, merging suggestions with @utility, ensuring file system watchers from CLI are cleaned up, not generating grid-column utilities when configuring grid-column-start/end, not generating grid-row utilities when configuring grid-row-start/end, preventing duplicate CSS when overwriting static utility with theme key, showing Lightning CSS warnings, using default export condition for @tailwindcss/vite, re-throwing errors from PostCSS nodes, detecting classes in markdown inline directives, ensuring files with only @theme produce no output, supporting Maud templates, not migrating variant = 'outline' during upgrades, showing version mismatch during upgrade, ensuring first class inside className is migrated, and migrating classes inside *ClassName and *Class attributes."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_1_15",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.15",
+      "tag_name": "v4.1.15",
+      "title": "v4.1.15",
+      "time_hint": "2025-10-20",
+      "published_at": "2025-10-20T13:17:31Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.1.15",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.1.15\nTag: v4.1.15; draft: False; prerelease: False; published_at: 2025-10-20T13:17:31Z; created_at: 2025-10-20T12:48:42Z\nRelease notes:\n### Fixed\n- Fix Safari devtools rendering issue due to `color-mix` fallback ([#19069](https://github.com/tailwindlabs/tailwindcss/pull/19069))\n- Suppress Lightning CSS warnings about `:deep`, `:slotted`, and `:global` ([#19094](https://github.com/tailwindlabs/tailwindcss/pull/19094))\n- Fix resolving theme keys when starting with the name of another theme key in JS configs and plugins ([#19097](https://github.com/tailwindlabs/tailwindcss/pull/19097))\n- Allow named groups in combination with `not-*`, `has-*`, and `in-*` ([#19100](https://github.com/tailwindlabs/tailwindcss/pull/19100))\n- Prevent important utilities from affecting other utilities ([#19110](https://github.com/tailwindlabs/tailwindcss/pull/19110))\n- Don’t index into strings with the `theme(…)` function ([#19111](https://github.com/tailwindlabs/tailwindcss/pull/19111))\n- Fix parsing issue when `\\t` is used in at-rules ([#19130](https://github.com/tailwindlabs/tailwindcss/pull/19130))\n- Upgrade: Canonicalize utilities containing `0` values ([#19095](https://github.com/tailwindlabs/tailwindcss/pull/19095))\n- Upgrade: Migrate deprecated `break-words` to `wrap-break-word` ([#19157](https://github.com/tailwindlabs/tailwindcss/pull/19157))\n### Changed\n- Remove the `postinstall` script from oxide ([#19149](https://github.com/tailwindlabs/tailwindcss/pull/19149))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.1.15, the release note fixes a Safari devtools rendering issue due to color-mix fallback, suppressing Lightning CSS warnings about :deep/:slotted/:global, resolving theme keys starting with another key's name in JS configs/plugins, allowing named groups with not-*/has-*/in-*, preventing important utilities from affecting others, not indexing into strings with theme(…), fixing parsing with \\t in at-rules, canonicalizing utilities with 0 values during upgrade, and migrating deprecated break-words to wrap-break-word. It also removes the postinstall script from oxide."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_1_16",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.16",
+      "tag_name": "v4.1.16",
+      "title": "v4.1.16",
+      "time_hint": "2025-10-23",
+      "published_at": "2025-10-23T10:55:20Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.1.16",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.1.16\nTag: v4.1.16; draft: False; prerelease: False; published_at: 2025-10-23T10:55:20Z; created_at: 2025-10-23T10:32:27Z\nRelease notes:\n### Fixed\n- Discard candidates with an empty data type ([#19172](https://github.com/tailwindlabs/tailwindcss/pull/19172))\n- Fix canonicalization of arbitrary variants with attribute selectors ([#19176](https://github.com/tailwindlabs/tailwindcss/pull/19176))\n- Fix invalid colors due to nested `&` ([#19184](https://github.com/tailwindlabs/tailwindcss/pull/19184))\n- Improve canonicalization for `& > :pseudo` and `& :pseudo` arbitrary variants ([#19178](https://github.com/tailwindlabs/tailwindcss/pull/19178))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.1.16, the release note fixes discarding candidates with empty data type, canonicalization of arbitrary variants with attribute selectors, invalid colors due to nested &, and improving canonicalization for & > :pseudo and & :pseudo arbitrary variants."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_1_17",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.17",
+      "tag_name": "v4.1.17",
+      "title": "v4.1.17",
+      "time_hint": "2025-11-06",
+      "published_at": "2025-11-06T15:34:59Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.1.17",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.1.17\nTag: v4.1.17; draft: False; prerelease: False; published_at: 2025-11-06T15:34:59Z; created_at: 2025-11-06T15:20:36Z\nRelease notes:\n### Fixed\n- Substitute `@variant` inside legacy JS APIs ([#19263](https://github.com/tailwindlabs/tailwindcss/pull/19263))\n- Prevent occasional crash on Windows when loaded into a worker thread ([#19242](https://github.com/tailwindlabs/tailwindcss/pull/19242))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.1.17, the release note fixes substituting @variant inside legacy JS APIs and preventing occasional crash on Windows when loaded into a worker thread."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v3_4_19",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.4.19",
+      "tag_name": "v3.4.19",
+      "title": "v3.4.19",
+      "time_hint": "2025-12-10",
+      "published_at": "2025-12-10T18:39:41Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v3.4.19",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v3.4.19\nTag: v3.4.19; draft: False; prerelease: False; published_at: 2025-12-10T18:39:41Z; created_at: 2025-12-10T16:00:34Z\nRelease notes:\n### Fixed\n- Don’t break `sibling-*()` functions when used inside `calc(…)` ([#19335](https://github.com/tailwindlabs/tailwindcss/pull/19335))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v3.4.19, the release note fixes not breaking sibling-*() functions when used inside calc(…)."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_1_18",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.18",
+      "tag_name": "v4.1.18",
+      "title": "v4.1.18",
+      "time_hint": "2025-12-11",
+      "published_at": "2025-12-11T16:31:46Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.1.18",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.1.18\nTag: v4.1.18; draft: False; prerelease: False; published_at: 2025-12-11T16:31:46Z; created_at: 2025-12-11T16:03:32Z\nRelease notes:\n### Fixed\n- Ensure validation of `source(…)` happens relative to the file it is in ([#19274](https://github.com/tailwindlabs/tailwindcss/pull/19274))\n- Include filename and line numbers in CSS parse errors ([#19282](https://github.com/tailwindlabs/tailwindcss/pull/19282))\n- Skip comments in Ruby files when checking for class names ([#19243](https://github.com/tailwindlabs/tailwindcss/pull/19243))\n- Skip over arbitrary property utilities with a top-level `!` in the value ([#19243](https://github.com/tailwindlabs/tailwindcss/pull/19243))\n- Support environment API in `@tailwindcss/vite` ([#18970](https://github.com/tailwindlabs/tailwindcss/pull/18970))\n- Preserve case of theme keys from JS configs and plugins ([#19337](https://github.com/tailwindlabs/tailwindcss/pull/19337))\n- Write source maps correctly on the CLI when using `--watch` ([#19373](https://github.com/tailwindlabs/tailwindcss/pull/19373))\n- Handle special defaults (like `ringColor.DEFAULT`) in JS configs ([#19348](https://github.com/tailwindlabs/tailwindcss/pull/19348))\n- Improve backwards compatibility for `content` theme key from JS configs ([#19381](https://github.com/tailwindlabs/tailwindcss/pull/19381))\n- Upgrade: Handle `future` and `experimental` config keys ([#19344](https://github.com/tailwindlabs/tailwindcss/pull/19344))\n- Try to canonicalize any arbitrary utility to a bare value ([#19379](https://github.com/tailwindlabs/tailwindcss/pull/19379))\n- Validate candidates similarly to Oxide ([#19397](https://github.com/tailwindlabs/tailwindcss/pull/19397))\n- Canonicalization: combine `text-*` and `leading-*` classes ([#19396](https://github.com/tailwindlabs/tailwindcss/pull/19396))\n- Correctly handle duplicate CLI arguments ([#19416](https://github.com/tailwindlabs/tailwindcss/pull/19416))\n- Don’t emit color-mix fallback rules inside `@keyframes` ([#19419](https://github.com/tailwindlabs/tailwindcss/pull/19419))\n- CLI: Don't hang when output is `/dev/stdout` ([#19421](https://github.com/tailwindlabs/tailwindcss/pull/19421))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.1.18, the release note fixes ensuring validation of source(…) happens relative to its file, including filename and line numbers in CSS parse errors, skipping comments in Ruby files when checking class names, skipping arbitrary property utilities with top-level ! in value, supporting environment API in @tailwindcss/vite, preserving case of theme keys from JS configs/plugins, writing source maps correctly on CLI with --watch, handling special defaults like ringColor.DEFAULT in JS configs, improving backwards compatibility for content theme key from JS configs, handling future and experimental config keys during upgrade, trying to canonicalize any arbitrary utility to a bare value, validating candidates similarly to Oxide, combining text-* and leading-* classes in canonicalization, correctly handling duplicate CLI arguments, not emitting color-mix fallback rules inside @keyframes, and not hanging when CLI output is /dev/stdout."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_2_0",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.2.0",
+      "tag_name": "v4.2.0",
+      "title": "v4.2.0",
+      "time_hint": "2026-02-18",
+      "published_at": "2026-02-18T14:58:28Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.2.0",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.2.0\nTag: v4.2.0; draft: False; prerelease: False; published_at: 2026-02-18T14:58:28Z; created_at: 2026-02-18T14:45:06Z\nRelease notes:\n### Added\n- Add mauve, olive, mist, and taupe color palettes to the default theme ([#19627](https://github.com/tailwindlabs/tailwindcss/pull/19627))\n- Add `@tailwindcss/webpack` package to run Tailwind CSS as a webpack plugin ([#19610](https://github.com/tailwindlabs/tailwindcss/pull/19610))\n- Add `pbs-*` and `pbe-*` utilities for `padding-block-start` and `padding-block-end` ([#19601](https://github.com/tailwindlabs/tailwindcss/pull/19601))\n- Add `mbs-*` and `mbe-*` utilities for `margin-block-start` and `margin-block-end` ([#19601](https://github.com/tailwindlabs/tailwindcss/pull/19601))\n- Add `scroll-pbs-*` and `scroll-pbe-*` utilities for `scroll-padding-block-start` and `scroll-padding-block-end` ([#19601](https://github.com/tailwindlabs/tailwindcss/pull/19601))\n- Add `scroll-mbs-*` and `scroll-mbe-*` utilities for `scroll-margin-block-start` and `scroll-margin-block-end` ([#19601](https://github.com/tailwindlabs/tailwindcss/pull/19601))\n- Add `border-bs-*` and `border-be-*` utilities for `border-block-start` and `border-block-end` ([#19601](https://github.com/tailwindlabs/tailwindcss/pull/19601))\n- Add `inline-*`, `min-inline-*`, `max-inline-*` utilities for `inline-size`, `min-inline-size`, and `max-inline-size` ([#19612](https://github.com/tailwindlabs/tailwindcss/pull/19612))\n- Add `block-*`, `min-block-*`, `max-block-*` utilities for `block-size`, `min-block-size`, and `max-block-size` ([#19612](https://github.com/tailwindlabs/tailwindcss/pull/19612))\n- Add `inset-s-*`, `inset-e-*`, `inset-bs-*`, `inset-be-*` utilities for `inset-inline-start`, `inset-inline-end`, `inset-block-start`, and `inset-block-end` ([#19613](https://github.com/tailwindlabs/tailwindcss/pull/19613))\n- Add `font-features-*` utility for `font-feature-settings` ([#19623](https://github.com/tailwindlabs/tailwindcss/pull/19623))\n### Fixed\n- Prevent double `@supports` wrapper for `color-mix` values ([#19450](https://github.com/tailwindlabs/tailwindcss/pull/19450))\n- Allow whitespace around `@source inline()` argument ([#19461](https://github.com/tailwindlabs/tailwindcss/pull/19461))\n- Emit comment when source maps are saved to files when using `@tailwindcss/cli` ([#19447](https://github.com/tailwindlabs/tailwindcss/pull/19447))\n- Detect utilities containing capital letters followed by numbers ([#19465](https://github.com/tailwindlabs/tailwindcss/pull/19465))\n- Fix class extraction for Rails' strict locals ([#19525](https://github.com/tailwindlabs/tailwindcss/pull/19525))\n- Align `@utility` name validation with Oxide scanner rules ([#19524](https://github.com/tailwindlabs/tailwindcss/pull/19524))\n- Fix infinite loop when using `@variant` inside `@custom-variant` ([#19633](https://github.com/tailwindlabs/tailwindcss/pull/19633))\n- Allow multiples of `.25` in `aspect-*` fractions (e.g. `aspect-8.5/11`) ([#19688](https://github.com/tailwindlabs/tailwindcss/pull/19688))\n- Ensure changes to external files listed via `@source` trigger a full page reload when using `@tailwindcss/vite` ([#19670](https://github.com/tailwindlabs/tailwindcss/pull/19670))\n- Improve performance of Oxide scanner in bigger projects by reducing file system walks ([#19632](https://github.com/tailwindlabs/tailwindcss/pull/19632))\n- Ensure import aliases in Astro v5 work without crashing when using `@tailwindcss/vite` ([#19677](https://github.com/tailwindlabs/tailwindcss/issues/19677))\n- Allow escape characters in `@utility` names to improve support with formatters such as Biome ([#19626](https://github.com/tailwindlabs/tailwindcss/pull/19626))\n- Fix incorrect canonicalization results when canonicalizing multiple times ([#19675](https://github.com/tailwindlabs/tailwindcss/pull/19675))\n- Add `.jj` to default ignored content directories ([#19687](https://github.com/tailwindlabs/tailwindcss/pull/19687))\n###...",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.2.0, the release note adds mauve, olive, mist, and taupe color palettes, @tailwindcss/webpack package, pbs-*/pbe-*, mbs-*/mbe-*, scroll-pbs-*/scroll-pbe-*, scroll-mbs-*/scroll-mbe-*, border-bs-*/border-be-*, inline-*/min-inline-*/max-inline-*, block-*/min-block-*/max-block-*, inset-s-*/inset-e-*/inset-bs-*/inset-be-* utilities, and font-features-* utility. It fixes preventing double @supports wrapper for color-mix values, allowing whitespace around @source inline() argument, emitting comment when source maps saved to files with CLI, detecting utilities with capital letters followed by numbers, fixing class extraction for Rails strict locals, aligning @utility name validation with Oxide scanner rules, fixing infinite loop with @variant inside @custom-variant, allowing multiples of .25 in aspect-* fractions, ensuring changes to external files via @source trigger full page reload with Vite, improving Oxide scanner performance, ensuring import aliases in Astro v5 work without crashing with Vite, allowing escape characters in @utility names, fixing incorrect canonicalization results when canonicalizing multiple times, and adding .jj to default ignored content directories."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_2_1",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.2.1",
+      "tag_name": "v4.2.1",
+      "title": "v4.2.1",
+      "time_hint": "2026-02-23",
+      "published_at": "2026-02-23T12:51:32Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.2.1",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.2.1\nTag: v4.2.1; draft: False; prerelease: False; published_at: 2026-02-23T12:51:32Z; created_at: 2026-02-23T10:45:12Z\nRelease notes:\n### Fixed\n- Allow trailing dash in functional utility names for backwards compatibility ([#19696](https://github.com/tailwindlabs/tailwindcss/pull/19696))\n- Properly detect classes containing `.` characters within curly braces in MDX files ([#19711](https://github.com/tailwindlabs/tailwindcss/pull/19711))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.2.1, the release note fixes allowing trailing dash in functional utility names for backwards compatibility and properly detecting classes containing . characters within curly braces in MDX files."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_2_2",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.2.2",
+      "tag_name": "v4.2.2",
+      "title": "v4.2.2",
+      "time_hint": "2026-03-18",
+      "published_at": "2026-03-18T16:06:04Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.2.2",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.2.2\nTag: v4.2.2; draft: False; prerelease: False; published_at: 2026-03-18T16:06:04Z; created_at: 2026-03-18T15:44:08Z\nRelease notes:\n### Added\n- Support Vite 8 in `@tailwindcss/vite` ([#19790](https://github.com/tailwindlabs/tailwindcss/pull/19790))\n### Fixed\n- Don't crash when candidates contain prototype properties like `row-constructor` ([#19725](https://github.com/tailwindlabs/tailwindcss/pull/19725))\n- Canonicalize `calc(var(--spacing)*…)` expressions into `--spacing(…)` ([#19769](https://github.com/tailwindlabs/tailwindcss/pull/19769))\n- Fix crash in canonicalization step when handling utilities containing `@property` at-rules (e.g. `shadow-sm border`) ([#19727](https://github.com/tailwindlabs/tailwindcss/pull/19727))\n- Skip full reload for server only modules scanned by client CSS when using `@tailwindcss/vite` ([#19745](https://github.com/tailwindlabs/tailwindcss/pull/19745))\n- Improve canonicalization for bare values exceeding default spacing scale suggestions (e.g. `w-1234 h-1234` → `size-1234`) ([#19809](https://github.com/tailwindlabs/tailwindcss/pull/19809))\n- Fix canonicalization resulting in empty list (e.g. `w-5 h-5 size-5` → `''` instead of `size-5`) ([#19812](https://github.com/tailwindlabs/tailwindcss/pull/19812))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.2.2, the release note adds support for Vite 8 in @tailwindcss/vite. It fixes not crashing when candidates contain prototype properties like row-constructor, canonicalizing calc(var(--spacing)*…) into --spacing(…), fixing crash in canonicalization with @property at-rules, skipping full reload for server-only modules scanned by client CSS with Vite, improving canonicalization for bare values exceeding default spacing scale, and fixing canonicalization resulting in empty list."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_2_3",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.2.3",
+      "tag_name": "v4.2.3",
+      "title": "v4.2.3",
+      "time_hint": "2026-04-20",
+      "published_at": "2026-04-20T20:46:46Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.2.3",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.2.3\nTag: v4.2.3; draft: False; prerelease: False; published_at: 2026-04-20T20:46:46Z; created_at: 2026-04-20T20:32:52Z\nRelease notes:\n### Fixed\n- Canonicalization: improve canonicalizations for `tracking-*` utilities by preferring non-negative utilities (e.g. `-tracking-tighter` → `tracking-wider`) ([#19827](https://github.com/tailwindlabs/tailwindcss/pull/19827))\n- Fix crash due to invalid characters in candidate (exceeding valid unicode code point range) ([#19829](https://github.com/tailwindlabs/tailwindcss/pull/19829))\n- Ensure query params in imports are considered unique resources when using `@tailwindcss/webpack` ([#19723](https://github.com/tailwindlabs/tailwindcss/pull/19723))\n- Canonicalization: collapse arbitrary values into shorthand utilities (e.g. `px-[1.2rem] py-[1.2rem]` → `p-[1.2rem]`) ([#19837](https://github.com/tailwindlabs/tailwindcss/pull/19837))\n- Canonicalization: collapse `border-{t,b}-*` into `border-y-*`, `border-{l,r}-*` into `border-x-*`, and `border-{t,r,b,l}-*` into `border-*` ([#19842](https://github.com/tailwindlabs/tailwindcss/pull/19842))\n- Canonicalization: collapse `scroll-m{t,b}-*` into `scroll-my-*`, `scroll-m{l,r}-*` into `scroll-mx-*`, and `scroll-m{t,r,b,l}-*` into `scroll-m-*` ([#19842](https://github.com/tailwindlabs/tailwindcss/pull/19842))\n- Canonicalization: collapse `scroll-p{t,b}-*` into `scroll-py-*`, `scroll-p{l,r}-*` into `scroll-px-*`, and `scroll-p{t,r,b,l}-*` into `scroll-p-*` ([#19842](https://github.com/tailwindlabs/tailwindcss/pull/19842))\n- Canonicalization: collapse `overflow-{x,y}-*` into `overflow-*` ([#19842](https://github.com/tailwindlabs/tailwindcss/pull/19842))\n- Canonicalization: collapse `overscroll-{x,y}-*` into `overscroll-*` ([#19842](https://github.com/tailwindlabs/tailwindcss/pull/19842))\n- Read from `--placeholder-color` instead of `--background-color` for `placeholder-*` utilities ([#19843](https://github.com/tailwindlabs/tailwindcss/pull/19843))\n- Upgrade: ensure files are not emptied out when killing the upgrade process while it's running ([#19846](https://github.com/tailwindlabs/tailwindcss/pull/19846))\n- Upgrade: use `config.content` when migrating from Tailwind CSS v3 to Tailwind CSS v4 ([#19846](https://github.com/tailwindlabs/tailwindcss/pull/19846))\n- Upgrade: never migrate files that are ignored by git ([#19846](https://github.com/tailwindlabs/tailwindcss/pull/19846))\n- Add `.env` and `.env.*` to default ignored content files ([#19846](https://github.com/tailwindlabs/tailwindcss/pull/19846))\n- Canonicalization: migrate `overflow-ellipsis` into `text-ellipsis` ([#19849](https://github.com/tailwindlabs/tailwindcss/pull/19849))\n- Canonicalization: migrate `start-full` → `inset-s-full`, `start-auto` → `inset-s-auto`, `start-px` → `inset-s-px`, and `start-<number>` → `inset-s-<number>` as well as negative versions ([#19849](https://github.com/tailwindlabs/tailwindcss/pull/19849))\n- Canonicalization: migrate `end-full` → `inset-e-full`, `end-auto` → `inset-e-auto`, `end-px` → `inset-e-px`, and `end-<number>` → `inset-e-<number>` as well as negative versions ([#19849](https://github.com/tailwindlabs/tailwindcss/pull/19849))\n- Canonicalization: move the `-` sign inside the arbitrary value `-left-[9rem]` → `left-[-9rem]` ([#19858](https://github.com/tailwindlabs/tailwindcss/pull/19858))\n- Canonicalization: move the `-` sign outside the arbitrary value `ml-[calc(-1*var(--width))]` → `-ml-(--width)` ([#19858](https://github.com/tailwindlabs/tailwindcss/pull/19858))\n- Improve performance when scanning JSONL / NDJSON files ([#19862](https://github.com/tailwindlabs/tailwindcss/pull/19862))\n- Support `NODE_PATH` environment variable in standalone CLI ([#19617](https://github.com/tailwindlabs/tailwindcss/pull/19617))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.2.3, the release note fixes improving canonicalizations for tracking-* by preferring non-negative utilities, fixing crash due to invalid characters in candidate, ensuring query params in imports are unique resources with webpack, collapsing arbitrary values into shorthand utilities, collapsing border-{t,b}-* into border-y-* etc., collapsing scroll-m{t,b}-* into scroll-my-* etc., collapsing scroll-p{t,b}-* into scroll-py-* etc., collapsing overflow-{x,y}-* into overflow-*, collapsing overscroll-{x,y}-* into overscroll-*, reading from --placeholder-color for placeholder-* utilities, ensuring files are not emptied when killing upgrade process, using config.content when migrating from v3 to v4, never migrating git-ignored files, adding .env and .env.* to default ignored files, migrating overflow-ellipsis to text-ellipsis, migrating start-* and end-* to inset-s-* and inset-e-*, moving - sign inside/outside arbitrary values, improving performance scanning JSONL/NDJSON files, and supporting NODE_PATH in standalone CLI."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_2_4",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.2.4",
+      "tag_name": "v4.2.4",
+      "title": "v4.2.4",
+      "time_hint": "2026-04-21",
+      "published_at": "2026-04-21T13:09:56Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.2.4",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.2.4\nTag: v4.2.4; draft: False; prerelease: False; published_at: 2026-04-21T13:09:56Z; created_at: 2026-04-21T12:52:34Z\nRelease notes:\n### Fixed\n- Ensure imports in `@import` and `@plugin` still resolve correctly when using Vite aliases in `@tailwindcss/vite` ([#19947](https://github.com/tailwindlabs/tailwindcss/pull/19947))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.2.4, the release note fixes ensuring imports in @import and @plugin resolve correctly when using Vite aliases in @tailwindcss/vite."
+    },
+    {
+      "memory_node_id": "tailwindlabs__tailwindcss__release__v4_3_0",
+      "repo": "tailwindlabs/tailwindcss",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.3.0",
+      "tag_name": "v4.3.0",
+      "title": "v4.3.0",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T20:17:25Z",
+      "source_url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.3.0",
+      "raw_text": "Repository: tailwindlabs/tailwindcss\nRelease: v4.3.0\nTag: v4.3.0; draft: False; prerelease: False; published_at: 2026-05-08T20:17:25Z; created_at: 2026-05-08T20:03:59Z\nRelease notes:\n### Added\n- Add `@container-size` utility ([#18901](https://github.com/tailwindlabs/tailwindcss/pull/18901))\n- Add `scrollbar-{auto,thin,none}` utilities for `scrollbar-width`, and `scrollbar-thumb-*` / `scrollbar-track-*` color utilities for `scrollbar-color` ([#19981](https://github.com/tailwindlabs/tailwindcss/pull/19981), [#20019](https://github.com/tailwindlabs/tailwindcss/pull/20019))\n- Add `scrollbar-gutter-*` utilities ([#20018](https://github.com/tailwindlabs/tailwindcss/pull/20018))\n- Add `zoom-*` utilities ([#20020](https://github.com/tailwindlabs/tailwindcss/pull/20020))\n- Add `tab-*` utilities ([#20022](https://github.com/tailwindlabs/tailwindcss/pull/20022))\n- Allow using `@variant` with stacked variants (e.g. `@variant hover:focus { … }`) ([#19996](https://github.com/tailwindlabs/tailwindcss/pull/19996))\n- Allow using `@variant` with compound variants (e.g. `@variant hover, focus { … }`) ([#19996](https://github.com/tailwindlabs/tailwindcss/pull/19996))\n- Support `--default(…)` in `--value(…)` and `--modifier(…)` for functional `@utility` definitions ([#19989](https://github.com/tailwindlabs/tailwindcss/pull/19989))\n### Fixed\n- Ensure `@plugin` resolves package JavaScript entries instead of browser CSS entries when using `@tailwindcss/vite` ([#19949](https://github.com/tailwindlabs/tailwindcss/pull/19949))\n- Fix relative `@import` and `@plugin` paths resolving from the wrong directory when using `@tailwindcss/vite` ([#19965](https://github.com/tailwindlabs/tailwindcss/pull/19965))\n- Ensure CSS files containing `@variant` are processed by `@tailwindcss/vite` ([#19966](https://github.com/tailwindlabs/tailwindcss/pull/19966))\n- Resolve imports relative to `base` when `result.opts.from` is not provided when using `@tailwindcss/postcss` ([#19980](https://github.com/tailwindlabs/tailwindcss/pull/19980))\n- Canonicalization: preserve significant `_` whitespace in arbitrary values ([#19986](https://github.com/tailwindlabs/tailwindcss/pull/19986))\n- Canonicalization: add parentheses when removing whitespace from arbitrary values would hurt readability (e.g. `w-[calc(100%---spacing(60))]` → `w-[calc(100%-(--spacing(60)))]`) ([#19986](https://github.com/tailwindlabs/tailwindcss/pull/19986))\n- Canonicalization: preserve the original unit in arbitrary values instead of normalizing to base units (e.g. `-mt-[20in]` → `mt-[-20in]`, not `mt-[-1920px]`) ([#19988](https://github.com/tailwindlabs/tailwindcss/pull/19988))\n- Canonicalization: migrate arbitrary `:has()` variants from `[&:has(…)]` to `has-[…]` ([#19991](https://github.com/tailwindlabs/tailwindcss/pull/19991))\n- Upgrade: don’t migrate inline `style` attributes (e.g. `style=\"flex-grow: 1\"` → `style=\"flex-grow: 1\"`, not `style=\"grow: 1\"`) ([#19918](https://github.com/tailwindlabs/tailwindcss/pull/19918))\n- Allow multiple `@utility` definitions with the same name but different value types ([#19777](https://github.com/tailwindlabs/tailwindcss/pull/19777))\n- Export missing `PluginWithConfig` type from `tailwindcss/plugin` to fix errors when inferring plugin config types ([#19707](https://github.com/tailwindlabs/tailwindcss/pull/19707))\n- Ensure `start` and `end` legacy utilities without values do not generate CSS ([#20003](https://github.com/tailwindlabs/tailwindcss/pull/20003))\n- Ensure `--value(…)` is required in functional `@utility` definitions ([#20005](https://github.com/tailwindlabs/tailwindcss/pull/20005))\n- Canonicalization: preserve required whitespace around operators in negated arbitrary values (e.g. `-left-[(var(--a)+var(--b))]`) ([#20011](https://github.com/tailwindlabs/tailwindcss/pull/20011))",
+      "memory_unit_text": "In the tailwindlabs/tailwindcss release v4.3.0, the release note adds @container-size utility, scrollbar-{auto,thin,none} and scrollbar-thumb-*/scrollbar-track-* color utilities, scrollbar-gutter-* utilities, zoom-* utilities, tab-* utilities, allowing @variant with stacked and compound variants, and supporting --default(…) in --value(…) and --modifier(…). It fixes ensuring @plugin resolves package JavaScript entries with Vite, fixing relative @import/@plugin paths with Vite, ensuring CSS files with @variant are processed by Vite, resolving imports relative to base with PostCSS, preserving significant _ whitespace in arbitrary values, adding parentheses when removing whitespace from arbitrary values, preserving original unit in arbitrary values, migrating arbitrary :has() variants, not migrating inline style attributes during upgrade, allowing multiple @utility definitions with same name but different value types, exporting missing PluginWithConfig type, ensuring start/end legacy utilities without values generate no CSS, ensuring --value(…) is required in functional @utility definitions, and preserving required whitespace around operators in negated arbitrary values."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the tailwindlabs/tailwindcss releases, which release adds support for literal values in --value('…') and --modifier('…')?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v4.0.15"
+        },
+        {
+          "option_id": "B",
+          "text": "v4.0.16"
+        },
+        {
+          "option_id": "C",
+          "text": "v4.0.17"
+        },
+        {
+          "option_id": "D",
+          "text": "v4.1.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v4.0.16",
+      "source_chunk_ids": [
+        "tailwindlabs__tailwindcss__release__v4_0_16"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "tailwindlabs__tailwindcss__release__v4_0_16",
+          "answer_text": "Add support for literal values in --value('…') and --modifier('…')"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the tailwindlabs/tailwindcss releases, how does the fix for class extraction followed by '(' differ between v4.0.15 and v4.0.16?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v4.0.15 fixes it in Slim, while v4.0.16 fixes it in Pug."
+        },
+        {
+          "option_id": "B",
+          "text": "v4.0.15 fixes it in Pug, while v4.0.16 fixes it in Slim."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases fix it in the same template language."
+        },
+        {
+          "option_id": "D",
+          "text": "v4.0.15 fixes it in Vue, while v4.0.16 fixes it in Ruby."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v4.0.15 fixes it in Slim, while v4.0.16 fixes it in Pug.",
+      "source_chunk_ids": [
+        "tailwindlabs__tailwindcss__release__v4_0_15",
+        "tailwindlabs__tailwindcss__release__v4_0_16"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "tailwindlabs__tailwindcss__release__v4_0_15",
+          "answer_text": "Fix class extraction followed by '(' in Slim"
+        },
+        {
+          "memory_node_id": "tailwindlabs__tailwindcss__release__v4_0_16",
+          "answer_text": "Fix class extraction followed by '(' in Pug"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the tailwindlabs/tailwindcss release window, order the following release-content states from earliest to latest: (1) a release that adds support for Vite 7, (2) a release that adds support for Vite 8, (3) a release that adds the @tailwindcss/webpack package.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "B",
+          "text": "1 -> 3 -> 2"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 1 -> 3"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "1 -> 3 -> 2",
+      "source_chunk_ids": [
+        "tailwindlabs__tailwindcss__release__v4_1_11",
+        "tailwindlabs__tailwindcss__release__v4_2_0",
+        "tailwindlabs__tailwindcss__release__v4_2_2"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "tailwindlabs__tailwindcss__release__v4_1_11",
+          "answer_text": "Add support for Vite 7 to @tailwindcss/vite"
+        },
+        {
+          "memory_node_id": "tailwindlabs__tailwindcss__release__v4_2_0",
+          "answer_text": "Add @tailwindcss/webpack package"
+        },
+        {
+          "memory_node_id": "tailwindlabs__tailwindcss__release__v4_2_2",
+          "answer_text": "Support Vite 8 in @tailwindcss/vite"
+        }
+      ]
+    }
+  ]
+}

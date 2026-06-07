@@ -1,0 +1,530 @@
+{
+  "prototype_id": "TabbyML__tabby_release_window",
+  "domain": "github_release_evolution",
+  "repo": "TabbyML/tabby",
+  "source_type": "release_note",
+  "window_title": "TabbyML/tabby recent release evolution",
+  "window_summary": "This window tracks the recent TabbyML/tabby release stream from v0.14.0 through v0.32.0, including patch releases and extension updates. It covers new features like code search, Answer Engine enhancements, access control, LDAP integration, and custom branding.",
+  "chunks": [
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_14_0",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.14.0",
+      "tag_name": "v0.14.0",
+      "title": "v0.14.0",
+      "time_hint": "2024-07-22",
+      "published_at": "2024-07-22T06:21:06Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.14.0",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.14.0\nTag: v0.14.0; draft: False; prerelease: False; published_at: 2024-07-22T06:21:06Z; created_at: 2024-07-22T05:40:05Z\nRelease notes:\n## 🚀 Features\n* Code search functionality is now available in the `Code Browser` tab. Users can search for code using regex patterns and filter by language, repository, and branch.\n* Initial experimental support for natural language to codebase conversation in `Answer Engine`.\n## 🧰 Fixed and Improvements\n* Incremental issues / PRs indexing by checking `updated_at`.\n* Canonicalize `git_url` before performing a relevant code search. Previously, for git_urls with credentials, the canonicalized git_url was used in the index, but the query still used the raw git_url.\n* bump llama.cpp to b3370 - which fixes Qwen2 model series inference\n## 💫 New Contributors\n* @schardong made their first contribution in https://github.com/TabbyML/tabby/pull/2530\n* @jtbr made their first contribution in https://github.com/TabbyML/tabby/pull/2531\n* @Srkl made their first contribution in https://github.com/TabbyML/tabby/pull/2549\n* @Syst3m1cAn0maly made their first contribution in https://github.com/TabbyML/tabby/pull/2604\n**Full Changelog**: https://github.com/TabbyML/tabby/compare/v0.13.1...v0.14.0",
+      "memory_unit_text": "In the TabbyML/tabby release v0.14.0, code search functionality is introduced in the Code Browser tab with regex patterns and filters by language, repository, and branch. Initial experimental support for natural language to codebase conversation is added in Answer Engine. Incremental issues/PRs indexing by updated_at is implemented, git_url canonicalization is fixed for relevant code search, and llama.cpp is bumped to b3370 to fix Qwen2 model series inference."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_15_0",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.15.0",
+      "tag_name": "v0.15.0",
+      "title": "v0.15.0",
+      "time_hint": "2024-08-09",
+      "published_at": "2024-08-09T07:31:50Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.15.0",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.15.0\nTag: v0.15.0; draft: False; prerelease: False; published_at: 2024-08-09T07:31:50Z; created_at: 2024-08-09T06:30:32Z\nRelease notes:\n## 🚀 Features\n* The search bar in the Code Browser has been reworked and integrated with file navigation functionality.\n* GraphQL syntax highlighting support in Code Browser.\n## 🧰 Fixed and Improvements\n* For linked GitHub repositories, issues and PRs are now only returned when the repository is selected.\n* Fixed GitLab issues/MRs indexing - no longer panics if the description field is null.\n* When connecting to localhost model servers, proxy settings are now skipped.\n* Allows code completion's input / output settings in [config.toml](https://tabby.tabbyml.com/docs/administration/code-completion/)\n## 💫 New Contributors\n* @xxs-wallace made their first contribution in https://github.com/TabbyML/tabby/pull/2649\n* @meichthys made their first contribution in https://github.com/TabbyML/tabby/pull/2715\n**Full Changelog**: https://github.com/TabbyML/tabby/compare/v0.14.0...v0.15.0",
+      "memory_unit_text": "In the TabbyML/tabby release v0.15.0, the Code Browser search bar is reworked and integrated with file navigation, and GraphQL syntax highlighting is supported. For linked GitHub repositories, issues and PRs are only returned when the repository is selected. GitLab issues/MRs indexing is fixed to handle null description fields, proxy settings are skipped for localhost model servers, and code completion input/output settings are allowed in config.toml."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_16_1",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.16.1",
+      "tag_name": "v0.16.1",
+      "title": "v0.16.1",
+      "time_hint": "2024-08-28",
+      "published_at": "2024-08-28T04:32:02Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.16.1",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.16.1\nTag: v0.16.1; draft: False; prerelease: False; published_at: 2024-08-28T04:32:02Z; created_at: 2024-08-28T03:51:50Z\nRelease notes:\n## ⚠️ Notice\n* Starting from this version, we are utilizing websockets for features that require streaming (e.g., Answer Engine and Chat Side Panel). If you are deploying tabby behind a reverse proxy, you may need to configure the proxy to support websockets.\n## 🚀 Features\n* Discussion threads in the Answer Engine are now persisted, allowing users to share threads with others.\n## 🧰 Fixed and Improvements\n* Fixed an issue where the llama-server subprocess was not being reused when reusing a model for Chat / Completion together (e.g., Codestral-22B) with the local model backend.\n* Updated llama.cpp to version b3571 to support the jina series embedding models.\n## 💫 New Contributors\n* @richginsberg made their first contribution in https://github.com/TabbyML/tabby/pull/2738\n* @VladislavNekto made their first contribution in https://github.com/TabbyML/tabby/pull/2804\n* @Sherlock113 made their first contribution in https://github.com/TabbyML/tabby/pull/2809\n* @zwpaper made their first contribution in https://github.com/TabbyML/tabby/pull/2812\n* @cclauss made their first contribution in https://github.com/TabbyML/tabby/pull/2832\n* @richard-jfc made their first contribution in https://github.com/TabbyML/tabby/pull/2835\n**Full Changelog**: https://github.com/TabbyML/tabby/compare/v0.15.0...v0.16.1",
+      "memory_unit_text": "In the TabbyML/tabby release v0.16.1, websockets are now used for streaming features like Answer Engine and Chat Side Panel, requiring reverse proxy configuration. Discussion threads in Answer Engine are persisted for sharing. A bug where the llama-server subprocess was not reused for Chat/Completion with the same model is fixed, and llama.cpp is updated to b3571 to support jina series embedding models."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_17_0",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.17.0",
+      "tag_name": "v0.17.0",
+      "title": "v0.17.0",
+      "time_hint": "2024-09-11",
+      "published_at": "2024-09-11T01:18:14Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.17.0",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.17.0\nTag: v0.17.0; draft: False; prerelease: False; published_at: 2024-09-11T01:18:14Z; created_at: 2024-09-11T00:44:06Z\nRelease notes:\n## ⚠️ Notice\n* We've reworked the `Web` (a beta feature) context provider into the `Developer Docs` context provider. Previously added context in the `Web` tab has been cleared and needs to be manually migrated to `Developer Docs`.\n<img width=\"687\" alt=\"image\" src=\"https://github.com/user-attachments/assets/3b57d2b9-3c23-4138-ad49-d378d3aa43b0\">\n## 🚀 Features\n* Extensive rework has been done in the answer engine search box.\n- Developer Docs / Web search is now triggered by `@`.\n- Repository Context is now selected using `#`.\n<img width=\"944\" alt=\"image\" src=\"https://github.com/user-attachments/assets/fc9fa9ad-59fc-4b5c-98d6-49e3f334469c\">\n* Supports OCaml\n## 💫 New Contributors\n* @eryue0220 made their first contribution in https://github.com/TabbyML/tabby/pull/2921\n* @th0rgall made their first contribution in https://github.com/TabbyML/tabby/pull/3041\n* @tcmzzz made their first contribution in https://github.com/TabbyML/tabby/pull/3093\n**Full Changelog**: https://github.com/TabbyML/tabby/compare/v0.16.1...v0.17.0",
+      "memory_unit_text": "In the TabbyML/tabby release v0.17.0, the Web context provider is reworked into the Developer Docs context provider, requiring manual migration of previously added content. The Answer Engine search box is extensively reworked: Developer Docs/Web search is triggered by '@', and Repository Context is selected using '#'. OCaml language support is added."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_18_0",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.18.0",
+      "tag_name": "v0.18.0",
+      "title": "v0.18.0",
+      "time_hint": "2024-10-02",
+      "published_at": "2024-10-02T08:22:54Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.18.0",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.18.0\nTag: v0.18.0; draft: False; prerelease: False; published_at: 2024-10-02T08:22:54Z; created_at: 2024-10-02T07:50:52Z\nRelease notes:\n### ⚠️ Notice\n* The Chat Side Panel implementation has been redesigned in version 0.18, necessitating an extension version bump for compatibility with 0.18.0.\n- VSCode: >= 1.12.0\n- IntelliJ: >= 1.8.0\n### 🚀 Features\n* User Groups Access Control: Server Administrators can now assign user groups to specific context providers to precisely control which contexts can be accessed by which user groups.\n## 💫 New Contributors\n* @shankarg87 made their first contribution in https://github.com/TabbyML/tabby/pull/3073\n**Full Changelog**: https://github.com/TabbyML/tabby/compare/v0.17.0...v0.18.0",
+      "memory_unit_text": "In the TabbyML/tabby release v0.18.0, the Chat Side Panel is redesigned, requiring extension version bumps (VSCode >= 1.12.0, IntelliJ >= 1.8.0). User Groups Access Control is introduced, allowing server administrators to assign user groups to specific context providers for precise access control."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_19_0",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.19.0",
+      "tag_name": "v0.19.0",
+      "title": "v0.19.0",
+      "time_hint": "2024-10-31",
+      "published_at": "2024-10-31T17:05:50Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.19.0",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.19.0\nTag: v0.19.0; draft: False; prerelease: False; published_at: 2024-10-31T17:05:50Z; created_at: 2024-10-31T16:38:34Z\nRelease notes:\n## 🚀 Features\n* For Answer Engine, when the file content is reasonably short (e.g., less than 200 lines of code), include the entire file content directly instead of only the chunk ([#3096](https://github.com/TabbyML/tabby/issues/3096)).\n* Allowed adding additional languages through the `config.toml` file.\n* Allowed customizing the `system_prompt` for Answer Engine.\n## 🧰 Fixed and Improvements\n* Redesigned homepage to make team activities (e.g., threads discussed in Answer Engine) discoverable.\n* Supported downloading models with multiple partitions (e.g., Qwen-2.5 series).\n## 💫 New Contributors\n* @antimonyGu made their first contribution in https://github.com/TabbyML/tabby/pull/3135\n* @ntninja made their first contribution in https://github.com/TabbyML/tabby/pull/3244\n* @oli-ver made their first contribution in https://github.com/TabbyML/tabby/pull/3291\n* @joaodinissf made their first contribution in https://github.com/TabbyML/tabby/pull/3297\n**Full Changelog**: https://github.com/TabbyML/tabby/compare/v0.18.0...v0.19.0",
+      "memory_unit_text": "In the TabbyML/tabby release v0.19.0, the Answer Engine includes entire file content directly when the file is short (less than 200 lines). Additional languages can be added via config.toml, and the system_prompt for Answer Engine can be customized. The homepage is redesigned to make team activities discoverable, and downloading models with multiple partitions (e.g., Qwen-2.5 series) is supported."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_20_0",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.20.0",
+      "tag_name": "v0.20.0",
+      "title": "v0.20.0",
+      "time_hint": "2024-11-10",
+      "published_at": "2024-11-10T06:19:45Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.20.0",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.20.0\nTag: v0.20.0; draft: False; prerelease: False; published_at: 2024-11-10T06:19:45Z; created_at: 2024-11-10T05:46:02Z\nRelease notes:\n## 🚀 Features\n* Search results can now be edited directly.\n* Allow switching backend chat models in Answer Engine.\n* Added a connection test button in the `System` tab to test the connection to the backend LLM server.\n## 🧰 Fixes and Improvements\n* Optimized CR-LF inference in code completion. ([#3279](https://github.com/TabbyML/tabby/issues/3279))\n* Bumped `llama.cpp` version to `b3995`.\n**Full Changelog**: https://github.com/TabbyML/tabby/compare/v0.19.0...v0.20.0",
+      "memory_unit_text": "In the TabbyML/tabby release v0.20.0, search results can be edited directly, backend chat models can be switched in Answer Engine, and a connection test button is added in the System tab. CR-LF inference in code completion is optimized, and llama.cpp is bumped to b3995."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_21_0",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.21.0",
+      "tag_name": "v0.21.0",
+      "title": "v0.21.0",
+      "time_hint": "2024-12-03",
+      "published_at": "2024-12-03T09:49:42Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.21.0",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.21.0\nTag: v0.21.0; draft: False; prerelease: True; published_at: 2024-12-03T09:49:42Z; created_at: 2024-12-03T08:51:39Z\nRelease notes:\n##  ⚠️ Notice\n* Due to changes in the indexing format, the `~/.tabby/index` directory will be automatically removed before any further indexing jobs are run. It is expected that the indexing jobs will be re-run (instead of incrementally) after the upgrade.\n## 🚀 Features\n* Support connecting to llamafile model backend.\n* Display **Open** / **Closed** state for issues / pull requests in Answer Engine context card.\n* Support deleting the entire thread in Answer Engine.\n* Add rate limiter options for HTTP-powered model backends.\n## 🧰 Fixed and Improvements\n* Fixed a panic that occurred when specifying a local model ([#3464](https://github.com/TabbyML/tabby/issues/3464))\n* Add pagination to Answer Engine threads.\n* Fix Vulkan binary distributions.\n* Improve the retry logic for chunk embedding computation in indexing job.\n## 💫 New Contributors\n* @emmanuel-ferdman made their first contribution in https://github.com/TabbyML/tabby/pull/3459\n**Full Changelog**: https://github.com/TabbyML/tabby/compare/v0.20.0...v0.21.0",
+      "memory_unit_text": "In the TabbyML/tabby release v0.21.0, due to indexing format changes, the ~/.tabby/index directory is automatically removed before re-indexing. Support for connecting to llamafile model backend is added. Open/Closed state is displayed for issues/PRs in Answer Engine context cards, entire threads can be deleted, and rate limiter options are added for HTTP-powered model backends. A panic when specifying a local model is fixed, pagination is added to Answer Engine threads, Vulkan binary distributions are fixed, and retry logic for chunk embedding computation is improved."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_21_1",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.21.1",
+      "tag_name": "v0.21.1",
+      "title": "v0.21.1",
+      "time_hint": "2024-12-06",
+      "published_at": "2024-12-06T09:08:13Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.21.1",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.21.1\nTag: v0.21.1; draft: False; prerelease: False; published_at: 2024-12-06T09:08:13Z; created_at: 2024-12-06T08:20:42Z\nRelease notes:\n## ⚠️ Notice\n* This is a patch release, please also check [the full release note](https://github.com/TabbyML/tabby/releases/tag/v0.21.0) for 0.21.\n## 🧰 Fixed and Improvements\n* Fixed Gitlab Context Provider.",
+      "memory_unit_text": "In the TabbyML/tabby patch release v0.21.1, the Gitlab Context Provider is fixed."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__intellij_1_9_1",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:intellij@1.9.1",
+      "tag_name": "intellij@1.9.1",
+      "title": "intellij@1.9.1",
+      "time_hint": "2024-12-18",
+      "published_at": "2024-12-18T07:18:34Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/intellij%401.9.1",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: intellij@1.9.1\nTag: intellij@1.9.1; draft: False; prerelease: False; published_at: 2024-12-18T07:18:34Z; created_at: 2024-12-18T07:14:47Z\nRelease notes:\n## 1.9.1\n### Fixes & Improvements\n- Updated the chat panel to be compatible with Tabby server versions 0.21.2, 0.22.0, and later.",
+      "memory_unit_text": "In the TabbyML/tabby IntelliJ extension release 1.9.1, the chat panel is updated to be compatible with Tabby server versions 0.21.2, 0.22.0, and later."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_21_2",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.21.2",
+      "tag_name": "v0.21.2",
+      "title": "v0.21.2",
+      "time_hint": "2024-12-18",
+      "published_at": "2024-12-18T08:24:48Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.21.2",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.21.2\nTag: v0.21.2; draft: False; prerelease: False; published_at: 2024-12-18T08:24:48Z; created_at: 2024-12-18T07:28:14Z\nRelease notes:\n## ⚠️ Notice\n* This is a patch release, please also check [the full release note](https://github.com/TabbyML/tabby/releases/tag/v0.21.1) for 0.21.1.\n## 🧰 Fixed and Improvements\n* Adapt extension side changes in new versions.\n- VSCode: 1.16.0\n- IntelliJ Platform: 1.9.1",
+      "memory_unit_text": "In the TabbyML/tabby patch release v0.21.2, extension side changes are adapted for new versions: VSCode 1.16.0 and IntelliJ Platform 1.9.1."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_22_0",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.22.0",
+      "tag_name": "v0.22.0",
+      "title": "v0.22.0",
+      "time_hint": "2024-12-24",
+      "published_at": "2024-12-24T05:39:02Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.22.0",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.22.0\nTag: v0.22.0; draft: False; prerelease: False; published_at: 2024-12-24T05:39:02Z; created_at: 2024-12-24T05:06:55Z\nRelease notes:\n## 🚀 Features\n* Introduce notification inbox on homepage and license expiration check. ([#3541](https://github.com/TabbyML/tabby/pull/3541)) ([#3566](https://github.com/TabbyML/tabby/pull/3566))\n* Display author information for issues / pull requests in Answer Engine context card ([#3513](https://github.com/TabbyML/tabby/pull/3513))\n## 🧰 Fixed and Improvements\n* Refactors the pull request indexing process to enhance the speed of incremental indexing for pull docs. ([#3538](https://github.com/TabbyML/tabby/pull/3538))\n* Optimize the rate limiter on the HTTP-powered model backend to reduce errors. ([#3567](https://github.com/TabbyML/tabby/pull/3567))\n* Introduce rate limiting at 60 requests per minute in the tabby-webserver. ([#3484](https://github.com/TabbyML/tabby/pull/3484))\n* Validate model capability prior to download. ([#3565](https://github.com/TabbyML/tabby/pull/3565))\n* Fix broken tree view on Windows in CodeBrowser. ([#3528](https://github.com/TabbyML/tabby/pull/3528))\n* Upgrade all Tabby Linux base images to manylinux_2_28. ([#3536](https://github.com/TabbyML/tabby/pull/3536))\n## 💫 New Contributors\n@aand18 made their first contribution in https://github.com/TabbyML/tabby/pull/3563\n**Full Changelog**: https://github.com/TabbyML/tabby/compare/v0.21.2...v0.22.0",
+      "memory_unit_text": "In the TabbyML/tabby release v0.22.0, a notification inbox is introduced on the homepage with license expiration check. Author information is displayed for issues/PRs in Answer Engine context cards. Pull request indexing is refactored for faster incremental indexing, rate limiter on HTTP-powered model backend is optimized, rate limiting at 60 requests per minute is introduced in the webserver, model capability is validated before download, a broken tree view on Windows in CodeBrowser is fixed, and all Linux base images are upgraded to manylinux_2_28."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_23_0",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.23.0",
+      "tag_name": "v0.23.0",
+      "title": "v0.23.0",
+      "time_hint": "2025-01-09",
+      "published_at": "2025-01-09T06:54:31Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.23.0",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.23.0\nTag: v0.23.0; draft: False; prerelease: False; published_at: 2025-01-09T06:54:31Z; created_at: 2025-01-09T06:19:11Z\nRelease notes:\n## 🚀 Features\n* Add commit hash to code attachments, allowing redirection to the specific commit in code browser. ([#3627](https://github.com/TabbyML/tabby/pull/3627)) ([#3577](https://github.com/TabbyML/tabby/pull/3577))\n* Display the connection status of the gitUrl repository in the chat side panel. ([#3550](https://github.com/TabbyML/tabby/pull/3550))\n## 🧰 Fixed and Improvements\n* Perform database backups only when there are pending schema migrations. ([#3620](https://github.com/TabbyML/tabby/pull/3620))\n* Add repository selection and remove '#' mentions in the Answer Engine. ([#3619](https://github.com/TabbyML/tabby/pull/3619))\n## 💫 New Contributors\n@TimmyOVO made their first contribution in https://github.com/TabbyML/tabby/pull/3606\nFull Changelog: https://github.com/TabbyML/tabby/compare/v0.22.0...v0.23.0",
+      "memory_unit_text": "In the TabbyML/tabby release v0.23.0, commit hash is added to code attachments for redirection to the specific commit in the code browser. The connection status of the gitUrl repository is displayed in the chat side panel. Database backups are performed only when there are pending schema migrations, and repository selection is added with removal of '#' mentions in the Answer Engine."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_23_1",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.23.1",
+      "tag_name": "v0.23.1",
+      "title": "v0.23.1",
+      "time_hint": "2025-01-31",
+      "published_at": "2025-01-31T11:37:14Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.23.1",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.23.1\nTag: v0.23.1; draft: False; prerelease: False; published_at: 2025-01-31T11:37:14Z; created_at: 2025-01-31T11:04:16Z\nRelease notes:\n## ⚠️ Notice\n* This is a patch release, please also check [the full release note](https://github.com/TabbyML/tabby/releases/tag/v0.23.0) for 0.23.0.\n## 🧰 Fixed and Improvements\n* Fix the issue of being unable to download remote models due to changes in HuggingFace API. ([#3772](https://github.com/TabbyML/tabby/pull/3772))",
+      "memory_unit_text": "In the TabbyML/tabby patch release v0.23.1, an issue preventing remote model downloads due to HuggingFace API changes is fixed."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_24_0",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.24.0",
+      "tag_name": "v0.24.0",
+      "title": "v0.24.0",
+      "time_hint": "2025-02-05",
+      "published_at": "2025-02-05T05:23:19Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.24.0",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.24.0\nTag: v0.24.0; draft: False; prerelease: False; published_at: 2025-02-05T05:23:19Z; created_at: 2025-02-05T04:50:38Z\nRelease notes:\n## 🚀 Features\n* Implement LDAP Authentication Integration. ([#3650](https://github.com/TabbyML/tabby/pull/3650)) ([#3625](https://github.com/TabbyML/tabby/pull/3625))\n* Add Notifications for unsuccessful background jobs. ([#3713](https://github.com/TabbyML/tabby/pull/3713))\n## 🧰 Fixed and Improvements\n* Fixed a bug that prevented the client code context in historical messages from being added to the prompt. ([#3673](https://github.com/TabbyML/tabby/pull/3673))\n* Retain the job run and user event history only for the past three months. ([#3640](https://github.com/TabbyML/tabby/pull/3640))\n* Resolved an issue that caused integration errors with recent versions of Jan AI. ([#3649](https://github.com/TabbyML/tabby/pull/3649))\n* Resolved an issue where repositories specified in config.toml were not synchronizing correctly. ([#3703](https://github.com/TabbyML/tabby/pull/3703))\n* Set the active text tab as default context in Code Browser chat. ([#3729](https://github.com/TabbyML/tabby/pull/3729))\n* Resolved an issue that caused models download failures due to changes in HuggingFace API. ([#3772](https://github.com/TabbyML/tabby/pull/3772))\n* Omit indexing of GitHub Pull Request diffs that exceed 300 files. ([#3779](https://github.com/TabbyML/tabby/pull/3779))\n## 💫 New Contributors\n@HigherOrderLogic made their first contribution in #3699\n@zhanba made their first contribution in #3675\n**Full Changelog**: https://github.com/TabbyML/tabby/compare/v0.23.0...v0.24.0",
+      "memory_unit_text": "In the TabbyML/tabby release v0.24.0, LDAP Authentication Integration is implemented. Notifications for unsuccessful background jobs are added. A bug preventing client code context in historical messages from being added to the prompt is fixed. Job run and user event history is retained only for the past three months. Integration errors with recent Jan AI versions are resolved, repository synchronization issues from config.toml are fixed, the active text tab is set as default context in Code Browser chat, model download failures due to HuggingFace API changes are resolved, and indexing of GitHub Pull Request diffs exceeding 300 files is omitted."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_25_0",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.25.0",
+      "tag_name": "v0.25.0",
+      "title": "v0.25.0",
+      "time_hint": "2025-02-20",
+      "published_at": "2025-02-20T15:23:27Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.25.0",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.25.0\nTag: v0.25.0; draft: False; prerelease: False; published_at: 2025-02-20T15:23:27Z; created_at: 2025-02-20T14:43:24Z\nRelease notes:\n## ⚠️ Notice\nSignificant changes have been implemented in this release; please consider adjusting them to fit your specific use case.\n* The default parallelism has been increased from 1 to 4, which might increase VRAM usage. ([#3832](https://github.com/TabbyML/tabby/pull/3832))\n* Introduce a new embedding kind `llama.cpp/before_b4356_embedding` for llamafile or other embedding services utilizing the legacy llama.cpp embedding API. ([#3828](https://github.com/TabbyML/tabby/pull/3828))\n## 🚀 Features\n* Expose thinking process of Answer Engine to the answers in thread message. ([#3785](https://github.com/TabbyML/tabby/pull/3785)) ([#3672](https://github.com/TabbyML/tabby/pull/3672))\n* Enable the Answer Engine to access the repository's directory file list as needed.  ([#3796](https://github.com/TabbyML/tabby/pull/3796))\n* Enable the use of `@` to mention a symbol in Chat Sidebar. ([#3778](https://github.com/TabbyML/tabby/pull/3778))\n* Provide default question recommendations that are repository-aware on Answer Engine. ([#3815](https://github.com/TabbyML/tabby/pull/3815))\n## 🧰 Fixed and Improvements\n* Provide a configuration to truncate text content prior to dispatching it to embedding service.. ([#3816](https://github.com/TabbyML/tabby/pull/3816))\n* Bump llama.cpp version to b4651. ([#3798](https://github.com/TabbyML/tabby/pull/3798))\n* Automatically retry embedding when the service occasionally fails due to issues with llama.cpp. ([#3805](https://github.com/TabbyML/tabby/pull/3805))\n* Enhance the user interface experience for Answer Engine. ([#3845](https://github.com/TabbyML/tabby/pull/3845)) ([#3794](https://github.com/TabbyML/tabby/pull/3794))\n* Resolve the deserialization issue related to `finish_reason` in chat response from LiteLLM Proxy Server.([#3882](https://github.com/TabbyML/tabby/pull/3882))\n## 💫 New Contributors\n@zhanba made their first contribution in #3675\n@faceCutWall made their first contribution in #3812\n**Full Changelog**: https://github.com/TabbyML/tabby/compare/v0.24.0...v0.25.0",
+      "memory_unit_text": "In the TabbyML/tabby release v0.25.0, default parallelism is increased from 1 to 4, potentially increasing VRAM usage. A new embedding kind 'llama.cpp/before_b4356_embedding' is introduced for legacy embedding APIs. The Answer Engine's thinking process is exposed in thread messages, it can access the repository's directory file list, '@' mentions of symbols are enabled in Chat Sidebar, and default repository-aware question recommendations are provided. Configuration to truncate text before embedding is added, llama.cpp is bumped to b4651, embedding retries on failure are automatic, Answer Engine UI is enhanced, and a deserialization issue with finish_reason from LiteLLM Proxy Server is resolved."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_25_1",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.25.1",
+      "tag_name": "v0.25.1",
+      "title": "v0.25.1",
+      "time_hint": "2025-02-25",
+      "published_at": "2025-02-25T11:04:57Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.25.1",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.25.1\nTag: v0.25.1; draft: False; prerelease: False; published_at: 2025-02-25T11:04:57Z; created_at: 2025-02-25T10:25:01Z\nRelease notes:\n## ⚠️ Notice\n* This is a patch release, please also check [the full release note](https://github.com/TabbyML/tabby/releases/tag/v0.25.0) for 0.25.\n## 🧰 Fixed and Improvements\n* Refine the UI details in Answer Engine. ([#3888](https://github.com/TabbyML/tabby/pull/3888)) ([#3889](https://github.com/TabbyML/tabby/pull/3889)) ([#3891](https://github.com/TabbyML/tabby/pull/3891))",
+      "memory_unit_text": "In the TabbyML/tabby patch release v0.25.1, UI details in Answer Engine are refined."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_26_0",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.26.0",
+      "tag_name": "v0.26.0",
+      "title": "v0.26.0",
+      "time_hint": "2025-03-16",
+      "published_at": "2025-03-16T05:05:19Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.26.0",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.26.0\nTag: v0.26.0; draft: False; prerelease: False; published_at: 2025-03-16T05:05:19Z; created_at: 2025-03-16T04:28:38Z\nRelease notes:\n## ⚠️ Notice\nBump minimum katana version to 1.1.2\n## 🚀 Features\n* Enable the Answer Engine to access the repository's commit history as needed. ([#3916](https://github.com/TabbyML/tabby/pull/3916))\n* Support the display of user chat history on Homepage and Chat Side Panel. ([#3897](https://github.com/TabbyML/tabby/pull/3897))\n## 🧰 Fixed and Improvements\n* Facilitate the crawling of developer documentation from llms-full.txt when available. ([#3880](https://github.com/TabbyML/tabby/pull/3880))\n## 💫 New Contributors\n@ifelsefi made their first contribution in #3909\n@Azenki made their first contribution in #3869\n**Full Changelog**: https://github.com/TabbyML/tabby/compare/v0.25.0...v0.26.0",
+      "memory_unit_text": "In the TabbyML/tabby release v0.26.0, the minimum katana version is bumped to 1.1.2. The Answer Engine can access the repository's commit history, and user chat history is displayed on the Homepage and Chat Side Panel. Crawling of developer documentation from llms-full.txt is facilitated when available."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_27_0",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.27.0",
+      "tag_name": "v0.27.0",
+      "title": "v0.27.0",
+      "time_hint": "2025-03-31",
+      "published_at": "2025-03-31T14:35:09Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.27.0",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.27.0\nTag: v0.27.0; draft: False; prerelease: False; published_at: 2025-03-31T14:35:09Z; created_at: 2025-03-31T13:53:31Z\nRelease notes:\n## ⚠️ Notice\n* Prepare for the 1.0 release. Starting with this release, extensions version upgrades will maintain backward compatibility with the Tabby server.\n## 🚀 Features\n* Add support for the ability to execute shell commands within Chat Panel. ([#3979](https://github.com/TabbyML/tabby/pull/3979))\n* Add support for `@changes` within Chat Panel to include uncommitted changes as contexts. ([#3988](https://github.com/TabbyML/tabby/pull/3988))\n* Add security option to hide password login in frontend. When enabled, the password login can be revealed by appending the URL search parameter `passwordSignIn=true`. ([#3996](https://github.com/TabbyML/tabby/pull/3996)) ([#4015](https://github.com/TabbyML/tabby/pull/4015))\n## 🧰 Fixed and Improvements\n* Store background job logs on disk to prevent disruptions during processing of large repositories. ([#3994](https://github.com/TabbyML/tabby/pull/3994))\n* Track chat usage frequency and display it in Reports page. ([#4025](https://github.com/TabbyML/tabby/pull/4025)) ([#4042](https://github.com/TabbyML/tabby/pull/4042))\n* Resolve the chat functionality issue involving OpenAI reasoning models such as `o3-mini` and `o1-mini`. ([#4049](https://github.com/TabbyML/tabby/pull/4049))\n**Full Changelog**: https://github.com/TabbyML/tabby/compare/v0.26.0...v0.27.0",
+      "memory_unit_text": "In the TabbyML/tabby release v0.27.0, preparation for the 1.0 release begins, with extension version upgrades maintaining backward compatibility. Shell command execution is supported within the Chat Panel, '@changes' can include uncommitted changes as contexts, and a security option hides password login on the frontend. Background job logs are stored on disk, chat usage frequency is tracked and displayed on the Reports page, and chat functionality issues with OpenAI reasoning models like o3-mini and o1-mini are resolved."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_27_1",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.27.1",
+      "tag_name": "v0.27.1",
+      "title": "v0.27.1",
+      "time_hint": "2025-04-11",
+      "published_at": "2025-04-11T02:29:08Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.27.1",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.27.1\nTag: v0.27.1; draft: False; prerelease: False; published_at: 2025-04-11T02:29:08Z; created_at: 2025-04-11T01:52:20Z\nRelease notes:\n## ⚠️ Notice\n* This is a patch release, please also check [the full release note](https://github.com/TabbyML/tabby/releases/tag/v0.27.0) for 0.27.\n## 🧰 Fixed and Improvements\n* Resolved an issue where certain escaped characters could cause plugin crashes on Windows systems. ([#4114](https://github.com/TabbyML/tabby/pull/4114))\n* Resolved an issue where the Tabby server could hang while waiting for the registry file to download in offline environments. ([#4120](https://github.com/TabbyML/tabby/pull/4120))\n* Improved handling of file mentions from different sources in the Chat Panel. ([#4116](https://github.com/TabbyML/tabby/pull/4116))",
+      "memory_unit_text": "In the TabbyML/tabby patch release v0.27.1, an issue with escaped characters causing plugin crashes on Windows is resolved, a hang when waiting for registry file download in offline environments is fixed, and handling of file mentions from different sources in the Chat Panel is improved."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_28_0",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.28.0",
+      "tag_name": "v0.28.0",
+      "title": "v0.28.0",
+      "time_hint": "2025-04-28",
+      "published_at": "2025-04-28T06:23:05Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.28.0",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.28.0\nTag: v0.28.0; draft: False; prerelease: False; published_at: 2025-04-28T06:23:05Z; created_at: 2025-04-28T05:45:08Z\nRelease notes:\n## 📰 Highlight\nIn this release, Tabby introduced `Convert to Page` feature, which can transform Answer Engine messages into persistent, shareable, organized Pages, showcased in this example: [View an Example Page](https://demo.tabbyml.com/pages/tabbys-indexing-of-issues-and-pull-requests-QN7p13)\n![CleanShot 2025-04-28 at 21 33 47@2x](https://github.com/user-attachments/assets/ded6906d-889b-4b59-8ced-f4a5fa8a9142)\n## 🚀 Features\n* Add support to convert Answer Engine messages into Pages. ([#4194](https://github.com/TabbyML/tabby/pull/4194))\n* Add support for Doc Query in Chat Panel, allowing Dev Docs to be included as context. ([#4095](https://github.com/TabbyML/tabby/pull/4095))\n## 🧰 Fixed and Improvements\n* Enhance background task logging to boost performance and enrich user experience. ([#4066](https://github.com/TabbyML/tabby/pull/4066)) ([#4145](https://github.com/TabbyML/tabby/pull/4145))\n* Enhance the display of thinking processes in Answer Engine and Chat Panel. ([#4091](https://github.com/TabbyML/tabby/pull/4091))\n**Full Changelog**: https://github.com/TabbyML/tabby/compare/v0.27.1...v0.28.0",
+      "memory_unit_text": "In the TabbyML/tabby release v0.28.0, the 'Convert to Page' feature is introduced, transforming Answer Engine messages into persistent, shareable Pages. Doc Query support is added in the Chat Panel to include Dev Docs as context. Background task logging is enhanced for performance, and the display of thinking processes in Answer Engine and Chat Panel is improved."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_29_0",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.29.0",
+      "tag_name": "v0.29.0",
+      "title": "v0.29.0",
+      "time_hint": "2025-05-19",
+      "published_at": "2025-05-19T15:13:56Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.29.0",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.29.0\nTag: v0.29.0; draft: False; prerelease: False; published_at: 2025-05-19T15:13:56Z; created_at: 2025-05-19T14:29:04Z\nRelease notes:\n## 🚀 Features\n* Add RESTful APIs for ingesting custom documents and facilitating their removal. ([#4171](https://github.com/TabbyML/tabby/pull/4171)) ([#4203](https://github.com/TabbyML/tabby/pull/4203)) ([#4196](https://github.com/TabbyML/tabby/pull/4196))\n## 🧰 Fixed and Improvements\n* Enhance error details in Notification Inbox. ([#4184](https://github.com/TabbyML/tabby/pull/4184))\n* Add support for Automatic Jobs status polling. ([#4172](https://github.com/TabbyML/tabby/pull/4172))\n* Bump llama.cpp to b2500. ([#4200](https://github.com/TabbyML/tabby/pull/4200))\n## 💫 New Contributors\n@roman0yurin made their first contribution in #4080\n@NarwhalChen made their first contribution in #4146\n**Full Changelog**: https://github.com/TabbyML/tabby/compare/v0.28.0...v0.29.0",
+      "memory_unit_text": "In the TabbyML/tabby release v0.29.0, RESTful APIs are added for ingesting custom documents and facilitating their removal. Error details in the Notification Inbox are enhanced, automatic Jobs status polling is supported, and llama.cpp is bumped to b2500."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_30_0",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.30.0",
+      "tag_name": "v0.30.0",
+      "title": "v0.30.0",
+      "time_hint": "2025-07-02",
+      "published_at": "2025-07-02T07:58:24Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.30.0",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.30.0\nTag: v0.30.0; draft: False; prerelease: False; published_at: 2025-07-02T07:58:24Z; created_at: 2025-07-02T07:12:32Z\nRelease notes:\n## ⚠️ Notice\n* The Tabby Docker image now requires an NVIDIA GPU. For CPU-only environments, use the Linux binary.\n## 🚀 Features\n* Support indexing GitLab Merge Request as Context. [#4227](https://github.com/TabbyML/tabby/pull/4227)\n## 🧰 Fixed and Improvements\n* Use CUDA 12 image as base image by default. [#4235](https://github.com/TabbyML/tabby/pull/4235)\n* Leverage the Answer Engine logic to enrich the context when generating new pages, improving page quality. [#4237](https://github.com/TabbyML/tabby/pull/4237)\n* Improve the model configuration details on the System page. [#4236](https://github.com/TabbyML/tabby/pull/4236)\n* Resolve the flickering of buttons within code snippets in a chat response during answer generation. [#4233](https://github.com/TabbyML/tabby/pull/4233)\n* Set the member filter bar always fixed at the top of the Reports page.[#4232](https://github.com/TabbyML/tabby/pull/4232)\n* Resolve the issue when loading a multi-part model from local.[#4302](https://github.com/TabbyML/tabby/pull/4302)\n## 💫 New Contributors\n* @petarjuki7 made their first contribution in [#4265](https://github.com/TabbyML/tabby/pull/4265)\n**Full Changelog**: https://github.com/TabbyML/tabby/compare/v0.29.0...v0.30.0",
+      "memory_unit_text": "In the TabbyML/tabby release v0.30.0, the Docker image now requires an NVIDIA GPU; CPU-only environments should use the Linux binary. GitLab Merge Request indexing as context is supported. CUDA 12 image is used as base image by default, Answer Engine logic enriches context when generating pages, model configuration details on the System page are improved, button flickering in code snippets during answer generation is resolved, the member filter bar on the Reports page is fixed at the top, and loading multi-part models from local is fixed."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_30_1",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.30.1",
+      "tag_name": "v0.30.1",
+      "title": "v0.30.1",
+      "time_hint": "2025-07-12",
+      "published_at": "2025-07-12T18:36:10Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.30.1",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.30.1\nTag: v0.30.1; draft: False; prerelease: False; published_at: 2025-07-12T18:36:10Z; created_at: 2025-07-12T17:56:03Z\nRelease notes:\n## ⚠️ Notice\n* This is a patch release, please also check [the full release note](https://github.com/TabbyML/tabby/releases/tag/v0.30.0) for 0.30.\n## 🧰 Fixed and Improvements\n* Downgrade CUDA base image to version 12.4.1 to enhance compatibility. [#4314](https://github.com/TabbyML/tabby/pull/4314)",
+      "memory_unit_text": "In the TabbyML/tabby patch release v0.30.1, the CUDA base image is downgraded to version 12.4.1 to enhance compatibility."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_30_2",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.30.2",
+      "tag_name": "v0.30.2",
+      "title": "v0.30.2",
+      "time_hint": "2025-08-07",
+      "published_at": "2025-08-07T09:13:33Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.30.2",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.30.2\nTag: v0.30.2; draft: False; prerelease: False; published_at: 2025-08-07T09:13:33Z; created_at: 2025-08-07T08:34:27Z\nRelease notes:\n## ⚠️ Notice\n* This is a patch release, please also check [the full release note](https://github.com/TabbyML/tabby/releases/tag/v0.30.0) for 0.30.\n## 🧰 Fixed and Improvements\n* Use 0.7.3 sqlx to avoid database pool timeout. [#4328](https://github.com/TabbyML/tabby/pull/4328)\n* Bump llama.cpp to b6047. [#4330](https://github.com/TabbyML/tabby/pull/4330)\n* Expose the Flash Attention LLAMA flag as an environment variable. [#4323](https://github.com/TabbyML/tabby/pull/4323)",
+      "memory_unit_text": "In the TabbyML/tabby patch release v0.30.2, sqlx is updated to 0.7.3 to avoid database pool timeout, llama.cpp is bumped to b6047, and the Flash Attention LLAMA flag is exposed as an environment variable."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_31_0",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.31.0",
+      "tag_name": "v0.31.0",
+      "title": "v0.31.0",
+      "time_hint": "2025-08-19",
+      "published_at": "2025-08-19T19:04:10Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.31.0",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.31.0\nTag: v0.31.0; draft: False; prerelease: False; published_at: 2025-08-19T19:04:10Z; created_at: 2025-08-19T18:13:41Z\nRelease notes:\n## 🚀 Features\n* Add support for custom branding with name and logo (Available Exclusively with an Enterprise License). [#4334](https://github.com/TabbyML/tabby/pull/4334)",
+      "memory_unit_text": "In the TabbyML/tabby release v0.31.0, custom branding with name and logo is supported, available exclusively with an Enterprise License."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_31_1",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.31.1",
+      "tag_name": "v0.31.1",
+      "title": "v0.31.1",
+      "time_hint": "2025-08-26",
+      "published_at": "2025-08-26T17:58:14Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.31.1",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.31.1\nTag: v0.31.1; draft: False; prerelease: False; published_at: 2025-08-26T17:58:14Z; created_at: 2025-08-26T17:10:02Z\nRelease notes:\n## ⚠️ Notice\n* This is a patch release, please also check [the full release note](https://github.com/TabbyML/tabby/releases/tag/v0.31.0) for 0.31.\n## 🧰 Fixed and Improvements\n* Optimize the SQLite connection parameters to improve stability. [#4350](https://github.com/TabbyML/tabby/pull/4350)",
+      "memory_unit_text": "In the TabbyML/tabby patch release v0.31.1, SQLite connection parameters are optimized to improve stability."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_31_2",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.31.2",
+      "tag_name": "v0.31.2",
+      "title": "v0.31.2",
+      "time_hint": "2025-09-25",
+      "published_at": "2025-09-25T16:26:54Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.31.2",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.31.2\nTag: v0.31.2; draft: False; prerelease: False; published_at: 2025-09-25T16:26:54Z; created_at: 2025-09-25T15:39:12Z\nRelease notes:\n## ⚠️ Notice\n* This is a patch release, please also check [the full release note](https://github.com/TabbyML/tabby/releases/tag/v0.31.0) for 0.31.\n## 🧰 Fixed and Improvements\n* Added environment variable `TABBY_INDEX_REPO_IN_SHARD` to enable hourly sharded indexing when repository count exceeds 20. [#4366](https://github.com/TabbyML/tabby/pull/4366)",
+      "memory_unit_text": "In the TabbyML/tabby patch release v0.31.2, an environment variable TABBY_INDEX_REPO_IN_SHARD is added to enable hourly sharded indexing when the repository count exceeds 20."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__v0_32_0",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.32.0",
+      "tag_name": "v0.32.0",
+      "title": "v0.32.0",
+      "time_hint": "2026-01-25",
+      "published_at": "2026-01-25T17:07:44Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/v0.32.0",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: v0.32.0\nTag: v0.32.0; draft: False; prerelease: False; published_at: 2026-01-25T17:07:44Z; created_at: 2026-01-25T16:22:26Z\nRelease notes:\n## 🚀 Features\n* Add support for mistral/embedding api kind. [#4380](https://github.com/TabbyML/tabby/pull/4380)\n* Add generic OAuth support. [#4325](https://github.com/TabbyML/tabby/pull/4325)\n* Add support for indexing multiple branches. [#4419](https://github.com/TabbyML/tabby/pull/4419)\n## 🧰 Fixed and Improvements\n* Include email in invitation link and disable email editing when opening the link. [#4417](https://github.com/TabbyML/tabby/pull/4417)",
+      "memory_unit_text": "In the TabbyML/tabby release v0.32.0, support for mistral/embedding api kind is added, generic OAuth support is introduced, and indexing of multiple branches is supported. Email is included in invitation links and email editing is disabled when opening the link."
+    },
+    {
+      "memory_node_id": "TabbyML__tabby__release__next_alpha",
+      "repo": "TabbyML/tabby",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:next-alpha",
+      "tag_name": "next-alpha",
+      "title": "next-alpha",
+      "time_hint": "2026-02-09",
+      "published_at": "2026-02-09T10:49:36Z",
+      "source_url": "https://github.com/TabbyML/tabby/releases/tag/next-alpha",
+      "raw_text": "Repository: TabbyML/tabby\nRelease: next-alpha\nTag: next-alpha; draft: False; prerelease: True; published_at: 2026-02-09T10:49:36Z; created_at: 2026-02-09T10:31:41Z\nRelease notes:\nThis is an alpha version for Tabby dev,\nThis is only intended to be used internally.",
+      "memory_unit_text": "In the TabbyML/tabby release next-alpha, this is an alpha version intended only for internal use by Tabby developers."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the TabbyML/tabby releases, which release introduces the 'Convert to Page' feature that transforms Answer Engine messages into persistent, shareable Pages?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.27.0"
+        },
+        {
+          "option_id": "B",
+          "text": "v0.28.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v0.29.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v0.30.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v0.28.0",
+      "source_chunk_ids": [
+        "TabbyML__tabby__release__v0_28_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "TabbyML__tabby__release__v0_28_0",
+          "answer_text": "the 'Convert to Page' feature is introduced, transforming Answer Engine messages into persistent, shareable Pages"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the TabbyML/tabby releases, how does the Answer Engine context selection mechanism change from v0.17.0 to v0.23.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.17.0 uses '@' for Developer Docs/Web search and '#' for Repository Context, while v0.23.0 adds repository selection and removes '#' mentions."
+        },
+        {
+          "option_id": "B",
+          "text": "v0.17.0 removes all context selection, while v0.23.0 introduces '@' mentions."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases use the same context selection mechanism with no changes."
+        },
+        {
+          "option_id": "D",
+          "text": "v0.17.0 uses '#' for Developer Docs and '@' for Repository Context, while v0.23.0 removes all mentions."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v0.17.0 uses '@' for Developer Docs/Web search and '#' for Repository Context, while v0.23.0 adds repository selection and removes '#' mentions.",
+      "source_chunk_ids": [
+        "TabbyML__tabby__release__v0_17_0",
+        "TabbyML__tabby__release__v0_23_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "TabbyML__tabby__release__v0_17_0",
+          "answer_text": "Developer Docs/Web search is triggered by '@', and Repository Context is selected using '#'"
+        },
+        {
+          "memory_node_id": "TabbyML__tabby__release__v0_23_0",
+          "answer_text": "Add repository selection and remove '#' mentions in the Answer Engine"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the TabbyML/tabby release window, order the following release-content states from earliest to latest: (1) a release that adds LDAP Authentication Integration, (2) a release that introduces User Groups Access Control, (3) a release that adds custom branding with name and logo for Enterprise License, (4) a release that adds generic OAuth support.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2 -> 1 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "1 -> 2 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "D",
+          "text": "1 -> 2 -> 3 -> 4"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2 -> 1 -> 3 -> 4",
+      "source_chunk_ids": [
+        "TabbyML__tabby__release__v0_18_0",
+        "TabbyML__tabby__release__v0_24_0",
+        "TabbyML__tabby__release__v0_31_0",
+        "TabbyML__tabby__release__v0_32_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "TabbyML__tabby__release__v0_18_0",
+          "answer_text": "User Groups Access Control is introduced"
+        },
+        {
+          "memory_node_id": "TabbyML__tabby__release__v0_24_0",
+          "answer_text": "LDAP Authentication Integration is implemented"
+        },
+        {
+          "memory_node_id": "TabbyML__tabby__release__v0_31_0",
+          "answer_text": "custom branding with name and logo is supported, available exclusively with an Enterprise License"
+        },
+        {
+          "memory_node_id": "TabbyML__tabby__release__v0_32_0",
+          "answer_text": "generic OAuth support is introduced"
+        }
+      ]
+    }
+  ]
+}

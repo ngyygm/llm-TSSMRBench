@@ -1,0 +1,530 @@
+{
+  "prototype_id": "Alamofire__Alamofire_release_window",
+  "domain": "github_release_evolution",
+  "repo": "Alamofire/Alamofire",
+  "source_type": "release_note",
+  "window_title": "Alamofire/Alamofire recent release evolution",
+  "window_summary": "This window tracks the recent Alamofire/Alamofire release stream from version 5.0.5 through 5.12.0, covering new features like Combine support, Swift concurrency, WebSocket requests, and numerous bug fixes and platform updates.",
+  "chunks": [
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_0_5",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.0.5",
+      "tag_name": "5.0.5",
+      "title": "Finishing Moves",
+      "time_hint": "2020-03-24",
+      "published_at": "2020-03-24T03:13:47Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.0.5",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: Finishing Moves\nTag: 5.0.5; draft: False; prerelease: False; published_at: 2020-03-24T03:13:47Z; created_at: 2020-03-24T03:13:09Z\nRelease notes:\nReleased on 2020-03-23. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/69?closed=1).\n#### Fixed\n- `Request` casting issue on retry that could lead to incomplete retry of `UploadRequest`s.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3127](https://github.com/Alamofire/Alamofire/pull/3127).\n- Rare scenario where `finish()` could be called multiple times, leading to duplicate response handler calls.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3116](https://github.com/Alamofire/Alamofire/pull/3116).",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.0.5 (Finishing Moves), the release fixes a Request casting issue on retry that could lead to incomplete retry of UploadRequests, and a rare scenario where finish() could be called multiple times, leading to duplicate response handler calls."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_1_0",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.1.0",
+      "tag_name": "5.1.0",
+      "title": "Streaming and Modification",
+      "time_hint": "2020-04-05",
+      "published_at": "2020-04-05T01:59:25Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.1.0",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: Streaming and Modification\nTag: 5.1.0; draft: False; prerelease: False; published_at: 2020-04-05T01:59:25Z; created_at: 2020-04-05T01:58:54Z\nRelease notes:\nReleased on 2020-04-04. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/64?closed=1).\n#### Added\n- `RequestModifier` closure to request APIs, allowing mutation of created `URLRequest`s.\n- Added by  [Jon Shier](https://github.com/jshier) in Pull Request [#3137](https://github.com/Alamofire/Alamofire/pull/3137).\n- `DataStreamRequest`, for streaming HTTP responses.\n- Added by  [Jon Shier](https://github.com/jshier) in Pull Request [#3074](https://github.com/Alamofire/Alamofire/pull/3074).\n#### Updated\n- Various framework internals to make porting to Linux easier.\n- Updated by  [Jon Shier](https://github.com/jshier) in Pull Request [#3115](https://github.com/Alamofire/Alamofire/pull/3115).\n- Project to require Swift 5.1.\n- Updated by  [Jon Shier](https://github.com/jshier) in Pull Request [#3066](https://github.com/Alamofire/Alamofire/pull/3066).\n#### Fixed\n- Typo in `ServerTrustEvaluating` documentation.\n- Fixed by [Lucas Tavares](https://github.com/tavares1) in Pull Request [#3138](https://github.com/Alamofire/Alamofire/pull/3138).",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.1.0 (Streaming and Modification), the release adds a RequestModifier closure to request APIs for mutating created URLRequests, and DataStreamRequest for streaming HTTP responses. It also updates various framework internals for easier Linux porting, requires Swift 5.1, and fixes a typo in ServerTrustEvaluating documentation."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_2_0",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.2.0",
+      "tag_name": "5.2.0",
+      "title": "Combine and AuthenticationInterceptor",
+      "time_hint": "2020-05-16",
+      "published_at": "2020-05-16T22:24:00Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.2.0",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: Combine and AuthenticationInterceptor\nTag: 5.2.0; draft: False; prerelease: False; published_at: 2020-05-16T22:24:00Z; created_at: 2020-05-16T22:23:11Z\nRelease notes:\nReleased on 2020-05-16. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/70?closed=1).\n#### Added\n- Combine support! `DataResponsePublisher`, `DownloadResponsePublisher`, and `DataStreamPublisher` to stream Alamofire responses.\n- Added by [Jon Shier](https://github.com/jshier) in Pull Request [#3160](https://github.com/Alamofire/Alamofire/pull/3160).\n- `AuthenticationInterceptor`, for easier adaptation and retry of requests with credentials.\n- Added by [Christian Noon](https://github.com/cnoon) in Pull Request [#3164](https://github.com/Alamofire/Alamofire/pull/3164).\n#### Updated\n- Response handlers to take all serializer parameters.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3188](https://github.com/Alamofire/Alamofire/pull/3188).\n- `DisabledEvaluator` to `DisabledTrustEvaluator`, deprecating the previous name.\n- Updated by [Florian Petit](https://github.com/MrCloud) in Pull Request [#3162](https://github.com/Alamofire/Alamofire/pull/3162).\n- `Interceptor` to be initialized with multiple `RequestInterceptor`s, in addition to `RequestAdapter`s and `RequestRetrier`s.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3155](https://github.com/Alamofire/Alamofire/pull/3155).\n#### Fixed\n- Minor documentation issues.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3187](https://github.com/Alamofire/Alamofire/pull/3187).\n- Encoding of `Decimal` values in `URLEncodedFormEncoder`.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3185](https://github.com/Alamofire/Alamofire/pull/3185).\n- Thread-safety issue in `Session`.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3179](https://github.com/Alamofire/Alamofire/pull/3179).\n- Memory leak in `NetworkReachabilityManager`.\n- Fixed by [dirtmelon](https://github.com/dirtmelon) in Pull Reqeust [#3180](https://github.com/Alamofire/Alamofire/pull/3180).",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.2.0 (Combine and AuthenticationInterceptor), the release adds Combine support with DataResponsePublisher, DownloadResponsePublisher, and DataStreamPublisher, and adds AuthenticationInterceptor for easier adaptation and retry of requests with credentials. It updates response handlers to take all serializer parameters, renames DisabledEvaluator to DisabledTrustEvaluator, allows Interceptor to be initialized with multiple RequestInterceptors, and fixes minor documentation issues, encoding of Decimal values in URLEncodedFormEncoder, a thread-safety issue in Session, and a memory leak in NetworkReachabilityManager."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_2_1",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.2.1",
+      "tag_name": "5.2.1",
+      "title": "Pluggin' Leaks",
+      "time_hint": "2020-05-26",
+      "published_at": "2020-05-26T02:37:55Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.2.1",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: Pluggin' Leaks\nTag: 5.2.1; draft: False; prerelease: False; published_at: 2020-05-26T02:37:55Z; created_at: 2020-05-26T02:37:08Z\nRelease notes:\nReleased on 2020-05-25. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/71?closed=1).\n#### Updated\n- Usage of `.background` `DispatchQoS` to `.utility` to avoid low-power issues.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3207](https://github.com/Alamofire/Alamofire/pull/3207).\n#### Fixed\n- Various memory leaks.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3199](https://github.com/Alamofire/Alamofire/pull/3199).",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.2.1 (Pluggin' Leaks), the release updates usage of .background DispatchQoS to .utility to avoid low-power issues, and fixes various memory leaks."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_2_2",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.2.2",
+      "tag_name": "5.2.2",
+      "title": "Reliable Streaming",
+      "time_hint": "2020-07-17",
+      "published_at": "2020-07-17T20:00:17Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.2.2",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: Reliable Streaming\nTag: 5.2.2; draft: False; prerelease: False; published_at: 2020-07-17T20:00:17Z; created_at: 2020-07-17T19:59:22Z\nRelease notes:\nReleased on 2020-07-17. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/72?closed=1).\n#### Added\n- `macOS(Catalyst)` `User-Agent` string.\n- Added by [Jon Shier](https://github.com/jshier) in Pull Request [#3236](https://github.com/Alamofire/Alamofire/pull/3236).\n#### Updated\n- `debugDescription` of `DataRequest` and `DownloadRequest` to better handle non-text and long content, with better formatting.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3256](https://github.com/Alamofire/Alamofire/pull/3256).\n- Code to use `switch` instead of `if else` statement.\n- Updated by [dirtmelon](https://github.com/dirtmelon) in Pull Request [#3214](https://github.com/Alamofire/Alamofire/pull/3214).\n#### Fixed\n- Linking on some Apple OS versions when using Swift Package Manager.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3259](https://github.com/Alamofire/Alamofire/pull/3259).\n- Reliability issues with `DataStreamRequest`.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3216](https://github.com/Alamofire/Alamofire/pull/3216).",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.2.2 (Reliable Streaming), the release adds a macOS(Catalyst) User-Agent string, updates debugDescription of DataRequest and DownloadRequest for better handling of non-text and long content, updates code to use switch instead of if else, and fixes linking on some Apple OS versions when using Swift Package Manager and reliability issues with DataStreamRequest."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_3_0",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.3.0",
+      "tag_name": "5.3.0",
+      "title": "Lifetime Events",
+      "time_hint": "2020-10-18",
+      "published_at": "2020-10-18T01:05:41Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.3.0",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: Lifetime Events\nTag: 5.3.0; draft: False; prerelease: False; published_at: 2020-10-18T01:05:41Z; created_at: 2020-10-18T01:04:45Z\nRelease notes:\nReleased on 2020-10-17. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/73?closed=1).\n#### Added\n- Closure callback APIs for the production of `URLRequest`s and `URLSessionTask`s.\n- Added by [Jon Shier](https://github.com/jshier) in Pull Request [#3219](https://github.com/Alamofire/Alamofire/pull/3219).\n- `URLSessionTaskMetrics` gathering on watchOS 7+.\n- Added by [Jon Shier](https://github.com/jshier) in Pull Request [#3321](https://github.com/Alamofire/Alamofire/pull/3321).\n#### Updated\n- Project settings, GitHub Actions, tests, and formatting for newer Xcodes.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Requests [#3278](https://github.com/Alamofire/Alamofire/pull/3278), [#3284](https://github.com/Alamofire/Alamofire/pull/3284), [#3285](https://github.com/Alamofire/Alamofire/pull/3285), [#3309](https://github.com/Alamofire/Alamofire/pull/3309), and  [#3320](https://github.com/Alamofire/Alamofire/pull/3320).\n- Use of `URLRequest.headers` extension property in `URLEncoding`.\n- Updated by [tomisacat](https://github.com/tomisacat) in Pull Request [#3264](https://github.com/Alamofire/Alamofire/pull/3264).\n- iOS example app.\n- Updated by [rain2540](https://github.com/rain2540) in Pull Request [#3268](https://github.com/Alamofire/Alamofire/pull/3268).\n- Various documentation.\n- Updated by [Jaydeep Vora](https://github.com/jaydeep-vora), [Minhyuk Kim](https://github.com/mininny), and [Tieda](https://github.com/weitieda) in Pull Requests [#3274](https://github.com/Alamofire/Alamofire/pull/3274), [#3292](https://github.com/Alamofire/Alamofire/pull/3292), and [#3317](https://github.com/Alamofire/Alamofire/pull/3317).\n#### Fixed\n- Double lock crash in `AuthenticationInterceptor` caused by synchronous `refresh` implementations.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3322](https://github.com/Alamofire/Alamofire/pull/3322).\n- Crash when requesting `file://` `URL`s by producing validation error.\n- Fixed by [hyotak.yun](https://github.com/devtak) in Pull Request [#3318](https://github.com/Alamofire/Alamofire/pull/3318).\n- Missing rethrow of error produced when writing temporary multipart files fails.\n- Fixed by [sudo.park](https://github.com/sudopark) in Pull Request [#3306](https://github.com/Alamofire/Alamofire/pull/3306).\n- Objective-C module conflicts in Xcode 12 by removing Obj-C module support.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3308](https://github.com/Alamofire/Alamofire/pull/3308).",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.3.0 (Lifetime Events), the release adds closure callback APIs for the production of URLRequests and URLSessionTasks, and URLSessionTaskMetrics gathering on watchOS 7+. It updates project settings, GitHub Actions, tests, and formatting for newer Xcodes, updates use of URLRequest.headers in URLEncoding, updates the iOS example app and various documentation, and fixes a double lock crash in AuthenticationInterceptor caused by synchronous refresh implementations, a crash when requesting file:// URLs by producing a validation error, missing rethrow of error when writing temporary multipart files fails, and Objective-C module conflicts in Xcode 12 by removing Obj-C module support."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_4_0",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.4.0",
+      "tag_name": "5.4.0",
+      "title": "URLs and File Downloads",
+      "time_hint": "2020-11-04",
+      "published_at": "2020-11-04T21:40:10Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.4.0",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: URLs and File Downloads\nTag: 5.4.0; draft: False; prerelease: False; published_at: 2020-11-04T21:40:10Z; created_at: 2020-11-04T21:38:08Z\nRelease notes:\nReleased on 2020-11-04. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/74?closed=1).\n#### Added\n- `URLResponseSerializer` and attendant convenience methods so downloads can produce a non-optional `URL`.\n- Added by[Jon Shier](https://github.com/jshier) in Pull Request [#3343](https://github.com/Alamofire/Alamofire/pull/3343).\n#### Updated\n- Handing of `file://` `URL`s, removing error added in 5.3.0 and adding support for `DownloadRequest`.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3342](https://github.com/Alamofire/Alamofire/pull/3342).",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.4.0 (URLs and File Downloads), the release adds URLResponseSerializer and attendant convenience methods so downloads can produce a non-optional URL, and updates handling of file:// URLs, removing the error added in 5.3.0 and adding support for DownloadRequest."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_4_1",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.4.1",
+      "tag_name": "5.4.1",
+      "title": "Installing Obj-C Headers",
+      "time_hint": "2020-12-21",
+      "published_at": "2020-12-21T02:11:14Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.4.1",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: Installing Obj-C Headers\nTag: 5.4.1; draft: False; prerelease: False; published_at: 2020-12-21T02:11:14Z; created_at: 2020-12-21T02:16:04Z\nRelease notes:\nReleased on 2020-12-20. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/75?closed=1).\n#### Updated\n- Project and CocoaPods installation of Obj-C header.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3378](https://github.com/Alamofire/Alamofire/pull/3378).",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.4.1 (Installing Obj-C Headers), the release updates the project and CocoaPods installation of the Obj-C header."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_4_2",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.4.2",
+      "tag_name": "5.4.2",
+      "title": "Multipart Safety",
+      "time_hint": "2021-04-03",
+      "published_at": "2021-04-03T21:46:06Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.4.2",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: Multipart Safety\nTag: 5.4.2; draft: False; prerelease: False; published_at: 2021-04-03T21:46:06Z; created_at: 2021-04-03T21:45:03Z\nRelease notes:\nReleased on 2021-04-03. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/76?closed=1).\n#### Updated\n- Resume data handling for `DownloadRequest`s to access resume data from errors as well as cancellation.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3419](https://github.com/Alamofire/Alamofire/pull/3419).\n- Project files and templates for Xcode 12.4 and GitHub templates.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3414](https://github.com/Alamofire/Alamofire/pull/3414).\n#### Fixed\n- `MultipartUpload` thread-safety.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3421](https://github.com/Alamofire/Alamofire/pull/3421).\n- Multipart body stream length handling to better handle partial streams.\n- Fixed by [Yu Ao](https://github.com/YuAo) and [Jon Shier](https://github.com/jshier) in Pull Requests [#3380](https://github.com/Alamofire/Alamofire/pull/3380) and [#3420](https://github.com/Alamofire/Alamofire/pull/3420).",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.4.2 (Multipart Safety), the release updates resume data handling for DownloadRequests to access resume data from errors as well as cancellation, updates project files and templates for Xcode 12.4 and GitHub templates, and fixes MultipartUpload thread-safety and multipart body stream length handling to better handle partial streams."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_4_3",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.4.3",
+      "tag_name": "5.4.3",
+      "title": "Multipart Order",
+      "time_hint": "2021-04-22",
+      "published_at": "2021-04-22T02:50:05Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.4.3",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: Multipart Order\nTag: 5.4.3; draft: False; prerelease: False; published_at: 2021-04-22T02:50:05Z; created_at: 2021-04-22T02:49:02Z\nRelease notes:\nReleased on 2021-04-21. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/77?closed=1).\n#### Fixed\n- Change in multipart upload creation order.\n- Fixed by [Christian Noon](https://github.com/cnoon) in Pull Request [#3438](https://github.com/Alamofire/Alamofire/pull/3438).\n- Typo in Alamofire 5 migration guide.\n- Fixed by [DevYeom](https://github.com/DevYeom) in Pull Request [#3431](https://github.com/Alamofire/Alamofire/pull/3431).",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.4.3 (Multipart Order), the release fixes a change in multipart upload creation order and a typo in the Alamofire 5 migration guide."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_4_4",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.4.4",
+      "tag_name": "5.4.4",
+      "title": "Xcode 13 Fixes",
+      "time_hint": "2021-09-20",
+      "published_at": "2021-09-20T23:47:57Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.4.4",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: Xcode 13 Fixes\nTag: 5.4.4; draft: False; prerelease: False; published_at: 2021-09-20T23:47:57Z; created_at: 2021-09-20T23:46:54Z\nRelease notes:\nReleased on 2021-09-20. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/78?closed=1).\n#### Added\n- Support for Xcode 13, including a workaround for Combine compilation on older architectures.\n- Added by [Jon Shier](https://github.com/jshier) in Pull Request [#3486](https://github.com/Alamofire/Alamofire/pull/3486).\n- Testing on watchOS.\n- Added by [Jon Shier](https://github.com/jshier) in Pull Request [#3449](https://github.com/Alamofire/Alamofire/pull/3449).\n- Support for building on Windows and Linux. Alamofire is unsupported on these platforms but should build correctly.\n- Added by [Jon Shier](https://github.com/jshier) and [Alex Taffe](https://github.com/alex-taffe) in Pull Requests [#3446](https://github.com/Alamofire/Alamofire/pull/3446) and [#3462](https://github.com/Alamofire/Alamofire/pull/3462).\n#### Updated\n- Usage of `.count >= 0` to `!.isEmpty`.\n- Updated by [Shafeer P](https://github.com/shafeerp) in Pull Request [#3478](https://github.com/Alamofire/Alamofire/pull/3478).\n#### Fixed\n- Async navigation title updating in example app.\n- Fixed by [Tiago Maia](https://github.com/TiagoMaiaL) in Pull Request [3494](https://github.com/Alamofire/Alamofire/pull/3494).\n- Various documentation bugs.\n- Fixed by [Jordan de Laune](https://github.com/jdelaune), [Cédric Luthi](https://github.com/0xced), [Romain Bertozzi](https://github.com/r-mckay), and [Tiago Maia](https://github.com/TiagoMaiaL).",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.4.4 (Xcode 13 Fixes), the release adds support for Xcode 13 including a workaround for Combine compilation on older architectures, testing on watchOS, and support for building on Windows and Linux. It updates usage of .count >= 0 to !.isEmpty, and fixes async navigation title updating in the example app and various documentation bugs."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_5_0",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.5.0",
+      "tag_name": "5.5.0",
+      "title": "Swift Concurrency",
+      "time_hint": "2021-12-13",
+      "published_at": "2021-12-13T23:57:17Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.5.0",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: Swift Concurrency\nTag: 5.5.0; draft: False; prerelease: False; published_at: 2021-12-13T23:57:17Z; created_at: 2021-12-13T23:54:48Z\nRelease notes:\nAlamofire 5.5 is the first release where we're labeling features we consider experimental. These features, while fully designed and well tested, rely on language or framework features which may change or require breaking bug fixes, and we'd rather not have to make a major release in that case. So [🔥 Experimental 🔥] features may require breaking changes in minor, rather than major, releases. This will be rare and compatibility should be preserved in most cases, but cannot be guaranteed.\nReleased on 2021-12-13. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/79?closed=1).\n#### Added\n- [🔥 Experimental 🔥] support for Swift Concurrency, including `async`-`await` for requests and `StreamOf` for streaming values.\n- Added by [Jon Shier](https://github.com/jshier) in Pull Request [#3463](https://github.com/Alamofire/Alamofire/pull/3463).\n- Generic static accessors for various protocols types for Swift 5.5.\n- Added by [Jon Shier](https://github.com/jshier) in Pull Request [#3499](https://github.com/Alamofire/Alamofire/pull/3499).\n- `.indexInBrackets` options for array encoding in query parameters.\n- Added by [Tiago Lopes](https://github.com/TiagoMaiaL) in Pull Request [#3516](https://github.com/Alamofire/Alamofire/pull/3516).\n- `RequestAdapterState` and new protocol requirements for `RequestAdapter` to allow for additional state to be available.\n- Added by [Christian Noon](https://github.com/cnoon) in Pull Request [#3504](https://github.com/Alamofire/Alamofire/pull/3504).\n#### Updated\n- `Session` to more safely target provided custom `DispatchQueue`s for internal use.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3523](https://github.com/Alamofire/Alamofire/pull/3523).\n- `AFError` message regarding unacceptable `Content-Type`s to sort the types.\n- Updated by [Timur Yusipov](https://github.com/Usipov) in Pull Request [#3518](https://github.com/Alamofire/Alamofire/pull/3518).\n- Base Swift language version requirement to 5.3.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3495](https://github.com/Alamofire/Alamofire/pull/3495).\n- Sample app to show proper loading state for requests.\n- Updated by [Tiago Lopes](https://github.com/TiagoMaiaL) in Pull Request [#3514](https://github.com/Alamofire/Alamofire/pull/3514).\n#### Deprecated\n- `responseJSON` and associated methods, in preference to `responseDecodable`.\n- Deprecated by [Jon Shier](https://github.com/jshier) in Pull Request [#3502](https://github.com/Alamofire/Alamofire/pull/3502).\n#### Fixed\n- Use of `Protected` wrapper when accessing properties of the wrapped values to ensure proper thread-safety.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3505](https://github.com/Alamofire/Alamofire/pull/3505).\n- Various documentation typos.\n- Fixed by [Christos Koninis](https://github.com/csknns), [Tiago Lopes](https://github.com/TiagoMaiaL), and [Eugene Berdnikov](https://github.com/evnik) in various Pull Requests.",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.5.0 (Swift Concurrency), the release adds experimental support for Swift Concurrency including async-await for requests and StreamOf for streaming values, generic static accessors for various protocol types for Swift 5.5, .indexInBrackets options for array encoding in query parameters, and RequestAdapterState with new protocol requirements for RequestAdapter. It updates Session to more safely target provided custom DispatchQueues, updates AFError message regarding unacceptable Content-Types to sort the types, updates the base Swift language version requirement to 5.3, updates the sample app to show proper loading state for requests, deprecates responseJSON and associated methods in preference to responseDecodable, and fixes use of Protected wrapper when accessing properties of wrapped values to ensure proper thread-safety and various documentation typos."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_6_0",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.6.0",
+      "tag_name": "5.6.0",
+      "title": "Concurrency Redux",
+      "time_hint": "2022-04-13",
+      "published_at": "2022-04-13T23:56:18Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.6.0",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: Concurrency Redux\nTag: 5.6.0; draft: False; prerelease: False; published_at: 2022-04-13T23:56:18Z; created_at: 2022-04-13T23:55:39Z\nRelease notes:\nReleased on 2022-04-13. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/80?closed=1).\n#### Added\n- Support for `HTTPMethod.query` to support the [upcoming standard](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-safe-method-w-body-02).\n- Added by [Jon Shier](https://github.com/jshier) in Pull Request [#3553](https://github.com/Alamofire/Alamofire/pull/3553).\n- Compile-time Swift version check to enforce minimum supported Swift version.\n- Added by [Dave Verwer](https://github.com/daveverwer) in Pull Request [#3549](https://github.com/Alamofire/Alamofire/pull/3549).\n- GitHub Sponsors support. You can now sponsor Alamofire directly through GitHub.\n- Added by [Jon Shier](https://github.com/jshier) in Pull Request [#3543](https://github.com/Alamofire/Alamofire/pull/3543).\n#### Updated\n- Swift version required to build [🔥 Experimental 🔥] Swift Concurrency support to 5.6.0 to avoid various Apple bugs with Xcode 13.2.0 and 13.2.1. Support now requires Xcode 13.3.1.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3590](https://github.com/Alamofire/Alamofire/pull/3590).\n- `DownloadRequest` to avoid producing resume data when not explicitly requested on cancellation.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3538](https://github.com/Alamofire/Alamofire/pull/3538).\n- Testing infrastructure to use XCTestPlans on Apple platforms.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3538](https://github.com/Alamofire/Alamofire/pull/3538).\n- GitHub Actions support for greater OS coverage, more SPM platforms, and Swift 5.6.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Requests [#3534](https://github.com/Alamofire/Alamofire/pull/3534), [#3545](https://github.com/Alamofire/Alamofire/pull/3545), [#3570](https://github.com/Alamofire/Alamofire/pull/3570), and [#3587](https://github.com/Alamofire/Alamofire/pull/3587).\n#### Fixed\n- Various Security framework deprecation warnings when deploying to newer OSes.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3555](https://github.com/Alamofire/Alamofire/pull/3555).\n- Various documentation issues.\n- Fixed by [Jon Shier](https://github.com/jshier), [Emanuele Fumagalli](https://github.com/emanuelef), [Huang-Libo](https://github.com/Huang-Libo), and [rain2540](https://github.com/rain2540) in Pull Requests [#3548](https://github.com/Alamofire/Alamofire/pull/3548), [#3562](https://github.com/Alamofire/Alamofire/pull/3562), [#3573](https://github.com/Alamofire/Alamofire/pull/3573), [#3574](https://github.com/Alamofire/Alamofire/pull/3574), and [#3585](https://github.com/Alamofire/Alamofire/pull/3585).",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.6.0 (Concurrency Redux), the release adds support for HTTPMethod.query, a compile-time Swift version check to enforce minimum supported Swift version, and GitHub Sponsors support. It updates the Swift version required to build experimental Swift Concurrency support to 5.6.0, updates DownloadRequest to avoid producing resume data when not explicitly requested on cancellation, updates testing infrastructure to use XCTestPlans on Apple platforms, updates GitHub Actions support for greater OS coverage, more SPM platforms, and Swift 5.6, and fixes various Security framework deprecation warnings and documentation issues."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_6_1",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.6.1",
+      "tag_name": "5.6.1",
+      "title": "Missing Cancellation Parameter",
+      "time_hint": "2022-04-17",
+      "published_at": "2022-04-17T20:22:23Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.6.1",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: Missing Cancellation Parameter\nTag: 5.6.1; draft: False; prerelease: False; published_at: 2022-04-17T20:22:23Z; created_at: 2022-04-17T20:20:41Z\nRelease notes:\nReleased on 2022-04-17. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/81?closed=1).\n#### Fixed\n- Missing `automaticallyCancelling` parameter in `serializingDownloadedFileURL`.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3597](https://github.com/Alamofire/Alamofire/pull/3597).",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.6.1 (Missing Cancellation Parameter), the release fixes a missing automaticallyCancelling parameter in serializingDownloadedFileURL."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_6_2",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.6.2",
+      "tag_name": "5.6.2",
+      "title": "Safer Encoding",
+      "time_hint": "2022-07-18",
+      "published_at": "2022-07-18T02:25:06Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.6.2",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: Safer Encoding\nTag: 5.6.2; draft: False; prerelease: False; published_at: 2022-07-18T02:25:06Z; created_at: 2022-07-18T02:23:40Z\nRelease notes:\nReleased on 2022-07-17. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/82?closed=1).\n#### Added\n- Error when object provided to `JSONEcoding` contains values that can't be passed through `JSONSerialization`.\n- Added by [Jon Shier](https://github.com/jshier) in Pull Request [#3624](https://github.com/Alamofire/Alamofire/pull/3624).\n#### Updated\n- CI support for all supported Xcode, macOS, and Linux versions.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Requests [#3607](https://github.com/Alamofire/Alamofire/pull/3607) and [#3622](https://github.com/Alamofire/Alamofire/pull/3622).\n- Support for various Xcode versions.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Requests [#3616](https://github.com/Alamofire/Alamofire/pull/3616) and [#3632](https://github.com/Alamofire/Alamofire/pull/3632).\n- `Cache-Control` header tests to not require hard-coded delays.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3601](https://github.com/Alamofire/Alamofire/pull/3601).\n#### Fixed\n- Swift version check for `SecTrustCopyCertificateChain`.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3606](https://github.com/Alamofire/Alamofire/pull/3606).\n- Various documentation issues.\n- Fixed by [Jacob Lange](https://github.com/jacoblange-dev), [rain2540](https://github.com/rain2540), [bondxf](https://github.com/bondxf), [Ikko Ashimine](https://github.com/eltociear), and [Elon Park](https://github.com/ElonPark) in various Pull Requests.",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.6.2 (Safer Encoding), the release adds an error when an object provided to JSONEncoding contains values that can't be passed through JSONSerialization, updates CI support for all supported Xcode, macOS, and Linux versions, updates support for various Xcode versions, updates Cache-Control header tests to not require hard-coded delays, and fixes a Swift version check for SecTrustCopyCertificateChain and various documentation issues."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_6_3",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.6.3",
+      "tag_name": "5.6.3",
+      "title": "5.6.3",
+      "time_hint": "2022-11-21",
+      "published_at": "2022-11-21T04:42:38Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.6.3",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: 5.6.3\nTag: 5.6.3; draft: False; prerelease: False; published_at: 2022-11-21T04:42:38Z; created_at: 2022-11-21T04:41:19Z\nRelease notes:\nReleased on 2022-11-20. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/83?closed=1).\n#### Updated\n- Swift package to 5.7, CI to Xcode 14.1.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3653](https://github.com/Alamofire/Alamofire/pull/3653).\n#### Fixed\n- Calls to deprecated cancellation handler function.\n- Fixed by [Sven Münnich](https://github.com/svenmuennich) in Pull Request [#3657](https://github.com/Alamofire/Alamofire/pull/3657).\n- Unnecessary protocol conformance on Combine publishers.\n- Fixed by [MoonkiKim(김문기)](https://github.com/tedKim5178) in Pull Request [#3650](https://github.com/Alamofire/Alamofire/pull/3650).\n- Don't attempt retry when `Request` has already been cancelled.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3641](https://github.com/Alamofire/Alamofire/pull/3641).\n#### New Contributors\n* @tedKim5178 made their first contribution in https://github.com/Alamofire/Alamofire/pull/3650\n* @svenmuennich made their first contribution in https://github.com/Alamofire/Alamofire/pull/3657\n**Full Changelog**: https://github.com/Alamofire/Alamofire/compare/5.6.2...5.6.3",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.6.3, the release updates the Swift package to 5.7 and CI to Xcode 14.1, and fixes calls to deprecated cancellation handler function, unnecessary protocol conformance on Combine publishers, and prevents retry when Request has already been cancelled."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_6_4",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.6.4",
+      "tag_name": "5.6.4",
+      "title": "5.6.4",
+      "time_hint": "2022-11-22",
+      "published_at": "2022-11-22T03:23:56Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.6.4",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: 5.6.4\nTag: 5.6.4; draft: False; prerelease: False; published_at: 2022-11-22T03:23:56Z; created_at: 2022-11-22T03:23:08Z\nRelease notes:\nReleased on 2022-11-21. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/84?closed=1).\n#### Fixed\n- Deprecated OS version support in Swift 5.7 SPM Package.\n- Fixed by [Guglielmo Faglioni](https://github.com/guidev) in Pull Request [#3665](https://github.com/Alamofire/Alamofire/pull/3665).\n## New Contributors\n* @guidev made their first contribution in https://github.com/Alamofire/Alamofire/pull/3665\n**Full Changelog**: https://github.com/Alamofire/Alamofire/compare/5.6.3...5.6.4",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.6.4, the release fixes deprecated OS version support in the Swift 5.7 SPM Package."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_7_0",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.7.0",
+      "tag_name": "5.7.0",
+      "title": "5.7.0",
+      "time_hint": "2023-05-09",
+      "published_at": "2023-05-09T23:00:31Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.7.0",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: 5.7.0\nTag: 5.7.0; draft: False; prerelease: False; published_at: 2023-05-09T23:00:31Z; created_at: 2023-05-09T22:58:41Z\nRelease notes:\nReleased on 2023-05-09. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/84?closed=1).\n#### Added\n- Request body compression support. This is disabled by default.\n- Added by [Jon Shier](https://github.com/jshier) in Pull Request [#3701](https://github.com/Alamofire/Alamofire/pull/3701).\n- `ArrayEncoding.custom` to `URLEncodedFormEncoder` and `URLEncoding`.\n- Added by [Mike Naquin](https://github.com/naquin) in Pull Request [#3699](https://github.com/Alamofire/Alamofire/pull/3699).\n- `KeyPathEncoding` to `URLEncodedFormEncoder`.\n- Added by [Jon Shier](https://github.com/jshier) in Pull Request [#3689](https://github.com/Alamofire/Alamofire/pull/3689).\n- `NilEncoding` to `URLEncodedFormEncoder`.\n- Added by [Jon Shier](https://github.com/jshier) in Pull Request [#3686](https://github.com/Alamofire/Alamofire/pull/3686).\n#### Updated\n- Alamofire now requires Swift 5.5+ and (macOS 10.13, iOS 11, tvOS 11, and watchOS 4)+.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Requests [#3670](https://github.com/Alamofire/Alamofire/pull/3670) and [#3717](https://github.com/Alamofire/Alamofire/pull/3717).\n- `flatMap` to `map` in `HTTPHeaders`.\n- Updated by [kati](https://github.com/kati-kms) in Pull Request [#3704](https://github.com/Alamofire/Alamofire/pull/3704).\n- Various CI integrations.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Requests [#3685](https://github.com/Alamofire/Alamofire/pull/3685) and [#3712](https://github.com/Alamofire/Alamofire/pull/3712).\n#### Fixed\n- Reachability API usage safety.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3684](https://github.com/Alamofire/Alamofire/pull/3684).\n- Unused `bufferingPolicy` in `StreamOf`.\n- Fixed by [Duc](https://github.com/trungducc) in Pull Request [#3668](https://github.com/Alamofire/Alamofire/pull/3668).\n- Various documentation typos.\n- Fixed by [Timo Wälisch](https://github.com/TimoWaelischIdealo), [Tony](https://github.com/iamtony), and [uhooi](https://github.com/uhooi) in various PRs.",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.7.0, the release adds request body compression support (disabled by default), ArrayEncoding.custom to URLEncodedFormEncoder and URLEncoding, KeyPathEncoding to URLEncodedFormEncoder, and NilEncoding to URLEncodedFormEncoder. It updates Alamofire to require Swift 5.5+ and (macOS 10.13, iOS 11, tvOS 11, watchOS 4)+, updates flatMap to map in HTTPHeaders, updates various CI integrations, and fixes reachability API usage safety, unused bufferingPolicy in StreamOf, and various documentation typos."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_7_1",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.7.1",
+      "tag_name": "5.7.1",
+      "title": "5.7.1",
+      "time_hint": "2023-05-10",
+      "published_at": "2023-05-10T16:00:06Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.7.1",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: 5.7.1\nTag: 5.7.1; draft: False; prerelease: False; published_at: 2023-05-10T16:00:06Z; created_at: 2023-05-10T15:59:02Z\nRelease notes:\nReleased on 2023-05-10. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/86?closed=1).\n#### Updated\n- Deployment targets reverted to (macOS 10.12, iOS 10, tvOS 10, and watchOS 3)+\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3720](https://github.com/Alamofire/Alamofire/pull/3720).",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.7.1, the release reverts deployment targets to (macOS 10.12, iOS 10, tvOS 10, watchOS 3)+."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_8_0",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.8.0",
+      "tag_name": "5.8.0",
+      "title": "5.8.0",
+      "time_hint": "2023-08-31",
+      "published_at": "2023-08-31T22:52:04Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.8.0",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: 5.8.0\nTag: 5.8.0; draft: False; prerelease: False; published_at: 2023-08-31T22:52:04Z; created_at: 2023-08-31T22:50:52Z\nRelease notes:\nReleased on 2023-08-31. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/87?closed=1).\n#### Added\n- visionOS support.\n- Added by [Jon Shier](https://github.com/jshier) in Pull Requests [#3738](https://github.com/Alamofire/Alamofire/pull/3738) and [#3750](https://github.com/Alamofire/Alamofire/pull/3750).\n- Hooks for initial `HTTPURLResponse` values.\n- Added by [Jon Shier](https://github.com/jshier) in Pull Request [#3762](https://github.com/Alamofire/Alamofire/pull/3738).\n- Android build support.\n- Added by [Hugo Gonzalez](https://github.com/hggz) in Pull Request [#3744](https://github.com/Alamofire/Alamofire/pull/3744).\n#### Updated\n- Async integration to obey automatic cancellation by default.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3757](https://github.com/Alamofire/Alamofire/pull/3757).\n- Platform `#if` checks.\n- Updated by [brenno](https://github.com/brennobemoura) in Pull Request [#3756](https://github.com/Alamofire/Alamofire/pull/3756).\n- Windows CI.\n- Updated by [Saleem Abdulrasool](https://github.com/compnerd) in Pull Request [#3763](https://github.com/Alamofire/Alamofire/pull/3763).\n- `URL` conversion tests for 2023 `URL` changes.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3734](https://github.com/Alamofire/Alamofire/pull/3734).\n- for-loop to `contains`.\n- Updated by [Mayank Kumar Gupta](https://github.com/Mayank-84) in Pull Request [#3726](https://github.com/Alamofire/Alamofire/pull/3726).\n#### Fixed\n- `MultipartFormData` stream to properly obey `bodyContentLength`.\n- Fixed by [Henrique Valcanaia](https://github.com/hvsw) in Pull Request [#3730](https://github.com/Alamofire/Alamofire/pull/3730).\n- Unnecessary call to empty init.\n- Fixed by [Shinolr](https://github.com/Shinolr) in Pull Request [#3742](https://github.com/Alamofire/Alamofire/pull/3742).\n- Documentation typos.\n- Fixed by [Jenna](https://github.com/ueunli) in Pull Request [#3733](https://github.com/Alamofire/Alamofire/pull/3733).",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.8.0, the release adds visionOS support, hooks for initial HTTPURLResponse values, and Android build support. It updates async integration to obey automatic cancellation by default, updates platform #if checks, Windows CI, URL conversion tests for 2023 URL changes, and updates a for-loop to contains. It fixes MultipartFormData stream to properly obey bodyContentLength, an unnecessary call to empty init, and documentation typos."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_8_1",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.8.1",
+      "tag_name": "5.8.1",
+      "title": "5.8.1",
+      "time_hint": "2023-10-26",
+      "published_at": "2023-10-26T19:49:10Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.8.1",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: 5.8.1\nTag: 5.8.1; draft: False; prerelease: False; published_at: 2023-10-26T19:49:10Z; created_at: 2023-10-26T19:47:55Z\nRelease notes:\nReleased on 2023-10-26. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/88?closed=1).\n### Updated\n- Internal: `Protected` to no longer be a `@propertyWrapper`.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3777](https://github.com/Alamofire/Alamofire/pull/3777).\n### Fixed\n- `URLEncodedFormEncoder` encoding of `Encodable` values with optional properties using `encodeIfPresent`.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3779](https://github.com/Alamofire/Alamofire/pull/3779).\n- Missing \"Skip Install\" setting for visionOS target.\n- Fixed by [Sai](https://github.com/Sai) in Pull Request [#3788](https://github.com/Alamofire/Alamofire/pull/3788).",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.8.1, the release updates the internal Protected to no longer be a @propertyWrapper, and fixes URLEncodedFormEncoder encoding of Encodable values with optional properties using encodeIfPresent and a missing \"Skip Install\" setting for the visionOS target."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_9_0",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.9.0",
+      "tag_name": "5.9.0",
+      "title": "5.9.0",
+      "time_hint": "2024-03-04",
+      "published_at": "2024-03-04T02:19:13Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.9.0",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: 5.9.0\nTag: 5.9.0; draft: False; prerelease: False; published_at: 2024-03-04T02:19:13Z; created_at: 2024-03-04T02:17:59Z\nRelease notes:\nReleased on 2024-03-03. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/89?closed=1).\n### Added\n- [🔥 Experimental 🔥] `WebSocketRequest`, as a wrapper for `URLSessionWebSocketTask`. This preview release is undocumented behind `@_spi(WebSocket)`. Its API _will_ change in the future, especially to adopt typed throws, but it is largely feature complete, tested, and usable now. API feedback, missing use cases, and bug reports are much appreciated before it goes fully public.\n- Added by [Jon Shier](https://github.com/jshier) in Pull Request [#3455](https://github.com/Alamofire/Alamofire/pull/3455).\n- `PrivacyInfo.xcprivacy` file and integration with SPM, CocoaPods, and Carthage.\n- Added by [Dmitry Kuleshov](https://github.com/kdvmgn) and [Jon Shier](https://github.com/jshier) in Pull Requests [#3792](https://github.com/Alamofire/Alamofire/pull/3792), [#3831](https://github.com/Alamofire/Alamofire/pull/3831), and [#3839](https://github.com/Alamofire/Alamofire/pull/3839).\n- `AlamofireDynamic` target, to force dynamic linking in Xcode when using SPM. Only use when you know you need it.\n- Added by [Jon Shier](https://github.com/jshier) in Pull Request [#3808](https://github.com/Alamofire/Alamofire/pull/3808).\n- `AFInfo` enum and a public `version` value to get Alamofire's current version, `AFInfo.version`.\n- Added by [Jon Shier](https://github.com/jshier) in Pull Request [#3819](https://github.com/Alamofire/Alamofire/pull/3819).\n### Updated\n- Alamofire to require Swift 5.7.1.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3798](https://github.com/Alamofire/Alamofire/pull/3798).\n- Project structure to break apart large `Request.swift` file and consolidate various `Request` subclasses into their own files.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3798](https://github.com/Alamofire/Alamofire/pull/3798).\n- `Empty` type to be `Sendable`.\n- Updated by [Antoine van der Lee](https://github.com/AvdLee) in Pull Request [#3816](https://github.com/Alamofire/Alamofire/pull/3816).\n- `.swiftformat` to remove duplicate rules.\n- Updated by [Fourenn](https://github.com/giftbott) in Pull Request [#3835](https://github.com/Alamofire/Alamofire/pull/3835).\n### Fixed\n- Platform deprecation warnings in `Package.swift` in newer Xcode versions.\n- Updated by [fess](https://github.com/apps4everyone) in Pull Request [#3823](https://github.com/Alamofire/Alamofire/pull/3823).\n- `Alamofire.podspec` after project restructuring.\n- Updated by [mlch](https://github.com/mlch911) in Pull Request [#3825](https://github.com/Alamofire/Alamofire/pull/3825).\n- Various documentation typos.\n- Fixed by [JaewoongLee-swift](https://github.com/JaewoongLee-swift), [TaeHyun](https://github.com/kth1210), and [hugo-syn](https://github.com/hugo-syn) in various Pull Requests.",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.9.0, the release adds experimental WebSocketRequest as a wrapper for URLSessionWebSocketTask, a PrivacyInfo.xcprivacy file and integration with SPM, CocoaPods, and Carthage, an AlamofireDynamic target to force dynamic linking in Xcode when using SPM, and AFInfo enum with a public version value to get Alamofire's current version. It updates Alamofire to require Swift 5.7.1, restructures the project to break apart large Request.swift file, updates Empty type to be Sendable, updates .swiftformat to remove duplicate rules, and fixes platform deprecation warnings in Package.swift, Alamofire.podspec after project restructuring, and various documentation typos."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_9_1",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.9.1",
+      "tag_name": "5.9.1",
+      "title": "5.9.1",
+      "time_hint": "2024-03-31",
+      "published_at": "2024-03-31T01:22:33Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.9.1",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: 5.9.1\nTag: 5.9.1; draft: False; prerelease: False; published_at: 2024-03-31T01:22:33Z; created_at: 2024-03-31T01:21:38Z\nRelease notes:\nReleased on 2024-03-30. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/90?closed=1).\n### Updated\n- `HTTPHeaders` and `HTTPHeader` to be `Sendable`.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3856](https://github.com/Alamofire/Alamofire/pull/3856).\n- `HTTPMethod` to be `Sendable`.\n- Updated by [Galvin Li](https://github.com/bestwnh) in Pull Request [#3848](https://github.com/Alamofire/Alamofire/pull/3848).\n### Fixed\n- CocoaPods visionOS support by explicitly declaring it in podspec.\n- Fixed by [Tamás Jäger](https://github.com/bestwnh) in Pull Request [#3845](https://github.com/Alamofire/Alamofire/pull/3845).",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.9.1, the release updates HTTPHeaders and HTTPHeader to be Sendable, updates HTTPMethod to be Sendable, and fixes CocoaPods visionOS support by explicitly declaring it in the podspec."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_10_0",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.10.0",
+      "tag_name": "5.10.0",
+      "title": "5.10.0",
+      "time_hint": "2024-10-13",
+      "published_at": "2024-10-13T22:22:50Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.10.0",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: 5.10.0\nTag: 5.10.0; draft: False; prerelease: False; published_at: 2024-10-13T22:22:50Z; created_at: 2024-10-13T22:22:05Z\nRelease notes:\n### Added\n- 🔥 Full Swift concurrency support with `Sendable` requirements. Most APIs are also marked `@preconcurrency`, so there should be no breaking changes. Swift 5.9 now required to build.\n- Added by [Jon Shier](https://github.com/jshier) in Pull Request [#3880](https://github.com/Alamofire/Alamofire/pull/3880).\n- Existential `any` now required internally by Alamofire.\n- Added by [Keita Watanabe](https://github.com/kitwtnb) in Pull Request [#3881](https://github.com/Alamofire/Alamofire/pull/3881).\n### Updated\n- 🔥 `Session.init(... eventMonitors:)` to allow no `EventMonitor`s at all, and `CompositeEventMonitor` to fix thread-safety. Potentially breaking if previously passing `[]` but still expecting `Notification`s to be posted. Pass `[AlamofireNotifications()]` if you need that behavior.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3894](https://github.com/Alamofire/Alamofire/pull/3894).\n- `DownloadRequest.validate` to read the `fileSize` rather than the whole file from disk.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3899](https://github.com/Alamofire/Alamofire/pull/3899).\n- Links to `swiftlang` repositories.\n- Updated by [LamTrinh.Dev](https://github.com/lamtrinhdev) in Pull Request [#3882](https://github.com/Alamofire/Alamofire/pull/3882).\n### Fixed\n- Various documentation typos.\n- Fixed by [Alexander Cyon](https://github.com/Sajjon) in Pull Request [#3891](https://github.com/Alamofire/Alamofire/pull/3891).\n- Passing `queue` parameter to `DataStream` serializers.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3879](https://github.com/Alamofire/Alamofire/pull/3879).\n- `testThatDatesCanBeEncodedAsFormatted` when running with a non-Gregorian calendar.\n- Fixed by [Kittisak Phetrungnapha](https://github.com/kittisak-phetrungnapha) in Pull Request [#3858](https://github.com/Alamofire/Alamofire/pull/3858).",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.10.0, the release adds full Swift concurrency support with Sendable requirements, requires existential any internally, updates Session.init(eventMonitors:) to allow no EventMonitors at all and fixes CompositeEventMonitor thread-safety, updates DownloadRequest.validate to read the fileSize rather than the whole file from disk, updates links to swiftlang repositories, and fixes various documentation typos, passing queue parameter to DataStream serializers, and a test for date encoding when running with a non-Gregorian calendar."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_10_1",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.10.1",
+      "tag_name": "5.10.1",
+      "title": "5.10.1",
+      "time_hint": "2024-10-19",
+      "published_at": "2024-10-19T19:29:57Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.10.1",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: 5.10.1\nTag: 5.10.1; draft: False; prerelease: False; published_at: 2024-10-19T19:29:57Z; created_at: 2024-10-19T19:29:09Z\nRelease notes:\nReleased on 2024-10-19. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/92?closed=1).\n### Fixed\n- `@Sendable` in `AdaptHandler` and `RetryHandler` types.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3906](https://github.com/Alamofire/Alamofire/pull/3906).\n- Downstream `JSONResponseSerializer` wrapper by reverting output type to just `Any`.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3903](https://github.com/Alamofire/Alamofire/pull/3903).\n- Missing `@Sendable` on `Authenticator.refresh`.\n- Fixed by [rono23](https://github.com/rono23) in Pull Request [#3901](https://github.com/Alamofire/Alamofire/pull/3901).",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.10.1, the release fixes @Sendable in AdaptHandler and RetryHandler types, a downstream JSONResponseSerializer wrapper by reverting output type to just Any, and missing @Sendable on Authenticator.refresh."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_10_2",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.10.2",
+      "tag_name": "5.10.2",
+      "title": "5.10.2",
+      "time_hint": "2024-11-25",
+      "published_at": "2024-11-25T15:11:48Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.10.2",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: 5.10.2\nTag: 5.10.2; draft: False; prerelease: False; published_at: 2024-11-25T15:11:48Z; created_at: 2024-11-25T15:10:32Z\nRelease notes:\nReleased on 2024-11-24. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/93?closed=1).\n### Fixed\n- Runtime crash when calling `validate` from a Swift 6-compiled target.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3920](https://github.com/Alamofire/Alamofire/pull/3920).\n- Swift 6.0 `Package.swift` deprecation warning.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3911](https://github.com/Alamofire/Alamofire/pull/3911).",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.10.2, the release fixes a runtime crash when calling validate from a Swift 6-compiled target and a Swift 6.0 Package.swift deprecation warning."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_11_0",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.11.0",
+      "tag_name": "5.11.0",
+      "title": "5.11.0",
+      "time_hint": "2025-12-20",
+      "published_at": "2025-12-20T07:34:46Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.11.0",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: 5.11.0\nTag: 5.11.0; draft: False; prerelease: False; published_at: 2025-12-20T07:34:46Z; created_at: 2025-12-20T07:33:56Z\nRelease notes:\nReleased on 2025-12-20. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/94?closed=1).\n### Added\n- Lazy `Request` setup by default. `Request`s are now inert until `resume()`'d, whether automatically or manually. Previous behavior can be restored by using `Session(requestSetup: .eager)`.\n- Added by [Jon Shier](https://github.com/jshier) in Pull Request [#3996](https://github.com/Alamofire/Alamofire/pull/3996).\n- Inline, per-`Request` `RequestAdapter`, `RequestRetrier`, `RequestInterceptor`, and `EventMonitor` APIs, to add instances after `Request` initialization.\n- Added by [Jon Shier](https://github.com/jshier) in Pull Request [#3996](https://github.com/Alamofire/Alamofire/pull/3996).\n- Per-`Request` automatic `resume()` control, with the `shouldAutomaticallyResume` parameter.\n- Added by [Jon Shier](https://github.com/jshier) in Pull Request [#3996](https://github.com/Alamofire/Alamofire/pull/3996).\n- `OfflineRetrier`, to retry requests based on `NWPathMonitor` status, as a replacement for `NetworkReachabilityManager`.\n- Added by [Jon Shier](https://github.com/jshier) and [gourav kumar](https://github.com/gouravkmar) in Pull Request [#3948](https://github.com/Alamofire/Alamofire/pull/3948).\n### Updated\n- Alamofire to require Xcode 16.0 and the Swift 6 compiler (Swift 5 or 6 mode).\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3984](https://github.com/Alamofire/Alamofire/pull/3984).\n- Deployment targets for the test targets to match XCTest and Swift Testing availability.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Requests [#3990](https://github.com/Alamofire/Alamofire/pull/3990) and [#3996](https://github.com/Alamofire/Alamofire/pull/3996).\n- `Empty` to be `Hashable`.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3985](https://github.com/Alamofire/Alamofire/pull/3985).\n- `Request` internals to use more atomic locking.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3948](https://github.com/Alamofire/Alamofire/pull/3948).\n- Deprecated `NetworkReachabilityManager` on iOS 17.4 and later.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#3947](https://github.com/Alamofire/Alamofire/pull/3947).\n- Linux and Android CI builds.\n- Updated by [Marc Prud'hommeaux](https://github.com/marcprux) in Pull Request [#3929](https://github.com/Alamofire/Alamofire/pull/3929).\n### Fixed\n- Missing `@Sendable` in `RetryPolicy`.\n- Fixed by [Colin Willson](https://github.com/CWftw) in Pull Request [#3994](https://github.com/Alamofire/Alamofire/pull/3994).\n- Example in Usage.md.\n- Fixed by [김영빈 (Rei)](https://github.com/kybeen) in Pull Request [#3955](https://github.com/Alamofire/Alamofire/pull/3955).\n- Deleted `.swiftpm` folder from repo to prevent Xcode from creating Alamofire schemes when used as a package.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3947](https://github.com/Alamofire/Alamofire/pull/3947).\n## New Contributors\n* @marcprux made their first contribution in https://github.com/Alamofire/Alamofire/pull/3929\n* @kybeen made their first contribution in https://github.com/Alamofire/Alamofire/pull/3955\n* @gouravkmar made their first contribution in https://github.com/Alamofire/Alamofire/pull/3948\n* @CWftw made their first contribution in https://github.com/Alamofire/Alamofire/pull/3994\n**Full Changelog**: https://github.com/Alamofire/Alamofire/compare/5.10.2...5.11.0",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.11.0, the release adds lazy Request setup by default, inline per-Request RequestAdapter, RequestRetrier, RequestInterceptor, and EventMonitor APIs, per-Request automatic resume() control with shouldAutomaticallyResume parameter, and OfflineRetrier to retry requests based on NWPathMonitor status as a replacement for NetworkReachabilityManager. It updates Alamofire to require Xcode 16.0 and the Swift 6 compiler, updates deployment targets for test targets, updates Empty to be Hashable, updates Request internals to use more atomic locking, deprecates NetworkReachabilityManager on iOS 17.4 and later, updates Linux and Android CI builds, and fixes missing @Sendable in RetryPolicy, an example in Usage.md, and deletes .swiftpm folder from repo to prevent Xcode from creating Alamofire schemes when used as a package."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_11_1",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.11.1",
+      "tag_name": "5.11.1",
+      "title": "5.11.1",
+      "time_hint": "2026-02-02",
+      "published_at": "2026-02-02T03:21:58Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.11.1",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: 5.11.1\nTag: 5.11.1; draft: False; prerelease: False; published_at: 2026-02-02T03:21:58Z; created_at: 2026-02-02T03:21:02Z\nRelease notes:\n### Fixed\n- Fixes [#3978](https://github.com/Alamofire/Alamofire/pull/3978), a rare logical race that allowed the same response serializer to execute multiple times simultaneously, which would call the completion handler multiple times, leading to crashes when wrapping continuations.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#3999](https://github.com/Alamofire/Alamofire/pull/3999).",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.11.1, the release fixes a rare logical race that allowed the same response serializer to execute multiple times simultaneously, which would call the completion handler multiple times, leading to crashes when wrapping continuations."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_11_2",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.11.2",
+      "tag_name": "5.11.2",
+      "title": "5.11.2",
+      "time_hint": "2026-04-06",
+      "published_at": "2026-04-06T03:14:26Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.11.2",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: 5.11.2\nTag: 5.11.2; draft: False; prerelease: False; published_at: 2026-04-06T03:14:26Z; created_at: 2026-04-06T03:13:06Z\nRelease notes:\n### Updated\n- Use of `#file` to `#fileID` to prevent build system info leakage.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#4003](https://github.com/Alamofire/Alamofire/pull/4003).\n- CI and dependencies.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#4017](https://github.com/Alamofire/Alamofire/pull/4017).\n### Fixed\n- A rare race between the creation of `StreamOf` values and the start of their iteration, which could miss values.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#4017](https://github.com/Alamofire/Alamofire/pull/4017).\n- Handling of duplicate `URLSessionTaskMetrics` callbacks, likely caused by using the new loading system (`usesClassicLoadingMode = false`).\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#4017](https://github.com/Alamofire/Alamofire/pull/4017).",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.11.2, the release updates use of #file to #fileID to prevent build system info leakage, updates CI and dependencies, and fixes a rare race between the creation of StreamOf values and the start of their iteration which could miss values, and handling of duplicate URLSessionTaskMetrics callbacks likely caused by using the new loading system."
+    },
+    {
+      "memory_node_id": "Alamofire__Alamofire__release__5_12_0",
+      "repo": "Alamofire/Alamofire",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.12.0",
+      "tag_name": "5.12.0",
+      "title": "5.12.0",
+      "time_hint": "2026-05-05",
+      "published_at": "2026-05-05T01:44:54Z",
+      "source_url": "https://github.com/Alamofire/Alamofire/releases/tag/5.12.0",
+      "raw_text": "Repository: Alamofire/Alamofire\nRelease: 5.12.0\nTag: 5.12.0; draft: False; prerelease: False; published_at: 2026-05-05T01:44:54Z; created_at: 2026-05-05T01:44:08Z\nRelease notes:\nReleased on 2026-05-04. All issues associated with this milestone can be found using this [filter](https://github.com/Alamofire/Alamofire/milestone/97?closed=1).\n### Added\n- FreeBSD compilation support.\n- Added by [Al Hoang](https://github.com/hoanga) in Pull Request [#4029](https://github.com/Alamofire/Alamofire/pull/4029).\n### Updated\n- Various CI configurations.\n- Updated by [Jon Shier](https://github.com/jshier) in Pull Request [#4030](https://github.com/Alamofire/Alamofire/pull/4030).\n### Fixed\n- Rare race in `Request.suspend()` and `Request.cancel()` where the state update would be lost if it occurred before the task was created.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#4030](https://github.com/Alamofire/Alamofire/pull/4030).\n- `Request.cancel()` incorrect called `Request.finish()` when the underlying task was already `.completed`.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#4030](https://github.com/Alamofire/Alamofire/pull/4030).\n- Rare race in `Request.resume()` that could lead to multiple `URLSessionTask`s created.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#4030](https://github.com/Alamofire/Alamofire/pull/4030).\n- Repeated calls to `Request.suspend()` and `Request.resume()` could lead to multiple pipeline executions.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#4030](https://github.com/Alamofire/Alamofire/pull/4030).\n- Thread-safety issue in `Session.deinit` when accessing internal state.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#4030](https://github.com/Alamofire/Alamofire/pull/4030).\n- Rare `Request.finish()` race in `Session.deinit`.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#4030](https://github.com/Alamofire/Alamofire/pull/4030).\n- `Session.deinit` called `Request.finish()` on `Request`s that were already finished.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#4030](https://github.com/Alamofire/Alamofire/pull/4030).\n- `Request.onHTTPRequest` didn't call the full `Request.cancel()` when the `.cancel` disposition was returned.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#4030](https://github.com/Alamofire/Alamofire/pull/4030).\n- Multiple unlikely force unwrap or `unowned self` crashes.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#4030](https://github.com/Alamofire/Alamofire/pull/4030).\n- Write to `DataStreamRequest`'s `outputStream` after it was closed.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#4030](https://github.com/Alamofire/Alamofire/pull/4030).\n- MIME type parsing, where a single element (`text`) or empty strings would be accepted.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#4030](https://github.com/Alamofire/Alamofire/pull/4030).\n- Cancelled `DownloadRequest`s could still trigger retry.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#4030](https://github.com/Alamofire/Alamofire/pull/4030).\n- `DataRequest.DataTask` and `DownloadRequest.DownloadTask` could miss early cancellation events if they happened before the underlying `Task` was created.\n- Fixed by [Jon Shier](https://github.com/jshier) in Pull Request [#4030](https://github.com/Alamofire/Alamofire/pull/4030).\n- 🔥 Multiple issues in `AuthenticationInterceptor`. These fixes slightly change the interceptor's behavior.\n1. `adapt()` enqueued adaptations, leading to requests restarted with a new credential to not execute the whole adapt pipeline again. `AuthenticationInterceptor` will now let those requests fail with the old credential and retry their whole pipeline with the new credential.\n2. Concurrent adaptations for the same stale credential could trigger multiple refreshes.\n3. `retry()` now l...",
+      "memory_unit_text": "In the Alamofire/Alamofire release 5.12.0, the release adds FreeBSD compilation support, updates various CI configurations, and fixes multiple issues including rare races in Request.suspend(), Request.cancel(), and Request.resume(), thread-safety issues in Session.deinit, multiple unlikely force unwrap or unowned self crashes, write to DataStreamRequest's outputStream after it was closed, MIME type parsing, cancelled DownloadRequests triggering retry, DataRequest.DataTask and DownloadRequest.DownloadTask missing early cancellation events, and multiple issues in AuthenticationInterceptor."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the Alamofire/Alamofire releases, which release adds Combine support with DataResponsePublisher, DownloadResponsePublisher, and DataStreamPublisher?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "5.1.0"
+        },
+        {
+          "option_id": "B",
+          "text": "5.2.0"
+        },
+        {
+          "option_id": "C",
+          "text": "5.3.0"
+        },
+        {
+          "option_id": "D",
+          "text": "5.4.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "5.2.0",
+      "source_chunk_ids": [
+        "Alamofire__Alamofire__release__5_2_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "Alamofire__Alamofire__release__5_2_0",
+          "answer_text": "adds Combine support with DataResponsePublisher, DownloadResponsePublisher, and DataStreamPublisher"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the Alamofire/Alamofire releases, how does the handling of file:// URLs differ between release 5.3.0 and release 5.4.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "5.3.0 adds support for file:// URLs in DownloadRequest, while 5.4.0 removes that support."
+        },
+        {
+          "option_id": "B",
+          "text": "5.3.0 crashes when requesting file:// URLs by producing a validation error, while 5.4.0 removes that error and adds support for DownloadRequest."
+        },
+        {
+          "option_id": "C",
+          "text": "5.3.0 introduces URLResponseSerializer for file:// URLs, while 5.4.0 deprecates it."
+        },
+        {
+          "option_id": "D",
+          "text": "Both releases handle file:// URLs identically without any changes."
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "5.3.0 crashes when requesting file:// URLs by producing a validation error, while 5.4.0 removes that error and adds support for DownloadRequest.",
+      "source_chunk_ids": [
+        "Alamofire__Alamofire__release__5_3_0",
+        "Alamofire__Alamofire__release__5_4_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "Alamofire__Alamofire__release__5_3_0",
+          "answer_text": "Crash when requesting file:// URLs by producing validation error."
+        },
+        {
+          "memory_node_id": "Alamofire__Alamofire__release__5_4_0",
+          "answer_text": "Handling of file:// URLs, removing error added in 5.3.0 and adding support for DownloadRequest."
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the Alamofire/Alamofire release window, order the following release-content states from earliest to latest: (1) a release that adds request body compression support, (2) a release that adds Combine support with publishers, (3) a release that adds experimental WebSocketRequest, (4) a release that adds full Swift concurrency support with Sendable requirements.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2 -> 1 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "1 -> 2 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 3 -> 1 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 2 -> 1 -> 4"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2 -> 1 -> 3 -> 4",
+      "source_chunk_ids": [
+        "Alamofire__Alamofire__release__5_2_0",
+        "Alamofire__Alamofire__release__5_7_0",
+        "Alamofire__Alamofire__release__5_9_0",
+        "Alamofire__Alamofire__release__5_10_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "Alamofire__Alamofire__release__5_2_0",
+          "answer_text": "adds Combine support with DataResponsePublisher, DownloadResponsePublisher, and DataStreamPublisher"
+        },
+        {
+          "memory_node_id": "Alamofire__Alamofire__release__5_7_0",
+          "answer_text": "adds request body compression support"
+        },
+        {
+          "memory_node_id": "Alamofire__Alamofire__release__5_9_0",
+          "answer_text": "adds experimental WebSocketRequest"
+        },
+        {
+          "memory_node_id": "Alamofire__Alamofire__release__5_10_0",
+          "answer_text": "adds full Swift concurrency support with Sendable requirements"
+        }
+      ]
+    }
+  ]
+}

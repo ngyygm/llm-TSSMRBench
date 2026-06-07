@@ -1,0 +1,530 @@
+{
+  "prototype_id": "portainer__portainer_release_window",
+  "domain": "github_release_evolution",
+  "repo": "portainer/portainer",
+  "source_type": "release_note",
+  "window_title": "portainer/portainer recent release evolution",
+  "window_summary": "This window tracks the recent portainer/portainer release stream across STS and LTS releases, covering new features, security fixes, deprecations, and known issues from version 2.27.7 through 2.42.0.",
+  "chunks": [
+    {
+      "memory_node_id": "portainer__portainer__release__2_31_0",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.31.0",
+      "tag_name": "2.31.0",
+      "title": "Release 2.31.0",
+      "time_hint": "2025-06-11",
+      "published_at": "2025-06-11T23:29:22Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.31.0",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.31.0\nTag: 2.31.0; draft: False; prerelease: False; published_at: 2025-06-11T23:29:22Z; created_at: 2025-06-11T23:01:33Z\nRelease notes:\n## Known issues\n- Users with Portainer deployed behind a reverse proxy may encounter \"Origin invalid\" issues under some configurations. We recommend updating to 2.31.3 which provides a workaround to this issue.\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## New in this Release:\n- Made improvements to the Helm feature:\n- Replaced Helm logo with information about registry URL\n- Improved Helm install view to be able to select a desired chart version\n- Added registry drop down to filter Helm charts\n- Now displays more than 10 workloads under Helm expand in the Applications view\n- Improved performance for getting available versions for a release\n- Added allow list of headers to send when proxying a request outside Portainer, all others are removed\n- For Kubernetes config map and secret operations, make the request via the Portainer server and not directly from the browser\n## Deprecated and removed features\n**Deprecated features**\n- We are transitioning our published container images to use the OCI image index format (`application/vnd.oci.image.index.v1+json`) instead of the traditional Docker manifest list format (`application/vnd.docker.distribution.manifest.list.v2+json`) in a future release. Any tooling relying on Docker-specific media types should be checked for compatibility, although most OCI-compliant tools already support this format.\n- We are deprecating our image builds of Portainer Server CE and BE for the Windows Server platform from this release. The Portainer Agent images will still be built for Windows Server - this only affects the Portainer Server container images.\n**Removed features**\nNone",
+      "memory_unit_text": "In the portainer/portainer release 2.31.0, the project introduces improvements to the Helm feature including a registry URL display, chart version selection, registry dropdown filtering, and displaying more than 10 workloads under Helm expand. It also adds an allow list of headers for proxying requests outside Portainer, and routes Kubernetes config map and secret operations through the Portainer server. Deprecations include transitioning to OCI image index format and deprecating Windows Server builds for Portainer Server CE and BE."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_27_7",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.27.7",
+      "tag_name": "2.27.7",
+      "title": "Release 2.27.7",
+      "time_hint": "2025-06-16",
+      "published_at": "2025-06-16T22:04:16Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.27.7",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.27.7\nTag: 2.27.7; draft: False; prerelease: False; published_at: 2025-06-16T22:04:16Z; created_at: 2025-06-16T21:55:09Z\nRelease notes:\n## Known issues\n- Users with Portainer deployed behind a reverse proxy may encounter \"Origin invalid\" issues under some configurations. We recommend updating to 2.27.9 which provides a workaround to this issue.\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes\n- Resolved the following CVEs:\n- CVE-2025-22871\n- CVE-2025-22874\n- CVE-2025-49593\n## Deprecated and removed features:\n**Deprecated features**\nNone\n**Removed features**\nNone",
+      "memory_unit_text": "In the portainer/portainer release 2.27.7, the release resolves CVEs CVE-2025-22871, CVE-2025-22874, and CVE-2025-49593. Known issues include 'Origin invalid' errors behind reverse proxies (recommend updating to 2.27.9) and limited Podman support."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_31_1",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.31.1",
+      "tag_name": "2.31.1",
+      "title": "Release 2.31.1",
+      "time_hint": "2025-06-19",
+      "published_at": "2025-06-19T00:30:44Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.31.1",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.31.1\nTag: 2.31.1; draft: False; prerelease: False; published_at: 2025-06-19T00:30:44Z; created_at: 2025-06-18T23:37:18Z\nRelease notes:\n## Known issues\n- Users with Portainer deployed behind a reverse proxy may encounter \"Origin invalid\" issues under some configurations. We recommend updating to 2.31.3 which provides a workaround to this issue.\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes\n- This release contains no changes compared to the previous release, and is being shipped in order to retain parity with the Business Edition release cadence.\n## Deprecated and removed features:\n**Deprecated features**\nNone\n**Removed features**\nNone",
+      "memory_unit_text": "In the portainer/portainer release 2.31.1, the release contains no changes compared to the previous release and is shipped to retain parity with the Business Edition release cadence. Known issues include 'Origin invalid' errors behind reverse proxies (recommend updating to 2.31.3) and limited Podman support."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_27_8",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.27.8",
+      "tag_name": "2.27.8",
+      "title": "Release 2.27.8",
+      "time_hint": "2025-06-24",
+      "published_at": "2025-06-24T22:08:09Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.27.8",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.27.8\nTag: 2.27.8; draft: False; prerelease: False; published_at: 2025-06-24T22:08:09Z; created_at: 2025-06-24T21:54:31Z\nRelease notes:\n## Known issues\n- Users with Portainer deployed behind a reverse proxy may encounter \"Origin invalid\" issues under some configurations. We recommend updating to 2.27.9 which provides a workaround to this issue.\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes\n###\n- Fixed an issue where the Kubernetes client cache was not cleared and created correctly per user\n- Fixed an issue where Kubernetes namespace access changes were not reflected for API users after sign-in\n## Deprecated and removed features:\n**Deprecated features**\nNone\n**Removed features**\nNone",
+      "memory_unit_text": "In the portainer/portainer release 2.27.8, the release fixes an issue where the Kubernetes client cache was not cleared and created correctly per user, and an issue where Kubernetes namespace access changes were not reflected for API users after sign-in. Known issues include 'Origin invalid' errors behind reverse proxies (recommend updating to 2.27.9) and limited Podman support."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_31_2",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.31.2",
+      "tag_name": "2.31.2",
+      "title": "Release 2.31.2",
+      "time_hint": "2025-06-25",
+      "published_at": "2025-06-25T23:50:33Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.31.2",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.31.2\nTag: 2.31.2; draft: False; prerelease: False; published_at: 2025-06-25T23:50:33Z; created_at: 2025-06-25T23:40:36Z\nRelease notes:\n## Known issues\n- Users with Portainer deployed behind a reverse proxy may encounter \"Origin invalid\" issues under some configurations. We recommend updating to 2.31.3 which provides a workaround to this issue.\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes\n- This release contains no changes compared to the previous release, and is being shipped in order to retain parity with the Business Edition release cadence.\n## Deprecated and removed features:\n**Deprecated features**\nNone\n**Removed features**\nNone",
+      "memory_unit_text": "In the portainer/portainer release 2.31.2, the release contains no changes compared to the previous release and is shipped to retain parity with the Business Edition release cadence. Known issues include 'Origin invalid' errors behind reverse proxies (recommend updating to 2.31.3) and limited Podman support."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_27_9",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.27.9",
+      "tag_name": "2.27.9",
+      "title": "Release 2.27.9 LTS",
+      "time_hint": "2025-07-02",
+      "published_at": "2025-07-02T03:50:04Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.27.9",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.27.9 LTS\nTag: 2.27.9; draft: False; prerelease: False; published_at: 2025-07-02T03:50:04Z; created_at: 2025-07-02T03:22:38Z\nRelease notes:\n## Known issues\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes\n###\n- Added the `--trusted-origins` CLI option and `TRUSTED_ORIGINS` environment variable to specify (in a comma-separated list) the domain(s) used to access Portainer when it is behind a reverse proxy. Use this option if Portainer is behind a reverse proxy and you are getting \"Origin invalid\" errors.\n## Deprecated and removed features:\n**Deprecated features**\nNone\n**Removed features**\nNone",
+      "memory_unit_text": "In the portainer/portainer release 2.27.9 LTS, the release adds the `--trusted-origins` CLI option and `TRUSTED_ORIGINS` environment variable to specify domains used to access Portainer behind a reverse proxy, addressing 'Origin invalid' errors. Known issues include limited Podman support."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_31_3",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.31.3",
+      "tag_name": "2.31.3",
+      "title": "Release 2.31.3 STS",
+      "time_hint": "2025-07-03",
+      "published_at": "2025-07-03T02:09:53Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.31.3",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.31.3 STS\nTag: 2.31.3; draft: False; prerelease: False; published_at: 2025-07-03T02:09:53Z; created_at: 2025-07-03T01:57:37Z\nRelease notes:\n## Known issues\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes\n- Added the `--trusted-origins` CLI option and `TRUSTED_ORIGINS` environment variable to specify (in a comma-separated list) the domain(s) used to access Portainer when it is behind a reverse proxy. Use this option if Portainer is behind a reverse proxy and you are getting \"Origin invalid\" errors.\n## Deprecated and removed features:\n**Deprecated features**\nNone\n**Removed features**\nNone",
+      "memory_unit_text": "In the portainer/portainer release 2.31.3 STS, the release adds the `--trusted-origins` CLI option and `TRUSTED_ORIGINS` environment variable to specify domains used to access Portainer behind a reverse proxy, addressing 'Origin invalid' errors. Known issues include limited Podman support."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_32_0",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.32.0",
+      "tag_name": "2.32.0",
+      "title": "Release 2.32.0 STS",
+      "time_hint": "2025-07-23",
+      "published_at": "2025-07-23T22:45:30Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.32.0",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.32.0 STS\nTag: 2.32.0; draft: False; prerelease: False; published_at: 2025-07-23T22:45:30Z; created_at: 2025-07-23T22:22:33Z\nRelease notes:\n## Known issues\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## New in this Release:\n- Application rebranding\n- Updated Message of the day application banner to reflect new branding\n- Updated background colors across the application\n- Updated dark/light mode button colors\n- Updated dark/light mode colors in the nav side bar\n- Updated the logo for both narrow and wide sidebars and login screens\n- Added a `--trusted-origins` flag to allow for CSRF protection in more complex setups\n- Fixed error handling when creating a new Kubernetes application\n- Updated the Docker binary version from v27.5.1 to v28.1.0\n- Improved frontend services datatable tests\n- Fixed an issue where the Kubernetes client cache was not cleared and created correctly per user\n- Fixed an issue where Kubernetes namespace access changes were not reflected for API users after sign-in\n- Fixed an issue where edge Kubernetes stacks were not deploying\n- Fixed an issue where v3 templates were not accepting empty values in the form\n- Fixed an issue where the image indicator was not displaying in swarm stacks and services page for private registries\n- Replaced deprecated methods pkix.CertificateList, issuer.CheckCRLSignature, and x509.ParseCRL\n- Enabled CSP by default\n- Added the display of an event warning count when viewing Kubernetes resource lists\n- Fixed a UI issue where table pagination was not working for edge environments\n- Resolved the following CVEs:\n- CVE-2025-53547\n- CVE-2025-22874\n- CVE-2025-22781\n- CVE-2025-22871\n## Deprecated and removed features\n**Deprecated features**\n- None\n**Removed features**\n- As previously announced, support for the Docker manifest list format (`application/vnd.docker.distribution.manifest.list.v2+json`) has been removed. All published container images now exclusively use the OCI image index format (`application/vnd.oci.image.index.v1+json`). Tooling that relied on Docker-specific media types should be updated to ensure compatibility with OCI-compliant image indexes.",
+      "memory_unit_text": "In the portainer/portainer release 2.32.0 STS, the release includes application rebranding with updated colors, logos, and dark/light mode buttons. It adds a `--trusted-origins` flag, fixes Kubernetes client cache and namespace access issues, updates Docker binary to v28.1.0, enables CSP by default, and resolves several CVEs. The Docker manifest list format is removed in favor of OCI image index format."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_33_0",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.33.0",
+      "tag_name": "2.33.0",
+      "title": "Release 2.33.0 LTS",
+      "time_hint": "2025-08-20",
+      "published_at": "2025-08-20T00:01:17Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.33.0",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.33.0 LTS\nTag: 2.33.0; draft: False; prerelease: False; published_at: 2025-08-20T00:01:17Z; created_at: 2025-08-19T23:44:56Z\nRelease notes:\n## Known issues\n- On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## New in this Release:\n- Improved the dropdown behavior when there are more than 1000 items\n- Improved the YAML web editor\n- Introduced the ability to add bearer token authentication support for Bitbucket Repositories\n- Fixed an issue where duplicated events could be created by pending events\n- Moved the kubectl shell feature to a pop-up window\n- Improved performance by optimizing Edge Group endpoint relations\n- Added Permissions-Policy header to improve security\n- Fixed an issue where the log viewer could crash when rendering long multiline logs\n- Fixed an issue where Portainer generated kubeconfig causes `kubectl exec` to fail\n- Fixed an issue with custom logos not being aligned correctly\n- Fixed an issue where Helm preview (dry run) errors could block some valid Helm installs\n- Fixed an issue where Kubernetes environment stats were missing in the Home View\n- Fixed an issue where the environment count could overlap with the other UI components in the Edge Configuration list view\n- Fixed an issue with links to Secrets when there is a ConfigMap and a Secret with the same names\n- Fixed an issue where edge stacks could show a status of unavailable when they were properly deployed\n- Fixed an issue where Helm applications with the same workload name would get combined in the Applications page\n- Fixed an issue where a standard user with access to a Helm registry could not load OCI Helm charts\n- Fixed Swagger documentation\n- Resolved the following CVEs:\n- CVE-2025-55198\n- CVE-2025-55199\n- CVE-2025-54388\n- CVE-2020-8552\n- CVE-2025-8556\n- GHSA-fv92-fjc5-jj9h\n## Deprecated and removed features\n**Deprecated features**\n- None\n**Removed features**\n- As previously announced, support for the Docker manifest list format (`application/vnd.docker.distribution.manifest.list.v2+json`) has been removed. All published container images now exclusively use the OCI image index format (`application/vnd.oci.image.index.v1+json`). Tooling that relied on Docker-specific media types should be updated to ensure compatibility with OCI-compliant image indexes.\n- The OpenAI integration experimental feature has been removed.",
+      "memory_unit_text": "In the portainer/portainer release 2.33.0 LTS, the release improves dropdown behavior for over 1000 items, enhances the YAML web editor, adds bearer token authentication for Bitbucket Repositories, moves kubectl shell to a pop-up window, adds Permissions-Policy header, and fixes various issues including log viewer crashes, kubeconfig exec failures, and Helm preview errors. It removes Docker manifest list format and the OpenAI integration experimental feature."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_33_1",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.33.1",
+      "tag_name": "2.33.1",
+      "title": "Release 2.33.1 LTS",
+      "time_hint": "2025-08-26",
+      "published_at": "2025-08-26T23:50:39Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.33.1",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.33.1 LTS\nTag: 2.33.1; draft: False; prerelease: False; published_at: 2025-08-26T23:50:39Z; created_at: 2025-08-26T23:30:15Z\nRelease notes:\n## Known issues\n- On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes:\n- Fixed an issue where the environment status was not updating in a timely fashion for Standard Edge Agent\n- Fixed an issue where the `--tlscert` and `--tlskey` CLI options did not work unless `--sslcert` and `--sslkey` were also provided\n- Fixed an issue where Edge Stacks with GitOps enabled were not being updated correctly\n- Fixed an issue where the container engine defaulted to Docker when associating the first Kubernetes environment\n- Resolved the following CVEs:\n- CVE-2025-22871\n- CVE-2025-22868\n- CVE-2025-22869\n- CVE-2025-4673\n- CVE-2024-45341\n- CVE-2024-45336\n- CVE-2025-0913\n- CVE-2024-45338\n- CVE-2025-22872\n- CVE-2024-40635\n- CVE-2025-22870\n- CVE-2025-22866\n- CVE-2025-54410\n- GHSA-2464-8j7c-4cjm\n## Deprecated and removed features\n**Deprecated features**\n- None\n**Removed features**\n- None",
+      "memory_unit_text": "In the portainer/portainer release 2.33.1 LTS, the release fixes issues with environment status updates for Standard Edge Agent, TLS CLI options, Edge Stacks with GitOps, and container engine defaulting to Docker. It resolves multiple CVEs including CVE-2025-22871 and CVE-2025-22868."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_34_0",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.34.0",
+      "tag_name": "2.34.0",
+      "title": "Release 2.34.0 STS",
+      "time_hint": "2025-09-17",
+      "published_at": "2025-09-17T22:49:58Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.34.0",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.34.0 STS\nTag: 2.34.0; draft: False; prerelease: False; published_at: 2025-09-17T22:49:58Z; created_at: 2025-09-17T22:37:11Z\nRelease notes:\n## Known issues\n- On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## New in this release\n- Increased Content-Security-Policy restrictions\n- Added enforcement of a minimum polling interval value for GitOps\n- Fixed environment type detection for the image status indicator\n- Fixed an access control bug in Custom Templates\n- Fixed inaccurate display of healthy containers count in environment listing\n- Implemented higher priority for interactive database transactions over background processes like edge agent polling\n- Fixed a data race in the job scheduler\n- Removed the password from the response of the registry update request\n- Fixed a problem that prevented the deployment of stacks from private repositories when Git credentials were entered manually\n- Fixed a failure when deploying a stack that referred to multiple private registries under the same provider\n- Fixed the display of Edge Groups when the number of environments is high\n- Fixed the network connection to containers by Standard Users\n- Removed `mingit` binary from Windows images\n- Added windows-2025 builds of the Portainer image\n- Fixed an inconsistency while adding new edge environments\n- Fixed Helm repository validation to match the library behavior\n- Improved the view for editing registry repositories\n- Fixed tab swapping in the Node details view\n- Fixed inconsistencies in the display of Namespace resource limits\n- Fixed Helm failures when the repository contains mixed media types\n- Fixed the browsing of custom registries when using public TLS certificates\n- Added support for shared credentials for Git operations\n- Fixed the resource request slider\n- Fixed the default DB encryption secret path\n## Deprecated and removed features\n**Deprecated features**\n- None\n**Removed features**\n- None",
+      "memory_unit_text": "In the portainer/portainer release 2.34.0 STS, the release increases Content-Security-Policy restrictions, enforces minimum polling interval for GitOps, fixes environment type detection, access control in Custom Templates, and various other bugs. It adds shared credentials for Git operations, windows-2025 builds, and removes `mingit` binary from Windows images."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_33_2",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.33.2",
+      "tag_name": "2.33.2",
+      "title": "Release 2.33.2 LTS",
+      "time_hint": "2025-09-25",
+      "published_at": "2025-09-25T03:07:58Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.33.2",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.33.2 LTS\nTag: 2.33.2; draft: False; prerelease: False; published_at: 2025-09-25T03:07:58Z; created_at: 2025-09-25T02:37:15Z\nRelease notes:\n## Known issues\n- On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes:\n- Fixed an issue where Standard Users could not join a container to a network\n- Fixed an issue where the database encryption secret was incorrectly set\n- Fixed an issue with Kubernetes Access Control\n- Fixed an issue where GitOps webhook URLs could be reused\n- Improved Helm repository validation to align with the behavior of the CLI\n- Fixed an issue where the environment status filter did not properly handle the \"Failed\" state when used with Edge Stacks\n- Fixed an issue where registry list API was returning back passwords\n- Fixed a data race issue caused by the Kubernetes client\n- Fixed an issue where the GitOps interval could be set to less than one minute\n- Fixed an issue where CSP blocks Google reCAPTCHA on \"Get a Trial License Key\" form\n- Bumped the following NPM dependencies to resolve vulnerabilities\n- axios → 1.7\n- coverage-v8 → ~2.1.9\n- vitest → 2.1.9\n- Resolved the following CVEs\n- CVE-2025-4676\n- CVE-2025-47907\n## Deprecated and removed features\n**Deprecated features**\n- We have deprecated the `--sslcert` and `--sslkey` CLI options in favor of the `--tlscert` and `--tlskey` options respectively, and will be removing the `--sslcert` and `--sslkey` options in a future release.\n**Removed features**\n- None",
+      "memory_unit_text": "In the portainer/portainer release 2.33.2 LTS, the release fixes issues with Standard Users joining containers to networks, database encryption secret, Kubernetes Access Control, GitOps webhook URLs, and environment status filter. It deprecates `--sslcert` and `--sslkey` CLI options in favor of `--tlscert` and `--tlskey`."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_35_0",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.35.0",
+      "tag_name": "2.35.0",
+      "title": "Release 2.35.0 STS",
+      "time_hint": "2025-10-15",
+      "published_at": "2025-10-15T21:20:40Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.35.0",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.35.0 STS\nTag: 2.35.0; draft: False; prerelease: False; published_at: 2025-10-15T21:20:40Z; created_at: 2025-10-15T20:45:55Z\nRelease notes:\n## Known issues\n- On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## New in this release\n- Fixed a bug where the Edit Ingress page wasn't displaying updated information immediately after making an update\n- Fixed an issue where GitOps webhook URLs could be reused\n- Fixed a data race issue caused by the Kubernetes client\n- Fixed an issue that caused a memory leak when redeploying a Kubernetes stack\n- Fixed an issue where the environment status filter did not properly handle the \"Failed\" state when used with Edge Stacks\n- Added support for IPV6 network configuration for IPvlan Docker networks\n- Added a new command flag --compact-db to allow database compaction on startup\n- Fixed typos in Content-Security-Policy\n- Added support for Helm GitOps allowing automatic upgrades based on changes to a Helm chart and/or Helm override files in a Git repository\n- Fixed an issue with access control when users attempted to view resources in namespaces they don't have access to\n- Fixed an issue where WebSocket connections were not forwarded correctly to the Kubernetes API\n- Fixed missing dependency versions in popup\n- Resolved the following CVEs:\n- CVE-2025-7783\n- CVE-2022-37601\n## Deprecated and removed features\n**Deprecated features**\n- None\n**Removed features**\n- None",
+      "memory_unit_text": "In the portainer/portainer release 2.35.0 STS, the release adds support for IPv6 network configuration for IPvlan Docker networks, a `--compact-db` flag for database compaction on startup, and Helm GitOps for automatic upgrades. It fixes issues with Edit Ingress, GitOps webhook URLs, Kubernetes client data race, and memory leak during Kubernetes stack redeployment."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_33_3",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.33.3",
+      "tag_name": "2.33.3",
+      "title": "Release 2.33.3 LTS",
+      "time_hint": "2025-10-29",
+      "published_at": "2025-10-29T23:32:35Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.33.3",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.33.3 LTS\nTag: 2.33.3; draft: False; prerelease: False; published_at: 2025-10-29T23:32:35Z; created_at: 2025-10-29T22:56:36Z\nRelease notes:\n## Known issues\n- On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes\n- Improved stability by attempting to compact using a read-only database\n- Fixed an issue where WebSocket upgrade failed with Portainer generated `kubeconfig`\n- Fixed an issue where a memory leak occured during Kubernetes stack auto redeployment\n- Fixed missing dependency versions displayed in the popup\n- Fixed an issue where adding a team access to a namespace threw a panic error\n- Fixed typos in Content-Security-Policy\n- Resolved CVE-2025-62725\n## Deprecated and removed features\n**Deprecated features**\n- None\n**Removed features**\n- None",
+      "memory_unit_text": "In the portainer/portainer release 2.33.3 LTS, the release improves stability by attempting to compact using a read-only database, fixes WebSocket upgrade failure with Portainer generated kubeconfig, memory leak during Kubernetes stack auto redeployment, and missing dependency versions display. It resolves CVE-2025-62725."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_33_4",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.33.4",
+      "tag_name": "2.33.4",
+      "title": "Release 2.33.4 LTS",
+      "time_hint": "2025-11-19",
+      "published_at": "2025-11-19T21:45:49Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.33.4",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.33.4 LTS\nTag: 2.33.4; draft: False; prerelease: False; published_at: 2025-11-19T21:45:49Z; created_at: 2025-11-19T21:29:57Z\nRelease notes:\n## Known issues\n- On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes\n- Fixed an issue of broken manual stack force deployment\n- Fixed an issue that caused the calendar widget to render incorrectly\n- Resolved the following CVEs:\n- CVE-2024-25621\n- CVE-2025-47913\n- CVE-2025-47906\n- CVE-2025-47910\n- CVE-2025-47907\n- CVE-2025-47912\n- CVE-2025-58183\n- CVE-2025-58185\n- CVE-2025-58186\n- CVE-2025-58187\n- CVE-2025-58188\n- CVE-2025-58189\n- CVE-2025-61723\n- CVE-2025-61724\n- CVE-2025-61725\n## Deprecated and removed features\n**Deprecated features**\n- None\n**Removed features**\n- None",
+      "memory_unit_text": "In the portainer/portainer release 2.33.4 LTS, the release fixes broken manual stack force deployment and calendar widget rendering. It resolves multiple CVEs including CVE-2024-25621 and CVE-2025-47913."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_36_0",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.36.0",
+      "tag_name": "2.36.0",
+      "title": "Release 2.36.0 STS",
+      "time_hint": "2025-11-26",
+      "published_at": "2025-11-26T20:20:59Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.36.0",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.36.0 STS\nTag: 2.36.0; draft: False; prerelease: False; published_at: 2025-11-26T20:20:59Z; created_at: 2025-11-26T20:01:32Z\nRelease notes:\n## Known issues\n- On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes\n- Fixed local development build scripts for community contributors with Apple M series chips\n- Improved ECR session management in the Agent\n- Added support for Docker v29\n- Improved the consistency for GitOps across different scenarios\n- Fixed the External label for Kubernetes environments\n- Fixed namespace selection in the registry access page\n- Improve the registry credential handling in compose files\n- Fixed CVEs in the password reset helper\n- Fixed the Prune services toggle for Swarm\n- Added a --data-path flag to the password reset helper\n- Fixed oversized custom icons in the templates view\n- Added an access token connection test for DockerHub before registry creation\n- Fixed the ability to uncheck filters after deleting filtered containers in the Container list view\n- Fixed the Insecure toggle for custom registries\n- Added the ability to rename Stacks\n- Fixed the date picker calendar to display the 7 days of the week without overflowing\n- Updated the privacy policy link\n- Added auto-onboarding script for Podman\n- Improved to display 'title' or 'tooltip' in all places that text is truncated in the UI\n- Fixed the navigation bar to display Portainer correctly\n- Fixed incorrect command syntax for Windows Edge agent deployment instructions\n- Fixed Helm install docs link\n- Fixed order of environment types\n- Resolved the following CVEs:\n- CVE-2024-25621\n- CVE-2024-25621\n- CVE-2025-47913\n- CVE-2025-47906\n- CVE-2025-47910\n- CVE-2025-47907\n- CVE-2025-47912\n- CVE-2025-58183\n- CVE-2025-58185\n- CVE-2025-58186\n- CVE-2025-58187\n- CVE-2025-58188\n- CVE-2025-58189\n- CVE-2025-61723\n- CVE-2025-61724\n- CVE-2025-61725\n- CVE-2025-62725\n## Deprecated and removed features\n**Deprecated features**\n- Deprecated OpenAMT support\n**Removed features**\n- None",
+      "memory_unit_text": "In the portainer/portainer release 2.36.0 STS, the release adds support for Docker v29, auto-onboarding script for Podman, ability to rename Stacks, and a `--data-path` flag to the password reset helper. It fixes local development build scripts for Apple M series chips, ECR session management, and various UI issues. OpenAMT support is deprecated."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_33_5",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.33.5",
+      "tag_name": "2.33.5",
+      "title": "Release 2.33.5 LTS",
+      "time_hint": "2025-11-26",
+      "published_at": "2025-11-26T23:42:28Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.33.5",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.33.5 LTS\nTag: 2.33.5; draft: False; prerelease: False; published_at: 2025-11-26T23:42:28Z; created_at: 2025-11-26T23:14:25Z\nRelease notes:\n## Known issues\n- On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes\n- Added support for Docker v29\n# Breaking change\n- Removed the optional raw snapshot response from some endpoint requests\n## Deprecated and removed features\n**Deprecated features**\n- None\n**Removed features**\n- None",
+      "memory_unit_text": "In the portainer/portainer release 2.33.5 LTS, the release adds support for Docker v29 and removes the optional raw snapshot response from some endpoint requests as a breaking change."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_37_0",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.37.0",
+      "tag_name": "2.37.0",
+      "title": "Release 2.37.0 STS",
+      "time_hint": "2025-12-10",
+      "published_at": "2025-12-10T22:19:39Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.37.0",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.37.0 STS\nTag: 2.37.0; draft: False; prerelease: False; published_at: 2025-12-10T22:19:39Z; created_at: 2025-12-10T22:00:44Z\nRelease notes:\n## Known issues\n- On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes\n- Fixed an issue where a standard stack could not pull private images from a private registry during a GitOps update (polling/webhook) when \"Re-pull image\" was enabled and a relative path was configured\n- Fixed an issue where the Update the Stack button was disabled when editing a standard stack deployed via the Web Editor\n- Fixed Service view display for Docker Swarm\n- Fixed a regression in the stack updates view\n- Fixed the disabled Save button for GitHub Credentials Authentication\n- Fixed the undesired regeneration of the webhook IDs\n- Fixed the disabled Update stack button\n- Fixed missing Compose configs for stacks\n- Removed the environment names from error responses\n- Fixed Edge Job logs API documentation\n- Increased the validations in the Edge Jobs logs API\n- Fixed an improper display of the editor search bar over a confirmation dialog\n- Changed the Volumes Browser to prevent it from adding `.txt` extension when downloading files\n- Removed the option to access host volumes for users that are not allowed to do it\n## Deprecated and removed features\n**Deprecated features**\n- None\n**Removed features**\n- None",
+      "memory_unit_text": "In the portainer/portainer release 2.37.0 STS, the release fixes issues with standard stacks pulling private images during GitOps updates, disabled Update Stack button, Service view display for Docker Swarm, and various other bugs. It removes environment names from error responses and the option to access host volumes for unauthorized users."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_33_6",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.33.6",
+      "tag_name": "2.33.6",
+      "title": "Release 2.33.6 LTS",
+      "time_hint": "2025-12-17",
+      "published_at": "2025-12-17T01:39:32Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.33.6",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.33.6 LTS\nTag: 2.33.6; draft: False; prerelease: False; published_at: 2025-12-17T01:39:32Z; created_at: 2025-12-15T23:51:27Z\nRelease notes:\n## Known issues\n- On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes\n- Fixed an issue where a standard stack could not pull private images from a private registry during a GitOps update (polling/webhook) when \"Re-pull image\" was enabled and a relative path was configured\n- Fixed an issue where starting a Stack failed when a private image referenced by the Stack had been removed from the environment\n- Fixed an issue where empty Docker snapshot could cause issues\n- Fixed an issue where Duplicate/Edit Container adds persistent MAC address causing Network issues\n- Fixed an issue where Docker Compose configs were not injected into containers for stacks correctly\n- Fixed an issue where the API endpoint /endpoints/{id}/edge/stacks/{stackId} leaked environment names\n- Fixed an issue where Docker Swarm Service view fails with the error message \"Cannot read properties of undefined (reading 'Ports')\"\n- Resolved the following CVEs:\n- CVE-2025-47914\n- CVE-2025-61727\n- CVE-2025-61729\n## Deprecated and removed features\n**Deprecated features**\n- None\n**Removed features**\n- None",
+      "memory_unit_text": "In the portainer/portainer release 2.33.6 LTS, the release fixes issues with standard stacks pulling private images during GitOps updates, starting stacks with removed private images, empty Docker snapshots, and duplicate/edit container persistent MAC addresses. It resolves CVEs CVE-2025-47914, CVE-2025-61727, and CVE-2025-61729."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_38_0",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.38.0",
+      "tag_name": "2.38.0",
+      "title": "Release 2.38.0 STS",
+      "time_hint": "2026-01-28",
+      "published_at": "2026-01-28T20:43:16Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.38.0",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.38.0 STS\nTag: 2.38.0; draft: False; prerelease: False; published_at: 2026-01-28T20:43:16Z; created_at: 2026-01-28T20:28:58Z\nRelease notes:\n## Known issues\n- On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes\n- Fixed an issue where starting Stack was failed when the private image referenced by the stack was removed from the environment\n- Fixed an issue where deploying a Stack in Kubernetes caused a memory leak\n- Fixed a UI issue when updating edge stacks\n- Changed the Docker security settings to safer default values\n- Fixed a panic in Edge Group creation\n- Fixed quote handling in TLS CLI flags\n- Fixed error in GitOps while updating Stacks\n- Fixed a problem that would cause for the Containers page to not load\n- Bumped up the max Docker API version in the proxy\n- Fixed a problem while duplicating/editing containers related to persistent MAC addresses\n- Added proper propagation of Docker error messages back to the frontend\n- Added missing validations for Swarm environments security settings\n- Optimized server allocations for a faster startup\n- Fixed GO-2025-3460\n- Upgraded to Compose v2.40.3 to fix a panic\n- Fixed a problem in config removal\n- Upgraded Git library to fix compatibility problem with gitee\n- Removed all the Matomo code\n- Removed confusing Podman log message in Docker environments\n- Replaced [gopkg.in/yaml.v3](http://gopkg.in/yaml.v3) to [go.yaml.in/yaml/v3](http://go.yaml.in/yaml/v3)\n- Ensured the surfacing of Edge Stack file not found errors to the UI\n- Changed the code to avoid creating updater networks\n- Fixed registry selection recall for Stacks pages\n- Fixed a nil pointer dereference error in FilterEndpoints()\n- Fixed a nil pointer dereference error in deleteEndpointGroup()\n- Fixed a nil pointer dereference error in CopyPath()\n- Improved visibility on proxy errors\n- Fixed a problem while renaming stacks on Swarm\n- Fixed a problem that could cause encrypting an existing Portainer database to fail\n- Improved the Azure Container Instance (ACI) experience with a new environment variables section in the creation form and a corresponding table in the instance view.\n- Updated the Portainer logo and favicon throughout the application to the new branding.\n- Upgraded the golang/stdlib to version 1.24.11 to the following CVEs in the Portainer agent:\n- CVE-2025-61729\n- CVE-2025-61727\n- CVE-2025-47914\n- Fixed an issue where Web Editor based Kubernetes app deployment ignores selected namespace.\n- Fixed an issue where Edit/Upgrade buttons not functioning on Helm chart details page.\n## Deprecated and removed features\n**Deprecated features**\n- None\n**Removed features**\n- None",
+      "memory_unit_text": "In the portainer/portainer release 2.38.0 STS, the release updates the Portainer logo and favicon, improves Azure Container Instance experience, upgrades to Compose v2.40.3, and fixes numerous issues including stack deployment memory leaks, UI issues, and nil pointer dereferences. It removes all Matomo code and confusing Podman log messages."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_33_7",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.33.7",
+      "tag_name": "2.33.7",
+      "title": "Release 2.33.7 LTS",
+      "time_hint": "2026-02-09",
+      "published_at": "2026-02-09T23:22:42Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.33.7",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.33.7 LTS\nTag: 2.33.7; draft: False; prerelease: False; published_at: 2026-02-09T23:22:42Z; created_at: 2026-02-09T21:17:51Z\nRelease notes:\n## Known issues\n- On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes\n- Fixed an issue where clicking the Update stack button would do nothing\n- Fixed an issue that would cause the Containers page to not load\n- Fixed an error when updating Edge Stacks\n- Fixed a panic in Edge Group creation\n- Fixed a deadlock in the auto onboarding\n- Fixed a problem that prevented the loading of the Containers page\n- Fixed a problem in Edge Stacks and GitOps when the entry file name was not at the repository root\n- Upgraded compose to v2.40.3 to fix a nil pointer error\n- Resolved the following CVEs:\n- CVE-2025-61726\n- CVE-2025-68121\n## Deprecated and removed features\n**Deprecated features**\n- None\n**Removed features**\n- None",
+      "memory_unit_text": "In the portainer/portainer release 2.33.7 LTS, the release fixes issues with the Update stack button, Containers page loading, Edge Stacks update errors, panic in Edge Group creation, and deadlock in auto onboarding. It upgrades compose to v2.40.3 and resolves CVEs CVE-2025-61726 and CVE-2025-68121."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_38_1",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.38.1",
+      "tag_name": "2.38.1",
+      "title": "Release 2.38.1 STS",
+      "time_hint": "2026-02-12",
+      "published_at": "2026-02-12T20:24:10Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.38.1",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.38.1 STS\nTag: 2.38.1; draft: False; prerelease: False; published_at: 2026-02-12T20:24:10Z; created_at: 2026-02-12T03:29:35Z\nRelease notes:\n## Known issues\n- On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes\n- Fixed an issue around changing an environment group for Kubernetes standard agent within the environment details view\n- Fixed an issue where local environments using Docker would have their protocol removed\n- Improved the namespace dropdown list to be sorted alphabetically by default\n- Resolved the following CVEs:\n- CVE-2025-61726\n- CVE-2025-61728\n- CVE-2025-61730\n## Deprecated and removed features\n**Deprecated features**\n- None\n**Removed features**\n- None",
+      "memory_unit_text": "In the portainer/portainer release 2.38.1 STS, the release fixes issues around changing environment group for Kubernetes standard agent, local environments using Docker having their protocol removed, and improves namespace dropdown sorting. It resolves CVEs CVE-2025-61726, CVE-2025-61728, and CVE-2025-61730."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_39_0",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.39.0",
+      "tag_name": "2.39.0",
+      "title": "Release 2.39.0 LTS",
+      "time_hint": "2026-02-25",
+      "published_at": "2026-02-25T21:21:04Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.39.0",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.39.0 LTS\nTag: 2.39.0; draft: False; prerelease: False; published_at: 2026-02-25T21:21:04Z; created_at: 2026-02-25T20:52:38Z\nRelease notes:\n## Known issues\n- On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot\n### Known issues with Podman support\n- Auto onboarding a Podman environment defaults to \"Standard\" and not \"Podman\"\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes\n- Fixed an issue preventing environment group changes for Kubernetes standard agents from the environment details view\n- Addressed security vulnerability disclosure\n- Updated form behavior to only show errors after the input has been touched/visited or submitted\n- Improved HTTP response code handling via the Portainer API\n- Added default alphabetical sorting to the namespace dropdown list\n- Fixed a UI issue where the dropdown form elements were overlapping with the footer\n- Updated styling of shared tabs used throughout Portainer\n- Improved TLS initialization for custom registries\n- Fixed a memory leak in kubectl delete\n- Fixed an issue where a \"\"Release: not found\" error was presented when installing a Traefik ingress\n- Fixed an issue when editing an environment that could inadvertently remove unix:// from URLs\n- Reordered the agent options in the \"Add Environment\" interface\n- Fixed an issue where Portainer was unable to pull from a private registry with a port in the URL\n- Fixed an issue where a webhook was missing during the initial deployment\n- Fixed an issue where the API response code from /docker/containers/create was returning 200 instead of 201\n- Improved visibility of the \"New version available\" alert in light mode\n- Upgraded package versions to mitigate potential frontend vulnerabilities\n- Associated environments in a group will now only be saved when submitting the form\n- Updated the documentation link supplied in the Portainer logs when a user tries to start Portainer BE with a CE database\n- Fixed a 500 issue when loading Docker in the dashboard\n- Fixed a problem with GitOps removing containers when image pull fails\n- Fixed incorrect transaction usage around webhooks\n- Fixed incorrect transaction usage when deleting endpoints\n- Resolved the following CVEs:\n- CVE-2025-61726\n- CVE-2025-68121\n- GO-2026-4337\n- CVE-2025-15467\n## Deprecated and removed features\n**Deprecated features**\n- None\n**Removed features**\n- None",
+      "memory_unit_text": "In the portainer/portainer release 2.39.0 LTS, the release addresses security vulnerability disclosure, updates form behavior to show errors after input interaction, improves HTTP response code handling, adds default alphabetical sorting to namespace dropdown, and fixes issues with environment group changes, memory leak in kubectl delete, and private registry pulling. It resolves CVEs including CVE-2025-61726 and CVE-2025-68121."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_39_1",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.39.1",
+      "tag_name": "2.39.1",
+      "title": "Release 2.39.1 LTS",
+      "time_hint": "2026-03-19",
+      "published_at": "2026-03-19T21:48:43Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.39.1",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.39.1 LTS\nTag: 2.39.1; draft: False; prerelease: False; published_at: 2026-03-19T21:48:43Z; created_at: 2026-03-19T21:36:01Z\nRelease notes:\n## Known issues\n- On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes\n- Fixed an issue where a Git-based Docker stack from GitLab failed validation for non-admin users\n- Re-enabled image registries for FIPS\n- Fixed an issue where groups were missing after an upgrade\n- Fixed an issue where not all containers for a service were shown in v2.39.0 Alpine\n- Fixed an issue where users could not add new environments to an existing group when the group already contained a large number of environments\n- Fixed an issue where the Edit this application button was disabled for non-admin users\n- Fixed an issue where custom template file content was accessible to unauthorized users\n- Fixed an issue where users could not view their containers\n- Fixed an issue where users saw a blank dashboard\n- Updated the kubectl shell image to version 1.35.2\n- Updated Kubernetes to version 1.35\n- Updated Go to version 1.25.8 to mitigate the following CVEs:\n- CVE-2026-25679\n- CVE-2026-27142\n- CVE-2026-27139\n- Resolved the following CVEs:\n- GO-2026-4550\n- GO-2026-4473\n- GO-2026-4394\n- CVE-2026-24051\n- CVE-2025-68121\n- CVE-2026-33186\n## Deprecated and removed features\n**Deprecated features**\n- None\n**Removed features**\n- None",
+      "memory_unit_text": "In the portainer/portainer release 2.39.1 LTS, the release fixes issues with Git-based Docker stacks from GitLab validation, re-enables image registries for FIPS, fixes missing groups after upgrade, and updates kubectl shell image to 1.35.2 and Kubernetes to 1.35. It resolves CVEs including GO-2026-4550 and CVE-2026-24051."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_40_0",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.40.0",
+      "tag_name": "2.40.0",
+      "title": "Release 2.40.0 STS",
+      "time_hint": "2026-03-25",
+      "published_at": "2026-03-25T21:47:55Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.40.0",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.40.0 STS\nTag: 2.40.0; draft: False; prerelease: False; published_at: 2026-03-25T21:47:55Z; created_at: 2026-03-25T21:30:06Z\nRelease notes:\n## Known issues\n- On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes\n### New and improved features\n- Added an information panel showing current and planned GitOps deployment details when a Git URL or config path is changed\n- Docker Compose GitOps stacks can now have their Git URL, config path, and entry point edited after creation\n- Cleaned up Git authentication token handling — GitHub tokens can now be entered directly in the Token field rather than the Basic auth field\n- Added a -remove-orphans / prune option when deploying Docker Compose stacks\n- Added support for -security-opt when creating Docker containers\n- Upgraded Helm Go SDK to v4\n- Upgraded Kubernetes dependencies to v1.35\n### Security improvements\n- Upgraded CIRCL library to v1.6.3 to fix GO-2026-4550 incorrect secp384r1 CombinedMult calculation\n- Upgraded go-git to v5.17.0 to fix GO-2026-4473 improper verification of data integrity for .idx and .pack files\n- Upgraded OpenTelemetry Go SDK to v1.41.0 to fix GO-2026-4394 arbitrary code execution via PATH hijacking vulnerability\n- Upgraded OpenTelemetry SDK to v1.42.0 to fix CVE-2026-24051\n- Upgraded Docker binary to v29.3.0 to mitigate CVE-2025-68121\n- Bumped golang-jwt/jwt/v4 to v4.5.2 to fix CVE-2025-30204 regression\n- Upgraded gRPC to v1.79.3 to fix CVE-2026-33186\n- Fixed missing authorization check on the Custom Template file content API endpoint\n### Bug fixes\n- Fixed GitOps Edge Configurations not restarting the correct service when a bind-mounted configuration file changes\n- Fixed Git reference (branch/tag/commit) input field not working in GitOps forms\n- Fixed container incorrectly shown as running in the UI while Docker reports it as restarting or removing\n- Fixed stack update/edit button remaining clickable during form submission\n- Fixed Git-based Docker stacks from GitLab failing environment variable validation for non-admin users\n- Fixed Helm Edge stacks being incorrectly marked as External Edge stacks\n- Fixed Portainer console freezing when pasting more than 2000 characters\n- Fixed TLS certificate upload failing when updating environment connection settings\n- Fixed deleting a Kubernetes Edge stack causing the environment to appear as offline\n- Fixed LDAP DN builder not accepting dashes in field values\n- Fixed \"Edit This Application\" button being disabled for non-admin users on the Kubernetes application details page\n- Fixed Docker Swarm Overlay Network issues causing \"Unable to find an agent on any manager node\" errors\n- Fixed environment selector crashing after upgrade when a group referenced in a stack no longer exists\n- Fixed not all containers for a Swarm service being shown\n- Fixed blank dashboard appearing after upgrade to 2.39.0 caused by a panic in the UAC evaluation for external stacks\n- Fixed container view failing with \"Unable to retrieve registries: Unauthorized\" for non-admin users\n- Fixed race condition in stack update function registration that could cause internal state corruption\n- Fixed WebSocket data race in logout handling\n- Improved PostInitMigrate() performance from O(N²) to O(N log N)\n- Fixed OAuth login failing when the OAuth provider returns a malformed Content-Type header (affects providers such as Cloudflare Access)\n- Fixed log lines that are JSON-encoded strings rendering as character-index pairs instead of the actual log text\n- Aligned Axios error message display in CE with the EE implementation\n## Deprecated and removed features\n**Deprecated features**\n- None\n**Rem...",
+      "memory_unit_text": "In the portainer/portainer release 2.40.0 STS, the release adds an information panel for GitOps deployment details, allows editing Git URL and config path for Docker Compose GitOps stacks, adds a prune option for Docker Compose stacks, and upgrades Helm Go SDK to v4 and Kubernetes dependencies to v1.35. It includes security upgrades and numerous bug fixes."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_41_0",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.41.0",
+      "tag_name": "2.41.0",
+      "title": "Release 2.41.0 STS",
+      "time_hint": "2026-04-29",
+      "published_at": "2026-04-29T22:49:38Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.41.0",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.41.0 STS\nTag: 2.41.0; draft: False; prerelease: False; published_at: 2026-04-29T22:49:38Z; created_at: 2026-04-29T22:48:43Z\nRelease notes:\n## Known issues\n- On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot\n### Known issues with Podman support\n- Support for only CentOS 9, Podman 5 rootful\n## Changes\n### Breaking changes\nChanges to the CSRF protection implementation may cause failures when upgrading:\n- Portainer fails to start with a fatal log entry like `failed to build server | error=\"invalid url for trusted origin... trusted_origin: \\\"portainer.example.com\\\"\"`. The new implementation requires each entry in the trusted origins list to be a full URL including scheme (e.g. `https://portainer.example.com/`); bare hostnames are no longer accepted.\n- Browser requests return `403 Forbidden` on state-changing actions, with `CSRF check failed` entries in the server logs. This means the browser's origin is not in the trusted origins list and needs to be added.\nThe previous CSRF implementation can be re-enabled by starting Portainer with the `legacy-csrf` feature flag (`-feat legacy-csrf`). This flag is provided for 2.41 only and is scheduled for removal in 2.42 — please report any problems so they can be addressed before the flag is removed.\n### New and improved features\n- Added support for deploying Helm chart edge stacks sourced from Helm repositories and Git repositories.\n- Reworked Docker stack creation and deployment to an async flow for consistent behaviour with Compose.\n- Kubernetes Manifest GitOps stacks can now be edited after deployment — admins can update the Git repository URL, reference, manifest filename, and credentials from the application detail view instead of tearing down and recreating the stack.\n- Added TUI (text-based UI) application support to the Web Console and kubectl shell, including proper terminal resize handling.\n- Added a \"Redeploy\" button to the Git-backed stack detail view for pulling and redeploying from the repository.\n- Added visible rendering of special and non-printable characters in the web code editor.\n- Added Edit YAML and Describe actions to Services, Jobs, CronJobs, Roles, RoleBindings, ClusterRoles, and ClusterRoleBindings datatables in the Kubernetes UI.\n- Added support for pruning unused Docker images from the Images list, with a confirmation modal.\n- Refreshed the navigation bar and page header styling.\n- Added a registry-access notice on Kubernetes app create/edit and Helm install/upgrade views to guide users to configure registry access.\n- Added a GitOps Workflows page — a new top-level sidebar item that lists every GitOps workflow across environments and edge stacks with a status summary bar, sortable list, and cross-jump to each stack's edit view. The backing API is RBAC-aware: admins see everything; Edge admins see Edge-stack workflows; environment and Kubernetes-namespace operators see workflows scoped to what they manage; standard users see workflows on stacks they can access via team membership.\n- Added custom namespace support when deploying Helm-based edge stacks.\n- Home UI improvements to highlight environment groups.\n### Security improvements\n- Bumped Go toolchain to 1.26.2 to remediate the following CVEs:\n- CVE-2026-32280 (crypto/x509 excessive chain-building work in Verify, denial of service)\n- CVE-2026-32281 (crypto/x509 inefficient policy validation, denial of service)\n- CVE-2026-32283 (crypto/tls 1.3 key update deadlock, uncontrolled resource consumption)\n- CVE-2026-33810 (crypto/x509 excluded DNS constraints not applied to wildcard domains in different case)\n- Bumped helm.sh/helm/v4 to v4.1.4 to remediate the following CVEs:\n- CVE-2026-35204 (plugin version path traversal enables arbitrary file write; GHSA-vmx8-mqv2-9gmg)\n- CVE-2026-35205 (plugin missing-provenance signature-verification bypass; GHSA-q5jf-9vfq-h4h7)\n- Bumped github.com/moby/spdystream to v0.5.1 to re...",
+      "memory_unit_text": "In the portainer/portainer release 2.41.0 STS, the release introduces breaking changes to CSRF protection requiring full URLs in trusted origins, adds support for Helm chart edge stacks from Helm and Git repositories, reworks Docker stack creation to async flow, and adds a GitOps Workflows page. It includes TUI application support, a Redeploy button for Git-backed stacks, and security upgrades."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_33_8",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.33.8",
+      "tag_name": "2.33.8",
+      "title": "Release 2.33.8 LTS",
+      "time_hint": "2026-05-06",
+      "published_at": "2026-05-06T22:05:47Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.33.8",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.33.8 LTS\nTag: 2.33.8; draft: False; prerelease: False; published_at: 2026-05-06T22:05:47Z; created_at: 2026-05-06T22:08:51Z\nRelease notes:\n## Known issues\n- On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes\n- Fixed a Docker API proxy authorisation bypass that allowed regular users to circumvent deny-plugin restrictions\n- Changed a default setting to enforce server-side EdgeID on first connection\n- Fixed a path traversal vulnerability in custom template handling\n- Fixed unauthorized access to custom template file contents via a direct API endpoint\n- Removed the option to pass a JWT token as a query string parameter\n- Removed the possibility to clone Git repositories that contain symlinks\n- Fixed a bind mount restriction bypass via HostConfig.Mounts during container creation\n- Fixed a bind mount restriction bypass during Swarm service creation\n- Fixed a container capabilities and sysctl restriction bypass during Swarm service creation\n- Fixed an error handling condition in the database\n- Added missing return statements to prevent continued execution after failed authorisation checks\n- Fixed an issue where Edge stack deployment retries stopped working\n- Resolved the following CVEs:\n- CVE-2026-25679\n- CVE-2026-27139\n- CVE-2026-27142\n- CVE-2026-32280\n- CVE-2026-32281\n- CVE-2026-32282\n- CVE-2026-32283\n- CVE-2026-32288\n- CVE-2026-32289\n- CVE-2025-58058\n- CVE-2026-1229\n- CVE-2026-24051\n- CVE-2026-25934\n- CVE-2026-32285\n- CVE-2026-32952\n- CVE-2026-33186\n- CVE-2026-33762\n- CVE-2026-34165\n- CVE-2026-35206\n- CVE-2026-35469\n- CVE-2026-39882\n- CVE-2026-39883\n- GHSA-3xc5-wrhm-f963\n- GHSA-xmrv-pmrh-hhx2\n## Deprecated and removed features\n### Deprecated features\nNone.\n### Removed features\nNone",
+      "memory_unit_text": "In the portainer/portainer release 2.33.8 LTS, the release fixes a Docker API proxy authorization bypass, path traversal vulnerability in custom template handling, and unauthorized access to custom template file contents. It removes the option to pass JWT token as query string parameter and the possibility to clone Git repositories with symlinks. It resolves numerous CVEs including CVE-2026-25679 and CVE-2026-32280."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_39_2",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.39.2",
+      "tag_name": "2.39.2",
+      "title": "Release 2.39.2 LTS",
+      "time_hint": "2026-05-07",
+      "published_at": "2026-05-07T02:52:21Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.39.2",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.39.2 LTS\nTag: 2.39.2; draft: False; prerelease: False; published_at: 2026-05-07T02:52:21Z; created_at: 2026-05-07T02:51:53Z\nRelease notes:\n## Known issues\n- On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot\n### Known issues with Podman\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes\n- Fixed an issue where the kubectl-shell-image flag only takes effect on the first Portainer run\n- Fixed an issue where deleting a kube edge stack results in a downed environment\n- Fixed an issue where Edge stack deployment retries stopped working\n- Fixed an issue with saving Git credentials\n- Fixed a Docker API proxy authorisation bypass that allowed regular users to circumvent deny-plugin restrictions\n- Changed a default setting to enforce server-side EdgeID on first connection\n- Fixed a bind mount restriction bypass via HostConfig.Mounts during container creation\n- Fixed a bind mount restriction bypass during Swarm service creation\n- Fixed a container capabilities and sysctl restriction bypass during Swarm service creation\n- Fixed an issue where the CronJob executions are not filtered by namespace - same-name CronJobs across namespaces show identical execution lists\n- Fixed an issue where the request failed with status code 504\n- Removed the option to pass a JWT token as a query string parameter\n- Upgraded typescript to v6\n- Fixed the TLS certificate uploading\n- Fixed a stacks issue where stack.env can be null\n- Ensured Portainer pulls images sequentially and respects COMPOSE_PARALLEL_LIMIT\n- Removed the possibility to clone Git repositories that contain symlinks\n- Fixed a DB write deadlock on ECR token refresh during stack redeployment\n- Enforced admin permissions when updating endpoint relations\n- Enforced admin permission in /system\n- Fixed handling no healthcheck logs output\n- Resolved the following CVEs:\n- CVE-2026-35469\n- CVE-2026-32280\n- CVE-2026-32281\n- CVE-2026-32283\n- CVE-2026-32282\n- CVE-2026-32289\n- CVE-2026-32288\n- CVE-2026-25679\n- CVE-2026-27142\n- CVE-2026-27139\n- CVE-2026-32285\n- CVE-2026-39883\n- CVE-2026-39882\n- GHSA-xmrv-pmrh-hhx2\n- CVE-2026-32952\n- CVE-2026-34165\n- CVE-2026-33762\n- GHSA-3xc5-wrhm-f963\n- CVE-2026-35206\n- GHSA-xmrv-pmrh-hhx2\n- CVE-2026-39882\n- GHSA-3xc5-wrhm-f963\n- CVE-2026-31789\n- CVE-2026-28387\n- CVE-2026-28388\n- CVE-2026-28390\n- CVE-2026-31790\n- CVE-2026-28389\n- CVE-2026-2673\n- CVE-2026-40200\n- CVE-2026-6042\n- CVE-2026-22184\n- CVE-2026-27171\n## Deprecated and removed features\n### Deprecated features\nNone.\n### Removed features\nNone",
+      "memory_unit_text": "In the portainer/portainer release 2.39.2 LTS, the release fixes issues with kubectl-shell-image flag, deleting kube edge stacks, Edge stack deployment retries, and saving Git credentials. It addresses Docker API proxy authorization bypass, bind mount restriction bypasses, and removes JWT token query string parameter. It resolves multiple CVEs including CVE-2026-35469 and CVE-2026-32280."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_41_1",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.41.1",
+      "tag_name": "2.41.1",
+      "title": "Release 2.41.1 STS",
+      "time_hint": "2026-05-11",
+      "published_at": "2026-05-11T02:40:14Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.41.1",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.41.1 STS\nTag: 2.41.1; draft: False; prerelease: False; published_at: 2026-05-11T02:40:14Z; created_at: 2026-05-11T02:39:40Z\nRelease notes:\n## Known issues\n- On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot\n### Known issues with Podman support\n- Podman environments aren't supported by auto-onboarding script\n- It's not possible to add Podman environments via socket, when running a Portainer server on Docker (and vice versa)\n- Support for only CentOS 9, Podman 5 rootful\n## Changes\n- Added Age as a sort option on the Home environments list and made it the default sort order, with \"Oldest\" (ascending by environment ID) and \"Newest\" (descending) toggles\n- Fixed the Talos Cluster Details page rendering blank by reverting the Omni cluster phase fields to int32 so they match the frontend OmniClusterPhase / OmniClusterUpgradePhase enum contract\n## Deprecated and removed features\n### Deprecated features\nNone.\n### Removed features\nNone",
+      "memory_unit_text": "In the portainer/portainer release 2.41.1 STS, the release adds Age as a sort option on the Home environments list with Oldest and Newest toggles, and fixes the Talos Cluster Details page rendering blank by reverting Omni cluster phase fields to int32."
+    },
+    {
+      "memory_node_id": "portainer__portainer__release__2_42_0",
+      "repo": "portainer/portainer",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.42.0",
+      "tag_name": "2.42.0",
+      "title": "Release 2.42.0 STS",
+      "time_hint": "2026-05-20",
+      "published_at": "2026-05-20T20:34:06Z",
+      "source_url": "https://github.com/portainer/portainer/releases/tag/2.42.0",
+      "raw_text": "Repository: portainer/portainer\nRelease: Release 2.42.0 STS\nTag: 2.42.0; draft: False; prerelease: False; published_at: 2026-05-20T20:34:06Z; created_at: 2026-05-20T20:33:37Z\nRelease notes:\n## Known issues\n- On Async Edge environments, an invalid update schedule date can be displayed when browsing a snapshot.\n### Known issues with Podman support\n- Support for only CentOS 9, Podman 5 rootful.\n## Changes\n### Breaking changes\nChanges to the CSRF protection implementation may cause failures when upgrading:\n- Removal of legacy CSRF fallback (scheduled). The legacy-csrf feature flag, introduced in 2.41 as a temporary migration aid, has been removed as scheduled. Users still relying on this flag must resolve any CSRF configuration issues before upgrading (see the 2.41 breaking changes for details). This change also resolves CVE-2025-47909.\n### New and improved features\n- Added theme selector to the user menu, allowing switching between light, dark, and high-contrast themes without navigating to settings.\n- Added GitOps sources list view and source detail view for managing Git sources used in deployments.\n- Added a connectivity test before adding edge environments.\n- Added Docker host disk usage display to the host details view.\n- Replaced Kubernetes Volume view with 3 new tables for PV, PVC, SC (PersistentVolumes, PersistentVolumeClaims, StorageClasses).\n- Added link ability between Kubernetes secrets and service account image pull secrets for private registry access.\n- Added pod restart and pod delete support on the Kubernetes application details page.\n- Improved Application Container list, separated pod info from containers list.\n- Ported Swarm stack deployments to use libstack, eliminating the embedded Docker binary from CE/BE images.\n- Added support for volumes-only mount paths in the agent, enabling environments where Docker volumes are accessible via non-default mount paths.\n- Added missing snapshot collection for Edge Agents with long running Chisel connections.\n### Security improvements\n- Fixed Docker exec endpoint to enforce container resource controls, preventing unauthorized exec access to containers.\n- Fixed Docker proxy to enforce resource controls on /containers/{id}/attach/ws WebSocket endpoint.\n- Fixed URL path rewriting to clear the RawPath field, preventing path traversal via percent-encoded paths.\n- Changed a default setting to enforce server-side EdgeID on first connection.\n- Authentication cookies now have the Secure attribute set automatically when Portainer is accessed over HTTPS.\n- Upgraded golang.org/x/net to v0.54.0 to address CVE-2026-27141 and CVE-2026-33814.\n- Upgraded github.com/go-git/go-git/v5 to v5.19.0 to address CVE-2026-34165, GHSA-3xc5-wrhm-f963, and CVE-2026-33762.\n- Upgraded github.com/in-toto/in-toto-golang to v0.11.0 to address GHSA-pmwq-pjrm-6p5r.\n- Upgraded github.com/Azure/go-ntlmssp to v0.1.1 to address CVE-2026-32952.\n- Upgraded github.com/prometheus/prometheus to v0.311.3 to address CVE-2026-40179, GHSA-fw8g-cg8f-9j28, and CVE-2026-42151.\n### Bug fixes\n- Fixed TLS configuration being accepted for Edge Agent environments via API (TLS is now correctly rejected for Edge Agent environment creation and updates).\n- Fixed stack deployments hanging due to deadlock during ECR token refresh under concurrent stack deployments.\n- Fixed Chisel panic caused by a negative WaitGroup counter.\n- Fixed stack images being pulled in parallel causing rate-limiting failures; images are now pulled sequentially and COMPOSE_PARALLEL_LIMIT is respected.\n- Fixed GitOps polling stopping permanently after a deployment error; auto-update now resumes correctly on subsequent polling cycles.\n- Fixed GitOps auto-update skipping re-deployment when the commit hash was persisted before the deployment attempt; the hash is now only written after the deploy status is saved.\n- Fixed an issue where editing a private git stack required re-entering credentials due to incorrect form validation and missing stack ID in gitops API c...",
+      "memory_unit_text": "In the portainer/portainer release 2.42.0 STS, the release removes the legacy-csrf feature flag, adds a theme selector to the user menu, GitOps sources list view, connectivity test before adding edge environments, and Docker host disk usage display. It replaces Kubernetes Volume view with new tables, adds pod restart/delete support, and ports Swarm stack deployments to use libstack. Security improvements include enforcing container resource controls on Docker exec endpoint and upgrading various dependencies."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the portainer/portainer releases, which release adds the `--trusted-origins` CLI option and `TRUSTED_ORIGINS` environment variable to address 'Origin invalid' errors behind reverse proxies?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2.27.9 LTS"
+        },
+        {
+          "option_id": "B",
+          "text": "2.31.0"
+        },
+        {
+          "option_id": "C",
+          "text": "2.32.0 STS"
+        },
+        {
+          "option_id": "D",
+          "text": "2.33.0 LTS"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2.27.9 LTS",
+      "source_chunk_ids": [
+        "portainer__portainer__release__2_27_9"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "portainer__portainer__release__2_27_9",
+          "answer_text": "Added the `--trusted-origins` CLI option and `TRUSTED_ORIGINS` environment variable to specify (in a comma-separated list) the domain(s) used to access Portainer when it is behind a reverse proxy. Use this option if Portainer is behind a reverse proxy and you are getting \"Origin invalid\" errors."
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the portainer/portainer releases, how does the handling of the Docker manifest list format differ between release 2.31.0 and release 2.32.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2.31.0 deprecates the Docker manifest list format and announces a future transition to OCI image index format, while 2.32.0 removes support for the Docker manifest list format entirely."
+        },
+        {
+          "option_id": "B",
+          "text": "2.31.0 removes the Docker manifest list format, while 2.32.0 reintroduces it."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only mention the Docker manifest list format in the context of Windows Server builds."
+        },
+        {
+          "option_id": "D",
+          "text": "2.31.0 adds support for the Docker manifest list format, while 2.32.0 deprecates it."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2.31.0 deprecates the Docker manifest list format and announces a future transition to OCI image index format, while 2.32.0 removes support for the Docker manifest list format entirely.",
+      "source_chunk_ids": [
+        "portainer__portainer__release__2_31_0",
+        "portainer__portainer__release__2_32_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "portainer__portainer__release__2_31_0",
+          "answer_text": "We are transitioning our published container images to use the OCI image index format ... instead of the traditional Docker manifest list format ... in a future release."
+        },
+        {
+          "memory_node_id": "portainer__portainer__release__2_32_0",
+          "answer_text": "As previously announced, support for the Docker manifest list format ... has been removed. All published container images now exclusively use the OCI image index format."
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the portainer/portainer release window, order the following release-content states from earliest to latest: (1) a release that adds the `--trusted-origins` CLI option and `TRUSTED_ORIGINS` environment variable, (2) a release that removes the Docker manifest list format in favor of OCI image index format, (3) a release that adds support for Docker v29 and an auto-onboarding script for Podman, (4) a release that introduces breaking changes to CSRF protection requiring full URLs in trusted origins.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 1 -> 2 -> 4"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "portainer__portainer__release__2_27_9",
+        "portainer__portainer__release__2_32_0",
+        "portainer__portainer__release__2_36_0",
+        "portainer__portainer__release__2_41_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "portainer__portainer__release__2_27_9",
+          "answer_text": "Added the `--trusted-origins` CLI option and `TRUSTED_ORIGINS` environment variable"
+        },
+        {
+          "memory_node_id": "portainer__portainer__release__2_32_0",
+          "answer_text": "support for the Docker manifest list format ... has been removed. All published container images now exclusively use the OCI image index format"
+        },
+        {
+          "memory_node_id": "portainer__portainer__release__2_36_0",
+          "answer_text": "Added support for Docker v29 ... Added auto-onboarding script for Podman"
+        },
+        {
+          "memory_node_id": "portainer__portainer__release__2_41_0",
+          "answer_text": "Changes to the CSRF protection implementation may cause failures when upgrading ... requires each entry in the trusted origins list to be a full URL including scheme"
+        }
+      ]
+    }
+  ]
+}

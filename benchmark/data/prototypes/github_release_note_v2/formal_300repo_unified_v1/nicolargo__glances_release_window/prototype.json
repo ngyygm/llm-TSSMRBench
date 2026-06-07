@@ -1,0 +1,525 @@
+{
+  "prototype_id": "nicolargo__glances_release_window",
+  "domain": "github_release_evolution",
+  "repo": "nicolargo/glances",
+  "source_type": "release_note",
+  "window_title": "nicolargo/glances recent release evolution",
+  "window_summary": "This window tracks the recent nicolargo/glances release stream from v3.3.0 through v4.5.4, covering major feature additions such as WebUI migration, GPU and VM monitoring, API enhancements, and security hardening.",
+  "chunks": [
+    {
+      "memory_node_id": "nicolargo__glances__release__v3_3_0",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.3.0",
+      "tag_name": "v3.3.0",
+      "title": "Glances 3.3.0",
+      "time_hint": "2022-10-29",
+      "published_at": "2022-10-29T09:42:17Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v3.3.0",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 3.3.0\nTag: v3.3.0; draft: False; prerelease: False; published_at: 2022-10-29T09:42:17Z; created_at: 2022-10-16T13:31:36Z\nRelease notes:\nEnhancements:\n* Migration from AngularJS to Angular/React/Vue #2100 (many thanks to @fr4nc0is)\n* Improve the IP module with a link to Censys #2105\n* Add the public IP information to the WebUI #2105\n* Add an option to show a configurable clock/time module to display #2150\n* Add sort information on Docker plugin (console mode). Related to #2138\n* Password files in same configuration dir in effect #2143\n* If the container name is long, then display the start, not the end - Related to #1732\n* Make the Web UI same than Console for CPU plugin\n* [WINDOWS] Reorganise CPU stats display #2131\n* Remove the static exportable_plugins list from glances_export.py #1556\n* Limiting data exported for economic storage #1443\nBug corrected:\n* glances.conf FS hide not applying #1666\n* AMP: regex with special chars #2152\n* fix(help-screen): add missing shortcuts and columnize algorithmically #2135\n* Correct issue with the regexp filter (use fullmatch instead of match)\n* Errors when running Glances as web service #1702\n* Apply alias to Duplicate sensor name #1686\n* Make the hide function in sensors section compliant with lower/upercase #1590\n* Web UI truncates the days part of CPU time counter of the process list #2108\n* Correct alignement issue with the diskio plugin (Console UI)\nDocumentation and CI:\n* Refactor Docker file CI\n* Add Codespell to the CI pipeline #2148\n* Please add docker-compose example and document example. #2151\n* [DOC] Glances failed to start and some other issues - BSD #2106\n* [REQUEST Docker image] Output log to stdout #2128 (for debian)\n* Fix code scanning alert - Clear-text logging of sensitive information #2124\n* Improve makefile (with online documentation)\n* buildx failed with: ERROR: failed to solve: python:3.10-slim-buster: no match for platform in manifest #2120\n* [Update docs] Can I export only the fields I need in csv report？ #2113\n* Windows Python 3 installation fails on dependency package \"future\" #2109\nContributors for this version:\n* fr4nc0is : a very special thanks to @fr4nc0is for his huge work on the Glances v3.3.0 WebUI !!!\n* Kostis Anagnostopoulos\n* Kian-Meng Ang\n* dependabot[bot]\n* matthewaaronthacker\n* and your servant Nicolargo",
+      "memory_unit_text": "In the nicolargo/glances release v3.3.0, the project migrates the WebUI from AngularJS to Angular/React/Vue, adds public IP information and a configurable clock/time module, improves Docker plugin sorting, and fixes several bugs including FS hide not applying and WebUI CPU time truncation."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v3_3_1",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.3.1",
+      "tag_name": "v3.3.1",
+      "title": "Glances 3.3.1",
+      "time_hint": "2023-01-14",
+      "published_at": "2023-01-14T15:00:47Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v3.3.1",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 3.3.1\nTag: v3.3.1; draft: False; prerelease: False; published_at: 2023-01-14T15:00:47Z; created_at: 2023-01-14T09:01:58Z\nRelease notes:\nEnhancements:\n* Minor change on the help screen\n* Refactor some loop in the processes function\n* Replace json by ujson #2201\nBug corrected:\n* Unable to see docker related information #2180\n* CSV export dependent on sort order for docker container cpu #2156\n* Error when process list is displayed in Programs mode #2209\n* Console formatting permanently messed up when other text printed #2211\n* API GET uptime returns formatted string, not seconds as the doc says #2158\n* Glances UI is breaking for multiline commands #2189\nDocumentation and CI:\n* Add unitary test for memory profiling\n* Update memory profile chart\n* Add run-docker-ubuntu-* in Makefile\n* The open-web-browser option was missing dashes #2219\n* Correct regexp in glances.conf file example\n* What is CW from network #2222 (related to discussion #2221)\n* Change Glances repology URL\n* Add example for the date format\n* Correct Flake8 configuration file\n* Drop UT for Python 3.5 and 3.6 (no more available in Ubuntu 22.04)\n* Correct unitary test with Python 3.5\n* Update Makefile with comments\n* Update Python minimal requirement for py3nvlm\n* Update security policy (user can open private issue directly in Github)\n* Add a simple run script. Entry point for IDE debuger\nCyber security update:\n* Security alert on ujson < 5.4\n* Merge pull request #2243 from nicolargo/renovate/nvidia-cuda-12.x\n* Merge pull request #2244 from nicolargo/renovate/crazy-max-ghaction-docker-meta-4.x\n* Merge pull request #2228 from nicolargo/renovate/zeroconf-0.x\n* Merge pull request #2242 from nicolargo/renovate/crazy-max-ghaction-docker-meta-4.x\n* Merge pull request #2239 from mfridge/action-command-split\n* Merge pull request #2165 from nicolargo/renovate/zeroconf-0.x\n* Merge pull request #2199 from nicolargo/renovate/alpine-3.x\n* Merge pull request #2202 from chncaption/oscs_fix_cdr0ts8au51t49so8c6g\n* Bump loader-utils from 2.0.0 to 2.0.3 in /glances/outputs/static #2187 - Update Web lib\nContributors for this version:\n* Nicolargo\n* renovate[bot]\n* chncaption\n* fkwong\n* *mfridge\nAnd also a big thanks to @RazCrimson (https://github.com/RazCrimson) for the support to the Glances community !",
+      "memory_unit_text": "In the nicolargo/glances release v3.3.1, the project replaces json with ujson, fixes Docker information display and CSV export ordering, corrects console formatting issues, and applies cyber security updates including a ujson version bump."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v3_4_0",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.4.0",
+      "tag_name": "v3.4.0",
+      "title": "Glances 3.4.0",
+      "time_hint": "2023-05-16",
+      "published_at": "2023-05-16T08:40:17Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v3.4.0",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 3.4.0\nTag: v3.4.0; draft: False; prerelease: False; published_at: 2023-05-16T08:40:17Z; created_at: 2023-05-16T07:38:09Z\nRelease notes:\n_Note: Glances 3.4.x will be the latest release with Python 2 and Python < 3.8 support. Futures releases based on the branch develop will only support Python 3.8 or higher._\nEnhancements:\n* Enhance process \"extended stats\" display (in Curses interface) #2225\n_You can now *pin* a specific process to the top of the process list_\n* Improve Glances start time by disabling Docker and Podman version getter - Related to #1985\n* Customizable InfluxDB2 export interval #2348\n* Improve kill signal management #2194\n* Display a critical error message if Glances is ran with both webserver and rpcserver mode\n* Refactor the Cloud plugin, disable it by default in the default configuration file - Related to #2279\n* Correct clear-text logging of sensitive information (security alert #29)\n* Use of a broken or weak cryptographic hashing algorithm (SHA256) on password storage #2175\nBug corrected:\n* Correct issue (error message) concerning the Cloud plugin - Related to #2392\n* InfluxDB2 export doesn't process folders correctly - missing key #2327\n* Index error when displaying programs on MacOS #2360\n* Dissociate 2 sensors with exactly the same names #2280\n* All times displayed in UTC - Container not using TZ/localtime (Docker) #2278\n* It is not possible to return API data for a particular mount point (FS plugin) #1162\nDocumentation and CI:\n* chg: Dockerfile - structured & cleaner build process #2386\n* Ubuntu is back as additional Docker images. Alpine stays the default one. Related to #2185\n* Improve Makefile amd docker-compose to support Podman and GPU\n* Workaround to pin urlib3<2.0 - Related to #2392\n* Error while generating the documentation (ModuleNotFoundError: No module named 'glances') #2391\n* Update Flamegraph (memory profiling)\n* Improve template for issue report and feature request\n* Parameters in the VIRT column #2343\n* Graph generation documentation is not clear #2336\n* docs: Docker - include tag details\n* Add global architecture diagram (Excalidraw)\n* Links to documents in sample glances.conf are not valid. #2271\n* Add semgrep support\n* Smartmontools missing from full docker image #2262\n* Improve documentation regarding regexp in configuration file\n* Improve documentation about the [ip] plugin #2251\nCyber security update:\n* All libs have been updated to the latest version\nFull roadmap here: https://github.com/nicolargo/glances/milestone/62?closed=1\nRefactor the Docker images factory, from now, Alpine and Ubuntu images will be provided (nicolargo/glances):\n- *latest-full* for a full Alpine Glances image (latest release) with all dependencies\n- *latest* for a basic Alpine Glances (latest release) version with minimal dependencies (Bottle and Docker)\n- *dev* for a basic Alpine Glances image (based on development branch) with all dependencies (Warning: may be instable)\n- *ubuntu-latest-full* for a full Ubuntu Glances image (latest release) with all dependencies\n- *ubuntu-latest* for a basic Ubuntu Glances (latest release) version with minimal dependencies (Bottle and Docker)\n- *ubuntu-dev* for a basic Ubuntu Glances image (based on development branch) with all dependencies (Warning: may be instable)\nContributors for this version:\n* @Nicolargo\n* @RazCrimson : a very special thanks to @RazCrimson for his huge work on this version !\n* Bharath Vignesh J K\n* @fr4nc0is\n* Florian Calvet\n* Ali Erdinç Köroğlu\n* Jose Vicente Nunez\n* Rui Chen\n* Ryan Horiguchi\n* mfridge\n* snyk-bot",
+      "memory_unit_text": "In the nicolargo/glances release v3.4.0, the project enhances process extended stats with pinning, improves start time by disabling Docker/Podman version getter, adds customizable InfluxDB2 export interval, refactors the Cloud plugin to be disabled by default, fixes InfluxDB2 folder processing and macOS index error, and restructures Docker images to provide both Alpine and Ubuntu variants."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v3_4_0_1",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.4.0.1",
+      "tag_name": "v3.4.0.1",
+      "title": "Glances 3.4.0.1",
+      "time_hint": "2023-05-17",
+      "published_at": "2023-05-17T13:08:54Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v3.4.0.1",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 3.4.0.1\nTag: v3.4.0.1; draft: False; prerelease: False; published_at: 2023-05-17T13:08:54Z; created_at: 2023-05-17T09:29:07Z\nRelease notes:\nHotfix for [Glances 3.4.0](https://github.com/nicolargo/glances/releases/tag/v3.4.0):\n* 3.4.0 crash on startupwith minimal deps #2401",
+      "memory_unit_text": "In the nicolargo/glances release v3.4.0.1, a hotfix addresses a crash on startup with minimal dependencies that occurred in version 3.4.0."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v3_4_0_2",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.4.0.2",
+      "tag_name": "v3.4.0.2",
+      "title": "Glances 3.4.0.2",
+      "time_hint": "2023-05-18",
+      "published_at": "2023-05-18T15:52:21Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v3.4.0.2",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 3.4.0.2\nTag: v3.4.0.2; draft: False; prerelease: False; published_at: 2023-05-18T15:52:21Z; created_at: 2023-05-18T15:45:30Z\nRelease notes:\nHotfix for [Glances 3.4.0](https://github.com/nicolargo/glances/releases/tag/v3.4.0):\n* Cannot start Glances 3.4.0.1 on Windows 10: SIGHUP not defined #2408\n* Influxdb2 export not working #2407",
+      "memory_unit_text": "In the nicolargo/glances release v3.4.0.2, hotfixes resolve a Windows 10 startup crash due to undefined SIGHUP and fix InfluxDB2 export not working."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v3_4_0_5",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.4.0.5",
+      "tag_name": "v3.4.0.5",
+      "title": "v3.4.0.5",
+      "time_hint": "2024-03-24",
+      "published_at": "2024-03-24T12:32:43Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v3.4.0.5",
+      "raw_text": "Repository: nicolargo/glances\nRelease: v3.4.0.5\nTag: v3.4.0.5; draft: False; prerelease: False; published_at: 2024-03-24T12:32:43Z; created_at: 2024-03-23T13:47:40Z\nRelease notes:\nVersion 3.4.0.5\n===============\nCorrect issur with GPU plugin in Docker images #2705\nVersion 3.4.0.4\n===============\nCyber security patch (update some deps in the WebUI and Docker image)\nVersion 3.4.0.3\n===============\nBugs corrected:\n* Add glances binary to '/usr/local/bin' + Update ENV PATH to include '/venv/bin' in Dockerfiles #2419\n* No more threshold display in the WebUI cpu/mem and memswap plugins #2420\nVersion 3.4.0.2\n===============\nBugs corrected:\n* Cannot start Glances 3.4.0.1 on Windows 10: SIGHUP not defined #2408\n* Influxdb2 export not working #2407\nVersion 3.4.0.1\n===============\nBug corrected:\n* 3.4.0 crash on startupwith minimal deps #2401\nVersion 3.4.0\n===============\nEnhancements:\n* Enhance process \"extended stats\" display (in Curses interface) #2225\n_You can now *pin* a specific process to the top of the process list_\n* Improve Glances start time by disabling Docker and Podman version getter - Related to #1985\n* Customizable InfluxDB2 export interval #2348\n* Improve kill signal management #2194\n* Display a critical error message if Glances is ran with both webserver and rpcserver mode\n* Refactor the Cloud plugin, disable it by default in the default configuration file - Related to #2279\n* Correct clear-text logging of sensitive information (security alert #29)\n* Use of a broken or weak cryptographic hashing algorithm (SHA256) on password storage #2175\nBug corrected:\n* Correct issue (error message) concerning the Cloud plugin - Related to #2392\n* InfluxDB2 export doesn't process folders correctly - missing key #2327\n* Index error when displaying programs on MacOS #2360\n* Dissociate 2 sensors with exactly the same names #2280\n* All times displayed in UTC - Container not using TZ/localtime (Docker) #2278\n* It is not possible to return API data for a particular mount point (FS plugin) #1162\nDocumentation and CI:\n* chg: Dockerfile - structured & cleaner build process #2386\n* Ubuntu is back as additional Docker images. Alpine stays the default one. Related to #2185\n* Improve Makefile amd docker-compose to support Podman and GPU\n* Workaround to pin urlib3<2.0 - Related to #2392\n* Error while generating the documentation (ModuleNotFoundError: No module named 'glances') #2391\n* Update Flamegraph (memory profiling)\n* Improve template for issue report and feature request\n* Parameters in the VIRT column #2343\n* Graph generation documentation is not clear #2336\n* docs: Docker - include tag details\n* Add global architecture diagram (Excalidraw)\n* Links to documents in sample glances.conf are not valid. #2271\n* Add semgrep support\n* Smartmontools missing from full docker image #2262\n* Improve documentation regarding regexp in configuration file\n* Improve documentation about the [ip] plugin #2251\nCyber security update:\n* All libs have been updated to the latest version\nFull roadmap here: https://github.com/nicolargo/glances/milestone/62?closed=1\nRefactor the Docker images factory, from now, Alpine and Ubuntu images will be provided (nicolargo/glances):\n- *latest-full* for a full Alpine Glances image (latest release) with all dependencies\n- *latest* for a basic Alpine Glances (latest release) version with minimal dependencies (Bottle and Docker)\n- *dev* for a basic Alpine Glances image (based on development branch) with all dependencies (Warning: may be instable)\n- *ubuntu-latest-full* for a full Ubuntu Glances image (latest release) with all dependencies\n- *ubuntu-latest* for a basic Ubuntu Glances (latest release) version with minimal dependencies (Bottle and Docker)\n- *ubuntu-dev* for a basic Ubuntu Glances image (based on development branch) with all dependencies (Warning: may be instable)\nContributors for this version:\n* Nicolargo\n* RazCrimson: a very special thanks to @RazCrimson for his huge work on this version !\n* Bharath Vignesh J K\n*...",
+      "memory_unit_text": "In the nicolargo/glances release v3.4.0.5, the project corrects a GPU plugin issue in Docker images, applies a cyber security patch for WebUI and Docker image dependencies, and includes earlier hotfixes for binary path, threshold display, Windows SIGHUP, and InfluxDB2 export."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_0_2",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.2",
+      "tag_name": "v4.0.2",
+      "title": "Glances 4.0.2",
+      "time_hint": "2024-05-13",
+      "published_at": "2024-05-13T21:03:55Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.0.2",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.0.2\nTag: v4.0.2; draft: False; prerelease: False; published_at: 2024-05-13T21:03:55Z; created_at: 2024-05-13T20:26:59Z\nRelease notes:\nDRAFT UNDER CONSTRUCTION\n***\n![](https://raw.githubusercontent.com/nicolargo/glances/develop/docs/_static/glances-summary.png)\n# New Features\n## Export individual processes stats\nThanks to the new software architecture it is now possible to export individual processes stats.\nYou should define the processes to export from the configuration file (section processlist /option export)\nor via the --export-process-filter option on the command line.\nThose options are a comma separated list of Glances filter (example bellow):\n* python.*: Filter processes name or command line starting with python\n* .*python.*: Filter processes name or command line containing python\n* username:nicolargo: Processes belong to nicolargo user\n* cmdline:\\/usr\\/bin.*: Processes starting by /usr/bin\nThe following example exports all processes with the name 'python' or 'bash':\n[processlist]\nexport=.*python.*,.*bash.*\nNote: or the --export-process-filter \".python.,.bash.\" option in the command line.\nAnother example exports all processes belong to 'nicolargo' user:\n[processlist]\nexport=username:nicolargo\nNote: or the --export-process-filter \"username:nicolargo\" option in the command line.\nLast example with the output result in a CSV file, with the following command line example:\nglances -C ./conf/glances.conf --export csv --export-csv-file /tmp/glances.csv --disable-plugin all --enable-plugin processlist --quiet\nthe output CSV file (with the PID as primary key) will look like:\ntimestamp,845992.memory_percent,845992.status,845992.num_threads,845992.cpu_timesuser,845992.cpu_timessystem,845992.cpu_timeschildren_user,845992.cpu_timeschildren_system,845992.cpu_timesiowait,845992.memory_inforss,845992.memory_infovms,845992.memory_infoshared,845992.memory_infotext,845992.memory_infolib,845992.memory_infodata,845992.memory_infodirty,845992.name,845992.io_counters,845992.nice,845992.cpu_percent,845992.pid,845992.gidsreal,845992.gidseffective,845992.gidssaved,845992.key,845992.time_since_update,845992.cmdline,845992.username,total,running,sleeping,thread,pid_max\n2024-04-03 18:39:55,3.692938041968513,S,138,1702.88,567.89,1752.79,244.18,0.0,288919552,12871561216,95182848,856064,0,984535040,0,firefox,1863281664,0,0.5,845992,1000,1000,1000,pid,2.2084147930145264,/snap/firefox/3836/usr/lib/firefox/firefox,nicolargo,403,1,333,1511,0\n2024-04-03 18:39:57,3.692938041968513,S,138,1702.88,567.89,1752.79,244.18,0.0,288919552,12871561216,95182848,856064,0,984535040,0,firefox,1863281664,0,0.5,845992,1000,1000,1000,pid,2.2084147930145264,/snap/firefox/3836/usr/lib/firefox/firefox,nicolargo,403,1,333,1511,0\nNote: more details in issue #794.\n## GPU plugin now support AMD GPU\nLasts Linux Kernel expose the GPU stats in the /sys/class/drm folder.\nSo, additionally to NVidia cards and without any external lib, Glances can display AMD GPU stats:\n![image](https://github.com/nicolargo/glances/assets/776747/01d8cd20-6483-4922-a611-aeff2b104971)\nGPU plugin software architecture has been re-factorized in order to easily add others cards in the future (Intel).\nNote: more details in issue #993.\n## Wifi plugin is back\nAs Glances version 4 is no longer supported Python 2, Wifi plugin has been refactor and do not need any external library.\nGlances parses the /proc/net/wireless file on new Linux kernel.\n![image](https://github.com/nicolargo/glances/assets/776747/e7957409-5e3c-40b9-8d77-e20d29414932)\nNote: more details in issue #1377.\n## Refactor alias configuration\nAlias has been completely refactor for all plugins in order to make it easier to configure.\nGlances version 3.x and lower:\nsda1_alias=InternalDisk\nsdb1_alias=ExternalDisk\nGlances version 4.x and higher:\nalias=sda1:InternalDisk,sdb1:ExternalDisk\nNote: more details in issue #1735.\n## Fields descriptions and units are now available through the API\nYou can now get sta...",
+      "memory_unit_text": "In the nicolargo/glances release v4.0.2, the project introduces export of individual process stats via configuration or command-line filters, adds AMD GPU support through /sys/class/drm, brings back the Wifi plugin without external libraries, refactors alias configuration to a simpler format, and makes field descriptions and units available through the API."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_0_3",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.3",
+      "tag_name": "v4.0.3",
+      "title": "v4.0.3",
+      "time_hint": "2024-05-15",
+      "published_at": "2024-05-15T07:59:31Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.0.3",
+      "raw_text": "Repository: nicolargo/glances\nRelease: v4.0.3\nTag: v4.0.3; draft: False; prerelease: False; published_at: 2024-05-15T07:59:31Z; created_at: 2024-05-15T07:38:28Z\nRelease notes:\n- Bug fixes for sensors plugin\n**Full Changelog**: https://github.com/nicolargo/glances/compare/v4.0.2...v4.0.3",
+      "memory_unit_text": "In the nicolargo/glances release v4.0.3, bug fixes are applied for the sensors plugin."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_0_4",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.4",
+      "tag_name": "v4.0.4",
+      "title": "Glances 4.0.4",
+      "time_hint": "2024-05-17",
+      "published_at": "2024-05-17T07:20:02Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.0.4",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.0.4\nTag: v4.0.4; draft: False; prerelease: False; published_at: 2024-05-17T07:20:02Z; created_at: 2024-05-15T09:20:23Z\nRelease notes:\n***\n![](https://raw.githubusercontent.com/nicolargo/glances/develop/docs/_static/glances-summary.png)\n# New Features\n## Export individual processes stats\nThanks to the new software architecture it is now possible to export individual processes stats.\nYou should define the processes to export from the configuration file (section processlist /option export)\nor via the --export-process-filter option on the command line.\nThose options are a comma separated list of Glances filter (example bellow):\n* python.*: Filter processes name or command line starting with python\n* .*python.*: Filter processes name or command line containing python\n* username:nicolargo: Processes belong to nicolargo user\n* cmdline:\\/usr\\/bin.*: Processes starting by /usr/bin\nThe following example exports all processes with the name 'python' or 'bash':\n[processlist]\nexport=.*python.*,.*bash.*\nNote: or the --export-process-filter \".python.,.bash.\" option in the command line.\nAnother example exports all processes belong to 'nicolargo' user:\n[processlist]\nexport=username:nicolargo\nNote: or the --export-process-filter \"username:nicolargo\" option in the command line.\nLast example with the output result in a CSV file, with the following command line example:\nglances -C ./conf/glances.conf --export csv --export-csv-file /tmp/glances.csv --disable-plugin all --enable-plugin processlist --quiet\nthe output CSV file (with the PID as primary key) will look like:\ntimestamp,845992.memory_percent,845992.status,845992.num_threads,845992.cpu_timesuser,845992.cpu_timessystem,845992.cpu_timeschildren_user,845992.cpu_timeschildren_system,845992.cpu_timesiowait,845992.memory_inforss,845992.memory_infovms,845992.memory_infoshared,845992.memory_infotext,845992.memory_infolib,845992.memory_infodata,845992.memory_infodirty,845992.name,845992.io_counters,845992.nice,845992.cpu_percent,845992.pid,845992.gidsreal,845992.gidseffective,845992.gidssaved,845992.key,845992.time_since_update,845992.cmdline,845992.username,total,running,sleeping,thread,pid_max\n2024-04-03 18:39:55,3.692938041968513,S,138,1702.88,567.89,1752.79,244.18,0.0,288919552,12871561216,95182848,856064,0,984535040,0,firefox,1863281664,0,0.5,845992,1000,1000,1000,pid,2.2084147930145264,/snap/firefox/3836/usr/lib/firefox/firefox,nicolargo,403,1,333,1511,0\n2024-04-03 18:39:57,3.692938041968513,S,138,1702.88,567.89,1752.79,244.18,0.0,288919552,12871561216,95182848,856064,0,984535040,0,firefox,1863281664,0,0.5,845992,1000,1000,1000,pid,2.2084147930145264,/snap/firefox/3836/usr/lib/firefox/firefox,nicolargo,403,1,333,1511,0\nNote: more details in issue #794.\n## GPU plugin now support AMD GPU\nLasts Linux Kernel expose the GPU stats in the /sys/class/drm folder.\nSo, additionally to NVidia cards and without any external lib, Glances can display AMD GPU stats:\n![image](https://github.com/nicolargo/glances/assets/776747/01d8cd20-6483-4922-a611-aeff2b104971)\nGPU plugin software architecture has been re-factorized in order to easily add others cards in the future (Intel).\nNote: more details in issue #993.\n## Wifi plugin is back\nAs Glances version 4 is no longer supported Python 2, Wifi plugin has been refactor and do not need any external library.\nGlances parses the /proc/net/wireless file on new Linux kernel.\n![image](https://github.com/nicolargo/glances/assets/776747/e7957409-5e3c-40b9-8d77-e20d29414932)\nNote: more details in issue #1377.\n## Refactor alias configuration\nAlias has been completely refactor for all plugins in order to make it easier to configure.\nGlances version 3.x and lower:\nsda1_alias=InternalDisk\nsdb1_alias=ExternalDisk\nGlances version 4.x and higher:\nalias=sda1:InternalDisk,sdb1:ExternalDisk\nNote: more details in issue #1735.\n## Fields descriptions and units are now available through the API\nYou can now get stat description and unit th...",
+      "memory_unit_text": "In the nicolargo/glances release v4.0.4, the project includes the same new features as v4.0.2 (individual process stats export, AMD GPU support, Wifi plugin, alias refactoring, API field descriptions) and adds a hotfix for sensors plugin support on Python 3.8."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_0_6",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.6",
+      "tag_name": "v4.0.6",
+      "title": "Glances 4.0.6",
+      "time_hint": "2024-05-25",
+      "published_at": "2024-05-25T10:14:15Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.0.6",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.0.6\nTag: v4.0.6; draft: False; prerelease: False; published_at: 2024-05-25T10:14:15Z; created_at: 2024-05-25T10:09:06Z\nRelease notes:\n***\n![](https://raw.githubusercontent.com/nicolargo/glances/develop/docs/_static/glances-summary.png)\n# New Features\n## Export individual processes stats\nThanks to the new software architecture it is now possible to export individual processes stats.\nYou should define the processes to export from the configuration file (section processlist /option export)\nor via the --export-process-filter option on the command line.\nThose options are a comma separated list of Glances filter (example bellow):\n* python.*: Filter processes name or command line starting with python\n* .*python.*: Filter processes name or command line containing python\n* username:nicolargo: Processes belong to nicolargo user\n* cmdline:\\/usr\\/bin.*: Processes starting by /usr/bin\nThe following example exports all processes with the name 'python' or 'bash':\n[processlist]\nexport=.*python.*,.*bash.*\nNote: or the --export-process-filter \".python.,.bash.\" option in the command line.\nAnother example exports all processes belong to 'nicolargo' user:\n[processlist]\nexport=username:nicolargo\nNote: or the --export-process-filter \"username:nicolargo\" option in the command line.\nLast example with the output result in a CSV file, with the following command line example:\nglances -C ./conf/glances.conf --export csv --export-csv-file /tmp/glances.csv --disable-plugin all --enable-plugin processlist --quiet\nthe output CSV file (with the PID as primary key) will look like:\ntimestamp,845992.memory_percent,845992.status,845992.num_threads,845992.cpu_timesuser,845992.cpu_timessystem,845992.cpu_timeschildren_user,845992.cpu_timeschildren_system,845992.cpu_timesiowait,845992.memory_inforss,845992.memory_infovms,845992.memory_infoshared,845992.memory_infotext,845992.memory_infolib,845992.memory_infodata,845992.memory_infodirty,845992.name,845992.io_counters,845992.nice,845992.cpu_percent,845992.pid,845992.gidsreal,845992.gidseffective,845992.gidssaved,845992.key,845992.time_since_update,845992.cmdline,845992.username,total,running,sleeping,thread,pid_max\n2024-04-03 18:39:55,3.692938041968513,S,138,1702.88,567.89,1752.79,244.18,0.0,288919552,12871561216,95182848,856064,0,984535040,0,firefox,1863281664,0,0.5,845992,1000,1000,1000,pid,2.2084147930145264,/snap/firefox/3836/usr/lib/firefox/firefox,nicolargo,403,1,333,1511,0\n2024-04-03 18:39:57,3.692938041968513,S,138,1702.88,567.89,1752.79,244.18,0.0,288919552,12871561216,95182848,856064,0,984535040,0,firefox,1863281664,0,0.5,845992,1000,1000,1000,pid,2.2084147930145264,/snap/firefox/3836/usr/lib/firefox/firefox,nicolargo,403,1,333,1511,0\nNote: more details in issue #794.\n## GPU plugin now support AMD GPU\nLasts Linux Kernel expose the GPU stats in the /sys/class/drm folder.\nSo, additionally to NVidia cards and without any external lib, Glances can display AMD GPU stats:\n![image](https://github.com/nicolargo/glances/assets/776747/01d8cd20-6483-4922-a611-aeff2b104971)\nGPU plugin software architecture has been re-factorized in order to easily add others cards in the future (Intel).\nNote: more details in issue #993.\n## Wifi plugin is back\nAs Glances version 4 is no longer supported Python 2, Wifi plugin has been refactor and do not need any external library.\nGlances parses the /proc/net/wireless file on new Linux kernel.\n![image](https://github.com/nicolargo/glances/assets/776747/e7957409-5e3c-40b9-8d77-e20d29414932)\nNote: more details in issue #1377.\n## Refactor alias configuration\nAlias has been completely refactor for all plugins in order to make it easier to configure.\nGlances version 3.x and lower:\nsda1_alias=InternalDisk\nsdb1_alias=ExternalDisk\nGlances version 4.x and higher:\nalias=sda1:InternalDisk,sdb1:ExternalDisk\nNote: more details in issue #1735.\n## Fields descriptions and units are now available through the API\nYou can now get stat description and unit th...",
+      "memory_unit_text": "In the nicolargo/glances release v4.0.6, the project includes the same new features as v4.0.2 and v4.0.4, and fixes missing GPU info on the Web View."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_0_7",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.7",
+      "tag_name": "v4.0.7",
+      "title": "Glances 4.0.7",
+      "time_hint": "2024-05-31",
+      "published_at": "2024-05-31T06:50:42Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.0.7",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.0.7\nTag: v4.0.7; draft: False; prerelease: False; published_at: 2024-05-31T06:50:42Z; created_at: 2024-05-25T14:13:18Z\nRelease notes:\n# Version 4.0.7\n* cpu_hz_current not available on NetBSD #2792\n* SensorType change in REST API breaks compatibility in 4.0.4 #2788\n# Version 4.0.6\n*  No GPU info on Web View #2796\n# Version 4.0.5\n* SensorType change in REST API breaks compatibility in 4.0.4 #2788\n* Please make pydantic optional dependency, not required one #2777\n* Update the Grafana dashboard #2780\n* 4.0.4 - On Glances startup \"ERROR -- Can not init battery class #2776\n* In codeSpace (with Python 3.8), an error occurs in ./unittest-restful.py #2773\nUse Ruff as default Linter.\n# Version 4.0.4\nHostfix release for support sensors plugin on python 3.8\n# Version 4.0.3\nAdditional fixes for Sensor plugin\n# Version 4.0.2\n* hotfix: plugin(sensors) - race conditions btw fan_speed & temperature… #2766\n* fix: include requirements.txt and SECURITY.md for pypi dist #2761\nThanks to RazCrimson for the sensors patch !\n# Version 4.0.1\nCorrect issue with CI (miss pydantic dep).\n# Version 4.0.0\n![](https://raw.githubusercontent.com/nicolargo/glances/develop/docs/_static/glances-summary.png)\n# New Features\n## Export individual processes stats\nThanks to the new software architecture it is now possible to export individual processes stats.\nYou should define the processes to export from the configuration file (section processlist /option export)\nor via the --export-process-filter option on the command line.\nThose options are a comma separated list of Glances filter (example bellow):\n* python.*: Filter processes name or command line starting with python\n* .*python.*: Filter processes name or command line containing python\n* username:nicolargo: Processes belong to nicolargo user\n* cmdline:\\/usr\\/bin.*: Processes starting by /usr/bin\nThe following example exports all processes with the name 'python' or 'bash':\n[processlist]\nexport=.*python.*,.*bash.*\nNote: or the --export-process-filter \".python.,.bash.\" option in the command line.\nAnother example exports all processes belong to 'nicolargo' user:\n[processlist]\nexport=username:nicolargo\nNote: or the --export-process-filter \"username:nicolargo\" option in the command line.\nLast example with the output result in a CSV file, with the following command line example:\nglances -C ./conf/glances.conf --export csv --export-csv-file /tmp/glances.csv --disable-plugin all --enable-plugin processlist --quiet\nthe output CSV file (with the PID as primary key) will look like:\ntimestamp,845992.memory_percent,845992.status,845992.num_threads,845992.cpu_timesuser,845992.cpu_timessystem,845992.cpu_timeschildren_user,845992.cpu_timeschildren_system,845992.cpu_timesiowait,845992.memory_inforss,845992.memory_infovms,845992.memory_infoshared,845992.memory_infotext,845992.memory_infolib,845992.memory_infodata,845992.memory_infodirty,845992.name,845992.io_counters,845992.nice,845992.cpu_percent,845992.pid,845992.gidsreal,845992.gidseffective,845992.gidssaved,845992.key,845992.time_since_update,845992.cmdline,845992.username,total,running,sleeping,thread,pid_max\n2024-04-03 18:39:55,3.692938041968513,S,138,1702.88,567.89,1752.79,244.18,0.0,288919552,12871561216,95182848,856064,0,984535040,0,firefox,1863281664,0,0.5,845992,1000,1000,1000,pid,2.2084147930145264,/snap/firefox/3836/usr/lib/firefox/firefox,nicolargo,403,1,333,1511,0\n2024-04-03 18:39:57,3.692938041968513,S,138,1702.88,567.89,1752.79,244.18,0.0,288919552,12871561216,95182848,856064,0,984535040,0,firefox,1863281664,0,0.5,845992,1000,1000,1000,pid,2.2084147930145264,/snap/firefox/3836/usr/lib/firefox/firefox,nicolargo,403,1,333,1511,0\nNote: more details in issue #794.\n## GPU plugin now support AMD GPU\nLasts Linux Kernel expose the GPU stats in the /sys/class/drm folder.\nSo, additionally to NVidia cards and without any external lib, Glances can display AMD GPU stats:\n![image](https://github.com/nicolargo/glances/assets/776747/...",
+      "memory_unit_text": "In the nicolargo/glances release v4.0.7, the project fixes cpu_hz_current not available on NetBSD and a SensorType change in the REST API that broke compatibility in v4.0.4, and includes earlier fixes for GPU info, pydantic dependency, Grafana dashboard, and battery class initialization."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_0_8",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.8",
+      "tag_name": "v4.0.8",
+      "title": "Glances 4.0.8",
+      "time_hint": "2024-06-08",
+      "published_at": "2024-06-08T08:33:17Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.0.8",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.0.8\nTag: v4.0.8; draft: False; prerelease: False; published_at: 2024-06-08T08:33:17Z; created_at: 2024-06-08T08:28:38Z\nRelease notes:\n#  Version 4.0.8\n* Make CORS option configurable security webui #2812\n* When Glances is installed via venv, default configuration file is not used documentation packaging #2803\n* GET /1272f6e9e8f9d6bfd6de.png results in 404 bug webui #2781 by Emporea was closed May 25, 2024\n* Screen frequently flickers when outputting to local display bug needs test #2490\n* Retire ujson for being in maintenance mode dependencies enhancement #2791",
+      "memory_unit_text": "In the nicolargo/glances release v4.0.8, the project makes CORS option configurable for security, fixes default configuration file path when installed via venv, addresses a 404 for a static file, screen flickering on local display, and retires ujson in favor of maintenance."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_1_1",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.1",
+      "tag_name": "v4.1.1",
+      "title": "Glances 4.1.1",
+      "time_hint": "2024-06-29",
+      "published_at": "2024-06-29T16:11:08Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.1.1",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.1.1\nTag: v4.1.1; draft: False; prerelease: False; published_at: 2024-06-29T16:11:08Z; created_at: 2024-06-29T14:34:35Z\nRelease notes:\n# Version 4.1.1\nBug corrected:\n*  Sensors data is not exported using InfluxDB2 exporter #2856\n# Version 4.1.0\nEnhancements:\n* Call process_iter.clear_cache() (PsUtil 6+) when Glances user force a refresh (F5 or CTRL-R) #2753\n* PsUtil 6+ no longer check PID reused #2755\n* Add support for automatically hiding network interfaces that are down or that don't have any IP addresses #2799\nBug corrected:\n* API: Network module is disabled but appears in endpoint \"all\" #2815\n* API is not compatible with requests containing spcial/encoding char #2820\n* 'j' hot key crashs Glances #2831\n* Raspberry PI - CPU info is not correct #2616\n* Graph export is broken if there is no graph section in Glances configuration file #2839\n* Glances API status check returns Error 405 - Method Not Allowed #2841\n* Rootless podman containers cause glances to fail with KeyError #2827\n* --export-process-filter Filter using complete command #2824\n* Exception when Glances is ran with limited plugin list #2822\n* Disable separator option do not work #2823\nContinious integration and documentation:\n* test test_107_fs_plugin_method fails on aarch64-linux #2819\nThanks to all contibutors and bug reporters !\nSpecial thanks to:\n* Bharath Vignesh J K\n* RazCrimson\n* Vadim Smal",
+      "memory_unit_text": "In the nicolargo/glances release v4.1.1, the project fixes sensors data not exported using InfluxDB2 exporter, and includes v4.1.0 enhancements such as process_iter.clear_cache() support, automatic hiding of down network interfaces, and various API and UI bug fixes."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_1_2_1",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.2.1",
+      "tag_name": "v4.1.2.1",
+      "title": "Glances 4.1.2",
+      "time_hint": "2024-07-04",
+      "published_at": "2024-07-04T07:48:17Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.1.2.1",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.1.2\nTag: v4.1.2.1; draft: False; prerelease: False; published_at: 2024-07-04T07:48:17Z; created_at: 2024-07-03T17:48:23Z\nRelease notes:\n# Version 4.1.2\nBug corrected:\n* AttributeError: 'CpuPercent' object has no attribute 'cpu_percent' #2859\n# Version 4.1.1\nBug corrected:\n*  Sensors data is not exported using InfluxDB2 exporter #2856\n# Version 4.1.0\nEnhancements:\n* Call process_iter.clear_cache() (PsUtil 6+) when Glances user force a refresh (F5 or CTRL-R) #2753\n* PsUtil 6+ no longer check PID reused #2755\n* Add support for automatically hiding network interfaces that are down or that don't have any IP addresses #2799\nBug corrected:\n* API: Network module is disabled but appears in endpoint \"all\" #2815\n* API is not compatible with requests containing spcial/encoding char #2820\n* 'j' hot key crashs Glances #2831\n* Raspberry PI - CPU info is not correct #2616\n* Graph export is broken if there is no graph section in Glances configuration file #2839\n* Glances API status check returns Error 405 - Method Not Allowed #2841\n* Rootless podman containers cause glances to fail with KeyError #2827\n* --export-process-filter Filter using complete command #2824\n* Exception when Glances is ran with limited plugin list #2822\n* Disable separator option do not work #2823\nContinious integration and documentation:\n* test test_107_fs_plugin_method fails on aarch64-linux #2819\nThanks to all contibutors and bug reporters !\nSpecial thanks to:\n* Bharath Vignesh J K\n* RazCrimson\n* Vadim Smal",
+      "memory_unit_text": "In the nicolargo/glances release v4.1.2.1, the project fixes an AttributeError on CpuPercent object, and includes the v4.1.1 fix for InfluxDB2 sensor export and v4.1.0 enhancements."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_2_0",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.2.0",
+      "tag_name": "v4.2.0",
+      "title": "Glances 4.2.0",
+      "time_hint": "2024-10-20",
+      "published_at": "2024-10-20T16:46:24Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.2.0",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.2.0\nTag: v4.2.0; draft: False; prerelease: False; published_at: 2024-10-20T16:46:24Z; created_at: 2024-10-20T16:02:38Z\nRelease notes:\nEnhancements:\n* Call process_iter.clear_cache() (PsUtil 6+) when Glances user force a refresh (F5 or CTRL-R) #2753\n* PsUtil 6+ no longer check PID reused #2755\n* Add support for automatically hiding network interfaces that are down or that don't have any IP addresses #2799\nBug corrected:\n* API: Network module is disabled but appears in endpoint \"all\" #2815\n* API is not compatible with requests containing special/encoding char #2820\n* 'j' hot key crashes Glances #2831\n* Raspberry PI - CPU info is not correct #2616\n* Graph export is broken if there is no graph section in Glances configuration file #2839\n* Glances API status check returns Error 405 - Method Not Allowed #2841\n* Rootless podman containers cause glances to fail with KeyError #2827\n* --export-process-filter Filter using complete command #2824\n* Exception when Glances is ran with limited plugin list #2822\n* Disable separator option do not work #2823\nContinuous integration and documentation:\n* test test_107_fs_plugin_method fails on aarch64-linux #2819\nThanks to all contributors and bug reporters !\nSpecial thanks to:\n* Bharath Vignesh J K\n* RazCrimson\n* Vadim Small",
+      "memory_unit_text": "In the nicolargo/glances release v4.2.0, the project includes the same enhancements and bug fixes as v4.1.0, such as process_iter.clear_cache() support, automatic hiding of down network interfaces, and various API and UI bug fixes."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_2_1",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.2.1",
+      "tag_name": "v4.2.1",
+      "title": "Glances 4.2.1",
+      "time_hint": "2024-11-01",
+      "published_at": "2024-11-01T11:00:18Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.2.1",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.2.1\nTag: v4.2.1; draft: False; prerelease: False; published_at: 2024-11-01T11:00:18Z; created_at: 2024-11-01T10:53:33Z\nRelease notes:\nEnhancements:\n* [WEBUI] Came back to default Black Theme / Reduce font size #2993\n* Improve hide_zero option #2958\nBug corrected:\n* Possible memory leak #2976\n* Docker/Podman shoud not flood log file with ERROR if containers list can not be retreived #2994\n* Using \"-w\" option gives error: NameError: name 'Any' is not defined #2992\n* Non blocking error message when Glances starts from a container (alpine-dev image) #2991\nContinuous integration and documentation:\n* Migrate from setup.py to pyproject.yml #2956\n* Make pyproject.toml's version dynamic #2990\nThanks to all contributors and bug reporters !\nSpecial thanks to:\n* @branchvincent for pyproject migration",
+      "memory_unit_text": "In the nicolargo/glances release v4.2.1, the project reverts to the default Black Theme in WebUI with reduced font size, improves hide_zero option, fixes a possible memory leak, Docker/Podman log flooding, and migrates from setup.py to pyproject.toml."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_3_0",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.3.0",
+      "tag_name": "v4.3.0",
+      "title": "Glances 4.3.0",
+      "time_hint": "2024-12-27",
+      "published_at": "2024-12-27T14:37:32Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.3.0",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.3.0\nTag: v4.3.0; draft: False; prerelease: False; published_at: 2024-12-27T14:37:32Z; created_at: 2024-12-27T14:16:07Z\nRelease notes:\nGlances 4.3.0 is available with the Browser Feature now available in your Web Browser. Run Glances with the following command line and all the Glances server (RestAPI or XML/RPC) will be avaialble in a single page:\n`glances -w --browser`\nOthers enhancements:\n* Web Based Glances Central Browser #1121\n* Ability to specify hide or show for smart plugin #2996\n* Thread mode ('j' hotkey) is not taken into accound in the WebUI #3019\n* [WEBUI] Clear old alert messages in the WebUI #3042\n* Raise an (Alert) Event for a group of sensors #3049\n* Allow processlist columns to be selected in config file #1524\n* Allow containers columns to be selected in config file #2722\n* [WebUI] Unecessary space between Processcount and processlist #3032\n* Add comparable NVML_LIB check for Windows #3000\n* Change the default path for graph export to /tmp/glances\n* Improve CCS of WebUI #3024\nBug corrected:\n* Thresholds not displayed in the WebUI for the DiskIO plugin #1498\n* FS module alias configuration do not taken into account everytime #3010\n* Unexpected behaviour while running glances in docker with --export influxdb2 #2904\n* Correct issue when key name contains space - Related to #2983\n* Issue with ports plugin (for URL request) #3008\n* Network problem when no bitrate available #3014\n* SyntaxError: f-string: unmatched '[' in server list (on the DEVELOP branch only) #3018\n* Uptime for Docker containers not working #3021\n* WebUI doesn't display valid time for process list #2902\n* Bug In the Web-UI, Timestamps for 'Warning or critical alerts' are showing incorrect month #3023\n* Correct display issue on Containers plugin in WebUI #3028\nContinuous integration and documentation:\n* Bumped minimal Python version to 3.9 #3005\n* Make the glances/outputs/static/js/uiconfig.json generated automaticaly from the make webui task\n* Update unit-test for Glances Central Browser\n* Add unit-test for new entry point in the API (plugin/item/key)\n* Add a target to start Glances with Htop features\n* Try new build and publish to Pypi CI actions\nThanks to all contributors and bug reporters !\nSpecial thanks to:\n* Ariel Otilibili for code quality improvements #2801",
+      "memory_unit_text": "In the nicolargo/glances release v4.3.0, the project introduces the Browser feature for accessing all Glances servers in a single web page, adds ability to specify hide/show for smart plugin, allows processlist and containers column selection in config, raises alert events for sensor groups, and fixes threshold display in WebUI for DiskIO and other bugs."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_3_0_6",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.3.0.6",
+      "tag_name": "v4.3.0.6",
+      "title": "Glances 4.3.0.6",
+      "time_hint": "2024-12-31",
+      "published_at": "2024-12-31T10:45:24Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.3.0.6",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.3.0.6\nTag: v4.3.0.6; draft: False; prerelease: False; published_at: 2024-12-31T10:45:24Z; created_at: 2024-12-30T14:15:55Z\nRelease notes:\n**Full Changelog**: https://github.com/nicolargo/glances/compare/v4.3.0...v4.3.0.6\n### Deprecation warning\n**netifaces** is deprecated and should be uninstall. instead **netifaces2** should be install:\n```\npip uninstall netifaces\npip install netifaces2\n```",
+      "memory_unit_text": "In the nicolargo/glances release v4.3.0.6, the project deprecates netifaces in favor of netifaces2."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_3_0_7",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.3.0.7",
+      "tag_name": "v4.3.0.7",
+      "title": "Glances 4.3.0.7",
+      "time_hint": "2025-01-03",
+      "published_at": "2025-01-03T09:45:17Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.3.0.7",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.3.0.7\nTag: v4.3.0.7; draft: False; prerelease: False; published_at: 2025-01-03T09:45:17Z; created_at: 2025-01-03T09:20:24Z\nRelease notes:\n**Full Changelog**: https://github.com/nicolargo/glances/compare/v4.3.0.6...v4.3.0.7",
+      "memory_unit_text": "In the nicolargo/glances release v4.3.0.7, the project provides a changelog-only update from v4.3.0.6."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_3_0_8",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.3.0.8",
+      "tag_name": "v4.3.0.8",
+      "title": "Glances 4.3.0.8",
+      "time_hint": "2025-01-05",
+      "published_at": "2025-01-05T13:55:13Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.3.0.8",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.3.0.8\nTag: v4.3.0.8; draft: False; prerelease: False; published_at: 2025-01-05T13:55:13Z; created_at: 2025-01-04T10:21:56Z\nRelease notes:\n**Full Changelog**: https://github.com/nicolargo/glances/compare/v4.3.0.7...v4.3.0.8",
+      "memory_unit_text": "In the nicolargo/glances release v4.3.0.8, the project provides a changelog-only update from v4.3.0.7."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_3_1",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.3.1",
+      "tag_name": "v4.3.1",
+      "title": "Glances 4.3.1",
+      "time_hint": "2025-03-23",
+      "published_at": "2025-03-23T09:02:54Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.3.1",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.3.1\nTag: v4.3.1; draft: False; prerelease: False; published_at: 2025-03-23T09:02:54Z; created_at: 2025-03-22T16:51:36Z\nRelease notes:\nEnhancements:\n* [WebUI] Top processes extended stats and processes filter in Web server mode #410\n* I'd like a feature to make the forground color for colored background white #3119\n* -disable-bg in ~/.config/glances.conf #3113\n* Entry point in the API to get extended process stats #3095\n* Replace netifaces by netifaces-plus dependencies #3053\n* Replace docker by containers in glances-grafana-flux.json #3118\nBug corrected:\n* default_config_dir: Fix config path to include glances/ directory #3106\n* Cannot set warning/critical temperature for a specific sensor needs test #3102\n* Try to reduce latency between stat's update and view - #3086\n* Error on Cloud plugin initialisation make TUI crash #3085\nContinious integration:\n* Add Selenium to test WebUI #3044\n* netifaces (deprecated) is replaced by netifaces2\nThanks to all contributors and bug reporters !\nSpecial thanks to:\n- Alexander Kuznetsov\n- Jonathan Chemla\n- mizulike",
+      "memory_unit_text": "In the nicolargo/glances release v4.3.1, the project adds top processes extended stats and processes filter in Web server mode, allows foreground color customization, adds an API entry point for extended process stats, replaces netifaces with netifaces-plus, and fixes config path and sensor temperature settings."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_3_2",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.3.2",
+      "tag_name": "v4.3.2",
+      "title": "Glances 4.3.2",
+      "time_hint": "2025-07-05",
+      "published_at": "2025-07-05T16:00:15Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.3.2",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.3.2\nTag: v4.3.2; draft: False; prerelease: False; published_at: 2025-07-05T16:00:15Z; created_at: 2025-07-05T08:44:50Z\nRelease notes:\nOverview of the TUI:\n![Capture d’écran du 2025-07-06 09-48-27](https://github.com/user-attachments/assets/9bf2c0c0-e8db-4f7e-96f3-761d623d8dc2)\nOverview of the WebUI:\n![Capture d’écran du 2025-07-05 17-59-25](https://github.com/user-attachments/assets/a47ab6d4-0694-455e-851d-ad1fd22afb09)\nEnhancements:\n* Add stats about running VMS (qemu/libvirt/kvm support through virsh) #1531\n* Add support for InfluxDB 3 Core #3182\n* (postgre)SQL export support / TimeScaleDB #2814\n* CSV column name now include the plugin name - Related to #2394\n* Make all results from amps plugins exportable #2394\n* Make --stdout (csv and json) compliant with client/server mode #3235\n* API history endpoints shows times without timezone #3218\n* FR: Sort Sensors my name in proper number order #3132\n* In the FS module, do not display threshold for volume mounted in 'ro' (read-only) #3143\n* Add a new field in the process list to identifie Zombie process #3178\n* Update plugin containers display and order #3186\n* Implement a basic memory cache with TTL for API call (set to ~1 second) #3202\n* Add container inactive_file & limit to InfluxDB2 export #3206\nBug corrected:\n* [GPU] AMD Plugin: Operation not permitted #3125\n* Container memory stats not displayed #3142\n* [WEBUI] Irix mode (per core instead of per CPU percentage) not togglable #3158\n* Related to iteritems, itervalues, and iterkeys are not more needed in Python 3 #3181\n* Glances Central Browser should use name instead of IP adress for redirection #3103\n* Glances breaks if Podman container is started while it is running #3199\nContinious integration and documentation:\n* Add a new option --print-completion to generate shell tab completion - #3111\n* Improve Restful API documentation embeded in FastAPI #2632\n* Upgrade JS libs #3147\n* Improve unittest for CSV export #3150\n* Improve unittest for InfluxDB plugin #3149\n* Code refactoring - Rename plugin class to <Plugin name>Plugin instead of PluginModel #3169\n* Refactor code to limit the complexity of update_views method in plugins #3171\nThanks to all contributors and bug reporters !\nSpecial thanks to:\n- Ariel Otilibili\n- kenrmayfield",
+      "memory_unit_text": "In the nicolargo/glances release v4.3.2, the project adds stats about running VMs via virsh, support for InfluxDB 3 Core, (postgre)SQL/TimeScaleDB export, makes all AMPs plugin results exportable, adds a zombie process identifier, implements a basic memory cache with TTL for API calls, and fixes AMD GPU plugin permission and container memory display issues."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_3_3",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.3.3",
+      "tag_name": "v4.3.3",
+      "title": "Glances 4.3.3",
+      "time_hint": "2025-10-08",
+      "published_at": "2025-10-08T15:45:21Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.3.3",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.3.3\nTag: v4.3.3; draft: False; prerelease: False; published_at: 2025-10-08T15:45:21Z; created_at: 2025-07-09T15:35:44Z\nRelease notes:\n## What's Changed\n* glances: refactor start() by @ariel-anieli in https://github.com/nicolargo/glances/pull/3131\n* Updates 4/6/2025: FreeBSD Section - Glances - An Eye on your System by @kenrmayfield in https://github.com/nicolargo/glances/pull/3141\n* Update dependency ubuntu to v24 by @renovate[bot] in https://github.com/nicolargo/glances/pull/3066\n* Update dependency windows to v2025 by @renovate[bot] in https://github.com/nicolargo/glances/pull/3148\n* Update actions/stale action to v9 by @renovate[bot] in https://github.com/nicolargo/glances/pull/3108\n* Update docker/build-push-action action to v6 by @renovate[bot] in https://github.com/nicolargo/glances/pull/3070\n* Ignore unsupported line endings in password file by @Destarianon in https://github.com/nicolargo/glances/pull/3151\n* Revision of confusing descriptions in the SMART section of the document by @wuhgit in https://github.com/nicolargo/glances/pull/3152\n* plugins: mem: reduce code complexity by @ariel-anieli in https://github.com/nicolargo/glances/pull/3159\n* Fix matching problem when fs config has \"show\" value by @nguuuquaaa in https://github.com/nicolargo/glances/pull/3160\n* plugins: connections: refactor by @ariel-anieli in https://github.com/nicolargo/glances/pull/3161\n* Revert \"plugins: connections: refactor\" by @nicolargo in https://github.com/nicolargo/glances/pull/3162\n* plugins: connections: refactor, version 2 by @ariel-anieli in https://github.com/nicolargo/glances/pull/3163\n* Fix the sorting of containers by @ariel-anieli in https://github.com/nicolargo/glances/pull/3179\n* plugins: containers; Refactor by @ariel-anieli in https://github.com/nicolargo/glances/pull/3180\n* podman: docker: Remove iterator helpers by @ariel-anieli in https://github.com/nicolargo/glances/pull/3183\n* globals: Fix a race condition in `namedtuple_to_dict` by @ariel-anieli in https://github.com/nicolargo/glances/pull/3185\n* outputs: containers: Refactor by @ariel-anieli in https://github.com/nicolargo/glances/pull/3188\n* glances: removal of iterators helpers in `processes.py` & `stats_client_snmp.py` by @ariel-anieli in https://github.com/nicolargo/glances/pull/3187\n* chore(deps): update alpine docker tag to v3.22 by @renovate[bot] in https://github.com/nicolargo/glances/pull/3189\n* glances: amps: Removal of iterator helpers, refactor by @ariel-anieli in https://github.com/nicolargo/glances/pull/3190\n* Change \"Pinned thread\" to \"Pinned task\" and \"Upin\" to \"Unpin\" by @ia74 in https://github.com/nicolargo/glances/pull/3191\n* Update plugin containers display and order #3186 by @fr4nc0is in https://github.com/nicolargo/glances/pull/3192\n* [Snyk] Fix for 8 vulnerabilities by @nicolargo in https://github.com/nicolargo/glances/pull/3184\n* [Snyk] Security upgrade h11 from 0.14.0 to 0.16.0 by @nicolargo in https://github.com/nicolargo/glances/pull/3195\n* fix(deps): update dependency pysnmp-lextudio to <6.3.1 by @renovate[bot] in https://github.com/nicolargo/glances/pull/3107\n* exports: Removed iterator helpers by @Boris-Okassa in https://github.com/nicolargo/glances/pull/3197\n## New Contributors\n* @kenrmayfield made their first contribution in https://github.com/nicolargo/glances/pull/3141\n* @Destarianon made their first contribution in https://github.com/nicolargo/glances/pull/3151\n* @wuhgit made their first contribution in https://github.com/nicolargo/glances/pull/3152\n* @nguuuquaaa made their first contribution in https://github.com/nicolargo/glances/pull/3160\n* @ia74 made their first contribution in https://github.com/nicolargo/glances/pull/3191\n**Full Changelog**: https://github.com/nicolargo/glances/compare/v4.3.2...v4.3.3",
+      "memory_unit_text": "In the nicolargo/glances release v4.3.3, the project includes various code refactoring, dependency updates, and fixes such as matching problem when fs config has show value, container sorting, and security upgrades."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_4_0",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.4.0",
+      "tag_name": "v4.4.0",
+      "title": "Glances 4.4.0",
+      "time_hint": "2025-11-02",
+      "published_at": "2025-11-02T16:36:14Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.4.0",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.4.0\nTag: v4.4.0; draft: False; prerelease: False; published_at: 2025-11-02T16:36:14Z; created_at: 2025-11-02T16:07:42Z\nRelease notes:\n## What's Changed\nBreaking changes:\n* A new Python API is now available to use Glances as a Python lib in your hown development #3237\n* In the process list, the long command line is now truncated by default. Use the arrow keys to show the full command line. SHIFT + arrow keys are used to switch between column sorts (TUI).\n* Prometheus export format is now more user friendly (see detail in #3283)\nEnhancements:\n* Make a Glances API in order to use Glances as a Python lib #3237\n* Add a new --fetch (neofetch like) option to display a snapshot of the current system status #3281\n* Show used port in container section #2054\n* Show long command line with arrow key #1553\n* Sensors plugin refresh by default every 10 seconds\n* Do not call update if a call is done to a specific plugin through the API #3033\n* [UI] Process virtual memory display can be disable by configuration #3299\n* Choose between used or available in the mem plugin #3288\n* [Experimental] Add export to DuckDB database #3205\n* Add Disk I/O Latency stats #1070\n* Filter fields to export #3258\n* Remove .keys() from loops over dicts #3253\n* Remove iterator helpers #3252\nBug corrected:\n* [MACOS] Glances not showing Processes on MacOS #3100\n* Last dev build broke Homepage API calls ? only 1 widget still working #3322\n* Cloud plugin always generate communication with 169.254.169.254, even if the plugin is disabled #3316\n* API response delay (3+ minutes) when VMs are running #3317\n* [WINDOWS] Glances do not display CPU stat correctly #3155\n* Glances hangs if network device (NFS) is no available #3290\n* Fix prometheus export format #3283\n* Issue #3279 zfs cache and memory math issues #3289\n* [MACOS]  Glances crashes when I try to filter #3266\n* Glances hang when killing process with muliple CTRL-C #3264\n* Issues after disabling system and processcount plugins #3248\n* Headers missing from predefined fields in TUI browser machine list #3250\n* Add another check for the famous Netifaces issue - Related to #3219\n* Key error 'type' in server_list_static.py (load_server_list) #3247\nContinuous integration and documentation:\n* Glances now use uv for the dev environment #3025\n* Glances is compatible with Python 3.14 #3319\n* Glances provides requirements files with specific versions for each release\n* Requirements files are now generated dynamically with the make requirements or requirements-upgrade target\n* Add duplicate line check in pre-commit (strange behavor with some VScode extension)\n* Solve issue with multiprocessing exception with Snap package\n* Add a test script for identify CPU consumption of sensor plugin\n* Refactor port to take into account netifaces2\n* Correct issue with Chrome driver in WebUI unit test\n* Upgrade export test with InfluxDB 1.12\n* Fix typo of --export-process-filter help message #3314\n* In the outdated feature, catch error message if Pypi server not reachable\n* Add unit test for auto_unit\n* Label error in docs #3286\n* Put WebUI conf generator in a dedicated script\n* Refactor the Makefile to generate WebUI config file for all webui targets\n* Update sensors documentation #3275\n* Update docker compose env quote #3273\n* Update docker-compose.yml #3249\n* Update API doc generation\n* Update README with nice icons #3236\n* Add documentation for WebUI test\n## New Contributors\n* @korn3r made their first contribution in https://github.com/nicolargo/glances/pull/3249\n* @lawrence-c made their first contribution in https://github.com/nicolargo/glances/pull/3273\n* @timrettop made their first contribution in https://github.com/nicolargo/glances/pull/3275\n* @jmwallach made their first contribution in https://github.com/nicolargo/glances/pull/3286\n* @DeepSpace2 made their first contribution in https://github.com/nicolargo/glances/pull/3283\n* @syohex made their first contribution in https://github.com/...",
+      "memory_unit_text": "In the nicolargo/glances release v4.4.0, the project introduces a new Python API for using Glances as a library, a --fetch option for system snapshot, shows used ports in container section, truncates long command lines by default, adds experimental DuckDB export, disk I/O latency stats, and fixes macOS process display and Prometheus export format."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_4_1",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.4.1",
+      "tag_name": "v4.4.1",
+      "title": "Glances 4.4.1",
+      "time_hint": "2025-11-05",
+      "published_at": "2025-11-05T09:08:23Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.4.1",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.4.1\nTag: v4.4.1; draft: False; prerelease: False; published_at: 2025-11-05T09:08:23Z; created_at: 2025-11-03T13:52:05Z\nRelease notes:\n**Full Changelog**: https://github.com/nicolargo/glances/compare/v4.4.0...v4.4.1",
+      "memory_unit_text": "In the nicolargo/glances release v4.4.1, the project provides a changelog-only update from v4.4.0."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_5_0",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.5.0",
+      "tag_name": "v4.5.0",
+      "title": "Glances 4.5.0",
+      "time_hint": "2026-02-08",
+      "published_at": "2026-02-08T16:01:53Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.5.0",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.5.0\nTag: v4.5.0; draft: False; prerelease: False; published_at: 2026-02-08T16:01:53Z; created_at: 2026-02-08T13:05:19Z\nRelease notes:\n**_Warning: Glances 4.5.0 has been removed and replaced by Glances 4.5.0.1._**\nI'm excited to announce the release of **Glances 4.5.0**, featuring 40 completed issues and pull requests! This release brings significant new features, important bug fixes, and major improvements to stability and security.\n## 🆕 New Features\n**Advanced Monitoring Capabilities:**\n- **ZFS Monitoring** - Native support for ZFS filesystem monitoring\n- **NPU Monitoring** - Track Neural Processing Unit performance\n- **NVMe Support** - Enhanced monitoring for NVMe drives\n- **DuckDB Export** - New export option to DuckDB database\n- **CPU Core Assignment** - See which CPU core each process is running on in the process list\n**Security & API:**\n- **API Token Authentication** - Secure your RestfulAPI server with token-based authentication\n- **Security Hardening** - Fixed Jinja2 and timeout vulnerabilities (B701, B113)\n- **Clear-text logging fix** - Improved handling of sensitive information in logs\n## 🐛 Major Bug Fixes\n- Fixed CPU speed/max speed display issues in WebUI\n- Corrected TIME+ showing incorrect large values in WebUI\n- Resolved KeyError: 'used' exception in ASGI application\n- Fixed InfluxDB export type mismatches for AMPs\n- Corrected Quicklook behavior when `psutil.cpu_freq().max=0.0`\n- Fixed SNMP discovery with `-c` parameter\n- Resolved fetch option incompatibility with client/server mode\n## ✨ Improvements\n- **Code Quality** - Significant code complexity reduction and refactoring\n- **AMD GPU Support** - Better GPU name detection from `amdgpu.ids`\n- **Docker** - Improved build pipeline\n- **UI/UX** - Removed empty space issues with Quicklook plugin\n- **Testing** - Added comprehensive unit tests for core plugins\n- **Documentation** - New Jupyter notebook for the Glances API\n- **Packaging** - Updated license to SPDX format\n## 📦 Get It Now\n```bash\npip install --upgrade glances\n```\nOr pull the latest Docker image:\n```bash\ndocker pull nicolargo/glances:latest\n```\nFull changelog available on the [[GitHub milestone page](https://github.com/nicolargo/glances/milestone/88?closed=1)](https://github.com/nicolargo/glances/milestone/88?closed=1).\nSpecial thanks to all contributors who made this release possible! 🙏\nAs always, feedback and bug reports are welcome on our [[GitHub issues page](https://github.com/nicolargo/glances/issues)](https://github.com/nicolargo/glances/issues).\n---\n*Note: If you find Glances useful, consider [[sponsoring the project](https://github.com/sponsors/nicolargo)](https://github.com/sponsors/nicolargo) to support its continued development!*",
+      "memory_unit_text": "In the nicolargo/glances release v4.5.0, the project adds ZFS monitoring, NPU monitoring, NVMe support, DuckDB export, CPU core assignment in process list, API token authentication, and fixes CPU speed display in WebUI, TIME+ large values, and InfluxDB export type mismatches."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_5_1",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.5.1",
+      "tag_name": "v4.5.1",
+      "title": "Glances 4.5.1",
+      "time_hint": "2026-03-07",
+      "published_at": "2026-03-07T15:10:42Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.5.1",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.5.1\nTag: v4.5.1; draft: False; prerelease: False; published_at: 2026-03-07T15:10:42Z; created_at: 2026-03-07T15:01:46Z\nRelease notes:\n**Release date:** March 2026\n**Milestone:** [[#91](https://github.com/nicolargo/glances/milestone/91?closed=1)](https://github.com/nicolargo/glances/milestone/91?closed=1)\n**21 issues & pull requests closed**\n---\n## Overview\nGlances 4.5.1 is a stability and quality release that addresses regressions introduced\nin the 4.5.0.x series, fixes cross-platform compatibility issues (OpenBSD, macOS, Snap),\nand ships several community-driven enhancements — most notably Intel GPU monitoring,\nDocker container health alerting, and per-plugin min/max/mean statistics.\n---\n## 🐛 Bug Fixes\n### Plugins\n- **DiskIO — crash on OpenBSD** ([[#3452](https://github.com/nicolargo/glances/issues/3452)](https://github.com/nicolargo/glances/issues/3452))\nA regression introduced in 4.5.0.5 caused Glances to crash on OpenBSD when the DiskIO\nplugin was active. The root cause was an unguarded attribute access in `msg_curse()`.\nFixed and covered by an additional test case.\n- **DiskIO — empty `args` not handled in `msg_curse()`** ([[#3429](https://github.com/nicolargo/glances/issues/3429)](https://github.com/nicolargo/glances/issues/3429))\nA `TypeError` would be raised in specific runtime configurations where `args` was not yet\npopulated when `msg_curse()` was called. A safe default is now enforced.\n- **Filesystem — `KeyError: '/etc/hostname'` on `get_view`** ([[#3470](https://github.com/nicolargo/glances/issues/3470)](https://github.com/nicolargo/glances/issues/3470))\nCertain bind-mounted or virtual paths (e.g. `/etc/hostname` inside containers) could\ntrigger a `KeyError` in the FS plugin's view logic. The lookup is now guarded with a\nsafe fallback.\n- **Sensors — show/hide by alias name broken** ([[#3439](https://github.com/nicolargo/glances/issues/3439)](https://github.com/nicolargo/glances/issues/3439))\nFiltering sensors by alias name via the configuration file had no effect in some\nconfigurations. Sensor aliasing and the associated hide/show logic are now correctly\napplied together.\n- **SMART — non-uniform key types cause `TypeError` with InfluxDB2 export** ([[#3449](https://github.com/nicolargo/glances/issues/3449)](https://github.com/nicolargo/glances/issues/3449))\nMixed integer/string key types in the SMART plugin's device stats dict were causing a\n`TypeError` when exporting to InfluxDB2. Key types are now normalized before export.\n### Web UI\n- **Fahrenheit display incorrect in WebUI** ([[#3450](https://github.com/nicolargo/glances/issues/3450)](https://github.com/nicolargo/glances/issues/3450))\nTemperature values were not properly converted to Fahrenheit in the Web UI when the\n`--fahrenheit` option was set. The unit conversion is now applied consistently on the\nfrontend side.\n### Snap Packaging\n- **AMD GPU plugin: `PermissionError` on `/usr/share/libdrm/amdgpu.ids`** ([[#3456](https://github.com/nicolargo/glances/issues/3456)](https://github.com/nicolargo/glances/issues/3456))\nGlances packaged as a Snap would refuse to start on systems with an AMD GPU because the\nGPU plugin attempted to open a file outside the Snap sandbox. The exception is now\ncaught at the correct level (`open()` rather than `f.read()`), preventing the crash at\nstartup.\n- **NVIDIA GPU not detected under Snap** ([[#3292](https://github.com/nicolargo/glances/issues/3292)](https://github.com/nicolargo/glances/issues/3292))\nThe Snap package was missing the `opengl` interface declaration in `snapcraft.yaml`,\npreventing the NVIDIA GPU plugin from accessing the required device nodes under strict\nconfinement. The interface is now correctly declared.\n### MCP Server\n- **DNS rebinding protection blocks external MCP clients** ([[#3467](https://github.com/nicolargo/glances/issues/3467)](https://github.com/nicolargo/glances/issues/3467))\nThe MCP server was rejecting connections from external hosts because the underly...",
+      "memory_unit_text": "In the nicolargo/glances release v4.5.1, the project fixes DiskIO crash on OpenBSD, filesystem KeyError, sensor alias filtering, SMART InfluxDB2 export TypeError, WebUI Fahrenheit display, Snap GPU plugin permissions, and MCP server DNS rebinding protection."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_5_2",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.5.2",
+      "tag_name": "v4.5.2",
+      "title": "Glances 4.5.2",
+      "time_hint": "2026-03-14",
+      "published_at": "2026-03-14T15:04:49Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.5.2",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.5.2\nTag: v4.5.2; draft: False; prerelease: False; published_at: 2026-03-14T15:04:49Z; created_at: 2026-03-14T14:31:44Z\nRelease notes:\n### Bug corrected\n* System display error on \"little\" terminal #3469\n### Security patches\n* Default CORS Configuration Allows Cross-Origin Credential Theft - Correct CVE-2026-32610\n* Incomplete Secrets Redaction: /api/v4/args Endpoint Leaks Password Hash and SNMP Credentials - Correct CVE-2026-32609\n* REST/WebUI Lacks Host Validation and Remains Exposed to DNS Rebinding - Correct CVE-2026-32632\n* Unauthenticated API Exposure / Add warning message on startup - Correct CVE-2026-32596\n* SQL Injection in DuckDB Export via Unparameterized DDL Statements - Correct CVE-2026-32611\n* Command Injection via Process Names in Action Command Templates - Correct CVE-2026-32608\n* Central Browser Autodiscovery Leaks Reusable Credentials to Zeroconf-Spoofed Servers - Correct CVE-2026-32634\n* Browser API Exposes Reusable Downstream Credentials via - Correct CVE-2026-32633\n### Breaking changes\nThis release addresses 8 security vulnerabilities (see below). Several of the mitigations change observable behaviour. Users who run Glances in web server or API mode (-w / --enable-webserver) should read the items below before upgrading.\n**CVE-2026-32632** Host header validation is now enforced on the built-in web server. Requests whose Host header does not match localhost or 127.0.0.1 will be rejected with HTTP 400 by default. Users accessing Glances through a reverse proxy, a custom hostname, or a non-loopback IP address must declare the allowed values with the new allowed_hosts key in the [outputs] section of glances.conf (comma-separated list). This was already required for the MCP server since 4.5.1; it now also applies to the main REST/WebUI server.\n**CVE-2026-32610** The default CORS policy is now restrictive. Previously, the server replied with Access-Control-Allow-Origin: * which allowed any web page to issue credentialed cross-origin requests against the API. The wildcard is removed. Users running third-party web dashboards or custom front-ends on a different origin must explicitly list allowed origins with the cors_origins key in the [outputs] section of glances.conf.\n**CVE-2026-32609** Sensitive fields are now redacted on unauthenticated API responses. The /api/4/args and /api/4/config endpoints no longer return password hashes, SSL key paths, or SNMP community strings to callers that have not authenticated. Scripts and integrations that relied on reading these values from the API must now authenticate (token or password) to receive them.\n**CVE-2026-32633** and **CVE-2026-32634** The Browser (multi-server mode) no longer forwards configured credentials to remote Glances servers, whether discovered via Zeroconf or listed in the [serverlist] section. Credentials are only sent after the user explicitly logs in to an individual server. Automated setups that relied on transparent credential propagation must switch to per-server authentication.\n**CVE-2026-32596** A WARNING is now printed to stdout at startup when the REST API is running without authentication (no --password and no API token configured). This is an informational message; the unauthenticated mode itself is unchanged and remains the default for private-network deployments. Startup scripts or monitoring pipelines that treat any stderr/stdout output as a failure may need to be updated.\n**CVE-2026-32611** The DuckDB export module now uses parameterized DDL statements. Table names derived from plugin or metric names are sanitized before use. Existing DuckDB databases whose table names contained characters that were previously interpolated verbatim may need to be recreated.\n**CVE-2026-32608** Process names used in [action] command templates are now shell-escaped before substitution. Templates that relied on unescaped special characters in process names to construct compound shell expressions will no longer beh...",
+      "memory_unit_text": "In the nicolargo/glances release v4.5.2, the project fixes system display error on small terminals and addresses 8 security vulnerabilities including CORS credential theft, secrets redaction, host validation, SQL injection in DuckDB, and command injection in action templates."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_5_3",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.5.3",
+      "tag_name": "v4.5.3",
+      "title": "Glances 4.5.3",
+      "time_hint": "2026-03-29",
+      "published_at": "2026-03-29T15:31:25Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.5.3",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.5.3\nTag: v4.5.3; draft: False; prerelease: False; published_at: 2026-03-29T15:31:25Z; created_at: 2026-03-29T14:56:51Z\nRelease notes:\nBug corrected:\n* Internal Server Error (Web Server Mode) #3502\n* Container plugin crashes with docker.errors.NullResource on Podman pod infra containers #3498\n* [ALERTS] Sometime the top process list is not the good one #3481\nEnhancements:\n- Support for LXC/LXD containers #3480\n- Add export to ClickHouse #3320\nSecurity patches:\n- Command Injection via Dynamic Configuration Values - Mitigate CVE-2026-33641\n- Cross-Origin System Information Disclosure via XML-RPC Server CORS Wildcard - Mitigate CVE-2026-33533\nContinious integration and documentation:\n- Use sys.executable in the testsuite #3497\n- Add unit tests for LXD container engine #3487\n- Replace Py-Spy per Memray for FlameGraph generation\n- Make the WebUI build before the packages and Docker images build\n- Harden GitHub Actions workflows: minimal permissions, SHA pins, timeouts\nThanks to all the contributors for this version: Christian Rishøj, Jeongwoo Kim, Ofek Gabay, Steve Kowalik, Tanishq Shah, Mithun M.",
+      "memory_unit_text": "In the nicolargo/glances release v4.5.3, the project fixes internal server error in web server mode, container plugin crash on Podman pod infra containers, adds support for LXC/LXD containers, export to ClickHouse, and mitigates command injection and XML-RPC CORS vulnerabilities."
+    },
+    {
+      "memory_node_id": "nicolargo__glances__release__v4_5_4",
+      "repo": "nicolargo/glances",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.5.4",
+      "tag_name": "v4.5.4",
+      "title": "Glances 4.5.4",
+      "time_hint": "2026-04-19",
+      "published_at": "2026-04-19T08:39:01Z",
+      "source_url": "https://github.com/nicolargo/glances/releases/tag/v4.5.4",
+      "raw_text": "Repository: nicolargo/glances\nRelease: Glances 4.5.4\nTag: v4.5.4; draft: False; prerelease: False; published_at: 2026-04-19T08:39:01Z; created_at: 2026-04-19T07:42:04Z\nRelease notes:\nBug corrected:\n* Cannot set warning/critical temperature for a specific sensor #3525\n* Memory percentage and used displayed as negative numbers #3358\n* Incorrect Docker container count via Homeassistant Integration #3433\n* Fix LXD filter excluding containers on standalone hosts #3529\nEnhancements:\n* Add Rockchip MPP plugin for hardware encoder/decoder monitoring #3514\n* Clamp memory used/percent to non-negative values for LXC containers #3505\n* Support single-core Rockchip NPU load parsing and improve device naming #3499\nSecurity patches:\n* SSRF in Glances IP Plugin via public_api leads to credential leakage - Correct CVE-2026-35587\n* Cross-Origin Information Disclosure via Unauthenticated REST API (/api/4) - Correct CVE-2026-34839\n* fix(cassandra): validate keyspace/table/replication_factor to prevent CQL injection - Correct CVE-2026-35588 #3520\nContinious integration and documentation:\n* pycache file is put in wheel #3516\n* Remove dead code #3507\nThanks to all the contributors for this version: csvke, Christian Rishøj,\nduriantaco, Julio César Suástegui, Paul and morimori-dev.",
+      "memory_unit_text": "In the nicolargo/glances release v4.5.4, the project fixes sensor temperature warning/critical setting, negative memory display, incorrect Docker container count, adds Rockchip MPP plugin for hardware encoder/decoder monitoring, and patches SSRF in IP plugin and CQL injection in Cassandra export."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the nicolargo/glances releases, which release introduces the Browser feature that allows accessing all Glances servers in a single web page?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v4.0.2"
+        },
+        {
+          "option_id": "B",
+          "text": "v4.3.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v4.4.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v4.5.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v4.3.0",
+      "source_chunk_ids": [
+        "nicolargo__glances__release__v4_3_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "nicolargo__glances__release__v4_3_0",
+          "answer_text": "introduces the Browser feature for accessing all Glances servers in a single web page"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the nicolargo/glances releases, how does the GPU-related change in v4.0.2 differ from the GPU-related change in v4.5.1?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v4.0.2 adds AMD GPU support via /sys/class/drm, while v4.5.1 fixes Snap GPU plugin permissions for AMD and NVIDIA."
+        },
+        {
+          "option_id": "B",
+          "text": "v4.0.2 removes GPU support, while v4.5.1 adds Intel GPU support."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only update GPU plugin documentation without functional changes."
+        },
+        {
+          "option_id": "D",
+          "text": "v4.0.2 adds NVIDIA GPU support, while v4.5.1 adds AMD GPU support."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v4.0.2 adds AMD GPU support via /sys/class/drm, while v4.5.1 fixes Snap GPU plugin permissions for AMD and NVIDIA.",
+      "source_chunk_ids": [
+        "nicolargo__glances__release__v4_0_2",
+        "nicolargo__glances__release__v4_5_1"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "nicolargo__glances__release__v4_0_2",
+          "answer_text": "adds AMD GPU support through /sys/class/drm"
+        },
+        {
+          "memory_node_id": "nicolargo__glances__release__v4_5_1",
+          "answer_text": "fixes Snap GPU plugin permissions for AMD and NVIDIA"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the nicolargo/glances release window, order the following release-content states from earliest to latest: (1) a release that migrates the WebUI from AngularJS to Angular/React/Vue, (2) a release that introduces export of individual process stats and AMD GPU support, (3) a release that adds ZFS monitoring and API token authentication.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3",
+      "source_chunk_ids": [
+        "nicolargo__glances__release__v3_3_0",
+        "nicolargo__glances__release__v4_0_2",
+        "nicolargo__glances__release__v4_5_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "nicolargo__glances__release__v3_3_0",
+          "answer_text": "migrates the WebUI from AngularJS to Angular/React/Vue"
+        },
+        {
+          "memory_node_id": "nicolargo__glances__release__v4_0_2",
+          "answer_text": "introduces export of individual process stats and AMD GPU support"
+        },
+        {
+          "memory_node_id": "nicolargo__glances__release__v4_5_0",
+          "answer_text": "adds ZFS monitoring and API token authentication"
+        }
+      ]
+    }
+  ]
+}

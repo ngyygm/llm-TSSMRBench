@@ -1,0 +1,530 @@
+{
+  "prototype_id": "LizardByte__Sunshine_release_window",
+  "domain": "github_release_evolution",
+  "repo": "LizardByte/Sunshine",
+  "source_type": "release_note",
+  "window_title": "LizardByte/Sunshine recent release evolution",
+  "window_summary": "This window tracks the recent LizardByte/Sunshine release stream from v0.11.1 through v2026.531.163415, covering early fixes, platform expansion, security hardening, and major feature additions like AV1 encoding, HDR, and new capture backends.",
+  "chunks": [
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v0_11_1",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.11.1",
+      "tag_name": "v0.11.1",
+      "title": "v0.11.1",
+      "time_hint": "2022-01-12",
+      "published_at": "2022-01-12T23:22:13Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v0.11.1",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v0.11.1\nTag: v0.11.1; draft: False; prerelease: False; published_at: 2022-01-12T23:22:13Z; created_at: 2021-10-05T11:53:58Z\nRelease notes:\n## Update\nThere was an issue with the configuration of the release build.\nThe linux version of Sunshine was searching in the wrong path for the config file and the assets.\nNew .deb packages have been uploaded.\n## Sunshine installation guide\n### Windows\n* Download and extract Sunshine-Windows.zip\n* Optionally install [ViGEmBus](https://github.com/ViGEm/ViGEmBus/releases)\n---\n### Ubuntu 20.04\n1. Download sunshine-2004.deb\n2. `sudo apt-get install -f ~/Downloads/sunshine-2004.deb`\n#### If this is the first install\n3. `sudo usermod -a -G input $USER`\n4. Reboot\n### Optional -- Run Sunshine in the background\n1. `systemctl --user start sunshine`\n### Ubuntu 21.04\n1. Download sunshine-2104.deb\n2. `sudo apt-get install -f ~/Downloads/sunshine-2104.deb`\n2. Follow instructions for Ubuntu 20.04 as needed\n### Debian\n1. Download sunshine-debian.deb\n2. `sudo apt-get install -f ~/Downloads/sunshine-debian.deb`\n2. Follow instructions for Ubuntu 20.04 as needed\n### Changes\n* Fixed a bug causing segfault when connecting multiple controllers.\n* (Linux) Improved NVENC, it now offloads converting images from RGB to NV12\n* (Linux) Added support for wlroots based compositors on Wayland.\n* (Linux) Fixed a bug causes stuttering\n* (Windows) Added an icon for the executable",
+      "memory_unit_text": "In the LizardByte/Sunshine release v0.11.1, the project fixes a configuration issue where the Linux version searched the wrong path for config and assets, and uploads new .deb packages. Changes include fixing a segfault when connecting multiple controllers, improving NVENC on Linux to offload RGB-to-NV12 conversion, adding support for wlroots-based compositors on Wayland, fixing a stuttering bug on Linux, and adding an icon for the Windows executable."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v0_12_0",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.0",
+      "tag_name": "v0.12.0",
+      "title": "v0.12.0",
+      "time_hint": "2022-02-14",
+      "published_at": "2022-02-14T19:16:39Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v0.12.0",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v0.12.0\nTag: v0.12.0; draft: False; prerelease: False; published_at: 2022-02-14T19:16:39Z; created_at: 2022-02-14T19:09:15Z\nRelease notes:\n### Added\n- New command line argument `--version`\n- Custom png poster support\n### Changed\n- Correct software bitrate calculation\n- Increase vbv-bufsize to 1/10 of requested bitrate\n- Improvements to Web UI",
+      "memory_unit_text": "In the LizardByte/Sunshine release v0.12.0, the project adds a --version command line argument and custom PNG poster support. Changes include correcting software bitrate calculation, increasing vbv-bufsize to 1/10 of requested bitrate, and improvements to the Web UI."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v0_13_0",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.13.0",
+      "tag_name": "v0.13.0",
+      "title": "v0.13.0",
+      "time_hint": "2022-02-27",
+      "published_at": "2022-02-27T18:18:36Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v0.13.0",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v0.13.0\nTag: v0.13.0; draft: False; prerelease: False; published_at: 2022-02-27T18:18:36Z; created_at: 2022-02-27T18:11:37Z\nRelease notes:\n### Added\n- (MacOS) Initial support for MacOS (#40)",
+      "memory_unit_text": "In the LizardByte/Sunshine release v0.13.0, the project adds initial support for macOS."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v0_14_0",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.14.0",
+      "tag_name": "v0.14.0",
+      "title": "v0.14.0",
+      "time_hint": "2022-06-15",
+      "published_at": "2022-06-15T22:36:19Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v0.14.0",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v0.14.0\nTag: v0.14.0; draft: False; prerelease: False; published_at: 2022-06-15T22:36:19Z; created_at: 2022-06-15T22:29:04Z\nRelease notes:\n### Added\n- (Documentation) Added Sphinx documentation available at https://sunshinestream.readthedocs.io/en/latest/\n- (Development) Initial support for Localization\n- (Linux) Add rpm package as release asset\n- (MacOS) Add Portfile as release asset\n- (Windows) Add DwmFlush() call  to improve capture\n- (Windows) Add Windows installer\n### Fixed\n- (AMD) Fixed hwdevice being destroyed before context\n- (Linux) Added missing dependencies to AppImage\n- (Linux) Fixed rumble events causing game to freeze\n- (Linux) Improved Pulse/Pipewire compatibility\n- (Linux) Moved to single deb package\n- (MacOS) Fixed missing TPCircularBuffer submodule\n- (Stream) Properly catch exceptions in stream broadcast handlers\n- (Stream/Video) AVPacket fix",
+      "memory_unit_text": "In the LizardByte/Sunshine release v0.14.0, the project adds Sphinx documentation, initial localization support, an RPM package for Linux, a Portfile for macOS, a DwmFlush() call to improve capture on Windows, and a Windows installer. Fixes include resolving an AMD hwdevice destruction order issue, adding missing dependencies to the AppImage, fixing rumble events causing game freezes on Linux, improving Pulse/Pipewire compatibility, moving to a single deb package, fixing a missing TPCircularBuffer submodule on macOS, properly catching exceptions in stream broadcast handlers, and an AVPacket fix."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v0_14_1",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.14.1",
+      "tag_name": "v0.14.1",
+      "title": "v0.14.1",
+      "time_hint": "2022-08-09",
+      "published_at": "2022-08-09T23:49:32Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v0.14.1",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v0.14.1\nTag: v0.14.1; draft: False; prerelease: False; published_at: 2022-08-09T23:49:32Z; created_at: 2022-08-09T23:42:10Z\nRelease notes:\n### Added\n- (Linux) Flatpak package added\n- (Linux) AUR package automated updates\n- (Windows) Winget package automated updates\n### Changed\n- (General) Moved repo to @LizardByte GitHub org\n- (WebUI) Fixed button spacing on home page\n- (WebUI) Added Discord WidgetBot Crate\n### Fixed\n- (Linux/Mac) Default config and app files now copied to user home directory\n- (Windows) Default config and app files now copied to working directory",
+      "memory_unit_text": "In the LizardByte/Sunshine release v0.14.1, the project adds a Flatpak package for Linux, automated AUR package updates, and automated Winget package updates for Windows. Changes include moving the repository to the LizardByte GitHub organization, fixing button spacing on the Web UI home page, and adding a Discord WidgetBot Crate. Fixes ensure default config and app files are copied to the user home directory on Linux/macOS and to the working directory on Windows."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v0_15_0",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.15.0",
+      "tag_name": "v0.15.0",
+      "title": "v0.15.0",
+      "time_hint": "2022-10-31",
+      "published_at": "2022-10-31T11:31:50Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v0.15.0",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v0.15.0\nTag: v0.15.0; draft: False; prerelease: False; published_at: 2022-10-31T11:31:50Z; created_at: 2022-10-31T11:23:34Z\nRelease notes:\n### Added\n- (Windows) Add firewall rules scripts\n- (Windows) Automatically add and remove firewall rules at install/uninstall\n- (Windows) Automatically add and remove service at install/uninstall\n- (Docker) Official image added\n- (Linux) Add aarch64 flatpak package\n### Changed\n- (Windows/Linux/MacOS) - Move default config and apps file to assets directory\n- (MacOS) Bump boost to 1.80 for macport builds\n- (Linux) Remove backup and restore of config files\n### Fixed\n- (Linux) - Create sunshine config directory if it doesn't exist\n- (Linux) Remove portable home and config directories for AppImage\n- (Windows) Include service install and uninstall scripts again\n- (Windows) Automatically delete start menu entry upon uninstall\n- (Windows) Automatically delete program install directory upon uninstall, with user prompt\n- (Linux) Handle the case of no default audio sink\n- (Windows/Linux/MacOS) Fix default image paths\n- (Linux) Fix CUDA RGBA to NV12 conversion",
+      "memory_unit_text": "In the LizardByte/Sunshine release v0.15.0, the project adds firewall rules scripts for Windows, automatic firewall rule management at install/uninstall, automatic service install/uninstall on Windows, an official Docker image, and an aarch64 Flatpak package for Linux. Changes include moving default config and apps files to an assets directory, bumping Boost to 1.80 for MacPorts builds, and removing backup/restore of config files on Linux. Fixes address creating the Sunshine config directory if missing, removing portable home/config directories for AppImage, including service install/uninstall scripts again, automatically deleting start menu entries and program directories on uninstall with user prompt, handling no default audio sink on Linux, fixing default image paths, and fixing CUDA RGBA to NV12 conversion on Linux."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v0_16_0",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.16.0",
+      "tag_name": "v0.16.0",
+      "title": "v0.16.0",
+      "time_hint": "2022-12-14",
+      "published_at": "2022-12-14T15:43:39Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v0.16.0",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v0.16.0\nTag: v0.16.0; draft: False; prerelease: False; published_at: 2022-12-14T15:43:39Z; created_at: 2022-12-14T15:35:31Z\nRelease notes:\n### Added\n- Add cover finder\n- (Docker) Add arm64 docker image\n- (Flatpak) Add installation helper scripts\n- (Windows) Add support for Unicode input messages\n### Fixed\n- (Linux) Reintroduce Ubuntu 20.04 and 22.04 specific deb packages\n- (Linux) Fixed udev and systemd file locations\n### Dependencies\n- Bump babel from 2.10.3 to 2.11.0\n- Bump sphinx-copybutton from 0.5.0 to 0.5.1\n- Bump KSXGitHub/github-actions-deploy-aur from 2.5.0 to 2.6.0\n- Use npm for web dependencies (breaking change for third-party package maintainers)\n- Update moonlight-common-c\n- Use pre-built ffmpeg from LizardByte/build-deps for all sunshine builds (breaking change for third-party package maintainers)\n- Bump furo from 2022.9.29 to 2022.12.7\n### Misc\n- Misc org level workflow updates\n- Fix misc typos in docs\n- Fix winget release",
+      "memory_unit_text": "In the LizardByte/Sunshine release v0.16.0, the project adds a cover finder, an arm64 Docker image, Flatpak installation helper scripts, and Unicode input message support on Windows. Fixes include reintroducing Ubuntu 20.04 and 22.04 specific deb packages and fixing udev and systemd file locations on Linux. Dependencies are updated, including using npm for web dependencies and pre-built ffmpeg from LizardByte/build-deps, which are breaking changes for third-party package maintainers."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v0_17_0",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.17.0",
+      "tag_name": "v0.17.0",
+      "title": "v0.17.0",
+      "time_hint": "2023-01-09",
+      "published_at": "2023-01-09T02:11:51Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v0.17.0",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v0.17.0\nTag: v0.17.0; draft: False; prerelease: False; published_at: 2023-01-09T02:11:51Z; created_at: 2023-01-09T02:03:16Z\nRelease notes:\nIf you are running Sunshine as a service on Windows, we are strongly urging you to update to v0.17.0 as soon as\npossible. Older Windows versions of Sunshine had a security flaw in which the binary was located in a user-writable\nlocation which is problematic when running as a service or on a multi-user system. Additionally, when running Sunshine\nas a service, games and applications were launched as SYSTEM. This could lead to issues with save files and other game\nsettings. In v0.17.0, games now run under your user account without elevated privileges.\n### Breaking\n- (Apps) Removed automatic desktop entry (Re-add by adding an empty application named \"Desktop\" with no commands, \"desktop.png\" can be added as the image.)\n- (Windows) Improved user upgrade experience (Suggest to manually uninstall existing Sunshine version before this upgrade. Do NOT select to remove everything, if prompted. Make a backup of config files before uninstall.)\n- (Windows) Move config files to specific directory (files will be migrated automatically if using Windows installer)\n- (Dependencies) Fix npm path (breaking change for package maintainers)\n### Added\n- (macOS) Added initial support for arm64 on macOS through Macports portfile\n- (Input) Added support for foreign keyboard input\n- (Misc) Logs inside the WebUI and log to file\n- (UI/Windows) Added an Apply button to configuration page when running as a service\n- (Input/Windows) Enable Mouse Keys while streaming for systems with no physical mouse\n### Fixed\n- (Video) Improved capture performance\n- (Audio) Improved audio bitrate and quality handling\n- (Apps/Windows) Fixed PATH environment variable handling\n- (Apps/Windows) Use the proper environment variable for the Program Files (x86) folder\n- (Service/Windows) Fix SunshineSvc hanging if an error occurs during startup\n- (Service/Windows) Spawn Sunshine.exe in a job object, so it is terminated if SunshineSvc.exe dies\n- (Video) windows/vram: fix fringing in NV12 colour conversion\n- (Apps/Windows) Launch games under the correct user account\n- (Video) nvenc, amdvce: rework all user presets/options\n- (Network) Generate certificates with unique serial numbers\n- (Service/Windows) Graceful termination on shutdown, logoff, and service stop\n- (Apps/Windows) Fix launching apps when Sunshine is running as admin\n- (Misc) Remove/fix calls to std::abort()\n- (Misc) Remove prompt to press enter after Sunshine exits\n- (Misc) Make log priority consistent for execution messages\n- (Apps) Applications in Moonlight clients are now updated automatically after editing\n- (Video/Linux) Fix wayland capture on nvidia\n- (Audio) Fix 7.1 surround channel mapping\n- (Video) Fix NVENC profile values not applying\n- (Network) Fix origin_web_ui_allowed binding\n- (Service/Windows) Self terminate/restart service if process hangs for 10 seconds\n- (Input/Windows) Fix Windows masked cursor blending with GPU encoders\n- (Video) Color conversion fixes and BT.2020 support\n### Dependencies\n- Bump ffmpeg from 4.4 to 5.1\n- ffmpeg_patches: add amfenc delay/buffering fix\n- CBS moved to ffmpeg submodules\n- Migrate to upstream Simple-Web-Server submodule\n- Bump third-party/TPCircularBuffer from `bce9170` to `8833b3a`\n- Bump third-party/moonlight-common-c from `8169a31` to `ef9ad52`\n- Bump third-party/miniupnp from `6f848ae` to `207cf44`\n- Bump third-party/ViGEmClient from `f719a1d` to `9e842ba`\n- Bump bootstrap from 5.0.0 to 5.2.3\n- Bump @fortawesome/fontawesome-free from 6.2.0 to 6.2.1",
+      "memory_unit_text": "In the LizardByte/Sunshine release v0.17.0, the project addresses a security flaw on Windows where the binary was in a user-writable location and games ran as SYSTEM; now games run under the user account without elevated privileges. Breaking changes include removing automatic desktop entry, improving the Windows upgrade experience, moving config files to a specific directory, and fixing the npm path. Additions include initial arm64 macOS support via MacPorts, foreign keyboard input support, logs in the Web UI and to file, an Apply button on the configuration page when running as a service, and enabling Mouse Keys while streaming. Numerous fixes improve capture performance, audio bitrate/quality, PATH handling, service stability, NV12 color conversion, game launching under correct user account, encoder presets, certificate serial numbers, graceful termination, app launching as admin, removal of std::abort() calls, log consistency, automatic app list updates in Moonlight, Wayland capture on Nvidia, 7.1 surround channel mapping, NVENC profile values, origin_web_ui_allowed binding, service self-termination on hang, masked cursor blending, color conversion, and BT.2020 support. Dependencies are updated, including ffmpeg from 4.4 to 5.1."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v0_18_0",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.18.0",
+      "tag_name": "v0.18.0",
+      "title": "v0.18.0",
+      "time_hint": "2023-01-30",
+      "published_at": "2023-01-30T03:35:04Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v0.18.0",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v0.18.0\nTag: v0.18.0; draft: False; prerelease: False; published_at: 2023-01-30T03:35:04Z; created_at: 2023-01-30T03:26:36Z\nRelease notes:\nAttention, this release contains critical security fixes. Please update as soon as possible. Additionally, we are\nencouraging users to change your Sunshine password, especially if you expose the web UI (i.e. port 47790 by default)\nto the internet, or have ever uploaded your logs with verbose output to a public resource.\n### Added\n- (Windows) Add support for Intel QuickSync\n- (Linux) Added aarch64 deb and rpm packages\n- (Windows) Add support for hybrid graphics systems, such as laptops with both integrated and discrete GPUs\n- (Linux) Add support for streaming from Steam Deck Gaming Mode\n- (Windows) Add HDR support, see https://docs.lizardbyte.dev/projects/sunshine/en/latest/about/usage.html#hdr-support\n### Fixed\n- (Network) Refactor code for UPnP port forwarding\n- (Video) Enforce 10 FPS encoding frame rate minimum to improve static image quality\n- (Linux) deb and rpm packages are now specific to destination distro and version\n- (Docs) Add nvidia/nvenc preset migration guide\n- (Network) Performance optimizations\n- (Video/Windows) Fix streaming to multiple clients from hardware encoder\n- (Linux) Fix child process spawning\n- (Security) Fix security vulnerability in implementation of SimpleWebServer\n- (Misc) Rename \"Steam BigPicture\" to \"Steam Big Picture\" in default apps.json\n- (Security) Scrub basic authorization header from logs\n- (Linux) The systemd service will now restart in the event of a crash\n- (Video/KMS/Linux) Fixed error: `couldn't import RGB Image: 00003002 and 00003004`\n- (Video/Windows) Fix stream freezing triggered by the resolution changed\n- (Installer/Windows) Fixes silent installation and other miscellaneous improvements\n- (CPU) Significantly improved CPU usage",
+      "memory_unit_text": "In the LizardByte/Sunshine release v0.18.0, the project contains critical security fixes and encourages users to change their Sunshine password. Additions include Intel QuickSync support on Windows, aarch64 deb and rpm packages for Linux, hybrid graphics system support on Windows, streaming from Steam Deck Gaming Mode on Linux, and HDR support on Windows. Fixes include refactoring UPnP port forwarding, enforcing a 10 FPS minimum encoding frame rate, making deb and rpm packages distro-specific, adding an Nvidia/NVENC preset migration guide, network performance optimizations, fixing streaming to multiple clients from hardware encoders, fixing child process spawning on Linux, fixing a security vulnerability in SimpleWebServer, renaming \"Steam BigPicture\" to \"Steam Big Picture\", scrubbing basic authorization headers from logs, restarting the systemd service on crash, fixing KMS RGB import errors, fixing stream freezing on resolution change, fixing silent installation and other installer improvements, and significantly improving CPU usage."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v0_18_1",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.18.1",
+      "tag_name": "v0.18.1",
+      "title": "v0.18.1",
+      "time_hint": "2023-02-01",
+      "published_at": "2023-02-01T01:53:26Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v0.18.1",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v0.18.1\nTag: v0.18.1; draft: False; prerelease: False; published_at: 2023-02-01T01:53:26Z; created_at: 2023-02-01T01:44:20Z\nRelease notes:\n### Fixed\n- (Linux) Fixed missing dependencies for deb and rpm packages\n- (Linux) Use dynamic boost",
+      "memory_unit_text": "In the LizardByte/Sunshine release v0.18.1, the project fixes missing dependencies for deb and rpm packages on Linux and switches to using dynamic Boost."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v0_18_2",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.18.2",
+      "tag_name": "v0.18.2",
+      "title": "v0.18.2",
+      "time_hint": "2023-02-13",
+      "published_at": "2023-02-13T19:28:16Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v0.18.2",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v0.18.2\nTag: v0.18.2; draft: False; prerelease: False; published_at: 2023-02-13T19:28:16Z; created_at: 2023-02-13T19:19:40Z\nRelease notes:\n### Fixed\n- (Video/KMV/Linux) Fixed wayland capture on Nvidia for KMS\n- (Video/Linux) Implement vaSyncBuffer stuf for libva <2.9.0\n- (UI) Fix issue where mime type was not being set for node_modules when using a reverse proxy\n- (UI/macOS) Added missing audio sink config options\n- (Linux) Specify correct Boost dependency versions\n- (Video/AMF) Add missing encoder tunables",
+      "memory_unit_text": "In the LizardByte/Sunshine release v0.18.2, the project fixes Wayland capture on Nvidia for KMS, implements vaSyncBuffer for libva <2.9.0, fixes a MIME type issue with reverse proxies, adds missing audio sink config options on macOS, specifies correct Boost dependency versions, and adds missing AMF encoder tunables."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v0_18_3",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.18.3",
+      "tag_name": "v0.18.3",
+      "title": "v0.18.3",
+      "time_hint": "2023-02-14",
+      "published_at": "2023-02-14T02:49:26Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v0.18.3",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v0.18.3\nTag: v0.18.3; draft: False; prerelease: False; published_at: 2023-02-14T02:49:26Z; created_at: 2023-02-14T02:40:32Z\nRelease notes:\n### Added\n- (Linux) Added PKGBUILD for Archlinux based distros to releases\n- (Linux) Added precompiled package for Archlinux based distros to releases\n- (Docker) Added archlinux docker image (x86_64 only)",
+      "memory_unit_text": "In the LizardByte/Sunshine release v0.18.3, the project adds a PKGBUILD and precompiled package for Arch Linux-based distros, and an Arch Linux Docker image (x86_64 only)."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v0_18_4",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.18.4",
+      "tag_name": "v0.18.4",
+      "title": "v0.18.4",
+      "time_hint": "2023-02-21",
+      "published_at": "2023-02-21T02:36:28Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v0.18.4",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v0.18.4\nTag: v0.18.4; draft: False; prerelease: False; published_at: 2023-02-21T02:36:28Z; created_at: 2023-02-21T02:26:37Z\nRelease notes:\n### Fixed\n- (Linux/AUR) Drop support of AUR package\n- (Docker) General enhancements to docker images",
+      "memory_unit_text": "In the LizardByte/Sunshine release v0.18.4, the project drops support for the AUR package on Linux and makes general enhancements to Docker images."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v0_19_0",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.19.0",
+      "tag_name": "v0.19.0",
+      "title": "v0.19.0",
+      "time_hint": "2023-03-30",
+      "published_at": "2023-03-30T02:31:35Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v0.19.0",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v0.19.0\nTag: v0.19.0; draft: False; prerelease: False; published_at: 2023-03-30T02:31:35Z; created_at: 2023-03-30T02:21:15Z\nRelease notes:\n**Breaking**\n- (Linux/Flatpak) Moved Flatpak to org.freedesktop.Platform 22.08 and Cuda 12.0.0\nThis will drop support for Nvidia GPUs with compute capability 3.5\n**Added**\n- (Input) Added option to suppress input from gamepads, keyboards, or mice\n- (Input/Linux) Added unicode support for remote pasting (may not work on all DEs)\n- (Input/Linux) Added XTest input fallback\n- (UI) Added version notifications to web UI\n- (Linux/Windows) Add system tray icon\n- (Windows) Added ability to safely elevate commands that fail due to insufficient permissions when running as a service\n- (Config) Added global prep commands, and ability to exclude an app from using global prep commands\n- (Installer/Windows) Automatically install ViGEmBus if selected\n**Changed**\n- (Logging) Changed client verified messages to debug to prevent spamming the log\n- (Config) Only save non default config values\n- (Service/Linux) Use xdg-desktop-autostart for systemd service\n- (Linux) Added config option to force capture method\n- (Windows) Execute prep command in context of current user\n- (Linux) Allow disconnected X11 outputs\n**Fixed**\n- (Input/Windows) Fix issue where internation keys were not translated correct, and modifier keys appeared stuck\n- (Linux) Fixed startup when /dev/dri didn't exist\n- (UI) Changes software encoding settings to select menu instead of text input\n- (Initialization) Do not terminate upon failure, allowing access to the web UI\n**Dependencies**\n- Bump third-party/moonlight-common-c from 07beb0f to c9426a6\n- Bump babel from 2.11.0 to 2.12.1\n- Bump @fortawesome/fontawesome-free from 6.2.1 to 6.4.0\n- Bump third-party/ViGEmClient from 9e842ba to 726404e\n- Bump ffmpeg\n- Bump third-party/miniupnp from 014c9df to e439318\n- Bump furo from 2022.12.7 to 2023.3.27\n- Bump third-party/nanors from 395e5ad to e9e242e\n**Misc**\n- (GitHub) Shared feature request board with Moonlight\n- (Docs) Improved application examples\n- (Docs) Added WIP documentation for source code using Doxygen and Breathe\n- (Build) Fix linux clang build errors\n- (Build/Archlinux) Skip irrelevant submodules\n- (Build/Archlinux) Disable download timeout\n- (Build/macOS) Support compiling for earlier releases of macOS\n- (Docs) Add favicon\n- (Docs) Add missing config default values\n- (Build) Fix compiler warnings due to depreciated elements in C++17\n- (Build) Fix libcurl link errors\n- (Clang) Adjusted formatting rules",
+      "memory_unit_text": "In the LizardByte/Sunshine release v0.19.0, the project moves Flatpak to org.freedesktop.Platform 22.08 and CUDA 12.0.0, dropping support for Nvidia GPUs with compute capability 3.5. Additions include options to suppress input from gamepads/keyboards/mice, Unicode support for remote pasting on Linux, XTest input fallback, version notifications in the Web UI, a system tray icon, ability to safely elevate commands on Windows, global prep commands with per-app exclusion, and automatic ViGEmBus installation in the Windows installer. Changes include logging client verified messages as debug, saving only non-default config values, using xdg-desktop-autostart for the systemd service, a config option to force capture method on Linux, executing prep commands in the current user context on Windows, and allowing disconnected X11 outputs. Fixes address international key translation and stuck modifier keys on Windows, startup when /dev/dri doesn't exist, changing software encoding settings to a select menu, and not terminating on failure to allow Web UI access."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v0_19_1",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.19.1",
+      "tag_name": "v0.19.1",
+      "title": "v0.19.1",
+      "time_hint": "2023-03-30",
+      "published_at": "2023-03-30T18:16:52Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v0.19.1",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v0.19.1\nTag: v0.19.1; draft: False; prerelease: False; published_at: 2023-03-30T18:16:52Z; created_at: 2023-03-30T18:08:17Z\nRelease notes:\n**Fixed**\n- (Audio) Fixed no audio issue introduced in v0.19.0",
+      "memory_unit_text": "In the LizardByte/Sunshine release v0.19.1, the project fixes a no audio issue introduced in v0.19.0."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v0_20_0",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.20.0",
+      "tag_name": "v0.20.0",
+      "title": "v0.20.0",
+      "time_hint": "2023-05-29",
+      "published_at": "2023-05-29T05:19:37Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v0.20.0",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v0.20.0\nTag: v0.20.0; draft: False; prerelease: False; published_at: 2023-05-29T05:19:37Z; created_at: 2023-05-29T05:11:33Z\nRelease notes:\n**Breaking**\n- (Windows) The Windows installer version of Sunshine is now always launched by the Sunshine Service. Manually launching Sunshine.exe from Program Files is no longer supported. This was necessary to address security issues caused by non-admin users having access to Sunshine's config data. If you have set up Task Scheduler or other mechanisms to launch Sunshine automatically, remove those from your system before updating.\n- (Windows) The Start Menu shortcut has been redesigned for use with the Sunshine Service. It now launches Sunshine in the background (if not already running) and opens the Web UI, avoiding the persistent Command Prompt window present in prior versions. The Start Menu shortcut is now the recommended method for opening the Web UI and launching Sunshine.\n- (Network/UPnP) If the Moonlight Internet Hosting Tool is installed alongside Sunshine, you must remove it or upgrade to v5.6 or later to prevent conflicts with Sunshine's UPnP support. As a reminder, the Moonlight Internet Hosting Tool is not required to stream over the Internet with Sunshine. Instead, simply enable UPnP in the Sunshine Web UI.\n- (Windows) If Steam is installed, the Steam Streaming Speakers driver will be automatically installed when starting a stream for the first time. This behavior can be disabled in the Audio/Video tab of the Web UI. This Steam driver enables support for surround sound and muting host audio without requiring any manual configuration.\n- (Input) The Back Button Timeout option has been renamed to Guide Button Emulation Timeout and has been disabled by default to ensure long presses on the Back button work by default. The previous behavior can be restored by setting the Guide Button Emulation Timeout to 2000.\n- (Windows) The service name of SunshineSvc has been changed to SunshineService to address a false positive in MalwareBytes. If you have any scripts or other logic on your system that is using the service name, you will need to update that for the new name.\n- (Windows) To support new installer features, install-service.bat no longer sets the service to auto-start by default. Users executing install-service.bat manually on the Sunshine portable build must also execute autostart-service.bat to start Sunshine on boot. However, installing the service manually like this is not recommended. Instead, use the Sunshine installer which handles service installation and configuration automatically.\n- (Linux/Fedora) Fedora 36 builds are removed due to upstream end of support\n**Added**\n- (Windows) Added an option to launch apps and prep/undo commands as administrator\n- (Installer/Windows) Added an option to choose whether Sunshine launches on boot. If not configured to launch on boot, use the Start Menu shortcut to start Sunshine when desired.\n- (Input/Windows) Added option to send VK codes instead of scancodes for compatibility with iOS/Android devices using non-English keyboard layouts\n- (UI) The Apply/Restart option is now available in the Web UI for all platforms\n- (Systray) Added a Restart option to the system tray context menu\n- (Video/Windows) Added host latency data to video frames. This requires future updates to Moonlight to display in the on-screen overlay.\n- (Audio) Added support for matching Audio Sink and Virtual Sink values on device names\n- (Client) Added friendly error messages for clients when streaming fails to start\n- (Video/Windows) Added warning log messages when Windows is hiding DRM-protected content from display capture\n- (Interop/Windows) Added warning log messages when GeForce Experience is currently using the same ports as Sunshine\n- (Linux/Fedora) Fedora 38 builds are now available\n**Changed**\n- (Video) Encoder selection now happens at each stream start for more reliable GPU detection\n- (Video/Windows) The host dis...",
+      "memory_unit_text": "In the LizardByte/Sunshine release v0.20.0, the project makes several breaking changes: the Windows installer version is always launched by the Sunshine Service, the Start Menu shortcut is redesigned to launch Sunshine in the background and open the Web UI, the Moonlight Internet Hosting Tool must be removed or upgraded to v5.6+ to avoid UPnP conflicts, Steam Streaming Speakers driver is automatically installed on first stream (can be disabled), the Back Button Timeout is renamed to Guide Button Emulation Timeout and disabled by default, the service name changes from SunshineSvc to SunshineService, install-service.bat no longer sets auto-start by default, and Fedora 36 builds are removed. Additions include an option to launch apps/commands as administrator, an installer option to choose whether Sunshine launches on boot, an option to send VK codes instead of scancodes, Apply/Restart in the Web UI for all platforms, a Restart option in the system tray, host latency data in video frames, matching audio sink and virtual sink on device names, friendly error messages for clients, warning logs for DRM-protected content and GeForce Experience port conflicts, and Fedora 38 builds. Changes include encoder selection at each stream start, and the host dis..."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v0_21_0",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.21.0",
+      "tag_name": "v0.21.0",
+      "title": "v0.21.0",
+      "time_hint": "2023-10-16",
+      "published_at": "2023-10-16T02:47:00Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v0.21.0",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v0.21.0\nTag: v0.21.0; draft: False; prerelease: False; published_at: 2023-10-16T02:47:00Z; created_at: 2023-10-16T02:33:37Z\nRelease notes:\n**Added**\n- (Input) Add support for automatically selecting the emulated controller type based on the physical controller connected to the client\n- (Input/Windows) Add support for Applications (context menu) key\n- (Input/Windows) Implement touchpad, motion sensors, battery state, and LED control for the emulated DualShock 4 controller\n- (Input) Advertise support for new input features to clients\n- (Linux/Debian) Added Debian Bookworm package\n- (Prep-Commands) Expose connection environment variables\n- (Input/Windows) Implement pen and touch support\n- (Capture/Windows) Add standalone NVENC encoder\n- (Capture) Implement AV1 encoding\n- (Network) Implement IPv6 support\n- (Capture/Windows) Add option to disable realtime hags\n- (Graphics/NVIDIA) Add an option to decrease GPU scheduling priority to workaround HAGS video hang\n- (Capture/Linux) Add FFmpeg powerpc64le architecture for self compiling Sunshine\n- (Capture/Windows) Add support for capturing rotated displays\n- (System Tray) Implement streaming event notifications\n- (UI) Add port configuration table\n- (Applications) Added option to automatically treat launcher type apps as detached commands\n- (Input/Gamepad) Allow the Misc button to work as Guide on emulated Xbox 360 controllers\n**Changed**\n- (Input) Reduce latency by implementing input batching\n- (Logging) Move input packet debug prints off the control stream thread\n- (Input) Refactor gamepad emulation code to use DS4 extended report format\n- (Graphics/NVIDIA) Modify and restore NVIDIA control panel settings before and after stream, respectively\n- (Graphics/NVIDIA) New config page for NVENC\n- (Graphics/Windows) Refactor DX shaders\n- (Input/Windows) Use our own keycode mapping to avoid installing the US English keyboard layout\n**Fixed**\n- (UI) Fix update notifications\n- (Dependencies/Linux) Replace libboost chrono and thread with standard chrono and thread\n- (Input) Increase maximum gamepad limit to 16\n- (Network) Allow use of multiple ENet channels\n- (Network) Consider link-local addresses on LAN\n- (Input) Fixed issue where button may sometimes stick on Windows\n- (Input) Fix \"ControllerNumber not allocated\" warning when a gamepad is removed\n- (Input) Fix handling of gamepad feedback with multiple clients connected\n- (Input) Fix clamping mouse position to aspect ratio adjusted viewport\n- (Graphics/AMD) Fix crash during startup on some older AMD GPUs\n- (Logging) Fix crash when non-ASCII characters are logged\n- (Prep-Commands) Fix resource exhaustion bug which could occur when many prep commands were used\n- (Subprocesses) Fix race condition when inserting new processes\n- (Logging) Log error if encoder doesn't produce IDR frame on demand\n- (Audio) Improve audio capture logic and logging\n- (Logging) Fix AMF logging to match configured log level\n- (Logging) Log FFmpeg to log file instead of stdout\n- (Capture) Reject codecs that are not supported by display device\n- (Capture) Add fallbacks for unsupported codec settings\n- (Capture) Avoid probing HEVC or AV1 codecs in some cases\n- (Caputre) Remove DwmFlush()\n- (Capture/Windows) Improvements to capture sleeps for better frame stability\n- (Capture/Windows) Adjust capture rate to better match with display\n- (Linux/ArchLinux) Fix package version in PKGBUILD and precompiled package\n- (UI) Highlight fatal log messages in web ui\n- (Commands) Allow stream if prep command fails\n- (Capture/Linux) Fix KMS grab VRAM capture with libva 2.20\n- (Capture/macOS) Fix video capture backend\n- (Misc/Windows) Don't start the session monitor window when launched in command mode\n- (Linux/AppImage) Use the linuxdeploy GTK plugin to correctly deploy GTK3 dependencies\n- (Input/Windows) Fix reWASD not recognizing emulated DualShock 4 input\n**Dependencies**\n- Bump bootstrap from 5.2.3 to 5.3.2\n- Bump third-party/moonlight-common-c f...",
+      "memory_unit_text": "In the LizardByte/Sunshine release v0.21.0, the project adds automatic emulated controller type selection, Applications key support on Windows, touchpad/motion/battery/LED for emulated DualShock 4, advertising new input features, a Debian Bookworm package, connection environment variables for prep commands, pen and touch support on Windows, a standalone NVENC encoder, AV1 encoding, IPv6 support, an option to disable realtime HAGS, an option to decrease GPU scheduling priority for HAGS video hang workaround, FFmpeg powerpc64le architecture for self-compiling, capturing rotated displays, streaming event notifications in the system tray, a port configuration table, automatic detached command treatment for launcher-type apps, and allowing the Misc button to work as Guide on emulated Xbox 360 controllers. Changes include input batching to reduce latency, moving input packet debug prints off the control stream thread, refactoring gamepad emulation to use DS4 extended report format, modifying and restoring NVIDIA control panel settings, a new NVENC config page, refactoring DX shaders, and using own keycode mapping to avoid installing US English keyboard layout. Fixes address update notifications, replacing libboost chrono/thread with standard, increasing gamepad limit to 16, allowing multiple ENet channels, considering link-local addresses on LAN, stuck buttons on Windows, \"ControllerNumber not allocated\" warning, gamepad feedback with multiple clients, clamping mouse position, crash on older AMD GPUs, crash with non-ASCII characters, resource exhaustion with many prep commands, race condition when inserting processes, logging IDR frame errors, improving audio capture logic, AMF logging, logging FFmpeg to file, rejecting unsupported codecs, adding fallbacks for unsupported codec settings, avoiding probing HEVC/AV1 in some cases, removing DwmFlush(), capture sleep improvements, adjusting capture rate, fixing Arch Linux package version, highlighting fatal log messages, allowing stream if prep command fails, fixing KMS grab VRAM capture with libva 2.20, fixing macOS video capture backend, not starting session monitor window in command mode, using linuxdeploy GTK plugin for AppImage, and fixing reWASD recognition of emulated DualShock 4."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v0_22_0",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.22.0",
+      "tag_name": "v0.22.0",
+      "title": "v0.22.0",
+      "time_hint": "2024-03-04",
+      "published_at": "2024-03-04T11:36:54Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v0.22.0",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v0.22.0\nTag: v0.22.0; draft: False; prerelease: False; published_at: 2024-03-04T11:36:54Z; created_at: 2024-03-04T11:28:33Z\nRelease notes:\n**Breaking**\n- (Network) Clients must now be paired with the host before they can use Wake-on-LAN\n- (Build/Linux) Drop Fedora 37 support\n**Added**\n- (Input/Linux) Add native/pen touch support for Linux\n- (Capture/Linux) Add HDR streaming support for Linux using KMS capture backend\n- (Capture/Linux) Add KMS capture support for Nvidia GPUs running Wayland\n- (Network) Add support for full E2E stream encryption, configurable for LAN and WAN independently\n- (Process) Add process group tracking to automatically handle launchers that spawn other child processes\n- (Capture/Windows) Add setting for controlling GPU power saving and encoding latency tradeoff for NVENC\n- (Capture/Windows) Add additional encoding settings for NVENC\n- (Process/Windows) Add experimental support for launching URLs and other non-exe files\n- (Capture/Windows) Add setting to allow use of slower HEVC encoding on older Intel GPUs\n- (Input/Windows) Add settings to control automatic gamepad type selection heuristics\n- (Input/Windows) Add setting to allow DS4 back/select button to trigger touchpad click\n- (Input) Add setting to disable high resolution scrolling and native pen/touch support\n- (Network) Add support for certificates types other than RSA-2048\n- (Build/Linux) Add Fedora 39 docker image and rpm package\n- (Capture/Linux) Display monitor indexes in logs for wlroots and KMS capture backends\n- (UI) Add link to logs inside fatal error container\n- (UI) Add hash handler and ids for all configuration categories and settings\n**Changed**\n- (UI) Several configuration options have been moved to more suitable locations\n- (Network) Client-selected bitrate is now adjusted for FEC percentage and other stream overhead\n- (Capture/Linux) Improve VAAPI encoding performance on Intel GPUs\n- (Capture) Connection establishment delay is reduced by eliminating many encoder probing operations\n- (Process) Graceful termination of running processes is attempted first when stopping apps\n- (Capture) Improve software encoding performance by enabling multi-threaded color conversion\n- (Capture) Adjust default CPU thread count for software encoding from 1 to 2 for improved performance\n- (Steam/Windows) Modernized the default Steam app shortcut to avoid depending on Steam's install location and support app termination\n- (Linux) Updated desktop files\n- (Config) Add 2560x1440 to default resolutions\n- (Network) Use the configured ping timeout for the initial launch event timeout\n- (UI) Migrate UI to Vite and Vue3, and various UX improvements\n- (Logging) Adjust wording and severity of some log messages\n- (Build) Use a single submodule for ffmpeg\n- (Install/Windows) Skip ViGEmBus installation if a supported version is already installed\n- (Build/Linux) Optionally, allow using the system installation of wayland-protocols\n- (Build/Linux) Make vaapi optional\n- (Windows) Replace boost::json with nlohmann/json\n**Fixed**\n- (Network/Windows) Fix auto-discovery of hosts by iOS/tvOS clients\n- (Network) Fix immediate connection termination when streaming over some Internet connections\n- (Capture/Linux) Fix missing mouse cursor when using KMS capture on a GPU with hardware cursor support\n- (Capture/Windows) Add workaround for Nvidia driver bug causing Sunshine to crash when RTX HDR is globally enabled\n- (Capture/Windows) Add workaround for AMD driver bug on pre-RDNA GPUs causing hardware encoding failure\n- (Capture/Windows) Reintroduce support for NVENC on older Nvidia GPU drivers (v456.71-v522.25)\n- (Capture/Windows) Fix encoding on old Intel GPUs that don't support low-power H.264 encoding\n- (Capture/Linux) Fix GL errors or corrupt video output on GPUs that use aux planes such as Intel Arc\n- (Capture/Linux) Fix GL errors or corrupt video output on GPUs that use DRM modifiers on YUV buffers\n- (Input/Windows) Fix non-functional d...",
+      "memory_unit_text": "In the LizardByte/Sunshine release v0.22.0, the project makes breaking changes: clients must be paired before using Wake-on-LAN, and Fedora 37 support is dropped. Additions include native pen/touch support on Linux, HDR streaming on Linux via KMS, KMS capture for Nvidia GPUs on Wayland, full E2E stream encryption configurable for LAN/WAN, process group tracking for launchers, GPU power saving/encoding latency tradeoff setting for NVENC, additional NVENC encoding settings, experimental support for launching URLs and non-exe files on Windows, slower HEVC encoding setting for older Intel GPUs, automatic gamepad type selection heuristics, DS4 back/select button touchpad click setting, disabling high resolution scrolling and native pen/touch, support for certificates other than RSA-2048, Fedora 39 docker image and rpm package, monitor indexes in logs for wlroots and KMS, a link to logs in fatal error container, and hash handler/ids for configuration categories. Changes include moving configuration options, adjusting client-selected bitrate for FEC overhead, improving VAAPI encoding performance on Intel GPUs, reducing connection establishment delay by eliminating encoder probing, attempting graceful termination of processes, enabling multi-threaded color conversion for software encoding, adjusting default CPU thread count for software encoding from 1 to 2, modernizing the default Steam app shortcut, updating desktop files, adding 2560x1440 to default resolutions, using configured ping timeout for initial launch event timeout, migrating UI to Vite and Vue3, adjusting log message wording/severity, using a single ffmpeg submodule, skipping ViGEmBus installation if a supported version is already installed, optionally using system wayland-protocols, making VAAPI optional, and replacing boost::json with nlohmann/json. Fixes address auto-discovery by iOS/tvOS clients, immediate connection termination over some Internet connections, missing mouse cursor on KMS capture with hardware cursor, Nvidia driver bug with RTX HDR, AMD driver bug on pre-RDNA GPUs, NVENC on older Nvidia drivers, encoding on old Intel GPUs, GL errors on GPUs with aux planes or DRM modifiers, non-functional d..."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v0_22_1",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.22.1",
+      "tag_name": "v0.22.1",
+      "title": "v0.22.1",
+      "time_hint": "2024-03-14",
+      "published_at": "2024-03-14T03:23:35Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v0.22.1",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v0.22.1\nTag: v0.22.1; draft: False; prerelease: False; published_at: 2024-03-14T03:23:35Z; created_at: 2024-03-14T03:17:30Z\nRelease notes:\n**Breaking**\n- (ArchLinux) Drop support for standalone PKGBUILD files. Use the binary Arch package or install via AUR instead.\n- (macOS) Drop support for experimental dmg package. Use Homebrew or MacPorts instead.\n**Added**\n- (macOS) Added Homebrew support\n**Changed**\n- (Process/Windows) The working directory is now searched first when the command contains a relative path\n- (ArchLinux) The kmsgrab capture backend is now compiled by default to support Wayland capture on non-wlroots-based compositors\n- (Capture/Linux) X11 capture is now preferred over kmsgrab for cards that lack atomic modesetting support to ensure cursor capture works\n- (Capture/Linux) Kmsgrab will only choose NVENC by default if the display is connected to the Nvidia GPU to avoid possible EGL import failures\n**Fixed**\n- (Config) Fix unsupported resolution error with some Moonlight clients\n- (Capture/Windows) Fix crash when streaming Ryujinx, Red Alert 2, and other apps that use unusually sized monochrome cursors\n- (Capture/Linux) Fix crash in KMS cursor capture when running on Arch-based distros\n- (Capture/Linux) Fix crash if CUDA GPU has a PCI ID with hexadecimal digits greater than 9\n- (Process/Windows) Fix starting apps when the working directory is enclosed in quotes\n- (Process/Windows) Fix process tree tracking when the app is launched via a cmd.exe trampoline\n- (Installer/Windows) Fix slow operation during ViGEmBus installation that may cause the installer to appear stuck\n- (Build/macOS) Fix issues building on macOS 13 and 14\n- (Build/Linux) Fix missing install script in the Arch binary package\n- (Build/Linux) Fix missing optional dependencies in the Arch binary package\n- (Build/Linux) Ensure correct Arch pkg is published to GitHub releases\n- (Capture/Linux) Fix mismatched case and unhandled exception in CUDA device lookup\n- (Config) Add missing resolution to default config ui\n- (Linux) Fix udev rules for uinput access not working until after reboot\n- (Linux) Fix wrong path in desktop files\n- (Tray) Cache icons to avoid possible DRM issues\n- (Tray) Fix attempt to update tray icon after it was destroyed\n- (Linux) Migrate old config files to new location if env SUNSHINE_MIGRATE_CONFIG=1 is set (automatically set for Flatpak)\n- (Linux/Fedora) Re-enable CUDA support and bump to 12.4.0\n**Misc**\n- (Build/Windows) Adjust Windows debuginfo artifact to reduce confusion with real release binaries",
+      "memory_unit_text": "In the LizardByte/Sunshine release v0.22.1, the project drops support for standalone PKGBUILD files on Arch Linux and the experimental dmg package on macOS, while adding Homebrew support for macOS. Changes include searching the working directory first for relative paths on Windows, compiling kmsgrab by default on Arch Linux, preferring X11 capture over kmsgrab for cards lacking atomic modesetting, and choosing NVENC by default in kmsgrab only if the display is connected to the Nvidia GPU. Fixes address unsupported resolution errors with some Moonlight clients, crashes with unusually sized monochrome cursors, KMS cursor capture crash on Arch-based distros, crash if CUDA GPU PCI ID has hex digits >9, starting apps with quoted working directories, process tree tracking with cmd.exe trampoline, slow ViGEmBus installation, build issues on macOS 13/14, missing install script and optional dependencies in Arch binary package, ensuring correct Arch pkg is published, mismatched case in CUDA device lookup, missing resolution in default config UI, udev rules not working until reboot, wrong path in desktop files, tray icon caching and destruction issues, config migration with SUNSHINE_MIGRATE_CONFIG=1, and re-enabling CUDA support on Fedora with bump to 12.4.0."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v0_22_2",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.22.2",
+      "tag_name": "v0.22.2",
+      "title": "v0.22.2",
+      "time_hint": "2024-03-15",
+      "published_at": "2024-03-15T11:13:18Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v0.22.2",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v0.22.2\nTag: v0.22.2; draft: False; prerelease: False; published_at: 2024-03-15T11:13:18Z; created_at: 2024-03-15T11:05:12Z\nRelease notes:\n**Fixed**\n- (Tray/Windows) Fix broken system tray icon on some systems\n- (Linux) Fix crash when XDG_CONFIG_HOME or CONFIGURATION_DIRECTORY are set\n- (Linux) Fix config migration across filesystems and with non-existent parent directories",
+      "memory_unit_text": "In the LizardByte/Sunshine release v0.22.2, the project fixes a broken system tray icon on some Windows systems, a crash when XDG_CONFIG_HOME or CONFIGURATION_DIRECTORY are set on Linux, and config migration across filesystems and with non-existent parent directories."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v0_23_0",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.23.0",
+      "tag_name": "v0.23.0",
+      "title": "v0.23.0",
+      "time_hint": "2024-04-07",
+      "published_at": "2024-04-07T03:32:03Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v0.23.0",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v0.23.0\nTag: v0.23.0; draft: False; prerelease: False; published_at: 2024-04-07T03:32:03Z; created_at: 2024-04-07T03:19:55Z\nRelease notes:\nAttention, this release contains critical security fixes. Please update as soon as possible.\n**Breaking**\n- (Linux) Drop support for Ubuntu 20.04\n- (Linux) No longer provide arm64 rpm packages, due to extreme compile time on GitHub hosted runners\n**Fixed**\n- (Network) Ensure unpairing takes effect without restart\n- (Capture/Linux) Fix logical comparison of texture size\n- (Service/Windows) Quote the path to sunshinesvc.exe when launching the termination helper\n**Added**\n- (WebUI) Localization support\n- (Capture/Linux) Populate host latency for kmx/x11 grab\n- (Capture/Windows) AMF rate control improvements\n- (Linux) Add support for Ubuntu 24.04 (x86_64 only)\n**Dependencies**\n- Bump rstcheck from 6.2.0 to 6.2.1\n- Bump org.flatpak.Builder.BaseApp from 644487f to 6e295e6\n- Bump ffmpeg\n- Bump @fortawesome/fontawesome-free from 6.5.1 to 6.5.2\n**Misc**\n- (Style) Refactored video encoder declarations\n- (CI) Refactored Linux build in CI\n- (CI) Added unit testing and code coverage\n- (Docs/macOS) Update curl command for Portfile install\n- (Style) Refactor logging initialization",
+      "memory_unit_text": "In the LizardByte/Sunshine release v0.23.0, the project contains critical security fixes and drops support for Ubuntu 20.04 and arm64 rpm packages. Fixes include ensuring unpairing takes effect without restart, fixing a logical comparison of texture size, and quoting the path to sunshinesvc.exe. Additions include Web UI localization support, populating host latency for KMS/X11 grab, AMF rate control improvements, and Ubuntu 24.04 support (x86_64 only)."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v0_23_1",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.23.1",
+      "tag_name": "v0.23.1",
+      "title": "v0.23.1",
+      "time_hint": "2024-04-21",
+      "published_at": "2024-04-21T02:02:54Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v0.23.1",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v0.23.1\nTag: v0.23.1; draft: False; prerelease: False; published_at: 2024-04-21T02:02:54Z; created_at: 2024-04-21T01:49:43Z\nRelease notes:\n**Fixed**\n- (Capture/Windows) Disable HRD and CBR encoding options by default for AMD GPUs due to video quality regressions in v0.23.0\n- (UI) Fix incorrect strings for QuickSync 'fast' and 'faster' presets\n- (UI/Linux) Fix update prompt appearing even when running the latest version\n- (Input) Fix crash when absolute input events are received prior to the display viewport being set\n- (Input/Linux) Fix missing clamping of rumble intensity to valid range\n- (Build/Tests) Fix error when attempting to disable compilation of tests\n- (Build/Linux) Fix some compilation errors when using Musl libc\n- (Logging) Fix broken debug messages for codec capability flags\n- (Logging/Linux) Fix log messages to include the correct setcap command for resolving KMS permission errors\n**Added**\n- (Capture/Linux) Improve frame time consistency for all capture backends\n- (UI) Set focus to the PIN textbox when navigating to the PIN tab\n**Dependencies**\n- Remove libavdevice dependency\n**Misc**\n- (Linux) Prefer ayatana-appindicator3 over appindicator3 if both are available",
+      "memory_unit_text": "In the LizardByte/Sunshine release v0.23.1, the project fixes video quality regressions on AMD GPUs by disabling HRD and CBR encoding options by default, incorrect strings for QuickSync presets, update prompt appearing on latest version on Linux, crash when absolute input events are received before viewport is set, missing clamping of rumble intensity on Linux, compilation errors when disabling tests or using Musl libc, broken debug messages for codec capability flags, and log messages for KMS permission errors. Additions include improving frame time consistency for all capture backends on Linux and setting focus to the PIN textbox when navigating to the PIN tab. The libavdevice dependency is removed."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v2025_118_151840",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2025.118.151840",
+      "tag_name": "v2025.118.151840",
+      "title": "v2025.118.151840",
+      "time_hint": "2025-01-18",
+      "published_at": "2025-01-18T15:19:21Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v2025.118.151840",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v2025.118.151840\nTag: v2025.118.151840; draft: False; prerelease: False; published_at: 2025-01-18T15:19:21Z; created_at: 2025-01-18T15:18:40Z\nRelease notes:\n## Attention\nThis release contains critical security updates. For more information see\n[GHSA-3hrw-xv8h-9499](https://github.com/LizardByte/Sunshine/security/advisories/GHSA-3hrw-xv8h-9499).\nPlease update as soon as possible!\nThis release also contains many new features and bug fixes, including:\n- Implemented automatic resolution and HDR mode changing on Windows.\n- Implemented YUV 4:4:4 encoding support for Intel and NVIDIA GPUs on Windows.\n- Implemented automatic discovery support for macOS hosts.\n- Added support for capturing displays other than the main display on macOS.\n- Added support for emulating DS5, Nintendo Switch Pro, and Xbox One controllers on Linux.\n- Removed the limit on concurrent streaming sessions.\n- Eliminated the need for driver patching to use NvFBC capture on Linux.\n- Significantly reduced CPU usage for encoding when using AMD GPUs (RDNA or later) on Windows.\n- Fixed video traffic timeout error when streaming from a Hyper-V VM using GPU Paravirtualization.\n- Fixed inability to stream from a Windows machine when using the Microsoft Basic Display Adapter driver.\n- Optimized internal frame handling by eliminating redundant data copies and using functions optimized for SSSE3,\nAVX2, and AVX512.\n- Implemented flow control to reduce the chance of dropped packets by overwhelmed routers or network switches.\n- Reworked the video encoding rate control logic for VA-API to improve bitrate efficiency on Linux.\n- New capture method using Windows.Graphics.Capture API on Windows.\nThis is an experimental feature and requires running Sunshine manually.\nIt is not compatible with running Sunshine as a service.\n- Clients can now be named and unpaired individually.\n- The web UI now supports dark mode.\n- Checkboxes replace select menus for boolean settings in the web UI.\n- RestAPI improvements.\nFor a more comprehensive list of user-facing changes, see below.\n## What's Changed\n* feat(macos/capture): support for capture display other than main display by [@TimmyOVO](https://github.com/TimmyOVO) in [#2449](https://github.com/LizardByte/Sunshine/pull/2449)\n* fix(macos/input): incorrect mouse input for non-main display by [@TimmyOVO](https://github.com/TimmyOVO) in [#2461](https://github.com/LizardByte/Sunshine/pull/2461)\n* webui: Update resolution automation example text with auto refresh rate by [@cgarst](https://github.com/cgarst) in [#2503](https://github.com/LizardByte/Sunshine/pull/2503)\n* fix(linux): add frame processing latency and logging improvements by [@gschintgen](https://github.com/gschintgen) in [#2502](https://github.com/LizardByte/Sunshine/pull/2502)\n* AppImage: add needed VA-API libraries (Intel & AMD) by [@gschintgen](https://github.com/gschintgen) in [#2429](https://github.com/LizardByte/Sunshine/pull/2429)\n* Allow a custom FFmpeg build to be provided using CMake variables by [@chewi](https://github.com/chewi) in [#1970](https://github.com/LizardByte/Sunshine/pull/1970)\n* Fix log message for Periodic Ping by [@c3m3gyanesh](https://github.com/c3m3gyanesh) in [#2538](https://github.com/LizardByte/Sunshine/pull/2538)\n* feat(ui): Dark Mode by [@Hazer](https://github.com/Hazer) in [#2493](https://github.com/LizardByte/Sunshine/pull/2493)\n* build(win): use UCRT64 environment instead of MinGW64. by [@tez011](https://github.com/tez011) in [#2323](https://github.com/LizardByte/Sunshine/pull/2323)\n* feat(win): new capture method, Windows.Graphics.Capture  by [@tez011](https://github.com/tez011) in [#2580](https://github.com/LizardByte/Sunshine/pull/2580)\n* Name and unpair individual clients by [@xanderfrangos](https://github.com/xanderfrangos) in [#2042](https://github.com/LizardByte/Sunshine/pull/2042)\n* feat(audio): custom surround-params by [@mariotaku](https://github.com/mariotaku) in [#2424](https://github.com/LizardByte/S...",
+      "memory_unit_text": "In the LizardByte/Sunshine release v2025.118.151840, the project contains critical security updates and many new features and bug fixes, including automatic resolution and HDR mode changing on Windows, YUV 4:4:4 encoding support for Intel and NVIDIA GPUs on Windows, automatic discovery support for macOS hosts, capturing displays other than the main display on macOS, emulating DS5, Nintendo Switch Pro, and Xbox One controllers on Linux, removing the limit on concurrent streaming sessions, eliminating the need for driver patching to use NvFBC capture on Linux, significantly reducing CPU usage for encoding on AMD GPUs (RDNA or later) on Windows, fixing video traffic timeout error when streaming from a Hyper-V VM using GPU Paravirtualization, fixing inability to stream with Microsoft Basic Display Adapter driver, optimizing internal frame handling with SSSE3/AVX2/AVX512, implementing flow control to reduce dropped packets, reworking VA-API video encoding rate control logic on Linux, a new experimental capture method using Windows.Graphics.Capture API (not compatible with service), naming and unpairing clients individually, dark mode in the Web UI, checkboxes for boolean settings, and RestAPI improvements."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v2025_122_141614",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2025.122.141614",
+      "tag_name": "v2025.122.141614",
+      "title": "v2025.122.141614",
+      "time_hint": "2025-01-22",
+      "published_at": "2025-01-22T14:16:55Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v2025.122.141614",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v2025.122.141614\nTag: v2025.122.141614; draft: False; prerelease: False; published_at: 2025-01-22T14:16:55Z; created_at: 2025-01-22T14:16:14Z\nRelease notes:\n## What's Changed\n* build(linux)!: remove legacy input option by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#3562](https://github.com/LizardByte/Sunshine/pull/3562)\n* fix(flatpak): fix broken desktop file, icons, and service by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#3561](https://github.com/LizardByte/Sunshine/pull/3561)\n* fix(web-ui): fix new version notification conditions by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#3577](https://github.com/LizardByte/Sunshine/pull/3577)\n* chore(l10n): update translations by [@LizardByte-bot](https://github.com/LizardByte-bot) in [#3563](https://github.com/LizardByte/Sunshine/pull/3563)\n## New Contributors\n* [@CodyManess](https://github.com/CodyManess) made their first contribution in [#3558](https://github.com/LizardByte/Sunshine/pull/3558)\n**Full Changelog**: https://github.com/LizardByte/Sunshine/compare/v2025.118.151840...v2025.122.141614\n---\n## Contributors\n<a href=\"https://github.com/ReenigneArcher\" target=\"_blank\" rel=\"external noopener noreferrer\" aria-label=\"GitHub profile of contributor, ReenigneArcher\" ><img src=\"https://github.com/ReenigneArcher.png?size=40\" width=\"40\" height=\"40\" alt=\"ReenigneArcher\" title=\"ReenigneArcher: 5 merges\" ></a><a href=\"https://github.com/dependabot\" target=\"_blank\" rel=\"external noopener noreferrer\" aria-label=\"GitHub profile of contributor, dependabot\" ><img src=\"https://github.com/dependabot.png?size=40\" width=\"40\" height=\"40\" alt=\"dependabot\" title=\"dependabot: 5 merges\" ></a><a href=\"https://github.com/CodyManess\" target=\"_blank\" rel=\"external noopener noreferrer\" aria-label=\"GitHub profile of contributor, CodyManess\" ><img src=\"https://github.com/CodyManess.png?size=40\" width=\"40\" height=\"40\" alt=\"CodyManess\" title=\"CodyManess: 2 merges\" ></a><a href=\"https://github.com/LizardByte-bot\" target=\"_blank\" rel=\"external noopener noreferrer\" aria-label=\"GitHub profile of contributor, LizardByte-bot\" ><img src=\"https://github.com/LizardByte-bot.png?size=40\" width=\"40\" height=\"40\" alt=\"LizardByte-bot\" title=\"LizardByte-bot: 2 merges\" ></a>",
+      "memory_unit_text": "In the LizardByte/Sunshine release v2025.122.141614, the project removes the legacy input option on Linux, fixes broken desktop file, icons, and service for Flatpak, fixes new version notification conditions in the Web UI, and updates translations."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v2025_628_4510",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2025.628.4510",
+      "tag_name": "v2025.628.4510",
+      "title": "v2025.628.4510",
+      "time_hint": "2025-06-28",
+      "published_at": "2025-06-28T00:45:53Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v2025.628.4510",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v2025.628.4510\nTag: v2025.628.4510; draft: False; prerelease: False; published_at: 2025-06-28T00:45:53Z; created_at: 2025-06-28T00:45:10Z\nRelease notes:\n## Attention\nThis release contains critical security updates. For more information see the following:\n- [GHSA-39hj-fxvw-758m](https://github.com/LizardByte/Sunshine/security/advisories/GHSA-39hj-fxvw-758m)\n- [GHSA-x97g-h2vp-g2c5](https://github.com/LizardByte/Sunshine/security/advisories/GHSA-x97g-h2vp-g2c5)\nPlease update as soon as possible!\nThis release also contains many new features and bug fixes, including:\n- Encoder probing fixes.\n- Display automation is now disabled by default, you can re-enable it in the Sunshing config UI.\n- RestAPI improvements.\n- Async encode added for NVENC.\n- Native DualSense support on Linux.\n- Headless monitor support on Wayland Linux.\n- Minimum FPS is now be based on client framerate.\n- New languages and updated translations.\n- Many behind the scene updates to the build, ci, and dependencies.\nFor a more comprehensive list of user-facing changes, see below.\n## What's Changed\n* fix(video): prevent encoder probing with no active displays by [@FrogTheFrog](https://github.com/FrogTheFrog) in [#3592](https://github.com/LizardByte/Sunshine/pull/3592)\n* fix(video): allow encoder probing when there are no devices at all by [@FrogTheFrog](https://github.com/FrogTheFrog) in [#3594](https://github.com/LizardByte/Sunshine/pull/3594)\n* feat(display): Add revert display config on disconnect option by [@VMFortress](https://github.com/VMFortress) in [#3613](https://github.com/LizardByte/Sunshine/pull/3613)\n* fix(api): return proper json objects by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#3544](https://github.com/LizardByte/Sunshine/pull/3544)\n* fix(ui): properly handle boolean json responses by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#3626](https://github.com/LizardByte/Sunshine/pull/3626)\n* fix(dd_config)!: disable by default by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#3639](https://github.com/LizardByte/Sunshine/pull/3639)\n* feat(nvenc): implement async encode by [@cgutman](https://github.com/cgutman) in [#3629](https://github.com/LizardByte/Sunshine/pull/3629)\n* fix(linux/inputtino): DualSense native support without Steam Input by [@ABeltramo](https://github.com/ABeltramo) in [#3600](https://github.com/LizardByte/Sunshine/pull/3600)\n* feat: Add Max Bitrate option by [@utkarshdalal](https://github.com/utkarshdalal) in [#3628](https://github.com/LizardByte/Sunshine/pull/3628)\n* fix: add missing strings for max_bitrate setting, and improved logging for bitrate by [@utkarshdalal](https://github.com/utkarshdalal) in [#3656](https://github.com/LizardByte/Sunshine/pull/3656)\n* feat(display): expose HDR toggle workaround delay to user by [@FrogTheFrog](https://github.com/FrogTheFrog) in [#3579](https://github.com/LizardByte/Sunshine/pull/3579)\n* fix(http): lower TLS to v1.2 for downloading covers by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#3691](https://github.com/LizardByte/Sunshine/pull/3691)\n* fix(packaging/windows): add Sunshine directories to system PATH by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#3727](https://github.com/LizardByte/Sunshine/pull/3727)\n* fix(linux): update sunshine rules by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#3748](https://github.com/LizardByte/Sunshine/pull/3748)\n* feat(input/linux): DualSense adaptive trigger support by [@ABeltramo](https://github.com/ABeltramo) in [#3738](https://github.com/LizardByte/Sunshine/pull/3738)\n* style(Web UI): Add 1rem margin between Save and Apply buttons for better UI/UX by [@richardziegler](https://github.com/richardziegler) in [#3762](https://github.com/LizardByte/Sunshine/pull/3762)\n* fix(config): parse config after logging initialized by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#3769](https://github.com/LizardByte/Sunshine/pull/3769)\n* fix(conf...",
+      "memory_unit_text": "In the LizardByte/Sunshine release v2025.628.4510, the project contains critical security updates and many new features and bug fixes, including encoder probing fixes, disabling display automation by default, RestAPI improvements, async encode for NVENC, native DualSense support on Linux, headless monitor support on Wayland Linux, basing minimum FPS on client framerate, new languages and updated translations, and many behind-the-scenes build, CI, and dependency updates."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v2025_923_33222",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2025.923.33222",
+      "tag_name": "v2025.923.33222",
+      "title": "v2025.923.33222",
+      "time_hint": "2025-09-23",
+      "published_at": "2025-09-23T06:17:05Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v2025.923.33222",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v2025.923.33222\nTag: v2025.923.33222; draft: False; prerelease: False; published_at: 2025-09-23T06:17:05Z; created_at: 2025-09-23T03:32:22Z\nRelease notes:\n## Attention\nThis release contains critical security updates. For more information see the following:\n- [GHSA-6p7j-5v8v-w45h](https://github.com/LizardByte/Sunshine/security/advisories/GHSA-6p7j-5v8v-w45h)\nPlease update as soon as possible!\nFor a comprehensive list of user-facing changes, see below.\n## What's Changed\n* fix(power): don't wake up every 500ms to poll while not streaming by [@cgutman](https://github.com/cgutman) in [#4051](https://github.com/LizardByte/Sunshine/pull/4051)\n* fix(amf): attempt to use level 5.1/5.2 for hevc by [@mariotaku](https://github.com/mariotaku) in [#3888](https://github.com/LizardByte/Sunshine/pull/3888)\n* fix(display): Restore Checkbox import for display device opts by [@VMFortress](https://github.com/VMFortress) in [#4076](https://github.com/LizardByte/Sunshine/pull/4076)\n* fix(windows): bundle vigembus instead of downloading it by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#4088](https://github.com/LizardByte/Sunshine/pull/4088)\n* fix(api): don't require content type for apps delete endpoint by [@doxxx](https://github.com/doxxx) in [#4093](https://github.com/LizardByte/Sunshine/pull/4093)\n* fix(video): restore the ability to set a minimum fps target by [@andygrundman](https://github.com/andygrundman) in [#4114](https://github.com/LizardByte/Sunshine/pull/4114)\n* fix(packaging/linux): depend on libgbm by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#4113](https://github.com/LizardByte/Sunshine/pull/4113)\n* build(linux): compile with gcc13+ and bump cuda by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#4136](https://github.com/LizardByte/Sunshine/pull/4136)\n* build(deps): Update to FFmpeg 8.0 branch by [@cgutman](https://github.com/cgutman) in [#4143](https://github.com/LizardByte/Sunshine/pull/4143)\n* feat(input/linux): allow ds5 gamepads to have a fixed device mac based on controller index by [@Kishi85](https://github.com/Kishi85) in [#4158](https://github.com/LizardByte/Sunshine/pull/4158)\n* fix(input): Cleanup and show additional gamepad options correctly on linux (DS5) by [@Kishi85](https://github.com/Kishi85) in [#4169](https://github.com/LizardByte/Sunshine/pull/4169)\n* fix(input): Add missing default value for ds5_inputtino_randomize_mac by [@Kishi85](https://github.com/Kishi85) in [#4207](https://github.com/LizardByte/Sunshine/pull/4207)\n* fix(tray): optionally run tray in main event loop enabling support for macOS by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#3818](https://github.com/LizardByte/Sunshine/pull/3818)\n* feat(tray): Add runtime config option to enable/disable system tray by [@Kishi85](https://github.com/Kishi85) in [#4208](https://github.com/LizardByte/Sunshine/pull/4208)\n* fix(packaging/Arch): make cuda and unit tests optional by [@FineWolf](https://github.com/FineWolf) in [#4254](https://github.com/LizardByte/Sunshine/pull/4254)\n* fix(packaging/Arch): do not fail if cuda was freshly installed by [@FineWolf](https://github.com/FineWolf) in [#4257](https://github.com/LizardByte/Sunshine/pull/4257)\n* fix(Linux): udev rules style issues by [@Revival8697](https://github.com/Revival8697) in [#4276](https://github.com/LizardByte/Sunshine/pull/4276)\n* build(packaging/Linux): remove cuda as required dependency on aur by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#4278](https://github.com/LizardByte/Sunshine/pull/4278)\n* fix(packaging/Linux): ensure that uhid is loaded automatically by [@gschintgen](https://github.com/gschintgen) in [#2906](https://github.com/LizardByte/Sunshine/pull/2906)\n## New Contributors\n* [@mengyanshou](https://github.com/mengyanshou) made their first contribution in [#3741](https://github.com/LizardByte/Sunshine/pull/3741)\n* [@doxxx](https://github.com/doxxx) made their first contribution in [...",
+      "memory_unit_text": "In the LizardByte/Sunshine release v2025.923.33222, the project contains critical security updates and fixes including not waking up every 500ms to poll while not streaming, attempting to use level 5.1/5.2 for HEVC in AMF, restoring Checkbox import for display device options, bundling ViGEmBus instead of downloading it, not requiring content type for apps delete endpoint, restoring the ability to set a minimum FPS target, depending on libgbm, compiling with gcc13+ and bumping CUDA, updating to FFmpeg 8.0 branch, allowing DS5 gamepads to have a fixed device MAC based on controller index, cleaning up and showing additional gamepad options correctly on Linux, adding missing default value for ds5_inputtino_randomize_mac, optionally running tray in main event loop for macOS support, adding a runtime config option to enable/disable system tray, making CUDA and unit tests optional on Arch, not failing if CUDA was freshly installed, fixing udev rules style issues, removing CUDA as a required dependency on AUR, and ensuring uhid is loaded automatically."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v2025_924_154138",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2025.924.154138",
+      "tag_name": "v2025.924.154138",
+      "title": "v2025.924.154138",
+      "time_hint": "2025-09-24",
+      "published_at": "2025-09-24T18:27:49Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v2025.924.154138",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v2025.924.154138\nTag: v2025.924.154138; draft: False; prerelease: False; published_at: 2025-09-24T18:27:49Z; created_at: 2025-09-24T15:41:38Z\nRelease notes:\n## What's Changed\n* fix(windows): Correct binPath syntax in install-service.bat by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#4290](https://github.com/LizardByte/Sunshine/pull/4290)\n* build(macos): Remove XCode dependency by [@eduardomozart](https://github.com/eduardomozart) in [#4293](https://github.com/LizardByte/Sunshine/pull/4293)\n## New Contributors\n* [@eduardomozart](https://github.com/eduardomozart) made their first contribution in [#4293](https://github.com/LizardByte/Sunshine/pull/4293)\n**Full Changelog**: https://github.com/LizardByte/Sunshine/compare/v2025.923.33222...v2025.924.154138\n---\n## Contributors\n<a href=\"https://github.com/ReenigneArcher\" target=\"_blank\" rel=\"external noopener noreferrer\" aria-label=\"GitHub profile of contributor, ReenigneArcher\" ><img src=\"https://github.com/ReenigneArcher.png?size=40\" width=\"40\" height=\"40\" alt=\"ReenigneArcher\" title=\"ReenigneArcher: 2 merges\" ></a><a href=\"https://github.com/eduardomozart\" target=\"_blank\" rel=\"external noopener noreferrer\" aria-label=\"GitHub profile of contributor, eduardomozart\" ><img src=\"https://github.com/eduardomozart.png?size=40\" width=\"40\" height=\"40\" alt=\"eduardomozart\" title=\"eduardomozart: 2 merges\" ></a><a href=\"https://github.com/LizardByte-bot\" target=\"_blank\" rel=\"external noopener noreferrer\" aria-label=\"GitHub profile of contributor, LizardByte-bot\" ><img src=\"https://github.com/LizardByte-bot.png?size=40\" width=\"40\" height=\"40\" alt=\"LizardByte-bot\" title=\"LizardByte-bot: 1 merge\" ></a>\n---\n🛡️ **VirusTotal Results:**\n- [Sunshine-Windows-AMD64-debuginfo.7z](https://www.virustotal.com/gui/file-analysis/ZWU3ODk3MTcwNjllYjNmYzQ0ZGNmNzBkZjI4MzQzODc6MTc1ODczODI1OA==)\n- [Sunshine-Windows-AMD64-installer.exe](https://www.virustotal.com/gui/file-analysis/ZTgwMDJjNmUyMDgwYTBiMzgxNzg4ZjY1Y2VkMmI1NDM6MTc1ODczODI2MA==)\n- [Sunshine-Windows-AMD64-portable.zip](https://www.virustotal.com/gui/file-analysis/MTU1NjA1NmJiOTg3OWFhNzU2MGE0YmE2OGRhYWNkYzI6MTc1ODczODI2NA==)\n- [flathub.tar.gz](https://www.virustotal.com/gui/file-analysis/ODU0MmI5YWVhOWFjMTBiZmVhM2E4NGQxZGJkNWQ4ZDQ6MTc1ODczODI2NQ==)\n- [sunshine-debian-trixie-amd64.deb](https://www.virustotal.com/gui/file-analysis/ODIxMzhmNDRhYjljOTM0NGJjMzk4ZTgxNjJkN2ZmMTk6MTc1ODczODMxOA==)\n- [sunshine-debian-trixie-arm64.deb](https://www.virustotal.com/gui/file-analysis/NzU5OTk4MWMyOTc0ODg4YTg0ZWZmMGQ0NWNiNTAxOTE6MTc1ODczODMxOQ==)\n- [sunshine-ubuntu-22.04-amd64.deb](https://www.virustotal.com/gui/file-analysis/MWY5M2JkNTM0MjYxZTAzZWIwN2Q5MDVlYzgxOTExYzE6MTc1ODczODMyMQ==)\n- [sunshine-ubuntu-22.04-arm64.deb](https://www.virustotal.com/gui/file-analysis/OTVhYzI3NjhmOTFiYjA2MTlkNDEwZGM5MzBmYjkxNGE6MTc1ODczODMyMw==)\n- [sunshine-ubuntu-24.04-amd64.deb](https://www.virustotal.com/gui/file-analysis/ZDUzN2U1MTlmNTA5MWRlZTRjZTYzMDA5OTc4MjNiNjY6MTc1ODczODMzMw==)\n- [sunshine-ubuntu-24.04-arm64.deb](https://www.virustotal.com/gui/file-analysis/YTU4YjkxZDkxYzU2MzhjNjdjZWJlMTQ0NmJiZjgwYWE6MTc1ODczODM4MA==)\n- [sunshine.AppImage](https://www.virustotal.com/gui/file-analysis/MjBkZDgxODBhZjFjODc4ODk3ZmM2NjkxZWE0MjkzNTY6MTc1ODczODM4Mg==)\n- [sunshine.pkg.tar.gz](https://www.virustotal.com/gui/file-analysis/ZjVlMDUyMmNkNjI5NDRiNTc0NGNiN2YwOTFiZGIyODU6MTc1ODczODM4Mg==)\n- [sunshine.pkg.tar.zst](https://www.virustotal.com/gui/file-analysis/OTBiNzYxMTQ4ZmQyYTlhMjgyN2JkMzUyODljOGI0ZTc6MTc1ODczODM5Mw==)\n- [sunshine.rb](https://www.virustotal.com/gui/file-analysis/ZDJmYzYzMjhkMWNhN2IyODVhZWE1YzAwYjQ1YmFmZDc6MTc1ODczODQwNg==)\n- [sunshine_aarch64.flatpak](https://www.virustotal.com/gui/file-analysis/Y2YzODk1MDhkZmZjZGJhMjZlMzFjYzcxMjVhYWUzYTU6MTc1ODczODQ0Mg==)\n- [sunshine_debug_aarch64.flatpak](https://www.virustotal.com/gui/file-analysis/YmNiYjYzZDY4NWI5M2YwZWY3MWViNjRjMjE2YWQzNDY6MTc1ODczODQ0NA==)\n- [sunshine_debug_x86_64.flatpak...",
+      "memory_unit_text": "In the LizardByte/Sunshine release v2025.924.154138, the project corrects the binPath syntax in install-service.bat on Windows and removes the XCode dependency for macOS builds."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v2026_516_143833",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2026.516.143833",
+      "tag_name": "v2026.516.143833",
+      "title": "v2026.516.143833",
+      "time_hint": "2026-05-16",
+      "published_at": "2026-05-16T18:37:51Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v2026.516.143833",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v2026.516.143833\nTag: v2026.516.143833; draft: False; prerelease: False; published_at: 2026-05-16T18:37:51Z; created_at: 2026-05-16T14:38:33Z\nRelease notes:\n## Attention\nThis release contains critical security updates. For more information see the following:\n- [GHSA-ph75-mgxh-mv57](https://github.com/LizardByte/Sunshine/security/advisories/GHSA-ph75-mgxh-mv57)\nPlease update as soon as possible!\n## Breaking Changes\n* ViGEmBus is no longer installed automatically. Instead you can install it from the troubleshooting page of the web-ui if needed.\n* CSRF protection has been added to web-ui. If you access Sunshine through an address other than localhost you must add this to your sunshine.conf file manually. See https://docs.lizardbyte.dev/projects/sunshine/latest/md_docs_2configuration.html#csrf_allowed_origins\n## Highlighted Changes\n* Added XDG, Pipewire, and KWin direct screencast capture on Linux\n* Added Vulkan encoding on Linux\n* Added official OpenSUSE packages to LizardByte copr repos\n* Added FreeBSD packages\n* Sunshine can now bind to a specific network interface\n* Added msi/wix installer for Windows\n* Added Windows support for ARM64\n* Added signed dmg package for macOS\n* Windows executables and installers are now signed for AMD64 packages\n* New endpoints for Rest API [/api/covers]\n* Updated icons, added themes, and modernized web-ui\n* Capture audio on macOS using Tap API\n* Add client enable/disable access control from web-ui\n* Support for clients to request fractional NTSC framerates\n* Support for split frame encoding on GPUs with 2+ nvenc blocks\n* Updated FFmpeg to 8.1 branch\nFor a comprehensive list of changes, see below.\n## What's Changed\n* ci(copr): Trigger release job only for non-prereleases by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#4297](https://github.com/LizardByte/Sunshine/pull/4297)\n* build(Linux): Refactor Dockerfiles and build script for multi-stage, step-based builds by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#4299](https://github.com/LizardByte/Sunshine/pull/4299)\n* build(deps): bump vue from 3.5.21 to 3.5.22 by [@dependabot[bot]](https://github.com/apps/dependabot) in [#4301](https://github.com/LizardByte/Sunshine/pull/4301)\n* build(linux): update pkg-config systemd variable names by [@PVermeer](https://github.com/PVermeer) in [#4303](https://github.com/LizardByte/Sunshine/pull/4303)\n* build(deps): bump third-party/build-deps from `c38829d` to `2840c8a` by [@dependabot[bot]](https://github.com/apps/dependabot) in [#4307](https://github.com/LizardByte/Sunshine/pull/4307)\n* build(packaging/homebrew): Rename class from @PROJECT_NAME@ to Sunshine by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#4308](https://github.com/LizardByte/Sunshine/pull/4308)\n* build(deps): bump LizardByte/actions from 2025.917.25039 to 2025.927.193939 in the lizardbyte-actions group by [@dependabot[bot]](https://github.com/apps/dependabot) in [#4309](https://github.com/LizardByte/Sunshine/pull/4309)\n* build(deps): bump LizardByte/actions from 2025.927.193939 to 2025.929.125237 in the lizardbyte-actions group by [@dependabot[bot]](https://github.com/apps/dependabot) in [#4313](https://github.com/LizardByte/Sunshine/pull/4313)\n* fix(linux): service file for Trixie by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#4319](https://github.com/LizardByte/Sunshine/pull/4319)\n* build(linux): static link std libraries by [@PVermeer](https://github.com/PVermeer) in [#4321](https://github.com/LizardByte/Sunshine/pull/4321)\n* build(linux): enable cpack auto dependencies by [@PVermeer](https://github.com/PVermeer) in [#4323](https://github.com/LizardByte/Sunshine/pull/4323)\n* build(linux): explicitely set CC and CXX compilers by [@PVermeer](https://github.com/PVermeer) in [#4325](https://github.com/LizardByte/Sunshine/pull/4325)\n* feat(audio): allow sending continuous audio by [@mariotaku](https://github.com/mariotaku) in [#4261](https://github.com/Liz...",
+      "memory_unit_text": "In the LizardByte/Sunshine release v2026.516.143833, the project contains critical security updates and breaking changes: ViGEmBus is no longer installed automatically and CSRF protection is added to the Web UI. Highlighted changes include XDG, Pipewire, and KWin direct screencast capture on Linux, Vulkan encoding on Linux, official OpenSUSE packages, FreeBSD packages, binding to a specific network interface, MSI/WiX installer for Windows, Windows ARM64 support, signed dmg package for macOS, signed Windows executables and installers for AMD64, new REST API endpoints for covers, updated icons and themes with a modernized Web UI, capturing audio on macOS using Tap API, client enable/disable access control from Web UI, support for fractional NTSC framerates, split frame encoding on GPUs with 2+ NVENC blocks, and updating FFmpeg to 8.1 branch."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v2026_528_35537",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2026.528.35537",
+      "tag_name": "v2026.528.35537",
+      "title": "v2026.528.35537",
+      "time_hint": "2026-05-28",
+      "published_at": "2026-05-28T07:55:54Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v2026.528.35537",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v2026.528.35537\nTag: v2026.528.35537; draft: False; prerelease: True; published_at: 2026-05-28T07:55:54Z; created_at: 2026-05-28T03:55:37Z\nRelease notes:\n## What's Changed\n* build(deps): bump third-party/inputtino from `f4ce2b0` to `b887f6a` by [@dependabot[bot]](https://github.com/apps/dependabot) in [#5135](https://github.com/LizardByte/Sunshine/pull/5135)\n* fix(macos): scale remote scroll input using macOS scroll speed by [@martona](https://github.com/martona) in [#5133](https://github.com/LizardByte/Sunshine/pull/5133)\n* chore(deps): update dependency vue-i18n to v11.4.3 by [@renovate[bot]](https://github.com/apps/renovate) in [#5139](https://github.com/LizardByte/Sunshine/pull/5139)\n* chore: fixes for release automation by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#5142](https://github.com/LizardByte/Sunshine/pull/5142)\n* chore(deps): update dependency vue-i18n to v11.4.4 by [@renovate[bot]](https://github.com/apps/renovate) in [#5143](https://github.com/LizardByte/Sunshine/pull/5143)\n* chore(deps): update dependency date-fns to v4.2.1 by [@renovate[bot]](https://github.com/apps/renovate) in [#5145](https://github.com/LizardByte/Sunshine/pull/5145)\n* chore(deps): update codecov/codecov-action action to v6.0.1 by [@renovate[bot]](https://github.com/apps/renovate) in [#5149](https://github.com/LizardByte/Sunshine/pull/5149)\n* fix(web): disconnect only the disabled client instead of all sessions by [@neatnoise](https://github.com/neatnoise) in [#5138](https://github.com/LizardByte/Sunshine/pull/5138)\n* chore(deps): update dependency marked to v18.0.4 by [@renovate[bot]](https://github.com/apps/renovate) in [#5151](https://github.com/LizardByte/Sunshine/pull/5151)\n* chore: rename copilot-instructions.md to AGENTS.md by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#5156](https://github.com/LizardByte/Sunshine/pull/5156)\n* fix(Windows-installer): move ViGEmBus to ThirdParty group by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#5157](https://github.com/LizardByte/Sunshine/pull/5157)\n* feat(rtsp): add option to limit packetsize for clients that cannot configure it by [@httpstorm](https://github.com/httpstorm) in [#5153](https://github.com/LizardByte/Sunshine/pull/5153)\n* feat(web-ui): Added Filtering & Searching to the Apps page by [@Noklef](https://github.com/Noklef) in [#5158](https://github.com/LizardByte/Sunshine/pull/5158)\n* build(deps): bump packaging/linux/flatpak/deps/flatpak-builder-tools from `dda10aa` to `ee65dc7` by [@dependabot[bot]](https://github.com/apps/dependabot) in [#5155](https://github.com/LizardByte/Sunshine/pull/5155)\n* chore(crowdin): set commit message by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#5160](https://github.com/LizardByte/Sunshine/pull/5160)\n* chore(l10n): update translations by [@LizardByte-bot](https://github.com/LizardByte-bot) in [#5161](https://github.com/LizardByte/Sunshine/pull/5161)\n* fix(web): the packetsize upper limit is 65535 by [@httpstorm](https://github.com/httpstorm) in [#5167](https://github.com/LizardByte/Sunshine/pull/5167)\n* chore(l10n): update translations by [@LizardByte-bot](https://github.com/LizardByte-bot) in [#5162](https://github.com/LizardByte/Sunshine/pull/5162)\n* chore(deps): update dependency date-fns to v4.3.0 by [@renovate[bot]](https://github.com/apps/renovate) in [#5172](https://github.com/LizardByte/Sunshine/pull/5172)\n* build(deps): bump packaging/linux/flatpak/deps/flatpak-builder-tools from `ee65dc7` to `96e2fe8` by [@dependabot[bot]](https://github.com/apps/dependabot) in [#5165](https://github.com/LizardByte/Sunshine/pull/5165)\n* chore(deps): update lizardbyte/actions action to v2026.522.121358 by [@renovate[bot]](https://github.com/apps/renovate) in [#5173](https://github.com/LizardByte/Sunshine/pull/5173)\n* fix(web-ui): add documentation link and version-aware URLs by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#5176](https://github.com/Liz...",
+      "memory_unit_text": "In the LizardByte/Sunshine prerelease v2026.528.35537, the project includes dependency updates, fixes for macOS remote scroll input scaling, release automation fixes, disconnecting only the disabled client instead of all sessions, moving ViGEmBus to ThirdParty group in the Windows installer, adding an option to limit RTSP packet size, adding filtering and searching to the Apps page in the Web UI, and various translation and build updates."
+    },
+    {
+      "memory_node_id": "LizardByte__Sunshine__release__v2026_531_163415",
+      "repo": "LizardByte/Sunshine",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2026.531.163415",
+      "tag_name": "v2026.531.163415",
+      "title": "v2026.531.163415",
+      "time_hint": "2026-05-31",
+      "published_at": "2026-05-31T20:04:44Z",
+      "source_url": "https://github.com/LizardByte/Sunshine/releases/tag/v2026.531.163415",
+      "raw_text": "Repository: LizardByte/Sunshine\nRelease: v2026.531.163415\nTag: v2026.531.163415; draft: False; prerelease: True; published_at: 2026-05-31T20:04:44Z; created_at: 2026-05-31T16:34:15Z\nRelease notes:\n## What's Changed\n* build(deps): bump third-party/inputtino from `f4ce2b0` to `b887f6a` by [@dependabot[bot]](https://github.com/apps/dependabot) in [#5135](https://github.com/LizardByte/Sunshine/pull/5135)\n* fix(macos): scale remote scroll input using macOS scroll speed by [@martona](https://github.com/martona) in [#5133](https://github.com/LizardByte/Sunshine/pull/5133)\n* chore(deps): update dependency vue-i18n to v11.4.3 by [@renovate[bot]](https://github.com/apps/renovate) in [#5139](https://github.com/LizardByte/Sunshine/pull/5139)\n* chore: fixes for release automation by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#5142](https://github.com/LizardByte/Sunshine/pull/5142)\n* chore(deps): update dependency vue-i18n to v11.4.4 by [@renovate[bot]](https://github.com/apps/renovate) in [#5143](https://github.com/LizardByte/Sunshine/pull/5143)\n* chore(deps): update dependency date-fns to v4.2.1 by [@renovate[bot]](https://github.com/apps/renovate) in [#5145](https://github.com/LizardByte/Sunshine/pull/5145)\n* chore(deps): update codecov/codecov-action action to v6.0.1 by [@renovate[bot]](https://github.com/apps/renovate) in [#5149](https://github.com/LizardByte/Sunshine/pull/5149)\n* fix(web): disconnect only the disabled client instead of all sessions by [@neatnoise](https://github.com/neatnoise) in [#5138](https://github.com/LizardByte/Sunshine/pull/5138)\n* chore(deps): update dependency marked to v18.0.4 by [@renovate[bot]](https://github.com/apps/renovate) in [#5151](https://github.com/LizardByte/Sunshine/pull/5151)\n* chore: rename copilot-instructions.md to AGENTS.md by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#5156](https://github.com/LizardByte/Sunshine/pull/5156)\n* fix(Windows-installer): move ViGEmBus to ThirdParty group by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#5157](https://github.com/LizardByte/Sunshine/pull/5157)\n* feat(rtsp): add option to limit packetsize for clients that cannot configure it by [@httpstorm](https://github.com/httpstorm) in [#5153](https://github.com/LizardByte/Sunshine/pull/5153)\n* feat(web-ui): Added Filtering & Searching to the Apps page by [@Noklef](https://github.com/Noklef) in [#5158](https://github.com/LizardByte/Sunshine/pull/5158)\n* build(deps): bump packaging/linux/flatpak/deps/flatpak-builder-tools from `dda10aa` to `ee65dc7` by [@dependabot[bot]](https://github.com/apps/dependabot) in [#5155](https://github.com/LizardByte/Sunshine/pull/5155)\n* chore(crowdin): set commit message by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#5160](https://github.com/LizardByte/Sunshine/pull/5160)\n* chore(l10n): update translations by [@LizardByte-bot](https://github.com/LizardByte-bot) in [#5161](https://github.com/LizardByte/Sunshine/pull/5161)\n* fix(web): the packetsize upper limit is 65535 by [@httpstorm](https://github.com/httpstorm) in [#5167](https://github.com/LizardByte/Sunshine/pull/5167)\n* chore(l10n): update translations by [@LizardByte-bot](https://github.com/LizardByte-bot) in [#5162](https://github.com/LizardByte/Sunshine/pull/5162)\n* chore(deps): update dependency date-fns to v4.3.0 by [@renovate[bot]](https://github.com/apps/renovate) in [#5172](https://github.com/LizardByte/Sunshine/pull/5172)\n* build(deps): bump packaging/linux/flatpak/deps/flatpak-builder-tools from `ee65dc7` to `96e2fe8` by [@dependabot[bot]](https://github.com/apps/dependabot) in [#5165](https://github.com/LizardByte/Sunshine/pull/5165)\n* chore(deps): update lizardbyte/actions action to v2026.522.121358 by [@renovate[bot]](https://github.com/apps/renovate) in [#5173](https://github.com/LizardByte/Sunshine/pull/5173)\n* fix(web-ui): add documentation link and version-aware URLs by [@ReenigneArcher](https://github.com/ReenigneArcher) in [#5176](https://github.com/L...",
+      "memory_unit_text": "In the LizardByte/Sunshine prerelease v2026.531.163415, the project includes dependency updates, fixes for macOS remote scroll input scaling, release automation fixes, disconnecting only the disabled client instead of all sessions, moving ViGEmBus to ThirdParty group in the Windows installer, adding an option to limit RTSP packet size, adding filtering and searching to the Apps page in the Web UI, and various translation and build updates."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the LizardByte/Sunshine releases, which release adds initial support for macOS?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.11.1"
+        },
+        {
+          "option_id": "B",
+          "text": "v0.12.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v0.13.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v0.14.0"
+        }
+      ],
+      "correct_option_id": "C",
+      "expected_answer": "v0.13.0",
+      "source_chunk_ids": [
+        "LizardByte__Sunshine__release__v0_13_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "LizardByte__Sunshine__release__v0_13_0",
+          "answer_text": "adds initial support for macOS"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the LizardByte/Sunshine releases, how does the security-related change in v0.17.0 differ from the security-related change in v0.18.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.17.0 fixes a Windows service security flaw where games ran as SYSTEM, while v0.18.0 contains critical security fixes and encourages users to change their Sunshine password."
+        },
+        {
+          "option_id": "B",
+          "text": "v0.17.0 adds HDR support, while v0.18.0 adds Intel QuickSync support."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only update dependencies without security changes."
+        },
+        {
+          "option_id": "D",
+          "text": "v0.17.0 removes automatic desktop entry, while v0.18.0 adds a cover finder."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v0.17.0 fixes a Windows service security flaw where games ran as SYSTEM, while v0.18.0 contains critical security fixes and encourages users to change their Sunshine password.",
+      "source_chunk_ids": [
+        "LizardByte__Sunshine__release__v0_17_0",
+        "LizardByte__Sunshine__release__v0_18_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "LizardByte__Sunshine__release__v0_17_0",
+          "answer_text": "addresses a security flaw on Windows where the binary was in a user-writable location and games ran as SYSTEM; now games run under the user account without elevated privileges"
+        },
+        {
+          "memory_node_id": "LizardByte__Sunshine__release__v0_18_0",
+          "answer_text": "contains critical security fixes and encourages users to change their Sunshine password"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the LizardByte/Sunshine release window, order the following release-content states from earliest to latest: (1) a release that adds a Flatpak package for Linux, (2) a release that adds AV1 encoding, (3) a release that adds YUV 4:4:4 encoding support for Intel and NVIDIA GPUs on Windows, (4) a release that adds Vulkan encoding on Linux.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "LizardByte__Sunshine__release__v0_14_1",
+        "LizardByte__Sunshine__release__v0_21_0",
+        "LizardByte__Sunshine__release__v2025_118_151840",
+        "LizardByte__Sunshine__release__v2026_516_143833"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "LizardByte__Sunshine__release__v0_14_1",
+          "answer_text": "adds a Flatpak package for Linux"
+        },
+        {
+          "memory_node_id": "LizardByte__Sunshine__release__v0_21_0",
+          "answer_text": "adds AV1 encoding"
+        },
+        {
+          "memory_node_id": "LizardByte__Sunshine__release__v2025_118_151840",
+          "answer_text": "YUV 4:4:4 encoding support for Intel and NVIDIA GPUs on Windows"
+        },
+        {
+          "memory_node_id": "LizardByte__Sunshine__release__v2026_516_143833",
+          "answer_text": "Vulkan encoding on Linux"
+        }
+      ]
+    }
+  ]
+}

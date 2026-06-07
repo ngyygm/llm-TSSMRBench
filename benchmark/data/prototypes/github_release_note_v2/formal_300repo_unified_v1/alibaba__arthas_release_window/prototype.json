@@ -1,0 +1,530 @@
+{
+  "prototype_id": "alibaba__arthas_release_window",
+  "domain": "github_release_evolution",
+  "repo": "alibaba/arthas",
+  "source_type": "release_note",
+  "window_title": "alibaba/arthas recent release evolution",
+  "window_summary": "This window tracks the recent alibaba/arthas release stream from version 3.6.1 through 4.2.0, covering new commands, dependency upgrades, bug fixes, and architectural changes such as the introduction of MCP support and profiler enhancements.",
+  "chunks": [
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_3_6_1",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-3.6.1",
+      "tag_name": "arthas-all-3.6.1",
+      "title": "arthas-all-3.6.1",
+      "time_hint": "2022-04-26",
+      "published_at": "2022-04-26T03:21:53Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-3.6.1",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-3.6.1\nTag: arthas-all-3.6.1; draft: False; prerelease: False; published_at: 2022-04-26T03:21:53Z; created_at: 2022-04-25T03:10:46Z\nRelease notes:\nIssues: https://github.com/alibaba/arthas/milestone/38?closed=1\n* #1528 #2156 trace 命令增加耗时百分比\n* #2141 #1865 #2119 http api not support vmtool command\n* #2148 jad失败时打印更多详细信息\n* #2151 #2153 HTTP Api return Sever Error for stack command, InaccessibleObjectException: accessible: module java.base does not \"opens java.lang\" to unnamed module\n* #2092 Arthas Spring Boot Starter 是否支持配置鉴权\n* #2009 #2159 monitor命令的-E选项报错 bug\n* #2152 通过 tunnel server连接时，如果watch命令输出结果过大，会导致连接断开，用户界面卡住 bug\n* #2136 tunnel server里的 xterm.js 需要同步修改",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-3.6.1, the trace command adds time-consuming percentage display, the HTTP API gains support for the vmtool command, jad prints more details on failure, stack command HTTP API returns Server Error due to InaccessibleObjectException, Arthas Spring Boot Starter supports authentication configuration, the monitor command -E option bug is fixed, large watch command output via tunnel server causes disconnection and UI freeze, and tunnel server xterm.js is synchronized."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_3_6_2",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-3.6.2",
+      "tag_name": "arthas-all-3.6.2",
+      "title": "arthas-all-3.6.2",
+      "time_hint": "2022-06-01",
+      "published_at": "2022-06-01T09:54:36Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-3.6.2",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-3.6.2\nTag: arthas-all-3.6.2; draft: False; prerelease: False; published_at: 2022-06-01T09:54:36Z; created_at: 2022-06-01T09:30:17Z\nRelease notes:\nIssues: https://github.com/alibaba/arthas/milestone/39?closed=1\n* #2171 多层trace时，百分比计算不对\n* #2173 展示 arthas-output 目录时，不要显示上级目录链接\n* upgrade fastjson to 1.2.83\n* #2188 Upgrade netty to 4.1.77.Final\n* #2186 Upgrade spring boot to 2.7.0",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-3.6.2, the percentage calculation for multi-layer trace is fixed, the arthas-output directory display no longer shows parent directory links, fastjson is upgraded to 1.2.83, netty is upgraded to 4.1.77.Final, and spring boot is upgraded to 2.7.0."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_3_6_3",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-3.6.3",
+      "tag_name": "arthas-all-3.6.3",
+      "title": "arthas-all-3.6.3",
+      "time_hint": "2022-06-13",
+      "published_at": "2022-06-13T07:23:02Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-3.6.3",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-3.6.3\nTag: arthas-all-3.6.3; draft: False; prerelease: False; published_at: 2022-06-13T07:23:02Z; created_at: 2022-06-13T06:36:17Z\nRelease notes:\nIssues: https://github.com/alibaba/arthas/milestone/40?closed=1\n* #2199 fastjosn使用 1.2.83_noneautotype 版本依赖",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-3.6.3, fastjson is updated to use the 1.2.83_noneautotype version dependency."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_3_6_4",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-3.6.4",
+      "tag_name": "arthas-all-3.6.4",
+      "title": "arthas-all-3.6.4",
+      "time_hint": "2022-07-30",
+      "published_at": "2022-07-30T09:43:46Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-3.6.4",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-3.6.4\nTag: arthas-all-3.6.4; draft: False; prerelease: False; published_at: 2022-07-30T09:43:46Z; created_at: 2022-07-30T08:40:33Z\nRelease notes:\nIssues: https://github.com/alibaba/arthas/milestone/41?closed=1\n* #2232 tunnel server默认不开启detail-pages\n* #2161 切换到基于vue press的全新文档系统",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-3.6.4, the tunnel server disables detail-pages by default, and the documentation system is switched to a new VuePress-based system."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_3_6_5",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-3.6.5",
+      "tag_name": "arthas-all-3.6.5",
+      "title": "arthas-all-3.6.5",
+      "time_hint": "2022-08-26",
+      "published_at": "2022-08-26T03:17:31Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-3.6.5",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-3.6.5\nTag: arthas-all-3.6.5; draft: False; prerelease: False; published_at: 2022-08-26T03:17:31Z; created_at: 2022-08-26T02:56:44Z\nRelease notes:\nIssues: https://github.com/alibaba/arthas/milestone/42?closed=1\n* #2262 Add jfr command\n* #2261 HTTP API返回对象支持类似 terminal 方式展示Object\n* #2202 Upgrade asm to 9.3, support Java 19\n* #2231 arthas网站支持DocSearch\n* #2249 当使用jdk11去 attach jdk8 应用时，会抛异常com.sun.tools.attach.AgentLoadException: 0 ，但实际上已经attach成功了\n* #2242 fix(docs): refactor sidebar\n* #2238 fix(docs): fix badge component\n* #2237 docs(plugin): fix page can not get version data\n* #2233 docs(style/plugin): add a version tag to the navbar and add the DocSearch plugin",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-3.6.5, a jfr command is added, the HTTP API returns objects in a terminal-like display, asm is upgraded to 9.3 supporting Java 19, the website supports DocSearch, an AgentLoadException when using JDK 11 to attach to JDK 8 applications is fixed, and various documentation fixes and enhancements are made including sidebar refactoring, badge component fix, version data retrieval, and addition of a version tag and DocSearch plugin."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_3_6_6",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-3.6.6",
+      "tag_name": "arthas-all-3.6.6",
+      "title": "arthas-all-3.6.6",
+      "time_hint": "2022-09-04",
+      "published_at": "2022-09-04T07:32:01Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-3.6.6",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-3.6.6\nTag: arthas-all-3.6.6; draft: False; prerelease: False; published_at: 2022-09-04T07:32:01Z; created_at: 2022-09-04T07:10:20Z\nRelease notes:\nIssues: https://github.com/alibaba/arthas/milestone/43?closed=1\n* #2269 logger命令容易抛出 NoClassDefFoundError: org/apache/logging/log4j/core/LoggerContext\n* #2166 有一些agent为了通配所有的java进程，会设置一个全局的 JAVA_TOOL_OPTIONS ，在as.sh/arthas-boot 里把这个变量打印并提示\n* #2270 chore(docs): adapted vuepress2 beta51",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-3.6.6, the logger command avoids NoClassDefFoundError for log4j LoggerContext, as.sh/arthas-boot prints and warns about global JAVA_TOOL_OPTIONS set by agents, and documentation is adapted to vuepress2 beta51."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_3_6_7",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-3.6.7",
+      "tag_name": "arthas-all-3.6.7",
+      "title": "arthas-all-3.6.7",
+      "time_hint": "2022-11-15",
+      "published_at": "2022-11-15T07:59:17Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-3.6.7",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-3.6.7\nTag: arthas-all-3.6.7; draft: False; prerelease: False; published_at: 2022-11-15T07:59:17Z; created_at: 2022-11-15T07:26:33Z\nRelease notes:\nIssues: https://github.com/alibaba/arthas/milestone/44?closed=1\n* #2318 #2325 #2328 #2304 #2302 #2292 New Web UI for arthas\n* #2331 chore(web ui):ref tunnel modules\n* #2329 fix issue: support ClassLoader#toString() for sc command.\n* #2342 在 wisp 的场景，执行 thread -n -1 会出错\n* #2320 HTTP API monitor command return timestamp\n* #2316 fix issue: packaging arthas-vmtool failed in 32-bit windows.\n* #2308 fix issue:sc command throws NPE.\n* #2289 当使用 ARTHAS_LIB_DIR 环境变量时，明确打印日志\n* #2286  fix: solved duplicate run addOldDocsContributors in same page",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-3.6.7, a new Web UI is introduced, tunnel modules are refactored, sc command supports ClassLoader#toString(), thread -n -1 error in wisp scenario is fixed, HTTP API monitor command returns timestamp, packaging arthas-vmtool on 32-bit Windows is fixed, sc command NPE is fixed, ARTHAS_LIB_DIR environment variable usage is logged, and duplicate run of addOldDocsContributors is fixed."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_3_6_8",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-3.6.8",
+      "tag_name": "arthas-all-3.6.8",
+      "title": "arthas-all-3.6.8",
+      "time_hint": "2023-04-19",
+      "published_at": "2023-04-19T15:58:20Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-3.6.8",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-3.6.8\nTag: arthas-all-3.6.8; draft: False; prerelease: False; published_at: 2023-04-19T15:58:20Z; created_at: 2023-04-19T11:50:58Z\nRelease notes:\nIssues: https://github.com/alibaba/arthas/milestone/45?closed=1\n* #2226 考虑使用QEMU支持编译vmtool linux aarch64 ，支持 linux arm64\n* #2443 补充针对linux系统的非主流架构的编译构建使用支持\n* #2444 利用github action 更新 vmtool lib\n* #2470  Upgrade asm to 9.5, support Java 21\n* #2350 classloader 命令支持高版本jdk 的 jdk.internal.loader.ClassLoaders$AppClassLoader\n* #2427 feat: 添加打断指定线程的功能\n* #2448 websocket idle time 从 60s 改为 10s\n* #2441 Update heapdump.md\n* #2468 Add -n command example to mbean commands\n* #2478 support build vmtool linux aarch64\n* #2432 Add http header connection close\n* #2353 doc(web ui):update document about introduction\n* #2378 watch/trace 等需要支持匹配到 class 的最大数量限制\n* #2385 Fix issue: make watch/trace/... cmds support a new option to controll the max number of matched class.\n* #2371 doc: 当jdk版本大于9时 perfcount命令提示增加相关的启动参数\n* #2412 fix the priority of environment properties\n* #2411 fix AnsiLog format NullPointerException\n* #2397 fix TelnetConsole#process() return status\n* #2399 fix attach doublecheck\n* #2347 perf(web ui): dashboard\n* #2344 fix(web ui):support relative paths\n* #2348 maven仓库上面的几乎所有的arthas项目的HomePage链接都是无效链接",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-3.6.8, QEMU is considered for compiling vmtool linux aarch64 to support linux arm64, build support for non-mainstream linux architectures is added, vmtool lib is updated via GitHub Actions, asm is upgraded to 9.5 supporting Java 21, classloader command supports high-version JDK AppClassLoader, a feature to interrupt specified threads is added, websocket idle time is changed from 60s to 10s, heapdump documentation is updated, mbean command examples are added, vmtool linux aarch64 build is supported, HTTP header connection close is added, Web UI documentation is updated, watch/trace commands support a maximum number of matched classes, perfcount command documentation adds startup parameters for JDK >9, environment properties priority is fixed, AnsiLog format NullPointerException is fixed, TelnetConsole process return status is fixed, attach doublecheck is fixed, Web UI dashboard performance is improved, Web UI supports relative paths, and invalid Maven repository homepage links are fixed."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_3_6_9",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-3.6.9",
+      "tag_name": "arthas-all-3.6.9",
+      "title": "arthas-all-3.6.9",
+      "time_hint": "2023-05-10",
+      "published_at": "2023-05-10T02:52:32Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-3.6.9",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-3.6.9\nTag: arthas-all-3.6.9; draft: False; prerelease: False; published_at: 2023-05-10T02:52:32Z; created_at: 2023-05-09T10:26:57Z\nRelease notes:\nIssues: https://github.com/alibaba/arthas/milestone/46?closed=1\n* #2481 为使用Alpine Linux作为Docker基础镜像的Java应用提供profiler命令支持\n* #2480 数据回报支持 agentId\n* #2505 upgrade async-profiler to v2.9\n* #2487 某些JDK执行 jps 命令会 core dump，在脚本里需要处理\n* #2485 改进arthas-vmtool 的编译支持，支持JDK 11，去掉多余的头文件等",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-3.6.9, profiler command support is added for Java applications using Alpine Linux as Docker base image, data reporting supports agentId, async-profiler is upgraded to v2.9, jps command core dump on certain JDKs is handled in scripts, and arthas-vmtool compilation support is improved for JDK 11 with removal of redundant header files."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_3_7_0",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-3.7.0",
+      "tag_name": "arthas-all-3.7.0",
+      "title": "arthas-all-3.7.0",
+      "time_hint": "2023-08-02",
+      "published_at": "2023-08-02T09:05:19Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-3.7.0",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-3.7.0\nTag: arthas-all-3.7.0; draft: False; prerelease: False; published_at: 2023-08-02T09:05:19Z; created_at: 2023-08-02T08:39:29Z\nRelease notes:\nIssues:  https://github.com/alibaba/arthas/milestone/48?closed=1\n* https://github.com/alibaba/arthas/issues/2572  tunnel-server detail-pages 页面支持自定义 port\n* https://github.com/alibaba/arthas/issues/2603 tunnel server 里的 SimpleHttpResponse 序列化增加白名单",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-3.7.0, the tunnel-server detail-pages support custom port configuration, and SimpleHttpResponse serialization in tunnel server adds a whitelist."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_3_7_1",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-3.7.1",
+      "tag_name": "arthas-all-3.7.1",
+      "title": "arthas-all-3.7.1",
+      "time_hint": "2023-08-24",
+      "published_at": "2023-08-24T12:32:49Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-3.7.1",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-3.7.1\nTag: arthas-all-3.7.1; draft: False; prerelease: False; published_at: 2023-08-24T12:32:49Z; created_at: 2023-08-24T12:13:19Z\nRelease notes:\nIssues: https://github.com/alibaba/arthas/milestone/49?closed=1\n* #2620 当 listen 0.0.0.0 时，默认生成随机密码，需要鉴权\n* #2633  修复在线教程，切换到 killercoda feat: update online tutorials, switch to killercoda",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-3.7.1, when listening on 0.0.0.0, a random password is generated by default requiring authentication, and online tutorials are fixed by switching to killercoda."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_3_7_2",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-3.7.2",
+      "tag_name": "arthas-all-3.7.2",
+      "title": "arthas-all-3.7.2",
+      "time_hint": "2024-01-02",
+      "published_at": "2024-01-02T14:06:57Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-3.7.2",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-3.7.2\nTag: arthas-all-3.7.2; draft: False; prerelease: False; published_at: 2024-01-02T14:06:57Z; created_at: 2024-01-02T10:43:14Z\nRelease notes:\nIssues: https://github.com/alibaba/arthas/milestone/50?closed=1\n* arthas-spring-boot-starter support spring boot3. #2524\n* upgrade spring-boot 2 to 2.7.15, spring boot 3 to 3.1.7\n* upgrade bytekit to 0.0.9 (#2775)\n* fix not use arthasHome when constructing ArthasAgent(#2544)\n* fix AnsiLog static init may error. #2740\n* sysenv/sysprop command sorted by key #2619 (#2652)\n* upgrade bytebuddy to 1.14.11\n* UserStat support agentId (#2501)",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-3.7.2, arthas-spring-boot-starter supports Spring Boot 3, spring-boot 2 is upgraded to 2.7.15 and spring-boot 3 to 3.1.7, bytekit is upgraded to 0.0.9, ArthasAgent construction uses arthasHome, AnsiLog static init error is fixed, sysenv/sysprop commands are sorted by key, bytebuddy is upgraded to 1.14.11, and UserStat supports agentId."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_4_0_0",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-4.0.0",
+      "tag_name": "arthas-all-4.0.0",
+      "title": "arthas-all-4.0.0",
+      "time_hint": "2024-08-12",
+      "published_at": "2024-08-12T08:39:13Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-4.0.0",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-4.0.0\nTag: arthas-all-4.0.0; draft: False; prerelease: False; published_at: 2024-08-12T08:39:13Z; created_at: 2024-08-12T07:40:18Z\nRelease notes:\nIssues: https://github.com/alibaba/arthas/milestone/47?closed=1\n要点：\n1. 4.0.0 之后只支持JDK8+，已支持 JDK 17/21/23\n2. 升级 jackson, fastjson2, ognl, netty, spring-boot 等依赖版本\n3. profiler 命令优化\n---\n* #2875 使用wisp时，报NPE错误\n* #2572 When Tunnel Server uses a custom port, the jump from the detail-pages to the agent console page fails.\n* #2498 升级到 fastjson2\n* #2659 logger 命令在jdk17的环境下无响应 bug\n* #2705 Tomcat CVE-2023-42795漏洞有升级计划嘛\n* #2740 AnsiLog 的 static 初始化可能抛出异常\n* #2611 升级 ognl 依赖版本\n* #2490 请升级一下依赖 jackson-databind 的版本\n* #2861 支持 jdk 22/23\n* #2835 Release netty ByteBuf after use\n* #2804 update DynamicCompiler add -g option for generate LocalVariableTable\n* #2736 Optimized the compilation speed of the memory compiler\n* #2710  update ognl website url\n* #2680 Bump zt-zip from 1.14 to 1.16\n* #2681 Bump spring-boot3 to 3.1.3 and spring-boot to 2.7.15\n* #2670 check directory for JadCommand and fix typos\n* #2658 优化识别重定向\n* #2661 Upgrade to JUnit 5\n* #2544 fix: agent-attach携带的arthasHome参数未生效 bug\n* #2663 Adjust time display accuracy to milliseconds\n* #2669  fix directory check for DumpClassCommand\n* #2662 Make thread id uniformly displayed in decimal format\n* #2652 feat: sysenv sorted by property key\n* #2646 jad命令优化\n* #2608 Async profiler api upgrade\n* #2573 Fix the page redirection issue of Arthas tunnel server #2572\n* #2566  print job output file\n* #2513 JDK17 ArthasAgent.attach Api Provider sun.tools.attach.LinuxAttachProvider not found bug",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-4.0.0, support is limited to JDK 8+ including JDK 17/21/23, dependencies such as jackson, fastjson2, ognl, netty, and spring-boot are upgraded, profiler command is optimized, NPE error with wisp is fixed, tunnel server custom port redirection to agent console is fixed, fastjson2 upgrade is performed, logger command unresponsiveness on JDK 17 is fixed, Tomcat CVE-2023-42795 upgrade plan is addressed, AnsiLog static initialization exception is fixed, ognl dependency is upgraded, jackson-databind version is upgraded, JDK 22/23 support is added, netty ByteBuf release after use is ensured, DynamicCompiler adds -g option for LocalVariableTable generation, memory compiler compilation speed is optimized, ognl website URL is updated, zt-zip is bumped from 1.14 to 1.16, spring-boot3 is bumped to 3.1.3 and spring-boot to 2.7.15, directory check for JadCommand is fixed, redirect recognition is optimized, JUnit 5 upgrade is performed, agent-attach arthasHome parameter not taking effect is fixed, time display accuracy is adjusted to milliseconds, directory check for DumpClassCommand is fixed, thread id is uniformly displayed in decimal format, sysenv is sorted by property key, jad command is optimized, async profiler API is upgraded, tunnel server page redirection issue is fixed, job output file is printed, and JDK17 ArthasAgent.attach API provider not found bug is fixed."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_3_7_3",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-3.7.3",
+      "tag_name": "arthas-all-3.7.3",
+      "title": "arthas-all-3.7.3",
+      "time_hint": "2024-09-14",
+      "published_at": "2024-09-14T08:38:57Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-3.7.3",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-3.7.3\nTag: arthas-all-3.7.3; draft: False; prerelease: False; published_at: 2024-09-14T08:38:57Z; created_at: 2024-09-14T08:18:58Z\nRelease notes:\nhttps://github.com/alibaba/arthas/issues?q=is%3Aclosed+milestone%3A3.7.3\n* #2900  在 arthas 3.x 版本的打包结果里，同时有 as.sh/as3.sh , arthas-boot.jar/arthas-boot3.jar ，保持兼容性\n* #2884 feat: restrict boot to use 3.x version and support website version switching",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-3.7.3, the 3.x packaging includes both as.sh/as3.sh and arthas-boot.jar/arthas-boot3.jar for compatibility, and boot is restricted to use 3.x version with website version switching support."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_4_0_1",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-4.0.1",
+      "tag_name": "arthas-all-4.0.1",
+      "title": "arthas-all-4.0.1",
+      "time_hint": "2024-09-14",
+      "published_at": "2024-09-14T09:21:06Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-4.0.1",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-4.0.1\nTag: arthas-all-4.0.1; draft: False; prerelease: False; published_at: 2024-09-14T09:21:06Z; created_at: 2024-09-14T08:59:50Z\nRelease notes:\nIssues: https://github.com/alibaba/arthas/milestone/51?closed=1\n* #2892 arthas-4.0.0执行ognl命令无效果\n* #2896 使用ognl更改日志信息失败\n* #2897 增强字节码时，没有正确判断 major version，导致 IllegalArgumentException: JSR/RET are not supported with computeFrames option\n* #2891 feat: website supports switching to v3.x and add notice for not supporting JDK 6/7",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-4.0.1, ognl command execution in 4.0.0 is fixed, ognl log level change failure is fixed, bytecode enhancement major version misjudgment causing IllegalArgumentException is fixed, and website supports switching to v3.x with a notice about not supporting JDK 6/7."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_4_0_2",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-4.0.2",
+      "tag_name": "arthas-all-4.0.2",
+      "title": "arthas-all-4.0.2",
+      "time_hint": "2024-10-17",
+      "published_at": "2024-10-17T08:58:41Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-4.0.2",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-4.0.2\nTag: arthas-all-4.0.2; draft: False; prerelease: False; published_at: 2024-10-17T08:58:41Z; created_at: 2024-10-17T08:37:01Z\nRelease notes:\nIssues: https://github.com/alibaba/arthas/milestone/53?closed=1\n* #2903 升级 async profiler 到 3.0\n* #2905 #2920 profiler 命令增加新选项 --wall 等\n* #2916 #2918  修复升级 netty 版本导致，下载火焰图失败",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-4.0.2, async profiler is upgraded to 3.0, profiler command adds new options such as --wall, and netty version upgrade causing flame graph download failure is fixed."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_4_0_3",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-4.0.3",
+      "tag_name": "arthas-all-4.0.3",
+      "title": "arthas-all-4.0.3",
+      "time_hint": "2024-11-13",
+      "published_at": "2024-11-13T10:02:02Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-4.0.3",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-4.0.3\nTag: arthas-all-4.0.3; draft: False; prerelease: False; published_at: 2024-11-13T10:02:02Z; created_at: 2024-11-13T09:24:59Z\nRelease notes:\nIssues: https://github.com/alibaba/arthas/milestone/54?closed=1\n* #2945 watch/trace 等补全 method 时，自动补全支持构造函数 <init>\n* #2936 quit 命令打印出提示，说明arthas仍在后台运行，执行 stop 才是彻底退出\n* #2941 修复 PackageInternalsFinder.fuse 在处理空包时（即自己没有类），会有 null 异常的问题\n* #2944 Revert \"优化识别重定向\" ，修复 watch等命令不支持构造函数 <init> 的问题",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-4.0.3, watch/trace command method completion supports constructor <init>, quit command prints a hint that Arthas is still running in background and stop is needed for full exit, PackageInternalsFinder.fuse null exception on empty packages is fixed, and a revert of redirect recognition optimization fixes watch commands not supporting constructor <init>."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_4_0_5",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-4.0.5",
+      "tag_name": "arthas-all-4.0.5",
+      "title": "arthas-all-4.0.5",
+      "time_hint": "2025-03-11",
+      "published_at": "2025-03-11T16:29:44Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-4.0.5",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-4.0.5\nTag: arthas-all-4.0.5; draft: False; prerelease: False; published_at: 2025-03-11T16:29:44Z; created_at: 2025-03-11T15:41:24Z\nRelease notes:\nIssues: https://github.com/alibaba/arthas/milestone/56?closed=1\n* #2997 使用 async-profiler nightly 版本 ，解决 jdk 21 crash 问题\n* #2961 #2987 profiler 命令需要增加测试，检查文档里的使用说明\n* #2962 使用profiler loop功能报错\n* #2952 SpyAPI.atEnter 可能抛出 ConcurrentModificationException\n* #2955 新版本 ognl 有一个 UseStricterInvocation 模块，默认开启，执行 ognl 表达式容易出现： cannot be called from within OGNL invokeMethod() under stricter invocation mode\n* #2957 解决abortProcess的并发问题\n* #2990 arthas打印的 main class 失效，在新版本jdk里获取失败\n* #2986 升级netty版本到 4.1.119.Final\n* #2968 某些 ClassLoader 实现调用 getURLs() 可能抛出异常，需要处理\n* 升级asm 到 9.7.1",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-4.0.5, async-profiler nightly version is used to fix JDK 21 crash, profiler command tests and documentation checks are added, profiler loop function error is fixed, SpyAPI.atEnter ConcurrentModificationException is fixed, new ognl UseStricterInvocation module causing invocation errors is addressed, abortProcess concurrency issue is fixed, main class printing failure on new JDK versions is fixed, netty is upgraded to 4.1.119.Final, ClassLoader getURLs() exception handling is added, and asm is upgraded to 9.7.1."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_4_1_0",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-4.1.0",
+      "tag_name": "arthas-all-4.1.0",
+      "title": "arthas-all-4.1.0",
+      "time_hint": "2025-10-15",
+      "published_at": "2025-10-15T02:39:40Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-4.1.0",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-4.1.0\nTag: arthas-all-4.1.0; draft: False; prerelease: False; published_at: 2025-10-15T02:39:40Z; created_at: 2025-10-14T16:08:45Z\nRelease notes:\nIssues: https://github.com/alibaba/arthas/milestone/57?closed=1\n重要功能：\n* [support mcp](https://github.com/alibaba/arthas/pull/3070)\n* [升级 asm 到 9.9 ，支持 jdk 25](https://github.com/alibaba/arthas/issues/3049)\n* [升级 async-profiler 到 4.1 ](https://github.com/alibaba/arthas/issues/3008)\n* [mallocTrim command to vmTool](https://github.com/alibaba/arthas/pull/3030)\n其它功能：\n* [Add the 'jcmd' command to replace 'jps'.](https://github.com/alibaba/arthas/pull/3057)\n* [命令行处理类名时，自动替换/为.](https://github.com/alibaba/arthas/pull/3017)\n* [fix bug of enum obj](https://github.com/alibaba/arthas/pull/3041)\n* [feat: jfr analyzer](https://github.com/alibaba/arthas/pull/3050)\n* [改进对 lambda 类的过滤，避免 UnmodifiableClassException](https://github.com/alibaba/arthas/issues/3010)\n* [使用 arthas-boot 时，可能会阻塞在查找 tcp 端口上](https://github.com/alibaba/arthas/issues/3007)\n* [arthas 启动时，可能会在获取版本号时卡住](https://github.com/alibaba/arthas/issues/3021)\nFull Changelog: https://github.com/alibaba/arthas/compare/arthas-all-4.0.5...arthas-all-4.1.0",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-4.1.0, MCP support is added, asm is upgraded to 9.9 supporting JDK 25, async-profiler is upgraded to 4.1, a mallocTrim command is added to vmTool, a jcmd command replaces jps, command line class name handling automatically replaces / with ., enum object bug is fixed, jfr analyzer is added, lambda class filtering is improved to avoid UnmodifiableClassException, arthas-boot may block on TCP port lookup, and Arthas startup may hang on version retrieval."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_4_1_1",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-4.1.1",
+      "tag_name": "arthas-all-4.1.1",
+      "title": "arthas-all-4.1.1",
+      "time_hint": "2025-10-23",
+      "published_at": "2025-10-23T09:51:51Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-4.1.1",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-4.1.1\nTag: arthas-all-4.1.1; draft: False; prerelease: False; published_at: 2025-10-23T09:51:51Z; created_at: 2025-10-23T08:33:29Z\nRelease notes:\n# Arthas 4.1.1 Release Notes\n**发布日期**: 2025-10-23\nArthas 4.1.1 是一个补丁版本，主要修复了通过远程 IP 访问时的认证失败问题。\n## 🐛 Bug 修复\n### 修复远程 IP 访问时的认证失败问题 (#3076)\n**问题描述**:\n在 4.1.0 版本中，当通过远程 IP 访问 Arthas Web Console 或 MCP Server 时，即使提供了正确的认证凭据，也会出现认证失败的情况。\n**根本原因**:\n`BasicHttpAuthenticatorHandler` 中的认证逻辑存在缺陷：\n- 已认证的 Subject 对象没有正确设置到 Channel 的 Attribute 中\n- 在 Session 中存在认证信息但 Channel Attribute 中缺失时，后续请求会重新触发认证流程\n- 远程连接场景下，本地 Principal 判断逻辑未能正确处理\n**修复内容**:\n1. **重构认证流程**: 将嵌套的 `if (msg instanceof HttpRequest)` 逻辑拆分为扁平化结构，提高代码可读性\n2. **提取公共方法**: 新增 `setAuthenticatedSubject()` 方法，统一处理 Subject 的设置逻辑\n3. **修复状态同步**: 确保 Subject 同时设置到 Channel Attribute 和 Session 中，保持状态一致性\n4. **改进会话处理**: 在从 Session 中恢复认证状态时，同步设置 Channel Attribute\n**影响范围**:\n- HTTP Basic Authentication\n- MCP Server Bearer/Basic Authentication\n- 远程 IP 访问场景\n**相关文件**:\n- `core/src/main/java/com/taobao/arthas/core/shell/term/impl/http/BasicHttpAuthenticatorHandler.java`\n**贡献者**: Zhang Yu (@3144550951)\n## 📝 文档更新\n- 更新 `CONTRIBUTING.md` 贡献指南\n## 📊 变更统计\n- **提交数**: 3\n- **文件变更**: 3 个文件\n- **代码行数**: +54 行新增, -41 行删除\n## 🔗 相关链接\n- **Pull Request**: #3076\n- **Issue 跟踪**: 修复远程 IP 访问认证失败问题\n- **提交范围**: arthas-all-4.1.0...arthas-all-4.1.1\n## ⬆️ 升级建议\n从 4.1.0 升级到 4.1.1：\n- 无需任何配置变更\n- 无 API 破坏性变更\n- 建议所有使用远程访问功能的用户升级\n## 📦 下载\n请访问 [GitHub Releases](https://github.com/alibaba/arthas/releases/tag/arthas-all-4.1.1) 下载最新版本。\n---\n**完整变更日志**: https://github.com/alibaba/arthas/compare/arthas-all-4.1.0...arthas-all-4.1.1",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-4.1.1, a patch version fixes authentication failure when accessing via remote IP, where the BasicHttpAuthenticatorHandler did not correctly set the authenticated Subject to the Channel Attribute, causing re-authentication on subsequent requests; the fix refactors authentication flow, extracts a setAuthenticatedSubject method, and ensures Subject is set in both Channel Attribute and Session."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_4_1_2",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-4.1.2",
+      "tag_name": "arthas-all-4.1.2",
+      "title": "arthas-all-4.1.2",
+      "time_hint": "2025-11-27",
+      "published_at": "2025-11-27T17:09:29Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-4.1.2",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-4.1.2\nTag: arthas-all-4.1.2; draft: False; prerelease: False; published_at: 2025-11-27T17:09:29Z; created_at: 2025-11-27T13:58:52Z\nRelease notes:\n# Arthas 4.1.2 Release Notes\n**发布日期**: 2025-11-27\n## 🚀 新特性 (Features)\n### 1. 用户追踪统计功能 ([#3087](https://github.com/alibaba/arthas/pull/3087))\n- 新增 `userId` 字段到 Session 接口\n- 支持从 HTTP 请求头 (`X-User-Id`) 和 URL 参数中提取 userId\n- 在所有命令执行路径中传递 userId（HTTP API、MCP Server、命令执行器）\n- 在 `session` 命令输出中显示 userId\n- 将 userId 包含在使用统计报告中\n### 2. MCP 协议升级至 2025-06-18 版本 ([#3084](https://github.com/alibaba/arthas/pull/3084))\n- 升级 MCP 协议版本，支持 elicitation 特性\n- 新增 `MCP-Protocol-Version` 支持\n- 增强 MCP Schema 定义（+566 行新增代码）\n- 新增 `ProtocolVersions` 类用于协议版本管理\n## 🐛 Bug 修复 (Bug Fixes)\n### 1. 修复 interrupt 状态判断问题 ([#3079](https://github.com/alibaba/arthas/pull/3079))\n- 修复当进程处于 `TERMINATED` 状态时，interrupt 操作应该成功的问题\n- 解决 `HttpApiHandler.processExecRequest` 在 job 状态为 TERMINATED 时的竞态条件\n### 2. 修复拼写错误 ([#3080](https://github.com/alibaba/arthas/pull/3080))\n- 修复文档和代码中的拼写错误\n## 📦 依赖升级 (Dependencies)\n- **Netty**: 升级至 `4.1.128.Final` ([#3085](https://github.com/alibaba/arthas/issues/3085))\n## 🔧 其他改进 (Other Changes)\n- 移除 Expert 文档内容（清理约 60 个过时的 expert 问答文档）\n- 升级 GitHub CodeQL Action 至 v3\n- 禁用 Java CodeQL 分析\n## 📊 变更统计\n- **文件变更**: 100 个文件\n- **新增行数**: +848\n- **删除行数**: -4,250\n## 👥 贡献者\n感谢以下贡献者对本版本的贡献：\n- hengyunabc (6 commits)\n- Yeaury (1 commit)\n- yande2011 (1 commit)\n- hzqnull (1 commit)\n---\n**完整变更日志**: [arthas-all-4.1.1...arthas-all-4.1.2](https://github.com/alibaba/arthas/compare/arthas-all-4.1.1...arthas-all-4.1.2)",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-4.1.2, user tracking statistics feature adds userId field to Session, extracted from HTTP header X-User-Id and URL parameters, passed through command execution paths, displayed in session command output, and included in usage statistics; MCP protocol is upgraded to 2025-06-18 version with elicitation support and ProtocolVersions class; interrupt status judgment is fixed for TERMINATED processes; spelling errors are fixed; Netty is upgraded to 4.1.128.Final; and outdated expert documentation is removed."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_4_1_3",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-4.1.3",
+      "tag_name": "arthas-all-4.1.3",
+      "title": "arthas-all-4.1.3",
+      "time_hint": "2025-12-08",
+      "published_at": "2025-12-08T02:47:49Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-4.1.3",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-4.1.3\nTag: arthas-all-4.1.3; draft: False; prerelease: False; published_at: 2025-12-08T02:47:49Z; created_at: 2025-12-08T02:16:20Z\nRelease notes:\n# Arthas 4.1.3 Release Notes\n**发布日期**: 2025-12-08\n## 概述\nArthas 4.1.3 版本主要对 MCP Server 进行了重大重构，提升了架构的可维护性和扩展性，同时修复了多个稳定性问题，并增强了 `watch`/`trace` 等核心命令的功能。\n## 🚀 新特性\n### MCP Server 架构重构\n- **重构 MCP Server 为 Streamable/Stateless 单服务架构** ([#3096](https://github.com/alibaba/arthas/pull/3096))\n- 简化了 MCP Server 的整体架构设计\n- 支持更灵活的部署方式\n### 功能增强\n- **watch/trace 命令支持 timeout 参数** ([#3089](https://github.com/alibaba/arthas/pull/3089))\n- 可设置命令执行超时时间，避免长时间阻塞\n- **enhance 命令支持 lazy 模式**\n- 延迟增强，提升灵活性\n### MCP 功能优化\n- **MCP 支持 Arthas 认证**：`McpStatelessServer` 支持 arthas auth 和 userId\n- **MCP 默认使用 ObjectView 格式**：提升输出可读性\n- **MCP watch/trace 工具 `numberOfExecutions` 默认值改为 1**\n- **MCP 默认超时时间调整为 30 秒**\n## 🐛 Bug 修复\n- **修复 SessionImpl 空值异常** ([#3094](https://github.com/alibaba/arthas/pull/3094))\n- 解决调用 `setForegroundJob(null)` 时的 NPE 问题\n- **修复 pom.xml 中 io.netty 依赖问题** ([#3090](https://github.com/alibaba/arthas/issues/3090), [#3092](https://github.com/alibaba/arthas/pull/3092))\n## 📦 依赖更新\n- Netty BOM 版本保持 4.1.128.Final\n- MCP SDK 版本: 0.17.0\n## 📊 统计信息\n- **提交数**: 14 commits\n- **文件变更**: 131 files changed\n- **代码变更**: +1,300 / -717 行\n## 👥 贡献者\n感谢以下贡献者对本版本的贡献：\n- hengyunabc (11 commits)\n- Yeaury (2 commits)\n- XiLeePapa (1 commit)",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-4.1.3, MCP Server is refactored to a Streamable/Stateless single-service architecture, watch/trace commands support a timeout parameter, enhance command supports lazy mode, MCP supports Arthas authentication and userId, MCP defaults to ObjectView format, MCP watch/trace numberOfExecutions defaults to 1, MCP default timeout is adjusted to 30 seconds, SessionImpl null exception on setForegroundJob(null) is fixed, and pom.xml io.netty dependency issue is fixed."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_4_1_4",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-4.1.4",
+      "tag_name": "arthas-all-4.1.4",
+      "title": "arthas-all-4.1.4",
+      "time_hint": "2025-12-29",
+      "published_at": "2025-12-29T06:21:28Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-4.1.4",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-4.1.4\nTag: arthas-all-4.1.4; draft: False; prerelease: False; published_at: 2025-12-29T06:21:28Z; created_at: 2025-12-29T05:13:08Z\nRelease notes:\n## Arthas 4.1.4 Release Notes\n**发布日期**: 2025-12-29\n### 🚀 新特性 (Features)\n#### MCP Server 增强\n- **新增 Profiler MCP 工具** - 支持通过 MCP 协议进行性能分析 (`profiler` 命令)\n- **新增 sc MCP 工具** - 支持通过 MCP 搜索类 ([#3107](https://github.com/alibaba/arthas/issues/3107))\n- **新增 sm MCP 工具** - 支持通过 MCP 搜索方法\n- **新增 options MCP 工具** - 支持通过 MCP 查看/修改全局选项\n- **新增 StopTool** - 支持通过 MCP 停止 Arthas\n- **MCP Server 默认使用 STREAMABLE 协议** - 改进 SSE 流式传输，keepalive 间隔 15s ([#3114](https://github.com/alibaba/arthas/issues/3114))\n- **新增 MCP 集成测试模块** (arthas-mcp-integration-test) ([#3115](https://github.com/alibaba/arthas/issues/3115))\n#### classloader 命令增强\n- **classloader 支持 `--url-classes` 选项** - 可以查看 URLClassLoader 加载的类来源 ([#3098](https://github.com/alibaba/arthas/issues/3098))\n### 🐛 Bug 修复 (Bug Fixes)\n#### 内存泄漏修复\n- **修复 Netty InternalThreadLocalMap ThreadLocal 泄漏问题** - 升级 termd 到 1.1.7.15 ([#1794](https://github.com/alibaba/arthas/issues/1794))\n- **修复 ThreadLocal ClassLoader 泄漏问题** - 改进 `ThreadLocalWatch` 实现\n#### MCP Server 修复\n- **修复 MCP last-event-id 请求返回 404 问题** ([#3118](https://github.com/alibaba/arthas/issues/3118))\n- **修复 mcp-keep-alive-scheduler 线程未停止问题**\n- **优化 MCP session 校验** - 防止 2 秒超时延迟\n#### 其他修复\n- **修复 json-format 输出时调用构造函数的问题** ([#3111](https://github.com/alibaba/arthas/issues/3111), [#3116](https://github.com/alibaba/arthas/pull/3116))\n- **修复 vmtool mallocTrim 问题** ([#3109](https://github.com/alibaba/arthas/issues/3109))\n### 📚 文档更新 (Documentation)\n- 修复 `tt` 命令文档中 `-t` 参数示例\n- 在 `stop` 命令文档中添加 `retransform` 相关说明\n- 更新 `classloader` 命令文档，添加 `--url-classes` 用法\n### 🔧 依赖升级 (Dependencies)\n| 依赖 | 旧版本 | 新版本 |\n|------|--------|--------|\n| termd-core | 1.1.7.14 | 1.1.7.15 |\n| mcp (新增) | - | 0.17.0 |\n### 📦 构建变更 (Build)\n- 新增 JDK 17+ profile，自动包含 arthas-mcp-integration-test 模块\n- 修复 build-vmtool.yaml 构建配置",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-4.1.4, MCP Server adds Profiler, sc, sm, options, and Stop tools, defaults to STREAMABLE protocol with 15s keepalive, adds MCP integration test module; classloader command adds --url-classes option; Netty InternalThreadLocalMap ThreadLocal leak is fixed by upgrading termd to 1.1.7.15; ThreadLocal ClassLoader leak is fixed; MCP last-event-id 404 and keep-alive scheduler thread not stopped are fixed; MCP session validation is optimized; json-format output calling constructor is fixed; vmtool mallocTrim issue is fixed; documentation updates for tt, stop, and classloader commands; and termd-core is upgraded to 1.1.7.15."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_4_1_5_qlexpress",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-4.1.5-qlexpress",
+      "tag_name": "arthas-all-4.1.5-qlexpress",
+      "title": "arthas-all-4.1.5-qlexpress",
+      "time_hint": "2026-01-09",
+      "published_at": "2026-01-09T14:44:15Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-4.1.5-qlexpress",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-4.1.5-qlexpress\nTag: arthas-all-4.1.5-qlexpress; draft: False; prerelease: True; published_at: 2026-01-09T14:44:15Z; created_at: 2026-01-09T14:39:21Z\nRelease notes:\narthas 里的表达式支持 qlexpress 。\n文档： https://github.com/alibaba/arthas/blob/qlexpress/site/docs/doc/qlexpress.md\n感谢 @taokan @DQinYuan 的支持。欢迎大家测试。",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-4.1.5-qlexpress, expression support for qlexpress is added, with documentation available, and thanks to contributors for testing."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_4_1_5",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-4.1.5",
+      "tag_name": "arthas-all-4.1.5",
+      "title": "arthas-all-4.1.5",
+      "time_hint": "2026-01-10",
+      "published_at": "2026-01-10T11:18:40Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-4.1.5",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-4.1.5\nTag: arthas-all-4.1.5; draft: False; prerelease: False; published_at: 2026-01-10T11:18:40Z; created_at: 2026-01-10T09:11:44Z\nRelease notes:\n# Arthas 4.1.5 Release Notes\n**发布日期**: 2026-01-10\n本次版本包含 15 个提交，主要新增堆内存分析功能、MCP viewfile 工具、ClassLoader 精确增强等重要特性。\n## 🚀 新特性 (Features)\n### 1. vmtool 新增堆内存分析功能 (#1915, #3122)\n> 感谢 @yuankong11\n新增两个强大的堆内存分析 action：\n**heapAnalyze** - 分析堆内存占用\n```bash\nvmtool --action heapAnalyze --classNum 5 --objectNum 3\n```\n- 从 GC Root 可达对象出发，统计各个类的实例数量与占用字节数\n- 输出占用最大的若干对象与类\n- 支持 `--classNum` 指定展示的类数量，`--objectNum` 指定展示的对象数量\n**referenceAnalyze** - 分析对象引用链\n```bash\nvmtool --action referenceAnalyze --className java.lang.String --objectNum 5 --backtraceNum 3\n```\n- 分析某个类的实例对象，输出占用最大的若干对象及其引用回溯链（从对象回溯到 GC Root）\n- 支持 `--backtraceNum` 参数指定回溯层数（-1 表示一直回溯到 root，0 表示不输出引用链）\n### 2. watch/trace/stack/tt/monitor 支持 ClassLoader Hash (#3120)\n所有增强类命令新增 `-c`/`--classloader` 参数，支持指定 ClassLoader 精确增强：\n```bash\nsc -d com.example.Foo\nwatch -c 3d4eac69 com.example.Foo bar '{params,returnObj}'\ntrace -c 3d4eac69 com.example.Foo bar\nstack -c 3d4eac69 com.example.Foo bar\n```\n- 解决同名类被多个 classloader 加载时的增强歧义问题\n- 可先用 `sc -d` 查看 classloader hash，再用 `-c` 指定\n### 3. MCP 新增 viewfile 工具 (#3121)\nMCP Server 新增文件查看工具，支持分段读取大文件：\n- 支持 cursor/offset 分段读取，避免一次性返回大量内容\n- 支持目录白名单配置（环境变量 `ARTHAS_MCP_VIEWFILE_ALLOWED_DIRS`）\n- 默认允许目录：arthas-output、`~/logs/`\n### 4. AnsiLog 可配置输出流 (#3128)\n- AnsiLog 支持自定义输出流配置，不再硬编码使用 System.out\n- 便于日志输出的灵活控制和重定向\n### 5. as-package.sh 支持 --fast 模式\n打包脚本新增 `--fast` 参数，支持快速打包模式，提升开发效率。\n## 🐛 Bug 修复 (Bug Fixes)\n### 1. 修复 MCP 禁用时访问 arthas-output 的空指针异常 (#3127)\n修复当 MCP 功能禁用时，访问 arthas-output 目录会抛出 NullPointerException 的问题。\n## 📦 依赖更新 (Dependencies)\n- 升级 byte-buddy 依赖至 1.18.3 版本\n## 🔧 工程改进 (Engineering)\n### 1. 新增 Telnet 停止泄漏集成测试 (#3125)\n- 新增 telnet-stop-leak 测试目录\n- 包含自动化测试脚本和 expect 脚本\n- 新增 GitHub Actions 工作流支持\n### 2. MCP 集成测试增强\n- 新增 profiler 和 viewfile 工具的集成测试\n- 新增 ViewFileToolTest 单元测试\n### 3. EnhancerTest 修复与增强\n- 修复 EnhancerTest 测试用例\n- 新增 ClassLoader hash 增强相关测试\n---\n## 相关 Issue\n- #1915 - vmtool 堆内存分析功能\n- #3120 - watch/trace 支持 classloader hash\n- #3121 - MCP viewfile 工具\n- #3122 - vmtool heap analyzer 实现\n- #3125 - 集成测试\n- #3127 - 修复 NullPointerException\n- #3128 - AnsiLog 可配置输出流",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-4.1.5, vmtool adds heap memory analysis actions heapAnalyze and referenceAnalyze; watch/trace/stack/tt/monitor commands support ClassLoader hash with -c/--classloader parameter; MCP adds viewfile tool with cursor/offset reading and directory whitelist; AnsiLog supports configurable output stream; as-package.sh supports --fast mode; MCP disabled access to arthas-output NullPointerException is fixed; byte-buddy is upgraded to 1.18.3; Telnet stop leak integration test is added; MCP integration tests for profiler and viewfile are added; and EnhancerTest is fixed and enhanced."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_4_1_6",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-4.1.6",
+      "tag_name": "arthas-all-4.1.6",
+      "title": "arthas-all-4.1.6",
+      "time_hint": "2026-03-05",
+      "published_at": "2026-03-05T02:26:33Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-4.1.6",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-4.1.6\nTag: arthas-all-4.1.6; draft: False; prerelease: False; published_at: 2026-03-05T02:26:33Z; created_at: 2026-03-05T02:19:19Z\nRelease notes:\n## 变更概览\n- feat: Add object-size-limit GlobalOptions for ObjectView ([#3147](https://github.com/alibaba/arthas/pull/3147))\n- feat(http api): `retransfrom` 命令增加增强的 id 返回 ([#3143](https://github.com/alibaba/arthas/pull/3143))\n- fix(mcp): `watch`/`tt` 支持 `-M/--sizeLimit` ([#3144](https://github.com/alibaba/arthas/pull/3144))\n- feat: profiler 输出支持 Markdown 报告生成\n- feat: 正则表达式编译缓存功能，提升相关场景性能 ([#3131](https://github.com/alibaba/arthas/pull/3131))\n- fix: 修复并发输出串扰问题 ([#3133](https://github.com/alibaba/arthas/pull/3133))\n## 依赖升级\n- upgrade bytekit to 0.1.6, asm to 9.9.1\n- upgrade netty to 4.1.130.Final\n## 其他改动\n- add `.github/workflows/sync-to-gitee.yaml` ([#3137](https://github.com/alibaba/arthas/pull/3137))\n## 对比\n- https://github.com/alibaba/arthas/compare/arthas-all-4.1.5...arthas-all-4.1.6",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-4.1.6, GlobalOptions adds object-size-limit for ObjectView, HTTP API retransform command returns enhancement id, MCP watch/tt support -M/--sizeLimit, profiler output supports Markdown report generation, regex compilation cache is added for performance, concurrent output crosstalk is fixed, bytekit is upgraded to 0.1.6, asm to 9.9.1, netty to 4.1.130.Final, and a sync-to-gitee workflow is added."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_4_1_7",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-4.1.7",
+      "tag_name": "arthas-all-4.1.7",
+      "title": "arthas-all-4.1.7",
+      "time_hint": "2026-03-05",
+      "published_at": "2026-03-05T08:28:02Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-4.1.7",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-4.1.7\nTag: arthas-all-4.1.7; draft: False; prerelease: False; published_at: 2026-03-05T08:28:02Z; created_at: 2026-03-05T08:16:50Z\nRelease notes:\n## 变更概览\n- feat: upgrade async-profiler to 4.3.0\n## 对比\n- https://github.com/alibaba/arthas/compare/arthas-all-4.1.6...arthas-all-4.1.7",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-4.1.7, async-profiler is upgraded to 4.3.0."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_4_1_8",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-4.1.8",
+      "tag_name": "arthas-all-4.1.8",
+      "title": "arthas-all-4.1.8",
+      "time_hint": "2026-03-09",
+      "published_at": "2026-03-09T06:31:40Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-4.1.8",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-4.1.8\nTag: arthas-all-4.1.8; draft: False; prerelease: False; published_at: 2026-03-09T06:31:40Z; created_at: 2026-03-09T06:27:36Z\nRelease notes:\n## 变更概览\n- fix: 修复 `ProcessImpl` 并发场景下 `processStatus` 可见性问题，并补充并发测试，见 #3149\n- feat: 新增 `skills` 文档，包含 `cpu-high`、`eagleeye-traceid`、`spring-context`\n## 对比\n- https://github.com/alibaba/arthas/compare/arthas-all-4.1.7...arthas-all-4.1.8",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-4.1.8, ProcessImpl concurrency visibility issue of processStatus is fixed with concurrent tests added, and skills documentation including cpu-high, eagleeye-traceid, and spring-context is added."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_4_1_9",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-4.1.9",
+      "tag_name": "arthas-all-4.1.9",
+      "title": "arthas-all-4.1.9",
+      "time_hint": "2026-05-09",
+      "published_at": "2026-05-09T08:28:52Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-4.1.9",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-4.1.9\nTag: arthas-all-4.1.9; draft: False; prerelease: False; published_at: 2026-05-09T08:28:52Z; created_at: 2026-05-09T07:50:33Z\nRelease notes:\n## 变更概览\n- feat: 新增 `classloader-metaspace` 命令，支持按 ClassLoader 实例统计 metaspace / class metadata 内存，见 #3188\n- feat: MCP Server 支持 task 模式，支持长时间工具调用的异步执行、查询/取消，并限制并发 task session，见 #3140 #3182 #3185\n- feat: 支持从启动 jar 加载外部命令，并补充外部命令集成测试，见 #3177\n- feat: `grep` 命令新增 `-c, --count` 选项，只输出匹配行数\n- feat: 新增 `loongarch64` 平台支持，见 #3164\n- fix: 修复 Arthas 启动时 `main_class` 展示额外参数的问题，见 #3150\n- fix: 修复 `tt` 列出 fragments 时可能出现 NPE 的问题，见 #3171\n- fix: `vmtool` 支持 `Object[]` 这类数组 className 写法，见 #3178\n- chore: 升级 Tunnel Server 到 Spring Boot 3.5 / 3.5.14，升级 Netty，Docker 基础镜像切换到 Eclipse Temurin，见 #3173 #3179 #3181 #3158\n- docs: 更新 MCP Server、vmtool、retransform 等文档，见 #3151 #3155 #3159\n## 对比\n- https://github.com/alibaba/arthas/compare/arthas-all-4.1.8...arthas-all-4.1.9",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-4.1.9, a classloader-metaspace command is added for per-ClassLoader metaspace/class metadata memory statistics; MCP Server supports task mode for asynchronous execution, query/cancel of long-running tool calls, and limits concurrent task sessions; external commands can be loaded from startup jar with integration tests; grep command adds -c/--count option; loongarch64 platform support is added; Arthas startup main_class display of extra parameters is fixed; tt listing fragments NPE is fixed; vmtool supports Object[] array className; Tunnel Server is upgraded to Spring Boot 3.5/3.5.14, Netty is upgraded, Docker base image switches to Eclipse Temurin; and documentation for MCP Server, vmtool, retransform is updated."
+    },
+    {
+      "memory_node_id": "alibaba__arthas__release__arthas_all_4_2_0",
+      "repo": "alibaba/arthas",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:arthas-all-4.2.0",
+      "tag_name": "arthas-all-4.2.0",
+      "title": "arthas-all-4.2.0",
+      "time_hint": "2026-05-25",
+      "published_at": "2026-05-25T18:04:59Z",
+      "source_url": "https://github.com/alibaba/arthas/releases/tag/arthas-all-4.2.0",
+      "raw_text": "Repository: alibaba/arthas\nRelease: arthas-all-4.2.0\nTag: arthas-all-4.2.0; draft: False; prerelease: False; published_at: 2026-05-25T18:04:59Z; created_at: 2026-05-25T18:00:17Z\nRelease notes:\n## 变更概览\n- feat: `profiler` 升级内置 async-profiler 到 4.4，移除已废弃的 `check` action，并将 `--cstack` 可选值更新为 `fp|dwarf|vm|vmx|no`，修复 Zing JVM 崩溃相关问题，见 #3186 #3199\n- chore: 默认 session timeout 从 30 分钟延长到 3 小时，覆盖 `as.sh`、`arthas.properties` 和 Shell Server 默认值\n- fix: 修复 `classloader-metaspace` 在 JFR loader id 缺失时对 hidden class / array class 计数不一致导致的 ClassLoader 映射失败，并降低诊断日志噪音，见 #3198\n- fix: 修复 MCP Server stop 时 graceful close 可能无限等待的问题，关闭各组件增加 5 秒超时并继续清理 task executor，见 #3194\n- fix: 修复 MCP Streamable HTTP 响应关闭连接但未发送 `Connection: close` 导致客户端复用已关闭连接、集成测试偶发失败的问题，见 #3200\n- chore: 移除已废弃的 `--use-http` 下载选项，`repo-mirror` 继续支持 aliyun / center / HTTP repository URL，下载默认使用 HTTPS，见 #3189\n- chore: release 流水线使用 JDK 21 构建 Tunnel Server fatjar，并要求 release asset 匹配成功，见 #3192\n- docs: 更新 Arthas 4.x 支持 JDK 8+（含 JDK 17 / 21 / 25）的说明，并补充 `classloader-metaspace`、AI/MCP 文档侧边栏入口，见 #3195\n## 对比\n- https://github.com/alibaba/arthas/compare/arthas-all-4.1.9...arthas-all-4.2.0",
+      "memory_unit_text": "In the alibaba/arthas release arthas-all-4.2.0, profiler upgrades built-in async-profiler to 4.4, removes deprecated check action, updates --cstack options to fp|dwarf|vm|vmx|no, and fixes Zing JVM crash; default session timeout is extended from 30 minutes to 3 hours; classloader-metaspace JFR loader id missing mapping failure is fixed and diagnostic log noise reduced; MCP Server stop graceful close infinite wait is fixed with 5-second timeout; MCP Streamable HTTP response missing Connection: close header causing client reuse of closed connection is fixed; deprecated --use-http download option is removed; release pipeline uses JDK 21 to build Tunnel Server fatjar; and documentation updates clarify JDK 8+ support including JDK 17/21/25 and add classloader-metaspace and AI/MCP documentation sidebar entries."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the alibaba/arthas releases, which release adds the jfr command and upgrades asm to 9.3 to support Java 19?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "arthas-all-3.6.5"
+        },
+        {
+          "option_id": "B",
+          "text": "arthas-all-3.6.7"
+        },
+        {
+          "option_id": "C",
+          "text": "arthas-all-3.6.8"
+        },
+        {
+          "option_id": "D",
+          "text": "arthas-all-4.0.0"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "arthas-all-3.6.5",
+      "source_chunk_ids": [
+        "alibaba__arthas__release__arthas_all_3_6_5"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "alibaba__arthas__release__arthas_all_3_6_5",
+          "answer_text": "a jfr command is added, asm is upgraded to 9.3 supporting Java 19"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the alibaba/arthas releases, how does the profiler-related change in arthas-all-4.0.2 differ from the profiler-related change in arthas-all-4.2.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "4.0.2 upgrades async profiler to 3.0 and adds --wall option, while 4.2.0 upgrades async-profiler to 4.4, removes check action, and updates --cstack options."
+        },
+        {
+          "option_id": "B",
+          "text": "4.0.2 removes profiler command, while 4.2.0 adds profiler command."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only fix profiler documentation without functional changes."
+        },
+        {
+          "option_id": "D",
+          "text": "4.0.2 downgrades async profiler to 2.9, while 4.2.0 upgrades to 3.0."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "4.0.2 upgrades async profiler to 3.0 and adds --wall option, while 4.2.0 upgrades async-profiler to 4.4, removes check action, and updates --cstack options.",
+      "source_chunk_ids": [
+        "alibaba__arthas__release__arthas_all_4_0_2",
+        "alibaba__arthas__release__arthas_all_4_2_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "alibaba__arthas__release__arthas_all_4_0_2",
+          "answer_text": "async profiler is upgraded to 3.0, profiler command adds new options such as --wall"
+        },
+        {
+          "memory_node_id": "alibaba__arthas__release__arthas_all_4_2_0",
+          "answer_text": "profiler upgrades built-in async-profiler to 4.4, removes deprecated check action, updates --cstack options to fp|dwarf|vm|vmx|no"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the alibaba/arthas release window, order the following release-content states from earliest to latest: (1) a release that adds MCP support and upgrades asm to 9.9 for JDK 25, (2) a release that adds a jfr command and upgrades asm to 9.3 for Java 19, (3) a release that upgrades async-profiler to 4.3.0, (4) a release that refactors MCP Server to a Streamable/Stateless single-service architecture and adds timeout parameter to watch/trace.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2 -> 1 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 3 -> 1 -> 4"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 2 -> 4 -> 3"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 2 -> 1 -> 3"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2 -> 1 -> 3 -> 4",
+      "source_chunk_ids": [
+        "alibaba__arthas__release__arthas_all_3_6_5",
+        "alibaba__arthas__release__arthas_all_4_1_0",
+        "alibaba__arthas__release__arthas_all_4_1_7",
+        "alibaba__arthas__release__arthas_all_4_1_3"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "alibaba__arthas__release__arthas_all_3_6_5",
+          "answer_text": "a jfr command is added, asm is upgraded to 9.3 supporting Java 19"
+        },
+        {
+          "memory_node_id": "alibaba__arthas__release__arthas_all_4_1_0",
+          "answer_text": "MCP support is added, asm is upgraded to 9.9 supporting JDK 25"
+        },
+        {
+          "memory_node_id": "alibaba__arthas__release__arthas_all_4_1_7",
+          "answer_text": "async-profiler is upgraded to 4.3.0"
+        },
+        {
+          "memory_node_id": "alibaba__arthas__release__arthas_all_4_1_3",
+          "answer_text": "MCP Server is refactored to a Streamable/Stateless single-service architecture, watch/trace commands support a timeout parameter"
+        }
+      ]
+    }
+  ]
+}

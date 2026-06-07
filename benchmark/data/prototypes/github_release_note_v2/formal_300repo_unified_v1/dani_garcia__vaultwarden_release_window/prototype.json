@@ -1,0 +1,530 @@
+{
+  "prototype_id": "dani_garcia__vaultwarden_release_window",
+  "domain": "github_release_evolution",
+  "repo": "dani-garcia/vaultwarden",
+  "source_type": "release_note",
+  "window_title": "dani-garcia/vaultwarden recent release evolution",
+  "window_summary": "This window tracks the recent dani-garcia/vaultwarden release stream from version 1.30.2 through 1.36.0, covering security fixes, web-vault updates, native mobile app support, SSO integration, and various feature enhancements.",
+  "chunks": [
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_30_2",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.30.2",
+      "tag_name": "1.30.2",
+      "title": "1.30.2",
+      "time_hint": "2024-01-30",
+      "published_at": "2024-01-30T20:25:14Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.30.2",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.30.2\nTag: 1.30.2; draft: False; prerelease: False; published_at: 2024-01-30T20:25:14Z; created_at: 2024-01-30T18:15:37Z\nRelease notes:\n⚠️ **Note:** The WebSockets service for live sync has been integrated in the main HTTP server, which means simpler proxy setups that don't require a separate rule to redirect WS traffic to port 3012. Please check the updated examples in the [wiki](https://github.com/dani-garcia/vaultwarden/wiki/Proxy-examples). It's recommended to migrate to this new setup as using the old server on port 3012 is deprecated, won't receive new features and will be removed in the next release.\n## What's Changed\n* Prevent generating an error during ws close by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4127\n* Update Rust, Crates, Profile and Actions by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4126\n* Several small fixes for open issues by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4143\n* Fix the version string by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4153\n* Decrease JWT Refresh/Auth token by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4163\n* Update crates by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4173\n* Add additional build target which optimizes for size by @gladiac in https://github.com/dani-garcia/vaultwarden/pull/4096\n* Update web-vault to v2023.12.0 by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4201\n* Update Rust and Crates by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4211\n* Fix Single Org Policy check by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4207\n* Allow customizing the featureStates by @PKizzle in https://github.com/dani-garcia/vaultwarden/pull/4168\n* Fix #3413: push to users accessing the collections using groups by @matlink in https://github.com/dani-garcia/vaultwarden/pull/3757\n* US or EU Data Region Selection by @toto-xoxo in https://github.com/dani-garcia/vaultwarden/pull/3752\n* enforce 2FA policy on removal of second factor and login by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/3803\n* improve emergency access when not enabled by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/4227\n* Update crates and fix icon issue by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4237\n* Bump h2 from 0.3.23 to 0.3.24 by @dependabot in https://github.com/dani-garcia/vaultwarden/pull/4260\n* Fix bulk collection deletion by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4257\n* fix: use black text for update badge (better contrast) by @tessus in https://github.com/dani-garcia/vaultwarden/pull/4245\n* prevent side effects if groups are disabled by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/4265\n* Update crates, web-vault to 2024.1.2 and GHA by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4275\n* Return 404 when user public_key is empty by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/4271\n* Improve file limit handling by @dani-garcia in https://github.com/dani-garcia/vaultwarden/pull/4242\n* Fix attachment upload size check by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4282\n* err on invalid feature flag by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/4263\n* register missing push devices at login by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/3792\n* Update env template file by @gzfrozen in https://github.com/dani-garcia/vaultwarden/pull/4276\n## New Contributors\n* @gladiac made their first contribution in https://github.com/dani-garcia/vaultwarden/pull/4096\n* @PKizzle made their first contribution in https://github.com/dani-garcia/vaultwarden/pull/4168\n* @matlink made their first contribution in https://github.com/dani-garcia/vaultwarden/pull/3757\n* @toto-xoxo made their first contribution in https://github.com/dani-garcia/vaultwarden/pull/3752\n*...",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.30.2, the WebSockets service for live sync is integrated into the main HTTP server, simplifying proxy setups by removing the need for a separate rule to redirect WS traffic to port 3012. The release updates the web-vault to v2023.12.0, adds a build target optimized for size, allows customizing featureStates, enforces 2FA policy on removal of second factor and login, improves emergency access when not enabled, fixes bulk collection deletion, and includes various dependency updates and small fixes."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_30_3",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.30.3",
+      "tag_name": "1.30.3",
+      "title": "1.30.3",
+      "time_hint": "2024-02-01",
+      "published_at": "2024-02-01T22:18:33Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.30.3",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.30.3\nTag: 1.30.3; draft: False; prerelease: False; published_at: 2024-02-01T22:18:33Z; created_at: 2024-01-31T21:31:47Z\nRelease notes:\nThis is a minor release to fix some issues with push notification device registration and docker healthcheck.\n⚠️ **Note:** The WebSockets service for live sync has been integrated in the main HTTP server, which means simpler proxy setups that don't require a separate rule to redirect WS traffic to port 3012. Please check the updated examples in the [wiki](https://github.com/dani-garcia/vaultwarden/wiki/Proxy-examples). It's recommended to migrate to this new setup as using the old server on port 3012 is deprecated, won't receive new features and will be removed in the next release.\n## What's Changed\n* fix push device registration by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/4297\n* Fix healthcheck when using .env file by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4299\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.30.2...1.30.3",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.30.3, a minor release fixes push notification device registration and resolves a Docker healthcheck issue when using a .env file. The WebSockets service remains integrated into the main HTTP server, with the old port 3012 deprecated."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_30_4",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.30.4",
+      "tag_name": "1.30.4",
+      "title": "1.30.4",
+      "time_hint": "2024-03-02",
+      "published_at": "2024-03-02T13:17:59Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.30.4",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.30.4\nTag: 1.30.4; draft: False; prerelease: False; published_at: 2024-03-02T13:17:59Z; created_at: 2024-02-25T22:26:46Z\nRelease notes:\n⚠️ Note: The WebSockets service for live sync has been integrated in the main HTTP server, which means simpler proxy setups that don't require a separate rule to redirect WS traffic to port 3012. Please check the updated examples in the [wiki](https://github.com/dani-garcia/vaultwarden/wiki/Proxy-examples). It's recommended to migrate to this new setup as using the old server on port 3012 is deprecated, won't receive new features and will be removed in the next release.\n## What's Changed\n* Update crates to fix new builds by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4308\n* Add Kubernetes environment detection by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4290\n* Update GHA Workflows by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4309\n* Update Rust, crates and web-vault by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4328\n* Change the codegen-units for low resources by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4336\n* Fix env templateto ensure compatibility with systemd's EnvironmentFile parsing by @seiuneko in https://github.com/dani-garcia/vaultwarden/pull/4315\n* Update crates, GHA and a Python script by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4357\n## New Contributors\n* @seiuneko made their first contribution in https://github.com/dani-garcia/vaultwarden/pull/4315\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.30.3...1.30.4",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.30.4, the project updates crates to fix new builds, adds Kubernetes environment detection, updates GHA workflows, changes codegen-units for low resources, fixes the env template for systemd compatibility, and updates Rust, crates, and web-vault."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_30_5",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.30.5",
+      "tag_name": "1.30.5",
+      "title": "1.30.5",
+      "time_hint": "2024-03-02",
+      "published_at": "2024-03-02T19:30:21Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.30.5",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.30.5\nTag: 1.30.5; draft: False; prerelease: False; published_at: 2024-03-02T19:30:21Z; created_at: 2024-03-02T18:40:13Z\nRelease notes:\n## What's Changed\n* fix: web API call for jquery 3.7.1 by @calvin-li-developer in https://github.com/dani-garcia/vaultwarden/pull/4400\n## New Contributors\n* @calvin-li-developer made their first contribution in https://github.com/dani-garcia/vaultwarden/pull/4400\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.30.4...1.30.5",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.30.5, a fix is applied for a web API call related to jquery 3.7.1."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_31_0",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.31.0",
+      "tag_name": "1.31.0",
+      "title": "1.31.0",
+      "time_hint": "2024-07-08",
+      "published_at": "2024-07-08T21:58:48Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.31.0",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.31.0\nTag: 1.31.0; draft: False; prerelease: False; published_at: 2024-07-08T21:58:48Z; created_at: 2024-07-08T21:39:22Z\nRelease notes:\n## Major changes and New Features\n* Initial support for the beta releases of the new native mobile apps\n* Removed support for WebSocket traffic on port 3012, as it's been integrated on the main HTTP port for a few releases\n* Updated included web vault to 2024.5.1\n## General mention\nBitwarden has changed the push API endpoints which affects the EU region endpoint users.\nSo if you use the push functionality and use the EU region you need to make some changes.\nYou have to update `push.bitwarden.eu` to `api.bitwarden.eu`.\nThis is also an issue with any previous version of Vaultwarden.\n## What's Changed\n* chore: remove repetitive words by @one230six in https://github.com/dani-garcia/vaultwarden/pull/4422\n* Fix comment in events.rs by @KrappRamiro in https://github.com/dani-garcia/vaultwarden/pull/4408\n* Improve JWT RSA key initialization and avoid saving public key by @dani-garcia in https://github.com/dani-garcia/vaultwarden/pull/4085\n* Remove custom WebSocket code by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4001\n* refactor: replace panic with a graceful exit by @tessus in https://github.com/dani-garcia/vaultwarden/pull/4402\n* Small improvements around email change by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/4415\n* Change timestamp data type. by @gzfrozen in https://github.com/dani-garcia/vaultwarden/pull/4355\n* Fix #3624: fix manager permission within groups by @matlink in https://github.com/dani-garcia/vaultwarden/pull/3754\n* automatically use email address as 2fa provider by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/4317\n* fix: typos by @testwill in https://github.com/dani-garcia/vaultwarden/pull/4440\n* Update chrono and sqlite by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4436\n* Update Rust and crates by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4445\n* Use async verify for Yubikey by @dani-garcia in https://github.com/dani-garcia/vaultwarden/pull/4448\n* update web-vault to v2024.3.1 (new vertical layout) by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/4468\n* Update crates and some Clippy fixes by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4475\n* Update Key Rotation web-vault v2024.3.x by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4446\n* Update Crate and Rust by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4522\n* Implement custom DNS resolver by @dani-garcia in https://github.com/dani-garcia/vaultwarden/pull/3988\n* Add extra (unsupported) container build arch's by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4524\n* Pass in collection ids to notifier when sharing cipher. by @kristof-mattei in https://github.com/dani-garcia/vaultwarden/pull/4517\n* improve access to collections via groups by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/4441\n* fix emergency access invites by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/4337\n* Some fixes for the new mobile apps by @dani-garcia in https://github.com/dani-garcia/vaultwarden/pull/4526\n* Update Rust, crates and web-vault by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4558\n* Improve Commentary Aesthetics by @rich-purnell in https://github.com/dani-garcia/vaultwarden/pull/4549\n* Optimize Dockerfiles by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/4532\n* also delete organization_api_key when deleting organizations by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/4557\n* Fix public api for domains with path prefix by @FDHoho007 in https://github.com/dani-garcia/vaultwarden/pull/4500\n* Update crates by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4587\n* Fix web-vault version in Docker(files/Settings) by @dfunkt in https://github.com/dani-...",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.31.0, initial support is added for beta releases of new native mobile apps, support for WebSocket traffic on port 3012 is removed, and the included web vault is updated to 2024.5.1. The release also notes that Bitwarden changed push API endpoints affecting EU region users, requiring an update from push.bitwarden.eu to api.bitwarden.eu. Other changes include JWT RSA key initialization improvements, removal of custom WebSocket code, timestamp data type changes, manager permission fixes within groups, automatic email address as 2FA provider, async Yubikey verification, custom DNS resolver implementation, and various dependency updates."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_32_0",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.32.0",
+      "tag_name": "1.32.0",
+      "title": "1.32.0",
+      "time_hint": "2024-08-11",
+      "published_at": "2024-08-11T19:40:35Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.32.0",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.32.0\nTag: 1.32.0; draft: False; prerelease: False; published_at: 2024-08-11T19:40:35Z; created_at: 2024-08-11T18:24:59Z\nRelease notes:\n## Security Fixes\nThis release has several CVE Reports fixed and we recommend everybody to update to the latest version as soon as possible.\n* [CVE-2024-39924](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39924) Fixed via #4715\n* [CVE-2024-39925](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39925) Fixed via #4837\n* [CVE-2024-39926](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-39926) Fixed via #4737\n## Other changes\n* Updated web-vault to v2024.6.2\n* Fixed issues with password reset enrollment by rolling back a web-vault commit\n## What's Changed\n* use a custom plan of enterprise tier to fix limits by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/4726\n* chore: Dockerfile to Remove port 3012 by @calvin-li-developer in https://github.com/dani-garcia/vaultwarden/pull/4725\n* Fix bug where secureNotes is empty by @cobyge in https://github.com/dani-garcia/vaultwarden/pull/4730\n* Improved HTTP client by @dani-garcia in https://github.com/dani-garcia/vaultwarden/pull/4740\n* Update admin interface by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4737\n* Fix for RSA Keys which are read only by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4744\n* Fix Email 2FA login on native app by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4762\n* Update crates & fix crate vulnerability by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/4771\n* Fix Dockerfile linter warnings by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/4763\n* allow re-invitations of existing users by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/4768\n* Allow to override log level for specific target by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/4305\n* Add support for MFA with Duo's Universal Prompt by @0x0fbc in https://github.com/dani-garcia/vaultwarden/pull/4637\n* Allow to increase the note size to 100_000 by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4772\n* Update Rust, Crates and GHA by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4783\n* Duo: use the formatted db email by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/4779\n* Update rust-toolchain.toml to 1.80.0 by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/4784\n* fix issue with adding ciphers to organizations on native ios app by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/4800\n* Rewrite the Push Notifications section in the configuration template by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/4805\n* Secure send file uploads by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4810\n* make access_all optional by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/4812\n* Remove lowercase conversion for featureStates by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/4820\n* Fix mail::send_incomplete_2fa_login panic issue by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/4792\n* Update crates, web-vault and fixes by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4823\n* Updated web-vault to v2024.6.2b by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4826\n* Update Rust to 1.80.1 by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/4831\n* Fix data disclosure on organization endpoints by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4837\n## New Contributors\n* @cobyge made their first contribution in https://github.com/dani-garcia/vaultwarden/pull/4730\n* @0x0fbc made their first contribution in https://github.com/dani-garcia/vaultwarden/pull/4637\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.31.0...1.32.0",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.32.0, several CVEs are fixed (CVE-2024-39924, CVE-2024-39925, CVE-2024-39926). The web-vault is updated to v2024.6.2, and issues with password reset enrollment are fixed by rolling back a web-vault commit. Other changes include using a custom enterprise plan to fix limits, removing port 3012 from Dockerfile, improving HTTP client, updating admin interface, fixing RSA key read-only issues, fixing Email 2FA login on native app, adding support for MFA with Duo's Universal Prompt, allowing note size increase to 100,000, securing send file uploads, and fixing data disclosure on organization endpoints."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_32_1",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.32.1",
+      "tag_name": "1.32.1",
+      "title": "1.32.1",
+      "time_hint": "2024-10-03",
+      "published_at": "2024-10-03T18:53:23Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.32.1",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.32.1\nTag: 1.32.1; draft: False; prerelease: False; published_at: 2024-10-03T18:53:23Z; created_at: 2024-10-03T18:09:44Z\nRelease notes:\n## Notable changes\n- Fixed syncing/login with native mobile clients\n- Added CLI option to backup SQLite database\n- Email Template changes regarding invites, 2FA Incomplete logins, and new logins\n## What's Changed\n* Update GitHub Action Workflows by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4849\n* Fix Duo Redirect not using path by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4862\n* Fix manager in web-vault v2024.6.2 for collections by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4860\n* Update email footer padding values by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/4838\n* Remove unecessary email normalization by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/4840\n* Fix Vaultwarden Admin page error messages by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4869\n* Update issue template by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4876\n* remove overzealous sanity check by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/4879\n* Fix Login with device by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4878\n* Switch to Whitelisting in .dockerignore by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/4856\n* Remove `version` from server config info by @zacknewman in https://github.com/dani-garcia/vaultwarden/pull/4885\n* Update issue template by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4882\n* Update crates (GHSA-wq9x-qwcq-mmgf) by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4889\n* Updated security readme by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4892\n* Allow custom umask setting by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4896\n* Allow Org Master-Pw policy enforcement by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4899\n* Allow enforcing Single Org with pw reset policy by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4903\n* Add a CLI feature to backup the SQLite DB by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4906\n* Update web-vault, crates and gha by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4909\n* Add orgUserHasExistingUser parameters to org invite by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/4827\n* Update Rust version & crates by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/4928\n* Fix sync with new native clients by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4932\n* Fix collection update from native client by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4937\n* fix invitation link via /admin by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/4950\n* Fix Pw History null dates by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4966\n* fix 2fa policy check on registration by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/4956\n* Actually use Device Type for mails by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/4916\n* remove backtics from postgresql migrations by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/4968\n* Fix Device Type column for 2FA migration by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4971\n* Fix encrypted lastUsedDate by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4972\n* Fix keyword collision in Rust 2024 and add new api/config value by @dani-garcia in https://github.com/dani-garcia/vaultwarden/pull/4975\n* Add extra linting by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4977\n## New Contributors\n* @zacknewman made their first contribution in https://github.com/dani-garcia/vaultwarden/pull/4885\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.32....",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.32.1, syncing and login with native mobile clients are fixed, a CLI option to backup SQLite database is added, and email templates for invites, 2FA incomplete logins, and new logins are changed. Other changes include fixing Duo redirect path, fixing manager in web-vault v2024.6.2 for collections, removing unnecessary email normalization, fixing Vaultwarden Admin page error messages, allowing custom umask setting, allowing Org Master-Pw policy enforcement, allowing enforcing Single Org with pw reset policy, and various dependency updates."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_32_2",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.32.2",
+      "tag_name": "1.32.2",
+      "title": "1.32.2",
+      "time_hint": "2024-10-13",
+      "published_at": "2024-10-13T15:26:55Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.32.2",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.32.2\nTag: 1.32.2; draft: False; prerelease: False; published_at: 2024-10-13T15:26:55Z; created_at: 2024-10-13T14:15:55Z\nRelease notes:\n## Notable changes\n- Fixed collection management for managers\n## What's Changed\n* Fix compiling for Windows targets by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5053\n* Updates and collection management fixes by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5072\n* Fix `--version` from failing without config by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5055\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.32.1...1.32.2",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.32.2, collection management for managers is fixed, compiling for Windows targets is fixed, and the --version flag no longer fails without config."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_32_3",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.32.3",
+      "tag_name": "1.32.3",
+      "title": "1.32.3",
+      "time_hint": "2024-10-27",
+      "published_at": "2024-10-27T14:42:53Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.32.3",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.32.3\nTag: 1.32.3; draft: False; prerelease: False; published_at: 2024-10-27T14:42:53Z; created_at: 2024-10-27T13:52:55Z\nRelease notes:\n## Notable changes\n- Email template for org invites was updated again. The URL got HTML Encoded which resulted in a sometimes non-working URL (#5100)\n- Fixed SMTP issues with some providers which send erroneous response to `QUIT` messages (Like QQ) (Thanks to @paolobarbolini)\n- Fixed a long standing collection management issue where collections were not able to be managed via the **Password Manager** overview\n## What's Changed\n* Fix iOS sync by converting field types to int by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5081\n* Fix field type to actually be hidden by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5082\n* Fix org invite url being html encoded by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5100\n* Update Rust to 1.82.0 by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/5099\n* Fix collection management and match some json output by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5095\n* Add `extension-refresh` feature flag by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/5106\n* Hide user name on invite status by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5110\n* Add documentation for the `extension-refresh` feature flag by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/5112\n* Update crates and fix Mail issue by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5125\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.32.2...1.32.3",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.32.3, the email template for org invites is updated to fix HTML-encoded URLs, SMTP issues with some providers sending erroneous QUIT responses are fixed, and a long-standing collection management issue where collections could not be managed via the Password Manager overview is resolved. Other changes include fixing iOS sync by converting field types to int, fixing field type to actually be hidden, updating Rust to 1.82.0, adding an extension-refresh feature flag, and hiding user name on invite status."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_32_4",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.32.4",
+      "tag_name": "1.32.4",
+      "title": "1.32.4",
+      "time_hint": "2024-11-10",
+      "published_at": "2024-11-10T23:55:30Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.32.4",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.32.4\nTag: 1.32.4; draft: False; prerelease: False; published_at: 2024-11-10T23:55:30Z; created_at: 2024-11-10T23:12:57Z\nRelease notes:\n## Security Fixes\nThis release has fixed some CVE Reports reported by a third party security auditor and we recommend everybody to update to the latest version as soon as possible. The contents of these reports will be disclosed publicly in the future.\n## Notable changes\n* Added more compatibility fixes for the native mobile apps, datetimes are now formatted without too many decimals.\n* Email Template changes to the send emergency access invite. If you have modified this template, make sure to update it with the new changes.\n## What's Changed\n* Update README by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5153\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.32.3...1.32.4",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.32.4, security fixes are applied for CVE reports from a third-party auditor. Compatibility fixes for native mobile apps include formatting datetimes without too many decimals, and the email template for sending emergency access invites is changed."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_32_5",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.32.5",
+      "tag_name": "1.32.5",
+      "title": "1.32.5",
+      "time_hint": "2024-11-18",
+      "published_at": "2024-11-18T11:23:03Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.32.5",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.32.5\nTag: 1.32.5; draft: False; prerelease: False; published_at: 2024-11-18T11:23:03Z; created_at: 2024-11-18T10:53:30Z\nRelease notes:\n## Security Fixes\nThis release further fixed some CVE Reports reported by a third party security auditor and we recommend everybody to update to the latest version as soon as possible. The contents of these reports will be disclosed publicly in the future.\n## Notable changes\n* Added SSH-Key storage support. Currently only usable with Bitwarden Desktop v2024.12.0 and newer.\nYou need to enable this feature by adding `ssh-key-vault-item,ssh-agent` to the `EXPERIMENTAL_CLIENT_FEATURE_FLAGS` config option. [See .env.template](https://github.com/dani-garcia/vaultwarden/blob/cdfdc6ff4f61a7495cd70609c0d9098ff10b55a4/.env.template#L353-L354)\n## What's Changed\n* Fix if logic error by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5171\n* More authrequest fixes by @dani-garcia in https://github.com/dani-garcia/vaultwarden/pull/5176\n* Add dynamic CSS support by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/4940\n* fix hibp username encoding and pw hint check by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5180\n* Remove auth-request deletion by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5184\n* fix password hint check by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/5189\n* don't infer manage permission for groups by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/5190\n* Some more authrequest changes by @dani-garcia in https://github.com/dani-garcia/vaultwarden/pull/5188\n* Support SSH keys on desktop 2024.12 by @dani-garcia in https://github.com/dani-garcia/vaultwarden/pull/5187\n* Fix Org Import duplicate collections by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5200\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.32.4...1.32.5",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.32.5, further CVE fixes are applied. SSH-Key storage support is added, usable with Bitwarden Desktop v2024.12.0 and newer, enabled via EXPERIMENTAL_CLIENT_FEATURE_FLAGS. Other changes include dynamic CSS support, fixes for hibp username encoding and password hint check, authrequest changes, and a fix for Org Import duplicate collections."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_32_6",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.32.6",
+      "tag_name": "1.32.6",
+      "title": "1.32.6",
+      "time_hint": "2024-12-10",
+      "published_at": "2024-12-10T21:16:27Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.32.6",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.32.6\nTag: 1.32.6; draft: False; prerelease: False; published_at: 2024-12-10T21:16:27Z; created_at: 2024-12-10T20:55:51Z\nRelease notes:\n## What's Changed\n* Fix push not working by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5214\n* Fix editing members which have access-all rights by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5213\n* chore: fix some comments by @chuangjinglu in https://github.com/dani-garcia/vaultwarden/pull/5224\n* Update Rust and crates by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5248\n* Update Alpine to version 3.21 by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/5256\n* Fix another sync issue with native clients by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5259\n* Update crates by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/5268\n* Some Backend Admin fixes and updates by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5272\n## New Contributors\n* @chuangjinglu made their first contribution in https://github.com/dani-garcia/vaultwarden/pull/5224\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.32.5...1.32.6",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.32.6, push notifications are fixed, editing members with access-all rights is fixed, Alpine is updated to version 3.21, another sync issue with native clients is fixed, and some backend admin fixes and updates are applied."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_32_7",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.32.7",
+      "tag_name": "1.32.7",
+      "title": "1.32.7",
+      "time_hint": "2024-12-20",
+      "published_at": "2024-12-20T09:51:55Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.32.7",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.32.7\nTag: 1.32.7; draft: False; prerelease: False; published_at: 2024-12-20T09:51:55Z; created_at: 2024-12-20T09:07:05Z\nRelease notes:\n## Security Fixes\nThis release contains a security fix for the following CVE https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-g65h-982x-4m5m.\nThis vulnerability affects any installations that have the  `ORG_GROUPS_ENABLED` setting enabled, and we urge anyone doing so to update as soon as possible.\n## What's Changed\n* feat: mask _smtp_img_src in support string by @tessus in https://github.com/dani-garcia/vaultwarden/pull/5281\n* Some refactoring, optimizations and security fixes by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5291\n* Allow adding connect-src entries by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5293\n* Use updated fern instead of patch by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5298\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.32.6...1.32.7",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.32.7, a security fix for CVE GHSA-g65h-982x-4m5m is applied, affecting installations with ORG_GROUPS_ENABLED. Other changes include masking _smtp_img_src in support string, refactoring and optimizations, allowing adding connect-src entries, and using updated fern."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_33_0",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.33.0",
+      "tag_name": "1.33.0",
+      "title": "1.33.0",
+      "time_hint": "2025-01-25",
+      "published_at": "2025-01-25T13:26:58Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.33.0",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.33.0\nTag: 1.33.0; draft: False; prerelease: False; published_at: 2025-01-25T13:26:58Z; created_at: 2025-01-25T12:06:33Z\nRelease notes:\n## Security Fixes\nThis release contains security fixes for the following advisories.\nAnd we strongly advice to update as soon as possible.\n- [GHSA-f7r5-w49x-gxm3](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-f7r5-w49x-gxm3)\nThis vulnerability is only possible if you do not have an `ADMIN_TOKEN` configured and open links or pages you should not trust anyway. Ensure you have an `ADMIN_TOKEN` configured to keep your admin environment save.\n- [GHSA-h6cc-rc6q-23j4](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-h6cc-rc6q-23j4)\nThis vulnerability is only possible if someone was able to gain access to your Vaultwarden Admin Backend. The attacker could then change some settings to use sendmail as mail agent but adjust the settings in such a way that it would use a shell command. It then also needed to craft a special favicon image which would have the commands embedded to run during for example sending a test email.\n- [GHSA-j4h8-vch3-f797](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-j4h8-vch3-f797)\nThis vulnerability affects all users who have multiple Organizations and users which are able to create a new organization or have admin or owner rights on at least one organization. The attacker does need to know the Organization UUID of the Organization it want's to attack or compromise though.\n## Notable changes\n- Updated web-vault to v2025.1.1\n- Added partial *manage* role support for collections\n- Manager role is converted to a Custom role with either Manage All Collections or per collection.\nAdmins and Owners probably want to check and verify if the rights are still correct.\n- The OCI containers and binaries are _signed_ via [GitHub Attestations](https://docs.github.com/en/actions/security-for-github-actions/using-artifact-attestations/using-artifact-attestations-to-establish-provenance-for-builds#verifying-artifact-attestations-with-the-github-cli)\nThis allows you to verify an OCI image or even the `vaultwarden` binary located within the OCI image.\nThese vulnerabilities affects\n## What's Changed\n* Add `inline-menu-positioning-improvements` feature flag by @Ephemera42 in https://github.com/dani-garcia/vaultwarden/pull/5313\n* Fix issues when uri match is a string by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5332\n* Add TOTP delete endpoint by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/5327\n* fix group issue in send_invite by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/5321\n* Update crates and GHA by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5346\n* Refactor the uri match fix and fix ssh-key sync by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5339\n* Add partial role support for manager only using web-vault v2024.12.0 by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5219\n* Fix issue with key-rotate by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5348\n* fix manager role in admin users overview by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/5359\n* Prevent new users/members to be stored in db when invite fails by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5350\n* Update crates and web-vault to v2025.1.0 by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5368\n* Allow building with Rust v1.84.0 or newer by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5371\n* rename membership and adopt newtype pattern by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/5320\n* build: raise msrv (1.83.0) rust toolchain (1.84.0) by @tessus in https://github.com/dani-garcia/vaultwarden/pull/5374\n* Fix an issue with login with device by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5379\n* refactor: replace sta...",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.33.0, security fixes are applied for GHSA-f7r5-w49x-gxm3, GHSA-h6cc-rc6q-23j4, and GHSA-j4h8-vch3-f797. The web-vault is updated to v2025.1.1, partial manage role support for collections is added, and OCI containers and binaries are signed via GitHub Attestations. Other changes include adding inline-menu-positioning-improvements feature flag, fixing issues when uri match is a string, adding TOTP delete endpoint, refactoring uri match fix and fixing ssh-key sync, and various dependency updates."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_33_1",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.33.1",
+      "tag_name": "1.33.1",
+      "title": "1.33.1",
+      "time_hint": "2025-02-03",
+      "published_at": "2025-02-03T13:21:44Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.33.1",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.33.1\nTag: 1.33.1; draft: False; prerelease: False; published_at: 2025-02-03T13:21:44Z; created_at: 2025-02-03T12:50:58Z\nRelease notes:\n## General mention\nThis release has some minor issues fixed like:\n- Icon's not working on the Desktop clients\n- Invites not always working\n- DUO settings not able to configure\n- Manager rights\n- Mobile client sync issues fixed\n## What's Changed\n* hide already approved (or declined) auth_requests by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/5467\n* let invited members access OrgMemberHeaders by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/5461\n* Make sure the icons are displayed correctly in desktop clients by @WinLinux1028 in https://github.com/dani-garcia/vaultwarden/pull/5469\n* Fix passwordRevisionDate format by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5477\n* add and use new event types by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/5482\n* Fix Duo Field Names for Web Client by @ratiner in https://github.com/dani-garcia/vaultwarden/pull/5491\n* Allow all manager to create collections again by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5488\n* Update Rust to 1.84.1 by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/5508\n## New Contributors\n* @WinLinux1028 made their first contribution in https://github.com/dani-garcia/vaultwarden/pull/5469\n* @ratiner made their first contribution in https://github.com/dani-garcia/vaultwarden/pull/5491\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.33.0...1.33.1",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.33.1, minor issues are fixed including icons not working on Desktop clients, invites not always working, DUO settings not able to configure, manager rights, and mobile client sync issues. Other changes include hiding already approved auth_requests, letting invited members access OrgMemberHeaders, fixing passwordRevisionDate format, adding new event types, fixing Duo field names for web client, and allowing all managers to create collections again."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_33_2",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.33.2",
+      "tag_name": "1.33.2",
+      "title": "1.33.2",
+      "time_hint": "2025-02-09",
+      "published_at": "2025-02-09T17:54:59Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.33.2",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.33.2\nTag: 1.33.2; draft: False; prerelease: False; published_at: 2025-02-09T17:54:59Z; created_at: 2025-02-09T17:23:28Z\nRelease notes:\n## What's Changed\n* Update workflows and enhance security by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5537\n* Update crates & fix CVE-2025-24898 by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/5538\n* add bulk-access endpoint for collections by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/5542\n* Fix icon redirect not working on desktop by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5536\n* Show assigned collections on member edit by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5556\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.33.1...1.33.2",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.33.2, workflows are updated and security enhanced, crates are updated and CVE-2025-24898 is fixed, a bulk-access endpoint for collections is added, icon redirect not working on desktop is fixed, and assigned collections are shown on member edit."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_34_0",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.34.0",
+      "tag_name": "1.34.0",
+      "title": "1.34.0",
+      "time_hint": "2025-05-26",
+      "published_at": "2025-05-26T19:53:27Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.34.0",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.34.0\nTag: 1.34.0; draft: False; prerelease: False; published_at: 2025-05-26T19:53:27Z; created_at: 2025-05-26T19:30:19Z\nRelease notes:\n## Notable changes\n- Updated web-vault to v2025.5.0\n- Implemented new registration flow with email verification\n- Added support for some feature flags (mutual TLS, attachment export, AnonAddy/SimpleLogin self host)\n## What's Changed\n* Update crates & fix CVE-2025-25188 by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/5576\n* Fix db issues with Option<> values and upd crates by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5594\n* allow CLI to upload send files with truncated filenames by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/5618\n* Update Rust to 1.85.0 by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/5634\n* Use subtle to replace deprecated ring::constant_time::verify_slices_are_equal by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/5680\n* Add support for mutual-tls feature flag by @bennettmsherman in https://github.com/dani-garcia/vaultwarden/pull/5698\n* Add AnonAddy/SimpleLogin self host feature flag by @PseudoResonance in https://github.com/dani-garcia/vaultwarden/pull/5694\n* Implement new registration flow with email verification by @dani-garcia in https://github.com/dani-garcia/vaultwarden/pull/5215\n* Some fixes for the new web-vault and updates by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5703\n* Update Rust, Crates and other deps by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5709\n* Update deps and web-vault by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5742\n* Fix invited user registration without SMTP by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/5712\n* Fix mysqlclient-sys building by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5743\n* Really fix building by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5745\n* Update Rust to 1.86.0 by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/5744\n* Verify templates in CI by @dani-garcia in https://github.com/dani-garcia/vaultwarden/pull/5748\n* Add Docker Templates pre-commit check by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5749\n* Fix debian docker building by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5752\n* Updates and general fixes by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5762\n* On member invite and edit access_all is not sent anymore by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/5673\n* respond with cipher json when deleting attachments by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/5823\n* feat: add feature flag export-attachments by @tessus in https://github.com/dani-garcia/vaultwarden/pull/5784\n* Fix Yubico toggle by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/5833\n* Fix minimum Android version for self-host email alias feature flags by @PseudoResonance in https://github.com/dani-garcia/vaultwarden/pull/5802\n* feat: add ip address in logs when email 2fa token is invalid or not available by @tessus in https://github.com/dani-garcia/vaultwarden/pull/5779\n* Update Rust, Crates and Web-Vault by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5860\n* Add totp menu feature flag by @moodejb123 in https://github.com/dani-garcia/vaultwarden/pull/5850\n* Remove Hide Business scss rules by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/5855\n* Toggle providers using class by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/5832\n* Remove old client version check by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/5874\n* web-client now request email 2fa by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/5871\n* Update admin interface by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5880\n* Sync with Upstream by @BlackDex in https://github.co...",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.34.0, the web-vault is updated to v2025.5.0, a new registration flow with email verification is implemented, and support is added for feature flags including mutual TLS, attachment export, and AnonAddy/SimpleLogin self host. Other changes include fixing CVE-2025-25188, allowing CLI to upload send files with truncated filenames, updating Rust to 1.85.0, and various dependency updates and fixes."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_34_1",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.34.1",
+      "tag_name": "1.34.1",
+      "title": "1.34.1",
+      "time_hint": "2025-05-26",
+      "published_at": "2025-05-26T21:40:54Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.34.1",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.34.1\nTag: 1.34.1; draft: False; prerelease: False; published_at: 2025-05-26T21:40:54Z; created_at: 2025-05-26T21:20:53Z\nRelease notes:\n## What's Changed\n* Fix admin diagnostics crash by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5886\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.34.0...1.34.1",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.34.1, an admin diagnostics crash is fixed."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_34_2",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.34.2",
+      "tag_name": "1.34.2",
+      "title": "1.34.2",
+      "time_hint": "2025-07-27",
+      "published_at": "2025-07-27T18:49:05Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.34.2",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.34.2\nTag: 1.34.2; draft: False; prerelease: False; published_at: 2025-07-27T18:49:05Z; created_at: 2025-07-27T18:27:00Z\nRelease notes:\n## Notable changes\n- Updated web vault to 2025.7.0\n- Included experimental support for S3 file backend using OpenDAL. This currently requires compiling from source with the `s3` feature flag, check https://github.com/dani-garcia/vaultwarden/pull/5626 for more details.\n## What's Changed\n* fix css to hide login with passkey by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/5890\n* fix css for locked screen by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/5905\n* Abstract persistent files through Apache OpenDAL by @txase in https://github.com/dani-garcia/vaultwarden/pull/5626\n* Some small admin updates by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5909\n* Fix and improvements to password policies by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/5923\n* Update Alpine to version 3.22 by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/5938\n* make css for login-page position independent by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/5906\n* Minor fixes to copy in `.env.template` by @nickgrim in https://github.com/dani-garcia/vaultwarden/pull/5928\n* Update crates and web-vault by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5955\n* allow signup for invited users by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/5967\n* fix account recovery withdrawal by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/5968\n* Fix an issue with yubico keys not validating by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5991\n* Misc Updates and favicon fixes by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/5993\n* Update flags version and enable manual error reporting by @dani-garcia in https://github.com/dani-garcia/vaultwarden/pull/5994\n* Use existing reqwest client for AWS S3 requests by @txase in https://github.com/dani-garcia/vaultwarden/pull/5917\n* Fix v2025.6.x clients and newer to delete items by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6004\n* chore: fix some minor issues in the comments by @mountdisk in https://github.com/dani-garcia/vaultwarden/pull/5998\n* fix hiding email as 2fa provider by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/6026\n* Update web-vault and admin resources by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6044\n* improve the usage section of the README by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/6041\n* close unmatched left parenthesis in the README by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/6046\n* Update crates, workflow and issue template by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6056\n* Update release.yml by @dani-garcia in https://github.com/dani-garcia/vaultwarden/pull/6057\n* fix hash reference in release.yml by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/6058\n* Fix digest SHA extraction step by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/6059\n* Hide login form custom fields by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/6054\n* Adjust issue template by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6096\n* fix: resolve group permission conflicts with multiple groups by @DasCanard in https://github.com/dani-garcia/vaultwarden/pull/6017\n* Update crates by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6100\n* fix account key rotation by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/6105\n## New Contributors\n* @txase made their first contribution in https://github.com/dani-garcia/vaultwarden/pull/5626\n* @nickgrim made their first contribution in https://github.com/dani-garcia/vaultwarden/pull/5928\n* @mountdisk made their first contribution in https://github.com/dani-garcia/vaultwarden/...",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.34.2, the web vault is updated to 2025.7.0, and experimental support for S3 file backend using OpenDAL is included, requiring compilation from source with the s3 feature flag. Other changes include fixing CSS for login with passkey and locked screen, abstracting persistent files through Apache OpenDAL, admin updates, password policy improvements, updating Alpine to 3.22, and various fixes for yubico key validation, favicon, and client compatibility."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_34_3",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.34.3",
+      "tag_name": "1.34.3",
+      "title": "1.34.3",
+      "time_hint": "2025-07-30",
+      "published_at": "2025-07-30T09:10:59Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.34.3",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.34.3\nTag: 1.34.3; draft: False; prerelease: False; published_at: 2025-07-30T09:10:59Z; created_at: 2025-07-30T08:45:51Z\nRelease notes:\n## Notable changes\nThis release should fix an issue with MySQL/MariaDB database connections when using the Alpine images.\nThe alpine build image has reverted to use MariaDB Connector/C v3.4.5 which resolved the issue.\n## What's Changed\n* Update crates to trigger rebuild for mysql issue by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6111\n* fix hiding of signup link by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/6113\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.34.2...1.34.3",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.34.3, an issue with MySQL/MariaDB database connections when using Alpine images is fixed by reverting to MariaDB Connector/C v3.4.5. The signup link hiding is also fixed."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_35_0",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.35.0",
+      "tag_name": "1.35.0",
+      "title": "1.35.0",
+      "time_hint": "2025-12-27",
+      "published_at": "2025-12-27T23:07:12Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.35.0",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.35.0\nTag: 1.35.0; draft: False; prerelease: False; published_at: 2025-12-27T23:07:12Z; created_at: 2025-12-27T22:53:01Z\nRelease notes:\n## Notable changes\n- Implemented support for SSO with OpenID Connect, https://github.com/dani-garcia/vaultwarden/wiki/Enabling-SSO-support-using-OpenId-Connect\n- Updated web vault to 2025.12.0\n- Added support for future mobile apps with versions 2026.1.0+\n- This is the first vaultwarden release using [immutable releases](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/immutable-releases) and release attestation!\n## What's Changed\n* Fix multi delete slowdown by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6144\n* Perform same checks when setting kdf by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/6141\n* SSO using OpenID Connect by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/3899\n* Delete SSO.md by @dani-garcia in https://github.com/dani-garcia/vaultwarden/pull/6152\n* Update webauthn-rs to 0.5.x by @zUnixorn in https://github.com/dani-garcia/vaultwarden/pull/5934\n* a little cleanup after SSO merge by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/6153\n* Fix link to point to the wiki by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/6157\n* Fix Email 2FA for mobile apps by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/6156\n* Update Rust to 1.89.0 by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/6150\n* Fix several more multi select push issues by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6151\n* Fix minor typo by @ncguk in https://github.com/dani-garcia/vaultwarden/pull/6165\n* Update crates, fixes some yanked crates by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6167\n* Fix WebauthN issue with Software Keys by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6168\n* Fix Playwright test conf and update deps by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/6176\n* Misc updates by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6185\n* fix typo in description of helo_name by @Flottegurke in https://github.com/dani-garcia/vaultwarden/pull/6194\n* Fix Playwright by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/6206\n* Switch to GHA's concurrency control by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/6164\n* Make database connection pool dynamic by @Samoth69 in https://github.com/dani-garcia/vaultwarden/pull/6166\n* Re-add `if` check to release workflow by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/6227\n* Fix Webauthn/Passkey 2FA migration/validation issues by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6190\n* refactor(config): update template, add validation by @tessus in https://github.com/dani-garcia/vaultwarden/pull/6229\n* Show SSO_ALLOW_UNKNOWN_EMAIL_VERIFICATION in admin by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/6235\n* Update crates, gha and web-vault by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6234\n* Fix panic around sso_master_password_policy by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/6233\n* make webauthn more optional by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/6160\n* Fix 2fa recovery endpoint by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6240\n* update trivy-action to v0.33.0 by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/6248\n* update web vault to v2025.9.1 and allow new policy by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/6340\n* prevent changing collections when hide_passwords is true by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/6278\n* Fix `sso_user` dropped on `User::save` by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/6262\n* Change OIDC dummy identifier by @Timshel in https://github.com/dani-gar...",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.35.0, SSO support with OpenID Connect is implemented, the web vault is updated to 2025.12.0, support for future mobile apps with versions 2026.1.0+ is added, and this is the first release using immutable releases and release attestation. Other changes include fixing multi delete slowdown, performing same checks when setting KDF, updating webauthn-rs to 0.5.x, fixing Email 2FA for mobile apps, updating Rust to 1.89.0, and various dependency updates and fixes."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_35_1",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.35.1",
+      "tag_name": "1.35.1",
+      "title": "1.35.1",
+      "time_hint": "2025-12-30",
+      "published_at": "2025-12-30T14:21:05Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.35.1",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.35.1\nTag: 1.35.1; draft: False; prerelease: False; published_at: 2025-12-30T14:21:05Z; created_at: 2025-12-29T21:55:47Z\nRelease notes:\n## Notable changes\n- Fixed issue with applications being logged out after upgrading due to changes to refresh token parsing\n- Updated web vault to 2025.12.1\n- Correctly publish `alpine` tag, which was missing in 1.35.0\n## What's Changed\n* Update lockfile by @dani-garcia in https://github.com/dani-garcia/vaultwarden/pull/6600\n* Re-add `alpine` tag by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/6626\n* Misc updates by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6627\n* Try old refresh token if we fail to decode jwt by @dani-garcia in https://github.com/dani-garcia/vaultwarden/pull/6629\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.35.0...1.35.1",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.35.1, an issue with applications being logged out after upgrading due to refresh token parsing changes is fixed, the web vault is updated to 2025.12.1, and the alpine tag is correctly published."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_35_2",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.35.2",
+      "tag_name": "1.35.2",
+      "title": "1.35.2",
+      "time_hint": "2026-01-09",
+      "published_at": "2026-01-09T18:37:04Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.35.2",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.35.2\nTag: 1.35.2; draft: False; prerelease: False; published_at: 2026-01-09T18:37:04Z; created_at: 2026-01-09T18:22:41Z\nRelease notes:\n## Notable changes\nFixed an issue with the web-vault which prevent creating an organization.\n## What's Changed\n* update web-vault to fix org creation by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/6646\n* return no content with status code 204 by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/6665\n* allow MasterPasswordHash for Android by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/6673\n* improve sso callback path by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/6676\n* Fix web-vault version check and update web-vault by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6686\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.35.1...1.35.2",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.35.2, an issue with the web-vault preventing organization creation is fixed. Other changes include returning no content with status code 204, allowing MasterPasswordHash for Android, improving SSO callback path, and fixing web-vault version check."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_35_3",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.35.3",
+      "tag_name": "1.35.3",
+      "title": "1.35.3",
+      "time_hint": "2026-02-10",
+      "published_at": "2026-02-10T20:37:03Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.35.3",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.35.3\nTag: 1.35.3; draft: False; prerelease: False; published_at: 2026-02-10T20:37:03Z; created_at: 2026-02-10T20:20:59Z\nRelease notes:\n## Security Fixes\nThis release contains security fixes for the following advisory. We strongly advice to update as soon as possible if you believe it could affect you.\n- [GHSA-h265-g7rm-h337](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-h265-g7rm-h337) (Publication in process, waiting for CVE assignment)\nThis vulnerability would allow an authenticated attacker that is part of an organization to access items from collections to which the attacker does not belong.\n## What's Changed\n* Fix User API Key login by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6712\n* use email instead of empty name for webauhn by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/6733\n* hide password hints via CSS by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/6726\n* fix email as 2fa with auth requests by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/6736\n* Update crates, web-vault, js, workflows by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6749\n* refactor: improve tooltips in diagnostics page by @tessus in https://github.com/dani-garcia/vaultwarden/pull/6765\n* Empty AccountKeys when no private key by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/6761\n* fix error message for purging auth requests by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/6776\n* Misc updates, crates, rust, js, gha, vault by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6799\n* Update crates and web-vault by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6810\n* Fix org-details issue by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6811\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.35.2...1.35.3",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.35.3, a security fix for GHSA-h265-g7rm-h337 is applied, addressing unauthorized access to items from collections. Other changes include fixing User API Key login, using email instead of empty name for webauthn, hiding password hints via CSS, fixing email as 2FA with auth requests, and various dependency updates."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_35_4",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.35.4",
+      "tag_name": "1.35.4",
+      "title": "1.35.4",
+      "time_hint": "2026-02-23",
+      "published_at": "2026-02-23T21:43:25Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.35.4",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.35.4\nTag: 1.35.4; draft: False; prerelease: False; published_at: 2026-02-23T21:43:25Z; created_at: 2026-02-23T21:23:41Z\nRelease notes:\n## Security Fixes\nThis release contains security fixes for the following advisories. We strongly advice to update as soon as possible.\n- [GHSA-w9f8-m526-h7fh](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-w9f8-m526-h7fh). This vulnerability would allow an attacker to access a cipher from a different user (fully encrypted) if they already know its internal UUID.\n- [GHSA-h4hq-rgvh-wh27](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-h4hq-rgvh-wh27). This vulnerability allows an attacker with manager-level access within an organization to modify collections they can access, even if they do not have management permissions for them.\n- [GHSA-r32r-j5jq-3w4m](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-r32r-j5jq-3w4m). This vulnerability allows an attacker with manager-level access within an organization to modify collections they are not assigned.\nThese are private for now, pending CVE assignment.\n## What's Changed\n* Update Rust and Crates and GHA by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6843\n* hide remember 2fa token by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/6852\n* fix(send_invite): invite links by @proofofcopilot in https://github.com/dani-garcia/vaultwarden/pull/6824\n* Misc organization fixes by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6867\n## New Contributors\n* @proofofcopilot made their first contribution in https://github.com/dani-garcia/vaultwarden/pull/6824\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.35.3...1.35.4",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.35.4, security fixes are applied for GHSA-w9f8-m526-h7fh, GHSA-h4hq-rgvh-wh27, and GHSA-r32r-j5jq-3w4m, addressing cipher access, manager-level collection modification, and unauthorized collection modification. Other changes include updating Rust and crates, hiding remember 2FA token, fixing invite links, and miscellaneous organization fixes."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_35_5",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.35.5",
+      "tag_name": "1.35.5",
+      "title": "1.35.5",
+      "time_hint": "2026-04-12",
+      "published_at": "2026-04-12T15:59:21Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.35.5",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.35.5\nTag: 1.35.5; draft: False; prerelease: False; published_at: 2026-04-12T15:59:21Z; created_at: 2026-04-12T14:53:59Z\nRelease notes:\n## Security Fixes\nThis release contains security fixes for the following advisories. We strongly advice to update as soon as possible.\n- [GHSA-937x-3j8m-7w7p](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-937x-3j8m-7w7p) Unconfirmed Owner Can Purge Entire Organization Vault.\n- [GHSA-569v-845w-g82p](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-569v-845w-g82p) Cross-Org Group Binding Enables Unauthorized Read And Write Access Into Another Organization\n- [GHSA-6j4w-g4jh-xjfx](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-6j4w-g4jh-xjfx) Refresh tokens not invalidated on security stamp rotation\nThese are private for now, pending CVE assignment.\n## Notes\n- The admin templates have changed, please update them if you override these via templates.\n- Two Factor Remember Tokens are now valid for max 30 days. Old tokens are invalid directly after upgrading.\n## What's Changed\n* apply policies only to confirmed members by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/6892\n* Feat(config): add feature flag for Safari account switching by @DerPlayer2001 in https://github.com/dani-garcia/vaultwarden/pull/6891\n* fix: add ForcePasswordReset to api key login by @montdidier in https://github.com/dani-garcia/vaultwarden/pull/6904\n* Add Webauthn related origins flag to known flags. by @pasarenicu in https://github.com/dani-garcia/vaultwarden/pull/6900\n* Add 30s cache to SSO exchange_refresh_token by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/6866\n* Add cxp-import-mobile and cxp-export-mobile: feature flags on mobile by @phoeagon in https://github.com/dani-garcia/vaultwarden/pull/6853\n* Misc updates and fixes by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6910\n* Support new desktop origin on CORS by @dani-garcia in https://github.com/dani-garcia/vaultwarden/pull/6920\n* Fix `checkout` action version by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/6921\n* Fix apikey login by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6922\n* Fix email header base64 padding by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6961\n* Update Feature Flags by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6981\n* Update crates and GHA by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6980\n* Use protected CI environment by @dani-garcia in https://github.com/dani-garcia/vaultwarden/pull/7004\n* Fix 2FA Remember to actually be 30 days by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/6929\n* Misc Updates by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/7027\n* Switch to `attest` action by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/7017\n* Rotate refresh-tokens on sstamp reset by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/7031\n* Misc org fixes by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/7032\n* Fix empty string FolderId by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/7048\n* Disable deployments for release env by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/7033\n* Fix Send icons by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/7051\n* prevent managers from creating collections by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/6890\n* Change SQLite backup to use VACUUM INTO query by @getaaron in https://github.com/dani-garcia/vaultwarden/pull/6989\n* Handle `SIGTERM` and `SIGQUIT` shutdown signals. by @0x484558 in https://github.com/dani-garcia/vaultwarden/pull/7008\n* Do not display unavailable 2FA options by @0x484558 in https://github.com/dani-garcia/vaultwarden/pull/7013\n* Fix logout push identifiers and send logout before clearing devices by @qaz741wsd856 in https://github.com/da...",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.35.5, security fixes are applied for GHSA-937x-3j8m-7w7p, GHSA-569v-845w-g82p, and GHSA-6j4w-g4jh-xjfx, addressing unconfirmed owner purging organization vault, cross-org group binding, and refresh token invalidation. Two Factor Remember Tokens are now valid for max 30 days. Other changes include applying policies only to confirmed members, adding feature flags, fixing apikey login, updating crates and GHA, and various organization fixes."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_35_6",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.35.6",
+      "tag_name": "1.35.6",
+      "title": "1.35.6",
+      "time_hint": "2026-04-12",
+      "published_at": "2026-04-12T19:28:35Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.35.6",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.35.6\nTag: 1.35.6; draft: False; prerelease: False; published_at: 2026-04-12T19:28:35Z; created_at: 2026-04-12T19:10:26Z\nRelease notes:\n## Notes\nThe previous release contained an issue where Two Factor Remember Tokens and Recovery Tokens were not accepted at all.\nThis has been fixed now in this release.\n## What's Changed\n* Fix MFA Remember by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/7085\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.35.5...1.35.6",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.35.6, an issue where Two Factor Remember Tokens and Recovery Tokens were not accepted is fixed."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_35_7",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.35.7",
+      "tag_name": "1.35.7",
+      "title": "1.35.7",
+      "time_hint": "2026-04-13",
+      "published_at": "2026-04-13T21:51:32Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.35.7",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.35.7\nTag: 1.35.7; draft: False; prerelease: False; published_at: 2026-04-13T21:51:32Z; created_at: 2026-04-13T21:10:06Z\nRelease notes:\n## What's Changed\n* Fix 2FA for Android by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/7093\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.35.6...1.35.7",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.35.7, 2FA for Android is fixed."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_35_8",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.35.8",
+      "tag_name": "1.35.8",
+      "title": "1.35.8",
+      "time_hint": "2026-04-25",
+      "published_at": "2026-04-25T18:08:50Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.35.8",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.35.8\nTag: 1.35.8; draft: False; prerelease: False; published_at: 2026-04-25T18:08:50Z; created_at: 2026-04-25T17:40:33Z\nRelease notes:\n## What's Changed\n* Dummy org Master password policy auth fix by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/7097\n* Fix recovery-code not working by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/7102\n* Fix invalid refresh token response by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/7105\n* Update Rust, Crates, GHA and fix a DNS issue by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/7108\n* Update web-vault and crates by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/7121\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.35.7...1.35.8",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.35.8, a dummy org master password policy auth fix is applied, recovery-code not working is fixed, invalid refresh token response is fixed, and Rust, crates, GHA, and a DNS issue are updated."
+    },
+    {
+      "memory_node_id": "dani_garcia__vaultwarden__release__1_36_0",
+      "repo": "dani-garcia/vaultwarden",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.36.0",
+      "tag_name": "1.36.0",
+      "title": "1.36.0",
+      "time_hint": "2026-05-03",
+      "published_at": "2026-05-03T12:54:52Z",
+      "source_url": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.36.0",
+      "raw_text": "Repository: dani-garcia/vaultwarden\nRelease: 1.36.0\nTag: 1.36.0; draft: False; prerelease: False; published_at: 2026-05-03T12:54:52Z; created_at: 2026-05-03T12:20:45Z\nRelease notes:\n## Security Fixes\nThis release contains security fixes for the following advisories. We strongly advice to update as soon as possible.\n- SSO Login CSRF\n[GHSA-pfp2-jhgq-6hg5](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-pfp2-jhgq-6hg5)\n[GHSA-w6h6-8r66-hcv7](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-w6h6-8r66-hcv7)\n- User/Organization Enumeration\n[GHSA-hxqh-ff5p-wfr3](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-hxqh-ff5p-wfr3)\n- SSO existing-user binding\n[GHSA-j4j8-gpvj-7fqr](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-j4j8-gpvj-7fqr)\n[GHSA-6x5c-84vm-5j56](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-6x5c-84vm-5j56)\n- SSRF via Icon Endpoint\n[GHSA-72vh-x5jq-m82g](https://github.com/dani-garcia/vaultwarden/security/advisories/GHSA-72vh-x5jq-m82g)\n- Some crate's updated and other minor security enhancements\nThese are private for now, pending CVE assignment.\n## Notes\n- Archiving of items is available\nhttps://bitwarden.com/blog/keep-your-vault-tidy-with-item-archiving/\nhttps://bitwarden.com/nl-nl/help/managing-items/#archive\n- Web Vault updated to v2026.4.1\n## What's Changed\n* SSO fallback to UserInfo preferred_username by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/7128\n* Dummy identifier need to pass for a guid by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/7154\n* add new /identity/accounts/prelogin/password by @stefan0xC in https://github.com/dani-garcia/vaultwarden/pull/7156\n* Add DuckDuckGo browser device type by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/7147\n* Apply `duration_suboptimal_units` lint findings by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/7144\n* Apply `ref_option` lint findings by @dfunkt in https://github.com/dani-garcia/vaultwarden/pull/7143\n* Fix hardcoded sso identifier by @Timshel in https://github.com/dani-garcia/vaultwarden/pull/7157\n* Update crates and fix a nightly lint by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/7161\n* Fix Host/IP resolving by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/7162\n* Several SSO Fixes by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/7163\n* Add support for archiving items by @matt-aaron in https://github.com/dani-garcia/vaultwarden/pull/6916\n* Fix favicon fetching to check all icon links instead of just the first one by @Shocker in https://github.com/dani-garcia/vaultwarden/pull/6880\n* Fix merge conflict by @dani-garcia in https://github.com/dani-garcia/vaultwarden/pull/7164\n* Replace organization_uuid unwrap with proper error handling by @xjohnyknox in https://github.com/dani-garcia/vaultwarden/pull/6936\n* fix: return Err instead of panic on unknown cipher atype in to_json() by @mango766 in https://github.com/dani-garcia/vaultwarden/pull/7068\n* Allow SQLite to be linked against dynamically by @ISSOtm in https://github.com/dani-garcia/vaultwarden/pull/7057\n* Update crates and web-vault by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/7171\n* Update hickory by @BlackDex in https://github.com/dani-garcia/vaultwarden/pull/7175\n## New Contributors\n* @matt-aaron made their first contribution in https://github.com/dani-garcia/vaultwarden/pull/6916\n* @Shocker made their first contribution in https://github.com/dani-garcia/vaultwarden/pull/6880\n* @xjohnyknox made their first contribution in https://github.com/dani-garcia/vaultwarden/pull/6936\n* @mango766 made their first contribution in https://github.com/dani-garcia/vaultwarden/pull/7068\n* @ISSOtm made their first contribution in https://github.com/dani-garcia/vaultwarden/pull/7057\n**Full Changelog**: https://github.com/dani-garcia/vaultwarden/compare/1.35.8...1.36.0\nYou can discuss this release here https:/...",
+      "memory_unit_text": "In the dani-garcia/vaultwarden release 1.36.0, security fixes are applied for SSO Login CSRF, User/Organization Enumeration, SSO existing-user binding, and SSRF via Icon Endpoint. Archiving of items is available, and the web vault is updated to v2026.4.1. Other changes include SSO fallback to UserInfo preferred_username, adding DuckDuckGo browser device type, fixing hardcoded SSO identifier, adding support for archiving items, and various dependency updates."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the dani-garcia/vaultwarden releases, which release adds a CLI option to backup the SQLite database?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1.32.0"
+        },
+        {
+          "option_id": "B",
+          "text": "1.32.1"
+        },
+        {
+          "option_id": "C",
+          "text": "1.33.0"
+        },
+        {
+          "option_id": "D",
+          "text": "1.34.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "1.32.1",
+      "source_chunk_ids": [
+        "dani_garcia__vaultwarden__release__1_32_1"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "dani_garcia__vaultwarden__release__1_32_1",
+          "answer_text": "Added CLI option to backup SQLite database"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the dani-garcia/vaultwarden releases, how does the web-vault update in release 1.31.0 differ from the web-vault update in release 1.32.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1.31.0 updates to v2024.5.1, while 1.32.0 updates to v2024.6.2."
+        },
+        {
+          "option_id": "B",
+          "text": "1.31.0 updates to v2024.6.2, while 1.32.0 updates to v2025.1.1."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases update to the same web-vault version."
+        },
+        {
+          "option_id": "D",
+          "text": "1.31.0 does not update the web-vault, while 1.32.0 updates to v2024.6.2."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1.31.0 updates to v2024.5.1, while 1.32.0 updates to v2024.6.2.",
+      "source_chunk_ids": [
+        "dani_garcia__vaultwarden__release__1_31_0",
+        "dani_garcia__vaultwarden__release__1_32_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "dani_garcia__vaultwarden__release__1_31_0",
+          "answer_text": "updated included web vault to 2024.5.1"
+        },
+        {
+          "memory_node_id": "dani_garcia__vaultwarden__release__1_32_0",
+          "answer_text": "Updated web-vault to v2024.6.2"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the dani-garcia/vaultwarden release window, order the following release-content states from earliest to latest: (1) a release that adds SSH-Key storage support, (2) a release that implements SSO support with OpenID Connect, (3) a release that adds a CLI option to backup SQLite database, (4) a release that adds initial support for beta releases of new native mobile apps.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "4 -> 3 -> 1 -> 2"
+        },
+        {
+          "option_id": "B",
+          "text": "3 -> 4 -> 1 -> 2"
+        },
+        {
+          "option_id": "C",
+          "text": "4 -> 1 -> 3 -> 2"
+        },
+        {
+          "option_id": "D",
+          "text": "1 -> 4 -> 3 -> 2"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "4 -> 3 -> 1 -> 2",
+      "source_chunk_ids": [
+        "dani_garcia__vaultwarden__release__1_31_0",
+        "dani_garcia__vaultwarden__release__1_32_1",
+        "dani_garcia__vaultwarden__release__1_32_5",
+        "dani_garcia__vaultwarden__release__1_35_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "dani_garcia__vaultwarden__release__1_31_0",
+          "answer_text": "Initial support for the beta releases of the new native mobile apps"
+        },
+        {
+          "memory_node_id": "dani_garcia__vaultwarden__release__1_32_1",
+          "answer_text": "Added CLI option to backup SQLite database"
+        },
+        {
+          "memory_node_id": "dani_garcia__vaultwarden__release__1_32_5",
+          "answer_text": "Added SSH-Key storage support"
+        },
+        {
+          "memory_node_id": "dani_garcia__vaultwarden__release__1_35_0",
+          "answer_text": "Implemented support for SSO with OpenID Connect"
+        }
+      ]
+    }
+  ]
+}

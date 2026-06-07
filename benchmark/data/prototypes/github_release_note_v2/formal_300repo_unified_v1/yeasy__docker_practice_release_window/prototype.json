@@ -1,0 +1,525 @@
+{
+  "prototype_id": "yeasy__docker_practice_release_window",
+  "domain": "github_release_evolution",
+  "repo": "yeasy/docker_practice",
+  "source_type": "release_note",
+  "window_title": "yeasy/docker_practice recent release evolution",
+  "window_summary": "This window tracks the evolution of yeasy/docker_practice from early foundational releases through major content revisions and into the modern v1.x series, highlighting key additions like Docker Compose, Swarm, and BuildKit, as well as ongoing maintenance and dependency updates.",
+  "chunks": [
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v0_9_rc1",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.9-rc1",
+      "tag_name": "v0.9-rc1",
+      "title": "v0.9.0-rc1",
+      "time_hint": "2017-11-29",
+      "published_at": "2017-11-29T03:02:00Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v0.9-rc1",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v0.9.0-rc1\nTag: v0.9-rc1; draft: False; prerelease: True; published_at: 2017-11-29T03:02:00Z; created_at: 2017-11-29T02:49:36Z\nRelease notes:\n# 变更日志\n本书内容将基于 Docker CE v17.MM 进行重新修订，计划 2017 年底发布 0.9.0 版本。\n## 0.9-rc1 (2017-11-29)\n### 新增\n* 根据最新版本（v17.09）修订内容 #192\n* 增加 `Dockerfile` 多阶段构建( `multistage builds` ) `Docker 17.05` 新增特性 #226\n* 增加 `docker exec` 子命令介绍 #240\n* 增加 `docker` 管理子命令 `container` `image` `network` `volume` 介绍 #203\n* 增加 `树莓派单片电脑` 安装 Docker\n* 增加 Docker 存储驱动 `OverlayFS` 相关内容 #250\n### 更新\n* 更新 `Docker CE` `v17.x` 安装说明 #192\n* 更新 `Docker 网络` 一节 #251\n* 更新 `Docker Machine` 基于 0.13.0 版本\n* 更新 `Docker Compose` 基于 3 文件格式 #238\n### 删除\n* 删除 `Docker Swarm` 相关内容，替换为 `Swarm mode` `Docker 1.12.0` 新增特性 #235\n* 删除 `docker run` `--link` 参数 #215\n### 精简\n* 精简 `Docker Registry` 一节 #180\n### 替换\n* 替换 `docker run` `-v` 参数为 `--mount` #214\n### 错误修复\n* 替换 `404` 链接\n### 排版\n* 优化文字排版 #223\n* 增加离线阅读功能 #216",
+      "memory_unit_text": "In the yeasy/docker_practice release v0.9.0-rc1, the book content is revised based on Docker CE v17.MM. New additions include Dockerfile multistage builds (Docker 17.05 feature), docker exec subcommand introduction, docker management subcommands (container, image, network, volume), Raspberry Pi installation, and OverlayFS storage driver. Updates cover Docker CE v17.x installation, Docker networking, Docker Machine based on 0.13.0, and Docker Compose based on file format 3. Removals include Docker Swarm content replaced by Swarm mode, and docker run --link parameter. The Docker Registry section is simplified, docker run -v is replaced with --mount, broken links are fixed, and text formatting is optimized with offline reading support added."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v0_9_rc2",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.9-rc2",
+      "tag_name": "v0.9-rc2",
+      "title": "v0.9.0-rc2",
+      "time_hint": "2017-12-09",
+      "published_at": "2017-12-09T12:36:55Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v0.9-rc2",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v0.9.0-rc2\nTag: v0.9-rc2; draft: False; prerelease: True; published_at: 2017-12-09T12:36:55Z; created_at: 2017-12-09T12:05:20Z\nRelease notes:\n# 变更日志\n本书内容将基于 Docker CE v17.MM 进行重新修订，计划 2017 年底发布 0.9.0 版本。\n## 0.9-rc2 (2017-12-09)\n### 新增\n* 增加 Docker 中文资源链接 #264\n* 增加介绍基于 Docker 的 CI/CD 工具 `Drone` #261\n* 增加 `docker secret` 相关内容 #282\n* 增加 `docker config` 相关内容 #283\n* 增加 `LinuxKit` 相关内容 #287\n### 更新\n* 更新 `CoreOS` 章节 #222\n* 更新 `etcd` 章节，基于 3.x 版本 #275\n### 删除\n* 删除 `Docker Compose` 中的 `links`指令 #215\n### 替换\n* 替换 `docker daemon` 命令为 `dockerd` #270\n* 替换 `docker ps` 命令为 `docker container ls` #279\n* 替换 `docker images` 命令为 `docker image ls` #279\n### 错误修复\n* 修改 `安装 Docker` 一节中部分文字表述\n* 修复内容逻辑错误 #258\n* 修复`404` 链接\n* 移除历史遗留文件和错误的文件 #290\n### 排版\n* 优化文字排版\n* 调整目录结构",
+      "memory_unit_text": "In the yeasy/docker_practice release v0.9.0-rc2, new content includes Docker Chinese resource links, introduction of the CI/CD tool Drone, docker secret and docker config commands, and LinuxKit. Updates cover CoreOS and etcd (based on 3.x). Removals include the links directive in Docker Compose. Replacements change docker daemon to dockerd, docker ps to docker container ls, and docker images to docker image ls. Fixes address text in the Docker installation section, content logic errors, broken links, and removal of legacy files. Text formatting and directory structure are also improved."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v0_8",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.8",
+      "tag_name": "v0.8",
+      "title": "v0.8.0",
+      "time_hint": "2017-12-31",
+      "published_at": "2017-12-31T02:37:36Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v0.8",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v0.8.0\nTag: v0.8; draft: False; prerelease: False; published_at: 2017-12-31T02:37:36Z; created_at: 2017-01-08T14:48:29Z\nRelease notes:\n## Compare\n* https://github.com/yeasy/docker_practice/compare/v0.7...v0.8\n## 0.8.0 (2017-01-08)\n* 修正文字内容\n* 根据最新版本（1.12）修订安装使用\n* 补充附录章节",
+      "memory_unit_text": "In the yeasy/docker_practice release v0.8.0, the release notes indicate text corrections, revision of installation and usage based on Docker version 1.12, and supplementation of appendix chapters."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v0_7",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7",
+      "tag_name": "v0.7",
+      "title": "0.7.0",
+      "time_hint": "2017-12-31",
+      "published_at": "2017-12-31T02:38:10Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v0.7",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: 0.7.0\nTag: v0.7; draft: False; prerelease: False; published_at: 2017-12-31T02:38:10Z; created_at: 2016-06-12T10:23:46Z\nRelease notes:\n## Compare\n* https://github.com/yeasy/docker_practice/compare/v0.6...v0.7\n## 0.7.0 (2016-06-12)\n* 根据最新版本进行命令调整\n* 修正若干文字描述",
+      "memory_unit_text": "In the yeasy/docker_practice release 0.7.0, the release notes mention command adjustments according to the latest version and correction of several text descriptions."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v0_6",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.6",
+      "tag_name": "v0.6",
+      "title": "v0.6.0",
+      "time_hint": "2017-12-31",
+      "published_at": "2017-12-31T02:38:39Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v0.6",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v0.6.0\nTag: v0.6; draft: False; prerelease: False; published_at: 2017-12-31T02:38:39Z; created_at: 2015-12-24T01:45:37Z\nRelease notes:\n## Compare\n* https://github.com/yeasy/docker_practice/compare/v0.5...v0.6\n## 0.6.0 (2015-12-24)\n* 补充 Machine 项目\n* 修正若干 bug",
+      "memory_unit_text": "In the yeasy/docker_practice release v0.6.0, the release notes add the Machine project and fix several bugs."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v0_5",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.5",
+      "tag_name": "v0.5",
+      "title": "v0.5.0",
+      "time_hint": "2017-12-31",
+      "published_at": "2017-12-31T02:40:30Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v0.5",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v0.5.0\nTag: v0.5; draft: False; prerelease: False; published_at: 2017-12-31T02:40:30Z; created_at: 2015-06-29T10:23:24Z\nRelease notes:\n## Compare\n* https://github.com/yeasy/docker_practice/compare/v0.4...v0.5\n## 0.5.0 (2015-06-29)\n* 添加 Compose 项目\n* 添加 Machine 项目\n* 添加 Swarm 项目\n* 完善 Kubernetes 项目内容\n* 添加 Mesos 项目内容",
+      "memory_unit_text": "In the yeasy/docker_practice release v0.5.0, the release notes add the Compose project, Machine project, Swarm project, improve Kubernetes project content, and add Mesos project content."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v0_4",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4",
+      "tag_name": "v0.4",
+      "title": "v0.4.0",
+      "time_hint": "2017-12-31",
+      "published_at": "2017-12-31T02:48:28Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v0.4",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v0.4.0\nTag: v0.4; draft: False; prerelease: False; published_at: 2017-12-31T02:48:28Z; created_at: 2015-05-08T02:49:19Z\nRelease notes:\n## Compare\n* https://github.com/yeasy/docker_practice/compare/v0.3...v0.4\n## 0.4.0 (2015-05-08)\n* 添加 Etcd 项目\n* 添加 Fig 项目\n* 添加 CoreOS 项目\n* 添加 Kubernetes 项目",
+      "memory_unit_text": "In the yeasy/docker_practice release v0.4.0, the release notes add the Etcd project, Fig project, CoreOS project, and Kubernetes project."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v0_3",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.3",
+      "tag_name": "v0.3",
+      "title": "v0.3.0",
+      "time_hint": "2017-12-31",
+      "published_at": "2017-12-31T02:49:18Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v0.3",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v0.3.0\nTag: v0.3; draft: False; prerelease: False; published_at: 2017-12-31T02:49:18Z; created_at: 2014-11-25T05:40:01Z\nRelease notes:\n## Compare\n* https://github.com/yeasy/docker_practice/compare/v0.2...v0.3\n## 0.3.0 (2014-11-25)\n* 完成仓库章节\n* 重写安全章节\n* 修正底层实现章节的架构、命名空间、控制组、文件系统、容器格式等内容\n* 添加对常见仓库和镜像的介绍\n* 添加 Dockerfile 的介绍\n* 重新校订中英文混排格式\n* 修订文字表达\n* 发布繁体版本分支：zh-Hant",
+      "memory_unit_text": "In the yeasy/docker_practice release v0.3.0, the release notes complete the repository chapter, rewrite the security chapter, correct the underlying implementation chapter (architecture, namespaces, control groups, file systems, container formats), add introductions to common repositories and images, add Dockerfile introduction, revise Chinese-English mixed formatting, revise text expressions, and publish a traditional Chinese version branch (zh-Hant)."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v0_2",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.2",
+      "tag_name": "v0.2",
+      "title": "v0.2.0",
+      "time_hint": "2017-12-31",
+      "published_at": "2017-12-31T02:50:00Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v0.2",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v0.2.0\nTag: v0.2; draft: False; prerelease: False; published_at: 2017-12-31T02:50:00Z; created_at: 2014-09-22T04:23:15Z\nRelease notes:\n## Compare\n* https://github.com/yeasy/docker_practice/compare/v0.1...v0.2\n## 0.2.0 (2014-09-18)\n* 对照官方文档重写介绍、基本概念、安装、镜像、容器、仓库、数据管理、网络等章节\n* 添加底层实现章节\n* 添加命令查询和资源链接章节\n* 其它修正",
+      "memory_unit_text": "In the yeasy/docker_practice release v0.2.0, the release notes rewrite chapters on introduction, basic concepts, installation, images, containers, repositories, data management, and networking based on official documentation; add underlying implementation chapter; add command reference and resource links chapters; and make other corrections."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v0_1",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.1",
+      "tag_name": "v0.1",
+      "title": "v0.1.0",
+      "time_hint": "2017-12-31",
+      "published_at": "2017-12-31T02:50:35Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v0.1",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v0.1.0\nTag: v0.1; draft: False; prerelease: False; published_at: 2017-12-31T02:50:35Z; created_at: 2014-09-22T04:20:00Z\nRelease notes:\n## 0.1.0 (2014-09-05)\n* 添加基本内容\n* 修正错别字和表达不通顺的地方",
+      "memory_unit_text": "In the yeasy/docker_practice release v0.1.0, the release notes add basic content and correct typos and unclear expressions."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v0_9_0",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.9.0",
+      "tag_name": "v0.9.0",
+      "title": "v0.9.0",
+      "time_hint": "2017-12-31",
+      "published_at": "2017-12-31T13:59:37Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v0.9.0",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v0.9.0\nTag: v0.9.0; draft: False; prerelease: False; published_at: 2017-12-31T13:59:37Z; created_at: 2017-12-31T13:10:11Z\nRelease notes:\n## Compare\n* https://github.com/yeasy/docker_practice/compare/v0.8...v0.9.0\n## 0.9.0 (2017-12-31)\n* 基于 Docker CE v17.MM 修订",
+      "memory_unit_text": "In the yeasy/docker_practice release v0.9.0, the release notes state that the book is revised based on Docker CE v17.MM."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v1_1_0",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.1.0",
+      "tag_name": "v1.1.0",
+      "title": "v1.1.0",
+      "time_hint": "2019-12-31",
+      "published_at": "2019-12-31T09:57:21Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v1.1.0",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v1.1.0\nTag: v1.1.0; draft: False; prerelease: False; published_at: 2019-12-31T09:57:21Z; created_at: 2019-12-26T03:54:45Z\nRelease notes:\n## Compare\n* https://github.com/yeasy/docker_practice/compare/v1.0.0...v1.1.0\n## 1.1.0 (2019-12-31)\n* 全面支持 v19.x 新版本\n* 增加 `BuildKit`\n* 增加 `docker buildx` 命令使用说明\n* 增加 `docker manifest` 命令使用说明\n* 移除 `Ubuntu 14.04` `Debian 8` `Debian 7`",
+      "memory_unit_text": "In the yeasy/docker_practice release v1.1.0, the release notes indicate full support for Docker v19.x, addition of BuildKit, docker buildx command usage, docker manifest command usage, and removal of Ubuntu 14.04, Debian 8, and Debian 7."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v1_2_0",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.2.0",
+      "tag_name": "v1.2.0",
+      "title": "v1.2.0",
+      "time_hint": "2020-12-20",
+      "published_at": "2020-12-20T13:52:11Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v1.2.0",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v1.2.0\nTag: v1.2.0; draft: False; prerelease: False; published_at: 2020-12-20T13:52:11Z; created_at: 2020-12-20T13:48:52Z\nRelease notes:\n## Compare\n* https://github.com/yeasy/docker_practice/compare/v1.1.0...v1.2.0\n## 1.2.0 (2020-12-20)\n* 错误修复",
+      "memory_unit_text": "In the yeasy/docker_practice release v1.2.0, the release notes mention bug fixes."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v1_3_0",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.0",
+      "tag_name": "v1.3.0",
+      "title": "v1.3.0 minor release",
+      "time_hint": "2021-12-01",
+      "published_at": "2021-12-01T23:05:55Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v1.3.0",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v1.3.0 minor release\nTag: v1.3.0; draft: False; prerelease: False; published_at: 2021-12-01T23:05:55Z; created_at: 2021-12-01T22:58:32Z\nRelease notes:\n* Update content with latest versions;\n* Remove unused packages;\n* Fix expression and format.",
+      "memory_unit_text": "In the yeasy/docker_practice release v1.3.0 minor release, the release notes mention updating content with latest versions, removing unused packages, and fixing expression and format."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v1_4_0",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.4.0",
+      "tag_name": "v1.4.0",
+      "title": "v1.4.0",
+      "time_hint": "2026-01-19",
+      "published_at": "2026-01-19T16:54:07Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v1.4.0",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v1.4.0\nTag: v1.4.0; draft: False; prerelease: False; published_at: 2026-01-19T16:54:07Z; created_at: 2026-01-11T06:39:51Z\nRelease notes:\n## What's Changed\n* Update best_practices.md by @smartlixx in https://github.com/yeasy/docker_practice/pull/496\n* update https://registry.npm.taobao.org to https://registry.npmmirror.com by @npmmirror in https://github.com/yeasy/docker_practice/pull/497\n* Update secret.md by @mrnyg in https://github.com/yeasy/docker_practice/pull/500\n* fix:修改image/build文档中的一处语病 by @WitchElaina in https://github.com/yeasy/docker_practice/pull/512\n* docs(install): 修改Mac安装系统要求 by @Hazel-Lin in https://github.com/yeasy/docker_practice/pull/514\n* fix: wrong key of registry mirrors by @kingyue737 in https://github.com/yeasy/docker_practice/pull/516\n* fix: typo by @kingyue737 in https://github.com/yeasy/docker_practice/pull/515\n* fix: typo by @hezhizhen in https://github.com/yeasy/docker_practice/pull/517\n* [issue-518] Add document on how to use HTTP/HTTPS proxy by @docete in https://github.com/yeasy/docker_practice/pull/519\n* 修改错别字 by @ReginaldChen in https://github.com/yeasy/docker_practice/pull/520\n* Update volume.md by @wushu037 in https://github.com/yeasy/docker_practice/pull/523\n* Update install by @hezhizhen in https://github.com/yeasy/docker_practice/pull/527\n* 修复离线安装时依赖包下载、离线rpm包安装依赖先后顺序的问题。 by @hellozrh in https://github.com/yeasy/docker_practice/pull/529\n* 修复离线rpm包安装方式，解决各个rpm包先后依赖安装顺序不一致导致安装失败的问题。 by @hellozrh in https://github.com/yeasy/docker_practice/pull/530\n* Update aliyun mirror configuration by @lxg199788 in https://github.com/yeasy/docker_practice/pull/533\n* fix(image\\dockerfile\\cmd.md): :bug: Fix issue yeasy#535, 改进对issue进程的提法 by @CybCom in https://github.com/yeasy/docker_practice/pull/536\n* Fix issue #537: CI错误，需要更新workflows YAML by @CybCom in https://github.com/yeasy/docker_practice/pull/538\n* Doc: add error solution for docker installation on raspi OS by @RockChinQ in https://github.com/yeasy/docker_practice/pull/540\n* add some suggestions for gpg in debian11. by @my-vegetable-has-exploded in https://github.com/yeasy/docker_practice/pull/543\n* ubuntu.md update #545  by @liangbinfudan in https://github.com/yeasy/docker_practice/pull/546\n* Update django requirement  by @upbeat-backbone-bose in https://github.com/yeasy/docker_practice/pull/542\n* Update README.md by @trevanlye in https://github.com/yeasy/docker_practice/pull/548\n* Update overview.md 修复图片地址问题 by @CNAHYZ in https://github.com/yeasy/docker_practice/pull/549\n## New Contributors\n* @smartlixx made their first contribution in https://github.com/yeasy/docker_practice/pull/496\n* @npmmirror made their first contribution in https://github.com/yeasy/docker_practice/pull/497\n* @mrnyg made their first contribution in https://github.com/yeasy/docker_practice/pull/500\n* @WitchElaina made their first contribution in https://github.com/yeasy/docker_practice/pull/512\n* @Hazel-Lin made their first contribution in https://github.com/yeasy/docker_practice/pull/514\n* @kingyue737 made their first contribution in https://github.com/yeasy/docker_practice/pull/516\n* @hezhizhen made their first contribution in https://github.com/yeasy/docker_practice/pull/517\n* @docete made their first contribution in https://github.com/yeasy/docker_practice/pull/519\n* @ReginaldChen made their first contribution in https://github.com/yeasy/docker_practice/pull/520\n* @wushu037 made their first contribution in https://github.com/yeasy/docker_practice/pull/523\n* @hellozrh made their first contribution in https://github.com/yeasy/docker_practice/pull/529\n* @lxg199788 made their first contribution in https://github.com/yeasy/docker_practice/pull/533\n* @CybCom made their first contribution in https://github.com/yeasy/docker_practice/pull/536\n* @RockChinQ made their first contribution in https://github.com/yeasy/docker_practice/pull/540\n* @my-vegetable-has-exploded made their first contribution in https://github.com/yeasy/docker_practi...",
+      "memory_unit_text": "In the yeasy/docker_practice release v1.4.0, the release notes list various contributions including updates to best practices, npm registry mirror, secret documentation, image/build documentation, Mac installation requirements, registry mirrors configuration, typo fixes, HTTP/HTTPS proxy documentation, volume documentation, installation updates, offline installation fixes, aliyun mirror configuration, CI workflow fixes, Raspberry Pi OS installation error solution, GPG suggestions for Debian 11, Ubuntu documentation update, Django requirement update, README update, and overview image fix."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v1_5_0",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.5.0",
+      "tag_name": "v1.5.0",
+      "title": "v1.5.0",
+      "time_hint": "2026-02-09",
+      "published_at": "2026-02-09T17:18:35Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v1.5.0",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v1.5.0\nTag: v1.5.0; draft: False; prerelease: False; published_at: 2026-02-09T17:18:35Z; created_at: 2026-02-05T06:14:22Z\nRelease notes:\n**Full Changelog**: https://github.com/yeasy/docker_practice/compare/v1.4.0...v1.5.0",
+      "memory_unit_text": "In the yeasy/docker_practice release v1.5.0, the release notes provide a full changelog comparing v1.4.0 to v1.5.0 without detailing specific changes."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v1_6_0",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.6.0",
+      "tag_name": "v1.6.0",
+      "title": "v1.6.0",
+      "time_hint": "2026-02-28",
+      "published_at": "2026-02-28T06:30:59Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v1.6.0",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v1.6.0\nTag: v1.6.0; draft: False; prerelease: False; published_at: 2026-02-28T06:30:59Z; created_at: 2026-02-28T06:29:50Z\nRelease notes:\n## What's Changed\n* chore(deps): bump actions/checkout from 4.1.1 to 6.0.2 by @dependabot[bot] in https://github.com/yeasy/docker_practice/pull/554\n* chore(deps): bump honkit from 5.1.5 to 6.1.6 by @dependabot[bot] in https://github.com/yeasy/docker_practice/pull/555\n* chore(deps): bump commander from 7.2.0 to 14.0.3 by @dependabot[bot] in https://github.com/yeasy/docker_practice/pull/556\n* chore(deps): bump the dependencies group with 2 updates by @dependabot[bot] in https://github.com/yeasy/docker_practice/pull/559\n## New Contributors\n* @dependabot[bot] made their first contribution in https://github.com/yeasy/docker_practice/pull/554\n**Full Changelog**: https://github.com/yeasy/docker_practice/compare/v1.5.0...v1.6.0",
+      "memory_unit_text": "In the yeasy/docker_practice release v1.6.0, the release notes include dependency bumps for actions/checkout, honkit, commander, and a dependencies group update, with dependabot as a new contributor."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v1_7_0",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.7.0",
+      "tag_name": "v1.7.0",
+      "title": "v1.7.0",
+      "time_hint": "2026-03-26",
+      "published_at": "2026-03-26T06:07:35Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v1.7.0",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v1.7.0\nTag: v1.7.0; draft: False; prerelease: False; published_at: 2026-03-26T06:07:35Z; created_at: 2026-03-26T06:05:55Z\nRelease notes:\n## What's Changed\n* 名字空间 -> 命名空间 by @Novtopro in https://github.com/yeasy/docker_practice/pull/87\n* 084 => 124 by @airacle in https://github.com/yeasy/docker_practice/pull/89\n* 更改列表显示格式 by @dangzhiqiang in https://github.com/yeasy/docker_practice/pull/88\n* 修改句式错误 by @vra in https://github.com/yeasy/docker_practice/pull/90\n* 在句尾增加句号 by @vra in https://github.com/yeasy/docker_practice/pull/91\n* 表格的修订 by @Pandoraemon in https://github.com/yeasy/docker_practice/pull/93\n* image links by @muicoder in https://github.com/yeasy/docker_practice/pull/95\n* fix a description in iptables by @liu4480 in https://github.com/yeasy/docker_practice/pull/96\n* change \"回头\" to \"回收\" in meos/architecture.md by @liu4480 in https://github.com/yeasy/docker_practice/pull/97\n* fix \"cmd_logic.png\" image by @muicoder in https://github.com/yeasy/docker_practice/pull/98\n* Official container event states by @muicoder in https://github.com/yeasy/docker_practice/pull/99\n* 在句尾增加句号 by @vra in https://github.com/yeasy/docker_practice/pull/100\n* fix typo by @likang in https://github.com/yeasy/docker_practice/pull/102\n* cmd_logic by @muicoder in https://github.com/yeasy/docker_practice/pull/103\n* prettify cmd_logic.png by @muicoder in https://github.com/yeasy/docker_practice/pull/104\n* fix compose usage, about haproxy config by @WALL-E in https://github.com/yeasy/docker_practice/pull/106\n* fix the spelling mistakes by @WALL-E in https://github.com/yeasy/docker_practice/pull/107\n* 补充\"什么是Docker\"的信息，并且调整文字叙述顺序。 by @twang2218 in https://github.com/yeasy/docker_practice/pull/108\n* 扩展 \"为什么要使用 Docker\" 文档 by @twang2218 in https://github.com/yeasy/docker_practice/pull/109\n* 重写基本概念章节 by @twang2218 in https://github.com/yeasy/docker_practice/pull/110\n* 改进 Ubuntu 安装文档 by @twang2218 in https://github.com/yeasy/docker_practice/pull/112\n* update nsenter comment and download link by @WALL-E in https://github.com/yeasy/docker_practice/pull/114\n* 重写 'Debian 安装文档' 并改进 'Ubuntu 安装文档' by @twang2218 in https://github.com/yeasy/docker_practice/pull/115\n* 重写 CentOS 安装章节 by @twang2218 in https://github.com/yeasy/docker_practice/pull/116\n* 将所有的 \"```sh\" 替换为 \"```bash\" by @twang2218 in https://github.com/yeasy/docker_practice/pull/117\n* 添加 \"macOS 安装文档\" by @twang2218 in https://github.com/yeasy/docker_practice/pull/119\n* 添加配置加速器章节 by @twang2218 in https://github.com/yeasy/docker_practice/pull/120\n* 改进'获取镜像'章节 by @twang2218 in https://github.com/yeasy/docker_practice/pull/118\n* 添加关于加速器配置章节的引用。 by @twang2218 in https://github.com/yeasy/docker_practice/pull/122\n* 合并 Ubuntu、Debian 安装文档 by @twang2218 in https://github.com/yeasy/docker_practice/pull/121\n* 将 \"名字空间\" 改为 \"命名空间\" by @twang2218 in https://github.com/yeasy/docker_practice/pull/125\n* 标出需要注意的图标，之前的提交忘记添加标注了。 by @twang2218 in https://github.com/yeasy/docker_practice/pull/124\n* 重新改写\"镜像列表\"章节 by @twang2218 in https://github.com/yeasy/docker_practice/pull/123\n* 补充镜像加速器WINDOWS10下的说明 by @sugov5 in https://github.com/yeasy/docker_practice/pull/126\n* 更新 book.json，代码色彩高亮换为默认的 highlight，并去除已经不再使用的 autocover 等 by @twang2218 in https://github.com/yeasy/docker_practice/pull/127\n* 重写定制镜像章节 by @twang2218 in https://github.com/yeasy/docker_practice/pull/128\n* 在 Mac 的配置界面上标记出来加速器的配置位置 by @twang2218 in https://github.com/yeasy/docker_practice/pull/129\n* Fix #8 hide the github button if it's mobile by @twang2218 in https://github.com/yeasy/docker_practice/pull/133\n* 修正 image/commit.md 中的图片链接错误 by @twang2218 in https://github.com/yeasy/docker_practice/pull/132\n* 重写删除镜像章节 by @twang2218 in https://github.com/yeasy/docker_practice/pull/135\n* 修正 --build-arg 的参数的说明以适应 Docker 1.13 的变化 by @twang2218 in https://github.com/yeasy/docker_practice/pull/137\n* Fix issue #139: fix typo, change from 意外 to 以外 by @chenshenyou in https://github.com/yeasy/docker_practice/pull/140\n* 修复错误描述 by @tianmingxing in...",
+      "memory_unit_text": "In the yeasy/docker_practice release v1.7.0, the release notes list numerous contributions including terminology changes (名字空间 to 命名空间), typo fixes, formatting improvements, image link fixes, content additions and rewrites for Docker introduction, basic concepts, installation guides (Ubuntu, Debian, CentOS, macOS), mirror accelerator configuration, image customization, and various other documentation improvements."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v1_7_1",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.7.1",
+      "tag_name": "v1.7.1",
+      "title": "v1.7.1",
+      "time_hint": "2026-03-29",
+      "published_at": "2026-03-29T01:21:46Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v1.7.1",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v1.7.1\nTag: v1.7.1; draft: False; prerelease: False; published_at: 2026-03-29T01:21:46Z; created_at: 2026-03-29T01:19:53Z\nRelease notes:\n**Full Changelog**: https://github.com/yeasy/docker_practice/compare/v1.7.0...v1.7.1",
+      "memory_unit_text": "In the yeasy/docker_practice release v1.7.1, the release notes provide a full changelog comparing v1.7.0 to v1.7.1 without detailing specific changes."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v1_7_2",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.7.2",
+      "tag_name": "v1.7.2",
+      "title": "v1.7.2",
+      "time_hint": "2026-03-29",
+      "published_at": "2026-03-29T01:26:48Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v1.7.2",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v1.7.2\nTag: v1.7.2; draft: False; prerelease: False; published_at: 2026-03-29T01:26:48Z; created_at: 2026-03-29T01:24:59Z\nRelease notes:\n**Full Changelog**: https://github.com/yeasy/docker_practice/compare/v1.7.1...v1.7.2",
+      "memory_unit_text": "In the yeasy/docker_practice release v1.7.2, the release notes provide a full changelog comparing v1.7.1 to v1.7.2 without detailing specific changes."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__preview_pdf",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:preview-pdf",
+      "tag_name": "preview-pdf",
+      "title": "Latest Preview PDF",
+      "time_hint": "2026-03-29",
+      "published_at": "2026-03-29T03:44:30Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/preview-pdf",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: Latest Preview PDF\nTag: preview-pdf; draft: False; prerelease: True; published_at: 2026-03-29T03:44:30Z; created_at: 2026-03-29T03:42:25Z\nRelease notes:\nAuto-updated preview PDF from `3c1720c`.\n- Branch: `master`\n- Commit: https://github.com/yeasy/docker_practice/commit/3c1720ccc9c04a534b1c820e6c5da155b6adcc82\n- Run: https://github.com/yeasy/docker_practice/actions/runs/26797663566",
+      "memory_unit_text": "In the yeasy/docker_practice release Latest Preview PDF, the release notes indicate an auto-updated preview PDF from commit 3c1720c on the master branch, with a link to the GitHub Actions run."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v1_7_3",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.7.3",
+      "tag_name": "v1.7.3",
+      "title": "v1.7.3",
+      "time_hint": "2026-03-30",
+      "published_at": "2026-03-30T02:58:05Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v1.7.3",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v1.7.3\nTag: v1.7.3; draft: False; prerelease: False; published_at: 2026-03-30T02:58:05Z; created_at: 2026-03-30T02:56:12Z\nRelease notes:\n**Full Changelog**: https://github.com/yeasy/docker_practice/compare/v1.7.2...v1.7.3",
+      "memory_unit_text": "In the yeasy/docker_practice release v1.7.3, the release notes provide a full changelog comparing v1.7.2 to v1.7.3 without detailing specific changes."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v1_7_4",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.7.4",
+      "tag_name": "v1.7.4",
+      "title": "v1.7.4",
+      "time_hint": "2026-04-01",
+      "published_at": "2026-04-01T03:31:40Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v1.7.4",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v1.7.4\nTag: v1.7.4; draft: False; prerelease: False; published_at: 2026-04-01T03:31:40Z; created_at: 2026-04-01T03:29:24Z\nRelease notes:\n**Full Changelog**: https://github.com/yeasy/docker_practice/compare/v1.7.2...v1.7.4",
+      "memory_unit_text": "In the yeasy/docker_practice release v1.7.4, the release notes provide a full changelog comparing v1.7.2 to v1.7.4 without detailing specific changes."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v1_7_5",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.7.5",
+      "tag_name": "v1.7.5",
+      "title": "v1.7.5",
+      "time_hint": "2026-04-05",
+      "published_at": "2026-04-05T15:19:22Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v1.7.5",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v1.7.5\nTag: v1.7.5; draft: False; prerelease: False; published_at: 2026-04-05T15:19:22Z; created_at: 2026-04-05T15:17:27Z\nRelease notes:\n**Full Changelog**: https://github.com/yeasy/docker_practice/compare/v1.7.4...v1.7.5\n**Full Changelog**: https://github.com/yeasy/docker_practice/compare/v1.7.4...v1.7.5",
+      "memory_unit_text": "In the yeasy/docker_practice release v1.7.5, the release notes provide a full changelog comparing v1.7.4 to v1.7.5 without detailing specific changes."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v1_8_0",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.8.0",
+      "tag_name": "v1.8.0",
+      "title": "v1.8.0",
+      "time_hint": "2026-04-28",
+      "published_at": "2026-04-28T03:53:34Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v1.8.0",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v1.8.0\nTag: v1.8.0; draft: False; prerelease: False; published_at: 2026-04-28T03:53:34Z; created_at: 2026-04-28T03:51:39Z\nRelease notes:\n## What's Changed\n* chore(deps): bump the dependencies group with 2 updates by @dependabot[bot] in https://github.com/yeasy/docker_practice/pull/564\n**Full Changelog**: https://github.com/yeasy/docker_practice/compare/v1.7.5...v1.8.0\n**Full Changelog**: https://github.com/yeasy/docker_practice/compare/v1.7.5...v1.8.0",
+      "memory_unit_text": "In the yeasy/docker_practice release v1.8.0, the release notes include a dependency group update with 2 updates by dependabot, and a full changelog comparing v1.7.5 to v1.8.0."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v1_9_0",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.9.0",
+      "tag_name": "v1.9.0",
+      "title": "v1.9.0",
+      "time_hint": "2026-05-02",
+      "published_at": "2026-05-02T21:59:05Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v1.9.0",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v1.9.0\nTag: v1.9.0; draft: False; prerelease: False; published_at: 2026-05-02T21:59:05Z; created_at: 2026-05-02T21:56:47Z\nRelease notes:\n**Full Changelog**: https://github.com/yeasy/docker_practice/compare/v1.8.0...v1.9.0",
+      "memory_unit_text": "In the yeasy/docker_practice release v1.9.0, the release notes provide a full changelog comparing v1.8.0 to v1.9.0 without detailing specific changes."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v1_9_1",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.9.1",
+      "tag_name": "v1.9.1",
+      "title": "v1.9.1",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T20:51:55Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v1.9.1",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v1.9.1\nTag: v1.9.1; draft: False; prerelease: False; published_at: 2026-05-08T20:51:55Z; created_at: 2026-05-08T20:50:57Z\nRelease notes:\n**Full Changelog**: https://github.com/yeasy/docker_practice/compare/v1.9.0...v1.9.1",
+      "memory_unit_text": "In the yeasy/docker_practice release v1.9.1, the release notes provide a full changelog comparing v1.9.0 to v1.9.1 without detailing specific changes."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v1_9_2",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.9.2",
+      "tag_name": "v1.9.2",
+      "title": "v1.9.2",
+      "time_hint": "2026-05-16",
+      "published_at": "2026-05-16T23:13:26Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v1.9.2",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v1.9.2\nTag: v1.9.2; draft: False; prerelease: False; published_at: 2026-05-16T23:13:26Z; created_at: 2026-05-16T23:12:36Z\nRelease notes:\n**Full Changelog**: https://github.com/yeasy/docker_practice/compare/v1.9.1...v1.9.2",
+      "memory_unit_text": "In the yeasy/docker_practice release v1.9.2, the release notes provide a full changelog comparing v1.9.1 to v1.9.2 without detailing specific changes."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v1_9_3",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.9.3",
+      "tag_name": "v1.9.3",
+      "title": "v1.9.3",
+      "time_hint": "2026-05-18",
+      "published_at": "2026-05-18T15:40:48Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v1.9.3",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v1.9.3\nTag: v1.9.3; draft: False; prerelease: False; published_at: 2026-05-18T15:40:48Z; created_at: 2026-05-18T15:39:15Z\nRelease notes:\n**Full Changelog**: https://github.com/yeasy/docker_practice/compare/v1.9.2...v1.9.3",
+      "memory_unit_text": "In the yeasy/docker_practice release v1.9.3, the release notes provide a full changelog comparing v1.9.2 to v1.9.3 without detailing specific changes."
+    },
+    {
+      "memory_node_id": "yeasy__docker_practice__release__v1_10_0",
+      "repo": "yeasy/docker_practice",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.10.0",
+      "tag_name": "v1.10.0",
+      "title": "v1.10.0",
+      "time_hint": "2026-05-31",
+      "published_at": "2026-05-31T05:53:19Z",
+      "source_url": "https://github.com/yeasy/docker_practice/releases/tag/v1.10.0",
+      "raw_text": "Repository: yeasy/docker_practice\nRelease: v1.10.0\nTag: v1.10.0; draft: False; prerelease: False; published_at: 2026-05-31T05:53:19Z; created_at: 2026-05-31T05:52:16Z\nRelease notes:\n**Full Changelog**: https://github.com/yeasy/docker_practice/compare/v1.9.3...v1.10.0",
+      "memory_unit_text": "In the yeasy/docker_practice release v1.10.0, the release notes provide a full changelog comparing v1.9.3 to v1.10.0 without detailing specific changes."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the yeasy/docker_practice releases, which release adds the CI/CD tool Drone and the docker secret command?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.9.0-rc1"
+        },
+        {
+          "option_id": "B",
+          "text": "v0.9.0-rc2"
+        },
+        {
+          "option_id": "C",
+          "text": "v0.9.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v1.1.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v0.9.0-rc2",
+      "source_chunk_ids": [
+        "yeasy__docker_practice__release__v0_9_rc2"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "yeasy__docker_practice__release__v0_9_rc2",
+          "answer_text": "增加介绍基于 Docker 的 CI/CD 工具 Drone ... 增加 docker secret 相关内容"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the yeasy/docker_practice releases, how does the content change described in v0.5.0 differ from the content change described in v1.1.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.5.0 adds Compose, Machine, Swarm, and Mesos projects, while v1.1.0 adds BuildKit, docker buildx, and docker manifest, and removes older OS support."
+        },
+        {
+          "option_id": "B",
+          "text": "v0.5.0 removes Docker Swarm content, while v1.1.0 adds Docker Swarm content."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only fix typos and formatting."
+        },
+        {
+          "option_id": "D",
+          "text": "v0.5.0 introduces Docker CE v17.MM revision, while v1.1.0 introduces Docker CE v19.x revision."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v0.5.0 adds Compose, Machine, Swarm, and Mesos projects, while v1.1.0 adds BuildKit, docker buildx, and docker manifest, and removes older OS support.",
+      "source_chunk_ids": [
+        "yeasy__docker_practice__release__v0_5",
+        "yeasy__docker_practice__release__v1_1_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "yeasy__docker_practice__release__v0_5",
+          "answer_text": "添加 Compose 项目 ... 添加 Machine 项目 ... 添加 Swarm 项目 ... 添加 Mesos 项目内容"
+        },
+        {
+          "memory_node_id": "yeasy__docker_practice__release__v1_1_0",
+          "answer_text": "增加 BuildKit ... 增加 docker buildx 命令使用说明 ... 增加 docker manifest 命令使用说明 ... 移除 Ubuntu 14.04 Debian 8 Debian 7"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the yeasy/docker_practice release window, order the following release-content states from earliest to latest: (1) a release that adds the Machine project and fixes several bugs, (2) a release that adds the Compose, Machine, Swarm, and Mesos projects, (3) a release that adds the Etcd, Fig, CoreOS, and Kubernetes projects.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "3 -> 2 -> 1"
+        },
+        {
+          "option_id": "B",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 1 -> 3"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 1 -> 2"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "3 -> 2 -> 1",
+      "source_chunk_ids": [
+        "yeasy__docker_practice__release__v0_4",
+        "yeasy__docker_practice__release__v0_5",
+        "yeasy__docker_practice__release__v0_6"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "yeasy__docker_practice__release__v0_4",
+          "answer_text": "添加 Etcd 项目 ... 添加 Fig 项目 ... 添加 CoreOS 项目 ... 添加 Kubernetes 项目"
+        },
+        {
+          "memory_node_id": "yeasy__docker_practice__release__v0_5",
+          "answer_text": "添加 Compose 项目 ... 添加 Machine 项目 ... 添加 Swarm 项目 ... 添加 Mesos 项目内容"
+        },
+        {
+          "memory_node_id": "yeasy__docker_practice__release__v0_6",
+          "answer_text": "补充 Machine 项目 ... 修正若干 bug"
+        }
+      ]
+    }
+  ]
+}

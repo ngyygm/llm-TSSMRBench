@@ -1,0 +1,530 @@
+{
+  "prototype_id": "Unitech__pm2_release_window",
+  "domain": "github_release_evolution",
+  "repo": "Unitech/pm2",
+  "source_type": "release_note",
+  "window_title": "Unitech/pm2 recent release evolution",
+  "window_summary": "This window tracks the recent Unitech/pm2 release stream from version 4.4.1 through v7.0.1, covering feature additions, bug fixes, dependency updates, and major architectural changes including the introduction of system monitoring, Bun support, and a core refactor in v7.0.0.",
+  "chunks": [
+    {
+      "memory_node_id": "Unitech__pm2__release__4_4_1",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.4.1",
+      "tag_name": "4.4.1",
+      "title": "4.4.1",
+      "time_hint": "2020-08-17",
+      "published_at": "2020-08-17T08:51:45Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/4.4.1",
+      "raw_text": "Repository: Unitech/pm2\nRelease: 4.4.1\nTag: 4.4.1; draft: False; prerelease: False; published_at: 2020-08-17T08:51:45Z; created_at: 2020-08-17T08:48:38Z\nRelease notes:\n- feature drop: autodump fixes #4763\n- fix: fix starting pm2 script from inside an app #4761 (need use PM2_PROGRAMMATIC)",
+      "memory_unit_text": "In the Unitech/pm2 release 4.4.1, the release notes include a feature drop for autodump (fixes #4763) and a fix for starting pm2 script from inside an app (#4761, requiring PM2_PROGRAMMATIC)."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__4_5_0",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.5.0",
+      "tag_name": "4.5.0",
+      "title": "4.5.0",
+      "time_hint": "2020-09-29",
+      "published_at": "2020-09-29T14:25:11Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/4.5.0",
+      "raw_text": "Repository: Unitech/pm2\nRelease: 4.5.0\nTag: 4.5.0; draft: False; prerelease: False; published_at: 2020-09-29T14:25:11Z; created_at: 2020-09-29T13:03:59Z\nRelease notes:\n## 4.5.0\n- fix: creating log folder in sync mode. #4846 - PR #4844 by @QS20199\n- fix: PM2 unable to run ESM packages: ERR_UNSUPPORTED_ESM_URL_SCHEME #4839 - PR #4841 by @ox-harris\n- fix: Use opts.namespace if it was passed in. Previously, it was ignored. #4778 - PR #4791 by @sbleon\n- fix: Prevent reloadLogs command from hanging. #4781 - PR #4782 by @mbrooks and Franck Danard\n- fix: backward compatibility fix for tarball modules - PR #4767 by @ykolbin\n- fix: Operation not permitted on call setgid #2957 - PR #4681 by @guard43ru\n- chore: upgrade dependencies",
+      "memory_unit_text": "In the Unitech/pm2 release 4.5.0, the release notes include fixes for creating log folder in sync mode (#4846), running ESM packages (#4839), using opts.namespace (#4778), preventing reloadLogs hang (#4781), backward compatibility for tarball modules (#4767), and Operation not permitted on setgid (#2957), along with dependency upgrades."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__4_5_1",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.5.1",
+      "tag_name": "4.5.1",
+      "title": "4.5.1",
+      "time_hint": "2020-12-16",
+      "published_at": "2020-12-16T14:36:52Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/4.5.1",
+      "raw_text": "Repository: Unitech/pm2\nRelease: 4.5.1\nTag: 4.5.1; draft: False; prerelease: False; published_at: 2020-12-16T14:36:52Z; created_at: 2020-12-16T14:34:12Z\nRelease notes:\n- fix: cron in cluster mode was not restarting process after one pass - fixes #4834 #4733 #4307 #4834\n- fix: restore --sort <param> option on `pm2 ls` - fix #4536\n- fix: fix tests with npm7\n- fix: restore warning message about process list changed and not dumped\n- chore: alias `--cron` with `--cron-restart`\n- chore: test PM2 againt Node.js 15.x\n- chore: upgrade systeminformation and debug module to latest - PR #4892 by @AdamMajer\n- chore: drop Node 9.x from travis testing\n- chore: remove ps-list module",
+      "memory_unit_text": "In the Unitech/pm2 release 4.5.1, the release notes include fixes for cron in cluster mode not restarting process after one pass (#4834), restoring --sort option on pm2 ls (#4536), fixing tests with npm7, restoring warning about process list not dumped, aliasing --cron with --cron-restart, testing against Node.js 15.x, upgrading systeminformation and debug modules, dropping Node 9.x from travis testing, and removing ps-list module."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__4_5_2",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.5.2",
+      "tag_name": "4.5.2",
+      "title": "4.5.2",
+      "time_hint": "2021-01-29",
+      "published_at": "2021-01-29T08:22:56Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/4.5.2",
+      "raw_text": "Repository: Unitech/pm2\nRelease: 4.5.2\nTag: 4.5.2; draft: False; prerelease: False; published_at: 2021-01-29T08:22:56Z; created_at: 2021-01-28T10:13:05Z\nRelease notes:\n- bump @pm2/js-api (axios CVE)",
+      "memory_unit_text": "In the Unitech/pm2 release 4.5.2, the release notes include a bump of @pm2/js-api to address an axios CVE."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__4_5_4",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.5.4",
+      "tag_name": "4.5.4",
+      "title": "4.5.4",
+      "time_hint": "2021-01-31",
+      "published_at": "2021-01-31T14:42:31Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/4.5.4",
+      "raw_text": "Repository: Unitech/pm2\nRelease: 4.5.4\nTag: 4.5.4; draft: False; prerelease: False; published_at: 2021-01-31T14:42:31Z; created_at: 2021-01-31T14:41:15Z\nRelease notes:\n- drop non used package\n- bump vizion from 0.2.13 to 2.2.1 (Snyk CVE)\n- bump chokidar to 3.5.1",
+      "memory_unit_text": "In the Unitech/pm2 release 4.5.4, the release notes include dropping a non-used package, bumping vizion from 0.2.13 to 2.2.1 for a Snyk CVE, and bumping chokidar to 3.5.1."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__4_5_5",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.5.5",
+      "tag_name": "4.5.5",
+      "title": "4.5.5",
+      "time_hint": "2021-02-25",
+      "published_at": "2021-02-25T22:18:37Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/4.5.5",
+      "raw_text": "Repository: Unitech/pm2\nRelease: 4.5.5\nTag: 4.5.5; draft: False; prerelease: False; published_at: 2021-02-25T22:18:37Z; created_at: 2021-02-25T16:03:11Z\nRelease notes:\n- bump debug\n- remove systeminformation",
+      "memory_unit_text": "In the Unitech/pm2 release 4.5.5, the release notes include bumping debug and removing systeminformation."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__4_5_6",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.5.6",
+      "tag_name": "4.5.6",
+      "title": "4.5.6",
+      "time_hint": "2021-04-01",
+      "published_at": "2021-04-01T10:20:19Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/4.5.6",
+      "raw_text": "Repository: Unitech/pm2\nRelease: 4.5.6\nTag: 4.5.6; draft: False; prerelease: False; published_at: 2021-04-01T10:20:19Z; created_at: 2021-04-01T10:19:30Z\nRelease notes:\n- all submodules version bumped\n- supress all \"security\" warnings",
+      "memory_unit_text": "In the Unitech/pm2 release 4.5.6, the release notes include bumping all submodules versions and suppressing all \"security\" warnings."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__5_0_0",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.0.0",
+      "tag_name": "5.0.0",
+      "title": "5.0.0",
+      "time_hint": "2021-06-07",
+      "published_at": "2021-06-07T13:43:59Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/5.0.0",
+      "raw_text": "Repository: Unitech/pm2\nRelease: 5.0.0\nTag: 5.0.0; draft: False; prerelease: False; published_at: 2021-06-07T13:43:59Z; created_at: 2021-06-07T13:08:45Z\nRelease notes:\n### System Monitoring\nA new local system monitoring feature has been added, allowing to monitor numerous vital server metrics.\nMost important metrics will be displayed when doing a pm2 ls:\n```bash\n┌─────┬─────────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐\n│ id  │ name            │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │\n├─────┼─────────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤\n│ 4   │ app             │ default     │ 1.0.0   │ fork    │ 164618   │ 2s     │ 1670 │ online    │ 0%       │ 41.8mb   │ unitech  │ disabled │\n└─────┴─────────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘\nhost metrics | cpu: 1.6% 42.9º | mem free: 52.0% | wlp0s20f3: ⇓ 0mb/s ⇑ 0mb/s | disk: ⇓ 0.199mb/s ⇑ 0mb/s /dev/nvme0n1p3 88.25% |\n```\nAll server metrics will be available to pm2.io:\n```\n┌─────────────────────────────┬──────────────────────────────────┐\n│ PM2 CPU Usage               │ 0.0 %                            │\n│ PM2 Memory Usage            │ 67.4 mb                          │\n│ PM2 Agent CPU Usage         │ 0 %                              │\n│ PM2 Agent Memory Usage      │ 0 mb                             │\n│ CPU Usage                   │ 1.5 %                            │\n│ CPUs Usage                  │ 0|0|0|0|2|0|0|1|0|0|0|1|0|1|2|8  │\n│ CPU Temperature             │ 42.9 °C                          │\n│ RAM Total                   │ 15.34 gb                         │\n│ RAM Free                    │ 1.18 gb                          │\n│ RAM Active                  │ 7.35 gb                          │\n│ RAM Available               │ 7.99 gb                          │\n│ RAM Usage                   │ 47.9 %                           │\n│ FD Opened                   │ 15072                            │\n│ Disk Writes                 │ 0 mb/s                           │\n│ Disk Reads                  │ 0.24 mb/s                        │\n│ Disk Usage                  │ 88.25 %                          │\n│ Disk Size                   │ 465.60 gb                        │\n│ Total TX                    │ 0.005 mb/s                       │\n│ Total RX                    │ 0.004 mb/s                       │\n│ fs:use:/dev/nvme0n1p3       │ 88.25 %                          │\n│ fs:size:/dev/nvme0n1p3      │ 465.60 gb                        │\n│ net:tx_5:wlp0s20f3          │ 0.005 mb/s                       │\n│ net:rx_5:wlp0s20f3          │ 0.004 mb/s                       │\n│ net:rx_errors_60:wlp0s20f3  │ 0 /min                           │\n│ net:tx_errors_60:wlp0s20f3  │ 0 /min                           │\n│ net:rx_dropped_60:wlp0s20f3 │ 0 /min                           │\n│ net:tx_dropped_60:wlp0s20f3 │ 0 /min                           │\n│ graphics:mem:total          │ 3878 mb                          │\n│ graphics:mem:used           │ 1260 mb                          │\n│ graphics:temp               │ 46 °C                            │\n└─────────────────────────────┴──────────────────────────────────┘\n```\n#### Disabling system monitoring\n```\n# Disable system monitoring\npm2 set pm2:sysmonit false\n# Enable system monitoring\npm2 set pm2:sysmonit true\n```\n### PM2.io bandwidth reduction\nData quantity sent from PM2 to PM2.io has been reduced by 80%, thanks for a json patch differential system. Much more data can now be exposed (metrics, actions) to PM2.io\n### Other fixes\n- feat: added args and full script path to monitoring data\n- fix: regular local ip check\n- fix: pm2 agent watchdog has been consolidated and fixes freezing issues\n- fix: modules bumped",
+      "memory_unit_text": "In the Unitech/pm2 release 5.0.0, the release notes introduce a new local system monitoring feature displaying vital server metrics in pm2 ls and pm2.io, a bandwidth reduction for PM2.io data via json patch differential, and other fixes including added args and full script path to monitoring data, regular local ip check, consolidated pm2 agent watchdog fixing freezing issues, and bumped modules."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__5_0_3",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.0.3",
+      "tag_name": "5.0.3",
+      "title": "5.0.3",
+      "time_hint": "2021-06-08",
+      "published_at": "2021-06-08T13:04:07Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/5.0.3",
+      "raw_text": "Repository: Unitech/pm2\nRelease: 5.0.3\nTag: 5.0.3; draft: False; prerelease: False; published_at: 2021-06-08T13:04:07Z; created_at: 2021-06-08T13:00:17Z\nRelease notes:\n- fixes for system monitoring",
+      "memory_unit_text": "In the Unitech/pm2 release 5.0.3, the release notes include fixes for system monitoring."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__5_1_1",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.1.1",
+      "tag_name": "5.1.1",
+      "title": "5.1.1",
+      "time_hint": "2021-09-02",
+      "published_at": "2021-09-02T06:39:01Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/5.1.1",
+      "raw_text": "Repository: Unitech/pm2\nRelease: 5.1.1\nTag: 5.1.1; draft: False; prerelease: False; published_at: 2021-09-02T06:39:01Z; created_at: 2021-08-19T20:54:34Z\nRelease notes:\n- add back Node 10.x support\n- make pm2-sysmonit module optional\n- remove fast-printf and replace with sprintfjs",
+      "memory_unit_text": "In the Unitech/pm2 release 5.1.1, the release notes include adding back Node 10.x support, making pm2-sysmonit module optional, and replacing fast-printf with sprintfjs."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__5_1_2",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.1.2",
+      "tag_name": "5.1.2",
+      "title": "5.1.2",
+      "time_hint": "2021-09-24",
+      "published_at": "2021-09-24T11:18:46Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/5.1.2",
+      "raw_text": "Repository: Unitech/pm2\nRelease: 5.1.2\nTag: 5.1.2; draft: False; prerelease: False; published_at: 2021-09-24T11:18:46Z; created_at: 2021-09-24T11:17:59Z\nRelease notes:\n- cron-restart improvements",
+      "memory_unit_text": "In the Unitech/pm2 release 5.1.2, the release notes include cron-restart improvements."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__5_2_0",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.2.0",
+      "tag_name": "5.2.0",
+      "title": "5.2.0",
+      "time_hint": "2022-02-17",
+      "published_at": "2022-02-17T13:05:04Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/5.2.0",
+      "raw_text": "Repository: Unitech/pm2\nRelease: 5.2.0\nTag: 5.2.0; draft: False; prerelease: False; published_at: 2022-02-17T13:05:04Z; created_at: 2022-02-17T09:25:38Z\nRelease notes:\n- replace node-cron by croner (#5183 #5035)\n- upgrade mocha deps\n- fix pm2 report when daemon not running\n- remove semver check for legacy node.js versions\n- update node version in setup.deb.sh by using lts (#5201) + openrc\n- replace legacy util._extend by Object.assign (#5239)\n- add missing start options types (#5242)\n- recursive detection of package.json (#5267)\n- make tarball module uninstall cross-platform (#5269)\n- Fix unnecessary \"ENOENT\" console.error when serving a spa (#5272)\n- fix: used env variable instead of hardcode datetime format (#5277)\n- copyright update (#5278)\n- fix: remove constants import from VersionCheck (not needed) (#5279)\n- Reduce async import (#5280)",
+      "memory_unit_text": "In the Unitech/pm2 release 5.2.0, the release notes include replacing node-cron by croner, upgrading mocha deps, fixing pm2 report when daemon not running, removing semver check for legacy Node.js versions, updating node version in setup.deb.sh, replacing legacy util._extend by Object.assign, adding missing start options types, recursive detection of package.json, making tarball module uninstall cross-platform, fixing unnecessary ENOENT console.error when serving a spa, using env variable instead of hardcoded datetime format, copyright update, removing constants import from VersionCheck, and reducing async import."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__5_2_2",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.2.2",
+      "tag_name": "5.2.2",
+      "title": "5.2.2",
+      "time_hint": "2022-10-13",
+      "published_at": "2022-10-13T08:06:28Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/5.2.2",
+      "raw_text": "Repository: Unitech/pm2\nRelease: 5.2.2\nTag: 5.2.2; draft: False; prerelease: False; published_at: 2022-10-13T08:06:28Z; created_at: 2022-10-13T07:47:19Z\nRelease notes:\n- fix cluster error avoiding process restart (#5396)\n- ensure increment_var value is a number (#5435)\n- update dependencies\n- add node latest to travis testing",
+      "memory_unit_text": "In the Unitech/pm2 release 5.2.2, the release notes include fixing cluster error avoiding process restart (#5396), ensuring increment_var value is a number (#5435), updating dependencies, and adding node latest to travis testing."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__5_3_0",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.3.0",
+      "tag_name": "5.3.0",
+      "title": "5.3.0",
+      "time_hint": "2023-03-15",
+      "published_at": "2023-03-15T20:58:19Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/5.3.0",
+      "raw_text": "Repository: Unitech/pm2\nRelease: 5.3.0\nTag: 5.3.0; draft: False; prerelease: False; published_at: 2023-03-15T20:58:19Z; created_at: 2023-03-15T18:19:07Z\nRelease notes:\n- fix: replace non-working condition that blocks flush from clearing the logs #5533 @Sailboat265\n- fix: ESM script loader #5524 @BlueWater86",
+      "memory_unit_text": "In the Unitech/pm2 release 5.3.0, the release notes include fixing a non-working condition that blocks flush from clearing the logs (#5533) and fixing ESM script loader (#5524)."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__v5_3_1",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.3.1",
+      "tag_name": "v5.3.1",
+      "title": "5.3.1",
+      "time_hint": "2024-01-20",
+      "published_at": "2024-01-20T15:06:17Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/v5.3.1",
+      "raw_text": "Repository: Unitech/pm2\nRelease: 5.3.1\nTag: v5.3.1; draft: False; prerelease: False; published_at: 2024-01-20T15:06:17Z; created_at: 2024-01-20T13:19:56Z\nRelease notes:\n- Fix terminal width when condensed https://github.com/Unitech/pm2/commit/cac839329afaa768ea9901e3e2551987d509ae05\n- Auto run tsx/ts files with bun binary instead of ts-node https://github.com/Unitech/pm2/commit/f122aabe3270aade8fa770fd5b67b877a26efd52\n- #5686 Switch from Travis CI to Github Actions\n- #5680 Fixed reserved keyword for ES6 Strict Mode when Bundling @juaneth\n- #5683 update badges\n- #5684 auto switch light and dark mode logos\n- #5678 Bugfix/deploy ecosystem filename extension / esm module default ecosystem config name @TeleMediaCC\n- #5660 Fix matching logic for logs from namespace when lines = 0 @bawjensen\n- fix \"vulnerabilities\" in axios module",
+      "memory_unit_text": "In the Unitech/pm2 release v5.3.1, the release notes include fixing terminal width when condensed, auto running tsx/ts files with bun binary instead of ts-node, switching from Travis CI to Github Actions, fixing reserved keyword for ES6 Strict Mode when bundling, updating badges, auto switching light and dark mode logos, fixing deploy ecosystem filename extension / esm module default ecosystem config name, fixing matching logic for logs from namespace when lines = 0, and fixing vulnerabilities in axios module."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__v5_4_0",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.4.0",
+      "tag_name": "v5.4.0",
+      "title": "5.4.0",
+      "time_hint": "2024-05-24",
+      "published_at": "2024-05-24T12:59:27Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/v5.4.0",
+      "raw_text": "Repository: Unitech/pm2\nRelease: 5.4.0\nTag: v5.4.0; draft: False; prerelease: False; published_at: 2024-05-24T12:59:27Z; created_at: 2024-05-24T11:36:10Z\nRelease notes:\n- drop old uuid sub dependency\n- #5782 add autostart true||false feature by @ultimate-tester\n- update modules",
+      "memory_unit_text": "In the Unitech/pm2 release v5.4.0, the release notes include dropping old uuid sub dependency, adding autostart true||false feature (#5782), and updating modules."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__v5_4_1",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.4.1",
+      "tag_name": "v5.4.1",
+      "title": "5.4.1",
+      "time_hint": "2024-06-18",
+      "published_at": "2024-06-18T08:59:44Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/v5.4.1",
+      "raw_text": "Repository: Unitech/pm2\nRelease: 5.4.1\nTag: v5.4.1; draft: False; prerelease: False; published_at: 2024-06-18T08:59:44Z; created_at: 2024-06-18T08:58:22Z\nRelease notes:\nUpdate websocket dependency in pm2/agent submodule",
+      "memory_unit_text": "In the Unitech/pm2 release v5.4.1, the release notes include updating websocket dependency in pm2/agent submodule."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__v5_4_2",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.4.2",
+      "tag_name": "v5.4.2",
+      "title": "v5.4.2",
+      "time_hint": "2024-07-08",
+      "published_at": "2024-07-08T08:47:10Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/v5.4.2",
+      "raw_text": "Repository: Unitech/pm2\nRelease: v5.4.2\nTag: v5.4.2; draft: False; prerelease: False; published_at: 2024-07-08T08:47:10Z; created_at: 2024-07-08T08:43:37Z\nRelease notes:\n- https://github.com/Unitech/pm2/pull/5833\n- https://github.com/keymetrics/pm2-io-apm/issues/301",
+      "memory_unit_text": "In the Unitech/pm2 release v5.4.2, the release notes reference pull request #5833 and keymetrics/pm2-io-apm issue #301."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__v6_0_5",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v6.0.5",
+      "tag_name": "v6.0.5",
+      "title": "v6.0.5",
+      "time_hint": "2025-03-15",
+      "published_at": "2025-03-15T10:24:12Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/v6.0.5",
+      "raw_text": "Repository: Unitech/pm2\nRelease: v6.0.5\nTag: v6.0.5; draft: False; prerelease: False; published_at: 2025-03-15T10:24:12Z; created_at: 2025-03-11T09:16:42Z\nRelease notes:\n# 6.0.5\n- Bun support - Fixes #5893 #5774 #5682 #5675 #5777\n- Disable git parsing by default #5909 #2182 #5801 #5051 #5696\n- Add WEBP content type for pm2 serve #5900 @tbo47\n- Enable PM2 module update from tarball #5906 @AYOKINYA\n- Fix treekil on FreeBSD #5896 @skeyby\n- fix allowing to update namespaced pm2 NPM module (@org/module-name) #5915 @endelendel",
+      "memory_unit_text": "In the Unitech/pm2 release v6.0.5, the release notes include Bun support, disabling git parsing by default, adding WEBP content type for pm2 serve, enabling PM2 module update from tarball, fixing treekil on FreeBSD, and fixing allowing to update namespaced pm2 NPM module."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__v6_0_6",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v6.0.6",
+      "tag_name": "v6.0.6",
+      "title": "v6.0.6",
+      "time_hint": "2025-05-13",
+      "published_at": "2025-05-13T11:57:14Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/v6.0.6",
+      "raw_text": "Repository: Unitech/pm2\nRelease: v6.0.6\nTag: v6.0.6; draft: False; prerelease: False; published_at: 2025-05-13T11:57:14Z; created_at: 2025-05-13T07:08:50Z\nRelease notes:\n- refactor: replace chalk with ansis by @webdiscus fix #5976 #5247",
+      "memory_unit_text": "In the Unitech/pm2 release v6.0.6, the release notes include refactoring to replace chalk with ansis."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__v6_0_7",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v6.0.7",
+      "tag_name": "v6.0.7",
+      "title": "v6.0.7",
+      "time_hint": "2025-06-05",
+      "published_at": "2025-06-05T09:09:49Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/v6.0.7",
+      "raw_text": "Repository: Unitech/pm2\nRelease: v6.0.7\nTag: v6.0.7; draft: False; prerelease: False; published_at: 2025-06-05T09:09:49Z; created_at: 2025-06-04T10:16:17Z\nRelease notes:\n- fix: ansis-node10 https://github.com/Unitech/pm2/commit/99d9224e940d119a1ad5b241b4fc4e0db7c830ed @\\\nwebdiscus",
+      "memory_unit_text": "In the Unitech/pm2 release v6.0.7, the release notes include a fix for ansis-node10."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__v6_0_8",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v6.0.8",
+      "tag_name": "v6.0.8",
+      "title": "v6.0.8",
+      "time_hint": "2025-06-05",
+      "published_at": "2025-06-05T09:16:23Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/v6.0.8",
+      "raw_text": "Repository: Unitech/pm2\nRelease: v6.0.8\nTag: v6.0.8; draft: False; prerelease: False; published_at: 2025-06-05T09:16:23Z; created_at: 2025-06-05T09:15:22Z\nRelease notes:\n- fix: package-lock update",
+      "memory_unit_text": "In the Unitech/pm2 release v6.0.8, the release notes include a fix for package-lock update."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__v6_0_9",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v6.0.9",
+      "tag_name": "v6.0.9",
+      "title": "v6.0.9",
+      "time_hint": "2025-09-01",
+      "published_at": "2025-09-01T13:20:52Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/v6.0.9",
+      "raw_text": "Repository: Unitech/pm2\nRelease: v6.0.9\nTag: v6.0.9; draft: False; prerelease: False; published_at: 2025-09-01T13:20:52Z; created_at: 2025-09-01T11:29:45Z\nRelease notes:\n## 6.0.9\n- updates all typescript definitions\n- upgrade github ci workflows\n- upgrade mocha dep and adapt tests\n- bump packages\n- fix:Potential ReDoS Vulnerability or Inefficient Regular Expression in Project: Need for Assessment and Mitigation #5971",
+      "memory_unit_text": "In the Unitech/pm2 release v6.0.9, the release notes include updating all typescript definitions, upgrading github ci workflows, upgrading mocha dep and adapting tests, bumping packages, and fixing a potential ReDoS vulnerability or inefficient regular expression (#5971)."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__v6_0_10",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v6.0.10",
+      "tag_name": "v6.0.10",
+      "title": "v6.0.10",
+      "time_hint": "2025-09-02",
+      "published_at": "2025-09-02T14:26:45Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/v6.0.10",
+      "raw_text": "Repository: Unitech/pm2\nRelease: v6.0.10\nTag: v6.0.10; draft: False; prerelease: False; published_at: 2025-09-02T14:26:45Z; created_at: 2025-09-02T14:25:56Z\nRelease notes:\n- revert #5971 #6031",
+      "memory_unit_text": "In the Unitech/pm2 release v6.0.10, the release notes include reverting #5971 (#6031)."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__v6_0_11",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v6.0.11",
+      "tag_name": "v6.0.11",
+      "title": "v6.0.11",
+      "time_hint": "2025-09-11",
+      "published_at": "2025-09-11T09:15:05Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/v6.0.11",
+      "raw_text": "Repository: Unitech/pm2\nRelease: v6.0.11\nTag: v6.0.11; draft: False; prerelease: False; published_at: 2025-09-11T09:15:05Z; created_at: 2025-09-11T09:13:54Z\nRelease notes:\n- #6034 replace package-lock.json by npm-shrinkwrap.json\n- #5915 fix allowing to update namespaced pm2 NPM module (@org/module-name)",
+      "memory_unit_text": "In the Unitech/pm2 release v6.0.11, the release notes include replacing package-lock.json by npm-shrinkwrap.json (#6034) and fixing allowing to update namespaced pm2 NPM module (#5915)."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__v6_0_12",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v6.0.12",
+      "tag_name": "v6.0.12",
+      "title": "v6.0.12",
+      "time_hint": "2025-09-22",
+      "published_at": "2025-09-22T08:20:30Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/v6.0.12",
+      "raw_text": "Repository: Unitech/pm2\nRelease: v6.0.12\nTag: v6.0.12; draft: False; prerelease: False; published_at: 2025-09-22T08:20:30Z; created_at: 2025-09-22T08:19:47Z\nRelease notes:\n- #6037 Drop npm-shrinkwrap in favor of fixed dependencies versions\n- #5577 fix pm2 monit crash",
+      "memory_unit_text": "In the Unitech/pm2 release v6.0.12, the release notes include dropping npm-shrinkwrap in favor of fixed dependencies versions (#6037) and fixing pm2 monit crash (#5577)."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__v6_0_13",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v6.0.13",
+      "tag_name": "v6.0.13",
+      "title": "v6.0.13",
+      "time_hint": "2025-09-22",
+      "published_at": "2025-09-22T09:02:56Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/v6.0.13",
+      "raw_text": "Repository: Unitech/pm2\nRelease: v6.0.13\nTag: v6.0.13; draft: False; prerelease: False; published_at: 2025-09-22T09:02:56Z; created_at: 2025-09-22T09:01:31Z\nRelease notes:\n- fix blessed dep",
+      "memory_unit_text": "In the Unitech/pm2 release v6.0.13, the release notes include fixing blessed dep."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__v6_0_14",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v6.0.14",
+      "tag_name": "v6.0.14",
+      "title": "v6.0.14",
+      "time_hint": "2025-11-26",
+      "published_at": "2025-11-26T08:40:01Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/v6.0.14",
+      "raw_text": "Repository: Unitech/pm2\nRelease: v6.0.14\nTag: v6.0.14; draft: False; prerelease: False; published_at: 2025-11-26T08:40:01Z; created_at: 2025-11-26T08:14:55Z\nRelease notes:\n## 6.0.14\n- Fixed version of @pm2/pm2-version-check #6055\n- CVE-2025-64718 Update js-yaml\n- replace fs.R_OK with fs.constants.T_OK #6012 #6019",
+      "memory_unit_text": "In the Unitech/pm2 release v6.0.14, the release notes include fixing version of @pm2/pm2-version-check (#6055), updating js-yaml for CVE-2025-64718, and replacing fs.R_OK with fs.constants.T_OK (#6012 #6019)."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__v7_0_0",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v7.0.0",
+      "tag_name": "v7.0.0",
+      "title": "v7.0.0",
+      "time_hint": "2026-05-02",
+      "published_at": "2026-05-02T07:11:59Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/v7.0.0",
+      "raw_text": "Repository: Unitech/pm2\nRelease: v7.0.0\nTag: v7.0.0; draft: False; prerelease: False; published_at: 2026-05-02T07:11:59Z; created_at: 2026-05-02T07:07:23Z\nRelease notes:\n## 7.0.0\n### Breaking Changes\n- Require Node.js >= 18.0.0 (dropped Node.js 16 support)\n### Core Refactor\n- Internalize pm2-axon, pm2-axon-rpc, pm2-io-bpm, pm2-io-agent, fclone as local modules (reduced supply chain surface)\n- Internalize pm2-multimeter and charm into lib/tools/multimeter (zero external deps)\n- Add Bun runtime support (ProcessContainerBun.js, ProcessContainerForkBun.js)\n- Replace `needle` with native `fetch` (CliAuth, TAR publish)\n- Replace `enquirer` with lightweight built-in prompt (boilerplate selector)\n- Replace `promptly` with built-in lib/tools/prompt\n- Replace `mkdirp` with native `fs.mkdirSync({ recursive: true })`\n- Replace `source-map-support` with native `process.setSourceMapsEnabled()`\n- Replace `sprintf-js` with template literals (Dashboard)\n- Replace `url.parse()` with native `URL` constructor (Serve, Utility, CliAuth)\n- Remove `fclone` npm dep, use internalized module\n- Drop auto source map file detection in Common.prepareAppConf\n### Security\n- CVE-2025-5891 Fix ReDoS in Config.js string-to-array split regex #6075\n- CVE-2026-27699 Update proxy-agent to 6.5.0, basic-ftp to 5.3.1 #6088\n- Fix command injection in WebAuth.js open() — replace exec() with execFile() #6089\n- Fix command injection in PM2IO.js open() — replace exec() with execFile(), validate SUDO_USER\n- Fix command injection in lib/tools/open.js — replace exec() with execFile(), validate SUDO_USER\n- Fix prototype pollution in Configuration.set/unset via __proto__ key traversal #6089\n- Fix HttpInterface env stripping never executing (WEB_STRIP_ENV_VARS) #6089\n### Bug Fixes\n- Rewrite TreeKill: single ps snapshot + in-memory tree build, eliminates race conditions. SIGKILL escalation now targets surviving child processes directly instead of re-walking a dead tree #6084\n- Fix [object Object] env vars leaked to fork mode subprocesses #6073\n- Fix Windows home path: use os.homedir() instead of HOMEPATH/HOMEDRIVE env vars #6106\n- Fix Windows TreeKill callback consistency\n- Fix missing BPM monitoring injection in Bun cluster mode (ProcessContainerBun.js)\n- Fix ReferenceError crash in Bun cluster console overrides when disable_logs is true\n- Fix CliAuth wrong credentials error displaying \"undefined\" instead of error message\n### Features\n- Add `--ftp` option to `pm2 serve` for directory listing (python http.server style)\n### Dependencies\n- Add OpenTelemetry tracing as direct dependencies (@opentelemetry/api, sdk-node, auto-instrumentations-node)\n- Upgrade OpenTelemetry packages to latest\n- Update pidusage from 3.0.2 to 4.0.1\n- Upgrade ws to ^8.18.0, eventemitter2 to ^6.4.9\n- Remove needle, enquirer, promptly, mkdirp, source-map-support, sprintf-js, fclone from npm dependencies\n### Testing\n- Add Docker parallel test runner with Node.js and Bun support\n- Add Windows test suite (test/windows.sh)\n- Add OpenTelemetry tracing tests\n- Add TreeKill unit tests\n- Add test scripts for internalized modules (bpm, axon, axon-rpc, io-agent)\n- Fix test compatibility for Node.js 22+ and Bun\n- CI matrix: Node.js 18, 20 + latest",
+      "memory_unit_text": "In the Unitech/pm2 release v7.0.0, the release notes include breaking changes requiring Node.js >= 18.0.0, a core refactor internalizing several modules, adding Bun runtime support, replacing various dependencies with native alternatives, security fixes for ReDoS, command injection, and prototype pollution, bug fixes including a TreeKill rewrite, features like --ftp option for pm2 serve, dependency updates including OpenTelemetry tracing, and testing improvements."
+    },
+    {
+      "memory_node_id": "Unitech__pm2__release__v7_0_1",
+      "repo": "Unitech/pm2",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v7.0.1",
+      "tag_name": "v7.0.1",
+      "title": "v7.0.1",
+      "time_hint": "2026-05-02",
+      "published_at": "2026-05-02T13:21:16Z",
+      "source_url": "https://github.com/Unitech/pm2/releases/tag/v7.0.1",
+      "raw_text": "Repository: Unitech/pm2\nRelease: v7.0.1\nTag: v7.0.1; draft: False; prerelease: False; published_at: 2026-05-02T13:21:16Z; created_at: 2026-05-02T13:19:49Z\nRelease notes:\n## 7.0.1\n### Bug Fixes\n- Fix Python (and other non-Node) interpreter regression on Ubuntu: bun runtime detection used a naive `includes('bun')` substring check that matched any path containing the letters \"bun\" — most notably `/home/ubuntu/...`. Affected paths were routed through `ProcessContainerForkBun.js` and crashed with `SyntaxError: unterminated string literal` when Python tried to parse the JS container. Anchored the match to the end of the interpreter path (`=== 'bun'` or `/bun$/`) in both `lib/God/ForkMode.js` and `lib/Common.js` #5990\n- Display `max_memory_restart` in `pm2 describe` output when set #5925\n- Add missing `port` option to `StartOptions` TypeScript declaration #6045\n- Fix incorrect file permissions on `openrc.tpl` template (0755 → 0644) #5957\n- Fix Windows cmd.exe regression: revert `bin/pm2*` launchers to `#!/usr/bin/env node` shebang (was polyglot `#!/bin/sh`). Polyglot worked on Linux/macOS but broke npm's `pm2.cmd` shim on Windows — `cmd.exe` can't interpret `/bin/sh` shebang and failed with `'\"/bin/sh\"' is not recognized as an internal or external command`. PowerShell's auto-generated `pm2.ps1` shim happened to call `node` directly so it kept working, masking the regression. Bun-only Linux/macOS users (no Node installed) need to symlink `node` to `bun` (`sudo ln -s $(which bun) /usr/local/bin/node`) — same workaround used in the project's bun test Dockerfile. Documented in README #6108",
+      "memory_unit_text": "In the Unitech/pm2 release v7.0.1, the release notes include bug fixes for a Python interpreter regression on Ubuntu caused by bun runtime detection, displaying max_memory_restart in pm2 describe, adding missing port option to TypeScript declaration, fixing incorrect file permissions on openrc.tpl template, and fixing a Windows cmd.exe regression by reverting bin/pm2 launchers to #!/usr/bin/env node shebang."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the Unitech/pm2 releases, which release introduces a new local system monitoring feature that displays vital server metrics in pm2 ls?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "4.5.0"
+        },
+        {
+          "option_id": "B",
+          "text": "5.0.0"
+        },
+        {
+          "option_id": "C",
+          "text": "5.1.1"
+        },
+        {
+          "option_id": "D",
+          "text": "5.2.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "5.0.0",
+      "source_chunk_ids": [
+        "Unitech__pm2__release__5_0_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "Unitech__pm2__release__5_0_0",
+          "answer_text": "introduces a new local system monitoring feature displaying vital server metrics in pm2 ls"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the Unitech/pm2 releases, how does the change in v6.0.5 regarding Bun support differ from the change in v7.0.0 regarding Bun support?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v6.0.5 adds Bun support, while v7.0.0 adds Bun runtime support and internalizes related modules."
+        },
+        {
+          "option_id": "B",
+          "text": "v6.0.5 removes Bun support, while v7.0.0 reintroduces it."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only update Bun-related dependencies without functional changes."
+        },
+        {
+          "option_id": "D",
+          "text": "v6.0.5 adds Bun support for cluster mode, while v7.0.0 adds Bun support for fork mode."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v6.0.5 adds Bun support, while v7.0.0 adds Bun runtime support and internalizes related modules.",
+      "source_chunk_ids": [
+        "Unitech__pm2__release__v6_0_5",
+        "Unitech__pm2__release__v7_0_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "Unitech__pm2__release__v6_0_5",
+          "answer_text": "Bun support"
+        },
+        {
+          "memory_node_id": "Unitech__pm2__release__v7_0_0",
+          "answer_text": "Add Bun runtime support (ProcessContainerBun.js, ProcessContainerForkBun.js)"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the Unitech/pm2 release window, order the following release-content states from earliest to latest: (1) a release that bumps @pm2/js-api for an axios CVE, (2) a release that adds Bun support and disables git parsing by default, (3) a release that replaces chalk with ansis, (4) a release that drops npm-shrinkwrap in favor of fixed dependencies versions.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 2 -> 1 -> 3"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "Unitech__pm2__release__4_5_2",
+        "Unitech__pm2__release__v6_0_5",
+        "Unitech__pm2__release__v6_0_6",
+        "Unitech__pm2__release__v6_0_12"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "Unitech__pm2__release__4_5_2",
+          "answer_text": "bump @pm2/js-api (axios CVE)"
+        },
+        {
+          "memory_node_id": "Unitech__pm2__release__v6_0_5",
+          "answer_text": "Bun support - Disable git parsing by default"
+        },
+        {
+          "memory_node_id": "Unitech__pm2__release__v6_0_6",
+          "answer_text": "replace chalk with ansis"
+        },
+        {
+          "memory_node_id": "Unitech__pm2__release__v6_0_12",
+          "answer_text": "Drop npm-shrinkwrap in favor of fixed dependencies versions"
+        }
+      ]
+    }
+  ]
+}

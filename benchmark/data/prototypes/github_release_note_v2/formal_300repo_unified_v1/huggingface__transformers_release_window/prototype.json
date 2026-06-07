@@ -1,0 +1,525 @@
+{
+  "prototype_id": "huggingface__transformers_release_window",
+  "domain": "github_release_evolution",
+  "repo": "huggingface/transformers",
+  "source_type": "release_note",
+  "window_title": "huggingface/transformers recent release evolution",
+  "window_summary": "This window tracks the recent huggingface/transformers release stream from v4.56.1-Vault-Gemma-preview through v5.9.0, including major version 5.0.0, its release candidates, and weekly minor releases with new model additions and fixes.",
+  "chunks": [
+    {
+      "memory_node_id": "huggingface__transformers__release__v4_56_1_vault_gemma_preview",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.56.1-Vault-Gemma-preview",
+      "tag_name": "v4.56.1-Vault-Gemma-preview",
+      "title": "Vault-Gemma (based on v4.56.1)",
+      "time_hint": "2025-09-12",
+      "published_at": "2025-09-12T15:43:49Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v4.56.1-Vault-Gemma-preview",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Vault-Gemma (based on v4.56.1)\nTag: v4.56.1-Vault-Gemma-preview; draft: False; prerelease: False; published_at: 2025-09-12T15:43:49Z; created_at: 2025-09-12T15:40:15Z\nRelease notes:\nA new model is added to transformers: Vault-Gemma\nIt is added on top of the v4.56.1 release, and can be installed from the following tag: `v4.56.1-Vault-Gemma-preview`.\nIn order to install this version, please install with the following command:\n```\npip install git+https://github.com/huggingface/transformers@v4.56.1-Vault-Gemma-preview\n```\nIf fixes are needed, they will be applied to this release; this installation may therefore be considered as stable and improving.\nAs the tag implies, this tag is a **_preview_** of the Vault-Gemma model. This tag is a tagged version of the `main` branch and does not follow semantic versioning. This model will be included in the next minor release: `v4.57.0`.\n## Vault-Gemma\n[VaultGemma](https://services.google.com/fh/files/blogs/vaultgemma_tech_report.pdf) is a text-only decoder model derived from [Gemma 2](https://huggingface.co/docs/transformers/en/model_doc/gemma2), notably it drops the norms after the Attention and MLP blocks, and uses full attention for all layers instead of alternating between full attention and local sliding attention. VaultGemma is available as a pretrained model with 1B parameters that uses a 1024 token sequence length.\nVaultGemma was trained from scratch with sequence-level differential privacy (DP). Its training data includes the same mixture as the [Gemma 2 models](https://huggingface.co/collections/google/gemma-2-release-667d6600fd5220e7b967f315), consisting of a number of documents of varying lengths. Additionally, it is trained using [DP stochastic gradient descent (DP-SGD)](https://arxiv.org/abs/1607.00133) and provides a (ε ≤ 2.0, δ ≤ 1.1e-10)-sequence-level DP guarantee, where a sequence consists of 1024 consecutive tokens extracted from heterogeneous data sources. Specifically, the privacy unit of the guarantee is for the sequences after sampling and packing of the mixture.\nThe example below demonstrates how to chat with the model with `pipeline`:\n```python\nfrom transformers import pipeline\npipe = pipeline(\ntask=\"text-generation\",\nmodel=\"google/vaultgemma-1b\",\ndtype=\"auto\",\ndevice_map=\"auto\",\n)\ntext = \"Tell me an unknown interesting biology fact about the brain.\"\noutputs = pipe(text, max_new_tokens=32)\nresponse = outputs[0][\"generated_text\"]\nprint(response)\n```\nwith the `AutoModelForCausalLM` class:\n```python\n# pip install accelerate\nfrom transformers import AutoTokenizer, AutoModelForCausalLM\nmodel_id = \"google/vaultgemma-1b\"\ntokenizer = AutoTokenizer.from_pretrained(model_id)\nmodel = AutoModelForCausalLM.from_pretrained(model_id, device_map=\"auto\", dtype=\"auto\")\ntext = \"Tell me an unknown interesting biology fact about the brain.\"\ninput_ids = tokenizer(text, return_tensors=\"pt\").to(model.device)\noutputs = model.generate(**input_ids, max_new_tokens=32)\nprint(tokenizer.decode(outputs[0]))\n```\nor with `transformers chat`:\n```\ntransformers chat google/vaultgemma-1b\n```",
+      "memory_unit_text": "In the huggingface/transformers release Vault-Gemma (based on v4.56.1), a new model Vault-Gemma is added. VaultGemma is a text-only decoder model derived from Gemma 2, dropping norms after Attention and MLP blocks and using full attention for all layers. It is a pretrained 1B parameter model with 1024 token sequence length, trained from scratch with sequence-level differential privacy (DP) using DP-SGD, providing a (ε ≤ 2.0, δ ≤ 1.1e-10)-sequence-level DP guarantee. This tag is a preview and will be included in the next minor release v4.57.0."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v4_56_2",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.56.2",
+      "tag_name": "v4.56.2",
+      "title": "Patch release v4.56.2",
+      "time_hint": "2025-09-17",
+      "published_at": "2025-09-17T09:13:17Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v4.56.2",
+      "raw_text": "Repository: huggingface/transformers\nRelease:  Patch release v4.56.2\nTag: v4.56.2; draft: False; prerelease: False; published_at: 2025-09-17T09:13:17Z; created_at: 2025-09-17T09:07:48Z\nRelease notes:\n- Processor load with multi-processing (#40786)\n- [Jetmoe] Fix RoPE (#40819)\n- Fix getter regression (#40824)\n- Fix config dtype parsing for Emu3 edge case (#40766)",
+      "memory_unit_text": "In the huggingface/transformers patch release v4.56.2, fixes include processor load with multi-processing, Jetmoe RoPE fix, getter regression fix, and config dtype parsing for Emu3 edge case."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v4_57_0",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.57.0",
+      "tag_name": "v4.57.0",
+      "title": "v4.57.0: Qwen3-Next, Vault Gemma, Qwen3 VL, LongCat Flash, Flex OLMO, LFM2 VL, BLT, Qwen3 OMNI MoE, Parakeet, EdgeTAM, OLMO3",
+      "time_hint": "2025-10-03",
+      "published_at": "2025-10-03T17:04:51Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v4.57.0",
+      "raw_text": "Repository: huggingface/transformers\nRelease: v4.57.0: Qwen3-Next, Vault Gemma, Qwen3 VL, LongCat Flash, Flex OLMO, LFM2 VL, BLT, Qwen3 OMNI MoE, Parakeet, EdgeTAM, OLMO3\nTag: v4.57.0; draft: False; prerelease: False; published_at: 2025-10-03T17:04:51Z; created_at: 2025-10-03T16:34:18Z\nRelease notes:\n## New model additions\n### Qwen3 Next\n<img width=\"1200\" height=\"511\" alt=\"image\" src=\"https://github.com/user-attachments/assets/3abad6c4-5650-412d-a831-f8a30a5d962e\" />\nThe Qwen3-Next series represents the Qwen team's next-generation foundation models, optimized for extreme context length and large-scale parameter efficiency.\nThe series introduces a suite of architectural innovations designed to maximize performance while minimizing computational cost:\n- **Hybrid Attention**: Replaces standard attention with the combination of **Gated DeltaNet** and **Gated Attention**, enabling efficient context modeling.\n- **High-Sparsity MoE**: Achieves an extreme low activation ratio as 1:50 in MoE layers — drastically reducing FLOPs per token while preserving model capacity.\n- **Multi-Token Prediction(MTP)**: Boosts pretraining model performance, and accelerates inference.\n- **Other Optimizations**: Includes techniques such as **zero-centered and weight-decayed layernorm**, **Gated Attention**, and other stabilizing enhancements for robust training.\nBuilt on this architecture, they trained and open-sourced Qwen3-Next-80B-A3B — 80B total parameters, only 3B active — achieving extreme sparsity and efficiency.\nDespite its ultra-efficiency, it outperforms Qwen3-32B on downstream tasks — while requiring **less than 1/10 of the training cost**.\nMoreover, it delivers over **10x higher inference throughput** than Qwen3-32B when handling contexts longer than 32K tokens.\nFor more details, please visit their blog [Qwen3-Next](qwen3_next) ([blog post](https://qwenlm.github.io/blog/qwen3_next/)).\n* Adding Support for Qwen3-Next  by @bozheng-hit in #40771\n### Vault Gemma\n<img width=\"1282\" height=\"392\" alt=\"image\" src=\"https://github.com/user-attachments/assets/9412905b-4083-4994-9000-aa0dbf97eb6f\" />\n[VaultGemma](https://services.google.com/fh/files/blogs/vaultgemma_tech_report.pdf) is a text-only decoder model derived from [Gemma 2](https://huggingface.co/docs/transformers/en/model_doc/gemma2), notably it drops the norms after the Attention and MLP blocks, and uses full attention for all layers instead of alternating between full attention and local sliding attention. VaultGemma is available as a pretrained model with 1B parameters that uses a 1024 token sequence length.\nVaultGemma was trained from scratch with sequence-level differential privacy (DP). Its training data includes the same mixture as the [Gemma 2 models](https://huggingface.co/collections/google/gemma-2-release-667d6600fd5220e7b967f315), consisting of a number of documents of varying lengths. Additionally, it is trained using [DP stochastic gradient descent (DP-SGD)](https://arxiv.org/abs/1607.00133) and provides a (ε ≤ 2.0, δ ≤ 1.1e-10)-sequence-level DP guarantee, where a sequence consists of 1024 consecutive tokens extracted from heterogeneous data sources. Specifically, the privacy unit of the guarantee is for the sequences after sampling and packing of the mixture.\n* add: differential privacy research model  by @RyanMullins in #40851\n### Qwen3 VL\n<img width=\"3544\" height=\"1886\" alt=\"image\" src=\"https://github.com/user-attachments/assets/5afa70cb-506e-4d56-baa3-30e7522ac653\" />\n[Qwen3-VL](https://huggingface.co/papers/2502.13923) is a multimodal vision-language model series, encompassing both dense and MoE variants, as well as Instruct and Thinking versions.\nBuilding upon its predecessors, Qwen3-VL delivers significant improvements in visual understanding while maintaining strong pure text capabilities. Key architectural advancements include: enhanced MRope with interleaved layout for better spatial-temporal modeling, DeepStack integration to effectively leverage multi-level feature...",
+      "memory_unit_text": "In the huggingface/transformers release v4.57.0, new models added include Qwen3-Next, Vault Gemma, Qwen3 VL, LongCat Flash, Flex OLMO, LFM2 VL, BLT, Qwen3 OMNI MoE, Parakeet, EdgeTAM, and OLMO3. Qwen3-Next introduces hybrid attention with Gated DeltaNet and Gated Attention, high-sparsity MoE with 1:50 activation ratio, multi-token prediction, and other optimizations. Vault Gemma is a text-only decoder derived from Gemma 2 with differential privacy training. Qwen3 VL is a multimodal vision-language model series with enhanced MRope and DeepStack integration."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v4_57_1",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.57.1",
+      "tag_name": "v4.57.1",
+      "title": "Patch release v4.57.1",
+      "time_hint": "2025-10-14",
+      "published_at": "2025-10-14T15:39:34Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v4.57.1",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Patch release v4.57.1\nTag: v4.57.1; draft: False; prerelease: False; published_at: 2025-10-14T15:39:34Z; created_at: 2025-10-14T15:28:24Z\nRelease notes:\nThis patch most notably fixes an issue with an optional dependency (`optax`), which resulted in parsing errors with `poetry`. It contains the following fixes:\n- [fix optax dep issue](https://github.com/huggingface/transformers/commit/0645c9ec3188e000aecf5060e2cdabcc156bb794)\n- [remove offload_state_dict from kwargs](https://github.com/huggingface/transformers/commit/a92b1e8a45e1863b95c5e2caa12f5597aee80279)\n- Fix bnb fsdp loading for pre-quantized checkpoint (#41415)\n- Fix tests fsdp (#41422)\n- Fix trainer for py3.9 (#41359)",
+      "memory_unit_text": "In the huggingface/transformers patch release v4.57.1, fixes include an optional dependency issue with optax causing parsing errors with poetry, removal of offload_state_dict from kwargs, bnb fsdp loading for pre-quantized checkpoint, fsdp tests, and trainer fix for Python 3.9."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v4_57_2",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.57.2",
+      "tag_name": "v4.57.2",
+      "title": "Patch Release v4.57.2",
+      "time_hint": "2025-11-24",
+      "published_at": "2025-11-24T17:54:34Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v4.57.2",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Patch Release v4.57.2\nTag: v4.57.2; draft: False; prerelease: False; published_at: 2025-11-24T17:54:34Z; created_at: 2025-11-24T17:48:54Z\nRelease notes:\nThis patch most notably fixes an issue on some Mistral tokenizers. It contains the following commits:\n- Add AutoTokenizer mapping for mistral3 and ministral (#42198)\n- Auto convert tekken.json (#42299)\n- fix tekken pattern matching (#42363)\n- Check model inputs - hidden states (#40994)\n- Remove invalid `@staticmethod` from module-level get_device_and_memory_breakdown (#41747)",
+      "memory_unit_text": "In the huggingface/transformers patch release v4.57.2, fixes include AutoTokenizer mapping for mistral3 and ministral, auto conversion of tekken.json, tekken pattern matching, check model inputs hidden states, and removal of invalid @staticmethod from module-level get_device_and_memory_breakdown."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v4_57_3",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.57.3",
+      "tag_name": "v4.57.3",
+      "title": "Patch release v4.57.3",
+      "time_hint": "2025-11-25",
+      "published_at": "2025-11-25T15:51:36Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v4.57.3",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Patch release v4.57.3\nTag: v4.57.3; draft: False; prerelease: False; published_at: 2025-11-25T15:51:36Z; created_at: 2025-11-25T15:34:46Z\nRelease notes:\nThere was a hidden bug when loading models with `local_files_only=True` and a typo related to the recent patch.\nThe main fix is: https://github.com/huggingface/transformers/commit/b6055550a15a8fab367cf983b743ff68cc58d81a.\nWe are really sorry that this slipped through, our CIs just did not catch it.\nAs it affects a lot of users we are gonna yank the previous release",
+      "memory_unit_text": "In the huggingface/transformers patch release v4.57.3, a hidden bug when loading models with local_files_only=True and a typo related to the recent patch are fixed. The previous release is yanked due to impact on many users."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v5_0_0rc0",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.0rc0",
+      "tag_name": "v5.0.0rc0",
+      "title": "Transformers v5.0.0rc0",
+      "time_hint": "2025-12-01",
+      "published_at": "2025-12-01T18:14:54Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v5.0.0rc0",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Transformers v5.0.0rc0\nTag: v5.0.0rc0; draft: False; prerelease: True; published_at: 2025-12-01T18:14:54Z; created_at: 2025-12-01T18:08:10Z\nRelease notes:\n## Transformers v5 release notes\n<img width=\"1800\" height=\"1013\" alt=\"image\" src=\"https://github.com/user-attachments/assets/7b5187d7-6945-4108-a546-6d1d7bfb55e3\" />\n- Highlights\n- Significant API changes: dynamic weight loading, tokenization\n- Backwards Incompatible Changes\n- Bugfixes and improvements\n## Highlights\nWe are excited to announce the initial release of Transformers v5. This is the first major release in five years, and the release is significant: 800 commits have been pushed to `main` since the latest minor release. This release removes a lot of long-due deprecations, introduces several refactors that significantly simplify our APIs and internals, and comes with a large number of bug fixes.\nWe give an overview of our focus for this release in the [following blogpost](https://huggingface.co/blog/transformers-v5). In these release notes, we'll focus directly on the refactors and new APIs coming with v5.\nThis release is a release candidate (RC). It is not the final v5 release, and we will push on pypi as a pre-release. This means that the current release is purely opt-in, as installing `transformers` without specifying this exact release will install the latest version instead (v4.57.3 as of writing).\nIn order to install this release, please do so with the following:\n```shell\npip install transformers --pre\n```\nFor us to deliver the best package possible, it is imperative that we have feedback on how the toolkit is currently working for you. Please try it out, and [open an issue](https://github.com/huggingface/transformers/issues/) in case you're facing something inconsistent/a bug.\nTransformers version 5 is a community endeavor, and this is the last mile. Let's ship this together!\n## Significant API changes\n> [!NOTE]\n> 👀 Nothing is final and things are still actively in movement. We have a section dedicated to what is planned for future release candidates, yet is known not to work in the RC0. Look for \"Disclaimers for the RC0\".\n>\n> We'll be eagerly awaiting your feedback in our GitHub issues!\n### Dynamic weight loading\nWe introduce a new weight loading API in `transformers`, which significantly improves on the previous API. This\nweight loading API is designed to apply operations to the checkpoints loaded by transformers.\nInstead of loading the checkpoint exactly as it is serialized within the model, these operations can reshape, merge,\nand split the layers according to how they're defined in this new API. These operations are often a necessity when\nworking with quantization or parallelism algorithms.\nThis new API is centered around the new `WeightConverter` class:\n```python\nclass WeightConverter(WeightTransform):\noperations: list[ConversionOps]\nsource_keys: Union[str, list[str]]\ntarget_keys: Union[str, list[str]]\n```\nThe weight converter is designed to apply a list of operations on the source keys, resulting in target keys. A common\noperation done on the attention layers is to fuse the query, key, values layers. Doing so with this API would amount\nto defining the following conversion:\n```python\nconversion = WeightConverter(\n[\"self_attn.q_proj\", \"self_attn.k_proj\", \"self_attn.v_proj\"],  # The input layers\n\"self_attn.qkv_proj\",  # The single layer as output\noperations=[Concatenate(dim=0)],\n)\n```\nIn this situation, we apply the `Concatenate` operation, which accepts a list of layers as input and returns a single\nlayer.\nThis allows us to define a mapping from architecture to a list of weight conversions. Applying those weight conversions\ncan apply arbitrary transformations to the layers themselves. This significantly simplified the `from_pretrained` method\nand helped us remove a lot of technical debt that we accumulated over the past few years.\nThis results in several improvements:\n- Much cleaner definition of transforma...",
+      "memory_unit_text": "In the huggingface/transformers release candidate v5.0.0rc0, the first major release in five years is announced with 800 commits. Highlights include dynamic weight loading API centered around WeightConverter class, significant tokenization refactors, and many bug fixes. This is a pre-release, opt-in via pip install transformers --pre."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v5_0_0rc1",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.0rc1",
+      "tag_name": "v5.0.0rc1",
+      "title": "Release candidate 5.0.0rc1",
+      "time_hint": "2026-01-08",
+      "published_at": "2026-01-08T10:15:16Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v5.0.0rc1",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Release candidate 5.0.0rc1\nTag: v5.0.0rc1; draft: False; prerelease: True; published_at: 2026-01-08T10:15:16Z; created_at: 2025-12-11T17:15:02Z\nRelease notes:\n## What's Changed\nThis release candidate was focused mostly on `quantization` support with the new dynamic weight loader, and a few notable 🚨 breaking changes🚨:\n1. Default dtype for any model when using `from_pretrained` is now `auto`!\n* Default auto 🚨 🚨  by @ArthurZucker in https://github.com/huggingface/transformers/pull/42805\n2. Default shard size when saving a model is now 50GB:\n* 🚨🚨 [saving] Default to 50GB shards, and remove non-safe serialization by @Cyrilvallez in https://github.com/huggingface/transformers/pull/42734\nThis is now as fast as before thanks to xet, and is just more convenient on the hub.\n3. Kwargs. They are fundamental to enable integration with vllm and other toosl:\n* Every model forward() should have **kwargs by @Rocketknight1 in https://github.com/huggingface/transformers/pull/42603\n### Dynamic weight loader updates:\nMostly QOL and fixed + support back CPU offloading.\n* mark params as _is_hf_initialized with DS Zero3 from weight conversion by @winglian in https://github.com/huggingface/transformers/pull/42626\n* [loading] Allow loading to happen without threading by @Cyrilvallez in https://github.com/huggingface/transformers/pull/42619\n* [loading] Correctly load params during offloading & careful memory considerations by @Cyrilvallez in https://github.com/huggingface/transformers/pull/42632\n* allow registration of custom checkpoint conversion mappings by @winglian in https://github.com/huggingface/transformers/pull/42634\n### New models:\n* Add FastVLM by @camilla-deckard in https://github.com/huggingface/transformers/pull/41112\n* Lasr model by @eustlb in https://github.com/huggingface/transformers/pull/42648\n* [Model] Add PaddleOCR-VL Model Support by @zhang-prog in https://github.com/huggingface/transformers/pull/42178\n### Some notable quantization fixes:\nMostly added support for `fbgemme` , `quanto`,\n* Fix fp8 + some enhancement by @SunMarc in https://github.com/huggingface/transformers/pull/42455\n* Fix eetq quanto quant methods by @SunMarc in https://github.com/huggingface/transformers/pull/42557\n* [Quantization] per tensor quantization kernel by @MekkCyber in https://github.com/huggingface/transformers/pull/42560\n* [Quantization] fix fbgemm by @MekkCyber in https://github.com/huggingface/transformers/pull/42561\n* [Quantization] Fix FP8 experts replacing by @MekkCyber in https://github.com/huggingface/transformers/pull/42654\n* [Quantization] Fix Static FP8 Quantization by @MekkCyber in https://github.com/huggingface/transformers/pull/42775\n* [core] fix fp-quant by @MekkCyber in https://github.com/huggingface/transformers/pull/42613\n### Peft:\nThe dynamic weight loader broke small things, this adds glue for all models but MoEs.\n* FIX Error when trying to load non-LoRA PEFT by @BenjaminBossan in https://github.com/huggingface/transformers/pull/42663\n* Fix PEFT integration with new weight loader by @Cyrilvallez in https://github.com/huggingface/transformers/pull/42701\n### Misc\nTokenization needed more refactoring, this time its a lot cleaner!\n* Refactor-tokenization-more by @ArthurZucker in https://github.com/huggingface/transformers/pull/42563\n* Only default `rope_parameters` to empty `dict` if there is something to put in it by @hmellor in https://github.com/huggingface/transformers/pull/42651\nWe omitted a lot of other commits for clarity, but thanks to everyone and the new contributors!\n## New Contributors\n* @camilla-deckard made their first contribution in https://github.com/huggingface/transformers/pull/41112\n* @Aaraviitkgp made their first contribution in https://github.com/huggingface/transformers/pull/42466\n* @ngazagna-qc made their first contribution in https://github.com/huggingface/transformers/pull/40691\n* @arrdel made their first contribution in https://github.com/huggingface/transformers...",
+      "memory_unit_text": "In the huggingface/transformers release candidate v5.0.0rc1, focus is on quantization support with the new dynamic weight loader. Breaking changes include default dtype auto for from_pretrained, default shard size 50GB when saving, and every model forward() requiring **kwargs. New models added: FastVLM, Lasr, PaddleOCR-VL. Quantization fixes for fbgemm, quanto, FP8. PEFT integration fixes and tokenization refactoring."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v5_0_0rc2",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.0rc2",
+      "tag_name": "v5.0.0rc2",
+      "title": "Release candidate 5.0.0rc2",
+      "time_hint": "2026-01-08",
+      "published_at": "2026-01-08T10:33:33Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v5.0.0rc2",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Release candidate 5.0.0rc2\nTag: v5.0.0rc2; draft: False; prerelease: True; published_at: 2026-01-08T10:33:33Z; created_at: 2026-01-07T16:52:27Z\nRelease notes:\n## What's Changed\nThis release candidate is focused on fixing `AutoTokenizer`, expanding the dynamic weight loading support, and improving performances with MoEs!\n## MoEs and performances:\n<img width=\"2048\" height=\"1451\" alt=\"image\" src=\"https://github.com/user-attachments/assets/3ed2508e-3eb1-4f13-8717-cd9027d12a39\" />\n* batched and grouped experts implementations by @IlyasMoutawwakil in https://github.com/huggingface/transformers/pull/42697\n* Optimize MoEs for decoding using batched_mm by @IlyasMoutawwakil in https://github.com/huggingface/transformers/pull/43126\n## Tokenization:\nThe main issue with the tokenization refactor is that `tokenizer_class` are now \"enforced\" when in most cases they are wrong. This took a while to properly isolate and now we try to use `TokenizersBackend` whenever we can. #42894 has a much more detailed description of the big changes!\n* use `TokenizersBackend` by @ArthurZucker in https://github.com/huggingface/transformers/pull/42894\n* Fix convert_tekken_tokenizer by @juliendenize in https://github.com/huggingface/transformers/pull/42592\n* refactor more tokenizers - v5 guide update by @itazap in https://github.com/huggingface/transformers/pull/42768\n* [`Tokenizers`] Change treatment of special tokens by @vasqu in https://github.com/huggingface/transformers/pull/42903\n## Core\nHere we focused on boosting the performances of loading weights on device!\n* [saving] Simplify general logic by @Cyrilvallez in https://github.com/huggingface/transformers/pull/42766\n* Do not rely on config for inferring model dtype by @Cyrilvallez in https://github.com/huggingface/transformers/pull/42838\n* Improve BatchFeature: stack list and lists of torch tensors by @yonigozlan in https://github.com/huggingface/transformers/pull/42750\n* Remove tied weights from internal attribute if they are not tied by @Cyrilvallez in https://github.com/huggingface/transformers/pull/42871\n* Enforce call to `post_init` and fix all of them by @Cyrilvallez in https://github.com/huggingface/transformers/pull/42873\n* Simplify tie weights logic by @Cyrilvallez in https://github.com/huggingface/transformers/pull/42895\n* Add buffers to `_init_weights` for ALL models by @Cyrilvallez in https://github.com/huggingface/transformers/pull/42309\n* [loading] Really initialize on meta device for huge perf gains by @Cyrilvallez in https://github.com/huggingface/transformers/pull/42941\n* Do not use accelerate hooks if the device_map has only 1 device by @Cyrilvallez in https://github.com/huggingface/transformers/pull/43019\n* Move missing weights and non-persistent buffers to correct device earlier by @Cyrilvallez in https://github.com/huggingface/transformers/pull/43021\n## New models\n* Sam: Perception Encoder Audiovisual by @eustlb in https://github.com/huggingface/transformers/pull/42905\n* adds jais2 model support by @sarathc-cerebras in https://github.com/huggingface/transformers/pull/42684\n* Add Pixio pre-trained models by @LiheYoung in https://github.com/huggingface/transformers/pull/42795\n* [`Ernie 4.5`] Ernie VL models by @vasqu in https://github.com/huggingface/transformers/pull/39585\n* [loading][TP] Fix device placement at loading-time, and simplify sharding primitives by @Cyrilvallez in https://github.com/huggingface/transformers/pull/43003\n* GLM-ASR  Support by @zRzRzRzRzRzRzR in https://github.com/huggingface/transformers/pull/42875\n## Quantization\n* [Devstral] Make sure FP8 conversion works correctly by @patrickvonplaten in https://github.com/huggingface/transformers/pull/42715\n* Fp8 dq by @SunMarc in https://github.com/huggingface/transformers/pull/42926\n* [Quantization] Removing misleading int8 quantization in Finegrained FP8 by @MekkCyber in https://github.com/huggingface/transformers/pull/42945\n* Fix deepspeed + quantization by @SunMarc in...",
+      "memory_unit_text": "In the huggingface/transformers release candidate v5.0.0rc2, focus is on fixing AutoTokenizer, expanding dynamic weight loading support, and improving MoE performance with batched and grouped experts. Tokenization refactor enforces TokenizersBackend usage. Core improvements boost weight loading performance on device. New models: Sam Perception Encoder Audiovisual, jais2, Pixio, Ernie VL, GLM-ASR. Quantization fixes for FP8 and deepspeed."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v4_57_4",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.57.4",
+      "tag_name": "v4.57.4",
+      "title": "Patch release v4.57.4",
+      "time_hint": "2026-01-13",
+      "published_at": "2026-01-13T11:07:40Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v4.57.4",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Patch release v4.57.4\nTag: v4.57.4; draft: False; prerelease: False; published_at: 2026-01-13T11:07:40Z; created_at: 2026-01-13T10:46:54Z\nRelease notes:\n## What's Changed\nLast patch release for v4: We have a few small fixes for remote generation methods (e.g. group beam search), vLLM, and an offline tokenizer fix (if it's already been cached).\n* Grouped beam search from config params by @zucchini-nlp in https://github.com/huggingface/transformers/pull/42472\n* Handle decorator with optional arguments better @hmellor in https://github.com/huggingface/transformers/pull/42512\n* fix: make mistral base check conditional to fix offline loading by @Killusions in https://github.com/huggingface/transformers/pull/42880\n## New Contributors\n* @Killusions made their first contribution in https://github.com/huggingface/transformers/pull/42880\n**Full Changelog**: https://github.com/huggingface/transformers/compare/v4.57.3...v4.57.4",
+      "memory_unit_text": "In the huggingface/transformers patch release v4.57.4, the last patch for v4 includes fixes for remote generation methods (group beam search), vLLM, and offline tokenizer loading when already cached."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v4_57_5",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.57.5",
+      "tag_name": "v4.57.5",
+      "title": "Patch release v4.57.5",
+      "time_hint": "2026-01-13",
+      "published_at": "2026-01-13T13:29:13Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v4.57.5",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Patch release v4.57.5\nTag: v4.57.5; draft: False; prerelease: False; published_at: 2026-01-13T13:29:13Z; created_at: 2026-01-13T13:11:42Z\nRelease notes:\n## What's Changed\nShould not have said last patch :wink: These should be the last remaining fixes that got lost in between patches and the transition to v5.\n* QwenVL: add skipped keys in setattr as well by @zucchini-nlp in https://github.com/huggingface/transformers/pull/41808\n* Fix lr_scheduler_parsing by @SunMarc in https://github.com/huggingface/transformers/pull/41322\n**Full Changelog**: https://github.com/huggingface/transformers/compare/v4.57.4...v4.57.5",
+      "memory_unit_text": "In the huggingface/transformers patch release v4.57.5, additional fixes include QwenVL skipped keys in setattr and lr_scheduler_parsing fix."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v4_57_6",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.57.6",
+      "tag_name": "v4.57.6",
+      "title": "Patch release v4.57.6",
+      "time_hint": "2026-01-16",
+      "published_at": "2026-01-16T10:40:02Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v4.57.6",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Patch release v4.57.6\nTag: v4.57.6; draft: False; prerelease: False; published_at: 2026-01-16T10:40:02Z; created_at: 2026-01-16T10:20:26Z\nRelease notes:\n## What's Changed\nAnother fix for qwen vl models that prevented correctly loading the associated model type - this works together with https://github.com/huggingface/transformers/pull/41808 of the previous patch release.\n* Fixed incorrect model_type for qwen2vl and qwen2.5vl when config is saved and loaded again by @i3hz in https://github.com/huggingface/transformers/pull/41758\n**Full Changelog**: https://github.com/huggingface/transformers/compare/v4.57.5...v4.57.6",
+      "memory_unit_text": "In the huggingface/transformers patch release v4.57.6, a fix for incorrect model_type for qwen2vl and qwen2.5vl when config is saved and loaded again."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v5_0_0rc3",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.0rc3",
+      "tag_name": "v5.0.0rc3",
+      "title": "Release candidate v5.0.0rc3",
+      "time_hint": "2026-01-26",
+      "published_at": "2026-01-26T10:02:55Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v5.0.0rc3",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Release candidate v5.0.0rc3\nTag: v5.0.0rc3; draft: False; prerelease: True; published_at: 2026-01-26T10:02:55Z; created_at: 2026-01-14T16:42:09Z\nRelease notes:\n# Release candidate v5.0.0rc3\n## New models:\n* [GLM-4.7] GLM-Lite Supoort by @zRzRzRzRzRzRzR in https://github.com/huggingface/transformers/pull/43031\n* [GLM-Image] AR Model Support for GLM-Image by @zRzRzRzRzRzRzR in https://github.com/huggingface/transformers/pull/43100\n* Add LWDetr model by @sbucaille in https://github.com/huggingface/transformers/pull/40991\n* Add LightOnOCR model implementation by @baptiste-aubertin in https://github.com/huggingface/transformers/pull/41621\n## What's Changed\nWe are getting closer and closer to the official release!\nThis RC is focused on removing more of the deprecated stuff, fixing some minors issues, doc updates.\n* Update Japanese README to match English version by @lilin-1 in https://github.com/huggingface/transformers/pull/43069\n* [docs] Deploying by @stevhliu in https://github.com/huggingface/transformers/pull/42263\n* [docs] inference engines by @stevhliu in https://github.com/huggingface/transformers/pull/42932\n* Fix typos: Remove duplicate duplicate words words by @efeecllk in https://github.com/huggingface/transformers/pull/43040\n* [style] Rework ruff rules and update all files by @Cyrilvallez in https://github.com/huggingface/transformers/pull/43144\n* [CB] Minor fix in kwargs by @remi-or in https://github.com/huggingface/transformers/pull/43147\n* [Bug] qwen2_5_omni: cap generation length to be less than the max_position_embedding in DiT by @sniper35 in https://github.com/huggingface/transformers/pull/43068\n* Fix some deprecated practices in torch 2.9 by @Cyrilvallez in https://github.com/huggingface/transformers/pull/43167\n* Fix Fuyu processor width dimension bug in `_get_num_multimodal_tokens` by @Abhinavexists in https://github.com/huggingface/transformers/pull/43137\n* Inherit from PreTrainedTokenizerBase by @juliendenize in https://github.com/huggingface/transformers/pull/43143\n* Generation config boolean defaults by @zucchini-nlp in https://github.com/huggingface/transformers/pull/43000\n* Fix failing `BartModelIntegrationTest` by @Sai-Suraj-27 in https://github.com/huggingface/transformers/pull/43160\n* fix failure of llava/pixtral by @sywangyi in https://github.com/huggingface/transformers/pull/42985\n* GemmaTokenizer: remove redundant whitespace pre-tokenizer by @vaibhav-research in https://github.com/huggingface/transformers/pull/43106\n* Support `auto_doctring` in Processors by @yonigozlan in https://github.com/huggingface/transformers/pull/42101\n* Fix failing `BitModelIntegrationTest` by @Sai-Suraj-27 in https://github.com/huggingface/transformers/pull/43164\n* [`Fp8`] Fix experts by @vasqu in https://github.com/huggingface/transformers/pull/43154\n* Docs: improve wording for documentation build instructions by @Sailnagale in https://github.com/huggingface/transformers/pull/43007\n* [makefile] Cleanup and improve the rules by @Cyrilvallez in https://github.com/huggingface/transformers/pull/43171\n* Some new models added stuff that was already removed by @Cyrilvallez in https://github.com/huggingface/transformers/pull/43179\n* Fixes and compilation warning in torchao docs by @merveenoyan in https://github.com/huggingface/transformers/pull/42909\n* [cache] Remove all deprecated classes by @Cyrilvallez in https://github.com/huggingface/transformers/pull/43168\n* Bump huggingface_hub minimal version by @Wauplin in https://github.com/huggingface/transformers/pull/43188\n* Rework check_config_attributes.py by @Cyrilvallez in https://github.com/huggingface/transformers/pull/43191\n* Fix generation config validation by @zucchini-nlp in https://github.com/huggingface/transformers/pull/43175\n* [style] Use 'x | y' syntax for processors as well by @Wauplin in https://github.com/huggingface/transformers/pull/43189\n* Remove deprecated objects by @Cyrilvallez in https://github.com/huggingface/tr...",
+      "memory_unit_text": "In the huggingface/transformers release candidate v5.0.0rc3, new models include GLM-Lite, GLM-Image, LWDetr, LightOnOCR. Focus on removing deprecated stuff, fixing minor issues, doc updates, and style rework with ruff rules."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v5_0_0",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.0",
+      "tag_name": "v5.0.0",
+      "title": "Transformers v5",
+      "time_hint": "2026-01-26",
+      "published_at": "2026-01-26T10:17:10Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v5.0.0",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Transformers v5\nTag: v5.0.0; draft: False; prerelease: False; published_at: 2026-01-26T10:17:10Z; created_at: 2026-01-26T10:41:39Z\nRelease notes:\n## Transformers v5 release notes\n<img width=\"1800\" height=\"1013\" alt=\"image\" src=\"https://github.com/user-attachments/assets/7b5187d7-6945-4108-a546-6d1d7bfb55e3\" />\n- Highlights\n- Significant API changes: dynamic weight loading, tokenization\n- Backwards Incompatible Changes\n- Bugfixes and improvements\nWe have a migration guide that will be continuously updated available on the `main` branch, please check it out in case you're facing issues: [migration guide](https://github.com/huggingface/transformers/blob/main/MIGRATION_GUIDE_V5.md).\n## Highlights\nWe are excited to announce the initial release of Transformers v5. This is the first major release in five years, and the release is significant: 1200 commits have been pushed to `main` since the latest minor release. This release removes a lot of long-due deprecations, introduces several refactors that significantly simplify our APIs and internals, and comes with a large number of bug fixes.\nWe give an overview of our focus for this release in the [following blogpost](https://huggingface.co/blog/transformers-v5). In these release notes, we'll focus directly on the refactors and new APIs coming with v5.\nThis release is the full V5 release. **It sets in motion something bigger: going forward, starting with v5, we'll now release minor releases every week, rather than every 5 weeks. Expect v5.1 to follow next week, then v5.2 the week that follows, etc.**\nWe're moving forward with this change to ensure you have access to models as soon as they're supported in the library, rather than a few weeks after.\nIn order to install this release, please do so with the following:\n```shell\npip install transformers\n```\nFor us to deliver the best package possible, it is imperative that we have feedback on how the toolkit is currently working for you. Please try it out, and [open an issue](https://github.com/huggingface/transformers/issues/) in case you're facing something inconsistent/a bug.\nTransformers version 5 is a community endeavor, and we couldn't have shipped such a massive release without the help of the entire community.\n## Significant API changes\n### Dynamic weight loading\nWe introduce a new weight loading API in `transformers`, which significantly improves on the previous API. This\nweight loading API is designed to apply operations to the checkpoints loaded by transformers.\nInstead of loading the checkpoint exactly as it is serialized within the model, these operations can reshape, merge,\nand split the layers according to how they're defined in this new API. These operations are often a necessity when\nworking with quantization or parallelism algorithms.\nThis new API is centered around the new `WeightConverter` class:\n```python\nclass WeightConverter(WeightTransform):\noperations: list[ConversionOps]\nsource_keys: Union[str, list[str]]\ntarget_keys: Union[str, list[str]]\n```\nThe weight converter is designed to apply a list of operations on the source keys, resulting in target keys. A common\noperation done on the attention layers is to fuse the query, key, values layers. Doing so with this API would amount\nto defining the following conversion:\n```python\nconversion = WeightConverter(\n[\"self_attn.q_proj\", \"self_attn.k_proj\", \"self_attn.v_proj\"],  # The input layers\n\"self_attn.qkv_proj\",  # The single layer as output\noperations=[Concatenate(dim=0)],\n)\n```\nIn this situation, we apply the `Concatenate` operation, which accepts a list of layers as input and returns a single\nlayer.\nThis allows us to define a mapping from architecture to a list of weight conversions. Applying those weight conversions\ncan apply arbitrary transformations to the layers themselves. This significantly simplified the `from_pretrained` method\nand helped us remove a lot of technical debt that we accumulated over the past few years.\nThi...",
+      "memory_unit_text": "In the huggingface/transformers release v5.0.0, the full major release with 1200 commits. Highlights include dynamic weight loading API, tokenization refactors, and removal of long-due deprecations. Starting with v5, minor releases will be weekly. Migration guide available."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v5_1_0",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.1.0",
+      "tag_name": "v5.1.0",
+      "title": "v5.1.0: EXAONE-MoE, PP-DocLayoutV3, Youtu-LLM, GLM-OCR",
+      "time_hint": "2026-02-05",
+      "published_at": "2026-02-05T15:44:54Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v5.1.0",
+      "raw_text": "Repository: huggingface/transformers\nRelease: v5.1.0: EXAONE-MoE, PP-DocLayoutV3, Youtu-LLM, GLM-OCR\nTag: v5.1.0; draft: False; prerelease: False; published_at: 2026-02-05T15:44:54Z; created_at: 2026-02-05T15:33:23Z\nRelease notes:\n## New Model additions\n### EXAONE-MoE\n<img width=\"2278\" height=\"1142\" alt=\"image\" src=\"https://github.com/user-attachments/assets/0c3d5341-0483-49c3-8467-f9784ec94b37\" />\nK-EXAONE is a large-scale multilingual language model developed by LG AI Research. Built using a Mixture-of-Experts architecture, K-EXAONE features 236 billion total parameters, with 23 billion active during inference. Performance evaluations across various benchmarks demonstrate that K-EXAONE excels in reasoning, agentic capabilities, general knowledge, multilingual understanding, and long-context processing.\n* Add EXAONE-MoE implementations (#43080) by @nuxlear\n### PP-DocLayoutV3\n<img width=\"6252\" height=\"1892\" alt=\"image\" src=\"https://github.com/user-attachments/assets/b2e58244-8ed3-42c6-80d7-e32842977ddb\" />\n**PP-DocLayoutV3** is a unified and high-efficiency model designed for comprehensive layout analysis. It addresses the challenges of complex physical distortions—such as skewing, curving, and adverse lighting—by integrating instance segmentation and reading order prediction into a single, end-to-end framework.\n* [Model] Add PP-DocLayoutV3 Model Support (#43098) by @zhang-prog\n### Youtu-LLM\n<img width=\"564\" height=\"352\" alt=\"image\" src=\"https://github.com/user-attachments/assets/864372be-4ecb-41fd-8c92-f3515be040d3\" />\nYoutu-LLM is a new, small, yet powerful LLM, contains only 1.96B parameters, supports 128k long context, and has native agentic talents. On general evaluations, Youtu-LLM significantly outperforms SOTA LLMs of similar size in terms of Commonsense, STEM, Coding and Long Context capabilities; in agent-related testing, Youtu-LLM surpasses larger-sized leaders and is truly capable of completing multiple end2end agent tasks.\n* Add Youtu-LLM model (#43166) by @LuJunru\n### GlmOcr\n<img width=\"3972\" height=\"2352\" alt=\"image\" src=\"https://github.com/user-attachments/assets/a7ddfb4f-42ea-4dc6-bc73-aefb0f750c4e\" />\nGLM-OCR is a multimodal OCR model for complex document understanding, built on the GLM-V encoder–decoder architecture. It introduces Multi-Token Prediction (MTP) loss and stable full-task reinforcement learning to improve training efficiency, recognition accuracy, and generalization. The model integrates the CogViT visual encoder pre-trained on large-scale image–text data, a lightweight cross-modal connector with efficient token downsampling, and a GLM-0.5B language decoder. Combined with a two-stage pipeline of layout analysis and parallel recognition based on PP-DocLayout-V3, GLM-OCR delivers robust and high-quality OCR performance across diverse document layouts.\n* [GLM-OCR] GLM-OCR Support (#43391)by @zRzRzRzRzRzRzR\n## Breaking changes\n* 🚨 T5Gemma2 model structure (#43633) - Makes sure that the attn implementation is set to all sub-configs. The config.encoder.text_config was not getting its attn set because we aren't passing it to PreTrainedModel.__init__. We can't change the model structure without breaking so I manually re-added a call to self.adjust_attn_implemetation in modeling code\n* 🚨 Generation cache preparation (#43679) - Refactors cache initialization in generation to ensure sliding window configurations are now properly respected. Previously, some models (like Afmoe) created caches without passing the model config, causing sliding window limits to be ignored. This is breaking because models with sliding window attention will now enforce their window size limits during generation, which may change generation behavior or require adjusting sequence lengths in existing code.\n* 🚨 Delete duplicate code in backbone utils (#43323) - This PR cleans up backbone utilities. Specifically, we have currently 5 different config attr to decide which backbone to load, most of which can be merged into one and see...",
+      "memory_unit_text": "In the huggingface/transformers release v5.1.0, new models include EXAONE-MoE (236B total, 23B active MoE), PP-DocLayoutV3 (layout analysis with instance segmentation and reading order), Youtu-LLM (1.96B params, 128k context, agentic talents), and GLM-OCR (multimodal OCR with MTP loss and reinforcement learning). Breaking changes: T5Gemma2 model structure, generation cache preparation, and deletion of duplicate code in backbone utils."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v5_2_0",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.2.0",
+      "tag_name": "v5.2.0",
+      "title": "v5.2.0: GLM-5, Qwen3.5, Voxtral Realtime, VibeVoice Acoustic Tokenizer",
+      "time_hint": "2026-02-16",
+      "published_at": "2026-02-16T18:55:53Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v5.2.0",
+      "raw_text": "Repository: huggingface/transformers\nRelease: v5.2.0: GLM-5, Qwen3.5, Voxtral Realtime, VibeVoice Acoustic Tokenizer\nTag: v5.2.0; draft: False; prerelease: False; published_at: 2026-02-16T18:55:53Z; created_at: 2026-02-16T18:42:44Z\nRelease notes:\n## New Model additions\n### VoxtralRealtime\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/80e37670-6d70-402b-8c8e-ccfb8c32df2d\" />\nVoxtralRealtime is a streaming speech-to-text model from [Mistral AI](https://mistral.ai), designed for real-time automatic speech recognition (ASR). Unlike the offline [Voxtral](./voxtral) model which processes complete audio files, VoxtralRealtime is architected for low-latency, incremental transcription by processing audio in chunks as they arrive.\nThe model combines an audio encoder with a Mistral-based language model decoder, using time conditioning embeddings and causal convolutions with padding caches to enable efficient streaming inference.\n* Add Voxtral Realtime (#43769) by @eustlb\n### GLM-5 - GlmMoeDsa\n<img width=\"947\" height=\"638\" alt=\"image\" src=\"https://github.com/user-attachments/assets/4c4fff37-7f40-4e86-b4a0-db718f45c93b\" />\nThe zAI team launches GLM-5, and introduces it as such:\n> GLM-5, targeting complex systems engineering and long-horizon agentic tasks. Scaling is still one of the most important ways to improve the intelligence efficiency of Artificial General Intelligence (AGI). Compared to GLM-4.5, GLM-5 scales from 355B parameters (32B active) to 744B parameters (40B active), and increases pre-training data from 23T to 28.5T tokens. GLM-5 also integrates DeepSeek Sparse Attention (DSA), largely reducing deployment cost while preserving long-context capacity.\n>\n> Reinforcement learning aims to bridge the gap between competence and excellence in pre-trained models. However, deploying it at scale for LLMs is a challenge due to the RL training inefficiency. To this end, we developed [slime](https://github.com/THUDM/slime), a novel asynchronous RL infrastructure that substantially improves training throughput and efficiency, enabling more fine-grained post-training iterations. With advances in both pre-training and post-training, GLM-5 delivers significant improvement compared to GLM-4.7 across a wide range of academic benchmarks and achieves best-in-class performance among all open-source models in the world on reasoning, coding, and agentic tasks, closing the gap with frontier models.\n* Add GlmMoeDsa (#43858) by @Cyrilvallez\n### Qwen3.5, Qwen3.5 Moe\n<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/b56dcaca-80e7-4b22-80a5-2f767bb65095\" />\nThe Qwen team launches Qwen 3.5, and introduces it as such:\n> We are delighted to announce the official release of Qwen3.5, introducing the open-weight of the first model in the Qwen3.5 series, namely Qwen3.5-397B-A17B. As a native vision-language model, Qwen3.5-397B-A17B demonstrates outstanding results across a full range of benchmark evaluations, including reasoning, coding, agent capabilities, and multimodal understanding, empowering developers and enterprises to achieve significantly greater productivity. Built on an innovative hybrid architecture that fuses linear attention (via Gated Delta Networks) with a sparse mixture-of-experts, the model attains remarkable inference efficiency: although it comprises 397 billion total parameters, just 17 billion are activated per forward pass, optimizing both speed and cost without sacrificing capability. We have also expanded our language and dialect support from 119 to 201, providing broader accessibility and enhanced support to users around the world.\n* Adding Support for Qwen3.5 (#43830) by @bozheng-hit\n### VibeVoice Acoustic Tokenizer\n<img width=\"821\" height=\"349\" alt=\"image\" src=\"https://github.com/user-attachments/assets/b1433597-b43b-4d2d-a2c7-216d7792b8c9\" />\n[VibeVoice](https://huggingface.co/papers/2508.19205) is a novel framework for synthesizing high-fideli...",
+      "memory_unit_text": "In the huggingface/transformers release v5.2.0, new models include VoxtralRealtime (streaming speech-to-text), GLM-5 (744B params, 40B active, DeepSeek Sparse Attention), Qwen3.5 and Qwen3.5 MoE (397B total, 17B active, hybrid architecture with Gated Delta Networks), and VibeVoice Acoustic Tokenizer."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v5_3_0",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.3.0",
+      "tag_name": "v5.3.0",
+      "title": "v5.3.0: EuroBERT, VibeVoice ASR, TimesFM2.5, PP-DocLayoutV2, OlmoHybrid, ModernVBert, Higgs Audio V2",
+      "time_hint": "2026-03-04",
+      "published_at": "2026-03-04T17:42:16Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v5.3.0",
+      "raw_text": "Repository: huggingface/transformers\nRelease: v5.3.0: EuroBERT, VibeVoice ASR, TimesFM2.5, PP-DocLayoutV2, OlmoHybrid, ModernVBert, Higgs Audio V2\nTag: v5.3.0; draft: False; prerelease: False; published_at: 2026-03-04T17:42:16Z; created_at: 2026-03-04T17:35:58Z\nRelease notes:\n## New Model additions\n### EuroBERT\n<img width=\"1080\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/33603f42-5435-421a-9641-baf72faacb22\" />\nEuroBERT is a multilingual encoder model based on a refreshed transformer architecture, akin to Llama but with bidirectional attention. It supports a mixture of European and widely spoken languages, with sequences of up to 8192 tokens.\n**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/eurobert) | [Paper](https://huggingface.co/papers/2503.05500) | [Blog Post](https://huggingface.co/blog/EuroBERT/release)\n* Add eurobert (#39455) by @ArthurZucker in [#39455](https://github.com/huggingface/transformers/pull/39455)\n### VibeVoice ASR\n<img width=\"673\" height=\"464\" alt=\"image\" src=\"https://github.com/user-attachments/assets/e4093a6b-fc6e-4136-a15d-2fcd7b27a69e\" />\nVibeVoice ASR is an automatic speech recognition model from Microsoft that combines acoustic and semantic audio tokenizers with a causal language model for robust speech-to-text transcription. The model uses VibeVoice's acoustic and semantic tokenizers that process audio at 24kHz, paired with a Qwen2-based language decoder for generating transcriptions. It can process up to 60 minutes of continuous audio input, supports customized hotwords, performs joint ASR/diarization/timestamping, and handles over 50 languages with code-switching support.\n**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/vibevoice_asr) | [Paper](https://huggingface.co/papers/2601.18184)\n* Add VibeVoice ASR (#43625) by @ebezzam in [#43625](https://github.com/huggingface/transformers/pull/43625)\n### TimesFM2.5\n<img width=\"799\" height=\"497\" alt=\"image\" src=\"https://github.com/user-attachments/assets/1e486803-1b68-496b-aa67-4c3f2055fbeb\" />\nTimesFM 2.5 is a pretrained time-series foundation model that uses a decoder-only attention architecture with input patching for forecasting. The model is designed to provide accurate zero-shot forecasts across different domains, forecasting horizons and temporal granularities without requiring dataset-specific training. It builds on the original TimesFM architecture with enhancements including rotary attention, QK normalization, per-dimension attention scaling, and continuous quantile prediction.\n**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/timesfm2_5) | [Paper](https://huggingface.co/papers/2310.10688)\n* Timesfm 2.5 (#41763) by @kashif in [#41763](https://github.com/huggingface/transformers/pull/41763)\n### PP-DocLayoutV2\n<img width=\"1440\" height=\"436\" alt=\"image\" src=\"https://github.com/user-attachments/assets/31d6609b-ef42-4f15-8c34-eeb2c0d679a9\" />\nPP-DocLayoutV2 is a dedicated lightweight model for layout analysis, focusing specifically on element detection, classification, and reading order prediction. The model is composed of two sequentially connected networks: an RT-DETR-based detection model that performs layout element detection and classification, followed by a pointer network that orders these layout elements. It is designed to analyze document layouts by identifying and organizing various layout components in their proper reading sequence.\n**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/pp_doclayout_v2)\n* [Model] Add PP-DocLayoutV2 Model Support (#43018) by @zhang-prog in [#43018](https://github.com/huggingface/transformers/pull/43018)\n### OlmoHybrid\nOLMo Hybrid is a hybrid architecture model from Ai2 that combines standard transformer attention layers with linear attention layers using the Gated Deltanet. This hybrid approach aims to improve efficiency while maintaini...",
+      "memory_unit_text": "In the huggingface/transformers release v5.3.0, new models include EuroBERT (multilingual encoder, 8192 tokens), VibeVoice ASR (speech-to-text with acoustic/semantic tokenizers), TimesFM2.5 (time-series forecasting), PP-DocLayoutV2 (layout analysis with RT-DETR and pointer network), OlmoHybrid (hybrid transformer with Gated Deltanet), ModernVBert, and Higgs Audio V2."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v5_4_0",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.4.0",
+      "tag_name": "v5.4.0",
+      "title": "Release v5.4.0: PaddlePaddle models 🙌, Mistral 4, PI0, VidEoMT, UVDoc, SLANeXt, Jina Embeddings v3",
+      "time_hint": "2026-03-27",
+      "published_at": "2026-03-27T00:33:02Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v5.4.0",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Release v5.4.0: PaddlePaddle models 🙌, Mistral 4, PI0, VidEoMT, UVDoc, SLANeXt, Jina Embeddings v3\nTag: v5.4.0; draft: False; prerelease: False; published_at: 2026-03-27T00:33:02Z; created_at: 2026-03-27T00:19:23Z\nRelease notes:\n## New Model additions\n### VidEoMT\n<img width=\"1480\" height=\"460\" alt=\"image\" src=\"https://github.com/user-attachments/assets/bec6fc25-b0ab-4227-8c2b-a838554f37f3\" />\nVideo Encoder-only Mask Transformer (VidEoMT) is a lightweight encoder-only model for online video segmentation built on a plain Vision Transformer (ViT). It eliminates the need for dedicated tracking modules by introducing a lightweight query propagation mechanism that carries information across frames and employs a query fusion strategy that combines propagated queries with temporally-agnostic learned queries. VidEoMT achieves competitive accuracy while being 5x-10x faster than existing approaches, running at up to 160 FPS with a ViT-L backbone.\n**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/videomt) | [Paper](https://huggingface.co/papers/2602.17807)\n* Add VidEoMT (#44285) by @NielsRogge in [#44285](https://github.com/huggingface/transformers/pull/44285)\n### UVDoc\n<img width=\"1765\" height=\"875\" alt=\"image\" src=\"https://github.com/user-attachments/assets/365e510e-8fb8-46cb-8f4b-e8b7082f0ae2\" />\nUVDoc is a machine learning model designed for document image rectification and correction. The main purpose of this model is to carry out geometric transformation on images to correct document distortion, inclination, perspective deformation and other problems in document images. It provides both single input and batched inference capabilities for processing distorted document images.\n**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/uvdoc)\n* [Model] Add UVDoc Model Support (#43385) by @XingweiDeng in [#43385](https://github.com/huggingface/transformers/pull/43385)\n### Jina Embeddings v3\n<img width=\"595\" height=\"513\" alt=\"image\" src=\"https://github.com/user-attachments/assets/2aee0692-8286-4c6b-98db-847b95ab2d40\" />\nThe Jina-Embeddings-v3 is a multilingual, multi-task text embedding model designed for a variety of NLP applications. Based on the XLM-RoBERTa architecture, this model supports Rotary Position Embeddings (RoPE) replacing absolute position embeddings to support long input sequences up to 8192 tokens. Additionally, it features 5 built-in Task-Specific LoRA Adapters that allow the model to generate task-specific embeddings (e.g., for retrieval vs. classification) without increasing inference latency significantly.\n**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/jina_embeddings_v3) | [Paper](https://huggingface.co/papers/2409.10173)\n* Add `Jina-Embeddings-V3` Model (#44251) by @Sai-Suraj-27 in [#44251](https://github.com/huggingface/transformers/pull/44251)\n### Mistral4\n<img width=\"2429\" height=\"1787\" alt=\"image\" src=\"https://github.com/user-attachments/assets/a6feb0da-8504-4eab-be65-22d6c676336f\" />\nMistral 4 is a powerful hybrid model with the capability of acting as both a general instruction model and a reasoning model. It unifies the capabilities of three different model families - Instruct, Reasoning (previously called Magistral), and Devstral - into a single, unified model. The model features a MoE architecture with 128 experts and 4 active, 119B parameters with 6.5B activated per token, 256k context length, and supports multimodal input with both text and image processing capabilities.\n**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/mistral4)\n* Add Mistral 4 (#44760) by @juliendenize in [#44760](https://github.com/huggingface/transformers/pull/44760)\n### PI0\nPI0 is a vision-language-action model for robotics manipulation that jointly processes visual observations and language instructions to generate robot actions. It uses a novel fl...",
+      "memory_unit_text": "In the huggingface/transformers release v5.4.0, new models include VidEoMT (video segmentation), UVDoc (document rectification), Jina Embeddings v3 (multilingual embeddings with LoRA adapters), Mistral 4 (MoE with 128 experts, 119B params, 6.5B active, multimodal), PI0 (vision-language-action for robotics), and PaddlePaddle models."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v5_5_0",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.5.0",
+      "tag_name": "v5.5.0",
+      "title": "Release v5.5.0",
+      "time_hint": "2026-04-02",
+      "published_at": "2026-04-02T16:15:33Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v5.5.0",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Release v5.5.0\nTag: v5.5.0; draft: False; prerelease: False; published_at: 2026-04-02T16:15:33Z; created_at: 2026-04-02T16:07:19Z\nRelease notes:\n# Release v5.5.0\n<img width=\"2786\" height=\"1504\" alt=\"image\" src=\"https://github.com/user-attachments/assets/6c8c878f-042b-4858-9f64-73fd9ccd7e4b\" />\n## New Model additions\n### Gemma4\n[Gemma 4](INSET_PAPER_LINK) is a multimodal model with pretrained and instruction-tuned variants, available in 1B, 13B, and 27B parameters. The architecture is mostly the same as the previous Gemma versions. The key differences are a vision processor that can output images of fixed token budget and a spatial 2D RoPE to encode vision-specific information across height and width axis.\n<img width=\"1478\" height=\"1374\" alt=\"image\" src=\"https://github.com/user-attachments/assets/9d88bd1b-02ea-4829-b7d0-fac0e347d436\" />\nYou can find all the original Gemma 4 checkpoints under the [Gemma 4](https://huggingface.co/collections/google/gemma-4-release-67c6c6f89c4f76621268bb6d) release.\nThe key difference from previous Gemma releases is the new design to process **images of different sizes** using a **fixed-budget number of tokens**. Unlike many models that squash every image into a fixed square (like 224×224), Gemma 4 keeps the image's natural aspect ratio while making it the right size. There a a couple constraints to follow:\n- The total number of pixels must fit within a patch budget\n- Both height and width must be divisible by **48** (= patch size 16 × pooling kernel 3)\n> [!IMPORTANT]\n> Gemma 4 does **not** apply the standard ImageNet mean/std normalization that many other vision models use. The model's own patch embedding layer handles the final scaling internally (shifting values to the [-1, 1] range).\nThe number of \"soft tokens\" (aka vision tokens) an image processor can produce is configurable. The supported options are outlined below and the default is **280 soft tokens** per image.\n| Soft Tokens | Patches (before pooling) | Approx. Image Area |\n|:-----------:|:------------------------:|:-------------------:|\n| 70          | 630                      | ~161K pixels        |\n| 140         | 1,260                    | ~323K pixels        |\n| **280**     | **2,520**                | **~645K pixels**    |\n| 560         | 5,040                    | ~1.3M pixels        |\n| 1,120       | 10,080                   | ~2.6M pixels        |\nTo encode positional information for each patch in the image, Gemma 4 uses a learned 2D position embedding table. The position table stores up to 10,240 positions per axis, which allows the model to handle very large images. Each position is a learned vector of the same dimensions as the patch embedding. The 2D RoPE which Gemma 4 uses independently rotate half the attention head dimensions for the x-axis and the other half for the y-axis. This allows the model to understand spatial relationships like \"above,\" \"below,\" \"left of,\" and \"right of.\"\n### NomicBERT\nNomicBERT is a BERT-inspired encoder model that applies Rotary Position Embeddings (RoPE) to create reproducible long context text embeddings. It is the first fully reproducible, open-source text embedding model with 8192 context length that outperforms both OpenAI Ada-002 and OpenAI text-embedding-3-small on short-context MTEB and long context LoCo benchmarks. The model generates dense vector embeddings for various tasks including search, clustering, and classification using specific instruction prefixes.\n**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/nomic_bert) | [Paper](https://arxiv.org/abs/2402.01613)\n* Internalise the NomicBERT model (#43067) by @ed22699 in [#43067](https://github.com/huggingface/transformers/pull/43067)\n### MusicFlamingo\nMusic Flamingo is a fully open large audio–language model designed for robust understanding and reasoning over music. It builds upon the Audio Flamingo 3 architecture by including Rotary Time Embeddings...",
+      "memory_unit_text": "In the huggingface/transformers release v5.5.0, new models include Gemma4 (multimodal, 1B/13B/27B, fixed-budget vision tokens, 2D RoPE), NomicBERT (reproducible long context embeddings, 8192 context), and MusicFlamingo (audio-language model)."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v5_5_1",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.5.1",
+      "tag_name": "v5.5.1",
+      "title": "Patch release v5.5.1",
+      "time_hint": "2026-04-09",
+      "published_at": "2026-04-09T05:53:03Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v5.5.1",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Patch release v5.5.1\nTag: v5.5.1; draft: False; prerelease: False; published_at: 2026-04-09T05:53:03Z; created_at: 2026-04-09T05:31:50Z\nRelease notes:\n# Patch release v5.5.1\nThis patch is very small and focuses on vLLM and Gemma4!\n** Fix export for gemma4 and add Integration tests (#45285) by @Cyrilvallez\n** Fix vllm cis (#45139) by @ArthurZucker",
+      "memory_unit_text": "In the huggingface/transformers patch release v5.5.1, fixes focus on vLLM and Gemma4 export and integration tests."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v5_5_2",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.5.2",
+      "tag_name": "v5.5.2",
+      "title": "Patch release: v5.5.2",
+      "time_hint": "2026-04-09",
+      "published_at": "2026-04-09T14:05:16Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v5.5.2",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Patch release: v5.5.2\nTag: v5.5.2; draft: False; prerelease: False; published_at: 2026-04-09T14:05:16Z; created_at: 2026-04-09T13:47:53Z\nRelease notes:\nSmall patch dedicated to optimizing gemma4, fixing inference with `use_cache=False` due to k/v states sharing between layers, as well as conversion mappings for some models that would inconsistently serialize their weight names. It contains the following PRs:\n- Add MoE to Gemma4 TP plan (#45219) by @sywangyi and @Cyrilvallez\n- [gemma4] Dissociate kv states sharing from the Cache (#45312) by @Cyrilvallez\n- [gemma4] Remove all shared weights, and silently skip them during loading (#45336) by @Cyrilvallez\n- Fix conversion mappings for vlms (#45340) by @Cyrilvallez",
+      "memory_unit_text": "In the huggingface/transformers patch release v5.5.2, optimizations for Gemma4 include MoE TP plan, dissociating kv states sharing from cache, removing shared weights, and fixing conversion mappings for VLMs."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v5_5_3",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.5.3",
+      "tag_name": "v5.5.3",
+      "title": "Patch release: v5.5.3",
+      "time_hint": "2026-04-09",
+      "published_at": "2026-04-09T15:53:11Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v5.5.3",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Patch release: v5.5.3\nTag: v5.5.3; draft: False; prerelease: False; published_at: 2026-04-09T15:53:11Z; created_at: 2026-04-09T15:48:02Z\nRelease notes:\nSmall patch release to fix `device_map` support for Gemma4! It contains the following commit:\n- [gemma4] Fix device map auto (#45347) by @Cyrilvallez",
+      "memory_unit_text": "In the huggingface/transformers patch release v5.5.3, a fix for device_map support for Gemma4."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v5_5_4",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.5.4",
+      "tag_name": "v5.5.4",
+      "title": "Patch release v5.5.4",
+      "time_hint": "2026-04-13",
+      "published_at": "2026-04-13T16:58:06Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v5.5.4",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Patch release v5.5.4\nTag: v5.5.4; draft: False; prerelease: False; published_at: 2026-04-13T16:58:06Z; created_at: 2026-04-13T16:40:35Z\nRelease notes:\n# Patch release v5.5.4\nThis is mostly some fixes that are good to have asap, mostly for tokenizers;\n** Fix Kimi-K2.5 tokenizer regression and _patch_mistral_regex Attribute… (#45305) by ArthurZucker\nFor training:\n** Fix #45305 + add regression test GAS (#45349) by florian6973, SunMarc\n** Fix IndexError with DeepSpeed ZeRO-3 when kernels rotary is active (#…) by ArthurZucker\nAnd for Qwen2.5-VL :\n** Fix Qwen2.5-VL temporal RoPE scaling applied to still images (#45330) by Kash6, zucchini-nlp",
+      "memory_unit_text": "In the huggingface/transformers patch release v5.5.4, fixes include Kimi-K2.5 tokenizer regression, training fixes for GAS and DeepSpeed ZeRO-3, and Qwen2.5-VL temporal RoPE scaling for still images."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v5_6_0",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.6.0",
+      "tag_name": "v5.6.0",
+      "title": "Release v5.6.0",
+      "time_hint": "2026-04-22",
+      "published_at": "2026-04-22T15:52:30Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v5.6.0",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Release v5.6.0\nTag: v5.6.0; draft: False; prerelease: False; published_at: 2026-04-22T15:52:30Z; created_at: 2026-04-22T15:30:42Z\nRelease notes:\n# Release v5.6.0\n## New Model additions\n### OpenAI Privacy Filter\nOpenAI Privacy Filter is a bidirectional token-classification model for personally identifiable information (PII) detection and masking in text. It is intended for high-throughput data sanitization workflows where teams need a model that they can run on-premises that is fast, context-aware, and tunable. The model labels an input sequence in a single forward pass, then decodes coherent spans with a constrained Viterbi procedure, predicting probability distributions over 8 privacy-related output categories for each input token.\n**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/openai_privacy_filter)\n* [`Privacy Filter`] Add model (#45580) by @vasqu in [#45580](https://github.com/huggingface/transformers/pull/45580)\n### QianfanOCR\nQianfan-OCR is a 4B-parameter end-to-end document intelligence model developed by Baidu that performs direct image-to-text conversion without traditional multi-stage OCR pipelines. It supports a broad range of prompt-driven tasks including structured document parsing, table extraction, chart understanding, document question answering, and key information extraction all within one unified model. The model features a unique \"Layout-as-Thought\" capability that generates structured layout representations before producing final outputs, making it particularly effective for complex documents with mixed element types.\n**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/qianfan_ocr) | [Paper](https://huggingface.co/papers/2603.13398)\n* add Qianfan-OCR model definition (#45280) by @marvinzh in [#45280](https://github.com/huggingface/transformers/pull/45280)\n### SAM3-LiteText\nSAM3-LiteText is a lightweight variant of SAM3 that replaces the heavy SAM3 text encoder (353M parameters) with a compact MobileCLIP-based text encoder optimized through knowledge distillation, while keeping the SAM3 ViT-H image encoder intact. This reduces text encoder parameters by up to 88% while maintaining segmentation performance comparable to the original model. The model enables efficient vision-language segmentation by addressing the redundancy found in text prompting for segmentation tasks.\n**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/sam3_lite_text) | [Paper](https://huggingface.co/papers/2602.12173)\n* Add SAM3-LiteText (#44320) by @NielsRogge in [#44320](https://github.com/huggingface/transformers/pull/44320)\n### SLANet\nSLANet and SLANet_plus are lightweight models designed for table structure recognition, focusing on accurately recognizing table structures in documents and natural scenes. The model improves accuracy and inference speed by adopting a CPU-friendly lightweight backbone network PP-LCNet, a high-low-level feature fusion module CSP-PAN, and a feature decoding module SLA Head that aligns structural and positional information. SLANet was developed by Baidu PaddlePaddle Vision Team as part of their table structure recognition solutions.\n**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/slanet)\n* [Model] Add SLANet Model Support (#45532) by @zhang-prog in [#45532](https://github.com/huggingface/transformers/pull/45532)\n## Breaking changes\nThe internal `rotary_fn` is no longer registered as a hidden kernel function, so any code referencing `self.rotary_fn(...)` within an Attention module will break and must be updated to call the function directly instead.\n* :rotating_light: [`Kernels`] Fix kernel function registration (#45420) by @vasqu\n## Serve\nThe `transformers serve` command received several enhancements, including a new `/v1/completions` endpoint for legacy text completion, multimodal support for audio and video inputs...",
+      "memory_unit_text": "In the huggingface/transformers release v5.6.0, new models include OpenAI Privacy Filter (PII detection), QianfanOCR (4B document intelligence), SAM3-LiteText (lightweight vision-language segmentation), and SLANet (table structure recognition). Breaking change: internal rotary_fn no longer registered as hidden kernel function. Serve command enhancements with /v1/completions endpoint and multimodal support."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v5_6_1",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.6.1",
+      "tag_name": "v5.6.1",
+      "title": "Patch release v5.6.1",
+      "time_hint": "2026-04-23",
+      "published_at": "2026-04-23T08:20:03Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v5.6.1",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Patch release v5.6.1\nTag: v5.6.1; draft: False; prerelease: False; published_at: 2026-04-23T08:20:03Z; created_at: 2026-04-23T07:57:39Z\nRelease notes:\n# Patch release v5.6.1\nFlash attention path was broken! Sorry everyone for this one 🤗\n* Fix AttributeError on s_aux=None in flash_attention_forward (https://github.com/huggingface/transformers/pull/45589) by @jamesbraza",
+      "memory_unit_text": "In the huggingface/transformers patch release v5.6.1, a fix for broken flash attention path (AttributeError on s_aux=None)."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v5_6_2",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.6.2",
+      "tag_name": "v5.6.2",
+      "title": "Patch release v5.6.2",
+      "time_hint": "2026-04-23",
+      "published_at": "2026-04-23T18:36:03Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v5.6.2",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Patch release v5.6.2\nTag: v5.6.2; draft: False; prerelease: False; published_at: 2026-04-23T18:36:03Z; created_at: 2026-04-23T18:26:59Z\nRelease notes:\n# Patch release v5.6.2\nQwen 3.5 and 3.6 MoE (text-only) were broken when using with FP8. It should now work again with this :saluting_face:\n* Fix configuration reading and error handling for kernels (https://github.com/huggingface/transformers/pull/45610) by @hmellor\n**Full Changelog**: https://github.com/huggingface/transformers/compare/v5.6.1...v5.6.2",
+      "memory_unit_text": "In the huggingface/transformers patch release v5.6.2, a fix for Qwen 3.5 and 3.6 MoE (text-only) broken with FP8, and configuration reading and error handling for kernels."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v5_7_0",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.7.0",
+      "tag_name": "v5.7.0",
+      "title": "Release v5.7.0",
+      "time_hint": "2026-04-28",
+      "published_at": "2026-04-28T18:32:50Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v5.7.0",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Release v5.7.0\nTag: v5.7.0; draft: False; prerelease: False; published_at: 2026-04-28T18:32:50Z; created_at: 2026-04-28T17:40:24Z\nRelease notes:\n# Release v5.7.0\n## New Model additions\n### Laguna\n<img width=\"699\" height=\"176\" alt=\"image\" src=\"https://github.com/user-attachments/assets/d3bae269-bea7-4ddf-a53f-d4718befdb17\" />\nLaguna is Poolside's mixture-of-experts language model family that extends standard SwiGLU MoE transformers with two key innovations. It features per-layer head counts allowing different decoder layers to have different query-head counts while sharing the same KV cache shape, and implements a sigmoid MoE router with auxiliary-loss-free load balancing that uses element-wise sigmoid of gate logits plus learned per-expert bias for router scoring.\n**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/laguna)\n* Laguna XS.2 implementation (#45673) by @joerowell in [#45673](https://github.com/huggingface/transformers/pull/45673)\n### DEIMv2\n<img width=\"2874\" height=\"908\" alt=\"image\" src=\"https://github.com/user-attachments/assets/fc8c59fe-f964-42ce-ae8e-c7fcace9beb7\" />\nDEIMv2 (DETR with Improved Matching v2) is a real-time object detection model that extends DEIM with DINOv3 features and spans eight model sizes from X to Atto for diverse deployment scenarios. It uses a Spatial Tuning Adapter (STA) for larger variants to convert DINOv3's single-scale output into multi-scale features, while ultra-lightweight models employ pruned HGNetv2 backbones. The unified design achieves superior performance-cost trade-offs, with DEIMv2-X reaching 57.8 AP with only 50.3M parameters and DEIMv2-S being the first sub-10M model to exceed 50 AP on COCO.\n**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/deimv2) | [Paper](https://huggingface.co/papers/2509.20787)\n* model: Add DEIMv2 to Transformers (#44339) by @harshaljanjani in [#44339](https://github.com/huggingface/transformers/pull/44339)\n## Attention\nSeveral attention-related bugs were fixed across multiple models, including a cross-attention cache type error in T5Gemma2 for long inputs, incorrect cached forward behavior in Qwen3.5's gated-delta-net linear attention, and a crash in GraniteMoeHybrid when no Mamba layers are present. Attention function dispatch was also updated to align with the latest model implementations.\n* Fix cross-attention cache layer type for T5Gemma2 long inputs (#45540) by @Beichen-Ma in [#45540]\n* [Qwen3.5] Fix GDN linear attention multi-token cached forward (#45513) by @kashif in [#45513]\n* Fix GraniteMoeHybrid _update_mamba_mask crash on attention-only models (#45514) by @tianhaocui in [#45514]\n* Align latest model attention function dispatch (#45598) by @Cyrilvallez in [#45598]\n## Tokenizers\nThere was a bug in AutoTokenizer that caused the wrong tokenizer class to be initialized. This caused regressions in models like DeepSeek R1.\n* change got reverted (#45680) by @itazap in [#45680]\n## Generation\nContinuous batching generation received several fixes and improvements, including correcting KV deduplication and memory estimation for long sequences (16K+), and removing misleading warnings about `num_return_sequences` and other unsupported features that were incorrectly firing even when functionality worked correctly. Documentation for per-request sampling parameters was also added.\n* generate: drop stale num_return_sequences warning on continuous batching path (#45582) by @joaquinhuigomez in [#45582]\n* Remove unnecessary generate warnings (#45619) by @Cyrilvallez in [#45619]\n* [CB] Changes for long generation (#45530) by @remi-or in [#45530]\n* [docs] per-request sampling params (#45553) by @stevhliu in [#45553]\n## Kernels\nImproved kernel support by fixing configuration reading and error handling for FP8 checkpoints (e.g., Qwen3.5-35B-A3B-FP8), enabling custom expert kernels registered from the HF Hub to be properly loaded, and resolving an...",
+      "memory_unit_text": "In the huggingface/transformers release v5.7.0, new models include Laguna (MoE with per-layer head counts and sigmoid router), DEIMv2 (real-time object detection). Attention fixes for T5Gemma2, Qwen3.5 GDN, GraniteMoeHybrid. Tokenizer bug fix for AutoTokenizer. Generation fixes for continuous batching. Kernel improvements for FP8 and custom expert kernels."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v5_8_0",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.8.0",
+      "tag_name": "v5.8.0",
+      "title": "Release 5.8.0",
+      "time_hint": "2026-05-05",
+      "published_at": "2026-05-05T16:52:21Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v5.8.0",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Release 5.8.0\nTag: v5.8.0; draft: False; prerelease: False; published_at: 2026-05-05T16:52:21Z; created_at: 2026-05-05T16:45:31Z\nRelease notes:\n# Release v5.8.0\n## New Model additions\n### DeepSeek-V4\n<img width=\"6604\" height=\"3574\" alt=\"image\" src=\"https://github.com/user-attachments/assets/4c0fdb29-f770-463c-a97b-d24438896a4c\" />\nDeepSeek-V4 is the next-generation MoE (Mixture of Experts) language model from DeepSeek that introduces several architectural innovations over DeepSeek-V3. The architecture replaces Multi-head Latent Attention (MLA) with a hybrid local + long-range attention design, swaps residual connections for Manifold-Constrained Hyper-Connections (mHC), and bootstraps the first few MoE layers with a static token-id → expert-id hash table. This implementation covers DeepSeek-V4-Flash, DeepSeek-V4-Pro, and their -Base pretrained variants, which share the same architecture but differ in width, depth, expert count and weights.\n**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/deepseek_v4) | [Paper](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash/blob/main/DeepSeek_V4.pdf)\n* Add DeepSeek V4 (#45643) by @ArthurZucker in [#45643](https://github.com/huggingface/transformers/pull/45643)\n### Gemma 4 Assistant\n<img width=\"2000\" height=\"400\" alt=\"image\" src=\"https://github.com/user-attachments/assets/02c79b0b-a172-4495-b09d-a6a4b625ee66\" />\nGemma 4 Assistant is a small, text-only model that enables speculative decoding for Gemma 4 models using the Multi-Token Prediction (MTP) method and associated candidate generator. The model shares the same Gemma4TextModel backbone as other Gemma 4 models but uses KV sharing throughout the entire model, allowing it to reuse the KV cache populated by the target model and skip the pre-fill phase entirely. This architecture includes cross-attention to make the most of the target model's context, allowing the assistant to accurately predict more drafted tokens per drafting round.\n**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/gemma4_assistant)\n* First model (#45788) by @SindhuRaghuram97 in [#45788](https://github.com/huggingface/transformers/pull/45788)\n### GraniteSpeechPlus\n<img width=\"1310\" height=\"930\" alt=\"image\" src=\"https://github.com/user-attachments/assets/94fc3730-742c-4b9e-ab6a-ed2e5c75d0bf\" />\nGranite Speech Plus is a variant of Granite Speech that enhances the projector by consuming the concatenation of the encoder's final hidden states with an arbitrary subset of its intermediate hidden states along the feature dimension. It is a multimodal speech-to-text model that can transcribe audio, provide speaker annotation and word level timestamps by responding to text prompts. The model inherits the same architecture components as Granite Speech including the speech encoder, query transformer projector, language model, and optional LoRA adapter.\n**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/granite_speech_plus)\n* Support for a new Granite-Speech-Plus model (#45695) by @zvik in [#45695](https://github.com/huggingface/transformers/pull/45695)\n### Granite4Vision\nGranite Vision 4.1 is a vision-language model from IBM Research designed for enterprise-grade document data extraction. It specializes in chart extraction (Chart2CSV, Chart2Summary, Chart2Code), table extraction (JSON, HTML, OTSL), and semantic key-value pair extraction. The model builds on LLaVA-NeXT with architectural innovations including SigLIP2 Vision Encoder, Window Q-Former Projectors, and DeepStack Feature Injection with 8 vision-to-LLM injection points.\n**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/granite4_vision)\n* Add Granite 4.1 Vision (granite4_vision) (#45597) by @artem-spector in [#45597](https://github.com/huggingface/transformers/pull/45597)\n### EXAONE-4.5\n<img width=\"3840\" height=\"2160\" alt=\"image\" src=\"ht...",
+      "memory_unit_text": "In the huggingface/transformers release v5.8.0, new models include DeepSeek-V4 (MoE with hybrid local+long-range attention, mHC, static hash table), Gemma 4 Assistant (speculative decoding with MTP), GraniteSpeechPlus (speech-to-text with intermediate hidden states), Granite4Vision (document data extraction), and EXAONE-4.5."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v5_8_1",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.8.1",
+      "tag_name": "v5.8.1",
+      "title": "Patch release v5.8.1",
+      "time_hint": "2026-05-13",
+      "published_at": "2026-05-13T03:21:23Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v5.8.1",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Patch release v5.8.1\nTag: v5.8.1; draft: False; prerelease: False; published_at: 2026-05-13T03:21:23Z; created_at: 2026-05-13T03:10:24Z\nRelease notes:\n# Patch release v5.8.1\nThis release is mainly to fix the Deepseek V4 integration!!!\n<img width=\"714\" height=\"774\" alt=\"image\" src=\"https://github.com/user-attachments/assets/0d85e891-a0ff-436e-a9d4-b6633096f2b5\" />\n* [fix] Add fatal_error to ContinuousBatchingManager so the serving... by @qgallouedec, @remi-or\n* Fix WeightConverter regex incorrectly matching shared_experts as experts by @silencelamb, @claude\n* Fix deepseek v4 by @ArthurZucker (#45892)\n* Deepseek v4 csa mask collapse by @ArthurZucker, @Sawyer117 (#45928)",
+      "memory_unit_text": "In the huggingface/transformers patch release v5.8.1, fixes mainly for DeepSeek V4 integration, including fatal_error in ContinuousBatchingManager, WeightConverter regex fix, and CSA mask collapse."
+    },
+    {
+      "memory_node_id": "huggingface__transformers__release__v5_9_0",
+      "repo": "huggingface/transformers",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.9.0",
+      "tag_name": "v5.9.0",
+      "title": "Release v5.9.0",
+      "time_hint": "2026-05-20",
+      "published_at": "2026-05-20T14:12:54Z",
+      "source_url": "https://github.com/huggingface/transformers/releases/tag/v5.9.0",
+      "raw_text": "Repository: huggingface/transformers\nRelease: Release v5.9.0\nTag: v5.9.0; draft: False; prerelease: False; published_at: 2026-05-20T14:12:54Z; created_at: 2026-05-20T13:42:38Z\nRelease notes:\n# Release v5.9.0\n## New Model additions\n### Cohere2Moe\nCommand A+ is a Mixture-of-Experts (MoE) language model from Cohere that features a hybrid attention pattern combining sliding window and full attention layers. The model incorporates both shared and routed experts and supports a very large context window for processing extensive text sequences.\n**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/cohere2_moe)\n* Add new cohere2_moe model (#46115) by @Cyrilvallez in [#46115](https://github.com/huggingface/transformers/pull/46115)\n### Parakeet tdt (#44171)\n* Parakeet tdt (#44171) by @lmaksym\n### HRM-Text\nHRM-Text is an improved autoregressive language-modeling variant of the Hierarchical Reasoning Model (HRM) that uses a hierarchical recurrent forward pass with two transformer stacks - one for slow, abstract planning (H) and one for fast, detailed computation (L) - reused inside a nested recurrence. It features PrefixLM attention where instruction tokens attend bidirectionally while response tokens attend causally, per-head sigmoid output gates, and parameterless RMSNorm. The model is designed as a base language model without instruction tuning or chat templates.\n**Links:** [Documentation](https://huggingface.co/docs/transformers/main/en/model_doc/hrm_text) | [Paper](https://huggingface.co/papers/2506.21734)\n* Add hrm text (#46025) by @abcd1927 in [#46025](https://github.com/huggingface/transformers/pull/46025)\n## Breaking changes\nThe `text_embeds` input for SAM3, EdgeTAM, and SAM3-Lite-Text models now expects full text embeddings instead of just pooler outputs, aligning with other models in the library — users must update their inputs accordingly.\n* 🚨Fix memory leaks caused by lru decorators in vision models (#45922) by @yonigozlan\n## Audio\nAudio support was expanded with the addition of AudioFlamingoNext model checkpoints and improved compilability of audio/vision encoders via standalone pure functions. Additional improvements include better error messaging when loading audio from video files and new documentation for audio/video processors.\n* user friendly error when loading audio from video (#45221) by @eustlb in [#45221]\n* [docs] adding audio/video processors (#45795) by @stevhliu in [#45795]\n* Support Audio Flamingo Next checkpoints (#44830) by @lashahub in [#44830]\n* Extract dynamic vision/audio tensors into standalone pure functions (#45396) by @IlyasMoutawwakil in [#45396]\n## Generation\nFixed generation issues including `inputs_embeds` and `per_layer_inputs` handling for Gemma4, an `AttributeError` in RAG's `generate()` caused by missing config fields, and flaky VLM generation tests by blocking special image tokens during sampling.\n* Fix Gemma4 generation from inputs_embeds and per_layer_inputs (#46049) by @Cyrilvallez in [#46049]\n* Fix AttributeError in RAG generate() for missing config fields (#46035) by @Sriniketh24 in [#46035]\n* Block image_start/end_token_id in generation test sampling (#45914) by @Rocketknight1 in [#45914]\n## Bugfixes and improvements\n* Remove mask visualization tool from `masking_utils.py` (#46066) by @Cyrilvallez in [#46066]\n* fix: owned_by field in GET /v1/models returns list instead of string (#46006) by @nileshpatil6 in [#46006]\n* [CB] Remove OpenTelemetry (#45984) by @remi-or in [#45984]\n* docs(readme): use canonical `huggingface.co` domain in prose links (#46042) by @kiwigitops in [#46042]\n* Fix remaining RAG doc examples that crash on current transformers (#46044) by @Sriniketh24 in [#46044]\n* Init the actual tensor, not a copy (#46030) by @Rocketknight1 in [#46030]\n* docs: sync legacy ACL anthology URLs and update metrics across i18n READMEs (#46027) by @irfaan101 in [#46027]\n* [MultimodalLM] add language_model to the get/set_input_embeddings logic (#46029) by @...",
+      "memory_unit_text": "In the huggingface/transformers release v5.9.0, new models include Cohere2Moe (MoE with hybrid sliding window and full attention), Parakeet tdt, HRM-Text (hierarchical reasoning model). Breaking change: SAM3/EdgeTAM/SAM3-Lite-Text now expect full text embeddings. Audio support expanded with AudioFlamingoNext. Generation fixes for Gemma4, RAG, and VLM tests."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the huggingface/transformers releases, which release introduces the Vault-Gemma model as a preview with differential privacy training?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v4.57.0"
+        },
+        {
+          "option_id": "B",
+          "text": "v4.56.1-Vault-Gemma-preview"
+        },
+        {
+          "option_id": "C",
+          "text": "v5.0.0rc0"
+        },
+        {
+          "option_id": "D",
+          "text": "v5.1.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v4.56.1-Vault-Gemma-preview",
+      "source_chunk_ids": [
+        "huggingface__transformers__release__v4_56_1_vault_gemma_preview"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "huggingface__transformers__release__v4_56_1_vault_gemma_preview",
+          "answer_text": "A new model is added to transformers: Vault-Gemma ... trained from scratch with sequence-level differential privacy (DP)"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the huggingface/transformers releases, how does the model addition in v5.1.0 differ from the model addition in v5.2.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v5.1.0 adds EXAONE-MoE, while v5.2.0 adds GLM-5."
+        },
+        {
+          "option_id": "B",
+          "text": "v5.1.0 adds Qwen3.5, while v5.2.0 adds EXAONE-MoE."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases add the same set of models."
+        },
+        {
+          "option_id": "D",
+          "text": "v5.1.0 adds VoxtralRealtime, while v5.2.0 adds PP-DocLayoutV3."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v5.1.0 adds EXAONE-MoE, while v5.2.0 adds GLM-5.",
+      "source_chunk_ids": [
+        "huggingface__transformers__release__v5_1_0",
+        "huggingface__transformers__release__v5_2_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "huggingface__transformers__release__v5_1_0",
+          "answer_text": "New Model additions ### EXAONE-MoE"
+        },
+        {
+          "memory_node_id": "huggingface__transformers__release__v5_2_0",
+          "answer_text": "New Model additions ### GLM-5 - GlmMoeDsa"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the huggingface/transformers release window, order the following release-content states from earliest to latest: (1) a release that adds the Vault-Gemma model as a preview, (2) a release that introduces the dynamic weight loading API as a release candidate, (3) a release that adds the DeepSeek-V4 model.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3",
+      "source_chunk_ids": [
+        "huggingface__transformers__release__v4_56_1_vault_gemma_preview",
+        "huggingface__transformers__release__v5_0_0rc0",
+        "huggingface__transformers__release__v5_8_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "huggingface__transformers__release__v4_56_1_vault_gemma_preview",
+          "answer_text": "A new model is added to transformers: Vault-Gemma"
+        },
+        {
+          "memory_node_id": "huggingface__transformers__release__v5_0_0rc0",
+          "answer_text": "We introduce a new weight loading API in transformers"
+        },
+        {
+          "memory_node_id": "huggingface__transformers__release__v5_8_0",
+          "answer_text": "DeepSeek-V4 is the next-generation MoE language model"
+        }
+      ]
+    }
+  ]
+}

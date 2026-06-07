@@ -1,0 +1,530 @@
+{
+  "prototype_id": "ventoy__Ventoy_release_window",
+  "domain": "github_release_evolution",
+  "repo": "ventoy/Ventoy",
+  "source_type": "release_note",
+  "window_title": "ventoy/Ventoy recent release evolution",
+  "window_summary": "This window tracks the recent ventoy/Ventoy release stream from v1.0.83 through v1.1.12, covering multi-language boot menu support, new OS compatibility, bug fixes, and the transition to the 1.1.x series with improved remount handling and btrfs experimental support.",
+  "chunks": [
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_0_83",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.0.83",
+      "tag_name": "v1.0.83",
+      "title": "Ventoy 1.0.83 release",
+      "time_hint": "2022-12-04",
+      "published_at": "2022-12-04T05:49:40Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.0.83",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.0.83 release\nTag: v1.0.83; draft: False; prerelease: False; published_at: 2022-12-04T05:49:40Z; created_at: 2022-12-04T05:15:18Z\nRelease notes:\nThis release was deprecated because of a BUG. Please wait for new release.",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.0.83, the release was deprecated because of a BUG and users were asked to wait for a new release."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_0_84",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.0.84",
+      "tag_name": "v1.0.84",
+      "title": "Ventoy 1.0.84 release",
+      "time_hint": "2022-12-04",
+      "published_at": "2022-12-04T07:40:00Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.0.84",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.0.84 release\nTag: v1.0.84; draft: False; prerelease: False; published_at: 2022-12-04T07:40:00Z; created_at: 2022-12-04T07:33:16Z\nRelease notes:\n**1. Multi-Language supported for Ventoy boot menu. [Notes](https://www.ventoy.net/en/doc_menu_language.html)**\n2. Add `L` hotkey to choose language.\n3. Change `F1` hotkey from memdisk mode to help information.\n4. Add `Ctrl+d` hotkey for memdisk mode.\n5. Add `VTOY_MENU_LANGUAGE` option in Global Control Plugin for default menu language.\n6. Remove `VTOY_HELP_TXT_LANGUAGE` option, use `VTOY_MENU_LANGUAGE` option uniformly.\n7. Ventoy2Disk.exe: Add `Cluster Size` option for Ventoy install.\n8. Ventoy2Disk.exe: Support FAT32 for 32GB+ disk.\n9. Ventoy2Disk.exe: Fix the format failure when install Ventoy in some WinPE/Lite Windows.\n10. Ventoy2Disk.exe: Change the `lock` icon for secure boot option to a yellow picture.\n11. Ventoy2Disk.exe: Show a tip message for cluster size when the mouse hover on the file system string.\n12. Ventoy2Disk.exe: Add `UDF` file system for Ventoy install.\n13. VentoyPlugson.exe: Fix the garbled characters when preview json which contains unicode characters.\n14. Add `VentoyPlugson_X64.exe` for convenience when used in WinPE.\n15. Update Shim/Mokmanager efi files.\n16. languages.json update\nSee [https://www.ventoy.net/en/doc_news.html](https://www.ventoy.net/en/doc_news.html) for more details.\n**About Ventoy Subscription Service**\nVentoy is an open source software under GPLv3 license.\nBut Ventoy project need to pay for the server hosting, domain name, bandwidth, many USB sticks for test, large capacity of HDD (for downloading ISO files) and so on.\nFor the better and sustainable development of Ventoy, I provide the subscription service.\nFor details please refer: [https://www.ventoy.net/en/doc_subscription.html](https://www.ventoy.net/en/doc_subscription.html)\n**SHA-256**\n```\nventoy-1.0.84-windows.zip:     b4c98f0fe3432007a64f6787fe409341f7558bd6a3c0a8312726f744146e67c0\nventoy-1.0.84-linux.tar.gz:    ca0200c36ef43f1e6746b4abb03df22c144504a1b0cddc57cd0eae752f60d992\nventoy-1.0.84-livecd.iso:      2db98ea9cb2fdfa56e14c6d2fd52f15579d11ff463d9a079b4fef74689591dae\n```",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.0.84, multi-language support was added for the Ventoy boot menu, along with hotkey changes (L for language, F1 for help, Ctrl+d for memdisk mode), a VTOY_MENU_LANGUAGE option in Global Control Plugin, removal of VTOY_HELP_TXT_LANGUAGE, and Ventoy2Disk.exe gained Cluster Size option, FAT32 support for 32GB+ disks, UDF file system support, and fixes for format failures in WinPE/Lite Windows."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_0_85",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.0.85",
+      "tag_name": "v1.0.85",
+      "title": "Ventoy 1.0.85 release",
+      "time_hint": "2022-12-18",
+      "published_at": "2022-12-18T14:26:16Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.0.85",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.0.85 release\nTag: v1.0.85; draft: False; prerelease: False; published_at: 2022-12-18T14:26:16Z; created_at: 2022-12-18T14:11:28Z\nRelease notes:\n1. Fix the format failure when install Ventoy.\n2. Auto memdisk plugin support some IMA/IMG files.\n3. Optimization for booting memtest86-usb.img.\n4. Grub2 mode supports KNOPPIX.\n5. Fix the issue when booting Peux distro iso files.\n6. Add new menu languages\n7. languages.json update\nSee [https://www.ventoy.net/en/doc_news.html](https://www.ventoy.net/en/doc_news.html) for more details.\n**About Ventoy Subscription Service**\nVentoy is an open source software under GPLv3 license.\nBut Ventoy project need to pay for the server hosting, domain name, bandwidth, many USB sticks for test, large capacity of HDD (for downloading ISO files) and so on.\nFor the better and sustainable development of Ventoy, I provide the subscription service.\nFor details please refer: [https://www.ventoy.net/en/doc_subscription.html](https://www.ventoy.net/en/doc_subscription.html)\n**SHA-256**\n```\nventoy-1.0.85-windows.zip:     cd1189b7990ce4d9db9dfe5391baeee7c94abbb3e3a7467624efbb316e89fd20\nventoy-1.0.85-linux.tar.gz:    1234bf19ff83760184bf7f0ef9d9ecb000bc4b15814579256e951d7086a14420\nventoy-1.0.85-livecd.iso:      c72a1db2d7e63ad5c491c2bf97870d2284e7b2f895d39457402d5f111ace9f11\n```",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.0.85, a format failure during Ventoy installation was fixed, auto memdisk plugin gained support for some IMA/IMG files, booting memtest86-usb.img was optimized, Grub2 mode added KNOPPIX support, a boot issue with Peux distro iso files was fixed, and new menu languages were added."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_0_86",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.0.86",
+      "tag_name": "v1.0.86",
+      "title": "Ventoy 1.0.86 release",
+      "time_hint": "2022-12-24",
+      "published_at": "2022-12-24T13:26:14Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.0.86",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.0.86 release\nTag: v1.0.86; draft: False; prerelease: False; published_at: 2022-12-24T13:26:14Z; created_at: 2022-12-24T13:19:31Z\nRelease notes:\n1. Add `F5 Tools ---> Temporary Control Settings` menu. [Notes](https://www.ventoy.net/en/doc_ctrl_settings.html)\n2. Ventoy2Disk.exe now supports command line mode. [Notes](https://www.ventoy.net/en/doc_windows_cli.html)\n3. Add `VTOY_WIN11_BYPASS_NRO` option in global control plugin to bypass online account requirement when intall Windows 11.\n4. Enable `VTOY_WIN11_BYPASS_CHECK` and `VTOY_WIN11_BYPASS_NRO` by default.\n5. Add `resolution_fit` option in theme plugin. [Notes](https://www.ventoy.net/en/plugin_theme.html#vtoy_theme_res_fit)\n6. Change the MBR partition type to 0xC if user selects FAT32 when intall Ventoy.\n7. VentoyPlugson: Add duplicate file path check in different lower/upper cases.\n8. Change egrep to grep -E for some scripts. (#2083)\n9. Add new menu languages\n10. languages.json update\nSee [https://www.ventoy.net/en/doc_news.html](https://www.ventoy.net/en/doc_news.html) for more details.\n**About Ventoy Subscription Service**\nVentoy is an open source software under GPLv3 license.\nBut Ventoy project need to pay for the server hosting, domain name, bandwidth, many USB sticks for test, large capacity of HDD (for downloading ISO files) and so on.\nFor the better and sustainable development of Ventoy, I provide the subscription service.\nFor details please refer: [https://www.ventoy.net/en/doc_subscription.html](https://www.ventoy.net/en/doc_subscription.html)\n**SHA-256**\n```\nventoy-1.0.86-windows.zip:     fb414f4546a62fd7688b30d7f483521bd9b740f716fae176911d9e966e4b99f5\nventoy-1.0.86-linux.tar.gz:    92cc57300ec63e516b3e2d6825af988389b2eaa306c15ae138bee92ebb9788d0\nventoy-1.0.86-livecd.iso:      adcda85d6152331b492793f62adb9e486718f1ad8dbaddc9c9e318f347630dc0\n```",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.0.86, a 'F5 Tools ---> Temporary Control Settings' menu was added, Ventoy2Disk.exe gained command line mode support, VTOY_WIN11_BYPASS_NRO option was added to bypass online account requirement during Windows 11 install, VTOY_WIN11_BYPASS_CHECK and VTOY_WIN11_BYPASS_NRO were enabled by default, a resolution_fit option was added in theme plugin, MBR partition type was changed to 0xC for FAT32 installs, and VentoyPlugson added duplicate file path check."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_0_87",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.0.87",
+      "tag_name": "v1.0.87",
+      "title": "Ventoy 1.0.87 release",
+      "time_hint": "2023-01-07",
+      "published_at": "2023-01-07T08:14:12Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.0.87",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.0.87 release\nTag: v1.0.87; draft: False; prerelease: False; published_at: 2023-01-07T08:14:12Z; created_at: 2023-01-07T07:57:53Z\nRelease notes:\n1. Add `return to previous menu` in secondary boot menu for convenience.\n2. Add `max` value for screen resolution option in theme plugin. [Notes](https://www.ventoy.net/en/plugin_theme.html)\n3. Fix the bug when F2 browse and boot VHD/VHDX files in an extend logic partition.\n4. Fix the menu title of `F5 Tools ---> Power ---> $VTLANG_POWER_REBOOT_EFIFW`\n5. Support BSD style for .md5/.sha1/.sh256/.sha512 checksum file. (#2112)\n6. Support `VENTOY_CHECKSUM` file for checksum value match. [Notes](https://www.ventoy.net/en/doc_checksum.html#checksum_compare)\n7. Disable Fn hotkeys in autoinstall/persistence/wim select menu.\n8. Fix the blank item in the last of Language select menu.\n9. Fix the menu display issue when use persistence (VTLANG_NO_PERSISTENCE).\n10. Add support for Lenovo Product Recovery iso file.\n11. Add support for Dell PER ISO. (#2113)\n12. grub2 mode supports Porteus ISO file.\n13. Fix the file path when file checksum in F2 browse mode.\n14. Add new menu languages\n15. languages.json update\nSee [https://www.ventoy.net/en/doc_news.html](https://www.ventoy.net/en/doc_news.html) for more details.\n**About Ventoy Subscription Service**\nVentoy is an open source software under GPLv3 license.\nBut Ventoy project need to pay for the server hosting, domain name, bandwidth, many USB sticks for test, large capacity of HDD (for downloading ISO files) and so on.\nFor the better and sustainable development of Ventoy, I provide the subscription service.\nFor details please refer: [https://www.ventoy.net/en/doc_subscription.html](https://www.ventoy.net/en/doc_subscription.html)\n**SHA-256**\n```\nventoy-1.0.87-windows.zip:     d40d3747c448368e3a8402aba922e88af7da717dd0ec1523dec6957f18fa9603\nventoy-1.0.87-linux.tar.gz:    d26ecc5cbb52baaf06743157cca798f3a0c882581e43ac3212da4ec81fed8647\nventoy-1.0.87-livecd.iso:      73a777405fb70ff6a494cc9edae1077347adcd816d83c4c92469da78e4b781e1\n```",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.0.87, a 'return to previous menu' was added in secondary boot menu, a 'max' value for screen resolution option was added in theme plugin, a bug when browsing and booting VHD/VHDX files in an extend logic partition was fixed, BSD style checksum files were supported, VENTOY_CHECKSUM file support was added, Fn hotkeys were disabled in autoinstall/persistence/wim select menu, a blank item in the language select menu was fixed, and support was added for Lenovo Product Recovery iso and Dell PER ISO."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_0_88",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.0.88",
+      "tag_name": "v1.0.88",
+      "title": "Ventoy 1.0.88 release",
+      "time_hint": "2023-01-13",
+      "published_at": "2023-01-13T14:04:28Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.0.88",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.0.88 release\nTag: v1.0.88; draft: False; prerelease: False; published_at: 2023-01-13T14:04:28Z; created_at: 2023-01-13T13:57:44Z\nRelease notes:\n1. Fix the VHD(x) boot issue introduced in 1.0.87.\n2. Add more options for Windows command line mode. [Notes](https://www.ventoy.net/en/doc_windows_cli.html)\n3. VentoyPlguson: Fix VTOY_WIN11_BYPASS_CHECK option web page display issue.\n4. Fix that workaround #2 not working for Legacy BIOS access limit.\n5. Fix a syntax error in F4 localboot.\n6. Show file checksum menu title according to the existence of checksum value.\n7. Automatically switch to en_US when use text mode.\n8. Add unsupported tip message for 4k native disk.\n9. languages.json update\nSee [https://www.ventoy.net/en/doc_news.html](https://www.ventoy.net/en/doc_news.html) for more details.\n**About Ventoy Subscription Service**\nVentoy is an open source software under GPLv3 license.\nBut Ventoy project need to pay for the server hosting, domain name, bandwidth, many USB sticks for test, large capacity of HDD (for downloading ISO files) and so on.\nFor the better and sustainable development of Ventoy, I provide the subscription service.\nFor details please refer: [https://www.ventoy.net/en/doc_subscription.html](https://www.ventoy.net/en/doc_subscription.html)\n**SHA-256**\n```\nventoy-1.0.88-windows.zip:     be6ea0c14d89a47d8f6e158bcfd43efdc1580dcff9c2e0d249a1a1085b5a2548\nventoy-1.0.88-linux.tar.gz:    9a0d5dcd74442213bd2eca0211abae051f444861ccdd1be814dfb9bc75341c30\nventoy-1.0.88-livecd.iso:      00e6bca25c17a97b92b22aa876ea56e92f8a9216fa92ab2e1c93373498509f1e\n```",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.0.88, a VHD(x) boot issue introduced in 1.0.87 was fixed, more options were added for Windows command line mode, VentoyPlugson fixed VTOY_WIN11_BYPASS_CHECK display issue, workaround #2 for Legacy BIOS access limit was fixed, a syntax error in F4 localboot was fixed, file checksum menu title now shows according to checksum existence, text mode automatically switches to en_US, and an unsupported tip message for 4k native disk was added."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_0_89",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.0.89",
+      "tag_name": "v1.0.89",
+      "title": "Ventoy 1.0.89 release",
+      "time_hint": "2023-03-07",
+      "published_at": "2023-03-07T11:45:35Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.0.89",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.0.89 release\nTag: v1.0.89; draft: False; prerelease: False; published_at: 2023-03-07T11:45:35Z; created_at: 2023-03-07T11:21:15Z\nRelease notes:\n1. Fix the issue that `VTOY_LINUX_REMOUNT` can not work in new linux kernel.\n2. Fix the issue that Ventoy2Disk_X64.exe can not run under altexe directory.\n3. Fix the issue that VentoyPlugson_X64.exe exit silently.\n4. Add missing /FS option for Ventoy2Disk.exe in Windows command line mode.\n5. Ventoy2Disk.exe automatically change current directory when started from other directory.\n6. Add tip message when theme file contains non-enclosed literal values. (#2166)\n7. Ignore reserved space when do non-destructive installation via GUI. (#2168)\n8. Fix the menu missing issue when there exist an invalid vlnk file. (#2228)\n9. languages.json update\nSee [https://www.ventoy.net/en/doc_news.html](https://www.ventoy.net/en/doc_news.html) for more details.\n**About Ventoy Subscription Service**\nVentoy is an open source software under GPLv3 license.\nBut Ventoy project need to pay for the server hosting, domain name, bandwidth, many USB sticks for test, large capacity of HDD (for downloading ISO files) and so on.\nFor the better and sustainable development of Ventoy, I provide the subscription service.\nFor details please refer: [https://www.ventoy.net/en/doc_subscription.html](https://www.ventoy.net/en/doc_subscription.html)\n**SHA-256**\n```\nventoy-1.0.89-windows.zip:     de104625b00909a221a7ef45927b66c47bd59d32305f7ec740875549f64e9de2\nventoy-1.0.89-linux.tar.gz:    74f04c001ce621351e9ce7b9ec10f9126a1f65e5c2f6fe88a56ee6f8e86161d0\nventoy-1.0.89-livecd.iso:      c859fc47121895331f2396e87b221840dcc2c79e28a683d06db90fc2afc844f5\n```",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.0.89, the issue that VTOY_LINUX_REMOUNT could not work in new linux kernel was fixed, Ventoy2Disk_X64.exe not running under altexe directory was fixed, VentoyPlugson_X64.exe silent exit was fixed, missing /FS option for Ventoy2Disk.exe in command line mode was added, Ventoy2Disk.exe automatically changes current directory when started from other directory, a tip message was added when theme file contains non-enclosed literal values, reserved space is ignored during non-destructive installation via GUI, and a menu missing issue with invalid vlnk files was fixed."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_0_90",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.0.90",
+      "tag_name": "v1.0.90",
+      "title": "Ventoy 1.0.90 release",
+      "time_hint": "2023-03-26",
+      "published_at": "2023-03-26T11:11:57Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.0.90",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.0.90 release\nTag: v1.0.90; draft: False; prerelease: False; published_at: 2023-03-26T11:11:57Z; created_at: 2023-03-26T11:01:13Z\nRelease notes:\n1. Fix the issue that `VTOY_LINUX_REMOUNT` option can not work for (Kernel 5.18+) + (Intel Gen11+ CPU).\n2. Support LibreELEC 11.0+. (#2281)\n3. Fix the issue that Fedora Rawhide install media not detected. (#2283)\n4. Add support for chimera linux. (#2309)\n5. Optimization for Fedora boot process.\n6. languages.json update.\n7. New iso support. (Total 1100+)\nSee [https://www.ventoy.net/en/doc_news.html](https://www.ventoy.net/en/doc_news.html) for more details.\n**About Ventoy Subscription Service**\nVentoy is an open source software under GPLv3 license.\nBut Ventoy project need to pay for the server hosting, domain name, bandwidth, many USB sticks for test, large capacity of HDD (for downloading ISO files) and so on.\nFor the better and sustainable development of Ventoy, I provide the subscription service.\nFor details please refer: [https://www.ventoy.net/en/doc_subscription.html](https://www.ventoy.net/en/doc_subscription.html)\n**SHA-256**\n```\nventoy-1.0.90-windows.zip:     a6b62ad5f7cb0690598af747c83b29a233b55c719d221429fb3a73995b1f8d39\nventoy-1.0.90-linux.tar.gz:    509e2482d176948667dfba7548392f0b21e6b8148548798c1ca2c3e3f668adb4\nventoy-1.0.90-livecd.iso:      c9b546e8c8cb0a0ee9424850f4faad7c9d59ecaa3bcd25870ea348ee47ce4c9b\n```",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.0.90, the issue that VTOY_LINUX_REMOUNT option could not work for Kernel 5.18+ with Intel Gen11+ CPU was fixed, LibreELEC 11.0+ support was added, Fedora Rawhide install media detection was fixed, chimera linux support was added, Fedora boot process was optimized, and new iso support brought the total to 1100+."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_0_91",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.0.91",
+      "tag_name": "v1.0.91",
+      "title": "Ventoy 1.0.91 release",
+      "time_hint": "2023-04-05",
+      "published_at": "2023-04-05T13:02:30Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.0.91",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.0.91 release\nTag: v1.0.91; draft: False; prerelease: False; published_at: 2023-04-05T13:02:30Z; created_at: 2023-04-05T12:41:34Z\nRelease notes:\n1. Add support for FreeBSD 14-CURRENT.\n2. Fix the issue for booting Bliss OS 15.x (#2329)\n3. Fix a bug that Fedora boot error if Ventoy partition is NTFS. (#2333)\n4. Add Recognition for NTFS with large cluster size (greater than 64KB).\n5. Improve grub2 mode process for legacy BIOS mode.\n6. languages.json update.\nSee [https://www.ventoy.net/en/doc_news.html](https://www.ventoy.net/en/doc_news.html) for more details.\n**About Ventoy Subscription Service**\nVentoy is an open source software under GPLv3 license.\nBut Ventoy project need to pay for the server hosting, domain name, bandwidth, many USB sticks for test, large capacity of HDD (for downloading ISO files) and so on.\nFor the better and sustainable development of Ventoy, I provide the subscription service.\nFor details please refer: [https://www.ventoy.net/en/doc_subscription.html](https://www.ventoy.net/en/doc_subscription.html)\n**SHA-256**\n```\nventoy-1.0.91-windows.zip:     c9450a0a89c5e288ea467e2014e0200c2311a3a38dc119e16752dda8fd3cd12c\nventoy-1.0.91-linux.tar.gz:    f6fb0574ec6c5b50acd3a8153ef42eb23bb6fb0a783e90706c7654ba0c1bddca\nventoy-1.0.91-livecd.iso:      912965a9aaf19caa85b64c63f8f071133d19d764feb4038b2122675bb5285637\n```",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.0.91, support for FreeBSD 14-CURRENT was added, a boot issue for Bliss OS 15.x was fixed, a bug causing Fedora boot error when Ventoy partition is NTFS was fixed, recognition for NTFS with large cluster size (>64KB) was added, and grub2 mode process for legacy BIOS mode was improved."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_0_92",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.0.92",
+      "tag_name": "v1.0.92",
+      "title": "Ventoy 1.0.92 release",
+      "time_hint": "2023-06-23",
+      "published_at": "2023-06-23T13:41:59Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.0.92",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.0.92 release\nTag: v1.0.92; draft: False; prerelease: False; published_at: 2023-06-23T13:41:59Z; created_at: 2023-06-23T13:29:51Z\nRelease notes:\nThis release was deprecated due to a critical bug, please use 1.0.93.",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.0.92, the release was deprecated due to a critical bug, and users were advised to use 1.0.93."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_0_93",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.0.93",
+      "tag_name": "v1.0.93",
+      "title": "Ventoy 1.0.93 release",
+      "time_hint": "2023-06-23",
+      "published_at": "2023-06-23T15:12:00Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.0.93",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.0.93 release\nTag: v1.0.93; draft: False; prerelease: False; published_at: 2023-06-23T15:12:00Z; created_at: 2023-06-23T15:07:21Z\nRelease notes:\n1. Fix the boot issue for Fedora/CentOS when file name contains special character. (#2360)\n2. Support unattended auto install for Deepin/UOS.\n3. Fix a bug that if you plug-out the USB drive during installation, Ventoy will be probabilistically installed to other disk.\n4. Correct EFI chainloader image device path. (#2397)\n5. languages.json update.\n**Wana boot and install OS through network (PXE)? Welcome to my new project iVentoy.**\n**About iVentoy [https://www.iventoy.com](https://www.iventoy.com)**\niVentoy is an enhanced version of the PXE server.\nExtremely easy to use\nMany advanced features\nx86 Legacy BIOS, IA32 UEFI, x86_64 UEFI and ARM64 UEFI mode supported\n110+ common types of OS supported (Windows/WinPE/Linux/VMware)\n......\n**About Ventoy Subscription Service**\nVentoy is an open source software under GPLv3 license.\nBut Ventoy project need to pay for the server hosting, domain name, bandwidth, many USB sticks for test, large capacity of HDD (for downloading ISO files) and so on.\nFor the better and sustainable development of Ventoy, I provide the subscription service.\nFor details please refer: [https://www.ventoy.net/en/doc_subscription.html](https://www.ventoy.net/en/doc_subscription.html)\n**SHA-256**\n```\nventoy-1.0.93-windows.zip:     2e887f24ace92596d5b7b9c21eabc8f9065bfaf43d27833bf0eac96da390114c\nventoy-1.0.93-linux.tar.gz:    a33e4856ad10b0f5fdd0de0406895dd9043cfc26385c5f8a710e352fe4d1e222\nventoy-1.0.93-livecd.iso:      0d2932d75bcd2ef63049adf173d52fdca1fdcd2058371527d52cd49b07eeea92\n```",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.0.93, a boot issue for Fedora/CentOS when file name contains special character was fixed, unattended auto install support for Deepin/UOS was added, a bug where unplugging the USB drive during installation could probabilistically install Ventoy to another disk was fixed, and EFI chainloader image device path was corrected."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_0_94",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.0.94",
+      "tag_name": "v1.0.94",
+      "title": "Ventoy 1.0.94 release",
+      "time_hint": "2023-07-20",
+      "published_at": "2023-07-20T04:05:59Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.0.94",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.0.94 release\nTag: v1.0.94; draft: False; prerelease: False; published_at: 2023-07-20T04:05:59Z; created_at: 2023-07-20T03:54:46Z\nRelease notes:\n1. Fix Synchronous Exception on some ARM cpus. (#2488)\n2. languages.json update.\n**Wana boot and install OS through network (PXE)? Welcome to my new project iVentoy.**\n**About iVentoy [https://www.iventoy.com](https://www.iventoy.com)**\niVentoy is an enhanced version of the PXE server.\nExtremely easy to use\nMany advanced features\nx86 Legacy BIOS, IA32 UEFI, x86_64 UEFI and ARM64 UEFI mode supported\n110+ common types of OS supported (Windows/WinPE/Linux/VMware)\n......\n**About Ventoy Subscription Service**\nVentoy is an open source software under GPLv3 license.\nBut Ventoy project need to pay for the server hosting, domain name, bandwidth, many USB sticks for test, large capacity of HDD (for downloading ISO files) and so on.\nFor the better and sustainable development of Ventoy, I provide the subscription service.\nFor details please refer: [https://www.ventoy.net/en/doc_subscription.html](https://www.ventoy.net/en/doc_subscription.html)\n**SHA-256**\n```\n75572bd2a0c6f79402f5acb549b86cf48c421b3a4bbde8f65d19a37b6f5f5a14  ventoy-1.0.94-linux.tar.gz\n202cb7ab9cef7cc8ed62fd71778da3e526c4fc82895ebdbbbab590e2f99828f3  ventoy-1.0.94-livecd.iso\nea03cc5031b397e43d316d466eb50a5c0a4c8f431cfbaecd0ce8f0b559038aaf  ventoy-1.0.94-windows.zip\n```",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.0.94, a Synchronous Exception on some ARM cpus was fixed."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_0_95",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.0.95",
+      "tag_name": "v1.0.95",
+      "title": "Ventoy 1.0.95 release",
+      "time_hint": "2023-08-23",
+      "published_at": "2023-08-23T01:42:04Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.0.95",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.0.95 release\nTag: v1.0.95; draft: False; prerelease: False; published_at: 2023-08-23T01:42:04Z; created_at: 2023-08-23T01:26:53Z\nRelease notes:\n1. Drag to resize Ventoy2Disk.exe dialog width.\n2. Fix a bug when booting veket_24.\n3. Fix a bug when booting the latest UOS server ISO.\n4. New distro support `vanilladpup`\n4. New distro support `FydeOS 17`\n5. languages.json update.\n**Wana boot and install OS through network (PXE)? Welcome to my new project iVentoy.**\n**About iVentoy [https://www.iventoy.com](https://www.iventoy.com)**\niVentoy is an enhanced version of the PXE server.\nExtremely easy to use\nMany advanced features\nx86 Legacy BIOS, IA32 UEFI, x86_64 UEFI and ARM64 UEFI mode supported\n110+ common types of OS supported (Windows/WinPE/Linux/VMware)\n......\n**About Ventoy Subscription Service**\nVentoy is an open source software under GPLv3 license.\nBut Ventoy project need to pay for the server hosting, domain name, bandwidth, many USB sticks for test, large capacity of HDD (for downloading ISO files) and so on.\nFor the better and sustainable development of Ventoy, I provide the subscription service.\nFor details please refer: [https://www.ventoy.net/en/doc_subscription.html](https://www.ventoy.net/en/doc_subscription.html)\n**SHA-256**\n```\nventoy-1.0.95-windows.zip:     73eb20d1c17b068f0d6315304affc5cbf7102de8699fc4e0b620abb3ebbc0d4c\nventoy-1.0.95-linux.tar.gz:    4ec8b9e3518032b581979c4ba3f2beb84c9aa1a0d25afc29e5133367957a4405\nventoy-1.0.95-livecd.iso:      1072d2d44c25c4ed7053952ff8e3fff840083168e1f07fc1e8b4f1fe964b1bec\n```",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.0.95, Ventoy2Disk.exe dialog width can now be dragged to resize, a bug when booting veket_24 was fixed, a bug when booting the latest UOS server ISO was fixed, and new distro support was added for vanilladpup and FydeOS 17."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_0_96",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.0.96",
+      "tag_name": "v1.0.96",
+      "title": "Ventoy 1.0.96 release",
+      "time_hint": "2023-10-06",
+      "published_at": "2023-10-06T14:57:38Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.0.96",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.0.96 release\nTag: v1.0.96; draft: False; prerelease: False; published_at: 2023-10-06T14:57:38Z; created_at: 2023-10-06T14:39:39Z\nRelease notes:\n1. Fix that bootpwd not working for VentoyPlugson. (#2584)\n2. Add escaping for path in VentoyPlugson.sh (#2585)\n3. Fix the warning prompt for Ventoy2Disk.sh (#2593)\n4. Fix the issue that VTOY_LINUX_REMOUNT=1 does not work on some distros. (#2475 #2551)\n5. `vtoyboot-1.0.30` release. [Notes](https://github.com/ventoy/vtoyboot/releases/tag/v1.0.30)\n6. languages.json update.\n**Wana boot and install OS through network (PXE)? Welcome to my new project iVentoy.**\n**About iVentoy [https://www.iventoy.com](https://www.iventoy.com)**\niVentoy is an enhanced version of the PXE server.\nExtremely easy to use\nMany advanced features\nx86 Legacy BIOS, IA32 UEFI, x86_64 UEFI and ARM64 UEFI mode supported\n110+ common types of OS supported (Windows/WinPE/Linux/VMware)\n......\n**SHA-256**\n```\nventoy-1.0.96-windows.zip:     c37d333bc630076679172cf1934290c3c7c80340a9719369b96628edbdcb724b\nventoy-1.0.96-linux.tar.gz:    794a717c9434bb76e90174d408a94c3bf562c0a701239f5814a277c46cd275c8\nventoy-1.0.96-livecd.iso:      9e1d266497456b9015d231789958f7c4ea1f54f369a41edf11eb3d61c57e29b3\n```\n[![Download Ventoy](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/ventoy/files/v1.0.96/)",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.0.96, a bug where bootpwd was not working for VentoyPlugson was fixed, escaping for path in VentoyPlugson.sh was added, a warning prompt for Ventoy2Disk.sh was fixed, the issue that VTOY_LINUX_REMOUNT=1 does not work on some distros was fixed, and vtoyboot-1.0.30 was released."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_0_97",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.0.97",
+      "tag_name": "v1.0.97",
+      "title": "Ventoy 1.0.97 release",
+      "time_hint": "2024-01-24",
+      "published_at": "2024-01-24T07:07:08Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.0.97",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.0.97 release\nTag: v1.0.97; draft: False; prerelease: False; published_at: 2024-01-24T07:07:08Z; created_at: 2024-01-24T07:02:32Z\nRelease notes:\n1. Add support for FreeBSD 14.0. (#2636)\n2. Fix Proxmox 8.1 boot issue. (#2657)\n3. Fix VTOY_LINUX_REMOUNT option does not work with latest linux kernel version. (#2661 #2674)\n4. Fix the VentoyPlugson issue that default_file value is wrong for more than 10 theme files. (#2608)\n5. `vtoyboot-1.0.31` release. [Notes](https://github.com/ventoy/vtoyboot/releases/tag/v1.0.31)\n**Wana boot and install OS through network (PXE)? Welcome to my new project iVentoy.**\n**About iVentoy [https://www.iventoy.com](https://www.iventoy.com)**\niVentoy is an enhanced version of the PXE server.\nExtremely easy to use\nMany advanced features\nx86 Legacy BIOS, IA32 UEFI, x86_64 UEFI and ARM64 UEFI mode supported\n110+ common types of OS supported (Windows/WinPE/Linux/VMware)\n......\n**SHA-256**\n```\nventoy-1.0.97-windows.zip:     44fb53f26872c6304e1cb3d47b65d0613665666100c48deeee4cd87901fb500f\nventoy-1.0.97-linux.tar.gz:    1368a9082c9db25958e5407ef4984322d90d3bb00905337d4bd41678e06c1150\nventoy-1.0.97-livecd.iso:      ca6369eca22e24d5e1b4a1e824fcde747345aaa2424221912f0f326e10570676\n```\n[![Download Ventoy](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/ventoy/files/v1.0.97/)",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.0.97, support for FreeBSD 14.0 was added, a Proxmox 8.1 boot issue was fixed, the VTOY_LINUX_REMOUNT option not working with latest linux kernel version was fixed, a VentoyPlugson issue where default_file value was wrong for more than 10 theme files was fixed, and vtoyboot-1.0.31 was released."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_0_98",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.0.98",
+      "tag_name": "v1.0.98",
+      "title": "Ventoy 1.0.98 release",
+      "time_hint": "2024-05-19",
+      "published_at": "2024-05-19T15:32:03Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.0.98",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.0.98 release\nTag: v1.0.98; draft: False; prerelease: False; published_at: 2024-05-19T15:32:03Z; created_at: 2024-05-19T15:14:49Z\nRelease notes:\n1. Update EFI boot files.\n2. Fix the issue that can not recognize Ext4 filesytem created with latest gparted.\n3. Fix the issue that VTOY_LINUX_REMOUNT=1 can not take effect in RHEL9/CentOS9. (#2827)\n4. Fix the boot issue for latest archlinux. (#2825 #2824)\n5. Fix the boot issue for latest KAOS.\n6. languages.json update\n7. `vtoyboot-1.0.35` release. [Notes](https://github.com/ventoy/vtoyboot/releases/tag/v1.0.35)\n**Wana boot and install OS through network (PXE)? Welcome to my new project iVentoy.**\n**About iVentoy [https://www.iventoy.com](https://www.iventoy.com)**\niVentoy is an enhanced version of the PXE server.\nExtremely easy to use\nMany advanced features\nx86 Legacy BIOS, IA32 UEFI, x86_64 UEFI and ARM64 UEFI mode supported\n110+ common types of OS supported (Windows/WinPE/Linux/VMware)\n......\n**SHA-256**\n```\n263041f6f1bb08db3815ba7a208064229660ee5f60d1ee7cb638739dceceb0bc  ventoy-1.0.98-linux.tar.gz\nb12e2a70e4c5994d131951e2d0787cd1f08d97b7cd0f1bf0c87509fc81c21105  ventoy-1.0.98-livecd.iso\n8a21eced5efea22a82b2f8b2783a7db2449c09ef0a4ecb0fa4d019e3ab06e0d1  ventoy-1.0.98-windows.zip\n```\n[![Download Ventoy](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/ventoy/files/v1.0.98/)",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.0.98, EFI boot files were updated, the issue that Ext4 filesystem created with latest gparted could not be recognized was fixed, VTOY_LINUX_REMOUNT=1 not taking effect in RHEL9/CentOS9 was fixed, boot issues for latest archlinux and KAOS were fixed, and vtoyboot-1.0.35 was released."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_0_99",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.0.99",
+      "tag_name": "v1.0.99",
+      "title": "Ventoy 1.0.99 release",
+      "time_hint": "2024-06-08",
+      "published_at": "2024-06-08T09:50:27Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.0.99",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.0.99 release\nTag: v1.0.99; draft: False; prerelease: False; published_at: 2024-06-08T09:50:27Z; created_at: 2024-06-08T09:26:33Z\nRelease notes:\n1. Upadte EFI boot files. Fix the `Linpus Lite` error on some computer.\n2. Fix the issue that VTOY_LINUX_REMOUNT can not take effect in latest openSUSE. (#2551)\n3. Fix the issue when installing on /dev/mdX device. (#2846)\n4. languages.json update\n**Wana boot and install OS through network (PXE)? Welcome to my new project iVentoy.**\n**About iVentoy [https://www.iventoy.com](https://www.iventoy.com)**\niVentoy is an enhanced version of the PXE server.\nExtremely easy to use\nMany advanced features\nx86 Legacy BIOS, IA32 UEFI, x86_64 UEFI and ARM64 UEFI mode supported\n110+ common types of OS supported (Windows/WinPE/Linux/VMware)\n......\n**SHA-256**\n```\n467cdd188a7f739bc706adbc1d695f61ffdefc95916adb015947d80829f00a3d  ventoy-1.0.99-linux.tar.gz\n6b0dfc9408be2826903dec8fdf4c47f04ac50202f50a70f0bbc19eb37a737737  ventoy-1.0.99-livecd.iso\n578993fcf8d57252bc34536c01dc853a374e60def68f60b2826c3de0826ea00c  ventoy-1.0.99-windows.zip\n```\n[![Download Ventoy](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/ventoy/files/v1.0.99/)",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.0.99, EFI boot files were updated to fix the 'Linpus Lite' error on some computers, the issue that VTOY_LINUX_REMOUNT could not take effect in latest openSUSE was fixed, and an issue when installing on /dev/mdX device was fixed."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_1_00",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.1.00",
+      "tag_name": "v1.1.00",
+      "title": "Ventoy 1.1.00 release",
+      "time_hint": "2025-01-22",
+      "published_at": "2025-01-22T12:27:35Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.1.00",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.1.00 release\nTag: v1.1.00; draft: False; prerelease: False; published_at: 2025-01-22T12:27:35Z; created_at: 2025-01-22T11:32:29Z\nRelease notes:\n1. Update to latest Shim (Fix verifying shim SBAT data failed) (#2947)\n2. Support eweOS ISO (#3068)\n3. Fix the boot issue of SystemRescue 11.02+ (#2958) (#3058)\n4. Some bugfix.\nPS:\nThe new version `1.1.00`  doesn't have any special meaning, just that I think `1.0.100` is too long.\n**Wana boot and install OS through network (PXE)? Welcome to my new project iVentoy.**\n**About iVentoy [https://www.iventoy.com](https://www.iventoy.com)**\niVentoy is an enhanced version of the PXE server.\nExtremely easy to use\nMany advanced features\nx86 Legacy BIOS, IA32 UEFI, x86_64 UEFI and ARM64 UEFI mode supported\n110+ common types of OS supported (Windows/WinPE/Linux/VMware)\n......\n**SHA-256**\n```\n27a2abaffa531c673059190975455db7a61583f221528e06da1ee38d1ea5702f  ventoy-1.1.00-linux.tar.gz\nfef6f9fd42106d06221a861a3a5a2eb6c543fa53c024fabddc6690192653bfe8  ventoy-1.1.00-livecd.iso\n04ae8ee05f9d7be532817e7d6736111f470e416860dc0a42561bb5083457d38e  ventoy-1.1.00-windows.zip\n```\n[![Download Ventoy](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/ventoy/files/v1.1.00/)",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.1.00, the Shim was updated to latest to fix verifying shim SBAT data failed, eweOS ISO support was added, the boot issue of SystemRescue 11.02+ was fixed, and some other bugfixes were included. The version jump to 1.1.00 was simply because 1.0.100 was considered too long."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_1_01",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.1.01",
+      "tag_name": "v1.1.01",
+      "title": "Ventoy 1.1.01 release",
+      "time_hint": "2025-02-10",
+      "published_at": "2025-02-10T13:40:17Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.1.01",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.1.01 release\nTag: v1.1.01; draft: False; prerelease: False; published_at: 2025-02-10T13:40:17Z; created_at: 2025-02-10T12:14:46Z\nRelease notes:\n1. Optimization for `VTOY_LINUX_REMOUNT` implementation to support all Linux distros. Please refer [Notes](https://ventoy.net/en/doc_linux_remount.html)\n2. Now linux remount is supported by default. So `VTOY_LINUX_REMOUNT` option now is deprecated, we don't need it anymore. Please refer [Notes](https://ventoy.net/en/doc_linux_remount.html)\n**Wana boot and install OS through network (PXE)? Welcome to my new project iVentoy.**\n**About iVentoy [https://www.iventoy.com](https://www.iventoy.com)**\niVentoy is an enhanced version of the PXE server.\nExtremely easy to use\nMany advanced features\nx86 Legacy BIOS, IA32 UEFI, x86_64 UEFI and ARM64 UEFI mode supported\n110+ common types of OS supported (Windows/WinPE/Linux/VMware)\n......\n**SHA-256**\n```\n611d3fcdeb7c12e8645afe0eb070fcc8ae0dbc0556277131c8f695e2dd8f2af1  ventoy-1.1.01-linux.tar.gz\ndd9cc488aa47557201551defc399a014461b51e85a7f1ccf10e20408b4635a0b  ventoy-1.1.01-livecd.iso\nc088ba56b2d7e05546825380288faa6ee20600652b4fd1d8f78424deb76d76ad  ventoy-1.1.01-windows.zip\n```\n[![Download Ventoy](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/ventoy/files/v1.1.01/)",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.1.01, the VTOY_LINUX_REMOUNT implementation was optimized to support all Linux distros, linux remount is now supported by default, and the VTOY_LINUX_REMOUNT option is deprecated."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_1_02",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.1.02",
+      "tag_name": "v1.1.02",
+      "title": "Ventoy 1.1.02 release",
+      "time_hint": "2025-02-12",
+      "published_at": "2025-02-12T15:29:04Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.1.02",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.1.02 release\nTag: v1.1.02; draft: False; prerelease: False; published_at: 2025-02-12T15:29:04Z; created_at: 2025-02-12T15:01:35Z\nRelease notes:\n1. Fix the `Unsupported vtoy type unknown` error when boot a VDI file created by VBox7. [Issue 48](https://github.com/ventoy/vtoyboot/issues/48)\n2. vtoyboot-1.0.36 release. [https://github.com/ventoy/vtoyboot/releases](https://github.com/ventoy/vtoyboot/releases)\n**Wana boot and install OS through network (PXE)? Welcome to my new project iVentoy.**\n**About iVentoy [https://www.iventoy.com](https://www.iventoy.com)**\niVentoy is an enhanced version of the PXE server.\nExtremely easy to use\nMany advanced features\nx86 Legacy BIOS, IA32 UEFI, x86_64 UEFI and ARM64 UEFI mode supported\n110+ common types of OS supported (Windows/WinPE/Linux/VMware)\n......\n**SHA-256**\n```\n0b47aeba910dd9a9d5faad26988c45bef5238c4eb19e3bf510545698ac5caece  ventoy-1.1.02-linux.tar.gz\n65dcdfc57d79988f7d7841cbed7b81a4a03fff65b91fdfd70316ca6dd140027e  ventoy-1.1.02-livecd.iso\nf992fb0569a2f9ec057c7d97800a13ead7acc57a758953800d8d958d0ae471dc  ventoy-1.1.02-windows.zip\n```\n[![Download Ventoy](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/ventoy/files/v1.1.02/)",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.1.02, the 'Unsupported vtoy type unknown' error when booting a VDI file created by VBox7 was fixed, and vtoyboot-1.0.36 was released."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_1_03",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.1.03",
+      "tag_name": "v1.1.03",
+      "title": "Ventoy 1.1.03 release",
+      "time_hint": "2025-02-21",
+      "published_at": "2025-02-21T14:08:09Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.1.03",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.1.03 release\nTag: v1.1.03; draft: False; prerelease: False; published_at: 2025-02-21T14:08:09Z; created_at: 2025-02-21T10:14:18Z\nRelease notes:\n**This release was deprecated, because it introducted a problem in LinuxGUI version (Windows version and Linux CLI version are OK).**\n**Please use latest release.**",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.1.03, the release was deprecated because it introduced a problem in the LinuxGUI version, while Windows and Linux CLI versions were OK."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_1_04",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.1.04",
+      "tag_name": "v1.1.04",
+      "title": "Ventoy 1.1.04 release",
+      "time_hint": "2025-02-22",
+      "published_at": "2025-02-22T03:33:32Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.1.04",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.1.04 release\nTag: v1.1.04; draft: False; prerelease: False; published_at: 2025-02-22T03:33:32Z; created_at: 2025-02-22T03:27:31Z\nRelease notes:\n1. Fix the `0x80070001` error when boot and install Windows 11.  (#3010 #3029 #3105)\n2. Fix the issue that SLES/OpenSUSE can not boot after install in Ventoy grub2 mode.\n3. Fix the boot issue for pfSense 2.7.x\n4. Fix the boot issue for latest TinyCore Linux\n**Attention:**\nVentoy2Disk.exe file is updated in this release. It hasn't been updated for several versions.\nAccording to past experience, as soon as this file is upgraded, some antivirus software will give false positives.\n**Wana boot and install OS through network (PXE)? Welcome to my new project iVentoy.**\n**About iVentoy [https://www.iventoy.com](https://www.iventoy.com)**\niVentoy is an enhanced version of the PXE server.\nExtremely easy to use\nMany advanced features\nx86 Legacy BIOS, IA32 UEFI, x86_64 UEFI and ARM64 UEFI mode supported\n110+ common types of OS supported (Windows/WinPE/Linux/VMware)\n......\n**SHA-256**\n```\nc77603e8b5cd51d75eb7dd54ea9bd2961c83c7fca8539541b86127f2e790673f  ventoy-1.1.04-linux.tar.gz\nf76dbaafc43de8f782d3396dca7a3902d9488cc81294777dc386f7b5a27fa511  ventoy-1.1.04-livecd.iso\nb2e71dff6796f9ebb6867b6fccb1f9fdf27ef6e5f6893952d8046bd17b6a51fa  ventoy-1.1.04-windows.zip\n```\n[![Download Ventoy](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/ventoy/files/v1.1.04/)",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.1.04, the 0x80070001 error when booting and installing Windows 11 was fixed, the issue that SLES/OpenSUSE could not boot after install in Ventoy grub2 mode was fixed, boot issues for pfSense 2.7.x and latest TinyCore Linux were fixed, and Ventoy2Disk.exe was updated."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_1_05",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.1.05",
+      "tag_name": "v1.1.05",
+      "title": "Ventoy 1.1.05 release",
+      "time_hint": "2025-02-24",
+      "published_at": "2025-02-24T11:53:12Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.1.05",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.1.05 release\nTag: v1.1.05; draft: False; prerelease: False; published_at: 2025-02-24T11:53:12Z; created_at: 2025-02-24T11:29:46Z\nRelease notes:\n1. Fix some resolution issue when boot some Windows/WinPE ISO in UEFI mode.\n**Wana boot and install OS through network (PXE)? Welcome to my new project iVentoy.**\n**About iVentoy [https://www.iventoy.com](https://www.iventoy.com)**\niVentoy is an enhanced version of the PXE server.\nExtremely easy to use\nMany advanced features\nx86 Legacy BIOS, IA32 UEFI, x86_64 UEFI and ARM64 UEFI mode supported\n110+ common types of OS supported (Windows/WinPE/Linux/VMware)\n......\n**SHA-256**\n```\n3379c99890359dcff55aab7f7b3286f87c988d1da2fd616e6a9e305fb0a1de9e  ventoy-1.1.05-linux.tar.gz\n6718cc9656fa479a682b2463e8b3c79ca82aee469859c4b06d9a537715867ebc  ventoy-1.1.05-livecd.iso\n3dc1f0a5209c6fa260af9f08951bc4421127b56d4efa3edd2c979af74b1941e5  ventoy-1.1.05-windows.zip\n```\n[![Download Ventoy](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/ventoy/files/v1.1.05/)",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.1.05, some resolution issues when booting some Windows/WinPE ISO in UEFI mode were fixed."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_1_06",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.1.06",
+      "tag_name": "v1.1.06",
+      "title": "Ventoy 1.1.06 release",
+      "time_hint": "2025-08-18",
+      "published_at": "2025-08-18T03:35:41Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.1.06",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.1.06 release\nTag: v1.1.06; draft: False; prerelease: False; published_at: 2025-08-18T03:35:41Z; created_at: 2025-08-18T03:16:07Z\nRelease notes:\n1. Support TrueNAS Scale (Linux) distro. (#3069 #3137)\n2. Update xfs to latest. (#3284)\n3. Fix the boot issue for Parted Magic. (#3304)\n4. Fix Libreelec 12.2.0 fails to boot. (#3323)\n5. Fix the order issue in TreeView mode. (#3218)\n6. Fix the issue that cannot boot Tails 6.13+ (#3171)\n**Wana boot and install OS through network (PXE)? Welcome to my new project iVentoy.**\n**About iVentoy [https://www.iventoy.com](https://www.iventoy.com)**\niVentoy is an enhanced version of the PXE server.\nExtremely easy to use\nMany advanced features\nx86 Legacy BIOS, IA32 UEFI, x86_64 UEFI and ARM64 UEFI mode supported\n110+ common types of OS supported (Windows/WinPE/Linux/VMware)\n......\n**SHA-256**\n```\n6176cc1ea7c8b822f5ee11fa5c3c71331aa194c72167a35196d8f1380b2feb17  ventoy-1.1.06-linux.tar.gz\n681f8ac9fecdfafeeedce8f55b8758c22a93f76be0284c01a78689ae9f60527f  ventoy-1.1.06-livecd.iso\nce192b6c3bb144f3f5e850b1df3e90457503badcc959581eaa46be9fcc9fa8e6  ventoy-1.1.06-windows.zip\n```\n[![Download Ventoy](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/ventoy/files/v1.1.06/)",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.1.06, TrueNAS Scale (Linux) distro support was added, xfs was updated to latest, boot issues for Parted Magic, Libreelec 12.2.0, and Tails 6.13+ were fixed, and an order issue in TreeView mode was fixed."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_1_07",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.1.07",
+      "tag_name": "v1.1.07",
+      "title": "Ventoy 1.1.07 release",
+      "time_hint": "2025-08-18",
+      "published_at": "2025-08-18T16:13:54Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.1.07",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.1.07 release\nTag: v1.1.07; draft: False; prerelease: False; published_at: 2025-08-18T16:13:54Z; created_at: 2025-08-18T15:20:15Z\nRelease notes:\n1. Fix an issue (introduced in v1.1.06) that Ventoy ISO partition cannot be mounted after boot linux distro.\n**SHA-256**\n```\n4ffabce468b03d6357ce5f4594e209714d1509d065da102938096dad6654c36e  ventoy-1.1.07-linux.tar.gz\n737c681af3549ebfb2234abe8dc4a2968a7b29548105b619b04cf9302b897557  ventoy-1.1.07-livecd.iso\n3e7a8db199c7e791e341e6d388d078bfc6b7a77c6f10282edf9c7b82f84f3ad4  ventoy-1.1.07-windows.zip\n```\n[![Download Ventoy](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/ventoy/files/v1.1.07/)",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.1.07, an issue introduced in v1.1.06 where the Ventoy ISO partition could not be mounted after booting a linux distro was fixed."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_1_08",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.1.08",
+      "tag_name": "v1.1.08",
+      "title": "Ventoy 1.1.08 release",
+      "time_hint": "2025-12-08",
+      "published_at": "2025-12-08T10:13:51Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.1.08",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.1.08 release\nTag: v1.1.08; draft: False; prerelease: False; published_at: 2025-12-08T10:13:51Z; created_at: 2025-12-08T10:06:42Z\nRelease notes:\n1. Add support for FreeBSD 15.0\n2. New tested ISO. `(Total 1300+)`\nWana boot and install OS through network (PXE)? Welcome to my new project iVentoy.\nAbout iVentoy https://www.iventoy.com/\niVentoy is an enhanced version of the PXE server.\nExtremely easy to use\nMany advanced features\nx86 Legacy BIOS, IA32 UEFI, x86_64 UEFI and ARM64 UEFI mode supported\n110+ common types of OS supported (Windows/WinPE/Linux/VMware)\n......\n**SHA-256**\n```\n57689c6ef027eb5994c2aad8a2325c38455249451de3b29107274a30e15e7633  ventoy-1.1.08-linux.tar.gz\nad312c5a2f0fe65d92ee3e31b428a944ab6a93101f66a005ae494ea6e8c349d4  ventoy-1.1.08-livecd.iso\n2eeb7553e62a940449a42b59ede3b4d3550023b2ff864a297dee818086e3564b  ventoy-1.1.08-windows.zip\n```\n[![Download Ventoy](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/ventoy/files/v1.1.08/)",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.1.08, support for FreeBSD 15.0 was added, and the total tested ISO count reached 1300+."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_1_09",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.1.09",
+      "tag_name": "v1.1.09",
+      "title": "Ventoy 1.1.09 release",
+      "time_hint": "2025-12-12",
+      "published_at": "2025-12-12T13:06:36Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.1.09",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.1.09 release\nTag: v1.1.09; draft: False; prerelease: False; published_at: 2025-12-12T13:06:36Z; created_at: 2025-12-12T11:53:55Z\nRelease notes:\n1. Fix the boot issue for openSUSE 16.0 (#3379)\n2. Experimental support for btrfs file system. (#3438 #3431 #3077 #2093).\na) Only support NO RAID mode (single mode).\nb) ISO file can NOT be compressed.\nPlease refer <a href=\"https://www.ventoy.net/en/doc_btrfs.html\">About btrfs</a> for details.\n3. Fix the issue that persistence plugin does not work for latest Arch Linux (#3407)\n4. Fix VentoyPlugson WebUI display bugs. (#3252)\n==================================================================\nWana boot and install OS through network (PXE)? Welcome to my new project iVentoy.\nAbout iVentoy https://www.iventoy.com/\niVentoy is an enhanced version of the PXE server.\nExtremely easy to use\nMany advanced features\nx86 Legacy BIOS, IA32 UEFI, x86_64 UEFI and ARM64 UEFI mode supported\n110+ common types of OS supported (Windows/WinPE/Linux/VMware)\n......\n**SHA-256**\n```\n1fef1e804d4d963c1cff7a6dca7758be503a08b101fc8440d85270acd0767493  ventoy-1.1.09-linux.tar.gz\n4bcafc308a8be5bd944255641e63cc3cbb78aaa62de388bc6eb59e5b77dd20f3  ventoy-1.1.09-livecd.iso\nff531a78d60c604cee67d56d02102a1147e647d0fb8fb8516f77712d05d5b99d  ventoy-1.1.09-windows.zip\n```\n[![Download Ventoy](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/ventoy/files/v1.1.09/)",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.1.09, a boot issue for openSUSE 16.0 was fixed, experimental support for btrfs file system (NO RAID mode, ISO file cannot be compressed) was added, the persistence plugin not working for latest Arch Linux was fixed, and VentoyPlugson WebUI display bugs were fixed."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_1_10",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.1.10",
+      "tag_name": "v1.1.10",
+      "title": "Ventoy 1.1.10 release",
+      "time_hint": "2025-12-21",
+      "published_at": "2025-12-21T13:13:01Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.1.10",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.1.10 release\nTag: v1.1.10; draft: False; prerelease: False; published_at: 2025-12-21T13:13:01Z; created_at: 2025-12-21T12:56:53Z\nRelease notes:\n1. Ventoy2Disk.sh supports musl libc envrionment. (#3332)\n2. Fix the LinuxGUI program crash issue in wayland environment. (#3406)\n3. Fix the boot issue with Kylin Server V11. (#3369)\n4. Fix a Windows boot issue in F2 mode.\n5. Fix the vhd.vtoy file boot issue in ext4 file system. (#3444)\n6. Add support for AerynOS. (#3433)\n7. Language update\nWana boot and install OS through network (PXE)? Welcome to my new project iVentoy.\nAbout iVentoy https://www.iventoy.com/\niVentoy is an enhanced version of the PXE server.\nExtremely easy to use\nMany advanced features\nx86 Legacy BIOS, IA32 UEFI, x86_64 UEFI and ARM64 UEFI mode supported\n110+ common types of OS supported (Windows/WinPE/Linux/VMware)\n......\n**SHA-256**\n```\n1113abe6e1bb712834fe574a966621a912858004f4fefd701666ec97c5beb208  ventoy-1.1.10-linux.tar.gz\n57ae81baf8ba6bd028ca8b335f5a7d59dcb37d2927b55392e8d947d08018f313  ventoy-1.1.10-livecd.iso\nc65e6bff33a376bd3fd3243eb9cdd923c07f7d051c934c7b6ad72f7bf6c80049  ventoy-1.1.10-windows.zip\n```\n[![Download Ventoy](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/ventoy/files/v1.1.10/)",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.1.10, Ventoy2Disk.sh gained musl libc environment support, a LinuxGUI program crash issue in wayland environment was fixed, boot issues with Kylin Server V11 and a Windows boot issue in F2 mode were fixed, vhd.vtoy file boot issue in ext4 file system was fixed, and support for AerynOS was added."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_1_11",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.1.11",
+      "tag_name": "v1.1.11",
+      "title": "Ventoy 1.1.11 release  (6th Anniversary Ver.)",
+      "time_hint": "2026-04-05",
+      "published_at": "2026-04-05T15:50:16Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.1.11",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.1.11 release  (6th Anniversary Ver.)\nTag: v1.1.11; draft: False; prerelease: False; published_at: 2026-04-05T15:50:16Z; created_at: 2026-04-05T15:11:45Z\nRelease notes:\n**6th Anniversary Ver.**\n1. Fix the display issue when UEFI booting Windows/WinPE ISO.\n2. Add VT_WINDOWS_DISK_NONVTOY_CLOSEST_XXX, VT_LINUX_DISK_NONVTOY_CLOSEST_XXX options in AutoInstall plugin.\n3. Improvement for Ventoy2Disk.sh (#3537)\n4. Improvement for porteus-hook.sh (#3532)\n5. Improvement for booting T2SDE. (#3526 #3468)\n6. Add support for KylinSecOS\n**SHA-256**\n```\nddcbcbf3341225d0c5df43f1d7cc65de0b8b2131643184c1a3ea359107789faa  ventoy-1.1.11-linux.tar.gz\n7509a24851f4b198268d868e085c2a016891adc758d2e0d2a554df35d5a23f32  ventoy-1.1.11-livecd.iso\n1e56e02fc424c194fc4f33357cb949867854f386d67eaf9764f1c96264561493  ventoy-1.1.11-windows.zip\n```\n===============================================================================\nWana boot and install OS through network (PXE)? Welcome to my new project iVentoy.\nAbout iVentoy https://www.iventoy.com/\niVentoy is an enhanced version of the PXE server.\nExtremely easy to use\nMany advanced features\nx86 Legacy BIOS, IA32 UEFI, x86_64 UEFI and ARM64 UEFI mode supported\n110+ common types of OS supported (Windows/WinPE/Linux/VMware)\n......\n[![Download Ventoy](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/ventoy/files/v1.1.11/)",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.1.11 (6th Anniversary Ver.), a display issue when UEFI booting Windows/WinPE ISO was fixed, VT_WINDOWS_DISK_NONVTOY_CLOSEST_XXX and VT_LINUX_DISK_NONVTOY_CLOSEST_XXX options were added in AutoInstall plugin, improvements were made to Ventoy2Disk.sh and porteus-hook.sh, booting T2SDE was improved, and support for KylinSecOS was added."
+    },
+    {
+      "memory_node_id": "ventoy__Ventoy__release__v1_1_12",
+      "repo": "ventoy/Ventoy",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.1.12",
+      "tag_name": "v1.1.12",
+      "title": "Ventoy 1.1.12 release",
+      "time_hint": "2026-04-23",
+      "published_at": "2026-04-23T10:27:20Z",
+      "source_url": "https://github.com/ventoy/Ventoy/releases/tag/v1.1.12",
+      "raw_text": "Repository: ventoy/Ventoy\nRelease: Ventoy 1.1.12 release\nTag: v1.1.12; draft: False; prerelease: False; published_at: 2026-04-23T10:27:20Z; created_at: 2026-04-23T10:04:05Z\nRelease notes:\n**Changelog**\n1. Bugfix for ubuntu24.04.4 install failure. (#3567)\n2. Fix the VirtualBox UEFI display issue when booting Windows. (#3570)\n3. Improve for UEFI boot Windows/WinPE resolution issue fix.\n4. Fix Oracle Linux 6.9 install issue.\nWana boot and install OS through network (PXE)? Welcome to my new project iVentoy.\nAbout iVentoy https://www.iventoy.com/\niVentoy is an enhanced version of the PXE server.\nExtremely easy to use\nMany advanced features\nx86 Legacy BIOS, IA32 UEFI, x86_64 UEFI and ARM64 UEFI mode supported\n110+ common types of OS supported (Windows/WinPE/Linux/VMware)\n**Turn any PC, laptop, server, NAS, or Raspberry Pi into a PXE server instantly!**\n......\n**SHA-256**\n```\n04620b546bcc5eeeb5971767595b3713ee3de71580a82449053c53a7cb32fcd9  ventoy-1.1.12-linux.tar.gz\nc1345277c8f3a8fcc213945687bcad5ff1d680b1d6b7b7a1cdf85f7d4a368406  ventoy-1.1.12-livecd.iso\ne70c505be08d99c55e506832f596c430a9c36f8d087f25542d3f6d332d9b6473  ventoy-1.1.12-windows.zip\n```\n[![Download Ventoy](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/ventoy/files/v1.1.12/)",
+      "memory_unit_text": "In the ventoy/Ventoy release v1.1.12, a bug causing ubuntu24.04.4 install failure was fixed, a VirtualBox UEFI display issue when booting Windows was fixed, UEFI boot Windows/WinPE resolution issue fix was improved, and an Oracle Linux 6.9 install issue was fixed."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the ventoy/Ventoy releases, which release adds experimental support for btrfs file system with the limitation that ISO files cannot be compressed?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v1.1.08"
+        },
+        {
+          "option_id": "B",
+          "text": "v1.1.09"
+        },
+        {
+          "option_id": "C",
+          "text": "v1.1.10"
+        },
+        {
+          "option_id": "D",
+          "text": "v1.1.11"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v1.1.09",
+      "source_chunk_ids": [
+        "ventoy__Ventoy__release__v1_1_09"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "ventoy__Ventoy__release__v1_1_09",
+          "answer_text": "Experimental support for btrfs file system. ... ISO file can NOT be compressed."
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the ventoy/Ventoy releases, how does the handling of VTOY_LINUX_REMOUNT differ between v1.0.99 and v1.1.01?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v1.0.99 fixes VTOY_LINUX_REMOUNT for openSUSE, while v1.1.01 optimizes the implementation to support all Linux distros and deprecates the option."
+        },
+        {
+          "option_id": "B",
+          "text": "v1.0.99 removes VTOY_LINUX_REMOUNT entirely, while v1.1.01 reintroduces it for legacy systems."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only update EFI boot files without changing VTOY_LINUX_REMOUNT."
+        },
+        {
+          "option_id": "D",
+          "text": "v1.0.99 adds VTOY_LINUX_REMOUNT for the first time, while v1.1.01 restricts it to RHEL9/CentOS9."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v1.0.99 fixes VTOY_LINUX_REMOUNT for openSUSE, while v1.1.01 optimizes the implementation to support all Linux distros and deprecates the option.",
+      "source_chunk_ids": [
+        "ventoy__Ventoy__release__v1_0_99",
+        "ventoy__Ventoy__release__v1_1_01"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "ventoy__Ventoy__release__v1_0_99",
+          "answer_text": "Fix the issue that VTOY_LINUX_REMOUNT can not take effect in latest openSUSE."
+        },
+        {
+          "memory_node_id": "ventoy__Ventoy__release__v1_1_01",
+          "answer_text": "Optimization for VTOY_LINUX_REMOUNT implementation to support all Linux distros. ... VTOY_LINUX_REMOUNT option now is deprecated."
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the ventoy/Ventoy release window, order the following release-content states from earliest to latest: (1) a release that adds multi-language support for the Ventoy boot menu, (2) a release that fixes the 0x80070001 error when booting and installing Windows 11, (3) a release that adds support for FreeBSD 15.0, (4) a release that adds experimental btrfs support.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 4 -> 3"
+        },
+        {
+          "option_id": "B",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 1 -> 3 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "1 -> 3 -> 2 -> 4"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "ventoy__Ventoy__release__v1_0_84",
+        "ventoy__Ventoy__release__v1_1_04",
+        "ventoy__Ventoy__release__v1_1_08",
+        "ventoy__Ventoy__release__v1_1_09"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "ventoy__Ventoy__release__v1_0_84",
+          "answer_text": "Multi-Language supported for Ventoy boot menu."
+        },
+        {
+          "memory_node_id": "ventoy__Ventoy__release__v1_1_04",
+          "answer_text": "Fix the 0x80070001 error when boot and install Windows 11."
+        },
+        {
+          "memory_node_id": "ventoy__Ventoy__release__v1_1_08",
+          "answer_text": "Add support for FreeBSD 15.0"
+        },
+        {
+          "memory_node_id": "ventoy__Ventoy__release__v1_1_09",
+          "answer_text": "Experimental support for btrfs file system."
+        }
+      ]
+    }
+  ]
+}

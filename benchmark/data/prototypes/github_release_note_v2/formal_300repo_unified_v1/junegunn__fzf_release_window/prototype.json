@@ -1,0 +1,530 @@
+{
+  "prototype_id": "junegunn__fzf_release_window",
+  "domain": "github_release_evolution",
+  "repo": "junegunn/fzf",
+  "source_type": "release_note",
+  "window_title": "junegunn/fzf recent release evolution",
+  "window_summary": "This window tracks the recent release evolution of junegunn/fzf, covering versions from 0.56.0 through 0.73.1. It highlights major feature additions such as gap display, border customization, raw mode, frozen columns, word wrapping, popup support, and performance improvements.",
+  "chunks": [
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_56_0",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.56.0",
+      "tag_name": "v0.56.0",
+      "title": "0.56.0",
+      "time_hint": "2024-10-27",
+      "published_at": "2024-10-27T03:07:01Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.56.0",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.56.0\nTag: v0.56.0; draft: False; prerelease: False; published_at: 2024-10-27T03:07:01Z; created_at: 2024-10-27T03:03:50Z\nRelease notes:\n- Added `--gap[=N]` option to display empty lines between items.\n- This can be useful to visually separate adjacent multi-line items.\n```sh\n# All bash functions, highlighted\ndeclare -f | perl -0777 -pe 's/^}\\n/}\\0/gm' |\nbat --plain --language bash --color always |\nfzf --read0 --ansi --reverse --multi --highlight-line --gap\n```\n<img width=\"855\" alt=\"image\" src=\"https://github.com/user-attachments/assets/b3d2eaf2-bf44-4e3a-8d7b-9878629dd9be\">\n- Or just to make the list easier to read. For single-line items, you probably want to set `--color gutter:-1` as well to hide the gutter.\n```sh\nfzf --info inline-right --gap --color gutter:-1\n```\n<img width=\"855\" alt=\"image\" src=\"https://github.com/user-attachments/assets/113757a1-ccfd-42a6-b946-83533f408e69\">\n- Added `noinfo` option to `--preview-window` to hide the scroll indicator in the preview window\n- Bug fixes\n- Thanks to @LangLangBart, @akinomyoga, and @charlievieth for fixing the bugs",
+      "memory_unit_text": "In the junegunn/fzf release 0.56.0, the project introduces the --gap[=N] option to display empty lines between items, useful for visually separating adjacent multi-line items. It also adds the noinfo option to --preview-window to hide the scroll indicator in the preview window, along with various bug fixes."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_56_1",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.56.1",
+      "tag_name": "v0.56.1",
+      "title": "0.56.1",
+      "time_hint": "2024-11-10",
+      "published_at": "2024-11-10T14:25:02Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.56.1",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.56.1\nTag: v0.56.1; draft: False; prerelease: False; published_at: 2024-11-10T14:25:02Z; created_at: 2024-11-10T14:17:38Z\nRelease notes:\n- Bug fixes and improvements\n- Fixed a race condition which would cause fzf to present stale results after `reload` (#4070)\n- `page-up` and `page-down` actions now work correctly with multi-line items (#4069)\n- `{n}` is allowed in `SCROLL` expression in `--preview-window` (#4079)\n- [zsh] Fixed regression in history loading with shared option (#4071)\n- [zsh] Better command extraction in zsh completion (#4082)\n- Thanks to @LangLangBart, @jaydee-coder, @alex-huff, and @vejkse for the contributions",
+      "memory_unit_text": "In the junegunn/fzf release 0.56.1, the release includes bug fixes and improvements: a race condition causing stale results after reload is fixed, page-up and page-down actions now work correctly with multi-line items, {n} is allowed in SCROLL expression in --preview-window, and zsh-specific fixes address history loading regression and command extraction."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_56_2",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.56.2",
+      "tag_name": "v0.56.2",
+      "title": "0.56.2",
+      "time_hint": "2024-11-11",
+      "published_at": "2024-11-11T15:59:57Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.56.2",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.56.2\nTag: v0.56.2; draft: False; prerelease: False; published_at: 2024-11-11T15:59:57Z; created_at: 2024-11-11T15:58:12Z\nRelease notes:\n- Bug fixes\n- Fixed abnormal scrolling behavior when `--wrap` is set (#4083)\n- [zsh] Fixed warning message when `ksh_arrays` is set (#4084)",
+      "memory_unit_text": "In the junegunn/fzf release 0.56.2, the release provides bug fixes: abnormal scrolling behavior when --wrap is set is corrected, and a zsh warning message when ksh_arrays is set is fixed."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_56_3",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.56.3",
+      "tag_name": "v0.56.3",
+      "title": "0.56.3",
+      "time_hint": "2024-11-15",
+      "published_at": "2024-11-15T01:07:53Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.56.3",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.56.3\nTag: v0.56.3; draft: False; prerelease: False; published_at: 2024-11-15T01:07:53Z; created_at: 2024-11-15T01:06:30Z\nRelease notes:\n- Bug fixes in zsh scripts\n- fix(zsh): handle backtick trigger edge case (#4090)\n- revert(zsh): remove 'fc -RI' call in the history widget (#4093)\n- Thanks to @LangLangBart for the contributions",
+      "memory_unit_text": "In the junegunn/fzf release 0.56.3, the release contains bug fixes in zsh scripts: handling of backtick trigger edge case is fixed, and the 'fc -RI' call in the history widget is reverted."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_57_0",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.57.0",
+      "tag_name": "v0.57.0",
+      "title": "0.57.0",
+      "time_hint": "2024-12-15",
+      "published_at": "2024-12-15T08:07:32Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.57.0",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.57.0\nTag: v0.57.0; draft: False; prerelease: False; published_at: 2024-12-15T08:07:32Z; created_at: 2024-12-15T08:04:14Z\nRelease notes:\n- You can now resize the preview window by dragging the border\n- Built-in walker improvements\n- `--walker-root` can take multiple directory arguments. e.g. `--walker-root include src lib`\n- `--walker-skip` can handle multi-component patterns. e.g. `--walker-skip target/build`\n- Removed long processing delay when displaying images in the preview window\n- `FZF_PREVIEW_*` environment variables are exported to all child processes (#4098)\n- Bug fixes in fish scripts",
+      "memory_unit_text": "In the junegunn/fzf release 0.57.0, the release allows resizing the preview window by dragging the border. Built-in walker improvements include --walker-root accepting multiple directory arguments and --walker-skip handling multi-component patterns. It also removes long processing delay when displaying images in the preview window, exports FZF_PREVIEW_* environment variables to all child processes, and fixes bugs in fish scripts."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_58_0",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.58.0",
+      "tag_name": "v0.58.0",
+      "title": "0.58.0",
+      "time_hint": "2025-01-19",
+      "published_at": "2025-01-19T17:11:30Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.58.0",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.58.0\nTag: v0.58.0; draft: False; prerelease: False; published_at: 2025-01-19T17:11:30Z; created_at: 2025-01-19T17:00:26Z\nRelease notes:\n_Release highlights: https://junegunn.github.io/fzf/releases/0.58.0/_\nThis version introduces three new border types, `--list-border`, `--input-border`, and `--header-border`, offering much greater flexibility for customizing the user interface.\n<img src=\"https://raw.githubusercontent.com/junegunn/i/master/fzf-4-borders.png\" />\nAlso, fzf now offers \"style presets\" for quick customization, which can be activated using the `--style` option.\n| Preset    | Screenshot                                                                             |\n| :---      | :---                                                                                   |\n| `default` | <img src=\"https://raw.githubusercontent.com/junegunn/i/master/fzf-style-default.png\"/> |\n| `full`    | <img src=\"https://raw.githubusercontent.com/junegunn/i/master/fzf-style-full.png\"/>    |\n| `minimal` | <img src=\"https://raw.githubusercontent.com/junegunn/i/master/fzf-style-minimal.png\"/> |\n- Style presets (#4160)\n- `--style=full[:BORDER_STYLE]`\n- `--style=default`\n- `--style=minimal`\n- Border and label for the list section (#4148)\n- Options\n- `--list-border[=STYLE]`\n- `--list-label=LABEL`\n- `--list-label-pos=COL[:bottom]`\n- Colors\n- `list-fg`\n- `list-bg`\n- `list-border`\n- `list-label`\n- Actions\n- `change-list-label`\n- `transform-list-label`\n- Border and label for the input section (prompt line and info line) (#4154)\n- Options\n- `--input-border[=STYLE]`\n- `--input-label=LABEL`\n- `--input-label-pos=COL[:bottom]`\n- Colors\n- `input-fg` (`query`)\n- `input-bg`\n- `input-border`\n- `input-label`\n- Actions\n- `change-input-label`\n- `transform-input-label`\n- Border and label for the header section (#4159)\n- Options\n- `--header-border[=STYLE]`\n- `--header-label=LABEL`\n- `--header-label-pos=COL[:bottom]`\n- Colors\n- `header-fg` (`header`)\n- `header-bg`\n- `header-border`\n- `header-label`\n- Actions\n- `change-header-label`\n- `transform-header-label`\n- Added `--preview-border[=STYLE]` as short for `--preview-window=border[-STYLE]`\n- Added new preview border style `line` which draws a single separator line between the preview window and the rest of the interface\n- fzf will now render a dashed line (`┈┈`) in each `--gap` for better visual separation.\n```sh\n# All bash/zsh functions, highlighted\ndeclare -f |\nperl -0 -pe 's/^}\\n/}\\0/gm' |\nbat --plain --language bash --color always |\nfzf --read0 --ansi --layout reverse --multi --highlight-line --gap\n```\n![](https://github.com/user-attachments/assets/203bf377-28da-4abf-a19c-d456ab1a72bb)\n- You can customize the line using `--gap-line[=STR]`.\n- You can specify `border-native` to `--tmux` so that native tmux border is used instead of `--border`. This can be useful if you start a different program from inside the popup.\n```sh\nfzf --tmux border-native --bind 'enter:execute:less {}'\n```\n- Added `toggle-multi-line` action\n- Added `toggle-hscroll` action\n- Added `change-nth` action for dynamically changing the value of the `--nth` option\n```sh\n# Start with --nth 1, then 2, then 3, then back to the default, 1\necho 'foo foobar foobarbaz' | fzf --bind 'space:change-nth(2|3|)' --nth 1 -q foo\n```\n- `--nth` parts of each line can now be rendered in a different text style\n```sh\n# nth in a different style\nls -al | fzf --nth -1 --color nth:italic\nls -al | fzf --nth -1 --color nth:reverse\nls -al | fzf --nth -1 --color nth:reverse:bold\n# Dim the other parts\nls -al | fzf --nth -1 --color nth:regular,fg:dim\n# With 'change-nth'. The current nth option is exported as $FZF_NTH.\nps -ef | fzf --reverse --header-lines 1 --header-border bottom --input-border \\\n--color nth:regular,fg:dim \\\n--bind 'ctrl-n:change-nth(8..|1|2|3|4|5|6|7|)' \\\n--bind 'result:transform-prompt:echo \"${FZF_NTH}> \"'\n```\n![](https://junegunn.github.io/fzf/images/fzf-change-nth.gif)\n- A single-character delimiter is now treated as a...",
+      "memory_unit_text": "In the junegunn/fzf release 0.58.0, the release introduces three new border types: --list-border, --input-border, and --header-border, along with style presets (default, full, minimal) via --style. It adds border and label options for list, input, and header sections, a new preview border style 'line', dashed lines in --gap, and actions like toggle-multi-line, toggle-hscroll, and change-nth. It also supports rendering --nth parts in different text styles and treats a single-character delimiter as a literal character."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_59_0",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.59.0",
+      "tag_name": "v0.59.0",
+      "title": "0.59.0",
+      "time_hint": "2025-02-02",
+      "published_at": "2025-02-02T14:44:13Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.59.0",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.59.0\nTag: v0.59.0; draft: False; prerelease: False; published_at: 2025-02-02T14:44:13Z; created_at: 2025-02-02T14:40:05Z\nRelease notes:\n_Release highlights: https://junegunn.github.io/fzf/releases/0.59.0/_\n- Prioritizing file name matches (#4192)\n- Added a new tiebreak option `pathname` for prioritizing file name matches\n- `--scheme=path` now sets `--tiebreak=pathname,length`\n- fzf will automatically choose `path` scheme\n* when the input is a TTY device, where fzf would start its built-in walker or run `$FZF_DEFAULT_COMMAND` which is usually a command for listing files,\n* but not when `reload` or `transform` action is bound to `start` event, because in that case, fzf can't be sure of the input type.\n- Added `--header-lines-border` to display header from `--header-lines` with a separate border\n```sh\n# Use --header-lines-border to separate two headers\nps -ef | fzf --style full --layout reverse --header-lines 1 \\\n--bind 'ctrl-r:reload(ps -ef)' --header 'Press CTRL-R to reload' \\\n--header-lines-border bottom --no-list-border\n```\n- `click-header` event now sets `$FZF_CLICK_HEADER_WORD` and `$FZF_CLICK_HEADER_NTH`. You can use them to implement a clickable header for changing the search scope using the new `transform-nth` action.\n```sh\n# Click on the header line to limit search scope\nps -ef | fzf --style full --layout reverse --header-lines 1 \\\n--header-lines-border bottom --no-list-border \\\n--color fg:dim,nth:regular \\\n--bind 'click-header:transform-nth(\necho $FZF_CLICK_HEADER_NTH\n)+transform-prompt(\necho \"$FZF_CLICK_HEADER_WORD> \"\n)'\n```\n- `$FZF_KEY` was updated to expose the type of the click. e.g. `click`, `ctrl-click`, etc. You can use it to implement a more sophisticated behavior.\n- `kill` completion for bash and zsh were updated to use this feature\n- Added `--no-input` option to completely disable and hide the input section\n```sh\n# Click header to trigger search\nfzf --header '[src] [test]' --no-input --layout reverse \\\n--header-border bottom --input-border \\\n--bind 'click-header:transform-search:echo ${FZF_CLICK_HEADER_WORD:1:-1}'\n# Vim-like mode switch\nfzf --layout reverse-list --no-input \\\n--bind 'j:down,k:up,/:show-input+unbind(j,k,/)' \\\n--bind 'enter,esc,ctrl-c:transform:\nif [[ $FZF_INPUT_STATE = enabled ]]; then\necho \"rebind(j,k,/)+hide-input\"\nelif [[ $FZF_KEY = enter ]]; then\necho accept\nelse\necho abort\nfi\n'\n```\n- You can later show the input section using `show-input` or `toggle-input` action, and hide it again using `hide-input`, or `toggle-input`.\n- Extended `{q}` placeholder to support ranges. e.g. `{q:1}`, `{q:2..}`, etc.\n- Added `search(...)` and `transform-search(...)` action to trigger an fzf search with an arbitrary query string. This can be used to extend the search syntax of fzf. In the following example, fzf will use the first word of the query to trigger ripgrep search, and use the rest of the query to perform fzf search within the result.\n```sh\nexport TEMP=$(mktemp -u)\ntrap 'rm -f \"$TEMP\"' EXIT\nTRANSFORMER='\nrg_pat={q:1}      # The first word is passed to ripgrep\nfzf_pat={q:2..}   # The rest are passed to fzf\nif ! [[ -r \"$TEMP\" ]] || [[ $rg_pat != $(cat \"$TEMP\") ]]; then\necho \"$rg_pat\" > \"$TEMP\"\nprintf \"reload:sleep 0.1; rg --column --line-number --no-heading --color=always --smart-case %q || true\" \"$rg_pat\"\nfi\necho \"+search:$fzf_pat\"\n'\nfzf --ansi --disabled \\\n--with-shell 'bash -c' \\\n--bind \"start,change:transform:$TRANSFORMER\"\n```\n- You can now bind actions to multiple keys and events at once by writing a comma-separated list of keys and events before the colon\n```sh\n# Load 'ps -ef' output on start and reload it on CTRL-R\nfzf --bind 'start,ctrl-r:reload:ps -ef'\n```\n- `--min-height` option now takes a number followed by `+`, which tells fzf to show at least that many items in the list section. The default value is now changed to `10+`.\n```sh\n# You will only see the input section which takes 3 lines\nfzf --style=full --height 1% --min-height 3\n# You will see 3 items in...",
+      "memory_unit_text": "In the junegunn/fzf release 0.59.0, the release prioritizes file name matches with a new tiebreak option pathname, and --scheme=path now sets --tiebreak=pathname,length. It adds --header-lines-border to display header from --header-lines with a separate border, click-header event setting $FZF_CLICK_HEADER_WORD and $FZF_CLICK_HEADER_NTH, --no-input option to hide the input section, extended {q} placeholder to support ranges, search(...) and transform-search(...) actions, binding actions to multiple keys/events, --min-height with + to show at least that many items, and various other enhancements."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_60_0",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.60.0",
+      "tag_name": "v0.60.0",
+      "title": "0.60.0",
+      "time_hint": "2025-02-12",
+      "published_at": "2025-02-12T16:02:18Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.60.0",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.60.0\nTag: v0.60.0; draft: False; prerelease: False; published_at: 2025-02-12T16:02:18Z; created_at: 2025-02-12T15:54:51Z\nRelease notes:\n_Release highlights: https://junegunn.github.io/fzf/releases/0.60.0/_\n- Added `--accept-nth` for choosing output fields\n```sh\nps -ef | fzf --multi --header-lines 1 | awk '{print $2}'\n# Becomes\nps -ef | fzf --multi --header-lines 1 --accept-nth 2\ngit branch | fzf | cut -c3-\n# Can be rewritten as\ngit branch | fzf --accept-nth -1\n```\n- `--accept-nth` and `--with-nth` now support a template that includes multiple field index expressions in curly braces\n```sh\necho foo,bar,baz | fzf --delimiter , --accept-nth '{1}, {3}, {2}'\n# foo, baz, bar\necho foo,bar,baz | fzf --delimiter , --with-nth '{1},{3},{2},{1..2}'\n# foo,baz,bar,foo,bar\n```\n- Added `exclude` and `exclude-multi` actions for dynamically excluding items\n```sh\nseq 100 | fzf --bind 'ctrl-x:exclude'\n# 'exclude-multi' will exclude the selected items or the current item\nseq 100 | fzf --multi --bind 'ctrl-x:exclude-multi'\n```\n- Preview window now prints wrap indicator when wrapping is enabled\n```sh\nseq 100 | xargs | fzf --wrap --preview 'echo {}' --preview-window wrap\n```\n- Bug fixes and improvements",
+      "memory_unit_text": "In the junegunn/fzf release 0.60.0, the release adds --accept-nth for choosing output fields, with support for templates including multiple field index expressions in curly braces. It introduces exclude and exclude-multi actions for dynamically excluding items, and the preview window now prints a wrap indicator when wrapping is enabled, along with bug fixes and improvements."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_60_1",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.60.1",
+      "tag_name": "v0.60.1",
+      "title": "0.60.1",
+      "time_hint": "2025-02-20",
+      "published_at": "2025-02-20T12:46:34Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.60.1",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.60.1\nTag: v0.60.1; draft: False; prerelease: False; published_at: 2025-02-20T12:46:34Z; created_at: 2025-02-20T12:43:29Z\nRelease notes:\n- Bug fixes and minor improvements\n- Built-in walker now prints directory entries with a trailing slash\n- Fixed a bug causing unexpected behavior with [fzf-tab](https://github.com/Aloxaf/fzf-tab). Please upgrade if you use it.\n- Thanks to @alexeisersun, @bitraid, @Lompik, and @fsc0 for the contributions",
+      "memory_unit_text": "In the junegunn/fzf release 0.60.1, the release includes bug fixes and minor improvements: the built-in walker now prints directory entries with a trailing slash, and a bug causing unexpected behavior with fzf-tab is fixed."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_60_2",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.60.2",
+      "tag_name": "v0.60.2",
+      "title": "0.60.2",
+      "time_hint": "2025-02-23",
+      "published_at": "2025-02-23T11:25:47Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.60.2",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.60.2\nTag: v0.60.2; draft: False; prerelease: False; published_at: 2025-02-23T11:25:47Z; created_at: 2025-02-23T11:12:22Z\nRelease notes:\n- Template for `--with-nth` and `--accept-nth` now supports `{n}` which evaluates to the zero-based ordinal index of the item\n- Fixed a regression that caused the last field in the \"nth\" expression to be trimmed when a regular expression delimiter is used\n- Thanks to @phanen for the fix\n- Fixed 'jump' action when the pointer is an empty string",
+      "memory_unit_text": "In the junegunn/fzf release 0.60.2, the release updates the template for --with-nth and --accept-nth to support {n} which evaluates to the zero-based ordinal index of the item. It fixes a regression that caused the last field in the nth expression to be trimmed when a regular expression delimiter is used, and corrects the 'jump' action when the pointer is an empty string."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_60_3",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.60.3",
+      "tag_name": "v0.60.3",
+      "title": "0.60.3",
+      "time_hint": "2025-03-03",
+      "published_at": "2025-03-03T08:18:43Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.60.3",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.60.3\nTag: v0.60.3; draft: False; prerelease: False; published_at: 2025-03-03T08:18:43Z; created_at: 2025-03-03T08:15:02Z\nRelease notes:\n- Bug fixes and improvements\n- [fish] Enable multiple history commands insertion (#4280) (@bitraid)\n- [walker] Append '/' to directory entries on MSYS2 (#4281)\n- Trim trailing whitespaces after processing ANSI sequences (#4282)\n- Remove temp files before `become` when using `--tmux` option (#4283)\n- Fix condition for using item numlines cache (#4285) (@alex-huff)\n- Make `--accept-nth` compatible with `--select-1` (#4287)\n- Increase the query length limit from 300 to 1000 (#4292)\n- [windows] Prevent fzf from consuming user input while paused (#4260)",
+      "memory_unit_text": "In the junegunn/fzf release 0.60.3, the release provides bug fixes and improvements: fish enables multiple history commands insertion, walker appends '/' to directory entries on MSYS2, trailing whitespaces are trimmed after processing ANSI sequences, temp files are removed before become when using --tmux, condition for using item numlines cache is fixed, --accept-nth is made compatible with --select-1, query length limit is increased from 300 to 1000, and on Windows fzf is prevented from consuming user input while paused."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_61_0",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.61.0",
+      "tag_name": "v0.61.0",
+      "title": "0.61.0",
+      "time_hint": "2025-03-30",
+      "published_at": "2025-03-30T10:57:42Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.61.0",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.61.0\nTag: v0.61.0; draft: False; prerelease: False; published_at: 2025-03-30T10:57:42Z; created_at: 2025-03-30T10:54:10Z\nRelease notes:\n- Added `--ghost=TEXT` to display a ghost text when the input is empty\n```sh\n# Display \"Type to search\" when the input is empty\nfzf --ghost \"Type to search\"\n```\n- Added `change-ghost` and `transform-ghost` actions for dynamically changing the ghost text\n- Added `change-pointer` and `transform-pointer` actions for dynamically changing the pointer sign\n- Added `r` flag for placeholder expression (raw mode) for unquoted output\n- Bug fixes and improvements",
+      "memory_unit_text": "In the junegunn/fzf release 0.61.0, the release adds --ghost=TEXT to display a ghost text when the input is empty, along with change-ghost and transform-ghost actions. It also adds change-pointer and transform-pointer actions for dynamically changing the pointer sign, and introduces the r flag for placeholder expression (raw mode) for unquoted output, plus bug fixes and improvements."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_61_1",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.61.1",
+      "tag_name": "v0.61.1",
+      "title": "0.61.1",
+      "time_hint": "2025-04-06",
+      "published_at": "2025-04-06T04:15:35Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.61.1",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.61.1\nTag: v0.61.1; draft: False; prerelease: False; published_at: 2025-04-06T04:15:35Z; created_at: 2025-04-06T04:13:20Z\nRelease notes:\n- Disable bracketed-paste mode on exit. This fixes issue where pasting breaks after running fzf on old bash versions that don't support the mode.",
+      "memory_unit_text": "In the junegunn/fzf release 0.61.1, the release disables bracketed-paste mode on exit, fixing an issue where pasting breaks after running fzf on old bash versions that don't support the mode."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_61_2",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.61.2",
+      "tag_name": "v0.61.2",
+      "title": "0.61.2",
+      "time_hint": "2025-04-20",
+      "published_at": "2025-04-20T02:42:25Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.61.2",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.61.2\nTag: v0.61.2; draft: False; prerelease: False; published_at: 2025-04-20T02:42:25Z; created_at: 2025-04-20T02:37:29Z\nRelease notes:\n- Fixed panic when using header border without pointer/marker (@phanen)\n- Fixed `--tmux` option when already inside a tmux popup (@peikk0)\n- Bug fixes and improvements in CTRL-T binding of fish (#4334) (@bitraid)\n- Added `--no-tty-default` option to make fzf search for the current TTY device instead of defaulting to `/dev/tty` (#4242)",
+      "memory_unit_text": "In the junegunn/fzf release 0.61.2, the release fixes a panic when using header border without pointer/marker, fixes --tmux option when already inside a tmux popup, includes bug fixes and improvements in CTRL-T binding of fish, and adds --no-tty-default option to make fzf search for the current TTY device instead of defaulting to /dev/tty."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_61_3",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.61.3",
+      "tag_name": "v0.61.3",
+      "title": "0.61.3",
+      "time_hint": "2025-04-22",
+      "published_at": "2025-04-22T12:55:29Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.61.3",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.61.3\nTag: v0.61.3; draft: False; prerelease: False; published_at: 2025-04-22T12:55:29Z; created_at: 2025-04-22T12:50:56Z\nRelease notes:\n- Reverted #4351 as it caused `tmux run-shell 'fzf --tmux'` to fail (#4559 #4560)\n- More environment variables for child processes (#4356)",
+      "memory_unit_text": "In the junegunn/fzf release 0.61.3, the release reverts a previous change that caused tmux run-shell 'fzf --tmux' to fail, and provides more environment variables for child processes."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_62_0",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.62.0",
+      "tag_name": "v0.62.0",
+      "title": "0.62.0",
+      "time_hint": "2025-05-04",
+      "published_at": "2025-05-04T10:00:03Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.62.0",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.62.0\nTag: v0.62.0; draft: False; prerelease: False; published_at: 2025-05-04T10:00:03Z; created_at: 2025-05-04T09:32:15Z\nRelease notes:\n- Relaxed the `--color` option syntax to allow whitespace-separated entries (in addition to commas), making multi-line definitions easier to write and read\n```sh\n# seoul256-light\nfzf --style full --color='\nfg:#616161 fg+:#616161\nbg:#ffffff bg+:#e9e9e9 alt-bg:#f1f1f1\nhl:#719872 hl+:#719899\npointer:#e12672 marker:#e17899\nheader:#719872\nspinner:#719899 info:#727100\nprompt:#0099bd query:#616161\nborder:#e1e1e1\n'\n```\n- Added `alt-bg` color to create striped lines to visually separate rows\n```sh\nfzf --color bg:237,alt-bg:238,current-bg:236 --highlight-line\ndeclare -f | perl -0777 -pe 's/^}\\n/}\\0/gm' |\nbat --plain --language bash --color always |\nfzf --read0 --ansi --reverse --multi \\\n--color bg:237,alt-bg:238,current-bg:236 --highlight-line\n```\n- [fish] Improvements in CTRL-R binding (@bitraid)\n- You can trigger CTRL-R in the middle of a command to insert the selected item\n- You can delete history items with SHIFT-DEL\n- Bug fixes and improvements\n- Fixed unnecessary 100ms delay after `reload` (#4364)\n- Fixed `selected-bg` not applied to colored items (#4372)\n## Screenshot\n<img width=\"822\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f1dcbdc5-905c-4043-857c-28c75a71d94a\" />",
+      "memory_unit_text": "In the junegunn/fzf release 0.62.0, the release relaxes the --color option syntax to allow whitespace-separated entries, adds alt-bg color to create striped lines for visual separation, improves fish CTRL-R binding (trigger in middle of command, delete history items with SHIFT-DEL), fixes unnecessary 100ms delay after reload, and fixes selected-bg not applied to colored items."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_63_0",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.63.0",
+      "tag_name": "v0.63.0",
+      "title": "0.63.0",
+      "time_hint": "2025-06-27",
+      "published_at": "2025-06-27T16:12:52Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.63.0",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.63.0\nTag: v0.63.0; draft: False; prerelease: False; published_at: 2025-06-27T16:12:52Z; created_at: 2025-06-27T16:11:43Z\nRelease notes:\n_Release highlights: https://junegunn.github.io/fzf/releases/0.63.0/_\n![image](https://github.com/user-attachments/assets/9f2e252b-75f5-4b42-a2d1-ccdb2394bc90)\n- Added footer. The default border style for footer is `line`, which draws a single separator line.\n```sh\nfzf --reverse --footer \"fzf: friend zone forever\"\n```\n- Options\n- `--footer[=STRING]`\n- `--footer-border[=STYLE]`\n- `--footer-label=LABEL`\n- `--footer-label-pos=COL[:bottom]`\n- Colors\n- `footer`\n- `footer-bg`\n- `footer-border`\n- `footer-label`\n- Actions\n- `change-footer`\n- `transform-footer`\n- `bg-transform-footer`\n- `change-footer-label`\n- `transform-footer-label`\n- `bg-transform-footer-label`\n- `line` border style is now allowed for all types of border except for `--list-border`.\n```sh\nfzf --height 50% --style full:line --preview 'cat {}' \\\n--bind 'focus:bg-transform-header(file {})+bg-transform-footer(wc {})'\n```\n- Added `{*}` placeholder flag that evaluates to all matched items.\n```bash\nseq 10000 | fzf --preview \"awk '{sum += \\$1} END {print sum}' {*f}\"\n```\n- Use this with caution, as it can make fzf sluggish for large lists.\n- Added asynchronous transform actions with `bg-` prefix that run asynchronously in the background, along with `bg-cancel` action to cancel currently running `bg-transform` actions.\n```sh\n# Implement popup that disappears after 1 second\n#   * Use footer as the popup\n#   * Use `bell` to ring the terminal bell\n#   * Use `bg-transform-footer` to clear the footer after 1 second\n#   * Use `bg-cancel` to cancel currently running background transform actions\nfzf --multi --list-border \\\n--bind 'enter:execute-silent(echo -n {+} | pbcopy)+bell' \\\n--bind 'enter:+transform-footer(echo Copied {} to clipboard)' \\\n--bind 'enter:+bg-cancel+bg-transform-footer(sleep 1)'\n# It's okay for the commands to take a little while because they run in the background\nGETTER='curl -s http://metaphorpsum.com/sentences/1'\nfzf --style full --border --preview : \\\n--bind \"focus:bg-transform-header:$GETTER\" \\\n--bind \"focus:+bg-transform-footer:$GETTER\" \\\n--bind \"focus:+bg-transform-border-label:$GETTER\" \\\n--bind \"focus:+bg-transform-preview-label:$GETTER\" \\\n--bind \"focus:+bg-transform-input-label:$GETTER\" \\\n--bind \"focus:+bg-transform-list-label:$GETTER\" \\\n--bind \"focus:+bg-transform-header-label:$GETTER\" \\\n--bind \"focus:+bg-transform-footer-label:$GETTER\" \\\n--bind \"focus:+bg-transform-ghost:$GETTER\" \\\n--bind \"focus:+bg-transform-prompt:$GETTER\"\n```\n- Added support for full-line background color in the list section\n```sh\nfor i in $(seq 16 255); do\necho -e \"\\x1b[48;5;${i}m\\x1b[0Khello\"\ndone | fzf --ansi\n```\n- SSH completion enhancements by @akinomyoga\n- Bug fixes and improvements",
+      "memory_unit_text": "In the junegunn/fzf release 0.63.0, the release adds a footer with options, colors, and actions, allows line border style for all border types except --list-border, adds {*} placeholder flag that evaluates to all matched items, introduces asynchronous transform actions with bg- prefix and bg-cancel action, supports full-line background color in the list section, enhances SSH completion, and includes bug fixes and improvements."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_64_0",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.64.0",
+      "tag_name": "v0.64.0",
+      "title": "0.64.0",
+      "time_hint": "2025-07-06",
+      "published_at": "2025-07-06T15:05:40Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.64.0",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.64.0\nTag: v0.64.0; draft: False; prerelease: False; published_at: 2025-07-06T15:05:40Z; created_at: 2025-07-06T14:59:38Z\nRelease notes:\n- Added `multi` event that is triggered when the multi-selection has changed.\n```sh\nfzf --multi \\\n--bind 'ctrl-a:select-all,ctrl-d:deselect-all' \\\n--bind 'multi:transform-footer:(( FZF_SELECT_COUNT )) && echo \"Selected $FZF_SELECT_COUNT item(s)\"'\n```\n- [Halfwidth and fullwidth alphanumeric and punctuation characters](https://en.wikipedia.org/wiki/Halfwidth_and_Fullwidth_Forms_(Unicode_block)) are now internally normalized to their ASCII equivalents to allow matching with ASCII queries.\n```sh\necho ＡＢＣ| fzf -q abc\n```\n- Renamed `clear-selection` action to `clear-multi` for consistency.\n- `clear-selection` remains supported as an alias for backward compatibility.\n- Bug fixes\n- Fixed a bug that could cause fzf to abort due to incorrect update ordering.\n- Fixed a bug where some multi-selections were lost when using `exclude` or `change-nth`.",
+      "memory_unit_text": "In the junegunn/fzf release 0.64.0, the release adds a multi event triggered when multi-selection changes, normalizes halfwidth and fullwidth alphanumeric and punctuation characters to ASCII equivalents for matching, renames clear-selection action to clear-multi (with backward compatibility), and fixes bugs causing abort due to incorrect update ordering and loss of multi-selections when using exclude or change-nth."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_65_0",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.65.0",
+      "tag_name": "v0.65.0",
+      "title": "0.65.0",
+      "time_hint": "2025-07-27",
+      "published_at": "2025-07-27T01:43:27Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.65.0",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.65.0\nTag: v0.65.0; draft: False; prerelease: False; published_at: 2025-07-27T01:43:27Z; created_at: 2025-07-27T01:40:22Z\nRelease notes:\n- Added `click-footer` event that is triggered when the footer section is clicked. When the event is triggered, the following environment variables are set:\n- `$FZF_CLICK_FOOTER_COLUMN` - clicked column (1-based)\n- `$FZF_CLICK_FOOTER_LINE` - clicked line (1-based)\n- `$FZF_CLICK_FOOTER_WORD` - the word under the cursor\n```sh\nfzf --footer $'[Edit] [View]\\n[Copy to clipboard]' \\\n--with-shell 'bash -c' \\\n--bind 'click-footer:transform:\n[[ $FZF_CLICK_FOOTER_WORD =~ Edit ]] && echo \"execute:vim \\{}\"\n[[ $FZF_CLICK_FOOTER_WORD =~ View ]] && echo \"execute:view \\{}\"\n(( FZF_CLICK_FOOTER_LINE == 2 )) && (( FZF_CLICK_FOOTER_COLUMN < 20 )) &&\necho \"execute-silent(echo -n \\{} | pbcopy)+bell\"\n'\n```\n- Added `trigger(...)` action that triggers events bound to another key or event.\n```sh\n# You can click on each key name to trigger the actions bound to that key\nfzf --footer 'Ctrl-E: Edit / Ctrl-V: View / Ctrl-Y: Copy to clipboard' \\\n--with-shell 'bash -c' \\\n--bind 'ctrl-e:execute:vim {}' \\\n--bind 'ctrl-v:execute:view {}' \\\n--bind 'ctrl-y:execute-silent(echo -n {} | pbcopy)+bell' \\\n--bind 'click-footer:transform:\n[[ $FZF_CLICK_FOOTER_WORD =~ Ctrl ]] && echo \"trigger(${FZF_CLICK_FOOTER_WORD%:})\"\n'\n```\n- You can specify a series of keys and events\n```sh\nfzf --bind 'a:up,b:trigger(a,a,a)'\n```\n- Added support for `{*n}` and `{*nf}` placeholder.\n- `{*n}` evaluates to the zero-based ordinal index of all matched items.\n- `{*nf}` evaluates to the temporary file containing that.\n- Bug fixes and improvements\n- [neovim] Fixed margin background color when `&winborder` is used (#4453)\n- Fixed rendering error when hiding a preview window without border (#4465)\n- fix(shell): check for mawk existence before version check (#4468)\n- Thanks to @LangLangBart and @akinomyoga\n- Fixed `--no-header-lines-border` behavior (08027e7a)",
+      "memory_unit_text": "In the junegunn/fzf release 0.65.0, the release adds click-footer event with environment variables for clicked column, line, and word, introduces trigger(...) action to trigger events bound to another key or event, supports {*n} and {*nf} placeholders, and includes bug fixes for neovim margin background, rendering error when hiding preview window without border, mawk existence check, and --no-header-lines-border behavior."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_65_1",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.65.1",
+      "tag_name": "v0.65.1",
+      "title": "0.65.1",
+      "time_hint": "2025-08-03",
+      "published_at": "2025-08-03T05:51:14Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.65.1",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.65.1\nTag: v0.65.1; draft: False; prerelease: False; published_at: 2025-08-03T05:51:14Z; created_at: 2025-08-03T05:42:11Z\nRelease notes:\n- Fixed incorrect `$FZF_CLICK_HEADER_WORD` and `$FZF_CLICK_FOOTER_WORD` when the header or footer contains ANSI escape sequences and tab characters.\n- Fixed a bug where you cannot unset the default `--nth` using `change-nth` action.\n- Fixed a highlighting bug when using `--color fg:dim,nth:regular` pattern over ANSI-colored items.",
+      "memory_unit_text": "In the junegunn/fzf release 0.65.1, the release fixes incorrect $FZF_CLICK_HEADER_WORD and $FZF_CLICK_FOOTER_WORD when header or footer contains ANSI escape sequences and tab characters, fixes a bug where you cannot unset the default --nth using change-nth action, and fixes a highlighting bug when using --color fg:dim,nth:regular pattern over ANSI-colored items."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_65_2",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.65.2",
+      "tag_name": "v0.65.2",
+      "title": "0.65.2",
+      "time_hint": "2025-08-31",
+      "published_at": "2025-08-31T13:25:04Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.65.2",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.65.2\nTag: v0.65.2; draft: False; prerelease: False; published_at: 2025-08-31T13:25:04Z; created_at: 2025-08-31T13:23:40Z\nRelease notes:\n- Bug fixes and improvements\n- Fix incorrect truncation of `--info-command` with `--info=inline-right` (#4479)\n- [install] Support old uname in macOS (#4492)\n- [bash 3] Fix `CTRL-T` and `ALT-C` to preserve the last yank (#4496)\n- Do not unset `FZF_DEFAULT_*` variables when using winpty (#4497) (#4400)\n- Fix rendering of items with tabs when using a non-default ellipsis (#4505)\n- **This is the final release to support Windows 7.**\n- Future versions will be built with the latest Go toolchain, which has dropped support for Windows 7.\n- Bug fixes will be backported to [go-1.20](https://github.com/junegunn/fzf/tree/go-1.20) branch. You can build your own binary from it.",
+      "memory_unit_text": "In the junegunn/fzf release 0.65.2, the release includes bug fixes and improvements: incorrect truncation of --info-command with --info=inline-right, support for old uname in macOS installer, bash 3 CTRL-T and ALT-C preserving last yank, not unsetting FZF_DEFAULT_* variables when using winpty, and fixing rendering of items with tabs when using non-default ellipsis. It also announces that this is the final release to support Windows 7."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_66_0",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.66.0",
+      "tag_name": "v0.66.0",
+      "title": "0.66.0",
+      "time_hint": "2025-10-12",
+      "published_at": "2025-10-12T13:24:17Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.66.0",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.66.0\nTag: v0.66.0; draft: False; prerelease: False; published_at: 2025-10-12T13:24:17Z; created_at: 2025-10-12T13:18:06Z\nRelease notes:\n### Quick summary\nThis version introduces many new features centered around the new \"raw\" mode.\n| Type        | Class   | Name                | Description                                        |\n| :--         | :--     | :--                 | :--                                                |\n| New         | Option  | `--raw`             | Enable raw mode by default                         |\n| New         | Option  | `--gutter CHAR`     | Set the gutter column character                    |\n| New         | Option  | `--gutter-raw CHAR` | Set the gutter column character in raw mode        |\n| Enhancement | Option  | `--listen SOCKET`   | Added support for Unix domain sockets              |\n| New         | Action  | `toggle-raw`        | Toggle raw mode                                    |\n| New         | Action  | `enable-raw`        | Enable raw mode                                    |\n| New         | Action  | `disable-raw`       | Disable raw mode                                   |\n| New         | Action  | `up-match`          | Move up to the matching item                       |\n| New         | Action  | `down-match`        | Move down to the matching item                     |\n| New         | Action  | `best`              | Move to the  matching item with the best score     |\n| New         | Color Name  | `nomatch`           | Color for non-matching items in raw mode           |\n| New         | Color Attr  | `strip`           | Remove original colors           |\n| New         | Env Var | `FZF_RAW`           | Matching status in raw mode (0, 1, or undefined)   |\n| New         | Env Var | `FZF_DIRECTION`     | `up` or `down` depending on the layout             |\n| New         | Env Var | `FZF_SOCK`          | Path to the Unix domain socket fzf is listening on |\n| Enhancement | Key     | `CTRL-N`            | `down` -> `down-match`                             |\n| Enhancement | Key     | `CTRL-P`            | `up` -> `up-match`                                 |\n| Enhancement | Shell   | `CTRL-R` binding    | Toggle raw mode with `ALT-R`                       |\n| Enhancement | Shell   | `CTRL-R` binding    | Opt-out with an empty `FZF_CTRL_R_COMMAND`         |\n### 1. Introducing \"raw\" mode\n![](https://github.com/user-attachments/assets/9640ae11-b5f7-43fb-95f1-c29307fc17c2)\nThis version introduces a new \"raw\" mode (named so because it shows the list \"unfiltered\"). In raw mode, non-matching items stay in their original positions, but appear dimmed. This allows you to see the surrounding items of a match and better understand the context of it. You can enable raw mode by default with `--raw`, but it's often more useful when toggled dynamically with the `toggle-raw` action.\n```sh\ntree | fzf --reverse --bind alt-r:toggle-raw\n```\nWhile non-matching items are displayed in a dimmed color, they are treated just like matching items, so you can place the cursor on them and perform any action. If you prefer to navigate only through matching items, use the `down-match` and `up-match` actions, which are from now on bound to `CTRL-N` and `CTRL-P` respectively, and also to `ALT-DOWN` and `ALT-UP`.\n| Key        | Action       | With `--history` |\n| :--        | :--          | :--              |\n| `down`     | `down`       |                  |\n| `up`       | `up`         |                  |\n| `ctrl-j`   | `down`       |                  |\n| `ctrl-k`   | `up`         |                  |\n| `ctrl-n`   | `down-match` | `next-history`   |\n| `ctrl-p`   | `up-match`   | `prev-history`   |\n| `alt-down` | `down-match` |                  |\n| `alt-up`   | `up-match`   |                  |\n> [!NOTE]\n> `CTRL-N` and `CTRL-P` are bound to `next-history` and `prev-history` when `--history` option is enabled, so in that case, you'll need to manually bind them, or use `ALT-DOWN` and...",
+      "memory_unit_text": "In the junegunn/fzf release 0.66.0, the release introduces raw mode with --raw option, toggle-raw action, and related features: non-matching items stay in original positions but appear dimmed. It adds --gutter and --gutter-raw options, --listen support for Unix domain sockets, up-match/down-match/best actions, nomatch color, strip color attribute, FZF_RAW and FZF_DIRECTION environment variables, and changes default bindings for CTRL-N/CTRL-P to down-match/up-match. Shell CTRL-R binding toggles raw mode with ALT-R."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_66_1",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.66.1",
+      "tag_name": "v0.66.1",
+      "title": "0.66.1",
+      "time_hint": "2025-10-26",
+      "published_at": "2025-10-26T06:13:42Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.66.1",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.66.1\nTag: v0.66.1; draft: False; prerelease: False; published_at: 2025-10-26T06:13:42Z; created_at: 2025-10-26T06:12:23Z\nRelease notes:\n- Bug fixes\n- Fixed a bug preventing 'ctrl-h' from being bound to an action (#4556)\n- Fixed `--no-color` / `NO_COLOR` theme (#4561)",
+      "memory_unit_text": "In the junegunn/fzf release 0.66.1, the release fixes a bug preventing 'ctrl-h' from being bound to an action, and fixes --no-color / NO_COLOR theme."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_67_0",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.67.0",
+      "tag_name": "v0.67.0",
+      "title": "0.67.0",
+      "time_hint": "2025-11-16",
+      "published_at": "2025-11-16T11:04:23Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.67.0",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.67.0\nTag: v0.67.0; draft: False; prerelease: False; published_at: 2025-11-16T11:04:23Z; created_at: 2025-11-16T11:02:53Z\nRelease notes:\n<img width=\"852\" height=\"761\" alt=\"image\" src=\"https://github.com/user-attachments/assets/7e13d33e-085d-4fb2-b2ce-ce1497dd79d9\" />\n- Added `--freeze-left=N` option to keep the leftmost N columns always visible.\n```sh\n# Keep the file name column fixed and always visible\ngit grep --line-number --color=always -- '' |\nfzf --ansi --delimiter : --freeze-left 1\n# Can be used with --keep-right\ngit grep --line-number --color=always -- '' |\nfzf --ansi --delimiter : --freeze-left 1 --keep-right\n```\n- Also added `--freeze-right=N` option to keep the rightmost N columns always visible.\n```sh\n# Stronger version of --keep-right that always keeps the right-end visible\nfd | fzf --freeze-right 1\n# Keep the base name always visible\nfd | fzf --freeze-right 1 --delimiter /\n# Keep both leftmost and rightmost components visible\nfd | fzf --freeze-left 1 --freeze-right 1 --delimiter /\n```\n- Updated `--info=inline` to print the spinner (load indicator).\n- Bug fixes",
+      "memory_unit_text": "In the junegunn/fzf release 0.67.0, the release adds --freeze-left=N and --freeze-right=N options to keep leftmost or rightmost N columns always visible. It updates --info=inline to print the spinner (load indicator), and includes bug fixes."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_68_0",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.68.0",
+      "tag_name": "v0.68.0",
+      "title": "0.68.0",
+      "time_hint": "2026-02-20",
+      "published_at": "2026-02-20T02:06:47Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.68.0",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.68.0\nTag: v0.68.0; draft: False; prerelease: False; published_at: 2026-02-20T02:06:47Z; created_at: 2026-02-20T02:04:01Z\nRelease notes:\nhttps://github.com/user-attachments/assets/8d9e6e29-1bde-49d3-b580-c560da394a5d\n- Implemented word wrapping in the list section\n- Added `--wrap=word` (or `--wrap-word`) option and `toggle-wrap-word` action for word-level line wrapping in the list section\n- Changed default binding of `ctrl-/` and `alt-/` from `toggle-wrap` to `toggle-wrap-word`\n```sh\nfzf --wrap=word\n```\n- Implemented word wrapping in the preview window\n- Added `wrap-word` flag for `--preview-window` to enable word-level wrapping\n- Added `toggle-preview-wrap-word` action\n```sh\nfzf --preview 'bat --style=plain --color=always {}' \\\n--preview-window wrap-word \\\n--bind space:toggle-preview-wrap-word\n```\n- Added support for underline style variants in `--color`: `underline-double`, `underline-curly`, `underline-dotted`, `underline-dashed`\n```sh\nfzf --color 'fg:underline-curly,current-fg:underline-dashed'\n```\n- Added support for underline styles (`4:N`) and underline colors (SGR 58/59)\n```sh\n# In the list section\nprintf '\\e[4:3;58;2;255;0;0mRed curly underline\\e[0m\\n' | fzf --ansi\n# In the preview window\nfzf --preview \"printf '\\e[4:3;58;2;255;0;0mRed curly underline\\e[0m\\n'\"\n```\n- Added `--preview-wrap-sign` to set a different wrap indicator for the preview window\n- Added `alt-gutter` color option (#4602) (@hedgieinsocks)\n- Added `$FZF_WRAP` environment variable to child processes (`char` or `word` when wrapping is enabled) (#4672) (@bitraid)\n- fish: Improved command history (CTRL-R) (#4672) (@bitraid)\n- Enabled syntax highlighting in the list on fish 4.3.3+\n- Added syntax-highlighted preview window that auto-shows for long or multi-line commands\n- Added `ALT-ENTER` to reformat and insert selected commands\n- Improved handling of bulk deletion of selected history entries (`SHIFT-DELETE`)\n- Added fish completion support (#4605) (@lalvarezt)\n- zsh: Handle multi-line history selection (#4595) (@LangLangBart)\n- Bug fixes\n- Fixed `_fzf_compgen_{path,dir}` to respect `FZF_COMPLETION_{PATH,DIR}_OPTS` (#4592) (@shtse8, @LangLangBart)\n- Fixed `--preview-window follow` not working correctly with wrapping (#3243, #4258)\n- Fixed symlinks to directories being returned as files (#4676) (@skk64)\n- Fixed SIGHUP signal handling (#4668) (@LangLangBart)\n- Fixed preview process not killed on exit (#4667)\n- Fixed coloring of items with zero-width characters (#4620)\n- Fixed `track-current` unset after a combined movement action (#4649)\n- Fixed `--accept-nth` being ignored in filter mode (#4636) (@charemma)\n- Fixed display width calculation with `maxWidth` (#4596) (@LangLangBart)\n- Fixed clearing of the rest of the current line on start (#4652)\n- Fixed `x-api-key` header not required for GET requests (#4627)\n- Fixed key reading not cancelled when `execute` triggered via a server request (#4653)\n- Fixed rebind of readline command `redraw-current-line` (#4635) (@jameslazo)\n- Fixed `fzf-tmux` `TERM` quoting and added `mktemp` usage (#4664) (@Goofygiraffe06)\n- Do not allow very long queries in `FuzzyMatchV2` (#4608)",
+      "memory_unit_text": "In the junegunn/fzf release 0.68.0, the release implements word wrapping in the list section with --wrap=word option and toggle-wrap-word action, and word wrapping in the preview window with wrap-word flag and toggle-preview-wrap-word action. It adds support for underline style variants in --color, underline styles and colors, --preview-wrap-sign, alt-gutter color, $FZF_WRAP environment variable, fish command history improvements, fish completion support, zsh multi-line history selection, and numerous bug fixes."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_70_0",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.70.0",
+      "tag_name": "v0.70.0",
+      "title": "0.70.0",
+      "time_hint": "2026-03-02",
+      "published_at": "2026-03-02T08:02:17Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.70.0",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.70.0\nTag: v0.70.0; draft: False; prerelease: False; published_at: 2026-03-02T08:02:17Z; created_at: 2026-03-02T07:56:42Z\nRelease notes:\n## Demo: `change-with-nth`\nhttps://github.com/user-attachments/assets/40abe7e6-8c98-4a13-85b7-17e69372ef9e\n## Summary\n- Added `change-with-nth` action for dynamically changing the `--with-nth` option.\n- Requires `--with-nth` to be set initially.\n- Multiple options separated by `|` can be given to cycle through.\n```sh\necho -e \"a b c\\nd e f\\ng h i\" | fzf --with-nth .. \\\n--bind 'space:change-with-nth(1|2|3|1,3|2,3|)'\n```\n- Added `change-header-lines` action for dynamically changing the `--header-lines` option\n- Performance improvements (1.3x to 1.9x faster filtering depending on query)\n```\n=== query: 'l' ===\n[all]   baseline:   168.87ms  current:    95.21ms  (1.77x)  matches: 5069891 (94.78%)\n[1T]    baseline:  1652.22ms  current:   841.40ms  (1.96x)  matches: 5069891 (94.78%)\n=== query: 'lin' ===\n[all]   baseline:   343.27ms  current:   252.59ms  (1.36x)  matches: 3516507 (65.74%)\n[1T]    baseline:  3199.89ms  current:  2230.64ms  (1.43x)  matches: 3516507 (65.74%)\n=== query: 'linux' ===\n[all]   baseline:    85.47ms  current:    63.72ms  (1.34x)  matches: 307229 (5.74%)\n[1T]    baseline:   774.64ms  current:   589.32ms  (1.31x)  matches: 307229 (5.74%)\n=== query: 'linuxlinux' ===\n[all]   baseline:    55.13ms  current:    35.67ms  (1.55x)  matches: 12230 (0.23%)\n[1T]    baseline:   461.99ms  current:   332.38ms  (1.39x)  matches: 12230 (0.23%)\n=== query: 'linuxlinuxlinux' ===\n[all]   baseline:    51.77ms  current:    32.53ms  (1.59x)  matches: 865 (0.02%)\n[1T]    baseline:   409.99ms  current:   296.33ms  (1.38x)  matches: 865 (0.02%)\n```\n- Fixed `nth` attribute merge order to respect precedence hierarchy (#4697)\n- bash: Replaced `printf` with builtin `printf` to bypass local indirections (#4684) (@DarrenBishop)",
+      "memory_unit_text": "In the junegunn/fzf release 0.70.0, the release adds change-with-nth action for dynamically changing --with-nth option, and change-header-lines action for dynamically changing --header-lines option. It delivers performance improvements (1.3x to 1.9x faster filtering), fixes nth attribute merge order, and replaces printf with builtin printf in bash to bypass local indirections."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_71_0",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.71.0",
+      "tag_name": "v0.71.0",
+      "title": "0.71.0",
+      "time_hint": "2026-04-04",
+      "published_at": "2026-04-04T05:15:38Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.71.0",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.71.0\nTag: v0.71.0; draft: False; prerelease: False; published_at: 2026-04-04T05:15:38Z; created_at: 2026-04-04T05:04:55Z\nRelease notes:\n_Release highlights: https://junegunn.github.io/fzf/releases/0.71.0/_\n- Added `--popup` as a new name for `--tmux` with Zellij support\n- `--popup` starts fzf in a tmux popup or a Zellij floating pane\n- `--tmux` is now an alias for `--popup`\n- Requires tmux 3.3+ or Zellij 0.44+\n- Cross-reload item identity with `--id-nth`\n- Added `--id-nth=NTH` to define item identity fields for cross-reload operations\n- When a `reload` is triggered with tracking enabled, fzf searches for the tracked item by its identity fields in the new list.\n- `--track --id-nth ..` tracks by the entire line\n- `--track --id-nth 1` tracks by the first field\n- `--track` without `--id-nth` retains the existing index-based tracking behavior\n- The UI is temporarily blocked (prompt dimmed, input disabled) until the item is found or loading completes.\n- Press `Escape` or `Ctrl-C` to cancel the blocked state without quitting\n- Info line shows `+T*` / `+t*` while searching\n- With `--multi`, selected items are preserved across `reload-sync` by matching their identity fields\n- Performance improvements\n- The search performance now scales linearly with the number of CPU cores, as we dropped static partitioning to allow better load balancing across threads.\n```\n=== query: 'linux' ===\n[all]   baseline:    21.95ms  current:    17.47ms  (1.26x)  matches: 179966 (12.79%)\n[1T]    baseline:   179.63ms  current:   180.53ms  (1.00x)  matches: 179966 (12.79%)\n[2T]    baseline:    97.38ms  current:    90.05ms  (1.08x)  matches: 179966 (12.79%)\n[4T]    baseline:    53.83ms  current:    44.77ms  (1.20x)  matches: 179966 (12.79%)\n[8T]    baseline:    41.66ms  current:    22.58ms  (1.84x)  matches: 179966 (12.79%)\n```\n- Improved the cache structure, reducing memory footprint per entry by 86x.\n- With the reduced per-entry cost, the cache now has broader coverage.\n- Shell integration improvements\n- bash: CTRL-R now supports multi-select and `shift-delete` to delete history entries (#4715)\n- fish:\n- Improved command history (CTRL-R) (#4703) (@bitraid)\n- Rewrite completion script (SHIFT-TAB) (#4731) (@bitraid)\n- Increase minimum fish version requirement to 3.4.0 (#4731) (@bitraid)\n- `GET /` HTTP endpoint now includes `positions` field in each match entry, providing the indices of matched characters for external highlighting (#4726)\n- Allow adaptive height with negative value (`--height=~-HEIGHT`) (#4682)\n- Bug fixes\n- `--walker=follow` no longer follows symlinks whose target is an ancestor of the walker root, avoiding severe resource exhaustion when a symlink points outside the tree (e.g. Wine's `z:` → `/`) (#4710)\n- Fixed AWK tokenizer not treating a new line character as whitespace\n- Fixed `--{accept,with}-nth` removing trailing whitespaces with a non-default `--delimiter`\n- Fixed OSC8 hyperlinks being mangled when the URL contains unicode characters (#4707)\n- Fixed `--with-shell` not handling quoted arguments correctly (#4709)\n- Fixed child processes not being terminated on Windows (#4723) (@pjeby)\n- Fixed preview scrollbar not rendered after `toggle-preview`\n- Fixed preview follow/scroll with long wrapped lines\n- Fixed tab width when `--frozen-left` is used\n- Fixed preview mouse events being processed when no preview window exists\n- zsh: Fixed history widget when `sh_glob` option is on (#4714) (@EvanHahn)",
+      "memory_unit_text": "In the junegunn/fzf release 0.71.0, the release adds --popup as a new name for --tmux with Zellij support, cross-reload item identity with --id-nth, performance improvements with linear scaling across CPU cores and reduced memory footprint, shell integration improvements (bash CTRL-R multi-select and delete, fish command history and completion rewrite), GET / endpoint includes positions field, adaptive height with negative value, and various bug fixes."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_72_0",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.72.0",
+      "tag_name": "v0.72.0",
+      "title": "0.72.0",
+      "time_hint": "2026-04-26",
+      "published_at": "2026-04-26T09:09:58Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.72.0",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.72.0\nTag: v0.72.0; draft: False; prerelease: False; published_at: 2026-04-26T09:09:58Z; created_at: 2026-04-26T09:05:07Z\nRelease notes:\n<img width=\"738\" height=\"477\" alt=\"17772131378862605481422441824188\" src=\"https://github.com/user-attachments/assets/8754adfd-2ff6-4038-bbba-adf6dd74b887\" />\n_Release highlights: https://junegunn.github.io/fzf/releases/0.72.0/_\n- `--header-border`, `--header-lines-border`, and `--footer-border` now accept a new `inline` style that embeds the section inside the list frame, separated from the list content by a horizontal line. When the list border has side segments, the separator joins them as T-junctions.\n- Requires a `--list-border` shape that has both top and bottom segments (`rounded`, `sharp`, `bold`, `double`, `block`, `thinblock`, or `horizontal`); falls back to `line` otherwise. `horizontal` has no side borders, so the separator is drawn without T-junction endpoints.\n- Sections stack. Example combining all three:\n```sh\nps -ef | fzf --reverse --style full \\\n--header 'Select a process' --header-lines 1 \\\n--bind 'load:transform-footer:echo $FZF_TOTAL_COUNT processes' \\\n--header-border dashed --header-first \\\n--header-lines-border inline --footer-border inline\n```\n- `--header-label` and `--footer-label` render on their respective separator row.\n- The separator inherits `--color list-border` when the section's own border color is not explicitly set.\n- `inline` takes precedence over `--header-first`: the inline section stays inside the list frame. `--header-border=inline` requires `--header-lines-border` to be `inline` or unset.\n- New `dashed` border style with dashed edges (`╶` / `┆`) and rounded corners.\n- `--border=dashed`, `--list-border=dashed`, etc.\n- Works with inline sections (T-junctions render correctly).\n- [vim] Move and resize popup window when detecting `VimResized` event (#4778) (@Vulcalien)\n- Bug fixes\n- Fixed gutter display in `--style=minimal`\n- Fixed arrow keys / Home / End without modifiers being ignored under the kitty keyboard protocol (#4776) (@TymekDev)\n- bash: Persist history deletion when `histappend` is on (#4764)",
+      "memory_unit_text": "In the junegunn/fzf release 0.72.0, the release introduces a new inline style for --header-border, --header-lines-border, and --footer-border that embeds the section inside the list frame with T-junctions. It adds a new dashed border style, vim popup window move/resize on VimResized event, and bug fixes for gutter display in minimal style, arrow keys under kitty keyboard protocol, and bash history deletion persistence."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_73_0",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.73.0",
+      "tag_name": "v0.73.0",
+      "title": "0.73.0",
+      "time_hint": "2026-05-23",
+      "published_at": "2026-05-23T15:19:24Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.73.0",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.73.0\nTag: v0.73.0; draft: False; prerelease: False; published_at: 2026-05-23T15:19:24Z; created_at: 2026-05-23T15:15:45Z\nRelease notes:\n_Release highlights: https://junegunn.github.io/fzf/releases/0.73.0/_\n- Nushell integration via `fzf --nushell` and the installer (#4630) (@sim590)\n- New `--preview-window=next` position that places the preview adjacent to the input section, on the list side: above the input in the default layout, below it in `--layout=reverse` (#4798)\n- Timer-driven `every(N)` event for `--bind`, where `N` is seconds\n- Added `$FZF_IDLE_TIME` (whole seconds) and `$FZF_IDLE_TIME_MS` (milliseconds), holding the elapsed time since the last user activity\n- Pair with `every(N)` to build idle-based behavior such as auto-accept or auto-quit (#1211)\n```sh\n# Live process list; --track --id-nth 2 keeps the cursor on the same PID across reloads\nfzf --header-lines 1 --track --id-nth 2 --bind 'start,every(2):reload-sync:ps -ef'\n# Auto-accept after 10 seconds of inactivity, with a countdown in the footer after 5s\nfzf --bind 'every(1):bg-transform:\nif   [[ $FZF_IDLE_TIME -lt 5  ]]; then echo change-footer:\nelif [[ $FZF_IDLE_TIME -lt 10 ]]; then echo \"change-footer:auto-accept in $((10 - FZF_IDLE_TIME))s\"\nelse echo accept\nfi'\n```\n- Added `$FZF_CURRENT_ITEM` for shells where quoting `{}` is awkward (#4802)\n- Bug fixes\n- Scoring: non-word characters at the start of input or after a delimiter now receive the same boundary bonus as word characters (#4795)\n- `change-preview-window` no longer resets `wrap` / `wrap-word` state set via `toggle-preview-wrap` / `toggle-preview-wrap-word` (#4791)\n- Stripped UTF-8-encoded C1 control characters from rendered items to prevent terminal control-sequence injection\n- Fixed integer-overflow panic in `FuzzyMatchV2` on 32-bit builds (Michal Majchrowicz, Marcin Wyczechowski, AFINE Team)\n- Fixed `bg-transform` `reload` / `exclude` payloads being dropped\n- Fixed rendering glitch with preview window on the left combined with footer",
+      "memory_unit_text": "In the junegunn/fzf release 0.73.0, the release adds Nushell integration via --nushell and installer, a new --preview-window=next position, timer-driven every(N) event for --bind, $FZF_IDLE_TIME and $FZF_IDLE_TIME_MS variables, $FZF_CURRENT_ITEM for easier quoting, and bug fixes for scoring, change-preview-window resetting wrap state, C1 control character stripping, integer overflow panic, bg-transform payload dropping, and rendering glitch with preview on left and footer."
+    },
+    {
+      "memory_node_id": "junegunn__fzf__release__v0_73_1",
+      "repo": "junegunn/fzf",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.73.1",
+      "tag_name": "v0.73.1",
+      "title": "0.73.1",
+      "time_hint": "2026-05-25",
+      "published_at": "2026-05-25T05:37:25Z",
+      "source_url": "https://github.com/junegunn/fzf/releases/tag/v0.73.1",
+      "raw_text": "Repository: junegunn/fzf\nRelease: 0.73.1\nTag: v0.73.1; draft: False; prerelease: False; published_at: 2026-05-25T05:37:25Z; created_at: 2026-05-25T05:35:21Z\nRelease notes:\n- Bug fixes\n- Skip `$FZF_CURRENT_ITEM` export when the item contains a NUL byte; `exec(2)` rejects the env, breaking preview and other child commands (#4806)\n- Fixed O(n^2) HTTP body accumulation in `--listen`; a single ~390 KB request could block the single-threaded server for ~8 s (Michal Majchrowicz, Marcin Wyczechowski, AFINE Team)",
+      "memory_unit_text": "In the junegunn/fzf release 0.73.1, the release fixes bugs: skipping $FZF_CURRENT_ITEM export when item contains NUL byte to prevent breaking child commands, and fixing O(n^2) HTTP body accumulation in --listen that could block the server."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the junegunn/fzf releases, which release introduces the --gap[=N] option to display empty lines between items?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "0.56.0"
+        },
+        {
+          "option_id": "B",
+          "text": "0.57.0"
+        },
+        {
+          "option_id": "C",
+          "text": "0.58.0"
+        },
+        {
+          "option_id": "D",
+          "text": "0.59.0"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "0.56.0",
+      "source_chunk_ids": [
+        "junegunn__fzf__release__v0_56_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "junegunn__fzf__release__v0_56_0",
+          "answer_text": "introduces the --gap[=N] option to display empty lines between items"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the junegunn/fzf releases, how does the border customization in release 0.58.0 differ from the border customization in release 0.72.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "0.58.0 introduces three new border types (--list-border, --input-border, --header-border) and style presets, while 0.72.0 introduces an inline style for header/footer borders that embeds sections inside the list frame with T-junctions and a new dashed border style."
+        },
+        {
+          "option_id": "B",
+          "text": "0.58.0 adds dashed borders, while 0.72.0 removes all border options."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only add preview window borders without any other changes."
+        },
+        {
+          "option_id": "D",
+          "text": "0.58.0 focuses on footer borders, while 0.72.0 focuses on input borders."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "0.58.0 introduces three new border types (--list-border, --input-border, --header-border) and style presets, while 0.72.0 introduces an inline style for header/footer borders that embeds sections inside the list frame with T-junctions and a new dashed border style.",
+      "source_chunk_ids": [
+        "junegunn__fzf__release__v0_58_0",
+        "junegunn__fzf__release__v0_72_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "junegunn__fzf__release__v0_58_0",
+          "answer_text": "introduces three new border types, --list-border, --input-border, and --header-border, offering much greater flexibility for customizing the user interface. Also, fzf now offers \"style presets\" for quick customization"
+        },
+        {
+          "memory_node_id": "junegunn__fzf__release__v0_72_0",
+          "answer_text": "--header-border, --header-lines-border, and --footer-border now accept a new inline style that embeds the section inside the list frame, separated from the list content by a horizontal line. When the list border has side segments, the separator joins them as T-junctions. ... New dashed border style with dashed edges"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the junegunn/fzf release window, order the following release-content states from earliest to latest: (1) a release that adds the --ghost option to display ghost text when input is empty, (2) a release that introduces raw mode with --raw and toggle-raw action, (3) a release that adds --freeze-left and --freeze-right options to keep columns always visible, (4) a release that implements word wrapping in the list section with --wrap=word.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "junegunn__fzf__release__v0_61_0",
+        "junegunn__fzf__release__v0_66_0",
+        "junegunn__fzf__release__v0_67_0",
+        "junegunn__fzf__release__v0_68_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "junegunn__fzf__release__v0_61_0",
+          "answer_text": "Added --ghost=TEXT to display a ghost text when the input is empty"
+        },
+        {
+          "memory_node_id": "junegunn__fzf__release__v0_66_0",
+          "answer_text": "Introducing \"raw\" mode ... You can enable raw mode by default with --raw, but it's often more useful when toggled dynamically with the toggle-raw action."
+        },
+        {
+          "memory_node_id": "junegunn__fzf__release__v0_67_0",
+          "answer_text": "Added --freeze-left=N option to keep the leftmost N columns always visible. ... Also added --freeze-right=N option"
+        },
+        {
+          "memory_node_id": "junegunn__fzf__release__v0_68_0",
+          "answer_text": "Implemented word wrapping in the list section ... Added --wrap=word (or --wrap-word) option"
+        }
+      ]
+    }
+  ]
+}

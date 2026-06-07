@@ -1,0 +1,530 @@
+{
+  "prototype_id": "topjohnwu__Magisk_release_window",
+  "domain": "github_release_evolution",
+  "repo": "topjohnwu/Magisk",
+  "source_type": "release_note",
+  "window_title": "topjohnwu/Magisk recent release evolution",
+  "window_summary": "This window tracks the recent topjohnwu/Magisk release stream from v25.2 through v30.7, covering major feature introductions like Zygisk API v4, magic mount rewrites, Rust migration, and support for newer Android versions.",
+  "chunks": [
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__v25_2",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v25.2",
+      "tag_name": "v25.2",
+      "title": "Magisk v25.2",
+      "time_hint": "2022-07-21",
+      "published_at": "2022-07-21T03:15:07Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/v25.2",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk v25.2\nTag: v25.2; draft: False; prerelease: False; published_at: 2022-07-21T03:15:07Z; created_at: 2022-07-21T03:13:26Z\nRelease notes:\nMaintenance release fixing various issues.\n- [MagiskInit] Fix a potential issue when stub cpio is used\n- [MagiskInit] Fix reboot to recovery when stub cpio is used\n- [MagiskInit] Fix sepolicy.rules symlink for rootfs devices\n- [General] Better data encryption detection\n- [General] Move the whole logging infrastructure into Rust\n### Full Changelog: [here](https://topjohnwu.github.io/Magisk/changes.html)",
+      "memory_unit_text": "In the topjohnwu/Magisk release v25.2, this maintenance release fixes various issues including a potential issue when stub cpio is used, reboot to recovery when stub cpio is used, sepolicy.rules symlink for rootfs devices, better data encryption detection, and moves the whole logging infrastructure into Rust."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__v26_0",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v26.0",
+      "tag_name": "v26.0",
+      "title": "Magisk v26.0",
+      "time_hint": "2023-04-05",
+      "published_at": "2023-04-05T18:05:58Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/v26.0",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk v26.0\nTag: v26.0; draft: False; prerelease: False; published_at: 2023-04-05T18:05:58Z; created_at: 2023-04-05T18:02:17Z\nRelease notes:\nHey! Long time no see!\n### Bumping Minimum Android Version to 6.0\nMagisk's support for Android Lollipop has been pretty broken for a while without it being noticed. Also, none of the active developers of Magisk have actual hardware to run Android Lollipop. We rely on using the official Android emulator for regression testing on older platforms, however Google never shipped a Lollipop emulator image with SELinux support, leaving us with no option but to drop Lollipop support since we don't feel comfortable supporting Android Lollipop without adequate testing.\n### New Magic Mount Implementation\nMagic Mount, the feature that make modules modify partitions, has gone through a major rewrite. The existing implementation doesn't work well with OEMs injecting overlays into their system using `overlayfs`. The new implementation fundamentally changes how filesystem mirrors are created, giving us a more accurate clone of the unmodified filesystem.\n### New `sepolicy.rule` Implementation\nMagisk allows modules to provide custom SELinux patches by including the file `sepolicy.rule`. Due to the complicated nature of SELinux patching, the compatibility of this functionality has been pretty spotty; many devices are not supported. In this release, a brand new pre-init partition detection mechanism has been designed to support even more devices. Due to complicated reasons, this detection mechanism cannot be performed in a custom recovery environment.\n**This means that any installation of Magisk v26+ using custom recovery will be incomplete; a subsequent re-installation through the Magisk app after booting up is required.**\n### Zygisk Updates\n**The new Zygisk API v4 is now live!** It comes with new features and a refined PLT function hook API. The implementaton of Zygisk has also gone through some major refactoring, including new code loading/unloading mechanisms and a new PLT function hook implementation.\nHead over to the [Zygisk Module Sample](https://github.com/topjohnwu/zygisk-module-sample) repository to check out the new API and documentation!\n### Full Changelog: [here](https://topjohnwu.github.io/Magisk/changes.html)",
+      "memory_unit_text": "In the topjohnwu/Magisk release v26.0, the minimum Android version is bumped to 6.0, a new magic mount implementation is introduced to handle overlayfs, a new sepolicy.rule implementation with pre-init partition detection is added (requiring re-installation via the app after custom recovery), and Zygisk API v4 is introduced with new features and a refined PLT function hook API."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__v26_1",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v26.1",
+      "tag_name": "v26.1",
+      "title": "Magisk v26.1",
+      "time_hint": "2023-04-11",
+      "published_at": "2023-04-11T09:06:16Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/v26.1",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk v26.1\nTag: v26.1; draft: False; prerelease: False; published_at: 2023-04-11T09:06:16Z; created_at: 2023-04-11T08:57:30Z\nRelease notes:\n### Changes from v26.0\n- [App] Fix crashing when revoking root permissions\n- [MagiskInit] Always prefer `ext4` partitions over `f2fs` when selecting the pre-init partition\n- [General] Restore module files' context/owner/group from mirror. This is a regression introduced in v26.0\n(The following is the same as v26.0 release notes)\nHey! Long time no see!\n### Bumping Minimum Android Version to 6.0\nMagisk's support for Android Lollipop has been pretty broken for a while without it being noticed. Also, none of the active developers of Magisk have actual hardware to run Android Lollipop. We rely on using the official Android emulator for regression testing on older platforms, however Google never shipped a Lollipop emulator image with SELinux support, leaving us with no option but to drop Lollipop support since we don't feel comfortable supporting Android Lollipop without adequate testing.\n### New Magic Mount Implementation\nMagic Mount, the feature that make modules modify partitions, has gone through a major rewrite. The existing implementation doesn't work well with OEMs injecting overlays into their system using `overlayfs`. The new implementation fundamentally changes how filesystem mirrors are created, giving us a more accurate clone of the unmodified filesystem.\n### New `sepolicy.rule` Implementation\nMagisk allows modules to provide custom SELinux patches by including the file `sepolicy.rule`. Due to the complicated nature of SELinux patching, the compatibility of this functionality has been pretty spotty; many devices are not supported. In this release, a brand new pre-init partition detection mechanism has been designed to support even more devices. Due to complicated reasons, this detection mechanism cannot be performed in a custom recovery environment.\n**This means that any installation of Magisk v26+ using custom recovery will be incomplete; a subsequent re-installation through the Magisk app after booting up is required.**\n### Zygisk Updates\n**The new Zygisk API v4 is now live!** It comes with new features and a refined PLT function hook API. The implementaton of Zygisk has also gone through some major refactoring, including new code loading/unloading mechanisms and a new PLT function hook implementation.\nHead over to the [Zygisk Module Sample](https://github.com/topjohnwu/zygisk-module-sample) repository to check out the new API and documentation!\n### Full Changelog: [here](https://topjohnwu.github.io/Magisk/changes.html)",
+      "memory_unit_text": "In the topjohnwu/Magisk release v26.1, changes from v26.0 include fixing app crashing when revoking root permissions, always preferring ext4 partitions over f2fs for pre-init partition selection, and restoring module files' context/owner/group from mirror, which was a regression in v26.0."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__v26_2",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v26.2",
+      "tag_name": "v26.2",
+      "title": "Magisk v26.2",
+      "time_hint": "2023-08-28",
+      "published_at": "2023-08-28T08:12:12Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/v26.2",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk v26.2\nTag: v26.2; draft: False; prerelease: False; published_at: 2023-08-28T08:12:12Z; created_at: 2023-08-28T08:04:28Z\nRelease notes:\n- [MagiskBoot] Support extracting boot image from `payload.bin`\n- [MagiskBoot] Support cpio files containing character files\n- [MagiskBoot] Support listing cpio content\n- [MagiskBoot] Directly handle AVB 1.0 signing and verification without going through Java implementation\n- [Daemon] Make daemon socket a fixed path in MAGISKTMP\n- [resetprop] Support printing property context\n- [resetprop] Support only printing persistent properties from storage\n- [resetprop] Properly support setting persistent properties bypassing property_service\n- [MagiskSU] Support `-g` and `-G` options\n- [MagiskSU] Support switching mount namespace to PID with `-t`\n- [MagiskPolicy] Fix patching extended permissions\n- [MagiskPolicy] Support more syntax for extended permissions\n- [MagiskPolicy] Support printing out the loaded sepolicy rules\n- [App] Support patching boot image from ROM zips\n- [App] Properly preserve `boot.img` when patching Samsung firmware with `init_boot.img`\n### Full Changelog: [here](https://topjohnwu.github.io/Magisk/changes.html)",
+      "memory_unit_text": "In the topjohnwu/Magisk release v26.2, MagiskBoot gains support for extracting boot image from payload.bin, handling cpio files with character files, listing cpio content, and directly handling AVB 1.0 signing/verification. The daemon socket becomes a fixed path in MAGISKTMP, resetprop supports printing property context and persistent properties, MagiskSU adds -g, -G, and -t options, MagiskPolicy fixes extended permissions patching and supports printing loaded sepolicy rules, and the app supports patching boot image from ROM zips and preserving boot.img for Samsung firmware with init_boot.img."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__v26_3",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v26.3",
+      "tag_name": "v26.3",
+      "title": "Magisk v26.3",
+      "time_hint": "2023-09-04",
+      "published_at": "2023-09-04T07:05:12Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/v26.3",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk v26.3\nTag: v26.3; draft: False; prerelease: False; published_at: 2023-09-04T07:05:12Z; created_at: 2023-09-04T07:01:46Z\nRelease notes:\n- [General] Fix device information detection script\n- [General] Update BusyBox to 1.36.1\n- [General] Update toolchain that produces broken arm32 executables\n- [App] Fix root service unable to bind on OnePlus devices\n### Full Changelog: [here](https://topjohnwu.github.io/Magisk/changes.html)",
+      "memory_unit_text": "In the topjohnwu/Magisk release v26.3, the device information detection script is fixed, BusyBox is updated to 1.36.1, the toolchain that produced broken arm32 executables is updated, and a fix is applied for root service unable to bind on OnePlus devices."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__v26_4",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v26.4",
+      "tag_name": "v26.4",
+      "title": "Magisk v26.4",
+      "time_hint": "2023-11-06",
+      "published_at": "2023-11-06T07:35:07Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/v26.4",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk v26.4\nTag: v26.4; draft: False; prerelease: False; published_at: 2023-11-06T07:35:07Z; created_at: 2023-11-06T07:31:15Z\nRelease notes:\n- [MagiskBoot] Don't pad zeros if signed boot image is larger\n- [MagiskPolicy] Fix `genfscon` and `filename_trans`\n- [MagiskPolicy] Fix bug in `libsepol`\n- [Zygisk] Fix and simplify file descriptor sanitization logic\n- [App] Prevent OOM when patching AP tarfiles\n- [App] Fix bug in device configuration detection\n- [Daemon] Fix certificate parsing of APKs\n- [General] Fix logging errors from C++ code being ignored\n### Full Changelog: [here](https://topjohnwu.github.io/Magisk/changes.html)",
+      "memory_unit_text": "In the topjohnwu/Magisk release v26.4, MagiskBoot avoids padding zeros if signed boot image is larger, MagiskPolicy fixes genfscon, filename_trans, and a libsepol bug, Zygisk fixes and simplifies file descriptor sanitization logic, the app prevents OOM when patching AP tarfiles and fixes a bug in device configuration detection, the daemon fixes certificate parsing of APKs, and logging errors from C++ code are no longer ignored."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__v27_0",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v27.0",
+      "tag_name": "v27.0",
+      "title": "Magisk v27.0",
+      "time_hint": "2024-02-03",
+      "published_at": "2024-02-03T07:33:55Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/v27.0",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk v27.0\nTag: v27.0; draft: False; prerelease: False; published_at: 2024-02-03T07:33:55Z; created_at: 2024-02-03T06:54:41Z\nRelease notes:\n- [Zygisk] Introduce new code injection mechanism\n- [Zygisk] Support new signature introduced in U QPR2\n- [SEPolicy] Update libsepol to properly set some policy config bits\n- [MagiskBoot] Support compressing `init` so Magisk is installable on devices with small boot partitions\n- [ResetProp] Add new wait for property feature `resetprop -w`\n### Full Changelog: [here](https://topjohnwu.github.io/Magisk/changes.html)",
+      "memory_unit_text": "In the topjohnwu/Magisk release v27.0, Zygisk introduces a new code injection mechanism and supports a new signature introduced in U QPR2, SEPolicy updates libsepol to properly set policy config bits, MagiskBoot supports compressing init for devices with small boot partitions, and ResetProp adds a new wait for property feature with resetprop -w."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__canary_27005",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:canary-27005",
+      "tag_name": "canary-27005",
+      "title": "Magisk (7b81e2d2) (27005)",
+      "time_hint": "2024-07-24",
+      "published_at": "2024-07-24T00:53:06Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/canary-27005",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk (7b81e2d2) (27005)\nTag: canary-27005; draft: False; prerelease: True; published_at: 2024-07-24T00:53:06Z; created_at: 2024-07-24T00:23:50Z\nRelease notes:\n- [Zygisk] Update internal JNI hooking implementation\n- [MagiskInit] Update preinit partition detection\n## Diffs to v27.0\n- [General] Support 16k page size\n- [General] Add support for RISC-V\n- [General] Use a minimal libc to build static executables (`magiskinit` and `magiskboot`) for smaller sizes\n- [Core] Remove unnecessary mirror for magic mount\n- [MagiskInit] Rewrite 2SI logic for injecting `magiskinit` as `init`\n- [MagiskPolicy] Preserve sepolicy config flag after patching\n- [MagiskPolicy] Optimize patching rules to reduce the amount of new rules being injected\n- [DenyList] Support enforcing denylist when Zygisk is disabled\n- [Resetprop] Improve implementation to workaround several property modification detections\n- [Resetprop] Update to properly work with property overlays\n- [App] Major internal code refactoring\n- [App] Support patching Samsung firmware with images larger than 8GiB\n- [App] Use user-initiated job instead of foreground services on Android 14\n- [App] Support Android 13+ built-in per-app language preferences\n- [MagiskBoot] Support spliting kernel images without decompression",
+      "memory_unit_text": "In the topjohnwu/Magisk canary release 27005 (7b81e2d2), Zygisk updates internal JNI hooking implementation and MagiskInit updates preinit partition detection. Diffs to v27.0 include support for 16k page size, RISC-V, minimal libc for static executables, removal of unnecessary mirror for magic mount, rewrite of 2SI logic, MagiskPolicy preserving sepolicy config flag and optimizing patching rules, DenyList supporting enforcement when Zygisk is disabled, Resetprop improvements for property modification detections and property overlays, major app internal refactoring, support for patching Samsung firmware >8GiB, user-initiated job on Android 14, Android 13+ per-app language preferences, and MagiskBoot splitting kernel images without decompression."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__canary_27006",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:canary-27006",
+      "tag_name": "canary-27006",
+      "title": "Magisk (0495468d) (27006)",
+      "time_hint": "2024-07-25",
+      "published_at": "2024-07-25T06:23:01Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/canary-27006",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk (0495468d) (27006)\nTag: canary-27006; draft: False; prerelease: True; published_at: 2024-07-25T06:23:01Z; created_at: 2024-07-25T06:13:21Z\nRelease notes:\n- [MagiskInit] Fix regression with `sepolicy.rule` loading\n## Diffs to v27.0\n- [General] Support 16k page size\n- [General] Add support for RISC-V\n- [General] Use a minimal libc to build static executables (`magiskinit` and `magiskboot`) for smaller sizes\n- [Core] Remove unnecessary mirror for magic mount\n- [MagiskInit] Rewrite 2SI logic for injecting `magiskinit` as `init`\n- [MagiskInit] Update preinit partition detection\n- [Zygisk] Update internal JNI hooking implementation\n- [MagiskPolicy] Preserve sepolicy config flag after patching\n- [MagiskPolicy] Optimize patching rules to reduce the amount of new rules being injected\n- [DenyList] Support enforcing denylist when Zygisk is disabled\n- [Resetprop] Improve implementation to workaround several property modification detections\n- [Resetprop] Update to properly work with property overlays\n- [App] Major internal code refactoring\n- [App] Support patching Samsung firmware with images larger than 8GiB\n- [App] Use user-initiated job instead of foreground services on Android 14\n- [App] Support Android 13+ built-in per-app language preferences\n- [MagiskBoot] Support spliting kernel images without decompression",
+      "memory_unit_text": "In the topjohnwu/Magisk canary release 27006 (0495468d), MagiskInit fixes a regression with sepolicy.rule loading. Diffs to v27.0 include support for 16k page size, RISC-V, minimal libc, removal of unnecessary mirror, rewrite of 2SI logic, updated preinit partition detection, updated Zygisk JNI hooking, MagiskPolicy changes, DenyList enforcement, Resetprop improvements, app refactoring, Samsung firmware patching, Android 14 job, per-app language preferences, and MagiskBoot splitting kernel images."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__canary_27007",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:canary-27007",
+      "tag_name": "canary-27007",
+      "title": "Magisk (8e82113b) (27007)",
+      "time_hint": "2024-08-23",
+      "published_at": "2024-08-23T08:22:54Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/canary-27007",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk (8e82113b) (27007)\nTag: canary-27007; draft: False; prerelease: True; published_at: 2024-08-23T08:22:54Z; created_at: 2024-08-23T08:07:45Z\nRelease notes:\n- [MagiskBoot] Properly support vendor boot images\n- [Core] Update boot image detection logic to support more devices\n## Diffs to v27.0\n- [General] Support 16k page size\n- [General] Add baisc support for RISC-V (not built in releases)\n- [General] Use a minimal libc to build static executables (`magiskinit` and `magiskboot`) for smaller sizes\n- [Core] Remove unnecessary mirror for magic mount\n- [Core] Update boot image detection logic to support more devices\n- [MagiskInit] Rewrite 2SI logic for injecting `magiskinit` as `init`\n- [MagiskInit] Update preinit partition detection\n- [Zygisk] Update internal JNI hooking implementation\n- [MagiskPolicy] Preserve sepolicy config flag after patching\n- [MagiskPolicy] Optimize patching rules to reduce the amount of new rules being injected\n- [DenyList] Support enforcing denylist when Zygisk is disabled\n- [Resetprop] Improve implementation to workaround several property modification detections\n- [Resetprop] Update to properly work with property overlays\n- [App] Major internal code refactoring\n- [App] Support patching Samsung firmware with images larger than 8GiB\n- [App] Use user-initiated job instead of foreground services on Android 14\n- [App] Support Android 13+ built-in per-app language preferences\n- [MagiskBoot] Support spliting kernel images without decompression\n- [MagiskBoot] Properly support vendor boot images",
+      "memory_unit_text": "In the topjohnwu/Magisk canary release 27007 (8e82113b), MagiskBoot properly supports vendor boot images and core updates boot image detection logic for more devices. Diffs to v27.0 include 16k page size, basic RISC-V support, minimal libc, removal of unnecessary mirror, updated boot image detection, rewrite of 2SI logic, updated preinit partition detection, Zygisk JNI hooking update, MagiskPolicy changes, DenyList enforcement, Resetprop improvements, app refactoring, Samsung firmware patching, Android 14 job, per-app language preferences, and MagiskBoot splitting kernel images and vendor boot image support."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__canary_27008",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:canary-27008",
+      "tag_name": "canary-27008",
+      "title": "Magisk (4f18a66d) (27008)",
+      "time_hint": "2024-09-17",
+      "published_at": "2024-09-17T08:57:32Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/canary-27008",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk (4f18a66d) (27008)\nTag: canary-27008; draft: False; prerelease: True; published_at: 2024-09-17T08:57:32Z; created_at: 2024-09-17T08:46:04Z\nRelease notes:\n- [MagiskBoot] Disable Samsung PROCA from kernel image\n- [App] Add `action.sh` support to allow modules to define an action triggered from UI\n## Diffs to v27.0\n- [General] Support 16k page size\n- [General] Add baisc support for RISC-V (not built in releases)\n- [General] Use a minimal libc to build static executables (`magiskinit` and `magiskboot`) for smaller sizes\n- [Core] Remove unnecessary mirror for magic mount\n- [Core] Update boot image detection logic to support more devices\n- [MagiskInit] Rewrite 2SI logic for injecting `magiskinit` as `init`\n- [MagiskInit] Update preinit partition detection\n- [Zygisk] Update internal JNI hooking implementation\n- [MagiskPolicy] Preserve sepolicy config flag after patching\n- [MagiskPolicy] Optimize patching rules to reduce the amount of new rules being injected\n- [DenyList] Support enforcing denylist when Zygisk is disabled\n- [Resetprop] Improve implementation to workaround several property modification detections\n- [Resetprop] Update to properly work with property overlays\n- [App] Major internal code refactoring\n- [App] Support patching Samsung firmware with images larger than 8GiB\n- [App] Use user-initiated job instead of foreground services on Android 14\n- [App] Support Android 13+ built-in per-app language preferences\n- [App] Add `action.sh` support to allow modules to define an action triggered from UI\n- [MagiskBoot] Support spliting kernel images without decompression\n- [MagiskBoot] Properly support vendor boot images\n- [MagiskBoot] Disable Samsung PROCA from kernel image",
+      "memory_unit_text": "In the topjohnwu/Magisk canary release 27008 (4f18a66d), MagiskBoot disables Samsung PROCA from kernel image and the app adds action.sh support for modules to define UI-triggered actions. Diffs to v27.0 include 16k page size, basic RISC-V, minimal libc, removal of unnecessary mirror, updated boot image detection, rewrite of 2SI logic, updated preinit partition detection, Zygisk JNI hooking update, MagiskPolicy changes, DenyList enforcement, Resetprop improvements, app refactoring, Samsung firmware patching, Android 14 job, per-app language preferences, MagiskBoot splitting kernel images, vendor boot image support, and Samsung PROCA disabling."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__v28_0",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v28.0",
+      "tag_name": "v28.0",
+      "title": "Magisk v28.0",
+      "time_hint": "2024-10-10",
+      "published_at": "2024-10-10T08:51:36Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/v28.0",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk v28.0\nTag: v28.0; draft: False; prerelease: False; published_at: 2024-10-10T08:51:36Z; created_at: 2024-10-10T08:47:00Z\nRelease notes:\n- [General] Support 16k page size\n- [General] Add basic support for RISC-V (not built in releases)\n- [General] Use a minimal libc to build static executables (`magiskinit` and `magiskboot`) for smaller sizes\n- [Core] Remove unnecessary mirror for magic mount\n- [Core] Update boot image detection logic to support more devices\n- [MagiskInit] Rewrite 2SI logic for injecting `magiskinit` as `init`\n- [MagiskInit] Update preinit partition detection\n- [Zygisk] Update internal JNI hooking implementation\n- [MagiskPolicy] Preserve sepolicy config flag after patching\n- [MagiskPolicy] Optimize patching rules to reduce the amount of new rules being injected\n- [DenyList] Support enforcing denylist when Zygisk is disabled\n- [Resetprop] Improve implementation to workaround several property modification detections\n- [Resetprop] Update to properly work with property overlays\n- [App] Major internal code refactoring\n- [App] Support patching Samsung firmware with images larger than 8GiB\n- [App] Use user-initiated job instead of foreground services on Android 14\n- [App] Support Android 13+ built-in per-app language preferences\n- [App] Add `action.sh` support to allow modules to define an action triggered from UI\n- [MagiskBoot] Support spliting kernel images without decompression\n- [MagiskBoot] Properly support vendor boot images\n- [MagiskBoot] Disable Samsung PROCA from kernel image\n### Full Changelog: [here](https://topjohnwu.github.io/Magisk/changes.html)",
+      "memory_unit_text": "In the topjohnwu/Magisk release v28.0, support for 16k page size, basic RISC-V, minimal libc for static executables, removal of unnecessary mirror for magic mount, updated boot image detection, rewrite of 2SI logic, updated preinit partition detection, Zygisk JNI hooking update, MagiskPolicy preserving sepolicy config flag and optimizing patching rules, DenyList enforcement when Zygisk is disabled, Resetprop improvements for property modification detections and property overlays, major app internal refactoring, support for patching Samsung firmware >8GiB, user-initiated job on Android 14, Android 13+ per-app language preferences, action.sh support, MagiskBoot splitting kernel images, vendor boot image support, and Samsung PROCA disabling are included."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__canary_28001",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:canary-28001",
+      "tag_name": "canary-28001",
+      "title": "Magisk (070719db) (28001)",
+      "time_hint": "2024-10-10",
+      "published_at": "2024-10-10T09:17:23Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/canary-28001",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk (070719db) (28001)\nTag: canary-28001; draft: False; prerelease: True; published_at: 2024-10-10T09:17:23Z; created_at: 2024-10-10T09:10:50Z\nRelease notes:\n- Sync to public release\n## Diffs to v28.0\n- N/A",
+      "memory_unit_text": "In the topjohnwu/Magisk canary release 28001 (070719db), this release syncs to the public v28.0 release with no additional changes."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__canary_28002",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:canary-28002",
+      "tag_name": "canary-28002",
+      "title": "Magisk (a34c04f9) (28002)",
+      "time_hint": "2024-12-01",
+      "published_at": "2024-12-01T23:10:02Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/canary-28002",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk (a34c04f9) (28002)\nTag: canary-28002; draft: False; prerelease: True; published_at: 2024-12-01T23:10:02Z; created_at: 2024-12-01T22:59:57Z\nRelease notes:\n- [App] Fix stub APK download link\n- [App] Fix support for Android lower than 8.0\n- [General] Fix support for MTK Samsung devices\n- [MagiskInit] Fix a regression for 2SI devices\n- [MagiskPolicy] Fix a regression causing `overlay.d` replaced files to be not accessible\n## Diffs to v28.0\n- [App] Fix stub APK download link\n- [App] Fix support for Android lower than 8.0\n- [General] Fix support for MTK Samsung devices\n- [MagiskInit] Fix a regression for 2SI devices\n- [MagiskPolicy] Fix a regression causing `overlay.d` replaced files to be not accessible",
+      "memory_unit_text": "In the topjohnwu/Magisk canary release 28002 (a34c04f9), fixes include stub APK download link, support for Android lower than 8.0, MTK Samsung devices, a regression for 2SI devices in MagiskInit, and a regression causing overlay.d replaced files to be not accessible in MagiskPolicy."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__canary_28003",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:canary-28003",
+      "tag_name": "canary-28003",
+      "title": "Magisk (895b5f6c) (28003)",
+      "time_hint": "2024-12-04",
+      "published_at": "2024-12-04T09:37:15Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/canary-28003",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk (895b5f6c) (28003)\nTag: canary-28003; draft: False; prerelease: True; published_at: 2024-12-04T09:37:15Z; created_at: 2024-12-04T09:28:31Z\nRelease notes:\n- Fix Samsung firmware AP tar patching\n## Diffs to v28.0\n- [App] Fix stub APK download link\n- [App] Fix support for Android lower than 8.0\n- [General] Fix support for MTK Samsung devices\n- [MagiskInit] Fix a regression for 2SI devices\n- [MagiskPolicy] Fix a regression causing `overlay.d` replaced files to be not accessible",
+      "memory_unit_text": "In the topjohnwu/Magisk canary release 28003 (895b5f6c), Samsung firmware AP tar patching is fixed. Diffs to v28.0 include fixes for stub APK download link, Android lower than 8.0, MTK Samsung devices, 2SI regression, and overlay.d regression."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__v28_1",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v28.1",
+      "tag_name": "v28.1",
+      "title": "Magisk v28.1",
+      "time_hint": "2024-12-07",
+      "published_at": "2024-12-07T01:53:44Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/v28.1",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk v28.1\nTag: v28.1; draft: False; prerelease: False; published_at: 2024-12-07T01:53:44Z; created_at: 2024-12-07T01:45:41Z\nRelease notes:\n- [App] Fix stub APK download link\n- [App] Fix support for Android lower than 8.0\n- [General] Fix support for MTK Samsung devices\n- [MagiskInit] Fix a regression for 2SI devices\n- [MagiskPolicy] Fix a regression causing `overlay.d` replaced files to be not accessible\n### Full Changelog: [here](https://topjohnwu.github.io/Magisk/changes.html)",
+      "memory_unit_text": "In the topjohnwu/Magisk release v28.1, fixes include stub APK download link, support for Android lower than 8.0, MTK Samsung devices, a regression for 2SI devices in MagiskInit, and a regression causing overlay.d replaced files to be not accessible in MagiskPolicy."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__canary_28101",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:canary-28101",
+      "tag_name": "canary-28101",
+      "title": "Magisk (47cc532d) (28101)",
+      "time_hint": "2024-12-07",
+      "published_at": "2024-12-07T02:59:10Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/canary-28101",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk (47cc532d) (28101)\nTag: canary-28101; draft: False; prerelease: True; published_at: 2024-12-07T02:59:10Z; created_at: 2024-12-07T02:19:06Z\nRelease notes:\n- Sync to public release\n## Diffs to v28.1\n- N/A",
+      "memory_unit_text": "In the topjohnwu/Magisk canary release 28101 (47cc532d), this release syncs to the public v28.1 release with no additional changes."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__canary_28102",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:canary-28102",
+      "tag_name": "canary-28102",
+      "title": "Magisk (b62835cb) (28102)",
+      "time_hint": "2025-01-30",
+      "published_at": "2025-01-30T18:49:55Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/canary-28102",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk (b62835cb) (28102)\nTag: canary-28102; draft: False; prerelease: True; published_at: 2025-01-30T18:49:55Z; created_at: 2025-01-30T18:36:58Z\nRelease notes:\nThere are a LOT of internal refactoring and significantly more testing infrastructure in the Magisk project!\n- [App] Support downloading module zip files with XZ compression\n- [MagiskMount] Support systemlessly deleting files with modules using blank file nodes\n## Diffs to v28.1\n- [App] Support downloading module zip files with XZ compression\n- [MagiskMount] Support systemlessly deleting files with modules using blank file nodes",
+      "memory_unit_text": "In the topjohnwu/Magisk canary release 28102 (b62835cb), the app supports downloading module zip files with XZ compression and MagiskMount supports systemlessly deleting files with modules using blank file nodes. Diffs to v28.1 include these two features."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__canary_28103",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:canary-28103",
+      "tag_name": "canary-28103",
+      "title": "Magisk (1e3edb88) (28103)",
+      "time_hint": "2025-03-21",
+      "published_at": "2025-03-21T17:48:55Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/canary-28103",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk (1e3edb88) (28103)\nTag: canary-28103; draft: False; prerelease: True; published_at: 2025-03-21T17:48:55Z; created_at: 2025-03-21T17:37:49Z\nRelease notes:\n- [General] Massive internal refactoring and code migration\n- [App] Fix patching Samsung's AP tar firmware files\n- [MagiskInit] Redesign sepolicy patching and injection logic\n## Diffs to v28.1\n- [General] Massive internal refactoring and code migration\n- [App] Support downloading module zip files with XZ compression\n- [MagiskMount] Support systemlessly deleting files with modules using blank file nodes\n- [MagiskInit] Redesign sepolicy patching and injection logic",
+      "memory_unit_text": "In the topjohnwu/Magisk canary release 28103 (1e3edb88), massive internal refactoring and code migration occurs, the app fixes patching Samsung's AP tar firmware files, and MagiskInit redesigns sepolicy patching and injection logic. Diffs to v28.1 include these changes plus XZ compression support and blank file node deletion."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__canary_28104",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:canary-28104",
+      "tag_name": "canary-28104",
+      "title": "Magisk (427a1ca4) (28104)",
+      "time_hint": "2025-04-29",
+      "published_at": "2025-04-29T19:06:07Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/canary-28104",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk (427a1ca4) (28104)\nTag: canary-28104; draft: False; prerelease: True; published_at: 2025-04-29T19:06:07Z; created_at: 2025-04-29T18:54:17Z\nRelease notes:\n- [MagiskInit] Fix 2SI on legacy SAR devices\n- [App] Disable app animations when system animations are disabled\n- [MagiskSU] Better TTY/PTY support\n## Diffs to v28.1\n- [General] Massive internal refactoring and code migration\n- [App] Support downloading module zip files with XZ compression\n- [App] Disable app animations when system animations are disabled\n- [MagiskMount] Support systemlessly deleting files with modules using blank file nodes\n- [MagiskInit] Redesign sepolicy patching and injection logic\n- [MagiskSU] Better TTY/PTY support",
+      "memory_unit_text": "In the topjohnwu/Magisk canary release 28104 (427a1ca4), MagiskInit fixes 2SI on legacy SAR devices, the app disables animations when system animations are disabled, and MagiskSU gets better TTY/PTY support. Diffs to v28.1 include massive refactoring, XZ compression, animation disabling, blank file node deletion, sepolicy redesign, and TTY/PTY support."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__v29_0",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v29.0",
+      "tag_name": "v29.0",
+      "title": "Magisk v29.0",
+      "time_hint": "2025-05-14",
+      "published_at": "2025-05-14T08:33:03Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/v29.0",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk v29.0\nTag: v29.0; draft: False; prerelease: False; published_at: 2025-05-14T08:33:03Z; created_at: 2025-05-14T08:26:05Z\nRelease notes:\nThis release looks minor at the surface, however, the entire codebase has gone through significant refactoring and migration. The native code in Magisk used to be mainly C++, but several contributors and I have been steadily rewriting parts of the code in Rust since April 2022. After years of effort, the Rust-ification of the project slowly began picking up steam, and at the moment of this release, over 40% of the native code has been rewritten in Rust, with several major subsystem rewrites in the PR queue, planned to be merged for the next release.\nMany might wonder, why introduce a new language to the project? My reason is actually not to reduce memory safety issues (although it is a nice side benefit), but to be able to develop Magisk using a more modern programming language. After using Rust for a while, it's clear to me that using Rust allows me to write more correct code and makes me happier compared to dealing with C++. People share the [same sentiment as I do](https://threadreaderapp.com/thread/1577667445719912450.html).\n## Changelog\n- [General] Massive internal refactoring and code migration\n- [App] Support downloading module zip files with XZ compression\n- [App] Disable app animations when system animations are disabled\n- [MagiskMount] Support systemlessly deleting files with modules using blank file nodes\n- [MagiskInit] Redesign sepolicy patching and injection logic\n- [MagiskSU] Better TTY/PTY support\n### Full Changelog: [here](https://topjohnwu.github.io/Magisk/changes.html)",
+      "memory_unit_text": "In the topjohnwu/Magisk release v29.0, the entire codebase has undergone significant refactoring and migration, with over 40% of native code rewritten in Rust. Changelog includes massive internal refactoring, support for downloading module zip files with XZ compression, disabling app animations when system animations are disabled, systemlessly deleting files with modules using blank file nodes, redesign of sepolicy patching and injection logic, and better TTY/PTY support in MagiskSU."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__canary_29001",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:canary-29001",
+      "tag_name": "canary-29001",
+      "title": "Magisk (b1dc47a0) (29001)",
+      "time_hint": "2025-05-14",
+      "published_at": "2025-05-14T08:54:42Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/canary-29001",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk (b1dc47a0) (29001)\nTag: canary-29001; draft: False; prerelease: True; published_at: 2025-05-14T08:54:42Z; created_at: 2025-05-14T08:41:38Z\nRelease notes:\n- Sync with public release\n## Diffs to v29.0\nN/A",
+      "memory_unit_text": "In the topjohnwu/Magisk canary release 29001 (b1dc47a0), this release syncs with the public v29.0 release with no additional changes."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__v30_0",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v30.0",
+      "tag_name": "v30.0",
+      "title": "Magisk v30.0",
+      "time_hint": "2025-07-01",
+      "published_at": "2025-07-01T17:25:55Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/v30.0",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk v30.0\nTag: v30.0; draft: False; prerelease: True; published_at: 2025-07-01T17:25:55Z; created_at: 2025-07-01T17:14:43Z\nRelease notes:\n- [General] Various minor bug fixes\n- [Core] Migrate module implementation to Rust\n- [Core] Improve Magisk specific files injection logic\n- [MagiskBoot] Migrate compression code to Rust\n### Full Changelog: [here](https://topjohnwu.github.io/Magisk/changes.html)",
+      "memory_unit_text": "In the topjohnwu/Magisk release v30.0, various minor bug fixes are applied, the core module implementation is migrated to Rust, Magisk specific files injection logic is improved, and MagiskBoot compression code is migrated to Rust."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__v30_1",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v30.1",
+      "tag_name": "v30.1",
+      "title": "Magisk v30.1",
+      "time_hint": "2025-07-03",
+      "published_at": "2025-07-03T10:27:36Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/v30.1",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk v30.1\nTag: v30.1; draft: False; prerelease: True; published_at: 2025-07-03T10:27:36Z; created_at: 2025-07-03T10:10:10Z\nRelease notes:\n- [Core] Fix bug in module mounting implementation\n- [MagiskSU] Add ability to restrict Linux capabilities even if running as root (uid=0)\n## Diffs to v29.0\n- [General] Various minor bug fixes\n- [Core] Migrate module implementation to Rust\n- [Core] Improve Magisk specific files injection logic\n- [MagiskBoot] Migrate compression code to Rust\n- [MagiskSU] Add ability to restrict Linux capabilities even if running as root (uid=0)\n### Full Changelog: [here](https://topjohnwu.github.io/Magisk/changes.html)",
+      "memory_unit_text": "In the topjohnwu/Magisk release v30.1, a bug in module mounting implementation is fixed and MagiskSU adds the ability to restrict Linux capabilities even when running as root (uid=0). Diffs to v29.0 include minor bug fixes, Rust migration for modules and compression, improved injection logic, and capability restriction."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__v30_2",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v30.2",
+      "tag_name": "v30.2",
+      "title": "Magisk v30.2",
+      "time_hint": "2025-08-06",
+      "published_at": "2025-08-06T10:53:46Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/v30.2",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk v30.2\nTag: v30.2; draft: False; prerelease: True; published_at: 2025-08-06T10:53:46Z; created_at: 2025-08-06T10:32:32Z\nRelease notes:\n- [Core] Fix an edge case breaking modules when overlayfs is involved\n- [Core] Fix module `.replace` functionality in certain situations\n- [resetprop] Reduce property modification traces\n## Diffs to v29.0\n- [General] Various minor bug fixes\n- [Core] Migrate module implementation to Rust\n- [Core] Improve Magisk specific files injection logic\n- [MagiskBoot] Migrate compression code to Rust\n- [MagiskSU] Add ability to restrict Linux capabilities even if running as root (uid=0)\n- [resetprop] Reduce property modification traces\n### Full Changelog: [here](https://topjohnwu.github.io/Magisk/changes.html)",
+      "memory_unit_text": "In the topjohnwu/Magisk release v30.2, an edge case breaking modules when overlayfs is involved is fixed, module .replace functionality is fixed in certain situations, and resetprop reduces property modification traces. Diffs to v29.0 include minor bug fixes, Rust migration, improved injection logic, capability restriction, and trace reduction."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__v30_3",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v30.3",
+      "tag_name": "v30.3",
+      "title": "Magisk v30.3",
+      "time_hint": "2025-09-30",
+      "published_at": "2025-09-30T04:46:23Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/v30.3",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk v30.3\nTag: v30.3; draft: False; prerelease: True; published_at: 2025-09-30T04:46:23Z; created_at: 2025-09-30T04:35:45Z\nRelease notes:\n- [General] Support installing Magisk into vendor_boot partition\n- [MagiskPolicy] Support new sepolicy binary format introduced in Android 16 QPR2\n- [Core] Migrate much more code into Rust\n- [MagiskSU] Fallback to older implementation when the kernel doesn't support zero userspace copy APIs\n## Diffs to v29.0\n- [General] Various minor bug fixes\n- [General] Support installing Magisk into vendor_boot partition\n- [General] Migrate a significant portion of the codebase to Rust\n- [Core] Improve Magisk specific files injection logic\n- [MagiskSU] Add ability to restrict Linux capabilities even if running as root (uid=0)\n- [MagiskSU] Fallback to older implementation when the kernel doesn't support zero userspace copy APIs\n- [MagiskPolicy] Support new sepolicy binary format introduced in Android 16 QPR2\n- [resetprop] Reduce property modification traces\n### Full Changelog: [here](https://topjohnwu.github.io/Magisk/changes.html)",
+      "memory_unit_text": "In the topjohnwu/Magisk release v30.3, support for installing Magisk into vendor_boot partition is added, MagiskPolicy supports the new sepolicy binary format in Android 16 QPR2, more code is migrated to Rust, and MagiskSU falls back to older implementation when the kernel lacks zero userspace copy APIs. Diffs to v29.0 include minor bug fixes, vendor_boot support, significant Rust migration, improved injection logic, capability restriction, fallback, sepolicy format support, and trace reduction."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__v30_4",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v30.4",
+      "tag_name": "v30.4",
+      "title": "Magisk v30.4",
+      "time_hint": "2025-10-02",
+      "published_at": "2025-10-02T11:34:43Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/v30.4",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk v30.4\nTag: v30.4; draft: False; prerelease: True; published_at: 2025-10-02T11:34:43Z; created_at: 2025-10-02T11:30:47Z\nRelease notes:\n- [MagiskSU] Fix several implementation bugs\n## Diffs to v29.0\n- [General] Various minor bug fixes\n- [General] Support installing Magisk into vendor_boot partition\n- [General] Migrate a significant portion of the codebase to Rust\n- [Core] Improve Magisk specific files injection logic\n- [MagiskSU] Add ability to restrict Linux capabilities even if running as root (uid=0)\n- [MagiskSU] Fallback to older implementation when the kernel doesn't support zero userspace copy APIs\n- [MagiskPolicy] Support new sepolicy binary format introduced in Android 16 QPR2\n- [resetprop] Reduce property modification traces\n### Full Changelog: [here](https://topjohnwu.github.io/Magisk/changes.html)",
+      "memory_unit_text": "In the topjohnwu/Magisk release v30.4, several implementation bugs in MagiskSU are fixed. Diffs to v29.0 include minor bug fixes, vendor_boot support, Rust migration, improved injection logic, capability restriction, fallback, sepolicy format support, and trace reduction."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__v30_5",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v30.5",
+      "tag_name": "v30.5",
+      "title": "Magisk v30.5",
+      "time_hint": "2025-12-01",
+      "published_at": "2025-12-01T09:56:53Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/v30.5",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk v30.5\nTag: v30.5; draft: False; prerelease: True; published_at: 2025-12-01T09:56:53Z; created_at: 2025-12-01T09:52:46Z\nRelease notes:\n- [General] Migrate a significant portion of the codebase to Rust\n- [General] Various minor bug fixes\n- [General] Support installing Magisk into vendor_boot partition\n- [Core] Improve Magisk specific files injection logic\n- [MagiskSU] Add ability to restrict Linux capabilities even if running as root (uid=0)\n- [MagiskSU] Fallback to older implementation when the kernel doesn't support zero userspace copy APIs\n- [MagiskPolicy] Support new sepolicy binary format introduced in Android 16 QPR2\n- [resetprop] Reduce property modification traces\n- [resetprop] Properly support Android versions with property overrides\n### Full Changelog: [here](https://topjohnwu.github.io/Magisk/changes.html)",
+      "memory_unit_text": "In the topjohnwu/Magisk release v30.5, a significant portion of the codebase is migrated to Rust, various minor bug fixes are applied, support for installing into vendor_boot partition is added, Magisk specific files injection logic is improved, MagiskSU adds capability restriction and fallback for older kernels, MagiskPolicy supports Android 16 QPR2 sepolicy format, resetprop reduces property modification traces and properly supports Android versions with property overrides."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__v30_6",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v30.6",
+      "tag_name": "v30.6",
+      "title": "Magisk v30.6",
+      "time_hint": "2025-12-01",
+      "published_at": "2025-12-01T23:57:55Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/v30.6",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk v30.6\nTag: v30.6; draft: False; prerelease: False; published_at: 2025-12-01T23:57:55Z; created_at: 2025-12-01T23:46:33Z\nRelease notes:\n### Hotfix\n- [MagiskInit] Revert a change that could result in bootloops\n### v30.5 Changelog\n- [General] Migrate a significant portion of the codebase to Rust\n- [General] Various minor bug fixes\n- [General] Support installing Magisk into vendor_boot partition\n- [Core] Improve Magisk specific files injection logic\n- [MagiskSU] Add ability to restrict Linux capabilities even if running as root (uid=0)\n- [MagiskSU] Fallback to older implementation when the kernel doesn't support zero userspace copy APIs\n- [MagiskPolicy] Support new sepolicy binary format introduced in Android 16 QPR2\n- [resetprop] Reduce property modification traces\n- [resetprop] Properly support Android versions with property overrides\n### Full Changelog: [here](https://topjohnwu.github.io/Magisk/changes.html)",
+      "memory_unit_text": "In the topjohnwu/Magisk release v30.6, a hotfix reverts a change in MagiskInit that could result in bootloops. The v30.5 changelog includes Rust migration, minor bug fixes, vendor_boot support, improved injection logic, capability restriction, fallback, sepolicy format support, trace reduction, and property override support."
+    },
+    {
+      "memory_node_id": "topjohnwu__Magisk__release__v30_7",
+      "repo": "topjohnwu/Magisk",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v30.7",
+      "tag_name": "v30.7",
+      "title": "Magisk v30.7",
+      "time_hint": "2026-02-23",
+      "published_at": "2026-02-23T08:07:01Z",
+      "source_url": "https://github.com/topjohnwu/Magisk/releases/tag/v30.7",
+      "raw_text": "Repository: topjohnwu/Magisk\nRelease: Magisk v30.7\nTag: v30.7; draft: False; prerelease: False; published_at: 2026-02-23T08:07:01Z; created_at: 2026-02-23T08:02:33Z\nRelease notes:\n- [MagiskInit] Support Android 16 QPR2 sepolicy format\n- [MagiskInit] Support using klogdump partition as pre-init storage\n- [Zygisk] Support Android 16 QPR2 and higher\n- [Zygisk] Support Android XR and some Nubia devices\n- [MagiskSU] Do not drop capabilities by default, even when switching to non-root UIDs. Explicitly use the `--drop-cap` argument to drop capabilities.\n- [MagiskBoot] Better lzma format detection\n- [MagiskBoot] Fix various commandline argument parsing bugs\n### Full Changelog: [here](https://topjohnwu.github.io/Magisk/changes.html)",
+      "memory_unit_text": "In the topjohnwu/Magisk release v30.7, MagiskInit supports Android 16 QPR2 sepolicy format and using klogdump partition as pre-init storage, Zygisk supports Android 16 QPR2 and higher as well as Android XR and some Nubia devices, MagiskSU no longer drops capabilities by default when switching to non-root UIDs (use --drop-cap explicitly), and MagiskBoot improves lzma format detection and fixes commandline argument parsing bugs."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the topjohnwu/Magisk releases, which release introduces Zygisk API v4 with a refined PLT function hook API?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v25.2"
+        },
+        {
+          "option_id": "B",
+          "text": "v26.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v27.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v28.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v26.0",
+      "source_chunk_ids": [
+        "topjohnwu__Magisk__release__v26_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "topjohnwu__Magisk__release__v26_0",
+          "answer_text": "Zygisk API v4 is now live! It comes with new features and a refined PLT function hook API."
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the topjohnwu/Magisk releases, how does the sepolicy.rule implementation change from v26.0 to v26.1?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v26.0 introduces a new pre-init partition detection mechanism, while v26.1 always prefers ext4 partitions over f2fs for pre-init partition selection."
+        },
+        {
+          "option_id": "B",
+          "text": "v26.0 removes sepolicy.rule support, while v26.1 restores it."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases use the same sepolicy.rule implementation without changes."
+        },
+        {
+          "option_id": "D",
+          "text": "v26.0 requires custom recovery installation, while v26.1 removes that requirement."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v26.0 introduces a new pre-init partition detection mechanism, while v26.1 always prefers ext4 partitions over f2fs for pre-init partition selection.",
+      "source_chunk_ids": [
+        "topjohnwu__Magisk__release__v26_0",
+        "topjohnwu__Magisk__release__v26_1"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "topjohnwu__Magisk__release__v26_0",
+          "answer_text": "a brand new pre-init partition detection mechanism has been designed"
+        },
+        {
+          "memory_node_id": "topjohnwu__Magisk__release__v26_1",
+          "answer_text": "Always prefer ext4 partitions over f2fs when selecting the pre-init partition"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the topjohnwu/Magisk release window, order the following release-content states from earliest to latest: (1) a release that adds support for downloading module zip files with XZ compression, (2) a release that introduces Zygisk API v4, (3) a release that migrates module implementation to Rust, (4) a release that supports installing Magisk into vendor_boot partition.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2 -> 1 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "1 -> 2 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 3 -> 1 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 2 -> 1 -> 3"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2 -> 1 -> 3 -> 4",
+      "source_chunk_ids": [
+        "topjohnwu__Magisk__release__v26_0",
+        "topjohnwu__Magisk__release__canary_28102",
+        "topjohnwu__Magisk__release__v30_0",
+        "topjohnwu__Magisk__release__v30_3"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "topjohnwu__Magisk__release__v26_0",
+          "answer_text": "Zygisk API v4 is now live"
+        },
+        {
+          "memory_node_id": "topjohnwu__Magisk__release__canary_28102",
+          "answer_text": "Support downloading module zip files with XZ compression"
+        },
+        {
+          "memory_node_id": "topjohnwu__Magisk__release__v30_0",
+          "answer_text": "Migrate module implementation to Rust"
+        },
+        {
+          "memory_node_id": "topjohnwu__Magisk__release__v30_3",
+          "answer_text": "Support installing Magisk into vendor_boot partition"
+        }
+      ]
+    }
+  ]
+}

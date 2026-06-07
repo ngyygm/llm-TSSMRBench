@@ -1,0 +1,530 @@
+{
+  "prototype_id": "jekyll__jekyll_release_window",
+  "domain": "github_release_evolution",
+  "repo": "jekyll/jekyll",
+  "source_type": "release_note",
+  "window_title": "jekyll/jekyll recent release evolution",
+  "window_summary": "This window tracks the recent jekyll/jekyll release stream from v3.8.0 through v4.4.1, covering major version jumps, security fixes, performance improvements, and feature additions across multiple minor and patch releases.",
+  "chunks": [
+    {
+      "memory_node_id": "jekyll__jekyll__release__v3_8_0",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.8.0",
+      "tag_name": "v3.8.0",
+      "title": "v3.8.0",
+      "time_hint": "2018-04-19",
+      "published_at": "2018-04-19T15:07:22Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v3.8.0",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v3.8.0\nTag: v3.8.0; draft: False; prerelease: False; published_at: 2018-04-19T15:07:22Z; created_at: 2018-04-19T15:07:12Z\nRelease notes:\n### Development Fixes\n* Move duplicate code to a single private method (#6593)\n* Test against Ruby 2.5 on AppVeyor (#6668)\n* Replace simple regex with a native Ruby method (#6732)\n* Codeclimate: exclude livereload.js (#6776)\n* Add a cucumber feature to test link tag (#6777)\n* Fix theme gem feature (#6784)\n* Replace simple regex with equivalent Ruby methods (#6736)\n* Rewrite `script/rubyprof` as a Ruby script (#6813)\n* Add debug output to theme rendering (#5195)\n* Fix minitest deprecation warning in test (#6839)\n* Memoize `Site#site_data` (#6809)\n* Memoize document output extension (#6814)\n* Access document permalink attribute efficiently (#6740)\n* Minimize array allocations in the `where` filter (#6860)\n* Bump JRuby (#6878)\n* Assert existence of &lt;collection&gt;.files (#6907)\n* Bump Rubocop to 0.54.x (#6915)\n* Regenerate unconditionally unless its an incremental build (#6917)\n* Centralize require statements (#6910)\n* Bump to Rubocop 0.55 (#6929)\n* Refactor private method `HighlightBlock#parse_options` (#6822)\n### Minor Enhancements\n* Two massive performance improvements for large sites (#6730)\n* Cache the list of documents to be written (#6741)\n* Allow Jekyll Doctor to detect stray posts dir (#6681)\n* Excerpt relative-path should match its path (#6597)\n* Remind user to resolve conflict in `jekyll new` with `--force` (#6801)\n* Memoize helper methods in site-cleaner (#6808)\n* Compute document&#39;s relative_path faster (#6767)\n* Create a single instance of PostReader per site (#6759)\n* Allow date filters to output ordinal days (#6773)\n* Change regex to sanitize and normalize filenames passed to LiquidRenderer (#6610)\n* Allow passing :strict_variables and :strict_filters options to Liquid&#39;s renderer (#6726)\n* Debug writing files during the build process (#6696)\n* Improve regex usage in `Tags::IncludeTag` (#6848)\n* Improve comment included in the starter index.md (#6916)\n* Store and retrieve converter instances for Jekyll::Filters via a hash (#6856)\n* Implement a cache within the `where` filter (#6868)\n* Store regexp in a constant (#6887)\n* Optimize computing filename in LiquidRenderer (#6841)\n### Documentation\n* Adding the jekyll-algolia plugin to the list of plugins (#6737)\n* Added Premonition plugin to list of plugins (#6750)\n* Add document on releasing a new version (#6745)\n* Mention Talkyard, a new commenting system for Jekyll and others. (#6752)\n* Add &#39;jekyll-fontello&#39; to plugins (#6757)\n* Install dh-autoreconf on Windows (#6765)\n* Fix common typos (#6764)\n* Fix documentation for `{{ page.excerpt }}` (#6779)\n* Update docs on permalink configuration (#6775)\n* Propose fix some typos (#6785)\n* Post: Say hello to Jekyll&#39;s New Lead Developer (#6790)\n* Add reference to Liquid to plugin docs (#6794)\n* Draft a release post for v3.7.3 (#6803)\n* Add missing step for gem-based theme conversion (#6802)\n* Update windows.md to explain an issue with jekyll new. (#6838)\n* Add Bundler Installation Instructions (#6828)\n* Describe difference between tags and categories (#6882)\n* Add `jekyll-random` plugin to docs (#6833)\n* Fixed typo in description of categories and tags (#6896)\n* Add missing ul-tag (#6897)\n* Add liquid tag plugin jekyll-onebox for html previews (#6898)\n* Add `jekyll-w2m` to plugins (#6855)\n* Fix tutorials navigation HTML (#6919)\n* Arch Linux installation troubleshoot (#6782)\n* Docs: Install Jekyll on macOS (#6881)\n* Fix CodeClimate badges [ci skip] (#6930)\n* Update index.md (#6933)\n### Site Enhancements\n* Remove links to Gists (#6751)\n* Always load Google Fonts over HTTPS (#6792)\n* Always load analytics.js over HTTPS (#6807)\n### Bug Fixes\n* Append appropriate closing tag to Liquid block in an excerpt ### -minor (#6724)\n* Bypass rendering via Liquid unless required (#6735)\n* Delegated methods after `private` keyword are meant to be priva...",
+      "memory_unit_text": "In the jekyll/jekyll release v3.8.0, the project delivers two massive performance improvements for large sites, caches the list of documents to be written, allows Jekyll Doctor to detect stray posts directories, ensures excerpt relative-path matches its path, reminds users to resolve conflicts in 'jekyll new' with --force, memoizes helper methods in site-cleaner, computes document relative_path faster, creates a single instance of PostReader per site, allows date filters to output ordinal days, changes regex to sanitize and normalize filenames passed to LiquidRenderer, allows passing :strict_variables and :strict_filters options to Liquid's renderer, debugs writing files during the build process, improves regex usage in Tags::IncludeTag, improves the comment in the starter index.md, stores and retrieves converter instances for Jekyll::Filters via a hash, implements a cache within the where filter, stores regexp in a constant, and optimizes computing filename in LiquidRenderer. Development fixes include moving duplicate code to a single private method, testing against Ruby 2.5 on AppVeyor, replacing simple regex with native Ruby methods, excluding livereload.js from Codeclimate, adding a cucumber feature to test link tag, fixing theme gem feature, rewriting script/rubyprof as a Ruby script, adding debug output to theme rendering, fixing minitest deprecation warning, memoizing Site#site_data, memoizing document output extension, accessing document permalink attribute efficiently, minimizing array allocations in the where filter, bumping JRuby, asserting existence of <collection>.files, bumping Rubocop to 0.54.x, regenerating unconditionally unless incremental build, centralizing require statements, bumping to Rubocop 0.55, and refactoring HighlightBlock#parse_options. Documentation adds several plugins and fixes various typos and instructions. Site enhancements remove links to Gists and enforce HTTPS for Google Fonts and analytics.js. Bug fixes append appropriate closing tag to Liquid block in an excerpt, bypass rendering via Liquid unless required, and ensure delegated methods after private keyword are meant to be private."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v3_8_1",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.8.1",
+      "tag_name": "v3.8.1",
+      "title": "v3.8.1",
+      "time_hint": "2018-05-01",
+      "published_at": "2018-05-01T20:16:39Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v3.8.1",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v3.8.1\nTag: v3.8.1; draft: False; prerelease: False; published_at: 2018-05-01T20:16:39Z; created_at: 2018-05-01T20:00:40Z\nRelease notes:\n### Bug Fixes\n* Fix rendering Liquid constructs in excerpts (#6945)\n* Liquify documents unless published == false (#6959)",
+      "memory_unit_text": "In the jekyll/jekyll release v3.8.1, the release fixes rendering of Liquid constructs in excerpts and ensures documents are liquified unless published is set to false."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v3_8_2",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.8.2",
+      "tag_name": "v3.8.2",
+      "title": "v3.8.2",
+      "time_hint": "2018-05-19",
+      "published_at": "2018-05-19T15:25:23Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v3.8.2",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v3.8.2\nTag: v3.8.2; draft: False; prerelease: False; published_at: 2018-05-19T15:25:23Z; created_at: 2018-05-19T15:30:00Z\nRelease notes:\n### Development Fixes\n* Update rubocop version (#7016)\n### Bug Fixes\n* Add whitespace control to LIQUID_TAG_REGEX (#7015)",
+      "memory_unit_text": "In the jekyll/jekyll release v3.8.2, the release updates the rubocop version and adds whitespace control to LIQUID_TAG_REGEX."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v3_8_3",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.8.3",
+      "tag_name": "v3.8.3",
+      "title": "v3.8.3",
+      "time_hint": "2018-06-05",
+      "published_at": "2018-06-05T14:27:42Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v3.8.3",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v3.8.3\nTag: v3.8.3; draft: False; prerelease: False; published_at: 2018-06-05T14:27:42Z; created_at: 2018-06-05T13:23:52Z\nRelease notes:\n### Bug Fixes\n* Fix --unpublished not affecting collection documents (#7027)",
+      "memory_unit_text": "In the jekyll/jekyll release v3.8.3, the release fixes the --unpublished flag not affecting collection documents."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v3_7_4",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.7.4",
+      "tag_name": "v3.7.4",
+      "title": "v3.7.4",
+      "time_hint": "2018-09-07",
+      "published_at": "2018-09-07T17:43:58Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v3.7.4",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v3.7.4\nTag: v3.7.4; draft: False; prerelease: False; published_at: 2018-09-07T17:43:58Z; created_at: 2018-09-07T17:36:55Z\nRelease notes:\n### Bug Fixes\n* Security: fix `include` bypass of EntryFilter#filter symlink check (https://github.com/jekyll/jekyll/pull/7224)",
+      "memory_unit_text": "In the jekyll/jekyll release v3.7.4, a security fix addresses an include bypass of EntryFilter#filter symlink check."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v3_8_4",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.8.4",
+      "tag_name": "v3.8.4",
+      "title": "v3.8.4",
+      "time_hint": "2018-09-18",
+      "published_at": "2018-09-18T21:53:37Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v3.8.4",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v3.8.4\nTag: v3.8.4; draft: False; prerelease: False; published_at: 2018-09-18T21:53:37Z; created_at: 2018-09-18T21:50:26Z\nRelease notes:\n## Bug Fixes\n* security: fix include bypass of EntryFilter#filter symlink check (#7228)",
+      "memory_unit_text": "In the jekyll/jekyll release v3.8.4, a security fix addresses an include bypass of EntryFilter#filter symlink check."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v3_8_5",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.8.5",
+      "tag_name": "v3.8.5",
+      "title": "v3.8.5",
+      "time_hint": "2018-11-04",
+      "published_at": "2018-11-04T20:24:33Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v3.8.5",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v3.8.5\nTag: v3.8.5; draft: False; prerelease: False; published_at: 2018-11-04T20:24:33Z; created_at: 2018-11-04T20:19:54Z\nRelease notes:\n## Bug Fixes\n* Re-implement handling Liquid blocks in excerpts (#7250)",
+      "memory_unit_text": "In the jekyll/jekyll release v3.8.5, the release re-implements handling of Liquid blocks in excerpts."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v4_0_0_pre_alpha1",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.0.pre.alpha1",
+      "tag_name": "v4.0.0.pre.alpha1",
+      "title": "v4.0.0.pre.alpha1",
+      "time_hint": "2019-03-19",
+      "published_at": "2019-03-19T07:05:21Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v4.0.0.pre.alpha1",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v4.0.0.pre.alpha1\nTag: v4.0.0.pre.alpha1; draft: False; prerelease: True; published_at: 2019-03-19T07:05:21Z; created_at: 2019-03-19T07:05:07Z\nRelease notes:\n### Major Enhancements\n* Drop ruby 2.3 (#7454)\n* Drop support for Ruby 2.1 and 2.2 (#6560)\n* Drop support for older versions of Rouge (#6978)\n* Drop support for pygments as syntax-highlighter (#7118)\n* Drop support for Redcarpet (#6987)\n* Drop support for rdiscount (#6988)\n* Drop support for `jekyll-watch-1.4.0` and older (#7287)\n* Incorporate `relative_url` filter in `link` tag (#6727)\n* Refactor `highlight` tag to behave like the `raw` tag (#6821)\n* Upgrade kramdown dependency to v2.x (#7492)\n* Upgrade i18n to v1.x (#6931)\n* Add `Jekyll::Cache` class to handle caching on disk (#7169)\n* Cache converted markdown (#7159)\n* Cache: Do not dump undumpable objects (#7190)\n* Cache matched defaults sets for given parameters (#6888)\n* Ignore cache directory (#7184)\n* Add `Site#in_cache_dir` helper method (#7160)\n* Remove &#39;cache_dir&#39; during `jekyll clean` (#7158)\n* Cache parsed Liquid templates in memory (#7136)\n* Only read layouts from source_dir or theme_dir (#6788)\n* Allow custom sorting of collection documents (#7427)\n* Always exclude certain paths from being processed (#7188)\n### Bug Fixes\n* Security: fix `include` bypass of `EntryFilter#filter` symlink check (#7226)\n* Theme gems: ensure directories aren&#39;t symlinks (#7419)\n* Add call to unused method `validate_options` in `commands/serve.rb` (#7122)\n* Check if scope applies to type before given path (#7263)\n* Document two methods, simplify one of the methods (#7270)\n* Check key in collections only if it isn&#39;t &#34;posts&#34; (#7277)\n* Interpolate Jekyll::Page subclass on inspection (#7203)\n* Measure the no. of times a template gets rendered (#7316)\n* Reduce array traversal in Jekyll::Reader (#7157)\n* Re-implement handling Liquid blocks in excerpts (#7250)\n* Documents should be able to render their date (#7404)\n* Fix Interpreter warning from Jekyll::Renderer (#7448)\n* Loggers should accept both numbers and symbols (#6967)\n* Replace regex arg to :gsub with a string arg (#7189)\n* Dont write static files from unrendered collection (#7410)\n* Excerpt handling of custom and intermediate tags (#7382)\n* Change future post loglevel to warn to help user narrow down issues (#7527)\n* Handle files with trailing dots in their basename (#7315)\n* Fix unnecessary allocations via StaticFileReader (#7572)\n* Don&#39;t check if site URL is absolute if it is nil (#7498)\n* Avoid unnecessary duplication of pages array (#7272)\n* Memoize Site#post_attr_hash (#7276)\n* Memoize Document#excerpt_separator (#7569)\n* Optimize Document::DATE_FILENAME_MATCHER to match valid filenames (#7292)\n* Escape valid special chars in a site&#39;s path name (#7568)\n* Replace `name` in Page#inspect with relative_path (#7434)\n* Log a warning when the slug is empty (#7357)\n* Push Markdown link refs to excerpt only as required (#7577)\n### Minor Enhancements\n* Enhance `--blank` scaffolding (#7310)\n* Fix custom 404 page for GitHub pages (#7132)\n* Load config file from within current theme-gem (#7304)\n* Use `jekyll-compose` if installed (#6932)\n* Suggest re-running command with `--trace` on fail (#6551)\n* Support for binary operators in where_exp filter (#6998)\n* Automatically load `_config.toml` (#7299)\n* Add vendor folder to a newly installed site&#39;s .gitignore (#6968)\n* Output Jekyll Version while debugging (#7173)\n* Memoize computing excerpt&#39;s relative_path (#6951)\n* Skip processing posts that can not be read (#7302)\n* Memoize the return value of Site#documents (#7273)\n* Cache globbed paths in front matter defaults (#7345)\n* Cache computed item property (#7301)\n* Cleanup Markdown converter (#7519)\n* Disable Liquid via front matter (#6824)\n* Do not process Liquid in post excerpt when disabled in front matter (#7146)\n* Liquefied link tag (#6269)\n* Update item_property to return numbers as numbers instead of strings (...",
+      "memory_unit_text": "In the jekyll/jekyll pre-release v4.0.0.pre.alpha1, major enhancements include dropping support for Ruby 2.3, 2.1, and 2.2, older versions of Rouge, pygments, Redcarpet, rdiscount, and jekyll-watch-1.4.0 and older; incorporating the relative_url filter in the link tag; refactoring the highlight tag to behave like the raw tag; upgrading kramdown to v2.x and i18n to v1.x; adding a Jekyll::Cache class for on-disk caching; caching converted markdown; ensuring cache does not dump undumpable objects; caching matched defaults sets; ignoring the cache directory; adding Site#in_cache_dir; removing cache_dir during jekyll clean; caching parsed Liquid templates in memory; only reading layouts from source_dir or theme_dir; allowing custom sorting of collection documents; and always excluding certain paths from processing. Bug fixes include a security fix for include bypass of EntryFilter#filter symlink check, ensuring theme gem directories aren't symlinks, adding call to unused method validate_options, checking if scope applies to type before given path, documenting two methods, checking key in collections only if not 'posts', interpolating Jekyll::Page subclass on inspection, measuring template render counts, reducing array traversal in Jekyll::Reader, re-implementing handling Liquid blocks in excerpts, enabling documents to render their date, fixing interpreter warning from Jekyll::Renderer, allowing loggers to accept numbers and symbols, replacing regex arg to gsub with a string arg, not writing static files from unrendered collection, handling excerpts of custom and intermediate tags, changing future post loglevel to warn, handling files with trailing dots in basename, fixing unnecessary allocations via StaticFileReader, not checking site URL if nil, avoiding unnecessary duplication of pages array, memoizing Site#post_attr_hash, memoizing Document#excerpt_separator, optimizing DATE_FILENAME_MATCHER, escaping valid special chars in site path name, replacing name in Page#inspect with relative_path, logging warning when slug is empty, and pushing Markdown link refs to excerpt only as required. Minor enhancements include enhancing --blank scaffolding, fixing custom 404 page for GitHub pages, loading config from current theme-gem, using jekyll-compose if installed, suggesting --trace on fail, supporting binary operators in where_exp filter, automatically loading _config.toml, adding vendor folder to .gitignore, outputting Jekyll version while debugging, memoizing excerpt relative_path, skipping unreadable posts, memoizing Site#documents, caching globbed paths in front matter defaults, caching computed item property, cleaning up Markdown converter, disabling Liquid via front matter, not processing Liquid in post excerpt when disabled, liquefied link tag, updating item_property to return numbers as numbers instead of strings, using .markdown extension for page templates, adding support for *.xhtml files, allowing i18n v0.9.5 and higher, ignoring permission error of /proc/version, stripping extra slashes via Jekyll.sanitized_path, removing default config for markdown in site template, adding custom inspect string for StaticFile objects, reminding user to include gem in Gemfile on error, searching front matter defaults for Page objects with relative_path, locking tzinfo to v1.x, utilizing absolute paths of user-provided file paths, detecting nil and empty values in objects with where filter, initializing mutations for Drops only if necessary, reducing array allocations via Jekyll::Cleaner, encoding and unencoding urls only as required, reducing string allocations, reducing allocations from Document instances, adding type attribute to Document instances, reducing allocations from where-filter, memoizing SiteDrop#documents, adding PathManager class, removing warnings for deprecated config, and delegating --profile tabulation to terminal-table."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v3_8_6",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.8.6",
+      "tag_name": "v3.8.6",
+      "title": "v3.8.6",
+      "time_hint": "2019-07-02",
+      "published_at": "2019-07-02T20:53:41Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v3.8.6",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v3.8.6\nTag: v3.8.6; draft: False; prerelease: False; published_at: 2019-07-02T20:53:41Z; created_at: 2019-07-02T20:53:35Z\nRelease notes:\n### Bug Fixes\n* Update log output for an invalid theme directory (#7734)\n* Memoize `SiteDrop#documents` to reduce allocations (#7722)\n* Excerpt handling of custom and intermediate tags (#7467)\n* Escape valid special chars in a site's path name (#7573)\n* Revert memoizing `Site#docs_to_write` and refactor `#documents` (#7689)\n* Fix broken `include_relative` usage in excerpt (#7690)\n* Install platform-specific gems as required (3c06609406)\n### Security Fixes\n* Theme gems: ensure directories aren't symlinks (#7424)",
+      "memory_unit_text": "In the jekyll/jekyll release v3.8.6, bug fixes include updating log output for an invalid theme directory, memoizing SiteDrop#documents to reduce allocations, handling excerpts of custom and intermediate tags, escaping valid special chars in a site's path name, reverting memoizing Site#docs_to_write and refactoring #documents, fixing broken include_relative usage in excerpt, and installing platform-specific gems as required. A security fix ensures theme gem directories aren't symlinks."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v4_0_0_pre_beta1",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.0.pre.beta1",
+      "tag_name": "v4.0.0.pre.beta1",
+      "title": "v4.0.0.pre.beta1",
+      "time_hint": "2019-08-04",
+      "published_at": "2019-08-04T18:21:41Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v4.0.0.pre.beta1",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v4.0.0.pre.beta1\nTag: v4.0.0.pre.beta1; draft: False; prerelease: True; published_at: 2019-08-04T18:21:41Z; created_at: 2019-08-04T18:21:33Z\nRelease notes:\n### Major Enhancements\n* Drop ruby 2.3 (#7454)\n* Drop support for Ruby 2.1 and 2.2 (#6560)\n* Drop support for older versions of Rouge (#6978)\n* Drop support for pygments as syntax-highlighter (#7118)\n* Drop support for Redcarpet (#6987)\n* Drop support for rdiscount (#6988)\n* Drop support for `jekyll-watch-1.4.0` and older (#7287)\n* Incorporate `relative_url` filter in `link` tag (#6727)\n* Upgrade kramdown dependency to v2.x (#7492)\n* Upgrade i18n to v1.x (#6931)\n* Add `Jekyll::Cache` class to handle caching on disk (#7169)\n* Cache converted markdown (#7159)\n* Cache: Do not dump undumpable objects (#7190)\n* Cache matched defaults sets for given parameters (#6888)\n* Ignore cache directory (#7184)\n* Add `Site#in_cache_dir` helper method (#7160)\n* Remove &#39;cache_dir&#39; during `jekyll clean` (#7158)\n* Cache parsed Liquid templates in memory (#7136)\n* Only read layouts from source_dir or theme_dir (#6788)\n* Allow custom sorting of collection documents (#7427)\n* Always exclude certain paths from being processed (#7188)\n* Remove Jekyll::Utils#strip_heredoc in favor of a Ruby &gt; 2.3 built in (#7584)\n* Incorporate `relative_url` within `post_url` tag (#7589)\n* Remove patch to modify config for kramdown (#7699)\n### Bug Fixes\n* Security: fix `include` bypass of `EntryFilter#filter` symlink check (#7226)\n* Theme gems: ensure directories aren&#39;t symlinks (#7419)\n* Add call to unused method `validate_options` in `commands/serve.rb` (#7122)\n* Check if scope applies to type before given path (#7263)\n* Document two methods, simplify one of the methods (#7270)\n* Check key in collections only if it isn&#39;t &#34;posts&#34; (#7277)\n* Interpolate Jekyll::Page subclass on inspection (#7203)\n* Measure the no. of times a template gets rendered (#7316)\n* Reduce array traversal in Jekyll::Reader (#7157)\n* Re-implement handling Liquid blocks in excerpts (#7250)\n* Documents should be able to render their date (#7404)\n* Fix Interpreter warning from Jekyll::Renderer (#7448)\n* Loggers should accept both numbers and symbols (#6967)\n* Replace regex arg to :gsub with a string arg (#7189)\n* Dont write static files from unrendered collection (#7410)\n* Excerpt handling of custom and intermediate tags (#7382)\n* Change future post loglevel to warn to help user narrow down issues (#7527)\n* Handle files with trailing dots in their basename (#7315)\n* Fix unnecessary allocations via StaticFileReader (#7572)\n* Don&#39;t check if site URL is absolute if it is nil (#7498)\n* Avoid unnecessary duplication of pages array (#7272)\n* Memoize Site#post_attr_hash (#7276)\n* Memoize Document#excerpt_separator (#7569)\n* Optimize Document::DATE_FILENAME_MATCHER to match valid filenames (#7292)\n* Escape valid special chars in a site&#39;s path name (#7568)\n* Replace `name` in Page#inspect with relative_path (#7434)\n* Log a warning when the slug is empty (#7357)\n* Push Markdown link refs to excerpt only as required (#7577)\n* Fix broken include_relative usage in excerpt (#7633)\n* Initialize and reset glob_cache only as necessary (#7658)\n* Revert memoizing Site#docs_to_write and #documents (#7684)\n* Backport #7684 for v3.8.x: Revert memoizing Site#docs_to_write and refactor #documents (#7689)\n* Backport #7213 and #7633 for v3.8.x: Fix broken include_relative usage in excerpt (#7690)\n* Don&#39;t read symlinks in site.include in safe mode (#7711)\n* Replace `String#=~` with `String#match?` (#7723)\n* Update log output for an invalid theme directory (#7679)\n### Minor Enhancements\n* Enhance `--blank` scaffolding (#7310)\n* Fix custom 404 page for GitHub pages (#7132)\n* Load config file from within current theme-gem (#7304)\n* Use `jekyll-compose` if installed (#6932)\n* Suggest re-running command with `--trace` on fail (#6551)\n* Support for binary operators in where_exp filter (#6998)\n* Automatic...",
+      "memory_unit_text": "In the jekyll/jekyll pre-release v4.0.0.pre.beta1, major enhancements include dropping Ruby 2.3, 2.1, and 2.2, older versions of Rouge, pygments, Redcarpet, rdiscount, and jekyll-watch-1.4.0 and older; incorporating relative_url filter in link tag; upgrading kramdown to v2.x and i18n to v1.x; adding Jekyll::Cache class; caching converted markdown; not dumping undumpable objects; caching matched defaults; ignoring cache directory; adding Site#in_cache_dir; removing cache_dir during jekyll clean; caching parsed Liquid templates; only reading layouts from source_dir or theme_dir; allowing custom sorting of collection documents; always excluding certain paths; removing Jekyll::Utils#strip_heredoc in favor of Ruby > 2.3 built-in; incorporating relative_url within post_url tag; and removing patch to modify config for kramdown. Bug fixes include security fix for include bypass of EntryFilter#filter symlink check, ensuring theme gem directories aren't symlinks, adding call to unused method validate_options, checking if scope applies to type before given path, documenting two methods, checking key in collections only if not 'posts', interpolating Jekyll::Page subclass on inspection, measuring template render counts, reducing array traversal in Jekyll::Reader, re-implementing handling Liquid blocks in excerpts, enabling documents to render their date, fixing interpreter warning from Jekyll::Renderer, allowing loggers to accept numbers and symbols, replacing regex arg to gsub with a string arg, not writing static files from unrendered collection, handling excerpts of custom and intermediate tags, changing future post loglevel to warn, handling files with trailing dots in basename, fixing unnecessary allocations via StaticFileReader, not checking site URL if nil, avoiding unnecessary duplication of pages array, memoizing Site#post_attr_hash, memoizing Document#excerpt_separator, optimizing DATE_FILENAME_MATCHER, escaping valid special chars in site path name, replacing name in Page#inspect with relative_path, logging warning when slug is empty, pushing Markdown link refs to excerpt only as required, fixing broken include_relative usage in excerpt, initializing and resetting glob_cache only as necessary, reverting memoizing Site#docs_to_write and #documents, backporting #7684 and #7213/#7633 for v3.8.x, not reading symlinks in site.include in safe mode, replacing String#=~ with String#match?, and updating log output for an invalid theme directory. Minor enhancements include enhancing --blank scaffolding, fixing custom 404 page for GitHub pages, loading config from current theme-gem, using jekyll-compose if installed, suggesting --trace on fail, supporting binary operators in where_exp filter, automatically loading _config.toml, adding vendor folder to .gitignore, outputting Jekyll version while debugging, memoizing excerpt relative_path, skipping unreadable posts, memoizing Site#documents, caching globbed paths in front matter defaults, caching computed item property, cleaning up Markdown converter, disabling Liquid via front matter, not processing Liquid in post excerpt when disabled, liquefied link tag, updating item_property to return numbers as numbers instead of strings, using .markdown extension for page templates, adding support for *.xhtml files, allowing i18n v0.9.5 and higher, ignoring permission error of /proc/version, stripping extra slashes via Jekyll.sanitized_path, removing default config for markdown in site template, adding custom inspect string for StaticFile objects, reminding user to include gem in Gemfile on error, searching front matter defaults for Page objects with relative_path, locking tzinfo to v1.x, utilizing absolute paths of user-provided file paths, detecting nil and empty values in objects with where filter, initializing mutations for Drops only if necessary, reducing array allocations via Jekyll::Cleaner, encoding and unencoding urls only as required, reducing string allocations, reducing allocations from Document instances, adding type attribute to Document instances, reducing allocations from where-filter, memoizing SiteDrop#documents, adding PathManager class, removing warnings for deprecated config, and delegating --profile tabulation to terminal-table."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v4_0_0",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.0",
+      "tag_name": "v4.0.0",
+      "title": "v4.0.0",
+      "time_hint": "2019-08-20",
+      "published_at": "2019-08-20T14:48:12Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v4.0.0",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v4.0.0\nTag: v4.0.0; draft: False; prerelease: False; published_at: 2019-08-20T14:48:12Z; created_at: 2019-08-20T14:48:04Z\nRelease notes:\n### Major Enhancements\n* Drop ruby 2.3 (#7454)\n* Drop support for Ruby 2.1 and 2.2 (#6560)\n* Drop support for older versions of Rouge (#6978)\n* Drop support for pygments as syntax-highlighter (#7118)\n* Drop support for Redcarpet (#6987)\n* Drop support for rdiscount (#6988)\n* Drop support for `jekyll-watch-1.4.0` and older (#7287)\n* Incorporate `relative_url` filter in `link` tag (#6727)\n* Upgrade kramdown dependency to v2.x (#7492)\n* Upgrade jekyll-sass-converter to v2.x - Sassc + sourcemaps (#7778)\n* Upgrade i18n to v1.x (#6931)\n* Add `Jekyll::Cache` class to handle caching on disk (#7169)\n* Cache converted markdown (#7159)\n* Cache: Do not dump undumpable objects (#7190)\n* Cache matched defaults sets for given parameters (#6888)\n* Ignore cache directory (#7184)\n* Add `Site#in_cache_dir` helper method (#7160)\n* Remove &#39;cache_dir&#39; during `jekyll clean` (#7158)\n* Cache parsed Liquid templates in memory (#7136)\n* Only read layouts from source_dir or theme_dir (#6788)\n* Allow custom sorting of collection documents (#7427)\n* Always exclude certain paths from being processed (#7188)\n* Remove Jekyll::Utils#strip_heredoc in favor of a Ruby &gt; 2.3 built in (#7584)\n* Incorporate `relative_url` within `post_url` tag (#7589)\n* Remove patch to modify config for kramdown (#7699)\n### Minor Enhancements\n* Enhance `--blank` scaffolding (#7310)\n* Use `jekyll-compose` if installed (#6932)\n* Disable Liquid via front matter (#6824)\n* Configure cache_dir (#7232)\n* ISO week date drops (#5981)\n* Fix custom 404 page for GitHub pages (#7132)\n* Load config file from within current theme-gem (#7304)\n* Suggest re-running command with `--trace` on fail (#6551)\n* Support for binary operators in where_exp filter (#6998)\n* Automatically load `_config.toml` (#7299)\n* Add vendor folder to a newly installed site&#39;s .gitignore (#6968)\n* Output Jekyll Version while debugging (#7173)\n* Memoize computing excerpt&#39;s relative_path (#6951)\n* Skip processing posts that can not be read (#7302)\n* Memoize the return value of Site#documents (#7273)\n* Cache globbed paths in front matter defaults (#7345)\n* Cache computed item property (#7301)\n* Cleanup Markdown converter (#7519)\n* Do not process Liquid in post excerpt when disabled in front matter (#7146)\n* Liquefied link tag (#6269)\n* Update item_property to return numbers as numbers instead of strings (#6608)\n* Use `.markdown` extension for page templates (#7126)\n* Add support for `*.xhtml` files (#6854)\n* Allow i18n v0.9.5 and higher (#7044)\n* Ignore permission error of /proc/version (#7267)\n* Strip extra slashes via `Jekyll.sanitized_path` (#7182)\n* Site template: remove default config for markdown (#7285)\n* Add a custom inspect string for StaticFile objects (#7422)\n* Remind user to include gem in the Gemfile on error (#7476)\n* Search Front matter defaults for Page objects with relative_path (#7261)\n* Lock use of `tzinfo` gem to v1.x (#7521, #7562)\n* Utilize absolute paths of user-provided file paths (#7450)\n* Detect `nil` and empty values in objects with `where` filter (#7580)\n* Initialize mutations for Drops only if necessary (#7657)\n* Reduce Array allocations via Jekyll::Cleaner (#7659)\n* Encode and unencode urls only as required (#7654)\n* Reduce string allocations with better alternatives (#7643)\n* Reduce allocations from Jekyll::Document instances (#7625)\n* Add `type` attribute to Document instances (#7406)\n* Reduce allocations from where-filter (#7653)\n* Memoize SiteDrop#documents to reduce allocations (#7697)\n* Add PathManager class to cache interim paths (#7732)\n* Remove warnings and fixes for deprecated config (#7440)\n* Delegate --profile tabulation to `terminal-table` (#7627)\n### Bug Fixes\n* Security: fix `include` bypass of `EntryFilter#filter` symlink check (#7226)\n* Theme gems: ensure directories aren&#39;t symlinks (#741...",
+      "memory_unit_text": "In the jekyll/jekyll release v4.0.0, major enhancements include dropping Ruby 2.3, 2.1, and 2.2, older versions of Rouge, pygments, Redcarpet, rdiscount, and jekyll-watch-1.4.0 and older; incorporating relative_url filter in link tag; upgrading kramdown to v2.x, jekyll-sass-converter to v2.x with Sassc and sourcemaps, and i18n to v1.x; adding Jekyll::Cache class; caching converted markdown; not dumping undumpable objects; caching matched defaults; ignoring cache directory; adding Site#in_cache_dir; removing cache_dir during jekyll clean; caching parsed Liquid templates; only reading layouts from source_dir or theme_dir; allowing custom sorting of collection documents; always excluding certain paths; removing Jekyll::Utils#strip_heredoc in favor of Ruby > 2.3 built-in; incorporating relative_url within post_url tag; and removing patch to modify config for kramdown. Minor enhancements include enhancing --blank scaffolding, using jekyll-compose if installed, disabling Liquid via front matter, configuring cache_dir, ISO week date drops, fixing custom 404 page for GitHub pages, loading config from current theme-gem, suggesting --trace on fail, supporting binary operators in where_exp filter, automatically loading _config.toml, adding vendor folder to .gitignore, outputting Jekyll version while debugging, memoizing excerpt relative_path, skipping unreadable posts, memoizing Site#documents, caching globbed paths in front matter defaults, caching computed item property, cleaning up Markdown converter, not processing Liquid in post excerpt when disabled, liquefied link tag, updating item_property to return numbers as numbers instead of strings, using .markdown extension for page templates, adding support for *.xhtml files, allowing i18n v0.9.5 and higher, ignoring permission error of /proc/version, stripping extra slashes via Jekyll.sanitized_path, removing default config for markdown in site template, adding custom inspect string for StaticFile objects, reminding user to include gem in Gemfile on error, searching front matter defaults for Page objects with relative_path, locking tzinfo to v1.x, utilizing absolute paths of user-provided file paths, detecting nil and empty values in objects with where filter, initializing mutations for Drops only if necessary, reducing array allocations via Jekyll::Cleaner, encoding and unencoding urls only as required, reducing string allocations, reducing allocations from Document instances, adding type attribute to Document instances, reducing allocations from where-filter, memoizing SiteDrop#documents, adding PathManager class, removing warnings for deprecated config, and delegating --profile tabulation to terminal-table. Bug fixes include security fix for include bypass of EntryFilter#filter symlink check, ensuring theme gem directories aren't symlinks, and various other fixes."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v3_8_7",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.8.7",
+      "tag_name": "v3.8.7",
+      "title": "v3.8.7",
+      "time_hint": "2020-05-08",
+      "published_at": "2020-05-08T15:21:16Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v3.8.7",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v3.8.7\nTag: v3.8.7; draft: False; prerelease: False; published_at: 2020-05-08T15:21:16Z; created_at: 2020-05-08T14:55:07Z\nRelease notes:\n## Fixes\n- Prevent console warnings with Ruby 2.7 (#7948)",
+      "memory_unit_text": "In the jekyll/jekyll release v3.8.7, the release prevents console warnings with Ruby 2.7."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v4_0_1",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.1",
+      "tag_name": "v4.0.1",
+      "title": "v4.0.1",
+      "time_hint": "2020-05-08",
+      "published_at": "2020-05-08T15:24:10Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v4.0.1",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v4.0.1\nTag: v4.0.1; draft: False; prerelease: False; published_at: 2020-05-08T15:24:10Z; created_at: 2020-05-08T15:00:08Z\nRelease notes:\n## Bug Fixes\n- Prevent console warnings with Ruby 2.7 (#8124)\n- Clear cached Liquid template scope before render (#8141)\n- Add static file's basename to its url_placeholder (#8142)\n- Update item_property to recognize integers (#8160)\n## Development Fixes\n- Fix Kramdown converter based tests for v4.0.x (#8143)",
+      "memory_unit_text": "In the jekyll/jekyll release v4.0.1, bug fixes include preventing console warnings with Ruby 2.7, clearing cached Liquid template scope before render, adding static file's basename to its url_placeholder, and updating item_property to recognize integers. Development fixes include fixing Kramdown converter based tests for v4.0.x."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v4_1_0",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.0",
+      "tag_name": "v4.1.0",
+      "title": "v4.1.0",
+      "time_hint": "2020-05-27",
+      "published_at": "2020-05-27T13:41:04Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v4.1.0",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v4.1.0\nTag: v4.1.0; draft: False; prerelease: False; published_at: 2020-05-27T13:41:04Z; created_at: 2020-05-27T10:53:29Z\nRelease notes:\n### Minor Enhancements\n* serve: add support for ECC certificates (#7768)\n* Update item_property to recognize integers (#7878)\n* Include _config.yml in a new theme&#39;s gemspec (#7865)\n* Add an option to easily disable disk-cache (#7928)\n* Optimize markdown parsing with Kramdown by reusing the options and parser objects (#8013)\n* Add PageDrop to provide Liquid templates with data (#7992)\n* Optimize `Kramdown::JekyllDocument#to_html` calls (#8041)\n* Reduce Jekyll::Renderer instances during a build (#7570)\n* Configure default language for syntax-highlighting (#8035)\n* Remove dev dependencies from new theme-gem gemspec (#8042)\n* Allow disabling import of theme configuration (#8131)\n* Allow excerpts to be generated for Page objects (#7642)\n* Profile various stages of a site&#39;s build process (#6760)\n* Add find filters to optimize where-first chains (#8171)\n* Make number_of_words respect CJK characters (#7813)\n* Initialize static files&#39; data hash only if needed (#8188)\n### Bug Fixes\n* Memoize absolute_url and relative_url filters (#7793)\n* Fix documentation comment for Jekyll::Converters::Identity (#7883)\n* Optimize Jekyll::Filters#item_property (#7696)\n* Allow multiple binary operators in where_exp filter (#8047)\n* Fix documents custom-ordering logic (#8028)\n* Use `layout.path` when rendering the Liquid layout (#8069)\n* Reduce array allocations from `StaticFile#path` (#8083)\n* Simplify `Jekyll::Renderer#validate_layout` (#8064)\n* Add static file&#39;s basename to its url_placeholder (#7908)\n* Clear cached Liquid template scope before render (#7967)\n* Add slugified_categories URL placeholder (#8094)\n* Cache URLFilter results of string inputs per site (#7990)\n* Use platforms instead of install_if (#8140)\n* Config include trailing slash (#8113)\n* Allow extensionless document in a strict site (#7950)\n* Improve path normalization in liquid_renderer (#8075)\n* Switch slugify regex to support more Unicode character groups (#8167)\n* Check if entry is a directory once per enumerator (#8177)\n* Filter out exclusively excluded entries sooner (#7482)",
+      "memory_unit_text": "In the jekyll/jekyll release v4.1.0, minor enhancements include adding support for ECC certificates in serve, updating item_property to recognize integers, including _config.yml in a new theme's gemspec, adding an option to easily disable disk-cache, optimizing markdown parsing with Kramdown by reusing options and parser objects, adding PageDrop to provide Liquid templates with data, optimizing Kramdown::JekyllDocument#to_html calls, reducing Jekyll::Renderer instances during a build, configuring default language for syntax-highlighting, removing dev dependencies from new theme-gem gemspec, allowing disabling import of theme configuration, allowing excerpts to be generated for Page objects, profiling various stages of a site's build process, adding find filters to optimize where-first chains, making number_of_words respect CJK characters, and initializing static files' data hash only if needed. Bug fixes include memoizing absolute_url and relative_url filters, fixing documentation comment for Jekyll::Converters::Identity, optimizing Jekyll::Filters#item_property, allowing multiple binary operators in where_exp filter, fixing documents custom-ordering logic, using layout.path when rendering the Liquid layout, reducing array allocations from StaticFile#path, simplifying Jekyll::Renderer#validate_layout, adding static file's basename to its url_placeholder, clearing cached Liquid template scope before render, adding slugified_categories URL placeholder, caching URLFilter results of string inputs per site, using platforms instead of install_if, fixing config include trailing slash, allowing extensionless document in a strict site, improving path normalization in liquid_renderer, switching slugify regex to support more Unicode character groups, checking if entry is a directory once per enumerator, and filtering out exclusively excluded entries sooner."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v4_1_1",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.1.1",
+      "tag_name": "v4.1.1",
+      "title": "v4.1.1",
+      "time_hint": "2020-06-24",
+      "published_at": "2020-06-24T16:58:00Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v4.1.1",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v4.1.1\nTag: v4.1.1; draft: False; prerelease: False; published_at: 2020-06-24T16:58:00Z; created_at: 2020-06-24T16:57:46Z\nRelease notes:\n* Fix grammar in documentation section (#8265)\n### Development Fixes\n* Bump RuboCop to v0.85.x (#8223)\n* Expect drive letter only on vanilla windows (#8227)\n### Bug Fixes\n* Disable page excerpts by default (#8222)\n* Revert introduction of PageDrop (#8221)\n* Don&#39;t generate excerpts for non-html pages (#8234)\n* Make page excerpts consistent with doc excerpts (#8236)\n### Documentation\n* Replace deprecated &#39;show&#39; command with &#39;info&#39; (#8235)\n* Change name to ▲Vercel (#8247)\n* Add language and examples to describe how to use the configuration op… (#8249)\n* Fix missing yaml front matter colon and adjust/add clarifying language. (#8250)\n* correct typo (#8261)\n* Allow hyperlinks to specific filter documentation (#8231)\n* Update link to Netlify step-by-step guide (#8264)\n### Site Enhancements\n* Including correct Sketch website (#8241)\n* Release post for v4.1.1 (#8243)",
+      "memory_unit_text": "In the jekyll/jekyll release v4.1.1, bug fixes include disabling page excerpts by default, reverting introduction of PageDrop, not generating excerpts for non-html pages, and making page excerpts consistent with doc excerpts. Development fixes include bumping RuboCop to v0.85.x and expecting drive letter only on vanilla windows. Documentation fixes grammar, replaces deprecated 'show' command with 'info', changes name to Vercel, adds language and examples for configuration options, fixes missing yaml front matter colon, corrects typo, allows hyperlinks to specific filter documentation, and updates link to Netlify step-by-step guide. Site enhancements include correcting Sketch website and a release post for v4.1.1."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v3_9_0",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.9.0",
+      "tag_name": "v3.9.0",
+      "title": "v3.9.0",
+      "time_hint": "2020-08-05",
+      "published_at": "2020-08-05T18:48:12Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v3.9.0",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v3.9.0\nTag: v3.9.0; draft: False; prerelease: False; published_at: 2020-08-05T18:48:12Z; created_at: 2020-08-05T18:48:04Z\nRelease notes:\n### Minor Enhancements\n* Allow use of kramdown v2 (#8322)\n* Add default language for kramdown syntax highlighting (#8325)",
+      "memory_unit_text": "In the jekyll/jekyll release v3.9.0, minor enhancements include allowing use of kramdown v2 and adding default language for kramdown syntax highlighting."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v4_2_0",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.2.0",
+      "tag_name": "v4.2.0",
+      "title": "v4.2.0",
+      "time_hint": "2020-12-14",
+      "published_at": "2020-12-14T12:32:03Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v4.2.0",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v4.2.0\nTag: v4.2.0; draft: False; prerelease: False; published_at: 2020-12-14T12:32:03Z; created_at: 2020-12-14T12:31:52Z\nRelease notes:\n### Minor Enhancements\n* Warn on command-line with permalink conflict (#8342)\n* Supress warning issued for redirect pages (#8347)\n* Enhance detection of conflicting destination URLs (#8459)\n* Add `:post_convert` hook to modify HTML content before layout (#8368)\n* Allow triggering `:post_convert` events atomically (#8465)\n* Debug reading Page and Layout objects (#8100)\n* Do not reset `site.url` to `http://localhost:4000` by default (#7253)\n* Add custom debug strings for Jekyll objects (#8473)\n* Debug reading data files in a site (#8481)\n### Bug Fixes\n* Replace nested conditional with guard clauses (#8294)\n* Fix: security bump (#8349)\n* Fix path matching regex in post_url Liquid tag (#8375)\n* Enable `Performance/ChainArrayAllocation` cop (#8404)\n* Enable Lint/NoReturnInBeginEndBlocks Cop (#8457)\n* Generate items from `site.include` list only once (#8463)\n* Explicitly return nil after site process phase (#8472)\n### Optimization Fixes\n* Implement custom delegators for drop methods (#8183)\n* Handle `nil` argument to `Jekyll.sanitized_path` (#8415)\n* Cache `Jekyll.sanitized_path` (#8424)\n* Memoize array of drop getter method names (#8421)\n* Reduce string allocations from the `link` tag (#8387)\n* Optimize parsing of parameters in `include` tag (#8192)\n* Stash documents `write?` attribute in a variable (#8389)\n* Reduce string allocations from generating doc URLs (#8392)\n* Check if site is in incremental mode optimally (#8401)\n* Utilize flexibility of `Site#in_dest_dir` (#8403)\n* Reduce allocations from rendering item as liquid (#8406)\n* Compute relative_path of pages using PathManager (#8408)\n* Reduce allocation from `normalize_whitespace` filter (#8400)\n* Use `Regexp#match?` when `MatchData` is not required (#8427)\n* Check default front matter scope against symbols (#8393)\n* Stash frequently used `Drop` setter keys for reuse (#8394)\n* Memoize defaults computed for Convertibles (#8451)\n* Reduce array allocations from merging categories (#8453)\n* Memoize destination of pages, documents and staticfiles (#8458)\n* Reduce allocations from computing item property (#8485)\n* Optimize `Page#dir` with a private method (#8489)\n* Stash attribute hash for Liquid computed for pages (#8497)\n### Development Fixes\n* Update cucumber gem to version 4.1 (#8278)\n* Move permalink styles data to constant (#8282)\n* Update rubocop gem to 0.87.1 (#8287)\n* Update RuboCop to-do file (#8296)\n* Fix `rake console` generating LoadError (#8312)\n* Configure Performance cops (#8369)\n* Update rubocop gem to 0.90.0 (#8313)\n* Refactor `Jekyll::Utils::Platforms` (#7236)\n* Bump RuboCop to v0.91.x (#8391)\n* Add workflow to build and profile third-party repo (#8398)\n* Bump RuboCop to v0.92.x\n* Update cucumber gem version to 5.1.2 (#8413)\n* Fix test suite compatibility with JRuby (#8418)\n* chore(deps): bump Rubocop to 0.93.0 (#8430)\n* Use Ruby 2.7.1 in GitHub Actions (#8444)\n* Test that Liquid expressions are not deeply evaled (#8292)\n* Test rendering arbitrary Liquid variables by default (#7414)\n* Migrate TravisCI jobs to GitHub Actions (#8492)\n### Documentation\n* Update pointer to special permalink variables for collections (#8274)\n* Fix special treatment for &#39;page 1&#39; in docs of pagination (#8230)\n* Add Formcake to forms section (#8283)\n* Add a note on the rendering process in the docs (#8291)\n* Add refactoring type to PULL_REQUEST_TEMPLATE (#8297)\n* Update resources.md (#7864)\n* Extra apostrophes in an URL (#8319)\n* Clarify target of subordinate clause (#8320)\n* Cherry-pick commits from conflicting branch `docs-40`\n* Update documentation on third party site (#8352)\n* Update default.md with info requested in #8314 (#8353)\n* Clarify description of `safe` option (#8354)\n* Simplifying the Git post-receive hook-example (#8358)\n* Add missing doc for build and serve commands (#8365)\n* Docs Review: Get...",
+      "memory_unit_text": "In the jekyll/jekyll release v4.2.0, minor enhancements include warning on command-line with permalink conflict, suppressing warning for redirect pages, enhancing detection of conflicting destination URLs, adding :post_convert hook to modify HTML content before layout, allowing triggering :post_convert events atomically, debugging reading Page and Layout objects, not resetting site.url to http://localhost:4000 by default, adding custom debug strings for Jekyll objects, and debugging reading data files in a site. Bug fixes include replacing nested conditional with guard clauses, a security bump, fixing path matching regex in post_url Liquid tag, enabling Performance/ChainArrayAllocation cop, enabling Lint/NoReturnInBeginEndBlocks Cop, generating items from site.include list only once, and explicitly returning nil after site process phase. Optimization fixes include implementing custom delegators for drop methods, handling nil argument to Jekyll.sanitized_path, caching Jekyll.sanitized_path, memoizing array of drop getter method names, reducing string allocations from the link tag, optimizing parsing of parameters in include tag, stashing documents write? attribute in a variable, reducing string allocations from generating doc URLs, checking if site is in incremental mode optimally, utilizing flexibility of Site#in_dest_dir, reducing allocations from rendering item as liquid, computing relative_path of pages using PathManager, reducing allocation from normalize_whitespace filter, using Regexp#match? when MatchData is not required, checking default front matter scope against symbols, stashing frequently used Drop setter keys for reuse, memoizing defaults computed for Convertibles, reducing array allocations from merging categories, memoizing destination of pages, documents and staticfiles, reducing allocations from computing item property, optimizing Page#dir with a private method, and stashing attribute hash for Liquid computed for pages. Development fixes include updating cucumber gem to version 4.1, moving permalink styles data to constant, updating rubocop gem to 0.87.1, updating RuboCop to-do file, fixing rake console generating LoadError, configuring Performance cops, updating rubocop gem to 0.90.0, refactoring Jekyll::Utils::Platforms, bumping RuboCop to v0.91.x, adding workflow to build and profile third-party repo, bumping RuboCop to v0.92.x, updating cucumber gem version to 5.1.2, fixing test suite compatibility with JRuby, bumping Rubocop to 0.93.0, using Ruby 2.7.1 in GitHub Actions, testing that Liquid expressions are not deeply evaled, testing rendering arbitrary Liquid variables by default, and migrating TravisCI jobs to GitHub Actions. Documentation updates include various fixes and additions."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v3_9_1",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.9.1",
+      "tag_name": "v3.9.1",
+      "title": "v3.9.1",
+      "time_hint": "2021-04-08",
+      "published_at": "2021-04-08T15:39:17Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v3.9.1",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v3.9.1\nTag: v3.9.1; draft: False; prerelease: False; published_at: 2021-04-08T15:39:17Z; created_at: 2021-04-08T14:50:38Z\nRelease notes:\n### Bug Fixes\n* Backport #8618 for v3.9.x: Update include tag to be more permissive (#8629)",
+      "memory_unit_text": "In the jekyll/jekyll release v3.9.1, a bug fix backports #8618 for v3.9.x to update the include tag to be more permissive."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v4_2_1",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.2.1",
+      "tag_name": "v4.2.1",
+      "title": "v4.2.1",
+      "time_hint": "2021-09-27",
+      "published_at": "2021-09-27T11:26:31Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v4.2.1",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v4.2.1\nTag: v4.2.1; draft: False; prerelease: False; published_at: 2021-09-27T11:26:31Z; created_at: 2021-09-27T10:55:58Z\nRelease notes:\n### Bug Fixes\n* Backport #8620 for v4.2.x: Revert #7253: \"Don't reset site.url to localhost:4000 by default\" (#8808)\n* Backport #8756 for v4.2.x: Respect collections_dir config within include tag (#8794)\n* Backport #8786 for v4.2.x: Fix regression in Convertible module from v4.2.0 (#8793)",
+      "memory_unit_text": "In the jekyll/jekyll release v4.2.1, bug fixes include backporting #8620 for v4.2.x to revert #7253: 'Don't reset site.url to localhost:4000 by default', backporting #8756 for v4.2.x to respect collections_dir config within include tag, and backporting #8786 for v4.2.x to fix regression in Convertible module from v4.2.0."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v4_2_2",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.2.2",
+      "tag_name": "v4.2.2",
+      "title": "v4.2.2",
+      "time_hint": "2022-03-03",
+      "published_at": "2022-03-03T11:01:53Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v4.2.2",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v4.2.2\nTag: v4.2.2; draft: False; prerelease: False; published_at: 2022-03-03T11:01:53Z; created_at: 2022-03-03T10:47:38Z\nRelease notes:\n### Bug Fixes\n* Lock `http_parser.rb` gem to `v0.6.x` on JRuby.\n### Development Fixes\n* Backport #8830 for v4.2.x: Add a workflow to build gems consistently (#8869)\n* Lock `rubocop-performance` to `v1.11.x`.",
+      "memory_unit_text": "In the jekyll/jekyll release v4.2.2, a bug fix locks the http_parser.rb gem to v0.6.x on JRuby. Development fixes include backporting #8830 for v4.2.x to add a workflow to build gems consistently and locking rubocop-performance to v1.11.x."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v3_9_2",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.9.2",
+      "tag_name": "v3.9.2",
+      "title": "v3.9.2",
+      "time_hint": "2022-03-28",
+      "published_at": "2022-03-28T10:26:54Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v3.9.2",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v3.9.2\nTag: v3.9.2; draft: False; prerelease: False; published_at: 2022-03-28T10:26:54Z; created_at: 2022-03-27T20:24:44Z\nRelease notes:\n### Bug Fixes\n* Lock `http_parser.rb` gem to `v0.6.x` on JRuby (#8943)\n* Backport #8756 for v3.9.x: Respect collections_dir config within include tag (#8795)\n* Backport #8965 for v3.9.x: Fix response header for content served via `jekyll serve` (#8976)\n### Development Fixes\n* Update and fix CI for `3.9-stable` on Ruby 3.x (#8942)\n* Fix CI for commits to `3.9-stable` branch (#8788)",
+      "memory_unit_text": "In the jekyll/jekyll release v3.9.2, bug fixes include locking http_parser.rb gem to v0.6.x on JRuby, backporting #8756 for v3.9.x to respect collections_dir config within include tag, and backporting #8965 for v3.9.x to fix response header for content served via jekyll serve. Development fixes include updating and fixing CI for 3.9-stable on Ruby 3.x and fixing CI for commits to 3.9-stable branch."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v4_3_0",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.3.0",
+      "tag_name": "v4.3.0",
+      "title": "v4.3.0",
+      "time_hint": "2022-10-20",
+      "published_at": "2022-10-20T16:05:01Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v4.3.0",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v4.3.0\nTag: v4.3.0; draft: False; prerelease: False; published_at: 2022-10-20T16:05:01Z; created_at: 2022-10-20T16:04:57Z\nRelease notes:\n### Minor Enhancements\n* Add webrick as a dependency (#8524)\n* Regenerate supported mime types (#8542)\n* Update include tag to be more permissive (#8618)\n* Optimize `Jekyll::Utils.parse_date` (#8425)\n* Update rubocop from 1.12 to 1.18 and min ruby from 2.4 to 2.5 (#8741)\n* Always hide cache-dir contents from Git (#8798)\n* Remove the warning about auto-regeneration on Windows (#8821)\n* Propagate _data folder from theme (#8815)\n* Support both tzinfo v1 and v2 alongwith non-half hour offsets. (#8880)\n* Run vendor-mimes to update mime.types (#8940)\n* Expose collection static files via `site.static_files` (#8961)\n* Expose `basename` from `document.rb` as `name` to Liquid templates (#8761)\n* Allow Configurable Converters on CSV (#8858)\n* Introduce `theme` drop to expose theme-gem details (#9129)\n* Relax version constraint to allow Rouge 4.x (#9134)\n* Incrementally rebuild when a data file is changed (#8771)\n* Support jekyll-sass-converter 3.x (#9132)\n### Bug Fixes\n* fix: pin rubocop to 1.12 due to error with ruby 2.4 (#8651)\n* Load Jekyll plugins from BUNDLE_GEMFILE location (#8585)\n* fix(security):  CVE-2021-28834 (#8680)\n* Inject livereload script using `location.protocol` instead of `http:` (#8718)\n* Respect collections_dir config within include tag (#8756)\n* Fix regression in Convertible module from v4.2.0  (#8786)\n* Revert #7253: &#34;Don&#39;t reset site.url to localhost:4000 by default&#34; (#8620)\n* Improve readability of CI logs (#8877)\n* Fix deprecation message for missing doc method (#8960)\n* Fix response header for content served via `jekyll serve` (#8965)\n* Trigger livereload in sites without pages (#8337)\n* Only enable BOM encoding option on UTF encodings (#8363)\n* Ensure theme config is a `Jekyll::Configuration` object (#8988)\n* Remove misleading totals row from `--profile` table (#9039)\n* Unlock Psych dependency (#9135)\n* Fix false positive conflicts for static files in a collection (#9141)\n### Development Fixes\n* style: enable new cops (#8538)\n* Allow dependabot to keep github actions up-to-date (#8540)\n* Update actions/cache requirement to v2.1.3 (#8543)\n* Pin rubocop version (#8564)\n* style: add rubocop 1.9 cops (#8567)\n* Cross Version Testing Locally and Faster CI (#8610)\n* Use official Ruby setup GH action (#8614)\n* Spell check action for markdown documentation (#8675)\n* Update expect to cover docs/_posts (#8677)\n* Bump check-spelling/check-spelling from 0.0.18 to 0.0.19 (#8740)\n* Enable Rubocop accessor grouping, fix existing offenses (#8293)\n* Tags:Highlight: Decomposed HTMLLegacy formatter (#8623)\n* Relax Rubocop Dependency (#8831)\n* Add a workflow to build gems consistently (#8830)\n* Fix random test failures in TestExcerpt #to_liquid (#8884)\n* Lock gem `psych` to `v3.x` (#8918)\n* Fix typo in Bug Report template (#8951)\n* Check symlink outside site_source without Pathutil (#9015)\n* Stop testing with Rubies older than 2.7 on non-Windows  (#8955)\n* Bump actions/checkout from 2 to 3 (#8986)\n* Remove git.io shortlinks from repo (#9045)\n* Bump rubocop to 1.32 (#9093)\n* Bump RuboCop to `1.36.x` (#9125)\n* Use check-spelling/check-spelling@v0.0.20 (#9111)\n* Disable pending cops when running rubocop (#9136)\n* Relax RDoc version dependency (#9142)\n### Documentation\n* typo - do instead of don&#39;t (#8518)\n* Document support for TSV files consistently (#8488)\n* Add a disclaimer to tutorials involving Ruby code (#8525)\n* Improve documentation on developing generators (#8527)\n* Fixes typo in layouts_dir documentation (#8532)\n* Fix i.e. typos in collections.md (#8529)\n* Remove GitHub Pages content which is in GitHub docs (#8533)\n* Step By Step Instructions Review (#8399)\n* Fix typo in migrating from 3.0 to 4.0 page (#8572)\n* Fix for important missing step in macOS Installation Docs: Add the Homebrew gems directory to the PATH (#8496)\n* Use latest Jeky...",
+      "memory_unit_text": "In the jekyll/jekyll release v4.3.0, minor enhancements include adding webrick as a dependency, regenerating supported mime types, updating include tag to be more permissive, optimizing Jekyll::Utils.parse_date, updating rubocop from 1.12 to 1.18 and min ruby from 2.4 to 2.5, always hiding cache-dir contents from Git, removing the warning about auto-regeneration on Windows, propagating _data folder from theme, supporting both tzinfo v1 and v2 along with non-half hour offsets, running vendor-mimes to update mime.types, exposing collection static files via site.static_files, exposing basename from document.rb as name to Liquid templates, allowing Configurable Converters on CSV, introducing theme drop to expose theme-gem details, relaxing version constraint to allow Rouge 4.x, incrementally rebuilding when a data file is changed, and supporting jekyll-sass-converter 3.x. Bug fixes include pinning rubocop to 1.12 due to error with ruby 2.4, loading Jekyll plugins from BUNDLE_GEMFILE location, fixing CVE-2021-28834, injecting livereload script using location.protocol instead of http:, respecting collections_dir config within include tag, fixing regression in Convertible module from v4.2.0, reverting #7253: 'Don't reset site.url to localhost:4000 by default', improving readability of CI logs, fixing deprecation message for missing doc method, fixing response header for content served via jekyll serve, triggering livereload in sites without pages, only enabling BOM encoding option on UTF encodings, ensuring theme config is a Jekyll::Configuration object, removing misleading totals row from --profile table, unlocking Psych dependency, and fixing false positive conflicts for static files in a collection. Development fixes include various style, CI, and testing updates. Documentation includes numerous fixes and additions."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v4_3_1",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.3.1",
+      "tag_name": "v4.3.1",
+      "title": "v4.3.1",
+      "time_hint": "2022-10-26",
+      "published_at": "2022-10-26T17:57:10Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v4.3.1",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v4.3.1\nTag: v4.3.1; draft: False; prerelease: False; published_at: 2022-10-26T17:57:10Z; created_at: 2022-10-26T17:57:08Z\nRelease notes:\n### Bug Fixes\n* Respect user-defined name attribute in documents (#9167)\n* Revert &#34;Incrementally rebuild when a data file is changed&#34; (#9170)\n### Documentation\n* Release post for v4.3.1 (#9171)",
+      "memory_unit_text": "In the jekyll/jekyll release v4.3.1, bug fixes include respecting user-defined name attribute in documents and reverting 'Incrementally rebuild when a data file is changed'. Documentation includes a release post for v4.3.1."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v4_3_2",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.3.2",
+      "tag_name": "v4.3.2",
+      "title": "v4.3.2",
+      "time_hint": "2023-01-20",
+      "published_at": "2023-01-20T18:13:22Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v4.3.2",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v4.3.2\nTag: v4.3.2; draft: False; prerelease: False; published_at: 2023-01-20T18:13:22Z; created_at: 2023-01-20T18:10:15Z\nRelease notes:\n### Bug Fixes\n* Backport #9257 for v4.3.x: Rename sass partial created for new blank site (#9262)\n* Backport #9187 for v4.3.x: Optimize `Site#each_site_file` (#9256)\n* Backport #9186 for v4.3.x: Remove totals in profile table properly (#9255)\n### Development Fixes\n* Backport #9223 for 4.3.x: Update sass related tests for jekyll-sass-converter 3.x (#9254)",
+      "memory_unit_text": "In the jekyll/jekyll release v4.3.2, bug fixes include backporting #9257 for v4.3.x to rename sass partial created for new blank site, backporting #9187 for v4.3.x to optimize Site#each_site_file, and backporting #9186 for v4.3.x to remove totals in profile table properly. Development fixes include backporting #9223 for 4.3.x to update sass related tests for jekyll-sass-converter 3.x."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v3_9_3",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.9.3",
+      "tag_name": "v3.9.3",
+      "title": "v3.9.3",
+      "time_hint": "2023-01-30",
+      "published_at": "2023-01-30T02:39:43Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v3.9.3",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v3.9.3\nTag: v3.9.3; draft: False; prerelease: False; published_at: 2023-01-30T02:39:43Z; created_at: 2023-01-30T02:31:02Z\nRelease notes:\n### Bug Fixes\n* 3.9.x: Support i18n 1.x (#9269)\n* Backport #8880 for v3.9.x: Support both tzinfo v1 and v2 alongwith\nnon-half hour offsets (#9280)\n### Development Fixes\n* v3.9.x: test under Ruby 3.2 #9272)\n* v3.9.x: fix rdiscount test (#9277)",
+      "memory_unit_text": "In the jekyll/jekyll release v3.9.3, bug fixes include supporting i18n 1.x and backporting #8880 for v3.9.x to support both tzinfo v1 and v2 along with non-half hour offsets. Development fixes include testing under Ruby 3.2 and fixing rdiscount test."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v4_3_3",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.3.3",
+      "tag_name": "v4.3.3",
+      "title": "v4.3.3",
+      "time_hint": "2023-12-27",
+      "published_at": "2023-12-27T19:20:38Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v4.3.3",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v4.3.3\nTag: v4.3.3; draft: False; prerelease: False; published_at: 2023-12-27T19:20:38Z; created_at: 2023-12-27T18:29:19Z\nRelease notes:\n### Bug Fixes\n* Backport #9392 for v4.3.x: Fix backward compatibility issues in the Logger (#9510)\n### Development Fixes\n* Backport #9237 for v4.3.x: Use Hash explicitly for Struct initializer (#9285)",
+      "memory_unit_text": "In the jekyll/jekyll release v4.3.3, a bug fix backports #9392 for v4.3.x to fix backward compatibility issues in the Logger. A development fix backports #9237 for v4.3.x to use Hash explicitly for Struct initializer."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v3_9_4",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.9.4",
+      "tag_name": "v3.9.4",
+      "title": "v3.9.4",
+      "time_hint": "2023-12-28",
+      "published_at": "2023-12-28T22:51:37Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v3.9.4",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v3.9.4\nTag: v3.9.4; draft: False; prerelease: False; published_at: 2023-12-28T22:51:37Z; created_at: 2023-12-28T22:48:01Z\nRelease notes:\n### Bug Fixes\n* Backport #9392 for v3.9.x: Add support for Ruby 3.3 Logger (#9513)",
+      "memory_unit_text": "In the jekyll/jekyll release v3.9.4, a bug fix backports #9392 for v3.9.x to add support for Ruby 3.3 Logger."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v4_3_4",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.3.4",
+      "tag_name": "v4.3.4",
+      "title": "v4.3.4",
+      "time_hint": "2024-09-16",
+      "published_at": "2024-09-16T16:24:42Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v4.3.4",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v4.3.4\nTag: v4.3.4; draft: False; prerelease: False; published_at: 2024-09-16T16:24:42Z; created_at: 2024-09-16T16:07:03Z\nRelease notes:\n## Bug Fixes\n* Backport #9662 for v4.3.x: Relax version constraint on wdm in new Gemfile (#9683)\n* Backport #9680 for v4.3.x: Render theme-gem root only in development (#9684)\n## Development Fixes\n* Sync workflows with counterparts on `master` (#9681)",
+      "memory_unit_text": "In the jekyll/jekyll release v4.3.4, bug fixes include backporting #9662 for v4.3.x to relax version constraint on wdm in new Gemfile and backporting #9680 for v4.3.x to render theme-gem root only in development. Development fixes include syncing workflows with counterparts on master."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v4_4_0",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.4.0",
+      "tag_name": "v4.4.0",
+      "title": "v4.4.0",
+      "time_hint": "2025-01-27",
+      "published_at": "2025-01-27T15:28:23Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v4.4.0",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v4.4.0\nTag: v4.4.0; draft: False; prerelease: False; published_at: 2025-01-27T15:28:23Z; created_at: 2025-01-27T15:28:21Z\nRelease notes:\n### Minor Enhancements\n* Allow marking specific highlighted lines via Liquid (#9138)\n* Add gem `csv` to runtime dependency list (#9522)\n* Bump the minimum ruby version to 2.7 (#9525)\n* Acknowledge `livereload_port` from site config too (#9606)\n* Add gem `base64` as runtime dependency (#9740)\n* Add gem `json` as runtime_dependency (#9671)\n* Remove unnecessary constraint on gem `mercenary` (#9758)\n### Bug Fixes\n* Optimize default front matter using `File.fnmatch?` (#9185)\n* Remove totals in profile table properly (#9186)\n* Optimize `Site#each_site_file` (#9187)\n* Rename sass partial created for new blank site (#9257)\n* Fix `jekyll serve --detach` with jekyll-sass-converter 3.x (#9304)\n* Handle TypeError from `where` filter gracefully (#9292)\n* Add support for upcoming logger 1.4.3 (#9392)\n* Fix typo in devcontainer.json (#9364)\n* Correct rubocop lint errors (#9600)\n* Fix inexistent layout warning for the default 404 page (#9589)\n* Relax version constraint on `wdm` in new Gemfile (#9662)\n* Fix `--livereload-ignore` option (#9570)\n* Render theme-gem root only in development (#9680)\n### Development Fixes\n* Cleanup highlight tag (#9177)\n* Run tests in utc (#9168)\n* Lock Ruby in CI to v3.1.2 and bump JRuby to v9.4.0.0 (#9196)\n* Update sass related tests for jekyll-sass-converter 3.x (#9223)\n* Split `test/test_tags.rb` into multiple files (#9230)\n* test: use hash explicitly for Struct initializer for ruby 3.2 (#9237)\n* script/default-site: accept flags for `jekyll new` (#9259)\n* Bump check-spelling/check-spelling from 0.0.20 to 0.0.21 (#9205)\n* Use check-spelling/check-spelling@v0.0.21 (#9199)\n* Bump RuboCop to v1.45.x (#9305)\n* Bump Rubocop to version 1.48.x (#9326)\n* Bump versions of ruby &amp; nodejs in devcontainer (#9360)\n* Bump rubocop version to 1.52.x (#9361)\n* Upgrade RuboCop to 1.54 (#9401)\n* Add CodeQL workflow (#9397)\n* Bump actions/checkout from 3 to 4 (#9442)\n* Test suite uses shoulda-context only. (#9441)\n* Keep activesupport at version 7.0.x (#9469)\n* Bump Rubocop to 1.56.4 (#9459)\n* Configure dependabot to handle rubygems dependencies (#9445)\n* Update rubocop gem (#9476)\n* Fix Performance/StringIdentifierArgument violation in site.rb and allow activesupport 6 for windows tests (#9512)\n* Add a few more emeritus team members (#9535)\n* Make custom cop inherit `RuboCop::Cop::Base` (#9597)\n* CI: Use JRuby 9.4.8.0 (#9654)\n* Stop testing with Cucumber on JRuby (#9661)\n* Windows CI on GitHub Actions (#9659)\n* Run GitHub Actions only if needed (#9664)\n* Format `.rubocop.yml` via a rake task (#9687)\n* Configure some new cops (#9688)\n* Fix expected markup per WAI-ARIA requirements (#9737)\n* Add an optional `:rdoc` group of gems (#9742)\n* Test `inspect` filter with custom object (#9743)\n* Bump cucumber to v9 (#9747)\n* Add Ruby 3.4 to CI matrix (#9740)\n* Remove unnecessary runtime dependency (#9753)\n* Bump `check-spelling/check-spelling` action (#9756)\n### Documentation\n* Fix Nested tree navigation with recursion example (#9174)\n* Fix typo on website (#9203)\n* Publish post on major release of sass-converter (#9225)\n* Update Jekyll on macOS (macos.md) and current ruby version to 3.1.3 in ruby.yml (#9195)\n* Add release post for v4.3.2 (#9263)\n* Grammatical reordering in  3-to-4 upgrading docs (#9245)\n* fixed grammatical mistake on &#34;showcase&#34; page (#9264)\n* Mark `highlight` `mark_lines` feature as 4.4 in docs (#9184)\n* Add v3.9.3 release history &amp; post to `master` branch (#9284)\n* Update S3 deployment to remove s3_website (#9221)\n* Document Exclude behavior, Include overrides and the default exclusion list (#9376)\n* Update macos.md, remove Catalina (macOS 10.15) (#9405)\n* Update macos.md, add support for Ventura (#9406)\n* Typo fix - update to hooks and 3rd party deployment and one other article (#9411)\n* Update 07-assets.md (#9393)\n* Mention the fron...",
+      "memory_unit_text": "In the jekyll/jekyll release v4.4.0, minor enhancements include allowing marking specific highlighted lines via Liquid, adding gem csv to runtime dependency list, bumping the minimum ruby version to 2.7, acknowledging livereload_port from site config too, adding gem base64 as runtime dependency, adding gem json as runtime_dependency, and removing unnecessary constraint on gem mercenary. Bug fixes include optimizing default front matter using File.fnmatch?, removing totals in profile table properly, optimizing Site#each_site_file, renaming sass partial created for new blank site, fixing jekyll serve --detach with jekyll-sass-converter 3.x, handling TypeError from where filter gracefully, adding support for upcoming logger 1.4.3, fixing typo in devcontainer.json, correcting rubocop lint errors, fixing inexistent layout warning for the default 404 page, relaxing version constraint on wdm in new Gemfile, fixing --livereload-ignore option, and rendering theme-gem root only in development. Development fixes include cleanup highlight tag, running tests in utc, locking Ruby in CI to v3.1.2 and bumping JRuby to v9.4.0.0, updating sass related tests for jekyll-sass-converter 3.x, splitting test/test_tags.rb into multiple files, using hash explicitly for Struct initializer for ruby 3.2, accepting flags for jekyll new in script/default-site, bumping check-spelling/check-spelling, bumping RuboCop to v1.45.x, v1.48.x, v1.52.x, v1.54, v1.56.4, and later versions, adding CodeQL workflow, bumping actions/checkout from 3 to 4, using shoulda-context only, keeping activesupport at version 7.0.x, configuring dependabot, fixing Performance/StringIdentifierArgument violation, adding emeritus team members, making custom cop inherit RuboCop::Cop::Base, using JRuby 9.4.8.0, stopping testing with Cucumber on JRuby, Windows CI on GitHub Actions, running GitHub Actions only if needed, formatting .rubocop.yml via a rake task, configuring new cops, fixing expected markup per WAI-ARIA requirements, adding an optional :rdoc group of gems, testing inspect filter with custom object, bumping cucumber to v9, adding Ruby 3.4 to CI matrix, removing unnecessary runtime dependency, and bumping check-spelling/check-spelling action. Documentation includes various updates and fixes."
+    },
+    {
+      "memory_node_id": "jekyll__jekyll__release__v4_4_1",
+      "repo": "jekyll/jekyll",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.4.1",
+      "tag_name": "v4.4.1",
+      "title": "v4.4.1",
+      "time_hint": "2025-01-29",
+      "published_at": "2025-01-29T12:47:41Z",
+      "source_url": "https://github.com/jekyll/jekyll/releases/tag/v4.4.1",
+      "raw_text": "Repository: jekyll/jekyll\nRelease: v4.4.1\nTag: v4.4.1; draft: False; prerelease: False; published_at: 2025-01-29T12:47:41Z; created_at: 2025-01-29T12:47:39Z\nRelease notes:\n### Bug Fixes\n* Restore globbed path behavior in front matter defaults (#9762)",
+      "memory_unit_text": "In the jekyll/jekyll release v4.4.1, a bug fix restores globbed path behavior in front matter defaults."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the jekyll/jekyll releases, which release adds the :post_convert hook to modify HTML content before layout?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v4.1.0"
+        },
+        {
+          "option_id": "B",
+          "text": "v4.2.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v4.3.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v4.4.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v4.2.0",
+      "source_chunk_ids": [
+        "jekyll__jekyll__release__v4_2_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "jekyll__jekyll__release__v4_2_0",
+          "answer_text": "adding :post_convert hook to modify HTML content before layout"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the jekyll/jekyll releases, how does the handling of Liquid blocks in excerpts differ between v3.8.5 and v4.0.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v3.8.5 re-implements handling Liquid blocks in excerpts, while v4.0.0 does not mention this change."
+        },
+        {
+          "option_id": "B",
+          "text": "v3.8.5 removes Liquid block handling from excerpts, while v4.0.0 adds it back."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases introduce the same Liquid block handling in excerpts."
+        },
+        {
+          "option_id": "D",
+          "text": "v3.8.5 disables Liquid in excerpts, while v4.0.0 enables it by default."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v3.8.5 re-implements handling Liquid blocks in excerpts, while v4.0.0 does not mention this change.",
+      "source_chunk_ids": [
+        "jekyll__jekyll__release__v3_8_5",
+        "jekyll__jekyll__release__v4_0_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "jekyll__jekyll__release__v3_8_5",
+          "answer_text": "re-implements handling Liquid blocks in excerpts"
+        },
+        {
+          "memory_node_id": "jekyll__jekyll__release__v4_0_0",
+          "answer_text": "no mention of re-implementing handling Liquid blocks in excerpts"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the jekyll/jekyll release window, order the following release-content states from earliest to latest: (1) a release that prevents console warnings with Ruby 2.7, (2) a release that adds webrick as a dependency, (3) a release that bumps the minimum ruby version to 2.7, (4) a release that restores globbed path behavior in front matter defaults.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "jekyll__jekyll__release__v3_8_7",
+        "jekyll__jekyll__release__v4_3_0",
+        "jekyll__jekyll__release__v4_4_0",
+        "jekyll__jekyll__release__v4_4_1"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "jekyll__jekyll__release__v3_8_7",
+          "answer_text": "prevents console warnings with Ruby 2.7"
+        },
+        {
+          "memory_node_id": "jekyll__jekyll__release__v4_3_0",
+          "answer_text": "adds webrick as a dependency"
+        },
+        {
+          "memory_node_id": "jekyll__jekyll__release__v4_4_0",
+          "answer_text": "bumps the minimum ruby version to 2.7"
+        },
+        {
+          "memory_node_id": "jekyll__jekyll__release__v4_4_1",
+          "answer_text": "restores globbed path behavior in front matter defaults"
+        }
+      ]
+    }
+  ]
+}

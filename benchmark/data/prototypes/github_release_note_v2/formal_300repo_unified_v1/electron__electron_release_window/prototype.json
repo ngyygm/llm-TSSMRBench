@@ -1,0 +1,525 @@
+{
+  "prototype_id": "electron__electron_release_window",
+  "domain": "github_release_evolution",
+  "repo": "electron/electron",
+  "source_type": "release_note",
+  "window_title": "electron/electron recent release evolution",
+  "window_summary": "This window tracks the recent electron/electron release stream across stable and pre-release versions, including v39, v40, v41, v42, and v43 alpha releases. It captures feature additions, bug fixes, security backports, and breaking changes as the project evolves.",
+  "chunks": [
+    {
+      "memory_node_id": "electron__electron__release__v40_9_2",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v40.9.2",
+      "tag_name": "v40.9.2",
+      "title": "electron v40.9.2",
+      "time_hint": "2026-04-21",
+      "published_at": "2026-04-21T22:36:07Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v40.9.2",
+      "raw_text": "Repository: electron/electron\nRelease: electron v40.9.2\nTag: v40.9.2; draft: False; prerelease: False; published_at: 2026-04-21T22:36:07Z; created_at: 2026-04-21T18:21:44Z\nRelease notes:\n# Release Notes for v40.9.2\n## Fixes\n* Fixed an issue where `nodeIntegrationInWorker` didn't always work in AudioWorklet. [#51004](https://github.com/electron/electron/pull/51004) <sup>(Also in [41](https://github.com/electron/electron/pull/51006), [42](https://github.com/electron/electron/pull/51005))</sup>\n* Fixed bug that could occasionally cause browserWindow's `always-on-top-changed` even to fire with incorrect values. [#51134](https://github.com/electron/electron/pull/51134) <sup>(Also in [41](https://github.com/electron/electron/pull/51135), [42](https://github.com/electron/electron/pull/51133))</sup>\n* Fixed test scaffolding bug when running tests locally on Linux. [#51151](https://github.com/electron/electron/pull/51151) <sup>(Also in [41](https://github.com/electron/electron/pull/51150), [42](https://github.com/electron/electron/pull/51149))</sup>\n## Other Changes\n* Fixed `gn gen` failing to resolve `electron_version` when building from a `git worktree` checkout. [#51164](https://github.com/electron/electron/pull/51164) <sup>(Also in [39](https://github.com/electron/electron/pull/51163), [41](https://github.com/electron/electron/pull/51165), [42](https://github.com/electron/electron/pull/51166))</sup>\n* Security: backported fixes for CVE-2026-6297, CVE-2026-6299, CVE-2026-6358, CVE-2026-6359, CVE-2026-6300, CVE-2026-6303, CVE-2026-6308, CVE-2026-6309, CVE-2026-6360, CVE-2026-6311, CVE-2026-6313, CVE-2026-6314, CVE-2026-6316, CVE-2026-6362, CVE-2026-6301, CVE-2026-6307, CVE-2026-6363, CVE-2026-6298, CVE-2026-6304, CVE-2026-6364, CVE-2026-6296, CVE-2026-6305, CVE-2026-6306, CVE-2026-6361, CVE-2026-6302, CVE-2026-6318. [#51139](https://github.com/electron/electron/pull/51139)",
+      "memory_unit_text": "In the electron/electron release v40.9.2, fixes include resolving an issue where nodeIntegrationInWorker did not always work in AudioWorklet, correcting a bug that could cause browserWindow's always-on-top-changed event to fire with incorrect values, and fixing a test scaffolding bug when running tests locally on Linux. Other changes include fixing gn gen failing to resolve electron_version when building from a git worktree checkout, and backporting security fixes for multiple CVEs."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v41_3_0",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v41.3.0",
+      "tag_name": "v41.3.0",
+      "title": "electron v41.3.0",
+      "time_hint": "2026-04-22",
+      "published_at": "2026-04-22T23:06:30Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v41.3.0",
+      "raw_text": "Repository: electron/electron\nRelease: electron v41.3.0\nTag: v41.3.0; draft: False; prerelease: False; published_at: 2026-04-22T23:06:30Z; created_at: 2026-04-22T21:04:18Z\nRelease notes:\n# Release Notes for v41.3.0\n## Fixes\n* Fixed `webContents.printToPDF` rejecting on all subsequent calls after a prior call was rejected with an invalid `pageRanges` value. [#51221](https://github.com/electron/electron/pull/51221) <sup>(Also in [40](https://github.com/electron/electron/pull/51220), [42](https://github.com/electron/electron/pull/51222))</sup>\n* Fixed an issue where `app-region: drag` inside a hidden `WebContentsView` would still drag the parent window on Windows. [#51246](https://github.com/electron/electron/pull/51246) <sup>(Also in [40](https://github.com/electron/electron/pull/51247), [42](https://github.com/electron/electron/pull/51245))</sup>\n* Fixed an issue where an Electron macOS update would not be applied if another app was previously blocking the macOS system update loop. [#51210](https://github.com/electron/electron/pull/51210) <sup>(Also in [40](https://github.com/electron/electron/pull/51211), [42](https://github.com/electron/electron/pull/51212))</sup>\n* Fixed build failure when building with `enable_pdf` disabled. [#51248](https://github.com/electron/electron/pull/51248) <sup>(Also in [42](https://github.com/electron/electron/pull/50846))</sup>\n* Fixed frameless transparent windows on Windows losing their transparency after `setResizable(false)` followed by `setResizable(true)`. [#51217](https://github.com/electron/electron/pull/51217) <sup>(Also in [42](https://github.com/electron/electron/pull/51218))</sup>\n## Other Changes\n* Updated Node.js to v24.15.0. [#51088](https://github.com/electron/electron/pull/51088)",
+      "memory_unit_text": "In the electron/electron release v41.3.0, fixes include resolving webContents.printToPDF rejecting on subsequent calls after a prior rejection with invalid pageRanges, preventing app-region: drag inside a hidden WebContentsView from dragging the parent window on Windows, ensuring Electron macOS updates apply even if another app blocked the system update loop, fixing a build failure when building with enable_pdf disabled, and correcting frameless transparent windows on Windows losing transparency after setResizable(false) followed by setResizable(true). Other changes update Node.js to v24.15.0."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v42_0_0_beta_7",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v42.0.0-beta.7",
+      "tag_name": "v42.0.0-beta.7",
+      "title": "electron v42.0.0-beta.7",
+      "time_hint": "2026-04-29",
+      "published_at": "2026-04-29T22:42:55Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v42.0.0-beta.7",
+      "raw_text": "Repository: electron/electron\nRelease: electron v42.0.0-beta.7\nTag: v42.0.0-beta.7; draft: False; prerelease: True; published_at: 2026-04-29T22:42:55Z; created_at: 2026-04-29T20:06:55Z\nRelease notes:\nNote: This is a beta release.  Please file new issues for any bugs you find in it.\nThis release is published to npm under the beta tag and can be installed via `npm install electron@beta`, or `npm install electron@42.0.0-beta.7`.\n# Release Notes for v42.0.0-beta.7\n## Features\n* Added JS stack trace to crash reports on renderer OOM. [#50911](https://github.com/electron/electron/pull/50911)\n* Added `Notification.getHistory()` for macOS, allowing developers to restore all delivered notifications still present in Notification Center. [#51123](https://github.com/electron/electron/pull/51123)\n* Added support for heap profiling via `contentTracing.enableHeapProfiling()`. [#51162](https://github.com/electron/electron/pull/51162) <sup>(Also in [41](https://github.com/electron/electron/pull/51178))</sup>\n* Added support for importing shared textures using the nv16 pixel format. [#51187](https://github.com/electron/electron/pull/51187)\n## Fixes\n* Ensured cross-origin `fetch()` and XHR are blocked for custom protocols registered with `supportFetchAPI: true` unless `corsEnabled: true` is also set; cross-origin `mode: 'no-cors'` requests now receive an opaque response. [#51269](https://github.com/electron/electron/pull/51269) <sup>(Also in [39](https://github.com/electron/electron/pull/51272), [40](https://github.com/electron/electron/pull/51271), [41](https://github.com/electron/electron/pull/51270))</sup>\n* Fixed `webContents.printToPDF` rejecting on all subsequent calls after a prior call was rejected with an invalid `pageRanges` value. [#51222](https://github.com/electron/electron/pull/51222) <sup>(Also in [40](https://github.com/electron/electron/pull/51220), [41](https://github.com/electron/electron/pull/51221))</sup>\n* Fixed a  crash when providing invalid HTTP header names or values in the `webRequest.onBeforeSendHeaders()` callback. [#51366](https://github.com/electron/electron/pull/51366) <sup>(Also in [40](https://github.com/electron/electron/pull/51364), [41](https://github.com/electron/electron/pull/51365))</sup>\n* Fixed a crash that could occur when an autofill suggestion popup was shown while a window was closing. [#51317](https://github.com/electron/electron/pull/51317) <sup>(Also in [41](https://github.com/electron/electron/pull/51321))</sup>\n* Fixed a regression on Windows where frameless windows changed their size after calling `setResizable`. [#51296](https://github.com/electron/electron/pull/51296)\n* Fixed a regression where frameless fullscreen windows had white borders on Windows. [#51331](https://github.com/electron/electron/pull/51331) <sup>(Also in [41](https://github.com/electron/electron/pull/51332))</sup>\n* Fixed an issue where `app-region: drag` inside a hidden `WebContentsView` would still drag the parent window on Windows. [#51245](https://github.com/electron/electron/pull/51245) <sup>(Also in [40](https://github.com/electron/electron/pull/51247), [41](https://github.com/electron/electron/pull/51246))</sup>\n* Fixed an issue where calling `contentTracing` APIs before `app.whenReady()` would crash the application. [#51353](https://github.com/electron/electron/pull/51353) <sup>(Also in [41](https://github.com/electron/electron/pull/51352))</sup>\n* Fixed an issue where some toast notification properties didn't work as expected in WinRT. [#51330](https://github.com/electron/electron/pull/51330)\n* Fixed buggy behavior where Backspace would accept macOS text replacements inside `contenteditable` elements. [#51344](https://github.com/electron/electron/pull/51344) <sup>(Also in [40](https://github.com/electron/electron/pull/51345), [41](https://github.com/electron/electron/pull/51343))</sup>\n* Fixed build failure when building with `enable_pdf` disabled. [#51249](https://github.com/electron/electron/pull/51249) <sup>(A...",
+      "memory_unit_text": "In the electron/electron pre-release v42.0.0-beta.7, features include adding JS stack trace to crash reports on renderer OOM, adding Notification.getHistory() for macOS to restore delivered notifications, adding support for heap profiling via contentTracing.enableHeapProfiling(), and adding support for importing shared textures using the nv16 pixel format. Fixes include ensuring cross-origin fetch() and XHR are blocked for custom protocols unless corsEnabled is true, fixing webContents.printToPDF rejection on subsequent calls after invalid pageRanges, fixing a crash when providing invalid HTTP header names or values in webRequest.onBeforeSendHeaders(), fixing a crash when an autofill suggestion popup is shown while a window is closing, fixing a regression on Windows where frameless windows changed size after calling setResizable, fixing a regression where frameless fullscreen windows had white borders on Windows, fixing app-region: drag inside a hidden WebContentsView still dragging the parent window on Windows, fixing a crash when calling contentTracing APIs before app.whenReady(), fixing some toast notification properties not working as expected in WinRT, fixing buggy behavior where Backspace would accept macOS text replacements inside contenteditable elements, and fixing a build failure when building with enable_pdf disabled."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v40_9_3",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v40.9.3",
+      "tag_name": "v40.9.3",
+      "title": "electron v40.9.3",
+      "time_hint": "2026-04-30",
+      "published_at": "2026-04-30T21:29:41Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v40.9.3",
+      "raw_text": "Repository: electron/electron\nRelease: electron v40.9.3\nTag: v40.9.3; draft: False; prerelease: False; published_at: 2026-04-30T21:29:41Z; created_at: 2026-04-30T19:33:39Z\nRelease notes:\n# Release Notes for v40.9.3\n## Fixes\n* Ensured cross-origin `fetch()` and XHR are blocked for custom protocols registered with `supportFetchAPI: true` unless `corsEnabled: true` is also set; cross-origin `mode: 'no-cors'` requests now receive an opaque response. [#51271](https://github.com/electron/electron/pull/51271) <sup>(Also in [39](https://github.com/electron/electron/pull/51272), [41](https://github.com/electron/electron/pull/51270), [42](https://github.com/electron/electron/pull/51269))</sup>\n* Fixed `webContents.printToPDF` rejecting on all subsequent calls after a prior call was rejected with an invalid `pageRanges` value. [#51220](https://github.com/electron/electron/pull/51220) <sup>(Also in [41](https://github.com/electron/electron/pull/51221), [42](https://github.com/electron/electron/pull/51222))</sup>\n* Fixed a  crash when providing invalid HTTP header names or values in the `webRequest.onBeforeSendHeaders()` callback. [#51364](https://github.com/electron/electron/pull/51364) <sup>(Also in [41](https://github.com/electron/electron/pull/51365), [42](https://github.com/electron/electron/pull/51366))</sup>\n* Fixed a crash that could occur when an autofill suggestion popup was shown while a window was closing. [#51334](https://github.com/electron/electron/pull/51334) <sup>(Also in [41](https://github.com/electron/electron/pull/51321), [42](https://github.com/electron/electron/pull/51317))</sup>\n* Fixed an issue where `app-region: drag` inside a hidden `WebContentsView` would still drag the parent window on Windows. [#51247](https://github.com/electron/electron/pull/51247) <sup>(Also in [41](https://github.com/electron/electron/pull/51246), [42](https://github.com/electron/electron/pull/51245))</sup>\n* Fixed an issue where an Electron macOS update would not be applied if another app was previously blocking the macOS system update loop. [#51211](https://github.com/electron/electron/pull/51211) <sup>(Also in [41](https://github.com/electron/electron/pull/51210), [42](https://github.com/electron/electron/pull/51212))</sup>\n* Fixed buggy behavior where Backspace would accept macOS text replacements inside `contenteditable` elements. [#51345](https://github.com/electron/electron/pull/51345) <sup>(Also in [41](https://github.com/electron/electron/pull/51343), [42](https://github.com/electron/electron/pull/51344))</sup>\n## Other Changes\n* Backported a fix for route_id validation in the GPU command buffer. [#51320](https://github.com/electron/electron/pull/51320)\n* Backported security fixes for 493319454, 494158331, 493234757, 492736100, 493413432, 492668885, 496281816. [#51258](https://github.com/electron/electron/pull/51258)\n* Backported several fixes in Skia, ANGLE, and WebRTC from upstream. [#51265](https://github.com/electron/electron/pull/51265)",
+      "memory_unit_text": "In the electron/electron release v40.9.3, fixes include ensuring cross-origin fetch() and XHR are blocked for custom protocols unless corsEnabled is true, fixing webContents.printToPDF rejection on subsequent calls after invalid pageRanges, fixing a crash when providing invalid HTTP header names or values in webRequest.onBeforeSendHeaders(), fixing a crash when an autofill suggestion popup is shown while a window is closing, fixing app-region: drag inside a hidden WebContentsView still dragging the parent window on Windows, fixing an issue where an Electron macOS update would not be applied if another app blocked the system update loop, and fixing buggy behavior where Backspace would accept macOS text replacements inside contenteditable elements. Other changes include backporting a fix for route_id validation in the GPU command buffer, backporting security fixes, and backporting several fixes in Skia, ANGLE, and WebRTC from upstream."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v41_4_0",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v41.4.0",
+      "tag_name": "v41.4.0",
+      "title": "electron v41.4.0",
+      "time_hint": "2026-04-30",
+      "published_at": "2026-04-30T23:53:49Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v41.4.0",
+      "raw_text": "Repository: electron/electron\nRelease: electron v41.4.0\nTag: v41.4.0; draft: False; prerelease: False; published_at: 2026-04-30T23:53:49Z; created_at: 2026-04-30T21:59:53Z\nRelease notes:\n# Release Notes for v41.4.0\n## Features\n* Added support for heap profiling via `contentTracing.enableHeapProfiling()`. [#51178](https://github.com/electron/electron/pull/51178) <sup>(Also in [42](https://github.com/electron/electron/pull/51162))</sup>\n## Fixes\n* Ensured cross-origin `fetch()` and XHR are blocked for custom protocols registered with `supportFetchAPI: true` unless `corsEnabled: true` is also set; cross-origin `mode: 'no-cors'` requests now receive an opaque response. [#51270](https://github.com/electron/electron/pull/51270) <sup>(Also in [39](https://github.com/electron/electron/pull/51272), [40](https://github.com/electron/electron/pull/51271), [42](https://github.com/electron/electron/pull/51269))</sup>\n* Fixed a  crash when providing invalid HTTP header names or values in the `webRequest.onBeforeSendHeaders()` callback. [#51365](https://github.com/electron/electron/pull/51365) <sup>(Also in [40](https://github.com/electron/electron/pull/51364), [42](https://github.com/electron/electron/pull/51366))</sup>\n* Fixed a bug that cause offscreen rendering doesn't have valid screen info and unable to get valid result of related media queries.\n* Added `webPreference.offscreen.deviceScaleFactor` to allow user specify a value, instead of using user's primary display's value. [#50375](https://github.com/electron/electron/pull/50375) <sup>(Also in [40](https://github.com/electron/electron/pull/49681))</sup>\n* Fixed a bug where errors would occur when using the Chrome DevTools Fetch API. [#51371](https://github.com/electron/electron/pull/51371) <sup>(Also in [42](https://github.com/electron/electron/pull/51372))</sup>\n* Fixed a crash that could occur when an autofill suggestion popup was shown while a window was closing. [#51321](https://github.com/electron/electron/pull/51321) <sup>(Also in [42](https://github.com/electron/electron/pull/51317))</sup>\n* Fixed a regression where frameless fullscreen windows had white borders on Windows. [#51332](https://github.com/electron/electron/pull/51332) <sup>(Also in [42](https://github.com/electron/electron/pull/51331))</sup>\n* Fixed a renderer crash when a page uses the `<geolocation>` HTML element. [#51373](https://github.com/electron/electron/pull/51373) <sup>(Also in [42](https://github.com/electron/electron/pull/51374))</sup>\n* Fixed an issue where calling `contentTracing` APIs before `app.whenReady()` would crash the application. [#51352](https://github.com/electron/electron/pull/51352) <sup>(Also in [42](https://github.com/electron/electron/pull/51353))</sup>\n* Fixed an issue where some toast notification properties didn't work as expected in WinRT. [#51397](https://github.com/electron/electron/pull/51397) <sup>(Also in [42](https://github.com/electron/electron/pull/51330))</sup>\n* Fixed buggy behavior where Backspace would accept macOS text replacements inside `contenteditable` elements. [#51343](https://github.com/electron/electron/pull/51343) <sup>(Also in [40](https://github.com/electron/electron/pull/51345), [42](https://github.com/electron/electron/pull/51344))</sup>\n* This PR fixes a regression in silent printing where custom DPI values from webContents.print were not honored, causing incorrect output scaling in real-world print flows. [#51355](https://github.com/electron/electron/pull/51355) <sup>(Also in [42](https://github.com/electron/electron/pull/51354))</sup>\n## Other Changes\n* Backported a fix for route_id validation in the GPU command buffer. [#51319](https://github.com/electron/electron/pull/51319)\n* Backported fix in Skia for 495534710. [#51264](https://github.com/electron/electron/pull/51264)\n* Backported security fixes for 492736100, 492668885, 493413432, 493319454, 494158331, 496281816. [#51259](https://github.com/electron/electron/pull/51259)\n* Updated Chromium to 146...",
+      "memory_unit_text": "In the electron/electron release v41.4.0, features include adding support for heap profiling via contentTracing.enableHeapProfiling(). Fixes include ensuring cross-origin fetch() and XHR are blocked for custom protocols unless corsEnabled is true, fixing a crash when providing invalid HTTP header names or values in webRequest.onBeforeSendHeaders(), fixing a bug that caused offscreen rendering to not have valid screen info and adding webPreference.offscreen.deviceScaleFactor, fixing a bug where errors would occur when using the Chrome DevTools Fetch API, fixing a crash when an autofill suggestion popup is shown while a window is closing, fixing a regression where frameless fullscreen windows had white borders on Windows, fixing a renderer crash when a page uses the <geolocation> HTML element, fixing an issue where calling contentTracing APIs before app.whenReady() would crash the application, fixing an issue where some toast notification properties didn't work as expected in WinRT, fixing buggy behavior where Backspace would accept macOS text replacements inside contenteditable elements, and fixing a regression in silent printing where custom DPI values from webContents.print were not honored. Other changes include backporting a fix for route_id validation in the GPU command buffer, backporting a fix in Skia, backporting security fixes, and updating Chromium."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v42_0_0_beta_8",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v42.0.0-beta.8",
+      "tag_name": "v42.0.0-beta.8",
+      "title": "electron v42.0.0-beta.8",
+      "time_hint": "2026-05-01",
+      "published_at": "2026-05-01T03:33:31Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v42.0.0-beta.8",
+      "raw_text": "Repository: electron/electron\nRelease: electron v42.0.0-beta.8\nTag: v42.0.0-beta.8; draft: False; prerelease: True; published_at: 2026-05-01T03:33:31Z; created_at: 2026-05-01T01:44:00Z\nRelease notes:\nNote: This is a beta release.  Please file new issues for any bugs you find in it.\nThis release is published to npm under the beta tag and can be installed via `npm install electron@beta`, or `npm install electron@42.0.0-beta.8`.\n# Release Notes for v42.0.0-beta.8\n## Fixes\n* Fixed a bug where errors would occur when using the Chrome DevTools Fetch API. [#51372](https://github.com/electron/electron/pull/51372) <sup>(Also in [41](https://github.com/electron/electron/pull/51371))</sup>\n* Fixed a renderer crash when a page uses the `<geolocation>` HTML element. [#51374](https://github.com/electron/electron/pull/51374) <sup>(Also in [41](https://github.com/electron/electron/pull/51373))</sup>\n* Fixed an issue on Windows where a transient `UnhookWindowsHookEx` failure in `setIgnoreMouseEvents(true, { forward: true })` teardown could cause duplicate low-level mouse hooks to be installed on the next activation. [#51418](https://github.com/electron/electron/pull/51418) <sup>(Also in [41](https://github.com/electron/electron/pull/51419))</sup>",
+      "memory_unit_text": "In the electron/electron pre-release v42.0.0-beta.8, fixes include fixing a bug where errors would occur when using the Chrome DevTools Fetch API, fixing a renderer crash when a page uses the <geolocation> HTML element, and fixing an issue on Windows where a transient UnhookWindowsHookEx failure in setIgnoreMouseEvents(true, { forward: true }) teardown could cause duplicate low-level mouse hooks to be installed on the next activation."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v41_5_0",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v41.5.0",
+      "tag_name": "v41.5.0",
+      "title": "electron v41.5.0",
+      "time_hint": "2026-05-02",
+      "published_at": "2026-05-02T01:40:01Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v41.5.0",
+      "raw_text": "Repository: electron/electron\nRelease: electron v41.5.0\nTag: v41.5.0; draft: False; prerelease: False; published_at: 2026-05-02T01:40:01Z; created_at: 2026-05-01T23:39:21Z\nRelease notes:\n# Release Notes for v41.5.0\n## Features\n* Added `app.configureWebAuthn()` to enable the Touch ID platform authenticator for WebAuthn on macOS, and a `select-webauthn-account` session event for choosing between multiple discoverable credentials. [#51412](https://github.com/electron/electron/pull/51412) <sup>(Also in [42](https://github.com/electron/electron/pull/51411))</sup>\n## Fixes\n* Fixed a regression on Windows where frameless windows changed their size after calling `setResizable`. [#51427](https://github.com/electron/electron/pull/51427) <sup>(Also in [42](https://github.com/electron/electron/pull/51296))</sup>\n* Fixed an issue on Windows where a transient `UnhookWindowsHookEx` failure in `setIgnoreMouseEvents(true, { forward: true })` teardown could cause duplicate low-level mouse hooks to be installed on the next activation. [#51419](https://github.com/electron/electron/pull/51419) <sup>(Also in [42](https://github.com/electron/electron/pull/51418))</sup>\n* Fixed remote debugging via `--remote-debugging-port` not working when inspecting from Chrome's `chrome://inspect` page. The DevTools page would appear empty due to the frontend URL pointing to a CDN that returned 404 for Electron's Chromium builds. [#51413](https://github.com/electron/electron/pull/51413)",
+      "memory_unit_text": "In the electron/electron release v41.5.0, features include adding app.configureWebAuthn() to enable the Touch ID platform authenticator for WebAuthn on macOS and a select-webauthn-account session event for choosing between multiple discoverable credentials. Fixes include fixing a regression on Windows where frameless windows changed their size after calling setResizable, fixing an issue on Windows where a transient UnhookWindowsHookEx failure in setIgnoreMouseEvents(true, { forward: true }) teardown could cause duplicate low-level mouse hooks to be installed on the next activation, and fixing remote debugging via --remote-debugging-port not working when inspecting from Chrome's chrome://inspect page."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v39_8_10",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v39.8.10",
+      "tag_name": "v39.8.10",
+      "title": "electron v39.8.10",
+      "time_hint": "2026-05-05",
+      "published_at": "2026-05-05T20:45:13Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v39.8.10",
+      "raw_text": "Repository: electron/electron\nRelease: electron v39.8.10\nTag: v39.8.10; draft: False; prerelease: False; published_at: 2026-05-05T20:45:13Z; created_at: 2026-05-05T18:30:42Z\nRelease notes:\n# Release Notes for v39.8.10\n> [!WARNING]\n> Electron 39.x.y has reached end-of-support as per the project's [support policy](https://www.electronjs.org/docs/latest/tutorial/electron-timelines#version-support-policy). Developers and applications are encouraged to upgrade to a newer version of Electron.\n## Fixes\n* Ensured cross-origin `fetch()` and XHR are blocked for custom protocols registered with `supportFetchAPI: true` unless `corsEnabled: true` is also set; cross-origin `mode: 'no-cors'` requests now receive an opaque response. [#51272](https://github.com/electron/electron/pull/51272) <sup>(Also in [40](https://github.com/electron/electron/pull/51271), [41](https://github.com/electron/electron/pull/51270), [42](https://github.com/electron/electron/pull/51269))</sup>\n* Fixed an issue where the Squirrel.Mac installer could resolve the target bundle path to different locations at different stages of an install. [#50766](https://github.com/electron/electron/pull/50766) <sup>(Also in [42](https://github.com/electron/electron/pull/50765))</sup>\n## Other Changes\n* Backported a fix for route_id validation in the GPU command buffer. [#51327](https://github.com/electron/electron/pull/51327)\n* Backported security fixes for 493319454, 494158331, 493234757, 492736100, 493413432, 492668885, 496281816. [#51257](https://github.com/electron/electron/pull/51257)\n* Backported several fixes in Skia, ANGLE, and WebRTC from upstream. [#51266](https://github.com/electron/electron/pull/51266)",
+      "memory_unit_text": "In the electron/electron release v39.8.10, which has reached end-of-support, fixes include ensuring cross-origin fetch() and XHR are blocked for custom protocols unless corsEnabled is true, and fixing an issue where the Squirrel.Mac installer could resolve the target bundle path to different locations at different stages of an install. Other changes include backporting a fix for route_id validation in the GPU command buffer, backporting security fixes, and backporting several fixes in Skia, ANGLE, and WebRTC from upstream."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v42_0_0",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v42.0.0",
+      "tag_name": "v42.0.0",
+      "title": "electron v42.0.0",
+      "time_hint": "2026-05-06",
+      "published_at": "2026-05-06T01:10:01Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v42.0.0",
+      "raw_text": "Repository: electron/electron\nRelease: electron v42.0.0\nTag: v42.0.0; draft: False; prerelease: False; published_at: 2026-05-06T01:10:01Z; created_at: 2026-05-05T19:07:06Z\nRelease notes:\n# Release Notes for v42.0.0\n## Stack Upgrades\n* Chromium `148.0.7778.96`\n* [New in 148](https://developer.chrome.com/blog/new-in-chrome-148/)\n* [New in 147](https://developer.chrome.com/blog/new-in-chrome-147/)\n* Node `v24.15.0`\n* [Node 24.15.0 blog post](https://nodejs.org/en/blog/release/v24.15.0/)\n* V8 `14.8`\n## Breaking Changes\n### Behavior Changed: macOS notifications now use `UNNotification` API\nElectron has migrated from the deprecated `NSUserNotification` API to the `UNNotification` API on macOS. The new API requires that an application be code-signed in order for notifications to be displayed. If an application is not code-signed, notifications will emit a `failed` event on the `Notification` object. [#47817](https://github.com/electron/electron/pull/47817)\n### Behavior Changed: `electron` no longer downloads itself via `postinstall` script\nPreviously, the `electron` npm package would download the Electron binary from the repository's GitHub Releases in the package's `postinstall` script. With recent supply chain security attacks against the npm ecosystem with `postinstall` scripts as a common attack vector, Electron will now download itself dynamically the first time that its main `bin` script is run (e.g. via `npx electron`). See [RFC #22](https://github.com/electron/rfcs/pull/22) for more context. [#49328](https://github.com/electron/electron/pull/49328)\n### Behavior Changed: Offscreen rendering default device scale factor\nPreviously, OSR used the primary display's device scale factor for rendering. Starting from Electron 42, the default changes to a constant value of `1.0` for more consistent output sizes. Use `webPreferences.offscreen.deviceScaleFactor` to specify a custom value. [#49683](https://github.com/electron/electron/pull/49683)\n### Removed: `quotas` object from `Session.clearStorageData(options)`\nWhen calling `Session.clearStorageData(options)`, the `options.quotas` object is no longer supported because it has been removed from upstream Chromium.\n### Removed: `ELECTRON_SKIP_BINARY_DOWNLOAD` environment variable\nThis environment variable is no longer supported due to the new lazy download behavior. [#50459](https://github.com/electron/electron/pull/50459)\n## Features\n### Additions\n* Added `app.configureWebAuthn({ touchID: { keychainAccessGroup } })` to enable the WebAuthn Touch ID platform authenticator on macOS. Also introduces a `select-webauthn-account` session event for discoverable-credential selection. [#51411](https://github.com/electron/electron/pull/51411) (Also in 41)\n* Added `Notification.getHistory()` for macOS. [#51123](https://github.com/electron/electron/pull/51123)\n* Added `Notification.handleActivation(callback)` API on Windows to handle notification clicks, replies, and action buttons - including when the app is launched from a notification (cold start). [#49919](https://github.com/electron/electron/pull/49919)\n* Added `ELECTRON_INSTALL_PLATFORM` and `ELECTRON_INSTALL_ARCH` variables to install binaries from other platforms and architectures. [#49981](https://github.com/electron/electron/pull/49981)\n* Added `allowExtensions` privilege to `protocol.registerSchemesAsPrivileged()` to enable Chrome extensions on custom protocols. [#50530](https://github.com/electron/electron/pull/50530) <sup>(Also in [40](https://github.com/electron/electron/pull/50588), [41](https://github.com/electron/electron/pull/50529))</sup>\n* Added `app.isActive()` to check if the app is the active/foreground application (macOS only). [#49622](https://github.com/electron/electron/pull/49622)\n* Added `globalShortcut.setSuspended()` and `globalShortcut.isSuspended()` methods to temporarily suspend and resume global shortcut handling. [#50777](https://github.com/electron/electron/pull/50777)\n* Added `id` and `groupId` options to the N...",
+      "memory_unit_text": "In the electron/electron release v42.0.0, stack upgrades include Chromium 148.0.7778.96, Node v24.15.0, and V8 14.8. Breaking changes include macOS notifications migrating to the UNNotification API requiring code-signing, the electron package no longer downloading itself via postinstall script, offscreen rendering default device scale factor changing to 1.0, removal of the quotas object from Session.clearStorageData(options), and removal of the ELECTRON_SKIP_BINARY_DOWNLOAD environment variable. Features include adding app.configureWebAuthn() with Touch ID support, Notification.getHistory() for macOS, Notification.handleActivation() on Windows, ELECTRON_INSTALL_PLATFORM and ELECTRON_INSTALL_ARCH variables, allowExtensions privilege for custom protocols, app.isActive() for macOS, globalShortcut.setSuspended() and isSuspended() methods, and id and groupId options to the Notification constructor on macOS."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v43_0_0_alpha_1",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v43.0.0-alpha.1",
+      "tag_name": "v43.0.0-alpha.1",
+      "title": "electron v43.0.0-alpha.1",
+      "time_hint": "2026-05-06",
+      "published_at": "2026-05-06T19:18:27Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v43.0.0-alpha.1",
+      "raw_text": "Repository: electron/electron\nRelease: electron v43.0.0-alpha.1\nTag: v43.0.0-alpha.1; draft: False; prerelease: True; published_at: 2026-05-06T19:18:27Z; created_at: 2026-05-06T16:56:47Z\nRelease notes:\nNote: This is an alpha release.  Please file new issues for any bugs you find in it.\nThis release is published to npm under the alpha tag and can be installed via `npm install electron@alpha`, or `npm install electron@43.0.0-alpha.1`.\n# Release Notes for v43.0.0-alpha.1\n## Features\n* Added Clone method to WebContents. [#49959](https://github.com/electron/electron/pull/49959)\n* Added JS stack trace to crash reports on renderer OOM. [#50043](https://github.com/electron/electron/pull/50043) <sup>(Also in [42](https://github.com/electron/electron/pull/50911))</sup>\n* Added Linux support for `app.getApplicationInfoForProtocol()`. [#51297](https://github.com/electron/electron/pull/51297)\n* Added `Notification.getHistory()` for macOS, allowing developers to restore all delivered notifications still present in Notification Center. [#50325](https://github.com/electron/electron/pull/50325) <sup>(Also in [42](https://github.com/electron/electron/pull/51123))</sup>\n* Added `accessibilityLabel` property to `MenuItem` constructor options and properties for defining screen-reader-friendly labels. [#50240](https://github.com/electron/electron/pull/50240)\n* Added `allowExtensions` privilege to `protocol.registerSchemesAsPrivileged()` to enable Chrome extensions on custom protocols. [#49951](https://github.com/electron/electron/pull/49951) <sup>(Also in [40](https://github.com/electron/electron/pull/50588), [41](https://github.com/electron/electron/pull/50529), [42](https://github.com/electron/electron/pull/50530))</sup>\n* Added `app.configureWebAuthn()` to enable the Touch ID platform authenticator for WebAuthn on macOS, and a `select-webauthn-account` session event for choosing between multiple discoverable credentials. [#51255](https://github.com/electron/electron/pull/51255) <sup>(Also in [41](https://github.com/electron/electron/pull/51412), [42](https://github.com/electron/electron/pull/51411))</sup>\n* Added `globalShortcut.setSuspended()` and `globalShortcut.isSuspended()` methods to temporarily suspend and resume global shortcut handling. [#50425](https://github.com/electron/electron/pull/50425) <sup>(Also in [42](https://github.com/electron/electron/pull/50777))</sup>\n* Added `id` and `groupId` options to the Notification constructor on macOS. `id` allows custom identifiers for notifications, and `groupId` visually groups notifications together in Notification Center. [#50097](https://github.com/electron/electron/pull/50097) <sup>(Also in [42](https://github.com/electron/electron/pull/50304))</sup>\n* Added `nv12` OSR pixel format support for professional use. [#49799](https://github.com/electron/electron/pull/49799)\n* Added `view.setBackgroundBlur`. [#51076](https://github.com/electron/electron/pull/51076)\n* Added `webContents.copyVideoFrameAt(x, y)` and `webContents.saveVideoFrameAs(x, y)` methods. [#48149](https://github.com/electron/electron/pull/48149)\n* Added id, groupId, and groupTitle support for Windows notifications. [#50328](https://github.com/electron/electron/pull/50328) <sup>(Also in [42](https://github.com/electron/electron/pull/50895))</sup>\n* Added nativeTheme.shouldDifferentiateWithoutColor on macOS. [#49912](https://github.com/electron/electron/pull/49912) <sup>(Also in [41](https://github.com/electron/electron/pull/50408), [42](https://github.com/electron/electron/pull/50409))</sup>\n* Added session support to net module requests from utility process. [#51279](https://github.com/electron/electron/pull/51279)\n* Added support for heap profiling via `contentTracing.enableHeapProfiling()`. [#50826](https://github.com/electron/electron/pull/50826) <sup>(Also in [41](https://github.com/electron/electron/pull/51178), [42](https://github.com/electron/electron/pull/51162))</sup>\n* Added support for importing shared textures u...",
+      "memory_unit_text": "In the electron/electron pre-release v43.0.0-alpha.1, features include adding Clone method to WebContents, adding JS stack trace to crash reports on renderer OOM, adding Linux support for app.getApplicationInfoForProtocol(), adding Notification.getHistory() for macOS, adding accessibilityLabel property to MenuItem, adding allowExtensions privilege for custom protocols, adding app.configureWebAuthn() for Touch ID, adding globalShortcut.setSuspended() and isSuspended() methods, adding id and groupId options to the Notification constructor on macOS, adding nv12 OSR pixel format support, adding view.setBackgroundBlur, adding webContents.copyVideoFrameAt() and saveVideoFrameAs() methods, adding id, groupId, and groupTitle support for Windows notifications, adding nativeTheme.shouldDifferentiateWithoutColor on macOS, adding session support to net module requests from utility process, adding support for heap profiling via contentTracing.enableHeapProfiling(), and adding support for importing shared textures using the nv16 pixel format."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v40_10_0",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v40.10.0",
+      "tag_name": "v40.10.0",
+      "title": "electron v40.10.0",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T18:47:34Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v40.10.0",
+      "raw_text": "Repository: electron/electron\nRelease: electron v40.10.0\nTag: v40.10.0; draft: False; prerelease: False; published_at: 2026-05-08T18:47:34Z; created_at: 2026-05-08T16:00:22Z\nRelease notes:\n# Release Notes for v40.10.0\n## Fixes\n* Fixed `app.getLoginItemSettings()` returning `undefined` for `executableWillLaunchAtLogin` on macOS; the property is now always a boolean. [#51509](https://github.com/electron/electron/pull/51509) <sup>(Also in [41](https://github.com/electron/electron/pull/51508), [42](https://github.com/electron/electron/pull/51507))</sup>\n## Other Changes\n* Updated Node.js to v24.15.0. [#51087](https://github.com/electron/electron/pull/51087)",
+      "memory_unit_text": "In the electron/electron release v40.10.0, fixes include fixing app.getLoginItemSettings() returning undefined for executableWillLaunchAtLogin on macOS, making the property always a boolean. Other changes update Node.js to v24.15.0."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v41_5_1",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v41.5.1",
+      "tag_name": "v41.5.1",
+      "title": "electron v41.5.1",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T18:51:56Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v41.5.1",
+      "raw_text": "Repository: electron/electron\nRelease: electron v41.5.1\nTag: v41.5.1; draft: False; prerelease: False; published_at: 2026-05-08T18:51:56Z; created_at: 2026-05-08T16:00:22Z\nRelease notes:\n# Release Notes for v41.5.1\n## Fixes\n* Fixed `app.getLoginItemSettings()` returning `undefined` for `executableWillLaunchAtLogin` on macOS; the property is now always a boolean. [#51508](https://github.com/electron/electron/pull/51508) <sup>(Also in [40](https://github.com/electron/electron/pull/51509), [42](https://github.com/electron/electron/pull/51507))</sup>\n* Fixed a potential race condition crash when closing DevTools. [#51474](https://github.com/electron/electron/pull/51474) <sup>(Also in [42](https://github.com/electron/electron/pull/51473))</sup>\n* Fixed cross-origin isolation failing for non-file origins. [#51403](https://github.com/electron/electron/pull/51403) <sup>(Also in [42](https://github.com/electron/electron/pull/51404))</sup>\n* Improved the way Electron determines the default XDG App ID and WM_CLASS on Linux for better platform compatibility if `desktopName` is not provided in `package.json`. [#51480](https://github.com/electron/electron/pull/51480) <sup>(Also in [42](https://github.com/electron/electron/pull/51479))</sup>",
+      "memory_unit_text": "In the electron/electron release v41.5.1, fixes include fixing app.getLoginItemSettings() returning undefined for executableWillLaunchAtLogin on macOS, fixing a potential race condition crash when closing DevTools, fixing cross-origin isolation failing for non-file origins, and improving the way Electron determines the default XDG App ID and WM_CLASS on Linux for better platform compatibility if desktopName is not provided in package.json."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v42_0_1",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v42.0.1",
+      "tag_name": "v42.0.1",
+      "title": "electron v42.0.1",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T20:52:38Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v42.0.1",
+      "raw_text": "Repository: electron/electron\nRelease: electron v42.0.1\nTag: v42.0.1; draft: False; prerelease: False; published_at: 2026-05-08T20:52:38Z; created_at: 2026-05-08T16:00:23Z\nRelease notes:\n# Release Notes for v42.0.1\n## Fixes\n* Fixed DesktopCapturer crash on macOS. [#51506](https://github.com/electron/electron/pull/51506)\n* Fixed ELECTRON_INSTALL_PLATFORM being ignored when resolving the Electron executable path during postinstall, which caused path.txt to be written for the host platform instead of the requested target and made isInstalled() always re-download on subsequent installs. [#51370](https://github.com/electron/electron/pull/51370)\n* Fixed `app.getLoginItemSettings()` returning `undefined` for `executableWillLaunchAtLogin` on macOS; the property is now always a boolean. [#51507](https://github.com/electron/electron/pull/51507) <sup>(Also in [40](https://github.com/electron/electron/pull/51509), [41](https://github.com/electron/electron/pull/51508))</sup>\n* Fixed a potential race condition crash when closing DevTools. [#51473](https://github.com/electron/electron/pull/51473) <sup>(Also in [41](https://github.com/electron/electron/pull/51474))</sup>\n## Other Changes\n* Updated Chromium to 148.0.7778.97. [#51517](https://github.com/electron/electron/pull/51517)",
+      "memory_unit_text": "In the electron/electron release v42.0.1, fixes include fixing DesktopCapturer crash on macOS, fixing ELECTRON_INSTALL_PLATFORM being ignored when resolving the Electron executable path during postinstall, fixing app.getLoginItemSettings() returning undefined for executableWillLaunchAtLogin on macOS, and fixing a potential race condition crash when closing DevTools. Other changes update Chromium to 148.0.7778.97."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v41_5_2",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v41.5.2",
+      "tag_name": "v41.5.2",
+      "title": "electron v41.5.2",
+      "time_hint": "2026-05-12",
+      "published_at": "2026-05-12T19:57:15Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v41.5.2",
+      "raw_text": "Repository: electron/electron\nRelease: electron v41.5.2\nTag: v41.5.2; draft: False; prerelease: False; published_at: 2026-05-12T19:57:15Z; created_at: 2026-05-12T16:00:16Z\nRelease notes:\n# Release Notes for v41.5.2\n## Fixes\n* Improved external resize band positioning and scaling for frameless windows on Windows. [#51560](https://github.com/electron/electron/pull/51560) <sup>(Also in [43](https://github.com/electron/electron/pull/51552))</sup>",
+      "memory_unit_text": "In the electron/electron release v41.5.2, fixes include improving external resize band positioning and scaling for frameless windows on Windows."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v43_0_0_alpha_2",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v43.0.0-alpha.2",
+      "tag_name": "v43.0.0-alpha.2",
+      "title": "electron v43.0.0-alpha.2",
+      "time_hint": "2026-05-13",
+      "published_at": "2026-05-13T22:52:27Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v43.0.0-alpha.2",
+      "raw_text": "Repository: electron/electron\nRelease: electron v43.0.0-alpha.2\nTag: v43.0.0-alpha.2; draft: False; prerelease: True; published_at: 2026-05-13T22:52:27Z; created_at: 2026-05-13T20:00:14Z\nRelease notes:\nNote: This is an alpha release.  Please file new issues for any bugs you find in it.\nThis release is published to npm under the alpha tag and can be installed via `npm install electron@alpha`, or `npm install electron@43.0.0-alpha.2`.\n# Release Notes for v43.0.0-alpha.2\n## Features\n* Added Clone method to WebContents. [#49959](https://github.com/electron/electron/pull/49959)\n* Added JS stack trace to crash reports on renderer OOM. [#50043](https://github.com/electron/electron/pull/50043) <sup>(Also in [42](https://github.com/electron/electron/pull/50911))</sup>\n* Added Linux support for `app.getApplicationInfoForProtocol()`. [#51297](https://github.com/electron/electron/pull/51297)\n* Added `Notification.getHistory()` for macOS, allowing developers to restore all delivered notifications still present in Notification Center. [#50325](https://github.com/electron/electron/pull/50325) <sup>(Also in [42](https://github.com/electron/electron/pull/51123))</sup>\n* Added `accessibilityLabel` property to `MenuItem` constructor options and properties for defining screen-reader-friendly labels. [#50240](https://github.com/electron/electron/pull/50240)\n* Added `allowExtensions` privilege to `protocol.registerSchemesAsPrivileged()` to enable Chrome extensions on custom protocols. [#49951](https://github.com/electron/electron/pull/49951) <sup>(Also in [40](https://github.com/electron/electron/pull/50588), [41](https://github.com/electron/electron/pull/50529), [42](https://github.com/electron/electron/pull/50530))</sup>\n* Added `app.configureWebAuthn()` to enable the Touch ID platform authenticator for WebAuthn on macOS, and a `select-webauthn-account` session event for choosing between multiple discoverable credentials. [#51255](https://github.com/electron/electron/pull/51255) <sup>(Also in [41](https://github.com/electron/electron/pull/51412), [42](https://github.com/electron/electron/pull/51411))</sup>\n* Added `globalShortcut.setSuspended()` and `globalShortcut.isSuspended()` methods to temporarily suspend and resume global shortcut handling. [#50425](https://github.com/electron/electron/pull/50425) <sup>(Also in [42](https://github.com/electron/electron/pull/50777))</sup>\n* Added `id` and `groupId` options to the Notification constructor on macOS. `id` allows custom identifiers for notifications, and `groupId` visually groups notifications together in Notification Center. [#50097](https://github.com/electron/electron/pull/50097) <sup>(Also in [42](https://github.com/electron/electron/pull/50304))</sup>\n* Added `nv12` OSR pixel format support for professional use. [#49799](https://github.com/electron/electron/pull/49799)\n* Added `view.setBackgroundBlur`. [#51076](https://github.com/electron/electron/pull/51076)\n* Added `webContents.copyVideoFrameAt(x, y)` and `webContents.saveVideoFrameAs(x, y)` methods. [#48149](https://github.com/electron/electron/pull/48149)\n* Added id, groupId, and groupTitle support for Windows notifications. [#50328](https://github.com/electron/electron/pull/50328) <sup>(Also in [42](https://github.com/electron/electron/pull/50895))</sup>\n* Added nativeTheme.shouldDifferentiateWithoutColor on macOS. [#49912](https://github.com/electron/electron/pull/49912) <sup>(Also in [41](https://github.com/electron/electron/pull/50408), [42](https://github.com/electron/electron/pull/50409))</sup>\n* Added session support to net module requests from utility process. [#51279](https://github.com/electron/electron/pull/51279)\n* Added support for heap profiling via `contentTracing.enableHeapProfiling()`. [#50826](https://github.com/electron/electron/pull/50826) <sup>(Also in [41](https://github.com/electron/electron/pull/51178), [42](https://github.com/electron/electron/pull/51162))</sup>\n* Added support for importing shared textures u...",
+      "memory_unit_text": "In the electron/electron pre-release v43.0.0-alpha.2, features include adding Clone method to WebContents, adding JS stack trace to crash reports on renderer OOM, adding Linux support for app.getApplicationInfoForProtocol(), adding Notification.getHistory() for macOS, adding accessibilityLabel property to MenuItem, adding allowExtensions privilege for custom protocols, adding app.configureWebAuthn() for Touch ID, adding globalShortcut.setSuspended() and isSuspended() methods, adding id and groupId options to the Notification constructor on macOS, adding nv12 OSR pixel format support, adding view.setBackgroundBlur, adding webContents.copyVideoFrameAt() and saveVideoFrameAs() methods, adding id, groupId, and groupTitle support for Windows notifications, adding nativeTheme.shouldDifferentiateWithoutColor on macOS, adding session support to net module requests from utility process, adding support for heap profiling via contentTracing.enableHeapProfiling(), and adding support for importing shared textures using the nv16 pixel format."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v41_6_0",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v41.6.0",
+      "tag_name": "v41.6.0",
+      "title": "electron v41.6.0",
+      "time_hint": "2026-05-14",
+      "published_at": "2026-05-14T00:45:47Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v41.6.0",
+      "raw_text": "Repository: electron/electron\nRelease: electron v41.6.0\nTag: v41.6.0; draft: False; prerelease: False; published_at: 2026-05-14T00:45:47Z; created_at: 2026-05-13T22:54:24Z\nRelease notes:\n# Release Notes for v41.6.0\n## Fixes\n* Fixed a crash in the macOS Touch ID WebAuthn prompt caused by a missing string resource, and added `touchID.promptReason` to `app.configureWebAuthn()` to customize the prompt text. [#51604](https://github.com/electron/electron/pull/51604) <sup>(Also in [42](https://github.com/electron/electron/pull/51594), [43](https://github.com/electron/electron/pull/51595))</sup>",
+      "memory_unit_text": "In the electron/electron release v41.6.0, fixes include fixing a crash in the macOS Touch ID WebAuthn prompt caused by a missing string resource, and adding touchID.promptReason to app.configureWebAuthn() to customize the prompt text."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v41_6_1",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v41.6.1",
+      "tag_name": "v41.6.1",
+      "title": "electron v41.6.1",
+      "time_hint": "2026-05-14",
+      "published_at": "2026-05-14T19:09:22Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v41.6.1",
+      "raw_text": "Repository: electron/electron\nRelease: electron v41.6.1\nTag: v41.6.1; draft: False; prerelease: False; published_at: 2026-05-14T19:09:22Z; created_at: 2026-05-14T15:37:01Z\nRelease notes:\n# Release Notes for v41.6.1\n## Other Changes\n* Improved performance of native event emission, IPC dispatch, and option-dictionary parsing. [#51613](https://github.com/electron/electron/pull/51613) <sup>(Also in [42](https://github.com/electron/electron/pull/51614))</sup>\n* Security: backported 20 High-severity fixes from Chrome 148 stable release. [#51612](https://github.com/electron/electron/pull/51612)",
+      "memory_unit_text": "In the electron/electron release v41.6.1, other changes include improving performance of native event emission, IPC dispatch, and option-dictionary parsing, and backporting 20 High-severity security fixes from Chrome 148 stable release."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v42_1_0",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v42.1.0",
+      "tag_name": "v42.1.0",
+      "title": "electron v42.1.0",
+      "time_hint": "2026-05-15",
+      "published_at": "2026-05-15T01:59:33Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v42.1.0",
+      "raw_text": "Repository: electron/electron\nRelease: electron v42.1.0\nTag: v42.1.0; draft: False; prerelease: False; published_at: 2026-05-15T01:59:33Z; created_at: 2026-05-14T22:13:57Z\nRelease notes:\n# Release Notes for v42.1.0\n## Fixes\n* Fixed a crash in the macOS Touch ID WebAuthn prompt caused by a missing string resource, and added `touchID.promptReason` to `app.configureWebAuthn()` to customize the prompt text. [#51594](https://github.com/electron/electron/pull/51594) <sup>(Also in [41](https://github.com/electron/electron/pull/51604), [43](https://github.com/electron/electron/pull/51595))</sup>\n* Fixed a crash on MacOS when a user clicked into a title bar or top view. [#51605](https://github.com/electron/electron/pull/51605) <sup>(Also in [43](https://github.com/electron/electron/pull/51606))</sup>\n## Other Changes\n* Improved performance of `webRequest` header conversions and several other gin converter hot paths. [#51607](https://github.com/electron/electron/pull/51607) <sup>(Also in [43](https://github.com/electron/electron/pull/51608))</sup>\n* Improved performance of native event emission, IPC dispatch, and option-dictionary parsing. [#51614](https://github.com/electron/electron/pull/51614) <sup>(Also in [41](https://github.com/electron/electron/pull/51613))</sup>",
+      "memory_unit_text": "In the electron/electron release v42.1.0, fixes include fixing a crash in the macOS Touch ID WebAuthn prompt caused by a missing string resource and adding touchID.promptReason to app.configureWebAuthn(), and fixing a crash on macOS when a user clicked into a title bar or top view. Other changes include improving performance of webRequest header conversions and several other gin converter hot paths, and improving performance of native event emission, IPC dispatch, and option-dictionary parsing."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v43_0_0_alpha_3",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v43.0.0-alpha.3",
+      "tag_name": "v43.0.0-alpha.3",
+      "title": "electron v43.0.0-alpha.3",
+      "time_hint": "2026-05-16",
+      "published_at": "2026-05-16T02:31:30Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v43.0.0-alpha.3",
+      "raw_text": "Repository: electron/electron\nRelease: electron v43.0.0-alpha.3\nTag: v43.0.0-alpha.3; draft: False; prerelease: True; published_at: 2026-05-16T02:31:30Z; created_at: 2026-05-16T00:13:15Z\nRelease notes:\nNote: This is an alpha release.  Please file new issues for any bugs you find in it.\nThis release is published to npm under the alpha tag and can be installed via `npm install electron@alpha`, or `npm install electron@43.0.0-alpha.3`.\n# Release Notes for v43.0.0-alpha.3\n## Fixes\n* Fixed a crash on MacOS when a user clicked into a title bar or top view. [#51606](https://github.com/electron/electron/pull/51606) <sup>(Also in [42](https://github.com/electron/electron/pull/51605))</sup>\n## Other Changes\n* Improved performance of `webRequest` header conversions and several other gin converter hot paths. [#51608](https://github.com/electron/electron/pull/51608) <sup>(Also in [42](https://github.com/electron/electron/pull/51607))</sup>\n* Updated Chromium to 150.0.7834.0. [#51609](https://github.com/electron/electron/pull/51609)",
+      "memory_unit_text": "In the electron/electron pre-release v43.0.0-alpha.3, fixes include fixing a crash on macOS when a user clicked into a title bar or top view. Other changes include improving performance of webRequest header conversions and several other gin converter hot paths, and updating Chromium to 150.0.7834.0."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v43_0_0_alpha_4",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v43.0.0-alpha.4",
+      "tag_name": "v43.0.0-alpha.4",
+      "title": "electron v43.0.0-alpha.4",
+      "time_hint": "2026-05-19",
+      "published_at": "2026-05-19T03:13:52Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v43.0.0-alpha.4",
+      "raw_text": "Repository: electron/electron\nRelease: electron v43.0.0-alpha.4\nTag: v43.0.0-alpha.4; draft: False; prerelease: True; published_at: 2026-05-19T03:13:52Z; created_at: 2026-05-18T20:00:14Z\nRelease notes:\nNote: This is an alpha release.  Please file new issues for any bugs you find in it.\nThis release is published to npm under the alpha tag and can be installed via `npm install electron@alpha`, or `npm install electron@43.0.0-alpha.4`.\n# Release Notes for v43.0.0-alpha.4\n## Fixes\n* Fixed crash for Notification close. [#51655](https://github.com/electron/electron/pull/51655) <sup>(Also in [41](https://github.com/electron/electron/pull/51656), [42](https://github.com/electron/electron/pull/51657))</sup>\n## Other Changes\n* Fixed runtime toggling of shadows for frameless windows on Linux.\n* Added support for system-configured button layouts in Window Controls Overlay on Linux. [#51658](https://github.com/electron/electron/pull/51658)",
+      "memory_unit_text": "In the electron/electron pre-release v43.0.0-alpha.4, fixes include fixing crash for Notification close. Other changes include fixing runtime toggling of shadows for frameless windows on Linux and adding support for system-configured button layouts in Window Controls Overlay on Linux."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v42_2_0",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v42.2.0",
+      "tag_name": "v42.2.0",
+      "title": "electron v42.2.0",
+      "time_hint": "2026-05-19",
+      "published_at": "2026-05-19T18:23:03Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v42.2.0",
+      "raw_text": "Repository: electron/electron\nRelease: electron v42.2.0\nTag: v42.2.0; draft: False; prerelease: False; published_at: 2026-05-19T18:23:03Z; created_at: 2026-05-19T16:00:20Z\nRelease notes:\n# Release Notes for v42.2.0\n## Features\n* Allowed the `--experimental-inspector-network-resource` Node.js flag to be passed through Electron. [#51378](https://github.com/electron/electron/pull/51378) <sup>(Also in [41](https://github.com/electron/electron/pull/51377))</sup>\n## Fixes\n* Fixed crash for Notification close. [#51657](https://github.com/electron/electron/pull/51657) <sup>(Also in [41](https://github.com/electron/electron/pull/51656), [43](https://github.com/electron/electron/pull/51655))</sup>\n## Other Changes\n* Backported fixes for a use-after-free in touch-event queue teardown, a runtime-effect validation gap in Skia image filters, and an integer overflow in the GLSL translator. [#51646](https://github.com/electron/electron/pull/51646)\n* Backported fixes for an out-of-bounds write in WebAudio worklet setup, a heap overflow in the ANGLE GL backend, a use-after-free in the GTK Wayland platform, an accessibility tree-state validation issue, and an integer overflow in text bidi handling. [#51666](https://github.com/electron/electron/pull/51666)\n* Improved performance of `app.getApplicationNameForProtocol()` on Linux. [#51628](https://github.com/electron/electron/pull/51628)\n## Documentation\n* Documentation changes: [#51688](https://github.com/electron/electron/pull/51688)",
+      "memory_unit_text": "In the electron/electron release v42.2.0, features include allowing the --experimental-inspector-network-resource Node.js flag to be passed through Electron. Fixes include fixing crash for Notification close. Other changes include backporting fixes for a use-after-free in touch-event queue teardown, a runtime-effect validation gap in Skia image filters, and an integer overflow in the GLSL translator; backporting fixes for an out-of-bounds write in WebAudio worklet setup, a heap overflow in the ANGLE GL backend, a use-after-free in the GTK Wayland platform, an accessibility tree-state validation issue, and an integer overflow in text bidi handling; and improving performance of app.getApplicationNameForProtocol() on Linux. Documentation changes are also noted."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v40_10_1",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v40.10.1",
+      "tag_name": "v40.10.1",
+      "title": "electron v40.10.1",
+      "time_hint": "2026-05-19",
+      "published_at": "2026-05-19T19:50:37Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v40.10.1",
+      "raw_text": "Repository: electron/electron\nRelease: electron v40.10.1\nTag: v40.10.1; draft: False; prerelease: False; published_at: 2026-05-19T19:50:37Z; created_at: 2026-05-19T16:00:20Z\nRelease notes:\n# Release Notes for v40.10.1\n## Other Changes\n* Backported a batch of upstream fixes for memory-safety and validation issues across media, GPU, networking, accessibility, compositing and the ANGLE GL backend. [#51671](https://github.com/electron/electron/pull/51671)\n* Backported fixes for several use-after-free and object-lifetime issues in input, UI, Aura, HID and file-system teardown paths, and a runtime-effect validation gap in Skia. [#51648](https://github.com/electron/electron/pull/51648)\n* Security: backported 20 High-severity fixes from Chrome 148 stable release. [#51618](https://github.com/electron/electron/pull/51618)",
+      "memory_unit_text": "In the electron/electron release v40.10.1, other changes include backporting a batch of upstream fixes for memory-safety and validation issues across media, GPU, networking, accessibility, compositing and the ANGLE GL backend; backporting fixes for several use-after-free and object-lifetime issues in input, UI, Aura, HID and file-system teardown paths, and a runtime-effect validation gap in Skia; and backporting 20 High-severity security fixes from Chrome 148 stable release."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v41_7_0",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v41.7.0",
+      "tag_name": "v41.7.0",
+      "title": "electron v41.7.0",
+      "time_hint": "2026-05-19",
+      "published_at": "2026-05-19T20:09:23Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v41.7.0",
+      "raw_text": "Repository: electron/electron\nRelease: electron v41.7.0\nTag: v41.7.0; draft: False; prerelease: False; published_at: 2026-05-19T20:09:23Z; created_at: 2026-05-19T16:00:20Z\nRelease notes:\n# Release Notes for v41.7.0\n## Features\n* Allowed the `--experimental-inspector-network-resource` Node.js flag to be passed through Electron. [#51377](https://github.com/electron/electron/pull/51377) <sup>(Also in [42](https://github.com/electron/electron/pull/51378))</sup>\n## Fixes\n* Fixed crash for Notification close. [#51656](https://github.com/electron/electron/pull/51656) <sup>(Also in [42](https://github.com/electron/electron/pull/51657), [43](https://github.com/electron/electron/pull/51655))</sup>\n## Other Changes\n* Backported a batch of upstream fixes for memory-safety and validation issues across media, GPU, networking, accessibility, compositing and the ANGLE GL backend. [#51667](https://github.com/electron/electron/pull/51667)\n* Backported fixes for several use-after-free and object-lifetime issues in input, UI, Aura, HID and file-system teardown paths, a runtime-effect validation gap in Skia, and an integer overflow in the GLSL translator. [#51647](https://github.com/electron/electron/pull/51647)",
+      "memory_unit_text": "In the electron/electron release v41.7.0, features include allowing the --experimental-inspector-network-resource Node.js flag to be passed through Electron. Fixes include fixing crash for Notification close. Other changes include backporting a batch of upstream fixes for memory-safety and validation issues across media, GPU, networking, accessibility, compositing and the ANGLE GL backend; and backporting fixes for several use-after-free and object-lifetime issues in input, UI, Aura, HID and file-system teardown paths, a runtime-effect validation gap in Skia, and an integer overflow in the GLSL translator."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v43_0_0_alpha_5",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v43.0.0-alpha.5",
+      "tag_name": "v43.0.0-alpha.5",
+      "title": "electron v43.0.0-alpha.5",
+      "time_hint": "2026-05-21",
+      "published_at": "2026-05-21T22:24:51Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v43.0.0-alpha.5",
+      "raw_text": "Repository: electron/electron\nRelease: electron v43.0.0-alpha.5\nTag: v43.0.0-alpha.5; draft: False; prerelease: True; published_at: 2026-05-21T22:24:51Z; created_at: 2026-05-21T20:00:14Z\nRelease notes:\nNote: This is an alpha release.  Please file new issues for any bugs you find in it.\nThis release is published to npm under the alpha tag and can be installed via `npm install electron@alpha`, or `npm install electron@43.0.0-alpha.5`.\n# Release Notes for v43.0.0-alpha.5\n## Features\n* Added Notification.remove(), removeAll(), and removeGroup() static methods for macOS. [#51690](https://github.com/electron/electron/pull/51690) <sup>(Also in [42](https://github.com/electron/electron/pull/51691))</sup>\n## Fixes\n* Fixed an issue where `process` and other Node globals were undefined in ESM preload scripts when `contextIsolation` was disabled. [#51723](https://github.com/electron/electron/pull/51723)\n* Fixed native addon compilation failure with undefined msvc intrinsic from v8 headers. [#51705](https://github.com/electron/electron/pull/51705) <sup>(Also in [42](https://github.com/electron/electron/pull/51706))</sup>\n## Other Changes\n* Improved performance of native event emission, IPC dispatch, and option-dictionary parsing. [#51615](https://github.com/electron/electron/pull/51615) <sup>(Also in [41](https://github.com/electron/electron/pull/51613), [42](https://github.com/electron/electron/pull/51614))</sup>\n## Documentation\n* Documentation changes: [#51689](https://github.com/electron/electron/pull/51689)",
+      "memory_unit_text": "In the electron/electron pre-release v43.0.0-alpha.5, features include adding Notification.remove(), removeAll(), and removeGroup() static methods for macOS. Fixes include fixing an issue where process and other Node globals were undefined in ESM preload scripts when contextIsolation was disabled, and fixing native addon compilation failure with undefined msvc intrinsic from v8 headers. Other changes include improving performance of native event emission, IPC dispatch, and option-dictionary parsing. Documentation changes are also noted."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v43_0_0_alpha_6",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v43.0.0-alpha.6",
+      "tag_name": "v43.0.0-alpha.6",
+      "title": "electron v43.0.0-alpha.6",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T18:38:53Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v43.0.0-alpha.6",
+      "raw_text": "Repository: electron/electron\nRelease: electron v43.0.0-alpha.6\nTag: v43.0.0-alpha.6; draft: False; prerelease: True; published_at: 2026-05-26T18:38:53Z; created_at: 2026-05-26T16:22:06Z\nRelease notes:\nNote: This is an alpha release.  Please file new issues for any bugs you find in it.\nThis release is published to npm under the alpha tag and can be installed via `npm install electron@alpha`, or `npm install electron@43.0.0-alpha.6`.\n# Release Notes for v43.0.0-alpha.6",
+      "memory_unit_text": "In the electron/electron pre-release v43.0.0-alpha.6, no specific changes are detailed in the release notes."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v42_3_0",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v42.3.0",
+      "tag_name": "v42.3.0",
+      "title": "electron v42.3.0",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T21:13:48Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v42.3.0",
+      "raw_text": "Repository: electron/electron\nRelease: electron v42.3.0\nTag: v42.3.0; draft: False; prerelease: False; published_at: 2026-05-26T21:13:48Z; created_at: 2026-05-26T19:06:04Z\nRelease notes:\n# Release Notes for v42.3.0\n## Features\n* Added Linux support for `app.getApplicationInfoForProtocol()`. [#51680](https://github.com/electron/electron/pull/51680)\n* Added Notification.remove(), removeAll(), and removeGroup() static methods for macOS. [#51691](https://github.com/electron/electron/pull/51691) <sup>(Also in [43](https://github.com/electron/electron/pull/51690))</sup>\n* Added session support to net module requests from utility process. [#51698](https://github.com/electron/electron/pull/51698)\n## Fixes\n* Fixed an issue where `process` and other Node globals were undefined in ESM preload scripts when `contextIsolation` was disabled. [#51726](https://github.com/electron/electron/pull/51726) <sup>(Also in [43](https://github.com/electron/electron/pull/51723))</sup>\n* Fixed native addon compilation failure with undefined msvc intrinsic from v8 headers. [#51706](https://github.com/electron/electron/pull/51706) <sup>(Also in [43](https://github.com/electron/electron/pull/51705))</sup>\n## Other Changes\n* Updated Chromium to 148.0.7778.180. [#51600](https://github.com/electron/electron/pull/51600)",
+      "memory_unit_text": "In the electron/electron release v42.3.0, features include adding Linux support for app.getApplicationInfoForProtocol(), adding Notification.remove(), removeAll(), and removeGroup() static methods for macOS, and adding session support to net module requests from utility process. Fixes include fixing an issue where process and other Node globals were undefined in ESM preload scripts when contextIsolation was disabled, and fixing native addon compilation failure with undefined msvc intrinsic from v8 headers. Other changes update Chromium to 148.0.7778.180."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v41_7_1",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v41.7.1",
+      "tag_name": "v41.7.1",
+      "title": "electron v41.7.1",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T21:45:21Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v41.7.1",
+      "raw_text": "Repository: electron/electron\nRelease: electron v41.7.1\nTag: v41.7.1; draft: False; prerelease: False; published_at: 2026-05-26T21:45:21Z; created_at: 2026-05-26T19:06:25Z\nRelease notes:\n# Release Notes for v41.7.1\n## Fixes\n* Fixed a potential crash when using `webContents.print()`. [#51728](https://github.com/electron/electron/pull/51728) <sup>(Also in [42](https://github.com/electron/electron/pull/50853))</sup>\n* Fixed an issue where custom options in `webContents.print()` did not prefill the print dialog on macOS. [#51682](https://github.com/electron/electron/pull/51682) <sup>(Also in [40](https://github.com/electron/electron/pull/51692), [42](https://github.com/electron/electron/pull/50643))</sup>",
+      "memory_unit_text": "In the electron/electron release v41.7.1, fixes include fixing a potential crash when using webContents.print(), and fixing an issue where custom options in webContents.print() did not prefill the print dialog on macOS."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v40_10_2",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v40.10.2",
+      "tag_name": "v40.10.2",
+      "title": "electron v40.10.2",
+      "time_hint": "2026-05-27",
+      "published_at": "2026-05-27T20:10:31Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v40.10.2",
+      "raw_text": "Repository: electron/electron\nRelease: electron v40.10.2\nTag: v40.10.2; draft: False; prerelease: False; published_at: 2026-05-27T20:10:31Z; created_at: 2026-05-27T17:50:32Z\nRelease notes:\n# Release Notes for v40.10.2\n## Fixes\n* Fixed an issue that caused the RGBAF16 shared texture format to have a keyed mutex on Windows. [#51701](https://github.com/electron/electron/pull/51701) <sup>(Also in [41](https://github.com/electron/electron/pull/49876))</sup>\n* Fixed an issue where closing devtools immediately after focus caused a crash. [#51702](https://github.com/electron/electron/pull/51702) <sup>(Also in [41](https://github.com/electron/electron/pull/51037), [42](https://github.com/electron/electron/pull/51036))</sup>\n* Fixed an issue where custom options in `webContents.print()` did not prefill the print dialog on macOS. [#51692](https://github.com/electron/electron/pull/51692) <sup>(Also in [41](https://github.com/electron/electron/pull/51682), [42](https://github.com/electron/electron/pull/50643))</sup>",
+      "memory_unit_text": "In the electron/electron release v40.10.2, fixes include fixing an issue that caused the RGBAF16 shared texture format to have a keyed mutex on Windows, fixing an issue where closing devtools immediately after focus caused a crash, and fixing an issue where custom options in webContents.print() did not prefill the print dialog on macOS."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v43_0_0_alpha_7",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v43.0.0-alpha.7",
+      "tag_name": "v43.0.0-alpha.7",
+      "title": "electron v43.0.0-alpha.7",
+      "time_hint": "2026-05-29",
+      "published_at": "2026-05-29T00:38:03Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v43.0.0-alpha.7",
+      "raw_text": "Repository: electron/electron\nRelease: electron v43.0.0-alpha.7\nTag: v43.0.0-alpha.7; draft: False; prerelease: True; published_at: 2026-05-29T00:38:03Z; created_at: 2026-05-28T20:00:15Z\nRelease notes:\nNote: This is an alpha release.  Please file new issues for any bugs you find in it.\nThis release is published to npm under the alpha tag and can be installed via `npm install electron@alpha`, or `npm install electron@43.0.0-alpha.7`.\n# Release Notes for v43.0.0-alpha.7\n## Fixes\n* Fixed desktopCapturer thumbnail generation and premature portal timeout on Linux with Wayland. [#51783](https://github.com/electron/electron/pull/51783)\n## Other Changes\n* Updated Chromium to 150.0.7849.0. [#51632](https://github.com/electron/electron/pull/51632)",
+      "memory_unit_text": "In the electron/electron pre-release v43.0.0-alpha.7, fixes include fixing desktopCapturer thumbnail generation and premature portal timeout on Linux with Wayland. Other changes update Chromium to 150.0.7849.0."
+    },
+    {
+      "memory_node_id": "electron__electron__release__v42_3_1",
+      "repo": "electron/electron",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v42.3.1",
+      "tag_name": "v42.3.1",
+      "title": "electron v42.3.1",
+      "time_hint": "2026-06-02",
+      "published_at": "2026-06-02T06:32:20Z",
+      "source_url": "https://github.com/electron/electron/releases/tag/v42.3.1",
+      "raw_text": "Repository: electron/electron\nRelease: electron v42.3.1\nTag: v42.3.1; draft: False; prerelease: False; published_at: 2026-06-02T06:32:20Z; created_at: 2026-06-02T04:25:56Z\nRelease notes:\n# Release Notes for v42.3.1\n## Fixes\n* Fixed a `desktopCapturer` crash when sharing a window on Windows. [#51787](https://github.com/electron/electron/pull/51787)\n## Other Changes\n* Enabled ThinLTO on macOS builds. [#51823](https://github.com/electron/electron/pull/51823) <sup>(Also in [43](https://github.com/electron/electron/pull/51819))</sup>\n* Improved performance of Linux and Windows release builds by enabling ThinLTO link-time optimization for the main Electron binary. [#51821](https://github.com/electron/electron/pull/51821) <sup>(Also in [43](https://github.com/electron/electron/pull/51820))</sup>\n* Improved performance of `app.isDefaultProtocolClient()` and `app.setAsDefaultProtocolClient()` on Linux. [#51627](https://github.com/electron/electron/pull/51627)\n* Improved runtime performance. [#51828](https://github.com/electron/electron/pull/51828)\n* Updated Chromium to 148.0.7778.218. [#51790](https://github.com/electron/electron/pull/51790)",
+      "memory_unit_text": "In the electron/electron release v42.3.1, fixes include fixing a desktopCapturer crash when sharing a window on Windows. Other changes include enabling ThinLTO on macOS builds, improving performance of Linux and Windows release builds by enabling ThinLTO link-time optimization for the main Electron binary, improving performance of app.isDefaultProtocolClient() and app.setAsDefaultProtocolClient() on Linux, improving runtime performance, and updating Chromium to 148.0.7778.218."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the electron/electron releases, which release adds the `Notification.getHistory()` method for macOS?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v40.9.2"
+        },
+        {
+          "option_id": "B",
+          "text": "v41.3.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v42.0.0-beta.7"
+        },
+        {
+          "option_id": "D",
+          "text": "v43.0.0-alpha.1"
+        }
+      ],
+      "correct_option_id": "C",
+      "expected_answer": "v42.0.0-beta.7",
+      "source_chunk_ids": [
+        "electron__electron__release__v42_0_0_beta_7"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "electron__electron__release__v42_0_0_beta_7",
+          "answer_text": "Added Notification.getHistory() for macOS, allowing developers to restore all delivered notifications still present in Notification Center."
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the electron/electron releases, how does the fix for `webContents.printToPDF` rejection on subsequent calls differ between v40.9.2 and v41.3.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v40.9.2 does not include this fix, while v41.3.0 includes it."
+        },
+        {
+          "option_id": "B",
+          "text": "Both releases include the fix, but v41.3.0 also fixes a related crash."
+        },
+        {
+          "option_id": "C",
+          "text": "v40.9.2 includes the fix, while v41.3.0 does not."
+        },
+        {
+          "option_id": "D",
+          "text": "Neither release includes this fix."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v40.9.2 does not include this fix, while v41.3.0 includes it.",
+      "source_chunk_ids": [
+        "electron__electron__release__v40_9_2",
+        "electron__electron__release__v41_3_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "electron__electron__release__v40_9_2",
+          "answer_text": "Fixes include resolving an issue where nodeIntegrationInWorker didn't always work in AudioWorklet, correcting a bug that could cause browserWindow's always-on-top-changed event to fire with incorrect values, and fixing a test scaffolding bug when running tests locally on Linux."
+        },
+        {
+          "memory_node_id": "electron__electron__release__v41_3_0",
+          "answer_text": "Fixes include resolving webContents.printToPDF rejecting on subsequent calls after a prior rejection with invalid pageRanges."
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the electron/electron release window, order the following release-content states from earliest to latest: (1) a release that adds `app.configureWebAuthn()` to enable the Touch ID platform authenticator for WebAuthn on macOS, (2) a release that fixes a crash in the macOS Touch ID WebAuthn prompt caused by a missing string resource and adds `touchID.promptReason` to `app.configureWebAuthn()`, (3) a release that adds `Notification.getHistory()` for macOS.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "3 -> 1 -> 2"
+        },
+        {
+          "option_id": "B",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 1 -> 3"
+        },
+        {
+          "option_id": "D",
+          "text": "1 -> 3 -> 2"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "3 -> 1 -> 2",
+      "source_chunk_ids": [
+        "electron__electron__release__v42_0_0_beta_7",
+        "electron__electron__release__v41_5_0",
+        "electron__electron__release__v41_6_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "electron__electron__release__v42_0_0_beta_7",
+          "answer_text": "Added Notification.getHistory() for macOS."
+        },
+        {
+          "memory_node_id": "electron__electron__release__v41_5_0",
+          "answer_text": "Added app.configureWebAuthn() to enable the Touch ID platform authenticator for WebAuthn on macOS."
+        },
+        {
+          "memory_node_id": "electron__electron__release__v41_6_0",
+          "answer_text": "Fixed a crash in the macOS Touch ID WebAuthn prompt caused by a missing string resource, and added touchID.promptReason to app.configureWebAuthn()."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,530 @@
+{
+  "prototype_id": "ccfos__nightingale_release_window",
+  "domain": "github_release_evolution",
+  "repo": "ccfos/nightingale",
+  "source_type": "release_note",
+  "window_title": "ccfos/nightingale recent release evolution",
+  "window_summary": "This window tracks the recent ccfos/nightingale release stream from v7.7.1 through v9.0.0-beta.2, covering new features, refactors, and fixes across alerting, dashboards, data sources, and notification channels.",
+  "chunks": [
+    {
+      "memory_node_id": "ccfos__nightingale__release__v7_7_1",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v7.7.1",
+      "tag_name": "v7.7.1",
+      "title": "v7.7.1",
+      "time_hint": "2024-11-19",
+      "published_at": "2024-11-19T11:49:54Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v7.7.1",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v7.7.1\nTag: v7.7.1; draft: False; prerelease: False; published_at: 2024-11-19T11:49:54Z; created_at: 2024-11-19T11:47:14Z\nRelease notes:\n## What's Changed\n* refactor: update self monitor metric by @Reditiny\n* feat: add console log with n9e address and root username/passwd when init root by @CRISPpp in https://github.com/ccfos/nightingale/pull/2302\n* feat: adding MySQL/Redis new dashboard\n* feat: supporting http_proxy in notification webhook\n* fix: updating builtin Doris dashboard\n## New Contributors\n* @CRISPpp made their first contribution in https://github.com/ccfos/nightingale/pull/2302\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v7.7.0...v7.7.1",
+      "memory_unit_text": "In the ccfos/nightingale release v7.7.1, the project updates self-monitor metrics, adds console log output with n9e address and root credentials during initialization, introduces new MySQL/Redis dashboards, supports HTTP proxy in notification webhooks, and fixes the built-in Doris dashboard."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v7_7_2",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v7.7.2",
+      "tag_name": "v7.7.2",
+      "title": "v7.7.2",
+      "time_hint": "2024-12-02",
+      "published_at": "2024-12-02T11:51:35Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v7.7.2",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v7.7.2\nTag: v7.7.2; draft: False; prerelease: False; published_at: 2024-12-02T11:51:35Z; created_at: 2024-12-02T11:33:07Z\nRelease notes:\n## What's Changed\n* 补齐初始化 sql 文件中的字段",
+      "memory_unit_text": "In the ccfos/nightingale release v7.7.2, the initialization SQL file is updated to include missing fields."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_0_0_beta_1",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.0.0-beta.1",
+      "tag_name": "v8.0.0-beta.1",
+      "title": "v8.0.0-beta.1",
+      "time_hint": "2024-12-12",
+      "published_at": "2024-12-12T13:37:32Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.0.0-beta.1",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.0.0-beta.1\nTag: v8.0.0-beta.1; draft: False; prerelease: False; published_at: 2024-12-12T13:37:32Z; created_at: 2024-12-12T13:32:51Z\nRelease notes:\n## What's Changed\n- feat: Support variable configuration in alert rules\n- feat: Support cron expression for alert rule execution frequency\n- feat: Support additional query methods in alert rule's supplementary information\n- feat: Add \"Name Only\" display mode for dashboard metric panels to optimize text size\n- feat: Support inverse selection in machine list query\n- refactor: Allow variable settings modification when importing dashboard templates\n- refactor: Optimize subscription rule form layout\n- refactor: Support tag binding when mounting machines to business groups\n- refactor: Change \"Hide\" setting to \"Enable\" in notification medium and contact method forms\n- refactor: Change default team display mode to list view in product settings\n- doc: Add comprehensive documentation\n- fix: Fix unit override settings not taking effect in dashboard line charts\n## 版本变更\n- feat: 告警规则支持配置变量\n- feat: 告警规则执行频率，支持配置 cron 表达式\n- feat: 告警规则附加信息，支持配置附加查询 query 方法\n- feat: 仪表盘指标图显示模式新增 \"名称\" 模式，支持只显示名称内容，优化文字大小\n- feat: 机器列表支持反选查询\n- refactor: 导入模板仪表盘时支持修改变量设置\n- refactor: 订阅规则表单排版优化\n- refactor: 机器挂载业务组时支持设置绑定标签\n- refactor: 通知设置的通知媒介和联系方式编辑表单 \"隐藏\" 设置项 改成 \"启用\" 设置项\n- refactor: 产品设置团队展示模式默认值调整为列表\n- doc: 补充大量说明文档\n- fix: 修复仪表盘折线图 override 的单位设置不生效问题\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v7.7.1...v8.0.0-beta.1",
+      "memory_unit_text": "In the ccfos/nightingale release v8.0.0-beta.1, the project adds support for variable configuration in alert rules, cron expression for alert rule execution frequency, additional query methods in alert rule supplementary information, a 'Name Only' display mode for dashboard metric panels, and inverse selection in machine list queries. It also refactors dashboard template import to allow variable settings modification, optimizes subscription rule form layout, supports tag binding when mounting machines to business groups, changes 'Hide' to 'Enable' in notification medium and contact method forms, changes default team display mode to list view, adds comprehensive documentation, and fixes unit override settings not taking effect in dashboard line charts."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_0_0_beta_2",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.0.0-beta.2",
+      "tag_name": "v8.0.0-beta.2",
+      "title": "v8.0.0-beta.2",
+      "time_hint": "2024-12-26",
+      "published_at": "2024-12-26T06:36:08Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.0.0-beta.2",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.0.0-beta.2\nTag: v8.0.0-beta.2; draft: False; prerelease: False; published_at: 2024-12-26T06:36:08Z; created_at: 2024-12-26T06:29:50Z\nRelease notes:\n## What's Changed\n- feat: 仪表盘变量格式支持 `[[var]]`\n- feat: 全局 webhook 支持配置 proxy\n- refactor: Elasticsearch 日志查询兼容低于 7.10.0 版本，索引模式支持跨集群\n- refactor: pushgw 模块 ignore_host 默认值改成 true\n- fix: 修复 PromQL 输入框下拉提示层被遮挡问题\n- fix: 告警规则变量被删除时清空对应的子变量\n## 注意事项\n-  telegraf 用户，需要在上报时序数据地址后面加一个参数 ignore_host=false，不然 telegraf 部署的机器，不会再注册到机器管理列表中\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.0.0-beta.1...v8.0.0-beta.2",
+      "memory_unit_text": "In the ccfos/nightingale release v8.0.0-beta.2, the project adds support for `[[var]]` format in dashboard variables, global webhook proxy configuration, refactors Elasticsearch log query compatibility for versions below 7.10.0 with cross-cluster index patterns, changes pushgw module ignore_host default to true, fixes PromQL input dropdown occlusion, and clears child variables when an alert rule variable is deleted. A note warns telegraf users to add ignore_host=false parameter."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_0_0_beta_3",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.0.0-beta.3",
+      "tag_name": "v8.0.0-beta.3",
+      "title": "v8.0.0-beta.3",
+      "time_hint": "2025-01-08",
+      "published_at": "2025-01-08T11:49:55Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.0.0-beta.3",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.0.0-beta.3\nTag: v8.0.0-beta.3; draft: False; prerelease: False; published_at: 2025-01-08T11:49:55Z; created_at: 2025-01-08T11:40:04Z\nRelease notes:\n## What's Changed\n* feat: support elasticsearch  alert\n* refactor: add wait time before starting the alert rule check\n* chore: update tpl and readme for cloudwatch\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.0.0-beta.2...v8.0.0-beta.3",
+      "memory_unit_text": "In the ccfos/nightingale release v8.0.0-beta.3, the project adds support for Elasticsearch alerting, adds a wait time before starting alert rule checks, and updates templates and readme for CloudWatch."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_0_0_beta_4",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.0.0-beta.4",
+      "tag_name": "v8.0.0-beta.4",
+      "title": "v8.0.0-beta.4",
+      "time_hint": "2025-01-24",
+      "published_at": "2025-01-24T09:15:09Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.0.0-beta.4",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.0.0-beta.4\nTag: v8.0.0-beta.4; draft: False; prerelease: False; published_at: 2025-01-24T09:15:09Z; created_at: 2025-01-24T09:08:58Z\nRelease notes:\n## What's Changed\n- feat: Elasticsearch alert support \"nodata\" alert conditions\n- feat: Add the \"All\" preset filter to the alert self-healing script and task list pages\n- feat: Add the `__refresh=10` (10s) URL parameter to the dashboard detail page to control automatic page refresh\n- refactor: Permission points support i18n\n- refactor: Optimize the subscription rule form layout\n- refactor: Remove merged cells for the data source column in the alert engine table\n- refactor: Remove width limitations for the data source and severity level selectors on the alert rule list page\n- refactor: Optimize the heartbeat update selector on the host list page by adding an option for heartbeat updates\n- fix: Resolve issue where Elasticsearch alert is invalid when the \"group by\" field type is int\n## 更新内容\n- feat: ES 日志告警，支持 nodata 类型告警条件\n- feat: 告警自愈脚本和任务列表页添加 \"全部\" 预置筛选\n- feat: 仪表盘详情页 URL 参数添加 `__refresh=10` (10s) 参数来控制页面是否自动刷新\n- refactor: 权限管理权限点支持 i18n\n- refactor: 订阅规则表单样式优化\n- refactor: 告警引擎表格的数据源列取消合并单元格\n- refactor: 告警规则列表页的数据源和级别选择器不再限制宽度\n- refactor: 机器列表心跳更新选择器优化，添加有心跳更新的选择项\n- fix: ES 日志告警，group by 字段类型为 int 时，不生效问题\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.0.0-beta.3...v8.0.0-beta.4",
+      "memory_unit_text": "In the ccfos/nightingale release v8.0.0-beta.4, the project adds 'nodata' alert conditions for Elasticsearch alerts, an 'All' preset filter on alert self-healing script and task list pages, a `__refresh=10` URL parameter for dashboard auto-refresh, refactors permission points to support i18n, optimizes subscription rule form layout, removes merged cells for the data source column in the alert engine table, removes width limitations for data source and severity selectors on the alert rule list page, optimizes the heartbeat update selector on the host list page, and fixes an issue where Elasticsearch alert is invalid when the 'group by' field type is int."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_0_0_beta_5",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.0.0-beta.5",
+      "tag_name": "v8.0.0-beta.5",
+      "title": "v8.0.0-beta.5",
+      "time_hint": "2025-02-14",
+      "published_at": "2025-02-14T03:12:25Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.0.0-beta.5",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.0.0-beta.5\nTag: v8.0.0-beta.5; draft: False; prerelease: False; published_at: 2025-02-14T03:12:25Z; created_at: 2025-02-13T08:36:10Z\nRelease notes:\n## What's Changed\n- feat: API authentication supports using the user's own token\n- feat: Support forwarding time-series data to Kafka\n- feat: Added annotations feature to dashboard line chart\n- feat: Added right-aligned table legend mode to dashboard line chart\n- feat: Added percentage mode for thresholds in dashboard line chart, with new threshold styles supporting dashed lines and area combinations\n- feat: Added Retro LCD display mode to dashboard leaderboard\n- feat: Dashboard global links now support adding dashboards type links\n- refactor: Optimized the UI for alert rule data source filtering\n- refactor: Changed dashboard configuration to manual save mode\n- refactor: Optimized panel title font size and color\n- refactor: Panel title bar now shows custom time prompt\n- refactor: Grouped panels display the number of panels when collapsed\n- refactor: Enhanced contrast optimization for line chart text color\n## 更新内容\n- feat: 接口鉴权支持使用用户自己的 token\n- feat: 支持将接收的时序数据转发到 kafka\n- feat: 仪表盘折线图新增 annotations 功能\n- feat: 仪表盘折线图新增右对齐的表格模式图例\n- feat: 仪表盘折线图阈值新增百分比模式，以及新增阈值样式支持虚线和区域等多样组合\n- feat: 仪表盘排行榜新增 Retro LCD 显示模式\n- feat: 仪表盘全局链接支持新增 dashboards 类型链接\n- refactor: 告警规则数据源筛选 UI 优化\n- refactor: 仪表盘配置改成手动保存模式\n- refactor: 面板标题字体大小颜色优化\n- refactor: 面板标题栏展示自定义时间提示\n- refactor: 分组面板折叠后显示包含面板数量信息\n- refactor: 折线图文字颜色优化增强对比度\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.0.0-beta.4...v8.0.0-beta.5",
+      "memory_unit_text": "In the ccfos/nightingale release v8.0.0-beta.5, the project adds API authentication using the user's own token, support for forwarding time-series data to Kafka, annotations feature in dashboard line charts, right-aligned table legend mode in dashboard line charts, percentage mode for thresholds with new threshold styles supporting dashed lines and area combinations, Retro LCD display mode in dashboard leaderboard, dashboard global links supporting dashboards type links, refactors alert rule data source filtering UI, changes dashboard configuration to manual save mode, optimizes panel title font size and color, shows custom time prompt on panel title bar, displays panel count when grouped panels are collapsed, and enhances contrast optimization for line chart text color."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_0_0_beta_6",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.0.0-beta.6",
+      "tag_name": "v8.0.0-beta.6",
+      "title": "v8.0.0-beta.6",
+      "time_hint": "2025-02-25",
+      "published_at": "2025-02-25T06:14:05Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.0.0-beta.6",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.0.0-beta.6\nTag: v8.0.0-beta.6; draft: False; prerelease: False; published_at: 2025-02-25T06:14:05Z; created_at: 2025-02-25T04:10:13Z\nRelease notes:\n## What's Changed\n* refactor: Changed alarm notification result recording to asynchronous to reduce database write pressure\n* fix: Fixed an issue where newly added record rule datasource could not be saved\n## 更新记录\n* refactor:  告警通知结果记录改为异步，降低对数据库的写入压力\n* fix：修复新增的记录规则数据源无法保存问题\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.0.0-beta.5...v8.0.0-beta.6",
+      "memory_unit_text": "In the ccfos/nightingale release v8.0.0-beta.6, the project changes alarm notification result recording to asynchronous to reduce database write pressure, and fixes an issue where newly added record rule datasource could not be saved."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_0_0_beta_7",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.0.0-beta.7",
+      "tag_name": "v8.0.0-beta.7",
+      "title": "v8.0.0-beta.7",
+      "time_hint": "2025-03-05",
+      "published_at": "2025-03-05T13:23:24Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.0.0-beta.7",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.0.0-beta.7\nTag: v8.0.0-beta.7; draft: False; prerelease: False; published_at: 2025-03-05T13:23:24Z; created_at: 2025-03-05T13:13:07Z\nRelease notes:\n## What's Changed\n- feat: Support new notification rules for easier configuration of alert notifications\n- feat: Support new notification channel configuration, adding new notification channels for greater convenience and flexibility\n- perf: Optimize query performance for log search in Elasticsearch data sources\n## 更新记录\n- feat: 支持新的通知规则，可以更加方便地配置告警通知\n- feat: 支持新的通知媒介配置，增加新的通知通道，更加方便灵活\n- perf: 优化日志查询 Elasticsearch 类型源的查询性能\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.0.0-beta.6...v8.0.0-beta.7",
+      "memory_unit_text": "In the ccfos/nightingale release v8.0.0-beta.7, the project supports new notification rules for easier alert notification configuration, supports new notification channel configuration with additional channels, and optimizes query performance for log search in Elasticsearch data sources."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_0_0_beta_8",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.0.0-beta.8",
+      "tag_name": "v8.0.0-beta.8",
+      "title": "v8.0.0-beta.8",
+      "time_hint": "2025-03-11",
+      "published_at": "2025-03-11T13:28:43Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.0.0-beta.8",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.0.0-beta.8\nTag: v8.0.0-beta.8; draft: False; prerelease: False; published_at: 2025-03-11T13:28:43Z; created_at: 2025-03-11T13:02:06Z\nRelease notes:\n## What's Changed\n- feat: Add Discord notification channel\n- refactor: Support @mention configuration in DingTalk notifications\n- fix: Unable to create new contact methods in fresh environment\n- fix: Aliyun SMS and phone call notifications not working\n- fix: Notification rule receiver group settings not taking effect\n- fix: Unable to fetch user custom contact methods\n## 更新记录\n- feat: 新增 Discord 通知媒介\n- refactor: 钉钉通知支持配置 at 人\n- fix: 全新环境联系方式无法新建问题\n- fix: 阿里云短信电话通知不生效\n- fix: 通知规则配置接收组不生效\n- fix: 用户自定义联系方式获取不到问题\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.0.0-beta.7...v8.0.0-beta.8",
+      "memory_unit_text": "In the ccfos/nightingale release v8.0.0-beta.8, the project adds a Discord notification channel, refactors DingTalk notifications to support @mention configuration, and fixes issues: unable to create new contact methods in fresh environment, Aliyun SMS and phone call notifications not working, notification rule receiver group settings not taking effect, and unable to fetch user custom contact methods."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_0_0_beta_8_3",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.0.0-beta.8.3",
+      "tag_name": "v8.0.0-beta.8.3",
+      "title": "v8.0.0-beta.8.3",
+      "time_hint": "2025-03-17",
+      "published_at": "2025-03-17T07:57:26Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.0.0-beta.8.3",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.0.0-beta.8.3\nTag: v8.0.0-beta.8.3; draft: False; prerelease: False; published_at: 2025-03-17T07:57:26Z; created_at: 2025-03-17T07:42:09Z\nRelease notes:\n## What's Changed\n* fix: 通知规则配置多个接收人时，发送邮件失败问题\n* feat: 增加飞书应用、Slack、Mattermost、Callback 内置通知媒介\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.0.0-beta.8.2...v8.0.0-beta.8.3",
+      "memory_unit_text": "In the ccfos/nightingale release v8.0.0-beta.8.3, the project fixes an issue where sending email fails when notification rules have multiple recipients, and adds built-in notification media for Feishu app, Slack, Mattermost, and Callback."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_0_0_beta_9",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.0.0-beta.9",
+      "tag_name": "v8.0.0-beta.9",
+      "title": "v8.0.0-beta.9",
+      "time_hint": "2025-03-20",
+      "published_at": "2025-03-20T11:41:15Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.0.0-beta.9",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.0.0-beta.9\nTag: v8.0.0-beta.9; draft: False; prerelease: False; published_at: 2025-03-20T11:41:15Z; created_at: 2025-03-20T11:06:43Z\nRelease notes:\n## What's Changed\n* refactor：提高数据转发性能\n* feature：增加了夜莺v8版本的内置仪表盘\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.0.0-beta.8.3...v8.0.0-beta.9",
+      "memory_unit_text": "In the ccfos/nightingale release v8.0.0-beta.9, the project improves data forwarding performance and adds built-in dashboards for the v8 version."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_0_0_beta_10",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.0.0-beta.10",
+      "tag_name": "v8.0.0-beta.10",
+      "title": "v8.0.0-beta.10",
+      "time_hint": "2025-03-27",
+      "published_at": "2025-03-27T07:24:07Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.0.0-beta.10",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.0.0-beta.10\nTag: v8.0.0-beta.10; draft: False; prerelease: False; published_at: 2025-03-27T07:24:07Z; created_at: 2025-03-27T00:35:56Z\nRelease notes:\n## What's Changed\n- **feat**: New dashboard datasource selector\n- **refactor**: Disabled anonymous access for dashboards containing \"Machine Identifier\" variables\n- **refactor**: Deprecated \"Business Group Identifier\" variable for dashboards\n- **refactor**: Added \"Save\" button to datasource form page, supporting save without testing\n- **refactor**: Changed default execution frequency of alert rules to 60 seconds\n- **refactor**: Unified submit buttons on rule form pages to \"Save\"\n- **refactor**: Notification rule improvements\n- Added view rule functionality to alert rule notification selector\n- Added support for message template cloning\n- Added adjustable width for documentation panel in message templates\n- **fix**: Fixed issue where datasource type wasn't refreshed on some pages after creating a datasource\n- **fix**: Fixed issue where cloned alert rules couldn't be saved when the original rule was modified by others\n- **fix**: Fixed incorrect field path saving for Elasticsearch source in alert rules\n- **fix**: Fixed issue in Elasticsearch log query Lucene mode where filter condition field values containing \"and\", \"or\", etc. were automatically converted to uppercase\n- **fix**: Fixed overflow issue in older dashboards after import due to missing legend.placement property\n- **fix**: Fixed issue where line chart tooltips didn't filter out empty value legends\n## 更新记录\n- feat: 仪表盘新版数据源选择器\n- refactor: 仪表盘包含 \"机器标识\" 变量时禁止启用匿名访问\n- refactor: 仪表盘下线 \"业务组标识\" 变量\n- refactor: 数据源表单页添加 \"保存\" 按钮，支持不测试仅保存\n- refactor: 告警规则默认执行频率改为 60 秒\n- refactor: 记录规则表单页提交按钮统一改名为 \"保存\"\n- refactor: 通知规则优化\n- 告警规则的通知规则选择器添加查看规则功能\n- 消息模板支持克隆\n- 消息模板右侧文档宽度支持调节\n- fix: 修复创建数据源后部分页面数据源类型未刷新问题\n- fix: 修复告警规则克隆时遇规则被其他修改无法保存问题\n- fix: 修复告警规则 Elasticsearch 源保存的字段路径错误问题\n- fix: 修复 Elasticsearch 日志查询 Lucene 模式的过滤条件的字段值中包含 and or 等字符时会被自动转换成大写问题\n- fix: 修复一些比较老的仪表盘导入后因为缺少 legend.placement 导致图例容器溢出问题\n- fix: 修复折线图提示信息没有过滤掉空值图例问题\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.0.0-beta.9...v8.0.0-beta.10",
+      "memory_unit_text": "In the ccfos/nightingale release v8.0.0-beta.10, the project introduces a new dashboard datasource selector, disables anonymous access for dashboards containing 'Machine Identifier' variables, deprecates 'Business Group Identifier' variable for dashboards, adds a 'Save' button to datasource form page supporting save without testing, changes default execution frequency of alert rules to 60 seconds, unifies submit buttons on rule form pages to 'Save', improves notification rules with view rule functionality, message template cloning, and adjustable documentation panel width, and fixes issues: datasource type not refreshed after creation, cloned alert rules not saving when original modified, incorrect field path saving for Elasticsearch source in alert rules, Lucene mode filter condition field values with 'and'/'or' auto-converted to uppercase, older dashboard import overflow due to missing legend.placement, and line chart tooltips not filtering empty value legends."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_0_0_beta_11",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.0.0-beta.11",
+      "tag_name": "v8.0.0-beta.11",
+      "title": "v8.0.0-beta.11",
+      "time_hint": "2025-05-29",
+      "published_at": "2025-05-29T13:56:11Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.0.0-beta.11",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.0.0-beta.11\nTag: v8.0.0-beta.11; draft: False; prerelease: False; published_at: 2025-05-29T13:56:11Z; created_at: 2025-05-29T13:49:57Z\nRelease notes:\n## What's Changed\n- feat: 告警支持 ClickHouse 数据源\n- feat: 菜单布局改版\n- feat: 活跃告警页面改版，活跃告警、历史告警的详情通过侧拉板形式呈现\n- feat: 新增告警事件处理 Pipeline，支持了 Relabel、Callback、Event Update、Event Drop 处理器\n- feat: 告警规则支持跨业务组克隆\n- feat: 仪表盘时间选择器支持 时区 选择\n- feat: 仪表盘图表面板添加 \"查看\" 功能，点击后放大到全屏查看\n- feat: 仪表盘时序图 Legend 新增方差、标准差统计值\n- feat: 告警规则 Elasticsearch 类型的查询条件添加 Offset 设置\n- refactor: 告警规则 Prometheus 类型的数据预览改成 Table 模式\n- fix: 修复告警规则 Elasticsearch 类型的单个查询条件的数据预览却查询了所有查询条件的问题\n- fix: 修复仪表盘面板标题栏的 Tooltip 的 max width 样式设置未生效问题 #Qnurye\n- fix: 修复分享的临时图可能出现图表渲染失败白屏问题\n## New Contributors\n* @rechardwang made their first contribution in https://github.com/ccfos/nightingale/pull/2576\n* @debidong made their first contribution in https://github.com/ccfos/nightingale/pull/2611\n* @IRONICBo made their first contribution in https://github.com/ccfos/nightingale/pull/2661\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.0.0-beta.10...v8.0.0-beta.11",
+      "memory_unit_text": "In the ccfos/nightingale release v8.0.0-beta.11, the project adds support for ClickHouse data source alerts, redesigns the menu layout, revamps the active alerts page with side panel details for active and historical alerts, introduces an alert event processing Pipeline supporting Relabel, Callback, Event Update, and Event Drop processors, supports cross-business-group cloning of alert rules, adds timezone selection to dashboard time picker, adds a 'View' function to dashboard chart panels for full-screen viewing, adds variance and standard deviation statistics to dashboard time series legend, adds Offset setting to Elasticsearch alert rule query conditions, refactors Prometheus alert rule data preview to Table mode, and fixes issues: Elasticsearch single query condition preview querying all conditions, dashboard panel title bar tooltip max-width not applying, and shared temporary chart rendering failure."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_0_0_beta_12",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.0.0-beta.12",
+      "tag_name": "v8.0.0-beta.12",
+      "title": "v8.0.0-beta.12",
+      "time_hint": "2025-05-30",
+      "published_at": "2025-05-30T04:10:53Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.0.0-beta.12",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.0.0-beta.12\nTag: v8.0.0-beta.12; draft: False; prerelease: False; published_at: 2025-05-30T04:10:53Z; created_at: 2025-05-30T00:51:00Z\nRelease notes:\n后端没有调整，前端修复了查看历史告警详情页面的Bug，故而重新打个包。\n从上个版本升级而来的话，只需要替换二进制重启即可。如果是容器，就更新一下镜像版本号重启即可。",
+      "memory_unit_text": "In the ccfos/nightingale release v8.0.0-beta.12, the backend has no changes; the frontend fixes a bug on the historical alert details page, requiring only binary replacement or image update for upgrade."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_0_0_beta_13",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.0.0-beta.13",
+      "tag_name": "v8.0.0-beta.13",
+      "title": "v8.0.0-beta.13",
+      "time_hint": "2025-06-09",
+      "published_at": "2025-06-09T09:42:57Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.0.0-beta.13",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.0.0-beta.13\nTag: v8.0.0-beta.13; draft: False; prerelease: False; published_at: 2025-06-09T09:42:57Z; created_at: 2025-06-09T09:36:33Z\nRelease notes:\n## What's Changed\n- feat: 支持 MySQL 数据源告警\n- refactor: 仪表盘图表弹窗新增时间选择器\n- fix: 修复通知媒介联系方式无法保存的问题\n- fix: 修复 Elasticsearch 数据源 KQL 语法报错未显示的问题\n- docs: 添加事件管道处理器的帮助文档，优化部分文案\n注意：`HTTP.APIForAgent.BasicAuth` 和 `HTTP.APIForService.BasicAuth` 如果配置了 Basic Auth 的信息，需要确保 `不能` 出现如下情况：\n- 用户名相同，但是密码不同，比如在 `HTTP.APIForAgent.BasicAuth` 里配置了一个用户是 `zhangsan`，密码是 `a`，在 `HTTP.APIForService.BasicAuth` 下面又配置了一个用户是 `zhangsan`，密码换成了 `b`\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.0.0-beta.12...v8.0.0-beta.13",
+      "memory_unit_text": "In the ccfos/nightingale release v8.0.0-beta.13, the project adds support for MySQL data source alerts, refactors dashboard chart popup to include a time picker, fixes issues: notification media contact method saving failure, Elasticsearch KQL syntax error not displayed, and adds documentation for event pipeline processors with a note about Basic Auth configuration constraints."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_0_0_beta_14",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.0.0-beta.14",
+      "tag_name": "v8.0.0-beta.14",
+      "title": "v8.0.0-beta.14",
+      "time_hint": "2025-06-20",
+      "published_at": "2025-06-20T10:27:22Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.0.0-beta.14",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.0.0-beta.14\nTag: v8.0.0-beta.14; draft: False; prerelease: False; published_at: 2025-06-20T10:27:22Z; created_at: 2025-06-20T10:01:01Z\nRelease notes:\n## What's Changed\n- feat: Support PostgreSQL datasource alerts\n- feat: Added AI Summary processor for event pipelines\n- feat: Support sharing links for alert events\n- feat: Added testing functionality for mute rules and subscription rules\n- refactor: Removed event pipeline menu, now accessible through notification rules - event processing side panel\n- refactor: Added sorting and copy functionality for alert rule event relabel settings\n- refactor: Added refresh button to alert healing history task list page, stops auto-refresh after healing tasks complete\n- refactor: Display \"Expired\" label for mute rules that are outside their effective time range\n- refactor: Removed tag character length limit for additional tags input box, optimized display for long tag characters\n- refactor: Added complexity validation for password input fields\n- refactor: Hide deprecated menus and features based on system installation time\n- refactor: Optimized datasource form save to prevent duplicate submissions, improved save and test button text\n- fix: Changed alert rule batch update execution frequency input to cron expression format\n- fix: Fixed missing offset parameter in Elasticsearch datasource alert rule query condition preview\n## 变更记录\n- feat: 支持 PostgreSQL 数据源告警\n- feat: 事件管道新增 AI Summary 处理器\n- feat: 告警事件生成分享链接\n- feat: 屏蔽规则、订阅规则添加测试功能\n- refactor: 删除 事件管道 菜单，在 通知规则 - 事件处理 里通过展开侧拉板管理\n- refactor: 告警规则-事件 relabel 设置添加排序和复制功能\n- refactor: 告警自愈历史任务列表页添加刷新按钮，自愈任务结束后停止自动刷新\n- refactor: 屏蔽规则列表页不在生效范围内的规则，显示 \"已过期\" 标签\n- refactor: 密码输入框添加复杂度校验\n- refactor: 根据系统安装时间判断是否隐藏即将下线的菜单和功能\n- refactor: 优化数据源表单保存防止重复提交问题，优化保存和测试按钮文案\n- fix: 告警规则批量更新 执行频率 输入框改成 cron 表达式方式\n- fix: 修复 Elasticsearch 数据源告警规则的查询条件预览没有传 offset 参数问题\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.0.0-beta.13...v8.0.0-beta.14",
+      "memory_unit_text": "In the ccfos/nightingale release v8.0.0-beta.14, the project adds support for PostgreSQL data source alerts, an AI Summary processor for event pipelines, sharing links for alert events, testing functionality for mute rules and subscription rules, refactors by removing the event pipeline menu (now managed via notification rules side panel), adds sorting and copy functionality for alert rule event relabel settings, adds a refresh button to alert healing history task list page, displays 'Expired' label for mute rules outside effective time range, removes tag character length limit for additional tags input, adds password complexity validation, hides deprecated menus based on system installation time, optimizes datasource form save to prevent duplicate submissions, and fixes issues: alert rule batch update execution frequency input changed to cron expression format, and missing offset parameter in Elasticsearch alert rule query condition preview."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_0_0",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.0.0",
+      "tag_name": "v8.0.0",
+      "title": "v8.0.0",
+      "time_hint": "2025-07-03",
+      "published_at": "2025-07-03T05:15:25Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.0.0",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.0.0\nTag: v8.0.0; draft: False; prerelease: False; published_at: 2025-07-03T05:15:25Z; created_at: 2025-07-02T12:32:56Z\nRelease notes:\n# What's Changed\n- **feat:** Support for Doris and Opensearch data source alerts\n- **feat:** User management with permission-based access control\n- **feat:** Machine list with multiple search criteria\n- **feat:** Built-in metric descriptions support multi-language configuration\n- **refactor:** Modified alert duration calculation logic, now using current detection time minus previous detection time\n- **refactor:** Template center redesign - built-in templates will no longer allow user modifications\n- **refactor:** Optimized shield rule configuration page\n- **refactor:** Alert rule list page now supports displaying associated notification rules\n- **refactor:** Added prominent alerts when data source-associated alert engines are disconnected\n- **refactor:** Optimized notification rule testing functionality prompts\n- **refactor:** Added \"Is recovery event?\" option to applicable properties\n- **refactor:** Dashboard query conditions support hiding specific query conditions [n9e/fe#1639](https://github.com/n9e/fe/issues/1639)\n- **fix:** Fixed dashboard table chart overrides configuration field matching issue where field values rendered abnormally [n9e/fe#1652](https://github.com/n9e/fe/issues/1652)\n- **fix:** Fixed SSO login failure issue [ccfos/nightingale#2743](https://github.com/ccfos/nightingale/issues/2743)\n- **fix:** Fixed Elasticsearch alert data deviation issue caused by log bucketing when alert interval is set to 1 day\n## 变更记录\n- feat: 支持 Doris、Opensearch 数据源告警\n- feat: 用户管理，支持通过权限点控制\n- feat: 机器列表，增加多个机器检索条件\n- feat: 内置指标说明支持配置多语言\n- refactor: 修改告警持续时长计算逻辑，改为使用本次检测时间减去上次检测时间\n- refactor: 模板中心改版，内置模板将不允许用户修改\n- refactor: 优化屏蔽规则配置页面\n- refactor: 告警规则列表页，支持显示关联的通知规则\n- refactor: 数据源关联的告警引擎失联，页面上添加醒目提示\n- refactor: 优化通知规则测试功能提示\n- refactor: 适用属性添加 \"是恢复事件？\" 选项\n- refactor: 仪表盘查询条件支持隐藏该查询条件 n9e/fe#1639\n- fix: 修复仪表盘表格图 overrides 配置匹配字段时，字段值渲染异常问题 n9e/fe#1652\n- fix: 修复 SSO 登录失败问题 ccfos/nightingale#2743\n- fix: 修复 Elasticsearch 告警时间间隔为 1 天时，日志分桶导致告警数据有偏差问题\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.0.0-beta.14...v8.0.0",
+      "memory_unit_text": "In the ccfos/nightingale release v8.0.0, the project adds support for Doris and Opensearch data source alerts, user management with permission-based access control, machine list with multiple search criteria, built-in metric descriptions supporting multi-language configuration, refactors alert duration calculation logic to use current detection time minus previous detection time, redesigns template center to prevent user modification of built-in templates, optimizes shield rule configuration page, supports displaying associated notification rules on alert rule list page, adds prominent alerts when data source-associated alert engines are disconnected, optimizes notification rule testing functionality prompts, adds 'Is recovery event?' option to applicable properties, supports hiding specific query conditions in dashboard query conditions, and fixes issues: dashboard table chart overrides configuration field matching, SSO login failure, and Elasticsearch alert data deviation when alert interval is 1 day."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_1_0",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.1.0",
+      "tag_name": "v8.1.0",
+      "title": "v8.1.0",
+      "time_hint": "2025-07-15",
+      "published_at": "2025-07-15T11:31:16Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.1.0",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.1.0\nTag: v8.1.0; draft: False; prerelease: False; published_at: 2025-07-15T11:31:16Z; created_at: 2025-07-15T08:29:30Z\nRelease notes:\n## What's Changed\n- feat: Elasticsearch 日志查询支持用户记录个人使用的查询语句功能\n- feat: Elasticsearch 日志检索页面支持全屏查看日志\n- feat: Elasticsearch 日志检索页面内容字段值支持快捷查询操作\n- refactor: 订阅规则支持 Host 类型数据源\n- docs: 消息模板文案优化\n- fix: 订阅规则列表页表格里 订阅业务组 列内容渲染异常\n- fix: 修复打开的页面地址与实际访问的页面级别页签地址不符问题\n- fix: 修复 Elasticsearch 日志检索页面左侧字段列表 top N 查询参数分页参数错误导致查询结果不对问题\n- fix: 修复仪表盘匿名分享链接在设置标识时没有用标识\n- fix: 通知规则脚本通知超时设置问题\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.0.0...v8.1.0",
+      "memory_unit_text": "In the ccfos/nightingale release v8.1.0, the project adds support for Elasticsearch log search to record user personal query statements, full-screen log viewing, quick query operations on content field values, refactors subscription rules to support Host type data sources, optimizes message template text, and fixes issues: subscription rule list table business group column rendering, page address mismatch with actual tab address, Elasticsearch log search left field list top N query pagination error, dashboard anonymous share link not using identifier, and notification rule script notification timeout."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_2_0",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.2.0",
+      "tag_name": "v8.2.0",
+      "title": "v8.2.0",
+      "time_hint": "2025-07-31",
+      "published_at": "2025-07-31T12:23:42Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.2.0",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.2.0\nTag: v8.2.0; draft: False; prerelease: False; published_at: 2025-07-31T12:23:42Z; created_at: 2025-07-31T10:08:12Z\nRelease notes:\n## What's Changed\n- feat: Support viewing Nightingale release records within the product\n- feat: Added email notification records\n- refactor: Convert template center alert rules to new notification rules when importing to business groups\n- refactor: Optimize message templates to fix display issues with blocked links and query curve links in IM\n- refactor: Import Prometheus alert rules and adapt to new version notification rules\n- fix: Fixed \"Skip certificate verification\" parameter error for HTTP-type notification media\n- fix: Removed data source list requests from shared anonymous access alert event pages\n- fix: PostgreSQL cross-database query issues\n- fix: Alert rule duplicate name detection logic\n- fix: Fixed incorrect parameters when jumping from Loki data source alert event details page to instant view\n## 变更记录\n- feat: 支持在产品中查看夜莺发版记录\n- feat: 新增邮件通知记录\n- refactor: 模板中心告警规则导入到业务组时转换成新版通知规则\n- refactor: 优化消息模板，解决在 im 中屏蔽链接和查询曲线链接展示错乱问题\n- refactor: 导入 Prometheus 告警规则，使用新版通知规则\n- fix: 通知媒介 HTTP 类型的 \"跳过证书验证\" 参数错误问题\n- fix: 分享的匿名访问告警事件页面去除数据源列表的请求\n- fix: PostgreSQL 跨数据库查询问题\n- fix: 告警名称重名检测逻辑\n- fix: loki 数据源从告警事件详情页跳转到即时查看携带参数不对问题\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.1.0...v8.2.0",
+      "memory_unit_text": "In the ccfos/nightingale release v8.2.0, the project adds support for viewing Nightingale release records within the product, email notification records, refactors template center alert rules to convert to new notification rules when importing to business groups, optimizes message templates to fix display issues with blocked links and query curve links in IM, imports Prometheus alert rules adapted to new notification rules, and fixes issues: HTTP notification media 'Skip certificate verification' parameter error, shared anonymous access alert event pages removing data source list requests, PostgreSQL cross-database query issues, alert rule duplicate name detection logic, and Loki data source alert event details page jump to instant view carrying incorrect parameters."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_2_1",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.2.1",
+      "tag_name": "v8.2.1",
+      "title": "v8.2.1",
+      "time_hint": "2025-08-06",
+      "published_at": "2025-08-06T03:19:26Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.2.1",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.2.1\nTag: v8.2.1; draft: False; prerelease: False; published_at: 2025-08-06T03:19:26Z; created_at: 2025-08-06T03:09:53Z\nRelease notes:\n## What's Changed\n- fix: MySQL datasource alert client connection issues\n- fix: Fix Elasticsearch alert rule \"document minimum value\" field name not taking effect\n- fix: Fix SSO logout functionality, redirect to SSO logout URL if available\n- refactor: Optimize Prometheus alert rule import logic\n- refactor: Add and adjust some text descriptions\n## 变更记录\n- fix: MySQL 数据源告警，客户端连接问题\n- fix: 修复 Elasticsearch 告警规则的 \"文档最小值\" 字段名不生效问题\n- fix: 修复 SSO 登出功能，如有 SSO Logout 地址则跳转到该地址\n- refactor: 优化 Prometheus 告警规则导入逻辑\n- refactor: 新增和调整部分文案说明\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.2.0...v8.2.1",
+      "memory_unit_text": "In the ccfos/nightingale release v8.2.1, the project fixes MySQL data source alert client connection issues, Elasticsearch alert rule 'document minimum value' field name not taking effect, SSO logout functionality to redirect to SSO logout URL if available, refactors Prometheus alert rule import logic, and adds/adjusts some text descriptions."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_2_2",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.2.2",
+      "tag_name": "v8.2.2",
+      "title": "v8.2.2",
+      "time_hint": "2025-08-06",
+      "published_at": "2025-08-06T12:23:48Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.2.2",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.2.2\nTag: v8.2.2; draft: False; prerelease: False; published_at: 2025-08-06T12:23:48Z; created_at: 2025-08-06T12:21:57Z\nRelease notes:\n## What's Changed\n- fix: The problem of data interaction when batch-updating alerting rules\n## 变更记录\n- fix: 批量更新告警规则时，数据相互影响的问题\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.2.1...v8.2.2",
+      "memory_unit_text": "In the ccfos/nightingale release v8.2.2, the project fixes a problem of data interaction when batch-updating alerting rules."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_3_0",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.3.0",
+      "tag_name": "v8.3.0",
+      "title": "v8.3.0",
+      "time_hint": "2025-08-28",
+      "published_at": "2025-08-28T11:51:48Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.3.0",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.3.0\nTag: v8.3.0; draft: False; prerelease: False; published_at: 2025-08-28T11:51:48Z; created_at: 2025-08-28T11:44:05Z\nRelease notes:\n## What's Changed\n- feat: Dashboard — add \"Table NG\" panel type\n- refactor: optimize machine heartbeat update logic\n- refactor: optimize time-series data forwarding logic\n- refactor: improve data source selector UX (applies to Instant Query / Log Search / Dashboard pages)\n- refactor: improve alert rule picker UX on the Subscription Rules page\n- refactor: Prometheus Instant Query — also save history on Enter and when the PromQL input loses focus\n- refactor: Elasticsearch Log Search — refine the log query API’s Query DSL\n- refactor: after SSO login, redirect back to the originally requested (pre-login) page\n- fix: auto-remediation task status update issue\n- fix: search not working in the Business Group list view\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.2.2...v8.3.0",
+      "memory_unit_text": "In the ccfos/nightingale release v8.3.0, the project adds a 'Table NG' panel type to dashboards, refactors machine heartbeat update logic, time-series data forwarding logic, data source selector UX for Instant Query/Log Search/Dashboard pages, alert rule picker UX on Subscription Rules page, Prometheus Instant Query to save history on Enter and input blur, Elasticsearch Log Search Query DSL, SSO login redirect to originally requested page, and fixes auto-remediation task status update and search not working in Business Group list view."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_3_1",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.3.1",
+      "tag_name": "v8.3.1",
+      "title": "v8.3.1",
+      "time_hint": "2025-08-29",
+      "published_at": "2025-08-29T18:03:15Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.3.1",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.3.1\nTag: v8.3.1; draft: False; prerelease: False; published_at: 2025-08-29T18:03:15Z; created_at: 2025-08-29T17:57:32Z\nRelease notes:\n## What's Changed\n- fix: Fixed the problem that the dashboard data source selector cannot select data source variables\n- fix: Send notification error and try again invalid problem\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.3.0...v8.3.1",
+      "memory_unit_text": "In the ccfos/nightingale release v8.3.1, the project fixes the dashboard data source selector not being able to select data source variables, and a send notification error retry invalid problem."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_4_0",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.4.0",
+      "tag_name": "v8.4.0",
+      "title": "v8.4.0",
+      "time_hint": "2025-10-15",
+      "published_at": "2025-10-15T09:21:12Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.4.0",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.4.0\nTag: v8.4.0; draft: False; prerelease: False; published_at: 2025-10-15T09:21:12Z; created_at: 2025-10-15T07:19:01Z\nRelease notes:\n## What's Changed\n- feat: Elasticsearch log search — add Top N for field statistics\n- feat: Prometheus instant query — Table view supports CSV export\n- feat: Support encrypted storage for phone numbers @zaipingy\n- refactor: Optimize periodic host caching logic\n- refactor: Dashboard TableNG panel — code and style optimizations\n- refactor: In Active Alerts and Alert History, change “add filter by clicking a tag” to “add filter by double-clicking a tag” @SaladDay\n- refactor: Business Group sidebar — optimize node action buttons; on hover on the right side of a node, also show Add/Delete buttons\n- refactor: Quick View time-series chart — also add step-related settings\n- fix: Business Group sidebar — missing Edit button in list mode\n- fix: SQL injection vulnerability in machine list and user list APIs — thanks to **Aleksey Solovev (Positive Technologies)** for reporting\n- fix: OpenSearch authentication issue\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.3.1...v8.4.0",
+      "memory_unit_text": "In the ccfos/nightingale release v8.4.0, the project adds Top N for field statistics in Elasticsearch log search, CSV export for Prometheus instant query Table view, encrypted storage for phone numbers, refactors periodic host caching logic, dashboard TableNG panel code and style, changes 'add filter by clicking a tag' to 'double-clicking a tag' in Active Alerts and Alert History, optimizes Business Group sidebar node action buttons, adds step-related settings to Quick View time-series chart, and fixes Business Group sidebar missing Edit button in list mode, SQL injection vulnerabilities in machine list and user list APIs, and OpenSearch authentication issue."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_4_1",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.4.1",
+      "tag_name": "v8.4.1",
+      "title": "v8.4.1",
+      "time_hint": "2025-11-11",
+      "published_at": "2025-11-11T09:51:46Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.4.1",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.4.1\nTag: v8.4.1; draft: False; prerelease: False; published_at: 2025-11-11T09:51:46Z; created_at: 2025-11-11T08:47:49Z\nRelease notes:\n## What's Changed\n* fix: elasticsearch v9 range query compatibility by @snowykami in https://github.com/ccfos/nightingale/pull/2922\n* fix: http callback retry interval in millisecond by @Direktor799 in https://github.com/ccfos/nightingale/pull/2928\n## New Contributors\n* @snowykami made their first contribution in https://github.com/ccfos/nightingale/pull/2922\n* @Direktor799 made their first contribution in https://github.com/ccfos/nightingale/pull/2928\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.4.0...v8.4.1",
+      "memory_unit_text": "In the ccfos/nightingale release v8.4.1, the project fixes Elasticsearch v9 range query compatibility and HTTP callback retry interval in milliseconds."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_5_0",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.5.0",
+      "tag_name": "v8.5.0",
+      "title": "v8.5.0",
+      "time_hint": "2025-12-20",
+      "published_at": "2025-12-20T12:48:11Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.5.0",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.5.0\nTag: v8.5.0; draft: False; prerelease: False; published_at: 2025-12-20T12:48:11Z; created_at: 2025-12-20T11:52:29Z\nRelease notes:\n## What's Changed\n- feat: Support VictoriaLogs datasource for alert rules\n- feat: Support Dingtalk for Single Sign-On (SSO)\n- feat: Display associated business groups in team management\n- feat: Add hash field to alert event details\n- feat: Add machine business group type option to the applicable attribute selector\n- feat: Add \"Metric classification ignore prefix\" setting to quick view, allowing certain prefixes to be ignored before classification\n- feat: Add notes field to dashboard configuration and tables\n- refactor: Refactor dashboard variables, support data preview for variable configuration, display error message when Query type variable query fails\n- refactor: Migrate \"Max data points\" and \"Time\" (custom time range) settings for individual queries in dashboards to the panel level, located to the right of the datasource selector\n- refactor: Limit the maximum height of PromQL input for Prometheus instant queries\n- refactor: Optimize ClickHouse datasource configuration page\n- refactor: Rename \"Collector\" to \"Category\" for built-in metrics, include component type parameter when querying category options\n- fix: Correct some typos in dashboard configuration\n- fix: Fix message template save conflict issue ccfos/nightingale#2937\n## New Contributors\n* @SenCoder made their first contribution in https://github.com/ccfos/nightingale/pull/2978\n* @busyster996 made their first contribution in https://github.com/ccfos/nightingale/pull/2982\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.4.1...v8.5.0",
+      "memory_unit_text": "In the ccfos/nightingale release v8.5.0, the project adds support for VictoriaLogs data source for alert rules, Dingtalk SSO, displaying associated business groups in team management, a hash field in alert event details, machine business group type option in applicable attribute selector, 'Metric classification ignore prefix' setting in quick view, notes field in dashboard configuration and tables, refactors dashboard variables with data preview and error messages, migrates 'Max data points' and 'Time' settings to panel level, limits PromQL input max height, optimizes ClickHouse data source configuration page, renames 'Collector' to 'Category' for built-in metrics, and fixes typos in dashboard configuration and message template save conflict."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v8_5_1",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.5.1",
+      "tag_name": "v8.5.1",
+      "title": "v8.5.1",
+      "time_hint": "2026-01-16",
+      "published_at": "2026-01-16T09:36:14Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v8.5.1",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v8.5.1\nTag: v8.5.1; draft: False; prerelease: False; published_at: 2026-01-16T09:36:14Z; created_at: 2026-01-16T09:29:35Z\nRelease notes:\n## What's Changed\n- refactor: Optimize database initialization logic\n- fix: Migrate typo in panel config within dashboard groups\n- fix: Reset zoom when time range changes in dashboard time series chart\n- fix: Show constant type variables when hide option is disabled in dashboard\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.5.0...v8.5.1",
+      "memory_unit_text": "In the ccfos/nightingale release v8.5.1, the project optimizes database initialization logic, fixes a typo in panel config within dashboard groups, resets zoom when time range changes in dashboard time series chart, and shows constant type variables when hide option is disabled in dashboard."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v9_0_0_beta_1",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v9.0.0-beta.1",
+      "tag_name": "v9.0.0-beta.1",
+      "title": "v9.0.0-beta.1",
+      "time_hint": "2026-05-23",
+      "published_at": "2026-05-23T07:05:52Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v9.0.0-beta.1",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v9.0.0-beta.1\nTag: v9.0.0-beta.1; draft: False; prerelease: False; published_at: 2026-05-23T07:05:52Z; created_at: 2026-05-23T06:09:04Z\nRelease notes:\n## What's Changed\n- feat: Introduce Nightingale AI — built-in AI assistant, Skills marketplace, LLM config management, with page-specific prompt recommendations\n- feat: Redesigned navigation menu, global layout, and table UI\n- feat: Refactored notification channel management\n- feat: New event pipeline execution tracking page with detailed execution view\n- feat: Alert mutes now support batch deletion of expired rules\n- feat: Mute / subscription / recording rule lists now support filtering by disabled status\n- feat: Added Feishu SSO; OAuth2 userinfo supports nested paths; LDAP login supports optional role override\n- feat: New host dashboard page with CPU, memory, and version stat cards\n- feat: Dashboards support cross-page panel copy/paste via clipboard, TableNG CSV export, and MySQL variables with multi/all selection\n- fix: Strengthened SQL injection protection, added Webhook queue size limit, unified MySQL collation\n## Upgrade note ⚠️\nThe new AI assistant relies on Redis Streams, so Redis 5.0 or later is required (Redis 7.0+ recommended for Cluster users to enable sharded Pub/Sub).\n## New Contributors\n* @zgcbj made their first contribution in https://github.com/ccfos/nightingale/pull/3044\n* @garudaen made their first contribution in https://github.com/ccfos/nightingale/pull/3050\n* @feiguoL made their first contribution in https://github.com/ccfos/nightingale/pull/3062\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v8.5.1...v9.0.0-beta.1",
+      "memory_unit_text": "In the ccfos/nightingale release v9.0.0-beta.1, the project introduces Nightingale AI with built-in AI assistant, Skills marketplace, LLM config management, and page-specific prompt recommendations, redesigns navigation menu, global layout, and table UI, refactors notification channel management, adds a new event pipeline execution tracking page with detailed execution view, supports batch deletion of expired mute rules, filtering by disabled status for mute/subscription/recording rule lists, adds Feishu SSO, OAuth2 userinfo nested paths, LDAP login optional role override, a new host dashboard page with CPU, memory, and version stat cards, cross-page panel copy/paste via clipboard, TableNG CSV export, MySQL variables with multi/all selection, and strengthens SQL injection protection, adds Webhook queue size limit, and unifies MySQL collation. Upgrade note: Redis 5.0+ required (7.0+ recommended for Cluster)."
+    },
+    {
+      "memory_node_id": "ccfos__nightingale__release__v9_0_0_beta_2",
+      "repo": "ccfos/nightingale",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v9.0.0-beta.2",
+      "tag_name": "v9.0.0-beta.2",
+      "title": "v9.0.0-beta.2",
+      "time_hint": "2026-05-29",
+      "published_at": "2026-05-29T07:32:40Z",
+      "source_url": "https://github.com/ccfos/nightingale/releases/tag/v9.0.0-beta.2",
+      "raw_text": "Repository: ccfos/nightingale\nRelease: v9.0.0-beta.2\nTag: v9.0.0-beta.2; draft: False; prerelease: False; published_at: 2026-05-29T07:32:40Z; created_at: 2026-05-29T06:20:21Z\nRelease notes:\n## What's Changed\n- Added a document-based Q&A skill. For any usage-related questions, you can now ask directly in the AI chat.\n- Added a one-click AI analysis button to the Alert Event Details page.\n##  V9 new feature\n- feat: Introduce Nightingale AI — built-in AI assistant, Skills marketplace, LLM config management, with page-specific prompt recommendations\n- feat: Redesigned navigation menu, global layout, and table UI\n- feat: Refactored notification channel management\n- feat: New event pipeline execution tracking page with detailed execution view\n## Upgrade note ⚠️\nThe new AI assistant relies on Redis Streams, so Redis 5.0 or later is required (Redis 7.0+ recommended for Cluster users to enable sharded Pub/Sub).\n**Full Changelog**: https://github.com/ccfos/nightingale/compare/v9.0.0-beta.1...v9.0.0-beta.2",
+      "memory_unit_text": "In the ccfos/nightingale release v9.0.0-beta.2, the project adds a document-based Q&A skill for AI chat and a one-click AI analysis button on the Alert Event Details page, and reiterates the V9 new features: Nightingale AI, redesigned navigation and UI, refactored notification channel management, and new event pipeline execution tracking page. Upgrade note: Redis 5.0+ required."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the ccfos/nightingale releases, which release introduces a new dashboard datasource selector and changes the default execution frequency of alert rules to 60 seconds?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v8.0.0-beta.10"
+        },
+        {
+          "option_id": "B",
+          "text": "v8.0.0-beta.11"
+        },
+        {
+          "option_id": "C",
+          "text": "v8.0.0-beta.9"
+        },
+        {
+          "option_id": "D",
+          "text": "v8.0.0-beta.8"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v8.0.0-beta.10",
+      "source_chunk_ids": [
+        "ccfos__nightingale__release__v8_0_0_beta_10"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "ccfos__nightingale__release__v8_0_0_beta_10",
+          "answer_text": "introduces a new dashboard datasource selector ... changes default execution frequency of alert rules to 60 seconds"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the ccfos/nightingale releases, how does the notification channel change in v8.0.0-beta.8.3 differ from the notification channel change in v8.0.0-beta.8?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v8.0.0-beta.8 adds a Discord notification channel, while v8.0.0-beta.8.3 adds built-in notification media for Feishu app, Slack, Mattermost, and Callback."
+        },
+        {
+          "option_id": "B",
+          "text": "v8.0.0-beta.8 adds Feishu app, Slack, Mattermost, and Callback, while v8.0.0-beta.8.3 adds Discord."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only fix notification bugs without adding new channels."
+        },
+        {
+          "option_id": "D",
+          "text": "v8.0.0-beta.8 adds email notification records, while v8.0.0-beta.8.3 adds Discord."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v8.0.0-beta.8 adds a Discord notification channel, while v8.0.0-beta.8.3 adds built-in notification media for Feishu app, Slack, Mattermost, and Callback.",
+      "source_chunk_ids": [
+        "ccfos__nightingale__release__v8_0_0_beta_8",
+        "ccfos__nightingale__release__v8_0_0_beta_8_3"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "ccfos__nightingale__release__v8_0_0_beta_8",
+          "answer_text": "adds a Discord notification channel"
+        },
+        {
+          "memory_node_id": "ccfos__nightingale__release__v8_0_0_beta_8_3",
+          "answer_text": "adds built-in notification media for Feishu app, Slack, Mattermost, and Callback"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the ccfos/nightingale release window, order the following release-content states from earliest to latest: (1) a release that adds support for ClickHouse data source alerts, (2) a release that introduces Nightingale AI with built-in AI assistant and Skills marketplace, (3) a release that adds a 'Table NG' panel type to dashboards, (4) a release that adds support for VictoriaLogs data source for alert rules.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 3 -> 4 -> 2"
+        },
+        {
+          "option_id": "B",
+          "text": "3 -> 1 -> 4 -> 2"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 4 -> 3 -> 2"
+        },
+        {
+          "option_id": "D",
+          "text": "2 -> 1 -> 3 -> 4"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 3 -> 4 -> 2",
+      "source_chunk_ids": [
+        "ccfos__nightingale__release__v8_0_0_beta_11",
+        "ccfos__nightingale__release__v8_3_0",
+        "ccfos__nightingale__release__v8_5_0",
+        "ccfos__nightingale__release__v9_0_0_beta_1"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "ccfos__nightingale__release__v8_0_0_beta_11",
+          "answer_text": "adds support for ClickHouse data source alerts"
+        },
+        {
+          "memory_node_id": "ccfos__nightingale__release__v8_3_0",
+          "answer_text": "adds a 'Table NG' panel type to dashboards"
+        },
+        {
+          "memory_node_id": "ccfos__nightingale__release__v8_5_0",
+          "answer_text": "adds support for VictoriaLogs data source for alert rules"
+        },
+        {
+          "memory_node_id": "ccfos__nightingale__release__v9_0_0_beta_1",
+          "answer_text": "introduces Nightingale AI with built-in AI assistant, Skills marketplace"
+        }
+      ]
+    }
+  ]
+}

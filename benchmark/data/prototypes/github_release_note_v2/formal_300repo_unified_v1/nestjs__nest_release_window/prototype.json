@@ -1,0 +1,530 @@
+{
+  "prototype_id": "nestjs__nest_release_window",
+  "domain": "github_release_evolution",
+  "repo": "nestjs/nest",
+  "source_type": "release_note",
+  "window_title": "nestjs/nest recent release evolution",
+  "window_summary": "This window tracks the recent nestjs/nest release stream across v10 and v11 minor/patch versions, highlighting microservices enhancements, core bug fixes, and dependency updates.",
+  "chunks": [
+    {
+      "memory_node_id": "nestjs__nest__release__v11_0_21",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.0.21",
+      "tag_name": "v11.0.21",
+      "title": "v11.0.21",
+      "time_hint": "2025-04-23",
+      "published_at": "2025-04-23T06:32:43Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.0.21",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.0.21\nTag: v11.0.21; draft: False; prerelease: False; published_at: 2025-04-23T06:32:43Z; created_at: 2025-04-23T06:31:34Z\nRelease notes:\n## v11.0.21 (2025-04-23)\n#### Enhancements\n* `common`\n* [#14995](https://github.com/nestjs/nest/pull/14995) feat(common): Add fallbackToMimetype support in FileTypeValidator ([@mag123c](https://github.com/mag123c))\n#### Dependencies\n* `platform-fastify`\n* [#14989](https://github.com/nestjs/nest/pull/14989) fix(deps): update dependency fastify to v5.3.2 [security] ([@renovate[bot]](https://github.com/apps/renovate))\n#### Committers: 1\n- JaeHo Jang ([@mag123c](https://github.com/mag123c))",
+      "memory_unit_text": "In the nestjs/nest release v11.0.21, the common package adds fallbackToMimetype support in FileTypeValidator, and the platform-fastify dependency fastify is updated to v5.3.2 for a security fix."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_0",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.0",
+      "tag_name": "v11.1.0",
+      "title": "v11.1.0",
+      "time_hint": "2025-04-23",
+      "published_at": "2025-04-23T11:25:19Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.0",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.0\nTag: v11.1.0; draft: False; prerelease: False; published_at: 2025-04-23T11:25:19Z; created_at: 2025-04-23T11:24:41Z\nRelease notes:\n## v11.1.0 (2025-04-23)\n#### Enhancements\n* `microservices`\n* [#14540](https://github.com/nestjs/nest/pull/14540) feat(microservices): add support for topic exchange (rabbitmq) ([@kamilmysliwiec](https://github.com/kamilmysliwiec))\n#### Committers: 1\n- Kamil Mysliwiec ([@kamilmysliwiec](https://github.com/kamilmysliwiec))",
+      "memory_unit_text": "In the nestjs/nest release v11.1.0, the microservices package adds support for topic exchange in RabbitMQ."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_1",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.1",
+      "tag_name": "v11.1.1",
+      "title": "v11.1.1",
+      "time_hint": "2025-05-14",
+      "published_at": "2025-05-14T07:04:07Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.1",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.1\nTag: v11.1.1; draft: False; prerelease: False; published_at: 2025-05-14T07:04:07Z; created_at: 2025-05-14T07:01:54Z\nRelease notes:\n## v11.1.1 (2025-05-14)\n#### Bug fixes\n* `core`\n* [#15056](https://github.com/nestjs/nest/pull/15056) fix(core): HTTP adapter error mapping ([@maxbronnikov10](https://github.com/maxbronnikov10))\n* `microservices`\n* [#15062](https://github.com/nestjs/nest/pull/15062) fix(microservices): ensure all redis and amqp client closes properly ([@yatin166](https://github.com/yatin166))\n* [#15032](https://github.com/nestjs/nest/pull/15032) fix(microservices): ensure all the amqp connections are closed properly ([@yatin166](https://github.com/yatin166))\n* [#15020](https://github.com/nestjs/nest/pull/15020) fix(microservices): ensure all redis connections are closed ([@yatin166](https://github.com/yatin166))\n* `core`, `platform-fastify`\n* [#15061](https://github.com/nestjs/nest/pull/15061) fix(core): bring back `getHeader` and `appendHeader` methods from `AbstractHttpAdapter` ([@micalevisk](https://github.com/micalevisk))\n* `platform-express`\n* [#15010](https://github.com/nestjs/nest/pull/15010) feat: remove use of pipeline ([@jmcdo29](https://github.com/jmcdo29))\n#### Enhancements\n* `microservices`\n* [#14606](https://github.com/nestjs/nest/pull/14606) feat(microservices): add specific transport id to microservices ([@maxbronnikov10](https://github.com/maxbronnikov10))\n* [#15057](https://github.com/nestjs/nest/pull/15057) feat(microservices): Allow custom exchangeType as string for plugin compatibility ([@ChangmoKang](https://github.com/ChangmoKang))\n* [#15072](https://github.com/nestjs/nest/pull/15072) feat(microservices): Add exchange arguments to RabbitMQ ([@gapon2401](https://github.com/gapon2401))\n#### Dependencies\n* `platform-fastify`\n* [#15129](https://github.com/nestjs/nest/pull/15129) chore(deps): bump fastify from 5.3.2 to 5.3.3 ([@dependabot[bot]](https://github.com/apps/dependabot))\n* `platform-ws`\n* [#15068](https://github.com/nestjs/nest/pull/15068) chore(deps): bump ws from 8.18.1 to 8.18.2 ([@dependabot[bot]](https://github.com/apps/dependabot))\n* `common`\n* [#15029](https://github.com/nestjs/nest/pull/15029) chore(deps): bump file-type from 20.4.1 to 20.5.0 ([@dependabot[bot]](https://github.com/apps/dependabot))\n#### Committers: 7\n- Antonio Tripodi ([@Tony133](https://github.com/Tony133))\n- Changmo Kang (Ryan) ([@ChangmoKang](https://github.com/ChangmoKang))\n- Igor Gaponov ([@gapon2401](https://github.com/gapon2401))\n- Jackie McDoniel ([@jmcdo29](https://github.com/jmcdo29))\n- Maxim Bronnikov ([@maxbronnikov10](https://github.com/maxbronnikov10))\n- Micael Levi L. Cavalcante ([@micalevisk](https://github.com/micalevisk))\n- Yatin Gaikwad ([@yatin166](https://github.com/yatin166))",
+      "memory_unit_text": "In the nestjs/nest release v11.1.1, multiple bug fixes are applied: core HTTP adapter error mapping, proper closing of Redis and AMQP connections in microservices, restoration of getHeader and appendHeader methods in AbstractHttpAdapter, and removal of pipeline usage in platform-express. Enhancements include adding specific transport id to microservices, allowing custom exchangeType as string for plugin compatibility, and adding exchange arguments to RabbitMQ. Dependencies are bumped for fastify, ws, and file-type."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_2",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.2",
+      "tag_name": "v11.1.2",
+      "title": "v11.1.2",
+      "time_hint": "2025-05-26",
+      "published_at": "2025-05-26T06:29:00Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.2",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.2\nTag: v11.1.2; draft: False; prerelease: False; published_at: 2025-05-26T06:29:00Z; created_at: 2025-05-26T06:27:54Z\nRelease notes:\n## v11.1.2 (2025-05-26)\n#### Bug fixes\n* `microservices`\n* [#15172](https://github.com/nestjs/nest/pull/15172) fix(microservices): support custom strategy in async usefactory config ([@mag123c](https://github.com/mag123c))\n* [#15166](https://github.com/nestjs/nest/pull/15166) fix(microservice): prevent error logs during redis client shutdown ([@janroker](https://github.com/janroker))\n#### Dependencies\n* `common`\n* [#15185](https://github.com/nestjs/nest/pull/15185) chore(deps): bump file-type from 20.5.0 to 21.0.0 ([@dependabot[bot]](https://github.com/apps/dependabot))\n* `platform-express`\n* [#15159](https://github.com/nestjs/nest/pull/15159) chore(deps): bump multer from 1.4.5-lts.2 to 2.0.0 ([@dependabot[bot]](https://github.com/apps/dependabot))\n#### Committers: 2\n- JaeHo Jang ([@mag123c](https://github.com/mag123c))\n- Jan Roček ([@janroker](https://github.com/janroker))",
+      "memory_unit_text": "In the nestjs/nest release v11.1.2, microservices fixes include support for custom strategy in async useFactory config and prevention of error logs during Redis client shutdown. Dependencies are updated: file-type to 21.0.0 and multer to 2.0.0."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v10_4_18",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v10.4.18",
+      "tag_name": "v10.4.18",
+      "title": "v10.4.18",
+      "time_hint": "2025-05-26",
+      "published_at": "2025-05-26T12:21:54Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v10.4.18",
+      "raw_text": "Repository: nestjs/nest\nRelease: v10.4.18\nTag: v10.4.18; draft: False; prerelease: False; published_at: 2025-05-26T12:21:54Z; created_at: 2025-05-26T12:20:26Z\nRelease notes:\n## v10.4.18 (2025-05-26)\n#### Dependencies\n* `platform-express`\n* chore(deps): bump multer from 1.4.5-lts.2 to 2.0.0",
+      "memory_unit_text": "In the nestjs/nest release v10.4.18, the platform-express dependency multer is bumped from 1.4.5-lts.2 to 2.0.0."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_3",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.3",
+      "tag_name": "v11.1.3",
+      "title": "v11.1.3",
+      "time_hint": "2025-06-06",
+      "published_at": "2025-06-06T06:58:58Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.3",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.3\nTag: v11.1.3; draft: False; prerelease: False; published_at: 2025-06-06T06:58:58Z; created_at: 2025-06-06T06:56:50Z\nRelease notes:\n## v11.1.3 (2025-06-06)\n#### Bug fixes\n* `core`\n* [#15201](https://github.com/nestjs/nest/pull/15201) fix(core): gracefully shutdown the app when repl exits ([@dzhlobo](https://github.com/dzhlobo))\n#### Enhancements\n* `common`\n* [#15209](https://github.com/nestjs/nest/pull/15209) feat: add string array type to disposition ([@fjodor-rybakov](https://github.com/fjodor-rybakov))\n* `common`, `core`\n* [#15203](https://github.com/nestjs/nest/pull/15203) feat(core): defer initialization connected microservice ([@isaryy](https://github.com/isaryy))\n#### Dependencies\n* `platform-express`\n* [#15232](https://github.com/nestjs/nest/pull/15232) chore(deps): bump multer from 2.0.0 to 2.0.1 ([@dependabot[bot]](https://github.com/apps/dependabot))\n#### Committers: 3\n- Dmitry Zhlobo ([@dzhlobo](https://github.com/dzhlobo))\n- [@fjodor-rybakov](https://github.com/fjodor-rybakov)\n- [@isaryy](https://github.com/isaryy)",
+      "memory_unit_text": "In the nestjs/nest release v11.1.3, core fixes include graceful shutdown when REPL exits. Enhancements add string array type to disposition in common, and defer initialization of connected microservice in core and common. Multer is bumped to 2.0.1."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v10_4_19",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v10.4.19",
+      "tag_name": "v10.4.19",
+      "title": "v10.4.19",
+      "time_hint": "2025-06-09",
+      "published_at": "2025-06-09T06:56:30Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v10.4.19",
+      "raw_text": "Repository: nestjs/nest\nRelease: v10.4.19\nTag: v10.4.19; draft: False; prerelease: False; published_at: 2025-06-09T06:56:30Z; created_at: 2025-06-09T06:55:39Z\nRelease notes:\n## v10.4.19 (2025-06-09)\n#### Dependencies\n* `platform-express`\n* chore(deps): bump multer from 2.0.0 to 2.0.1 ([@dependabot[bot]](https://github.com/apps/dependabot))",
+      "memory_unit_text": "In the nestjs/nest release v10.4.19, the platform-express dependency multer is bumped from 2.0.0 to 2.0.1."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_4",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.4",
+      "tag_name": "v11.1.4",
+      "title": "v11.1.4",
+      "time_hint": "2025-07-16",
+      "published_at": "2025-07-16T07:42:08Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.4",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.4\nTag: v11.1.4; draft: False; prerelease: False; published_at: 2025-07-16T07:42:08Z; created_at: 2025-07-16T07:40:47Z\nRelease notes:\n## v11.1.4 (2025-07-16)\n#### Bug fixes\n* `platform-fastify`\n* [#15385](https://github.com/nestjs/nest/pull/15385) fix(testing): auto-init fastify adapter for middleware registration ([@mag123c](https://github.com/mag123c))\n* `core`, `testing`\n* [#15405](https://github.com/nestjs/nest/pull/15405) fix(core): fix race condition in class dependency resolution ([@hajekjiri](https://github.com/hajekjiri))\n* `core`\n* [#15333](https://github.com/nestjs/nest/pull/15333) fix(core): Make flattenRoutePath return a valid module ([@gentunian](https://github.com/gentunian))\n* `microservices`\n* [#15305](https://github.com/nestjs/nest/pull/15305) fix(microservices): Revisit RMQ pattern matching with wildcards ([@getlarge](https://github.com/getlarge))\n* [#15250](https://github.com/nestjs/nest/pull/15250) fix(constants): update RMQ_DEFAULT_QUEUE to an empty string ([@EeeasyCode](https://github.com/EeeasyCode))\n#### Enhancements\n* `platform-fastify`\n* [#14789](https://github.com/nestjs/nest/pull/14789) feat(fastify): add decorator for custom schema ([@piotrfrankowski](https://github.com/piotrfrankowski))\n* `common`, `core`, `microservices`, `platform-express`, `platform-fastify`, `websockets`\n* [#15386](https://github.com/nestjs/nest/pull/15386) feat: enhance introspection capabilities ([@kamilmysliwiec](https://github.com/kamilmysliwiec))\n* `core`\n* [#15374](https://github.com/nestjs/nest/pull/15374) feat: supporting fine async storage control ([@Farenheith](https://github.com/Farenheith))\n#### Dependencies\n* `platform-ws`\n* [#15350](https://github.com/nestjs/nest/pull/15350) chore(deps): bump ws from 8.18.2 to 8.18.3 ([@dependabot[bot]](https://github.com/apps/dependabot))\n* `platform-fastify`\n* [#15278](https://github.com/nestjs/nest/pull/15278) chore(deps): bump fastify from 5.3.3 to 5.4.0 ([@dependabot[bot]](https://github.com/apps/dependabot))\n#### Committers: 11\n- Alexey Filippov ([@SocketSomeone](https://github.com/SocketSomeone))\n- EFIcats ([@ext4cats](https://github.com/ext4cats))\n- Edouard Maleix ([@getlarge](https://github.com/getlarge))\n- JaeHo Jang ([@mag123c](https://github.com/mag123c))\n- Jiri Hajek ([@hajekjiri](https://github.com/hajekjiri))\n- Kamil Mysliwiec ([@kamilmysliwiec](https://github.com/kamilmysliwiec))\n- Khan / 이창민 ([@EeeasyCode](https://github.com/EeeasyCode))\n- Peter F. ([@piotrfrankowski](https://github.com/piotrfrankowski))\n- Sebastian ([@gentunian](https://github.com/gentunian))\n- Thiago Oliveira Santos ([@Farenheith](https://github.com/Farenheith))\n- jochong ([@jochongs](https://github.com/jochongs))",
+      "memory_unit_text": "In the nestjs/nest release v11.1.4, bug fixes address fastify adapter auto-init for middleware registration, race condition in class dependency resolution, flattenRoutePath returning a valid module, RMQ pattern matching with wildcards, and updating RMQ_DEFAULT_QUEUE to an empty string. Enhancements include a decorator for custom schema in fastify, enhanced introspection capabilities across multiple packages, and fine async storage control in core. Dependencies bump ws to 8.18.3 and fastify to 5.4.0."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_5",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.5",
+      "tag_name": "v11.1.5",
+      "title": "v11.1.5",
+      "time_hint": "2025-07-18",
+      "published_at": "2025-07-18T09:15:48Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.5",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.5\nTag: v11.1.5; draft: False; prerelease: False; published_at: 2025-07-18T09:15:48Z; created_at: 2025-07-18T09:14:45Z\nRelease notes:\n## v11.1.5 (2025-07-18)\n#### Dependencies\n* `platform-express`\n* [#15425](https://github.com/nestjs/nest/pull/15425) chore(deps): bump multer from 2.0.1 to 2.0.2 in /packages/platform-express ([@dependabot[bot]](https://github.com/apps/dependabot))",
+      "memory_unit_text": "In the nestjs/nest release v11.1.5, the platform-express dependency multer is bumped from 2.0.1 to 2.0.2."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_6",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.6",
+      "tag_name": "v11.1.6",
+      "title": "v11.1.6",
+      "time_hint": "2025-08-07",
+      "published_at": "2025-08-07T07:01:10Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.6",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.6\nTag: v11.1.6; draft: False; prerelease: False; published_at: 2025-08-07T07:01:10Z; created_at: 2025-08-07T06:59:12Z\nRelease notes:\n## v11.1.6 (2025-08-07)\n#### Bug fixes\n* `core`\n* [#15504](https://github.com/nestjs/nest/pull/15504) fix(core): fix race condition in class dependency resolution from imported modules ([@hajekjiri](https://github.com/hajekjiri))\n* [#15469](https://github.com/nestjs/nest/pull/15469) fix(core): attach root inquirer for nested transient providers ([@kamilmysliwiec](https://github.com/kamilmysliwiec))\n* `microservices`\n* [#15508](https://github.com/nestjs/nest/pull/15508) fix(microservices): report correct buffer length in exception ([@kim-sung-jee](https://github.com/kim-sung-jee))\n* [#15492](https://github.com/nestjs/nest/pull/15492) fix(microservices): fix kafka serilization of class instances ([@LeonBiersch](https://github.com/LeonBiersch))\n#### Dependencies\n* `platform-fastify`\n* [#15493](https://github.com/nestjs/nest/pull/15493) chore(deps): bump @fastify/cors from 11.0.1 to 11.1.0 ([@dependabot[bot]](https://github.com/apps/dependabot))\n#### Committers: 6\n- Jiri Hajek ([@hajekjiri](https://github.com/hajekjiri))\n- Kamil Mysliwiec ([@kamilmysliwiec](https://github.com/kamilmysliwiec))\n- Leon Biersch ([@LeonBiersch](https://github.com/LeonBiersch))\n- Seongjee Kim ([@kim-sung-jee](https://github.com/kim-sung-jee))\n- [@premierbell](https://github.com/premierbell)\n- pTr ([@ptrgits](https://github.com/ptrgits))",
+      "memory_unit_text": "In the nestjs/nest release v11.1.6, core fixes address race condition in class dependency resolution from imported modules and attaching root inquirer for nested transient providers. Microservices fixes include reporting correct buffer length in exception and fixing Kafka serialization of class instances. The @fastify/cors dependency is bumped to 11.1.0."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_7",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.7",
+      "tag_name": "v11.1.7",
+      "title": "v11.1.7",
+      "time_hint": "2025-10-21",
+      "published_at": "2025-10-21T08:58:29Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.7",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.7\nTag: v11.1.7; draft: False; prerelease: False; published_at: 2025-10-21T08:58:29Z; created_at: 2025-10-21T08:54:51Z\nRelease notes:\n## v11.1.7 (2025-10-21)\n#### Bug fixes\n* `microservices`\n* [#15747](https://github.com/nestjs/nest/pull/15747) Fix/rmq microservice fanout bind ([@slon2015](https://github.com/slon2015))\n* `platform-fastify`\n* [#15732](https://github.com/nestjs/nest/pull/15732) fix: correct parameter type in RouteConstraints decorator ([@thedv91](https://github.com/thedv91))\n* `core`\n* [#15571](https://github.com/nestjs/nest/pull/15571) fix(core): skip lifecycle hooks for non-instantiated transient services ([@mag123c](https://github.com/mag123c))\n* `common`\n* [#15577](https://github.com/nestjs/nest/pull/15577) Add color allowance check to console logger options ([@kerryChen95](https://github.com/kerryChen95))\n#### Enhancements\n* `common`, `platform-socket.io`, `websockets`\n* [#15543](https://github.com/nestjs/nest/pull/15543) feat(websockets): allow manual acknowledgement handling with @Ack() decorator ([@kim-sung-jee](https://github.com/kim-sung-jee))\n* `common`\n* [#15705](https://github.com/nestjs/nest/pull/15705) fix(core): resolve extras in configurable module builder async methods ([@mag123c](https://github.com/mag123c))\n* `common`, `core`\n* [#15503](https://github.com/nestjs/nest/pull/15503) feat(common): add force-console option to console logger ([@mag123c](https://github.com/mag123c))\n* `core`\n* [#15588](https://github.com/nestjs/nest/pull/15588) fix(core): improve dependency resolution error messages ([@at7211](https://github.com/at7211))\n* `microservices`\n* [#15598](https://github.com/nestjs/nest/pull/15598) feat(errors): add InvalidTcpDataReceptionException for handling TCP receive errors​ ([@ghyghoo8](https://github.com/ghyghoo8))\n#### Dependencies\n* `platform-fastify`\n* [#15664](https://github.com/nestjs/nest/pull/15664) chore(deps): bump fastify to 5.6.1 ([@dependabot[bot]](https://github.com/apps/dependabot))\n* `core`, `platform-express`, `platform-fastify`\n* [#15622](https://github.com/nestjs/nest/pull/15622) fix(deps): update dependency path-to-regexp to v8.3.0 ([@renovate[bot]](https://github.com/apps/renovate))\n* `common`\n* [#15566](https://github.com/nestjs/nest/pull/15566) chore(deps): bump load-esm from 1.0.2 to 1.0.3 ([@dependabot[bot]](https://github.com/apps/dependabot))\n#### Committers: 9\n- Harry ([@thedv91](https://github.com/thedv91))\n- JaeHo Jang ([@mag123c](https://github.com/mag123c))\n- Jay-Chou ([@at7211](https://github.com/at7211))\n- Kerry ([@kerryChen95](https://github.com/kerryChen95))\n- Micael Levi L. Cavalcante ([@micalevisk](https://github.com/micalevisk))\n- Seongjee Kim ([@kim-sung-jee](https://github.com/kim-sung-jee))\n- SerafimGerasimov ([@slon2015](https://github.com/slon2015))\n- [@Olexandr88](https://github.com/Olexandr88)\n- ghy ([@ghyghoo8](https://github.com/ghyghoo8))",
+      "memory_unit_text": "In the nestjs/nest release v11.1.7, microservices fixes include RMQ fanout bind and correct parameter type in RouteConstraints decorator for fastify. Core fixes skip lifecycle hooks for non-instantiated transient services, and common adds color allowance check to console logger options. Enhancements allow manual acknowledgement handling with @Ack() decorator in websockets, resolve extras in configurable module builder async methods, add force-console option to console logger, improve dependency resolution error messages, and add InvalidTcpDataReceptionException for TCP receive errors. Dependencies bump fastify to 5.6.1, path-to-regexp to 8.3.0, and load-esm to 1.0.3."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_8",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.8",
+      "tag_name": "v11.1.8",
+      "title": "v11.1.8",
+      "time_hint": "2025-10-27",
+      "published_at": "2025-10-27T09:02:30Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.8",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.8\nTag: v11.1.8; draft: False; prerelease: False; published_at: 2025-10-27T09:02:30Z; created_at: 2025-10-27T09:00:55Z\nRelease notes:\n## v11.1.8 (2025-10-27)\n#### Bug fixes\n* `core`\n* [#15815](https://github.com/nestjs/nest/pull/15815) fix(core): ensure nested transient provider isolation ([@mag123c](https://github.com/mag123c))\n* `platform-fastify`\n* [#15831](https://github.com/nestjs/nest/pull/15831) fix(fastify): Migrate fastify top-level options to routerOptions ([@kim-sung-jee](https://github.com/kim-sung-jee))\n#### Committers: 2\n- JaeHo Jang ([@mag123c](https://github.com/mag123c))\n- Seongjee Kim ([@kim-sung-jee](https://github.com/kim-sung-jee))",
+      "memory_unit_text": "In the nestjs/nest release v11.1.8, core fixes ensure nested transient provider isolation, and fastify migrates top-level options to routerOptions."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_9",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.9",
+      "tag_name": "v11.1.9",
+      "title": "v11.1.9",
+      "time_hint": "2025-11-14",
+      "published_at": "2025-11-14T10:18:56Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.9",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.9\nTag: v11.1.9; draft: False; prerelease: False; published_at: 2025-11-14T10:18:56Z; created_at: 2025-11-14T10:18:02Z\nRelease notes:\n## v11.1.9 (2025-11-14)\n#### Bug fixes\n* `core`\n* [#15865](https://github.com/nestjs/nest/pull/15865) fix(core): make get() throw for implicitly request-scoped trees ([@JoeNutt](https://github.com/JoeNutt))\n#### Enhancements\n* `common`\n* [#15863](https://github.com/nestjs/nest/pull/15863) feat(common): add method options to @sse decorator ([@TomerSteinberg](https://github.com/TomerSteinberg))\n#### Dependencies\n* `platform-fastify`\n* [#15899](https://github.com/nestjs/nest/pull/15899) chore(deps): bump fastify from 5.6.1 to 5.6.2 ([@dependabot[bot]](https://github.com/apps/dependabot))\n#### Committers: 4\n- Rami ([@JoeNutt](https://github.com/JoeNutt))\n- Rhynel Algopera ([@dev-rhynel](https://github.com/dev-rhynel))\n- Tomer Steinberg ([@TomerSteinberg](https://github.com/TomerSteinberg))\n- WuMingDao ([@WuMingDao](https://github.com/WuMingDao))",
+      "memory_unit_text": "In the nestjs/nest release v11.1.9, core fixes make get() throw for implicitly request-scoped trees. Enhancements add method options to @sse decorator in common. Fastify dependency is bumped to 5.6.2."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_10",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.10",
+      "tag_name": "v11.1.10",
+      "title": "v11.1.10",
+      "time_hint": "2025-12-22",
+      "published_at": "2025-12-22T08:58:24Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.10",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.10\nTag: v11.1.10; draft: False; prerelease: False; published_at: 2025-12-22T08:58:24Z; created_at: 2025-12-22T08:55:08Z\nRelease notes:\n## v11.1.10 (2025-12-22)\n#### Bug fixes\n* `core`\n* [#16098](https://github.com/nestjs/nest/pull/16098) fix(core): instantiate nested transient providers in static context ([@mag123c](https://github.com/mag123c))\n* [#16005](https://github.com/nestjs/nest/pull/16005) fix(core): resolve all providers when using resolve() with each option ([@malkovitc](https://github.com/malkovitc))\n* `microservices`\n* [#16072](https://github.com/nestjs/nest/pull/16072) fix(microservices): fix grpc stream method return type ([@shash-hq](https://github.com/shash-hq))\n* `common`\n* [#16077](https://github.com/nestjs/nest/pull/16077) fix(common): resolve file-type path explicitly ([@shash-hq](https://github.com/shash-hq))\n* [#16013](https://github.com/nestjs/nest/pull/16013) fix(common): Support fallbackToMimetype without buffer ([@chenjieya](https://github.com/chenjieya))\n#### Enhancements\n* `common`\n* [#16100](https://github.com/nestjs/nest/pull/16100) fix(common): improve error handling in FileTypeValidator ([@malkovitc](https://github.com/malkovitc))\n* [#16060](https://github.com/nestjs/nest/pull/16060) feat(common): add message property to file type validator ([@Jo-Minseok](https://github.com/Jo-Minseok))\n* [#16079](https://github.com/nestjs/nest/pull/16079) fix: enhance ValidationPipe ([@liu-jin-yi](https://github.com/liu-jin-yi))\n* `core`\n* [#15721](https://github.com/nestjs/nest/pull/15721) feat(core): add Promise<Observable> support for SSE handlers ([@pythonjsgo](https://github.com/pythonjsgo))\n* `microservices`\n* [#15975](https://github.com/nestjs/nest/pull/15975) feat(microservices): add keepalive support for server side ([@OlegStrokan](https://github.com/OlegStrokan))\n* `common`, `core`\n* [#15986](https://github.com/nestjs/nest/pull/15986) feat(core): add option for async logger compatibility ([@mag123c](https://github.com/mag123c))\n#### Dependencies\n* `platform-fastify`\n* [#16041](https://github.com/nestjs/nest/pull/16041) fix(deps): update dependency @fastify/cors to v11.2.0 ([@renovate[bot]](https://github.com/apps/renovate))\n* `platform-express`\n* [#16002](https://github.com/nestjs/nest/pull/16002) fix(deps): update dependency express to v5.2.1 ([@renovate[bot]](https://github.com/apps/renovate))\n* `common`\n* [#15948](https://github.com/nestjs/nest/pull/15948) chore(deps): bump file-type from 21.1.0 to 21.1.1 ([@dependabot[bot]](https://github.com/apps/dependabot))\n#### Committers: 11\n- Alexander ([@pythonjsgo](https://github.com/pythonjsgo))\n- J_Coder ([@Jo-Minseok](https://github.com/Jo-Minseok))\n- Luke Son ([@KAPUIST](https://github.com/KAPUIST))\n- Oleh Strokan ([@OlegStrokan](https://github.com/OlegStrokan))\n- Praveen Somasundaram ([@som14062005](https://github.com/som14062005))\n- Shashank ([@shash-hq](https://github.com/shash-hq))\n- [@chenjieya](https://github.com/chenjieya)\n- [@giorgikakauridze](https://github.com/giorgikakauridze)\n- [@mag123c](https://github.com/mag123c)\n- chernomortsev evgeny ([@malkovitc](https://github.com/malkovitc))\n- liu-jin-yi ([@liu-jin-yi](https://github.com/liu-jin-yi))",
+      "memory_unit_text": "In the nestjs/nest release v11.1.10, core fixes instantiate nested transient providers in static context, resolve all providers when using resolve() with each option, and fix grpc stream method return type in microservices. Common fixes resolve file-type path explicitly and support fallbackToMimetype without buffer. Enhancements improve error handling in FileTypeValidator, add message property to file type validator, enhance ValidationPipe, add Promise<Observable> support for SSE handlers in core, add keepalive support for server side in microservices, and add option for async logger compatibility in common and core. Dependencies update @fastify/cors to 11.2.0, express to 5.2.1, and file-type to 21.1.1."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_11",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.11",
+      "tag_name": "v11.1.11",
+      "title": "v11.1.11",
+      "time_hint": "2025-12-29",
+      "published_at": "2025-12-29T13:32:37Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.11",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.11\nTag: v11.1.11; draft: False; prerelease: False; published_at: 2025-12-29T13:32:37Z; created_at: 2025-12-29T13:31:03Z\nRelease notes:\n## v11.1.11 (2025-12-29)\n#### Bug fixes\n* `platform-fastify`\n* [#16135](https://github.com/nestjs/nest/pull/16135) fix(platform-fastify): middie bypassing through decoded chars ([@kamilmysliwiec](https://github.com/kamilmysliwiec))\n* `core`\n* [#16133](https://github.com/nestjs/nest/pull/16133) fix(core): add missing catch handler for forward-ref provider resolution ([@coti-z](https://github.com/coti-z))\n#### Dependencies\n* `platform-socket.io`\n* [#16125](https://github.com/nestjs/nest/pull/16125) fix(deps): update dependency socket.io to v4.8.3 ([@renovate[bot]](https://github.com/apps/renovate))\n* [#16114](https://github.com/nestjs/nest/pull/16114) chore(deps): bump socket.io from 4.8.1 to 4.8.2 ([@dependabot[bot]](https://github.com/apps/dependabot))\n* `platform-fastify`\n* [#16130](https://github.com/nestjs/nest/pull/16130) fix(deps): update dependency @fastify/static to v9 ([@renovate[bot]](https://github.com/apps/renovate))\n* `common`\n* [#16127](https://github.com/nestjs/nest/pull/16127) chore(deps): bump file-type from 21.1.1 to 21.2.0 ([@dependabot[bot]](https://github.com/apps/dependabot))\n#### Committers: 3\n- Himanshu Gupta ([@manureja64](https://github.com/manureja64))\n- Kamil Mysliwiec ([@kamilmysliwiec](https://github.com/kamilmysliwiec))\n- coti ([@coti-z](https://github.com/coti-z))",
+      "memory_unit_text": "In the nestjs/nest release v11.1.11, platform-fastify fixes middie bypassing through decoded chars, and core adds missing catch handler for forward-ref provider resolution. Dependencies update socket.io to 4.8.3, @fastify/static to v9, and file-type to 21.2.0."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v10_4_21",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v10.4.21",
+      "tag_name": "v10.4.21",
+      "title": "v10.4.21",
+      "time_hint": "2026-01-08",
+      "published_at": "2026-01-08T09:42:09Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v10.4.21",
+      "raw_text": "Repository: nestjs/nest\nRelease: v10.4.21\nTag: v10.4.21; draft: False; prerelease: False; published_at: 2026-01-08T09:42:09Z; created_at: 2026-01-08T09:41:03Z\nRelease notes:\n## What's Changed\n* fix(express): Update express to 4.22.1 to address CVE-2025-15284 by @Xilis in https://github.com/nestjs/nest/pull/16157\n## New Contributors\n* @Xilis made their first contribution in https://github.com/nestjs/nest/pull/16157\n**Full Changelog**: https://github.com/nestjs/nest/compare/v10.4.20...v10.4.21",
+      "memory_unit_text": "In the nestjs/nest release v10.4.21, express is updated to 4.22.1 to address CVE-2025-15284."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v10_4_22",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v10.4.22",
+      "tag_name": "v10.4.22",
+      "title": "v10.4.22",
+      "time_hint": "2026-01-10",
+      "published_at": "2026-01-10T16:27:38Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v10.4.22",
+      "raw_text": "Repository: nestjs/nest\nRelease: v10.4.22\nTag: v10.4.22; draft: False; prerelease: False; published_at: 2026-01-10T16:27:38Z; created_at: 2026-01-10T16:26:44Z\nRelease notes:\n## What's Changed\n* fix(express): Update body-parser to 1.20.4 for CVE-2025-15284 by @Xilis in https://github.com/nestjs/nest/pull/16178\n**Full Changelog**: https://github.com/nestjs/nest/compare/v10.4.21...v10.4.22",
+      "memory_unit_text": "In the nestjs/nest release v10.4.22, body-parser is updated to 1.20.4 for CVE-2025-15284."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_12",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.12",
+      "tag_name": "v11.1.12",
+      "title": "v11.1.12",
+      "time_hint": "2026-01-15",
+      "published_at": "2026-01-15T08:31:51Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.12",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.12\nTag: v11.1.12; draft: False; prerelease: False; published_at: 2026-01-15T08:31:51Z; created_at: 2026-01-15T08:29:48Z\nRelease notes:\n## v11.1.12 (2026-01-15)\n#### Bug fixes\n* `common`\n* [#16187](https://github.com/nestjs/nest/pull/16187) fix(common): regression in loading file-type under Windows OS ([@iamkanguk97](https://github.com/iamkanguk97))\n#### Dependencies\n* `platform-ws`\n* [#16161](https://github.com/nestjs/nest/pull/16161) chore(deps): bump ws from 8.18.3 to 8.19.0 ([@dependabot[bot]](https://github.com/apps/dependabot))\n* `common`\n* [#16155](https://github.com/nestjs/nest/pull/16155) fix(deps): update dependency file-type to v21.3.0 ([@renovate[bot]](https://github.com/apps/renovate))\n* `platform-fastify`\n* [#16154](https://github.com/nestjs/nest/pull/16154) fix(deps): update dependency find-my-way to v9.4.0 ([@renovate[bot]](https://github.com/apps/renovate))\n#### Committers: 3\n- Antonio Tripodi ([@Tony133](https://github.com/Tony133))\n- KANGUK LEE ([@iamkanguk97](https://github.com/iamkanguk97))\n- [@miso-kyoungminkim](https://github.com/miso-kyoungminkim)",
+      "memory_unit_text": "In the nestjs/nest release v11.1.12, common fixes a regression in loading file-type under Windows OS. Dependencies bump ws to 8.19.0, file-type to 21.3.0, and find-my-way to 9.4.0."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_13",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.13",
+      "tag_name": "v11.1.13",
+      "title": "v11.1.13",
+      "time_hint": "2026-02-03",
+      "published_at": "2026-02-03T13:07:27Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.13",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.13\nTag: v11.1.13; draft: False; prerelease: False; published_at: 2026-02-03T13:07:27Z; created_at: 2026-02-03T13:06:14Z\nRelease notes:\n# v11.1.13 (2026-02-03)\n#### Bug fixes\n* `common`\n* [#16230](https://github.com/nestjs/nest/pull/16230) fix(common): Fix skipping maxArrayLength and maxStringLength option ([@chojs23](https://github.com/chojs23))\n#### Enhancements\n* `microservices`\n* [#16286](https://github.com/nestjs/nest/pull/16286) feat(microservices): support per-handler qos in mqtt ([@suuuuuuminnnnnn](https://github.com/suuuuuuminnnnnn))\n* [#16262](https://github.com/nestjs/nest/pull/16262) Feat/microservices configurable max buffer size ([@jobnow](https://github.com/jobnow))\n* `common`\n* [#16202](https://github.com/nestjs/nest/pull/16202) fix(common): exclude built-in primitives from strip proto keys ([@som14062005](https://github.com/som14062005))\n#### Dependencies\n* `platform-fastify`\n* [#16282](https://github.com/nestjs/nest/pull/16282) fix(deps): update dependency fastify to v5.7.4 ([@renovate[bot]](https://github.com/apps/renovate))\n* `platform-express`\n* [#16241](https://github.com/nestjs/nest/pull/16241) fix(deps): update dependency cors to v2.8.6 ([@renovate[bot]](https://github.com/apps/renovate))\n#### Committers: 6\n- Lee Donghyun ([@devizi0](https://github.com/devizi0))\n- Mykhailo Skrypsky ([@mixator](https://github.com/mixator))\n- Neo ([@chojs23](https://github.com/chojs23))\n- Praveen Somasundaram ([@som14062005](https://github.com/som14062005))\n- Ricardo Gomes ([@jobnow](https://github.com/jobnow))\n- 조수민 ([@suuuuuuminnnnnn](https://github.com/suuuuuuminnnnnn))",
+      "memory_unit_text": "In the nestjs/nest release v11.1.13, common fixes skipping maxArrayLength and maxStringLength options. Enhancements add per-handler QoS in MQTT microservices, configurable max buffer size in microservices, and exclude built-in primitives from strip proto keys in common. Dependencies update fastify to 5.7.4 and cors to 2.8.6."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_14",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.14",
+      "tag_name": "v11.1.14",
+      "title": "v11.1.14",
+      "time_hint": "2026-02-17",
+      "published_at": "2026-02-17T16:26:00Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.14",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.14\nTag: v11.1.14; draft: False; prerelease: False; published_at: 2026-02-17T16:26:00Z; created_at: 2026-02-17T16:24:44Z\nRelease notes:\n## v11.1.14 (2026-02-17)\n#### Bug fixes\n* `platform-fastify`\n* [#16384](https://github.com/nestjs/nest/pull/16384) fix(fastify): fastify middleware bypass cve ([@kamilmysliwiec](https://github.com/kamilmysliwiec))\n* `common`\n* [#16307](https://github.com/nestjs/nest/pull/16307) fix: logger print invalid context when no stack trace provided ([@JulienDuf](https://github.com/JulienDuf))\n#### Enhancements\n* `common`\n* [#16314](https://github.com/nestjs/nest/pull/16314) fix(common): change requestOrigin type ([@SpencerKaiser](https://github.com/SpencerKaiser))\n#### Committers: 5\n- Julien Dufresne ([@JulienDuf](https://github.com/JulienDuf))\n- Kamil Mysliwiec ([@kamilmysliwiec](https://github.com/kamilmysliwiec))\n- Mykhailo Skrypsky ([@mixator](https://github.com/mixator))\n- Spencer Kaiser ([@SpencerKaiser](https://github.com/SpencerKaiser))\n- 조수민 ([@suuuuuuminnnnnn](https://github.com/suuuuuuminnnnnn))",
+      "memory_unit_text": "In the nestjs/nest release v11.1.14, fastify fixes a middleware bypass CVE, and common fixes logger printing invalid context when no stack trace is provided. Enhancements change requestOrigin type in common."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_15",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.15",
+      "tag_name": "v11.1.15",
+      "title": "v11.1.15",
+      "time_hint": "2026-03-03",
+      "published_at": "2026-03-03T13:53:50Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.15",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.15\nTag: v11.1.15; draft: False; prerelease: False; published_at: 2026-03-03T13:53:50Z; created_at: 2026-03-03T13:51:12Z\nRelease notes:\n## What's Changed\n* fix(microservices): if indexOf return 0 will if will be falsy by @cuiweixie in https://github.com/nestjs/nest/pull/16401\n* fix(microservices): introuduce max pattern depth and object complexity by @kamilmysliwiec in https://github.com/nestjs/nest/pull/16402\n* chore(@nestjs/core): allow override for initializeWildcardHandlersIfE… by @StNekroman in https://github.com/nestjs/nest/pull/16468\n* chore(deps): update dependency @fastify/middie to v9.2.0 [security] by @renovate[bot] in https://github.com/nestjs/nest/pull/16472\n* fix(deps): update dependency multer to v2.1.0 [security] by @renovate[bot] in https://github.com/nestjs/nest/pull/16474\n## New Contributors\n* @cuiweixie made their first contribution in https://github.com/nestjs/nest/pull/16401\n* @StNekroman made their first contribution in https://github.com/nestjs/nest/pull/16468\n**Full Changelog**: https://github.com/nestjs/nest/compare/v11.1.14...v11.1.15",
+      "memory_unit_text": "In the nestjs/nest release v11.1.15, microservices fixes include handling falsy indexOf return and introducing max pattern depth and object complexity. Core allows override for initializeWildcardHandlersIfEmpty. Dependencies update @fastify/middie to 9.2.0 for security and multer to 2.1.0 for security."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_16",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.16",
+      "tag_name": "v11.1.16",
+      "title": "v11.1.16",
+      "time_hint": "2026-03-05",
+      "published_at": "2026-03-05T13:25:51Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.16",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.16\nTag: v11.1.16; draft: False; prerelease: False; published_at: 2026-03-05T13:25:51Z; created_at: 2026-03-05T13:21:24Z\nRelease notes:\n## v11.1.16 (2026-03-05)\n#### Bug fixes\n* `microservices`\n* [#16506](https://github.com/nestjs/nest/pull/16506) fix(microservices): fix double callback when isdisposed or err is truthy ([@LhonRafaat](https://github.com/LhonRafaat))\n#### Dependencies\n* `platform-express`\n* [#16507](https://github.com/nestjs/nest/pull/16507) fix(deps): update dependency multer to v2.1.1 ([@renovate[bot]](https://github.com/apps/renovate))\n#### Committers: 2\n- Lhon ([@LhonRafaat](https://github.com/LhonRafaat))\n- Shahnoor Mujawar ([@shahnoormujawar](https://github.com/shahnoormujawar))",
+      "memory_unit_text": "In the nestjs/nest release v11.1.16, microservices fix double callback when isDisposed or err is truthy. Multer dependency is updated to 2.1.1."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_17",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.17",
+      "tag_name": "v11.1.17",
+      "title": "v11.1.17",
+      "time_hint": "2026-03-16",
+      "published_at": "2026-03-16T10:41:45Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.17",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.17\nTag: v11.1.17; draft: False; prerelease: False; published_at: 2026-03-16T10:41:45Z; created_at: 2026-03-16T10:32:06Z\nRelease notes:\n## v11.1.17 (2026-03-16)\n#### Enhancements\n* `microservices`\n* [#16218](https://github.com/nestjs/nest/pull/16218) feat(microservices): add redis driver identification ([@vchomakov](https://github.com/vchomakov))\n#### Bugs\n* `platform-fastify`\n* auto-run middleware for HEAD requests as fastify redirects them to GET handlers (effectively skipping middleware execution) https://github.com/nestjs/nest/commit/cbdf737cd6e7cefa52d05ecea2ae4af95c464614 (@kamilmysliwiec)\n#### Dependencies\n* `common`\n* [#16567](https://github.com/nestjs/nest/pull/16567) fix(deps): update dependency file-type to v21.3.2 ([@renovate[bot]](https://github.com/apps/renovate))\n* `platform-fastify`\n* [#16533](https://github.com/nestjs/nest/pull/16533) fix(deps): update dependency fastify to v5.8.2 ([@renovate[bot]](https://github.com/apps/renovate))\n#### Committers: 3\n- Rohan Santhosh Kumar ([@Rohan5commit](https://github.com/Rohan5commit))\n- Vasil Chomakov ([@vchomakov](https://github.com/vchomakov))\n- Kamil Mysliwiec (@kamilmysliwiec)",
+      "memory_unit_text": "In the nestjs/nest release v11.1.17, microservices add Redis driver identification. Fastify auto-runs middleware for HEAD requests. Dependencies update file-type to 21.3.2 and fastify to 5.8.2."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_18",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.18",
+      "tag_name": "v11.1.18",
+      "title": "v11.1.18",
+      "time_hint": "2026-04-03",
+      "published_at": "2026-04-03T09:40:47Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.18",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.18\nTag: v11.1.18; draft: False; prerelease: False; published_at: 2026-04-03T09:40:47Z; created_at: 2026-04-03T09:32:49Z\nRelease notes:\n## v11.1.18 (2026-04-03)\n#### Bug fixes\n* `microservices`\n* [#16675](https://github.com/nestjs/nest/pull/16675) fix(microservices): preserve packet headers in nats serializer ([@wwenrr](https://github.com/wwenrr))\n* `core`\n* [#16683](https://github.com/nestjs/nest/pull/16683) fix(core): prevent injector hang when design:paramtypes is missing ([@Youmoo](https://github.com/Youmoo))\n* [#16637](https://github.com/nestjs/nest/pull/16637) fix(core): dependency injection edge case with moduleref.create ([@JakobStaudinger](https://github.com/JakobStaudinger))\n* https://github.com/nestjs/nest/pull/16686 fix(core): sanitize sse message\n#### Dependencies\n* `core`, `platform-express`, `platform-fastify`\n* [#16679](https://github.com/nestjs/nest/pull/16679) fix(deps): update dependency path-to-regexp to v8.4.2 ([@renovate[bot]](https://github.com/apps/renovate))\n* `platform-fastify`\n* [#16623](https://github.com/nestjs/nest/pull/16623) fix(deps): update dependency fastify to v5.8.4 ([@renovate[bot]](https://github.com/apps/renovate))\n* `platform-ws`\n* [#16618](https://github.com/nestjs/nest/pull/16618) chore(deps): bump ws from 8.19.0 to 8.20.0 ([@dependabot[bot]](https://github.com/apps/dependabot))\n* `common`\n* [#16619](https://github.com/nestjs/nest/pull/16619) chore(deps): bump file-type from 21.3.3 to 21.3.4 ([@dependabot[bot]](https://github.com/apps/dependabot))\n#### Committers: 6\n- Ankit San ([@ankitbelal](https://github.com/ankitbelal))\n- Jakob Staudinger ([@JakobStaudinger](https://github.com/JakobStaudinger))\n- Kamil Mysliwiec ([@kamilmysliwiec](https://github.com/kamilmysliwiec))\n- Krishna Chaitanya ([@Krishnachaitanyakc](https://github.com/Krishnachaitanyakc))\n- MK ([@wwenrr](https://github.com/wwenrr))\n- youmoo ([@Youmoo](https://github.com/Youmoo))",
+      "memory_unit_text": "In the nestjs/nest release v11.1.18, microservices preserve packet headers in NATS serializer. Core fixes prevent injector hang when design:paramtypes is missing, fix dependency injection edge case with ModuleRef.create, and sanitize SSE message. Dependencies update path-to-regexp to 8.4.2, fastify to 5.8.4, ws to 8.20.0, and file-type to 21.3.4."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_19",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.19",
+      "tag_name": "v11.1.19",
+      "title": "v11.1.19",
+      "time_hint": "2026-04-13",
+      "published_at": "2026-04-13T07:56:09Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.19",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.19\nTag: v11.1.19; draft: False; prerelease: False; published_at: 2026-04-13T07:56:09Z; created_at: 2026-04-13T07:51:31Z\nRelease notes:\n## v11.1.19 (2026-04-13)\n#### Bug fixes\n* `microservices`\n* [#16762](https://github.com/nestjs/nest/pull/16762) fix(microservices): use backing field for consumer CRASH event listener ([@burhanharoon](https://github.com/burhanharoon))\n* [#16764](https://github.com/nestjs/nest/pull/16764) fix(microservices): prevent stack overflow in jsonsocket.handledata() ([@kamilmysliwiec](https://github.com/kamilmysliwiec))\n#### Committers: 2\n- Burhan Haroon⚡ ([@burhanharoon](https://github.com/burhanharoon))\n- Kamil Mysliwiec ([@kamilmysliwiec](https://github.com/kamilmysliwiec))",
+      "memory_unit_text": "In the nestjs/nest release v11.1.19, microservices fix consumer CRASH event listener to use backing field and prevent stack overflow in JsonSocket.handleData()."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_20",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.20",
+      "tag_name": "v11.1.20",
+      "title": "v11.1.20",
+      "time_hint": "2026-05-13",
+      "published_at": "2026-05-13T07:29:54Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.20",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.20\nTag: v11.1.20; draft: False; prerelease: False; published_at: 2026-05-13T07:29:54Z; created_at: 2026-05-13T07:26:04Z\nRelease notes:\n## v11.1.20 (2026-05-13)\n#### Bug fixes\n* `core`, `testing`\n* [#16939](https://github.com/nestjs/nest/pull/16939) fix(core): fix deeply nested transient providers resolution ([@kamilmysliwiec](https://github.com/kamilmysliwiec))\n* `core`\n* [#16861](https://github.com/nestjs/nest/pull/16861) fix(core): fix @Sse losing events on complete ([@MatthiasBrehmer](https://github.com/MatthiasBrehmer))\n* [#16753](https://github.com/nestjs/nest/pull/16753) fix(core): defer sse writehead until after lifecycle completes ([@jkalberer](https://github.com/jkalberer))\n* [#16782](https://github.com/nestjs/nest/pull/16782) fix(core): use strict null check for SSE message id ([@burhanharoon](https://github.com/burhanharoon))\n* `microservices`\n* [#16850](https://github.com/nestjs/nest/pull/16850) fix(microservices): ServerRMQ crashes at boot when @MessagePattern(undefined) is combined with wildcards: true ([@lavieennoir](https://github.com/lavieennoir))\n* `common`\n* [#16845](https://github.com/nestjs/nest/pull/16845) fix(common): accept zero timestamp in parse date pipe ([@Mysh3ll](https://github.com/Mysh3ll))\n* `platform-socket.io`\n* [#16742](https://github.com/nestjs/nest/pull/16742) fix(socket.io): Deduplicate disconnect listener in bindMessageHandlers ([@fru1tworld](https://github.com/fru1tworld))\n#### Enhancements\n* `microservices`\n* [#16676](https://github.com/nestjs/nest/pull/16676) feat(microservices): add return buffers option for binary data ([@Forceres](https://github.com/Forceres))\n* [#16826](https://github.com/nestjs/nest/pull/16826) feat(microservices): handle rmq blocked/unblocked connection events ([@thisalihassan](https://github.com/thisalihassan))\n* `common`\n* [#16902](https://github.com/nestjs/nest/pull/16902) fix(common): filetype validator buffer message ([@QusaiAlbonni](https://github.com/QusaiAlbonni))\n* `platform-express`\n* [#16844](https://github.com/nestjs/nest/pull/16844) feat(platform-express): add defParamCharset to MulterOptions ([@starnayuta](https://github.com/starnayuta))\n#### Dependencies\n* `platform-ws`\n* [#16941](https://github.com/nestjs/nest/pull/16941) chore(deps): bump ws from 8.20.0 to 8.20.1 ([@dependabot[bot]](https://github.com/apps/dependabot))\n#### Committers: 13\n- Ali Hassan ([@thisalihassan](https://github.com/thisalihassan))\n- Burhan Haroon⚡ ([@burhanharoon](https://github.com/burhanharoon))\n- Dmytro Khyzhniak ([@lavieennoir](https://github.com/lavieennoir))\n- Harsh Rathod ([@harshrathod50](https://github.com/harshrathod50))\n- IlyaCredo ([@Forceres](https://github.com/Forceres))\n- Kamil Mysliwiec ([@kamilmysliwiec](https://github.com/kamilmysliwiec))\n- Mysh3ll ([@Mysh3ll](https://github.com/Mysh3ll))\n- [@MatthiasBrehmer](https://github.com/MatthiasBrehmer)\n- [@QusaiAlbonni](https://github.com/QusaiAlbonni)\n- [@jkalberer](https://github.com/jkalberer)\n- [@pazaderey](https://github.com/pazaderey)\n- fru1tworld ([@fru1tworld](https://github.com/fru1tworld))\n- starnayuta ([@starnayuta](https://github.com/starnayuta))",
+      "memory_unit_text": "In the nestjs/nest release v11.1.20, core fixes deeply nested transient providers resolution, @Sse losing events on complete, defer SSE writeHead until after lifecycle completes, and use strict null check for SSE message id. Microservices fix ServerRMQ crash with undefined MessagePattern and wildcards. Common accepts zero timestamp in parse date pipe. Socket.io deduplicates disconnect listener. Enhancements add return buffers option for binary data in microservices, handle RMQ blocked/unblocked connection events, improve filetype validator buffer message, and add defParamCharset to MulterOptions in platform-express. Ws dependency is bumped to 8.20.1."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_21",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.21",
+      "tag_name": "v11.1.21",
+      "title": "v11.1.21",
+      "time_hint": "2026-05-14",
+      "published_at": "2026-05-14T09:00:47Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.21",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.21\nTag: v11.1.21; draft: False; prerelease: False; published_at: 2026-05-14T09:00:47Z; created_at: 2026-05-14T08:58:13Z\nRelease notes:\n## v11.1.21 (2026-05-14)\n#### Bug fixes\n* `core`\n* [#16948](https://github.com/nestjs/nest/pull/16948) fix(core): settle skipped provider initialization ([@yudin-s](https://github.com/yudin-s))\n#### Committers: 1\n- Serge Yudin ([@yudin-s](https://github.com/yudin-s))",
+      "memory_unit_text": "In the nestjs/nest release v11.1.21, core fixes settle skipped provider initialization."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_22",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.22",
+      "tag_name": "v11.1.22",
+      "title": "v11.1.22",
+      "time_hint": "2026-05-21",
+      "published_at": "2026-05-21T08:57:18Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.22",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.22\nTag: v11.1.22; draft: False; prerelease: False; published_at: 2026-05-21T08:57:18Z; created_at: 2026-05-21T08:56:30Z\nRelease notes:\n## v11.1.22 (2026-05-21)\n#### Bug fixes\n* `core`\n* [#16993](https://github.com/nestjs/nest/pull/16993) fix(core): inflight request injection bug #16989 ([@kamilmysliwiec](https://github.com/kamilmysliwiec))\n#### Enhancements\n* `core`\n* [#16967](https://github.com/nestjs/nest/pull/16967) fix(core): identify decorator type in invalid-class-module error ([@HarrierOnChain](https://github.com/HarrierOnChain))\n*\n#### Committers: 2\n- Harrier ([@HarrierOnChain](https://github.com/HarrierOnChain))\n- Kamil Mysliwiec ([@kamilmysliwiec](https://github.com/kamilmysliwiec))",
+      "memory_unit_text": "In the nestjs/nest release v11.1.22, core fixes an inflight request injection bug and identifies decorator type in invalid-class-module error."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_23",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.23",
+      "tag_name": "v11.1.23",
+      "title": "v11.1.23",
+      "time_hint": "2026-05-21",
+      "published_at": "2026-05-21T18:18:12Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.23",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.23\nTag: v11.1.23; draft: False; prerelease: False; published_at: 2026-05-21T18:18:12Z; created_at: 2026-05-21T18:14:12Z\nRelease notes:\n## v11.1.23 (2026-05-21)\n#### Bug fixes\n* `core`\n* https://github.com/nestjs/nest/issues/16998 fix snapshot: true eagerly instantiates Terminus transient indicators since 11.1.20\n#### Committers: 1\n- Kamil Mysliwiec ([@kamilmysliwiec](https://github.com/kamilmysliwiec))",
+      "memory_unit_text": "In the nestjs/nest release v11.1.23, core fixes an issue where snapshot:true eagerly instantiates Terminus transient indicators since v11.1.20."
+    },
+    {
+      "memory_node_id": "nestjs__nest__release__v11_1_24",
+      "repo": "nestjs/nest",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v11.1.24",
+      "tag_name": "v11.1.24",
+      "title": "v11.1.24",
+      "time_hint": "2026-05-25",
+      "published_at": "2026-05-25T08:41:52Z",
+      "source_url": "https://github.com/nestjs/nest/releases/tag/v11.1.24",
+      "raw_text": "Repository: nestjs/nest\nRelease: v11.1.24\nTag: v11.1.24; draft: False; prerelease: False; published_at: 2026-05-25T08:41:52Z; created_at: 2026-05-25T08:18:58Z\nRelease notes:\n## v11.1.24 (2026-05-25)\n#### Bug fixes\n* `core`\n* [#17009](https://github.com/nestjs/nest/pull/17009) fix(core): reset dependency-tree cache on metadata changes ([@puneetdixit200](https://github.com/puneetdixit200))\n#### Enhancements\n* `core`\n* [#16997](https://github.com/nestjs/nest/pull/16997) feat(core): warn on late websocket adapter registration ([@hbinhng](https://github.com/hbinhng))\n#### Dependencies\n* `platform-ws`\n* [#17011](https://github.com/nestjs/nest/pull/17011) chore(deps): bump ws from 8.20.1 to 8.21.0 ([@dependabot[bot]](https://github.com/apps/dependabot))\n#### Committers: 2\n- Nguyễn Hải Bình ([@hbinhng](https://github.com/hbinhng))\n- Puneet Dixit ([@puneetdixit200](https://github.com/puneetdixit200))",
+      "memory_unit_text": "In the nestjs/nest release v11.1.24, core fixes reset dependency-tree cache on metadata changes and adds a warning on late websocket adapter registration. Ws dependency is bumped to 8.21.0."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the nestjs/nest releases, which release adds support for topic exchange in RabbitMQ?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v11.0.21"
+        },
+        {
+          "option_id": "B",
+          "text": "v11.1.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v11.1.1"
+        },
+        {
+          "option_id": "D",
+          "text": "v11.1.2"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v11.1.0",
+      "source_chunk_ids": [
+        "nestjs__nest__release__v11_1_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "nestjs__nest__release__v11_1_0",
+          "answer_text": "adds support for topic exchange in RabbitMQ"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the nestjs/nest releases, how does the multer dependency change differ between v10.4.18 and v11.1.5?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v10.4.18 bumps multer from 1.4.5-lts.2 to 2.0.0, while v11.1.5 bumps multer from 2.0.1 to 2.0.2."
+        },
+        {
+          "option_id": "B",
+          "text": "v10.4.18 bumps multer from 2.0.0 to 2.0.1, while v11.1.5 bumps multer from 2.0.1 to 2.0.2."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases bump multer from 1.4.5-lts.2 to 2.0.0."
+        },
+        {
+          "option_id": "D",
+          "text": "v10.4.18 bumps multer from 2.0.1 to 2.0.2, while v11.1.5 bumps multer from 1.4.5-lts.2 to 2.0.0."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v10.4.18 bumps multer from 1.4.5-lts.2 to 2.0.0, while v11.1.5 bumps multer from 2.0.1 to 2.0.2.",
+      "source_chunk_ids": [
+        "nestjs__nest__release__v10_4_18",
+        "nestjs__nest__release__v11_1_5"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "nestjs__nest__release__v10_4_18",
+          "answer_text": "multer is bumped from 1.4.5-lts.2 to 2.0.0"
+        },
+        {
+          "memory_node_id": "nestjs__nest__release__v11_1_5",
+          "answer_text": "multer is bumped from 2.0.1 to 2.0.2"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the nestjs/nest release window, order the following release-content states from earliest to latest: (1) a release that adds fallbackToMimetype support in FileTypeValidator, (2) a release that adds support for topic exchange in RabbitMQ, (3) a release that adds specific transport id to microservices and restores getHeader/appendHeader methods, (4) a release that fixes a regression in loading file-type under Windows OS.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 2 -> 1 -> 3"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "nestjs__nest__release__v11_0_21",
+        "nestjs__nest__release__v11_1_0",
+        "nestjs__nest__release__v11_1_1",
+        "nestjs__nest__release__v11_1_12"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "nestjs__nest__release__v11_0_21",
+          "answer_text": "adds fallbackToMimetype support in FileTypeValidator"
+        },
+        {
+          "memory_node_id": "nestjs__nest__release__v11_1_0",
+          "answer_text": "adds support for topic exchange in RabbitMQ"
+        },
+        {
+          "memory_node_id": "nestjs__nest__release__v11_1_1",
+          "answer_text": "adds specific transport id to microservices and restores getHeader and appendHeader methods"
+        },
+        {
+          "memory_node_id": "nestjs__nest__release__v11_1_12",
+          "answer_text": "fixes a regression in loading file-type under Windows OS"
+        }
+      ]
+    }
+  ]
+}

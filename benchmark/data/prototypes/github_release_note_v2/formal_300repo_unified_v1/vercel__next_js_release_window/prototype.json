@@ -1,0 +1,530 @@
+{
+  "prototype_id": "vercel__next_js_release_window",
+  "domain": "github_release_evolution",
+  "repo": "vercel/next.js",
+  "source_type": "release_note",
+  "window_title": "vercel/next.js recent release evolution",
+  "window_summary": "This window tracks the recent vercel/next.js release stream across canary prereleases and stable security/bugfix releases, covering core changes, Turbopack improvements, and misc updates.",
+  "chunks": [
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_12",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.12",
+      "tag_name": "v16.3.0-canary.12",
+      "title": "v16.3.0-canary.12",
+      "time_hint": "2026-05-06",
+      "published_at": "2026-05-06T18:59:24Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.12",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.12\nTag: v16.3.0-canary.12; draft: False; prerelease: True; published_at: 2026-05-06T18:59:24Z; created_at: 2026-05-06T18:34:51Z\nRelease notes:\n### Core Changes\n- Refactor: Decouple request store creation from `req` / `res`: #93499\n- Detect `'use cache'` module-scope deadlocks early in dev: #93500\n- Bundle the `'use cache'` deadlock probe worker: #93538\n- Support configuring a default instant validation level : #93301\n- Upgrade React from `f4e0d4ed-20260429` to `dd453071-20260506`: #93547\n### Misc Changes\n- [turbopack] shrink the size of futures: #93474\n- [turbopack] Simplify local task tracking: #93478\n- [turbopack] correct a fencepost error in our inline string descision: #93524\n- Turbopack: make rcstr! macro expansion const: #93516\n- Turbopack: lazy aggregation optimize via persistent pending flag: #93454\n- docs: remove unreachable forms and mutations: #93509\n- docs: broken link from usePathname compat call out: #93528\n- Turbopack: really fix MAX_INLINE_LEN: #93531\n- [ci] Clarify new preview build flow: #93540\n- Turbopack: simplify asset ident constructors: #93213\n### Credits\nHuge thanks to @lukesandberg, @unstubbable, @mischnic, @sokra, @icyJoseph, @eps1lon, @gnoff, and @vercel-release-bot for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.12, core changes include refactoring request store creation, detecting 'use cache' module-scope deadlocks early in dev, bundling the deadlock probe worker, supporting a default instant validation level, and upgrading React to dd453071-20260506. Misc changes involve Turbopack optimizations, documentation fixes, and CI clarifications."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_13",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.13",
+      "tag_name": "v16.3.0-canary.13",
+      "title": "v16.3.0-canary.13",
+      "time_hint": "2026-05-07",
+      "published_at": "2026-05-07T00:00:19Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.13",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.13\nTag: v16.3.0-canary.13; draft: False; prerelease: True; published_at: 2026-05-07T00:00:19Z; created_at: 2026-05-06T23:35:03Z\nRelease notes:\n### Core Changes\n- Disable instant validations in draft mode: #93472\n### Misc Changes\n- Drop `ReferencedAsset::from_resolve_result` as a turbotask: #93297\n- Turbopack: Cache effect errors, replace the write_lock Mutex with a lazily created Notify instance: #93476\n### Credits\nHuge thanks to @samselikoff, @lukesandberg, and @bgw for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.13, core changes disable instant validations in draft mode. Misc changes drop ReferencedAsset::from_resolve_result as a turbotask and improve Turbopack caching with a lazily created Notify instance."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_14",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.14",
+      "tag_name": "v16.3.0-canary.14",
+      "title": "v16.3.0-canary.14",
+      "time_hint": "2026-05-07",
+      "published_at": "2026-05-07T09:19:37Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.14",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.14\nTag: v16.3.0-canary.14; draft: False; prerelease: True; published_at: 2026-05-07T09:19:37Z; created_at: 2026-05-07T08:55:48Z\nRelease notes:\n### Misc Changes\n- perf(ecmascript): shrink JsValue 64→32 bytes: #93106\n- Order loader tree imports by tree depth: #93537\n- Turbopack: more strict vergen setup: #93541\n### Credits\nHuge thanks to @mmastrac, @sokra, and @mischnic for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.14, misc changes include shrinking JsValue from 64 to 32 bytes, ordering loader tree imports by tree depth, and making Turbopack vergen setup more strict."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_2_6",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.2.6",
+      "tag_name": "v16.2.6",
+      "title": "v16.2.6",
+      "time_hint": "2026-05-07",
+      "published_at": "2026-05-07T20:16:51Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.2.6",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.2.6\nTag: v16.2.6; draft: False; prerelease: False; published_at: 2026-05-07T20:16:51Z; created_at: 2026-05-07T18:43:56Z\nRelease notes:\n> [!NOTE]\n> This release contains security fixes and backported bug fixes. It does **not** include all pending features/changes on canary.\n### Security Fixes\nThe following advisories have been addressed:\n**High:**\n- [GHSA-8h8q-6873-q5fj: Denial of Service with Server Components](https://github.com/vercel/next.js/security/advisories/GHSA-8h8q-6873-q5fj)\n- [GHSA-267c-6grr-h53f: Middleware / Proxy bypass in App Router applications via segment-prefetch routes](https://github.com/vercel/next.js/security/advisories/GHSA-267c-6grr-h53f)\n- [GHSA-26hh-7cqf-hhc6: Middleware / Proxy bypass in App Router applications via segment-prefetch routes - **Incomplete Fix Follow-Up**](https://github.com/vercel/next.js/security/advisories/GHSA-26hh-7cqf-hhc6)\n- [GHSA-mg66-mrh9-m8jx: Denial of Service via connection exhaustion in applications using Cache Components](https://github.com/vercel/next.js/security/advisories/GHSA-mg66-mrh9-m8jx)\n- [GHSA-492v-c6pp-mqqv: Middleware / Proxy bypass through dynamic route parameter injection](https://github.com/vercel/next.js/security/advisories/GHSA-492v-c6pp-mqqv)\n- [GHSA-c4j6-fc7j-m34r: Server-side request forgery in applications using WebSocket upgrades](https://github.com/vercel/next.js/security/advisories/GHSA-c4j6-fc7j-m34r)\n- [GHSA-36qx-fr4f-26g5: Middleware / Proxy bypass in Pages Router applications using i18n](https://github.com/vercel/next.js/security/advisories/GHSA-36qx-fr4f-26g5)\n**Moderate:**\n- [GHSA-ffhc-5mcf-pf4q: Cross-site scripting in App Router applications using CSP nonces](https://github.com/vercel/next.js/security/advisories/GHSA-ffhc-5mcf-pf4q)\n- [GHSA-gx5p-jg67-6x7h: Cross-site scripting in beforeInteractive scripts with untrusted input](https://github.com/vercel/next.js/security/advisories/GHSA-gx5p-jg67-6x7h)\n- [GHSA-h64f-5h5j-jqjh: Denial of Service in the Image Optimization API](https://github.com/vercel/next.js/security/advisories/GHSA-h64f-5h5j-jqjh)\n- [GHSA-wfc6-r584-vfw7: Cache poisoning in React Server Component responses](https://github.com/vercel/next.js/security/advisories/GHSA-wfc6-r584-vfw7)\n**Low:**\n- [GHSA-vfv6-92ff-j949: Cache poisoning via collisions in React Server Component cache-busting](https://github.com/vercel/next.js/security/advisories/GHSA-vfv6-92ff-j949)\n- [GHSA-3g8h-86w9-wvmq: Middleware / Proxy redirects can be cache-poisoned](https://github.com/vercel/next.js/security/advisories/GHSA-3g8h-86w9-wvmq)\n### Core Changes\n- fix: preserve HTTP access fallbacks during prerender recovery (#92231)\n- Fix fallback route params case in app-page handler (#91737)\n- Fix invalid HTML response for route-level RSC requests in deployment adapter (#91541)\n- Patch setHeader for direct route handlers (#93101)\n- Include deployment id in `cacheHandlers` keys (#93453)\n- Fix double-encoding of URL pathname parts in client param parsing (#93491)",
+      "memory_unit_text": "In the vercel/next.js release v16.2.6, security fixes address multiple high, moderate, and low severity advisories including denial of service, middleware bypass, cross-site scripting, and cache poisoning. Core changes fix HTTP access fallbacks during prerender recovery, fallback route params, invalid HTML responses, setHeader patching, deployment id in cacheHandlers keys, and double-encoding of URL pathname parts."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v15_5_18",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v15.5.18",
+      "tag_name": "v15.5.18",
+      "title": "v15.5.18",
+      "time_hint": "2026-05-07",
+      "published_at": "2026-05-07T20:18:27Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v15.5.18",
+      "raw_text": "Repository: vercel/next.js\nRelease: v15.5.18\nTag: v15.5.18; draft: False; prerelease: False; published_at: 2026-05-07T20:18:27Z; created_at: 2026-05-07T18:47:11Z\nRelease notes:\nThis release contains security fixes for the following advisories:\nHigh:\n- [GHSA-8h8q-6873-q5fj: Denial of Service with Server Components](https://github.com/vercel/next.js/security/advisories/GHSA-8h8q-6873-q5fj)\n- [GHSA-267c-6grr-h53f: Middleware / Proxy bypass in App Router applications via segment-prefetch routes](https://github.com/vercel/next.js/security/advisories/GHSA-267c-6grr-h53f)\n- [GHSA-26hh-7cqf-hhc6: Middleware / Proxy bypass in App Router applications via segment-prefetch routes - Incomplete Fix Follow-Up](https://github.com/vercel/next.js/security/advisories/GHSA-26hh-7cqf-hhc6)\n- [GHSA-mg66-mrh9-m8jx: Denial of Service via connection exhaustion in applications using Cache Components](https://github.com/vercel/next.js/security/advisories/GHSA-mg66-mrh9-m8jx)\n- [GHSA-492v-c6pp-mqqv: Middleware / Proxy bypass through dynamic route parameter injection](https://github.com/vercel/next.js/security/advisories/GHSA-492v-c6pp-mqqv)\n- [GHSA-c4j6-fc7j-m34r: Server-side request forgery in applications using WebSocket upgrades](https://github.com/vercel/next.js/security/advisories/GHSA-c4j6-fc7j-m34r)\n- [GHSA-36qx-fr4f-26g5: Middleware / Proxy bypass in Pages Router applications using i18n](https://github.com/vercel/next.js/security/advisories/GHSA-36qx-fr4f-26g5)\nModerate:\n- [GHSA-ffhc-5mcf-pf4q: Cross-site scripting in App Router applications using CSP nonces](https://github.com/vercel/next.js/security/advisories/GHSA-ffhc-5mcf-pf4q)\n- [GHSA-gx5p-jg67-6x7h: Cross-site scripting in beforeInteractive scripts with untrusted input](https://github.com/vercel/next.js/security/advisories/GHSA-gx5p-jg67-6x7h)\n- [GHSA-h64f-5h5j-jqjh: Denial of Service in the Image Optimization API](https://github.com/vercel/next.js/security/advisories/GHSA-h64f-5h5j-jqjh)\n- [GHSA-wfc6-r584-vfw7: Cache poisoning in React Server Component responses](https://github.com/vercel/next.js/security/advisories/GHSA-wfc6-r584-vfw7)\nLow:\n- [GHSA-vfv6-92ff-j949: Cache poisoning via collisions in React Server Component cache-busting](https://github.com/vercel/next.js/security/advisories/GHSA-vfv6-92ff-j949)\n- [GHSA-3g8h-86w9-wvmq: Middleware / Proxy redirects can be cache-poisoned](https://github.com/vercel/next.js/security/advisories/GHSA-3g8h-86w9-wvmq)",
+      "memory_unit_text": "In the vercel/next.js release v15.5.18, security fixes address high, moderate, and low severity advisories including denial of service, middleware bypass, cross-site scripting, and cache poisoning."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_15",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.15",
+      "tag_name": "v16.3.0-canary.15",
+      "title": "v16.3.0-canary.15",
+      "time_hint": "2026-05-07",
+      "published_at": "2026-05-07T22:31:24Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.15",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.15\nTag: v16.3.0-canary.15; draft: False; prerelease: True; published_at: 2026-05-07T22:31:24Z; created_at: 2026-05-07T22:06:28Z\nRelease notes:\n### Core Changes\n- [devtools] Force ANSI colors on overlay code frames regardless of TTY: #93550\n- Turbopack: Match proxy matchers with webpack implementation: #93594\n- Track `searchParams` access through a Proxy to catch missing-key reads: #93549\n- Cherry-pick ghsa commits to canary: #93614\n### Misc Changes\n- docs: escape literal triple-backticks in contribution guide: #93584\n- [test] Pin package manager to patch versions: #93592\n- turbo-rcstr: replace `rcstr!` macro_rules with proc macro: #93551\n- Turbopack: Fix middleware matcher suffix: #93590\n- Turbopack: Change DynEffect::dyn_value to DynEffect::value_hash, a simple u128: #93552\n- [ci] Ensure graphite_ci_optimizer fails open even if github fails to fetch the action: #93615\n### Credits\nHuge thanks to @aurorascharff, @icyJoseph, @eps1lon, @lukesandberg, @timneutkens, @unstubbable, and @bgw for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.15, core changes force ANSI colors on overlay code frames, match proxy matchers with webpack implementation, track searchParams access via Proxy, and cherry-pick GHSA commits. Misc changes include documentation fixes, test pinning, turbo-rcstr proc macro, Turbopack middleware matcher suffix fix, DynEffect value_hash change, and CI resilience."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_16",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.16",
+      "tag_name": "v16.3.0-canary.16",
+      "title": "v16.3.0-canary.16",
+      "time_hint": "2026-05-07",
+      "published_at": "2026-05-07T23:55:58Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.16",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.16\nTag: v16.3.0-canary.16; draft: False; prerelease: True; published_at: 2026-05-07T23:55:58Z; created_at: 2026-05-07T23:34:37Z\nRelease notes:\n### Core Changes\n- Hold `cacheSignal` across `unstable_cache` foreground revalidation: #93617\n- Encode non-ASCII characters in cache tags at construction: #93601\n### Credits\nHuge thanks to @unstubbable for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.16, core changes hold cacheSignal across unstable_cache foreground revalidation and encode non-ASCII characters in cache tags at construction."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_17",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.17",
+      "tag_name": "v16.3.0-canary.17",
+      "title": "v16.3.0-canary.17",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T23:58:51Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.17",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.17\nTag: v16.3.0-canary.17; draft: False; prerelease: True; published_at: 2026-05-08T23:58:51Z; created_at: 2026-05-08T23:36:03Z\nRelease notes:\n### Core Changes\n- Stabilize `unstable_io`: #93621\n- Use Next.js version as Turbopack persistent cache versioning key: #93605\n- feat(turbopack): add chunkLoadingGlobal config option: #93488\n- fix(devtools): render nested error messages with HotlinkedText: #93620\n- Fix: Improved rewrite detection during optimistic routing: #93619\n- Fix \"type: module\" in project dir when using standalone or adapters: #93612\n- Instant Insights: favor reported errors over missing slots: #93709\n### Misc Changes\n- Trace-server: Fix bottom up, and reduce allocations in turbopack-trace-server bottom-up grouping: #93460\n- turbopack: reschedule stale tasks with correct invalidation priority: #92897\n- [ci] Also pin first-party GH actions: #93609\n- Remove ineffective turbo-tasks: #91341\n### Credits\nHuge thanks to @gnoff, @sokra, @tim123abc, @aurorascharff, @acdlite, @timneutkens, @bgw, and @lukesandberg for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.17, core changes stabilize unstable_io, use Next.js version as Turbopack persistent cache versioning key, add chunkLoadingGlobal config option, fix devtools nested error rendering, improve rewrite detection during optimistic routing, fix type:module in project dir, and favor reported errors over missing slots in Instant Insights. Misc changes include trace-server improvements, task rescheduling, CI pinning, and removal of ineffective turbo-tasks."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_18",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.18",
+      "tag_name": "v16.3.0-canary.18",
+      "title": "v16.3.0-canary.18",
+      "time_hint": "2026-05-09",
+      "published_at": "2026-05-09T23:55:45Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.18",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.18\nTag: v16.3.0-canary.18; draft: False; prerelease: True; published_at: 2026-05-09T23:55:45Z; created_at: 2026-05-09T23:32:53Z\nRelease notes:\n### Core Changes\n- Remove redundant instant navigation prefetch header: #93713\n- Instant Insights: Favor reporting errors from all potential navigations over reporting a failed attempt to validate when a slot is missing: #93714\n### Misc Changes\n- CI speed improvements: #93411\n### Credits\nHuge thanks to @acdlite, @gnoff, and @timneutkens for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.18, core changes remove redundant instant navigation prefetch header and favor reporting errors from all potential navigations over failed validation attempts when a slot is missing. Misc changes include CI speed improvements."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_19",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.19",
+      "tag_name": "v16.3.0-canary.19",
+      "title": "v16.3.0-canary.19",
+      "time_hint": "2026-05-10",
+      "published_at": "2026-05-10T23:58:12Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.19",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.19\nTag: v16.3.0-canary.19; draft: False; prerelease: True; published_at: 2026-05-10T23:58:12Z; created_at: 2026-05-10T23:35:33Z\nRelease notes:\n### Misc Changes\n- Proof of concept: task eviction after snapshot for turbo-tasks-backend: #91790\n### Credits\nHuge thanks to @lukesandberg for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.19, misc changes introduce a proof of concept for task eviction after snapshot for turbo-tasks-backend."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_20",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.20",
+      "tag_name": "v16.3.0-canary.20",
+      "title": "v16.3.0-canary.20",
+      "time_hint": "2026-05-15",
+      "published_at": "2026-05-15T16:00:31Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.20",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.20\nTag: v16.3.0-canary.20; draft: False; prerelease: True; published_at: 2026-05-15T16:00:31Z; created_at: 2026-05-15T15:36:41Z\nRelease notes:\n### Core Changes\n- [turbopack] fix feature usage telemetry: #93100\n- Add an info panel for the existing \"Cache disabled\" indicator: #93756\n- Convert test/integration to isolated tests: #93247\n- Extend instant error overlay to metadata, viewport, and sync IO errors: #93287\n- Turbopack: expose hashes of source files to adapters: #93539\n- bfcacheId: Opt out of state preservation: #93633\n- Honor Suspense-above-body opt-in for dynamic `generateViewport`: #93759\n- Add `next internal static-routes-info` CLI command: #93399\n- Craigandrews/ensure isr lru is written if requests collapsed: #93766\n- Fix catch-all `router.query` corruption with `basePath` + `rewrites`: #93294\n- Surface invalid dynamic usage errors via Flight in dev: #93706\n- Upgrade React from `dd453071-20260506` to `d5736f09-20260507`: #93702\n- Show inner `\"use cache\"` as cause of nested-dynamic cache error: #93707\n- Fix server action forwarding loop with middleware rewrites: #93792\n- Instant Insights: When unable to complete validation provide a filename for the unvalidated boundary: #93770\n### Example Changes\n- [examples] migrate cloudinary to vercel-blob: #93762\n### Misc Changes\n- Turbopack: don't generate next-server.js.nft.json with adapters: #93684\n- Repo: Add gh stack skill: #93705\n- Fix React 18 tests: #93763\n- docs: clarify cacheTag limit - it is per call: #93768\n- docs: devIndicators with usage example: #93784\n- Convert tests using createNext -> nextTestSetup: #93767\n- Turbopack: fix lock-order inversion between Storage::map and Storage::snapshots: #93788\n- [turbopack] Enforce `root` attribute for strongly consistent reads and collectibles: #93114\n- Fix Turbopack worker_threads URL resolution: #93432\n- docs: less aggressive AI agent hint for an experimental API: #93811\n- docs: fix typos and links: #92541\n- docs: less aggressive AI agent hint for an experimental API: #93814\n- Patch `playwright-core` to resolve `_finishedPromise` on `requestFailed`: #93802\n- Revert \"[test] Skip flaky `cached-navigations` tests\": #93798\n- fix: GNU xargs warns about incompatible --replace/--max-args: #93821\n- fix: renumber non-sequential errors in errors.json: #93824\n- simplify session dependent tasks (#91729): #93227\n- fetch: respect HTTP Cache-Control headers with TTL-based invalidation (#91729): #93228\n- [CC] fix: cachedNavigations missing asyncApiPromises in resumes: #93827\n- Fix `Date.now()` cause shadowing in sync IO error overlay: #93857\n- Mark .agents/skills as internal so external `npx skills add` hides them: #93856\n- Instant Insights: only report non-validatable if dev render is error free: #93858\n- Remove partialFallbacks config flag: #93859\n- Fix warning in new apps caused by incorrect image dimensions: #93826\n### Credits\nHuge thanks to @lukesandberg, @mischnic, @unstubbable, @timneutkens, @aurorascharff, @icyJoseph, @acdlite, @christopherkindl, @sokra, @gnoff, @publictheta, @gaojude, @unclebay143, @lubieowoce, @vercel-release-bot, and @samselikoff for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.20, core changes fix feature usage telemetry, add an info panel for cache disabled indicator, convert test/integration to isolated tests, extend instant error overlay to metadata/viewport/sync IO errors, expose source file hashes to adapters, opt out of state preservation for bfcacheId, honor Suspense-above-body opt-in for dynamic generateViewport, add next internal static-routes-info CLI command, ensure ISR LRU is written if requests collapsed, fix catch-all router.query corruption, surface invalid dynamic usage errors via Flight, upgrade React to d5736f09-20260507, show inner use cache as cause of nested-dynamic cache error, fix server action forwarding loop, and provide filename for unvalidated boundary in Instant Insights. Example changes migrate cloudinary to vercel-blob. Misc changes include Turbopack NFT adjustments, repo skills, React 18 test fixes, documentation updates, test conversions, lock-order inversion fix, strongly consistent reads enforcement, worker_threads URL resolution fix, and various other fixes and improvements."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_21",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.21",
+      "tag_name": "v16.3.0-canary.21",
+      "title": "v16.3.0-canary.21",
+      "time_hint": "2026-05-15",
+      "published_at": "2026-05-15T23:59:20Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.21",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.21\nTag: v16.3.0-canary.21; draft: False; prerelease: True; published_at: 2026-05-15T23:59:20Z; created_at: 2026-05-15T23:35:24Z\nRelease notes:\n### Core Changes\n- Redesign dev overlay: cleaner shell + instant fix-card guidance: #93755\n### Misc Changes\n- Trace middleware/proxy source files in webpack NFT pipeline: #93871\n### Credits\nHuge thanks to @unstubbable and @yavorpunchev for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.21, core changes redesign the dev overlay with a cleaner shell and instant fix-card guidance. Misc changes trace middleware/proxy source files in webpack NFT pipeline."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_22",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.22",
+      "tag_name": "v16.3.0-canary.22",
+      "title": "v16.3.0-canary.22",
+      "time_hint": "2026-05-17",
+      "published_at": "2026-05-17T23:58:12Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.22",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.22\nTag: v16.3.0-canary.22; draft: False; prerelease: True; published_at: 2026-05-17T23:58:12Z; created_at: 2026-05-17T23:37:03Z\nRelease notes:\n### Misc Changes\n- turbo-tasks: prioritize recomputed tasks with Recomputation priority: #93876\n### Credits\nHuge thanks to @sokra for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.22, misc changes prioritize recomputed tasks with Recomputation priority in turbo-tasks."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_23",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.23",
+      "tag_name": "v16.3.0-canary.23",
+      "title": "v16.3.0-canary.23",
+      "time_hint": "2026-05-19",
+      "published_at": "2026-05-19T00:02:26Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.23",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.23\nTag: v16.3.0-canary.23; draft: False; prerelease: True; published_at: 2026-05-19T00:02:26Z; created_at: 2026-05-18T23:39:20Z\nRelease notes:\n### Core Changes\n- [Turbopack] Add graph-based CSS chunking algorithm behind experimental.cssChunking: \"graph\": #93606\n### Misc Changes\n- Convert more tests from createNext -> nextTestSetup: #93799\n- turbopack: emit assets before duplicate check in emit_assets: #93875\n- [test] split `og-api` test suite into default and standalone variants: #93915\n- Pass projectDir to adapter modifyConfig: #93916\n- Distinguish in-navigation errors in the instant error overlay: #93843\n- Eval next.config export functions in the try catch: #93884\n- Rename TaskExecutionReason::Initial to Root: #93922\n### Credits\nHuge thanks to @timneutkens, @sokra, @unstubbable, @mischnic, @aurorascharff, and @lukesandberg for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.23, core changes add a graph-based CSS chunking algorithm behind experimental.cssChunking: graph. Misc changes convert more tests to nextTestSetup, emit assets before duplicate check, split og-api test suite, pass projectDir to adapter modifyConfig, distinguish in-navigation errors in instant error overlay, eval next.config export functions in try catch, and rename TaskExecutionReason::Initial to Root."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_24",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.24",
+      "tag_name": "v16.3.0-canary.24",
+      "title": "v16.3.0-canary.24",
+      "time_hint": "2026-05-20",
+      "published_at": "2026-05-20T00:06:27Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.24",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.24\nTag: v16.3.0-canary.24; draft: False; prerelease: True; published_at: 2026-05-20T00:06:27Z; created_at: 2026-05-19T23:41:21Z\nRelease notes:\n### Core Changes\n- Add nextConfig.instrumentationClientInject: #93785\n- Add MCP `compile_route` tool: #93337\n- [turbopack-trace-server] Add memory samples to the mcp tool results: #93338\n### Misc Changes\n- docs: update agent test guidance: #93924\n- Add create PR skill: #93937\n- Use node streams for server inserted HTML: #93934\n- Remove vercel approvers: #93921\n- [otel] honor traceparent for verbose mode spans: #93874\n- Fix cross-param leak with `prefetch={true}` and `cachedNavigations`: #93940\n- Enable rootParams by default: #93863\n- devlow: add run sampling snapshots and comparison reports: #93833\n- Allow inspecting prerender worker again: #93947\n- make rcstrs on the heap/static slightly smaller: #93805\n- Stop pinning compiled chunk source on `EcmascriptBuildNodeChunkVersion`.\n: #93807\n- [turbopack] Add trace metadata about the persist size: #93339\n### Credits\nHuge thanks to @timneutkens, @mischnic, @gnoff, @kakadiadarpan, @unstubbable, @wbinnssmith, and @lukesandberg for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.24, core changes add nextConfig.instrumentationClientInject, add MCP compile_route tool, and add memory samples to turbopack-trace-server MCP tool results. Misc changes include documentation updates, create PR skill, using node streams for server inserted HTML, removing vercel approvers, honoring traceparent for verbose mode spans, fixing cross-param leak, enabling rootParams by default, devlow run sampling snapshots, allowing inspecting prerender worker, making rcstrs smaller, stopping pinning compiled chunk source, and adding trace metadata about persist size."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_25",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.25",
+      "tag_name": "v16.3.0-canary.25",
+      "title": "v16.3.0-canary.25",
+      "time_hint": "2026-05-21",
+      "published_at": "2026-05-21T00:06:36Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.25",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.25\nTag: v16.3.0-canary.25; draft: False; prerelease: True; published_at: 2026-05-21T00:06:36Z; created_at: 2026-05-20T23:44:50Z\nRelease notes:\n### Misc Changes\n- Enable mimalloc in benchmarks: #93388\n- Turbopack: fix subpath imports pointing to external packages: #93308\n- Turbopack: fix error reporting with crashing webpack loaders: #93926\n- docs: instrumentationClientInject: #93913\n- Fix Yarn berry tests: #93962\n- Polish instant fix cards and validation messages: #93894\n- Add deployable tarballs to pack-next: #93963\n- fix(devtools): detect VS Code renamed macOS binary in launch-editor: #93971\n- turbo-tasks: task-storage memory wins: #93720\n- Add backport PR skill: #93973\n- Turbopack: respect the module-sync export condition: #93970\n- use the action cache for passing tests: #93954\n- devlow-bench: percentile-based comparison and run retries: #93950\n- @vercel/devlow-bench: 0.3.5 → 0.4.0: #93951\n- [test] Prerendering HTTP access fallback pages with Cache Components: #93987\n- Prerender HTTP access fallbacks with Cache Components semantics: #93988\n- Add experimental.appShells feature flag: #93997\n### Credits\nHuge thanks to @lukesandberg, @mischnic, @aurorascharff, @timneutkens, @wbinnssmith, @unstubbable, and @acdlite for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.25, misc changes enable mimalloc in benchmarks, fix subpath imports pointing to external packages, fix error reporting with crashing webpack loaders, add documentation for instrumentationClientInject, fix Yarn berry tests, polish instant fix cards and validation messages, add deployable tarballs to pack-next, fix devtools launch-editor for VS Code renamed macOS binary, implement task-storage memory wins, add backport PR skill, respect module-sync export condition, use action cache for passing tests, add devlow-bench percentile-based comparison and run retries, update @vercel/devlow-bench to 0.4.0, add test for prerendering HTTP access fallback pages with Cache Components, implement prerender HTTP access fallbacks with Cache Components semantics, and add experimental.appShells feature flag."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_26",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.26",
+      "tag_name": "v16.3.0-canary.26",
+      "title": "v16.3.0-canary.26",
+      "time_hint": "2026-05-22",
+      "published_at": "2026-05-22T00:00:01Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.26",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.26\nTag: v16.3.0-canary.26; draft: False; prerelease: True; published_at: 2026-05-22T00:00:01Z; created_at: 2026-05-21T23:38:31Z\nRelease notes:\n### Misc Changes\n- [ci] Add an `TURBO_TASKS_AVAILABLE_PARALLELISM` environment variable that overrides `std::thread::available_parallelism` callsites: #93995\n- Make `--debug-build-paths` work with `src/` directory projects: #94016\n- ci: run Linux Playwright jobs in prebuilt Microsoft container: #93794\n- Revert \"Prerender HTTP access fallbacks with Cache Components semantics\": #94018\n- Respond to App Shell prefetches on the server: #93998\n- [turbopack] Disable ctor under RA: #94022\n- Upgrade rustc to nightly-2026-05-15: #94021\n- Turbopack: don't crash the dev server when node_modules/next is briefly unresolvable: #93877\n- Include PPR routes in dynamicRoutes regardless of revalidate time: #94025\n- Enable experimental.varyParams by default: #94010\n- Enable experimental.optimisticRouting by default: #94011\n- Enable experimental.cachedNavigations by default with cacheComponents: #94012\n- Update font data: #94006\n- [ci] Set `TURBO_TASKS_AVAILABLE_PARALLELISM` to 4 in most e2e tests: #93996\n### Credits\nHuge thanks to @bgw, @unstubbable, @timneutkens, @acdlite, @lukesandberg, @mischnic, @gnoff, and @vercel-release-bot for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.26, misc changes add TURBO_TASKS_AVAILABLE_PARALLELISM environment variable, make --debug-build-paths work with src/ directory projects, run Linux Playwright jobs in prebuilt Microsoft container, revert prerender HTTP access fallbacks with Cache Components semantics, respond to App Shell prefetches on the server, disable ctor under RA, upgrade rustc to nightly-2026-05-15, don't crash dev server when node_modules/next is briefly unresolvable, include PPR routes in dynamicRoutes regardless of revalidate time, enable experimental.varyParams by default, enable experimental.optimisticRouting by default, enable experimental.cachedNavigations by default with cacheComponents, update font data, and set TURBO_TASKS_AVAILABLE_PARALLELISM to 4 in most e2e tests."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_27",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.27",
+      "tag_name": "v16.3.0-canary.27",
+      "title": "v16.3.0-canary.27",
+      "time_hint": "2026-05-23",
+      "published_at": "2026-05-23T00:02:32Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.27",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.27\nTag: v16.3.0-canary.27; draft: False; prerelease: True; published_at: 2026-05-23T00:02:32Z; created_at: 2026-05-22T23:40:59Z\nRelease notes:\n### Misc Changes\n- Add next-dev-loop and next-ppr-optimizer skills: #93943\n- test: migrate webdriver callers to next.browser: #93941\n- Revert \"Include PPR routes in dynamicRoutes regardless of revalidate time\": #94032\n- Fix pr-status job pagination: #94049\n- Prerender static metadata under dynamic segments to canonical pathname: #93873\n- Instant navs devtools revamp: #94027\n- Add Chromium-only Playwright image publisher: #94051\n### Credits\nHuge thanks to @gaojude, @timneutkens, @gnoff, and @samselikoff for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.27, misc changes add next-dev-loop and next-ppr-optimizer skills, migrate webdriver callers to next.browser, revert including PPR routes in dynamicRoutes regardless of revalidate time, fix pr-status job pagination, prerender static metadata under dynamic segments to canonical pathname, revamp instant navs devtools, and add Chromium-only Playwright image publisher."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_28",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.28",
+      "tag_name": "v16.3.0-canary.28",
+      "title": "v16.3.0-canary.28",
+      "time_hint": "2026-05-24",
+      "published_at": "2026-05-24T00:00:29Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.28",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.28\nTag: v16.3.0-canary.28; draft: False; prerelease: True; published_at: 2026-05-24T00:00:29Z; created_at: 2026-05-23T23:37:14Z\nRelease notes:\n### Misc Changes\n- [Skills] Mark backport-pr and create-pr as internal: #94076\n### Credits\nHuge thanks to @gaojude for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.28, misc changes mark backport-pr and create-pr skills as internal."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_29",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.29",
+      "tag_name": "v16.3.0-canary.29",
+      "title": "v16.3.0-canary.29",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T00:02:56Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.29",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.29\nTag: v16.3.0-canary.29; draft: False; prerelease: True; published_at: 2026-05-26T00:02:56Z; created_at: 2026-05-25T23:40:28Z\nRelease notes:\n### Misc Changes\n- Replace next-ppr-optimizer with next-cache-components-optimizer: #94035\n- [Skills] next-dev-loop: persist login state across loops: #94105\n- Fix errors.json merge driver to handle gaps in error codes: #93829\n### Credits\nHuge thanks to @gaojude and @sokra for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.29, misc changes replace next-ppr-optimizer with next-cache-components-optimizer, persist login state across loops in next-dev-loop skill, and fix errors.json merge driver to handle gaps in error codes."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_30",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.30",
+      "tag_name": "v16.3.0-canary.30",
+      "title": "v16.3.0-canary.30",
+      "time_hint": "2026-05-27",
+      "published_at": "2026-05-27T00:02:50Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.30",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.30\nTag: v16.3.0-canary.30; draft: False; prerelease: True; published_at: 2026-05-27T00:02:50Z; created_at: 2026-05-26T23:40:51Z\nRelease notes:\n### Core Changes\n- Revert \"Revert \"refactor: write pages router export files directly to server/pages/\"\": #93409\n### Misc Changes\n- Turbopack: make available_modules an OperationVc and simplify merged module bookkeeping: #94055\n- chore: release @next/rspack-core 1.0.3: #94116\n- Improve notFound recovery in error pathway: #94037\n- Turbopack: Fix unsound IntoIterator for ReadRef<T>: #94122\n- [ci] Skip installing native binaries when fetching test timings: #93593\n- [ci] Reserve comments for stats and tests: #93240\n- docs: vocabulary-bridge rule for api-ref and guide skills: #94127\n- docs: rework dynamic segments intro section: #94126\n- [ci] Fix the playwright-chromium Dockerfile: #94064\n- Fix Firefox refresh loop on initial load of streaming pages in dev mode: #94128\n- Upgrade React from `d5736f09-20260507` to `75b0945b-20260526`: #94131\n- Prefetch App Shells on the client: #93999\n- [ci] Add an AGENTS.md for GitHub Actions: #94056\n- docs: add next/root-params API reference: #93764\n- docs: ISR w/ Cache Components - `experimental.partialFallbacks`: #93299\n- [ci] Resize tiny jobs in integration_tests_reusable.yml to use smaller machines: #93886\n### Credits\nHuge thanks to @sokra, @SyMind, @gnoff, @timneutkens, @eps1lon, @icyJoseph, @bgw, @unstubbable, @vercel-release-bot, and @acdlite for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.30, core changes revert a previous revert to write pages router export files directly to server/pages/. Misc changes make available_modules an OperationVc, release @next/rspack-core 1.0.3, improve notFound recovery in error pathway, fix unsound IntoIterator for ReadRef<T>, skip installing native binaries when fetching test timings, reserve comments for stats and tests, add vocabulary-bridge rule for api-ref and guide skills, rework dynamic segments intro section, fix playwright-chromium Dockerfile, fix Firefox refresh loop on initial load of streaming pages in dev mode, upgrade React to 75b0945b-20260526, prefetch App Shells on the client, add AGENTS.md for GitHub Actions, add next/root-params API reference, document ISR with Cache Components and experimental.partialFallbacks, and resize tiny jobs in integration_tests_reusable.yml."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_31",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.31",
+      "tag_name": "v16.3.0-canary.31",
+      "title": "v16.3.0-canary.31",
+      "time_hint": "2026-05-28",
+      "published_at": "2026-05-28T00:25:47Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.31",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.31\nTag: v16.3.0-canary.31; draft: False; prerelease: True; published_at: 2026-05-28T00:25:47Z; created_at: 2026-05-27T23:43:21Z\nRelease notes:\n### Misc Changes\n- ServerActionsGraph: pass ModuleGraphLayer as OperationVc: #94141\n- [ci] Explicitly disable package-manager-cache for uses of actions/setup-node: #93953\n- Bugfix: Incorrect search params stored in cache: #94144\n- Upgrade ast-grep: #94150\n- docs: transpilePackages usage: #93602\n- [Skills] next-cache-components-optimizer: clarify private-cache scope rule: #94113\n- [ci] Increase TEST_CONCURRENCY from 8 to 12: #94138\n- Upgrade React from `75b0945b-20260526` to `c0cd4d5d-20260527`: #94161\n- Remove extra word: #94160\n- [ci] Give the build cache in cache in build_and_deploy a more obvious name, not just a hash and run number: #93957\n- docs: move isr cacheHandler callout to next steps: #94167\n- [ci] Rename GRAPHITE_TOKEN to GRAPHITE_CI_OPTIMIZER_TOKEN: #94166\n- Fix default regex for `require.context` in Turbopack analyzer: #94162\n- [ci] Use Turbopack in non-webpack-specific e2e test jobs: #94005\n### Credits\nHuge thanks to @sokra, @bgw, @acdlite, @mischnic, @icyJoseph, @gaojude, @vercel-release-bot, @igorbabko, and @sampoder for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.31, misc changes pass ModuleGraphLayer as OperationVc, explicitly disable package-manager-cache for setup-node, fix incorrect search params stored in cache, upgrade ast-grep, document transpilePackages usage, clarify private-cache scope rule in next-cache-components-optimizer skill, increase TEST_CONCURRENCY from 8 to 12, upgrade React to c0cd4d5d-20260527, remove extra word, give build cache a more obvious name, move ISR cacheHandler callout to next steps, rename GRAPHITE_TOKEN to GRAPHITE_CI_OPTIMIZER_TOKEN, fix default regex for require.context in Turbopack analyzer, and use Turbopack in non-webpack-specific e2e test jobs."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_32",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.32",
+      "tag_name": "v16.3.0-canary.32",
+      "title": "v16.3.0-canary.32",
+      "time_hint": "2026-05-28",
+      "published_at": "2026-05-28T11:56:19Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.32",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.32\nTag: v16.3.0-canary.32; draft: False; prerelease: True; published_at: 2026-05-28T11:56:19Z; created_at: 2026-05-28T11:33:06Z\nRelease notes:\n### Misc Changes\n- Fix short circuit evaluation of AND / OR in the Turbopack analyzer for string & nullish-related methods: #94159\n- Turbopack: fix instrumentationClientInject with type:module: #94184\n- [test] Add test for static metadata files and `generateStaticParams`: #93465\n- Align issue triage guidance with automated behavior: #94189\n### Credits\nHuge thanks to @sampoder, @mischnic, @eps1lon, and @timneutkens for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.32, misc changes fix short circuit evaluation of AND/OR in Turbopack analyzer for string & nullish-related methods, fix instrumentationClientInject with type:module, add test for static metadata files and generateStaticParams, and align issue triage guidance with automated behavior."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_33",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.33",
+      "tag_name": "v16.3.0-canary.33",
+      "title": "v16.3.0-canary.33",
+      "time_hint": "2026-05-29",
+      "published_at": "2026-05-29T00:07:52Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.33",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.33\nTag: v16.3.0-canary.33; draft: False; prerelease: True; published_at: 2026-05-29T00:07:52Z; created_at: 2026-05-28T23:46:19Z\nRelease notes:\n### Misc Changes\n- docs: fix code examples in getting-started guides: #93273\n- [CC] Streaming prerender: #94044\n- test: skip flaky instant-nav-panel tests: #94196\n- [CC] Avoid unnecessary conversions to a stream: #94192\n- test: fix next-after-app-static: #94195\n- Propagate adapter preferred regions: #94123\n- [ci] Update all actions/* dependencies: #94174\n- Consolidate Resume Data Caches and partially revert #88556: #94194\n- Fix `'use cache'` bail-out under `unstable_instant = false`: #94198\n- Turbopack: use module graph for NFT: #92901\n- Turbopack's analyzer: always treat promises as truth-y and non-nullish: #94186\n### Credits\nHuge thanks to @StanislavKozachenko, @lubieowoce, @timneutkens, @bgw, @unstubbable, @mischnic, and @sampoder for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.33, misc changes fix code examples in getting-started guides, implement streaming prerender for Cache Components, skip flaky instant-nav-panel tests, avoid unnecessary conversions to a stream, fix next-after-app-static test, propagate adapter preferred regions, update all actions/* dependencies, consolidate Resume Data Caches and partially revert #88556, fix 'use cache' bail-out under unstable_instant = false, use module graph for NFT, and always treat promises as truth-y and non-nullish in Turbopack analyzer."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_34",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.34",
+      "tag_name": "v16.3.0-canary.34",
+      "title": "v16.3.0-canary.34",
+      "time_hint": "2026-05-29",
+      "published_at": "2026-05-29T20:41:45Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.34",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.34\nTag: v16.3.0-canary.34; draft: False; prerelease: True; published_at: 2026-05-29T20:41:45Z; created_at: 2026-05-29T20:18:37Z\nRelease notes:\n### Misc Changes\n- Update `shortcircuit_if_known` to `eval_shortcircuit()`: #94163\n- Remove dead code from `JsValue::Binary` in `is_truthy`: #94165\n- Produce valid file URLs for `import.meta.url` on Windows in Turbopack: #94179\n- [turbopack] Store TaskDirtyCause in Dirtyness and pass to NativeFunction::span: #94057\n- Turbopack: cleanup ModuleHotReferenceAssetReference: #94206\n- [feat] updated the documentation for deployment to point to new next.js Docker official guide.: #94185\n- docs: correct custom server optimization guidance: #94229\n- Add Errors/Insights tab split to the instant error overlay: #94073\n- Replace VcStorage with real TurboTasks in tests/benches\n: #93955\n- Redesign the unrendered-segment instant validation overlay: #93879\n- turbopack tracing: add chunk_name to `get HMR events` span: #94061\n- Turbopack: reduce hmr chunk list subscriptions: #94062\n- [turbopack] Separate `JsValue` into it's own folder in the analyzer: #94208\n- feat(image-optimization): add experimental flag `imgOptOperationCache`: #94246\n### Credits\nHuge thanks to @sampoder, @sokra, @mischnic, @kristiyan-velkov, @timneutkens, @aurorascharff, @lukesandberg, @wbinnssmith, and @styfle for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.34, misc changes update shortcircuit_if_known to eval_shortcircuit(), remove dead code from JsValue::Binary in is_truthy, produce valid file URLs for import.meta.url on Windows in Turbopack, store TaskDirtyCause in Dirtyness and pass to NativeFunction::span, cleanup ModuleHotReferenceAssetReference, update deployment documentation to point to new Next.js Docker official guide, correct custom server optimization guidance, add Errors/Insights tab split to instant error overlay, replace VcStorage with real TurboTasks in tests/benches, redesign unrendered-segment instant validation overlay, add chunk_name to get HMR events span, reduce hmr chunk list subscriptions, separate JsValue into its own folder in the analyzer, and add experimental flag imgOptOperationCache for image optimization."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_35",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.35",
+      "tag_name": "v16.3.0-canary.35",
+      "title": "v16.3.0-canary.35",
+      "time_hint": "2026-05-30",
+      "published_at": "2026-05-30T00:26:51Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.35",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.35\nTag: v16.3.0-canary.35; draft: False; prerelease: True; published_at: 2026-05-30T00:26:51Z; created_at: 2026-05-29T23:45:39Z\nRelease notes:\n### Misc Changes\n- Exclude static metadata and viewport from error recovery prerender when cache-components is enabled: #94134\n- [turbopack] Shrink ReadRawVcFuture from 80 to 64 bytes: #94201\n- [turbopack] Move `WellKnownObjectKind` & `WellKnownFunctionKind` into `well_known/kinds.rs` in the analyzer: #94209\n- [turbopack] Move `require.context`-related code into a seperate file in the analyzer: #94210\n### Credits\nHuge thanks to @gnoff, @lukesandberg, and @sampoder for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.35, misc changes exclude static metadata and viewport from error recovery prerender when cache-components is enabled, shrink ReadRawVcFuture from 80 to 64 bytes, move WellKnownObjectKind & WellKnownFunctionKind into well_known/kinds.rs in the analyzer, and move require.context-related code into a separate file in the analyzer."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_36",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.36",
+      "tag_name": "v16.3.0-canary.36",
+      "title": "v16.3.0-canary.36",
+      "time_hint": "2026-05-31",
+      "published_at": "2026-05-31T00:00:36Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.36",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.36\nTag: v16.3.0-canary.36; draft: False; prerelease: True; published_at: 2026-05-31T00:00:36Z; created_at: 2026-05-30T23:38:16Z\nRelease notes:\n### Misc Changes\n- Turbopack analyzer: analyze ternaries + promises in string & nullish methods: #94187\n- [turbopack] Break up `graph.rs` in the analyzer into smaller files: #94211\n- [turbopack] Add `explain()` methods to `WellKnownObjectKind` and `WellKnownFunctionKind`: #94217\n- [turbopack] Handle negative numbers as constants in the analyzer: #94218\n- [turbopack] Use `ast_path.kinds()` instead of mapping over `ast_path` in the analyzer: #94221\n- [CLI] Exit non-zero with a clear message when next typegen fails: #94241\n### Credits\nHuge thanks to @sampoder and @gaojude for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.36, misc changes analyze ternaries + promises in string & nullish methods in Turbopack analyzer, break up graph.rs into smaller files, add explain() methods to WellKnownObjectKind and WellKnownFunctionKind, handle negative numbers as constants in the analyzer, use ast_path.kinds() instead of mapping over ast_path, and exit non-zero with a clear message when next typegen fails."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_2_7",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.2.7",
+      "tag_name": "v16.2.7",
+      "title": "v16.2.7",
+      "time_hint": "2026-06-01",
+      "published_at": "2026-06-01T19:53:29Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.2.7",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.2.7\nTag: v16.2.7; draft: False; prerelease: False; published_at: 2026-06-01T19:53:29Z; created_at: 2026-06-01T15:28:16Z\nRelease notes:\n> [!NOTE]\n> This release is backporting bug fixes. It does **not** include all pending features/changes on canary.\n### Core Changes\n- Backport documentation fixes for v16.2 (#93804)\n- [backport] Patch `playwright-core` to resolve `_finishedPromise` on `requestFailed` (#93920)\n- [backport] Fix dev mode hydration failure when page is served from HTTP cache (#93492)\n- [backport] Fix catch-all `router.query` corruption with `basePath` + `rewrites` (#93917)\n- [backport] Encode non-ASCII characters in cache tags at construction (#93918)\n- [backport] Fix server action forwarding loop with middleware rewrites (#93919)\n- [backport] Turbopack: switch from base40 to base38 hash encoding (#93932)\n- [ci] Disable hanging node 24 typescript tests on 16.2 backport branch (#94164)\n- [backport] Fix \"type: module\" in project dir when using standalone or adapters (#94050)\n- [backport] Propagate adapter preferred regions (#94200)\n- [16.2.x] Don't drop `FormData` entries (#94240)\n- [backport] feat(turbopack): add LocalPathOrProjectPath PostCSS config resolution (#94284)\n### Credits\nHuge thanks to @eps1lon, @icyJoseph, @unstubbable, @mischnic, @bgw, @timneutkens, and @lukesandberg for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.2.7, core changes backport documentation fixes, patch playwright-core to resolve _finishedPromise on requestFailed, fix dev mode hydration failure when page is served from HTTP cache, fix catch-all router.query corruption with basePath + rewrites, encode non-ASCII characters in cache tags at construction, fix server action forwarding loop with middleware rewrites, switch from base40 to base38 hash encoding in Turbopack, disable hanging node 24 typescript tests on 16.2 backport branch, fix type:module in project dir when using standalone or adapters, propagate adapter preferred regions, don't drop FormData entries, and add LocalPathOrProjectPath PostCSS config resolution."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v15_5_19",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v15.5.19",
+      "tag_name": "v15.5.19",
+      "title": "15.5.19",
+      "time_hint": "2026-06-01",
+      "published_at": "2026-06-01T20:09:02Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v15.5.19",
+      "raw_text": "Repository: vercel/next.js\nRelease: 15.5.19\nTag: v15.5.19; draft: False; prerelease: False; published_at: 2026-06-01T20:09:02Z; created_at: 2026-06-01T15:32:07Z\nRelease notes:\n> [!NOTE]\n> This release is backporting bug fixes. It does **not** include all pending features/changes on canary.\n### Core Changes\n- [15.5.x] Don't drop `FormData` entries (#94244)\n### Other\n- [15.5.x] Fix CI (#94281)\n### Credits\nHuge thanks to @eps1lon for helping!",
+      "memory_unit_text": "In the vercel/next.js release 15.5.19, core changes backport a fix to not drop FormData entries. Other changes fix CI."
+    },
+    {
+      "memory_node_id": "vercel__next_js__release__v16_3_0_canary_37",
+      "repo": "vercel/next.js",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v16.3.0-canary.37",
+      "tag_name": "v16.3.0-canary.37",
+      "title": "v16.3.0-canary.37",
+      "time_hint": "2026-06-02",
+      "published_at": "2026-06-02T00:11:04Z",
+      "source_url": "https://github.com/vercel/next.js/releases/tag/v16.3.0-canary.37",
+      "raw_text": "Repository: vercel/next.js\nRelease: v16.3.0-canary.37\nTag: v16.3.0-canary.37; draft: False; prerelease: True; published_at: 2026-06-02T00:11:04Z; created_at: 2026-06-01T23:47:24Z\nRelease notes:\n### Misc Changes\n- Switch `TotalOrderF64` to `f64` in `ConstantNumber` to correctly handle `NaN === NaN` and `0 === -0` inside the Turbopack analyzer: #94172\n- Use `serde_json::Number` in `CompileTimeDefineValue` and remove `TotalOrderF64`: #94177\n- docs: bodySizeLimit measures raw HTTP body: #94137\n- Update ctor from 0.10 to 1.0.6: #94045\n- Include `--port` in `next internal query-trace` startup hint and help example: #93961\n- Turbopack: refactor NFT to add Endpoint.traced_files: #94224\n- Turbopack: show codeframe when tracing too much: #94207\n- fix(instrumentation): await instrumentation in RouteModule.prepare: #94306\n- [turbopack] Function pointers are copy: #94273\n- docs: accuracy and pappercuts: #94299\n### Credits\nHuge thanks to @sampoder, @icyJoseph, @sokra, @mischnic, and @lukesandberg for helping!",
+      "memory_unit_text": "In the vercel/next.js release v16.3.0-canary.37, misc changes switch TotalOrderF64 to f64 in ConstantNumber to correctly handle NaN and 0, use serde_json::Number in CompileTimeDefineValue and remove TotalOrderF64, document bodySizeLimit measures raw HTTP body, update ctor from 0.10 to 1.0.6, include --port in next internal query-trace startup hint, refactor NFT to add Endpoint.traced_files, show codeframe when tracing too much, fix instrumentation await in RouteModule.prepare, make function pointers copy, and improve documentation accuracy."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the vercel/next.js releases, which release adds a graph-based CSS chunking algorithm behind experimental.cssChunking: \"graph\"?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v16.3.0-canary.23"
+        },
+        {
+          "option_id": "B",
+          "text": "v16.3.0-canary.24"
+        },
+        {
+          "option_id": "C",
+          "text": "v16.3.0-canary.25"
+        },
+        {
+          "option_id": "D",
+          "text": "v16.3.0-canary.26"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v16.3.0-canary.23",
+      "source_chunk_ids": [
+        "vercel__next_js__release__v16_3_0_canary_23"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "vercel__next_js__release__v16_3_0_canary_23",
+          "answer_text": "add a graph-based CSS chunking algorithm behind experimental.cssChunking: graph"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the vercel/next.js releases, how does the security fix content in v16.2.6 differ from the security fix content in v15.5.18?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v16.2.6 includes security fixes and additional core changes like fixing HTTP access fallbacks and double-encoding of URL pathname parts, while v15.5.18 only contains security fixes without additional core changes."
+        },
+        {
+          "option_id": "B",
+          "text": "v16.2.6 only contains security fixes, while v15.5.18 includes both security fixes and core changes."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases contain identical security fixes and core changes."
+        },
+        {
+          "option_id": "D",
+          "text": "v16.2.6 contains no security fixes, while v15.5.18 contains all security fixes."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v16.2.6 includes security fixes and additional core changes like fixing HTTP access fallbacks and double-encoding of URL pathname parts, while v15.5.18 only contains security fixes without additional core changes.",
+      "source_chunk_ids": [
+        "vercel__next_js__release__v16_2_6",
+        "vercel__next_js__release__v15_5_18"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "vercel__next_js__release__v16_2_6",
+          "answer_text": "security fixes address multiple high, moderate, and low severity advisories ... Core changes fix HTTP access fallbacks during prerender recovery, fallback route params, invalid HTML responses, setHeader patching, deployment id in cacheHandlers keys, and double-encoding of URL pathname parts"
+        },
+        {
+          "memory_node_id": "vercel__next_js__release__v15_5_18",
+          "answer_text": "security fixes address high, moderate, and low severity advisories"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the vercel/next.js release window, order the following release-content states from earliest to latest: (1) a release that stabilizes unstable_io and uses Next.js version as Turbopack persistent cache versioning key, (2) a release that adds a graph-based CSS chunking algorithm behind experimental.cssChunking: \"graph\", (3) a release that redesigns the dev overlay with a cleaner shell and instant fix-card guidance, (4) a release that adds nextConfig.instrumentationClientInject and an MCP compile_route tool.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2 -> 1 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 3 -> 1 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "1 -> 3 -> 2 -> 4"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "vercel__next_js__release__v16_3_0_canary_17",
+        "vercel__next_js__release__v16_3_0_canary_23",
+        "vercel__next_js__release__v16_3_0_canary_21",
+        "vercel__next_js__release__v16_3_0_canary_24"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "vercel__next_js__release__v16_3_0_canary_17",
+          "answer_text": "stabilize unstable_io, use Next.js version as Turbopack persistent cache versioning key"
+        },
+        {
+          "memory_node_id": "vercel__next_js__release__v16_3_0_canary_23",
+          "answer_text": "add a graph-based CSS chunking algorithm behind experimental.cssChunking: graph"
+        },
+        {
+          "memory_node_id": "vercel__next_js__release__v16_3_0_canary_21",
+          "answer_text": "redesign the dev overlay with a cleaner shell and instant fix-card guidance"
+        },
+        {
+          "memory_node_id": "vercel__next_js__release__v16_3_0_canary_24",
+          "answer_text": "add nextConfig.instrumentationClientInject, add MCP compile_route tool"
+        }
+      ]
+    }
+  ]
+}

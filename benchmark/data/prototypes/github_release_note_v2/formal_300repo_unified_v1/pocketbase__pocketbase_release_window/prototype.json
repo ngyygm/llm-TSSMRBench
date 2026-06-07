@@ -1,0 +1,525 @@
+{
+  "prototype_id": "pocketbase__pocketbase_release_window",
+  "domain": "github_release_evolution",
+  "repo": "pocketbase/pocketbase",
+  "source_type": "release_note",
+  "window_title": "pocketbase/pocketbase recent release evolution",
+  "window_summary": "This window tracks the recent pocketbase/pocketbase release stream from v0.22.38 through v0.39.0, including backported fixes and major feature releases such as the new UI in v0.37.0 and the SQL console in v0.39.0.",
+  "chunks": [
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_36_0_rc_1",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.36.0-rc.1",
+      "tag_name": "v0.36.0-rc.1",
+      "title": "v0.36.0-rc.1",
+      "time_hint": "2026-01-13",
+      "published_at": "2026-01-13T20:44:04Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.36.0-rc.1",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.36.0-rc.1\nTag: v0.36.0-rc.1; draft: False; prerelease: True; published_at: 2026-01-13T20:44:04Z; created_at: 2026-01-13T20:30:31Z\nRelease notes:\n> [!CAUTION]\n> **This is a prerelease for test purposes only!**\n>\n> _It contains 2 minor list query optimizations related to https://github.com/pocketbase/pocketbase/discussions/7444 that haven't been fully tested and verified yet._",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.36.0-rc.1, this prerelease contains two minor list query optimizations related to discussion #7444 that have not been fully tested and verified yet."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_22_38",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.22.38",
+      "tag_name": "v0.22.38",
+      "title": "v0.22.38 Release",
+      "time_hint": "2026-01-16",
+      "published_at": "2026-01-16T04:50:52Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.22.38",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.22.38 Release\nTag: v0.22.38; draft: False; prerelease: False; published_at: 2026-01-16T04:50:52Z; created_at: 2026-01-15T21:16:42Z\nRelease notes:\n- (_Backported from v0.36.0_) Bumped min Go GitHub action version to 1.25.6 because it comes with some [minor security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.25.6).",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.22.38, the minimum Go GitHub action version is bumped to 1.25.6, backported from v0.36.0, because it includes minor security fixes."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_36_0",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.36.0",
+      "tag_name": "v0.36.0",
+      "title": "v0.36.0 Release",
+      "time_hint": "2026-01-16",
+      "published_at": "2026-01-16T04:51:49Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.36.0",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.36.0 Release\nTag: v0.36.0; draft: False; prerelease: False; published_at: 2026-01-16T04:51:49Z; created_at: 2026-01-16T04:27:55Z\nRelease notes:\n> _To update the prebuilt executable you can run `./pocketbase update`._\n- List query and API rules optimizations:\n- Removed unnecessary correlated subquery expression when using back-relations via single `relation` field.\n- Replaced `DISTINCT` with `GROUP BY id` when rows deduplication is needed and when deemed safe.\n_This should help with having a more stable and predictable performance even if the collection records are on the larger side._\nFor some queries and data sets the above 2 optimizations have shown significant improvements but if you notice a performance degradation after upgrading, please open a Q&A discussion with export of your collections structure and the problematic request so that it can be analyzed.\n- Added [`strftime(format, timevalue, modifiers...)`](https://pocketbase.io/docs/api-rules-and-filters/#strftimeformat-time-value-modifiers-) date formatting filter and API rules function.\nIt works similarly to the [SQLite `strftime` builtin function](https://sqlite.org/lang_datefunc.html) with the main difference that NULL results will be normalized for consistency with the non-nullable PocketBase `text` and `date` fields.\nMulti-match expressions are also supported and works the same as if the collection field is referenced, for example:\n```js\n// requires ANY/AT-LEAST-ONE-OF multiRel records to have \"created\" date matching the formatted string \"2026-01\"\nstrftime('%Y-%m', multiRel.created) ?= '2026-01'\n// requires ALL multiRel records to have \"created\" date matching the formatted string \"2026-01\"\nstrftime('%Y-%m', multiRel.created) = '2026-01'\n```\n- ⚠️ Minor changes to the `search.ResolverResult` struct _(mostly used internally)_:\n- Replaced `NoCoalesce` field with the more explicit `NullFallback` _(`NullFallbackDisabled` is the same as `NoCoalesce:true`)_.\n- Replaced the expression interface of the `MultiMatchSubQuery` field with the concrete struct type `search.MultiMatchSubquery` to avoid excessive type assertions and allow direct mutations of the field.\n- Updated `modernc.org/sqlite` to v1.44.1 _(SQLite 3.51.1)_.\n- Bumped min Go GitHub action version to 1.25.6 because it comes with some [minor security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.25.6).",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.36.0, list query and API rules optimizations are introduced: unnecessary correlated subquery expressions when using back-relations via a single relation field are removed, and DISTINCT is replaced with GROUP BY id for row deduplication when safe. A new strftime date formatting filter and API rules function is added. The search.ResolverResult struct is modified: NoCoalesce is replaced with NullFallback, and the MultiMatchSubQuery field expression interface is replaced with a concrete struct type. Dependencies are updated: modernc.org/sqlite to v1.44.1 (SQLite 3.51.1), and the minimum Go GitHub action version is bumped to 1.25.6 for minor security fixes."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_36_1",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.36.1",
+      "tag_name": "v0.36.1",
+      "title": "v0.36.1 Release",
+      "time_hint": "2026-01-18",
+      "published_at": "2026-01-18T17:09:58Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.36.1",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.36.1 Release\nTag: v0.36.1; draft: False; prerelease: False; published_at: 2026-01-18T17:09:58Z; created_at: 2026-01-18T16:57:18Z\nRelease notes:\n> _To update the prebuilt executable you can run `./pocketbase update`._\n- Reverted the `DISTINCT` with `GROUP BY` replacement optimization from v0.36.0 as it was reported to negatively impact the indexes utilization for some queries and the minor performance boost that you may get when used on large records is not enough to justify the more common use ([#7461](https://github.com/pocketbase/pocketbase/discussions/7461)).\n_A better generic deduplication optimization for large records (aka. records with large `text`/`json` fields or many small ones) will be researched but there are no ETAs._\n- Updated `modernc.org/sqlite` to v1.44.2 _(SQLite 3.51.2)_.\n- Fixed code comment typos.",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.36.1, the DISTINCT with GROUP BY replacement optimization from v0.36.0 is reverted because it negatively impacted index utilization for some queries. modernc.org/sqlite is updated to v1.44.2 (SQLite 3.51.2), and code comment typos are fixed."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_36_2",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.36.2",
+      "tag_name": "v0.36.2",
+      "title": "v0.36.2 Release",
+      "time_hint": "2026-02-01",
+      "published_at": "2026-02-01T08:12:42Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.36.2",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.36.2 Release\nTag: v0.36.2; draft: False; prerelease: False; published_at: 2026-02-01T08:12:42Z; created_at: 2026-02-01T07:40:10Z\nRelease notes:\n> _To update the prebuilt executable you can run `./pocketbase update`._\n- Updated `modernc.org/sqlite` to v1.44.3 _(race check fix)_, `goja` _(circular references fix)_ and other go deps.\n- Other minor fixes _(updated tests to silence some of the race detector errors, updated `FindFirstRecordByData` with more clear error message when missing or invalid key is used, etc.)_.",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.36.2, dependencies are updated: modernc.org/sqlite to v1.44.3 (race check fix), goja (circular references fix), and other Go dependencies. Minor fixes include updated tests to silence race detector errors and a clearer error message in FindFirstRecordByData when a missing or invalid key is used."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_36_3",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.36.3",
+      "tag_name": "v0.36.3",
+      "title": "v0.36.3 Release",
+      "time_hint": "2026-02-13",
+      "published_at": "2026-02-13T18:38:58Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.36.3",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.36.3 Release\nTag: v0.36.3; draft: False; prerelease: False; published_at: 2026-02-13T18:38:58Z; created_at: 2026-02-13T18:07:31Z\nRelease notes:\n> _To update the prebuilt executable you can run `./pocketbase update`._\n- Added `Accept-Encoding: identity` to the S3 requests per the suggestion in [#7523](https://github.com/pocketbase/pocketbase/issues/7523).\n_This should help fixing the 0-bytes file response when S3 API compression is enabled._\n- Bumped min Go GitHub action version to 1.26.0 _(it comes with minor [GC performance improvements](https://go.dev/doc/go1.26#runtime))_.\n- Other minor fixes _(updated `modernc.org/sqlite` to v1.45.0, updated `goja_nodejs` adding `Buffer.concat`, updated the arguments of `app.DeleteTable(...)`, `app.DeleteView(...)` and other similar methods to make it more clear that they are dangerous and shouldn't be used with untrusted input, etc.)_.",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.36.3, Accept-Encoding: identity is added to S3 requests to fix 0-byte file responses when S3 API compression is enabled. The minimum Go GitHub action version is bumped to 1.26.0 for minor GC performance improvements. Other minor fixes include updating modernc.org/sqlite to v1.45.0, adding Buffer.concat to goja_nodejs, and clarifying the danger of app.DeleteTable, app.DeleteView, and similar methods."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_36_4",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.36.4",
+      "tag_name": "v0.36.4",
+      "title": "v0.36.4 Release",
+      "time_hint": "2026-02-17",
+      "published_at": "2026-02-17T08:02:51Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.36.4",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.36.4 Release\nTag: v0.36.4; draft: False; prerelease: False; published_at: 2026-02-17T08:02:51Z; created_at: 2026-02-16T20:04:19Z\nRelease notes:\n> _To update the prebuilt executable you can run `./pocketbase update`._\n- Made the optional `Bearer` token prefix case-insensitive ([#7525](https://github.com/pocketbase/pocketbase/pull/7525); thanks @benjamesfleming).\n- Enabled `$filesystem.s3(...)` and `$filesystem.local(...)` JSVM bindings ([#7526](https://github.com/pocketbase/pocketbase/issues/7526)).",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.36.4, the optional Bearer token prefix is made case-insensitive, and $filesystem.s3(...) and $filesystem.local(...) JSVM bindings are enabled."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_36_5",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.36.5",
+      "tag_name": "v0.36.5",
+      "title": "v0.36.5 Release",
+      "time_hint": "2026-02-21",
+      "published_at": "2026-02-21T11:45:32Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.36.5",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.36.5 Release\nTag: v0.36.5; draft: False; prerelease: False; published_at: 2026-02-21T11:45:32Z; created_at: 2026-02-21T11:31:48Z\nRelease notes:\n> _To update the prebuilt executable you can run `./pocketbase update`._\n- Disabled collection and fields name normalization while in IME mode ([#7532](https://github.com/pocketbase/pocketbase/pull/7532); thanks @miaopan607).\n- Updated `modernc.org/sqlite` to v1.46.1 _(resets connection state on Tx.Commit failure)_.",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.36.5, collection and field name normalization is disabled while in IME mode, and modernc.org/sqlite is updated to v1.46.1, which resets connection state on Tx.Commit failure."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_22_39",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.22.39",
+      "tag_name": "v0.22.39",
+      "title": "v0.22.39 Release",
+      "time_hint": "2026-03-06",
+      "published_at": "2026-03-06T08:06:11Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.22.39",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.22.39 Release\nTag: v0.22.39; draft: False; prerelease: False; published_at: 2026-03-06T08:06:11Z; created_at: 2026-03-06T07:45:28Z\nRelease notes:\n- (_Backported from v0.36.6_) Bumped min Go GitHub action version to 1.26.1 because it comes with some [minor bug and security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.26.1).",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.22.39, the minimum Go GitHub action version is bumped to 1.26.1, backported from v0.36.6, because it includes minor bug and security fixes."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_36_6",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.36.6",
+      "tag_name": "v0.36.6",
+      "title": "v0.36.6 Release",
+      "time_hint": "2026-03-06",
+      "published_at": "2026-03-06T08:07:09Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.36.6",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.36.6 Release\nTag: v0.36.6; draft: False; prerelease: False; published_at: 2026-03-06T08:07:09Z; created_at: 2026-03-06T07:27:44Z\nRelease notes:\n> _To update the prebuilt executable you can run `./pocketbase update`._\n- Set `NumberField.OnlyInt:true` for the generated View collection schema fields when a view column expression is known to return int-only values ([#7538](https://github.com/pocketbase/pocketbase/issues/7538)).\n- Documented the `unmarshal` JSVM helper ([#7543](https://github.com/pocketbase/pocketbase/issues/7543)).\n- Added extra read check after the `Store.GetOrSet` write lock to prevent races overwriting an already existing value.\n- Added empty records check for the additional client-side filter's ListRule constraint that was introduced in v0.32.0 ([presentator#206](https://github.com/presentator/presentator/issues/206)).\n- Set a fixed `routine.FireAndForget()` debug stack trace limit to 2KB.\n- Bumped min Go GitHub action version to 1.26.1 because it comes with some [minor bug and security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.26.1).\n- Typos and other minor doc fixes.",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.36.6, NumberField.OnlyInt is set to true for generated View collection schema fields when a view column expression is known to return int-only values. The unmarshal JSVM helper is documented. An extra read check is added after Store.GetOrSet write lock to prevent races. An empty records check is added for the additional client-side filter's ListRule constraint introduced in v0.32.0. A fixed routine.FireAndForget debug stack trace limit of 2KB is set. The minimum Go GitHub action version is bumped to 1.26.1 for minor bug and security fixes. Typos and minor doc fixes are applied."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_36_7_rc_1",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.36.7-rc.1",
+      "tag_name": "v0.36.7-rc.1",
+      "title": "v0.36.7-rc.1",
+      "time_hint": "2026-03-09",
+      "published_at": "2026-03-09T15:42:08Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.36.7-rc.1",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.36.7-rc.1\nTag: v0.36.7-rc.1; draft: False; prerelease: True; published_at: 2026-03-09T15:42:08Z; created_at: 2026-03-09T15:33:04Z\nRelease notes:\n> [!CAUTION]\n> **This is a prerelease to validate a fix for high memory usage when uploading large files ([#7572](https://github.com/pocketbase/pocketbase/discussions/7572)).**",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.36.7-rc.1, this prerelease is intended to validate a fix for high memory usage when uploading large files, as reported in discussion #7572."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_22_40",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.22.40",
+      "tag_name": "v0.22.40",
+      "title": "v0.22.40 Release",
+      "time_hint": "2026-03-16",
+      "published_at": "2026-03-16T17:34:54Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.22.40",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.22.40 Release\nTag: v0.22.40; draft: False; prerelease: False; published_at: 2026-03-16T17:34:54Z; created_at: 2026-03-16T17:11:21Z\nRelease notes:\n- (_Backported from v0.36.7_) Updated `modernc.org/sqlite` to v1.46.2 and SQLite 3.51.3.\n_⚠️ SQLite 3.51.3 fixed a [database corruption bug](https://sqlite.org/wal.html#walresetbug) that is very unlikely to happen (with PocketBase even more so because we queue on app level all writes and explicit transactions through a single db connection), but still it is advised to upgrade._\n- (_Backported from v0.36.7_) Updated other minor Go and npm deps.\n_The min Go version in the go.mod of the package was also bumped to Go 1.25.0 because some of the newer deps require it._",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.22.40, modernc.org/sqlite is updated to v1.46.2 and SQLite 3.51.3, backported from v0.36.7, fixing a database corruption bug. Other minor Go and npm dependencies are updated, and the minimum Go version in go.mod is bumped to 1.25.0."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_36_7",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.36.7",
+      "tag_name": "v0.36.7",
+      "title": "v0.36.7 Release",
+      "time_hint": "2026-03-16",
+      "published_at": "2026-03-16T17:36:10Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.36.7",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.36.7 Release\nTag: v0.36.7; draft: False; prerelease: False; published_at: 2026-03-16T17:36:10Z; created_at: 2026-03-16T17:01:40Z\nRelease notes:\n> _To update the prebuilt executable you can run `./pocketbase update`._\n- Fixed high memory usage with large file uploads ([#7572](https://github.com/pocketbase/pocketbase/discussions/7572)).\n- Updated the rate limiter reset rules to follow a more traditional fixed window strategy _(aka. to be more close to how it is presented in the UI - allow max X user requests under Ys)_ since several users complained that the older algorithm was not intuitive and not suitable for large intervals.\n_Approximated sliding window strategy was also suggested as a better compromise option to help minimize traffic spikes right after reset but the additional tracking could introduce some overhead and for now it is left aside until we have more tests._\n- Updated `modernc.org/sqlite` to v1.46.2 and SQLite 3.51.3.\n_⚠️ SQLite 3.51.3 fixed a [database corruption bug](https://sqlite.org/wal.html#walresetbug) that is very unlikely to happen (with PocketBase even more so because we queue on app level all writes and explicit transactions through a single db connection), but still it is advised to upgrade._\n- Updated other minor Go and npm deps.\n_The min Go version in the go.mod of the package was also bumped to Go 1.25.0 because some of the newer deps require it._",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.36.7, high memory usage with large file uploads is fixed. The rate limiter reset rules are updated to a more traditional fixed window strategy. modernc.org/sqlite is updated to v1.46.2 and SQLite 3.51.3, fixing a database corruption bug. Other minor Go and npm dependencies are updated, and the minimum Go version in go.mod is bumped to 1.25.0."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_36_8",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.36.8",
+      "tag_name": "v0.36.8",
+      "title": "v0.36.8 Release",
+      "time_hint": "2026-03-28",
+      "published_at": "2026-03-28T07:55:06Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.36.8",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.36.8 Release\nTag: v0.36.8; draft: False; prerelease: False; published_at: 2026-03-28T07:55:06Z; created_at: 2026-03-27T23:14:43Z\nRelease notes:\n> _To update the prebuilt executable you can run `./pocketbase update`._\n- Fixed OAuth2 client secret reset when serializing a cached collection model.\n- Bumped all Go and npm deps.\n_This should also silence recent spam reports and security scanners regarding [CVE-2026-33809](https://www.cve.org/CVERecord?id=CVE-2026-33809) (it is not an issue in PocketBase because we don't support TIFF thumbs)._",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.36.8, an OAuth2 client secret reset issue when serializing a cached collection model is fixed. All Go and npm dependencies are bumped, silencing reports regarding CVE-2026-33809, which is not an issue in PocketBase because TIFF thumbs are not supported."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_22_41",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.22.41",
+      "tag_name": "v0.22.41",
+      "title": "v0.22.41 Release",
+      "time_hint": "2026-04-09",
+      "published_at": "2026-04-09T14:57:04Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.22.41",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.22.41 Release\nTag: v0.22.41; draft: False; prerelease: False; published_at: 2026-04-09T14:57:04Z; created_at: 2026-04-09T14:37:19Z\nRelease notes:\n- (_Backported from v0.36.9_) Updated the Discord `AuthUser.Name` field to use `global_name` ([#7603](https://github.com/pocketbase/pocketbase/pull/7603)).\n- (_Backported from v0.36.9_) Updated `modernc.org/sqlite` to v1.48.2 _(vfs and other error path related fixes)_.\n- (_Backported from v0.36.9_) Bumped min Go GitHub action version to 1.26.2 because it comes with several [minor security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.26.2).",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.22.41, the Discord AuthUser.Name field is updated to use global_name, modernc.org/sqlite is updated to v1.48.2 for vfs and error path fixes, and the minimum Go GitHub action version is bumped to 1.26.2 for minor security fixes, all backported from v0.36.9."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_36_9",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.36.9",
+      "tag_name": "v0.36.9",
+      "title": "v0.36.9 Release",
+      "time_hint": "2026-04-09",
+      "published_at": "2026-04-09T15:01:07Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.36.9",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.36.9 Release\nTag: v0.36.9; draft: False; prerelease: False; published_at: 2026-04-09T15:01:07Z; created_at: 2026-04-09T14:34:00Z\nRelease notes:\n> _To update the prebuilt executable you can run `./pocketbase update`._\n- Updated the Discord `AuthUser.Name` field to use `global_name` ([#7603](https://github.com/pocketbase/pocketbase/pull/7603); thanks @HansHans135).\n- Fixed settings SMTP password clear persistence.\n- Added extra OAuth2 checks when downloading the avatar URL to prevent internal network probing requests in case of a malicious/vulnerable vendor.\n- Updated `modernc.org/sqlite` to v1.48.2 _(vfs and other error path related fixes)_.\n- Updated min Go GitHub action version to 1.26.2 because it comes with some [minor security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.26.2).\n- Other small improvements _(updated `$apis.static` JSVM documentation, fixed comment typos, added missing file close on seek error, etc.)_.",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.36.9, the Discord AuthUser.Name field is updated to use global_name. Settings SMTP password clear persistence is fixed. Extra OAuth2 checks are added when downloading avatar URLs to prevent internal network probing. modernc.org/sqlite is updated to v1.48.2 for vfs and error path fixes. The minimum Go GitHub action version is bumped to 1.26.2 for minor security fixes. Other small improvements include updated JSVM documentation, fixed comment typos, and a missing file close on seek error."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_37_0",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.37.0",
+      "tag_name": "v0.37.0",
+      "title": "v0.37.0 Release",
+      "time_hint": "2026-04-19",
+      "published_at": "2026-04-19T06:27:24Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.37.0",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.37.0 Release\nTag: v0.37.0; draft: False; prerelease: False; published_at: 2026-04-19T06:27:24Z; created_at: 2026-04-19T06:19:52Z\nRelease notes:\n> _To update the prebuilt executable you can run `./pocketbase update`._\n- New UI rewritten from scratch and with support for external customization in mind.\n> Note that as explained in [#7612](https://github.com/pocketbase/pocketbase/discussions/7612) the new UI kit and extensions APIs will intentionally remain undocumented until \"Stage 2\" completion _(**there no ETAs**)_.\nThe new UI also introduced several other small improvements:\n- ~2MB smaller bundle size.\n- Dark mode and theming support.\n- Basic responsive/mobile support _(it is far from perfect but certainly more usable than before)_.\n- Help text option for the collection fields.\n- Lifted the max nested level restriction of presentable relations _(children are lazy loaded)_.\n- Lighter rules autocomplete.\n- Live view query preview.\n- Insert of an audio/video embed tag in the richtext editor from a collection file.\n- Option to bulk export records as JSON.\n- Local search history for all searchbars.\n- API rules overview across all collections.\n- Very basic ERD-like visualization for the collections structure and relations.\n- New stepped logs chart visualization with panning support.\n- `listAuthMethods()` (aka. `/api/collection/{col}/auth-methods`) now returns the OAuth2 provider logo for each provider as inlined SVG string in its response data.\n_⚠️ Note that if your app for whatever reason rely on the dashboard OAuth2 logos available under `/_/images/oauth2/*` they are still available for now but will be removed in future versions and it is recommended to use the new inline SVGs!_\n- Added optional `no_ui` build tag to exclude the UI from bundling with the executable ([#7548](https://github.com/pocketbase/pocketbase/issues/7548)).\n```sh\ngo build -tags no_ui\n```\n- Exported the internal JSVM bind functions ([#7600](https://github.com/pocketbase/pocketbase/discussions/7600)).\n```go\njsvm.BindCore(vm)\njsvm.BindDbx(vm)\njsvm.BindSecurity(vm)\njsvm.BindOS(vm)\njsvm.BindFilepath(vm)\njsvm.BindHTTP(vm)\njsvm.BindFilesystem(vm)\njsvm.BindForms(vm)\njsvm.BindMails(vm)\njsvm.BindApis(vm)\n```\n- Updated `modernc.org/sqlite` to v1.49.1 (SQLite 3.53.0).",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.37.0, a new UI is rewritten from scratch with external customization support, featuring a smaller bundle size, dark mode, basic responsive/mobile support, help text for collection fields, lifted max nested level restriction for presentable relations, lighter rules autocomplete, live view query preview, audio/video embed in richtext editor, bulk export of records as JSON, local search history, API rules overview, ERD-like visualization, stepped logs chart with panning, and OAuth2 provider logos as inline SVGs in listAuthMethods. An optional no_ui build tag is added to exclude the UI from the executable. Internal JSVM bind functions are exported. modernc.org/sqlite is updated to v1.49.1 (SQLite 3.53.0)."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_37_1",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.37.1",
+      "tag_name": "v0.37.1",
+      "title": "v0.37.1 Release",
+      "time_hint": "2026-04-19",
+      "published_at": "2026-04-19T12:54:06Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.37.1",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.37.1 Release\nTag: v0.37.1; draft: False; prerelease: False; published_at: 2026-04-19T12:54:06Z; created_at: 2026-04-19T12:36:38Z\nRelease notes:\n> _To update the prebuilt executable you can run `./pocketbase update`._\n- Minor UI bugfixes:\n- Fixed `number` field input values normalization ([#7646](https://github.com/pocketbase/pocketbase/issues/7646)).\n- Allow opening collections in new tab with middle click.\n- Show collection name in the page title on initial load.",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.37.1, minor UI bugfixes are applied: number field input values normalization is fixed, collections can be opened in a new tab with middle click, and the collection name is shown in the page title on initial load."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_37_2",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.37.2",
+      "tag_name": "v0.37.2",
+      "title": "v0.37.2 Release",
+      "time_hint": "2026-04-20",
+      "published_at": "2026-04-20T14:44:48Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.37.2",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.37.2 Release\nTag: v0.37.2; draft: False; prerelease: False; published_at: 2026-04-20T14:44:48Z; created_at: 2026-04-20T14:40:11Z\nRelease notes:\n> _To update the prebuilt executable you can run `./pocketbase update`._\n- Fixed autoexpandable input in Firefox ([#7648](https://github.com/pocketbase/pocketbase/discussions/7648)).\n- Slightly adjusted the dark theme colors for better readability ([#7648](https://github.com/pocketbase/pocketbase/discussions/7648)).\n- Removed unnecessary tags stripping from the displayed log attributes ([#7649](https://github.com/pocketbase/pocketbase/issues/7649)).\n- Workarounded Safari freeze caused by a buggy CSS popover property ([#7650](https://github.com/pocketbase/pocketbase/issues/7650)).",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.37.2, an autoexpandable input issue in Firefox is fixed, dark theme colors are adjusted for better readability, unnecessary tags stripping from displayed log attributes is removed, and a Safari freeze caused by a buggy CSS popover property is worked around."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_37_3",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.37.3",
+      "tag_name": "v0.37.3",
+      "title": "v0.37.3 Release",
+      "time_hint": "2026-04-22",
+      "published_at": "2026-04-22T13:35:55Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.37.3",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.37.3 Release\nTag: v0.37.3; draft: False; prerelease: False; published_at: 2026-04-22T13:35:55Z; created_at: 2026-04-22T13:04:57Z\nRelease notes:\n> _To update the prebuilt executable you can run `./pocketbase update`._\n- Fixed total count load on page back/forward navigation.\n- Fixed `editor` floating dialogs position when scrolling ([#7653](https://github.com/pocketbase/pocketbase/issues/7653)).\n- Enabled text wrapping for the API rule fields.\n- Added view query sample loading indicator.\n- Other minor light UI contrast and styles improvements.",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.37.3, total count load on page back/forward navigation is fixed, editor floating dialogs position when scrolling is fixed, text wrapping for API rule fields is enabled, a view query sample loading indicator is added, and other minor light UI contrast and style improvements are made."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_37_4",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.37.4",
+      "tag_name": "v0.37.4",
+      "title": "v0.37.4 Release",
+      "time_hint": "2026-04-27",
+      "published_at": "2026-04-27T06:55:53Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.37.4",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.37.4 Release\nTag: v0.37.4; draft: False; prerelease: False; published_at: 2026-04-27T06:55:53Z; created_at: 2026-04-27T06:30:32Z\nRelease notes:\n> _To update the prebuilt executable you can run `./pocketbase update`._\n> [!IMPORTANT]\n> This release include a security fix related to [#7662](https://github.com/pocketbase/pocketbase/discussions/7662).\n- Added backups list scroll container ([#7655](https://github.com/pocketbase/pocketbase/issues/7655)).\n- Optimized record upsert and preview modals data loading to minimize layout jumps.\n- Fixed SMTP IPv6 network address format ([#7659](https://github.com/pocketbase/pocketbase/issues/7659)).\n- Fixed autocomplete selection not properly updating the underlying input value ([#7664](https://github.com/pocketbase/pocketbase/issues/7664)).\n- Added `ghupdate.BaseURL` config option ([#7665](https://github.com/pocketbase/pocketbase/issues/7665)).\n- Added dummy bcrypt password check for the failure auth path to minimize enumeration timing attacks when registrations are disabled.\n- Adjusted Bitbucket, GitHub, GitLab and Gitea/Forgejo OAuth2 providers to better reflect recent API updates and doc references.\n_In case the userinfo data is not sufficient, some of the providers now send a separate list emails request in order to minimize eventual linking security issues caused by custom onpremise setups (e.g. Gitea/Forgejo allows skipping the email verification if an ENV variable is configured)._\n- ⚠️ Fixed a pre-hijacking OAuth2 linking vulnerability ([#7662](https://github.com/pocketbase/pocketbase/discussions/7662); thanks @Alardiians for reporting it privately).\n- Bumped Go and npm dependencies.",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.37.4, a security fix related to discussion #7662 is included. A backups list scroll container is added. Record upsert and preview modals data loading is optimized to minimize layout jumps. SMTP IPv6 network address format is fixed. Autocomplete selection not updating the underlying input value is fixed. A ghupdate.BaseURL config option is added. A dummy bcrypt password check is added for the failure auth path to minimize enumeration timing attacks when registrations are disabled. Bitbucket, GitHub, GitLab, and Gitea/Forgejo OAuth2 providers are adjusted to reflect recent API updates and doc references, with some providers sending a separate list emails request to minimize linking security issues. A pre-hijacking OAuth2 linking vulnerability is fixed. Go and npm dependencies are bumped."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_22_42",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.22.42",
+      "tag_name": "v0.22.42",
+      "title": "v0.22.42 Release",
+      "time_hint": "2026-04-27",
+      "published_at": "2026-04-27T07:02:59Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.22.42",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.22.42 Release\nTag: v0.22.42; draft: False; prerelease: False; published_at: 2026-04-27T07:02:59Z; created_at: 2026-04-27T06:42:33Z\nRelease notes:\n- (_Backported from v0.37.4_) Adjusted Bitbucket, GitHub, GitLab and Gitea/Forgejo OAuth2 providers to better reflect recent API updates and doc references.\n_In case the userinfo data is not sufficient, some of the providers now send a separate list emails request in order to minimize eventual linking security issues caused by custom onpremise setups (e.g. Gitea/Forgejo allows skipping the email verification if an ENV variable is configured)._\n- (_Backported from v0.37.4_) ⚠️ Fixed a pre-hijacking OAuth2 linking vulnerability ([#7662](https://github.com/pocketbase/pocketbase/discussions/7662)).",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.22.42, Bitbucket, GitHub, GitLab, and Gitea/Forgejo OAuth2 providers are adjusted to reflect recent API updates and doc references, and a pre-hijacking OAuth2 linking vulnerability is fixed, both backported from v0.37.4."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_37_5",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.37.5",
+      "tag_name": "v0.37.5",
+      "title": "v0.37.5 Release",
+      "time_hint": "2026-05-02",
+      "published_at": "2026-05-02T04:47:32Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.37.5",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.37.5 Release\nTag: v0.37.5; draft: False; prerelease: False; published_at: 2026-05-02T04:47:32Z; created_at: 2026-05-02T04:34:50Z\nRelease notes:\n> _To update the prebuilt executable you can run `./pocketbase update`._\n- Fixed password fields not being detected as changed ([#7670](https://github.com/pocketbase/pocketbase/issues/7670)).\n- Added the local time zone name next to the `date` field label.\n- Reload trusted proxy info UI after settings save.\n- Other minor improvements (skips the duplicated record ids from the `IN` expand list, reordered confirm-email-change error checks to minimize enumeration attacks, etc.).",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.37.5, password fields not being detected as changed is fixed. The local time zone name is added next to the date field label. Trusted proxy info UI is reloaded after settings save. Other minor improvements include skipping duplicated record ids from the IN expand list and reordering confirm-email-change error checks to minimize enumeration attacks."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_22_43",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.22.43",
+      "tag_name": "v0.22.43",
+      "title": "v0.22.43 Release",
+      "time_hint": "2026-05-07",
+      "published_at": "2026-05-07T17:21:43Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.22.43",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.22.43 Release\nTag: v0.22.43; draft: False; prerelease: False; published_at: 2026-05-07T17:21:43Z; created_at: 2026-05-07T17:02:50Z\nRelease notes:\n- (_Backported from v0.38.0_) Bumped min Go GitHub action version to 1.26.3 because it comes with some [minor bug and security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.26.3).",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.22.43, the minimum Go GitHub action version is bumped to 1.26.3, backported from v0.38.0, because it includes minor bug and security fixes."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_38_0",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.38.0",
+      "tag_name": "v0.38.0",
+      "title": "v0.38.0 Release",
+      "time_hint": "2026-05-07",
+      "published_at": "2026-05-07T17:22:08Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.38.0",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.38.0 Release\nTag: v0.38.0; draft: False; prerelease: False; published_at: 2026-05-07T17:22:08Z; created_at: 2026-05-07T16:51:35Z\nRelease notes:\n> _To update the prebuilt executable you can run `./pocketbase update`._\n- Fixed UI logs pagination when no custom range is specified.\n- Fixed default CSP not allowing audio/video previews ([#7677](https://github.com/pocketbase/pocketbase/issues/7677)).\n- Serve fixed `Content-Type` for `.xlsx`, `.docx` and `.pptx` files to allow previews on iOS ([#7467](https://github.com/pocketbase/pocketbase/discussions/7467)).\n- Changed settings app URL input to `type=\"text\"` for compatibility with earlier versions ([#7681](https://github.com/pocketbase/pocketbase/issues/7681)).\n- Added an internal watcher to sync various runtime states between multiple PocketBase processes (e.g. memory store) using the same `pb_data`.\n_This is helpful in case for example a separate PocketBase console command change the collections or application settings while the server is still running._\n_The watcher is debounced and implemented by watching the special `pb_data/.notify` dir as a workaround to avoid depending on OS and SQLite driver specific APIs._\n- Added new [Superuser IPs/CIDR subnets whitelist setting](https://pocketbase.io/docs/going-to-production/#limit-superusers-to-specific-ipssubnets).\nThe optional setting can be changed from the UI under _Dasboard > Settings > Application > Superuser IPs_.\nTo avoid lockout in case your superuser IP change, the ips whitelist can be updated also via the `superuser ips` console command:\n```sh\n# note: --dir is optional and defaults to pb_data next to the executable\n# clear whitelisted IPs\n./pocketbase superuser ips --dir=/custom/path/to/pb_data\n# OR change the whitelisted IPs to 127.0.0.1 and 10.0.0.0 (replace with your real IP(s))\n./pocketbase superuser ips 127.0.0.1 10.0.0.0 --dir=/custom/path/to/pb_data\n```\n- Added rate limit option to exclude IPs/CIDR subnets ([#6410](https://github.com/pocketbase/pocketbase/issues/6410)).\n- Bumped min Go GitHub action version to 1.26.3 because it comes with some [minor bug and security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.26.3).",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.38.0, UI logs pagination when no custom range is specified is fixed. Default CSP is fixed to allow audio/video previews. Fixed Content-Type is served for .xlsx, .docx, and .pptx files to allow previews on iOS. Settings app URL input is changed to type=\"text\" for compatibility. An internal watcher is added to sync runtime states between multiple PocketBase processes using the same pb_data. A new Superuser IPs/CIDR subnets whitelist setting is added, configurable via UI or console command. A rate limit option to exclude IPs/CIDR subnets is added. The minimum Go GitHub action version is bumped to 1.26.3 for minor bug and security fixes."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_22_44",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.22.44",
+      "tag_name": "v0.22.44",
+      "title": "v0.22.44 Release",
+      "time_hint": "2026-05-15",
+      "published_at": "2026-05-15T04:51:09Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.22.44",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.22.44 Release\nTag: v0.22.44; draft: False; prerelease: False; published_at: 2026-05-15T04:51:09Z; created_at: 2026-05-14T03:21:17Z\nRelease notes:\n- (_Backported from v0.38.1_) Force unset the auth state of existing realtime connections on user tokenKey change.",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.22.44, the auth state of existing realtime connections is forced to unset on user tokenKey change, backported from v0.38.1."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_38_1",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.38.1",
+      "tag_name": "v0.38.1",
+      "title": "v0.38.1 Release",
+      "time_hint": "2026-05-15",
+      "published_at": "2026-05-15T04:52:26Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.38.1",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.38.1 Release\nTag: v0.38.1; draft: False; prerelease: False; published_at: 2026-05-15T04:52:26Z; created_at: 2026-05-15T04:34:50Z\nRelease notes:\n> _To update the prebuilt executable you can run `./pocketbase update`._\n- Silenced the superuser IPs confirmation if there is no change.\n- Updated the _experimental_ UI extensions APIs to allow top-level `await` in the initialization script.\n- Force unset the auth state of existing realtime connections on user password, collection secret, etc. changes.\n_This is not strictly necessary because the realtime connections have short-lived idle timeout by design but nonetheless it was implemented to minimize the attack vectors._\n- Added error marker for each collection tab and fixed the styles of the raw errors tooltip.\n- Fixed indexes collection update error ([#7689](https://github.com/pocketbase/pocketbase/issues/7689)).\n_⚠️ The fix comes with a system migration that resaves all collections with indexes to ensure that all indexes are normalized and available in the `Collection.Indexes` field (it will also include indexes created manually via the sqlite3 cli or other external tool)._\n_If you are using a test `pb_data` for your Go automation tests you may want to apply the migration to it too so that it runs only once and not for each execution of your tests, aka. you could run once `go run main.go migrate up --dir=\"/path/to/test_pb_data\"`._\n- Updated `modernc.org/sqlite` to v1.50.1 (SQLite 3.53.1).\n- Other minor fixes (_updated API preview examples, fixed code comment typos, etc._).",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.38.1, the superuser IPs confirmation is silenced if there is no change. The experimental UI extensions APIs are updated to allow top-level await in the initialization script. The auth state of existing realtime connections is forced to unset on user password, collection secret, etc. changes. An error marker is added for each collection tab, and raw errors tooltip styles are fixed. An indexes collection update error is fixed, with a system migration that resaves all collections with indexes to ensure normalization. modernc.org/sqlite is updated to v1.50.1 (SQLite 3.53.1). Other minor fixes include updated API preview examples and fixed code comment typos."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_22_45",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.22.45",
+      "tag_name": "v0.22.45",
+      "title": "v0.22.45 Release",
+      "time_hint": "2026-05-22",
+      "published_at": "2026-05-22T04:56:57Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.22.45",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.22.45 Release\nTag: v0.22.45; draft: False; prerelease: False; published_at: 2026-05-22T04:56:57Z; created_at: 2026-05-22T04:40:46Z\nRelease notes:\n- (_Backported from v0.38.2_) Updated all `golang.org/x/` packages to cover the recent [security fixes](https://groups.google.com/g/golang-announce/c/PdiGK3xulk4) _(none of them should be a critical issue in PocketBase but nonetheless it is advised to update)_.",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.22.45, all golang.org/x/ packages are updated to cover recent security fixes, backported from v0.38.2."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_38_2",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.38.2",
+      "tag_name": "v0.38.2",
+      "title": "v0.38.2 Release",
+      "time_hint": "2026-05-22",
+      "published_at": "2026-05-22T04:57:49Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.38.2",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.38.2 Release\nTag: v0.38.2; draft: False; prerelease: False; published_at: 2026-05-22T04:57:49Z; created_at: 2026-05-22T04:20:20Z\nRelease notes:\n> _To update the prebuilt executable you can run `./pocketbase update`._\n- Added `RealtimeConnectRequestEvent.MaxTimeout` field to specify the absolute max duration a realtime connection can remain open (default to 30mins).\n_This is in addition to the `IdeTimeout` of 5mins in order to prevent misuse and to allow the GC to run more regularly._\n- Added extra checks for the connected user IP in the realtime APIs to prevent bruteforce guest subscription update attempts and to serve as an extra protection for the \"all-in-one\" OAuth2 realtime handler.\n- Don't reset the records list pagination on record update ([#7694](https://github.com/pocketbase/pocketbase/issues/7694)).\n- Updated all `golang.org/x/` packages to cover the recent [security fixes](https://groups.google.com/g/golang-announce/c/PdiGK3xulk4) _(none of them should be a critical issue in PocketBase but nonetheless it is advised to update)_.",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.38.2, a RealtimeConnectRequestEvent.MaxTimeout field is added to specify the absolute max duration a realtime connection can remain open, defaulting to 30 minutes. Extra checks for the connected user IP are added in the realtime APIs to prevent bruteforce guest subscription update attempts and to protect the all-in-one OAuth2 realtime handler. The records list pagination is no longer reset on record update. All golang.org/x/ packages are updated to cover recent security fixes."
+    },
+    {
+      "memory_node_id": "pocketbase__pocketbase__release__v0_39_0",
+      "repo": "pocketbase/pocketbase",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.39.0",
+      "tag_name": "v0.39.0",
+      "title": "v0.39.0 Release",
+      "time_hint": "2026-05-28",
+      "published_at": "2026-05-28T16:02:11Z",
+      "source_url": "https://github.com/pocketbase/pocketbase/releases/tag/v0.39.0",
+      "raw_text": "Repository: pocketbase/pocketbase\nRelease: v0.39.0 Release\nTag: v0.39.0; draft: False; prerelease: False; published_at: 2026-05-28T16:02:11Z; created_at: 2026-05-28T15:23:05Z\nRelease notes:\n> _To update the prebuilt executable you can run `./pocketbase update`._\n- Added new \"SQL console\" section under _Settings > Debug_ allowing executing any raw SQL query from the UI ([#2236](https://github.com/pocketbase/pocketbase/issues/2236); [#7638](https://github.com/pocketbase/pocketbase/discussions/7638)).\n_Note that this is intended for one-off analytic queries, the occasional `VACUUM`/`PRAGMA optimize` or debug purposes and not as the primary interface for interacting with your PocketBase data because it can break your application if not used with proper care!_\n- Send system email alerts to superusers in case of an error with the automated backups ([#7698](https://github.com/pocketbase/pocketbase/issues/7698)).\n- Various minor improvements and fixes:\n- fixed logs bulk selection export error\n- optimized logs and records list rendering\n- allowed word breaking in labels\n- text contrast improvements\n- registered missing `oidc2` and `oidc3` option fields\n- updated default email template texts for consistency\n- updated `modernc.org/sqlite` to v1.51.0\n- etc.",
+      "memory_unit_text": "In the pocketbase/pocketbase release v0.39.0, a new SQL console section is added under Settings > Debug, allowing execution of raw SQL queries from the UI. System email alerts are sent to superusers in case of an error with automated backups. Various minor improvements and fixes include fixing logs bulk selection export error, optimizing logs and records list rendering, allowing word breaking in labels, text contrast improvements, registering missing oidc2 and oidc3 option fields, updating default email template texts for consistency, and updating modernc.org/sqlite to v1.51.0."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the pocketbase/pocketbase releases, which release introduces a new UI rewritten from scratch with dark mode and theming support?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.36.0"
+        },
+        {
+          "option_id": "B",
+          "text": "v0.37.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v0.38.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v0.39.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v0.37.0",
+      "source_chunk_ids": [
+        "pocketbase__pocketbase__release__v0_37_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "pocketbase__pocketbase__release__v0_37_0",
+          "answer_text": "New UI rewritten from scratch and with support for external customization in mind... Dark mode and theming support."
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the pocketbase/pocketbase releases, how does the rate limiter change in v0.36.7 differ from the rate limit feature added in v0.38.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.36.7 updates the rate limiter reset rules to a fixed window strategy, while v0.38.0 adds an option to exclude IPs/CIDR subnets from rate limiting."
+        },
+        {
+          "option_id": "B",
+          "text": "v0.36.7 removes rate limiting entirely, while v0.38.0 introduces a sliding window strategy."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only update the rate limiter to use a fixed window strategy."
+        },
+        {
+          "option_id": "D",
+          "text": "v0.36.7 adds a rate limit exclusion option, while v0.38.0 updates the reset rules."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v0.36.7 updates the rate limiter reset rules to a fixed window strategy, while v0.38.0 adds an option to exclude IPs/CIDR subnets from rate limiting.",
+      "source_chunk_ids": [
+        "pocketbase__pocketbase__release__v0_36_7",
+        "pocketbase__pocketbase__release__v0_38_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "pocketbase__pocketbase__release__v0_36_7",
+          "answer_text": "Updated the rate limiter reset rules to follow a more traditional fixed window strategy"
+        },
+        {
+          "memory_node_id": "pocketbase__pocketbase__release__v0_38_0",
+          "answer_text": "Added rate limit option to exclude IPs/CIDR subnets"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the pocketbase/pocketbase release window, order the following release-content states from earliest to latest: (1) a release that adds a new SQL console section under Settings > Debug, (2) a release that introduces a new UI rewritten from scratch with dark mode and theming support, (3) a release that adds a Superuser IPs/CIDR subnets whitelist setting.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2 -> 3 -> 1"
+        },
+        {
+          "option_id": "B",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "3 -> 2 -> 1"
+        },
+        {
+          "option_id": "D",
+          "text": "2 -> 1 -> 3"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2 -> 3 -> 1",
+      "source_chunk_ids": [
+        "pocketbase__pocketbase__release__v0_37_0",
+        "pocketbase__pocketbase__release__v0_38_0",
+        "pocketbase__pocketbase__release__v0_39_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "pocketbase__pocketbase__release__v0_37_0",
+          "answer_text": "New UI rewritten from scratch... Dark mode and theming support."
+        },
+        {
+          "memory_node_id": "pocketbase__pocketbase__release__v0_38_0",
+          "answer_text": "Added new Superuser IPs/CIDR subnets whitelist setting"
+        },
+        {
+          "memory_node_id": "pocketbase__pocketbase__release__v0_39_0",
+          "answer_text": "Added new \"SQL console\" section under Settings > Debug"
+        }
+      ]
+    }
+  ]
+}

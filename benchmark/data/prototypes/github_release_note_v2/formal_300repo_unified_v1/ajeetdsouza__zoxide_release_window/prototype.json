@@ -1,0 +1,525 @@
+{
+  "prototype_id": "ajeetdsouza__zoxide_release_window",
+  "domain": "github_release_evolution",
+  "repo": "ajeetdsouza/zoxide",
+  "source_type": "release_note",
+  "window_title": "ajeetdsouza/zoxide recent release evolution",
+  "window_summary": "This window tracks the recent release evolution of ajeetdsouza/zoxide, a smarter cd command, from v0.4.0 through v0.9.9, highlighting new shell supports, feature additions, and bug fixes.",
+  "chunks": [
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_4_0",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.0",
+      "tag_name": "v0.4.0",
+      "title": "v0.4.0",
+      "time_hint": "2020-05-03",
+      "published_at": "2020-05-03T12:46:42Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.4.0",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: v0.4.0\nTag: v0.4.0; draft: False; prerelease: False; published_at: 2020-05-03T12:46:42Z; created_at: 2020-05-03T12:41:35Z\nRelease notes:\n### Added\n- Interactive mode for removing entries (`zoxide remove -i`).\n- Aliases for interactive `query` and `remove` (`zqi` and `zri` respectively).\n- PWD hooks for POSIX shells.\n### Changed\n- `zoxide remove` now throws an error if there was no match in the database.\n- Interactive mode in `zoxide` no longer throws an error if `fzf` exits gracefully.\n- Canonicalize to regular paths instead of UNC paths on Windows.\n- `zoxide init` now uses PWD hooks by default for better performance.\n- `$_ZO_ECHO` now only works when set to `1`.\n- Using the `--z-cmd` flag now also renames the associated aliases.\n- The `--z-cmd` flag has been renamed to `--cmd`.\n- The `--no-define-aliases` flag has been renamed to `--no-aliases`.\n### Fixed\n- fish no longer `cd`s to the user's home when no match is found.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.4.0, the project added interactive mode for removing entries (zoxide remove -i), aliases for interactive query and remove (zqi and zri), and PWD hooks for POSIX shells. Changes include zoxide remove now throwing an error if no match, interactive mode no longer erroring on graceful fzf exit, canonicalizing to regular paths on Windows, zoxide init using PWD hooks by default, $_ZO_ECHO only working when set to 1, --z-cmd flag renamed to --cmd, and --no-define-aliases renamed to --no-aliases. A fix prevents fish from cd-ing to home when no match is found."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_4_1",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.1",
+      "tag_name": "v0.4.1",
+      "title": "v0.4.1",
+      "time_hint": "2020-05-24",
+      "published_at": "2020-05-24T21:29:40Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.4.1",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: v0.4.1\nTag: v0.4.1; draft: False; prerelease: False; published_at: 2020-05-24T21:29:40Z; created_at: 2020-05-24T21:25:23Z\nRelease notes:\n### Added\n- Support for PowerShell.\n### Removed\n- Backward compatibility with `v0.2.x` databases.\n- Support for paths with invalid UTF-8.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.4.1, support for PowerShell was added. Backward compatibility with v0.2.x databases was removed, and support for paths with invalid UTF-8 was removed."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_4_2",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.2",
+      "tag_name": "v0.4.2",
+      "title": "v0.4.2",
+      "time_hint": "2020-07-03",
+      "published_at": "2020-07-03T19:44:01Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.4.2",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: v0.4.2\nTag: v0.4.2; draft: False; prerelease: False; published_at: 2020-07-03T19:44:01Z; created_at: 2020-07-03T19:39:31Z\nRelease notes:\n### Added\n- `$_ZO_FZF_OPTS` to specify custom options for `fzf`\n- `zoxide query --list` to list all matches\n- `zoxide query --score` to show score along with result\n### Changed\n- Increased default value of `$_ZO_MAXAGE` to `10000`.\n- Symlinks are treated as separate directories by default, this can be changed by setting `_ZO_RESOLVE_SYMLINKS=1`.\n### Removed\n- Help menus for `z` and `zri`.\n- `zoxide remove -i` is replaced with `zri`.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.4.2, $_ZO_FZF_OPTS was added to specify custom fzf options, zoxide query --list to list all matches, and zoxide query --score to show score with result. The default $_ZO_MAXAGE was increased to 10000, and symlinks are treated as separate directories by default (changeable with _ZO_RESOLVE_SYMLINKS=1). Help menus for z and zri were removed, and zoxide remove -i was replaced with zri."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_4_3",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.4.3",
+      "tag_name": "v0.4.3",
+      "title": "v0.4.3",
+      "time_hint": "2020-07-04",
+      "published_at": "2020-07-04T08:14:23Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.4.3",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: v0.4.3\nTag: v0.4.3; draft: False; prerelease: False; published_at: 2020-07-04T08:14:23Z; created_at: 2020-07-04T08:04:54Z\nRelease notes:\n### Fixed\n- Bug in Fish init script",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.4.3, a bug in the Fish init script was fixed."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_5_0",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.5.0",
+      "tag_name": "v0.5.0",
+      "title": "v0.5.0",
+      "time_hint": "2020-10-30",
+      "published_at": "2020-10-30T18:57:51Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.5.0",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: v0.5.0\nTag: v0.5.0; draft: False; prerelease: False; published_at: 2020-10-30T18:57:51Z; created_at: 2020-10-30T18:52:09Z\nRelease notes:\n### Added\n- Inaccessible directories are no longer removed; zoxide can now remember paths on removable devices.\n- `$_ZO_EXCLUDE_DIRS` now supports globs.\n- `zoxide init` now defines `__zoxide_z*` functions that can be aliased as needed.\n- Support for the [xonsh](https://xon.sh/) shell.\n- `zoxide import` can now import from Autojump.\n### Changed\n- `zoxide init --no-aliases` no longer generates `z` or `zi`.\n### Fixed\n- Clobber conflicting alias definitions in bash/fish/zsh/POSIX shells.\n### Removed\n- Deprecated PWD hooks for POSIX shells.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.5.0, inaccessible directories are no longer removed, allowing zoxide to remember paths on removable devices. $_ZO_EXCLUDE_DIRS now supports globs. zoxide init defines __zoxide_z* functions for aliasing. Support for the xonsh shell was added. zoxide import can now import from Autojump. zoxide init --no-aliases no longer generates z or zi. Conflicting alias definitions in bash/fish/zsh/POSIX shells are clobbered. Deprecated PWD hooks for POSIX shells were removed."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_6_0",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.6.0",
+      "tag_name": "v0.6.0",
+      "title": "v0.6.0",
+      "time_hint": "2021-04-08",
+      "published_at": "2021-04-08T19:27:10Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.6.0",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: v0.6.0\nTag: v0.6.0; draft: False; prerelease: False; published_at: 2021-04-08T19:27:10Z; created_at: 2021-04-08T19:22:26Z\nRelease notes:\n### Added\n- Support for [Nushell](https://www.nushell.sh/).\n- Support for [Elvish](https://elv.sh/).\n### Changed\n- `z` now excludes the current directory from search results.\n### Fixed\n- Removed backtraces on Rust nightly.\n- Generated shell code avoids using aliased builtins.\n- Handle broken pipe errors gracefully when writing to streams.\n- NUL file appearing in working directory on Windows.\n- Accidental redefinition of hooks when initialized twice on some shells.\n- zoxide unable to find itself on Xonsh shells.\n### Removed\n- Aliases: `za`, `zq`, `zqi`, `zr`, `zri`. These are trivial aliases to zoxide that can easily be defined manually, and aren't very useful to most users.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.6.0, support for Nushell and Elvish was added. The z command now excludes the current directory from search results. Fixes include removing backtraces on Rust nightly, avoiding aliased builtins in generated shell code, handling broken pipe errors gracefully, fixing NUL file appearing on Windows, accidental redefinition of hooks when initialized twice, and zoxide unable to find itself on Xonsh. Aliases za, zq, zqi, zr, zri were removed."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_7_0",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.0",
+      "tag_name": "v0.7.0",
+      "title": "v0.7.0",
+      "time_hint": "2021-05-02",
+      "published_at": "2021-05-02T00:41:16Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.7.0",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: v0.7.0\nTag: v0.7.0; draft: False; prerelease: False; published_at: 2021-05-02T00:41:16Z; created_at: 2021-05-02T00:34:08Z\nRelease notes:\n### Added\n- Manpages for all subcommands.\n- Default prompt for Nushell.\n### Changed\n- `zoxide remove -i` now accepts multiple selections.\n- `zoxide add` no longer accepts zero parameters.\n- `$_ZO_EXCLUDE_DIRS` now defaults to `\"$HOME\"`.\n- Binary releases now use `.zip` on Windows, `.tar.gz` otherwise.\n### Fixed\n- `cd -` on fish shells.\n- `__zoxide_hook` no longer changes value of `$?` within `$PROMPT_COMMAND` on bash.\n### Removed\n- GitHub install script.\n- Release binaries built with `glibc`, use `musl` instead.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.7.0, manpages for all subcommands and a default prompt for Nushell were added. zoxide remove -i now accepts multiple selections, zoxide add no longer accepts zero parameters, $_ZO_EXCLUDE_DIRS defaults to \"$HOME\", and binary releases use .zip on Windows and .tar.gz otherwise. Fixes include cd - on fish, __zoxide_hook no longer changing $? within $PROMPT_COMMAND on bash. The GitHub install script and release binaries built with glibc were removed."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_7_1",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.1",
+      "tag_name": "v0.7.1",
+      "title": "v0.7.1",
+      "time_hint": "2021-06-09",
+      "published_at": "2021-06-09T16:55:07Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.7.1",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: v0.7.1\nTag: v0.7.1; draft: False; prerelease: False; published_at: 2021-06-09T16:55:07Z; created_at: 2021-06-09T16:42:43Z\nRelease notes:\n### Added\n- Auto-generated shell completions.\n- `zoxide query --all` for listing deleted directories.\n- Lazy deletion for removed directories that have not been accessed in > 90 days.\n- Nushell: support for 0.32.0+.\n### Fixed\n- Nushell: avoid calling `__zoxide_hook` on non-filesystem subshells.\n- Fish: `alias cd=z` now works, but it must be done after calling `zoxide init`.\n- PowerShell: avoid calling `__zoxide_hook` on non-filesystem providers.\n- Fish: avoid calling `__zoxide_hook` in private mode.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.7.1, auto-generated shell completions, zoxide query --all for listing deleted directories, lazy deletion for removed directories not accessed in > 90 days, and Nushell support for 0.32.0+ were added. Fixes include Nushell avoiding __zoxide_hook on non-filesystem subshells, Fish alias cd=z working after zoxide init, PowerShell avoiding __zoxide_hook on non-filesystem providers, and Fish avoiding __zoxide_hook in private mode."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_7_2",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.2",
+      "tag_name": "v0.7.2",
+      "title": "v0.7.2",
+      "time_hint": "2021-06-10",
+      "published_at": "2021-06-10T03:24:07Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.7.2",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: v0.7.2\nTag: v0.7.2; draft: False; prerelease: False; published_at: 2021-06-10T03:24:07Z; created_at: 2021-06-10T03:16:06Z\nRelease notes:\n### Fixed\n- `zoxide -V` not printing version.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.7.2, a fix was made for zoxide -V not printing the version."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_7_3",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.3",
+      "tag_name": "v0.7.3",
+      "title": "v0.7.3",
+      "time_hint": "2021-08-05",
+      "published_at": "2021-08-05T19:55:42Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.7.3",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: v0.7.3\nTag: v0.7.3; draft: False; prerelease: False; published_at: 2021-08-05T19:55:42Z; created_at: 2021-08-05T13:52:13Z\nRelease notes:\n### Added\n- `zoxide add` and `zoxide remove` now accept multiple arguments.\n### Fixed\n- Nushell: errors on 0.33.0.\n- PowerShell: errors when initializing in `StrictMode`.\n- Bash/POSIX: remove conflicting alias definitions when initializing.\n- Bash: remove extra semicolon when setting `$PROMPT_COMMAND`.\n- Xonsh: use shell environment instead of `os.environ`.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.7.3, zoxide add and zoxide remove now accept multiple arguments. Fixes include Nushell errors on 0.33.0, PowerShell errors in StrictMode, Bash/POSIX removing conflicting alias definitions, Bash removing extra semicolon in $PROMPT_COMMAND, and Xonsh using shell environment instead of os.environ."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_7_4",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.4",
+      "tag_name": "v0.7.4",
+      "title": "v0.7.4",
+      "time_hint": "2021-08-15",
+      "published_at": "2021-08-15T12:22:30Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.7.4",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: v0.7.4\nTag: v0.7.4; draft: False; prerelease: False; published_at: 2021-08-15T12:22:30Z; created_at: 2021-08-15T12:07:36Z\nRelease notes:\n### Fixed\n- Compile error with `clap v3.0.0-beta.4`.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.7.4, a compile error with clap v3.0.0-beta.4 was fixed."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_7_5",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.5",
+      "tag_name": "v0.7.5",
+      "title": "v0.7.5",
+      "time_hint": "2021-09-09",
+      "published_at": "2021-09-09T16:53:06Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.7.5",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: v0.7.5\nTag: v0.7.5; draft: False; prerelease: False; published_at: 2021-09-09T16:53:06Z; created_at: 2021-09-09T14:56:31Z\nRelease notes:\n### Added\n- Bash/Elvish: completions for `z` command.\n### Changed\n- Nushell: upgrade minimum supported version to v0.36.0.\n- Nushell: easier installation instructions.\n### Fixed\n- Elvish: unable to `z` into directories by path.\n- Elvish: don't show traceback when `z` or `zi` fails.\n- Elvish: nested shells do not initialize correctly.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.7.5, completions for the z command were added for Bash and Elvish. Nushell minimum supported version was upgraded to v0.36.0 with easier installation instructions. Fixes include Elvish unable to z into directories by path, Elvish not showing traceback on z or zi failure, and Elvish nested shells not initializing correctly."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_7_6",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.6",
+      "tag_name": "v0.7.6",
+      "title": "v0.7.6",
+      "time_hint": "2021-10-13",
+      "published_at": "2021-10-13T10:55:34Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.7.6",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: v0.7.6\nTag: v0.7.6; draft: False; prerelease: False; published_at: 2021-10-13T10:55:34Z; created_at: 2021-10-13T10:11:05Z\nRelease notes:\n### Changed\n- Nushell: upgrade minimum supported version to v0.37.0.\n### Fixed\n- Xonsh: error messages in `zi`.\n- Xonsh: configuration environment variables not being handled correctly.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.7.6, Nushell minimum supported version was upgraded to v0.37.0. Fixes include Xonsh error messages in zi and Xonsh configuration environment variables not being handled correctly."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_7_7",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.7",
+      "tag_name": "v0.7.7",
+      "title": "v0.7.7",
+      "time_hint": "2021-10-15",
+      "published_at": "2021-10-15T03:20:35Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.7.7",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: v0.7.7\nTag: v0.7.7; draft: False; prerelease: False; published_at: 2021-10-15T03:20:35Z; created_at: 2021-10-15T03:01:51Z\nRelease notes:\n### Fixed\n- PowerShell: Hook not initializing correctly.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.7.7, a fix was made for PowerShell hook not initializing correctly."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_7_8",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.8",
+      "tag_name": "v0.7.8",
+      "title": "v0.7.8",
+      "time_hint": "2021-10-21",
+      "published_at": "2021-10-21T04:13:18Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.7.8",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: v0.7.8\nTag: v0.7.8; draft: False; prerelease: False; published_at: 2021-10-21T04:13:18Z; created_at: 2021-10-20T22:43:14Z\nRelease notes:\n### Added\n- Auto-generated completions for [Fig](https://fig.io/).\n### Fixed\n- Compile error with `clap v3.0.0-beta.5`.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.7.8, auto-generated completions for Fig were added. A compile error with clap v3.0.0-beta.5 was fixed."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_7_9",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.9",
+      "tag_name": "v0.7.9",
+      "title": "v0.7.9",
+      "time_hint": "2021-11-01",
+      "published_at": "2021-11-01T22:07:03Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.7.9",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: v0.7.9\nTag: v0.7.9; draft: False; prerelease: False; published_at: 2021-11-01T22:07:03Z; created_at: 2021-11-01T21:21:21Z\nRelease notes:\n### Changed\n- Bash/Fish: improved completions for `z` command.\n### Fixed\n- Fish: error erasing completions on older versions.\n- PowerShell: enable `--cmd cd` to replace the `cd` command.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.7.9, improved completions for the z command were made for Bash and Fish. Fixes include Fish error erasing completions on older versions and PowerShell enabling --cmd cd to replace the cd command."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_8_0",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.8.0",
+      "tag_name": "v0.8.0",
+      "title": "v0.8.0",
+      "time_hint": "2021-12-24",
+      "published_at": "2021-12-24T22:48:58Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.8.0",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: v0.8.0\nTag: v0.8.0; draft: False; prerelease: False; published_at: 2021-12-24T22:48:58Z; created_at: 2021-12-24T22:37:30Z\nRelease notes:\n### Added\n- Zsh: completions for `z` command.\n### Changed\n- Fzf: better default options.\n- Fish: interactive completions are only triggered when the last argument is empty.\n- PowerShell: installation instructions.\n### Fixed\n- PowerShell: use global scope for aliases.\n- Zsh: fix errors with `set -eu`.\n- Fzf: handle early selection.\n- PowerShell: correctly handle escape characters in paths.\n- Parse error on Cygwin/MSYS due to CRLF line endings.\n- Fzf: handle spaces correctly in preview window.\n- Bash: avoid initializing completions on older versions.\n- Fzf: avoid launching binary from current directory on Windows.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.8.0, Zsh completions for the z command were added. Changes include better default fzf options, Fish interactive completions only triggered when last argument is empty, and updated PowerShell installation instructions. Fixes include PowerShell using global scope for aliases, Zsh errors with set -eu, fzf handling early selection, PowerShell handling escape characters in paths, parse error on Cygwin/MSYS due to CRLF, fzf handling spaces in preview window, Bash avoiding initializing completions on older versions, and fzf avoiding launching binary from current directory on Windows."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_8_1",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.8.1",
+      "tag_name": "v0.8.1",
+      "title": "v0.8.1",
+      "time_hint": "2022-04-23",
+      "published_at": "2022-04-23T01:19:37Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.8.1",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: v0.8.1\nTag: v0.8.1; draft: False; prerelease: False; published_at: 2022-04-23T01:19:37Z; created_at: 2022-04-23T01:09:18Z\nRelease notes:\n### Changed\n- Manpages: moved to `man/man1/*.1`.\n- Replace `--no-aliases` with `--no-cmd`.\n- Elvish: upgrade minimum supported version to v0.18.0.\n- Nushell: upgrade minimum supported version to v0.61.0.\n### Fixed\n- Bash/Zsh: rename `_z` completion function to avoid conflicts with other shell\nplugins.\n- Fzf: added `--keep-right` option by default, upgrade minimum supported version\nto v0.21.0.\n- Bash: only enable completions on 4.4+.\n- Fzf: bypass `ls` alias in preview window.\n- Retain ownership of database file.\n- `zoxide query --interactive` should not conflict with `--score`.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.8.1, manpages were moved to man/man1/*.1, --no-aliases was replaced with --no-cmd, Elvish minimum supported version was upgraded to v0.18.0, and Nushell minimum supported version was upgraded to v0.61.0. Fixes include renaming _z completion function in Bash/Zsh to avoid conflicts, adding --keep-right option by default for fzf with minimum version v0.21.0, enabling Bash completions only on 4.4+, bypassing ls alias in fzf preview window, retaining ownership of database file, and preventing zoxide query --interactive from conflicting with --score."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_8_2",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.8.2",
+      "tag_name": "v0.8.2",
+      "title": "v0.8.2",
+      "time_hint": "2022-06-25",
+      "published_at": "2022-06-25T20:05:55Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.8.2",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: v0.8.2\nTag: v0.8.2; draft: False; prerelease: False; published_at: 2022-06-25T20:05:55Z; created_at: 2022-06-25T19:52:49Z\nRelease notes:\n### Changed\n- Fzf: show preview window below results.\n### Fixed\n- Bash/Fish/POSIX/Zsh: paths on Cygwin.\n- Fish: completions not working on certain systems.\n- Bash: completions not escaping spaces correctly.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.8.2, fzf preview window was changed to show below results. Fixes include paths on Cygwin for Bash/Fish/POSIX/Zsh, Fish completions not working on certain systems, and Bash completions not escaping spaces correctly."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_8_3",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.8.3",
+      "tag_name": "v0.8.3",
+      "title": "v0.8.3",
+      "time_hint": "2022-09-02",
+      "published_at": "2022-09-02T09:01:15Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.8.3",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: v0.8.3\nTag: v0.8.3; draft: False; prerelease: False; published_at: 2022-09-02T09:01:15Z; created_at: 2022-09-02T09:00:16Z\nRelease notes:\n### Added\n- Nushell: support for `z -`.\n- Nushell: support for PWD hooks.\n### Changed\n- Fish: change fuzzy completion prefix to `z!`.\n- Zsh: allow `z` to navigate dirstack via `+n` and `-n`.\n- Fzf: improved preview window.\n### Fixed\n- Bash: double forward slash in completions.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.8.3, Nushell support for z - and PWD hooks was added. Fish fuzzy completion prefix was changed to z!, Zsh allowed z to navigate dirstack via +n and -n, and fzf preview window was improved. A fix was made for Bash double forward slash in completions."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_9_0",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.9.0",
+      "tag_name": "v0.9.0",
+      "title": "0.9.0",
+      "time_hint": "2023-01-07",
+      "published_at": "2023-01-07T23:24:14Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.9.0",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: 0.9.0\nTag: v0.9.0; draft: False; prerelease: False; published_at: 2023-01-07T23:24:14Z; created_at: 2023-01-07T23:17:44Z\nRelease notes:\n### Added\n- `edit` subcommand to adjust the scores of entries.\n### Fixed\n- Zsh: completions clashing with `zsh-autocomplete`.\n- Fzf: 'invalid option' on macOS.\n- PowerShell: handle UTF-8 encoding correctly.\n- Zsh: don't hide output from `chpwd` hooks.\n- Nushell: upgrade minimum supported version to v0.73.0.\n- Zsh: fix extra space in interactive completions when no match is found.\n- Fzf: various improvements.\n- Nushell: Accidental redefinition of hooks when initialized twice.\n### Removed\n- `remove -i` subcommand: use `edit` instead.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.9.0, an edit subcommand was added to adjust entry scores. Fixes include Zsh completions clashing with zsh-autocomplete, fzf 'invalid option' on macOS, PowerShell handling UTF-8 encoding, Zsh not hiding output from chpwd hooks, Nushell minimum supported version upgraded to v0.73.0, Zsh extra space in interactive completions when no match, various fzf improvements, and Nushell accidental redefinition of hooks when initialized twice. The remove -i subcommand was removed in favor of edit."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_9_1",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.9.1",
+      "tag_name": "v0.9.1",
+      "title": "0.9.1",
+      "time_hint": "2023-05-07",
+      "published_at": "2023-05-07T16:11:50Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.9.1",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: 0.9.1\nTag: v0.9.1; draft: False; prerelease: False; published_at: 2023-05-07T16:11:50Z; created_at: 2023-05-07T15:37:00Z\nRelease notes:\n### Added\n- Fish/Zsh: aliases on `__zoxide_z` will now use completions.\n- Nushell: add support for v0.78.0.\n- Fish: plugin now works on older versions.\n- PowerShell: warn when PowerShell version is too old for `z -` and `z +`.\n- PowerShell: support for PWD hooks on all versions.\n### Fixed\n- Fish: not providing `cd` completions when there is a space in the path.\n- Bash/Fish/Zsh: providing `z` completions when the last argument starts with `z!`.\n- Bash/Fish/Zsh: attempting to `cd` when the last argument is `z!`.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.9.1, Fish/Zsh aliases on __zoxide_z now use completions, Nushell support for v0.78.0 was added, Fish plugin works on older versions, PowerShell warns when version is too old for z - and z +, and PowerShell supports PWD hooks on all versions. Fixes include Fish not providing cd completions with space in path, Bash/Fish/Zsh providing z completions when last argument starts with z!, and Bash/Fish/Zsh attempting to cd when last argument is z!."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_9_2",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.9.2",
+      "tag_name": "v0.9.2",
+      "title": "0.9.2",
+      "time_hint": "2023-08-04",
+      "published_at": "2023-08-04T03:16:26Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.9.2",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: 0.9.2\nTag: v0.9.2; draft: False; prerelease: False; published_at: 2023-08-04T03:16:26Z; created_at: 2023-08-04T02:27:38Z\nRelease notes:\n### Added\n- Short option `-a` for `zoxide query --all`.\n### Fixed\n- PowerShell: use `global` scope for variables / functions.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.9.2, a short option -a was added for zoxide query --all. A fix was made for PowerShell using global scope for variables/functions."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_9_3",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.9.3",
+      "tag_name": "v0.9.3",
+      "title": "0.9.3",
+      "time_hint": "2024-02-12",
+      "published_at": "2024-02-12T22:45:50Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.9.3",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: 0.9.3\nTag: v0.9.3; draft: False; prerelease: False; published_at: 2024-02-12T22:45:50Z; created_at: 2024-02-12T22:36:46Z\nRelease notes:\n### Added\n- Nushell: support for v0.89.0.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.9.3, Nushell support for v0.89.0 was added."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_9_4",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.9.4",
+      "tag_name": "v0.9.4",
+      "title": "0.9.4",
+      "time_hint": "2024-02-20",
+      "published_at": "2024-02-20T23:13:34Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.9.4",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: 0.9.4\nTag: v0.9.4; draft: False; prerelease: False; published_at: 2024-02-20T23:13:34Z; created_at: 2024-02-20T23:06:08Z\nRelease notes:\n### Changed\n- zsh: improved Space-Tab completions.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.9.4, Zsh Space-Tab completions were improved."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_9_5",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.9.5",
+      "tag_name": "v0.9.5",
+      "title": "0.9.5",
+      "time_hint": "2024-09-13",
+      "published_at": "2024-09-13T00:54:52Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.9.5",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: 0.9.5\nTag: v0.9.5; draft: False; prerelease: False; published_at: 2024-09-13T00:54:52Z; created_at: 2024-09-13T00:47:34Z\nRelease notes:\n### Added\n- zsh: improved `cd` completions.\n- Lazily delete excluded directories from the database.\n- fish: detect infinite loop when using `alias cd=z`.\n- Installer: added flags for `--bin-dir`, `--man-dir`, `--arch`, and `--sudo`.\n- Nushell: support for v0.94.0+.\n- bash/fish/zsh: support for `z -- dir` style queries.\n- fish: improved Space-Tab completions.\n- ksh: added support for the Korn shell.\n### Changed\n- fzf: removed `--select-1` from default options. The interactive selector will\nnow open up even if there is only one match.\n- Enforce that `$_ZO_DATA_DIR` is an absolute path.\n### Fixed\n- zsh: Space-Tab completion repeating output multiple times when matching single\ndirectory\n- fish / Nushell / PowerShell: handle queries that look like args (e.g. `z -x`).\n- elvish: `z -` now works as expected.\n- fish: generated shell code avoids using aliased builtins.\n- fish: `cd` command is now copied directly from\n`$__fish_data_dir/functions/cd.fish`. This should minimize the chances of an\ninfinite loop when aliasing `cd=z`.\n- Symlinks not getting added to the database when `$_ZO_RESOLVE_SYMLINKS=0`.\n- Symlinked database files getting replaced instead of the actual files.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.9.5, additions include improved cd completions for Zsh, lazy deletion of excluded directories from the database, Fish infinite loop detection when using alias cd=z, installer flags --bin-dir, --man-dir, --arch, --sudo, Nushell support for v0.94.0+, bash/fish/zsh support for z -- dir style queries, Fish improved Space-Tab completions, and Korn shell (ksh) support. Changes include fzf removing --select-1 from default options and enforcing $_ZO_DATA_DIR as an absolute path. Fixes include Zsh Space-Tab completion repeating output, fish/Nushell/PowerShell handling queries that look like args, elvish z - working, fish generated code avoiding aliased builtins, fish cd command copied from $__fish_data_dir/functions/cd.fish, symlinks not added when $_ZO_RESOLVE_SYMLINKS=0, and symlinked database files not being replaced."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_9_6",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.9.6",
+      "tag_name": "v0.9.6",
+      "title": "0.9.6",
+      "time_hint": "2024-09-19",
+      "published_at": "2024-09-19T08:21:22Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.9.6",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: 0.9.6\nTag: v0.9.6; draft: False; prerelease: False; published_at: 2024-09-19T08:21:22Z; created_at: 2024-09-19T08:11:26Z\nRelease notes:\n### Fixed\n- Fish: `builtin abbr` doesn't work on older versions.\n- Zsh: make `__zoxide_z_complete` available with `--no-cmd`.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.9.6, fixes include Fish builtin abbr not working on older versions and Zsh making __zoxide_z_complete available with --no-cmd."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_9_7",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.9.7",
+      "tag_name": "v0.9.7",
+      "title": "0.9.7",
+      "time_hint": "2025-02-09",
+      "published_at": "2025-02-09T21:51:33Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.9.7",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: 0.9.7\nTag: v0.9.7; draft: False; prerelease: False; published_at: 2025-02-09T21:51:33Z; created_at: 2025-02-09T21:49:05Z\nRelease notes:\n### Added\n- Nushell: support for 0.102.0.\n- Bash / Zsh: add doctor to diagnose common issues.\n### Fixed\n- ksh: alias to regular POSIX implementation for better compatibility.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.9.7, Nushell support for 0.102.0 was added, and a doctor command was added for Bash/Zsh to diagnose common issues. A fix was made for ksh aliasing to regular POSIX implementation for better compatibility."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_9_8",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.9.8",
+      "tag_name": "v0.9.8",
+      "title": "0.9.8",
+      "time_hint": "2025-05-26",
+      "published_at": "2025-05-26T21:52:52Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.9.8",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: 0.9.8\nTag: v0.9.8; draft: False; prerelease: False; published_at: 2025-05-26T21:52:52Z; created_at: 2025-05-26T21:43:06Z\nRelease notes:\n### Added\n- Support for Tcsh.\n- Added `--score` flag to `zoxide add`.\n- POSIX: add doctor to diagnose common issues.\n- Nushell: add CLI completions.\n### Changed\n- Bash: zoxide will now automatically `cd` when selecting Space-Tab completions.\n### Fixed\n- Bash: doctor now handles `PROMPT_COMMAND` being an array.\n- Bash: doctor now handles Visual Studio Code's shell integration.\n- Bash: completions now work with `ble.sh`.\n- Nushell: stop ignoring symlinks when `cd`-ing into a directory.\n- Fzf: updated minimum supported version to v0.51.0.\n- PowerShell: avoid setting `$error` when defining `__zoxide_hooked`.\n- PowerShell: handle special characters in file paths when `cd`-ing into them.\n- Database corruption issue when the filesystem is 100% full.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.9.8, support for Tcsh was added, --score flag was added to zoxide add, POSIX doctor was added, and Nushell CLI completions were added. Changes include Bash automatically cd-ing when selecting Space-Tab completions. Fixes include Bash doctor handling PROMPT_COMMAND array and VS Code shell integration, Bash completions working with ble.sh, Nushell not ignoring symlinks when cd-ing, fzf minimum version updated to v0.51.0, PowerShell avoiding setting $error when defining __zoxide_hooked, PowerShell handling special characters in file paths, and database corruption when filesystem is 100% full."
+    },
+    {
+      "memory_node_id": "ajeetdsouza__zoxide__release__v0_9_9",
+      "repo": "ajeetdsouza/zoxide",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.9.9",
+      "tag_name": "v0.9.9",
+      "title": "0.9.9",
+      "time_hint": "2026-01-31",
+      "published_at": "2026-01-31T07:48:49Z",
+      "source_url": "https://github.com/ajeetdsouza/zoxide/releases/tag/v0.9.9",
+      "raw_text": "Repository: ajeetdsouza/zoxide\nRelease: 0.9.9\nTag: v0.9.9; draft: False; prerelease: False; published_at: 2026-01-31T07:48:49Z; created_at: 2026-01-31T07:42:16Z\nRelease notes:\n### Added\n- Support for Android ARMv7.\n- Fish: support for v4.1.0+.\n### Fixed\n- Nushell: use sigil operator when calling external commands.\n- Zsh: support multiple digits in `z +N` and `z -N` dirstack commands.\n- Bash: avoid downcasting `$PROMPT_COMMAND` array into a string.\n- Bash: avoid overwriting `$PIPESTATUS`.\n- POSIX: remove non-POSIX compliant calls to `builtin`.\n- Fish: clear existing completions when defining `z` command.",
+      "memory_unit_text": "In the ajeetdsouza/zoxide release v0.9.9, support for Android ARMv7 and Fish v4.1.0+ was added. Fixes include Nushell using sigil operator for external commands, Zsh supporting multiple digits in z +N and z -N dirstack commands, Bash avoiding downcasting $PROMPT_COMMAND array and overwriting $PIPESTATUS, POSIX removing non-POSIX calls to builtin, and Fish clearing existing completions when defining z command."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the ajeetdsouza/zoxide releases, which release adds support for the Korn shell (ksh)?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.9.5"
+        },
+        {
+          "option_id": "B",
+          "text": "v0.9.8"
+        },
+        {
+          "option_id": "C",
+          "text": "v0.9.7"
+        },
+        {
+          "option_id": "D",
+          "text": "v0.9.9"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v0.9.5",
+      "source_chunk_ids": [
+        "ajeetdsouza__zoxide__release__v0_9_5"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "ajeetdsouza__zoxide__release__v0_9_5",
+          "answer_text": "ksh: added support for the Korn shell."
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the ajeetdsouza/zoxide releases, how does the handling of the fzf default options differ between v0.8.0 and v0.9.5?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.8.0 adds --keep-right by default, while v0.9.5 removes --select-1 from default options."
+        },
+        {
+          "option_id": "B",
+          "text": "v0.8.0 removes --select-1, while v0.9.5 adds --keep-right."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases add --select-1 to default options."
+        },
+        {
+          "option_id": "D",
+          "text": "v0.8.0 changes preview window position, while v0.9.5 changes minimum fzf version."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v0.8.0 adds --keep-right by default, while v0.9.5 removes --select-1 from default options.",
+      "source_chunk_ids": [
+        "ajeetdsouza__zoxide__release__v0_8_0",
+        "ajeetdsouza__zoxide__release__v0_9_5"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "ajeetdsouza__zoxide__release__v0_8_0",
+          "answer_text": "Fzf: better default options."
+        },
+        {
+          "memory_node_id": "ajeetdsouza__zoxide__release__v0_9_5",
+          "answer_text": "fzf: removed --select-1 from default options."
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the ajeetdsouza/zoxide release window, order the following release-content states from earliest to latest: (1) a release that adds support for PowerShell, (2) a release that adds support for the xonsh shell, (3) a release that adds support for Nushell and Elvish.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3",
+      "source_chunk_ids": [
+        "ajeetdsouza__zoxide__release__v0_4_1",
+        "ajeetdsouza__zoxide__release__v0_5_0",
+        "ajeetdsouza__zoxide__release__v0_6_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "ajeetdsouza__zoxide__release__v0_4_1",
+          "answer_text": "Support for PowerShell."
+        },
+        {
+          "memory_node_id": "ajeetdsouza__zoxide__release__v0_5_0",
+          "answer_text": "Support for the xonsh shell."
+        },
+        {
+          "memory_node_id": "ajeetdsouza__zoxide__release__v0_6_0",
+          "answer_text": "Support for Nushell and Elvish."
+        }
+      ]
+    }
+  ]
+}

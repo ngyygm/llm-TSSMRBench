@@ -1,0 +1,530 @@
+{
+  "prototype_id": "pppscn__SmsForwarder_release_window",
+  "domain": "github_release_evolution",
+  "repo": "pppscn/SmsForwarder",
+  "source_type": "release_note",
+  "window_title": "pppscn/SmsForwarder recent release evolution",
+  "window_summary": "This window tracks the recent pppscn/SmsForwarder release stream from early versions like 1.7.0 through the Kotlin-refactored v3.x series up to v3.5.0, highlighting new forwarding channels, automation features, and stability improvements.",
+  "chunks": [
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__1_7_0",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.7.0",
+      "tag_name": "1.7.0",
+      "title": "1.7.0",
+      "time_hint": "2021-03-18",
+      "published_at": "2021-03-18T12:54:12Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/1.7.0",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: 1.7.0\nTag: 1.7.0; draft: False; prerelease: False; published_at: 2021-03-18T12:54:12Z; created_at: 2021-03-18T12:49:26Z\nRelease notes:\n【注意】此版本去除了Android 5.x 的支持，最低支持6.0\n1、新增转发到Server酱·Turbo版\n2、新增转发到Telegram机器人\n3、转发到webhook支持GET方式（节点改变，原配置要重新编辑）\n4、修复钉钉机器人没启用加签时url拼接错误问题\n5、Android8.1以下手机重启后尝试启动主界面，以便动态获取权限（修复开机自启后无法转发短信，要打开软件后才会转发短信的问题）\n6、新增转发到其他手机短信\n7、避免热插卡时FC\n8、规则展示优化\n9、获取多卡信息&获取卡槽备注优\n10、新增恢复初始化配置",
+      "memory_unit_text": "In the pppscn/SmsForwarder release 1.7.0, the project drops support for Android 5.x, requiring a minimum of Android 6.0. It adds forwarding to Server酱 Turbo and Telegram bots, supports GET method for webhook forwarding (requiring reconfiguration of existing setups), fixes a DingTalk bot URL concatenation bug when signing is not enabled, attempts to launch the main interface after reboot on Android 8.1 and below to dynamically obtain permissions (fixing the issue where SMS forwarding would not work after auto-start until the app is opened), adds forwarding to other phone SMS, prevents force close on hot SIM swap, optimizes rule display, improves multi-SIM information retrieval and slot remark display, and adds a restore initialization configuration option."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__1_7_4",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.7.4",
+      "tag_name": "1.7.4",
+      "title": "1.7.4",
+      "time_hint": "2021-07-15",
+      "published_at": "2021-07-15T09:12:03Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/1.7.4",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: 1.7.4\nTag: 1.7.4; draft: False; prerelease: False; published_at: 2021-07-15T09:12:03Z; created_at: 2021-07-15T09:06:17Z\nRelease notes:\nPS.抱歉！本来想着攒到 1.8.0 再发个版，只是最近实在太忙了，没时间更新这个，把1.7.3之后提交的代码打个包，方便不会打包的朋友\n**累计更新：**\n1、修复转发企业微信群机器人碰到\"被截断问题\n2、转发到webhook时忽略ssl证书校验（提高自建服务端兼容性）\n3、转发telegram时将 # 替换为 井，避免被当作标签\n4、隐私保护，发送方设置中敏感信息(密码/token/secret等)用星号显示\n5、更新友盟基础组件库\n6、解决“设置页面关闭卡槽信息，同时使用默认模板时，发送消息卡槽信息仍显示” （by miaoc ）",
+      "memory_unit_text": "In the pppscn/SmsForwarder release 1.7.4, the release bundles commits since 1.7.3 for users who cannot build themselves. It fixes a truncation issue when forwarding to WeCom group robot messages, ignores SSL certificate verification for webhook forwarding to improve self-hosted server compatibility, replaces '#' with '井' in Telegram forwarding to avoid tag interpretation, masks sensitive information (passwords/tokens/secrets) in sender settings with asterisks, updates the Umeng component library, and resolves an issue where SIM slot information still appeared in sent messages when the slot info setting was disabled and the default template was used."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v2_0_0",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.0.0",
+      "tag_name": "v2.0.0",
+      "title": "SmsForwarder v2.0.0 国庆版",
+      "time_hint": "2021-09-30",
+      "published_at": "2021-09-30T08:50:33Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v2.0.0",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v2.0.0 国庆版\nTag: v2.0.0; draft: False; prerelease: False; published_at: 2021-09-30T08:50:33Z; created_at: 2021-09-30T08:49:39Z\nRelease notes:\n1、转发到webhook增加支持自定义post数据，并支持Json数据提交\n2、增加电池优化白名单设置和权限（感谢：aoe-iu）\n3、重新梳理代码 & 引入Lombok & 升级gradle版本（消灭waring）\n4、Bark增加支持分组（发送方名称作为分组名称）\n5、改进正则表达式匹配方式\n6、内容匹配模式【不是】改为【不包含】\n7、增加低电量预警，按需设置一下转发规则（不再遍历所有发送方）【号码：88888888、内容：当前剩余电量：xx%，已经到达低电量预警阈值，请及时充电！、卡槽：sim1】\n8、添加飞书的webhook支持\n9、自定义 Scheme（forwarder://main）用于唤起App\n10、接口请求失败后延时重试5次（可配置间隔时间）\n11、未接来电提醒转发（转发规则与短信相同，感谢：aoe-iu）\n12、手机重启后，主动初始化设置。（解决部分情况下，手机重启后无法转发，必须打开app问题，感谢：aoe-iu）\n13、多语言支持（目前：中文、英文，感谢：malsony）",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v2.0.0 (National Day edition), the release adds custom POST data support and JSON submission for webhook forwarding, adds battery optimization whitelist settings and permissions, refactors code with Lombok and upgrades Gradle, adds group support for Bark (using sender name as group name), improves regex matching, changes content matching mode from 'is not' to 'does not contain', adds low battery alert (with a dedicated forwarding rule using number 88888888 and specific content), adds Feishu webhook support, adds a custom URL scheme (forwarder://main) to launch the app, adds delayed retry up to 5 times on interface request failure (configurable interval), adds missed call reminder forwarding (same rules as SMS), proactively initializes settings after phone reboot to fix forwarding failures without opening the app, and adds multi-language support (Chinese and English)."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v2_1_0",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.1.0",
+      "tag_name": "v2.1.0",
+      "title": "SmsForwarder v2.1.0 程序猿节版",
+      "time_hint": "2021-10-24",
+      "published_at": "2021-10-24T09:26:53Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v2.1.0",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v2.1.0 程序猿节版\nTag: v2.1.0; draft: False; prerelease: False; published_at: 2021-10-24T09:26:53Z; created_at: 2021-10-24T03:59:56Z\nRelease notes:\n1. 增加配置导出导入功能（一键克隆）\n2. 转发到其他手机短信取消延时重试（没有实际意义）\n3. bark新增指定推送消息图标\n4. 简化设置，取消“转发时附加卡槽信息”和“转发时附加设备名称”开关，若需要直接修改“转发信息模板”\n5. 修复转发未接来电开关失效问题",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v2.1.0 (Programmer's Day edition), the release adds configuration export/import functionality (one-click clone), removes delayed retry for forwarding to other phone SMS, adds the ability to specify a push message icon for Bark, simplifies settings by removing the 'attach SIM slot info' and 'attach device name' toggles (users should modify the forwarding message template directly if needed), and fixes an issue where the missed call forwarding switch was ineffective."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v2_2_0",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.2.0",
+      "tag_name": "v2.2.0",
+      "title": "SmsForwarder v2.2.0",
+      "time_hint": "2021-11-22",
+      "published_at": "2021-11-22T10:19:07Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v2.2.0",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v2.2.0\nTag: v2.2.0; draft: False; prerelease: False; published_at: 2021-11-22T10:19:07Z; created_at: 2021-11-22T10:16:39Z\nRelease notes:\n**新增：监听其他APP通知信息并根据规则转发**\n修复：Telegram手机号丢失问题\n优化：来电转发增加获取卡槽信息\n优化：Telegram转发支持自定义bot地址(复用ApiToken字段，http开头)\n新增：添加转发规则时允许自定义模板（留空则取全局设置）\n修复：bark指定推送消息图标空指针判断bug\n新增：默认关闭短信、来电、APP转发（设置中总开关）\n优化：ActionBar弹出菜单的位置\n新增：获取所有应用列表（方便复制APP包名）\n新增：转发到PushPlus\n新增：帮助文档（跳转Gitee的wiki）\n优化：不在最近任务列表中显示（利于保活）\n优化：兼容 Android 5.x\n**新增：此版本开始采用Github Actions在线编译发版**",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v2.2.0, the release adds the ability to listen for notifications from other apps and forward them based on rules, fixes a Telegram phone number loss issue, optimizes call forwarding to include SIM slot information, optimizes Telegram forwarding to support custom bot addresses (reusing the ApiToken field, starting with http), allows custom templates when adding forwarding rules (leaving it empty uses the global setting), fixes a null pointer bug in Bark push message icon specification, adds default off switches for SMS, call, and app forwarding in general settings, optimizes the ActionBar popup menu position, adds a feature to get a list of all apps (for easy copying of app package names), adds forwarding to PushPlus, adds a help document (linking to Gitee wiki), optimizes to not show in recent tasks list (to aid keep-alive), restores compatibility with Android 5.x, and starts using GitHub Actions for online compilation and release."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v2_2_1",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.2.1",
+      "tag_name": "v2.2.1",
+      "title": "SmsForwarder v2.2.1",
+      "time_hint": "2021-11-25",
+      "published_at": "2021-11-25T10:07:44Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v2.2.1",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v2.2.1\nTag: v2.2.1; draft: False; prerelease: False; published_at: 2021-11-25T10:07:44Z; created_at: 2021-11-25T10:05:29Z\nRelease notes:\n**更新内容：**\n- 新增：邮件主题支持自定义模板\n- 新增：自定义模板支持 {{当前应用版本号}} 来获取 SmsForwarder 当前版本名\n- 优化：恢复初始设置增加二次确认（防止误操作），初始化操作包括：重置设置、删除发送通道、规则、日志\n- 优化：PushPlus通道允许自定义失效时间（timestamp节点）\n- 优化：文本输入框保存时过滤前后空格（.trim）\n- 优化：通知栏文案修改\n- 优化：转发未接来电获取卡槽信息机制（延时：挂断后1秒）",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v2.2.1, the release adds support for custom templates in email subjects, adds a {{current app version}} template variable to get the SmsForwarder version name, optimizes the restore initial settings action with a secondary confirmation dialog (including resetting settings, deleting sending channels, rules, and logs), allows custom expiration time for PushPlus channels (timestamp node), trims leading and trailing spaces when saving text input, modifies notification bar text, and optimizes the mechanism for obtaining SIM slot information for missed call forwarding (delayed by 1 second after hangup)."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v2_3_0",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.3.0",
+      "tag_name": "v2.3.0",
+      "title": "SmsForwarder v2.3.0 双12狂欢版",
+      "time_hint": "2021-12-12",
+      "published_at": "2021-12-12T11:33:28Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v2.3.0",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v2.3.0 双12狂欢版\nTag: v2.3.0; draft: False; prerelease: False; published_at: 2021-12-12T11:33:28Z; created_at: 2021-12-12T11:28:47Z\nRelease notes:\n**更新内容：**\n- 新增：Telegram通过socks5/HTTP代理转发\n- 优化：关于软件页面下打开开机启动，将尝试跳转到系统自启动设置界面\n- 优化：限制只能安装只内部卡，避免自启动失败（待验证）\n- 修复：转发到其他手机，多个手机号用分号分隔无效的bug\n- 优化：日志增加一个中间状态 & 记录接口请求重试日志\n- 优化：电池状态监听（剩余电量预警上下限，电池状态改变）\n- 新增：转发规则上支持配置正则替换内容（用法：详见开源仓库wiki）\n- 优化：升级XUpdate组件版本\n- 优化：同一卡槽同一秒的重复未接来电广播不再重复处理（部分机型会收到两条广播？）\n- 修复：多个企业微信应用 access_token 并存问题",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v2.3.0 (Double 12 Carnival edition), the release adds Telegram forwarding via SOCKS5/HTTP proxy, optimizes the about page to attempt jumping to the system auto-start settings when enabling auto-start, restricts installation to internal storage only to prevent auto-start failure (to be verified), fixes a bug where multiple phone numbers separated by semicolons were invalid for forwarding to other phones, optimizes logging with an intermediate state and records interface request retry logs, optimizes battery status monitoring (low battery warning thresholds, battery status changes), adds support for configuring regex replacement content on forwarding rules, upgrades the XUpdate component version, prevents duplicate processing of missed call broadcasts for the same SIM slot within the same second (some models receive two broadcasts), and fixes an issue with multiple WeCom app access tokens coexisting."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v2_4_0",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.4.0",
+      "tag_name": "v2.4.0",
+      "title": "SmsForwarder v2.4.0 新春贺岁暨周年庆版",
+      "time_hint": "2022-01-30",
+      "published_at": "2022-01-30T12:17:01Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v2.4.0",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v2.4.0 新春贺岁暨周年庆版\nTag: v2.4.0; draft: False; prerelease: False; published_at: 2022-01-30T12:17:01Z; created_at: 2022-01-30T12:10:03Z\nRelease notes:\n### 重要更新：\n* 新增：Gotify发送通道（自主推送通知服务）\n* 优化：一键克隆机制优化，提高成功率\n* 新增：smshub主被动模式 by xingxichen\n* 优化：界面布局 & 用户体验优化\n* 优化：关闭代码混淆（minifyEnabled=false），避免代码混淆后一些莫名其妙的问题，因此APK包有所变大\n### 常规更新：\n* 修复：多重匹配中”正则匹配“bug\n* 优化：飞书使用Card发送通知消息 by xiao0yy\n* 新增：支持一键克隆单条转发规则（长按弹出对话框）\n* 新增：多重匹配增加匹配字段——通知标题、卡槽信息\n* 新增：自定义模板 新增 {{通知标题}} 变量（APP通知有效，取值等同{{卡槽信息}}）\n* 新增：允许开启自动关闭通知（单条通知处理完毕后自动关闭，避免多条通知堆叠）\n* 新增：隐私政策对话框（合规化，同意后才能使用软件、未同意隐私协议前不进行任何组件初始化）\n* 优化：邮件发送支持多个收件人（以半角逗号,分隔）\n* 新增：Telegram允许指定请求方式(POST/GET) by pickmefly\n* 优化：自定义模板（在焦点位置插入标签） by Nacll\n* 优化：更换SIM卡后，卡槽信息自动刷新 by Nacll\n* 新增：手动重发发送失败的消息 by Nacll\n* 优化：敏感信息输入框增加明文/密文切换、清除按钮（明文状态下可粘贴）\n* 新增：发送通道新增是否启用状态\n* 优化：发送通道必填字段校验与界面优化\n* 新增：pushplus增加标题模板\n* 优化：发送失败重试简化配置、机制优化（手动请求时不重试）\n* 新增：转发规则新增是否启用状态\n* 新增：异常捕获类，记录crash日志\n* 优化：移除RxJava\n* 新增：OkHttp重试拦截器、设置超时时间为5秒\n* 优化：电量预警增加是否持续通知开关\n* 新增：Webhook的GET形式支持webParams【例如：PushDeer】\n* 整理：英文语言包&界面布局微调 by malsony\n* 优化：StepBar 控件（新手按1234步骤进行配置，已设置过则点亮）\n* 精简：不需要获取 mImei 和 mImsi，避免异常\n* 修复：来电转发的卡槽信息不准确（异常处理：获取卡槽失败时，默认为卡槽1）、转发文本标明通话类型：1.呼入 2.呼出 3.未接\n* 优化：bark推送新增标题模板、时效性、声音、角标、链接设置项（兼容旧的配置）\n* 优化：增加ABI配置（按CPU架构分别打包）\n* 精简：删除不必要的资源文件、压缩图片资源\n* 优化：细化权限请求判断\n* 优化：GitHub Action 打包脚本（按CPU架构分别发包）\n* 精简：替换FloatingActionButton组件\n### APK版本说明：\n* universal: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下3种CPU架构so）\n* armeabi-v7a: 32位ARM设备（备用机首选）\n* arm64-v8a: 64位ARM设备（主流旗舰机）\n* x86: 32位Intel设备\n### 2022-02-02 更新：\n* 修复：兼容旧版本保存的telegram配置\n* 优化：APP通知默认不开启”自动消除通知“功能\n* 优化：隐私协议授权弹窗自适应分辨率（避免老年人模式下点不到按钮）\n* 优化：通用设置界面微调（避免换行）\n* 修复：转发通话记录开关状态保存失效",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v2.4.0 (Spring Festival and Anniversary edition), the release adds a Gotify sending channel, optimizes the one-click clone mechanism for higher success rate, adds SMSHub active/passive modes, optimizes UI layout and user experience, disables code minification to avoid mysterious issues (increasing APK size), fixes a regex matching bug in multi-match, optimizes Feishu to send notifications using Cards, adds one-click clone for a single forwarding rule (long press dialog), adds notification title and SIM slot info as multi-match fields, adds a {{notification title}} template variable (valid for app notifications, same value as {{SIM slot info}}), allows automatic closing of notifications after processing to avoid stacking, adds a privacy policy dialog for compliance (must agree before using the app, no component initialization before agreement), supports multiple recipients for email (comma separated), allows specifying request method (POST/GET) for Telegram, optimizes custom template tag insertion at focus position, auto-refreshes SIM slot info after SIM change, adds manual resend of failed messages, adds show/hide toggle and clear button for sensitive info input fields (paste in plaintext mode), adds enable/disable status for sending channels, optimizes required field validation and UI for sending channels, adds a title template for PushPlus, simplifies retry configuration and mechanism for send failures (no retry on manual request), adds enable/disable status for forwarding rules, adds an exception capture class to record crash logs, removes RxJava, adds OkHttp retry interceptor and sets timeout to 5 seconds, adds a persistent notification switch for battery alerts, supports webParams for webhook GET form (e.g., PushDeer), organizes English language pack and UI layout, optimizes StepBar control (guides new users through steps 1-4, lit if already configured), removes unnecessary mImei and mImsi retrieval to avoid exceptions, fixes inaccurate SIM slot info for call forwarding (defaults to slot 1 on failure) and indicates call type (1. incoming, 2. outgoing, 3. missed), adds title template, expiration, sound, badge, and link settings for Bark push (backward compatible), adds ABI configuration to package by CPU architecture, removes unnecessary resource files and compresses images, refines permission request logic, optimizes GitHub Action packaging script to build per CPU architecture, and replaces the FloatingActionButton component."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v2_4_1",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.4.1",
+      "tag_name": "v2.4.1",
+      "title": "SmsForwarder v2.4.1",
+      "time_hint": "2022-02-05",
+      "published_at": "2022-02-05T09:08:57Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v2.4.1",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v2.4.1\nTag: v2.4.1; draft: False; prerelease: False; published_at: 2022-02-05T09:08:57Z; created_at: 2022-02-05T09:01:12Z\nRelease notes:\n* 修复：兼容旧版本保存的telegram配置\n* 优化：APP通知默认不开启”自动消除通知“功能\n* 优化：隐私协议授权弹窗自适应分辨率（避免老年人模式下点不到按钮）\n* 优化：通用设置界面微调（避免换行）\n* 修复：转发通话记录开关状态保存失效\n* 修复：Android 11+ mail报错导致crash\nPS. 在线更新后端程序兼容按CPU架构检测升级\n### APK版本说明：\n* universal: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下3种CPU架构so）\n* armeabi-v7a: 32位ARM设备（备用机首选）\n* arm64-v8a: 64位ARM设备（主流旗舰机）\n* x86: 32位Intel设备（64位兼容）",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v2.4.1, the release fixes compatibility with old Telegram configurations, optimizes app notification to not enable 'auto dismiss notification' by default, makes the privacy policy authorization dialog adaptive to screen resolution (to avoid unreachable buttons in senior mode), fine-tunes the general settings UI to avoid line wrapping, fixes the failure to save the call forwarding switch state, fixes a crash on Android 11+ caused by mail errors, and makes the online update backend compatible with CPU architecture detection for upgrades."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v2_4_2",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.4.2",
+      "tag_name": "v2.4.2",
+      "title": "SmsForwarder v2.4.2 情人节版",
+      "time_hint": "2022-02-14",
+      "published_at": "2022-02-14T10:59:32Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v2.4.2",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v2.4.2 情人节版\nTag: v2.4.2; draft: False; prerelease: False; published_at: 2022-02-14T10:59:32Z; created_at: 2022-02-14T10:51:51Z\nRelease notes:\n常规修复更新，祝大家：情人节快乐，有情人终成眷属\n* 优化：界面优化 & 适配暗夜模式\n* 修复：转发短信出错（Targeting S+(version 31 and above) requires that one of FLAG_IMMUATABLE）\n* 新增：首次使用重要提醒（新手必看）\n* 优化：精简gradle依赖（瘦身计划）\n* 优化：短信发送本地server模式更新 by xingxichen\n* 修复：bark发送通道的url参数无效\n* 优化：1234步骤页面增加右上角菜单\n* 优化：ClearEditText适配超低分辨率\n* 优化：gotify忽略https证书\n* 优化：添加短信发送通道时判断是否有“发送短信”权限\n* 优化：页面帮助关闭时减少弹窗提示\n* 优化：短信转发总开关去掉“发送短信”权限判断\n* 修复：安卓6.0以下没有忽略电池优化\n### APK版本说明：\n* universal: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下3种CPU架构so）\n* armeabi-v7a: 32位ARM设备（备用机首选）\n* arm64-v8a: 64位ARM设备（主流旗舰机）\n* x86: 32位Intel设备（64位兼容）",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v2.4.2 (Valentine's Day edition), the release optimizes UI and adapts to dark mode, fixes an SMS forwarding error related to targeting S+ (version 31 and above) requiring FLAG_IMMUTABLE, adds an important first-use reminder for new users, streamlines Gradle dependencies (slimming plan), optimizes the SMS local server mode, fixes invalid URL parameters for the Bark sending channel, adds a top-right menu on the 1234 steps page, adapts ClearEditText for ultra-low resolution, makes Gotify ignore HTTPS certificates, checks for 'send SMS' permission when adding an SMS sending channel, reduces popup prompts when closing page help, removes the 'send SMS' permission check from the SMS forwarding master switch, and fixes the lack of battery optimization ignore on Android 6.0 and below."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v2_4_3",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.4.3",
+      "tag_name": "v2.4.3",
+      "title": "SmsForwarder v2.4.3",
+      "time_hint": "2022-02-25",
+      "published_at": "2022-02-25T01:51:42Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v2.4.3",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v2.4.3\nTag: v2.4.3; draft: False; prerelease: False; published_at: 2022-02-25T01:51:42Z; created_at: 2022-02-25T01:44:31Z\nRelease notes:\n刚好赶上生日，发一版自嗨一下……\n### 试验性优化：\n* 优化：保活措施-播放无声音乐让后台一直运行（可能比较耗电，按需启用）\n* 优化：保活措施-1像素透明Activity保活（使进程的优先级在屏幕锁屏时间由4提升为最高优先级1）\n* 优化：兼容OV系手机短信广播（可以不用在通过APP通知转发了）\n### 常规更新：\n* 优化：多重匹配中的正则匹配改成部分匹配（pattern.matcher）\n* 修复：PushPlus标题模板无效\n* 优化：webhook发送通道的 webParams 新增可用标签\n* 优化：飞书发送通道允许选择消息类型（纯文本/消息卡片）\n* 优化：飞书发送通道的消息卡片允许自定义标题模板\n* 优化：界面布局微调\n### APK版本说明：\n* universal: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下3种CPU架构so）\n* armeabi-v7a: 32位ARM设备（备用机首选）\n* arm64-v8a: 64位ARM设备（主流旗舰机）\n* x86: 32位Intel设备（64位兼容）",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v2.4.3, the release experimentally optimizes keep-alive by playing silent music to keep the background running (may increase battery consumption, enable as needed) and using a 1-pixel transparent Activity to raise process priority from 4 to 1 when the screen is locked, improves compatibility with OV brand phone SMS broadcasts (no longer needing to forward via app notifications), changes multi-match regex to partial matching (pattern.matcher), fixes an invalid PushPlus title template, adds available tags for webParams in the webhook sending channel, allows selecting message type (plain text/message card) for Feishu sending channel, allows custom title template for Feishu message cards, and fine-tunes UI layout."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v2_4_4",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.4.4",
+      "tag_name": "v2.4.4",
+      "title": "SmsForwarder v2.4.4",
+      "time_hint": "2022-04-04",
+      "published_at": "2022-04-04T01:54:55Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v2.4.4",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v2.4.4\nTag: v2.4.4; draft: False; prerelease: False; published_at: 2022-04-04T01:54:55Z; created_at: 2022-04-04T01:48:59Z\nRelease notes:\n大版本更新之前，先发一个小版本更新，下一个版本（2.5.0）重点改造 `主动请求(远程控制)` 功能\n对暴露的api有什么想法欢迎提issue，在合法合规的前提下，酌情考虑会不会添加！\n### 重点优化\n* 新增：一键克隆增加离线模式（导出备份json文件到Download目录，其他机器读取文件导入）\n* 优化：一键克隆机制优化（替换db文件→操作现有db）\n* 新增：Webhook发送通道支持设置Header (#128)\n* 优化：Email发送通道简化配置（常见邮箱不需要填写smtp信息）\n### 常规优化\n* 新增：仅锁屏状态转发APP通知开关\n* 新增：定时发布 每夜构建 版本（北京时间：23:30）\n* 新增：定时推送电池状态 (#131)\n* 修复：手动重发消息中UTC时间未转换本地时间 (#122)\n* 优化：抽取电池状态信息工具类\n* 新增：定时推送电池状态 (#121)\n* 优化：内嵌 WebView 打开使用帮助\n* 优化：界面微调（增加输入框提示等）\n* 修复：Bark通道转发规则正则导致转发失败（去除对标题的正则替换）\n### APK版本说明：\n* universal: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下3种CPU架构so）\n* armeabi-v7a: 32位ARM设备（备用机首选）\n* arm64-v8a: 64位ARM设备（主流旗舰机）\n* x86: 32位Intel设备（64位兼容）",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v2.4.4, the release adds an offline mode for one-click clone (export backup JSON file to Download directory, import on other devices), optimizes the one-click clone mechanism (replacing db file -> operating on existing db), adds support for setting headers in the Webhook sending channel, simplifies email sending channel configuration (common email providers do not need SMTP info), adds a switch to forward app notifications only when the screen is locked, adds scheduled nightly builds (Beijing time 23:30), adds scheduled battery status push, fixes UTC time not converted to local time in manual resend messages, extracts a battery status utility class, embeds WebView for help, fine-tunes UI (adds input hints, etc.), and fixes a Bark channel forwarding failure caused by regex on the title (removes regex replacement on title)."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v3_0_0",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.0.0",
+      "tag_name": "v3.0.0",
+      "title": "SmsForwarder v3.0.0 Kotlin全新重构版",
+      "time_hint": "2022-06-09",
+      "published_at": "2022-06-09T05:41:36Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v3.0.0",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v3.0.0 Kotlin全新重构版\nTag: v3.0.0; draft: False; prerelease: True; published_at: 2022-06-09T05:41:36Z; created_at: 2022-06-09T02:03:28Z\nRelease notes:\n【注意】v3.x版本是全新重构开发，可能一开始并不稳定，建议升级前先做好数据备份！（一键克隆离线导出）\n### 更新日志\n* 重构：采用 Kotlin 全新重构（不是迁移代码）\n* 重构：全新的界面 XUI 实现（略微提升点前端美感）\n* 重构：全新的 HttpServer 实现（采用 AndServer，目前有6个API）\n* 新增：增加 Frpc 支持内网穿透（按需下载 FrpcLib 动态库支持）\n* 新增：主动控制·客户端（界面直接远程发短信等）\n* 新增：保活措施 Cactus（双进程前台服务，JobScheduler，onePix(一像素)，WorkManager，无声音乐）\n* 优化：适配 Android 4.4 ~ 12.0\n* 优化：舍弃 emailkit 依赖，直接基于 android-mail 重写\n* 优化：自动过滤指定时间内的重复消息\n* 修复：v2.x 的 issue\n* 精简：一些不必要的功能（含尚未迁移的小功能）\n### APK版本说明：\n* universal: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下3种CPU架构so）\n* armeabi-v7a: 32位ARM设备（备用机首选）\n* arm64-v8a: 64位ARM设备（主流旗舰机）\n* x86: 32位Intel设备\n* x86_64: 64/32位Intel设备",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v3.0.0 (Kotlin full rewrite edition), the project is completely rewritten in Kotlin (not a code migration), features a new UI using XUI, a new HttpServer implementation using AndServer with 6 APIs, adds Frpc support for intranet penetration (requires downloading FrpcLib dynamic library), adds an active control client (remote SMS sending via interface), adds Cactus keep-alive measures (dual-process foreground service, JobScheduler, onePix, WorkManager, silent music), optimizes compatibility with Android 4.4 to 12.0, drops emailkit dependency and rewrites email based on android-mail, automatically filters duplicate messages within a specified time, fixes v2.x issues, and removes some unnecessary features (including small features not yet migrated)."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v3_0_1",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.0.1",
+      "tag_name": "v3.0.1",
+      "title": "SmsForwarder v3.0.1 Kotlin全新重构版",
+      "time_hint": "2022-06-09",
+      "published_at": "2022-06-09T14:26:11Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v3.0.1",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v3.0.1 Kotlin全新重构版\nTag: v3.0.1; draft: False; prerelease: True; published_at: 2022-06-09T14:26:11Z; created_at: 2022-06-09T14:11:18Z\nRelease notes:\n【注意】v3.x版本是全新重构开发，可能一开始并不稳定，建议升级前先做好数据备份！（一键克隆离线导出）\n### 更新日志\n* 重构：采用 Kotlin 全新重构（不是迁移代码）\n* 重构：全新的界面 XUI 实现（略微提升点前端美感）\n* 重构：全新的 HttpServer 实现（采用 AndServer，目前有6个API）\n* 新增：增加 Frpc 支持内网穿透（按需下载 FrpcLib 动态库支持）\n* 新增：主动控制·客户端（界面直接远程发短信等）\n* 新增：保活措施 Cactus（双进程前台服务，JobScheduler，onePix(一像素)，WorkManager，无声音乐）\n* 优化：适配 Android 4.4 ~ 12.0\n* 优化：舍弃 emailkit 依赖，直接基于 android-mail 重写\n* 优化：自动过滤指定时间内的重复消息\n* 修复：v2.x 的 issue\n* 精简：一些不必要的功能（含尚未迁移的小功能）\n* 修复：短信广播中的权限判断导致OV系手机转发异常(v3.0.1)\n* 修复：在子线程中调用Toast的异常情况处理(v3.0.1)\n### APK版本说明：\n* universal: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下3种CPU架构so）\n* armeabi-v7a: 32位ARM设备（备用机首选）\n* arm64-v8a: 64位ARM设备（主流旗舰机）\n* x86: 32位Intel设备\n* x86_64: 64/32位Intel设备",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v3.0.1 (Kotlin full rewrite edition), the release includes all features of v3.0.0 and additionally fixes an SMS broadcast permission check that caused forwarding anomalies on OV brand phones, and handles exceptions when calling Toast from a child thread."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v3_0_2",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.0.2",
+      "tag_name": "v3.0.2",
+      "title": "SmsForwarder v3.0.2 Kotlin全新重构版",
+      "time_hint": "2022-06-11",
+      "published_at": "2022-06-11T00:59:08Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v3.0.2",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v3.0.2 Kotlin全新重构版\nTag: v3.0.2; draft: False; prerelease: True; published_at: 2022-06-11T00:59:08Z; created_at: 2022-06-11T00:40:01Z\nRelease notes:\n【注意】v3.x版本是全新重构开发，可能一开始并不稳定，建议升级前先做好数据备份！（一键克隆离线导出）\n### 更新日志\n* 重构：采用 Kotlin 全新重构（不是迁移代码）\n* 重构：全新的界面 XUI 实现（略微提升点前端美感）\n* 重构：全新的 HttpServer 实现（采用 AndServer，目前有6个API）\n* 新增：增加 Frpc 支持内网穿透（按需下载 FrpcLib 动态库支持）\n* 新增：主动控制·客户端（界面直接远程发短信等）\n* 新增：保活措施 Cactus（双进程前台服务，JobScheduler，onePix(一像素)，WorkManager，无声音乐）\n* 优化：适配 Android 4.4 ~ 12.0\n* 优化：舍弃 emailkit 依赖，直接基于 android-mail 重写\n* 优化：自动过滤指定时间内的重复消息\n* 修复：v2.x 的 issue\n* 精简：一些不必要的功能（含尚未迁移的小功能）\n* 修复：短信广播中的权限判断导致OV系手机转发异常 (v3.0.1)\n* 修复：在子线程中调用Toast的异常情况处理 (v3.0.1)\n* 优化：统一卡槽ID枚举值（ 0=Sim1, 1=Sim2, -1=获取失败）【未做机型适配】 (v3.0.2)\n* 修复：卡槽匹配转发规则错误（卡槽id：-1=获取失败、0=卡槽1、1=卡槽2，但是 Rule 表里存的是 SIM1/SIM2） (v3.0.2)\n* 修复：通用设置中无法关闭转发应用通知开关 (v3.0.2)\n* 修复：无网络时主动控制·服务端界面自动获取IP异常 (v3.0.2)\n* 整理：隐私权政策内容 (v3.0.2)\n* 优化：在线更新【主界面检测】 (v3.0.2)\n### APK版本说明：\n* universal: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下3种CPU架构so）\n* armeabi-v7a: 32位ARM设备（备用机首选）\n* arm64-v8a: 64位ARM设备（主流旗舰机）\n* x86: 32位Intel设备\n* x86_64: 64/32位Intel设备",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v3.0.2 (Kotlin full rewrite edition), the release includes all features of v3.0.1 and additionally unifies SIM slot ID enumeration values (0=Sim1, 1=Sim2, -1=failed to obtain) without device-specific adaptation, fixes a SIM slot matching forwarding rule error (slot id -1, 0, 1 vs SIM1/SIM2 stored in Rule table), fixes the inability to turn off the app notification forwarding switch in general settings, fixes an exception when automatically obtaining IP in the active control server interface without network, organizes privacy policy content, and optimizes online update detection on the main interface."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v3_0_3",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.0.3",
+      "tag_name": "v3.0.3",
+      "title": "SmsForwarder v3.0.3 Kotlin全新重构版",
+      "time_hint": "2022-06-13",
+      "published_at": "2022-06-13T12:04:53Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v3.0.3",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v3.0.3 Kotlin全新重构版\nTag: v3.0.3; draft: False; prerelease: True; published_at: 2022-06-13T12:04:53Z; created_at: 2022-06-13T11:49:15Z\nRelease notes:\n【注意】v3.x版本是全新重构开发，可能一开始并不稳定，建议升级前先做好数据备份！（一键克隆离线导出）\n### 更新日志\n* 重构：采用 Kotlin 全新重构（不是迁移代码）\n* 重构：全新的界面 XUI 实现（略微提升点前端美感）\n* 重构：全新的 HttpServer 实现（采用 AndServer，目前有6个API）\n* 新增：增加 Frpc 支持内网穿透（按需下载 FrpcLib 动态库支持）\n* 新增：主动控制·客户端（界面直接远程发短信等）\n* 新增：保活措施 Cactus（双进程前台服务，JobScheduler，onePix(一像素)，WorkManager，无声音乐）\n* 优化：适配 Android 4.4 ~ 12.0\n* 优化：舍弃 emailkit 依赖，直接基于 android-mail 重写\n* 优化：自动过滤指定时间内的重复消息\n* 修复：v2.x 的 issue\n* 精简：一些不必要的功能（含尚未迁移的小功能）\n---\n* 修复：短信广播中的权限判断导致OV系手机转发异常 (v3.0.1)\n* 修复：在子线程中调用Toast的异常情况处理 (v3.0.1)\n---\n* 优化：统一卡槽ID枚举值（ 0=Sim1, 1=Sim2, -1=获取失败）【未做机型适配】 (v3.0.2)\n* 修复：卡槽匹配转发规则错误（卡槽id：-1=获取失败、0=卡槽1、1=卡槽2，但是 Rule 表里存的是 SIM1/SIM2） (v3.0.2)\n* 修复：通用设置中无法关闭转发应用通知开关 (v3.0.2)\n* 修复：无网络时主动控制·服务端界面自动获取IP异常 (v3.0.2)\n* 整理：隐私权政策内容 (v3.0.2)\n* 优化：在线更新【主界面检测】 (v3.0.2)\n---\n* 优化：仅测试转发规则与发送通道时Toast提示 (v3.0.3)\n* 优化：主动控制·服务端定时更新UI机制 (v3.0.3)\n* 精简：ANR异常捕获依赖（ANR-WatchDog）【可能会增加耗电】 (v3.0.3)\n* 修复：转发规则编辑页面关闭自定义模板/正则替换时没有清空输入框 (v3.0.3)\n* 新增：启动时异步获取已安装App信息开关 (v3.0.3)\n* 新增：应用列表分类展示(用户应用/系统应用)/按应用名排序 (v3.0.3)\n* 新增：自定义模板支持{{APP名称}}标签（仅启用异步获取App列表时有值） (v3.0.3)\n* 修复：v3.0.2来电转发卡槽信息获取失败 (v3.0.3)\n* 新增：按需启用Cactus增强保活措施的开关【开启后可能会增加耗电】 (v3.0.3)\n### APK版本说明：\n* universal: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下3种CPU架构so）\n* armeabi-v7a: 32位ARM设备（备用机首选）\n* arm64-v8a: 64位ARM设备（主流旗舰机）\n* x86: 32位Intel设备\n* x86_64: 64/32位Intel设备",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v3.0.3 (Kotlin full rewrite edition), the release includes all features of v3.0.2 and additionally optimizes Toast prompts when testing forwarding rules and sending channels, optimizes the active control server UI update mechanism, removes the ANR exception capture dependency (ANR-WatchDog) which may increase battery consumption, fixes the forwarding rule edit page not clearing input fields when disabling custom template/regex replacement, adds a switch to asynchronously fetch installed app info at startup, adds categorized app list display (user apps/system apps) sorted by app name, adds a {{APP name}} template tag (only has value when async app list fetch is enabled), fixes call forwarding SIM slot info retrieval failure from v3.0.2, and adds a switch to enable Cactus enhanced keep-alive measures (may increase battery consumption)."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v3_0_4",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.0.4",
+      "tag_name": "v3.0.4",
+      "title": "SmsForwarder v3.0.4 Kotlin全新重构版",
+      "time_hint": "2022-06-16",
+      "published_at": "2022-06-16T11:38:04Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v3.0.4",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v3.0.4 Kotlin全新重构版\nTag: v3.0.4; draft: False; prerelease: True; published_at: 2022-06-16T11:38:04Z; created_at: 2022-06-16T11:22:07Z\nRelease notes:\n【注意】v3.x版本是全新重构开发，可能一开始并不稳定，建议升级前先做好数据备份！（一键克隆离线导出）\n### 更新日志\n* 重构：采用 Kotlin 全新重构（不是迁移代码）\n* 重构：全新的界面 XUI 实现（略微提升点前端美感）\n* 重构：全新的 HttpServer 实现（采用 AndServer，目前有6个API）\n* 新增：增加 Frpc 支持内网穿透（按需下载 FrpcLib 动态库支持）\n* 新增：主动控制·客户端（界面直接远程发短信等）\n* 新增：保活措施 Cactus（双进程前台服务，JobScheduler，onePix(一像素)，WorkManager，无声音乐）\n* 优化：适配 Android 4.4 ~ 12.0\n* 优化：舍弃 emailkit 依赖，直接基于 android-mail 重写\n* 优化：自动过滤指定时间内的重复消息\n* 修复：v2.x 的 issue\n* 精简：一些不必要的功能（含尚未迁移的小功能）\n---\n* 修复：短信广播中的权限判断导致OV系手机转发异常 (v3.0.1)\n* 修复：在子线程中调用Toast的异常情况处理 (v3.0.1)\n---\n* 优化：统一卡槽ID枚举值（ 0=Sim1, 1=Sim2, -1=获取失败）【未做机型适配】 (v3.0.2)\n* 修复：卡槽匹配转发规则错误（卡槽id：-1=获取失败、0=卡槽1、1=卡槽2，但是 Rule 表里存的是 SIM1/SIM2） (v3.0.2)\n* 修复：通用设置中无法关闭转发应用通知开关 (v3.0.2)\n* 修复：无网络时主动控制·服务端界面自动获取IP异常 (v3.0.2)\n* 整理：隐私权政策内容 (v3.0.2)\n* 优化：在线更新【主界面检测】 (v3.0.2)\n---\n* 优化：仅测试转发规则与发送通道时Toast提示 (v3.0.3)\n* 优化：主动控制·服务端定时更新UI机制 (v3.0.3)\n* 精简：ANR异常捕获依赖（ANR-WatchDog）【可能会增加耗电】 (v3.0.3)\n* 修复：转发规则编辑页面关闭自定义模板/正则替换时没有清空输入框 (v3.0.3)\n* 新增：启动时异步获取已安装App信息开关 (v3.0.3)\n* 新增：应用列表分类展示(用户应用/系统应用)/按应用名排序 (v3.0.3)\n* 新增：自定义模板支持{{APP名称}}标签（仅启用异步获取App列表时有值） (v3.0.3)\n* 修复：v3.0.2来电转发卡槽信息获取失败 (v3.0.3)\n* 新增：按需启用Cactus增强保活措施的开关【开启后可能会增加耗电】 (v3.0.3)\n---\n* 优化：未开启异步获取已安装App信息开关时，规则编辑不显示已安装APP下拉框 (v3.0.4)\n* 优化：允许不填写服务端地址直接进入 主动控制·客户端 -> 一键换新机 -> 离线模式 (v3.0.4)\n* 修复：测试TG/Webhook发送通道时，子线程调用Toast引发FC (v3.0.4)\n* 修复：发件人昵称插入 {{接收时间}} 时转码失败（Nested Group） (v3.0.4)\n* 优化：邮件主题、发件人昵称替换冒号、换行为 - (v3.0.4)\n* 整理：替换 在线升级 & FrpcLib下载 URL的域名 (v3.0.4)\n* 新增：主动控制·客户端增加服务地址历史记录（测试接口通过后自动加入） (v3.0.4)\n* 优化：主动控制·客户端发送短信手机号长度限制放宽到20位（短信平台号） (v3.0.4)\n* 优化：提高主动控制·客户端远程查通话、远程查话簿兼容性（兼容鸿蒙2.0） (v3.0.4)\n* 新增：关于页面增加QQ频道入口 (v3.0.4)\n### APK版本说明：\n* universal: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下3种CPU架构so）\n* armeabi-v7a: 32位ARM设备（备用机首选）\n* arm64-v8a: 64位ARM设备（主流旗舰机）\n* x86: 32位Intel设备\n* x86_64: 64/32位Intel设备",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v3.0.4 (Kotlin full rewrite edition), the release includes all features of v3.0.3 and additionally optimizes the rule edit to not show the installed app dropdown when async app info fetch is off, allows entering the active control client -> one-click new phone -> offline mode without filling in the server address, fixes a force close when testing TG/Webhook sending channels due to Toast on a child thread, fixes transcoding failure when inserting {{receive time}} in sender nickname (Nested Group), optimizes email subject and sender nickname by replacing colons and newlines with hyphens, replaces domain names for online upgrade and FrpcLib download URLs, adds service address history in the active control client (automatically added after a successful test), relaxes the phone number length limit to 20 digits for sending SMS in the active control client (for SMS platform numbers), improves compatibility of remote call log and contact query in the active control client (compatible with HarmonyOS 2.0), and adds a QQ channel entry on the about page."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v3_0_5",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.0.5",
+      "tag_name": "v3.0.5",
+      "title": "SmsForwarder v3.0.5 Kotlin全新重构版",
+      "time_hint": "2022-07-01",
+      "published_at": "2022-07-01T09:59:45Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v3.0.5",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v3.0.5 Kotlin全新重构版\nTag: v3.0.5; draft: False; prerelease: True; published_at: 2022-07-01T09:59:45Z; created_at: 2022-07-01T09:43:55Z\nRelease notes:\n### 【注意】\n* v3.x版本是全新重构开发，可能一开始并不稳定，建议升级前先做好数据备份！（一键克隆离线导出）\n* 从2.x升级上来耗电异常的，尝试全新安装后导入配置\n### 更新日志\n* 重构：采用 Kotlin 全新重构（不是迁移代码）\n* 重构：全新的界面 XUI 实现（略微提升点前端美感）\n* 重构：全新的 HttpServer 实现（采用 AndServer，目前有6个API）\n* 新增：增加 Frpc 支持内网穿透（按需下载 FrpcLib 动态库支持）\n* 新增：主动控制·客户端（界面直接远程发短信等）\n* 新增：保活措施 Cactus（双进程前台服务，JobScheduler，onePix(一像素)，WorkManager，无声音乐）\n* 优化：适配 Android 4.4 ~ 12.0\n* 优化：舍弃 emailkit 依赖，直接基于 android-mail 重写\n* 优化：自动过滤指定时间内的重复消息\n* 修复：v2.x 的 issue\n* 精简：一些不必要的功能（含尚未迁移的小功能）\n---\n* 修复：短信广播中的权限判断导致OV系手机转发异常 (v3.0.1)\n* 修复：在子线程中调用Toast的异常情况处理 (v3.0.1)\n---\n* 优化：统一卡槽ID枚举值（ 0=Sim1, 1=Sim2, -1=获取失败）【未做机型适配】 (v3.0.2)\n* 修复：卡槽匹配转发规则错误（卡槽id：-1=获取失败、0=卡槽1、1=卡槽2，但是 Rule 表里存的是 SIM1/SIM2） (v3.0.2)\n* 修复：通用设置中无法关闭转发应用通知开关 (v3.0.2)\n* 修复：无网络时主动控制·服务端界面自动获取IP异常 (v3.0.2)\n* 整理：隐私权政策内容 (v3.0.2)\n* 优化：在线更新【主界面检测】 (v3.0.2)\n---\n* 优化：仅测试转发规则与发送通道时Toast提示 (v3.0.3)\n* 优化：主动控制·服务端定时更新UI机制 (v3.0.3)\n* 精简：ANR异常捕获依赖（ANR-WatchDog）【可能会增加耗电】 (v3.0.3)\n* 修复：转发规则编辑页面关闭自定义模板/正则替换时没有清空输入框 (v3.0.3)\n* 新增：启动时异步获取已安装App信息开关 (v3.0.3)\n* 新增：应用列表分类展示(用户应用/系统应用)/按应用名排序 (v3.0.3)\n* 新增：自定义模板支持{{APP名称}}标签（仅启用异步获取App列表时有值） (v3.0.3)\n* 修复：v3.0.2来电转发卡槽信息获取失败 (v3.0.3)\n* 新增：按需启用Cactus增强保活措施的开关【开启后可能会增加耗电】 (v3.0.3)\n---\n* 优化：未开启异步获取已安装App信息开关时，规则编辑不显示已安装APP下拉框 (v3.0.4)\n* 优化：允许不填写服务端地址直接进入 主动控制·客户端 -> 一键换新机 -> 离线模式 (v3.0.4)\n* 修复：测试TG/Webhook发送通道时，子线程调用Toast引发FC (v3.0.4)\n* 修复：发件人昵称插入 {{接收时间}} 时转码失败（Nested Group） (v3.0.4)\n* 优化：邮件主题、发件人昵称替换冒号、换行为 - (v3.0.4)\n* 整理：替换 在线升级 & FrpcLib下载 URL的域名 (v3.0.4)\n* 新增：主动控制·客户端增加服务地址历史记录（测试接口通过后自动加入） (v3.0.4)\n* 优化：主动控制·客户端发送短信手机号长度限制放宽到20位（短信平台号） (v3.0.4)\n* 优化：提高主动控制·客户端远程查通话、远程查话簿兼容性（兼容鸿蒙2.0） (v3.0.4)\n* 新增：关于页面增加QQ频道入口 (v3.0.4)\n---\n* 优化：发送通道`webhook`支持HTTP基本认证 【格式：http://username:password@domain.com/uri】 #175 (v3.0.5)\n* 优化：发送通道`企业微信应用`获取access_token失败时记录错误日志 (v3.0.5)\n* 优化：发送通道`短信`发送权限未授权/仅当无网络启用时记录错误日志 (v3.0.5)\n* 修复：邮箱发送通道收件地址不支持逗号分隔Bug（已支持逗号/分号） (v3.0.5)\n* 优化：测试发送通道/转发规则时创建子线程运行 & 异常捕获 (v3.0.5)\n* 优化：发送通道`Telegram`代理主机名支持域名解析 #172 (v3.0.5)\n* 新增：远程查配置接口增加卡槽信息与备注 #174 (v3.0.5)\n* 修复：发送通道`Telegram`启用Socks5支持用户密码鉴权 #172 (v3.0.5)\n* 优化：发送通道`webhook`的`webParams`非空时（wiki:2.1/2.2）不再限制必须包含`[msg]`标签 (v3.0.5)\n* 优化：发送通道`Bark`/`Gotify`支持HTTP基本认证 【格式：http://username:password@domain.com/uri】 #170 (v3.0.5)\n* 优化：支持`正则替换===右边`添加\\n用于手动换行 (v3.0.5)\n* 优化：webhook通道替换POST时替换webParams中[timestamp]/[sign]标签 (v3.0.5)\n* 新增：主动控制·客户端 -> 一键换新机 支持导出导入Frpc配置 (v3.0.5)\n* 优化：FrpcLib下载流程（增加确认对话框） (v3.0.5)\n* 新增：免打扰(禁用转发)时间段 (v3.0.5)\n* 修复：钉钉群机器人不填写加签密钥时报错（Empty key） (v3.0.5)\n### APK版本说明：\n* universal: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下3种CPU架构so）\n* armeabi-v7a: 32位ARM设备（备用机首选）\n* arm64-v8a: 64位ARM设备（主流旗舰机）\n* x86: 32位Intel设备\n* x86_64: 64/32位Intel设备",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v3.0.5 (Kotlin full rewrite edition), the release includes all features of v3.0.4 and additionally optimizes the webhook sending channel to support HTTP basic authentication, optimizes WeCom app channel to log errors when access_token retrieval fails, optimizes SMS sending channel to log errors when permission is not granted or when enabled only without network, fixes a bug where email recipient addresses did not support comma separation (now supports comma/semicolon), optimizes testing of sending channels/forwarding rules by running in a child thread with exception capture, optimizes Telegram proxy hostname to support domain resolution, adds SIM slot info and remarks to the remote config query interface, fixes Telegram Socks5 user password authentication, optimizes webhook webParams to no longer require the [msg] tag when non-empty, optimizes Bark/Gotify to support HTTP basic authentication, supports adding \\n in regex replacement for manual line breaks, optimizes webhook channel to replace [timestamp]/[sign] tags in webParams during POST, adds export/import of Frpc configuration in one-click new phone, optimizes FrpcLib download flow with a confirmation dialog, adds a do-not-disturb (disable forwarding) time period, and fixes an error when DingTalk group robot does not fill in the signing key (Empty key)."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v3_0_6",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.0.6",
+      "tag_name": "v3.0.6",
+      "title": "SmsForwarder v3.0.6 Kotlin全新重构版",
+      "time_hint": "2022-07-06",
+      "published_at": "2022-07-06T07:29:39Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v3.0.6",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v3.0.6 Kotlin全新重构版\nTag: v3.0.6; draft: False; prerelease: False; published_at: 2022-07-06T07:29:39Z; created_at: 2022-07-06T07:16:06Z\nRelease notes:\n### 【注意】\n* v3.x版本是全新重构开发，可能一开始并不稳定，建议升级前先做好数据备份！（客户端>一键换新机>离线模式>导出）\n* 从2.x升级上来耗电异常的，尝试全新安装后导入配置\n### 更新日志\n* 重构：采用 Kotlin 全新重构（不是迁移代码）\n* 重构：全新的界面 XUI 实现（略微提升点前端美感）\n* 重构：全新的 HttpServer 实现（采用 AndServer，目前有6个API）\n* 新增：增加 Frpc 支持内网穿透（按需下载 FrpcLib 动态库支持）\n* 新增：主动控制·客户端（界面直接远程发短信等）\n* 新增：保活措施 Cactus（双进程前台服务，JobScheduler，onePix(一像素)，WorkManager，无声音乐）\n* 优化：适配 Android 4.4 ~ 12.0\n* 优化：舍弃 emailkit 依赖，直接基于 android-mail 重写\n* 优化：自动过滤指定时间内的重复消息\n* 修复：v2.x 的 issue\n* 精简：一些不必要的功能（含尚未迁移的小功能）\n---\n* 修复：短信广播中的权限判断导致OV系手机转发异常 (v3.0.1)\n* 修复：在子线程中调用Toast的异常情况处理 (v3.0.1)\n---\n* 优化：统一卡槽ID枚举值（ 0=Sim1, 1=Sim2, -1=获取失败）【未做机型适配】 (v3.0.2)\n* 修复：卡槽匹配转发规则错误（卡槽id：-1=获取失败、0=卡槽1、1=卡槽2，但是 Rule 表里存的是 SIM1/SIM2） (v3.0.2)\n* 修复：通用设置中无法关闭转发应用通知开关 (v3.0.2)\n* 修复：无网络时主动控制·服务端界面自动获取IP异常 (v3.0.2)\n* 整理：隐私权政策内容 (v3.0.2)\n* 优化：在线更新【主界面检测】 (v3.0.2)\n---\n* 优化：仅测试转发规则与发送通道时Toast提示 (v3.0.3)\n* 优化：主动控制·服务端定时更新UI机制 (v3.0.3)\n* 精简：ANR异常捕获依赖（ANR-WatchDog）【可能会增加耗电】 (v3.0.3)\n* 修复：转发规则编辑页面关闭自定义模板/正则替换时没有清空输入框 (v3.0.3)\n* 新增：启动时异步获取已安装App信息开关 (v3.0.3)\n* 新增：应用列表分类展示(用户应用/系统应用)/按应用名排序 (v3.0.3)\n* 新增：自定义模板支持{{APP名称}}标签（仅启用异步获取App列表时有值） (v3.0.3)\n* 修复：v3.0.2来电转发卡槽信息获取失败 (v3.0.3)\n* 新增：按需启用Cactus增强保活措施的开关【开启后可能会增加耗电】 (v3.0.3)\n---\n* 优化：未开启异步获取已安装App信息开关时，规则编辑不显示已安装APP下拉框 (v3.0.4)\n* 优化：允许不填写服务端地址直接进入 主动控制·客户端 -> 一键换新机 -> 离线模式 (v3.0.4)\n* 修复：测试TG/Webhook发送通道时，子线程调用Toast引发FC (v3.0.4)\n* 修复：发件人昵称插入 {{接收时间}} 时转码失败（Nested Group） (v3.0.4)\n* 优化：邮件主题、发件人昵称替换冒号、换行为 - (v3.0.4)\n* 整理：替换 在线升级 & FrpcLib下载 URL的域名 (v3.0.4)\n* 新增：主动控制·客户端增加服务地址历史记录（测试接口通过后自动加入） (v3.0.4)\n* 优化：主动控制·客户端发送短信手机号长度限制放宽到20位（短信平台号） (v3.0.4)\n* 优化：提高主动控制·客户端远程查通话、远程查话簿兼容性（兼容鸿蒙2.0） (v3.0.4)\n* 新增：关于页面增加QQ频道入口 (v3.0.4)\n---\n* 优化：发送通道`webhook`支持HTTP基本认证 【格式：http://username:password@domain.com/uri】 #175 (v3.0.5)\n* 优化：发送通道`企业微信应用`获取access_token失败时记录错误日志 (v3.0.5)\n* 优化：发送通道`短信`发送权限未授权/仅当无网络启用时记录错误日志 (v3.0.5)\n* 修复：邮箱发送通道收件地址不支持逗号分隔Bug（已支持逗号/分号） (v3.0.5)\n* 优化：测试发送通道/转发规则时创建子线程运行 & 异常捕获 (v3.0.5)\n* 优化：发送通道`Telegram`代理主机名支持域名解析 #172 (v3.0.5)\n* 新增：远程查配置接口增加卡槽信息与备注 #174 (v3.0.5)\n* 修复：发送通道`Telegram`启用Socks5支持用户密码鉴权 #172 (v3.0.5)\n* 优化：发送通道`webhook`的`webParams`非空时（wiki:2.1/2.2）不再限制必须包含`[msg]`标签 (v3.0.5)\n* 优化：发送通道`Bark`/`Gotify`支持HTTP基本认证 【格式：http://username:password@domain.com/uri】 #170 (v3.0.5)\n* 优化：支持`正则替换===右边`添加\\n用于手动换行 (v3.0.5)\n* 优化：webhook通道替换POST时替换webParams中[timestamp]/[sign]标签 (v3.0.5)\n* 新增：主动控制·客户端 -> 一键换新机 支持导出导入Frpc配置 (v3.0.5)\n* 优化：FrpcLib下载流程（增加确认对话框） (v3.0.5)\n* 新增：免打扰(禁用转发)时间段 (v3.0.5)\n* 修复：钉钉群机器人不填写加签密钥时报错（Empty key） (v3.0.5)\n---\n* 优化：发送通道企业微信应用支持http/socks5代理（应对IP白名单限制） (v3.0.6)\n* 修复：v3.0.5在部分机型解析/config/query返回sim_info_list节点时报错 (v3.0.6)\n### APK版本说明：\n* universal: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下3种CPU架构so）\n* armeabi-v7a: 32位ARM设备（备用机首选）\n* arm64-v8a: 64位ARM设备（主流旗舰机）\n* x86: 32位Intel设备\n* x86_64: 64/32位Intel设备",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v3.0.6 (Kotlin full rewrite edition), the release includes all features of v3.0.5 and additionally optimizes the WeCom app sending channel to support http/socks5 proxy (to deal with IP whitelist restrictions), and fixes an error when parsing the /config/query response's sim_info_list node on some models in v3.0.5."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v3_0_7",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.0.7",
+      "tag_name": "v3.0.7",
+      "title": "SmsForwarder v3.0.7 Kotlin全新重构版（7x24运维节版）",
+      "time_hint": "2022-07-24",
+      "published_at": "2022-07-24T14:38:20Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v3.0.7",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v3.0.7 Kotlin全新重构版（7x24运维节版）\nTag: v3.0.7; draft: False; prerelease: False; published_at: 2022-07-24T14:38:20Z; created_at: 2022-07-24T14:24:19Z\nRelease notes:\nPS. 自嘲一下，虽然咱们跟运维没有半毛钱关系，即便是免费开源的，也是 7x24 小时为各位老板服务、在线答疑\n---\n### 【注意】\n* v3.x版本是全新重构开发，可能一开始并不稳定，建议升级前先做好数据备份！（客户端>一键换新机>离线模式>导出）\n* 从2.x升级上来耗电异常的，尝试全新安装后导入配置\n### 更新日志\n* 重构：采用 Kotlin 全新重构（不是迁移代码）\n* 重构：全新的界面 XUI 实现（略微提升点前端美感）\n* 重构：全新的 HttpServer 实现（采用 AndServer，目前有6个API）\n* 新增：增加 Frpc 支持内网穿透（按需下载 FrpcLib 动态库支持）\n* 新增：主动控制·客户端（界面直接远程发短信等）\n* 新增：保活措施 Cactus（双进程前台服务，JobScheduler，onePix(一像素)，WorkManager，无声音乐）\n* 优化：适配 Android 4.4 ~ 12.0\n* 优化：舍弃 emailkit 依赖，直接基于 android-mail 重写\n* 优化：自动过滤指定时间内的重复消息\n* 修复：v2.x 的 issue\n* 精简：一些不必要的功能（含尚未迁移的小功能）\n---\n* 修复：短信广播中的权限判断导致OV系手机转发异常 (v3.0.1)\n* 修复：在子线程中调用Toast的异常情况处理 (v3.0.1)\n---\n* 优化：统一卡槽ID枚举值（ 0=Sim1, 1=Sim2, -1=获取失败）【未做机型适配】 (v3.0.2)\n* 修复：卡槽匹配转发规则错误（卡槽id：-1=获取失败、0=卡槽1、1=卡槽2，但是 Rule 表里存的是 SIM1/SIM2） (v3.0.2)\n* 修复：通用设置中无法关闭转发应用通知开关 (v3.0.2)\n* 修复：无网络时主动控制·服务端界面自动获取IP异常 (v3.0.2)\n* 整理：隐私权政策内容 (v3.0.2)\n* 优化：在线更新【主界面检测】 (v3.0.2)\n---\n* 优化：仅测试转发规则与发送通道时Toast提示 (v3.0.3)\n* 优化：主动控制·服务端定时更新UI机制 (v3.0.3)\n* 精简：ANR异常捕获依赖（ANR-WatchDog）【可能会增加耗电】 (v3.0.3)\n* 修复：转发规则编辑页面关闭自定义模板/正则替换时没有清空输入框 (v3.0.3)\n* 新增：启动时异步获取已安装App信息开关 (v3.0.3)\n* 新增：应用列表分类展示(用户应用/系统应用)/按应用名排序 (v3.0.3)\n* 新增：自定义模板支持{{APP名称}}标签（仅启用异步获取App列表时有值） (v3.0.3)\n* 修复：v3.0.2来电转发卡槽信息获取失败 (v3.0.3)\n* 新增：按需启用Cactus增强保活措施的开关【开启后可能会增加耗电】 (v3.0.3)\n---\n* 优化：未开启异步获取已安装App信息开关时，规则编辑不显示已安装APP下拉框 (v3.0.4)\n* 优化：允许不填写服务端地址直接进入 主动控制·客户端 -> 一键换新机 -> 离线模式 (v3.0.4)\n* 修复：测试TG/Webhook发送通道时，子线程调用Toast引发FC (v3.0.4)\n* 修复：发件人昵称插入 {{接收时间}} 时转码失败（Nested Group） (v3.0.4)\n* 优化：邮件主题、发件人昵称替换冒号、换行为 - (v3.0.4)\n* 整理：替换 在线升级 & FrpcLib下载 URL的域名 (v3.0.4)\n* 新增：主动控制·客户端增加服务地址历史记录（测试接口通过后自动加入） (v3.0.4)\n* 优化：主动控制·客户端发送短信手机号长度限制放宽到20位（短信平台号） (v3.0.4)\n* 优化：提高主动控制·客户端远程查通话、远程查话簿兼容性（兼容鸿蒙2.0） (v3.0.4)\n* 新增：关于页面增加QQ频道入口 (v3.0.4)\n---\n* 优化：发送通道`webhook`支持HTTP基本认证 【格式：http://username:password@domain.com/uri】 #175 (v3.0.5)\n* 优化：发送通道`企业微信应用`获取access_token失败时记录错误日志 (v3.0.5)\n* 优化：发送通道`短信`发送权限未授权/仅当无网络启用时记录错误日志 (v3.0.5)\n* 修复：邮箱发送通道收件地址不支持逗号分隔Bug（已支持逗号/分号） (v3.0.5)\n* 优化：测试发送通道/转发规则时创建子线程运行 & 异常捕获 (v3.0.5)\n* 优化：发送通道`Telegram`代理主机名支持域名解析 #172 (v3.0.5)\n* 新增：远程查配置接口增加卡槽信息与备注 #174 (v3.0.5)\n* 修复：发送通道`Telegram`启用Socks5支持用户密码鉴权 #172 (v3.0.5)\n* 优化：发送通道`webhook`的`webParams`非空时（wiki:2.1/2.2）不再限制必须包含`[msg]`标签 (v3.0.5)\n* 优化：发送通道`Bark`/`Gotify`支持HTTP基本认证 【格式：http://username:password@domain.com/uri】 #170 (v3.0.5)\n* 优化：支持`正则替换===右边`添加\\n用于手动换行 (v3.0.5)\n* 优化：webhook通道替换POST时替换webParams中[timestamp]/[sign]标签 (v3.0.5)\n* 新增：主动控制·客户端 -> 一键换新机 支持导出导入Frpc配置 (v3.0.5)\n* 优化：FrpcLib下载流程（增加确认对话框） (v3.0.5)\n* 新增：免打扰(禁用转发)时间段 (v3.0.5)\n* 修复：钉钉群机器人不填写加签密钥时报错（Empty key） (v3.0.5)\n---\n* 优化：发送通道企业微信应用支持http/socks5代理（应对IP白名单限制） (v3.0.6)\n* 修复：v3.0.5在部分机型解析/config/query返回sim_info_list节点时报错 (v3.0.6)\n---\n* 优化：Android 4.4 兼容性（410棒子） #180  (v3.0.7)\n* 新增：/config/query接口返回version_code和version_name字段 #184 (v3.0.7)\n* 升级：frpclib 到 v0.44.0 (v3.0.7)\n* 新增：钉钉企业内机器人发送通道（支持私发）(v3.0.7)\n* 修复：通道名称太长导致编辑转发规则报错（setSpan (N ... N) ends beyond length 20）(v3.0.7)\n* 优化：bark/gotify通道忽略https证书（提高自建服务端兼容性）(v3.0.7)\n### APK版本说明：\n* universal: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下4种CPU架构so）\n* armeabi-v7a: 32位ARM设备（备用机首选）\n* arm64-v8a: 64位ARM设备（主流旗舰机）\n* x86: 32位Intel设备\n* x86_64: 64/32位Intel设备",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v3.0.7 (Kotlin full rewrite edition, 7x24 Ops Festival edition), the release includes all features of v3.0.6 and additionally optimizes Android 4.4 compatibility, adds version_code and version_name fields to the /config/query interface, upgrades frpclib to v0.44.0, adds a DingTalk enterprise internal robot sending channel (supports private messaging), fixes an error when editing forwarding rules due to channel name being too long (setSpan ends beyond length 20), and optimizes Bark/Gotify channels to ignore HTTPS certificates (improving self-hosted server compatibility)."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v3_0_8",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.0.8",
+      "tag_name": "v3.0.8",
+      "title": "SmsForwarder v3.0.8 Kotlin全新重构版",
+      "time_hint": "2022-08-15",
+      "published_at": "2022-08-15T05:50:18Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v3.0.8",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v3.0.8 Kotlin全新重构版\nTag: v3.0.8; draft: False; prerelease: False; published_at: 2022-08-15T05:50:18Z; created_at: 2022-08-15T05:31:18Z\nRelease notes:\n日本无条件投降77周年，勿忘历史，我辈自强！\n---\n### 【注意】\n* v3.x版本是全新重构开发，可能一开始并不稳定，建议升级前先做好数据备份！（客户端>一键换新机>离线模式>导出）\n* 从2.x升级上来耗电异常的，尝试全新安装后导入配置\n### 更新日志\n- 修复：短信内容包含“<\"字符时，用tg转发失败 #205\n- 优化：随身WiFi断电重启后frpc启动不成功 #199\n- 新增：HttpServer允许自主指定Web客户端目录（/sdcard/Download/目录下） #191\n- 优化：主动控制·客户端的历史列表增加设备名称、远程发短信增加卡槽备注 #201\n- 新增：企微应用消息允许指定部门和指定标签\n- 修复：钉钉企业内机器人发送通道不能转发bug（”转发中“）\n- 升级：gradle依赖库版本\n- 修复：Android 5.0 以下TLS 版本过低导致 Okhttp https 握手失败（最高支持TLSv1.2） #197\n- 优化：倒计时Button在处理结束时提前结束\n- 优化：英文系统的界面布局微调\n- 优化：消灭任何可能导致内存泄露的代码（长期跟踪的改造点）\n- 升级：XXPermissions 至 v15.0 （修复 Android 12 内存泄漏问题）\n- 升级：XUI解决xtoast内存泄漏问题\n- 升级：androidx.room 版本到 2.4.3\n- 升级：解决XUpdate可能出现的空指针问题\n- 优化：电子邮箱发送通道自动替换正文中的`\\n`为`<br>`(邮件正文是html)\n- 修复：gotify insert bug (#193)\n- 修复：远程查通话和远程查短信关键字搜索时分页bug\n- 新增：主动控制增加远程WOL功能（用于远程唤醒同一个局域网其他设备） #190\n- 优化：发送通道企微应用消息增加限制：@all或指定成员（避免82001错误）\n### APK版本说明：\n* universal: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下4种CPU架构so）\n* armeabi-v7a: 32位ARM设备（备用机首选）\n* arm64-v8a: 64位ARM设备（主流旗舰机）\n* x86: 32位Intel设备\n* x86_64: 64/32位Intel设备",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v3.0.8 (Kotlin full rewrite edition), the release fixes an issue where SMS content containing '<' fails to forward via Telegram, optimizes Frpc startup failure after portable WiFi power cycle, adds the ability for HttpServer to specify a custom web client directory, optimizes the active control client history list to show device name and SIM slot remarks for remote SMS, adds the ability for WeCom app messages to specify departments and tags, fixes a bug where the DingTalk enterprise internal robot sending channel could not forward (stuck on 'forwarding'), upgrades Gradle dependency versions, fixes an issue where Android 5.0 and below had TLS version too low causing OkHttp HTTPS handshake failure (max supported TLSv1.2), optimizes countdown button to end early when processing finishes, fine-tunes UI layout for English systems, eliminates potential memory leak code, upgrades XXPermissions to v15.0 (fixes Android 12 memory leak), upgrades XUI to fix xtoast memory leak, upgrades androidx.room to 2.4.3, fixes potential null pointer in XUpdate, optimizes email sending channel to auto-replace \\n with <br> in body (HTML email), fixes a Gotify insert bug, fixes pagination bugs in remote call log and SMS keyword search, adds remote Wake-on-LAN (WOL) functionality in active control, and optimizes WeCom app message sending channel to limit @all or specify members (to avoid 82001 error)."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v3_0_9",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.0.9",
+      "tag_name": "v3.0.9",
+      "title": "SmsForwarder v3.0.9 抗战胜利77周年纪念版",
+      "time_hint": "2022-09-03",
+      "published_at": "2022-09-03T04:09:44Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v3.0.9",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v3.0.9 抗战胜利77周年纪念版\nTag: v3.0.9; draft: False; prerelease: False; published_at: 2022-09-03T04:09:44Z; created_at: 2022-09-03T04:01:05Z\nRelease notes:\n`中国人民抗日战争`暨`世界反法西斯战争`胜利77周年纪念日版\n**勿忘往昔峥嵘，铭记伟大胜利，缅怀英烈，吾辈自强！**\n---\n### 【注意】\n* v3.x版本是全新重构开发，可能一开始并不稳定，建议升级前先做好数据备份！（客户端>一键换新机>离线模式>导出）\n* 从2.x升级上来耗电异常的，尝试全新安装后导入配置\n### 更新日志\n* 优化：`HttpServer`在`低版本Android`下`MIME`类型支持`js`、`css`、`icon`（修复web客户端页面空白问题）\n* 新增：来电提醒（响铃立即转发，无卡槽信息） #213\n* 整理：`frpc`客户端配置示例与`wiki`示例保持一致\n* 新增：`手机短信` 发送通道的 `接收手机` 允许插入 `{{来源号码}}` 标签来实现短信自动回复（短信/来电场景） #211\n* 优化：`Telegram`发送通道仅`POST`请求时转义原始短信内容中的 `<` `>` `&` `\"` 字符（正则替换不影响） #210\n* 优化：让 Android 4.4 支持 TLS 1.3 #197（修复证书错误）\n* 新增：`飞书企业应用`发送通道\n* 新增：测试通知标题\n* 修复：英文环境转发规则的正则表达式 (#208)\n### APK版本说明：\n* universal: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下4种CPU架构so）\n* armeabi-v7a: 32位ARM设备（备用机首选）\n* arm64-v8a: 64位ARM设备（主流旗舰机）\n* x86: 32位Intel设备\n* x86_64: 64/32位Intel设备",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v3.0.9 (77th Anniversary of Victory edition), the release optimizes HttpServer MIME type support for js, css, and icon on low Android versions (fixing blank web client pages), adds incoming call alert (rings immediately, no SIM slot info), organizes Frpc client configuration examples to match wiki examples, adds the ability to insert {{source number}} tag in the recipient phone field of the SMS sending channel for auto-reply (SMS/call scenarios), optimizes Telegram sending channel to escape '<', '>', '&', '\"' characters in original SMS content only for POST requests (regex replacement unaffected), enables TLS 1.3 support for Android 4.4 (fixing certificate errors), adds a Feishu enterprise app sending channel, adds a test notification title, and fixes a regex issue in forwarding rules under English locale."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v3_1_0",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.1.0",
+      "tag_name": "v3.1.0",
+      "title": "SmsForwarder v3.1.0 1024程序猿节版",
+      "time_hint": "2022-10-24",
+      "published_at": "2022-10-24T16:09:37Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v3.1.0",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v3.1.0 1024程序猿节版\nTag: v3.1.0; draft: False; prerelease: True; published_at: 2022-10-24T16:09:37Z; created_at: 2022-10-24T16:00:57Z\nRelease notes:\nPS. 踩着1024的尾巴，提交了3.1.0版本，迟到的程序猿节礼物！\n---\n### 【注意】\n* v3.x版本是全新重构开发，可能一开始并不稳定，建议升级前先做好数据备份！（客户端>一键换新机>离线模式>导出）\n* 从2.x升级上来耗电异常的，尝试全新安装后导入配置\n### 更新日志\n* 新增：微信小程序客户端的太阳码\n* 新增：`HttpServer`请求/应答报文进行`国密SM4`对称加密传输 【配套`SmsF`微信小程序】\n* 新增：`HttpServer`请求/应答报文进行`RSA`非对称加密传输\n* 升级：gradle及依赖版本\n* 修复：远程控制发送短信时手机号不能包含国家地区代码 (#231)\n* 优化：允许自定义客户端与服务端时间容差，避免请求重放攻击 #227\n* 优化：提升发送通道多参数分隔的兼容性\n* 优化：Bark的消息链接支持URL Scheme #229\n* 优化：提升发送通道多参数分隔的兼容性\n* 优化：检查合法的URL时支持IPv6地址（例如：主动控制·客户端的服务地址）\n* 整理：更新APP通知转发的多重匹配规则示例\n* 新增：`webhook`发送通道增加`PUT`/`PATCH`请求方式 #206\n* 优化：仅当有WIFI网络时自动检查更新/获取提示\n* 新增：自动删除N天前的转发记录（0=禁用，触发机制：每次电量变化时扫描） #224\n* 优化：自动消除通知仅消除已匹配的通知 #204（临时方案，重复查询换取准确性）\n* 修复：通话转发卡槽信息识别错误\n* 精简：去掉美团多渠道打包\n* 升级：权限请求框架 XXPermissions\n* 修复：极端情况下Gson().fromJson爆空指针错误 #207\n* 修复：通过转发日志中重新发送短信时，{{接收时间}}错误 #218\n### APK版本说明：\n* universal: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下4种CPU架构so）\n* armeabi-v7a: 32位ARM设备（备用机首选）\n* arm64-v8a: 64位ARM设备（主流旗舰机）\n* x86: 32位Intel设备\n* x86_64: 64/32位Intel设备",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v3.1.0 (1024 Programmer's Day edition), the release adds a solar code for the WeChat mini program client, adds SM4 symmetric encryption for HttpServer request/response messages (supporting the SmsF WeChat mini program), adds RSA asymmetric encryption for HttpServer request/response messages, upgrades Gradle and dependencies, fixes an issue where phone numbers with country codes could not be used for remote SMS sending, allows customizing the time tolerance between client and server to prevent replay attacks, improves compatibility of multi-parameter separation in sending channels, supports URL Scheme for Bark message links, improves URL validation to support IPv6 addresses, updates examples for app notification forwarding multi-match rules, adds PUT/PATCH request methods for the webhook sending channel, optimizes automatic update checks to only occur on WiFi, adds automatic deletion of forwarding records older than N days (0=disabled, triggered on battery change), optimizes automatic notification dismissal to only dismiss matched notifications (temporary solution, trades repeated queries for accuracy), fixes call forwarding SIM slot info recognition error, removes Meituan multi-channel packaging, upgrades the XXPermissions permission request framework, fixes an extreme case null pointer error in Gson().fromJson, and fixes an incorrect {{receive time}} when resending SMS from the forwarding log."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v3_1_1",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.1.1",
+      "tag_name": "v3.1.1",
+      "title": "SmsForwarder v3.1.1 1024程序猿节版",
+      "time_hint": "2022-10-27",
+      "published_at": "2022-10-27T13:06:46Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v3.1.1",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v3.1.1 1024程序猿节版\nTag: v3.1.1; draft: False; prerelease: False; published_at: 2022-10-27T13:06:46Z; created_at: 2022-10-27T12:58:17Z\nRelease notes:\nPS. 踩着1024的尾巴，提交了3.1.0版本，迟到的程序猿节礼物！\n---\n### 【注意】\n* v3.x版本是全新重构开发，可能一开始并不稳定，建议升级前先做好数据备份！（客户端>一键换新机>离线模式>导出）\n* 从2.x升级上来耗电异常的，尝试全新安装后导入配置\n### 更新日志\n* 紧急修复：微信小程序端报错“sm4Key must not be null”\n* 新增：微信小程序客户端的太阳码\n* 新增：`HttpServer`请求/应答报文进行`国密SM4`对称加密传输 【配套`SmsF`微信小程序】\n* 新增：`HttpServer`请求/应答报文进行`RSA`非对称加密传输\n* 升级：gradle及依赖版本\n* 修复：远程控制发送短信时手机号不能包含国家地区代码 (#231)\n* 优化：允许自定义客户端与服务端时间容差，避免请求重放攻击 #227\n* 优化：提升发送通道多参数分隔的兼容性\n* 优化：Bark的消息链接支持URL Scheme #229\n* 优化：提升发送通道多参数分隔的兼容性\n* 优化：检查合法的URL时支持IPv6地址（例如：主动控制·客户端的服务地址）\n* 整理：更新APP通知转发的多重匹配规则示例\n* 新增：`webhook`发送通道增加`PUT`/`PATCH`请求方式 #206\n* 优化：仅当有WIFI网络时自动检查更新/获取提示\n* 新增：自动删除N天前的转发记录（0=禁用，触发机制：每次电量变化时扫描） #224\n* 优化：自动消除通知仅消除已匹配的通知 #204（临时方案，重复查询换取准确性）\n* 修复：通话转发卡槽信息识别错误\n* 精简：去掉美团多渠道打包\n* 升级：权限请求框架 XXPermissions\n* 修复：极端情况下Gson().fromJson爆空指针错误 #207\n* 修复：通过转发日志中重新发送短信时，{{接收时间}}错误 #218\n### APK版本说明：\n* universal: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下4种CPU架构so）\n* armeabi-v7a: 32位ARM设备（备用机首选）\n* arm64-v8a: 64位ARM设备（主流旗舰机）\n* x86: 32位Intel设备\n* x86_64: 64/32位Intel设备",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v3.1.1 (1024 Programmer's Day edition), the release includes all features of v3.1.0 and additionally provides an emergency fix for the WeChat mini program client error 'sm4Key must not be null'."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v3_2_0",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.2.0",
+      "tag_name": "v3.2.0",
+      "title": "SmsForwarder v3.2.0 免费开源2周年纪念版",
+      "time_hint": "2023-02-14",
+      "published_at": "2023-02-14T09:25:00Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v3.2.0",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v3.2.0 免费开源2周年纪念版\nTag: v3.2.0; draft: False; prerelease: False; published_at: 2023-02-14T09:25:00Z; created_at: 2023-02-14T09:15:59Z\nRelease notes:\nPS. 距离上一次1024发版，已经过去快5个月了，期间发生不少事，一直没更新这个项目，不管如何，魔幻的2022年都过去了！\n感谢大家这2年来的陪伴与支持，祝大家有情人终成眷属，情人节快乐！\n---\n### 【注意】\n* v3.x版本是全新重构开发，可能一开始并不稳定，建议升级前先做好数据备份！（客户端>一键换新机>离线模式>导出）\n* `v3.2.0` 去除了 `mmkv` 依赖，采用 `SharedPreferences` 来保存配置，升级之后通用设置中的配置请重新配置，具体原因参见 [Issue #245](https://github.com/pppscn/SmsForwarder/issues/245)\n* 升级完毕后，建议离线导出配置，完全卸载干净全新安装后再导入配置（可以避免一些莫名其妙的玄学问题，例如：耗电异常）\n---\n### 更新日志\n* 新增：短信指令（根据短信指令开关对应功能） #I5YX3F\n* 新增：监听网络状态变化提醒（APP通知转发，包名：77777777） #259\n* 新增：远程改话簿（方便给老人家添加联系人） #256\n* 新增：远程查询手机定位（方便找回手机/防止老少走丢） #256\n* 新增：Socket发送通道（支持MQTT/TCP/UDP协议） #252\n* 新增：发送通道 URL Scheme（支持跨应用数据传递）#250\n* 新增：自动消除额外APP通知 #232 #248\n* 优化：短信/通话转发获取卡槽信息机制（自行备注卡槽SubId对应）#228 #235\n* 优化：来电转发逻辑 & 新增提醒类型（1.来电挂机 2.去电挂机 3.未接来电 4.来电提醒 5.来电接通 6.去电拨出）\n* 优化：单个转发规则支持绑定多个发送通道，且支持执行逻辑（全部执行/失败即止/成功即止） #247\n* 优化：转发日志列表以原始信息为主，聚合展示转发日志（一对多）\n* 优化：已安装App信息列表异步加载机制\n* 优化：电池状态监听/网络状态监控 在未开启去重时默认开启1秒去重\n* 优化：利用BatteryReceiver守护自启动的Frpc (试验) #254\n* 修复：Android 13 无法授予通知权限 #255\n* 修复：重启手机自动启动APP时加载配置失败 #233 #245\n* 修复：转发消息遍历发送通道时未跳过已禁用的通道\n* 修复：降级Android Gradle插件版本以兼容4.4 (#249 by NyaMisty)\n* 升级：andserver到2.1.12（加快web端上下行速度等）\n* 升级：frpclib 到 v0.47.0\n* 升级：androidx组件和kotlin版本\n还有一些细微调整参见`github`提交记录\n---\n### APK版本说明：\n* universal（10XXXX）: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下4种CPU架构so）\n* armeabi-v7a（20XXXX）: 32位ARM设备（备用机首选）\n* arm64-v8a（30XXXX）: 64位ARM设备（主流旗舰机）\n* x86（40XXXX）: 32位Intel设备\n* x86_64（50XXXX）: 64/32位Intel设备",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v3.2.0 (2nd Anniversary edition), the release adds SMS commands (toggle functions based on SMS commands), adds network status change monitoring (app notification forwarding, package name 77777777), adds remote contact editing (convenient for adding contacts for elderly), adds remote phone location query (to find phone/prevent loss), adds a Socket sending channel (supporting MQTT/TCP/UDP protocols), adds a URL Scheme sending channel (for cross-app data transfer), adds automatic dismissal of extra app notifications, optimizes SIM slot info retrieval for SMS/call forwarding (self-annotate SIM slot SubId mapping), optimizes call forwarding logic and adds reminder types (1. incoming hangup, 2. outgoing hangup, 3. missed call, 4. incoming alert, 5. incoming answered, 6. outgoing dialed), allows a single forwarding rule to bind multiple sending channels with execution logic (execute all/stop on failure/stop on success), optimizes forwarding log list to show original messages and aggregate forwarding logs (one-to-many), optimizes async loading of installed app info list, enables 1-second deduplication by default for battery status and network monitoring when dedup is off, uses BatteryReceiver to guard auto-started Frpc (experimental), fixes inability to grant notification permission on Android 13, fixes configuration loading failure on auto-start after reboot, fixes forwarding message traversal skipping disabled channels, downgrades Android Gradle plugin version for 4.4 compatibility, upgrades andserver to 2.1.12 (speeds up web upload/download), upgrades frpclib to v0.47.0, and upgrades androidx components and Kotlin version."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v3_3_0",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.3.0",
+      "tag_name": "v3.3.0",
+      "title": "SmsForwarder v3.3.0 免费开源3周年纪念版",
+      "time_hint": "2024-02-14",
+      "published_at": "2024-02-14T02:22:07Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v3.3.0",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v3.3.0 免费开源3周年纪念版\nTag: v3.3.0; draft: False; prerelease: False; published_at: 2024-02-14T02:22:07Z; created_at: 2024-02-14T02:15:31Z\nRelease notes:\n新春快乐，龙年大吉！\n感谢大家3年来的陪伴与支持，顺祝情人节快乐！\n---\n【重点推荐】\n`自动任务·快捷指令`，轻松自动化，助您事半功倍，更多时间享受亲情陪伴！（v3.3+）\n---\n### 【注意】\n* `v3.2.0` 去除了 `mmkv` 依赖，采用 `SharedPreferences` 来保存配置，如果从低于 `v3.2.0`  升级后请重新配置，具体原因参见 [Issue #245](https://github.com/pppscn/SmsForwarder/issues/245)\n* 升级完毕后，建议离线导出配置（客户端>一键换新机>离线模式>导出），完全卸载干净全新安装后再导入配置（可以避免一些莫名其妙的玄学问题，例如：耗电异常）\n---\n### 更新日志\n* 新增：自动任务·快捷指令 —— 触发条件：定时任务\n* 新增：自动任务·快捷指令 —— 触发条件：到达地点&离开地点\n* 新增：自动任务·快捷指令 —— 触发条件：SIM卡槽状态改变（废弃：`66666666`）\n* 新增：自动任务·快捷指令 —— 触发条件：网络状态改变（废弃：`77777777`）\n* 新增：自动任务·快捷指令 —— 触发条件：电池电量&充电状态改变（废弃：`88888888`）\n* 新增：自动任务·快捷指令 —— 触发条件：锁屏解锁 #370\n* 新增：自动任务·快捷指令 —— 执行动作：发送短信、推送通知、清理日志、通用设置、启停Frpc、启停HttpServer、启停规则、启停通道\n* 新增：`企微群机器人`发送`文本消息`时支持at成员 #376\n* 新增：通话转发规则的`匹配字段`增加`通话类型` & 自定义模板增加`{{通话类型}}`标签 #305 #381\n* 新增：重写`Log`类，将`Log.*`写入文件，以便排查问题 #269\n* 新增：多语言切换设置适应国际化 #378\n* 新增：繁体中文语言包(机器转换)\n* 新增：App通知转发增加uid条件，区分双开应用（需Android Q+）\n* 新增：自定义模板可用标签 `{{定位信息}}`（英文系统：`{{LOCATION}}`） #341 #343\n* 新增：网络状态变化通知增加当前WiFi名称(SSID)/移动数据卡槽 #355\n* ~~新增：SIM卡槽状态监控（包名：`66666666`） #355~~\n* 新增：短信指令增加短信发送功能 #338\n* 新增：短信指令打开或关闭 WiFi #316 （试验性）\n* 新增：短信指令`smsf#system#reboot`和`smsf#system#shutdown`（试验性，仅适用root过的机器）\n* 新增：webParams 的 `[receive_time]` 标签支持自定义时间格式 #327\n* 新增：网络状态监控通知增加IPv6获取 #321\n* 新增：转发规则可以设置免打扰(禁用转发)时间段 #318\n* 新增：`发送通道`的测试内容携带`通道名称` #317\n* 新增：`{{当前时间}}` `{{CURRENT_TIME}}` 标签（便于调试）\n* 新增：钉钉群机器人支持markdown格式 #311\n* 新增：钉钉群机器人支持at钉钉号/海外手机号 #312\n* 新增：支持Bark推送加密 #273 (详见：https://bark.day.app/#/encryption)\n* 优化：记录crash日志\n* 优化：`飞书群机器人`和`飞书企业应用`支持自定义`消息卡片`模板 #381\n* 优化：`飞书企业应用`支持指定`消息接收者ID类型`\n* 优化：主动控制·服务端/客户端默认隐藏密钥\n* 优化：在 Android 4.4 上使用矢量图\n* 优化：请求重试机制（无网络时也执行重试机制 & 修正延迟时间单位错误）\n* 优化：MainActivity 内容填充方式（避免一次性加载多个Fragment）&& 提升APP启动速度与稳定性\n* 优化：左滑菜单 与 TabBar 美化\n* 优化：仅当开启自动检查且有网络时，App启动时自动检查更新\n* 优化：仅当开启`启动时异步获取已安装App列表`总开关时获取\n* 优化：采用 LiveEventBus 替换掉 Looper.loop() 后再 Toast 形式\n* 优化：应用列表增加UID & APP通知自定义模板增加可用标签 `{{UID}}` #366\n* ~~优化：网络状态监控（包名：`77777777`），multi SIM 切换问题 #355~~\n* 优化：避免 Room 主线程查询缓存 #345\n* 优化：自动删除N天前的转发记录时同时清理缓存 #354\n* 优化：`企业微信应用`发送通道允许自定义API地址【通过反向代理(proxy_pass https://qyapi.weixin.qq.com;)绕过IP白名单限制】 #352\n* 优化：移除 `kmnkt` 依赖，重构 `SocketUtils` #339 #349\n* 优化：`Webhook`通道新增成功应答关键字（置空则http状态200即为成功） #346\n* 优化：增加企业专有钉钉的支持 #348 （填写`Webhook`全地址）\n* 优化：在选择Web客户端目录的时候弹出授权管理所有文件访问的权限 #332\n* 优化：主动控制·远程WOL唤醒功能 #328\n* 优化：`企微群机器人`发送通道支持`Markdown`格式消息 #292\n* 优化：接口请求失败重试时间间隔输入方式 #285\n* 优化：发送通道的Bark的消息链接取消限制 #290\n* 优化：避免个别机型重启后自启动时`startService`可能空指针导致`crash`\n* 优化：一键换新机·导出/导入通用设置的机制\n* 优化：APP通知转发的默认模板去除卡槽主键(SubId)字段\n* 优化：客户端发送短信，取消对手机号长度检测限制 #264\n* 修复： 部分 Android 4.4 系统（随身WiFi）不支持 `instr()` 函数的问题\n* 修复：提示连不上`smtp.gmail.com`的`587`端口问题\n* 修复：MQTT能连接成功但是不能正常工作的问题 #310\n* 修复：没有跳转到具体的通知权限设置页的问题\n* 修复：应用转发规则编辑界面的`通知标题`按钮点击无效\n* 修复：CactusSave中SharedPreference的键值对应错误 #294\n* 修复：错误的 URL 有效性验证正则表达式 (#286)\n* 修复：无法自动消除通知的bug\n* 修复：通过转发日志中重试发送/重新匹配规则并发送消息时，{{接收时间}}错误（取当前时间） #275\n* 升级：frpclib 到 `v0.54.0`（支持最新的XTCP） #329\n* 升级：XUI框架版本（优化XToastUtils等）\n* 升级：XUpdate 依赖版本（优化默认版本解析器）\n* 升级：CodeView & XXPermissions 依赖库版本（提升兼容性）\n* 精简：界面微调 & 去除不常用设置\n* 整理：code review & 精简无用资源\n* 整理：Release Assets文件命名简化 #298\n还有一些细微调整参见`github`提交记录\n---\n### APK版本说明：\n* universal（10XXXX）: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下4种CPU架构so）\n* armeabi-v7a（20XXXX）: 32位ARM设备（备用机首选）\n* arm64-v8a（30XXXX）: 64位ARM设备（主流旗舰机）\n* x86（40XXXX）: 32位Intel设备\n* x86_64（50XXXX）: 64/32位Intel设备",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v3.3.0 (3rd Anniversary edition), the release adds automatic tasks/shortcut commands with trigger conditions: scheduled tasks, arriving/leaving a location, SIM slot status change (deprecates 66666666), network status change (deprecates 77777777), battery level/charging status change (deprecates 88888888), screen lock/unlock; and execution actions: send SMS, push notification, clear logs, general settings, start/stop Frpc, start/stop HttpServer, start/stop rules, start/stop channels. It also adds support for @members in WeCom group robot text messages, adds call type as a matching field in call forwarding rules and a {{call type}} template tag, rewrites the Log class to write logs to files for troubleshooting, adds multi-language switching settings, adds Traditional Chinese language pack (machine translated), adds UID condition for app notification forwarding to distinguish dual apps (requires Android Q+), adds a {{location info}} template tag, adds current WiFi name (SSID)/mobile data SIM slot to network status change notifications, adds SMS sending function to SMS commands, adds SMS commands to turn WiFi on/off (experimental), adds SMS commands smsf#system#reboot and smsf#system#shutdown (experimental, root only), adds custom time format support for the [receive_time] tag in webParams, adds IPv6 retrieval to network status monitoring notifications, allows forwarding rules to set do-not-disturb time periods, adds channel name to sending channel test content, adds {{current time}} tag, adds DingTalk group robot markdown format support, adds DingTalk group robot @DingTalk ID/overseas phone number support, adds Bark push encryption support, records crash logs, optimizes Feishu group robot and enterprise app to support custom message card templates, optimizes Feishu enterprise app to specify message recipient ID type, hides keys by default in active control server/client, uses vector graphics on Android 4.4, optimizes request retry mechanism (retries even without network, fixes delay unit error), optimizes MainActivity content filling to avoid loading multiple fragments at once and improve startup speed and stability, beautifies left slide menu and TabBar, only auto-checks for updates on startup when enabled and network available, only fetches installed app list when the master switch is on, replaces Looper.loop() Toast with LiveEventBus, adds UID to app list and {{UID}} template tag for app notifications, optimizes network status monitoring for multi-SIM switching issues, avoids Room main thread query cache, cleans cache when auto-deleting old forwarding records, allows custom API address for WeCom app sending channel (to bypass IP whitelist via reverse proxy), removes kmnkt dependency and refactors SocketUtils, adds success response keyword for Webhook channel (empty means HTTP 200 is success), adds support for enterprise-specific DingTalk (fill in full Webhook address), prompts for manage all files permission when selecting web client directory, optimizes remote WOL functionality, supports Markdown format for WeCom group robot sending channel, improves input method for retry interval on request failure, removes restrictions on Bark message links, avoids potential null pointer crash on auto-start service after reboot on some models, optimizes one-click new phone export/import of general settings, removes SIM slot primary key (SubId) field from default app notification forwarding template, removes phone number length detection limit for client SMS sending, fixes incompatibility of instr() function on some Android 4.4 systems (portable WiFi), fixes inability to connect to smtp.gmail.com port 587, fixes MQTT connection but not working issue, fixes not jumping to specific notification permission settings page, fixes invalid click on notification title button in app forwarding rule edit, fixes key-value error in CactusSave SharedPreferences, fixes incorrect URL validation regex, fixes inability to auto-dismiss notifications, fixes incorrect {{receive time}} when retrying/resending from forwarding log (uses current time), upgrades frpclib to v0.54.0 (supports latest XTCP), upgrades XUI framework, upgrades XUpdate dependency, upgrades CodeView & XXPermissions dependency libraries, fine-tunes UI and removes infrequently used settings, and organizes code review and removes useless resources."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v3_3_1",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.3.1",
+      "tag_name": "v3.3.1",
+      "title": "SmsForwarder v3.3.1 致敬`遥遥领先`版",
+      "time_hint": "2024-04-18",
+      "published_at": "2024-04-18T02:45:39Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v3.3.1",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v3.3.1 致敬`遥遥领先`版\nTag: v3.3.1; draft: False; prerelease: False; published_at: 2024-04-18T02:45:39Z; created_at: 2024-04-18T02:17:02Z\nRelease notes:\n致敬 `遥遥领先` **先锋计划**，迎接 `SmsForwarder` **预览体验计划**，领先与体验并驾齐驱！\n---\n【强烈建议】`v3.3.0` 用户升级\n【重点推荐】`自动任务·快捷指令`，轻松自动化，助您事半功倍，更多时间享受亲情陪伴！（v3.3+）\n---\n### 【注意】\n* `v3.2.0` 去除了 `mmkv` 依赖，采用 `SharedPreferences` 来保存配置，如果从低于 `v3.2.0`  升级后请重新配置，具体原因参见 [Issue #245](https://github.com/pppscn/SmsForwarder/issues/245)\n* 升级完毕后，建议离线导出配置（客户端>一键换新机>离线模式>导出），完全卸载干净全新安装后再导入配置（可以避免一些莫名其妙的玄学问题，例如：耗电异常）\n---\n### 更新日志\n修复：`定时任务`的`Cron表达式`输入非法时导致FC #407\n修复：Frpclib未下载时，自动任务添加启停frpc app自动重启 #402\n修复：WiFi平板（没有GPS芯片）无法启用`GPS定位服务` #391\n修复：错误的 URL 有效性验证正则表达式（兼容IPv6） #286\n修复：多个自启动的Frpc无法同时自动启动Bug\n修复：疑似`ResUtils.getString`导致FC #426\n修复：在线更新失败时手动下载页面地址\n修复：转发规则自定义发送通道顺序失效（将`List<T>`按照`instr`的顺序排序） #422\n修复：自动任务触发条件在测试倒计时没结束前返回导致app自动重启 #394\n修复：自动任务电池状态中充电器任意无法触发 #395\n新增：`{{IP_LIST}}`变量标签用于获取`本机所有IP地址列表`（排除环回地址） #I9CVLZ\n新增：`通用设置`增加按钮直接跳转`一键换新机`·`离线模式`\n新增：Frp内网穿透·编辑配置时语法高亮\n新增：发送通道`电子邮箱`支持`S/MIME`或`OpenPGP`加密 #417\n新增：监听`Screen`事件`延迟执行时再次校验` #399\n新增：两个常用标签`网络状态`(`{{NET_TYPE}}`)和`简单电池信息`(`{{BATTERY_INFO_SIMPLE}}`) #439\n新增：免打扰(禁用转发)时间段记录日志（配合`自动任务`实现延时发送） #411\n新增：是否加入SmsF预览体验计划（在线更新每周构建版） #416\n新增：转发日志增加筛选器方便搜索/批量删除 #433\n新增：自动任务·快捷指令 —— 触发条件：短信广播、通话广播、APP通知 #385 #389\n新增：自动任务·快捷指令 —— 触发条件：蓝牙设备（状态变化、设备发现、连接断开） #388\n新增：自动任务·快捷指令 —— 执行动作：播放警报 #385\n新增：自动任务·快捷指令 —— 执行动作：启停任务 #389\n新增：自动任务·快捷指令 —— 执行动作：重发消息\n优化：`{{BATTERY_PCT}}`保留2位小数\n优化：`Android 5.0`以下`TLS协议`&`明文传输` #427 #390 #274 #197\n优化：`build.gradle`脚本，编译前后自动清理\n优化：`Webhook` 非 `HTTP 200` 应答时仍可以指定 `成功应答关键字` #234\n优化：`发送通道`参数默认值（避免反序列化时空指针）\n优化：`一换新新机`·`还原设置`时保留本机的`设备名称`和`SIM卡主键/备注`\n优化：`自动任务`触发条件`网络状态`：仅`Android 10`(含) 以上显示`数据卡槽`选项 #429\n优化：`自动任务`触发条件`网络状态`：延迟5秒获取WiFi名称（给够搜索信号时间） #429\n优化：`自动任务·快捷指令` —— 执行动作：`发送短信`支持插入`变量标签`（标签适用场景参见 wiki附录3） #441\n优化：Frpc默认配置采用toml格式\n优化：部分手机通知栏异常显示两条常驻通知 #392\n优化：多语言切换时枚举常量自动切换语言\n优化：发送通道`Webhook`支持http/socks5代理\n优化：放宽`Url`和`UrlScheme`的正则校验限制 #431\n优化：服务端应答`Http 204 No Content`时特殊处理（更新日志状态为成功） #234\n优化：服务端应答`HTTP Status 201-299`时特殊处理（更新日志状态为成功） #234\n优化：改进IPv6正则表达式（避免`{{IPV6}}`替换为空）\n优化：监听`Screen`事件细分`On/Off/Locked/Unlocked` #399\n优化：进入`通用设置`时`再次检查`是否已授权`已开启功能`的`必需权限`\n优化：判断Frpclib是否已经初始化\n优化：权限检查机制判断（适配 OPPO 应用权限受阻跳转优化方案）\n优化：以`Base64`形式保存证书（同时兼容`文件路径`形式） #437\n优化：自定义模板可用变量标签支持正则替换 #421 #423\n优化：自定义模板可用变量统一成英文标签\n优化：自定义模板增加`{{IPV4}}``{{IPV6}}`标签 #398\n优化：自定义模板增加`{{定位信息_经度}}`/`{{定位信息_纬度}}`/`{{定位信息_地址}}`三个标签 #400\n升级：AgentWeb依赖（解决存在的内存泄漏问题）\n升级：frpclib 到 `v0.57.0`\n升级：XAOP 依赖\n升级：XUI 到 `dev-1.2.2`\n升级：XUpdate 到 `2.1.5` （兼容Android 12 & 完善日志）\n升级：依赖版本\n整理：code review & 精简无用资源\n回退：`{{通知Scheme}}`(英文系统`{{SCHEME}}`)标签以获取应用通知的`Scheme` #272 #276（无解，去除多余代码）\n还有一些细微调整参见`github`提交记录\n---\n### APK版本说明：\n* universal（10XXXX）: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下4种CPU架构so）\n* armeabi-v7a（20XXXX）: 32位ARM设备（备用机首选）\n* arm64-v8a（30XXXX）: 64位ARM设备（主流旗舰机）\n* x86（40XXXX）: 32位Intel设备\n* x86_64（50XXXX）: 64/32位Intel设备",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v3.3.1 (Tribute to 'Far Ahead' edition), the release fixes a force close when entering an illegal Cron expression for scheduled tasks, fixes auto-restart when adding start/stop Frpc task without Frpclib downloaded, fixes inability to enable GPS location service on WiFi tablets without GPS chips, fixes incorrect URL validation regex (compatible with IPv6), fixes multiple auto-started Frpc not starting simultaneously, fixes a suspected null pointer in ResUtils.getString causing force close, fixes manual download page address on online update failure, fixes forwarding rule custom sending channel order failure (sorts List<T> by instr order), fixes auto task trigger condition causing app restart when test countdown hasn't ended, fixes auto task battery status charger any not triggering, adds {{IP_LIST}} variable tag to get all local IP addresses (excluding loopback), adds a button in general settings to jump directly to one-click new phone offline mode, adds syntax highlighting when editing Frpc intranet penetration configuration, adds S/MIME or OpenPGP encryption support for email sending channel, adds re-verification on delayed execution for Screen event monitoring, adds two common tags {{NET_TYPE}} and {{BATTERY_INFO_SIMPLE}}, adds logging for do-not-disturb time periods (to cooperate with auto tasks for delayed sending), adds an option to join the SmsF preview experience plan (weekly builds online update), adds filters to forwarding logs for easy search/batch delete, adds auto task trigger conditions: SMS broadcast, call broadcast, app notification; adds auto task trigger condition: Bluetooth device (status change, device discovery, connection disconnect); adds auto task execution actions: play alarm, start/stop task, resend message; optimizes {{BATTERY_PCT}} to retain 2 decimal places, optimizes TLS protocol and plaintext transmission for Android 5.0 and below, optimizes build.gradle script to auto-clean before and after compilation, allows specifying success response keyword even for non-HTTP 200 responses in Webhook, optimizes default values for sending channel parameters to avoid null pointers on deserialization, retains device name and SIM card primary key/remark when restoring settings in one-click new phone, shows data SIM slot option in auto task network status trigger only for Android 10+, delays WiFi name retrieval by 5 seconds in network status trigger to allow signal search, supports inserting variable tags in auto task send SMS action, adopts toml format for default Frpc configuration, fixes abnormal display of two persistent notifications on some phones, auto-switches language for enum constants on language change, supports http/socks5 proxy for Webhook sending channel, relaxes URL and URL Scheme regex validation, handles HTTP 204 No Content response specially (updates log status to success), handles HTTP Status 201-299 specially (updates log status to success), improves IPv6 regex to avoid replacing {{IPV6}} with empty, subdivides Screen event monitoring into On/Off/Locked/Unlocked, re-checks required permissions for enabled features when entering general settings, judges whether Frpclib is initialized, optimizes permission check mechanism (adapts to OPPO app permission blocked jump optimization), saves certificates in Base64 form (also compatible with file path form), supports regex replacement for custom template variable tags, unifies custom template available variables to English tags, adds {{IPV4}} and {{IPV6}} tags to custom templates, adds {{location_longitude}}, {{location_latitude}}, {{location_address}} tags to custom templates, upgrades AgentWeb dependency to fix memory leak, upgrades frpclib to v0.57.0, upgrades XAOP dependency, upgrades XUI to dev-1.2.2, upgrades XUpdate to 2.1.5 (compatible with Android 12 and improved logging), upgrades dependency versions, organizes code review and removes useless resources, and rolls back the {{notification Scheme}} tag (no solution, removes excess code)."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v3_3_2",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.3.2",
+      "tag_name": "v3.3.2",
+      "title": "SmsForwarder v3.3.2",
+      "time_hint": "2024-08-15",
+      "published_at": "2024-08-15T12:54:47Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v3.3.2",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v3.3.2\nTag: v3.3.2; draft: False; prerelease: False; published_at: 2024-08-15T12:54:47Z; created_at: 2024-08-15T12:47:44Z\nRelease notes:\n**1945年8月15日，这是值得每个中国人永远铭记的一天！**\n**勿忘历史，珍爱和平！振兴中华，吾辈自强！**\n---\n【强烈建议】`v3.3.0` 用户升级\n【重点推荐】`自动任务·快捷指令`，轻松自动化，助您事半功倍，更多时间享受亲情陪伴！（v3.3+）\n---\n### 【注意】\n* `v3.2.0` 去除了 `mmkv` 依赖，采用 `SharedPreferences` 来保存配置，如果从低于 `v3.2.0`  升级后请重新配置，具体原因参见 [Issue #245](https://github.com/pppscn/SmsForwarder/issues/245)\n* 升级完毕后，建议离线导出配置（客户端>一键换新机>离线模式>导出），完全卸载干净全新安装后再导入配置（可以避免一些莫名其妙的玄学问题，例如：耗电异常）\n---\n### 更新日志\n修复：`蓝牙服务未开启`时提示语 (#483)\n修复：免打扰时段跨天不成功BUG #493\n修复：未筛选时无法直接清空日志BUG #463\n优化：`BluetoothReceiver`偶尔崩溃（增加异常捕获） #499\n优化：`webhook`发送通道允许在`消息模板`中直接使用`自定义模板可用变量` #516\n优化：`webhook`通道`webParam`分割键值对方式 #472\n优化：`自动任务` 触发条件 `充电状态` 的提示语 (#480)\n优化：多重匹配语法增加对`UID`的支持 #510\n优化：放宽`Bark-Server`正则表达式限制 #457\n优化：通过`Content-Type=applicaton/json`指定请求体为`json`格式 #491\n优化：下载`FrpcLib`时忽略https证书（避免老设备证书验证失败）\n优化：在输入框失去焦点时校验输入值 #479\n优化：在线更新时忽略https证书（避免老设备证书验证失败）\n优化：转发规则`匹配的值`允许传入`逻辑运算符`：`与(&&)`、`或(||)`（用于支持多个关键词） #470\n优化：自动任务监控电量——使用`hashcode`保证`WorkManager`唯一  #458\n整理：APP通知转发规则描述去掉`任意卡` #516\n还有一些细微调整参见`github`提交记录\n---\n### APK版本说明：\n* universal（10XXXX）: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下4种CPU架构so）\n* armeabi-v7a（20XXXX）: 32位ARM设备（备用机首选）\n* arm64-v8a（30XXXX）: 64位ARM设备（主流旗舰机）\n* x86（40XXXX）: 32位Intel设备\n* x86_64（50XXXX）: 64/32位Intel设备",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v3.3.2, the release fixes a prompt when Bluetooth service is not enabled, fixes a bug where do-not-disturb period crossing midnight fails, fixes a bug where logs cannot be cleared directly without filtering, optimizes occasional BluetoothReceiver crash by adding exception capture, allows direct use of custom template available variables in the message template for webhook sending channel, optimizes webParam key-value pair splitting for webhook channel, optimizes the prompt for auto task trigger condition charging status, adds UID support to multi-match syntax, relaxes Bark-Server regex restrictions, specifies request body as JSON format via Content-Type=application/json, ignores HTTPS certificate when downloading FrpcLib (to avoid verification failure on old devices), validates input values when input fields lose focus, ignores HTTPS certificate during online update (to avoid verification failure on old devices), allows logical operators AND (&&) and OR (||) in forwarding rule match values to support multiple keywords, uses hashcode to ensure WorkManager uniqueness for auto task battery monitoring, and organizes app notification forwarding rule description to remove 'any SIM'."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v3_3_3",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.3.3",
+      "tag_name": "v3.3.3",
+      "title": "SmsForwarder v3.3.3 免费开源4周年纪念版",
+      "time_hint": "2025-02-14",
+      "published_at": "2025-02-14T06:26:26Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v3.3.3",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v3.3.3 免费开源4周年纪念版\nTag: v3.3.3; draft: False; prerelease: False; published_at: 2025-02-14T06:26:26Z; created_at: 2025-02-14T06:19:59Z\nRelease notes:\n蛟龙去，灵蛇来！巳巳（事事）如意，生生不息！\n感谢大家4年来的陪伴与支持，顺祝情人节快乐！\n---\n### 更新日志\n* 新增： `{{CONTACT_NAME}}` 标签用于反查`{{FROM}}`对应的通讯录姓名 #582\n* 新增： `{{PHONE_AREA}}` 标签用于反查`{{FROM}}`对应的归属地 #564\n* 新增：`bark`发送通道允许自定义自动复制`copy`字段 #538\n* 新增：`bark`通道的`持续提醒`功能 #528\n* 新增：`webhook` 发送通道通过`Content-Type=text/plain、text/html、text/css、text/javascript、text/xml`指定请求体为`文本`格式\n* 新增：`自动任务-快捷指令-警报提醒`动作添加`振动提醒`的功能 #554 #482\n* 新增：免打扰支持指定星期\n* 新增：添加iCloud邮箱支持 #541\n* 修复：`转发规则`测试模拟的`通话类型`显示错误 #IAG059\n* 修复：未授权访问应用列表时进入应用列表异常提示 #577\n* 优化：兼容Server酱³Sendkey\n* 优化：单 sim 卡槽手机不显示 sim2 设置。\n* 优化：红米手机品牌问题\n* 优化：手机号匹配通讯录联系人算法改进 #580\n* 优化：首页弹窗tips多语言适配 #544\n* 优化：添加周一到周日的繁体翻译 (#568)\n* 优化：统一管理自定义模板可用变量标签插入按钮 #559\n* 升级：`android-mail`升级为`jakarta.mail`\n* 整理：Gradle依赖库 #576\n还有一些细微调整参见`github`提交记录\n---\nPS. 不得不提一嘴，2024年我确实变懒了，都以 issue 驱动更新了（也不是很及时处理），上面更新记录也没几条，可能将来也会越来越少吧\n---\n### 【注意】\n* `v3.2.0` 去除了 `mmkv` 依赖，采用 `SharedPreferences` 来保存配置，如果从低于 `v3.2.0`  升级后请重新配置，具体原因参见 [Issue #245](https://github.com/pppscn/SmsForwarder/issues/245)\n* 升级完毕后，建议离线导出配置（客户端>一键换新机>离线模式>导出），完全卸载干净全新安装后再导入配置（可以避免一些莫名其妙的玄学问题，例如：耗电异常）\n---\n### APK版本说明：\n* universal（10XXXX）: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下4种CPU架构so）\n* armeabi-v7a（20XXXX）: 32位ARM设备（备用机首选）\n* arm64-v8a（30XXXX）: 64位ARM设备（主流旗舰机）\n* x86（40XXXX）: 32位Intel设备\n* x86_64（50XXXX）: 64/32位Intel设备",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v3.3.3 (4th Anniversary edition), the release adds a {{CONTACT_NAME}} tag to reverse lookup the contact name for {{FROM}}, adds a {{PHONE_AREA}} tag to reverse lookup the location for {{FROM}}, allows custom auto-copy field for Bark sending channel, adds persistent reminder functionality for Bark channel, specifies request body as text format via Content-Type=text/plain, text/html, text/css, text/javascript, text/xml for webhook sending channel, adds vibration reminder to auto task alarm action, adds support for specifying days of the week in do-not-disturb, adds iCloud email support, fixes incorrect display of call type in forwarding rule test simulation, fixes abnormal prompt when entering app list without authorization, optimizes compatibility with Server酱³ Sendkey, hides SIM2 settings on single SIM phones, optimizes Redmi phone brand issue, improves phone number matching algorithm for contacts, adapts multilingual tips on the home page popup, adds Traditional Chinese translation for Monday to Sunday, unifies management of custom template available variable tag insertion buttons, upgrades android-mail to jakarta.mail, and organizes Gradle dependencies."
+    },
+    {
+      "memory_node_id": "pppscn__SmsForwarder__release__v3_5_0",
+      "repo": "pppscn/SmsForwarder",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.5.0",
+      "tag_name": "v3.5.0",
+      "title": "SmsForwarder v3.5.0 免费开源5周年新春纪念版",
+      "time_hint": "2026-02-14",
+      "published_at": "2026-02-14T01:03:00Z",
+      "source_url": "https://github.com/pppscn/SmsForwarder/releases/tag/v3.5.0",
+      "raw_text": "Repository: pppscn/SmsForwarder\nRelease: SmsForwarder v3.5.0 免费开源5周年新春纪念版\nTag: v3.5.0; draft: False; prerelease: False; published_at: 2026-02-14T01:03:00Z; created_at: 2026-02-14T00:56:13Z\nRelease notes:\n蛇隐瑞气在，马嘶春风来！\n感谢大家5年来的陪伴与支持，顺祝情人节快乐，新春吉祥！\n---\n### 更新日志\n* 优化: `一键换新机` 兼容 `3.3.3` 升级到 `3.5.0` 后直接导入 #699\n* 优化：`APP通知转发`尝试获取`大文本通知`内容 (Android 5.0+) #530\n* 优化：`Bark`通道`加密推送`支持随机IV #688\n* 优化：`Bark`通道增加`重要警告`功能 #614\n* 优化：`Socket`通道`MQTT`请求方式支持指定`qos`和`retained` #623\n* 优化：`Socket`通道`TCP`/`UDP`请求方式 #684\n* 优化：`Telegram`通道支持指定群组`Topic` #691\n* 优化：`一键换新机` 功能新增`版本兼容映射表`\n* 优化：`电子邮箱` 增加 `发件邮箱别名` 设置 #660\n* 优化：允许自定义`主动控制`服务端监听端口(默认:5000)\n* 优化：短信指令 `smsf#system#reboot` 或 `smsf#system#shutdown` 增加过滤重复消息机制 #653\n* 优化：短信指令`#`分割次数限制(指令格式：`smsf#功能名#动作名#参数`的参数允许出现`#`) #641\n* 优化：移除`代理服务器`的主动DNS解析(交于`OkHttp`异步DNS, 避免NetworkOnMainThreadException) #612\n* 优化：转发规则可以自定义标题名称 #685\n* 优化：`Bark`发送通道`消息链接`支持插入`变量标签`(#604)\n* 优化：`Telegram` 发送通道支持 `MarkdownV2`解析模式 #570\n* 优化：手机号匹配通讯录联系人算法改进 #580\n* 优化：添加周一到周日的繁体翻译 (#568)\n* 修复：PGP加密邮件时没有签名 #605\n* 修复：免打扰(禁用转发)日期段脏数据可能导致`Parameter specified as non-null is null`问题 #666\n* 修复：SOCKET TCP 通道设置中的成功应答关键字置空时，不等待返回值 #635 #636\n* 修复：发送通道`Bark`的`自动复制`配置项保存后，再次编辑没有赋值给输入框 #674\n* 修复：未授权访问应用列表时进入应用列表异常提示 #577\n* 升级：Gradle依赖库\n* 升级：XUI & SmartRefreshLayout 依赖库\n* 升级：友盟统计依赖库\n* 升级：权限请求框架 XXPermissions，提升系统兼容性 升级：多语种适配框架 MultiLanguages，提升稳定性\n* 整理：加速apk打包 & 加速本地调试\n* 整理：Gradle依赖库 #576\n* 整理：字典错别字 #608\n* 新增：自动任务-添加远程唤醒(WOL)功能支持 #696 #690\n* 新增：通话转发增加`呼叫转移`标识 #590 (试验性)\n* 新增： `{{CONTACT_NAME}}` 标签用于反查`{{FROM}}`对应的通讯录姓名 #582\n* 新增： `{{PHONE_AREA}}` 标签用于反查`{{FROM}}`对应的归属地 #564\n* 新增：`自动任务-快捷指令-警报提醒`动作添加`闪烁手机`的功能 #581\n* 新增：靠近听筒关屏 功能 #603\n* 删除：由于不支持Basic Authentication登录SMTP, 移除Outlook系列邮箱后缀 #698\n还有一些细微调整参见`github`提交记录\n---\n### ⚠️注意事项\n* `v3.5.0` 开始, 把应用包名改成 `cn.ppps.forwarder`, 如果从低于 `v3.5.0`  升级后请重新配置, 或从旧版升级到最新的每周构建版(关于页面)导出配置后再导入)，具体原因参见 [Issue #676](https://github.com/pppscn/SmsForwarder/issues/676)\n* `v3.2.0` 去除了 `mmkv` 依赖，采用 `SharedPreferences` 来保存配置，如果从低于 `v3.2.0`  升级后请重新配置，具体原因参见 [Issue #245](https://github.com/pppscn/SmsForwarder/issues/245)\n* 升级完毕后，建议离线导出配置（客户端>一键换新机>离线模式>导出），完全卸载干净全新安装后再导入配置（可以避免一些莫名其妙的玄学问题，例如：耗电异常）\n---\n### APK版本说明：\n* universal（10XXXX）: 通用版（不在乎安装包大小/懒得选就用这个版本，包含以下4种CPU架构so）\n* armeabi-v7a（20XXXX）: 32位ARM设备（备用机首选）\n* arm64-v8a（30XXXX）: 64位ARM设备（主流旗舰机）\n* x86（40XXXX）: 32位Intel设备\n* x86_64（50XXXX）: 64/32位Intel设备",
+      "memory_unit_text": "In the pppscn/SmsForwarder release v3.5.0 (5th Anniversary Spring Festival edition), the release optimizes one-click new phone compatibility for upgrading from 3.3.3 to 3.5.0, optimizes app notification forwarding to attempt retrieving large text notification content (Android 5.0+), optimizes Bark channel encrypted push to support random IV, adds critical alert functionality to Bark channel, optimizes Socket channel MQTT request to support specifying QoS and retained, optimizes Socket channel TCP/UDP request methods, optimizes Telegram channel to support specifying group Topic, adds a version compatibility mapping table for one-click new phone, adds a sender alias setting for email, allows customizing the active control server listening port (default 5000), adds duplicate message filtering for SMS commands smsf#system#reboot or smsf#system#shutdown, optimizes SMS command '#' split count limit (allows '#' in parameters), removes active DNS resolution from proxy server (delegates to OkHttp async DNS to avoid NetworkOnMainThreadException), allows custom title names for forwarding rules, supports inserting variable tags in Bark sending channel message links, supports MarkdownV2 parsing mode for Telegram sending channel, improves phone number matching algorithm for contacts, adds Traditional Chinese translation for Monday to Sunday, fixes PGP encrypted email missing signature, fixes potential null parameter issue in do-not-disturb date range dirty data, fixes Socket TCP channel not waiting for response when success response keyword is empty, fixes Bark channel auto-copy configuration not being assigned to input field on re-edit, fixes abnormal prompt when entering app list without authorization, upgrades Gradle dependencies, upgrades XUI & SmartRefreshLayout dependencies, upgrades Umeng statistics dependency, upgrades XXPermissions permission request framework for better system compatibility, upgrades MultiLanguages framework for stability, speeds up APK packaging and local debugging, organizes Gradle dependencies, corrects dictionary typos, adds remote Wake-on-WOL functionality to auto tasks, adds call forwarding transfer identification (experimental), adds {{CONTACT_NAME}} tag, adds {{PHONE_AREA}} tag, adds screen flashing functionality to auto task alarm action, adds proximity sensor screen off feature, and removes Outlook series email suffixes due to lack of Basic Authentication login support for SMTP."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the pppscn/SmsForwarder releases, which release adds a Gotify sending channel and disables code minification to avoid mysterious issues?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v2.3.0"
+        },
+        {
+          "option_id": "B",
+          "text": "v2.4.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v2.4.1"
+        },
+        {
+          "option_id": "D",
+          "text": "v2.4.2"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v2.4.0",
+      "source_chunk_ids": [
+        "pppscn__SmsForwarder__release__v2_4_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "pppscn__SmsForwarder__release__v2_4_0",
+          "answer_text": "adds a Gotify sending channel ... disables code minification to avoid mysterious issues"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the pppscn/SmsForwarder releases, how does the keep-alive approach in v2.4.3 differ from the keep-alive approach in v3.0.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v2.4.3 uses silent music and a 1-pixel transparent Activity, while v3.0.0 introduces a comprehensive Cactus system with dual-process foreground service, JobScheduler, onePix, WorkManager, and silent music."
+        },
+        {
+          "option_id": "B",
+          "text": "v2.4.3 introduces Cactus, while v3.0.0 removes all keep-alive measures."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases rely solely on JobScheduler for keep-alive."
+        },
+        {
+          "option_id": "D",
+          "text": "v2.4.3 uses WorkManager, while v3.0.0 uses only a foreground service."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v2.4.3 uses silent music and a 1-pixel transparent Activity, while v3.0.0 introduces a comprehensive Cactus system with dual-process foreground service, JobScheduler, onePix, WorkManager, and silent music.",
+      "source_chunk_ids": [
+        "pppscn__SmsForwarder__release__v2_4_3",
+        "pppscn__SmsForwarder__release__v3_0_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "pppscn__SmsForwarder__release__v2_4_3",
+          "answer_text": "experimentally optimizes keep-alive by playing silent music ... and using a 1-pixel transparent Activity"
+        },
+        {
+          "memory_node_id": "pppscn__SmsForwarder__release__v3_0_0",
+          "answer_text": "adds Cactus keep-alive measures (dual-process foreground service, JobScheduler, onePix, WorkManager, silent music)"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the pppscn/SmsForwarder release window, order the following release-content states from earliest to latest: (1) a release that adds a Gotify sending channel and disables code minification, (2) a release that adds a Socket sending channel supporting MQTT/TCP/UDP and remote phone location query, (3) a release that adds automatic tasks with trigger conditions including scheduled tasks and location, (4) a release that adds a {{CONTACT_NAME}} tag and persistent reminder for Bark.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "pppscn__SmsForwarder__release__v2_4_0",
+        "pppscn__SmsForwarder__release__v3_2_0",
+        "pppscn__SmsForwarder__release__v3_3_0",
+        "pppscn__SmsForwarder__release__v3_3_3"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "pppscn__SmsForwarder__release__v2_4_0",
+          "answer_text": "adds a Gotify sending channel ... disables code minification"
+        },
+        {
+          "memory_node_id": "pppscn__SmsForwarder__release__v3_2_0",
+          "answer_text": "adds a Socket sending channel (supporting MQTT/TCP/UDP protocols) ... adds remote phone location query"
+        },
+        {
+          "memory_node_id": "pppscn__SmsForwarder__release__v3_3_0",
+          "answer_text": "adds automatic tasks/shortcut commands with trigger conditions: scheduled tasks, arriving/leaving a location"
+        },
+        {
+          "memory_node_id": "pppscn__SmsForwarder__release__v3_3_3",
+          "answer_text": "adds a {{CONTACT_NAME}} tag ... adds persistent reminder functionality for Bark channel"
+        }
+      ]
+    }
+  ]
+}

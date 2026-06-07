@@ -1,0 +1,530 @@
+{
+  "prototype_id": "openobserve__openobserve_release_window",
+  "domain": "github_release_evolution",
+  "repo": "openobserve/openobserve",
+  "source_type": "release_note",
+  "window_title": "openobserve/openobserve recent release evolution",
+  "window_summary": "This window tracks the recent openobserve/openobserve release stream from v0.50.5 through v0.90.3, including major feature releases, patch releases, and release candidates. Key themes include LLM observability, dashboard enhancements, anomaly detection, and infrastructure improvements.",
+  "chunks": [
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_50_5",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.50.5",
+      "tag_name": "v0.50.5",
+      "title": "Release v0.50.5",
+      "time_hint": "2026-02-25",
+      "published_at": "2026-02-25T19:00:24Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.50.5",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.50.5\nTag: v0.50.5; draft: False; prerelease: False; published_at: 2026-02-25T19:00:24Z; created_at: 2026-02-25T16:28:46Z\nRelease notes:\n📦 Download Binaries from https://openobserve.ai/downloads\n## What's Changed\n* fix: logs field values caching issue by @omkarK06 in https://github.com/openobserve/openobserve/pull/10620\n* fix: sync PostgreSQL sequences after bulk migration with explicit IDs by @hengfeiyang in https://github.com/openobserve/openobserve/pull/10657\n**Full Changelog**: https://github.com/openobserve/openobserve/compare/v0.50.4...v0.50.5",
+      "memory_unit_text": "In the openobserve/openobserve release v0.50.5, the release note describes fixes for logs field values caching and synchronization of PostgreSQL sequences after bulk migration with explicit IDs."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_60_2",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.60.2",
+      "tag_name": "v0.60.2",
+      "title": "Release v0.60.2",
+      "time_hint": "2026-02-27",
+      "published_at": "2026-02-27T16:44:17Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.60.2",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.60.2\nTag: v0.60.2; draft: False; prerelease: False; published_at: 2026-02-27T16:44:17Z; created_at: 2026-02-27T11:52:59Z\nRelease notes:\n## Patch Release: v0.60.2 (February 27, 2026)\n**Commits**: 6 OSS | **Previous**: v0.60.1\n#### API\n- **BasicAuth Security Scheme** - Added BasicAuth security scheme to OpenAPI router (OSS#10685) — @hengfeiyang\n#### Infrastructure\n- Fixed add option to control batch size (OSS#10649) — @hengfeiyang\n- Fixed sync PostgreSQL sequences after bulk migration with explicit IDs (OSS#10659) — @hengfeiyang\n- Fixed enable local mode for enrichment table requests (OSS#10665) — @hengfeiyang\n- Fixed account for existing cache size when computing ZO_DISK_CACHE_MAX_SIZE (OSS#10686) — @hengfeiyang\n#### Logs & Search\n- Fixed correct hit truncation limit in partitioned streaming search (OSS#10667) — @Loaki07\n---",
+      "memory_unit_text": "In the openobserve/openobserve release v0.60.2, the release note describes a patch release with API addition of BasicAuth security scheme to OpenAPI router, infrastructure fixes for batch size control, PostgreSQL sequence sync, local mode for enrichment table requests, and disk cache max size computation, and a logs and search fix for hit truncation limit in partitioned streaming search."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_70_0_rc1",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.70.0-rc1",
+      "tag_name": "v0.70.0-rc1",
+      "title": "Release v0.70.0-rc1",
+      "time_hint": "2026-02-27",
+      "published_at": "2026-02-27T17:36:38Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.70.0-rc1",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.70.0-rc1\nTag: v0.70.0-rc1; draft: False; prerelease: False; published_at: 2026-02-27T17:36:38Z; created_at: 2026-02-27T12:42:34Z\nRelease notes:\n📦 Download Binaries from https://openobserve.ai/downloads\n## What's Changed\n* fix: introduce restore of filter , current page , no of records by @nikhilsaikethe in https://github.com/openobserve/openobserve/pull/10368\n* fix: insights UI changes by @nikhilsaikethe in https://github.com/openobserve/openobserve/pull/10322\n* test: e2e testcase for bug #9754 by @neha00290 in https://github.com/openobserve/openobserve/pull/10365\n* fix: minor UI issues by @nikhilsaikethe in https://github.com/openobserve/openobserve/pull/10377\n* chore: add llm field to uds for traces by @haohuaijin in https://github.com/openobserve/openobserve/pull/10372\n* fix: routes for billings by @uddhavdave in https://github.com/openobserve/openobserve/pull/10358\n* fix: cache with query size by @hengfeiyang in https://github.com/openobserve/openobserve/pull/10384\n* fix: sre-agent error propogation by @007harshmahajan in https://github.com/openobserve/openobserve/pull/10383\n* refactor: add a common component for the error/warnings by @ktx-riya in https://github.com/openobserve/openobserve/pull/10140\n* fix: line chart issue with vrl for visualization by @ktx-abhay in https://github.com/openobserve/openobserve/pull/10373\n* ci: disable sccache by @hengfeiyang in https://github.com/openobserve/openobserve/pull/10392\n* fix: query usage stream for their org by @007harshmahajan in https://github.com/openobserve/openobserve/pull/10139\n* fix: O2A title and tool call improvements by @uddhavdave in https://github.com/openobserve/openobserve/pull/10385\n* fix: dependency upgrades in Cargo.toml and Cargo.lock. by @007harshmahajan in https://github.com/openobserve/openobserve/pull/10253\n* fix: ParserError on streams with : in name by @007harshmahajan in https://github.com/openobserve/openobserve/pull/10394\n* fix: for errors when saving prebuilt destinations, show the message on UI by @Subhra264 in https://github.com/openobserve/openobserve/pull/10335\n* feat: dag graph for llm traces by @haohuaijin in https://github.com/openobserve/openobserve/pull/10388\n* feat(incidents): enrich alert dimensions from query conditions by @ByteBaker in https://github.com/openobserve/openobserve/pull/10399\n* fix: redirect config for router client by @uddhavdave in https://github.com/openobserve/openobserve/pull/10398\n* fix: Tanstack table incident detail page Logs tab by @bjp232004 in https://github.com/openobserve/openobserve/pull/10380\n* test: add PromQL query persistence tests for metrics by @ktx-akshay in https://github.com/openobserve/openobserve/pull/10100\n* feat: impl llm session view backend api by @haohuaijin in https://github.com/openobserve/openobserve/pull/10412\n* fix: serde for user role and add test cases by @uddhavdave in https://github.com/openobserve/openobserve/pull/10408\n* fix: default not set for usage stream by @007harshmahajan in https://github.com/openobserve/openobserve/pull/10411\n* refactor: adaptive per-type stream sampling for service discovery by @ByteBaker in https://github.com/openobserve/openobserve/pull/10414\n* fix: use log stream filters for correlated logs query field names by @ByteBaker in https://github.com/openobserve/openobserve/pull/10415\n* test: overhaul dashboard variables E2E tests with Page Object Model and parallel execution stability by @Shrinath-O2 in https://github.com/openobserve/openobserve/pull/10393\n* fix: enhance incidents UI and fix correlation field resolution by @ByteBaker in https://github.com/openobserve/openobserve/pull/10390\n* feat: dashboard table chart pagination by @ktx-riya in https://github.com/openobserve/openobserve/pull/10285\n* feat: impl user view backend for llm by @haohuaijin in https://github.com/openobserve/openobserve/pull/10418\n* fix: dashboard variables for child, set default value by @ktx-vaidehi in https://github.com/openo...",
+      "memory_unit_text": "In the openobserve/openobserve release v0.70.0-rc1, the release note describes numerous fixes and features including restore of filter and current page, insights UI changes, e2e test for bug #9754, minor UI issues, addition of LLM field to UDS for traces, billing routes fix, cache with query size, SRE agent error propagation, common error/warning component refactor, line chart VRL visualization fix, CI sccache disable, query usage stream for org, O2A title and tool call improvements, dependency upgrades, ParserError fix for streams with colon in name, error message display for prebuilt destinations, DAG graph for LLM traces, incident alert dimension enrichment from query conditions, redirect config for router client, Tanstack table incident detail page logs tab, PromQL query persistence tests, LLM session view backend API, serde for user role and test cases, default not set for usage stream, adaptive per-type stream sampling for service discovery, log stream filters for correlated logs query field names, dashboard variables E2E test overhaul, incidents UI and correlation field resolution enhancement, dashboard table chart pagination, and LLM user view backend implementation."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_60_3",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.60.3",
+      "tag_name": "v0.60.3",
+      "title": "Release v0.60.3",
+      "time_hint": "2026-03-01",
+      "published_at": "2026-03-01T10:46:39Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.60.3",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.60.3\nTag: v0.60.3; draft: False; prerelease: False; published_at: 2026-03-01T10:46:39Z; created_at: 2026-03-01T08:16:20Z\nRelease notes:\n## Patch Release: v0.60.3 (March 1, 2026)\n**Commits**: 4 OSS | **Previous**: v0.60.2\n#### Infrastructure\n- Fixed enforce queue store configuration to use nats — @hengfeiyang\n- Fixed make sure HTTP router is wrapped into base URI (OSS#10592) — @hengfeiyang\n- Fixed router with base_uri (OSS#10704) — @hengfeiyang\n### CI/CD\n- Removed push to latest tag (OSS + Enterprise) — @hengfeiyang\n---",
+      "memory_unit_text": "In the openobserve/openobserve release v0.60.3, the release note describes a patch release with infrastructure fixes to enforce queue store configuration to use NATS, ensure HTTP router is wrapped into base URI, and fix router with base_uri, and a CI/CD change to remove push to latest tag."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_50_6",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.50.6",
+      "tag_name": "v0.50.6",
+      "title": "Release v0.50.6",
+      "time_hint": "2026-03-05",
+      "published_at": "2026-03-05T04:11:07Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.50.6",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.50.6\nTag: v0.50.6; draft: False; prerelease: False; published_at: 2026-03-05T04:11:07Z; created_at: 2026-03-05T02:35:37Z\nRelease notes:\n📦 Download Binaries from https://openobserve.ai/downloads\n## What's Changed\n* fix: enable local mode for enrichment table requests by @hengfeiyang in https://github.com/openobserve/openobserve/pull/10664\n* fix: update theme styles for dark mode in variable settings and add conditional class for add variable drawer (#10709) by @ktx-vaidehi in https://github.com/openobserve/openobserve/pull/10713\n* fix: bulk api metrics by @hengfeiyang in https://github.com/openobserve/openobserve/pull/10737\n* fix: WAL runtime worker configuration by @hengfeiyang in https://github.com/openobserve/openobserve/pull/10748\n**Full Changelog**: https://github.com/openobserve/openobserve/compare/v0.50.5...v0.50.6",
+      "memory_unit_text": "In the openobserve/openobserve release v0.50.6, the release note describes fixes for enabling local mode for enrichment table requests, updating theme styles for dark mode in variable settings and adding conditional class for add variable drawer, bulk API metrics, and WAL runtime worker configuration."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_70_0_rc2",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.70.0-rc2",
+      "tag_name": "v0.70.0-rc2",
+      "title": "Release v0.70.0-rc2",
+      "time_hint": "2026-03-05",
+      "published_at": "2026-03-05T11:36:14Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.70.0-rc2",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.70.0-rc2\nTag: v0.70.0-rc2; draft: False; prerelease: False; published_at: 2026-03-05T11:36:14Z; created_at: 2026-03-05T08:34:36Z\nRelease notes:\n📦 Download Binaries from https://openobserve.ai/downloads\n## What's Changed\n* fix: router with base_uri by @hengfeiyang in https://github.com/openobserve/openobserve/pull/10705\n* fix: Field values changes 0.70.0 by @bjp232004 in https://github.com/openobserve/openobserve/pull/10700\n* fix: trace colors generation by @omkarK06 in https://github.com/openobserve/openobserve/pull/10708\n* fix: update theme styles for dark mode in variable settings and add conditional class for add variable drawer (#10709) by @ktx-vaidehi in https://github.com/openobserve/openobserve/pull/10711\n* fix: cloud import fix by @007harshmahajan in https://github.com/openobserve/openobserve/pull/10714\n* fix: handle variable loading state to prevent panel blocking on errors (#10710) by @ktx-vaidehi in https://github.com/openobserve/openobserve/pull/10716\n* fix: Updated trace service latency tooltip UI  by @omkarK06 in https://github.com/openobserve/openobserve/pull/10719\n* fix: bulk api metrics by @hengfeiyang in https://github.com/openobserve/openobserve/pull/10739\n* fix: WAL runtime worker configuration by @hengfeiyang in https://github.com/openobserve/openobserve/pull/10752\n* fix: RUM session editor and field-list UI issue by @omkarK06 in https://github.com/openobserve/openobserve/pull/10755\n* ci: update mimalloc version by @hengfeiyang in https://github.com/openobserve/openobserve/pull/10757\n**Full Changelog**: https://github.com/openobserve/openobserve/compare/v0.70.0-rc1...v0.70.0-rc2",
+      "memory_unit_text": "In the openobserve/openobserve release v0.70.0-rc2, the release note describes fixes for router with base_uri, field values changes for 0.70.0, trace colors generation, theme styles for dark mode in variable settings and conditional class for add variable drawer, cloud import, variable loading state to prevent panel blocking on errors, trace service latency tooltip UI, bulk API metrics, WAL runtime worker configuration, RUM session editor and field-list UI issue, and CI update of mimalloc version."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_60_4",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.60.4",
+      "tag_name": "v0.60.4",
+      "title": "Release v0.60.4",
+      "time_hint": "2026-03-06",
+      "published_at": "2026-03-06T07:40:24Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.60.4",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.60.4\nTag: v0.60.4; draft: False; prerelease: False; published_at: 2026-03-06T07:40:24Z; created_at: 2026-03-06T01:57:46Z\nRelease notes:\n## Patch Release: v0.60.4 (March 6, 2026)\n**Commits**: 3 OSS | **Previous**: v0.60.3\n*Enterprise-only release.*\n#### UI/UX\n- Fixed update theme styles for dark mode in variable settings and add conditional class for add variable drawer (OSS#10712) — @ktx-vaidehi\n#### Metrics\n- Fixed bulk API metrics (OSS#10738) — @hengfeiyang\n#### Infrastructure\n- Fixed WAL runtime worker configuration (OSS#10751) — @hengfeiyang\n---",
+      "memory_unit_text": "In the openobserve/openobserve release v0.60.4, the release note describes an enterprise-only patch release with UI/UX fix for theme styles for dark mode in variable settings and conditional class for add variable drawer, metrics fix for bulk API metrics, and infrastructure fix for WAL runtime worker configuration."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_70_0_rc3",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.70.0-rc3",
+      "tag_name": "v0.70.0-rc3",
+      "title": "Release v0.70.0-rc3",
+      "time_hint": "2026-03-09",
+      "published_at": "2026-03-09T13:57:36Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.70.0-rc3",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.70.0-rc3\nTag: v0.70.0-rc3; draft: False; prerelease: False; published_at: 2026-03-09T13:57:36Z; created_at: 2026-03-09T10:49:09Z\nRelease notes:\n📦 Download Binaries from https://openobserve.ai/downloads\n## What's Changed\n* fix: build tab switch error msg issue (#10758) by @ktx-abhay in https://github.com/openobserve/openobserve/pull/10771\n* fix: dashboard import template default folder missing by @ktx-vaidehi in https://github.com/openobserve/openobserve/pull/10804\n* fix: updated the pricing by @bjp232004 in https://github.com/openobserve/openobserve/pull/10810\n* fix: all organizations api axum fix on cloud by @Subhra264 in https://github.com/openobserve/openobserve/pull/10805\n**Full Changelog**: https://github.com/openobserve/openobserve/compare/v0.70.0-rc2...v0.70.0-rc3",
+      "memory_unit_text": "In the openobserve/openobserve release v0.70.0-rc3, the release note describes fixes for build tab switch error message, dashboard import template default folder missing, updated pricing, and all organizations API axum fix on cloud."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_70_0",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.70.0",
+      "tag_name": "v0.70.0",
+      "title": "Release v0.70.0",
+      "time_hint": "2026-03-11",
+      "published_at": "2026-03-11T19:52:39Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.70.0",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.70.0\nTag: v0.70.0; draft: False; prerelease: False; published_at: 2026-03-11T19:52:39Z; created_at: 2026-03-11T17:10:49Z\nRelease notes:\n# OpenObserve v0.70.0 Release Notes\n**Download Binaries**: https://openobserve.ai/downloads\n**Release Date**: March 11, 2026\n**Previous Version**: v0.60.4\n---\n## Highlights\nThis release introduces **LLM Observability** with DAG graph visualization, session views, and user-level analytics for LLM traces. The **Service Graph** receives a major overhaul with tree view custom tooltips, edge latency trend charts, and baseline-driven coloring. A new **Incident Event Timeline** with an Activity tab enables comprehensive incident tracking. **Dashboard Enhancements** include panel-level time ranges, stream/field variable support, and table chart pagination. The **Query Builder for Logs** brings a visual query construction experience, while **1-Click Data Onboarding** simplifies initial setup. The **O2 Assistant** gains navigation capabilities, tool search, and image support.\n---\n## New Features\n### AI & LLM Observability\n- **DAG Graph for LLM Traces** - Directed acyclic graph visualization for LLM trace workflows (OSS#10388) — @haohuaijin\n- **LLM Session View Backend API** - Backend API for viewing LLM sessions with full context (OSS#10412) — @haohuaijin\n- **LLM User View** - User-level analytics and view for LLM usage tracking (OSS#10418) — @haohuaijin\n- **LLM Field in UDS for Traces** - Added LLM field to unified data schema for traces (OSS#10372) — @haohuaijin\n### O2 Assistant\n- **O2 Assistant Navigation** - Navigation capabilities for the O2 AI assistant (OSS#10564) — @uddhavdave\n- **O2 Assistant Improvements (Iter 2)** - Enhanced title handling, tool call improvements, and SQL skills (OSS#10473) — @uddhavdave\n### Dashboard\n- **Table Chart Pagination** - Pagination support for dashboard table charts (OSS#10285) — @ktx-riya\n- **Panel-Level Time Range** - Time range configuration available at individual panel level (OSS#10288) — @ktx-vaidehi\n- **Stream and Field Support from Variables** - Dashboard variables can now drive stream and field selection (OSS#10454) — @ktx-vaidehi\n- **iFrame Support for HTML Chart** - Embed external content via iFrame in HTML chart panels (OSS#10532) — @ktx-abhay\n### Logs & Search\n- **Query Builder for Logs Page** - Visual SQL query builder on the logs page for easier query construction (OSS#10305) — @ktx-abhay\n### Traces\n- **Order by Duration for Traces** - Support sorting traces by duration in the traces list (OSS#10676) — @hengfeiyang\n- **Traces UI Improvements** - Enhanced traces list interface with improved readability (OSS#10848) — @omkarK06\n### Alerts & Incidents\n- **Enrich Alert Dimensions from Query Conditions** - Automatically extract and enrich incident dimensions from alert query conditions (OSS#10399) — @ByteBaker\n- **Incident Event Timeline with Activity Tab** - New event timeline system with Activity tab for comprehensive incident tracking — @ByteBaker\n### Service Graph\n- **Edge Latency Trend & Interaction Overhaul** - Edge latency trend charts with redesigned interaction model — @ByteBaker\n- **Tree View Improvements & Telemetry Correlation** - Enhanced tree view with telemetry correlation support — @ByteBaker\n- **Custom Tooltips, Inside Labels, and Dynamic Node Sizing** - Rich tooltips, in-node labels, and responsive node sizing for tree view — @ByteBaker\n- **Baseline Latency for Edge Coloring** - Previous-slot baseline latency comparison for edge color coding — @ByteBaker\n### Data Onboarding\n- **1-Click Data Onboarding** - Simplified data onboarding with one-click setup capabilities (OSS#10331) — @chaitanya-sistla\n### Infrastructure\n- **Vortex File Format Support** - Support for Vortex as an optional file format for improved compression (OSS#10491, ENT#1269) — @haohuaijin\n- **File List Partitioning** - Added partitioning for file list tables to improve query performance (OSS#10521) — @hengfeiyang\n-...",
+      "memory_unit_text": "In the openobserve/openobserve release v0.70.0, the release note describes a major release introducing LLM Observability with DAG graph visualization, session views, and user-level analytics for LLM traces; a major Service Graph overhaul with tree view custom tooltips, edge latency trend charts, and baseline-driven coloring; a new Incident Event Timeline with Activity tab; Dashboard Enhancements including panel-level time ranges, stream/field variable support, and table chart pagination; a Query Builder for Logs; 1-Click Data Onboarding; and O2 Assistant navigation, tool search, and image support. New features include DAG Graph for LLM Traces, LLM Session View Backend API, LLM User View, LLM Field in UDS for Traces, O2 Assistant Navigation, O2 Assistant Improvements, Table Chart Pagination, Panel-Level Time Range, Stream and Field Support from Variables, iFrame Support for HTML Chart, Query Builder for Logs Page, Order by Duration for Traces, Traces UI Improvements, Enrich Alert Dimensions from Query Conditions, Incident Event Timeline with Activity Tab, Edge Latency Trend & Interaction Overhaul, Tree View Improvements & Telemetry Correlation, Custom Tooltips, Inside Labels, and Dynamic Node Sizing, Baseline Latency for Edge Coloring, 1-Click Data Onboarding, Vortex File Format Support, and File List Partitioning."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_70_1",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.70.1",
+      "tag_name": "v0.70.1",
+      "title": "Release v0.70.1",
+      "time_hint": "2026-03-25",
+      "published_at": "2026-03-25T20:07:48Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.70.1",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.70.1\nTag: v0.70.1; draft: False; prerelease: False; published_at: 2026-03-25T20:07:48Z; created_at: 2026-03-25T16:05:58Z\nRelease notes:\n## Patch Release: v0.70.1 (March 25, 2026)\n**Commits**: 9 OSS | **Previous**: v0.70.0\n### Bug Fixes\n#### Dashboard\n- Fixed dashboard drilldown on same tab (OSS#10873) — @ktx-vaidehi\n- Fixed dashboard allow table as json custom query (OSS#10954, OSS#10974) — @ktx-vaidehi\n#### Traces\n- Fixed Traces UI Issues (OSS#10981) — @omkarK06\n- Fixed clear log search errors when switching to patterns tab (OSS#11017) — @omkarK06\n#### Infrastructure\n- Fixed create trigger schema (OSS#10898) — @hengfeiyang\n- Fixed handle serde_json arbitrary_precision number in VRL parse_json (OSS#10921) — @hengfeiyang\n- Fixed for prometheus metadata api (OSS#10934, OSS#10976) — @oasisk\n### Improvements\n#### Refactoring\n- Simplify path handling in middleware and router configuration (OSS#10961) — @hengfeiyang\n#### Dependencies\n- Upgrade datafusion to 52.4.0 (OSS#11000, ENT#1380) — @haohuaijin",
+      "memory_unit_text": "In the openobserve/openobserve release v0.70.1, the release note describes a patch release with bug fixes for dashboard drilldown on same tab, dashboard allow table as JSON custom query, traces UI issues, clear log search errors when switching to patterns tab, create trigger schema, handle serde_json arbitrary_precision number in VRL parse_json, and prometheus metadata API; improvements include simplifying path handling in middleware and router configuration, and upgrading datafusion to 52.4.0."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_80_0_rc1",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.80.0-rc1",
+      "tag_name": "v0.80.0-rc1",
+      "title": "Release v0.80.0-rc1",
+      "time_hint": "2026-03-26",
+      "published_at": "2026-03-26T12:32:18Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.80.0-rc1",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.80.0-rc1\nTag: v0.80.0-rc1; draft: False; prerelease: False; published_at: 2026-03-26T12:32:18Z; created_at: 2026-03-26T09:52:51Z\nRelease notes:\n📦 Download Binaries from https://openobserve.ai/downloads\n## What's Changed\n* feat: add keyword field to values_stream API by @hengfeiyang in https://github.com/openobserve/openobserve/pull/10690\n* fix: 10682 logs page field values improvement by @bjp232004 in https://github.com/openobserve/openobserve/pull/10689\n* ci: fix deps for vortex by @hengfeiyang in https://github.com/openobserve/openobserve/pull/10694\n* fix: change visibility for data retention usage by @uddhavdave in https://github.com/openobserve/openobserve/pull/10691\n* fix: traces color generation by @omkarK06 in https://github.com/openobserve/openobserve/pull/10693\n* fix: removed quotation mark from json keys by @bjp232004 in https://github.com/openobserve/openobserve/pull/10698\n* fix: added datatype icon on logs page field list by @bjp232004 in https://github.com/openobserve/openobserve/pull/10697\n* fix: added resource name in error message by @bjp232004 in https://github.com/openobserve/openobserve/pull/10644\n* chore(deps-dev): bump minimatch from 3.1.2 to 3.1.5 in /web by @dependabot[bot] in https://github.com/openobserve/openobserve/pull/10701\n* chore(deps): bump rollup from 4.55.1 to 4.59.0 in /web by @dependabot[bot] in https://github.com/openobserve/openobserve/pull/10702\n* fix: router with base_uri by @hengfeiyang in https://github.com/openobserve/openobserve/pull/10703\n* feat: introduce rbac for logs patterns, logs insights and cache refresh by @Subhra264 in https://github.com/openobserve/openobserve/pull/10662\n* Logs page UI issues by @bjp232004 in https://github.com/openobserve/openobserve/pull/10707\n* fix: update theme styles for dark mode in variable settings and add conditional class for add variable drawer by @ktx-vaidehi in https://github.com/openobserve/openobserve/pull/10709\n* chore: upgrade datafusion to 52.2.0 and vortex to 0.60.0 by @haohuaijin in https://github.com/openobserve/openobserve/pull/10706\n* fix: handle variable loading state to prevent panel blocking on errors by @ktx-vaidehi in https://github.com/openobserve/openobserve/pull/10710\n* test: add test cases for creating alert from dashboard chart by @ktx-akshay in https://github.com/openobserve/openobserve/pull/10669\n* feat: add notification support for incidents by @ByteBaker in https://github.com/openobserve/openobserve/pull/10715\n* fix: dashboard disable annotation mode when loading state is active by @ktx-vaidehi in https://github.com/openobserve/openobserve/pull/10718\n* test: add alpha1 cloud login E2E tests and Dex auth setup by @Shrinath-O2 in https://github.com/openobserve/openobserve/pull/10675\n* chore: enhance search inspector API by @hengfeiyang in https://github.com/openobserve/openobserve/pull/10720\n* refactor: standardize sort order handling in trace queries by @hengfeiyang in https://github.com/openobserve/openobserve/pull/10725\n* fix: traces datatype icon & values api implementation by @bjp232004 in https://github.com/openobserve/openobserve/pull/10721\n* test: stabilize dashboard variable flaky test case by @ktx-akshay in https://github.com/openobserve/openobserve/pull/10717\n* chore: upgrading packaages (only non-core packages) by @007harshmahajan in https://github.com/openobserve/openobserve/pull/10726\n* fix: Inconsistent height of field list in RUM  by @omkarK06 in https://github.com/openobserve/openobserve/pull/10730\n* fix: Pipeline stream fields list improvements by @bjp232004 in https://github.com/openobserve/openobserve/pull/10733\n* fix: llm evaluations by @oasisk in https://github.com/openobserve/openobserve/pull/10612\n* feat: add support for dynamic tracing resource attributes by @hengfeiyang in https://github.com/openobserve/openobserve/pull/10731\n* chore: update new model and pricing by @haohuaijin in https://github.com/openobserve/openobserve/pull/10745\n* fi...",
+      "memory_unit_text": "In the openobserve/openobserve release v0.80.0-rc1, the release note describes numerous changes including adding keyword field to values_stream API, logs page field values improvement, CI deps for vortex, change visibility for data retention usage, traces color generation, removed quotation mark from JSON keys, added datatype icon on logs page field list, added resource name in error message, dependency bumps, router with base_uri fix, RBAC for logs patterns, logs insights and cache refresh, logs page UI issues, theme styles for dark mode in variable settings and conditional class for add variable drawer, upgrade datafusion to 52.2.0 and vortex to 0.60.0, handle variable loading state to prevent panel blocking on errors, test cases for creating alert from dashboard chart, notification support for incidents, dashboard disable annotation mode when loading state is active, alpha1 cloud login E2E tests and Dex auth setup, enhance search inspector API, standardize sort order handling in trace queries, traces datatype icon & values API implementation, stabilize dashboard variable flaky test case, upgrading packages, inconsistent height of field list in RUM, pipeline stream fields list improvements, LLM evaluations, support for dynamic tracing resource attributes, update new model and pricing, and more."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_70_2",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.70.2",
+      "tag_name": "v0.70.2",
+      "title": "Release v0.70.2",
+      "time_hint": "2026-03-31",
+      "published_at": "2026-03-31T13:07:03Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.70.2",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.70.2\nTag: v0.70.2; draft: False; prerelease: False; published_at: 2026-03-31T13:07:03Z; created_at: 2026-03-31T10:23:43Z\nRelease notes:\n## Patch Release: v0.70.2 (March 31, 2026)\n**Commits**: 3 OSS | **Previous**: v0.70.1\n### Bug Fixes\n#### Infrastructure\n- Fixed report to remote not blocking (OSS#11066) — @haohuaijin\n- Fixed return tls client config without arc (OSS#11055, OSS#11072) — @uddhavdave\n- Fixed grpc use native/webpki trust store (OSS#11083, OSS#11092) — @uddhavdave",
+      "memory_unit_text": "In the openobserve/openobserve release v0.70.2, the release note describes a patch release with infrastructure bug fixes for report to remote not blocking, return TLS client config without arc, and gRPC use native/webpki trust store."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_80_0_rc2",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.80.0-rc2",
+      "tag_name": "v0.80.0-rc2",
+      "title": "Release v0.80.0-rc2",
+      "time_hint": "2026-04-02",
+      "published_at": "2026-04-02T11:07:32Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.80.0-rc2",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.80.0-rc2\nTag: v0.80.0-rc2; draft: False; prerelease: False; published_at: 2026-04-02T11:07:32Z; created_at: 2026-04-02T07:56:56Z\nRelease notes:\n📦 Download Binaries from https://openobserve.ai/downloads\n## What's Changed\n* fix: return tls client config without arc (#11055) by @uddhavdave in https://github.com/openobserve/openobserve/pull/11073\n* fix: decouple AI mode from SQL mode toggle on logs page by @bjp232004 in https://github.com/openobserve/openobserve/pull/11076\n* fix: check trigger again next week when pipeline is disabled similar to alerts by @Subhra264 in https://github.com/openobserve/openobserve/pull/11068\n* fix: Include the error field in alert/pipeline history query by @Subhra264 in https://github.com/openobserve/openobserve/pull/11069\n* fix: grpc use native/webpki trust store (#11083) by @uddhavdave in https://github.com/openobserve/openobserve/pull/11096\n* fix: minor ui issues 80 by @nikhilsaikethe in https://github.com/openobserve/openobserve/pull/11103\n* fix: dashboard first chunk rendering issue v80 by @ktx-abhay in https://github.com/openobserve/openobserve/pull/11078\n* fix: ensure full query time range for histogram visualization v80 by @ktx-vaidehi in https://github.com/openobserve/openobserve/pull/11109\n* fix: O2AI session response fix by @bjp232004 in https://github.com/openobserve/openobserve/pull/11112\n* fix: dex refresh fix by @bjp232004 in https://github.com/openobserve/openobserve/pull/11113\n**Full Changelog**: https://github.com/openobserve/openobserve/compare/v0.80.0-rc1...v0.80.0-rc2",
+      "memory_unit_text": "In the openobserve/openobserve release v0.80.0-rc2, the release note describes fixes for return TLS client config without arc, decouple AI mode from SQL mode toggle on logs page, check trigger again next week when pipeline is disabled similar to alerts, include the error field in alert/pipeline history query, gRPC use native/webpki trust store, minor UI issues, dashboard first chunk rendering issue, ensure full query time range for histogram visualization, O2AI session response fix, and dex refresh fix."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_60_5",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.60.5",
+      "tag_name": "v0.60.5",
+      "title": "Release v0.60.5",
+      "time_hint": "2026-04-05",
+      "published_at": "2026-04-05T14:05:51Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.60.5",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.60.5\nTag: v0.60.5; draft: False; prerelease: False; published_at: 2026-04-05T14:05:51Z; created_at: 2026-04-05T11:30:40Z\nRelease notes:\n📦 Download Binaries from https://openobserve.ai/downloads\n## What's Changed\n* fix: dashboard series color for multi window (#10846) (#10852) by @ktx-vaidehi in https://github.com/openobserve/openobserve/pull/10856\n* fix: improve date parsing logic in scan wal files by @hengfeiyang in https://github.com/openobserve/openobserve/pull/11148\n**Full Changelog**: https://github.com/openobserve/openobserve/compare/v0.60.4...v0.60.5",
+      "memory_unit_text": "In the openobserve/openobserve release v0.60.5, the release note describes fixes for dashboard series color for multi window and improving date parsing logic in scan WAL files."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_70_3",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.70.3",
+      "tag_name": "v0.70.3",
+      "title": "Release v0.70.3",
+      "time_hint": "2026-04-05",
+      "published_at": "2026-04-05T17:16:26Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.70.3",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.70.3\nTag: v0.70.3; draft: False; prerelease: False; published_at: 2026-04-05T17:16:26Z; created_at: 2026-04-05T14:35:35Z\nRelease notes:\n📦 Download Binaries from https://openobserve.ai/downloads\n## What's Changed\n* ci: don't update latest tag by @hengfeiyang in https://github.com/openobserve/openobserve/pull/11100\n* fix: improve date parsing logic in scan wal files by @hengfeiyang in https://github.com/openobserve/openobserve/pull/11149\n**Full Changelog**: https://github.com/openobserve/openobserve/compare/v0.70.2...v0.70.3",
+      "memory_unit_text": "In the openobserve/openobserve release v0.70.3, the release note describes a CI change to not update latest tag and a fix for improving date parsing logic in scan WAL files."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_80_0_rc3",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.80.0-rc3",
+      "tag_name": "v0.80.0-rc3",
+      "title": "Release v0.80.0-rc3",
+      "time_hint": "2026-04-09",
+      "published_at": "2026-04-09T15:37:47Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.80.0-rc3",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.80.0-rc3\nTag: v0.80.0-rc3; draft: False; prerelease: False; published_at: 2026-04-09T15:37:47Z; created_at: 2026-04-09T11:59:42Z\nRelease notes:\n📦 Download Binaries from https://openobserve.ai/downloads\n## What's Changed\n* fix: include exclude values in query editor by @bjp232004 in https://github.com/openobserve/openobserve/pull/11122\n* fix: report to remote not blocking[80] by @haohuaijin in https://github.com/openobserve/openobserve/pull/11131\n* fix: rum include/exclude value in filter by @bjp232004 in https://github.com/openobserve/openobserve/pull/11128\n* fix: pending delete files  by @hengfeiyang in https://github.com/openobserve/openobserve/pull/11138\n* fix: include exclude selection improvement by @bjp232004 in https://github.com/openobserve/openobserve/pull/11140\n* fix: improve date parsing logic in scan wal files by @hengfeiyang in https://github.com/openobserve/openobserve/pull/11150\n* fix: do not strip base uri prefix in rum enpoints by @Subhra264 in https://github.com/openobserve/openobserve/pull/11154\n* fix: enhance drilldown handling to prevent URL clobbering during same dashboard navigation (#11134) by @ktx-vaidehi in https://github.com/openobserve/openobserve/pull/11161\n* fix: pause one time run report when it is done by @Subhra264 in https://github.com/openobserve/openobserve/pull/11142\n* fix: updated view_url and resource_url in RUM sessions fields by @omkarK06 in https://github.com/openobserve/openobserve/pull/11107\n* fix: dashboard table chart overlap print mode (#11123) by @ktx-vaidehi in https://github.com/openobserve/openobserve/pull/11175\n* fix: Alert preview issue 11172 0.80.0 by @bjp232004 in https://github.com/openobserve/openobserve/pull/11183\n* fix: Issue ent 1422 iam page 0.80.0 by @bjp232004 in https://github.com/openobserve/openobserve/pull/11179\n* fix: dashboard timestamp conversion table chart by @ktx-vaidehi in https://github.com/openobserve/openobserve/pull/11199\n* fix: cross link issue with multi stream (#11200) by @ktx-abhay in https://github.com/openobserve/openobserve/pull/11213\n* fix: include search_multi_stream in is_streaming_endpoint function by @Subhra264 in https://github.com/openobserve/openobserve/pull/11195\n* chore: cherry pick service discovery changes to v0.80.0 by @ByteBaker in https://github.com/openobserve/openobserve/pull/11201\n**Full Changelog**: https://github.com/openobserve/openobserve/compare/v0.80.0-rc2...v0.80.0-rc3",
+      "memory_unit_text": "In the openobserve/openobserve release v0.80.0-rc3, the release note describes fixes for include exclude values in query editor, report to remote not blocking, RUM include/exclude value in filter, pending delete files, include exclude selection improvement, improve date parsing logic in scan WAL files, do not strip base URI prefix in RUM endpoints, enhance drilldown handling to prevent URL clobbering during same dashboard navigation, pause one time run report when it is done, updated view_url and resource_url in RUM sessions fields, dashboard table chart overlap print mode, alert preview issue, IAM page issue, dashboard timestamp conversion table chart, cross link issue with multi stream, include search_multi_stream in is_streaming_endpoint function, and cherry pick service discovery changes."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_80_0_rc4",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.80.0-rc4",
+      "tag_name": "v0.80.0-rc4",
+      "title": "Release v0.80.0-rc4",
+      "time_hint": "2026-04-21",
+      "published_at": "2026-04-21T20:55:40Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.80.0-rc4",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.80.0-rc4\nTag: v0.80.0-rc4; draft: False; prerelease: False; published_at: 2026-04-21T20:55:40Z; created_at: 2026-04-21T16:30:02Z\nRelease notes:\n📦 Download Binaries from https://openobserve.ai/downloads\n## What's Changed\n* fix: visualisation api call issue with region by @ktx-akshay in https://github.com/openobserve/openobserve/pull/11022\n* fix: Issue 1345 UI screen fix by @bjp232004 in https://github.com/openobserve/openobserve/pull/11032\n* test: add E2E tests for dashboard table chart core features by @ktx-akshay in https://github.com/openobserve/openobserve/pull/11004\n* fix: when user on 2nd page of indexlist after run query should not reset by @nikhilsaikethe in https://github.com/openobserve/openobserve/pull/11018\n* fix: Add check all checkbox for permissions on role edit page by @Subhra264 in https://github.com/openobserve/openobserve/pull/11001\n* fix: persist up and down vote in o2ai by @bjp232004 in https://github.com/openobserve/openobserve/pull/11037\n* test: add E2E tests for autocomplete value suggestions feature by @neha00290 in https://github.com/openobserve/openobserve/pull/11027\n* fix: Anomaly UI changes by @bjp232004 in https://github.com/openobserve/openobserve/pull/11035\n* fix: filter from trace details by @omkarK06 in https://github.com/openobserve/openobserve/pull/11038\n* fix: check trigger again next week when pipeline is disabled similar to alerts by @Subhra264 in https://github.com/openobserve/openobserve/pull/11040\n* fix: Include the error field in alert/pipeline history query by @Subhra264 in https://github.com/openobserve/openobserve/pull/11050\n* feat: add patch panel apis  by @uddhavdave in https://github.com/openobserve/openobserve/pull/11025\n* test: add E2E tests for RUM sourcemap feature by @Shrinath-O2 in https://github.com/openobserve/openobserve/pull/11014\n* fix: return tls client config without arc by @uddhavdave in https://github.com/openobserve/openobserve/pull/11055\n* fix: pass search inspect env via config by @nikhilsaikethe in https://github.com/openobserve/openobserve/pull/11051\n* fix: validate prebuilt destination type before using it by @saiprasannasastry in https://github.com/openobserve/openobserve/pull/10963\n* fix: report to remote not blocking by @haohuaijin in https://github.com/openobserve/openobserve/pull/11053\n* feat: simplify service discovery feature by @ByteBaker in https://github.com/openobserve/openobserve/pull/10946\n* fix: decouple AI mode from SQL mode toggle on logs page by @bjp232004 in https://github.com/openobserve/openobserve/pull/11075\n* fix: enhance variable handling in dashboard drilldown and add duplicate name check by @ktx-vaidehi in https://github.com/openobserve/openobserve/pull/11071\n* fix: created a single button toggle with Spans | Traces | Search Graph by @omkarK06 in https://github.com/openobserve/openobserve/pull/11048\n* chore: fix tests and bump DB_SCHEMA_VERSION by @ByteBaker in https://github.com/openobserve/openobserve/pull/11087\n* fix: grpc use native/webpki trust store by @uddhavdave in https://github.com/openobserve/openobserve/pull/11083\n* fix(ci): pass PR target branch in enterprise build dispatch payload by @uddhavdave in https://github.com/openobserve/openobserve/pull/11074\n* fix: npm ci axios version by @uddhavdave in https://github.com/openobserve/openobserve/pull/11090\n* fix: block non-admin role at user creation if ofga is disabled by @YashodhanJoshi1 in https://github.com/openobserve/openobserve/pull/11080\n* fix: minor Ui issues #11062 , #11061 , #11064 by @nikhilsaikethe in https://github.com/openobserve/openobserve/pull/11101\n* ci: add merge_group trigger to CI workflows for merge queue support by @uddhavdave in https://github.com/openobserve/openobserve/pull/11105\n* fix: dex refresh fix by @bjp232004 in https://github.com/openobserve/openobserve/pull/11084\n* fix: dashboard first chunk rendering issue by @ktx-abhay in https://github.com/openobserve/openobserve/pull/11077\n* fix:...",
+      "memory_unit_text": "In the openobserve/openobserve release v0.80.0-rc4, the release note describes numerous changes including visualization API call issue with region, UI screen fix, E2E tests for dashboard table chart core features, fix for when user on 2nd page of indexlist after run query should not reset, add check all checkbox for permissions on role edit page, persist up and down vote in O2AI, E2E tests for autocomplete value suggestions feature, anomaly UI changes, filter from trace details, check trigger again next week when pipeline is disabled similar to alerts, include the error field in alert/pipeline history query, add patch panel APIs, E2E tests for RUM sourcemap feature, return TLS client config without arc, pass search inspect env via config, validate prebuilt destination type before using it, report to remote not blocking, simplify service discovery feature, decouple AI mode from SQL mode toggle on logs page, enhance variable handling in dashboard drilldown and add duplicate name check, created a single button toggle with Spans | Traces | Search Graph, fix tests and bump DB_SCHEMA_VERSION, gRPC use native/webpki trust store, pass PR target branch in enterprise build dispatch payload, npm ci axios version, block non-admin role at user creation if OFGA is disabled, minor UI issues, add merge_group trigger to CI workflows for merge queue support, dex refresh fix, dashboard first chunk rendering issue, and more."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_80_0_rc5",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.80.0-rc5",
+      "tag_name": "v0.80.0-rc5",
+      "title": "Release v0.80.0-rc5",
+      "time_hint": "2026-04-23",
+      "published_at": "2026-04-23T14:41:48Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.80.0-rc5",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.80.0-rc5\nTag: v0.80.0-rc5; draft: False; prerelease: False; published_at: 2026-04-23T14:41:48Z; created_at: 2026-04-23T11:07:54Z\nRelease notes:\n📦 Download Binaries from https://openobserve.ai/downloads\n## What's Changed\n* fix: map_group_to_role should work even when custom_role is empty by @Subhra264 in https://github.com/openobserve/openobserve/pull/11395\n* fix: cherry pick fixes for join validation and partitions for non-ts col by @Loaki07 in https://github.com/openobserve/openobserve/pull/11412\n* fix: report folder issues (#11362) by @nikhilsaikethe in https://github.com/openobserve/openobserve/pull/11410\n* fix: Traces UI fixes v0.80.0 by @omkarK06 in https://github.com/openobserve/openobserve/pull/11407\n* fix: use text casting for cache report list db query by @Subhra264 in https://github.com/openobserve/openobserve/pull/11406\n* fix: dashboard table chart render if no label v80 by @ktx-vaidehi in https://github.com/openobserve/openobserve/pull/11411\n**Full Changelog**: https://github.com/openobserve/openobserve/compare/v0.80.0-rc4...v0.80.0-rc5",
+      "memory_unit_text": "In the openobserve/openobserve release v0.80.0-rc5, the release note describes fixes for map_group_to_role should work even when custom_role is empty, cherry pick fixes for join validation and partitions for non-ts col, report folder issues, traces UI fixes, use text casting for cache report list DB query, and dashboard table chart render if no label."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_80_0",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.80.0",
+      "tag_name": "v0.80.0",
+      "title": "Release v0.80.0",
+      "time_hint": "2026-04-26",
+      "published_at": "2026-04-26T06:30:28Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.80.0",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.80.0\nTag: v0.80.0; draft: False; prerelease: False; published_at: 2026-04-26T06:30:28Z; created_at: 2026-04-26T03:59:35Z\nRelease notes:\n# OpenObserve v0.80.0 Release Notes\n**Download Binaries**: https://openobserve.ai/downloads\n**Release Date**: April 23, 2026\n**Previous Version**: v0.70.3\n---\n## Highlights\nv0.80.0 is a major feature release introducing **ML-based Anomaly Detection** using the Random Cut Forest algorithm, a comprehensive **Dashboard overhaul** with pivot tables, cross-linking, config panel redesign, and TanStack table migration, along with **RUM Sourcemap support** for production JavaScript debugging. The release also expands **RBAC coverage** to report folders, incidents, and logs patterns, upgrades the **MCP implementation** to the 2025-11-25 specification, and introduces **Work Group v2** for slot-based admission control.\n---\n## New Features\n### Dashboard\n- **Pivot Table Support** — Added pivot table visualization type to dashboards (OSS#10774) — @ktx-abhay\n- **Cross-Linking** — Cross-linking support between dashboards and logs page for seamless navigation (OSS#10652) — @ktx-abhay\n- **Config Panel Redesign** — Redesigned dashboard configuration panel for improved usability (OSS#10917) — @ktx-vaidehi\n- **TanStack Table Migration** — Refactored table chart to use TanStack Table for better performance and features (OSS#11036) — @ktx-vaidehi\n- **SQL Autocomplete** — Auto-complete suggestions for SQL queries in dashboards (OSS#11251) — @ktx-vaidehi\n- **JSON Field Display** — Added configuration option to show fields as JSON in dashboard visualizations (OSS#11091) — @ktx-abhay\n- **Mustache Variable Replacement** — Support for replacing variable values with mustache syntax in dashboards (OSS#11085) — @ktx-abhay\n- **Patch Panel APIs** — Added APIs for patch panel operations (OSS#11025) — @uddhavdave\n### Traces & RUM\n- **Sourcemaps for RUM** — Added sourcemap support for Real User Monitoring to enable debugging of minified JavaScript errors in production (OSS#10259) — @YashodhanJoshi1\n- **Traces Table Improvements** — Enhanced traces table with better sorting, filtering, and display options (OSS#10941) — @omkarK06\n- **Service Graph Improvements** — Enhanced service graph with metrics tab in node details panel, improved visualization (OSS#11097) — @omkarK06\n### Anomaly Detection\n- **Anomaly Detection P2** — Continued enhancements to anomaly detection pipeline and UI (OSS#10940) — @Loaki07\n### AI & MCP\n- **Custom AI Tools** — Added support for custom AI tool definitions and execution (OSS#11270) — @hengfeiyang\n- **MCP 2025-11-25 Spec Upgrade** — Upgraded MCP implementation to the 2025-11-25 specification with pinned tools and schema cleanup (OSS#11181) — @hengfeiyang\n- **Summary for Tool Responses** — Added summary generation for AI tool responses (OSS#10955) — @uddhavdave\n### Infrastructure\n- **Work Group v2** — Slot-based admission control for work groups, replacing the previous concurrency model (OSS#10990) — @hengfeiyang\n- **S3 Infrequent Access Storage Class** — Support for S3 Infrequent Access storage class for cost optimization (OSS#11144) — @haohuaijin\n- **Field Values in FST Logs Page** — Configuration option for field values display in Full-Text Search logs page (OSS#10951) — @hengfeiyang\n- **Webinar Banner** — Added in-app webinar banner for user engagement (OSS#11240) — @bjp232004\n### RBAC & Security\n- **Report Folders API** — API support for organizing reports into folders (OSS#11261) — @Subhra264\n### Reports & Alerts\n- **Report Preview in Email** — Option to include preview images in email reports (OSS#11133) — @Subhra264\n### Service Discovery\n- **Simplified Service Discovery** — Simplified correlation core by replacing FQN/confidence model with direct name + distinguish_by lookup (OSS#10946) — @ByteBaker\n---\n## Improvements\n### Performance\n- Dashboard performance improvements — batch streaming response while main thread is blocked (OSS#11020) —...",
+      "memory_unit_text": "In the openobserve/openobserve release v0.80.0, the release note describes a major feature release introducing ML-based Anomaly Detection using the Random Cut Forest algorithm, a comprehensive Dashboard overhaul with pivot tables, cross-linking, config panel redesign, and TanStack table migration, along with RUM Sourcemap support for production JavaScript debugging. The release also expands RBAC coverage to report folders, incidents, and logs patterns, upgrades the MCP implementation to the 2025-11-25 specification, and introduces Work Group v2 for slot-based admission control. New features include Pivot Table Support, Cross-Linking, Config Panel Redesign, TanStack Table Migration, SQL Autocomplete, JSON Field Display, Mustache Variable Replacement, Patch Panel APIs, Sourcemaps for RUM, Traces Table Improvements, Service Graph Improvements, Anomaly Detection P2, Custom AI Tools, MCP 2025-11-25 Spec Upgrade, Summary for Tool Responses, Work Group v2, S3 Infrequent Access Storage Class, Field Values in FST Logs Page, Webinar Banner, Report Folders API, Report Preview in Email, and Simplified Service Discovery."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_80_1",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.80.1",
+      "tag_name": "v0.80.1",
+      "title": "Release v0.80.1",
+      "time_hint": "2026-04-28",
+      "published_at": "2026-04-28T20:49:22Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.80.1",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.80.1\nTag: v0.80.1; draft: False; prerelease: False; published_at: 2026-04-28T20:49:22Z; created_at: 2026-04-28T14:38:43Z\nRelease notes:\n## Patch Release: v0.80.1 (April 28, 2026)\n**Commits**: 5 OSS | **Previous**: v0.80.0\n### Bug Fixes\n#### Traces\n- Fixed traces list showing blank rows when filtered by duration (OSS#11524) — @hengfeiyang\n- Fixed `llm_usage_tokens_input` not found error in traces (OSS#11497) — @hengfeiyang\n- Fixed force LLM field datatype to prevent stream mismatches (OSS#11493) — @haohuaijin\n#### Infrastructure\n- Fixed UDS not being cleared when only `_timestamp` remains after field removal (OSS#11479) — @hengfeiyang\n#### Authentication\n- Fixed SRE agent service account creation with email casing fix and additional permissions (OSS#11507, ENT#1587) — @uddhavdave\n### Improvements\n#### Refactoring\n- Refactored `detect_llm_stream` to accept a key-lookup closure for improved modularity (OSS#11481) — @hengfeiyang",
+      "memory_unit_text": "In the openobserve/openobserve release v0.80.1, the release note describes a patch release with bug fixes for traces list showing blank rows when filtered by duration, llm_usage_tokens_input not found error in traces, force LLM field datatype to prevent stream mismatches, UDS not being cleared when only _timestamp remains after field removal, and SRE agent service account creation with email casing fix and additional permissions; improvements include refactoring detect_llm_stream to accept a key-lookup closure for improved modularity."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_80_2",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.80.2",
+      "tag_name": "v0.80.2",
+      "title": "Release v0.80.2",
+      "time_hint": "2026-05-05",
+      "published_at": "2026-05-05T07:40:42Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.80.2",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.80.2\nTag: v0.80.2; draft: False; prerelease: False; published_at: 2026-05-05T07:40:42Z; created_at: 2026-04-30T13:32:06Z\nRelease notes:\n## Patch Release: v0.80.2 (April 30, 2026)\n**Commits**: 5 OSS | **Previous**: v0.80.1\n### Bug Fixes\n#### Infrastructure\n- Fixed partition base speed optimization for better query performance (OSS#11536) — @hengfeiyang\n- Fixed license job to always run on all nodes (OSS#11539, ENT#1601) — @YashodhanJoshi1\n- Fixed corrected inflated took time in streaming search for search and histogram queries (OSS#11552) — @Loaki07\n#### Dashboard\n- Fixed is aggregation value not being passed when switching from PromQL/SQL to custom query mode (OSS#11550) — @nikhilsaikethe\n#### UI/UX\n- Fixed remove actions scripts from dialog to prevent stale script execution (OSS#11554) — @nikhilsaikethe",
+      "memory_unit_text": "In the openobserve/openobserve release v0.80.2, the release note describes a patch release with bug fixes for partition base speed optimization for better query performance, license job to always run on all nodes, corrected inflated took time in streaming search for search and histogram queries, is aggregation value not being passed when switching from PromQL/SQL to custom query mode, and remove actions scripts from dialog to prevent stale script execution."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_90_0_rc1",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.90.0-rc1",
+      "tag_name": "v0.90.0-rc1",
+      "title": "Release v0.90.0-rc1",
+      "time_hint": "2026-05-06",
+      "published_at": "2026-05-06T20:00:25Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.90.0-rc1",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.90.0-rc1\nTag: v0.90.0-rc1; draft: False; prerelease: False; published_at: 2026-05-06T20:00:25Z; created_at: 2026-05-06T14:42:27Z\nRelease notes:\n📦 Download Binaries from https://openobserve.ai/downloads\n## What's Changed\n* fix: removed spans limit from trace details by @omkarK06 in https://github.com/openobserve/openobserve/pull/11333\n* fix: validate multi-stream SQL join query fields against correct stream schema by @Loaki07 in https://github.com/openobserve/openobserve/pull/11374\n* fix: service accounts should not be able to rotate token without rbac by @Subhra264 in https://github.com/openobserve/openobserve/pull/11359\n* chore: LLM observability user-pricing by @007harshmahajan in https://github.com/openobserve/openobserve/pull/10781\n* fix: report folder issues by @nikhilsaikethe in https://github.com/openobserve/openobserve/pull/11362\n* fix: added tooltips for formatted span and error count by @omkarK06 in https://github.com/openobserve/openobserve/pull/11373\n* fix: improve real ip logic by @hengfeiyang in https://github.com/openobserve/openobserve/pull/11378\n* Feat: Add cloudformation stack-set support by @chaitanya-sistla in https://github.com/openobserve/openobserve/pull/11268\n* fix: Auto run query feature by @bjp232004 in https://github.com/openobserve/openobserve/pull/11376\n* chore: code cleanup and add trace_id in logs by @haohuaijin in https://github.com/openobserve/openobserve/pull/11385\n* fix: return empty if either left or right is empty for and by @vnghia in https://github.com/openobserve/openobserve/pull/11361\n* fix: disable partitioning for ORDER BY on non-timestamp column by @Loaki07 in https://github.com/openobserve/openobserve/pull/11389\n* fix: deadloop fix while error response by @bjp232004 in https://github.com/openobserve/openobserve/pull/11391\n* fix: add custom skill support by @hengfeiyang in https://github.com/openobserve/openobserve/pull/11381\n* chore(deps): bump docker/login-action from 3 to 4 by @dependabot[bot] in https://github.com/openobserve/openobserve/pull/11345\n* chore(deps): bump dompurify from 3.3.2 to 3.4.0 in /web by @dependabot[bot] in https://github.com/openobserve/openobserve/pull/11285\n* chore(deps): bump follow-redirects from 1.15.11 to 1.16.0 in /web by @dependabot[bot] in https://github.com/openobserve/openobserve/pull/11262\n* chore(deps): bump rand from 0.10.0 to 0.10.1 by @dependabot[bot] in https://github.com/openobserve/openobserve/pull/11260\n* chore(deps): bump softprops/action-gh-release from 2 to 3 by @dependabot[bot] in https://github.com/openobserve/openobserve/pull/11256\n* chore(deps): bump actions/github-script from 6 to 9 by @dependabot[bot] in https://github.com/openobserve/openobserve/pull/11255\n* test: Add e2e for anomalies feature by @neha00290 in https://github.com/openobserve/openobserve/pull/11358\n* chore(deps): bump uuid and googleapis in /tests/ui-testing by @dependabot[bot] in https://github.com/openobserve/openobserve/pull/11397\n* chore: last refreshed for logs and traces by @oasisk in https://github.com/openobserve/openobserve/pull/11398\n* test: fix Dex submit button click interception on alpha AKS environment by @Shrinath-O2 in https://github.com/openobserve/openobserve/pull/11275\n* fix: persist include/exclude selection after switching between them by @bjp232004 in https://github.com/openobserve/openobserve/pull/11402\n* fix: show refresh button inline by @nikhilsaikethe in https://github.com/openobserve/openobserve/pull/11405\n* feat: dashboard validation sync from BE by @ktx-abhay in https://github.com/openobserve/openobserve/pull/11034\n* fix: Histogram loading issue stream switch by @bjp232004 in https://github.com/openobserve/openobserve/pull/11414\n* fix: dashboard table chart render if no label by @ktx-vaidehi in https://github.com/openobserve/openobserve/pull/11409\n* fix: map_group_to_role should work even when custom_role is empty by @Subhra264 in https://github.com/openobserve/openobserve/pul...",
+      "memory_unit_text": "In the openobserve/openobserve release v0.90.0-rc1, the release note describes numerous changes including removed spans limit from trace details, validate multi-stream SQL join query fields against correct stream schema, service accounts should not be able to rotate token without RBAC, LLM observability user-pricing, report folder issues, added tooltips for formatted span and error count, improve real IP logic, add cloudformation stack-set support, auto run query feature, code cleanup and add trace_id in logs, return empty if either left or right is empty for AND, disable partitioning for ORDER BY on non-timestamp column, deadloop fix while error response, add custom skill support, dependency bumps, E2E for anomalies feature, last refreshed for logs and traces, fix Dex submit button click interception on alpha AKS environment, persist include/exclude selection after switching between them, show refresh button inline, dashboard validation sync from BE, histogram loading issue stream switch, dashboard table chart render if no label, map_group_to_role should work even when custom_role is empty, and more."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_80_3",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.80.3",
+      "tag_name": "v0.80.3",
+      "title": "Release v0.80.3",
+      "time_hint": "2026-05-07",
+      "published_at": "2026-05-07T12:14:08Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.80.3",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.80.3\nTag: v0.80.3; draft: False; prerelease: False; published_at: 2026-05-07T12:14:08Z; created_at: 2026-05-07T08:12:20Z\nRelease notes:\n## Patch Release: v0.80.3 (May 7, 2026)\n**Commits**: 3 OSS | **Previous**: v0.80.2\n### Bug Fixes\n#### Infrastructure\n- Fixed is_llm_stream field update support via UpdateStreamSettings API to prevent stream type mismatches (OSS#11563) — @hengfeiyang\n- Fixed correlation fixes including storage handling improvements and large UTF-8 fixes (OSS#11646, ENT#1635) — @oasisk",
+      "memory_unit_text": "In the openobserve/openobserve release v0.80.3, the release note describes a patch release with infrastructure bug fixes for is_llm_stream field update support via UpdateStreamSettings API to prevent stream type mismatches, and correlation fixes including storage handling improvements and large UTF-8 fixes."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_90_0_rc2",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.90.0-rc2",
+      "tag_name": "v0.90.0-rc2",
+      "title": "Release v0.90.0-rc2",
+      "time_hint": "2026-05-11",
+      "published_at": "2026-05-11T14:31:49Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.90.0-rc2",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.90.0-rc2\nTag: v0.90.0-rc2; draft: False; prerelease: False; published_at: 2026-05-11T14:31:49Z; created_at: 2026-05-11T10:34:44Z\nRelease notes:\n📦 Download Binaries from https://openobserve.ai/downloads\n## What's Changed\n* chore: upgrade build runners to ubicloud-standard-16 by @Loaki07 in https://github.com/openobserve/openobserve/pull/11631\n* refactor(compactor): select old-data hours by file size, push merge filter to SQL (port of #11638 to v0.90.0) by @hengfeiyang in https://github.com/openobserve/openobserve/pull/11640\n* fix: corelation custom groups by @oasisk in https://github.com/openobserve/openobserve/pull/11662\n* fix: corelation settings fixes by @oasisk in https://github.com/openobserve/openobserve/pull/11666\n* perf: reduce compactor memory usage[90] by @haohuaijin in https://github.com/openobserve/openobserve/pull/11671\n* fix: alert template {field:N} length truncation in destination template by @hengfeiyang in https://github.com/openobserve/openobserve/pull/11698\n* perf: repartition parquet file to fit target partitions[90] by @haohuaijin in https://github.com/openobserve/openobserve/pull/11693\n* fix: backport correlation custom groups + settings fixes by @oasisk in https://github.com/openobserve/openobserve/pull/11707\n* perf: tantivy index improve[90] by @haohuaijin in https://github.com/openobserve/openobserve/pull/11714\n**Full Changelog**: https://github.com/openobserve/openobserve/compare/v0.90.0-rc1...v0.90.0-rc2",
+      "memory_unit_text": "In the openobserve/openobserve release v0.90.0-rc2, the release note describes changes including upgrade build runners to ubicloud-standard-16, refactor compactor to select old-data hours by file size and push merge filter to SQL, fix correlation custom groups, fix correlation settings, reduce compactor memory usage, fix alert template {field:N} length truncation in destination template, repartition parquet file to fit target partitions, backport correlation custom groups + settings fixes, and tantivy index improvement."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_90_0_rc3",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.90.0-rc3",
+      "tag_name": "v0.90.0-rc3",
+      "title": "Release v0.90.0-rc3",
+      "time_hint": "2026-05-14",
+      "published_at": "2026-05-14T13:25:31Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.90.0-rc3",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.90.0-rc3\nTag: v0.90.0-rc3; draft: False; prerelease: False; published_at: 2026-05-14T13:25:31Z; created_at: 2026-05-14T09:37:17Z\nRelease notes:\n📦 Download Binaries from https://openobserve.ai/downloads\n## What's Changed\n* fix: service details operations table sorting (#11683) by @omkarK06 in https://github.com/openobserve/openobserve/pull/11731\n* fix: added multi stream api support in correlated logs  by @omkarK06 in https://github.com/openobserve/openobserve/pull/11791\n* fix: timechart rendering issue from visualize to timechart (#11790) by @ktx-abhay in https://github.com/openobserve/openobserve/pull/11798\n* fix: histogram cache returns duplicate hits when stream_min_ts falls mid-bucket by @Loaki07 in https://github.com/openobserve/openobserve/pull/11801\n* fix: timechart tab issues #11803 by @ktx-abhay in https://github.com/openobserve/openobserve/pull/11809\n**Full Changelog**: https://github.com/openobserve/openobserve/compare/v0.90.0-rc2...v0.90.0-rc3",
+      "memory_unit_text": "In the openobserve/openobserve release v0.90.0-rc3, the release note describes fixes for service details operations table sorting, added multi stream API support in correlated logs, timechart rendering issue from visualize to timechart, histogram cache returns duplicate hits when stream_min_ts falls mid-bucket, and timechart tab issues."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_90_0_rc4",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.90.0-rc4",
+      "tag_name": "v0.90.0-rc4",
+      "title": "Release v0.90.0-rc4",
+      "time_hint": "2026-05-18",
+      "published_at": "2026-05-18T17:01:34Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.90.0-rc4",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.90.0-rc4\nTag: v0.90.0-rc4; draft: False; prerelease: False; published_at: 2026-05-18T17:01:34Z; created_at: 2026-05-18T12:56:02Z\nRelease notes:\n📦 Download Binaries from https://openobserve.ai/downloads\n## What's Changed\n* fix: migration-issues-fixes by @Loaki07 in https://github.com/openobserve/openobserve/pull/11828\n* fix: dashboard no data issue (#11840) by @ktx-abhay in https://github.com/openobserve/openobserve/pull/11863\n* perf: reduce compactor memory[90] by @haohuaijin in https://github.com/openobserve/openobserve/pull/11882\n* fix: file list migration url by @hengfeiyang in https://github.com/openobserve/openobserve/pull/11889\n* fix: correct pagination for ORDER BY non-timestamp column in _search_… by @Loaki07 in https://github.com/openobserve/openobserve/pull/11898\n* fix: check if user password is empty in the authentication by @Subhra264 in https://github.com/openobserve/openobserve/pull/11908\n**Full Changelog**: https://github.com/openobserve/openobserve/compare/v0.90.0-rc3...v0.90.0-rc4",
+      "memory_unit_text": "In the openobserve/openobserve release v0.90.0-rc4, the release note describes fixes for migration issues, dashboard no data issue, reduce compactor memory, file list migration URL, correct pagination for ORDER BY non-timestamp column in _search, and check if user password is empty in the authentication."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_90_0",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.90.0",
+      "tag_name": "v0.90.0",
+      "title": "Release v0.90.0",
+      "time_hint": "2026-05-19",
+      "published_at": "2026-05-19T18:15:25Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.90.0",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.90.0\nTag: v0.90.0; draft: False; prerelease: False; published_at: 2026-05-19T18:15:25Z; created_at: 2026-05-19T14:27:14Z\nRelease notes:\n# OpenObserve v0.90.0 Release Notes\n**Download Binaries**: https://openobserve.ai/downloads\n**Release Date**: May 19, 2026\n**Previous Version**: v0.80.3\n---\n## Highlights\nv0.90.0 introduces the **Service Catalog** for traces, giving operators a topology view of their microservices with side-panel drill-downs. The **Trace Details sidebar** gains dedicated DB and Error tabs for richer debugging context. On the dashboard front, the chart engine moves to TanStack Table with CSV export, SQL auto-complete, and mustache variable substitution. Enterprise users get **contract-based subscriptions**, **license v2 with usage reporting**, and **org-level storage configuration**.\n---\n## New Features\n### Traces\n- **Service Catalog** — New service topology view with side-panel drill-downs, operations table, and service-level metrics (OSS#11555) — @omkarK06\n- **DB Tab in Trace Details** — Dedicated database view in the trace details sidebar for inspecting DB queries within spans (OSS#11675) — @omkarK06\n- **Error Tab in Trace Details** — Dedicated error view in the trace details sidebar for quick error inspection (OSS#11655) — @omkarK06\n- **Schematic group field mapping** — Support for mapping group fields when creating multi-stream queries (OSS#11741) — @omkarK06\n### Dashboards\n- **Dashboard reports as CSV** — Export dashboard data as downloadable CSV files (OSS#11282) — @ktx-vaidehi\n- **SQL auto-complete suggestions** — Context-aware SQL suggestions in the dashboard query editor (OSS#11251) — @ktx-vaidehi\n- **TanStack Table migration** — Dashboard table chart refactored to TanStack Table for improved rendering and features (OSS#11036) — @ktx-vaidehi\n- **Mustache variable replacement** — Replace dashboard variable placeholders with mustache syntax (OSS#11085) — @ktx-abhay\n- **JSON field display option** — Configuration option to render fields as JSON in dashboard tables (OSS#11104) — @ktx-abhay\n- **Datasources integration** — New datasources framework for connecting external data sources (OSS#11564) — @bjp232004\n### Logs, Metrics & Search\n- **Log pattern statistics** — Enumerated value statistics on log pattern variables for deeper pattern analysis (OSS#1591, ENT#1591) — @haohuaijin\n- **LLM input/output as default FTS fields** — `llm_input` and `llm_output` now included in default full-text search for LLM observability (OSS#11518) — @hengfeiyang\n- **Tantivy footer cache** — New caching layer for Tantivy index metadata to speed up search operations (OSS#11895) — @haohuaijin\n### Infrastructure\n- **Org-level storage configuration** — Configure S3-compatible storage per organization (OSS#11614, ENT#1628) — @YashodhanJoshi1\n- **Super cluster sync for anomaly detection** — Anomaly detection now supports super cluster sync for multi-node consistency (OSS#11587, ENT#1621) — @Loaki07\n- **Reset file-list-jobs subcommand** — New CLI subcommand to reset compactor file-list jobs for a specific stream (OSS#11535) — @hengfeiyang\n## Improvements\n### Performance\n- Store `row_group_size` in Tantivy puffin footer and shrink to 128K for faster indexed reads (OSS#11965, ENT#1731) — @hengfeiyang\n- Reduce compactor memory usage during parquet file processing (OSS#11851, OSS#11641) — @haohuaijin\n- Tantivy index performance improvements (OSS#11708) — @haohuaijin\n- Repartition parquet files to fit target partition sizes for more efficient storage (OSS#11685) — @haohuaijin\n- Batch streaming responses while the main thread is blocked for smoother UI (OSS#11020) — @ktx-abhay\n### Refactoring\n- Update file statistics cache configuration and metrics (OSS#11950) — @hengfeiyang\n- Select old-data compaction hours by file size, push merge filter to SQL (OSS#11638) — @hengfeiyang\n- Make `detect_llm_stream` accept a key-lookup closure for flexible field detection (OSS#11481) — @hengfeiyang...",
+      "memory_unit_text": "In the openobserve/openobserve release v0.90.0, the release note describes a major release introducing the Service Catalog for traces with topology view and side-panel drill-downs, Trace Details sidebar with dedicated DB and Error tabs, dashboard enhancements including TanStack Table migration, CSV export, SQL auto-complete, and mustache variable substitution, and enterprise features like contract-based subscriptions, license v2 with usage reporting, and org-level storage configuration. New features include Service Catalog, DB Tab in Trace Details, Error Tab in Trace Details, Schematic group field mapping, Dashboard reports as CSV, SQL auto-complete suggestions, TanStack Table migration, Mustache variable replacement, JSON field display option, Datasources integration, Log pattern statistics, LLM input/output as default FTS fields, Tantivy footer cache, Org-level storage configuration, Super cluster sync for anomaly detection, and Reset file-list-jobs subcommand. Improvements include performance enhancements like storing row_group_size in Tantivy puffin footer and shrinking to 128K, reducing compactor memory usage, Tantivy index performance improvements, repartition parquet files, and batch streaming responses, and refactoring like updating file statistics cache configuration, selecting old-data compaction hours by file size, and making detect_llm_stream accept a key-lookup closure."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_90_1",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.90.1",
+      "tag_name": "v0.90.1",
+      "title": "Release v0.90.1",
+      "time_hint": "2026-05-21",
+      "published_at": "2026-05-21T16:25:50Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.90.1",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.90.1\nTag: v0.90.1; draft: False; prerelease: False; published_at: 2026-05-21T16:25:50Z; created_at: 2026-05-21T13:37:12Z\nRelease notes:\n📦 Download Binaries from https://openobserve.ai/downloads\n## What's Changed\n* perf: store row_group_size in tantivy puffin footer and shrink to 128k by @hengfeiyang in https://github.com/openobserve/openobserve/pull/12004\n* fix: add runtime validation checks to sql queries for traces and sessions (#11960) by @uddhavdave in https://github.com/openobserve/openobserve/pull/12044\n* fix: strip api prefix if not already stripped by @Subhra264 in https://github.com/openobserve/openobserve/pull/12062\n* fix: logs page fixed 90 by @nikhilsaikethe in https://github.com/openobserve/openobserve/pull/12069\n* fix: change banner time from 1hr to 6hr by @YashodhanJoshi1 in https://github.com/openobserve/openobserve/pull/12076\n* fix: should allow != in alert import by @nikhilsaikethe in https://github.com/openobserve/openobserve/pull/12078\n* fix(file_downloader): fix priority queue OOM and LIFO ordering by @Loaki07 in https://github.com/openobserve/openobserve/pull/12082\n* perf: optimizer target partition config[90] by @haohuaijin in https://github.com/openobserve/openobserve/pull/12095\n**Full Changelog**: https://github.com/openobserve/openobserve/compare/v0.90.0...v0.90.1",
+      "memory_unit_text": "In the openobserve/openobserve release v0.90.1, the release note describes performance improvement for storing row_group_size in tantivy puffin footer and shrinking to 128k, and fixes for adding runtime validation checks to SQL queries for traces and sessions, stripping API prefix if not already stripped, logs page fixed, changing banner time from 1hr to 6hr, allowing != in alert import, fixing file downloader priority queue OOM and LIFO ordering, and optimizer target partition config."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_90_2",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.90.2",
+      "tag_name": "v0.90.2",
+      "title": "Release v0.90.2",
+      "time_hint": "2026-05-22",
+      "published_at": "2026-05-22T18:09:02Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.90.2",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.90.2\nTag: v0.90.2; draft: False; prerelease: False; published_at: 2026-05-22T18:09:02Z; created_at: 2026-05-22T14:47:07Z\nRelease notes:\n📦 Download Binaries from https://openobserve.ai/downloads\n## What's Changed\n* fix: identity and correlate api auth fix by @uddhavdave in https://github.com/openobserve/openobserve/pull/12109\n* fix: object store bulk delete issue by @hengfeiyang in https://github.com/openobserve/openobserve/pull/12118\n* fix: anomaly rbac by @Subhra264 in https://github.com/openobserve/openobserve/pull/12138\n**Full Changelog**: https://github.com/openobserve/openobserve/compare/v0.90.1...v0.90.2",
+      "memory_unit_text": "In the openobserve/openobserve release v0.90.2, the release note describes fixes for identity and correlate API auth, object store bulk delete issue, and anomaly RBAC."
+    },
+    {
+      "memory_node_id": "openobserve__openobserve__release__v0_90_3",
+      "repo": "openobserve/openobserve",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.90.3",
+      "tag_name": "v0.90.3",
+      "title": "Release v0.90.3",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T06:45:50Z",
+      "source_url": "https://github.com/openobserve/openobserve/releases/tag/v0.90.3",
+      "raw_text": "Repository: openobserve/openobserve\nRelease: Release v0.90.3\nTag: v0.90.3; draft: False; prerelease: False; published_at: 2026-05-26T06:45:50Z; created_at: 2026-05-26T04:26:53Z\nRelease notes:\n📦 Download Binaries from https://openobserve.ai/downloads\n## What's Changed\n* perf: single node tantivy topn[90] by @haohuaijin in https://github.com/openobserve/openobserve/pull/12182\n* impr: builder tab improvements #11586 by @ktx-abhay in https://github.com/openobserve/openobserve/pull/12186\n* fix: ingestion limits wording by @oasisk in https://github.com/openobserve/openobserve/pull/12228\n* fix: disabling some APIs by @007harshmahajan in https://github.com/openobserve/openobserve/pull/12224\n* fix: TopKHeap for non-ts ORDER BY in latest_stream by @Loaki07 in https://github.com/openobserve/openobserve/pull/12233\n* fix: badge text 200GB → 50GB for open_source variant in en.json by @oasisk in https://github.com/openobserve/openobserve/pull/12231\n* fix: restore retry guard in enrichment table URL validation (v0.90.0) by @neha00290 in https://github.com/openobserve/openobserve/pull/12234\n**Full Changelog**: https://github.com/openobserve/openobserve/compare/v0.90.2...v0.90.3",
+      "memory_unit_text": "In the openobserve/openobserve release v0.90.3, the release note describes performance improvement for single node tantivy topn, builder tab improvements, ingestion limits wording fix, disabling some APIs, TopKHeap for non-ts ORDER BY in latest_stream, badge text change from 200GB to 50GB for open_source variant in en.json, and restore retry guard in enrichment table URL validation."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the openobserve/openobserve releases, which release introduces the Service Catalog for traces with a topology view and side-panel drill-downs?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.70.0"
+        },
+        {
+          "option_id": "B",
+          "text": "v0.80.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v0.90.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v0.90.1"
+        }
+      ],
+      "correct_option_id": "C",
+      "expected_answer": "v0.90.0",
+      "source_chunk_ids": [
+        "openobserve__openobserve__release__v0_90_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "openobserve__openobserve__release__v0_90_0",
+          "answer_text": "introduces the Service Catalog for traces with topology view and side-panel drill-downs"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the openobserve/openobserve releases, how does the anomaly detection feature introduced in v0.80.0 differ from the anomaly detection support added in v0.90.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.80.0 introduces ML-based Anomaly Detection using Random Cut Forest, while v0.90.0 adds super cluster sync for anomaly detection."
+        },
+        {
+          "option_id": "B",
+          "text": "v0.80.0 adds anomaly detection for logs, while v0.90.0 adds anomaly detection for metrics."
+        },
+        {
+          "option_id": "C",
+          "text": "v0.80.0 introduces anomaly detection UI, while v0.90.0 removes anomaly detection."
+        },
+        {
+          "option_id": "D",
+          "text": "Both releases introduce the same anomaly detection feature without any differences."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v0.80.0 introduces ML-based Anomaly Detection using Random Cut Forest, while v0.90.0 adds super cluster sync for anomaly detection.",
+      "source_chunk_ids": [
+        "openobserve__openobserve__release__v0_80_0",
+        "openobserve__openobserve__release__v0_90_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "openobserve__openobserve__release__v0_80_0",
+          "answer_text": "introducing ML-based Anomaly Detection using the Random Cut Forest algorithm"
+        },
+        {
+          "memory_node_id": "openobserve__openobserve__release__v0_90_0",
+          "answer_text": "Super cluster sync for anomaly detection — Anomaly detection now supports super cluster sync for multi-node consistency"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the openobserve/openobserve release window, order the following release-content states from earliest to latest: (1) a release that introduces LLM Observability with DAG graph visualization, (2) a release that introduces ML-based Anomaly Detection using Random Cut Forest, (3) a release that introduces the Service Catalog for traces, (4) a patch release that fixes identity and correlate API auth.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "openobserve__openobserve__release__v0_70_0",
+        "openobserve__openobserve__release__v0_80_0",
+        "openobserve__openobserve__release__v0_90_0",
+        "openobserve__openobserve__release__v0_90_2"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "openobserve__openobserve__release__v0_70_0",
+          "answer_text": "introduces LLM Observability with DAG graph visualization"
+        },
+        {
+          "memory_node_id": "openobserve__openobserve__release__v0_80_0",
+          "answer_text": "introducing ML-based Anomaly Detection using the Random Cut Forest algorithm"
+        },
+        {
+          "memory_node_id": "openobserve__openobserve__release__v0_90_0",
+          "answer_text": "introduces the Service Catalog for traces"
+        },
+        {
+          "memory_node_id": "openobserve__openobserve__release__v0_90_2",
+          "answer_text": "fixes for identity and correlate API auth"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,530 @@
+{
+  "prototype_id": "microsoft__WSL_release_window",
+  "domain": "github_release_evolution",
+  "repo": "microsoft/WSL",
+  "source_type": "release_note",
+  "window_title": "microsoft/WSL recent release evolution",
+  "window_summary": "This window tracks the recent microsoft/WSL release stream from version 2.3.17 through 2.7.7, covering kernel updates, networking changes, modern distro support, and the first open source release.",
+  "chunks": [
+    {
+      "memory_node_id": "microsoft__WSL__release__2_3_17",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.3.17",
+      "tag_name": "2.3.17",
+      "title": "2.3.17",
+      "time_hint": "2024-08-10",
+      "published_at": "2024-08-10T18:23:45Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.3.17",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.3.17\nTag: 2.3.17; draft: False; prerelease: True; published_at: 2024-08-10T18:23:45Z; created_at: 2024-08-10T00:47:36Z\nRelease notes:\n*  Revert Linux kernel to 5.15.153.1-2 while issues are being debugged\n*  Fix race condition when WSL2 distribution is stopped\n*  Use a format attribute to catch printf format errors compile time\n*  Fix segfault in init when boot.initPath doesn't exist (solves #11725)\n*  Add default Hyper-V firewall rules to allow inbound mDNS traffic (solves #11852)\n*  Update Windows SDK to version 26100\n*  Update Microsoft.Windows.ImplementationLibrary to version 1.0.240803.1",
+      "memory_unit_text": "In the microsoft/WSL release 2.3.17, the Linux kernel is reverted to 5.15.153.1-2 while issues are debugged. A race condition when a WSL2 distribution is stopped is fixed. A format attribute is used to catch printf format errors at compile time. A segfault in init when boot.initPath does not exist is fixed (solves #11725). Default Hyper-V firewall rules are added to allow inbound mDNS traffic (solves #11852). The Windows SDK is updated to version 26100, and Microsoft.Windows.ImplementationLibrary is updated to version 1.0.240803.1."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_3_21",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.3.21",
+      "tag_name": "2.3.21",
+      "title": "2.3.21",
+      "time_hint": "2024-09-16",
+      "published_at": "2024-09-16T18:49:07Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.3.21",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.3.21\nTag: 2.3.21; draft: False; prerelease: True; published_at: 2024-09-16T18:49:07Z; created_at: 2024-09-11T20:54:02Z\nRelease notes:\n*  Don't register the binfmt_late entry when interop is disabled (solves #11920)\n*  Fix invalid iterator access causing service crash in DnsResolver::Stop\n*  Simplify elevated relaunch to use AttachConsole instead of pseudoconsole\n*  Update wsl.exe --mount to allow ARM64 passthrough disks on version of Windows that support it (solves #9611)\n*  Update MSRDC to 1.2.5620\n*  Update WinUIEx version 2.4.0\n*  Update Microsoft.Windows.SDK.NET.Ref version 10.0.26100.45\n*  Update Microsoft.Windows.ImplementationLibrary to version 1.0.240822.1\n*  Update CommunityToolkit.Common and CommunityToolkit.Mvvm to version 8.3.1\n*  Update various Microsoft runtime nuget packages from 8.0.7 -> 8.0.8",
+      "memory_unit_text": "In the microsoft/WSL release 2.3.21, the binfmt_late entry is no longer registered when interop is disabled (solves #11920). An invalid iterator access causing a service crash in DnsResolver::Stop is fixed. Elevated relaunch is simplified to use AttachConsole instead of pseudoconsole. wsl.exe --mount is updated to allow ARM64 passthrough disks on supported Windows versions (solves #9611). MSRDC is updated to 1.2.5620, WinUIEx to version 2.4.0, Microsoft.Windows.SDK.NET.Ref to version 10.0.26100.45, Microsoft.Windows.ImplementationLibrary to version 1.0.240822.1, CommunityToolkit.Common and CommunityToolkit.Mvvm to version 8.3.1, and various Microsoft runtime NuGet packages from 8.0.7 to 8.0.8."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_3_22",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.3.22",
+      "tag_name": "2.3.22",
+      "title": "2.3.22",
+      "time_hint": "2024-09-20",
+      "published_at": "2024-09-20T18:53:00Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.3.22",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.3.22\nTag: 2.3.22; draft: False; prerelease: True; published_at: 2024-09-20T18:53:00Z; created_at: 2024-09-19T18:28:32Z\nRelease notes:\n*  Remove experimental useWindowsDnsCache config",
+      "memory_unit_text": "In the microsoft/WSL release 2.3.22, the experimental useWindowsDnsCache config is removed."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_3_24",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.3.24",
+      "tag_name": "2.3.24",
+      "title": "2.3.24",
+      "time_hint": "2024-09-27",
+      "published_at": "2024-09-27T05:01:19Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.3.24",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.3.24\nTag: 2.3.24; draft: False; prerelease: False; published_at: 2024-09-27T05:01:19Z; created_at: 2024-09-19T18:28:32Z\nRelease notes:\n*  WSL: Change VM creation to fall back to no networking instead of failing\n*  Manually call IPlan9FileSystem::Teardown() to work around destructor hang in ni_release\n*  Update Windows App SDK to 1.6",
+      "memory_unit_text": "In the microsoft/WSL release 2.3.24, VM creation is changed to fall back to no networking instead of failing. IPlan9FileSystem::Teardown() is manually called to work around a destructor hang in ni_release. The Windows App SDK is updated to 1.6."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_3_25",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.3.25",
+      "tag_name": "2.3.25",
+      "title": "2.3.25",
+      "time_hint": "2024-10-25",
+      "published_at": "2024-10-25T00:14:19Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.3.25",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.3.25\nTag: 2.3.25; draft: False; prerelease: True; published_at: 2024-10-25T00:14:19Z; created_at: 2024-10-03T17:48:17Z\nRelease notes:\n*  Automatically fall back to virtioProxy networking mode if NAT networking mode fails.",
+      "memory_unit_text": "In the microsoft/WSL release 2.3.25, the system automatically falls back to virtioProxy networking mode if NAT networking mode fails."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_3_26",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.3.26",
+      "tag_name": "2.3.26",
+      "title": "2.3.26",
+      "time_hint": "2024-11-10",
+      "published_at": "2024-11-10T03:32:54Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.3.26",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.3.26\nTag: 2.3.26; draft: False; prerelease: False; published_at: 2024-11-10T03:32:54Z; created_at: 2024-10-03T17:48:17Z\nRelease notes:\n* Update kernel to 5.15.167.4\n* Update to upstream stable kernel version v5.15.167\n* Include an out-of-tree patch fixing a bug in the XSAVES subsystem.",
+      "memory_unit_text": "In the microsoft/WSL release 2.3.26, the kernel is updated to 5.15.167.4, which updates to upstream stable kernel version v5.15.167 and includes an out-of-tree patch fixing a bug in the XSAVES subsystem."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_4_4",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.4.4",
+      "tag_name": "2.4.4",
+      "title": "2.4.4",
+      "time_hint": "2024-11-19",
+      "published_at": "2024-11-19T14:21:43Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.4.4",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.4.4\nTag: 2.4.4; draft: False; prerelease: True; published_at: 2024-11-19T14:21:43Z; created_at: 2024-10-03T17:48:17Z\nRelease notes:\n*  Add logic to wait for block device to be available before calling mkfs / mkswap\n*  Set pathTranslationStyle to 'wsl' in generated terminal profiles\n* Add support for terminal profile generation udring distribution installation\n* Add explorer extension to handle .wsl files\n*  Add support for gzip compression when calling wsl --export\n*  Fix double handle close in wslhost.exe\n*  modern-distro: Implement install on double click\n*  modern-distro: Implement wsl --manage <distro> --set-default-user\n*  Add file size based progress to wsl --export\n*  Don't set the default UID if it's not in wsl-distribution.conf\n*  Implement wsl.exe --distribution-id <id>\n*  Fall back to using virito proxy networking mode if NAT fails\n*  modern-distro: Implement Flavor & Version parsing\n*  Remove hardcoded 30 seconds timeout and respect KernelBootTimeout config setting\n*  Add socket receive timeouts when starting a new distro\n*  Add logic to offer to re-install WSL if WslInstaller fails to install the MSI\n*  Don't wait on termination event when HcsStartComputeSystem fails\n*  Configure the CRT to crash the process when abort() is called",
+      "memory_unit_text": "In the microsoft/WSL release 2.4.4, logic is added to wait for a block device to be available before calling mkfs/mkswap. PathTranslationStyle is set to 'wsl' in generated terminal profiles. Support for terminal profile generation during distribution installation is added. An explorer extension to handle .wsl files is added. Support for gzip compression when calling wsl --export is added. A double handle close in wslhost.exe is fixed. Modern-distro features include install on double click, wsl --manage <distro> --set-default-user, flavor and version parsing. File size based progress is added to wsl --export. The default UID is not set if not in wsl-distribution.conf. wsl.exe --distribution-id <id> is implemented. Fallback to virtio proxy networking mode if NAT fails is added. The hardcoded 30 seconds timeout is removed and KernelBootTimeout config setting is respected. Socket receive timeouts are added when starting a new distro. Logic to offer to re-install WSL if WslInstaller fails to install the MSI is added. The process no longer waits on termination event when HcsStartComputeSystem fails. The CRT is configured to crash the process when abort() is called."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_4_5",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.4.5",
+      "tag_name": "2.4.5",
+      "title": "2.4.5",
+      "time_hint": "2024-12-03",
+      "published_at": "2024-12-03T22:09:30Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.4.5",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.4.5\nTag: 2.4.5; draft: False; prerelease: True; published_at: 2024-12-03T22:09:30Z; created_at: 2024-11-27T20:09:20Z\nRelease notes:\n*  Allow distributions to opt out of shortcut and terminal profile generation\n*  Use GetLogicalProcessorInformationEx to determine max number of processors (solves #1115)\n*  Add user warning letting users know bridged networking will be deprecated\n*  Add back Windows-specific string conversion functions (solves #12294)\n*  Fix regression causing default distribution to no be listed in wsl --list's o... (solves #12302)\n*  Update wslpath to preserve trailing slashes (solves #8827)",
+      "memory_unit_text": "In the microsoft/WSL release 2.4.5, distributions are allowed to opt out of shortcut and terminal profile generation. GetLogicalProcessorInformationEx is used to determine the maximum number of processors (solves #1115). A user warning is added that bridged networking will be deprecated. Windows-specific string conversion functions are added back (solves #12294). A regression causing the default distribution to not be listed in wsl --list's output is fixed (solves #12302). wslpath is updated to preserve trailing slashes (solves #8827)."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_4_8",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.4.8",
+      "tag_name": "2.4.8",
+      "title": "2.4.8",
+      "time_hint": "2024-12-16",
+      "published_at": "2024-12-16T21:24:49Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.4.8",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.4.8\nTag: 2.4.8; draft: False; prerelease: True; published_at: 2024-12-16T21:24:49Z; created_at: 2024-12-16T21:23:04Z\nRelease notes:\n*  Don't delete terminal profile & start menu shortcut when a distribution is converted\n*  Plumb stderr handle through to WSL1 processes for import / export / setversion\n*  Update modern distros to support WSL1 (solves #12298)\n*  Make wsl --install case insensitive with modern distros\n*  Fix logic error causing wsl2.processors to always be defaulted to the maximum... (solves #12346)\n*  Update Microsoft.RemoteDesktop.Client.MSRDC.SessionHost to version 1.2.5716",
+      "memory_unit_text": "In the microsoft/WSL release 2.4.8, terminal profiles and start menu shortcuts are no longer deleted when a distribution is converted. The stderr handle is plumbed through to WSL1 processes for import/export/setversion. Modern distros are updated to support WSL1 (solves #12298). wsl --install is made case insensitive with modern distros. A logic error causing wsl2.processors to always default to the maximum is fixed (solves #12346). Microsoft.RemoteDesktop.Client.MSRDC.SessionHost is updated to version 1.2.5716."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_4_9",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.4.9",
+      "tag_name": "2.4.9",
+      "title": "2.4.9",
+      "time_hint": "2025-01-30",
+      "published_at": "2025-01-30T05:28:32Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.4.9",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.4.9\nTag: 2.4.9; draft: False; prerelease: True; published_at: 2025-01-30T05:28:32Z; created_at: 2025-01-29T22:32:27Z\nRelease notes:\n*  Update modern distro shortcut and terminal profiles to start in user's home directory",
+      "memory_unit_text": "In the microsoft/WSL release 2.4.9, modern distro shortcuts and terminal profiles are updated to start in the user's home directory."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_4_10",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.4.10",
+      "tag_name": "2.4.10",
+      "title": "2.4.10",
+      "time_hint": "2025-02-01",
+      "published_at": "2025-02-01T23:10:19Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.4.10",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.4.10\nTag: 2.4.10; draft: False; prerelease: False; published_at: 2025-02-01T23:10:19Z; created_at: 2025-02-01T00:22:02Z\nRelease notes:\n*  Backport WSL1 OOBE support for modern distros (solves #12398)",
+      "memory_unit_text": "In the microsoft/WSL release 2.4.10, WSL1 OOBE support for modern distros is backported (solves #12398)."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_4_11",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.4.11",
+      "tag_name": "2.4.11",
+      "title": "2.4.11",
+      "time_hint": "2025-02-12",
+      "published_at": "2025-02-12T03:55:24Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.4.11",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.4.11\nTag: 2.4.11; draft: False; prerelease: False; published_at: 2025-02-12T03:55:24Z; created_at: 2025-02-11T00:59:40Z\nRelease notes:\n*  Handle failure to launch if c:\\windows\\system32\\lxss\\lib is not present",
+      "memory_unit_text": "In the microsoft/WSL release 2.4.11, a failure to launch is handled if c:\\windows\\system32\\lxss\\lib is not present."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_4_12",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.4.12",
+      "tag_name": "2.4.12",
+      "title": "2.4.12",
+      "time_hint": "2025-03-06",
+      "published_at": "2025-03-06T18:43:45Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.4.12",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.4.12\nTag: 2.4.12; draft: False; prerelease: False; published_at: 2025-03-06T18:43:45Z; created_at: 2025-02-24T23:20:00Z\nRelease notes:\n*  Gracefully handle situations where the user's defaultDistribution registry value is missing (solves #12595)",
+      "memory_unit_text": "In the microsoft/WSL release 2.4.12, situations where the user's defaultDistribution registry value is missing are gracefully handled (solves #12595)."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_5_1",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.5.1",
+      "tag_name": "2.5.1",
+      "title": "2.5.1",
+      "time_hint": "2025-03-12",
+      "published_at": "2025-03-12T23:09:45Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.5.1",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.5.1\nTag: 2.5.1; draft: False; prerelease: True; published_at: 2025-03-12T23:09:45Z; created_at: 2025-03-12T23:07:09Z\nRelease notes:\n*  Fix broken /etc/hosts generation and correctly handle empty domain names (solves #12275)\n*  Improve hardenning of the WSL binfmt interpreter (solves #8843)\n*  Gracefully handle situations where the user's defaultDistribution registry value points to a missing registration (solves #12595)\n*  Update WSLg to 1.0.66\n*  Add support for exporting distributions via wsl --export as .tar.xz\n*  Change wslpluginapi.h Windows.h header include to lowercase (solves #12580)\n*  Move the user token duplication logic to LxssUserSession so valid user tokens are passed to plugins (solves #12554)\n*  Update Kernel to 6.6.75 and switch modules to a vhd\n*  Remove cgroupv1 support\n*  Automatically start the distribution when a .wsl file is double clicked.\n*  Fix potential deadlock in the IO relay when stdin is a pipe (solves #12523)\n*  Introduce DefaultNetworkingMode WSL policy value\n*  Add support for CRLF in /etc/wsl.conf (solves #12502)\n*  Check automount setting before mounting admin drives (solves #12443)\n*  Remove TrustedInstaller registry protections before writing the registry during installation (solves #11376)\n*  WSLg: Create /run/user/<uid> as a tmpfs mount that systemd expects (solves #11261)\n*  Add support for distro compressed with xz, or bzip for WSL1\n*  Implement OOBE for WSL1 distros. (solves #12398)\n*  Update Microsoft.Identity.MSAL.WSL.Proxy to version 0.1.1\n*  Implement config file warnings on Linux\n*  Implement localization on Linux\n*  Update 'wsl.exe --import-in-place` to call plugin API and do modern distro operations (solves #12370)\n*  Add support for resizing a distribution via wsl --manage <distro> --resize",
+      "memory_unit_text": "In the microsoft/WSL release 2.5.1, broken /etc/hosts generation is fixed and empty domain names are correctly handled (solves #12275). Hardening of the WSL binfmt interpreter is improved (solves #8843). Situations where the user's defaultDistribution registry value points to a missing registration are gracefully handled (solves #12595). WSLg is updated to 1.0.66. Support for exporting distributions via wsl --export as .tar.xz is added. The wslpluginapi.h Windows.h header include is changed to lowercase (solves #12580). User token duplication logic is moved to LxssUserSession so valid user tokens are passed to plugins (solves #12554). The kernel is updated to 6.6.75 and modules are switched to a vhd. cgroupv1 support is removed. The distribution is automatically started when a .wsl file is double clicked. A potential deadlock in the IO relay when stdin is a pipe is fixed (solves #12523). A DefaultNetworkingMode WSL policy value is introduced. Support for CRLF in /etc/wsl.conf is added (solves #12502). The automount setting is checked before mounting admin drives (solves #12443). TrustedInstaller registry protections are removed before writing the registry during installation (solves #11376). WSLg creates /run/user/<uid> as a tmpfs mount that systemd expects (solves #11261). Support for distros compressed with xz or bzip for WSL1 is added. OOBE for WSL1 distros is implemented (solves #12398). Microsoft.Identity.MSAL.WSL.Proxy is updated to version 0.1.1. Config file warnings on Linux are implemented. Localization on Linux is implemented. wsl.exe --import-in-place is updated to call plugin API and do modern distro operations (solves #12370). Support for resizing a distribution via wsl --manage <distro> --resize is added."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_4_13",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.4.13",
+      "tag_name": "2.4.13",
+      "title": "2.4.13",
+      "time_hint": "2025-03-20",
+      "published_at": "2025-03-20T19:48:02Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.4.13",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.4.13\nTag: 2.4.13; draft: False; prerelease: False; published_at: 2025-03-20T19:48:02Z; created_at: 2025-03-19T20:27:02Z\nRelease notes:\n*  Update Microsoft.Identity.MSAL.WSL.Proxy to version 0.1.1",
+      "memory_unit_text": "In the microsoft/WSL release 2.4.13, Microsoft.Identity.MSAL.WSL.Proxy is updated to version 0.1.1."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_5_4",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.5.4",
+      "tag_name": "2.5.4",
+      "title": "2.5.4",
+      "time_hint": "2025-03-26",
+      "published_at": "2025-03-26T00:27:30Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.5.4",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.5.4\nTag: 2.5.4; draft: False; prerelease: True; published_at: 2025-03-26T00:27:30Z; created_at: 2025-03-25T02:04:38Z\nRelease notes:\n* Fix the wsl --update --pre-release logic to correctly handle backports and always pick the actual latest\n* Set LX_WSL2_INSTALL_PATH even when gui apps are disabled\n* Introduce general.instanceIdleTimeout to control distribution termination timeouts  (solves #10138, #9401)\n* Modify config file parsing to allow empty strings\n* Update Microsoft.RemoteDesktop.Client.MSRDC.SessionHost to version 1.2.6074\n* Change behavior of a custom kernel with no modules to not log a warning.\n* Implement --vhd-size and --fixed-vhd arguments to wsl.exe --install\n* Detect when the VM crashes, and capture dmesg\n* Resolve kernel warning about ip_local_port_range having start / end with same parity\n* Update WSLENV logic to allow passing /l and /p together to translate paths and path lists\n* Don't throw when processing an empty argument  (solves #12649)\n* Disable DNS tunneling if global secure access client is present\n* Remove support bridged networking\n* Fix wsl.exe --install --enable-wsl1 to work when run as non-elevated\n* Fix partial read causing failure to import WSL1 distribution\n* wslsettings: Launch MSI version of wsl.exe instead of the one in system32",
+      "memory_unit_text": "In the microsoft/WSL release 2.5.4, the wsl --update --pre-release logic is fixed to correctly handle backports and always pick the actual latest. LX_WSL2_INSTALL_PATH is set even when gui apps are disabled. A general.instanceIdleTimeout is introduced to control distribution termination timeouts (solves #10138, #9401). Config file parsing is modified to allow empty strings. Microsoft.RemoteDesktop.Client.MSRDC.SessionHost is updated to version 1.2.6074. The behavior of a custom kernel with no modules is changed to not log a warning. --vhd-size and --fixed-vhd arguments are implemented for wsl.exe --install. Detection of VM crashes and capturing dmesg is added. A kernel warning about ip_local_port_range having start/end with same parity is resolved. WSLENV logic is updated to allow passing /l and /p together to translate paths and path lists. An exception is no longer thrown when processing an empty argument (solves #12649). DNS tunneling is disabled if the global secure access client is present. Bridged networking support is removed. wsl.exe --install --enable-wsl1 is fixed to work when run as non-elevated. A partial read causing failure to import a WSL1 distribution is fixed. wslsettings launches the MSI version of wsl.exe instead of the one in system32."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_5_6",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.5.6",
+      "tag_name": "2.5.6",
+      "title": "2.5.6",
+      "time_hint": "2025-04-08",
+      "published_at": "2025-04-08T19:07:53Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.5.6",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.5.6\nTag: 2.5.6; draft: False; prerelease: True; published_at: 2025-04-08T19:07:53Z; created_at: 2025-04-07T16:20:32Z\nRelease notes:\n* Fix docker by adding back modules loaded at boot  (solves #12748)\n* Fix command line parsing preventing importing or exporting from stdout / stdin\n* Bring back bridged networking mode\n* Update to 6.6.84.1 WSL Kernel\n* wslinfo: print newline after usage\n* Add initgroups helper to work around musl limitation  (solves #12755)\n* Remove invalid kmesg error when gui apps are disabled\n* Fallback to GrantVmAccess when attaching a VHD fails with ERROR_ACCESS_DENIED\n* Update UtilConnectToInteropServer to respect g_InitPid and minor wslinfo updates  (solves #12714)\n* Put sparse vhd support behind an --allow-unsafe flag.\n* wslsettings: fix networking mode selection logic  (solves #12745)",
+      "memory_unit_text": "In the microsoft/WSL release 2.5.6, Docker is fixed by adding back modules loaded at boot (solves #12748). Command line parsing preventing importing or exporting from stdout/stdin is fixed. Bridged networking mode is brought back. The WSL kernel is updated to 6.6.84.1. wslinfo prints a newline after usage. An initgroups helper is added to work around a musl limitation (solves #12755). An invalid kmesg error when gui apps are disabled is removed. Fallback to GrantVmAccess when attaching a VHD fails with ERROR_ACCESS_DENIED is added. UtilConnectToInteropServer is updated to respect g_InitPid and minor wslinfo updates are made (solves #12714). Sparse vhd support is put behind an --allow-unsafe flag. wslsettings fixes the networking mode selection logic (solves #12745)."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_5_7",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.5.7",
+      "tag_name": "2.5.7",
+      "title": "2.5.7",
+      "time_hint": "2025-04-24",
+      "published_at": "2025-04-24T21:15:28Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.5.7",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.5.7\nTag: 2.5.7; draft: False; prerelease: False; published_at: 2025-04-24T21:15:28Z; created_at: 2025-04-21T18:39:51Z\nRelease notes:\n* Update Linux kernel to 6.6.87.1-1\n* Update WindowsAppSDK to version 1.7.250401001\n* Increase the soft file descriptor limit to 1024 * 1024 (solves #12837)\n* Add logic to detect when an imported distribution is invalid\n* Move Linux side warnings to new warning infrastructure\n* Fix potential deadlock when converting a distribution to WSL1 or WSL2\n* Fix download logic to download to a file instead of in memory (solves #12805)\n* Use a systemd-generator to create the wslg and binfmt units",
+      "memory_unit_text": "In the microsoft/WSL release 2.5.7, the Linux kernel is updated to 6.6.87.1-1. WindowsAppSDK is updated to version 1.7.250401001. The soft file descriptor limit is increased to 1024 * 1024 (solves #12837). Logic to detect when an imported distribution is invalid is added. Linux side warnings are moved to a new warning infrastructure. A potential deadlock when converting a distribution to WSL1 or WSL2 is fixed. Download logic is fixed to download to a file instead of in memory (solves #12805). A systemd-generator is used to create the wslg and binfmt units."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_5_8",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.5.8",
+      "tag_name": "2.5.8",
+      "title": "2.5.8",
+      "time_hint": "2025-06-05",
+      "published_at": "2025-06-05T15:15:53Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.5.8",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.5.8\nTag: 2.5.8; draft: False; prerelease: True; published_at: 2025-06-05T15:15:53Z; created_at: 2025-06-05T01:11:01Z\nRelease notes:\n* Reduce file descriptor soft limit to 10240 (solves #12985)\n* Add a systemd override binfmt-support.service to protect wsl's interop entry (solves #13000)",
+      "memory_unit_text": "In the microsoft/WSL release 2.5.8, the file descriptor soft limit is reduced to 10240 (solves #12985). A systemd override binfmt-support.service is added to protect WSL's interop entry (solves #13000)."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_5_9",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.5.9",
+      "tag_name": "2.5.9",
+      "title": "2.5.9",
+      "time_hint": "2025-06-10",
+      "published_at": "2025-06-10T00:24:23Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.5.9",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.5.9\nTag: 2.5.9; draft: False; prerelease: False; published_at: 2025-06-10T00:24:23Z; created_at: 2025-06-06T22:06:29Z\nRelease notes:\n* Update to WSL Kernel 6.6.87.2 (solves #12987, #12983, #13031)\n* Merged PR 13054145: Make the post import distribution checks less strict (Solves #13036)",
+      "memory_unit_text": "In the microsoft/WSL release 2.5.9, the WSL kernel is updated to 6.6.87.2 (solves #12987, #12983, #13031). Post import distribution checks are made less strict (solves #13036)."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_6_0",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.6.0",
+      "tag_name": "2.6.0",
+      "title": "2.6.0",
+      "time_hint": "2025-06-20",
+      "published_at": "2025-06-20T02:11:50Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.6.0",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.6.0\nTag: 2.6.0; draft: False; prerelease: True; published_at: 2025-06-20T02:11:50Z; created_at: 2025-06-19T01:29:43Z\nRelease notes:\n* **First open source release of WSL**\n* Various stability improvements\n* Update localized strings\n* Don't throw when unregistering a distro that has a BasePath that doesn't exist  (solves #13004)\n* Fix distribution download failing if the URL contains parameters\n* Fix various issues with systemd user sessions   (solves #13053)\n* Fix wslsettings crash when invoked from wslservice\n* Set MOVEFILE_WRITE_THROUGH when moving distribution VHD's  (solves #13055)\n* Discard BOM header when parsing the Windows 'hosts' file  (solves #9642)\n* Correctly report corrupted disks when mount() fails with EUCLEAN  (solves #13074)\n* Don't use a ? prefix when resolving the distribution location  (solves #13064)\n* Solve potential failure while downloading a distribution if LastError is non zero",
+      "memory_unit_text": "In the microsoft/WSL release 2.6.0, this is the first open source release of WSL. Various stability improvements are included. Localized strings are updated. An exception is no longer thrown when unregistering a distro that has a BasePath that doesn't exist (solves #13004). Distribution download failure if the URL contains parameters is fixed. Various issues with systemd user sessions are fixed (solves #13053). A wslsettings crash when invoked from wslservice is fixed. MOVEFILE_WRITE_THROUGH is set when moving distribution VHDs (solves #13055). The BOM header is discarded when parsing the Windows 'hosts' file (solves #9642). Corrupted disks are correctly reported when mount() fails with EUCLEAN (solves #13074). A ? prefix is no longer used when resolving the distribution location (solves #13064). Potential failure while downloading a distribution if LastError is non-zero is solved."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_5_10",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.5.10",
+      "tag_name": "2.5.10",
+      "title": "2.5.10",
+      "time_hint": "2025-08-06",
+      "published_at": "2025-08-06T22:10:30Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.5.10",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.5.10\nTag: 2.5.10; draft: False; prerelease: False; published_at: 2025-08-06T22:10:30Z; created_at: 2025-08-05T21:36:10Z\nRelease notes:\n* Fixed [CVE-2025-53788](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-53788) (Details to be published on Aug 12th)",
+      "memory_unit_text": "In the microsoft/WSL release 2.5.10, CVE-2025-53788 is fixed (details to be published on Aug 12th)."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_6_1",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.6.1",
+      "tag_name": "2.6.1",
+      "title": "2.6.1",
+      "time_hint": "2025-08-07",
+      "published_at": "2025-08-07T01:00:00Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.6.1",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.6.1\nTag: 2.6.1; draft: False; prerelease: False; published_at: 2025-08-07T01:00:00Z; created_at: 2025-08-05T21:36:10Z\nRelease notes:\n## What's Changed\n* Fix json invalid utf-8 from IconPath by @CarlosNihelton in https://github.com/microsoft/WSL/pull/13340\n* Switch `wslinfo --vm-id` to not rely on presence of VM ID environment variable by @benhillis in https://github.com/microsoft/WSL/pull/13318\n* Fixed [CVE-2025-53788](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-53788) (Details to be published on Aug 12th)\n* install: do not attempt to install distros if a reboot is required by @benhillis in https://github.com/microsoft/WSL/pull/13298\n* wslsettings: appropriately set heading level for PageHeaderTextBlockStyle by @benhillis in https://github.com/microsoft/WSL/pull/13257\n* Expose the VM ID inside user distros by @chelnak in https://github.com/microsoft/WSL/pull/13212\n* Don't display a warning when the binfmt process doesn't have a controlling terminal by @OneBlue in https://github.com/microsoft/WSL/pull/13176\n* Fix C1010070 compilation error in wslsettings by @Mlekow in https://github.com/microsoft/WSL/pull/12928\n* Look up systemctl from $PATH for user session checks by @K900 in https://github.com/microsoft/WSL/pull/13157\n* Update Microsoft.RemoteDesktop.Client.MSRDC.SessionHost to version 1.2.6353 by @benhillis in https://github.com/microsoft/WSL/pull/13271\n## New Contributors\n* @Mlekow made their first contribution in https://github.com/microsoft/WSL/pull/12928\n* @K900 made their first contribution in https://github.com/microsoft/WSL/pull/13157\n* @g0tmi1k made their first contribution in https://github.com/microsoft/WSL/pull/13182\n* @chelnak made their first contribution in https://github.com/microsoft/WSL/pull/13212\n* @kirancheparthi made their first contribution in https://github.com/microsoft/WSL/pull/13240\n* @mohiuddin-khan-shiam made their first contribution in https://github.com/microsoft/WSL/pull/13201\n* @stratusjerry made their first contribution in https://github.com/microsoft/WSL/pull/13314\n* @CarlosNihelton made their first contribution in https://github.com/microsoft/WSL/pull/13340\n**Full Changelog**: https://github.com/microsoft/WSL/compare/2.6.0...2.6.1",
+      "memory_unit_text": "In the microsoft/WSL release 2.6.1, a JSON invalid utf-8 from IconPath is fixed. wslinfo --vm-id is switched to not rely on the presence of a VM ID environment variable. CVE-2025-53788 is fixed. Installation does not attempt to install distros if a reboot is required. wslsettings appropriately sets the heading level for PageHeaderTextBlockStyle. The VM ID is exposed inside user distros. A warning is no longer displayed when the binfmt process doesn't have a controlling terminal. A C1010070 compilation error in wslsettings is fixed. systemctl is looked up from $PATH for user session checks. Microsoft.RemoteDesktop.Client.MSRDC.SessionHost is updated to version 1.2.6353."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_6_2",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.6.2",
+      "tag_name": "2.6.2",
+      "title": "2.6.2",
+      "time_hint": "2025-10-13",
+      "published_at": "2025-10-13T20:56:40Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.6.2",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.6.2\nTag: 2.6.2; draft: False; prerelease: False; published_at: 2025-10-13T20:56:40Z; created_at: 2025-10-09T01:24:31Z\nRelease notes:\n## What's Changed\n* Add comprehensive GitHub Copilot instructions for WSL development by @Copilot in https://github.com/microsoft/WSL/pull/13352\n* wslg: update to latest version which uses wslinfo --vm-id instead of env var by @benhillis in https://github.com/microsoft/WSL/pull/13361\n* Remove hardcoded `--cd ~` from WSL terminal fragment profiles to support Terminal's startingDirectory by @Copilot in https://github.com/microsoft/WSL/pull/13350\n* Disable HTTP cache when reading the distribution manifest over HTTP by @OneBlue in https://github.com/microsoft/WSL/pull/13383\n* Relaunch the debug shell if user exits it. by @benhillis in https://github.com/microsoft/WSL/pull/13379\n* Update Microsoft .NET and AppSDK nuget packages. by @benhillis in https://github.com/microsoft/WSL/pull/13450\n* logging: add more settings to vm create begin / end events. by @benhillis in https://github.com/microsoft/WSL/pull/13412\n* Fix: Always use 'WSLInterop` as the binfmt name by @benhillis in https://github.com/microsoft/WSL/pull/13467\n* Notice change from build: 129899373 by @benhillis in https://github.com/microsoft/WSL/pull/13475\n* Set TargetLatestRuntimePatch to false to prevent automatic framework version increases by @OneBlue in https://github.com/microsoft/WSL/pull/13483\n* Add WININET_E_TIMEOUT to g_commonErrors by @OneBlue in https://github.com/microsoft/WSL/pull/13506\n* fix: UnboundLocalError in create-release.py by @rodeka in https://github.com/microsoft/WSL/pull/13499\n* Add logic to force terminate the VM if the session lock can't be acquired for 30 seconds when the service stops by @OneBlue in https://github.com/microsoft/WSL/pull/13493\n* Fix incorrect timeout causing WSL1 OOBE to fail if the OOBE process takes longer than 30 seconds by @OneBlue in https://github.com/microsoft/WSL/pull/13517\n* Create a persistent install log file to help root cause package upgrade issues by @OneBlue in https://github.com/microsoft/WSL/pull/13500\n* fix: correct sparse VHD command to include `true` by @junhaoliao in https://github.com/microsoft/WSL/pull/13512\n* Introduce a new wsl.conf config value to allow distributions to opt-in to cgroupv1 mounts by @OneBlue in https://github.com/microsoft/WSL/pull/13546\n* Add more verbose output to bsdtar to help root cause 'ImportExportStdout' test failures by @OneBlue in https://github.com/microsoft/WSL/pull/13555\n* Respect the distribution manifest ordering when listing distributions by @OneBlue in https://github.com/microsoft/WSL/pull/13561\n* Update the initramfs generation logic to set 755 permissions on /init by @OneBlue in https://github.com/microsoft/WSL/pull/13567\n* Update WSLg to 1.0.71 by @hideyukn88 in https://github.com/microsoft/WSL/pull/13570\n* Implement clean instance terminate when using systemd by @benhillis in https://github.com/microsoft/WSL/pull/13552\n* Fix potential service deadlock when plugin returns an error from OnVmStarted by @OneBlue in https://github.com/microsoft/WSL/pull/13569\n* Improve logging when socket operations fail by @OneBlue in https://github.com/microsoft/WSL/pull/13579\n## New Contributors\n* @jkvn made their first contribution in https://github.com/microsoft/WSL/pull/13355\n* @Copilot made their first contribution in https://github.com/microsoft/WSL/pull/13352\n* @rodeka made their first contribution in https://github.com/microsoft/WSL/pull/13499\n* @junhaoliao made their first contribution in https://github.com/microsoft/WSL/pull/13512\n* @hideyukn88 made their first contribution in https://github.com/microsoft/WSL/pull/13570\n**Full Changelog**: https://github.com/microsoft/WSL/compare/2.5.10...2.6.2",
+      "memory_unit_text": "In the microsoft/WSL release 2.6.2, comprehensive GitHub Copilot instructions for WSL development are added. WSLg is updated to use wslinfo --vm-id instead of an environment variable. The hardcoded --cd ~ is removed from WSL terminal fragment profiles to support Terminal's startingDirectory. The HTTP cache is disabled when reading the distribution manifest over HTTP. The debug shell is relaunched if the user exits it. Microsoft .NET and AppSDK NuGet packages are updated. More settings are added to VM create begin/end events. The binfmt name is always set to 'WSLInterop'. TargetLatestRuntimePatch is set to false to prevent automatic framework version increases. WININET_E_TIMEOUT is added to g_commonErrors. An UnboundLocalError in create-release.py is fixed. Logic to force terminate the VM if the session lock can't be acquired for 30 seconds when the service stops is added. An incorrect timeout causing WSL1 OOBE to fail if the OOBE process takes longer than 30 seconds is fixed. A persistent install log file is created to help root cause package upgrade issues. A sparse VHD command is corrected to include 'true'. A new wsl.conf config value is introduced to allow distributions to opt-in to cgroupv1 mounts. More verbose output is added to bsdtar to help root cause 'ImportExportStdout' test failures. The distribution manifest ordering is respected when listing distributions. The initramfs generation logic is updated to set 755 permissions on /init. WSLg is updated to 1.0.71. Clean instance terminate when using systemd is implemented. A potential service deadlock when a plugin returns an error from OnVmStarted is fixed. Logging when socket operations fail is improved."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_7_0",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.7.0",
+      "tag_name": "2.7.0",
+      "title": "2.7.0",
+      "time_hint": "2025-12-11",
+      "published_at": "2025-12-11T16:09:39Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.7.0",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.7.0\nTag: 2.7.0; draft: False; prerelease: True; published_at: 2025-12-11T16:09:39Z; created_at: 2025-12-11T00:20:45Z\nRelease notes:\n## What's Changed\n* Remove unused LXSS_DISTRO_FLAGS_WSLCORE_MODE by @OneBlue in https://github.com/microsoft/WSL/pull/13603\n* Add logic to handle partial hvsocket writes and additional logging by @OneBlue in https://github.com/microsoft/WSL/pull/13602\n* Update Microsoft.NETCore.App.Runtime packages version with fix for CVE-2025-55248 by @benhillis in https://github.com/microsoft/WSL/pull/13607\n* Update Microsoft.WSL.DeviceHost package to version 1.0.0-20251015.1 by @benhillis in https://github.com/microsoft/WSL/pull/13606\n* Fix edge cases around .vhd support by @benhillis in https://github.com/microsoft/WSL/pull/13061\n* Fix WslDistributionConfig to not default-initialize optional fields by @benhillis in https://github.com/microsoft/WSL/pull/13629\n* Make the sample WSL_POST_BUILD_COMMAND more resilient by @OneBlue in https://github.com/microsoft/WSL/pull/13652\n* wslsettings: allow OOBE window to close with escape key by @benhillis in https://github.com/microsoft/WSL/pull/13686\n* wslsettings: fix OOBE text truncation at 200% text scaling by @benhillis in https://github.com/microsoft/WSL/pull/13693\n* wslsettings: add underlines to links in about page by @benhillis in https://github.com/microsoft/WSL/pull/13703\n* .clang-format: add InsertBraces: true and minor fix to FormatSource.ps1 by @benhillis in https://github.com/microsoft/WSL/pull/13712\n* wslsettings: ensure selected setting is auto-expanded and selected by @benhillis in https://github.com/microsoft/WSL/pull/13689\n* build: fix minor compiler errors when building with VS2026 by @benhillis in https://github.com/microsoft/WSL/pull/13744\n* Mask systemd-networkd-wait-online.service during boot by @OneBlue in https://github.com/microsoft/WSL/pull/13611\n* deps: update a number of NuGet packages to the latest available versions by @benhillis in https://github.com/microsoft/WSL/pull/13728\n* Add *.slnx to .gitignore by @OneBlue in https://github.com/microsoft/WSL/pull/13754\n* Fix service crash when collecting a linux crash dump when maxCrashDumpCount is set to 0 by @OneBlue in https://github.com/microsoft/WSL/pull/13755\n* cleanup: VirtioNetworking refactoring by @benhillis in https://github.com/microsoft/WSL/pull/13760\n* cleanup: switch from Microsoft::WRL::ComPtr to wil::com_ptr by @benhillis in https://github.com/microsoft/WSL/pull/13767\n* cleanup: VirtioNetworking refactoring to be more portable by @benhillis in https://github.com/microsoft/WSL/pull/13783\n* cleanup: remove invalid m_deviceHostSupport checks by @benhillis in https://github.com/microsoft/WSL/pull/13787\n* cleanup: move common functionality out of service exe by @benhillis in https://github.com/microsoft/WSL/pull/13788\n* test: improve test logging infra by @benhillis in https://github.com/microsoft/WSL/pull/13811\n* virtio networking: fix two minor issues by @benhillis in https://github.com/microsoft/WSL/pull/13810\n* Update Microsoft.WSL.Kernel to 6.6.114.1 by @chessturo in https://github.com/microsoft/WSL/pull/13812\n* test: minor updates to improve virtiofs pass rate by @benhillis in https://github.com/microsoft/WSL/pull/13815\n* Update Microsoft.WSL.DeviceHost to remove lxutil.dll dependency by @benhillis in https://github.com/microsoft/WSL/pull/13633\n* cleanup: add handling for product-specific virtio networking class IDs. by @benhillis in https://github.com/microsoft/WSL/pull/13822\n* wslsettings: ensure text in the oobe window properly wraps by @benhillis in https://github.com/microsoft/WSL/pull/13823\n* Add back WSL2_VM_ID environment variable to the system distro. by @benhillis in https://github.com/microsoft/WSL/pull/13835\n* CI: Switch away from -dev versions of MS-RDX-MRO.windows-store-publish tasks by @benhillis in https://github.com/microsoft/WSL/pull/13841\n* Fix typo in Dutch translations by @frosit in https://github.com/microsoft/WSL/pull/1...",
+      "memory_unit_text": "In the microsoft/WSL release 2.7.0, unused LXSS_DISTRO_FLAGS_WSLCORE_MODE is removed. Logic to handle partial hvsocket writes and additional logging is added. Microsoft.NETCore.App.Runtime packages are updated with a fix for CVE-2025-55248. Microsoft.WSL.DeviceHost package is updated to version 1.0.0-20251015.1. Edge cases around .vhd support are fixed. WslDistributionConfig is fixed to not default-initialize optional fields. The sample WSL_POST_BUILD_COMMAND is made more resilient. wslsettings allows the OOBE window to close with the escape key and fixes OOBE text truncation at 200% text scaling. Underlines are added to links on the about page. .clang-format adds InsertBraces: true and a minor fix to FormatSource.ps1. wslsettings ensures the selected setting is auto-expanded and selected. Minor compiler errors when building with VS2026 are fixed. systemd-networkd-wait-online.service is masked during boot. A number of NuGet packages are updated to the latest available versions. *.slnx is added to .gitignore. A service crash when collecting a Linux crash dump when maxCrashDumpCount is set to 0 is fixed. VirtioNetworking is refactored. Microsoft::WRL::ComPtr is switched to wil::com_ptr. VirtioNetworking is further refactored to be more portable. Invalid m_deviceHostSupport checks are removed. Common functionality is moved out of the service exe. Test logging infra is improved. Two minor issues in virtio networking are fixed. Microsoft.WSL.Kernel is updated to 6.6.114.1. Minor updates are made to improve virtiofs pass rate. Microsoft.WSL.DeviceHost is updated to remove lxutil.dll dependency. Handling for product-specific virtio networking class IDs is added. wslsettings ensures text in the OOBE window properly wraps. The WSL2_VM_ID environment variable is added back to the system distro. CI switches away from -dev versions of MS-RDX-MRO.windows-store-publish tasks. A typo in Dutch translations is fixed."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_6_3",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.6.3",
+      "tag_name": "2.6.3",
+      "title": "2.6.3",
+      "time_hint": "2025-12-12",
+      "published_at": "2025-12-12T23:34:01Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.6.3",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.6.3\nTag: 2.6.3; draft: False; prerelease: False; published_at: 2025-12-12T23:34:01Z; created_at: 2025-12-12T01:45:15Z\nRelease notes:\n* Fix an issue causing wslg shortcut generation to fail (solves: #1388)",
+      "memory_unit_text": "In the microsoft/WSL release 2.6.3, an issue causing wslg shortcut generation to fail is fixed (solves: #1388)."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_7_1",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.7.1",
+      "tag_name": "2.7.1",
+      "title": "2.7.1",
+      "time_hint": "2026-03-24",
+      "published_at": "2026-03-24T21:10:40Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.7.1",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.7.1\nTag: 2.7.1; draft: False; prerelease: True; published_at: 2026-03-24T21:10:40Z; created_at: 2026-03-20T19:45:46Z\nRelease notes:\n## What's Changed\n### Security\n* Fix CVE-2026-26127: bump .NET runtime from 10.0.0 to 10.0.4 by @benhillis in https://github.com/microsoft/WSL/pull/14421\n### Bug Fixes\n* virtiofs: fix elevated virtiofs access when VM is launched by an elevated user by @benhillis in https://github.com/microsoft/WSL/pull/13877\n* Resolve issue with config file writing sections outside of their expected header by @benhillis in https://github.com/microsoft/WSL/pull/13898\n* Resolve issue with buttons on notifications not working correctly by @benhillis in https://github.com/microsoft/WSL/pull/13921\n* [GH 13837] Remove trailing slash from `$XDG_RUNTIME_DIR` by @benhillis in https://github.com/microsoft/WSL/pull/13929\n* Fix issue with svccommio incorrectly resetting console state in the move operator by @benhillis in https://github.com/microsoft/WSL/pull/14083\n* Fix excessive screen updates in progress indicators by @Copilot in https://github.com/microsoft/WSL/pull/14206\n* Fix 4 code bugs: substr off-by-one, HANDLE* cast, TOCTOU GetLastError, sun_path overflow by @benhillis in https://github.com/microsoft/WSL/pull/14297\n* Fix wsl stuck when misconfigured cifs mount presents by @chemwolf6922 in https://github.com/microsoft/WSL/pull/14466\n* Accessibility: After selecting from the navigation list, keyboard focus is now transferred to page content by @ssparach in https://github.com/microsoft/WSL/pull/14289\n### Features & Improvements\n* virtiofs: add support for statx syscall by @benhillis in https://github.com/microsoft/WSL/pull/14087\n* virtiofs: add support for mounting directories (not just full volumes) by @benhillis in https://github.com/microsoft/WSL/pull/14073\n* virtio networking: add support for ipv6 by @benhillis in https://github.com/microsoft/WSL/pull/14350\n* Enable DNS tunneling for VirtioProxy networking mode by @benhillis in https://github.com/microsoft/WSL/pull/14461\n* DNS: switch to using 'search' instead of obsolete 'domain' by @benhillis in https://github.com/microsoft/WSL/pull/14133\n* Track `bind` syscall when port is 0 by @damanm24 in https://github.com/microsoft/WSL/pull/14333\n* Add `WindowsTerminal.enabled` to the list of config keys for wsl-distribution.conf by @OneBlue in https://github.com/microsoft/WSL/pull/14021\n* Disable the process creation cursor animation by default by @OneBlue in https://github.com/microsoft/WSL/pull/14293\n* Improved VirtioProxy networking and VirtioFS posix compatibility by @benhillis in https://github.com/microsoft/WSL/pull/14198\n* Updated enable virtualization error message by @craigloewen-msft in https://github.com/microsoft/WSL/pull/14110\n* Mask NetworkManager-wait-online.service during boot by @dhtzs in https://github.com/microsoft/WSL/pull/14272\n* Add iptables to list of apps to install in WSL by @andremueiot in https://github.com/microsoft/WSL/pull/14459\n### Developer Experience\n* Enable VS 2026 solution generation and improve ARM64 developer experience by @benhillis in https://github.com/microsoft/WSL/pull/14283\n* Refactor: Use TryParse in view models for safer numeric input parsing by @dhtzs in https://github.com/microsoft/WSL/pull/14323\n## New Contributors\n* @salmanmkc made their first contribution in https://github.com/microsoft/WSL/pull/13896\n* @mznms made their first contribution in https://github.com/microsoft/WSL/pull/13950\n* @rfu-cn made their first contribution in https://github.com/microsoft/WSL/pull/14022\n* @andysterland made their first contribution in https://github.com/microsoft/WSL/pull/14160\n* @dhtzs made their first contribution in https://github.com/microsoft/WSL/pull/14272\n* @ssparach made their first contribution in https://github.com/microsoft/WSL/pull/14289\n* @damanm24 made their first contribution in https://github.com/microsoft/WSL/pull/14333\n* @andremueiot made their first contribution in https://github.co...",
+      "memory_unit_text": "In the microsoft/WSL release 2.7.1, CVE-2026-26127 is fixed by bumping the .NET runtime from 10.0.0 to 10.0.4. Elevated virtiofs access when the VM is launched by an elevated user is fixed. An issue with config file writing sections outside of their expected header is resolved. Buttons on notifications not working correctly is resolved. A trailing slash is removed from $XDG_RUNTIME_DIR. An issue with svccommio incorrectly resetting console state in the move operator is fixed. Excessive screen updates in progress indicators are fixed. Four code bugs are fixed: substr off-by-one, HANDLE* cast, TOCTOU GetLastError, sun_path overflow. WSL stuck when a misconfigured cifs mount is present is fixed. After selecting from the navigation list, keyboard focus is now transferred to page content. Support for the statx syscall is added to virtiofs. Support for mounting directories (not just full volumes) is added to virtiofs. IPv6 support is added to virtio networking. DNS tunneling is enabled for VirtioProxy networking mode. DNS switches to using 'search' instead of obsolete 'domain'. The bind syscall is tracked when port is 0. WindowsTerminal.enabled is added to the list of config keys for wsl-distribution.conf. The process creation cursor animation is disabled by default. VirtioProxy networking and VirtioFS posix compatibility are improved. The enable virtualization error message is updated. NetworkManager-wait-online.service is masked during boot. iptables is added to the list of apps to install in WSL. VS 2026 solution generation is enabled and the ARM64 developer experience is improved. TryParse is used in view models for safer numeric input parsing."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_7_3",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.7.3",
+      "tag_name": "2.7.3",
+      "title": "2.7.3",
+      "time_hint": "2026-04-25",
+      "published_at": "2026-04-25T00:50:11Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.7.3",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.7.3\nTag: 2.7.3; draft: False; prerelease: False; published_at: 2026-04-25T00:50:11Z; created_at: 2026-04-24T21:12:59Z\nRelease notes:\n## What's Changed\n* Update Microsoft.WSL.DeviceHost package to 1.2.14-0 by @benhillis in https://github.com/microsoft/WSL/pull/40286\n* Disable shared compilation when building wslsettings by @OneBlue in https://github.com/microsoft/WSL/pull/40289\n* diagnostics: collect MSI verbose install logs in diagnostic bundle by @yeelam-gordon in https://github.com/microsoft/WSL/pull/40218\n* Fix NuGet package path validation in nuget-stage pipeline by @benhillis in https://github.com/microsoft/WSL/pull/40293\n* test: Add arm64 test distro support by @benhillis in https://github.com/microsoft/WSL/pull/14500\n* test: remove duplicated DNS test coverage by @benhillis in https://github.com/microsoft/WSL/pull/14522\n* Fix: Fail and warn the user when --uninstall is given parameters by @chemwolf6922 in https://github.com/microsoft/WSL/pull/14524\n* virito net: revert to previous DNS behavior while we debug an issue with DNS over TCP by @benhillis in https://github.com/microsoft/WSL/pull/14532\n* Update cgmanifest to match CMakeLists.txt by @OneBlue in https://github.com/microsoft/WSL/pull/14550\n* socketshared: add maximum message size to avoid very large allocations by @benhillis in https://github.com/microsoft/WSL/pull/40050\n* Fix: bind interrupted by seccomp signal race by @chemwolf6922 in https://github.com/microsoft/WSL/pull/14554\n* Set Distro Env HOSTTYPE to aarch64 for ARM64 build by @wangxin12 in https://github.com/microsoft/WSL/pull/40048\n* devicehost: stop re-signing and fix MSI installer failing to replace wsldevicehost.dll by @benhillis in https://github.com/microsoft/WSL/pull/40075\n* Suppress MSI-initiated reboots during Store updates by @benhillis in https://github.com/microsoft/WSL/pull/40079\n* build: add Source Link to embed GitHub source mappings in PDBs by @benhillis in https://github.com/microsoft/WSL/pull/40055\n* Mask console-getty.service to prevent multi-distro failures (#13595) by @benhillis in https://github.com/microsoft/WSL/pull/14490\n* Fix random \"ERROR_FILE_NOT_FOUND\" when unmounting with absolute path by @chemwolf6922 in https://github.com/microsoft/WSL/pull/40092\n* Fixes to route mirroring by @FetoiuCatalin in https://github.com/microsoft/WSL/pull/40099\n* Fix wrong variable checking by @wangxin12 in https://github.com/microsoft/WSL/pull/40185\n* Bump Microsoft.NETCore.App.Runtime to 10.0.6 (CVE-2026-32178) by @benhillis in https://github.com/microsoft/WSL/pull/40207\n* Fix VHD ownership after cross-volume move to prevent E_ACCESSDENIED by @benhillis in https://github.com/microsoft/WSL/pull/40159\n* fix: use {} format specifier instead of %s in Linux LOG_ERROR path by @benhillis in https://github.com/microsoft/WSL/pull/40227\n* Update MoveVhdOwnership test to WSL2 only by @Copilot in https://github.com/microsoft/WSL/pull/40223\n* fix: use ssize_t for readlinkat return value in p9file.cpp by @benhillis in https://github.com/microsoft/WSL/pull/40226\n* cleanup: extract SkipSignal helper to deduplicate signal skip lists by @benhillis in https://github.com/microsoft/WSL/pull/40228\n* fix: use correct GetAddrInfoTestEntry handler for get_addr_info test by @benhillis in https://github.com/microsoft/WSL/pull/40225\n* fix: implement IDisposable on WslConfigService to dispose FileSystemWatcher by @benhillis in https://github.com/microsoft/WSL/pull/40249\n* fix: add waitpid safety net after signalfd setup to prevent SIGCHLD race by @benhillis in https://github.com/microsoft/WSL/pull/40229\n* Settings: Add pending changes tracking and apply confirmation dialog by @dabhattimsft in https://github.com/microsoft/WSL/pull/14425\n* Add boot check for ipv6 disabled via registry in mirrored mode by @FetoiuCatalin in https://github.com/microsoft/WSL/pull/40235\n* Fix broken WSLCorePort channel after receive timeout by @chemwolf6922 in https://github.com/microsoft/WSL/pull/14455\n* Fix...",
+      "memory_unit_text": "In the microsoft/WSL release 2.7.3, the Microsoft.WSL.DeviceHost package is updated to 1.2.14-0. Shared compilation is disabled when building wslsettings. MSI verbose install logs are collected in the diagnostic bundle. NuGet package path validation in the nuget-stage pipeline is fixed. ARM64 test distro support is added. Duplicated DNS test coverage is removed. A failure and warning is given when --uninstall is given parameters. Virtio net reverts to previous DNS behavior while debugging an issue with DNS over TCP. cgmanifest is updated to match CMakeLists.txt. A maximum message size is added to socketshared to avoid very large allocations. A bind interrupted by seccomp signal race is fixed. Distro Env HOSTTYPE is set to aarch64 for ARM64 build. Devicehost stops re-signing and fixes the MSI installer failing to replace wsldevicehost.dll. MSI-initiated reboots during Store updates are suppressed. Source Link is added to embed GitHub source mappings in PDBs. console-getty.service is masked to prevent multi-distro failures. A random \"ERROR_FILE_NOT_FOUND\" when unmounting with an absolute path is fixed. Route mirroring is fixed. Wrong variable checking is fixed. Microsoft.NETCore.App.Runtime is bumped to 10.0.6 (CVE-2026-32178). VHD ownership after cross-volume move is fixed to prevent E_ACCESSDENIED. A {} format specifier is used instead of %s in the Linux LOG_ERROR path. The MoveVhdOwnership test is updated to WSL2 only. ssize_t is used for readlinkat return value in p9file.cpp. A SkipSignal helper is extracted to deduplicate signal skip lists. The correct GetAddrInfoTestEntry handler is used for the get_addr_info test. IDisposable is implemented on WslConfigService to dispose FileSystemWatcher. A waitpid safety net is added after signalfd setup to prevent a SIGCHLD race. Pending changes tracking and an apply confirmation dialog are added to Settings. A boot check for ipv6 disabled via registry in mirrored mode is added. A broken WSLCorePort channel after receive timeout is fixed."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_7_5",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.7.5",
+      "tag_name": "2.7.5",
+      "title": "2.7.5",
+      "time_hint": "2026-05-15",
+      "published_at": "2026-05-15T00:28:33Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.7.5",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.7.5\nTag: 2.7.5; draft: False; prerelease: True; published_at: 2026-05-15T00:28:33Z; created_at: 2026-05-14T00:06:43Z\nRelease notes:\n## What's Changed\n* Update Microsoft.WSL.Kernel to 6.18.26.1 (#40161) by @chessturo\n* Service: Best-effort grant of VMWP access to user-supplied VHDs (#40485) by @benhillis\n**Full Changelog**: https://github.com/microsoft/WSL/compare/2.7.3...2.7.5",
+      "memory_unit_text": "In the microsoft/WSL release 2.7.5, Microsoft.WSL.Kernel is updated to 6.18.26.1. A best-effort grant of VMWP access to user-supplied VHDs is added."
+    },
+    {
+      "memory_node_id": "microsoft__WSL__release__2_7_7",
+      "repo": "microsoft/WSL",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:2.7.7",
+      "tag_name": "2.7.7",
+      "title": "2.7.7",
+      "time_hint": "2026-05-19",
+      "published_at": "2026-05-19T21:26:34Z",
+      "source_url": "https://github.com/microsoft/WSL/releases/tag/2.7.7",
+      "raw_text": "Repository: microsoft/WSL\nRelease: 2.7.7\nTag: 2.7.7; draft: False; prerelease: True; published_at: 2026-05-19T21:26:34Z; created_at: 2026-05-19T14:00:01Z\nRelease notes:\n## What's Changed\n* Update Microsoft.WSL to version 1.0.73.2 by @benhillis in https://github.com/microsoft/WSL/pull/40585\n**Full Changelog**: https://github.com/microsoft/WSL/compare/2.7.6...2.7.7",
+      "memory_unit_text": "In the microsoft/WSL release 2.7.7, Microsoft.WSL is updated to version 1.0.73.2."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the microsoft/WSL releases, which release removes the experimental useWindowsDnsCache config?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2.3.17"
+        },
+        {
+          "option_id": "B",
+          "text": "2.3.22"
+        },
+        {
+          "option_id": "C",
+          "text": "2.4.4"
+        },
+        {
+          "option_id": "D",
+          "text": "2.5.1"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "2.3.22",
+      "source_chunk_ids": [
+        "microsoft__WSL__release__2_3_22"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "microsoft__WSL__release__2_3_22",
+          "answer_text": "the experimental useWindowsDnsCache config is removed"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the microsoft/WSL releases, how does the networking fallback behavior described in release 2.3.25 differ from the networking fallback behavior described in release 2.4.4?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2.3.25 falls back to virtioProxy if NAT fails, while 2.4.4 also falls back to virtioProxy if NAT fails but additionally adds socket receive timeouts when starting a new distro."
+        },
+        {
+          "option_id": "B",
+          "text": "2.3.25 removes bridged networking, while 2.4.4 adds bridged networking."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only update the Windows SDK without networking changes."
+        },
+        {
+          "option_id": "D",
+          "text": "2.3.25 introduces DNS tunneling, while 2.4.4 disables DNS tunneling."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2.3.25 falls back to virtioProxy if NAT fails, while 2.4.4 also falls back to virtioProxy if NAT fails but additionally adds socket receive timeouts when starting a new distro.",
+      "source_chunk_ids": [
+        "microsoft__WSL__release__2_3_25",
+        "microsoft__WSL__release__2_4_4"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "microsoft__WSL__release__2_3_25",
+          "answer_text": "automatically falls back to virtioProxy networking mode if NAT networking mode fails"
+        },
+        {
+          "memory_node_id": "microsoft__WSL__release__2_4_4",
+          "answer_text": "Fall back to using virito proxy networking mode if NAT fails ... Socket receive timeouts are added when starting a new distro"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the microsoft/WSL release window, order the following release-content states from earliest to latest: (1) a release that updates the kernel to 6.6.75 and switches modules to a vhd, (2) a release that updates the kernel to 6.6.87.1-1 and increases the soft file descriptor limit to 1024 * 1024, (3) a release that updates the kernel to 6.6.84.1 and brings back bridged networking mode, (4) a release that updates the kernel to 6.6.87.2 and makes post import distribution checks less strict.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "3 -> 1 -> 4 -> 2"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 2 -> 3 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 3 -> 2 -> 4",
+      "source_chunk_ids": [
+        "microsoft__WSL__release__2_5_1",
+        "microsoft__WSL__release__2_5_6",
+        "microsoft__WSL__release__2_5_7",
+        "microsoft__WSL__release__2_5_9"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "microsoft__WSL__release__2_5_1",
+          "answer_text": "kernel is updated to 6.6.75 and modules are switched to a vhd"
+        },
+        {
+          "memory_node_id": "microsoft__WSL__release__2_5_6",
+          "answer_text": "WSL kernel is updated to 6.6.84.1 ... Bridged networking mode is brought back"
+        },
+        {
+          "memory_node_id": "microsoft__WSL__release__2_5_7",
+          "answer_text": "Linux kernel is updated to 6.6.87.1-1 ... soft file descriptor limit is increased to 1024 * 1024"
+        },
+        {
+          "memory_node_id": "microsoft__WSL__release__2_5_9",
+          "answer_text": "WSL kernel is updated to 6.6.87.2 ... Post import distribution checks are made less strict"
+        }
+      ]
+    }
+  ]
+}

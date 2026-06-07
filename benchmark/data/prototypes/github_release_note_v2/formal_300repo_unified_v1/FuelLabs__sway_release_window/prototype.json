@@ -1,0 +1,530 @@
+{
+  "prototype_id": "FuelLabs__sway_release_window",
+  "domain": "github_release_evolution",
+  "repo": "FuelLabs/sway",
+  "source_type": "release_note",
+  "window_title": "FuelLabs/sway recent release evolution",
+  "window_summary": "This window tracks the recent FuelLabs/sway release stream from v0.66.4 through v0.71.2, covering compiler improvements, standard library additions, breaking changes, and new tooling such as forc plugins and dynamic storage support.",
+  "chunks": [
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_66_4",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.66.4",
+      "tag_name": "v0.66.4",
+      "title": "v0.66.4",
+      "time_hint": "2024-11-03",
+      "published_at": "2024-11-03T16:13:20Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.66.4",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.66.4\nTag: v0.66.4; draft: False; prerelease: False; published_at: 2024-11-03T16:13:20Z; created_at: 2024-11-03T16:12:45Z\nRelease notes:\n## What's Changed\n* Optimise TokenMap to only hold either a typed or parsed AST token by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/6585\n* `EncodeBufferAppend`: `grow_if_needed` should allocate sufficiently by @vaivaswatha in https://github.com/FuelLabs/sway/pull/6686\n* Bump to v0.66.4 by @IGI-111 in https://github.com/FuelLabs/sway/pull/6688\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.66.3...v0.66.4",
+      "memory_unit_text": "In the FuelLabs/sway release v0.66.4, the release note includes an optimization of TokenMap to hold either a typed or parsed AST token, a fix for EncodeBufferAppend to allocate sufficiently, and a version bump to v0.66.4."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_66_5",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.66.5",
+      "tag_name": "v0.66.5",
+      "title": "v0.66.5",
+      "time_hint": "2024-11-20",
+      "published_at": "2024-11-20T22:16:15Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.66.5",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.66.5\nTag: v0.66.5; draft: False; prerelease: False; published_at: 2024-11-20T22:16:15Z; created_at: 2024-11-20T22:15:14Z\nRelease notes:\n## What's Changed\n* chore: add a script to bump all fuel maintained dependencies by @kayagokalp in https://github.com/FuelLabs/sway/pull/6684\n* docs: remove dead links to sway-libs/fixed-point by @kayagokalp in https://github.com/FuelLabs/sway/pull/6689\n* chore: remove unmaintained `atty` crate by @kayagokalp in https://github.com/FuelLabs/sway/pull/6691\n* chore: remove unmaintained `difference` in favor of `similar` by @kayagokalp in https://github.com/FuelLabs/sway/pull/6694\n* Rewrite `TypeEngine` for performance, robustness, and simplicity by @ironcev in https://github.com/FuelLabs/sway/pull/6613\n* chore: remove unmaintained `ansi_term` in favor of `ansiterm` by @kayagokalp in https://github.com/FuelLabs/sway/pull/6696\n* Remove `forc` help test. by @tritao in https://github.com/FuelLabs/sway/pull/6682\n* chore: remove `uwuify` feature by @kayagokalp in https://github.com/FuelLabs/sway/pull/6698\n* fix: forc-deploy asks for password before checking if the wallet exists by @kayagokalp in https://github.com/FuelLabs/sway/pull/6704\n* Forc-deploy import wallet support if non-existent wallet by @zees-dev in https://github.com/FuelLabs/sway/pull/6680\n* chore: upgrade fuels sdk to 66.10 by @sdankel in https://github.com/FuelLabs/sway/pull/6715\n* Send method arguments with numerics to the second pass by @xunilrj in https://github.com/FuelLabs/sway/pull/6700\n* Add verifications-complete job by @IGI-111 in https://github.com/FuelLabs/sway/pull/6716\n* Add modules to forc-doc search index by @sdankel in https://github.com/FuelLabs/sway/pull/6711\n* Test encoding raw slices does not allows buffer overflows by @xunilrj in https://github.com/FuelLabs/sway/pull/6699\n* Add revert with log function to std lib by @SwayStar123 in https://github.com/FuelLabs/sway/pull/6717\n* Transmute intrinsics by @xunilrj in https://github.com/FuelLabs/sway/pull/6692\n* Profiling support by @tritao in https://github.com/FuelLabs/sway/pull/6705\n* Storage domains by @ironcev in https://github.com/FuelLabs/sway/pull/6466\n* Fix module visibility check by @jjcnn in https://github.com/FuelLabs/sway/pull/6685\n* Make `OrdEq` trait public by @bitzoic in https://github.com/FuelLabs/sway/pull/6723\n* Add configurables section offset in the preamble by @vaivaswatha in https://github.com/FuelLabs/sway/pull/6709\n* `Forc.toml` metadata support by @zees-dev in https://github.com/FuelLabs/sway/pull/6728\n* Proof that #6324 is not a bug. by @esdrubal in https://github.com/FuelLabs/sway/pull/6573\n* Add repro for issue #6335. by @tritao in https://github.com/FuelLabs/sway/pull/6730\n* feat: add function for generating bytecode identifier by @sdankel in https://github.com/FuelLabs/sway/pull/6674\n* Add comments about bytecode test files by @sdankel in https://github.com/FuelLabs/sway/pull/6741\n* chore: bump version to 0.66.5 by @sdankel in https://github.com/FuelLabs/sway/pull/6743\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.66.4...v0.66.5",
+      "memory_unit_text": "In the FuelLabs/sway release v0.66.5, the release note includes a rewrite of the TypeEngine for performance, robustness, and simplicity; the addition of storage domains; profiling support; transmute intrinsics; a revert with log function in the standard library; Forc.toml metadata support; a function for generating bytecode identifier; and various dependency bumps and cleanups."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_66_6",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.66.6",
+      "tag_name": "v0.66.6",
+      "title": "v0.66.6",
+      "time_hint": "2025-01-23",
+      "published_at": "2025-01-23T14:17:59Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.66.6",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.66.6\nTag: v0.66.6; draft: False; prerelease: False; published_at: 2025-01-23T14:17:59Z; created_at: 2025-01-23T10:36:14Z\nRelease notes:\n## What's Changed\n* forc test single-step until jump point instead of patching binary by @xunilrj in https://github.com/FuelLabs/sway/pull/6731\n* Support for aliased import for encoding v1 by @xunilrj in https://github.com/FuelLabs/sway/pull/6628\n* improve asm copy propagation for MOVE instruction by @xunilrj in https://github.com/FuelLabs/sway/pull/6641\n* Error on use of self intead of Self in return type by @esdrubal in https://github.com/FuelLabs/sway/pull/6763\n* Fixes `for` specific error message. by @esdrubal in https://github.com/FuelLabs/sway/pull/6758\n* Improve document symbol hierarchy to match rust-analyzer layout by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/6678\n* Fixes qualified call path without as trait. by @esdrubal in https://github.com/FuelLabs/sway/pull/6764\n* Implement Serde for AstNode types by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/6605\n* More namespace cleanups by @tritao in https://github.com/FuelLabs/sway/pull/6675\n* Implement hierarchical trait map and namespace lookups. by @tritao in https://github.com/FuelLabs/sway/pull/6516\n* refactor: Improve DAP server code organisation and readability by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/6770\n* Fix handling of associated constants in ABI/traits  by @tritao in https://github.com/FuelLabs/sway/pull/6768\n* Change `SubstTypesContext` to contain an optional `TypeSubstMap`. by @tritao in https://github.com/FuelLabs/sway/pull/6773\n* Add `mod` to `U128` by @bitzoic in https://github.com/FuelLabs/sway/pull/6771\n* Associate lexical scopes with their respective declarations. by @tritao in https://github.com/FuelLabs/sway/pull/6780\n* typo-Update deploy.rs by @shystrui1199 in https://github.com/FuelLabs/sway/pull/6783\n* Update `output_asset_to()` and `output_asset_id()` to handle `Output::Variable` by @bitzoic in https://github.com/FuelLabs/sway/pull/6781\n* docs: add sway memory model by @matt-user in https://github.com/FuelLabs/sway/pull/6775\n* fix: typos cleanup by @yash251 in https://github.com/FuelLabs/sway/pull/6799\n* Add testing of `storage_domains` to language and SDK tests by @ironcev in https://github.com/FuelLabs/sway/pull/6809\n* Refactor `swayfmt` to support arbitrary lexed trees by @ironcev in https://github.com/FuelLabs/sway/pull/6806\n* Add modulo inline tests by @SwayStar123 in https://github.com/FuelLabs/sway/pull/6817\n* fix: formatting for loop by @amiremohamadi in https://github.com/FuelLabs/sway/pull/6807\n* Rename forc doc `--manifest-path` to `--path` by @amiremohamadi in https://github.com/FuelLabs/sway/pull/6797\n* fix bug in `memcopyopt` related to killing defined symbols by @vaivaswatha in https://github.com/FuelLabs/sway/pull/6820\n* Remove instances of multiple impl blocks by @SwayStar123 in https://github.com/FuelLabs/sway/pull/6822\n* Fixes array oob on reassignment. by @esdrubal in https://github.com/FuelLabs/sway/pull/6819\n* add erroneously missing #[test()] attribute by @SwayStar123 in https://github.com/FuelLabs/sway/pull/6824\n* Implements fully working hierarchical lexical scopes. by @esdrubal in https://github.com/FuelLabs/sway/pull/6784\n* Implement `Iterator` for `StorageVec` by @ironcev in https://github.com/FuelLabs/sway/pull/6821\n* Show error when contract method names conflict by @xunilrj in https://github.com/FuelLabs/sway/pull/6782\n* codegen: Use idiomatic fuel-vm ops for memcpy and addr_of by @Dentosal in https://github.com/FuelLabs/sway/pull/6795\n* Refactor the module structure of the namespace module by @jjcnn in https://github.com/FuelLabs/sway/pull/6291\n* migrate from shellfish to rustyline with enhanced CLI features by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/6830\n* [asmgen] pushing / popping registers for call should handle all def'd regs by @vaivaswatha in https://github.com/FuelLabs/sway/pull/6826...",
+      "memory_unit_text": "In the FuelLabs/sway release v0.66.6, the release note includes support for aliased import for encoding v1, improvement of asm copy propagation for MOVE instruction, implementation of hierarchical trait map and namespace lookups, implementation of Iterator for StorageVec, addition of modulo inline tests, implementation of fully working hierarchical lexical scopes, and various fixes and refactors."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_66_7",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.66.7",
+      "tag_name": "v0.66.7",
+      "title": "v0.66.7",
+      "time_hint": "2025-02-05",
+      "published_at": "2025-02-05T21:42:10Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.66.7",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.66.7\nTag: v0.66.7; draft: False; prerelease: False; published_at: 2025-02-05T21:42:10Z; created_at: 2025-02-05T17:16:42Z\nRelease notes:\n## What's Changed\n* Add `Bytes` conversions for `Address`, `ContractId`, `EvmAddress`, `B512` and `AssetId` by @bitzoic in https://github.com/FuelLabs/sway/pull/6857\n* Encoding v1 docs by @xunilrj in https://github.com/FuelLabs/sway/pull/6350\n* Introduce `crypto` module and expand cryptographic functions by @bitzoic in https://github.com/FuelLabs/sway/pull/6837\n* Auto-generate DWARF debug symbols in debug builds by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/6863\n* Fixes insert_trait_implementaion for nested generics. by @esdrubal in https://github.com/FuelLabs/sway/pull/6827\n* Add `Clone` implementation for `String` and `Vec` by @bitzoic in https://github.com/FuelLabs/sway/pull/6865\n* Add `resize()` to `Vec` and `Bytes` by @bitzoic in https://github.com/FuelLabs/sway/pull/6864\n* feat: Add support for additional package manifest keys by @sdankel in https://github.com/FuelLabs/sway/pull/6868\n* Add `last()` to `Vec` by @bitzoic in https://github.com/FuelLabs/sway/pull/6870\n* Use compiler source map directly in forc-debug by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/6872\n* chore: upgrade `fuels-rs` sdk to `0.70` by @zees-dev in https://github.com/FuelLabs/sway/pull/6851\n* Fix CI error when building external fork non-push builds by @tritao in https://github.com/FuelLabs/sway/pull/6878\n* ZK opcodes in the Sway assembly by @vaivaswatha in https://github.com/FuelLabs/sway/pull/6876\n* Fix clippy warnings for Rust 1.84.0 by @tritao in https://github.com/FuelLabs/sway/pull/6877\n* `forc-debug`: Add ABI support for decoding log values by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/6856\n* Add tests of visibility of private direct submodules by @jjcnn in https://github.com/FuelLabs/sway/pull/6849\n* Fix `build-publish-master-image` CI by upgrading Rust version in Dockerfile by @tritao in https://github.com/FuelLabs/sway/pull/6882\n* Std-lib support for ZK opcodes by @bitzoic in https://github.com/FuelLabs/sway/pull/6832\n* chore: bump to 0.66.7 by @sdankel in https://github.com/FuelLabs/sway/pull/6894\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.66.6...v0.66.7",
+      "memory_unit_text": "In the FuelLabs/sway release v0.66.7, the release note includes the introduction of a crypto module with expanded cryptographic functions, auto-generation of DWARF debug symbols in debug builds, addition of Clone for String and Vec, addition of resize() to Vec and Bytes, addition of last() to Vec, support for additional package manifest keys, ZK opcodes in Sway assembly, and std-lib support for ZK opcodes."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_66_8",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.66.8",
+      "tag_name": "v0.66.8",
+      "title": "v0.66.8",
+      "time_hint": "2025-03-05",
+      "published_at": "2025-03-05T02:17:54Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.66.8",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.66.8\nTag: v0.66.8; draft: False; prerelease: False; published_at: 2025-03-05T02:17:54Z; created_at: 2025-03-05T02:16:25Z\nRelease notes:\n## What's Changed\n* Function selector collision check by @jjcnn in https://github.com/FuelLabs/sway/pull/6869\n* plugin: forc-call by @zees-dev in https://github.com/FuelLabs/sway/pull/6791\n* CompileError::ContractIdConstantNotAConstDecl by @mo-hak in https://github.com/FuelLabs/sway/pull/6842\n* Implement marker traits by @ironcev in https://github.com/FuelLabs/sway/pull/6871\n* Fixes double call of get_items_for_type. by @esdrubal in https://github.com/FuelLabs/sway/pull/6626\n* Fixes argument errors not displayed. by @esdrubal in https://github.com/FuelLabs/sway/pull/5909\n* feat: disallow dependency package name collision in forc-pkg by @kayagokalp in https://github.com/FuelLabs/sway/pull/6888\n* fix: remove invalid unpacking logic for IPFS pinned pkg sources by @kayagokalp in https://github.com/FuelLabs/sway/pull/6902\n* feat: Add forc-publish plugin by @sdankel in https://github.com/FuelLabs/sway/pull/6890\n* Implement array repeat without repeating item at the AST/CST trees by @xunilrj in https://github.com/FuelLabs/sway/pull/6901\n* Implement partial equivalence and extend `forc migrate` tool by @ironcev in https://github.com/FuelLabs/sway/pull/6900\n* Removes redundant checks from unifier. by @esdrubal in https://github.com/FuelLabs/sway/pull/6912\n* Removes TraitMap::insert_for_type. by @esdrubal in https://github.com/FuelLabs/sway/pull/6867\n* Respect variable type ascription when initializer has type Never by @jjcnn in https://github.com/FuelLabs/sway/pull/6911\n* minor: Migrate forc-call node_url by @zees-dev in https://github.com/FuelLabs/sway/pull/6920\n* chore: cargo update by @sdankel in https://github.com/FuelLabs/sway/pull/6929\n* feat: add forc-node command for easily bootstrapping a node by @kayagokalp in https://github.com/FuelLabs/sway/pull/6473\n* Const generic feature toggle, parser and errors. by @xunilrj in https://github.com/FuelLabs/sway/pull/6926\n* Fix bug in conditional-const-prop when targets of cbr are same by @vaivaswatha in https://github.com/FuelLabs/sway/pull/6936\n* docs: added a twitter shield by @Olexandr88 in https://github.com/FuelLabs/sway/pull/6939\n* Fix issue with `__transmute` type checking by @xunilrj in https://github.com/FuelLabs/sway/pull/6940\n* unique constants in the IR by @vaivaswatha in https://github.com/FuelLabs/sway/pull/6896\n* Add test of never type in arrays by @jjcnn in https://github.com/FuelLabs/sway/pull/6943\n* ECAL opcode support by @zees-dev in https://github.com/FuelLabs/sway/pull/6947\n* Extend `#[deprecated]` support by @IGI-111 in https://github.com/FuelLabs/sway/pull/6944\n* Add `bldd` case to `Op::parse_opcode()` by @ironcev in https://github.com/FuelLabs/sway/pull/6957\n* Add as_u256 for U128 by @SwayStar123 in https://github.com/FuelLabs/sway/pull/6951\n* Allow `ldc` opcode in predicates by @ironcev in https://github.com/FuelLabs/sway/pull/6964\n* Add `ProgramId` to root module. by @tritao in https://github.com/FuelLabs/sway/pull/6959\n* Implement Iteration for Bytes by @SwayStar123 in https://github.com/FuelLabs/sway/pull/6953\n* chore: move dev dependencies to workspace by @sdankel in https://github.com/FuelLabs/sway/pull/6966\n* fix extract_type_parameters regarding primitive types by @xunilrj in https://github.com/FuelLabs/sway/pull/6965\n* forc-call logs support by @zees-dev in https://github.com/FuelLabs/sway/pull/6968\n* fix: resolve UB in _add, __sub, _mul for u8, u16, u32 by @K1-R1 in https://github.com/FuelLabs/sway/pull/6654\n* Fully resolve trait constraints call paths. by @tritao in https://github.com/FuelLabs/sway/pull/6962\n* Fix typos in CI. by @tritao in https://github.com/FuelLabs/sway/pull/6972\n* feat: Support categories and keywords in forc manifest by @sdankel in https://github.com/FuelLabs/sway/pull/6974\n* ci: Install forc-node in gh-pages.yml by @sdankel in https://github.com/FuelLabs/sw...",
+      "memory_unit_text": "In the FuelLabs/sway release v0.66.8, the release note includes a function selector collision check, the forc-call plugin, implementation of marker traits, the forc-publish plugin, implementation of array repeat without repeating item at the AST/CST trees, implementation of partial equivalence and extension of forc migrate, const generic feature toggle with parser and errors, ECAL opcode support, extension of #[deprecated] support, and addition of ProgramId to root module."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_66_9",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.66.9",
+      "tag_name": "v0.66.9",
+      "title": "v0.66.9",
+      "time_hint": "2025-03-11",
+      "published_at": "2025-03-11T17:16:00Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.66.9",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.66.9\nTag: v0.66.9; draft: False; prerelease: False; published_at: 2025-03-11T17:16:00Z; created_at: 2025-03-11T16:48:41Z\nRelease notes:\n## What's Changed\n* Implement `TryFrom<Bytes>` for `b256` by @bitzoic in https://github.com/FuelLabs/sway/pull/6958\n* chore: Change blob ID calculation in forc-deploy to use configurables offset by @sdankel in https://github.com/FuelLabs/sway/pull/6991\n* Check for type aliases when implementing traits by @jjcnn in https://github.com/FuelLabs/sway/pull/6875\n* `impl` trait for \"const generics\" by @xunilrj in https://github.com/FuelLabs/sway/pull/6946\n* Refactor CONTRACT_ID injection logic to only occur in LSP mode  by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7001\n* Add inline tests for all arithmetic cases in `u8`, `u16`, `u32`, `u64`, `U128`, and `u256` by @bitzoic in https://github.com/FuelLabs/sway/pull/6995\n* Update trait map to track fully resolved impl type parameters. by @tritao in https://github.com/FuelLabs/sway/pull/6963\n* Introduce `GlobalVar` akin to `LocalVar` and introduce `get_global` instruction similar to `get_local`. by @vaivaswatha in https://github.com/FuelLabs/sway/pull/6928\n* Implement trees visitors and migrations for `TryFrom<Bytes>` for `b256` by @ironcev in https://github.com/FuelLabs/sway/pull/7005\n* Add migration for `Bytes::into(self) -> b256` to `Bytes::try_into` by @ironcev in https://github.com/FuelLabs/sway/pull/7009\n* Add migration for merging `core` and `std` libraries by @ironcev in https://github.com/FuelLabs/sway/pull/7010\n* Bump to 0.66.9 by @IGI-111 in https://github.com/FuelLabs/sway/pull/7011\n* Fix source dependencies preventing release by @IGI-111 in https://github.com/FuelLabs/sway/pull/7012\n* fix fallback compilation on new encoding by @xunilrj in https://github.com/FuelLabs/sway/pull/6998\n* Add description to forc-node by @IGI-111 in https://github.com/FuelLabs/sway/pull/7013\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.66.8...v0.66.9",
+      "memory_unit_text": "In the FuelLabs/sway release v0.66.9, the release note includes implementation of TryFrom<Bytes> for b256, a change in blob ID calculation in forc-deploy to use configurables offset, a check for type aliases when implementing traits, impl trait for const generics, refactoring of CONTRACT_ID injection logic to only occur in LSP mode, addition of inline tests for arithmetic cases in various integer types, introduction of GlobalVar and get_global instruction, and migrations for TryFrom<Bytes> for b256 and for merging core and std libraries."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_66_10",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.66.10",
+      "tag_name": "v0.66.10",
+      "title": "v0.66.10",
+      "time_hint": "2025-03-11",
+      "published_at": "2025-03-11T18:21:56Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.66.10",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.66.10\nTag: v0.66.10; draft: False; prerelease: False; published_at: 2025-03-11T18:21:56Z; created_at: 2025-03-11T18:19:27Z\nRelease notes:\n## What's Changed\n* Bump to 0.66.10 by @IGI-111 in https://github.com/FuelLabs/sway/pull/7014\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.66.9...v0.66.10",
+      "memory_unit_text": "In the FuelLabs/sway release v0.66.10, the release note consists solely of a version bump to v0.66.10."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_67_0",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.67.0",
+      "tag_name": "v0.67.0",
+      "title": "v0.67.0",
+      "time_hint": "2025-03-13",
+      "published_at": "2025-03-13T16:14:34Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.67.0",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.67.0\nTag: v0.67.0; draft: False; prerelease: False; published_at: 2025-03-13T16:14:34Z; created_at: 2025-03-13T15:25:49Z\nRelease notes:\n## What's Changed\n* Trait map optimizations by @tritao in https://github.com/FuelLabs/sway/pull/7007\n* Merge std and core libraries by @SwayStar123 in https://github.com/FuelLabs/sway/pull/6729\n* Promote experimental features by @ironcev in https://github.com/FuelLabs/sway/pull/7016\n* Bump to v0.67.0 by @IGI-111 in https://github.com/FuelLabs/sway/pull/7017\n## Breaking Changes\n* `core` and `std` libraries have been merged\n* Storage keys are now [calculated differently](https://github.com/FuelLabs/sway/issues/6701)\n* The `Eq` trait has been split into `Eq` and `PartialEq`\n* conversions from `Bytes` to `b256` are now fallible\nWe recommend using the [new `forc migrate` tool](https://docs.fuel.network/docs/forc/plugins/forc_migrate/) to address these breaking changes in your codebase.\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.66.10...v0.67.0",
+      "memory_unit_text": "In the FuelLabs/sway release v0.67.0, the release note includes trait map optimizations, merging of std and core libraries, promotion of experimental features, and a version bump to v0.67.0. Breaking changes include the merging of core and std libraries, differently calculated storage keys, splitting of the Eq trait into Eq and PartialEq, and fallible conversions from Bytes to b256."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_68_0",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.68.0",
+      "tag_name": "v0.68.0",
+      "title": "v0.68.0",
+      "time_hint": "2025-04-23",
+      "published_at": "2025-04-23T17:27:58Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.68.0",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.68.0\nTag: v0.68.0; draft: False; prerelease: False; published_at: 2025-04-23T17:27:58Z; created_at: 2025-04-23T17:16:49Z\nRelease notes:\n## What's Changed\n* Improve snapshot testing by @ironcev in https://github.com/FuelLabs/sway/pull/7020\n* chore: update templates to use newer fuels SDK by @sdankel in https://github.com/FuelLabs/sway/pull/7024\n* chore: add more information to lib-std project manifest by @sdankel in https://github.com/FuelLabs/sway/pull/7003\n* Fix trait constraint type checking order for supertraits. by @tritao in https://github.com/FuelLabs/sway/pull/7022\n* forc-call list functions support with example call usage by @zees-dev in https://github.com/FuelLabs/sway/pull/7018\n* AbiDecode for arrays using `const_generics` by @xunilrj in https://github.com/FuelLabs/sway/pull/7008\n* Separate prelude imports from star imports by @jjcnn in https://github.com/FuelLabs/sway/pull/6971\n* Implements deref in reassignment for projections. by @esdrubal in https://github.com/FuelLabs/sway/pull/6941\n* Import codec to all files that define new types in std lib by @SwayStar123 in https://github.com/FuelLabs/sway/pull/7028\n* Refactor: Access to externals moved from `Root` to `Namespace` by @jjcnn in https://github.com/FuelLabs/sway/pull/6999\n* Defining, parsing, and checking `#[attribute]`s by @ironcev in https://github.com/FuelLabs/sway/pull/6986\n* impl PartialEq, Eq, Hash, Clone for array by @xunilrj in https://github.com/FuelLabs/sway/pull/7037\n* Cleanup stale lock files in the .lsp-locks directory by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/6816\n* Merge type and const generics by @xunilrj in https://github.com/FuelLabs/sway/pull/7044\n* TypeArgument as enum to support const generics by @xunilrj in https://github.com/FuelLabs/sway/pull/7052\n* Allow decimal/binary/octal u256 literals by @saimeunt in https://github.com/FuelLabs/sway/pull/7043\n* chore: improve `test_cleanup_stale_files` test & add `mark-flaky-tests` crate by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7055\n* Check for redundant `.gitignore` files in tests by @ironcev in https://github.com/FuelLabs/sway/pull/7059\n* move codspeed benchmarks to buildjet by @Voxelot in https://github.com/FuelLabs/sway/pull/7062\n* Update fuels version by @zees-dev in https://github.com/FuelLabs/sway/pull/7053\n* fix: run forc-publish tarball tests sequentially to remove flakiness by @kayagokalp in https://github.com/FuelLabs/sway/pull/7064\n* Forc call transfers by @zees-dev in https://github.com/FuelLabs/sway/pull/7056\n* Add `#[error_type]` and `#[error]` attributes by @ironcev in https://github.com/FuelLabs/sway/pull/7058\n* Fix compiler panic on configurable initialization by @ironcev in https://github.com/FuelLabs/sway/pull/7068\n* ci: include forc-node binaries in releases by @kayagokalp in https://github.com/FuelLabs/sway/pull/7069\n* Add `--generate-hexfile` flag to `forc build` for hex-encoded output by @JoE11-y in https://github.com/FuelLabs/sway/pull/7032\n* forc call verbosity levels by @zees-dev in https://github.com/FuelLabs/sway/pull/7074\n* feat: registry source resolution and builds by @kayagokalp in https://github.com/FuelLabs/sway/pull/7038\n* feat: yanking support for registry packages by @kayagokalp in https://github.com/FuelLabs/sway/pull/7081\n* forc-pkg: add guards to ensure proper fetch cleanups by @kayagokalp in https://github.com/FuelLabs/sway/pull/7049\n* ci: add a step to reject x.y.z versioning for dependencies by @kayagokalp in https://github.com/FuelLabs/sway/pull/7082\n* Cache and restore namespace module for cached modules by @tritao in https://github.com/FuelLabs/sway/pull/7078\n* Implement `Eq` for `Signature` and add missing `codec` tests by @bitzoic in https://github.com/FuelLabs/sway/pull/7084\n* Optimize `tx` module for bytecode size and gas usage by @ironcev in https://github.com/FuelLabs/sway/pull/7087\n* Sway compiler optimizations by @xunilrj in https://github.com/FuelLabs/sway/pull/7080\n* Optimi...",
+      "memory_unit_text": "In the FuelLabs/sway release v0.68.0, the release note includes improvement of snapshot testing, update of templates to use newer fuels SDK, addition of more information to lib-std project manifest, fix of trait constraint type checking order for supertraits, forc-call list functions support, AbiDecode for arrays using const generics, separation of prelude imports from star imports, implementation of deref in reassignment for projections, import of codec to all files that define new types in std lib, refactoring of access to externals from Root to Namespace, defining, parsing, and checking of #[attribute]s, implementation of PartialEq, Eq, Hash, Clone for array, cleanup of stale lock files in .lsp-locks directory, merging of type and const generics, TypeArgument as enum to support const generics, allowance of decimal/binary/octal u256 literals, addition of #[error_type] and #[error] attributes, fix of compiler panic on configurable initialization, inclusion of forc-node binaries in releases, addition of --generate-hexfile flag to forc build, forc call verbosity levels, registry source resolution and builds, yanking support for registry packages, guards for proper fetch cleanups in forc-pkg, caching and restoring of namespace module for cached modules, implementation of Eq for Signature, optimization of tx module for bytecode size and gas usage, and Sway compiler optimizations."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_68_1",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.68.1",
+      "tag_name": "v0.68.1",
+      "title": "v0.68.1",
+      "time_hint": "2025-04-24",
+      "published_at": "2025-04-24T04:38:43Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.68.1",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.68.1\nTag: v0.68.1; draft: False; prerelease: False; published_at: 2025-04-24T04:38:43Z; created_at: 2025-04-24T04:34:53Z\nRelease notes:\n## What's Changed\n* chore: bump fuel-core to 0.43.1 and fuels to 0.72 by @kayagokalp in https://github.com/FuelLabs/sway/pull/7110\n* Fix relative path resolution with temp manifests in LSP by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7079\n* chore: bump version to 0.68.1 by @kayagokalp in https://github.com/FuelLabs/sway/pull/7112\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.68.0...v0.68.1",
+      "memory_unit_text": "In the FuelLabs/sway release v0.68.1, the release note includes bumping fuel-core to 0.43.1 and fuels to 0.72, fixing relative path resolution with temp manifests in LSP, and a version bump to 0.68.1."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_68_2",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.68.2",
+      "tag_name": "v0.68.2",
+      "title": "v0.68.2",
+      "time_hint": "2025-05-01",
+      "published_at": "2025-05-01T18:45:01Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.68.2",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.68.2\nTag: v0.68.2; draft: False; prerelease: False; published_at: 2025-05-01T18:45:01Z; created_at: 2025-05-01T18:44:36Z\nRelease notes:\n## What's Changed\n* fix: add `implicit-std = false` to fix failing LSP test by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7116\n* forc-call: missing contract retrieval refactor by @zees-dev in https://github.com/FuelLabs/sway/pull/7115\n* Make update-contract-ids.sh macOS-compatible by @Dentosal in https://github.com/FuelLabs/sway/pull/7120\n* Add support for experimental features in the parsing phase by @ironcev in https://github.com/FuelLabs/sway/pull/7124\n* Add `str` conversion methods to `std::string::String` in `sway-lib-std` by @camden-smallwood in https://github.com/FuelLabs/sway/pull/7121\n* Upgrade CI and fix Clippy issues with Rust 1.86.0 by @tritao in https://github.com/FuelLabs/sway/pull/7127\n* Support for const generics in structs by @xunilrj in https://github.com/FuelLabs/sway/pull/7076\n* chore: bump fuel-core v0.43.2 by @kayagokalp in https://github.com/FuelLabs/sway/pull/7130\n* chore: update codeowners from swayex to onchain team by @luizstacio in https://github.com/FuelLabs/sway/pull/7128\n* Add forc-publish to release binaries by @sdankel in https://github.com/FuelLabs/sway/pull/7129\n* Rework and fix associated const visibility for impl items by @tritao in https://github.com/FuelLabs/sway/pull/6785\n* Implement `panic` expression by @ironcev in https://github.com/FuelLabs/sway/pull/7073\n* improve dbg intrinsic with fflush by @xunilrj in https://github.com/FuelLabs/sway/pull/7126\n* Parse raw identifiers (`r#<identifier>`) in expressions by @ironcev in https://github.com/FuelLabs/sway/pull/7137\n* chore: bump to 0.68.2 by @kayagokalp in https://github.com/FuelLabs/sway/pull/7140\n## New Contributors\n* @camden-smallwood made their first contribution in https://github.com/FuelLabs/sway/pull/7121\n* @luizstacio made their first contribution in https://github.com/FuelLabs/sway/pull/7128\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.68.1...v0.68.2",
+      "memory_unit_text": "In the FuelLabs/sway release v0.68.2, the release note includes adding implicit-std = false to fix a failing LSP test, a forc-call missing contract retrieval refactor, making update-contract-ids.sh macOS-compatible, adding support for experimental features in the parsing phase, adding str conversion methods to std::string::String, upgrading CI and fixing Clippy issues with Rust 1.86.0, support for const generics in structs, bumping fuel-core to v0.43.2, adding forc-publish to release binaries, reworking and fixing associated const visibility for impl items, implementing panic expression, improving dbg intrinsic with fflush, and parsing raw identifiers in expressions."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_68_3",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.68.3",
+      "tag_name": "v0.68.3",
+      "title": "v0.68.3",
+      "time_hint": "2025-05-13",
+      "published_at": "2025-05-13T08:48:40Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.68.3",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.68.3\nTag: v0.68.3; draft: False; prerelease: False; published_at: 2025-05-13T08:48:40Z; created_at: 2025-05-13T04:14:29Z\nRelease notes:\n## What's Changed\n* sway-book: fix forc call examples by @zees-dev in https://github.com/FuelLabs/sway/pull/7133\n* Better `Debug` tests and impls for primitives and std lib types by @xunilrj in https://github.com/FuelLabs/sway/pull/7119\n* sway-lsp: Fix the double read-lock bug in session by @Chain-Fox in https://github.com/FuelLabs/sway/pull/7145\n* Add documentation for the `abi` keyword for LSP by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7148\n* codegen optimization: symbolic fuel-vm interpretation by @Dentosal in https://github.com/FuelLabs/sway/pull/7109\n* Replace Tokio Thread File Watcher with LSP Client File Watcher by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7147\n* Rename AllocatedOpcode to AllocatedInstruction to follow fuel-spec/fuel-asm terminology by @Sendi0011 in https://github.com/FuelLabs/sway/pull/7122\n* Remove `AbiEncode` impl for `raw_ptr` by @tritao in https://github.com/FuelLabs/sway/pull/7160\n* Support new expiry policy in std-lib by @bitzoic in https://github.com/FuelLabs/sway/pull/7155\n* Optimize `crypto` module for bytecode size and gas usage by @ironcev in https://github.com/FuelLabs/sway/pull/7151\n* ci: Ensure that std-lib version matches forc version by @sdankel in https://github.com/FuelLabs/sway/pull/7154\n* Support doc comments and attributes on nested items by @saimeunt in https://github.com/FuelLabs/sway/pull/7146\n* Optimize `vec` and `bytes` modules for bytecode size and gas usage by @ironcev in https://github.com/FuelLabs/sway/pull/7162\n* feat: forc call json output by @zees-dev in https://github.com/FuelLabs/sway/pull/7156\n* ci: publish lib-std on release by @sdankel in https://github.com/FuelLabs/sway/pull/7165\n* Remove double IR-compilation of contract methods by @ironcev in https://github.com/FuelLabs/sway/pull/7164\n* chore: bump to 0.68.3 by @sdankel in https://github.com/FuelLabs/sway/pull/7167\n## New Contributors\n* @Chain-Fox made their first contribution in https://github.com/FuelLabs/sway/pull/7145\n* @Sendi0011 made their first contribution in https://github.com/FuelLabs/sway/pull/7122\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.68.2...v0.68.3",
+      "memory_unit_text": "In the FuelLabs/sway release v0.68.3, the release note includes fixing forc call examples in sway-book, better Debug tests and impls for primitives and std lib types, fixing a double read-lock bug in LSP session, adding documentation for the abi keyword for LSP, codegen optimization with symbolic fuel-vm interpretation, replacing Tokio Thread File Watcher with LSP Client File Watcher, renaming AllocatedOpcode to AllocatedInstruction, removing AbiEncode impl for raw_ptr, supporting new expiry policy in std-lib, optimizing crypto module for bytecode size and gas usage, ensuring std-lib version matches forc version, supporting doc comments and attributes on nested items, optimizing vec and bytes modules for bytecode size and gas usage, forc call json output, publishing lib-std on release, and removing double IR-compilation of contract methods."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_68_4",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.68.4",
+      "tag_name": "v0.68.4",
+      "title": "v0.68.4",
+      "time_hint": "2025-05-14",
+      "published_at": "2025-05-14T00:30:23Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.68.4",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.68.4\nTag: v0.68.4; draft: False; prerelease: False; published_at: 2025-05-14T00:30:23Z; created_at: 2025-05-14T00:29:12Z\nRelease notes:\n## What's Changed\n* Run `forc-unit-tests` on CI in `release` and `debug` mode by @ironcev in https://github.com/FuelLabs/sway/pull/7159\n* ci: release sway std after publishing forc binaries by @sdankel in https://github.com/FuelLabs/sway/pull/7170\n* chore: bump to v0.68.4 by @sdankel in https://github.com/FuelLabs/sway/pull/7171\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.68.3...v0.68.4",
+      "memory_unit_text": "In the FuelLabs/sway release v0.68.4, the release note includes running forc-unit-tests on CI in release and debug mode, releasing sway std after publishing forc binaries, and a version bump to v0.68.4."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_68_5",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.68.5",
+      "tag_name": "v0.68.5",
+      "title": "v0.68.5",
+      "time_hint": "2025-05-20",
+      "published_at": "2025-05-20T15:51:28Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.68.5",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.68.5\nTag: v0.68.5; draft: False; prerelease: False; published_at: 2025-05-20T15:51:28Z; created_at: 2025-05-20T15:47:20Z\nRelease notes:\n## What's Changed\n* fix: Print full error in forc-publish by @sdankel in https://github.com/FuelLabs/sway/pull/7173\n* Refactor jump label realization by @Dentosal in https://github.com/FuelLabs/sway/pull/7088\n* chore: move test deps to dev-dependencies by @sdankel in https://github.com/FuelLabs/sway/pull/7181\n* Refactor: Move `SyncWorkspace` from `Session` into `ServerState` by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7166\n* feat: use SSE in forc-publish for long-running uploads by @sdankel in https://github.com/FuelLabs/sway/pull/7178\n* chore: bump to 0.68.5 by @sdankel in https://github.com/FuelLabs/sway/pull/7185\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.68.4...v0.68.5",
+      "memory_unit_text": "In the FuelLabs/sway release v0.68.5, the release note includes printing full error in forc-publish, refactoring jump label realization, moving test deps to dev-dependencies, moving SyncWorkspace from Session into ServerState, using SSE in forc-publish for long-running uploads, and a version bump to 0.68.5."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_68_6",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.68.6",
+      "tag_name": "v0.68.6",
+      "title": "v0.68.6",
+      "time_hint": "2025-05-28",
+      "published_at": "2025-05-28T10:14:47Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.68.6",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.68.6\nTag: v0.68.6; draft: False; prerelease: False; published_at: 2025-05-28T10:14:47Z; created_at: 2025-05-28T10:14:07Z\nRelease notes:\n## What's Changed\n* Use a workspace level `TokenMap` and `Engines`  by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7139\n* ci: install Forc plugins by iterating the plugins in the forc-plugins directory by @grandima in https://github.com/FuelLabs/sway/pull/7183\n* fix: Prevent panic in semantic highlighting for unknown token types by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7189\n* Check for typed program errors before unwrapping to prevent panics. by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7190\n* feat: implement `forc add` and `forc remove` to add/remove dependencies by @JoE11-y in https://github.com/FuelLabs/sway/pull/7143\n* const generics for standalone fns by @xunilrj in https://github.com/FuelLabs/sway/pull/7175\n* fix: ensure forc-node ignition fetches ignition chain config by @kayagokalp in https://github.com/FuelLabs/sway/pull/7194\n* fix: typo in `Cargo.toml` by @gap-editor in https://github.com/FuelLabs/sway/pull/7199\n* Compile panic expression to ABI error codes by @ironcev in https://github.com/FuelLabs/sway/pull/7118\n* Bump to 0.68.6 by @IGI-111 in https://github.com/FuelLabs/sway/pull/7200\n* Update Rust in dockerfile to 1.87 by @IGI-111 in https://github.com/FuelLabs/sway/pull/7201\n## New Contributors\n* @grandima made their first contribution in https://github.com/FuelLabs/sway/pull/7183\n* @gap-editor made their first contribution in https://github.com/FuelLabs/sway/pull/7199\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.68.5...v0.68.6",
+      "memory_unit_text": "In the FuelLabs/sway release v0.68.6, the release note includes using a workspace level TokenMap and Engines, installing Forc plugins by iterating the plugins directory, preventing panic in semantic highlighting for unknown token types, checking for typed program errors before unwrapping, implementing forc add and forc remove to add/remove dependencies, const generics for standalone fns, ensuring forc-node ignition fetches ignition chain config, fixing a typo in Cargo.toml, compiling panic expression to ABI error codes, and a version bump to 0.68.6."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_68_7",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.68.7",
+      "tag_name": "v0.68.7",
+      "title": "v0.68.7",
+      "time_hint": "2025-06-04",
+      "published_at": "2025-06-04T12:37:16Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.68.7",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.68.7\nTag: v0.68.7; draft: False; prerelease: False; published_at: 2025-06-04T12:37:16Z; created_at: 2025-06-04T12:11:55Z\nRelease notes:\n## What's Changed\n* feat: return failed to fetch message for invalid registry lookups by @kayagokalp in https://github.com/FuelLabs/sway/pull/7205\n* `const-generics` for enums by @xunilrj in https://github.com/FuelLabs/sway/pull/7163\n* feat: more descriptive publish error message for forc-publish by @kayagokalp in https://github.com/FuelLabs/sway/pull/7208\n* feat: forc call tracing by @zees-dev in https://github.com/FuelLabs/sway/pull/7196\n* Introduce the Time Library by @bitzoic in https://github.com/FuelLabs/sway/pull/7206\n* Removing needless allocations (clone, to_vec, collect etc...) by @xunilrj in https://github.com/FuelLabs/sway/pull/7209\n* Const generics for \"string array\" and `len` methods by @xunilrj in https://github.com/FuelLabs/sway/pull/7202\n* Improve error handling by avoiding unwrap for transmute expression type checking by @tritao in https://github.com/FuelLabs/sway/pull/7212\n* Optimisation: only traverse AST's if the cache is stale.  by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7215\n* Implement `Hash` for `Vec<T>` by @ironcev in https://github.com/FuelLabs/sway/pull/7217\n* feat: implicitly depend on std from registry, not via git by @kayagokalp in https://github.com/FuelLabs/sway/pull/7204\n* Bump to 0.68.7 by @IGI-111 in https://github.com/FuelLabs/sway/pull/7219\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.68.6...v0.68.7",
+      "memory_unit_text": "In the FuelLabs/sway release v0.68.7, the release note includes returning a failed to fetch message for invalid registry lookups, const-generics for enums, more descriptive publish error message for forc-publish, forc call tracing, introduction of the Time Library, removing needless allocations, const generics for string array and len methods, improving error handling for transmute expression type checking, optimization to only traverse ASTs if the cache is stale, implementing Hash for Vec<T>, implicitly depending on std from registry not via git, and a version bump to 0.68.7."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_68_8",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.68.8",
+      "tag_name": "v0.68.8",
+      "title": "v0.68.8",
+      "time_hint": "2025-06-19",
+      "published_at": "2025-06-19T01:39:59Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.68.8",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.68.8\nTag: v0.68.8; draft: False; prerelease: False; published_at: 2025-06-19T01:39:59Z; created_at: 2025-06-19T01:39:29Z\nRelease notes:\n## What's Changed\n* Remove Docker jobs from CI by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7221\n* Support `GM_GET_CHAIN_ID` GM opcode with `chain_id()` function by @bitzoic in https://github.com/FuelLabs/sway/pull/7222\n* Support ABI errors in `forc test` by @ironcev in https://github.com/FuelLabs/sway/pull/7224\n* Respect CLI flags in `unit_test_pass` E2E tests by @ironcev in https://github.com/FuelLabs/sway/pull/7226\n* Keep track of interface surface status for entries in trait map. by @tritao in https://github.com/FuelLabs/sway/pull/7210\n* IR: Taking function arg address and representing references as pointers by @vaivaswatha in https://github.com/FuelLabs/sway/pull/6967\n* Add verified assets to `AssetId` implementation by @bitzoic in https://github.com/FuelLabs/sway/pull/7225\n* Add migration for renaming existing `panic` identifiers to `r#panic` by @ironcev in https://github.com/FuelLabs/sway/pull/7231\n* fix: add forc-call to binary stripping step in ci by @kayagokalp in https://github.com/FuelLabs/sway/pull/7237\n* LSP: Support multiple workspaces  by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7214\n* Optimize existing and add missing `Hash` implementations by @ironcev in https://github.com/FuelLabs/sway/pull/7238\n* Bump to 0.68.8 by @IGI-111 in https://github.com/FuelLabs/sway/pull/7235\n* Fix forc-test dependency to include the tx feature by @IGI-111 in https://github.com/FuelLabs/sway/pull/7239\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.68.7...v0.68.8",
+      "memory_unit_text": "In the FuelLabs/sway release v0.68.8, the release note includes removing Docker jobs from CI, supporting GM_GET_CHAIN_ID GM opcode with chain_id() function, supporting ABI errors in forc test, respecting CLI flags in unit_test_pass E2E tests, keeping track of interface surface status for entries in trait map, taking function arg address and representing references as pointers in IR, adding verified assets to AssetId implementation, adding migration for renaming existing panic identifiers to r#panic, adding forc-call to binary stripping step in CI, LSP support for multiple workspaces, optimizing existing and adding missing Hash implementations, and a version bump to 0.68.8."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_68_9",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.68.9",
+      "tag_name": "v0.68.9",
+      "title": "v0.68.9",
+      "time_hint": "2025-06-23",
+      "published_at": "2025-06-23T06:10:27Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.68.9",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.68.9\nTag: v0.68.9; draft: False; prerelease: False; published_at: 2025-06-23T06:10:27Z; created_at: 2025-06-23T06:09:30Z\nRelease notes:\n## What's Changed\n* Trait coherence fixes by @tritao in https://github.com/FuelLabs/sway/pull/7211\n* Update Merkle library link to current documentation by @VolodymyrBg in https://github.com/FuelLabs/sway/pull/7244\n* minor adjustment to inliner heuristic by @vaivaswatha in https://github.com/FuelLabs/sway/pull/7232\n* fix(forc-pkg): Resolve runtime panic in registry dependency fetching by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7246\n* bump to 0.68.9 by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7247\n## New Contributors\n* @VolodymyrBg made their first contribution in https://github.com/FuelLabs/sway/pull/7244\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.68.8...v0.68.9",
+      "memory_unit_text": "In the FuelLabs/sway release v0.68.9, the release note includes trait coherence fixes, updating Merkle library link to current documentation, a minor adjustment to inliner heuristic, resolving a runtime panic in registry dependency fetching in forc-pkg, and a version bump to 0.68.9."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_69_0",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.69.0",
+      "tag_name": "v0.69.0",
+      "title": "v0.69.0",
+      "time_hint": "2025-06-23",
+      "published_at": "2025-06-23T15:27:01Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.69.0",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.69.0\nTag: v0.69.0; draft: False; prerelease: False; published_at: 2025-06-23T15:27:01Z; created_at: 2025-06-23T15:25:04Z\nRelease notes:\n## What's Changed\n* Bump fuel deps by @Dentosal in https://github.com/FuelLabs/sway/pull/7228\n* Stabilize ABI errors by @IGI-111 in https://github.com/FuelLabs/sway/pull/7241\n* Add docs for error handling (ABI errors, `panic`, `error_type`, `error`) by @ironcev in https://github.com/FuelLabs/sway/pull/7249\n* Bump/0.69.0 by @zees-dev in https://github.com/FuelLabs/sway/pull/7248\n## Breaking Changes\n* `panic` is now a keyword\n* fuel-vm, fuel-core fuels-rs and forc-wallet dependencies have been updated to latest versions\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.68.9...v0.69.0",
+      "memory_unit_text": "In the FuelLabs/sway release v0.69.0, the release note includes bumping fuel deps, stabilizing ABI errors, adding docs for error handling, and a version bump to 0.69.0. Breaking changes include panic becoming a keyword and updating fuel-vm, fuel-core, fuels-rs, and forc-wallet dependencies to latest versions."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_69_1",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.69.1",
+      "tag_name": "v0.69.1",
+      "title": "v0.69.1",
+      "time_hint": "2025-07-17",
+      "published_at": "2025-07-17T18:49:17Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.69.1",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.69.1\nTag: v0.69.1; draft: False; prerelease: False; published_at: 2025-07-17T18:49:17Z; created_at: 2025-07-17T18:48:56Z\nRelease notes:\n## What's Changed\n* support `__addr_of` for all types by @vaivaswatha in https://github.com/FuelLabs/sway/pull/7255\n* remove archived `forc-explore` plugin from CI and docs by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7257\n* forc-call detailed vm-interpreter call traces by @zees-dev in https://github.com/FuelLabs/sway/pull/7251\n* Add criterion benchmark to forc-doc + initial code quality pass by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7242\n* treat string array values as if it were `[u8; N]` by @vaivaswatha in https://github.com/FuelLabs/sway/pull/7258\n* fix: typo in comment for `forc-migrate` by @kayagokalp in https://github.com/FuelLabs/sway/pull/7269\n* chore: use wildcard include for `forc-plugins` in `Cargo.toml` by @kayagokalp in https://github.com/FuelLabs/sway/pull/7265\n* Fix broken link to test data directory in README by @GarmashAlex in https://github.com/FuelLabs/sway/pull/7266\n* Add workspace support to `forc-doc` by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7268\n* feat: forc-call inline abi support by @zees-dev in https://github.com/FuelLabs/sway/pull/7270\n* Fix Typo in Yanked Version Message by @leopardracer in https://github.com/FuelLabs/sway/pull/7274\n* feat: add mdbook preprocessing for forc-publish to flatten include directives by @kayagokalp in https://github.com/FuelLabs/sway/pull/7264\n* Implement new hashing by @ironcev in https://github.com/FuelLabs/sway/pull/7259\n* Contract self impl by @xunilrj in https://github.com/FuelLabs/sway/pull/7275\n* Add `#[trace]` attribute by @ironcev in https://github.com/FuelLabs/sway/pull/7277\n* Subroutine calls using the new JAL instruction by @Dentosal in https://github.com/FuelLabs/sway/pull/7085\n* Partially revert #6795 by @vaivaswatha in https://github.com/FuelLabs/sway/pull/7288\n* Add `backtrace` build option by @ironcev in https://github.com/FuelLabs/sway/pull/7285\n* Bump to v0.69.1 by @IGI-111 in https://github.com/FuelLabs/sway/pull/7289\n## New Contributors\n* @GarmashAlex made their first contribution in https://github.com/FuelLabs/sway/pull/7266\n* @leopardracer made their first contribution in https://github.com/FuelLabs/sway/pull/7274\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.69.0...v0.69.1",
+      "memory_unit_text": "In the FuelLabs/sway release v0.69.1, the release note includes supporting __addr_of for all types, removing archived forc-explore plugin from CI and docs, forc-call detailed vm-interpreter call traces, adding criterion benchmark to forc-doc, treating string array values as [u8; N], fixing a typo in comment for forc-migrate, using wildcard include for forc-plugins in Cargo.toml, fixing a broken link to test data directory in README, adding workspace support to forc-doc, forc-call inline abi support, fixing a typo in yanked version message, adding mdbook preprocessing for forc-publish, implementing new hashing, contract self impl, adding #[trace] attribute, subroutine calls using the new JAL instruction, partially reverting #6795, adding backtrace build option, and a version bump to v0.69.1."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_69_4",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.69.4",
+      "tag_name": "v0.69.4",
+      "title": "v0.69.4",
+      "time_hint": "2025-09-24",
+      "published_at": "2025-09-24T16:09:51Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.69.4",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.69.4\nTag: v0.69.4; draft: False; prerelease: False; published_at: 2025-09-24T16:09:51Z; created_at: 2025-09-24T16:09:25Z\nRelease notes:\n## What's Changed\n* Add `#[abi_name(name = \"foo\")]` attribute to rename ABI items. by @tritao in https://github.com/FuelLabs/sway/pull/7057\n* Add migration for `new_hashing` by @ironcev in https://github.com/FuelLabs/sway/pull/7287\n* Better observability for the compiler by @xunilrj in https://github.com/FuelLabs/sway/pull/7250\n* Fix type check for variables in const generics by @xunilrj in https://github.com/FuelLabs/sway/pull/7273\n* Clone implementation for string arrays by @xunilrj in https://github.com/FuelLabs/sway/pull/7290\n* feat: add preliminary local checks for forc-publish by @kayagokalp in https://github.com/FuelLabs/sway/pull/7253\n* Represent `RawUntypedPtr` AST type using a new `Pointer` IR type by @vaivaswatha in https://github.com/FuelLabs/sway/pull/7272\n* Fix const generics standalone fns by @xunilrj in https://github.com/FuelLabs/sway/pull/7292\n* feat: forc mcp server - with forc-call tool integration by @zees-dev in https://github.com/FuelLabs/sway/pull/7284\n* docs: fix broken sway-libs GitHub link to use official documentation URL by @MozirDmitriy in https://github.com/FuelLabs/sway/pull/7298\n* Add parallel processing to `forc-doc` using rayon to improve performance by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7296\n* feat: check file descriptor limits before running forc node by @mchristopher in https://github.com/FuelLabs/sway/pull/7302\n* feat: forc-mcp auth for mcp server hosting by @zees-dev in https://github.com/FuelLabs/sway/pull/7300\n* Remove some uses of `ptr_to_int` and `int_to_ptr`, using `ptr` instead by @vaivaswatha in https://github.com/FuelLabs/sway/pull/7297\n* chore: fix broken link in libraries.md by @Galoretka in https://github.com/FuelLabs/sway/pull/7309\n* Hash for string arrays by @xunilrj in https://github.com/FuelLabs/sway/pull/7293\n* abiencode and abidecode for str array by @xunilrj in https://github.com/FuelLabs/sway/pull/7313\n* bugfix: forc-call list-functions and script output by @zees-dev in https://github.com/FuelLabs/sway/pull/7312\n* feat: forc-debug as lib by @zees-dev in https://github.com/FuelLabs/sway/pull/7320\n* feat: fallback into s3 cache in forc-pkg for failed ipfs fetch by @kayagokalp in https://github.com/FuelLabs/sway/pull/7310\n* feat: forc-call debugger integration by @zees-dev in https://github.com/FuelLabs/sway/pull/7323\n* Add wrapping operations to standard library by @IGI-111 in https://github.com/FuelLabs/sway/pull/7329\n* docs:Remove duplicate words by @RiceChuan in https://github.com/FuelLabs/sway/pull/7336\n* Optimize initialization of array repeat when the initial value is zero by @xunilrj in https://github.com/FuelLabs/sway/pull/7299\n* forc-run debugger integration by @IGI-111 in https://github.com/FuelLabs/sway/pull/7337\n* fix(docs): update Fuel VM instruction set link to new docs site by @sashass1315 in https://github.com/FuelLabs/sway/pull/7319\n* Don't duplicate source pointers in spans by @IGI-111 in https://github.com/FuelLabs/sway/pull/7339\n* Add detailed diagnostics for Rust-style enums  by @kfastov in https://github.com/FuelLabs/sway/pull/7047\n* refactor(u128): rename as_u64 to try_as_u64 for naming consistency by @crStiv in https://github.com/FuelLabs/sway/pull/7332\n* `arg` and `ret` demotion passes should be module passes by @vaivaswatha in https://github.com/FuelLabs/sway/pull/7343\n* Remove `cargo-run-e2e-test-evm` job from CI by @ironcev in https://github.com/FuelLabs/sway/pull/7349\n* chore: fix typos by @Elaela22soL in https://github.com/FuelLabs/sway/pull/7350\n* Eliminate `mem_copy_val`s when accessing global constants by @ironcev in https://github.com/FuelLabs/sway/pull/7348\n* Enable `storage_vec_iter_tests` in-language test by @ironcev in https://github.com/FuelLabs/sway/pull/7356\n* Implement a command to dump impls for a given type by @tritao in https://github...",
+      "memory_unit_text": "In the FuelLabs/sway release v0.69.4, the release note includes adding #[abi_name(name = \"foo\")] attribute to rename ABI items, adding migration for new_hashing, better observability for the compiler, fixing type check for variables in const generics, Clone implementation for string arrays, adding preliminary local checks for forc-publish, representing RawUntypedPtr AST type using a new Pointer IR type, fixing const generics standalone fns, forc mcp server with forc-call tool integration, fixing a broken sway-libs GitHub link, adding parallel processing to forc-doc using rayon, checking file descriptor limits before running forc node, forc-mcp auth for mcp server hosting, removing some uses of ptr_to_int and int_to_ptr, fixing a broken link in libraries.md, Hash for string arrays, abiencode and abidecode for str array, bugfix for forc-call list-functions and script output, forc-debug as lib, fallback into s3 cache in forc-pkg for failed ipfs fetch, forc-call debugger integration, adding wrapping operations to standard library, removing duplicate words in docs, optimizing initialization of array repeat when initial value is zero, forc-run debugger integration, fixing a link to Fuel VM instruction set, not duplicating source pointers in spans, adding detailed diagnostics for Rust-style enums, renaming as_u64 to try_as_u64 for naming consistency, making arg and ret demotion passes module passes, removing cargo-run-e2e-test-evm job from CI, fixing typos, eliminating mem_copy_vals when accessing global constants, enabling storage_vec_iter_tests in-language test, and implementing a command to dump impls for a given type."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_69_5",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.69.5",
+      "tag_name": "v0.69.5",
+      "title": "v0.69.5",
+      "time_hint": "2025-09-29",
+      "published_at": "2025-09-29T14:41:52Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.69.5",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.69.5\nTag: v0.69.5; draft: False; prerelease: False; published_at: 2025-09-29T14:41:52Z; created_at: 2025-09-29T14:41:07Z\nRelease notes:\n## What's Changed\n* fix: `build-and-release-forc-binaries` CI by @zees-dev in https://github.com/FuelLabs/sway/pull/7413\n* Add \"Experimental Features\" chapter to The Sway Book by @ironcev in https://github.com/FuelLabs/sway/pull/7416\n* Improve method resolution by allowing placeholder unification under ConstraintSubset by @xunilrj in https://github.com/FuelLabs/sway/pull/7411\n* fix: migrate to warpbuild and github runner by @mchristopher in https://github.com/FuelLabs/sway/pull/7415\n* Bump to v0.69.5 by @IGI-111 in https://github.com/FuelLabs/sway/pull/7417\n* fix: change runners for publish workflows by @mchristopher in https://github.com/FuelLabs/sway/pull/7424\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.69.4...v0.69.5",
+      "memory_unit_text": "In the FuelLabs/sway release v0.69.5, the release note includes fixing build-and-release-forc-binaries CI, adding an \"Experimental Features\" chapter to The Sway Book, improving method resolution by allowing placeholder unification under ConstraintSubset, migrating to warpbuild and github runner, bumping to v0.69.5, and changing runners for publish workflows."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_69_6",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.69.6",
+      "tag_name": "v0.69.6",
+      "title": "v0.69.6",
+      "time_hint": "2025-09-29",
+      "published_at": "2025-09-29T19:11:14Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.69.6",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.69.6\nTag: v0.69.6; draft: False; prerelease: False; published_at: 2025-09-29T19:11:14Z; created_at: 2025-09-29T19:10:34Z\nRelease notes:\n## What's Changed\n* chore: bump version to v0.69.6 by @kayagokalp in https://github.com/FuelLabs/sway/pull/7425\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.69.5...v0.69.6",
+      "memory_unit_text": "In the FuelLabs/sway release v0.69.6, the release note consists solely of a version bump to v0.69.6."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_70_0",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.70.0",
+      "tag_name": "v0.70.0",
+      "title": "v0.70.0",
+      "time_hint": "2025-10-04",
+      "published_at": "2025-10-04T04:34:32Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.70.0",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.70.0\nTag: v0.70.0; draft: False; prerelease: False; published_at: 2025-10-04T04:34:32Z; created_at: 2025-10-04T04:26:46Z\nRelease notes:\n## What's Changed\n* Fix register allocator non-deterministic output across platforms by @tritao in https://github.com/FuelLabs/sway/pull/7422\n* Allow trait impls to inherit default associated constants by @tritao in https://github.com/FuelLabs/sway/pull/7409\n* fix: various typos around codebase to unblock ci by @kayagokalp in https://github.com/FuelLabs/sway/pull/7432\n* Symptom-fix associated const shadowing itself by @ironcev in https://github.com/FuelLabs/sway/pull/7429\n* fix: also create deployment artifacts for chunked deployments by @kayagokalp in https://github.com/FuelLabs/sway/pull/7426\n* chore: bumpt rust version to 1.90 by @kayagokalp in https://github.com/FuelLabs/sway/pull/7427\n* fix: formatter use newline interference by @kayagokalp in https://github.com/FuelLabs/sway/pull/7431\n* feat: introduce fuel-telemetry macros by @kayagokalp in https://github.com/FuelLabs/sway/pull/7295\n* forc-node wasm32 removal by @zees-dev in https://github.com/FuelLabs/sway/pull/7436\n* Stabilize `new_hashing` by @IGI-111 in https://github.com/FuelLabs/sway/pull/7437\n* Bump to 0.70.0 by @IGI-111 in https://github.com/FuelLabs/sway/pull/7438\n## Breaking Changes\nHashing has received a significant change to alleviate security issues as detailed in https://github.com/FuelLabs/sway/issues/7256.\nThe `new_hashing` feature is now enabled by default which will result in dynamically sized collections now producing hashes that include size to reflect their shape.\nIf you have code that uses canonical hashes as part of its logic or relies on the stability of sway produced hashes you may be affected.\nMake sure to use `forc migrate` to check if you are. If necessary you may disable the change for now with `--no-experimental new_hashing`, however this option will be removed in a future release.\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.69.6...v0.70.0",
+      "memory_unit_text": "In the FuelLabs/sway release v0.70.0, the release note includes fixing register allocator non-deterministic output across platforms, allowing trait impls to inherit default associated constants, fixing various typos, symptom-fixing associated const shadowing itself, creating deployment artifacts for chunked deployments, bumping Rust version to 1.90, fixing formatter use newline interference, introducing fuel-telemetry macros, removing forc-node wasm32, stabilizing new_hashing, and a version bump to 0.70.0. Breaking changes include a significant change to hashing to alleviate security issues, with new_hashing enabled by default, causing dynamically sized collections to produce hashes that include size."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_70_1",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.70.1",
+      "tag_name": "v0.70.1",
+      "title": "v0.70.1",
+      "time_hint": "2025-10-10",
+      "published_at": "2025-10-10T07:36:20Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.70.1",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.70.1\nTag: v0.70.1; draft: False; prerelease: False; published_at: 2025-10-10T07:36:20Z; created_at: 2025-10-10T07:34:56Z\nRelease notes:\n## What's Changed\n* Remove workarounds based on `asm` blocks from `std::hash` by @ironcev in https://github.com/FuelLabs/sway/pull/7446\n* Bump fuel-core v0.46.0 by @zees-dev in https://github.com/FuelLabs/sway/pull/7445\n* Revert feat: introduce fuel-telemetry macros (#7295) by @kayagokalp in https://github.com/FuelLabs/sway/pull/7451\n* Compile runtime backtracing to ASM and compile-time to ABI JSON by @ironcev in https://github.com/FuelLabs/sway/pull/7387\n* Remove `fuels` patches from workspace's `Cargo.toml` by @ironcev in https://github.com/FuelLabs/sway/pull/7452\n* Removing todo const generics by @xunilrj in https://github.com/FuelLabs/sway/pull/7391\n* chore: bump version to v0.70.1 by @kayagokalp in https://github.com/FuelLabs/sway/pull/7454\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.70.0...v0.70.1",
+      "memory_unit_text": "In the FuelLabs/sway release v0.70.1, the release note includes removing workarounds based on asm blocks from std::hash, bumping fuel-core to v0.46.0, reverting the introduction of fuel-telemetry macros, compiling runtime backtracing to ASM and compile-time to ABI JSON, removing fuels patches from workspace's Cargo.toml, removing todo const generics, and a version bump to v0.70.1."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_70_2",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.70.2",
+      "tag_name": "v0.70.2",
+      "title": "v0.70.2",
+      "time_hint": "2025-11-19",
+      "published_at": "2025-11-19T15:00:16Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.70.2",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.70.2\nTag: v0.70.2; draft: False; prerelease: False; published_at: 2025-11-19T15:00:16Z; created_at: 2025-11-19T12:19:11Z\nRelease notes:\n## What's Changed\n* Add docs for ABI Backtracing by @ironcev in https://github.com/FuelLabs/sway/pull/7435\n* Excute E2E tests in parallel by @ironcev in https://github.com/FuelLabs/sway/pull/7456\n* Cost of contract calls snapshot tests by @xunilrj in https://github.com/FuelLabs/sway/pull/7440\n* Improve diff between generic argument generic type argument by @xunilrj in https://github.com/FuelLabs/sway/pull/7453\n* Improve Contract Call by not encoding fuelvm protocol args by @xunilrj in https://github.com/FuelLabs/sway/pull/7447\n* Add `--perf` option to `test` to collect and diff performance data by @ironcev in https://github.com/FuelLabs/sway/pull/7459\n* Fix \"Transaction collided\" issue when running `run_on_node` tests by @ironcev in https://github.com/FuelLabs/sway/pull/7461\n* Fix build warnings in `in-language` tests by @ironcev in https://github.com/FuelLabs/sway/pull/7464\n* Improve Contract Call by not encoding method name by @xunilrj in https://github.com/FuelLabs/sway/pull/7455\n* SROA: Do not generate GEPs when direct address is available by @vaivaswatha in https://github.com/FuelLabs/sway/pull/7457\n* Add `--gas-costs` option to `forc-test` and E2E test runner by @ironcev in https://github.com/FuelLabs/sway/pull/7471\n* Collect more storage access performance data from tests by @ironcev in https://github.com/FuelLabs/sway/pull/7476\n* Fix default `--gas-costs` option to be `built-in` by @ironcev in https://github.com/FuelLabs/sway/pull/7475\n* Do not read from state when writing aligned, slot sized values by @vaivaswatha in https://github.com/FuelLabs/sway/pull/7470\n* Fix CI issue by relaxing typo checker for \"aloc\". by @tritao in https://github.com/FuelLabs/sway/pull/7479\n* Add `perf-diff-stats` `just` recipe by @ironcev in https://github.com/FuelLabs/sway/pull/7480\n* Improve method selector on contracts by @xunilrj in https://github.com/FuelLabs/sway/pull/7458\n* Optimize `slot_calculator` for bytecode size and gas usage by @ironcev in https://github.com/FuelLabs/sway/pull/7481\n* Reduce storage API byte allocation by @bitzoic in https://github.com/FuelLabs/sway/pull/7430\n* Coins analysis for const generics by @xunilrj in https://github.com/FuelLabs/sway/pull/7473\n* Add event support via `#[event]` and `#[indexed]` attributes by @tritao in https://github.com/FuelLabs/sway/pull/7158\n* Add relative jump instructions to `asm` blocks by @ironcev in https://github.com/FuelLabs/sway/pull/7485\n* Remove unchecked new methods from `VirtualImmediate*` by @vaivaswatha in https://github.com/FuelLabs/sway/pull/7484\n* Update to latest `fuels-rs` dependency by @tritao in https://github.com/FuelLabs/sway/pull/7468\n* Add a new memcpy propagation pass by @vaivaswatha in https://github.com/FuelLabs/sway/pull/7443\n* Forbid const generics on abis by @xunilrj in https://github.com/FuelLabs/sway/pull/7483\n* Trivially encoded types by @xunilrj in https://github.com/FuelLabs/sway/pull/7488\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.70.1...v0.70.2",
+      "memory_unit_text": "In the FuelLabs/sway release v0.70.2, the release note includes adding docs for ABI Backtracing, executing E2E tests in parallel, cost of contract calls snapshot tests, improving diff between generic argument and generic type argument, improving Contract Call by not encoding fuelvm protocol args, adding --perf option to test to collect and diff performance data, fixing \"Transaction collided\" issue when running run_on_node tests, fixing build warnings in in-language tests, improving Contract Call by not encoding method name, SROA not generating GEPs when direct address is available, adding --gas-costs option to forc-test and E2E test runner, collecting more storage access performance data from tests, fixing default --gas-costs option to be built-in, not reading from state when writing aligned slot sized values, fixing CI issue by relaxing typo checker for \"aloc\", adding perf-diff-stats just recipe, improving method selector on contracts, optimizing slot_calculator for bytecode size and gas usage, reducing storage API byte allocation, coins analysis for const generics, adding event support via #[event] and #[indexed] attributes, adding relative jump instructions to asm blocks, removing unchecked new methods from VirtualImmediate*, updating to latest fuels-rs dependency, adding a new memcpy propagation pass, forbidding const generics on abis, and trivially encoded types."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_70_3",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.70.3",
+      "tag_name": "v0.70.3",
+      "title": "v0.70.3",
+      "time_hint": "2025-12-17",
+      "published_at": "2025-12-17T15:41:11Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.70.3",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.70.3\nTag: v0.70.3; draft: False; prerelease: False; published_at: 2025-12-17T15:41:11Z; created_at: 2025-12-17T15:15:19Z\nRelease notes:\n## What's Changed\n* feat: add support for patching registry dependencies by @kayagokalp in https://github.com/FuelLabs/sway/pull/7469\n* docs: fix a/an grammar errors in documentation by @serikssonn in https://github.com/FuelLabs/sway/pull/7491\n* Deterministic printing of IR values by @vaivaswatha in https://github.com/FuelLabs/sway/pull/7490\n* feat: forc-call abi backtracing by @zees-dev in https://github.com/FuelLabs/sway/pull/7502\n* Introduce `alloc` intrinsic to avoid using `asm` by @vaivaswatha in https://github.com/FuelLabs/sway/pull/7499\n* Optionally remove test gas limit in `forc test` by @ironcev in https://github.com/FuelLabs/sway/pull/7495\n* Migrate `forc-tracing` and `forc-crypto` to forc monorepo by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7507\n* Forbid types with const generics on configurables by @xunilrj in https://github.com/FuelLabs/sway/pull/7494\n* Forbid const generics log by @xunilrj in https://github.com/FuelLabs/sway/pull/7510\n* Fix size of ZSTs by @xunilrj in https://github.com/FuelLabs/sway/pull/7509\n* Convert const generics todos to ice by @xunilrj in https://github.com/FuelLabs/sway/pull/7511\n* Enable const generics as true by default by @xunilrj in https://github.com/FuelLabs/sway/pull/7512\n* Enable references tests and adjust them for zero sized unit type by @ironcev in https://github.com/FuelLabs/sway/pull/7513\n* Trait coherence: disallow inherent impls on external types by @tritao in https://github.com/FuelLabs/sway/pull/7385\n* Trivial fns allowing control if a type is trivially encoded/decoded by @xunilrj in https://github.com/FuelLabs/sway/pull/7501\n## New Contributors\n* @serikssonn made their first contribution in https://github.com/FuelLabs/sway/pull/7491\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.70.2...v0.70.3",
+      "memory_unit_text": "In the FuelLabs/sway release v0.70.3, the release note includes adding support for patching registry dependencies, fixing a/an grammar errors in documentation, deterministic printing of IR values, forc-call abi backtracing, introducing alloc intrinsic to avoid using asm, optionally removing test gas limit in forc test, migrating forc-tracing and forc-crypto to forc monorepo, forbidding types with const generics on configurables, forbidding const generics log, fixing size of ZSTs, converting const generics todos to ice, enabling const generics as true by default, enabling references tests and adjusting them for zero sized unit type, trait coherence disallowing inherent impls on external types, and trivial fns allowing control if a type is trivially encoded/decoded."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_71_0",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.71.0",
+      "tag_name": "v0.71.0",
+      "title": "v0.71.0",
+      "time_hint": "2026-04-14",
+      "published_at": "2026-04-14T12:08:19Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.71.0",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.71.0\nTag: v0.71.0; draft: False; prerelease: False; published_at: 2026-04-14T12:08:19Z; created_at: 2026-04-14T11:42:16Z\nRelease notes:\n## What's Changed\n* ci: ensure forc-crypto moved to forc repo still gets installed for doc generation by @kayagokalp in https://github.com/FuelLabs/sway/pull/7523\n* Decrease size threshold inside sroa profitability  by @xunilrj in https://github.com/FuelLabs/sway/pull/7527\n* Forbid outer variables in const evaluations by @ironcev in https://github.com/FuelLabs/sway/pull/7522\n* Add `len` method to `std::string::String` by @ironcev in https://github.com/FuelLabs/sway/pull/7526\n* `encode_allow_alias` to optimise logging by @xunilrj in https://github.com/FuelLabs/sway/pull/7516\n* Speed up execution of `cargo-run-e2e-test-release` on CI by @ironcev in https://github.com/FuelLabs/sway/pull/7531\n* feat: add pkg names to the output of predicate roots while building by @kayagokalp in https://github.com/FuelLabs/sway/pull/7533\n* Migrate `forc-node` to `forc` monorepo by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7534\n* Implement `init_aggr` in IR and optimize aggregates initialization by @ironcev in https://github.com/FuelLabs/sway/pull/7530\n* Hash attributes to avoid undesired `dedup` matches by @xunilrj in https://github.com/FuelLabs/sway/pull/7538\n* Fix type check issues on CI by @ironcev in https://github.com/FuelLabs/sway/pull/7543\n* Fix runtime memory layout of string arrays by @xunilrj in https://github.com/FuelLabs/sway/pull/7517\n* Optimisations for leaf fns by @xunilrj in https://github.com/FuelLabs/sway/pull/7541\n* chore: Update outdated GitHub Actions versions by @pgoslatara in https://github.com/FuelLabs/sway/pull/7537\n* Bump bytes from 1.10.1 to 1.11.1 in /test/src/sdk-harness by @dependabot[bot] in https://github.com/FuelLabs/sway/pull/7544\n* Bump time from 0.3.41 to 0.3.47 in /test/src/sdk-harness by @dependabot[bot] in https://github.com/FuelLabs/sway/pull/7546\n* Replace forc-client with fuels SDK in e2e test harness by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7549\n* Remove `MOVE $$locbase, $$sp` if non-entry function doesn't use stack by @ironcev in https://github.com/FuelLabs/sway/pull/7548\n* Migrate `forc-client` to `forc` monorepo by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7545\n* Remove stale workspace dependencies by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7554\n* Const condition on `if` expressions only generate the correct branch by @xunilrj in https://github.com/FuelLabs/sway/pull/7535\n* Remove `memcpy`ing of `b256` intrinsic arguments to a temporary by @ironcev in https://github.com/FuelLabs/sway/pull/7552\n* Improve execution time and coverage of SDK harness and in-language tests by @ironcev in https://github.com/FuelLabs/sway/pull/7555\n* Fix issues in `forc add/remove --help` by @ironcev in https://github.com/FuelLabs/sway/pull/7558\n* Verify all jumps on asm are using ControlFlowOp by @xunilrj in https://github.com/FuelLabs/sway/pull/7563\n* Bump keccak from 0.1.5 to 0.1.6 in /test/src/sdk-harness by @dependabot[bot] in https://github.com/FuelLabs/sway/pull/7562\n* Bump Rust to 1.93.0 by @ironcev in https://github.com/FuelLabs/sway/pull/7569\n* Improve `asm` const propagation by @xunilrj in https://github.com/FuelLabs/sway/pull/7550\n* Bump quinn-proto from 0.11.12 to 0.11.14 in /test/src/sdk-harness by @dependabot[bot] in https://github.com/FuelLabs/sway/pull/7573\n* Optimise `pshl` by @xunilrj in https://github.com/FuelLabs/sway/pull/7561\n* Slides for trivial encoding, const generics and dbg by @xunilrj in https://github.com/FuelLabs/sway/pull/7566\n* Support attributes and constants in self `impl Contract`s by @ironcev in https://github.com/FuelLabs/sway/pull/7580\n* Add comprehensive benchmarks for storage access by @ironcev in https://github.com/FuelLabs/sway/pull/7583\n* Remove forc-mcp from sway repo by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7585\n* Pin tracing-subscriber to...",
+      "memory_unit_text": "In the FuelLabs/sway release v0.71.0, the release note includes ensuring forc-crypto moved to forc repo still gets installed for doc generation, decreasing size threshold inside sroa profitability, forbidding outer variables in const evaluations, adding len method to std::string::String, encode_allow_alias to optimise logging, speeding up execution of cargo-run-e2e-test-release on CI, adding pkg names to the output of predicate roots while building, migrating forc-node to forc monorepo, implementing init_aggr in IR and optimizing aggregates initialization, hashing attributes to avoid undesired dedup matches, fixing type check issues on CI, fixing runtime memory layout of string arrays, optimisations for leaf fns, updating outdated GitHub Actions versions, bumping bytes and time dependencies, replacing forc-client with fuels SDK in e2e test harness, removing MOVE $$locbase, $$sp if non-entry function doesn't use stack, migrating forc-client to forc monorepo, removing stale workspace dependencies, const condition on if expressions only generating the correct branch, removing memcpying of b256 intrinsic arguments to a temporary, improving execution time and coverage of SDK harness and in-language tests, fixing issues in forc add/remove --help, verifying all jumps on asm are using ControlFlowOp, bumping keccak dependency, bumping Rust to 1.93.0, improving asm const propagation, bumping quinn-proto dependency, optimising pshl, slides for trivial encoding, const generics and dbg, supporting attributes and constants in self impl Contracts, adding comprehensive benchmarks for storage access, removing forc-mcp from sway repo, and pinning tracing-subscriber."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_71_1",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.71.1",
+      "tag_name": "v0.71.1",
+      "title": "v0.71.1",
+      "time_hint": "2026-05-25",
+      "published_at": "2026-05-25T15:03:04Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.71.1",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.71.1\nTag: v0.71.1; draft: False; prerelease: False; published_at: 2026-05-25T15:03:04Z; created_at: 2026-05-25T14:40:44Z\nRelease notes:\n## What's Changed\n* Implement dynamic storage opcodes in the compiler by @ironcev in https://github.com/FuelLabs/sway/pull/7595\n* Implement dynamic storage intrinsics by @ironcev in https://github.com/FuelLabs/sway/pull/7597\n* Implement dynamic storage for `storage` declaration and `std` by @ironcev in https://github.com/FuelLabs/sway/pull/7598\n* Implement reassignment for arrays declared using const generics by @ironcev in https://github.com/FuelLabs/sway/pull/7601\n* Increase test coverage for `dynamic_storage` by @ironcev in https://github.com/FuelLabs/sway/pull/7608\n* Fix tuple codec helpers to avoid LSP stack overflows by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7611\n* Disable initialization of dynamic storage fields larger than 32 bytes by @ironcev in https://github.com/FuelLabs/sway/pull/7622\n* Implement dynamic storage based `StorageVec` by @ironcev in https://github.com/FuelLabs/sway/pull/7614\n* Fix `Vec` with ZSTs by @xunilrj in https://github.com/FuelLabs/sway/pull/7620\n* Optimize encoding and decoding of `Vec<T>` when `T` is trivial by @ironcev in https://github.com/FuelLabs/sway/pull/7582\n* Add comprehensive in-language tests for all storage types by @ironcev in https://github.com/FuelLabs/sway/pull/7626\n* Attribute for checking of trivial encoding and decoding by @xunilrj in https://github.com/FuelLabs/sway/pull/7575\n* Bump to 0.71.1 by @ironcev in https://github.com/FuelLabs/sway/pull/7631\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.71.0...v0.71.1",
+      "memory_unit_text": "In the FuelLabs/sway release v0.71.1, the release note includes implementing dynamic storage opcodes in the compiler, implementing dynamic storage intrinsics, implementing dynamic storage for storage declaration and std, implementing reassignment for arrays declared using const generics, increasing test coverage for dynamic_storage, fixing tuple codec helpers to avoid LSP stack overflows, disabling initialization of dynamic storage fields larger than 32 bytes, implementing dynamic storage based StorageVec, fixing Vec with ZSTs, optimizing encoding and decoding of Vec<T> when T is trivial, adding comprehensive in-language tests for all storage types, attribute for checking of trivial encoding and decoding, and a version bump to 0.71.1."
+    },
+    {
+      "memory_node_id": "FuelLabs__sway__release__v0_71_2",
+      "repo": "FuelLabs/sway",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.71.2",
+      "tag_name": "v0.71.2",
+      "title": "v0.71.2",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T01:23:58Z",
+      "source_url": "https://github.com/FuelLabs/sway/releases/tag/v0.71.2",
+      "raw_text": "Repository: FuelLabs/sway\nRelease: v0.71.2\nTag: v0.71.2; draft: False; prerelease: False; published_at: 2026-05-26T01:23:58Z; created_at: 2026-05-26T01:19:58Z\nRelease notes:\n## What's Changed\n* fix help link that needs compiler version by @xunilrj in https://github.com/FuelLabs/sway/pull/7632\n* Bump to 0.71.2 and fix crates.io publish by @JoshuaBatty in https://github.com/FuelLabs/sway/pull/7634\n**Full Changelog**: https://github.com/FuelLabs/sway/compare/v0.71.1...v0.71.2",
+      "memory_unit_text": "In the FuelLabs/sway release v0.71.2, the release note includes fixing a help link that needs compiler version, bumping to 0.71.2, and fixing crates.io publish."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the FuelLabs/sway releases, which release introduces the `crypto` module with expanded cryptographic functions and auto-generation of DWARF debug symbols in debug builds?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.66.5"
+        },
+        {
+          "option_id": "B",
+          "text": "v0.66.6"
+        },
+        {
+          "option_id": "C",
+          "text": "v0.66.7"
+        },
+        {
+          "option_id": "D",
+          "text": "v0.66.8"
+        }
+      ],
+      "correct_option_id": "C",
+      "expected_answer": "v0.66.7",
+      "source_chunk_ids": [
+        "FuelLabs__sway__release__v0_66_7"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "FuelLabs__sway__release__v0_66_7",
+          "answer_text": "introduces a crypto module with expanded cryptographic functions, auto-generation of DWARF debug symbols in debug builds"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the FuelLabs/sway releases, how does the handling of `panic` differ between v0.68.2 and v0.69.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.68.2 implements `panic` as an expression, while v0.69.0 makes `panic` a keyword."
+        },
+        {
+          "option_id": "B",
+          "text": "v0.68.2 removes `panic`, while v0.69.0 reintroduces it as a built-in function."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases treat `panic` identically as a standard library function."
+        },
+        {
+          "option_id": "D",
+          "text": "v0.68.2 deprecates `panic`, while v0.69.0 stabilizes it as an attribute."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v0.68.2 implements `panic` as an expression, while v0.69.0 makes `panic` a keyword.",
+      "source_chunk_ids": [
+        "FuelLabs__sway__release__v0_68_2",
+        "FuelLabs__sway__release__v0_69_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "FuelLabs__sway__release__v0_68_2",
+          "answer_text": "implementing panic expression"
+        },
+        {
+          "memory_node_id": "FuelLabs__sway__release__v0_69_0",
+          "answer_text": "Breaking changes include panic becoming a keyword"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the FuelLabs/sway release window, order the following release-content states from earliest to latest: (1) a release that merges `std` and `core` libraries and splits the `Eq` trait into `Eq` and `PartialEq`, (2) a release that introduces the `crypto` module with expanded cryptographic functions and auto-generation of DWARF debug symbols, (3) a release that implements dynamic storage opcodes in the compiler and dynamic storage based `StorageVec`, (4) a release that stabilizes `new_hashing` and bumps Rust version to 1.90.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "B",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 1 -> 3 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "1 -> 2 -> 4 -> 3"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2 -> 1 -> 4 -> 3",
+      "source_chunk_ids": [
+        "FuelLabs__sway__release__v0_66_7",
+        "FuelLabs__sway__release__v0_67_0",
+        "FuelLabs__sway__release__v0_70_0",
+        "FuelLabs__sway__release__v0_71_1"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "FuelLabs__sway__release__v0_66_7",
+          "answer_text": "introduces a crypto module with expanded cryptographic functions, auto-generation of DWARF debug symbols"
+        },
+        {
+          "memory_node_id": "FuelLabs__sway__release__v0_67_0",
+          "answer_text": "merging of std and core libraries, splitting of the Eq trait into Eq and PartialEq"
+        },
+        {
+          "memory_node_id": "FuelLabs__sway__release__v0_70_0",
+          "answer_text": "stabilizing new_hashing, bumping Rust version to 1.90"
+        },
+        {
+          "memory_node_id": "FuelLabs__sway__release__v0_71_1",
+          "answer_text": "implementing dynamic storage opcodes in the compiler, implementing dynamic storage based StorageVec"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,530 @@
+{
+  "prototype_id": "halo_dev__halo_release_window",
+  "domain": "github_release_evolution",
+  "repo": "halo-dev/halo",
+  "source_type": "release_note",
+  "window_title": "halo-dev/halo recent release evolution",
+  "window_summary": "This window tracks the recent halo-dev/halo release stream from v2.21.10 through v2.24.2, including alpha, beta, rc, and stable releases. It covers new features like editor enhancements, Spring Boot upgrades, and numerous bug fixes and optimizations.",
+  "chunks": [
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_21_10",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.21.10",
+      "tag_name": "v2.21.10",
+      "title": "2.21.10",
+      "time_hint": "2025-11-06",
+      "published_at": "2025-11-06T15:35:18Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.21.10",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.21.10\nTag: v2.21.10; draft: False; prerelease: False; published_at: 2025-11-06T15:35:18Z; created_at: 2025-11-06T15:23:12Z\nRelease notes:\n## 功能优化\n* 优化重置密码时因邮箱可输入大小写导致的问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/7901\n* 为编辑器的命令面板添加插入图片的选项 by @ruibaby in https://github.com/halo-dev/halo/pull/7803\n## 问题修复\n* 修复潜在的内存泄漏问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/7914\n* 修复离线环境下，Console 无法请求接口的问题 by @ruibaby in https://github.com/halo-dev/halo/pull/7848\n* 解决切换代码块语言时编辑器页面不正常跳动的问题 by @LIlGG in https://github.com/halo-dev/halo/pull/7839\n## 文档\n<https://docs.halo.run>\n## 资源\n适用于 2.0 的插件和主题可查阅：\n- <https://www.halo.run/store/apps>\n- <https://github.com/halo-sigs/awesome-halo>\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.21.9...v2.21.10",
+      "memory_unit_text": "In the halo-dev/halo release v2.21.10, the release note describes optimizations for password reset case sensitivity and adding an insert image option to the editor command palette. It also fixes a potential memory leak, an issue where the Console could not request interfaces in offline environments, and an abnormal page jump when switching code block languages."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_22_0_alpha_1",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.22.0-alpha.1",
+      "tag_name": "v2.22.0-alpha.1",
+      "title": "2.22.0-alpha.1",
+      "time_hint": "2025-12-12",
+      "published_at": "2025-12-12T03:42:09Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.22.0-alpha.1",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.22.0-alpha.1\nTag: v2.22.0-alpha.1; draft: False; prerelease: True; published_at: 2025-12-12T03:42:09Z; created_at: 2025-12-12T02:53:13Z\nRelease notes:\n## ⚠️ 提示\n此版本为 2.22.0 的早期版本，不适用于生产环境。这个版本部分功能的内部实现做了较大变更，同时包含了部分插件 API 的变动，发布此版本的主要目的是为了可以让社区的插件和主题开发者提前适配。\n插件和主题的 API 变更可查阅：[插件 API 变更日志](https://docs.halo.run/next/developer-guide/plugin/api-changelog) / [主题 API 变更日志](https://docs.halo.run/next/developer-guide/theme/api-changelog)\n> 由于 UI 的依赖库还未发布到 npm，暂时可以使用在 [pkg.pr.new](https://github.com/halo-dev/halo/actions/workflows/packages-preview-release.yaml) 中构建的版本。\n## 新特性\n- 为编辑器新增画廊（图片集）功能 by @LIlGG in <https://github.com/halo-dev/halo/pull/7897>\n- 用户注册支持设置受保护用户名 by @liuyiwuqing in <https://github.com/halo-dev/halo/pull/7887>\n- 编辑器的图片、视频、音频支持添加描述文本 by @LIlGG in <https://github.com/halo-dev/halo/pull/7875>\n- 重构编辑器拖拽功能，并为其增加功能操作菜单 by @LIlGG in <https://github.com/halo-dev/halo/pull/7861>\n- 编辑器支持使用中文符号、唤起建议菜单 by @LIlGG in <https://github.com/halo-dev/halo/pull/7840>\n- 支持在文章编辑页面设置封面图 by @ruibaby in <https://github.com/halo-dev/halo/pull/7809>\n- 支持为附件存储策略设置在上传界面的显示优先级 by @ruibaby in <https://github.com/halo-dev/halo/pull/7805>\n- 支持在附件上传界面隐藏部分存储策略 by @ruibaby in <https://github.com/halo-dev/halo/pull/7792>\n## 功能优化\n- 清理通知发送所残留的无用数据 by @JohnNiang in <https://github.com/halo-dev/halo/pull/8007>\n- 当首页没有使用文章列表变量时，不再查询数据库，以提升性能 by @JohnNiang in <https://github.com/halo-dev/halo/pull/8006>\n- 用户密码允许输入 . 和 ? by @xzyone in <https://github.com/halo-dev/halo/pull/8005>\n- 为阻塞操作添加超时时间以提升系统可靠性 by @JohnNiang in <https://github.com/halo-dev/halo/pull/8004>\n- 优化编辑器的整体样式和交互逻辑 by @ruibaby in <https://github.com/halo-dev/halo/pull/7982>\n- 优化 Console 和 UC 的加载速度 by @ruibaby in <https://github.com/halo-dev/halo/pull/7976> <https://github.com/halo-dev/halo/pull/7971> <https://github.com/halo-dev/halo/pull/7941> <https://github.com/halo-dev/halo/pull/7935>\n- 提升 Console 端代码输入框的渲染速度 by @ruibaby in <https://github.com/halo-dev/halo/pull/7956> <https://github.com/halo-dev/halo/pull/7932>\n- 优化个人中心身份认证设置，将三方登录与两步认证合并到一个选项卡 by @ruibaby in <https://github.com/halo-dev/halo/pull/7950>\n- Console 和 UC 支持异步加载所需语言包，提升首屏加载速度 by @ruibaby in <https://github.com/halo-dev/halo/pull/7931>\n- 懒加载 Console 和 UC 的部分路由，优化首屏渲染速度 by @ruibaby in <https://github.com/halo-dev/halo/pull/7930>\n- 文章设置中选择作者时支持显示用户名 by @ruibaby in <https://github.com/halo-dev/halo/pull/7904>\n- 修复离线环境下，Console 无法请求接口的问题 by @ruibaby in <https://github.com/halo-dev/halo/pull/7848>\n- 解决生成缩略图时可能出现内存溢出的问题 by @JohnNiang in <https://github.com/halo-dev/halo/pull/7817>\n- 支持配置缩略图生成启用、禁用和并发量 by @JohnNiang in <https://github.com/halo-dev/halo/pull/7812>\n- 为编辑器的命令面板添加插入图片的选项 by @ruibaby in <https://github.com/halo-dev/halo/pull/7803>\n- 重构图片缩略图功能，移除缩略图记录，改为按需生成 by @JohnNiang in <https://github.com/halo-dev/halo/pull/7779>\n- 新增 Shiki 代码高亮和超链接卡片预设插件 by @ruibaby in <https://github.com/halo-dev/halo/pull/7785>\n## 问题修复\n- 解决无法在编辑器中插入视频的问题 by @LIlGG in <https://github.com/halo-dev/halo/pull/7986>\n- 修复可能无法初始化主题配置的问题 by @JohnNiang in <https://github.com/halo-dev/halo/pull/7923>\n- 修复潜在的内存泄漏问题 by @JohnNiang in <https://github.com/halo-dev/halo/pull/7914>\n- 优化重置密码时因邮箱可输入大小写导致的问题 by @JohnNiang in <https://github.com/halo-dev/halo/pull/7901>\n- 解决切换代码块语言时编辑器页面不正常跳动的问题 by @LIlGG in <https://github.com/halo-dev/halo/pull/7839>\n- 修复可能无法正常获取附件链接的问题 by @JohnNiang in <https://github.com/halo-dev/halo/pull/7788>\n## 依赖更新\n- 升级 Spring Boot 至 3.5.7 by @JohnNiang in <https://github.com/halo-dev/halo/pull/7871>\n- 升级 Tiptap 至 3.x by @LIlGG in <https://github.com/halo-dev/halo/pull/7811>\n## 开发者相关\n- 修复 `@halo-dev/components` 的 Dropdown 组件类型问题 by @ruibaby in <https://github.com/halo-dev/halo/pull/7974>\n- 将 `@halo-dev/console-shared` 重命名为 `@halo-dev/ui-shared` by @ruibaby in <https://github.com/halo-dev/halo/pull/7926>\n- `@halo-dev/console-shared` 包提供 `utils.id.uuid()` 方法，用于生成 uuid by @ruibaby in <https://github.com/halo-dev/halo/pull/7898>\n- 在 `@halo-dev/console-shared` 包中提供 `stores` 对象，包含 currentUser 和 globalInfo by @r...",
+      "memory_unit_text": "In the halo-dev/halo release v2.22.0-alpha.1, the release note introduces new features including a gallery (image collection) function for the editor, support for setting protected usernames during registration, adding description text to images, videos, and audio in the editor, refactored editor drag functionality with an operation menu, support for Chinese symbols and suggestion menus in the editor, setting cover images on the article editing page, setting display priority for attachment storage policies on the upload interface, and hiding some storage policies on the attachment upload interface. Optimizations include cleaning up residual data from notification sending, skipping database queries when the homepage does not use article list variables, allowing '.' and '?' in user passwords, adding timeouts to blocking operations, optimizing editor styles and interactions, improving Console and UC loading speeds, enhancing Console code input box rendering speed, merging third-party login and two-step authentication into one tab in personal center identity settings, asynchronous loading of language packs for Console and UC, lazy loading of some routes, displaying usernames when selecting authors in article settings, fixing offline Console interface requests, solving potential memory overflow during thumbnail generation, configuring thumbnail generation enable/disable and concurrency, adding insert image option to editor command palette, refactoring image thumbnail functionality to generate on demand instead of storing records, and adding Shiki code highlighting and hyperlink card preset plugins. Fixes include resolving inability to insert videos in the editor, potential theme configuration initialization failure, potential memory leak, password reset case sensitivity, abnormal page jump when switching code block languages, and potential failure to obtain attachment links. Dependency updates include upgrading Spring Boot to 3.5.7 and Tiptap to 3.x. Developer-related changes include fixing Dropdown component type issues, renaming @halo-dev/console-shared to @halo-dev/ui-shared, providing a uuid generation method, and providing stores object with currentUser and globalInfo."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_22_0_alpha_2",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.22.0-alpha.2",
+      "tag_name": "v2.22.0-alpha.2",
+      "title": "2.22.0-alpha.2",
+      "time_hint": "2025-12-15",
+      "published_at": "2025-12-15T14:25:57Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.22.0-alpha.2",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.22.0-alpha.2\nTag: v2.22.0-alpha.2; draft: False; prerelease: True; published_at: 2025-12-15T14:25:57Z; created_at: 2025-12-15T14:20:40Z\nRelease notes:\n## ⚠️ 提示\n此版本为 2.22.0 的早期版本，不适用于生产环境。这个版本部分功能的内部实现做了较大变更，同时包含了部分插件 API 的变动，发布此版本的主要目的是为了可以让社区的插件和主题开发者提前适配。\n插件和主题的 API 变更可查阅：[插件 API 变更日志](https://docs.halo.run/next/developer-guide/plugin/api-changelog) / [主题 API 变更日志](https://docs.halo.run/next/developer-guide/theme/api-changelog)\n- [2.22.0-alpha.1](https://github.com/halo-dev/halo/releases/tag/v2.22.0-alpha.1)\n## 功能优化\n* 降低文章编辑器中封面的高度，并支持展开图片 by @ruibaby in https://github.com/halo-dev/halo/pull/8027\n* 优化编辑器中图片的大小设置，默认不为其设置 `height`  by @LIlGG in https://github.com/halo-dev/halo/pull/8031\n* FormKit Iconify 支持手动编辑图标信息 by @ruibaby in https://github.com/halo-dev/halo/pull/8033\n## 问题修复\n* 解决编辑器搜索与替换框位置不正确的情况 by @LIlGG in https://github.com/halo-dev/halo/pull/8029\n## 开发者相关\n* FormKit Iconify 支持显示 `iconify` 数据 by @LIlGG in https://github.com/halo-dev/halo/pull/8014\n* 修复表单中同时存在多个 Array 输入类型时，界面显示异常的问题 by @LIlGG in https://github.com/halo-dev/halo/pull/8024\n* FormKit Iconify 输入框支持配置展开位置 by @ruibaby in https://github.com/halo-dev/halo/pull/8026\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.22.0-alpha.1...v2.22.0-alpha.2",
+      "memory_unit_text": "In the halo-dev/halo release v2.22.0-alpha.2, the release note describes optimizations such as reducing the height of the cover in the article editor and supporting image expansion, optimizing image size settings in the editor by not setting a default height, and supporting manual editing of icon information in FormKit Iconify. It fixes an issue where the editor search and replace box position was incorrect. Developer-related changes include FormKit Iconify supporting display of iconify data, fixing an issue where multiple Array input types in a form caused display anomalies, and supporting configuration of the expansion position for FormKit Iconify input boxes."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_22_0_alpha_3",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.22.0-alpha.3",
+      "tag_name": "v2.22.0-alpha.3",
+      "title": "2.22.0-alpha.3",
+      "time_hint": "2025-12-18",
+      "published_at": "2025-12-18T16:08:53Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.22.0-alpha.3",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.22.0-alpha.3\nTag: v2.22.0-alpha.3; draft: False; prerelease: True; published_at: 2025-12-18T16:08:53Z; created_at: 2025-12-18T14:27:40Z\nRelease notes:\n## ⚠️ 提示\n此版本为 2.22.0 的测试版本，不适用于生产环境。这个版本部分功能的内部实现做了较大变更，同时包含了部分插件 API 的变动，发布此版本的主要目的是为了可以让社区的插件和主题开发者提前适配。\n插件和主题的 API 变更可查阅：[插件 API 变更日志](https://docs.halo.run/next/developer-guide/plugin/api-changelog) / [主题 API 变更日志](https://docs.halo.run/next/developer-guide/theme/api-changelog)\n- [2.22.0-alpha.2](https://github.com/halo-dev/halo/releases/tag/v2.22.0-alpha.2)\n- [2.22.0-alpha.1](https://github.com/halo-dev/halo/releases/tag/v2.22.0-alpha.1)\n## 功能优化\n* 优化 Console 和 UC 的加载速度 by @ruibaby in https://github.com/halo-dev/halo/pull/8037\n* 优化系统性能 by @JohnNiang in https://github.com/halo-dev/halo/pull/8045\n* 优化文章详情页面加载 by @JohnNiang in https://github.com/halo-dev/halo/pull/8047\n* 优化编辑器搜索界面的样式 by @ruibaby in https://github.com/halo-dev/halo/pull/8052\n## 开发者相关\n* FormKit Color 支持 hsl 格式，并支持手动编辑色值 by @ruibaby in https://github.com/halo-dev/halo/pull/8039\n* 为文章、页面等元数据表单注入当前表单的数据，以便在元数据定义中判断是否需要显示表单项 by @ruibaby in https://github.com/halo-dev/halo/pull/8040\n* 修改 FormKit Iconify 表单类型的数据结构，默认以对象形式存储 by @ruibaby in https://github.com/halo-dev/halo/pull/8042 https://github.com/halo-dev/halo/pull/8055\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.22.0-alpha.2...v2.22.0-alpha.3",
+      "memory_unit_text": "In the halo-dev/halo release v2.22.0-alpha.3, the release note includes optimizations for Console and UC loading speed, system performance, article detail page loading, and editor search interface styles. Developer-related changes include FormKit Color supporting hsl format and manual color value editing, injecting current form data into article and page metadata forms to determine whether to display form items, and modifying the data structure of FormKit Iconify form type to store as an object by default."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_22_0_alpha_4",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.22.0-alpha.4",
+      "tag_name": "v2.22.0-alpha.4",
+      "title": "2.22.0-alpha.4",
+      "time_hint": "2025-12-21",
+      "published_at": "2025-12-21T13:51:17Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.22.0-alpha.4",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.22.0-alpha.4\nTag: v2.22.0-alpha.4; draft: False; prerelease: True; published_at: 2025-12-21T13:51:17Z; created_at: 2025-12-21T13:09:12Z\nRelease notes:\n## ⚠️ 提示\n此版本为 2.22.0 的测试版本，不适用于生产环境。这个版本部分功能的内部实现做了较大变更，同时包含了部分插件 API 的变动，发布此版本的主要目的是为了可以让社区的插件和主题开发者提前适配。\n插件和主题的 API 变更可查阅：[插件 API 变更日志](https://docs.halo.run/next/developer-guide/plugin/api-changelog) / [主题 API 变更日志](https://docs.halo.run/next/developer-guide/theme/api-changelog)\n- [2.22.0-alpha.3](https://github.com/halo-dev/halo/releases/tag/v2.22.0-alpha.3)\n- [2.22.0-alpha.2](https://github.com/halo-dev/halo/releases/tag/v2.22.0-alpha.2)\n- [2.22.0-alpha.1](https://github.com/halo-dev/halo/releases/tag/v2.22.0-alpha.1)\n## 功能优化\n* 重构附件选择弹窗，与上传界面融合 by @ruibaby in https://github.com/halo-dev/halo/pull/8058\n* 重构附件表单类型，支持预览和直接上传 by @ruibaby in https://github.com/halo-dev/halo/pull/8061\n## 问题修复\n* 修复异步加载 Console 语言包异常的问题 by @ruibaby in https://github.com/halo-dev/halo/pull/8062\n* 修复 Array 表单类型中 Iconify 表单项可能无法预览的问题 by @ruibaby in https://github.com/halo-dev/halo/pull/8065\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.22.0-alpha.3...v2.22.0-alpha.4",
+      "memory_unit_text": "In the halo-dev/halo release v2.22.0-alpha.4, the release note describes optimizations including refactoring the attachment selection modal to integrate with the upload interface and refactoring the attachment form type to support preview and direct upload. It fixes issues with asynchronous loading of Console language packs and potential inability to preview Iconify form items in Array form types."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_22_0_rc_1",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.22.0-rc.1",
+      "tag_name": "v2.22.0-rc.1",
+      "title": "2.22.0-rc.1",
+      "time_hint": "2025-12-22",
+      "published_at": "2025-12-22T15:42:38Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.22.0-rc.1",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.22.0-rc.1\nTag: v2.22.0-rc.1; draft: False; prerelease: True; published_at: 2025-12-22T15:42:38Z; created_at: 2025-12-22T09:21:32Z\nRelease notes:\n## ⚠️ 提示\n建议在升级到此版本前，先查阅 2.22.0 Alpha 版本的更新日志：\n- [2.22.0-alpha.4](https://github.com/halo-dev/halo/releases/tag/v2.22.0-alpha.4)\n- [2.22.0-alpha.3](https://github.com/halo-dev/halo/releases/tag/v2.22.0-alpha.3)\n- [2.22.0-alpha.2](https://github.com/halo-dev/halo/releases/tag/v2.22.0-alpha.2)\n- [2.22.0-alpha.1](https://github.com/halo-dev/halo/releases/tag/v2.22.0-alpha.1)\n## 依赖更新\n* 升级 Spring Boot 至 3.5.9 by @JohnNiang in https://github.com/halo-dev/halo/pull/8069\n## 开发者相关\n* Array 表单类型的列表支持显示颜色值 by @Copilot in https://github.com/halo-dev/halo/pull/8067\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.22.0-alpha.4...v2.22.0-rc.1",
+      "memory_unit_text": "In the halo-dev/halo release v2.22.0-rc.1, the release note includes a dependency update to upgrade Spring Boot to 3.5.9. Developer-related changes include the Array form type list supporting display of color values."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_22_0",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.22.0",
+      "tag_name": "v2.22.0",
+      "title": "2.22.0",
+      "time_hint": "2025-12-24",
+      "published_at": "2025-12-24T02:53:14Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.22.0",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.22.0\nTag: v2.22.0; draft: False; prerelease: False; published_at: 2025-12-24T02:53:14Z; created_at: 2025-12-24T02:47:58Z\nRelease notes:\n## ⚠️ 注意\n- 此版本重构了部分插件 API，升级之后可能导致部分插件无法正常使用，升级之前建议先检查你所使用的插件是否已经兼容 Halo 2.22，在升级之后建议及时更新所有能够更新的插件。\n- 此版本重构了附件缩略图的生成逻辑，并且与之前版本的存储目录结构不同，所以在升级之后可能需要按需重新生成，在这个阶段可能会导致网站资源占用较高，属于正常现象。\n插件和主题的 API 变更可查阅：[插件 API 变更日志](https://docs.halo.run/developer-guide/plugin/api-changelog) / [主题 API 变更日志](https://docs.halo.run/developer-guide/theme/api-changelog)\n## 新特性\n- 为编辑器新增图片集功能 by @LIlGG in <https://github.com/halo-dev/halo/pull/7897>\n- 用户注册支持设置受保护用户名 by @liuyiwuqing in <https://github.com/halo-dev/halo/pull/7887>\n- 编辑器的图片、视频、音频支持添加描述文本 by @LIlGG in <https://github.com/halo-dev/halo/pull/7875>\n- 重构编辑器拖拽功能，并为其增加功能操作菜单 by @LIlGG in <https://github.com/halo-dev/halo/pull/7861>\n- 编辑器支持使用中文符号、唤起建议菜单 by @LIlGG in <https://github.com/halo-dev/halo/pull/7840>\n- 支持在文章编辑页面设置封面图 by @ruibaby in <https://github.com/halo-dev/halo/pull/7809>\n- 支持为附件存储策略设置在上传界面的显示优先级 by @ruibaby in <https://github.com/halo-dev/halo/pull/7805>\n- 支持在附件上传界面隐藏部分存储策略 by @ruibaby in <https://github.com/halo-dev/halo/pull/7792>\n## 功能优化\n- 清理通知发送所残留的无用数据 by @JohnNiang in <https://github.com/halo-dev/halo/pull/8007>\n- 用户密码允许输入 . 和 ? by @xzyone in <https://github.com/halo-dev/halo/pull/8005>\n- 为阻塞操作添加超时时间以提升系统可靠性 by @JohnNiang in <https://github.com/halo-dev/halo/pull/8004>\n- 优化编辑器的整体样式和交互逻辑 by @ruibaby in <https://github.com/halo-dev/halo/pull/7982>\n- 优化 Console 和 UC 的加载速度 by @ruibaby in <https://github.com/halo-dev/halo/pull/7976> <https://github.com/halo-dev/halo/pull/7971> <https://github.com/halo-dev/halo/pull/7941> <https://github.com/halo-dev/halo/pull/7935> <https://github.com/halo-dev/halo/pull/8037>\n- 提升 Console 端代码输入框的渲染速度 by @ruibaby in <https://github.com/halo-dev/halo/pull/7956> <https://github.com/halo-dev/halo/pull/7932>\n- 优化个人中心身份认证设置，将三方登录与两步认证合并到一个选项卡 by @ruibaby in <https://github.com/halo-dev/halo/pull/7950>\n- Console 和 UC 支持异步加载所需语言包，提升首屏加载速度 by @ruibaby in <https://github.com/halo-dev/halo/pull/7931>\n- 懒加载 Console 和 UC 的部分路由，优化首屏渲染速度 by @ruibaby in <https://github.com/halo-dev/halo/pull/7930>\n- 文章设置中选择作者时支持显示用户名 by @ruibaby in <https://github.com/halo-dev/halo/pull/7904>\n- 修复离线环境下，Console 无法请求接口的问题 by @ruibaby in <https://github.com/halo-dev/halo/pull/7848>\n- 解决生成缩略图时可能出现内存溢出的问题 by @JohnNiang in <https://github.com/halo-dev/halo/pull/7817>\n- 支持配置缩略图生成启用、禁用和并发量 by @JohnNiang in <https://github.com/halo-dev/halo/pull/7812>\n- 为编辑器的命令面板添加插入图片的选项 by @ruibaby in <https://github.com/halo-dev/halo/pull/7803>\n- 重构图片缩略图功能，移除缩略图记录，改为按需生成 by @JohnNiang in <https://github.com/halo-dev/halo/pull/7779>\n- 新增 Shiki 代码高亮和超链接卡片预设插件 by @ruibaby in <https://github.com/halo-dev/halo/pull/7785>\n- 优化系统性能 by @JohnNiang in https://github.com/halo-dev/halo/pull/8045\n- 优化文章详情页面加载 by @JohnNiang in https://github.com/halo-dev/halo/pull/8047\n- 优化编辑器搜索界面的样式 by @ruibaby in https://github.com/halo-dev/halo/pull/8052\n- 重构附件选择弹窗，与上传界面融合 by @ruibaby in https://github.com/halo-dev/halo/pull/8058\n- 重构附件表单类型，支持预览和直接上传 by @ruibaby in https://github.com/halo-dev/halo/pull/8061\n- 重构附件默认存储策略配置，统一在设置 -> 附件设置中配置 by @JohnNiang in https://github.com/halo-dev/halo/pull/8092\n## 问题修复\n- 解决无法在编辑器中插入视频的问题 by @LIlGG in <https://github.com/halo-dev/halo/pull/7986>\n- 修复可能无法初始化主题配置的问题 by @JohnNiang in <https://github.com/halo-dev/halo/pull/7923>\n- 修复潜在的内存泄漏问题 by @JohnNiang in <https://github.com/halo-dev/halo/pull/7914>\n- 优化重置密码时因邮箱可输入大小写导致的问题 by @JohnNiang in <https://github.com/halo-dev/halo/pull/7901>\n- 解决切换代码块语言时编辑器页面不正常跳动的问题 by @LIlGG in <https://github.com/halo-dev/halo/pull/7839>\n- 修复可能无法正常获取附件链接的问题 by @JohnNiang in <https://github.com/halo-dev/halo/pull/7788>\n## 依赖更新\n- 升级 Spring Boot 至 3.5.7 by @JohnNiang in <https://github.com/halo-dev/halo/pull/7871>\n- 升级 Spring Boot 至 3.5.9 by @JohnNiang in https://github.com/halo-dev/halo/pull/8069\n- 升级 Tiptap 至 3.x by @LIlGG in <https://github.com/halo-dev/halo/pull/7811>\n## 开发者相关\n- 修复 `@halo-dev/c...",
+      "memory_unit_text": "In the halo-dev/halo release v2.22.0, the release note introduces new features such as an image gallery function for the editor, support for setting protected usernames during registration, adding description text to images, videos, and audio in the editor, refactored editor drag functionality with an operation menu, support for Chinese symbols and suggestion menus in the editor, setting cover images on the article editing page, setting display priority for attachment storage policies on the upload interface, and hiding some storage policies on the attachment upload interface. Optimizations include cleaning up residual data from notification sending, allowing '.' and '?' in user passwords, adding timeouts to blocking operations, optimizing editor styles and interactions, improving Console and UC loading speeds, enhancing Console code input box rendering speed, merging third-party login and two-step authentication into one tab in personal center identity settings, asynchronous loading of language packs for Console and UC, lazy loading of some routes, displaying usernames when selecting authors in article settings, fixing offline Console interface requests, solving potential memory overflow during thumbnail generation, configuring thumbnail generation enable/disable and concurrency, adding insert image option to editor command palette, refactoring image thumbnail functionality to generate on demand instead of storing records, adding Shiki code highlighting and hyperlink card preset plugins, optimizing system performance, optimizing article detail page loading, optimizing editor search interface styles, refactoring the attachment selection modal to integrate with the upload interface, refactoring the attachment form type to support preview and direct upload, and refactoring default storage policy configuration to be unified in settings -> attachment settings. Fixes include resolving inability to insert videos in the editor, potential theme configuration initialization failure, potential memory leak, password reset case sensitivity, abnormal page jump when switching code block languages, and potential failure to obtain attachment links. Dependency updates include upgrading Spring Boot to 3.5.7 and 3.5.9, and Tiptap to 3.x. Developer-related changes include fixing @halo-dev/components Dropdown component type issues, renaming @halo-dev/console-shared to @halo-dev/ui-shared, providing a uuid generation method, providing stores object with currentUser and globalInfo, and other changes."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_22_1",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.22.1",
+      "tag_name": "v2.22.1",
+      "title": "2.22.1",
+      "time_hint": "2025-12-24",
+      "published_at": "2025-12-24T16:13:45Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.22.1",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.22.1\nTag: v2.22.1; draft: False; prerelease: False; published_at: 2025-12-24T16:13:45Z; created_at: 2025-12-24T16:10:54Z\nRelease notes:\n## 功能优化\n* 优化 Iconify 表单类型的图标样式，不再固定宽度，以提供更好的兼容性 by @ruibaby in https://github.com/halo-dev/halo/pull/8111\n## 问题修复\n* 修复附件分组下拉选项显示不完整的问题 by @ruibaby in https://github.com/halo-dev/halo/pull/8109\n## 开发者相关\n* 为 FormKit 添加 Swtich 表单类型 by @LIlGG in https://github.com/halo-dev/halo/pull/8095\n## 文档\n<https://docs.halo.run>\n## 资源\n适用于 2.0 的插件和主题可查阅：\n- <https://www.halo.run/store/apps>\n- <https://github.com/halo-sigs/awesome-halo>\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.22.0...v2.22.1",
+      "memory_unit_text": "In the halo-dev/halo release v2.22.1, the release note describes an optimization to the Iconify form type icon style to not fix the width for better compatibility. It fixes an issue where the attachment group dropdown options were not fully displayed. Developer-related changes include adding a Switch form type for FormKit."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_22_2",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.22.2",
+      "tag_name": "v2.22.2",
+      "title": "2.22.2",
+      "time_hint": "2025-12-25",
+      "published_at": "2025-12-25T13:54:03Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.22.2",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.22.2\nTag: v2.22.2; draft: False; prerelease: False; published_at: 2025-12-25T13:54:03Z; created_at: 2025-12-25T10:29:03Z\nRelease notes:\n## 功能优化\n* 提升文章、页面、分类的标题和别名字符串长度限制，以提供更好的兼容性 by @ruibaby in https://github.com/halo-dev/halo/pull/8117\n## 问题修复\n* 解决使用部分数据库时无法正常启动的问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/8115\n* 修复部分文章路由规则配置失效的问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/8116\n## 文档\n<https://docs.halo.run>\n## 资源\n适用于 2.0 的插件和主题可查阅：\n- <https://www.halo.run/store/apps>\n- <https://github.com/halo-sigs/awesome-halo>\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.22.1...v2.22.2",
+      "memory_unit_text": "In the halo-dev/halo release v2.22.2, the release note includes an optimization to increase the length limit of titles and aliases for articles, pages, and categories for better compatibility. It fixes issues where the system could not start normally with some databases and where some article routing rule configurations were ineffective."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_22_3",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.22.3",
+      "tag_name": "v2.22.3",
+      "title": "2.22.3",
+      "time_hint": "2025-12-26",
+      "published_at": "2025-12-26T13:22:00Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.22.3",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.22.3\nTag: v2.22.3; draft: False; prerelease: False; published_at: 2025-12-26T13:22:00Z; created_at: 2025-12-26T10:17:03Z\nRelease notes:\n## 功能优化\n* 支持使用已验证邮箱登录 by @JohnNiang in https://github.com/halo-dev/halo/pull/8126\n* 个人中心文章设置支持元数据表单 by @JohnNiang in https://github.com/halo-dev/halo/pull/8129\n## 文档\n<https://docs.halo.run>\n## 资源\n适用于 2.0 的插件和主题可查阅：\n- <https://www.halo.run/store/apps>\n- <https://github.com/halo-sigs/awesome-halo>\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.22.2...v2.22.3",
+      "memory_unit_text": "In the halo-dev/halo release v2.22.3, the release note describes optimizations including support for logging in with a verified email and support for metadata forms in personal center article settings."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_22_4",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.22.4",
+      "tag_name": "v2.22.4",
+      "title": "2.22.4",
+      "time_hint": "2025-12-31",
+      "published_at": "2025-12-31T11:05:36Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.22.4",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.22.4\nTag: v2.22.4; draft: False; prerelease: False; published_at: 2025-12-31T11:05:36Z; created_at: 2025-12-31T10:27:37Z\nRelease notes:\n## 问题修复\n* 修复最后一页数据可能包含上一页部分数据的问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/8138\n* 修复头像附件配置的描述文本，移除不存在的分组选项说明 by @Copilot in https://github.com/halo-dev/halo/pull/8145\n* 修复 Windows 和 Linux 下无法正常访问缩略图的问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/8153\n* 解决编辑器粘贴富文本内单个图片时无法正确上传的问题 by @LIlGG in https://github.com/halo-dev/halo/pull/8154\n## 文档\n<https://docs.halo.run>\n## 资源\n适用于 2.0 的插件和主题可查阅：\n- <https://www.halo.run/store/apps>\n- <https://github.com/halo-sigs/awesome-halo>\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.22.3...v2.22.4",
+      "memory_unit_text": "In the halo-dev/halo release v2.22.4, the release note fixes issues including the last page of data potentially containing some data from the previous page, incorrect description text for avatar attachment configuration by removing non-existent group option descriptions, inability to access thumbnails on Windows and Linux, and inability to correctly upload a single image when pasting rich text in the editor."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_22_5",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.22.5",
+      "tag_name": "v2.22.5",
+      "title": "2.22.5",
+      "time_hint": "2026-01-04",
+      "published_at": "2026-01-04T11:06:48Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.22.5",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.22.5\nTag: v2.22.5; draft: False; prerelease: False; published_at: 2026-01-04T11:06:48Z; created_at: 2026-01-04T10:57:40Z\nRelease notes:\n## 功能优化\n* 优化插件启用和禁用逻辑 by @JohnNiang in https://github.com/halo-dev/halo/pull/8165\n* 优化系统和插件启动速度 by @JohnNiang in https://github.com/halo-dev/halo/pull/8168\n## 问题修复\n* 修复因插件未适配缩略图导致无法显示图片的问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/8159\n* 修复备份恢复后仍然保留了备份相关的数据 by @JohnNiang in https://github.com/halo-dev/halo/pull/8160\n* 修复图片链接中包含中文无法访问缩略图的问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/8163\n* 修复注册时同一个邮箱不同大小写仍然可重复注册的问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/8155\n* 修复评论管理列表可能无法正常访问的问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/8169\n## 文档\n<https://docs.halo.run>\n## 资源\n适用于 2.0 的插件和主题可查阅：\n- <https://www.halo.run/store/apps>\n- <https://github.com/halo-sigs/awesome-halo>\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.22.4...v2.22.5",
+      "memory_unit_text": "In the halo-dev/halo release v2.22.5, the release note describes optimizations to plugin enable/disable logic and system and plugin startup speed. It fixes issues including inability to display images due to plugins not adapting to thumbnails, backup-related data remaining after backup restoration, inability to access thumbnails when image links contain Chinese characters, duplicate registration with the same email in different cases, and potential inability to access the comment management list."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_22_6",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.22.6",
+      "tag_name": "v2.22.6",
+      "title": "2.22.6",
+      "time_hint": "2026-01-04",
+      "published_at": "2026-01-04T14:32:44Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.22.6",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.22.6\nTag: v2.22.6; draft: False; prerelease: False; published_at: 2026-01-04T14:32:44Z; created_at: 2026-01-04T14:31:03Z\nRelease notes:\n## 问题修复\n* 修复评论数量可能不准确的问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/8171\n* 修复插件可能无法启动和更新的问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/8170\n## 文档\n<https://docs.halo.run>\n## 资源\n适用于 2.0 的插件和主题可查阅：\n- <https://www.halo.run/store/apps>\n- <https://github.com/halo-sigs/awesome-halo>\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.22.5...v2.22.6",
+      "memory_unit_text": "In the halo-dev/halo release v2.22.6, the release note fixes issues including inaccurate comment counts and potential inability to start and update plugins."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_22_7",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.22.7",
+      "tag_name": "v2.22.7",
+      "title": "2.22.7",
+      "time_hint": "2026-01-04",
+      "published_at": "2026-01-04T17:29:05Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.22.7",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.22.7\nTag: v2.22.7; draft: False; prerelease: False; published_at: 2026-01-04T17:29:05Z; created_at: 2026-01-04T17:27:17Z\nRelease notes:\n## 问题修复\n* 修复插件启动时间过长可能失败的问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/8173\n## 文档\n<https://docs.halo.run>\n## 资源\n适用于 2.0 的插件和主题可查阅：\n- <https://www.halo.run/store/apps>\n- <https://github.com/halo-sigs/awesome-halo>\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.22.6...v2.22.7",
+      "memory_unit_text": "In the halo-dev/halo release v2.22.7, the release note fixes an issue where plugins could fail if the startup time was too long."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_22_8",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.22.8",
+      "tag_name": "v2.22.8",
+      "title": "2.22.8",
+      "time_hint": "2026-01-09",
+      "published_at": "2026-01-09T13:41:07Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.22.8",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.22.8\nTag: v2.22.8; draft: False; prerelease: False; published_at: 2026-01-09T13:41:07Z; created_at: 2026-01-09T12:57:53Z\nRelease notes:\n## 功能优化\n* 两步验证界面支持退出登录 by @JohnNiang in https://github.com/halo-dev/halo/pull/8182\n* 优化系统稳定性，提升并发访问量 by @JohnNiang in https://github.com/halo-dev/halo/pull/8190\n* 优化在特定情况下首页的加载速度 by @JohnNiang in https://github.com/halo-dev/halo/pull/8193\n* 减少登录设备更新频次，降低 SQL 查询量 by @JohnNiang in https://github.com/halo-dev/halo/pull/8202\n* 为编辑器实现智能阈值滚动 by @LIlGG in https://github.com/halo-dev/halo/pull/8189\n* 移除创建文章标签时设置的默认颜色 by @Copilot in https://github.com/halo-dev/halo/pull/8198\n## 问题修复\n* 解决停止插件后可能导致系统无法正常访问的问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/8181\n* 修复多值索引部分查询结果不准确问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/8187\n* 修复附件表单类型的移除逻辑问题，与旧版保持一致 by @ruibaby in https://github.com/halo-dev/halo/pull/8191\n* 解决默认编辑器中顶部工具栏中的对齐工具对图片、视频、音频无效的问题 by @LIlGG in https://github.com/halo-dev/halo/pull/8203\n## 开发者相关\n* 为 FormKit 新增 `toggle` 组件 by @LIlGG in https://github.com/halo-dev/halo/pull/8104\n## 文档\n<https://docs.halo.run>\n## 资源\n适用于 2.0 的插件和主题可查阅：\n- <https://www.halo.run/store/apps>\n- <https://github.com/halo-sigs/awesome-halo>\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.22.7...v2.22.8",
+      "memory_unit_text": "In the halo-dev/halo release v2.22.8, the release note describes optimizations including support for logging out on the two-step verification interface, improving system stability and concurrent access, optimizing homepage loading speed under specific conditions, reducing login device update frequency to lower SQL queries, implementing intelligent threshold scrolling for the editor, and removing the default color set when creating article tags. It fixes issues including potential system inaccessibility after stopping a plugin, inaccurate multi-value index query results, attachment form type removal logic inconsistency with the old version, and ineffectiveness of alignment tools in the default editor top toolbar for images, videos, and audio. Developer-related changes include adding a toggle component for FormKit."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_22_9",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.22.9",
+      "tag_name": "v2.22.9",
+      "title": "2.22.9",
+      "time_hint": "2026-01-14",
+      "published_at": "2026-01-14T10:50:45Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.22.9",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.22.9\nTag: v2.22.9; draft: False; prerelease: False; published_at: 2026-01-14T10:50:45Z; created_at: 2026-01-14T10:47:57Z\nRelease notes:\n## 问题修复\n* 解决 Formkit Toggle 组件切换无效的问题 by @LIlGG in https://github.com/halo-dev/halo/pull/8206\n* 修复编辑器转存单个图片时的成功提示信息不正确的问题 by @ruibaby in https://github.com/halo-dev/halo/pull/8217\n* 修复附件删除后再次访问时出现 500 错误 by @JohnNiang in https://github.com/halo-dev/halo/pull/8222\n* 解决标签和分类选择器嵌入至弹窗时下拉菜单会被遮挡的问题 by @LIlGG in https://github.com/halo-dev/halo/pull/8224\n## 文档\n<https://docs.halo.run>\n## 资源\n适用于 2.0 的插件和主题可查阅：\n- <https://www.halo.run/store/apps>\n- <https://github.com/halo-sigs/awesome-halo>\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.22.8...v2.22.9",
+      "memory_unit_text": "In the halo-dev/halo release v2.22.9, the release note fixes issues including the Formkit Toggle component switching being ineffective, incorrect success prompt when transferring a single image in the editor, a 500 error when accessing an attachment after deletion, and the tag and category selector dropdown being obscured when embedded in a modal."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_22_10",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.22.10",
+      "tag_name": "v2.22.10",
+      "title": "2.22.10",
+      "time_hint": "2026-01-16",
+      "published_at": "2026-01-16T10:18:09Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.22.10",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.22.10\nTag: v2.22.10; draft: False; prerelease: False; published_at: 2026-01-16T10:18:09Z; created_at: 2026-01-16T09:28:04Z\nRelease notes:\n## 功能优化\n* 支持修改用户角色后自动踢出所有登录会话 by @JohnNiang in https://github.com/halo-dev/halo/pull/8228\n* 优化系统性能 by @JohnNiang in https://github.com/halo-dev/halo/pull/8233\n* 允许修改默认存储策略的部分配置 by @JohnNiang in https://github.com/halo-dev/halo/pull/8230\n* 移除默认内存限制 by @JohnNiang in https://github.com/halo-dev/halo/pull/8227\n## 问题修复\n* 解决打开历史文章会出现排版错乱的问题 by @LIlGG in https://github.com/halo-dev/halo/pull/8215\n* 修复特定条件下查询结果不符合预期的问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/8229\n## 开发者相关\n* 简化 `/actuator/globalinfo` 端点，移除不必要的字段 by @JohnNiang in https://github.com/halo-dev/halo/pull/8236\n* 重构密钥（Secret）表单项的交互逻辑，并支持设置多个所需的 key by @ruibaby in https://github.com/halo-dev/halo/pull/8237\n## 文档\n<https://docs.halo.run>\n## 资源\n适用于 2.0 的插件和主题可查阅：\n- <https://www.halo.run/store/apps>\n- <https://github.com/halo-sigs/awesome-halo>\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.22.9...v2.22.10",
+      "memory_unit_text": "In the halo-dev/halo release v2.22.10, the release note describes optimizations including automatically kicking out all login sessions after modifying a user role, optimizing system performance, allowing modification of some default storage policy configurations, and removing the default memory limit. It fixes issues including layout disorder when opening historical articles and query results not meeting expectations under specific conditions. Developer-related changes include simplifying the /actuator/globalinfo endpoint by removing unnecessary fields and refactoring the Secret form item interaction logic to support setting multiple required keys."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_22_11",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.22.11",
+      "tag_name": "v2.22.11",
+      "title": "2.22.11",
+      "time_hint": "2026-01-20",
+      "published_at": "2026-01-20T03:01:19Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.22.11",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.22.11\nTag: v2.22.11; draft: False; prerelease: False; published_at: 2026-01-20T03:01:19Z; created_at: 2026-01-20T02:21:03Z\nRelease notes:\n## 功能优化\n* 解决首页文章列表中不显示私有文章的问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/8246\n* 优化主题安装和更新体验 by @JohnNiang in https://github.com/halo-dev/halo/pull/8250\n## 问题修复\n* 修复为用户赋角色可能失效的问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/8256\n* 修复 Array 表单项中图标预览的样式问题 by @ruibaby in https://github.com/halo-dev/halo/pull/8253\n## 开发者相关\n* 附件插件上传上下文新增附件分组信息 by @JohnNiang in https://github.com/halo-dev/halo/pull/8255\n## 文档\n<https://docs.halo.run>\n## 资源\n适用于 2.0 的插件和主题可查阅：\n- <https://www.halo.run/store/apps>\n- <https://github.com/halo-sigs/awesome-halo>\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.22.10...v2.22.11",
+      "memory_unit_text": "In the halo-dev/halo release v2.22.11, the release note describes optimizations including solving the issue of private articles not being displayed in the homepage article list and optimizing the theme installation and update experience. It fixes issues including potential failure when assigning roles to users and icon preview style issues in Array form items. Developer-related changes include adding attachment group information to the attachment plugin upload context."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_22_12",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.22.12",
+      "tag_name": "v2.22.12",
+      "title": "2.22.12",
+      "time_hint": "2026-01-26",
+      "published_at": "2026-01-26T13:59:39Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.22.12",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.22.12\nTag: v2.22.12; draft: False; prerelease: False; published_at: 2026-01-26T13:59:39Z; created_at: 2026-01-26T05:04:47Z\nRelease notes:\n## 功能优化\n* 为 `Array` 组件适配 Halo 中的大部分组件并支持 Select 远程数据源 by @LIlGG  in https://github.com/halo-dev/halo/pull/8267\n## 问题修复\n* 解决 Sercet 组件 UI 过长且处于最后一行时会出现边框被遮挡的问题 by @LIlGG  in https://github.com/halo-dev/halo/pull/8268\n## 文档\n<https://docs.halo.run>\n## 资源\n适用于 2.0 的插件和主题可查阅：\n- <https://www.halo.run/store/apps>\n- <https://github.com/halo-sigs/awesome-halo>\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.22.11...v2.22.12",
+      "memory_unit_text": "In the halo-dev/halo release v2.22.12, the release note describes an optimization to adapt the Array component to most components in Halo and support Select remote data sources. It fixes an issue where the Secret component UI was too long and the border was obscured when on the last line."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_22_13",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.22.13",
+      "tag_name": "v2.22.13",
+      "title": "2.22.13",
+      "time_hint": "2026-02-02",
+      "published_at": "2026-02-02T07:11:58Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.22.13",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.22.13\nTag: v2.22.13; draft: False; prerelease: False; published_at: 2026-02-02T07:11:58Z; created_at: 2026-02-02T04:48:33Z\nRelease notes:\n## 问题修复\n* 解决 Array 组件空值渲染异常的问题 by @LIlGG in https://github.com/halo-dev/halo/pull/8305\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.22.12...v2.22.13",
+      "memory_unit_text": "In the halo-dev/halo release v2.22.13, the release note fixes an issue where the Array component rendered abnormally with null values."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_22_14",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.22.14",
+      "tag_name": "v2.22.14",
+      "title": "2.22.14",
+      "time_hint": "2026-02-08",
+      "published_at": "2026-02-08T14:04:10Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.22.14",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.22.14\nTag: v2.22.14; draft: False; prerelease: False; published_at: 2026-02-08T14:04:10Z; created_at: 2026-02-05T10:05:01Z\nRelease notes:\n## 问题修复\n* 解决在编辑器中复制或粘贴图片时首张图片会被覆盖的问题 by @LIlGG  in https://github.com/halo-dev/halo/pull/8333\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.22.13...v2.22.14",
+      "memory_unit_text": "In the halo-dev/halo release v2.22.14, the release note fixes an issue where the first image would be overwritten when copying or pasting images in the editor."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_23_0_beta_1",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.23.0-beta.1",
+      "tag_name": "v2.23.0-beta.1",
+      "title": "2.23.0-beta.1",
+      "time_hint": "2026-03-03",
+      "published_at": "2026-03-03T03:12:31Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.23.0-beta.1",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.23.0-beta.1\nTag: v2.23.0-beta.1; draft: False; prerelease: True; published_at: 2026-03-03T03:12:31Z; created_at: 2026-03-03T03:11:19Z\nRelease notes:\n## ⚠️ 提示\n此版本为 2.23.0 的测试版本，不建议在生产环境升级，同时在测试时需要注意以下事项：\n- 此版本升级了 Spring Boot 4 版本，已知有少部分插件不兼容，包括应用市场插件，**建议在升级 Halo 前先升级应用市场插件（1.16.0）**\n- 建议升级 Halo 之后检查是否有异常的插件，如有异常，请向插件作者报告\n## 新特性\n- 为主题和插件的设置页面添加滚动到顶部按钮 by @ruibaby in <https://github.com/halo-dev/halo/pull/8347>\n- 为编辑器中的图片添加 **应用宽度至全文** 的功能 by @LIlGG in <https://github.com/halo-dev/halo/pull/8338>\n- 支持在文章设置中设置作者页文章显示条数 by @AR-26710 in <https://github.com/halo-dev/halo/pull/8304>\n- 支持对比文章版本 by @ruibaby in <https://github.com/halo-dev/halo/pull/8272>\n## 功能优化\n- 允许在新建菜单项时，移除选中的上级菜单 by @LIlGG in <https://github.com/halo-dev/halo/pull/8364>\n- 系统设置中的保留用户名支持同时应用于显示名称 by @AR-26710 in <https://github.com/halo-dev/halo/pull/8310>\n- Console 仪表盘新增点赞数量小部件 by @Copilot in <https://github.com/halo-dev/halo/pull/8271>\n- 优化 Console 端评论管理的默认排序，优先显示最近有回复的评论 by @Copilot in <https://github.com/halo-dev/halo/pull/8371>\n## 问题修复\n- 解决 FormKit Iconify 表单类型中存在隐藏的空白页面的问题 by @LIlGG in <https://github.com/halo-dev/halo/pull/8361>\n- 解决 FormKit Array 表单类型无法支持图片多选的渲染问题 by @LIlGG in <https://github.com/halo-dev/halo/pull/8360>\n- 解决在编辑器中复制或粘贴图片时首张图片会被覆盖的问题 by @LIlGG in <https://github.com/halo-dev/halo/pull/8333>\n- 修复首次安装 Halo 之后，无法在文章编辑器中上传文件的问题 by @ruibaby in <https://github.com/halo-dev/halo/pull/8308>\n- 解决 Array 组件空值渲染异常的问题 by @LIlGG in <https://github.com/halo-dev/halo/pull/8305>\n- 解决 FormKit Sercet 表单类型 UI 过长且处于最后一行时会出现边框被遮挡的问题 by @LIlGG in <https://github.com/halo-dev/halo/pull/8268>\n- 修复首页文章列表分页参数不为数字时渲染异常的问题 by @Copilot in <https://github.com/halo-dev/halo/pull/8374>\n## 依赖更新\n- 升级至 Spring Boot 4 by @JohnNiang in <https://github.com/halo-dev/halo/pull/8291>\n- 升级 PF4J 至 3.15.0 by @JohnNiang in <https://github.com/halo-dev/halo/pull/8294>\n## 开发者相关\n- 为 FormKit Arrary 表单类型适配 Halo 中的大部分组件并支持 Select 远程数据源 by @LIlGG in <https://github.com/halo-dev/halo/pull/8267>\n- FormKit Iconify 支持设置尺寸参数，默认不再向用户显示尺寸设置选项 by @ruibaby in <https://github.com/halo-dev/halo/pull/8346>\n- 为 FormKit Array 表单类型添加 slot 插槽类型 by @LIlGG in <https://github.com/halo-dev/halo/pull/8359>\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.22.11...v2.23.0-beta.1",
+      "memory_unit_text": "In the halo-dev/halo release v2.23.0-beta.1, the release note introduces new features including adding a scroll-to-top button on theme and plugin settings pages, adding an 'apply width to full text' function for images in the editor, supporting setting the number of articles displayed on the author page in article settings, and supporting article version comparison. Optimizations include allowing removal of the selected parent menu when creating a new menu item, applying reserved usernames to display names in system settings, adding a like count widget to the Console dashboard, and optimizing the default sorting of comment management in the Console to prioritize recently replied comments. Fixes include resolving a hidden blank page issue in FormKit Iconify form type, resolving FormKit Array form type inability to support image multi-select rendering, resolving the issue of the first image being overwritten when copying or pasting images in the editor, fixing inability to upload files in the article editor after first installing Halo, resolving Array component null value rendering exception, resolving FormKit Secret form type UI border obscuring when on the last line, and fixing abnormal rendering when the homepage article list pagination parameter is not a number. Dependency updates include upgrading to Spring Boot 4 and upgrading PF4J to 3.15.0. Developer-related changes include adapting FormKit Array form type to most components in Halo and supporting Select remote data sources, FormKit Iconify supporting size parameter settings and not displaying size options to users by default, and adding a slot type for FormKit Array form type."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_23_0_beta_2",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.23.0-beta.2",
+      "tag_name": "v2.23.0-beta.2",
+      "title": "2.23.0-beta.2",
+      "time_hint": "2026-03-09",
+      "published_at": "2026-03-09T15:17:57Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.23.0-beta.2",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.23.0-beta.2\nTag: v2.23.0-beta.2; draft: False; prerelease: True; published_at: 2026-03-09T15:17:57Z; created_at: 2026-03-09T13:36:40Z\nRelease notes:\n## ⚠️ 提示\n此版本为 2.23.0 的测试版本，不建议在生产环境升级，同时在测试时需要注意以下事项：\n- 此版本升级了 Spring Boot 4 版本，已知有少部分插件不兼容，包括应用市场插件，**建议在升级 Halo 前先升级应用市场插件（1.16.0）**\n- 建议升级 Halo 之后检查是否有异常的插件，如有异常，请向插件作者报告\n历史测试版本：\n- [2.23.0-beta.1](https://github.com/halo-dev/halo/releases/tag/v2.23.0-beta.1)\n## 功能优化\n- 优化本地化翻译字符串和措辞 by @ruibaby in https://github.com/halo-dev/halo/pull/8391\n- 重构备份时的数据检索逻辑，降低 OOM 风险 by @JohnNiang in https://github.com/halo-dev/halo/pull/8390\n## 问题修复\n- 修复颜色选择表单项手动输入颜色值会导致结果不符合预期的问题 by @ruibaby in https://github.com/halo-dev/halo/pull/8399\n- 修复 API 错误处理器在响应缺少 Content-Type 时的空引用错误 by @dataCenter430 in https://github.com/halo-dev/halo/pull/8397\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.23.0-beta.1...v2.23.0-beta.2",
+      "memory_unit_text": "In the halo-dev/halo release v2.23.0-beta.2, the release note describes optimizations including optimizing localization translation strings and wording, and refactoring the data retrieval logic during backup to reduce OOM risk. It fixes issues including the color picker form item manual input resulting in unexpected values and a null reference error in the API error handler when the response lacks Content-Type."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_23_0",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.23.0",
+      "tag_name": "v2.23.0",
+      "title": "2.23.0",
+      "time_hint": "2026-03-13",
+      "published_at": "2026-03-13T08:09:39Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.23.0",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.23.0\nTag: v2.23.0; draft: False; prerelease: False; published_at: 2026-03-13T08:09:39Z; created_at: 2026-03-13T07:47:00Z\nRelease notes:\n## ⚠️ 重要提示\n- 此版本升级了 Spring Boot 4 版本，已知有少部分插件不兼容，包括应用市场插件，**建议在升级 Halo 前先升级应用市场插件（1.16.0）**\n- 建议升级 Halo 之后检查是否有异常的插件，如有异常，请向插件作者报告\n## 新特性\n- 为主题和插件的设置页面添加滚动到顶部按钮 by @ruibaby in <https://github.com/halo-dev/halo/pull/8347>\n- 为编辑器中的图片添加 **应用宽度至全文** 的功能 by @LIlGG in <https://github.com/halo-dev/halo/pull/8338>\n- 支持在文章设置中设置作者页文章显示条数 by @AR-26710 in <https://github.com/halo-dev/halo/pull/8304>\n- 支持对比文章版本 by @ruibaby in <https://github.com/halo-dev/halo/pull/8272>\n## 功能优化\n- 优化本地化翻译字符串和措辞 by @ruibaby in https://github.com/halo-dev/halo/pull/8391\n- 重构备份时的数据检索逻辑，降低 OOM 风险 by @JohnNiang in https://github.com/halo-dev/halo/pull/8390\n- 允许在新建菜单项时，移除选中的上级菜单 by @LIlGG in <https://github.com/halo-dev/halo/pull/8364>\n- 系统设置中的保留用户名支持同时应用于显示名称 by @AR-26710 in <https://github.com/halo-dev/halo/pull/8310>\n- Console 仪表盘新增点赞数量小部件 by @Copilot in <https://github.com/halo-dev/halo/pull/8271>\n- 优化 Console 端评论管理的默认排序，优先显示最近有回复的评论 by @Copilot in <https://github.com/halo-dev/halo/pull/8371>\n## 问题修复\n- 修复颜色选择表单项手动输入颜色值会导致结果不符合预期的问题 by @ruibaby in https://github.com/halo-dev/halo/pull/8399\n- 修复 API 错误处理器在响应缺少 Content-Type 时的空引用错误 by @dataCenter430 in https://github.com/halo-dev/halo/pull/8397\n- 解决 FormKit Iconify 表单类型中存在隐藏的空白页面的问题 by @LIlGG in <https://github.com/halo-dev/halo/pull/8361>\n- 解决 FormKit Array 表单类型无法支持图片多选的渲染问题 by @LIlGG in <https://github.com/halo-dev/halo/pull/8360>\n- 解决在编辑器中复制或粘贴图片时首张图片会被覆盖的问题 by @LIlGG in <https://github.com/halo-dev/halo/pull/8333>\n- 修复首次安装 Halo 之后，无法在文章编辑器中上传文件的问题 by @ruibaby in <https://github.com/halo-dev/halo/pull/8308>\n- 解决 Array 组件空值渲染异常的问题 by @LIlGG in <https://github.com/halo-dev/halo/pull/8305>\n- 解决 FormKit Sercet 表单类型 UI 过长且处于最后一行时会出现边框被遮挡的问题 by @LIlGG in <https://github.com/halo-dev/halo/pull/8268>\n- 修复首页文章列表分页参数不为数字时渲染异常的问题 by @Copilot in <https://github.com/halo-dev/halo/pull/8374>\n## 依赖更新\n- 升级至 Spring Boot 4 by @JohnNiang in <https://github.com/halo-dev/halo/pull/8291>\n- 升级 PF4J 至 3.15.0 by @JohnNiang in <https://github.com/halo-dev/halo/pull/8294>\n## 开发者相关\n- 为 FormKit Arrary 表单类型适配 Halo 中的大部分组件并支持 Select 远程数据源 by @LIlGG in <https://github.com/halo-dev/halo/pull/8267>\n- FormKit Iconify 支持设置尺寸参数，默认不再向用户显示尺寸设置选项 by @ruibaby in <https://github.com/halo-dev/halo/pull/8346>\n- 为 FormKit Array 表单类型添加 slot 插槽类型 by @LIlGG in <https://github.com/halo-dev/halo/pull/8359>\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.22.11...v2.23.0",
+      "memory_unit_text": "In the halo-dev/halo release v2.23.0, the release note introduces new features including adding a scroll-to-top button on theme and plugin settings pages, adding an 'apply width to full text' function for images in the editor, supporting setting the number of articles displayed on the author page in article settings, and supporting article version comparison. Optimizations include optimizing localization translation strings and wording, refactoring the data retrieval logic during backup to reduce OOM risk, allowing removal of the selected parent menu when creating a new menu item, applying reserved usernames to display names in system settings, adding a like count widget to the Console dashboard, and optimizing the default sorting of comment management in the Console to prioritize recently replied comments. Fixes include fixing the color picker form item manual input resulting in unexpected values, fixing a null reference error in the API error handler when the response lacks Content-Type, resolving a hidden blank page issue in FormKit Iconify form type, resolving FormKit Array form type inability to support image multi-select rendering, resolving the issue of the first image being overwritten when copying or pasting images in the editor, fixing inability to upload files in the article editor after first installing Halo, resolving Array component null value rendering exception, resolving FormKit Secret form type UI border obscuring when on the last line, and fixing abnormal rendering when the homepage article list pagination parameter is not a number. Dependency updates include upgrading to Spring Boot 4 and upgrading PF4J to 3.15.0. Developer-related changes include adapting FormKit Array form type to most components in Halo and supporting Select remote data sources, FormKit Iconify supporting size parameter settings and not displaying size options to users by default, and adding a slot type for FormKit Array form type."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_23_1",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.23.1",
+      "tag_name": "v2.23.1",
+      "title": "2.23.1",
+      "time_hint": "2026-03-17",
+      "published_at": "2026-03-17T13:42:34Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.23.1",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.23.1\nTag: v2.23.1; draft: False; prerelease: False; published_at: 2026-03-17T13:42:34Z; created_at: 2026-03-17T13:28:49Z\nRelease notes:\n## 功能优化\n* 为文章标签添加描述字段 by @baocai27 in https://github.com/halo-dev/halo/pull/8418\n## 依赖更新\n* 升级 MariaDB 驱动，提升兼容性 by @JohnNiang in https://github.com/halo-dev/halo/pull/8423\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.23.0...v2.23.1",
+      "memory_unit_text": "In the halo-dev/halo release v2.23.1, the release note describes an optimization to add a description field to article tags. It includes a dependency update to upgrade the MariaDB driver for improved compatibility."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_23_2",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.23.2",
+      "tag_name": "v2.23.2",
+      "title": "2.23.2",
+      "time_hint": "2026-03-30",
+      "published_at": "2026-03-30T13:57:24Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.23.2",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.23.2\nTag: v2.23.2; draft: False; prerelease: False; published_at: 2026-03-30T13:57:24Z; created_at: 2026-03-30T13:53:17Z\nRelease notes:\n## 问题修复\n* 解决当富文本编辑器中嵌套其他编辑器时所导致的异常滚动问题 by @LIlGG in https://github.com/halo-dev/halo/pull/8436\n* 解决 FormKit Array 渲染图片时可能出现的报错问题 by @LIlGG in https://github.com/halo-dev/halo/pull/8495\n* 修复 FormKit Iconify 自定义图片时，表单可能出现自动关闭的问题 by @ruibaby in https://github.com/halo-dev/halo/pull/8497\n## 依赖更新\n* 升级 Spring Boot 至 4.0.4 by @JohnNiang in https://github.com/halo-dev/halo/pull/8434\n## 开发者相关\n* 修复标签归档页面缺少 `_templateId` 变量的问题 by @Copilot in https://github.com/halo-dev/halo/pull/8485\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.23.1...v2.23.2",
+      "memory_unit_text": "In the halo-dev/halo release v2.23.2, the release note fixes issues including abnormal scrolling when other editors are nested in the rich text editor, potential errors when FormKit Array renders images, and the FormKit Iconify form potentially closing automatically when customizing images. It includes a dependency update to upgrade Spring Boot to 4.0.4. Developer-related changes include fixing the missing _templateId variable on the tag archive page."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_23_3",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.23.3",
+      "tag_name": "v2.23.3",
+      "title": "2.23.3",
+      "time_hint": "2026-04-13",
+      "published_at": "2026-04-13T10:07:05Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.23.3",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.23.3\nTag: v2.23.3; draft: False; prerelease: False; published_at: 2026-04-13T10:07:05Z; created_at: 2026-04-13T09:56:43Z\nRelease notes:\n## 问题修复\n* 修复编辑器图片、视频、音频类型的对齐图标显示不正确的问题 by @ruibaby in https://github.com/halo-dev/halo/pull/9852\n* 修复创建文章时无法设置作者的问题 by @ruibaby in https://github.com/halo-dev/halo/pull/9862\n* 修复部分包含 Finder API 的插件可能在升级后无法正常启动的问题 by @ruibaby in https://github.com/halo-dev/halo/pull/9853\n* 修复附件插件未实现缩略图生成功能时出现大量警告日志的问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/9878\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.23.2...v2.23.3",
+      "memory_unit_text": "In the halo-dev/halo release v2.23.3, the release note fixes issues including incorrect display of alignment icons for image, video, and audio types in the editor, inability to set the author when creating an article, potential failure of some plugins containing Finder API to start after upgrade, and a large number of warning logs when attachment plugins do not implement thumbnail generation."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_24_0",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.24.0",
+      "tag_name": "v2.24.0",
+      "title": "2.24.0",
+      "time_hint": "2026-04-16",
+      "published_at": "2026-04-16T07:35:40Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.24.0",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.24.0\nTag: v2.24.0; draft: False; prerelease: False; published_at: 2026-04-16T07:35:40Z; created_at: 2026-04-16T07:32:46Z\nRelease notes:\n## 新特性\n- 完善插件详情页面的管理功能 by @ruibaby in <https://github.com/halo-dev/halo/pull/9867>\n- 支持在 Console 插件管理中重载插件 by @ruibaby in <https://github.com/halo-dev/halo/pull/9865>\n- 创建个人令牌时支持直接选择当前拥有的角色 by @ruibaby in <https://github.com/halo-dev/halo/pull/9842>\n- 支持菜单克隆 by @W33KT in <https://github.com/halo-dev/halo/pull/8417>\n## 功能优化\n- 禁用/重新配置两步验证时要求验证，以增强安全性 by @Copilot in <https://github.com/halo-dev/halo/pull/9857>\n- 支持登录失败后回显用户名 by @JohnNiang in <https://github.com/halo-dev/halo/pull/9893>\n- 扩充上传头像的文件类型限制 by @LIlGG in <https://github.com/halo-dev/halo/pull/9892>\n- 支持一个用户绑定多个社交账号（同一提供商） by @JohnNiang in <https://github.com/halo-dev/halo/pull/9859>\n- 为主题设置与插件设置增加了未保存内容的提示信息 by @LIlGG in <https://github.com/halo-dev/halo/pull/9800>\n## 问题修复\n- 修复主题更新后新增的配置默认值可能不生效的问题 by @JohnNiang in <https://github.com/halo-dev/halo/pull/9894>\n- 修复 Console 输入框聚焦时出现黑色线条的问题 by @ruibaby in <https://github.com/halo-dev/halo/pull/9891>\n- 修复当外部访问地址尾部带 / 时，生成的附件绝对路径不正确的问题 by @ruibaby in <https://github.com/halo-dev/halo/pull/9885>\n- 修复创建文章时无法设置作者的问题 by @ruibaby in <https://github.com/halo-dev/halo/pull/9862>\n- 修复编辑器图片、视频、音频类型的对齐图标显示不正确的问题 by @ruibaby in <https://github.com/halo-dev/halo/pull/9852>\n- 修复生成个人令牌时主题管理权限缺失主题升级权限的问题 by @Copilot in <https://github.com/halo-dev/halo/pull/9887>\n- 修复附件插件未实现缩略图生成功能时出现大量警告日志的问题 by @JohnNiang in <https://github.com/halo-dev/halo/pull/9878>\n- 修复部分包含 Finder API 的插件可能在升级后无法正常启动的问题 by @Copilot in <https://github.com/halo-dev/halo/pull/9853>\n## 开发者相关\n- 提供 JWT 认证支持 by @JohnNiang in <https://github.com/halo-dev/halo/pull/9799>\n- 为分类和作者归档页面提供 `name` 变量 by @Copilot in <https://github.com/halo-dev/halo/pull/9850>\n- 支持自动为主题静态资源添加版本参数 by @Copilot in <https://github.com/halo-dev/halo/pull/9854>\n- 修复主题通过 `categoryFinder.getByNames` 和 `tagFinder.getByNames` 获取的结果顺序不对的问题 by @Copilot in <https://github.com/halo-dev/halo/pull/9882>\n## 依赖更新\n- 升级 Spring Boot 至 4.0.5 by @JohnNiang in <https://github.com/halo-dev/halo/pull/9840>\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.23.2...v2.24.0",
+      "memory_unit_text": "In the halo-dev/halo release v2.24.0, the release note introduces new features including improving the management functionality of the plugin details page, supporting plugin reloading in the Console plugin management, supporting direct selection of current roles when creating personal tokens, and supporting menu cloning. Optimizations include requiring verification when disabling/reconfiguring two-step authentication for enhanced security, supporting echoing the username after login failure, expanding the file type restrictions for uploading avatars, supporting binding multiple social accounts (same provider) for one user, and adding unsaved content prompts for theme and plugin settings. Fixes include fixing the issue where newly added configuration defaults may not take effect after theme updates, fixing a black line appearing when the Console input box is focused, fixing incorrect absolute path generation for attachments when the external access address ends with '/', fixing inability to set the author when creating an article, fixing incorrect display of alignment icons for image, video, and audio types in the editor, fixing missing theme upgrade permission when generating personal tokens with theme management permissions, fixing a large number of warning logs when attachment plugins do not implement thumbnail generation, and fixing potential failure of some plugins containing Finder API to start after upgrade. Developer-related changes include providing JWT authentication support, providing name variables for category and author archive pages, supporting automatic addition of version parameters to theme static resources, and fixing incorrect order of results obtained by theme through categoryFinder.getByNames and tagFinder.getByNames. Dependency updates include upgrading Spring Boot to 4.0.5."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_24_1",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.24.1",
+      "tag_name": "v2.24.1",
+      "title": "2.24.1",
+      "time_hint": "2026-04-24",
+      "published_at": "2026-04-24T15:37:40Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.24.1",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.24.1\nTag: v2.24.1; draft: False; prerelease: False; published_at: 2026-04-24T15:37:40Z; created_at: 2026-04-24T15:19:32Z\nRelease notes:\n## 安全性修复\n* 加强了个人中心通过 URL 上传附件时的目标地址校验，降低服务端请求被滥用的风险\n## 问题修复\n* 修复登录时勾选记住我后撤销设备后不起作用的问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/9899\n* 修复 2.24.0 自动为主题资源加版本参数功能在部分边缘场景下路径拼接错误的问题 by @ruibaby in https://github.com/halo-dev/halo/pull/9897\n## 开发者相关\n* 为 `PostFinder` 添加 `random` 方法以支持随机获取文章 by @JohnNiang in https://github.com/halo-dev/halo/pull/9918\n## 致谢\n感谢 JD-Security SHENYI Team 报告的安全漏洞。\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.24.0...v2.24.1",
+      "memory_unit_text": "In the halo-dev/halo release v2.24.1, the release note includes a security fix to strengthen the target address verification when uploading attachments via URL in the personal center to reduce the risk of server-side request abuse. It fixes issues including the 'remember me' function not working after revoking a device during login and incorrect path concatenation in edge cases for the automatic version parameter addition to theme resources introduced in 2.24.0. Developer-related changes include adding a random method to PostFinder to support random article retrieval."
+    },
+    {
+      "memory_node_id": "halo_dev__halo__release__v2_24_2",
+      "repo": "halo-dev/halo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.24.2",
+      "tag_name": "v2.24.2",
+      "title": "2.24.2",
+      "time_hint": "2026-04-29",
+      "published_at": "2026-04-29T08:37:05Z",
+      "source_url": "https://github.com/halo-dev/halo/releases/tag/v2.24.2",
+      "raw_text": "Repository: halo-dev/halo\nRelease: 2.24.2\nTag: v2.24.2; draft: False; prerelease: False; published_at: 2026-04-29T08:37:05Z; created_at: 2026-04-29T08:20:04Z\nRelease notes:\n## 功能优化\n* 提升登录设备管理中 UA 信息解析的准确性 by @JohnNiang in https://github.com/halo-dev/halo/pull/9921\n## 问题修复\n* 解决“保持登录会话”功能在特定情况下可能失效的问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/9928\n* 修复通过 URL 下载大文件（如插件安装包）时因响应体大小限制导致下载失败的问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/9931\n* 修复通过 PostFinder#random 随机获取文章时可能返回少于请求的文章的问题 by @JohnNiang in https://github.com/halo-dev/halo/pull/9932\n**Full Changelog**: https://github.com/halo-dev/halo/compare/v2.24.1...v2.24.2",
+      "memory_unit_text": "In the halo-dev/halo release v2.24.2, the release note describes an optimization to improve the accuracy of UA information parsing in login device management. It fixes issues including the 'keep login session' function potentially failing under specific conditions, download failure of large files (such as plugin installation packages) via URL due to response body size limits, and the PostFinder#random method potentially returning fewer articles than requested."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the halo-dev/halo releases, which release introduces a gallery (image collection) function for the editor and support for setting protected usernames during registration?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v2.21.10"
+        },
+        {
+          "option_id": "B",
+          "text": "v2.22.0-alpha.1"
+        },
+        {
+          "option_id": "C",
+          "text": "v2.22.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v2.23.0-beta.1"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v2.22.0-alpha.1",
+      "source_chunk_ids": [
+        "halo_dev__halo__release__v2_22_0_alpha_1"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "halo_dev__halo__release__v2_22_0_alpha_1",
+          "answer_text": "introduces new features including a gallery (image collection) function for the editor, support for setting protected usernames during registration"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the halo-dev/halo releases, how does the thumbnail-related change in v2.22.0 differ from the thumbnail-related change in v2.22.5?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v2.22.0 refactors image thumbnail functionality to generate on demand instead of storing records, while v2.22.5 fixes an issue where plugins not adapted to thumbnails caused images not to display."
+        },
+        {
+          "option_id": "B",
+          "text": "v2.22.0 removes thumbnail generation entirely, while v2.22.5 adds thumbnail generation for videos."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only update the thumbnail storage path without functional changes."
+        },
+        {
+          "option_id": "D",
+          "text": "v2.22.0 introduces thumbnail generation for the first time, while v2.22.5 disables thumbnail generation by default."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v2.22.0 refactors image thumbnail functionality to generate on demand instead of storing records, while v2.22.5 fixes an issue where plugins not adapted to thumbnails caused images not to display.",
+      "source_chunk_ids": [
+        "halo_dev__halo__release__v2_22_0",
+        "halo_dev__halo__release__v2_22_5"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "halo_dev__halo__release__v2_22_0",
+          "answer_text": "refactoring image thumbnail functionality to generate on demand instead of storing records"
+        },
+        {
+          "memory_node_id": "halo_dev__halo__release__v2_22_5",
+          "answer_text": "fixes an issue where plugins not adapted to thumbnails caused images not to display"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the halo-dev/halo release window, order the following release-content states from earliest to latest: (1) a release that upgrades Spring Boot to 3.5.7 and Tiptap to 3.x, (2) a release that upgrades to Spring Boot 4 and PF4J to 3.15.0, (3) a release that upgrades Spring Boot to 4.0.4, (4) a release that upgrades Spring Boot to 4.0.5.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "halo_dev__halo__release__v2_22_0_alpha_1",
+        "halo_dev__halo__release__v2_23_0_beta_1",
+        "halo_dev__halo__release__v2_23_2",
+        "halo_dev__halo__release__v2_24_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "halo_dev__halo__release__v2_22_0_alpha_1",
+          "answer_text": "upgrading Spring Boot to 3.5.7 and Tiptap to 3.x"
+        },
+        {
+          "memory_node_id": "halo_dev__halo__release__v2_23_0_beta_1",
+          "answer_text": "upgrading to Spring Boot 4 and upgrading PF4J to 3.15.0"
+        },
+        {
+          "memory_node_id": "halo_dev__halo__release__v2_23_2",
+          "answer_text": "upgrade Spring Boot to 4.0.4"
+        },
+        {
+          "memory_node_id": "halo_dev__halo__release__v2_24_0",
+          "answer_text": "upgrading Spring Boot to 4.0.5"
+        }
+      ]
+    }
+  ]
+}

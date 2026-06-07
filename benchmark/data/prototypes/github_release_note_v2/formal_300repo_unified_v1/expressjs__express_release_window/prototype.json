@@ -1,0 +1,525 @@
+{
+  "prototype_id": "expressjs__express_release_window",
+  "domain": "github_release_evolution",
+  "repo": "expressjs/express",
+  "source_type": "release_note",
+  "window_title": "expressjs/express recent release evolution",
+  "window_summary": "This window tracks the recent expressjs/express release stream across 4.x and 5.x lines, including alpha, beta, and stable releases from 4.16.3 through v4.22.2 and v5.2.1.",
+  "chunks": [
+    {
+      "memory_node_id": "expressjs__express__release__4_16_3",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.16.3",
+      "tag_name": "4.16.3",
+      "title": "4.16.3",
+      "time_hint": "2018-03-12",
+      "published_at": "2018-03-12T17:51:54Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/4.16.3",
+      "raw_text": "Repository: expressjs/express\nRelease: 4.16.3\nTag: 4.16.3; draft: False; prerelease: False; published_at: 2018-03-12T17:51:54Z; created_at: 2018-03-12T17:38:44Z\nRelease notes:\n* deps: accepts@~1.3.5\n- deps: mime-types@~2.1.18\n* deps: depd@~1.1.2\n- perf: remove argument reassignment\n* deps: encodeurl@~1.0.2\n- Fix encoding `%` as last character\n* deps: finalhandler@1.1.1\n- Fix 404 output for bad / missing pathnames\n- deps: encodeurl@~1.0.2\n- deps: statuses@~1.4.0\n* deps: proxy-addr@~2.0.3\n- deps: ipaddr.js@1.6.0\n* deps: send@0.16.2\n- Fix incorrect end tag in default error & redirects\n- deps: depd@~1.1.2\n- deps: encodeurl@~1.0.2\n- deps: statuses@~1.4.0\n* deps: serve-static@1.13.2\n- Fix incorrect end tag in redirects\n- deps: encodeurl@~1.0.2\n- deps: send@0.16.2\n* deps: statuses@~1.4.0\n* deps: type-is@~1.6.16\n- deps: mime-types@~2.1.18",
+      "memory_unit_text": "In the expressjs/express release 4.16.3, the project updates several dependencies: accepts to ~1.3.5 (with mime-types ~2.1.18), depd to ~1.1.2 (with a performance improvement removing argument reassignment), encodeurl to ~1.0.2 (fixing encoding of '%' as last character), finalhandler to 1.1.1 (fixing 404 output for bad/missing pathnames and updating encodeurl and statuses), proxy-addr to ~2.0.3 (with ipaddr.js 1.6.0), send to 0.16.2 (fixing incorrect end tag in default error and redirects, and updating depd, encodeurl, statuses), serve-static to 1.13.2 (fixing incorrect end tag in redirects, and updating encodeurl and send), statuses to ~1.4.0, and type-is to ~1.6.16 (with mime-types ~2.1.18)."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__4_16_4",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.16.4",
+      "tag_name": "4.16.4",
+      "title": "4.16.4",
+      "time_hint": "2018-10-11",
+      "published_at": "2018-10-11T03:59:47Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/4.16.4",
+      "raw_text": "Repository: expressjs/express\nRelease: 4.16.4\nTag: 4.16.4; draft: False; prerelease: False; published_at: 2018-10-11T03:59:47Z; created_at: 2018-10-11T03:50:45Z\nRelease notes:\n* Fix issue where `\"Request aborted\"` may be logged in `res.sendfile`\n* Fix JSDoc for `Router` constructor\n* deps: body-parser@1.18.3\n- Fix deprecation warnings on Node.js 10+\n- Fix stack trace for strict json parse error\n- deps: depd@~1.1.2\n- deps: http-errors@~1.6.3\n- deps: iconv-lite@0.4.23\n- deps: qs@6.5.2\n- deps: raw-body@2.3.3\n- deps: type-is@~1.6.16\n* deps: proxy-addr@~2.0.4\n- deps: ipaddr.js@1.8.0\n* deps: qs@6.5.2\n* deps: safe-buffer@5.1.2",
+      "memory_unit_text": "In the expressjs/express release 4.16.4, the project fixes an issue where 'Request aborted' may be logged in res.sendfile, fixes JSDoc for the Router constructor, and updates dependencies: body-parser to 1.18.3 (fixing deprecation warnings on Node.js 10+, fixing stack trace for strict json parse error, and updating depd, http-errors, iconv-lite, qs, raw-body, type-is), proxy-addr to ~2.0.4 (with ipaddr.js 1.8.0), qs to 6.5.2, and safe-buffer to 5.1.2."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__5_0_0_alpha_7",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.0.0-alpha.7",
+      "tag_name": "5.0.0-alpha.7",
+      "title": "5.0.0-alpha.7",
+      "time_hint": "2018-10-27",
+      "published_at": "2018-10-27T03:13:01Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/5.0.0-alpha.7",
+      "raw_text": "Repository: expressjs/express\nRelease: 5.0.0-alpha.7\nTag: 5.0.0-alpha.7; draft: False; prerelease: True; published_at: 2018-10-27T03:13:01Z; created_at: 2018-10-27T02:29:15Z\nRelease notes:\nThis is the seventh Express 5.0 alpha release, based off 4.16.4 and includes\nchanges from 5.0.0-alpha.6.\nThe major change with this alpha is the basic support for returned, rejected\nPromises in the router.\n* remove:\n- `path-to-regexp` dependency\n* deps: debug@3.1.0\n- Add `DEBUG_HIDE_DATE` environment variable\n- Change timer to per-namespace instead of global\n- Change non-TTY date format\n- Remove `DEBUG_FD` environment variable support\n- Support 256 namespace colors\n* deps: router@2.0.0-alpha.1\n- Add basic support for returned, rejected Promises\n- Fix JSDoc for `Router` constructor\n- deps: debug@3.1.0\n- deps: parseurl@~1.3.2\n- deps: setprototypeof@1.1.0\n- deps: utils-merge@1.0.1",
+      "memory_unit_text": "In the expressjs/express release 5.0.0-alpha.7, the seventh Express 5.0 alpha based on 4.16.4, the major change is basic support for returned, rejected Promises in the router. It removes the path-to-regexp dependency, updates debug to 3.1.0 (adding DEBUG_HIDE_DATE, changing timer to per-namespace, changing non-TTY date format, removing DEBUG_FD support, supporting 256 namespace colors), and updates router to 2.0.0-alpha.1 (adding basic support for returned rejected Promises, fixing JSDoc for Router constructor, and updating debug, parseurl, setprototypeof, utils-merge)."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__4_17_0",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.17.0",
+      "tag_name": "4.17.0",
+      "title": "4.17.0",
+      "time_hint": "2019-05-17",
+      "published_at": "2019-05-17T01:57:29Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/4.17.0",
+      "raw_text": "Repository: expressjs/express\nRelease: 4.17.0\nTag: 4.17.0; draft: False; prerelease: False; published_at: 2019-05-17T01:57:29Z; created_at: 2019-05-17T01:25:42Z\nRelease notes:\n* Add `express.raw` to parse bodies into `Buffer`\n* Add `express.text` to parse bodies into string\n* Improve error message for non-strings to `res.sendFile`\n* Improve error message for `null`/`undefined` to `res.status`\n* Support multiple hosts in `X-Forwarded-Host`\n* deps: accepts@~1.3.7\n* deps: body-parser@1.19.0\n- Add encoding MIK\n- Add petabyte (`pb`) support\n- Fix parsing array brackets after index\n- deps: bytes@3.1.0\n- deps: http-errors@1.7.2\n- deps: iconv-lite@0.4.24\n- deps: qs@6.7.0\n- deps: raw-body@2.4.0\n- deps: type-is@~1.6.17\n* deps: content-disposition@0.5.3\n* deps: cookie@0.4.0\n- Add `SameSite=None` support\n* deps: finalhandler@~1.1.2\n- Set stricter `Content-Security-Policy` header\n- deps: parseurl@~1.3.3\n- deps: statuses@~1.5.0\n* deps: parseurl@~1.3.3\n* deps: proxy-addr@~2.0.5\n- deps: ipaddr.js@1.9.0\n* deps: qs@6.7.0\n- Fix parsing array brackets after index\n* deps: range-parser@~1.2.1\n* deps: send@0.17.1\n- Set stricter CSP header in redirect & error responses\n- deps: http-errors@~1.7.2\n- deps: mime@1.6.0\n- deps: ms@2.1.1\n- deps: range-parser@~1.2.1\n- deps: statuses@~1.5.0\n- perf: remove redundant `path.normalize` call\n* deps: serve-static@1.14.1\n- Set stricter CSP header in redirect response\n- deps: parseurl@~1.3.3\n- deps: send@0.17.1\n* deps: setprototypeof@1.1.1\n* deps: statuses@~1.5.0\n- Add `103 Early Hints`\n* deps: type-is@~1.6.18\n- deps: mime-types@~2.1.24\n- perf: prevent internal `throw` on invalid type",
+      "memory_unit_text": "In the expressjs/express release 4.17.0, the project adds express.raw to parse bodies into Buffer, express.text to parse bodies into string, improves error messages for non-strings to res.sendFile and for null/undefined to res.status, supports multiple hosts in X-Forwarded-Host, and updates dependencies: accepts to ~1.3.7, body-parser to 1.19.0 (adding encoding MIK, petabyte support, fixing parsing array brackets after index, and updating bytes, http-errors, iconv-lite, qs, raw-body, type-is), content-disposition to 0.5.3, cookie to 0.4.0 (adding SameSite=None support), finalhandler to ~1.1.2 (setting stricter Content-Security-Policy header, updating parseurl and statuses), parseurl to ~1.3.3, proxy-addr to ~2.0.5 (with ipaddr.js 1.9.0), qs to 6.7.0 (fixing parsing array brackets after index), range-parser to ~1.2.1, send to 0.17.1 (setting stricter CSP header in redirect and error responses, updating http-errors, mime, ms, range-parser, statuses, and removing redundant path.normalize call), serve-static to 1.14.1 (setting stricter CSP header in redirect response, updating parseurl and send), setprototypeof to 1.1.1, statuses to ~1.5.0 (adding 103 Early Hints), and type-is to ~1.6.18 (with mime-types ~2.1.24 and preventing internal throw on invalid type)."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__4_17_1",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.17.1",
+      "tag_name": "4.17.1",
+      "title": "4.17.1",
+      "time_hint": "2019-05-26",
+      "published_at": "2019-05-26T04:30:04Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/4.17.1",
+      "raw_text": "Repository: expressjs/express\nRelease: 4.17.1\nTag: 4.17.1; draft: False; prerelease: False; published_at: 2019-05-26T04:30:04Z; created_at: 2019-05-26T04:24:55Z\nRelease notes:\n* Revert \"Improve error message for `null`/`undefined` to `res.status`\"",
+      "memory_unit_text": "In the expressjs/express release 4.17.1, the project reverts the improvement to the error message for null/undefined to res.status that was introduced in 4.17.0."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__5_0_0_alpha_8",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.0.0-alpha.8",
+      "tag_name": "5.0.0-alpha.8",
+      "title": "5.0.0-alpha.8",
+      "time_hint": "2020-03-26",
+      "published_at": "2020-03-26T00:22:48Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/5.0.0-alpha.8",
+      "raw_text": "Repository: expressjs/express\nRelease: 5.0.0-alpha.8\nTag: 5.0.0-alpha.8; draft: False; prerelease: True; published_at: 2020-03-26T00:22:48Z; created_at: 2020-03-26T00:14:47Z\nRelease notes:\nThis is the sixth Express 5.0 alpha release, based off 4.17.1 and includes\nchanges from 5.0.0-alpha.7.",
+      "memory_unit_text": "In the expressjs/express release 5.0.0-alpha.8, the sixth Express 5.0 alpha release based on 4.17.1, it includes changes from 5.0.0-alpha.7."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__4_17_2",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.17.2",
+      "tag_name": "4.17.2",
+      "title": "4.17.2",
+      "time_hint": "2021-12-17",
+      "published_at": "2021-12-17T03:41:16Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/4.17.2",
+      "raw_text": "Repository: expressjs/express\nRelease: 4.17.2\nTag: 4.17.2; draft: False; prerelease: False; published_at: 2021-12-17T03:41:16Z; created_at: 2021-12-17T03:40:49Z\nRelease notes:\n* Fix handling of `undefined` in `res.jsonp`\n* Fix handling of `undefined` when `\"json escape\"` is enabled\n* Fix incorrect middleware execution with unanchored `RegExp`s\n* Fix `res.jsonp(obj, status)` deprecation message\n* Fix typo in `res.is` JSDoc\n* deps: body-parser@1.19.1\n- deps: bytes@3.1.1\n- deps: http-errors@1.8.1\n- deps: qs@6.9.6\n- deps: raw-body@2.4.2\n- deps: safe-buffer@5.2.1\n- deps: type-is@~1.6.18\n* deps: content-disposition@0.5.4\n- deps: safe-buffer@5.2.1\n* deps: cookie@0.4.1\n- Fix `maxAge` option to reject invalid values\n* deps: proxy-addr@~2.0.7\n- Use `req.socket` over deprecated `req.connection`\n- deps: forwarded@0.2.0\n- deps: ipaddr.js@1.9.1\n* deps: qs@6.9.6\n* deps: safe-buffer@5.2.1\n* deps: send@0.17.2\n- deps: http-errors@1.8.1\n- deps: ms@2.1.3\n- pref: ignore empty http tokens\n* deps: serve-static@1.14.2\n- deps: send@0.17.2\n* deps: setprototypeof@1.2.0",
+      "memory_unit_text": "In the expressjs/express release 4.17.2, the project fixes handling of undefined in res.jsonp, handling of undefined when 'json escape' is enabled, incorrect middleware execution with unanchored RegExps, res.jsonp(obj, status) deprecation message, and a typo in res.is JSDoc. It updates dependencies: body-parser to 1.19.1 (with bytes 3.1.1, http-errors 1.8.1, qs 6.9.6, raw-body 2.4.2, safe-buffer 5.2.1, type-is ~1.6.18), content-disposition to 0.5.4 (with safe-buffer 5.2.1), cookie to 0.4.1 (fixing maxAge option to reject invalid values), proxy-addr to ~2.0.7 (using req.socket over deprecated req.connection, with forwarded 0.2.0 and ipaddr.js 1.9.1), qs to 6.9.6, safe-buffer to 5.2.1, send to 0.17.2 (with http-errors 1.8.1, ms 2.1.3, and ignoring empty http tokens), serve-static to 1.14.2 (with send 0.17.2), and setprototypeof to 1.2.0."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__v5_0_0_beta_1",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.0-beta.1",
+      "tag_name": "v5.0.0-beta.1",
+      "title": "5.0.0-beta.1",
+      "time_hint": "2022-02-15",
+      "published_at": "2022-02-15T01:12:53Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/v5.0.0-beta.1",
+      "raw_text": "Repository: expressjs/express\nRelease: 5.0.0-beta.1\nTag: v5.0.0-beta.1; draft: False; prerelease: True; published_at: 2022-02-15T01:12:53Z; created_at: 2022-02-15T00:13:14Z\nRelease notes:\nThis is the first Express 5.0 beta release, based off 4.17.2 and includes\nchanges from 5.0.0-alpha.8.\n* change:\n- Default \"query parser\" setting to `'simple'`\n- Requires Node.js 4+\n- Use `mime-types` for file to content type mapping\n* deps: array-flatten@3.0.0\n* deps: body-parser@2.0.0-beta.1\n- `req.body` is no longer always initialized to `{}`\n- `urlencoded` parser now defaults `extended` to `false`\n- Use `on-finished` to determine when body read\n* deps: router@2.0.0-beta.1\n- Add new `?`, `*`, and `+` parameter modifiers\n- Internalize private `router.process_params` method\n- Matching group expressions are only RegExp syntax\n- Named matching groups no longer available by position in `req.params`\n- Regular expressions can only be used in a matching group\n- Remove `debug` dependency\n- Special `*` path segment behavior removed\n- deps: array-flatten@3.0.0\n- deps: parseurl@~1.3.3\n- deps: path-to-regexp@3.2.0\n- deps: setprototypeof@1.2.0\n* deps: send@1.0.0-beta.1\n- Change `dotfiles` option default to `'ignore'`\n- Remove `hidden` option; use `dotfiles` option instead\n- Use `mime-types` for file to content type mapping\n- deps: debug@3.1.0\n* deps: serve-static@2.0.0-beta.1\n- Change `dotfiles` option default to `'ignore'`\n- Remove `hidden` option; use `dotfiles` option instead\n- Use `mime-types` for file to content type mapping\n- deps: send@1.0.0-beta.1",
+      "memory_unit_text": "In the expressjs/express release 5.0.0-beta.1, the first Express 5.0 beta based on 4.17.2 and including changes from 5.0.0-alpha.8, the project changes the default 'query parser' setting to 'simple', requires Node.js 4+, uses mime-types for file to content type mapping, and updates dependencies: array-flatten to 3.0.0, body-parser to 2.0.0-beta.1 (req.body is no longer always initialized to {}, urlencoded parser defaults extended to false, uses on-finished to determine when body read), router to 2.0.0-beta.1 (adding new ?, *, and + parameter modifiers, internalizing private router.process_params method, matching group expressions are only RegExp syntax, named matching groups no longer available by position in req.params, regular expressions can only be used in a matching group, removing debug dependency, special * path segment behavior removed, and updating array-flatten, parseurl, path-to-regexp, setprototypeof), send to 1.0.0-beta.1 (changing dotfiles option default to 'ignore', removing hidden option, using mime-types for file to content type mapping, updating debug), and serve-static to 2.0.0-beta.1 (changing dotfiles option default to 'ignore', removing hidden option, using mime-types for file to content type mapping, updating send)."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__4_17_3",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.17.3",
+      "tag_name": "4.17.3",
+      "title": "4.17.3",
+      "time_hint": "2022-02-17",
+      "published_at": "2022-02-17T02:06:52Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/4.17.3",
+      "raw_text": "Repository: expressjs/express\nRelease: 4.17.3\nTag: 4.17.3; draft: False; prerelease: False; published_at: 2022-02-17T02:06:52Z; created_at: 2022-02-17T02:03:42Z\nRelease notes:\n* deps: accepts@~1.3.8\n- deps: mime-types@~2.1.34\n- deps: negotiator@0.6.3\n* deps: body-parser@1.19.2\n- deps: bytes@3.1.2\n- deps: qs@6.9.7\n- deps: raw-body@2.4.3\n* deps: cookie@0.4.2\n* deps: qs@6.9.7\n* Fix handling of `__proto__` keys\n* pref: remove unnecessary regexp for trust proxy",
+      "memory_unit_text": "In the expressjs/express release 4.17.3, the project updates dependencies: accepts to ~1.3.8 (with mime-types ~2.1.34 and negotiator 0.6.3), body-parser to 1.19.2 (with bytes 3.1.2, qs 6.9.7, raw-body 2.4.3), cookie to 0.4.2, qs to 6.9.7, fixes handling of __proto__ keys, and removes an unnecessary regexp for trust proxy."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__4_18_0",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.18.0",
+      "tag_name": "4.18.0",
+      "title": "4.18.0",
+      "time_hint": "2022-04-25",
+      "published_at": "2022-04-25T19:17:02Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/4.18.0",
+      "raw_text": "Repository: expressjs/express\nRelease: 4.18.0\nTag: 4.18.0; draft: False; prerelease: False; published_at: 2022-04-25T19:17:02Z; created_at: 2022-04-25T18:53:28Z\nRelease notes:\n* Add \"root\" option to `res.download`\n* Allow `options` without `filename` in `res.download`\n* Deprecate string and non-integer arguments to `res.status`\n* Fix behavior of `null`/`undefined` as `maxAge` in `res.cookie`\n* Fix handling very large stacks of sync middleware\n* Ignore `Object.prototype` values in settings through `app.set`/`app.get`\n* Invoke `default` with same arguments as types in `res.format`\n* Support proper 205 responses using `res.send`\n* Use `http-errors` for `res.format` error\n* deps: body-parser@1.20.0\n- Fix error message for json parse whitespace in `strict`\n- Fix internal error when inflated body exceeds limit\n- Prevent loss of async hooks context\n- Prevent hanging when request already read\n- deps: depd@2.0.0\n- deps: http-errors@2.0.0\n- deps: on-finished@2.4.1\n- deps: qs@6.10.3\n- deps: raw-body@2.5.1\n* deps: cookie@0.5.0\n- Add `priority` option\n- Fix `expires` option to reject invalid dates\n* deps: depd@2.0.0\n- Replace internal `eval` usage with `Function` constructor\n- Use instance methods on `process` to check for listeners\n* deps: finalhandler@1.2.0\n- Remove set content headers that break response\n- deps: on-finished@2.4.1\n- deps: statuses@2.0.1\n* deps: on-finished@2.4.1\n- Prevent loss of async hooks context\n* deps: qs@6.10.3\n* deps: send@0.18.0\n- Fix emitted 416 error missing headers property\n- Limit the headers removed for 304 response\n- deps: depd@2.0.0\n- deps: destroy@1.2.0\n- deps: http-errors@2.0.0\n- deps: on-finished@2.4.1\n- deps: statuses@2.0.1\n* deps: serve-static@1.15.0\n- deps: send@0.18.0\n* deps: statuses@2.0.1\n- Remove code 306\n- Rename `425 Unordered Collection` to standard `425 Too Early`",
+      "memory_unit_text": "In the expressjs/express release 4.18.0, the project adds a 'root' option to res.download, allows options without filename in res.download, deprecates string and non-integer arguments to res.status, fixes behavior of null/undefined as maxAge in res.cookie, fixes handling very large stacks of sync middleware, ignores Object.prototype values in settings through app.set/app.get, invokes default with same arguments as types in res.format, supports proper 205 responses using res.send, uses http-errors for res.format error, and updates dependencies: body-parser to 1.20.0 (fixing error message for json parse whitespace in strict, fixing internal error when inflated body exceeds limit, preventing loss of async hooks context, preventing hanging when request already read, and updating depd, http-errors, on-finished, qs, raw-body), cookie to 0.5.0 (adding priority option, fixing expires option to reject invalid dates), depd to 2.0.0 (replacing internal eval usage with Function constructor, using instance methods on process to check for listeners), finalhandler to 1.2.0 (removing set content headers that break response, updating on-finished and statuses), on-finished to 2.4.1 (preventing loss of async hooks context), qs to 6.10.3, send to 0.18.0 (fixing emitted 416 error missing headers property, limiting headers removed for 304 response, updating depd, destroy, http-errors, on-finished, statuses), serve-static to 1.15.0 (updating send), and statuses to 2.0.1 (removing code 306, renaming 425 Unordered Collection to standard 425 Too Early)."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__4_18_1",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.18.1",
+      "tag_name": "4.18.1",
+      "title": "4.18.1",
+      "time_hint": "2022-04-29",
+      "published_at": "2022-04-29T19:32:52Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/4.18.1",
+      "raw_text": "Repository: expressjs/express\nRelease: 4.18.1\nTag: 4.18.1; draft: False; prerelease: False; published_at: 2022-04-29T19:32:52Z; created_at: 2022-04-29T19:32:26Z\nRelease notes:\n* Fix hanging on large stack of sync routes",
+      "memory_unit_text": "In the expressjs/express release 4.18.1, the project fixes hanging on large stack of sync routes."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__4_18_2",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.18.2",
+      "tag_name": "4.18.2",
+      "title": "4.18.2",
+      "time_hint": "2022-10-08",
+      "published_at": "2022-10-08T20:12:36Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/4.18.2",
+      "raw_text": "Repository: expressjs/express\nRelease: 4.18.2\nTag: 4.18.2; draft: False; prerelease: False; published_at: 2022-10-08T20:12:36Z; created_at: 2022-10-08T20:11:42Z\nRelease notes:\n* Fix regression routing a large stack in a single route\n* deps: body-parser@1.20.1\n- deps: qs@6.11.0\n- perf: remove unnecessary object clone\n* deps: qs@6.11.0",
+      "memory_unit_text": "In the expressjs/express release 4.18.2, the project fixes a regression routing a large stack in a single route, and updates dependencies: body-parser to 1.20.1 (with qs 6.11.0 and removing unnecessary object clone), and qs to 6.11.0."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__4_18_3",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.18.3",
+      "tag_name": "4.18.3",
+      "title": "4.18.3",
+      "time_hint": "2024-02-29",
+      "published_at": "2024-02-29T11:44:48Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/4.18.3",
+      "raw_text": "Repository: expressjs/express\nRelease: 4.18.3\nTag: 4.18.3; draft: False; prerelease: False; published_at: 2024-02-29T11:44:48Z; created_at: 2024-02-29T11:42:09Z\nRelease notes:\n## Main Changes\n* Fix routing requests without method\n* deps: body-parser@1.20.2\n- Fix strict json error message on Node.js 19+\n- deps: content-type@~1.0.5\n- deps: raw-body@2.5.2\n## Other Changes\n* Use https: protocol instead of deprecated git: protocol by @vcsjones in https://github.com/expressjs/express/pull/5032\n* build: Node.js@16.18 and Node.js@18.12 by @abenhamdine in https://github.com/expressjs/express/pull/5034\n* ci: update actions/checkout to v3 by @armujahid in https://github.com/expressjs/express/pull/5027\n* test: remove unused function arguments in params by @raksbisht in https://github.com/expressjs/express/pull/5124\n* Remove unused originalIndex from acceptParams by @raksbisht in https://github.com/expressjs/express/pull/5119\n* Fixed typos by @raksbisht in https://github.com/expressjs/express/pull/5117\n* examples: remove unused params by @raksbisht in https://github.com/expressjs/express/pull/5113\n* fix: parameter str is not described in JSDoc by @raksbisht in https://github.com/expressjs/express/pull/5130\n* fix: typos in History.md by @raksbisht in https://github.com/expressjs/express/pull/5131\n* build : add Node.js@19.7 by @abenhamdine in https://github.com/expressjs/express/pull/5028\n* test: remove unused function arguments in params by @raksbisht in https://github.com/expressjs/express/pull/5137\n* use random port in test so it won't fail on already listening by @rluvaton in https://github.com/expressjs/express/pull/5162\n* tests: use cb() instead of done() by @kristof-low in https://github.com/expressjs/express/pull/5233\n* examples: remove multipart example by @riddlew in https://github.com/expressjs/express/pull/5195\n* Update support Node.js@18 in the CI  by @UlisesGascon in https://github.com/expressjs/express/pull/5490\n* Fix favicon-related bug in cookie-sessions example by @DmytroKondrashov in https://github.com/expressjs/express/pull/5414\n* Release 4.18.3 by @UlisesGascon in https://github.com/expressjs/express/pull/5505\n## New Contributors\n* @vcsjones made their first contribution in https://github.com/expressjs/express/pull/5032\n* @abenhamdine made their first contribution in https://github.com/expressjs/express/pull/5034\n* @armujahid made their first contribution in https://github.com/expressjs/express/pull/5027\n* @raksbisht made their first contribution in https://github.com/expressjs/express/pull/5124\n* @rluvaton made their first contribution in https://github.com/expressjs/express/pull/5162\n* @kristof-low made their first contribution in https://github.com/expressjs/express/pull/5233\n* @riddlew made their first contribution in https://github.com/expressjs/express/pull/5195\n* @DmytroKondrashov made their first contribution in https://github.com/expressjs/express/pull/5414\n**Full Changelog**: https://github.com/expressjs/express/compare/4.18.2...4.18.3",
+      "memory_unit_text": "In the expressjs/express release 4.18.3, the project fixes routing requests without method, updates body-parser to 1.20.2 (fixing strict json error message on Node.js 19+, updating content-type and raw-body), uses https protocol instead of deprecated git protocol, updates build to Node.js 16.18 and 18.12, updates CI actions/checkout to v3, and includes various test and documentation improvements."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__4_19_0",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.19.0",
+      "tag_name": "4.19.0",
+      "title": "4.19.0",
+      "time_hint": "2024-03-20",
+      "published_at": "2024-03-20T16:43:00Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/4.19.0",
+      "raw_text": "Repository: expressjs/express\nRelease: 4.19.0\nTag: 4.19.0; draft: False; prerelease: False; published_at: 2024-03-20T16:43:00Z; created_at: 2024-03-20T16:39:49Z\nRelease notes:\n## What's Changed\n* fix typo in release date by @UlisesGascon in https://github.com/expressjs/express/pull/5527\n* docs: nominating @wesleytodd to be project captian by @wesleytodd in https://github.com/expressjs/express/pull/5511\n* docs: loosen TC activity rules by @wesleytodd in https://github.com/expressjs/express/pull/5510\n* Add note on how to update docs for new release by @crandmck in https://github.com/expressjs/express/pull/5541\n* [Prevent open redirect allow list bypass due to encodeurl](https://github.com/expressjs/express/pull/5551/commits/660ccf5fa33dd0baab069e5c8ddd9ffe7d8bbff1)\n* Release 4.19.0 by @wesleytodd in https://github.com/expressjs/express/pull/5551\n## New Contributors\n* @crandmck made their first contribution in https://github.com/expressjs/express/pull/5541\n**Full Changelog**: https://github.com/expressjs/express/compare/4.18.3...4.19.0",
+      "memory_unit_text": "In the expressjs/express release 4.19.0, the project fixes a typo in release date, nominates @wesleytodd as project captain, loosens TC activity rules, adds a note on how to update docs for new release, and prevents open redirect allow list bypass due to encodeurl."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__4_19_1",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.19.1",
+      "tag_name": "4.19.1",
+      "title": "4.19.1",
+      "time_hint": "2024-03-25",
+      "published_at": "2024-03-25T14:31:15Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/4.19.1",
+      "raw_text": "Repository: expressjs/express\nRelease: 4.19.1\nTag: 4.19.1; draft: False; prerelease: False; published_at: 2024-03-25T14:31:15Z; created_at: 2024-03-20T22:18:05Z\nRelease notes:\n## What's Changed\n* Fix ci after location patch by @wesleytodd in https://github.com/expressjs/express/pull/5552\n* fixed un-edited version in history.md for 4.19.0 by @wesleytodd in https://github.com/expressjs/express/pull/5556\n**Full Changelog**: https://github.com/expressjs/express/compare/4.19.0...4.19.1",
+      "memory_unit_text": "In the expressjs/express release 4.19.1, the project fixes CI after a location patch and fixes an un-edited version in history.md for 4.19.0."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__4_19_2",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.19.2",
+      "tag_name": "4.19.2",
+      "title": "4.19.2",
+      "time_hint": "2024-03-25",
+      "published_at": "2024-03-25T14:32:36Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/4.19.2",
+      "raw_text": "Repository: expressjs/express\nRelease: 4.19.2\nTag: 4.19.2; draft: False; prerelease: False; published_at: 2024-03-25T14:32:36Z; created_at: 2024-03-25T14:26:10Z\nRelease notes:\n## What's Changed\n* [Improved fix for open redirect allow list bypass](https://github.com/expressjs/express/commit/0b746953c4bd8e377123527db11f9cd866e39f94)\n**Full Changelog**: https://github.com/expressjs/express/compare/4.19.1...4.19.2",
+      "memory_unit_text": "In the expressjs/express release 4.19.2, the project provides an improved fix for open redirect allow list bypass."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__5_0_0_beta_2",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.0.0-beta.2",
+      "tag_name": "5.0.0-beta.2",
+      "title": "5.0.0-beta.2",
+      "time_hint": "2024-03-25",
+      "published_at": "2024-03-25T14:59:09Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/5.0.0-beta.2",
+      "raw_text": "Repository: expressjs/express\nRelease: 5.0.0-beta.2\nTag: 5.0.0-beta.2; draft: False; prerelease: True; published_at: 2024-03-25T14:59:09Z; created_at: 2024-03-21T03:00:26Z\nRelease notes:\n## What's Changed\n* lib: fix typo ocurred -> occurred by @caioagiani in https://github.com/expressjs/express/pull/4805\n* examples: defend from privilege elevation by @KoyamaSohei in https://github.com/expressjs/express/pull/4120\n* replace \"replaces\" with \"replacer\" in jsdoc by @apeltop in https://github.com/expressjs/express/pull/4843\n* Add install size badge to README by @styfle in https://github.com/expressjs/express/pull/3710\n* Replace deprecated String.prototype.substr() by @CommanderRoot in https://github.com/expressjs/express/pull/4860\n* fix: remove deprecated html attribute by @Hashen110 in https://github.com/expressjs/express/pull/4866\n* fix: parameter index is not described in JSDoc by @Hashen110 in https://github.com/expressjs/express/pull/4867\n* fix: continue is unnecessary as the last statement in a loop by @Hashen110 in https://github.com/expressjs/express/pull/4868\n* Deprecate non integer status codes in v4 by @jonchurch in https://github.com/expressjs/express/pull/4223\n* Add root support in res.download() by @mmito in https://github.com/expressjs/express/pull/4855\n* res.format(): call default using `obj` as the context by @shesek in https://github.com/expressjs/express/pull/3587\n* Feature/4171 depd by @UlisesGascon in https://github.com/expressjs/express/pull/4174\n* Validate `maxAge` appropriateness before use by @cjbarth in https://github.com/expressjs/express/pull/3936\n* deps: statuses@2.0.1 by @3imed-jaberi in https://github.com/expressjs/express/pull/4336\n* test: fix typo by @Hashen110 in https://github.com/expressjs/express/pull/4882\n* docs: fix typo: http -> HTTP by @ghousemohamed in https://github.com/expressjs/express/pull/4872\n* Update Security.md by @netcode in https://github.com/expressjs/express/pull/4890\n* examples: add missing associated labels by @Hashen110 in https://github.com/expressjs/express/pull/4884\n* Increase timeout for mocha to 7500 by @grisu48 in https://github.com/expressjs/express/pull/4887\n* Release 4.18 by @dougwilson in https://github.com/expressjs/express/pull/4287\n* Expanding the benchmark. by @denizy97 in https://github.com/expressjs/express/pull/4880\n* examples: remove unused params by @alxdrg in https://github.com/expressjs/express/pull/4914\n* Grammatically updated the express documentation for better comprehension by @REALSTEVEIG in https://github.com/expressjs/express/pull/4926\n* Freenode is dead/dying by @theabhinavdas in https://github.com/expressjs/express/pull/5013\n* Use https: protocol instead of deprecated git: protocol by @vcsjones in https://github.com/expressjs/express/pull/5032\n* build: Node.js@16.18 and Node.js@18.12 by @abenhamdine in https://github.com/expressjs/express/pull/5034\n* ci: update actions/checkout to v3 by @armujahid in https://github.com/expressjs/express/pull/5027\n* test: remove unused function arguments in params by @raksbisht in https://github.com/expressjs/express/pull/5124\n* Remove unused originalIndex from acceptParams by @raksbisht in https://github.com/expressjs/express/pull/5119\n* Fixed typos by @raksbisht in https://github.com/expressjs/express/pull/5117\n* examples: remove unused params by @raksbisht in https://github.com/expressjs/express/pull/5113\n* fix: parameter str is not described in JSDoc by @raksbisht in https://github.com/expressjs/express/pull/5130\n* fix: typos in History.md by @raksbisht in https://github.com/expressjs/express/pull/5131\n* build : add Node.js@19.7 by @abenhamdine in https://github.com/expressjs/express/pull/5028\n* test: remove unused function arguments in params by @raksbisht in https://github.com/expressjs/express/pull/5137\n* use random port in test so it won't fail on already listening by @rluvaton in https://github.com/expressjs/express/pull/5162\n* tests: use cb() instead of done() by @kristof-low in https://github.com/expr...",
+      "memory_unit_text": "In the expressjs/express release 5.0.0-beta.2, the project includes various fixes and improvements such as fixing a typo, defending from privilege elevation in examples, replacing 'replaces' with 'replacer' in jsdoc, adding install size badge to README, replacing deprecated String.prototype.substr(), removing deprecated html attribute, fixing JSDoc parameter descriptions, deprecating non-integer status codes in v4, adding root support in res.download(), calling default using obj as context in res.format(), using depd, validating maxAge appropriateness, updating statuses to 2.0.1, and many other test, documentation, and CI updates."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__v5_0_0_beta_3",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.0-beta.3",
+      "tag_name": "v5.0.0-beta.3",
+      "title": "v5.0.0-beta.3",
+      "time_hint": "2024-03-25",
+      "published_at": "2024-03-25T14:59:35Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/v5.0.0-beta.3",
+      "raw_text": "Repository: expressjs/express\nRelease: v5.0.0-beta.3\nTag: v5.0.0-beta.3; draft: False; prerelease: True; published_at: 2024-03-25T14:59:35Z; created_at: 2024-03-25T14:41:38Z\nRelease notes:\n**Full Changelog**: https://github.com/expressjs/express/compare/5.0.0-beta.2...v5.0.0-beta.3",
+      "memory_unit_text": "In the expressjs/express release v5.0.0-beta.3, the project provides a full changelog comparing to 5.0.0-beta.2."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__4_20_0",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.20.0",
+      "tag_name": "4.20.0",
+      "title": "4.20.0",
+      "time_hint": "2024-09-10",
+      "published_at": "2024-09-10T02:06:04Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/4.20.0",
+      "raw_text": "Repository: expressjs/express\nRelease: 4.20.0\nTag: 4.20.0; draft: False; prerelease: False; published_at: 2024-09-10T02:06:04Z; created_at: 2024-09-10T02:01:43Z\nRelease notes:\n## What's Changed\n### Important\n* IMPORTANT: The default `depth` level for parsing URL-encoded data is now `32` (previously was `Infinity`)\n* Remove link renderization in html while using `res.redirect`\n### Other Changes\n* 4.19.2 Staging by @wesleytodd in https://github.com/expressjs/express/pull/5561\n* remove duplicate location test for data uri by @wesleytodd in https://github.com/expressjs/express/pull/5562\n* feat: document beta releases expectations by @marco-ippolito in https://github.com/expressjs/express/pull/5565\n* Cut down on duplicated CI runs by @jonchurch in https://github.com/expressjs/express/pull/5564\n* Add a Threat Model by @UlisesGascon in https://github.com/expressjs/express/pull/5526\n* Assign captain of encodeurl by @blakeembrey in https://github.com/expressjs/express/pull/5579\n* Nominate jonchurch as repo captain for `http-errors`, `expressjs.com`, `morgan`, `cors`, `body-parser` by @jonchurch in https://github.com/expressjs/express/pull/5587\n* docs: update Security.md by @inigomarquinez in https://github.com/expressjs/express/pull/5590\n* docs: update triage nomination policy by @UlisesGascon in https://github.com/expressjs/express/pull/5600\n* Add CodeQL (SAST) by @UlisesGascon in https://github.com/expressjs/express/pull/5433\n* docs: add UlisesGascon as triage initiative captain by @UlisesGascon in https://github.com/expressjs/express/pull/5605\n* deps: encodeurl@~2.0.0 by @blakeembrey in https://github.com/expressjs/express/pull/5569\n* skip QUERY method test by @jonchurch in https://github.com/expressjs/express/pull/5628\n* ignore ETAG query test on 21 and 22, reuse skip util by @jonchurch in https://github.com/expressjs/express/pull/5639\n* add support Node.js@22 in the CI by @mertcanaltin in https://github.com/expressjs/express/pull/5627\n* doc: add table of contents, tc/triager lists to readme by @mertcanaltin in https://github.com/expressjs/express/pull/5619\n* List and sort all projects, add captains by @blakeembrey in https://github.com/expressjs/express/pull/5653\n* docs: add @UlisesGascon as captain for cookie-parser by @UlisesGascon in https://github.com/expressjs/express/pull/5666\n* ✨ bring back query tests for node 21 by @ctcpip in https://github.com/expressjs/express/pull/5690\n* [v4] Deprecate `res.clearCookie` accepting `options.maxAge` and `options.expires` by @jonchurch in https://github.com/expressjs/express/pull/5672\n* skip QUERY tests for Node 21 only, still not supported by @jonchurch in https://github.com/expressjs/express/pull/5695\n* 📝 update people, add ctcpip to TC by @ctcpip in https://github.com/expressjs/express/pull/5683\n* remove minor version pinning from ci by @jonchurch in https://github.com/expressjs/express/pull/5722\n* Fix link variable use in attribution section of CODE OF CONDUCT by @IamLizu in https://github.com/expressjs/express/pull/5762\n* Replace Appveyor windows testing with GHA by @jonchurch in https://github.com/expressjs/express/pull/5599\n* Add OSSF Scorecard badge by @UlisesGascon in https://github.com/expressjs/express/pull/5436\n* update scorecard link by @bjohansebas in https://github.com/expressjs/express/pull/5814\n* Nominate @IamLizu to the triage team by @UlisesGascon in https://github.com/expressjs/express/pull/5836\n* deps: path-to-regexp@0.1.8 by @blakeembrey in https://github.com/expressjs/express/pull/5603\n* docs: specify new instructions for `question` and `discuss` by @IamLizu in https://github.com/expressjs/express/pull/5835\n* 4.x: Upgrade `merge-descriptors` dependency by @RobinTail in https://github.com/expressjs/express/pull/5781\n* path-to-regexp@0.1.10 by @blakeembrey in https://github.com/expressjs/express/pull/5902\n## New Contributors\n* @marco-ippolito made their first contribution in https://github.com/expressjs/express/pull/5565\n* @inigomarquinez made their first contributi...",
+      "memory_unit_text": "In the expressjs/express release 4.20.0, the project makes important changes: the default depth level for parsing URL-encoded data is now 32 (previously Infinity), and removes link renderization in html while using res.redirect. Other changes include staging 4.19.2, removing duplicate location test for data uri, documenting beta releases expectations, cutting down on duplicated CI runs, adding a Threat Model, assigning captain of encodeurl, nominating jonchurch as repo captain for several packages, updating Security.md, updating triage nomination policy, adding CodeQL (SAST), adding UlisesGascon as triage initiative captain, updating encodeurl to ~2.0.0, skipping QUERY method test, ignoring ETAG query test on 21 and 22, adding support Node.js@22 in CI, adding table of contents and tc/triager lists to readme, listing and sorting all projects with captains, adding UlisesGascon as captain for cookie-parser, bringing back query tests for node 21, deprecating res.clearCookie accepting options.maxAge and options.expires, skipping QUERY tests for Node 21 only, updating people and adding ctcpip to TC, removing minor version pinning from CI, fixing link variable use in attribution section of CODE OF CONDUCT, replacing Appveyor windows testing with GHA, adding OSSF Scorecard badge, updating scorecard link, nominating @IamLizu to the triage team, updating path-to-regexp to 0.1.8, specifying new instructions for question and discuss, upgrading merge-descriptors dependency, and updating path-to-regexp to 0.1.10."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__v5_0_0",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.0",
+      "tag_name": "v5.0.0",
+      "title": "5.0.0",
+      "time_hint": "2024-09-10",
+      "published_at": "2024-09-10T04:51:37Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/v5.0.0",
+      "raw_text": "Repository: expressjs/express\nRelease: 5.0.0\nTag: v5.0.0; draft: False; prerelease: False; published_at: 2024-09-10T04:51:37Z; created_at: 2024-09-10T04:37:22Z\nRelease notes:\n# Express v5.0.0\n🎉 **Express v5 is finally here!** 🎉\nAfter years of development, the long-awaited Express v5 has been officially released. This version focuses on simplifying the codebase, improving security, and dropping support for older Node.js versions to enable better performance and maintainability.\nFor detailed information, please check out the official [Express v5 release blog post](https://expressjs.com/2024/10/15/v5-release.html).\n## Most relevant details\n### Major Changes in v5\n- **Node.js version support**: Dropped support for Node.js versions before v18.\n- **Routing changes**: Updated to `path-to-regexp@8.x`, removing sub-expression regex patterns for security reasons (ReDoS mitigation).\n- **Promise support**: Middleware can now return rejected promises, caught by the router as errors.\n- **`body-parser` changes**: Several improvements including the ability to customize `urlencoded` body depth and defaulting `extended` to `false`.\n- **Deprecated API methods removed**: Removed old, deprecated API method signatures from Express v3/v4.\nFor a complete list of breaking changes and API deprecations, see the [migration guide](https://expressjs.com/en/guide/migrating-5.html).\n### Security Updates\nThis release includes important security fixes, including improvements to prevent ReDoS attacks and mitigation for CVE-2024-45590. Full details can be found in the [security release notes](https://expressjs.com/2024/09/29/security-releases.html).\n### Migration\nBe sure to check out our [migration guide](https://expressjs.com/en/guide/migrating-5.html) for instructions on how to update your applications from Express v4 to v5.\n### Security Guidance\nFor best practices, we recommend reviewing the [Threat Model](https://github.com/expressjs/security-wg/blob/main/docs/ThreatModel.md) which outlines Express' approach to securing your applications, including tips for user input validation and other critical aspects.\n## What's Changed\n* 4.19.2 Staging by @wesleytodd in https://github.com/expressjs/express/pull/5561\n* remove duplicate location test for data uri by @wesleytodd in https://github.com/expressjs/express/pull/5562\n* feat: document beta releases expectations by @marco-ippolito in https://github.com/expressjs/express/pull/5565\n* Cut down on duplicated CI runs by @jonchurch in https://github.com/expressjs/express/pull/5564\n* Add a Threat Model by @UlisesGascon in https://github.com/expressjs/express/pull/5526\n* Assign captain of encodeurl by @blakeembrey in https://github.com/expressjs/express/pull/5579\n* Nominate jonchurch as repo captain for `http-errors`, `expressjs.com`, `morgan`, `cors`, `body-parser` by @jonchurch in https://github.com/expressjs/express/pull/5587\n* docs: update Security.md by @inigomarquinez in https://github.com/expressjs/express/pull/5590\n* docs: update triage nomination policy by @UlisesGascon in https://github.com/expressjs/express/pull/5600\n* Add CodeQL (SAST) by @UlisesGascon in https://github.com/expressjs/express/pull/5433\n* docs: add UlisesGascon as triage initiative captain by @UlisesGascon in https://github.com/expressjs/express/pull/5605\n* Use object with null prototype for various app properties by @EvanHahn in https://github.com/expressjs/express/pull/4861\n* deps: encodeurl@~2.0.0 by @blakeembrey in https://github.com/expressjs/express/pull/5569\n* skip QUERY method test by @jonchurch in https://github.com/expressjs/express/pull/5628\n* ignore ETAG query test on 21 and 22, reuse skip util by @jonchurch in https://github.com/expressjs/express/pull/5639\n* add support Node.js@22 in the CI by @mertcanaltin in https://github.com/expressjs/express/pull/5627\n* doc: add table of contents, tc/triager lists to readme by @mertcanaltin in https://github.com/expressjs/express/pull/5619\n* List and sort all projects, add captains by @blake...",
+      "memory_unit_text": "In the expressjs/express release v5.0.0, the project announces the official release of Express v5. Major changes include dropping support for Node.js versions before v18, routing changes with path-to-regexp@8.x removing sub-expression regex patterns for ReDoS mitigation, middleware can now return rejected promises caught by the router, body-parser changes including customizable urlencoded body depth and defaulting extended to false, and removal of deprecated API method signatures from v3/v4. Security updates include ReDoS prevention and mitigation for CVE-2024-45590. The release also includes many other changes such as staging 4.19.2, removing duplicate location test, documenting beta releases expectations, cutting down on duplicated CI runs, adding a Threat Model, assigning captain of encodeurl, nominating jonchurch as repo captain, updating Security.md, updating triage nomination policy, adding CodeQL, adding UlisesGascon as triage initiative captain, using object with null prototype for various app properties, updating encodeurl to ~2.0.0, skipping QUERY method test, ignoring ETAG query test on 21 and 22, adding support Node.js@22 in CI, adding table of contents and tc/triager lists to readme, listing and sorting all projects with captains, and many more."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__4_21_0",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.21.0",
+      "tag_name": "4.21.0",
+      "title": "4.21.0",
+      "time_hint": "2024-09-11",
+      "published_at": "2024-09-11T22:34:26Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/4.21.0",
+      "raw_text": "Repository: expressjs/express\nRelease: 4.21.0\nTag: 4.21.0; draft: False; prerelease: False; published_at: 2024-09-11T22:34:26Z; created_at: 2024-09-11T22:32:37Z\nRelease notes:\n## What's Changed\n* Deprecate `\"back\"` magic string in redirects by @blakeembrey in https://github.com/expressjs/express/pull/5935\n* finalhandler@1.3.1 by @wesleytodd in https://github.com/expressjs/express/pull/5954\n* fix(deps): serve-static@1.16.2 by @wesleytodd in https://github.com/expressjs/express/pull/5951\n* Upgraded dependency qs to 6.13.0 to match qs in body-parser by @agadzinski93 in https://github.com/expressjs/express/pull/5946\n## New Contributors\n* @agadzinski93 made their first contribution in https://github.com/expressjs/express/pull/5946\n**Full Changelog**: https://github.com/expressjs/express/compare/4.20.0...4.21.0",
+      "memory_unit_text": "In the expressjs/express release 4.21.0, the project deprecates the 'back' magic string in redirects, updates finalhandler to 1.3.1, updates serve-static to 1.16.2, and upgrades qs to 6.13.0 to match qs in body-parser."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__4_21_1",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.21.1",
+      "tag_name": "4.21.1",
+      "title": "4.21.1",
+      "time_hint": "2024-10-08",
+      "published_at": "2024-10-08T18:38:48Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/4.21.1",
+      "raw_text": "Repository: expressjs/express\nRelease: 4.21.1\nTag: 4.21.1; draft: False; prerelease: False; published_at: 2024-10-08T18:38:48Z; created_at: 2024-10-08T18:36:08Z\nRelease notes:\n## What's Changed\n* Backport a fix for CVE-2024-47764 to the 4.x branch by @joshbuker in https://github.com/expressjs/express/pull/6029\n* Release: 4.21.1 by @UlisesGascon in https://github.com/expressjs/express/pull/6031\n**Full Changelog**: https://github.com/expressjs/express/compare/4.21.0...4.21.1",
+      "memory_unit_text": "In the expressjs/express release 4.21.1, the project backports a fix for CVE-2024-47764 to the 4.x branch."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__v5_0_1",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.0.1",
+      "tag_name": "v5.0.1",
+      "title": "5.0.1",
+      "time_hint": "2024-10-08",
+      "published_at": "2024-10-08T19:41:00Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/v5.0.1",
+      "raw_text": "Repository: expressjs/express\nRelease: 5.0.1\nTag: v5.0.1; draft: False; prerelease: False; published_at: 2024-10-08T19:41:00Z; created_at: 2025-04-20T14:28:30Z\nRelease notes:\n## What's Changed\n* remove --bail from test script by @jonchurch in https://github.com/expressjs/express/pull/5962\n* Nominate @bjohansebas to the triage team by @UlisesGascon in https://github.com/expressjs/express/pull/6009\n* Link and update captains by @blakeembrey in https://github.com/expressjs/express/pull/6013\n* Update `cookie` semver lock to address CVE-2024-47764 by @joshbuker in https://github.com/expressjs/express/pull/6017\n* Release: 5.0.1 by @UlisesGascon in https://github.com/expressjs/express/pull/6032\n**Full Changelog**: https://github.com/expressjs/express/compare/v5.0.0...5.0.1",
+      "memory_unit_text": "In the expressjs/express release v5.0.1, the project removes --bail from test script, nominates @bjohansebas to the triage team, links and updates captains, and updates cookie semver lock to address CVE-2024-47764."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__4_21_2",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.21.2",
+      "tag_name": "4.21.2",
+      "title": "4.21.2",
+      "time_hint": "2024-12-05",
+      "published_at": "2024-12-05T22:41:41Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/4.21.2",
+      "raw_text": "Repository: expressjs/express\nRelease: 4.21.2\nTag: 4.21.2; draft: False; prerelease: False; published_at: 2024-12-05T22:41:41Z; created_at: 2024-12-05T22:27:56Z\nRelease notes:\n## What's Changed\n* Add funding field (v4) by @bjohansebas in https://github.com/expressjs/express/pull/6065\n* deps: path-to-regexp@0.1.11 by @blakeembrey in https://github.com/expressjs/express/pull/5956\n* deps: bump path-to-regexp@0.1.12 by @jonchurch in https://github.com/expressjs/express/pull/6209\n* Release: 4.21.2 by @UlisesGascon in https://github.com/expressjs/express/pull/6094\n**Full Changelog**: https://github.com/expressjs/express/compare/4.21.1...4.21.2",
+      "memory_unit_text": "In the expressjs/express release 4.21.2, the project adds a funding field, updates path-to-regexp to 0.1.11 and then to 0.1.12."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__v5_1_0",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.1.0",
+      "tag_name": "v5.1.0",
+      "title": "v5.1.0",
+      "time_hint": "2025-03-31",
+      "published_at": "2025-03-31T14:04:44Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/v5.1.0",
+      "raw_text": "Repository: expressjs/express\nRelease: v5.1.0\nTag: v5.1.0; draft: False; prerelease: False; published_at: 2025-03-31T14:04:44Z; created_at: 2025-03-28T18:29:22Z\nRelease notes:\n## What's Changed\n* Update captains by @UlisesGascon in https://github.com/expressjs/express/pull/6027\n* build: Node.js 23.0 by @bjohansebas in https://github.com/expressjs/express/pull/6075\n* Add funding field (v5) by @bjohansebas in https://github.com/expressjs/express/pull/6064\n* ✅ add discarded middleware test by @ctcpip in https://github.com/expressjs/express/pull/5819\n* update homepage link http to https by @bjohansebas in https://github.com/expressjs/express/pull/5920\n* Improve readme by @bjohansebas in https://github.com/expressjs/express/pull/5994\n* Add bjohansebas as repo captain for expressjs.com by @crandmck in https://github.com/expressjs/express/pull/6058\n* Remove Object.setPrototypeOf polyfill by @Phillip9587 in https://github.com/expressjs/express/pull/6081\n* fix(buffer): use node:buffer instead of safe-buffer by @bhavya3024 in https://github.com/expressjs/express/pull/6071\n* docs: Add DCO by @UlisesGascon in https://github.com/expressjs/express/pull/6048\n* cleanup: remove promise support check from tests by @Phillip9587 in https://github.com/expressjs/express/pull/6148\n* Use loop for acceptParams by @blakeembrey in https://github.com/expressjs/express/pull/6066\n* Improve documentation step in release process by @bjohansebas in https://github.com/expressjs/express/pull/6150\n* cleanup: remove unnecessary require for global Buffer by @Phillip9587 in https://github.com/expressjs/express/pull/6146\n* cleanup: remove AsyncLocalStorage check by @Phillip9587 in https://github.com/expressjs/express/pull/6147\n* update history.md for acceptParams change by @jonchurch in https://github.com/expressjs/express/pull/6177\n* docs: add @rxmarbles to the triage team by @UlisesGascon in https://github.com/expressjs/express/pull/6151\n* refactor: improve readability by @sazk07 in https://github.com/expressjs/express/pull/6173\n* docs: clarify the security process in the triage role by @bjohansebas in https://github.com/expressjs/express/pull/6217\n* chore: replace `methods` dependency with standard library by @jonkoops in https://github.com/expressjs/express/pull/6196\n* Remove `utils-merge` dependency - use spread syntax instead by @Phillip9587 in https://github.com/expressjs/express/pull/6091\n* fix(securite): fix vulnerabilities by @Abdel-Monaam-Aouini in https://github.com/expressjs/express/pull/6211\n* refactor: prefix built-in node module imports by @slagiewka in https://github.com/expressjs/express/pull/6236\n* fix: remove download size badges by @wesleytodd in https://github.com/expressjs/express/pull/6266\n* Remove unused `depd` dependency by @jonkoops in https://github.com/expressjs/express/pull/6197\n* fix: usage of `Invalid action input 'persist-credentials'` for `actions/setup-node@v4` in `ci.yml` by @hamirmahal in https://github.com/expressjs/express/pull/6256\n* Add support for OSSF scorecard reporting by @UlisesGascon in https://github.com/expressjs/express/pull/5431\n* docs: add @Phillip9587 to the triage team by @bjohansebas in https://github.com/expressjs/express/pull/6276\n* fix: added a missing semicolon in css styles in examples/auth by @pr4j3sh in https://github.com/expressjs/express/pull/6297\n* docs: include team email in the security policy by @UlisesGascon in https://github.com/expressjs/express/pull/6278\n* refactor: simplify `normalizeTypes` function by @Ayoub-Mabrouk in https://github.com/expressjs/express/pull/6097\n* ci: updated github actions ci workflow by @Phillip9587 in https://github.com/expressjs/express/pull/6314\n* ci: fix npm install --include typo by @Phillip9587 in https://github.com/expressjs/express/pull/6324\n* ci: updated scorecard actions by @Phillip9587 in https://github.com/expressjs/express/pull/6322\n* build(deps): use carat notation for dependency versions by @dpopp07 in https://github.com/expressjs/express/pull/6317\n* cho...",
+      "memory_unit_text": "In the expressjs/express release v5.1.0, the project updates captains, builds with Node.js 23.0, adds a funding field, adds a discarded middleware test, updates homepage link to https, improves readme, adds bjohansebas as repo captain for expressjs.com, removes Object.setPrototypeOf polyfill, uses node:buffer instead of safe-buffer, adds DCO documentation, removes promise support check from tests, uses loop for acceptParams, improves documentation step in release process, removes unnecessary require for global Buffer, removes AsyncLocalStorage check, updates history.md for acceptParams change, adds @rxmarbles to the triage team, refactors for readability, clarifies security process in triage role, replaces methods dependency with standard library, removes utils-merge dependency using spread syntax, fixes vulnerabilities, prefixes built-in node module imports, removes download size badges, removes unused depd dependency, fixes usage of invalid action input for actions/setup-node@v4, adds support for OSSF scorecard reporting, adds @Phillip9587 to the triage team, fixes a missing semicolon in css styles in examples/auth, includes team email in security policy, simplifies normalizeTypes function, updates github actions ci workflow, fixes npm install --include typo, updates scorecard actions, uses carat notation for dependency versions, and many more."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__4_22_0",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.22.0",
+      "tag_name": "4.22.0",
+      "title": "4.22.0",
+      "time_hint": "2025-12-01",
+      "published_at": "2025-12-01T16:19:48Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/4.22.0",
+      "raw_text": "Repository: expressjs/express\nRelease: 4.22.0\nTag: 4.22.0; draft: False; prerelease: False; published_at: 2025-12-01T16:19:48Z; created_at: 2025-12-01T16:17:12Z\nRelease notes:\n## Important: Security\n* Security fix for [CVE-2024-51999](https://www.cve.org/CVERecord?id=CVE-2024-51999) ([GHSA-pj86-cfqh-vqx6](https://github.com/expressjs/express/security/advisories/GHSA-pj86-cfqh-vqx6))\n## What's Changed\n* Refactor: improve readability by @sazk07 in https://github.com/expressjs/express/pull/6190\n* ci: add support for Node.js@23.0 by @UlisesGascon in https://github.com/expressjs/express/pull/6080\n* Method functions with no path should error by @wesleytodd in https://github.com/expressjs/express/pull/5957\n* ci: updated github actions ci workflow by @Phillip9587 in https://github.com/expressjs/express/pull/6323\n* ci: reorder `npm i` steps to fix ci for older node versions by @Phillip9587 in https://github.com/expressjs/express/pull/6336\n* Backport: ci: add node.js 24 to test matrix by @Phillip9587 in https://github.com/expressjs/express/pull/6506\n* chore(4.x): wider range for query test skip by @jonchurch in https://github.com/expressjs/express/pull/6513\n* use tilde notation for certain dependencies by @UlisesGascon in https://github.com/expressjs/express/pull/6905\n* deps: qs@6.14.0 by @UlisesGascon in https://github.com/expressjs/express/pull/6909\n* deps: use tilde notation for `qs` by @Phillip9587 in https://github.com/expressjs/express/pull/6919\n* Release: 4.22.0 by @UlisesGascon in https://github.com/expressjs/express/pull/6921\n**Full Changelog**: https://github.com/expressjs/express/compare/4.21.2...4.22.0",
+      "memory_unit_text": "In the expressjs/express release 4.22.0, the project includes a security fix for CVE-2024-51999, refactors for readability, adds support for Node.js@23.0 in CI, makes method functions with no path error, updates github actions ci workflow, reorders npm i steps to fix CI for older node versions, backports adding node.js 24 to test matrix, widens range for query test skip, uses tilde notation for certain dependencies, updates qs to 6.14.0, and uses tilde notation for qs."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__v5_2_0",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.2.0",
+      "tag_name": "v5.2.0",
+      "title": "v5.2.0",
+      "time_hint": "2025-12-01",
+      "published_at": "2025-12-01T16:21:03Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/v5.2.0",
+      "raw_text": "Repository: expressjs/express\nRelease: v5.2.0\nTag: v5.2.0; draft: False; prerelease: False; published_at: 2025-12-01T16:21:03Z; created_at: 2025-12-01T16:17:31Z\nRelease notes:\n## Important: Security\n* Security fix for [CVE-2024-51999](https://www.cve.org/CVERecord?id=CVE-2024-51999) ([GHSA-pj86-cfqh-vqx6](https://github.com/expressjs/express/security/advisories/GHSA-pj86-cfqh-vqx6))\n## What's Changed\n* build(deps): bump github/codeql-action from 3.28.11 to 3.28.13 by @dependabot[bot] in https://github.com/expressjs/express/pull/6429\n* Refactor: simplify `acceptsLanguages` implementation using spread operator by @Ayoub-Mabrouk in https://github.com/expressjs/express/pull/6137\n* increased code coverage of utils.js file by @ashish3011 in https://github.com/expressjs/express/pull/6386\n* chore: remove duplicate word by @dufucun in https://github.com/expressjs/express/pull/6456\n* build(deps): bump github/codeql-action from 3.28.13 to 3.28.16 by @dependabot[bot] in https://github.com/expressjs/express/pull/6498\n* build(deps): bump actions/setup-node from 4.3.0 to 4.4.0 by @dependabot[bot] in https://github.com/expressjs/express/pull/6497\n* build(deps): bump actions/download-artifact from 4.2.1 to 4.3.0 by @dependabot[bot] in https://github.com/expressjs/express/pull/6496\n* ci: add node.js 24 to test matrix by @Phillip9587 in https://github.com/expressjs/express/pull/6504\n* ci: update codeql config by @Phillip9587 in https://github.com/expressjs/express/pull/6488\n* chore: wider range for query test skip by @jonchurch in https://github.com/expressjs/express/pull/6512\n* chore: fix typos in test by @noritaka1166 in https://github.com/expressjs/express/pull/6535\n* ci: disable credential persistence for checkout actions by @mertssmnoglu in https://github.com/expressjs/express/pull/6522\n* ci: allow manual triggering of workflow by @shivarm in https://github.com/expressjs/express/pull/6515\n* test: add coverage for app.listen() variants by @kgarg1 in https://github.com/expressjs/express/pull/6476\n* docs: move documentation and charters to the discussions and .github … by @bjohansebas in https://github.com/expressjs/express/pull/6427\n* build(deps): bump github/codeql-action from 3.28.16 to 3.28.18 by @dependabot[bot] in https://github.com/expressjs/express/pull/6549\n* build(deps): bump ossf/scorecard-action from 2.4.1 to 2.4.2 by @dependabot[bot] in https://github.com/expressjs/express/pull/6548\n* chore: enforce explicit `Buffer` import and add lint rule by @shivarm in https://github.com/expressjs/express/pull/6525\n* chore: use node protocol for querystring by @shivarm in https://github.com/expressjs/express/pull/6520\n* chore: fix typo by @mountdisk in https://github.com/expressjs/express/pull/6609\n* build(deps): bump github/codeql-action from 3.28.18 to 3.29.2 by @dependabot[bot] in https://github.com/expressjs/express/pull/6618\n* add deprecation warnings for redirect arguments undefined by @bjohansebas in https://github.com/expressjs/express/pull/6405\n* ci: run CI when the markdown changes by @bjohansebas in https://github.com/expressjs/express/pull/6632\n* doc: fix CONTRIBUTING link by @jonchurch in https://github.com/expressjs/express/pull/6653\n* doc: update contributing guidelines and code of conduct links by @ShubhamOulkar in https://github.com/expressjs/express/pull/6601\n* build(deps-dev): bump morgan from 1.10.0 to 1.10.1 by @dependabot[bot] in https://github.com/expressjs/express/pull/6679\n* build(deps-dev): bump cookie-session from 2.1.0 to 2.1.1 by @dependabot[bot] in https://github.com/expressjs/express/pull/6678\n* lint: add --fix flag to automatic fix linting issue by @shivarm in https://github.com/expressjs/express/pull/6644\n* chore: ignore yarn.lock file and update example by @shivarm in https://github.com/expressjs/express/pull/6588\n* lib: use req.socket over deprecated req.connection by @bjohansebas in https://github.com/expressjs/express/pull/6705\n* doc: update express app example by @shivarm in https://github.com/expressjs...",
+      "memory_unit_text": "In the expressjs/express release v5.2.0, the project includes a security fix for CVE-2024-51999, bumps github/codeql-action, refactors acceptsLanguages implementation using spread operator, increases code coverage of utils.js, removes duplicate word, bumps actions/setup-node and actions/download-artifact, adds node.js 24 to test matrix, updates codeql config, widens range for query test skip, fixes typos in test, disables credential persistence for checkout actions, allows manual triggering of workflow, adds coverage for app.listen() variants, moves documentation and charters to discussions and .github, bumps github/codeql-action and ossf/scorecard-action, enforces explicit Buffer import and adds lint rule, uses node protocol for querystring, fixes typo, adds deprecation warnings for redirect arguments undefined, runs CI when markdown changes, fixes CONTRIBUTING link, updates contributing guidelines and code of conduct links, bumps morgan and cookie-session, adds --fix flag to lint, ignores yarn.lock file and updates example, uses req.socket over deprecated req.connection, updates express app example, and many more."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__v5_2_1",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v5.2.1",
+      "tag_name": "v5.2.1",
+      "title": "v5.2.1",
+      "time_hint": "2025-12-01",
+      "published_at": "2025-12-01T20:54:44Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/v5.2.1",
+      "raw_text": "Repository: expressjs/express\nRelease: v5.2.1\nTag: v5.2.1; draft: False; prerelease: False; published_at: 2025-12-01T20:54:44Z; created_at: 2025-12-01T20:27:35Z\nRelease notes:\n## What's Changed\n> [!IMPORTANT]\n> The prior release (5.2.0) included an erroneous breaking change related to the extended query parser. There is no actual security vulnerability associated with this behavior (CVE-2024-51999 has been rejected). The change has been fully reverted in this release.\n* Release: 5.2.1 by @UlisesGascon in https://github.com/expressjs/express/pull/6933\n**Full Changelog**: https://github.com/expressjs/express/compare/v5.2.0...v5.2.1",
+      "memory_unit_text": "In the expressjs/express release v5.2.1, the project notes that the prior release 5.2.0 included an erroneous breaking change related to the extended query parser, CVE-2024-51999 has been rejected, and the change has been fully reverted."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__v4_22_1",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.22.1",
+      "tag_name": "v4.22.1",
+      "title": "v4.22.1",
+      "time_hint": "2025-12-01",
+      "published_at": "2025-12-01T20:55:45Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/v4.22.1",
+      "raw_text": "Repository: expressjs/express\nRelease: v4.22.1\nTag: v4.22.1; draft: False; prerelease: False; published_at: 2025-12-01T20:55:45Z; created_at: 2025-12-01T20:27:22Z\nRelease notes:\n## What's Changed\n> [!IMPORTANT]\n> The prior release (4.22.0) included an erroneous breaking change related to the extended query parser. There is no actual security vulnerability associated with this behavior (CVE-2024-51999 has been rejected). The change has been fully reverted in this release.\n* Release: 4.22.1 by @UlisesGascon in https://github.com/expressjs/express/pull/6934\n**Full Changelog**: https://github.com/expressjs/express/compare/4.22.0...v4.22.1",
+      "memory_unit_text": "In the expressjs/express release v4.22.1, the project notes that the prior release 4.22.0 included an erroneous breaking change related to the extended query parser, CVE-2024-51999 has been rejected, and the change has been fully reverted."
+    },
+    {
+      "memory_node_id": "expressjs__express__release__v4_22_2",
+      "repo": "expressjs/express",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.22.2",
+      "tag_name": "v4.22.2",
+      "title": "v4.22.2",
+      "time_hint": "2026-05-11",
+      "published_at": "2026-05-11T18:54:02Z",
+      "source_url": "https://github.com/expressjs/express/releases/tag/v4.22.2",
+      "raw_text": "Repository: expressjs/express\nRelease: v4.22.2\nTag: v4.22.2; draft: False; prerelease: False; published_at: 2026-05-11T18:54:02Z; created_at: 2026-05-11T18:43:23Z\nRelease notes:\n## What's Changed\n* fix: restore >20 array parsing for `req.query` repeated keys ([`8d09bfe6`](https://github.com/expressjs/express/commit/8d09bfe6d88983da5c3e12cfdd54782c4dc675db))\n* This also unifies array-cap behavior across notations. Indexed notation (`a[0]=...`) was historically capped at qs's default `arrayLimit` of 20 even in older qs versions; after this change it also allows up to 1000 items.\n* deps: qs@~6.15.1\n* deps: body-parser@~1.20.5\n## New Contributors\n* @suuuuuuminnnnnn made their first contribution in https://github.com/expressjs/express/pull/7021\n* @SAY-5 made their first contribution in https://github.com/expressjs/express/pull/7181\n**Full Changelog**: https://github.com/expressjs/express/compare/v4.22.1...v4.22.2",
+      "memory_unit_text": "In the expressjs/express release v4.22.2, the project restores >20 array parsing for req.query repeated keys, unifies array-cap behavior across notations (indexed notation now allows up to 1000 items), and updates qs to ~6.15.1 and body-parser to ~1.20.5."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the expressjs/express releases, which release adds express.raw and express.text to parse bodies into Buffer and string respectively?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "4.16.3"
+        },
+        {
+          "option_id": "B",
+          "text": "4.17.0"
+        },
+        {
+          "option_id": "C",
+          "text": "4.18.0"
+        },
+        {
+          "option_id": "D",
+          "text": "4.19.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "4.17.0",
+      "source_chunk_ids": [
+        "expressjs__express__release__4_17_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "expressjs__express__release__4_17_0",
+          "answer_text": "Add express.raw to parse bodies into Buffer, Add express.text to parse bodies into string"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the expressjs/express releases, how does the handling of the 'query parser' setting differ between release 5.0.0-beta.1 and release v5.0.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "5.0.0-beta.1 changes the default 'query parser' setting to 'simple', while v5.0.0 does not mention any change to the query parser default."
+        },
+        {
+          "option_id": "B",
+          "text": "5.0.0-beta.1 removes the query parser entirely, while v5.0.0 reintroduces it with extended mode."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases set the default query parser to 'extended'."
+        },
+        {
+          "option_id": "D",
+          "text": "5.0.0-beta.1 defaults query parser to 'extended', while v5.0.0 changes it to 'simple'."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "5.0.0-beta.1 changes the default 'query parser' setting to 'simple', while v5.0.0 does not mention any change to the query parser default.",
+      "source_chunk_ids": [
+        "expressjs__express__release__v5_0_0_beta_1",
+        "expressjs__express__release__v5_0_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "expressjs__express__release__v5_0_0_beta_1",
+          "answer_text": "Default \"query parser\" setting to 'simple'"
+        },
+        {
+          "memory_node_id": "expressjs__express__release__v5_0_0",
+          "answer_text": "No mention of query parser default change in v5.0.0 release notes."
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the expressjs/express release window, order the following release-content states from earliest to latest: (1) a release that fixes handling of undefined in res.jsonp and incorrect middleware execution with unanchored RegExps, (2) a release that adds a 'root' option to res.download and deprecates string and non-integer arguments to res.status, (3) a release that deprecates the 'back' magic string in redirects and upgrades qs to 6.13.0.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3",
+      "source_chunk_ids": [
+        "expressjs__express__release__4_17_2",
+        "expressjs__express__release__4_18_0",
+        "expressjs__express__release__4_21_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "expressjs__express__release__4_17_2",
+          "answer_text": "Fix handling of undefined in res.jsonp, Fix incorrect middleware execution with unanchored RegExps"
+        },
+        {
+          "memory_node_id": "expressjs__express__release__4_18_0",
+          "answer_text": "Add \"root\" option to res.download, Deprecate string and non-integer arguments to res.status"
+        },
+        {
+          "memory_node_id": "expressjs__express__release__4_21_0",
+          "answer_text": "Deprecate \"back\" magic string in redirects, Upgraded dependency qs to 6.13.0"
+        }
+      ]
+    }
+  ]
+}

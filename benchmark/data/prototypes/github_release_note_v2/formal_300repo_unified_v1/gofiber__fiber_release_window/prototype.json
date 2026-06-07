@@ -1,0 +1,525 @@
+{
+  "prototype_id": "gofiber__fiber_release_window",
+  "domain": "github_release_evolution",
+  "repo": "gofiber/fiber",
+  "source_type": "release_note",
+  "window_title": "gofiber/fiber recent release evolution",
+  "window_summary": "This window tracks the recent gofiber/fiber release stream across v2 and v3 releases, including new features, middleware enhancements, security fixes, and breaking changes.",
+  "chunks": [
+    {
+      "memory_node_id": "gofiber__fiber__release__v2_48_0",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.48.0",
+      "tag_name": "v2.48.0",
+      "title": "v2.48.0",
+      "time_hint": "2023-07-16",
+      "published_at": "2023-07-16T14:20:47Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v2.48.0",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v2.48.0\nTag: v2.48.0; draft: False; prerelease: False; published_at: 2023-07-16T14:20:47Z; created_at: 2023-07-16T14:18:23Z\nRelease notes:\n## 🚀 New\n- Add ability to print custom message on startup (#2491)\nhttps://docs.gofiber.io/guide/hooks#onlisten\n```go\napp := fiber.New(fiber.Config{\nDisableStartupMessage: true,\n})\napp.Hooks().OnListen(func(listenData fiber.ListenData) error {\nif fiber.IsChild() {\nreturn nil\n}\nscheme := \"http\"\nif data.TLS {\nscheme = \"https\"\n}\nlog.Println(scheme + \"://\" + listenData.Host + \":\" + listenData.Port)\nreturn nil\n})\napp.Listen(\":5000\")\n```\n- Add Logger interface and fiberlog (#2499)\nhttps://docs.gofiber.io/api/log\n## 🧹 Updates\n- Dictpool is not completely gone (#2540)\n- Bump golang.org/x/sys from 0.9.0 to 0.10.0 (#2530)\n- Bump github.com/valyala/fasthttp from 1.47.0 to 1.48.0 (#2511)\n## 🐛 Fixes\n- Middleware/logger: Default logger color behaviour (#2513)\n## 📚 Documentation\n- Fix link (#2542)\n- Fix bad documentation on queries function (#2522)\n- Fix validation-guide (#2517)\n- Fix bad documentation on queries function (#2522)\n- Add a warning on security implications when using X-Forwarded-For improperly (#2520)\n- Fix typo (#2518)\n- Typo in ctx.md (#2516)\n- Fix comment in client.go (#2514)\n- Fix docs api fiber custom config (#2510)\n**Full Changelog**: https://github.com/gofiber/fiber/compare/v2.47.0...v2.48.0\nThank you @ForAeons, @RHeynsZa, @Saman-Safaei, @Skyenought, @Z3NTL3, @andre-dasilva, @cmd777, @dozheiny, @efectn, @f1rstmehul, @gaby, @itcuihao and @mo1ein for making this update possible.",
+      "memory_unit_text": "In the gofiber/fiber release v2.48.0, the project adds the ability to print a custom message on startup via the OnListen hook, introduces a Logger interface and fiberlog package, updates dependencies including fasthttp to v1.48.0, and fixes default logger color behavior."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v2_49_0",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.49.0",
+      "tag_name": "v2.49.0",
+      "title": "v2.49.0",
+      "time_hint": "2023-08-27",
+      "published_at": "2023-08-27T11:06:58Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v2.49.0",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v2.49.0\nTag: v2.49.0; draft: False; prerelease: False; published_at: 2023-08-27T11:06:58Z; created_at: 2023-08-27T10:53:07Z\nRelease notes:\n## ❗ Breaking Changes\n- Add config to enable splitting by comma in parsers (#2560)\nhttps://docs.gofiber.io/api/fiber#config\n>EnableSplittingOnParsers splits the query/body/header parameters by comma when it's true (default: false).\n>\n>For example, you can use it to parse multiple values from a query parameter like this:\n>/api?foo=bar,baz == foo[]=bar&foo[]=baz\n## 🚀 New\n- Add custom data property to favicon middleware config (#2579)\nhttps://docs.gofiber.io/api/middleware/favicon#config\n> This allows the user to use //go:embed flags to load favicon data during build-time, and supply it to the middleware instead of reading the file every time the application starts.\n## 🧹 Updates\n- Middleware/logger: Latency match gin-gonic/gin formatter (#2569)\n- Middleware/filesystem: Refactor: use `errors.Is` instead of `os.IsNotExist` (#2558)\n- Use Global vars instead of local vars for isLocalHost  (#2595)\n- Remove redundant nil check (#2584)\n- Bump github.com/mattn/go-runewidth from 0.0.14 to 0.0.15 (#2551)\n- Bump github.com/google/uuid from 1.3.0 to 1.3.1 (#2592)\n- Bump golang.org/x/sys from 0.10.0 to 0.11.0 (#2563)\n- Add go 1.21 to ci and readmes (#2588)\n## 🐛 Fixes\n- Middleware/logger: Default latency output format (#2580)\n- Decompress request body when multi Content-Encoding sent on request headers (#2555)\n## 📚 Documentation\n- Fix wrong JSON docs (#2554)\n- Update io/ioutil package to io package (#2589)\n- Replace EG flag with the proper and smaller SVG  (#2585)\n- Added Egyptian Arabic readme file (#2565)\n- Translate README to Portuguese (#2567)\n- Improve \\*fiber.Client section (#2553)\n- Improved the config section of the middleware readme´s (#2552)\n- Added documentation about ctx Fresh (#2549)\n- Update intro.md (#2550)\n- Fixed link to slim template engine (#2547)\n**Full Changelog**: https://github.com/gofiber/fiber/compare/v2.48.0...v2.49.0\nThank you @Jictyvoo, @Juneezee, @Kirari04, @LimJiAn, @PassTheMayo, @andersonmiranda-com, @bigpreshy, @efectn, @renanbastos93, @scandar, @sixcolors and @stefanb for making this update possible.",
+      "memory_unit_text": "In the gofiber/fiber release v2.49.0, a breaking change adds a config option EnableSplittingOnParsers to split query/body/header parameters by comma. New features include a custom data property for the favicon middleware config. Updates include latency formatting matching gin, refactoring filesystem middleware, and dependency bumps. Fixes address default latency output and decompression of request bodies with multiple Content-Encoding headers."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v2_49_1",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.49.1",
+      "tag_name": "v2.49.1",
+      "title": "v2.49.1",
+      "time_hint": "2023-09-02",
+      "published_at": "2023-09-02T17:21:23Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v2.49.1",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v2.49.1\nTag: v2.49.1; draft: False; prerelease: False; published_at: 2023-09-02T17:21:23Z; created_at: 2023-09-02T16:27:18Z\nRelease notes:\n## 🧹 Updates\n- Bump github.com/valyala/fasthttp from 1.48.0 to 1.49.0 (#2615)\n## 🐛 Fixes\n- Rollback changes to go.mod file (#2614)\n## 📚 Documentation\n- Add Polish translation - README\\_pl.md (#2613)\n- Update README\\_ko.md (#2605)\n**Full Changelog**: https://github.com/gofiber/fiber/compare/v2.49.0...v2.49.1\nThank you @KompocikDot, @LimJiAn and @gaby for making this update possible.",
+      "memory_unit_text": "In the gofiber/fiber release v2.49.1, the project bumps fasthttp from v1.48.0 to v1.49.0, rolls back changes to go.mod, and adds Polish and updates Korean README translations."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v2_49_2",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.49.2",
+      "tag_name": "v2.49.2",
+      "title": "v2.49.2",
+      "time_hint": "2023-09-14",
+      "published_at": "2023-09-14T06:30:50Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v2.49.2",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v2.49.2\nTag: v2.49.2; draft: False; prerelease: False; published_at: 2023-09-14T06:30:50Z; created_at: 2023-09-14T06:00:10Z\nRelease notes:\n## 🧹 Updates\n- Middleware/logger: Enabling color changes padding for some fields #2604  (#2616)\n- Bump actions/checkout from 3 to 4 (#2618)\n- Bump golang.org/x/sys from 0.11.0 to 0.12.0 (#2617)\n## 🐛 Fixes\n- Vulnerability in Ctx.IsFromLocal(https://github.com/gofiber/fiber/security/advisories/GHSA-3q5p-3558-364f)\n## 📚 Documentation\n- Replaced double quotes with backticks in all route parameter strings  (#2591)\n**Full Changelog**: https://github.com/gofiber/fiber/compare/v2.49.1...v2.49.2\nThank you @11-aryan and @AKARSHITJOSHI for making this update possible.",
+      "memory_unit_text": "In the gofiber/fiber release v2.49.2, the logger middleware enables color changes padding for some fields, bumps actions/checkout and golang.org/x/sys, fixes a vulnerability in Ctx.IsFromLocal, and replaces double quotes with backticks in route parameter documentation."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v2_50_0",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.50.0",
+      "tag_name": "v2.50.0",
+      "title": "v2.50.0",
+      "time_hint": "2023-10-16",
+      "published_at": "2023-10-16T12:17:17Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v2.50.0",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v2.50.0\nTag: v2.50.0; draft: False; prerelease: False; published_at: 2023-10-16T12:17:17Z; created_at: 2023-10-16T08:35:42Z\nRelease notes:\n## ❗ Breaking Changes\n- Change signatures of GetReqHeaders and GetRespHeaders (#2650)\n> To allow single and list values under headers according to the [rfc standard](https://datatracker.ietf.org/doc/html/rfc9110#section-5.2)\n```diff\n- func (c *Ctx) GetReqHeaders() map[string]string\n+ func (c *Ctx) GetReqHeaders() map[string][]string\n```\n```diff\n- func (c *Ctx) GetRespHeaders() map[string]string\n+ func (c *Ctx) GetRespHeaders() map[string][]string\n```\n## 👮 Security\n<details>\n<summary>Middleware/csrf: Token Vulnerability (GHSA-mv73-f69x-444p, GHSA-94w9-97p3-p368)</summary>\nhttps://docs.gofiber.io/api/middleware/csrf\n🚀 Improvements to the CSRF middleware:\n- Added support for single-use tokens through the `SingleUseToken` configuration option.\n- Optional integration with GoFiber session middleware through the `Session` and `SessionKey` configuration options.\n- Introduction of origin checks for HTTPS connections to verify referer headers.\n- Implementation of a Double Submit Cookie approach for CSRF token generation and validation when used without `Session`.\n- Enhancement of error handling with more descriptive error messages.\n- The documentation for the CSRF middleware has been enhanced with the addition of the new options and best practices to improve security.\nThank you @sixcolors\n</details>\n## 🚀 New\n- Cookie parser (#2656)\nhttps://docs.gofiber.io/api/ctx#cookieparser\n```go\n// Field names should start with an uppercase letter\ntype Person struct {\nName     string  `cookie:\"name\"`\nAge      int     `cookie:\"age\"`\nJob      bool    `cookie:\"job\"`\n}\n// Example route\napp.Get(\"/\", func(c *fiber.Ctx) error {\np := new(Person)\n// This method is similar to BodyParser, but for cookie parameters\nif err := c.CookieParser(p); err != nil {\nreturn err\n}\nlog.Println(p.Name)     // Joseph\nlog.Println(p.Age)      // 23\nlog.Println(p.Job)      // true\n})\n```\n- Middleware/cors: Allow disabling caching in preflight requests (#2649)\nhttps://docs.gofiber.io/api/middleware/cors#config\n```go\n// To disable caching completely, pass MaxAge value negative. It will set the Access-Control-Max-Age header 0.\napp.Use(cors.New(cors.Config{MaxAge: -1}))\n```\n- Middleware/session: Add Reset method to Session struct in session middleware (#2654)\nhttps://docs.gofiber.io/api/middleware/session#signatures\n```go\n// Provide more flexibility in session management, especially in scenarios like repeated user logins\nfunc (s *Session) Reset() error\n```\nExample usage:\n```go\n// Initialize default config\n// This stores all of your app's sessions\nstore := session.New()\napp.Post(\"/login\", func(c *fiber.Ctx) error {\n// Get session from storage\nsess, err := store.Get(c)\nif err != nil {\npanic(err)\n}\n// ... validate login ...\n// Check if the session is fresh\nif !sess.Fresh() {\n// If the session is not fresh, reset it\nif err := sess.Reset(); err != nil {\npanic(err)\n}\n}\n// Set new session data\nsess.Set(\"user_id\", user.ID)\n// Save session\nif err := sess.Save(); err != nil {\npanic(err)\n}\nreturn c.SendString(fmt.Sprintf(\"Welcome %v\", user.ID))\n})\n```\n- Middleware/session: Add Delete method to Store struct in session middleware (#2655)\nhttps://docs.gofiber.io/api/middleware/session#signatures\n```go\n// Provide more control over individual session management, especially in scenarios\n// like administrator-enforced user logout or user-initiated logout from a specific device session\nfunc (s *Store) Delete(id string) error\n```\nExample usage:\n```go\napp.Post(\"/admin/session/:id/logout\", func(c *fiber.Ctx) error {\n// Get session id from request\nsessionID := c.Params(\"id\")\n// Delete the session\nif err := store.Delete(sessionID); err != nil {\nreturn c.Status(500).SendString(err.Error())\n}\nreturn c.SendString(\"Logout successful\")\n})\n```\n## 🧹 Updates\n- Middleware/filesystem: Improve status for SendFile (#2664)\n- Middleware/filesystem...",
+      "memory_unit_text": "In the gofiber/fiber release v2.50.0, breaking changes modify GetReqHeaders and GetRespHeaders to return map[string][]string. Security improvements to CSRF middleware include single-use tokens, session integration, origin checks, and double submit cookie approach. New features add a cookie parser, CORS preflight caching disable, session Reset and Store Delete methods. Updates improve filesystem SendFile status and other middleware enhancements."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v2_51_0",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.51.0",
+      "tag_name": "v2.51.0",
+      "title": "v2.51.0",
+      "time_hint": "2023-11-14",
+      "published_at": "2023-11-14T07:35:14Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v2.51.0",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v2.51.0\nTag: v2.51.0; draft: False; prerelease: False; published_at: 2023-11-14T07:35:14Z; created_at: 2023-11-14T07:18:46Z\nRelease notes:\n## 🚀 New\n- Add support for parameters in content negotiation (#2678) [RFC](https://www.rfc-editor.org/rfc/rfc9110#name-parameters)\nhttps://docs.gofiber.io/api/ctx#accepts\n```go\n// Consideration of parameters in the accepted headers\n// Accept: text/plain, application/json; version=1; foo=bar\napp.Get(\"/\", func(c *fiber.Ctx) error {\n// Extra parameters in the accept are ignored\nc.Accepts(\"text/plain;format=flowed\") // \"text/plain;format=flowed\"\n// An offer must contain all parameters present in the Accept type\nc.Accepts(\"application/json\") // \"\"\n// Parameter order and capitalization does not matter. Quotes on values are stripped.\nc.Accepts(`application/json;foo=\"bar\";VERSION=1`) // \"application/json;foo=\"bar\";VERSION=1\"\n})\n```\n- Add support for application/problem+json (#2704)\nhttps://docs.gofiber.io/api/ctx#json\nhttps://docs.gofiber.io/api/client#json\n```go\n// Passing a custom json type\nctx.JSON(fiber.Map{\n\"type\": \"https://example.com/probs/out-of-credit\",\n\"title\": \"You do not have enough credit.\",\n\"status\": 403,\n\"detail\": \"Your current balance is 30, but that costs 50.\",\n\"instance\": \"/account/12345/msgs/abc\",\n}, fiber.)\n```\n## 🧹 Updates\n- Ctx.Range: reduce allocations (#2705)\n- Middleware/pprof: improve performance (#2709)\n## 🛠️ Maintenance\n- Bump golang.org/x/sys from 0.13.0 to 0.14.0 (#2707)\n- Bump github.com/google/uuid from 1.3.1 to 1.4.0 (#2693)\n- Bump actions/setup-node from 3 to 4 (#2690)\n- Bump github.com/mattn/go-isatty from 0.0.19 to 0.0.20 (#2679)\n## 🐛 Fixes\n- Middleware/limiter: fix intermittent failures (#2716)\n- Naming of routes works wrong after mount #2688 (#2689)\n- Fix method validation on route naming (#2686)\n## 📚 Documentation\n- Changed \"Twitter\" to \"X (Twitter)\" in README.md Contribute Section  (#2696)\n- Add additional information as to why GetReqHeaders returns a map where the values are slices of strings  (#2698)\n- Enhance csrf.md (#2692)\n**Full Changelog**: https://github.com/gofiber/fiber/compare/v2.50.0...v2.51.0\nThank you @BandhiyaHardik, @database64128, @efectn, @moritz157, @nickajacks1, @rhburt and @sixcolors for making this update possible.",
+      "memory_unit_text": "In the gofiber/fiber release v2.51.0, new features add support for parameters in content negotiation and application/problem+json. Updates reduce allocations in Ctx.Range and improve pprof middleware performance. Maintenance bumps dependencies. Fixes address intermittent limiter failures, route naming after mount, and method validation on route naming."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v2_52_0",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.52.0",
+      "tag_name": "v2.52.0",
+      "title": "v2.52.0",
+      "time_hint": "2024-01-05",
+      "published_at": "2024-01-05T13:41:08Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v2.52.0",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v2.52.0\nTag: v2.52.0; draft: False; prerelease: False; published_at: 2024-01-05T13:41:08Z; created_at: 2024-01-05T13:36:18Z\nRelease notes:\n## 🚀 New\n- Middleware/healthcheck: Add liveness and readiness checks (#2509)\nhttps://docs.gofiber.io/api/middleware/healthcheck\n```go\n// Direct usage with default config\napp.Use(healthcheck.New())\n// Or extend your config for customization\napp.Use(healthcheck.New(healthcheck.Config{\nLivenessEndpoint: \"/live\",\nLivenessProbe: func(c *fiber.Ctx) bool {\nreturn true\n},\nReadinessEndpoint: \"/ready\",\nReadinessProbe: func(c *fiber.Ctx) bool {\nreturn serviceA.Ready() && serviceB.Ready() && ...\n},\n}))\n```\n## 🧹 Updates\n- Middlewares: don't constrain middlewares context-keys to strings (#2751)\n- Middleware/logger: colorize logger error message #2593 (#2773)\n- Middleware/logger: changing default log output (#2730)\n- Middleware/logger: log client IP address by default (#2755)\n- Middleware/encryptcookie: update default config (#2753)\n- Improve benchmarks for getOffer (#2739)\n## 🛠️ Maintenance\n- Bump github/codeql-action from 2 to 3 (#2763)\n- Bump github.com/google/uuid from 1.4.0 to 1.5.0 (#2762)\n- Bump actions/setup-go from 4 to 5 (#2754)\n- Bump golang.org/x/sys from 0.14.0 to 0.15.0 (#2744)\n- Bump github.com/valyala/fasthttp from 1.50.0 to 1.51.0 (#2721)\n## 🐛 Fixes\n- Middleware/redirect : fix for redirect with query params (#2748)\n- Middleware/adaptor: Adaptor + otelfiber issue #2641 (#2772)\n- Middleware/cors: Should use the defined AllowedOriginsFunc config when AllowedOrigins is empty (#2771)\n- Middleware/session: Race in session middleware tests (#2740)\n- Middleware/csrf: Fix failing CSRF tests (#2720)\n- Fix race condition in parallel tests (#2734)\n- utils.IsIPv4 and net.ParseIP have inconsistent results #2735 (#2736)\n## 📚 Documentation\n- Middleware/csrf: Improve csrf docs (#2726)\n- Update app.md for indentation (#2761)\n- Update default config (#2753)\n- Update CONTRIBUTING.md (#2752)\n**Full Changelog**: https://github.com/gofiber/fiber/compare/v2.51.0...v2.52.0\nThank you @MehmetFiratKomurcu, @benjajaja, @brunodmartins, @gilwo, @iredmail, @itswcg, @luk3skyw4lker, @muhammadkholidb, @nickajacks1, @sixcolors and @tokelo-12 for making this update possible.",
+      "memory_unit_text": "In the gofiber/fiber release v2.52.0, a new healthcheck middleware adds liveness and readiness checks. Updates allow middleware context-keys to be non-strings, colorize logger error messages, change default log output, log client IP by default, and update encryptcookie defaults. Maintenance bumps dependencies. Fixes address redirect with query params, adaptor+otelfiber issue, CORS AllowedOriginsFunc, session race, CSRF tests, parallel test race, and inconsistent IsIPv4 results."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v2_52_1",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.52.1",
+      "tag_name": "v2.52.1",
+      "title": "v2.52.1",
+      "time_hint": "2024-02-21",
+      "published_at": "2024-02-21T20:28:33Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v2.52.1",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v2.52.1\nTag: v2.52.1; draft: False; prerelease: False; published_at: 2024-02-21T20:28:33Z; created_at: 2024-02-21T20:18:56Z\nRelease notes:\n## 👮 Security\n<details>\n<summary>Middleware/cors: Insecure CORS Configuration Allowing Wildcard Origin with Credentials -\nGHSA-fmg4-x8pw-hjhg</summary>\nhttps://docs.gofiber.io/api/middleware/cors\n</details>\n## 🐛 Fixes\n- Middleware/healthcheck: Not working with route group(#2863)\n## 📚 Documentation\n- Fix default value to false in docs of QueryBool (#2811)\n- Fix code snippet indentation in /docs/api/middleware/keyauth.md (#2867)\n**Full Changelog**: https://github.com/gofiber/fiber/compare/v2.52.0...v2.52.1\nThank you @luk3skyw4lker, @CAEL0, @grivera64, @gaby and @sixcolors for making this update possible.",
+      "memory_unit_text": "In the gofiber/fiber release v2.52.1, a security advisory addresses insecure CORS configuration allowing wildcard origin with credentials. A fix resolves healthcheck middleware not working with route groups. Documentation fixes include default value for QueryBool and code snippet indentation."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v2_52_2",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.52.2",
+      "tag_name": "v2.52.2",
+      "title": "v2.52.2",
+      "time_hint": "2024-03-02",
+      "published_at": "2024-03-02T18:07:52Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v2.52.2",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v2.52.2\nTag: v2.52.2; draft: False; prerelease: False; published_at: 2024-03-02T18:07:52Z; created_at: 2024-03-02T17:56:50Z\nRelease notes:\n## 🐛 Fixes\n* Middleware/cors: Validation of multiple Origins (https://github.com/gofiber/fiber/pull/2883)\n**Full Changelog**: https://github.com/gofiber/fiber/compare/v2.52.1...v2.52.2",
+      "memory_unit_text": "In the gofiber/fiber release v2.52.2, a fix addresses validation of multiple Origins in the CORS middleware."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v2_52_3",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.52.3",
+      "tag_name": "v2.52.3",
+      "title": "v2.52.3",
+      "time_hint": "2024-03-25",
+      "published_at": "2024-03-25T19:40:39Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v2.52.3",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v2.52.3\nTag: v2.52.3; draft: False; prerelease: False; published_at: 2024-03-25T19:40:39Z; created_at: 2024-03-25T19:26:29Z\nRelease notes:\n## 🐛 Fixes\n* Middleware/cors: Handling and wildcard subdomain matching by @sixcolors in https://github.com/gofiber/fiber/pull/2915\n* Middleware/cors: Categorize requests correctly by @sixcolors in https://github.com/gofiber/fiber/pull/2921\n* Middleware/csrf: Fix Benchmark Tests by @sixcolors in https://github.com/gofiber/fiber/pull/2932\n**Full Changelog**: https://github.com/gofiber/fiber/compare/v2.52.2...v2.52.3",
+      "memory_unit_text": "In the gofiber/fiber release v2.52.3, fixes address CORS handling and wildcard subdomain matching, categorize requests correctly, and fix CSRF benchmark tests."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v2_52_4",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.52.4",
+      "tag_name": "v2.52.4",
+      "title": "v2.52.4",
+      "time_hint": "2024-03-27",
+      "published_at": "2024-03-27T06:30:30Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v2.52.4",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v2.52.4\nTag: v2.52.4; draft: False; prerelease: False; published_at: 2024-03-27T06:30:30Z; created_at: 2024-03-26T21:40:09Z\nRelease notes:\n# 🐛 Fixes\n* Middleware/cors: CORS handling by @sixcolors in https://github.com/gofiber/fiber/pull/2937\n* Middleware/cors: Vary header handling non-cors OPTIONS requests by @sixcolors in https://github.com/gofiber/fiber/pull/2939\n**Full Changelog**: https://github.com/gofiber/fiber/compare/v2.52.3...v2.52.4",
+      "memory_unit_text": "In the gofiber/fiber release v2.52.4, fixes address CORS handling and Vary header handling for non-CORS OPTIONS requests."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v3_0_0_beta_2",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.0.0-beta.2",
+      "tag_name": "v3.0.0-beta.2",
+      "title": "v3.0.0-beta.2",
+      "time_hint": "2024-04-07",
+      "published_at": "2024-04-07T19:38:13Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v3.0.0-beta.2",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v3.0.0-beta.2\nTag: v3.0.0-beta.2; draft: False; prerelease: True; published_at: 2024-04-07T19:38:13Z; created_at: 2024-04-07T18:34:23Z\nRelease notes:\n## 🚀 New\n* Binding: Initial support for binding (#1981)\n* Addon: add retry mechanism (#1972)\n* Client: client refactor (#1986)\n* Middleware/csrf: Add support for trusted origins (#2910)\n* Middleware/csrf: TrustedOrigins using https://*.example.com style subdomains (#2925)\n* Middleware/cors: Add support for Access-Control-Allow-Private-Network (#2908)\n* Middleware/proxy: Add DialDualStack option for upstream IPv6 support (#2900)\n* Convert fiber.Ctx type to interface (#1928)\n* Merge Listen methods & ListenConfig (#1930)\n* New Route method (#2065)\n* Router interface changes (#2176)\n* New redirection methods (#2014)\n* New mounting system (#2022)\n* Generate msgp tests (#2263)\n* Make app.Test accept a time.Duration timeout (#2269)\n* Add QueryParser for get query using generic (#2776)\n* Addition of Locals Function with Go Generics as an Alternative to c.Locals (#2813)\n* Add support for custom constraints (#2807)\n* Adding GetReqHeaders and GetRespHeaders (#2831)\n* Implement new generic functions: Params, Get and Convert (#2850)\n## 🧹 Updates\n* Middleware/adpator: Add parallel benchmarks to adaptor middleware (#2870)\n* Middleware/csrf,limiter: Update CSRF and Limiter to remove repetitive names (#2846)\n* Middleware/earlydata (#2270)\n* Middleware/filesystem: Refactor filesystem middleware with `io/fs` (#2027)\n* Middleware/healthchecker: Migrate HealthChecker to v3 (#2884)\n* Middleware/idempotency (#2253)\n* Middleware/logger: Remove mutex lock in logger middleware (#2840)\n* Middleware/logger: refactor logger middleware (#1979)\n* Client: Rename \"ClientNew\" Function to \"New\" (#2896)\n* Router: return status 501 instead of 400 on unknown method (#2220)\n* Add `[]byte` support to `utils.EqualFold` (#2029)\n* Remove `utils.Trim*` because stdlib has same performance in go1.19 (#2030)\n* Use testify for assertion (#2036)\n* Change startup message (#2041)\n* Cleanup (#2255)\n* Update Ctx.Format to match Express's res.format (#2766)\n* Change interface{} to any (#2796)\n* Clean up errcheck config (#2841)\n* Update startup message formatting (#2847)\n* Add inamedparam linter (#2848)\n* Simplify content negotiation code (#2865)\n* Expand Tests and Benchmarks for Log package (#2886)\n* Performance optimizations (#2838, #2947)\n## 🐛 Fixes\n* Middleware/cors: CORS handling (#2938)\n* Middleware/logger: Fix logger benchmarks (#2074)\n* Middleware/logger: Print to stderr if log fails for default format (#2830)\n* Fix benchmark results (#1982, #2130)\n* Rename WithTlsConfig method to WithTLSConfig (#2570)\n* ContextKey collisions (#2781)\n* Fix testifylint errors in middleware (#2805)\n* Fix remaining testifylint errors (#2806)\n* Fix force type assertions in session_test.go (#2815)\n* Added respects body immutability to ctx.Body() and ctx.BodyRaw() functions. (#2812)\n* Testifylint failure that fell through the cracks (#2821)\n* Inconsistent and flaky unit-tests (#2892)\n* Improper query/body parsing with embedded structs (#2906)\n## 🛠️ Maintenance\n* Bump minimum version of Go to 1.21 (#2911)\n* Add go1.22 to test matrix (#2835)\n* Update to use gofiber/utils/v2 (#2184)\n* Speed up addon/retry tests (#2800)\n* Re-enable tparallel linter (#2801)\n* Do not retry flaky tests (#2875)\n* Update test workflow to use gotestsum (#2895)\n* Enabling shuffling, cleanup and consistency across tests (#2931)\n* Run tests against Apple M1 platform (#2852)\n* Merge V2 to v3 (#2864, #2944)\n* Middleware/cors: Merge changes from v2 (#2922)\n* Update golangci-lint to v1.55.2 (#2817)\n* Address multiple lint rules (#2869)\n* Make golangci-lint config stricter (#2874)\n* Update golangci-lint to enable more lint rules (#2923)\n* Bump golangci-lint to v1.56.1 (#2842)\n* Bump golangci-lint to v1.56.2 (#2862)\n* Bump golangci-lint to v1.57.1 (#2929)\n* Bump github.com/google/uuid from 1.5.0 to 1.6.0 (#2810)\n* Bump github.com/valyala/fasthttp...",
+      "memory_unit_text": "In the gofiber/fiber release v3.0.0-beta.2, new features include initial binding support, retry mechanism, client refactor, CSRF trusted origins with subdomain style, CORS Access-Control-Allow-Private-Network, proxy DialDualStack, conversion of fiber.Ctx to interface, merged Listen methods, new Route method, router interface changes, redirection methods, mounting system, msgp tests, app.Test timeout, QueryParser, Locals with generics, custom constraints, GetReqHeaders/GetRespHeaders, and generic Params/Get/Convert. Updates and fixes span many areas including adaptor benchmarks, CSRF/limiter naming, earlydata, filesystem refactor, healthchecker migration, idempotency, logger refactor, client rename, router status 501, utils changes, testify usage, startup message, Ctx.Format, interface{} to any, linting, content negotiation, log package tests, performance optimizations, CORS handling, logger benchmarks, stderr logging, benchmark fixes, TLS config rename, context key collisions, testifylint errors, body immutability, flaky tests, and query/body parsing. Maintenance bumps Go minimum to 1.21, adds go1.22, updates utils, speeds up tests, re-enables linters, uses gotestsum, enables shuffling, runs on Apple M1, merges v2, updates golangci-lint, and bumps dependencies."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v2_52_5",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.52.5",
+      "tag_name": "v2.52.5",
+      "title": "v2.52.5",
+      "time_hint": "2024-06-30",
+      "published_at": "2024-06-30T20:19:10Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v2.52.5",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v2.52.5\nTag: v2.52.5; draft: False; prerelease: False; published_at: 2024-06-30T20:19:10Z; created_at: 2024-06-30T20:11:08Z\nRelease notes:\n## 👮 Security\n<details>\n<summary>Middleware/session: Session Middleware Token Injection Vulnerability - GHSA-98j2-3j3p-fw2v</summary>\nhttps://docs.gofiber.io/api/middleware/session\n</details>\n## 🧹 Updates\n- Middleware/session: Remove extra release and aquire ctx calls in session_test.go (#3043)\n##  🐛 Bug Fixes\n- Middleware/monitor: middleware reporting of CPU usage (#2984)\n- Middleware/session: mutex for thread safety (#3050)\n## 📚 Documentation\n- Improve ctx.Locals method description and example (#3030)\n- Improve ctx.Locals method documentation (#3033)\n- Update README_id.md (#3045)\n**Full Changelog**: https://github.com/gofiber/fiber/compare/v2.52.4...v2.52.5\nThank you @nyufeng, @PaulTitto and @sixcolors for making this update possible.",
+      "memory_unit_text": "In the gofiber/fiber release v2.52.5, a security advisory addresses session middleware token injection vulnerability. Updates remove extra release/acquire calls in session tests. Bug fixes address monitor CPU usage reporting and session mutex for thread safety. Documentation improves ctx.Locals description and updates README_id."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v3_0_0_beta_3",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.0.0-beta.3",
+      "tag_name": "v3.0.0-beta.3",
+      "title": "v3.0.0-beta.3",
+      "time_hint": "2024-06-30",
+      "published_at": "2024-06-30T20:35:38Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v3.0.0-beta.3",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v3.0.0-beta.3\nTag: v3.0.0-beta.3; draft: False; prerelease: True; published_at: 2024-06-30T20:35:38Z; created_at: 2024-06-30T20:08:19Z\nRelease notes:\n## 🚀 New Features\n- Middleware/static: add static middleware (#3006)\n- Middleware/cache: Add Cache Invalidation Option to Cache Middleware (#3036)\n- Middleware/keyauth: Add support for custom KeyLookup functions in the Keyauth middleware (#3028)\n- Add support for zstd compression (#3041)\n- Add configuration support to c.SendFile() (#3017)\n- Add support for longtests during CI (#3054)\n- Add CHIPS support to Cookie (#3047)\n## 🧹 Updates\n- Middleware/cors: Config, lists as list types (#2962)\n- Middleware/session: Remove extra release and acquire ctx calls in session_test.go (#3044)\n- Optimize Cache middleware handler (#3031)\n- Adding a generator to generate the CTX interface (#3024)\n- Add Benchmarks for IsProxyTrusted() (#2933)\n## 🐛 Bug Fixes\n- Fix some struct names in comments (#2974)\n- Fixes #3038 \"v3 Flash Message with redirect is not working\" (#3046)\n- Middleware/session: mutex for thread safety (#3049)\n- Middleware/session: fix data-race with sync.Pool (#3051)\n## 🛠️ Maintenance\n- Bump github.com/valyala/fasthttp from 1.52.0 to 1.53.0 (#3000)\n- Bump github.com/valyala/fasthttp from 1.54.0 to 1.55.0 (#3037)\n- Updated fasthttp to 1.54.0 release (#3010)\n## 📚 Documentation\n- Add docs for new client (#2991)\n- Consolidate and Document Core Changes in v3 (#2934)\n- Fix broken link to slim template in FAQ (#2969)\n- Fix merge conflict in documentation (#2957)\n- Fix some comments (#2983)\n- Update intro.md to make clear `fiber.Ctx` is not thread-safe. (#3014)\n- Improve ctx.Locals method description, godoc and example (#3032)\n- Add zero-allocation section to README (#3039)\n- Middleware/csrf: Update config TrustedOrigin comments (#2963)\n- Middleware/cors middleware (#2979)\n**Full Changelog**: https://github.com/gofiber/fiber/compare/v3.0.0-beta.2...v3.0.0-beta.3\nThank you @efectn, @gaby, @hcancelik, @dave-gray101, @sixcolors, @ReneWerner87, @orvillesimba, @deferdeter, @rabarar, @dockercui and @omaskery for making this update possible.",
+      "memory_unit_text": "In the gofiber/fiber release v3.0.0-beta.3, new features add static middleware, cache invalidation option, keyauth custom KeyLookup, zstd compression, configuration support for SendFile, longtests CI support, and CHIPS cookie support. Updates include CORS config as list types, session test cleanup, cache middleware optimization, CTX interface generator, and IsProxyTrusted benchmarks. Bug fixes address struct name comments, flash message with redirect, session mutex, and session data-race. Maintenance bumps fasthttp and other dependencies. Documentation adds new client docs, core changes consolidation, and various fixes."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v3_0_0_beta_4",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.0.0-beta.4",
+      "tag_name": "v3.0.0-beta.4",
+      "title": "v3.0.0-beta.4",
+      "time_hint": "2024-12-31",
+      "published_at": "2024-12-31T17:00:22Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v3.0.0-beta.4",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v3.0.0-beta.4\nTag: v3.0.0-beta.4; draft: False; prerelease: True; published_at: 2024-12-31T17:00:22Z; created_at: 2024-12-31T16:00:40Z\nRelease notes:\n## 🚀 New Features\n* Add Startup Probe to Healthcheck Middleware by @kirankumar-grootan in https://github.com/gofiber/fiber/pull/3069\n* Add support for RebuildTree by @luk3skyw4lker in https://github.com/gofiber/fiber/pull/3074\n* Add Max Func to Limiter Middleware by @luk3skyw4lker in https://github.com/gofiber/fiber/pull/3070\n* Add support for TrustProxy by @xEricL in https://github.com/gofiber/fiber/pull/3170\n* Add Context Support to RequestID Middleware by @JIeJaitt in https://github.com/gofiber/fiber/pull/3200\n* Add TestConfig to app.Test() for configurable testing by @grivera64 in https://github.com/gofiber/fiber/pull/3161\n* Add support for creating Fiber client from existing FastHTTP client by @mitulagr2 in https://github.com/gofiber/fiber/pull/3214\n* Add buffered streaming support by @grivera64 in https://github.com/gofiber/fiber/pull/3131\n* Add support for CBOR encoding by @imsk17 in https://github.com/gofiber/fiber/pull/3173\n* Add AllLogger to Config by @haochunchang in https://github.com/gofiber/fiber/pull/3153\n* Add support for graceful shutdown timeout in ListenConfig by @ksw2000 in https://github.com/gofiber/fiber/pull/3220\n* Add support for AutoTLS / ACME by @wangjq4214 in https://github.com/gofiber/fiber/pull/3201\n* Add support for iterator methods to Fiber client by @efectn in https://github.com/gofiber/fiber/pull/3228\n* Add support for configuring TLS Min Version by @dozheiny in https://github.com/gofiber/fiber/pull/3248\n* Add Drop method to DefaultCtx for silent connection termination by @ryanbekhen in https://github.com/gofiber/fiber/pull/3257\n* Middleware/session: re-write session middleware with handler by @sixcolors in https://github.com/gofiber/fiber/pull/3016\n## 🧹 Updates\n* Updates to fiberlog benchmarks and documentation by @gaby in https://github.com/gofiber/fiber/pull/3059\n* Update benchmarks for Logger Middleware by @gaby in https://github.com/gofiber/fiber/pull/3061\n* Enforce key length for EncryptCookie middleware default functions by @gaby in https://github.com/gofiber/fiber/pull/3056\n* Improve and simplify logic of ctx.Next() by @gaby in https://github.com/gofiber/fiber/pull/3063\n* Improve performance of Adaptor Middleware by @gaby in https://github.com/gofiber/fiber/pull/3078\n* Refactor Benchmark Results Workflow by @gaby in https://github.com/gofiber/fiber/pull/3082\n* Use Named Fields Instead of Positional and Align Structures to Reduce Memory Usage by @gaby in https://github.com/gofiber/fiber/pull/3079\n* Improve performance of helper functions by @gaby in https://github.com/gofiber/fiber/pull/3086\n* Use utils Trim functions instead of the strings/bytes functions by @ReneWerner87 in https://github.com/gofiber/fiber/pull/3087\n* Improve Performance of c.Body() by 125% by @gaby in https://github.com/gofiber/fiber/pull/3090\n* Add Benchmarks for Rewrite Middleware by @gaby in https://github.com/gofiber/fiber/pull/3092\n* Consolidate Logic of Handling the Request Body by @ad3n in https://github.com/gofiber/fiber/pull/3093\n* Add support for go1.23 and golangci-lint v1.60.1 by @gaby in https://github.com/gofiber/fiber/pull/3101\n* Use msgp for flash message encoding/decoding by @efectn in https://github.com/gofiber/fiber/pull/3099\n* Optimize IsFromLocal() performance by @gaby in https://github.com/gofiber/fiber/pull/3140\n* Replace vendored gorilla/schema package by @efectn in https://github.com/gofiber/fiber/pull/3152\n* Middleware/CORS Remove Scheme Restriction by @zingi in https://github.com/gofiber/fiber/pull/3163\n* Improve naming convention for Context returning functions by @gaby in https://github.com/gofiber/fiber/pull/3193\n* Mark go1.23 as minimum go version by @efectn in https://github.com/gofiber/fiber/pull/3226\n* Rename the Method Names of FormData and FormDatas (#3251) by @ksw2000 in https://github.com/gofiber...",
+      "memory_unit_text": "In the gofiber/fiber release v3.0.0-beta.4, new features add startup probe to healthcheck, RebuildTree support, Max func to limiter, TrustProxy, context support to RequestID, TestConfig, Fiber client from existing FastHTTP client, buffered streaming, CBOR encoding, AllLogger, graceful shutdown timeout, AutoTLS/ACME, iterator methods for client, TLS Min Version config, Drop method for silent connection termination, and session middleware rewrite. Updates include fiberlog benchmarks, logger benchmarks, encryptcookie key length enforcement, ctx.Next simplification, adaptor performance, benchmark workflow refactor, struct alignment, helper performance, utils Trim usage, c.Body performance, rewrite benchmarks, request body handling consolidation, go1.23 and golangci-lint update, msgp for flash messages, IsFromLocal optimization, gorilla/schema replacement, CORS scheme restriction removal, naming convention improvements, go1.23 minimum, and FormData method rename."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v2_52_6",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.52.6",
+      "tag_name": "v2.52.6",
+      "title": "v2.52.6",
+      "time_hint": "2024-12-31",
+      "published_at": "2024-12-31T17:12:37Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v2.52.6",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v2.52.6\nTag: v2.52.6; draft: False; prerelease: False; published_at: 2024-12-31T17:12:37Z; created_at: 2024-12-31T17:04:19Z\nRelease notes:\n## 🐛 Bug Fixes\n* Use Content-Length for bytesReceived and bytesSent tags in Logger Middleware in v2 by @gaby in https://github.com/gofiber/fiber/pull/3067\n* Fix handle un-matched open brackets in the query params by @dojutsu-user in https://github.com/gofiber/fiber/pull/3121\n* Middleware/CORS: Remove Scheme Restriction by @zingi in https://github.com/gofiber/fiber/pull/3168\n* Respect Immutable config for Body() by @nickajacks1 in https://github.com/gofiber/fiber/pull/3246\n* Support Square Bracket Notation in Multipart Form data by @ReneWerner87 in https://github.com/gofiber/fiber/pull/3268\n## 📚 Documentation\n* Add detailed documentation for the templates guide by @grivera64 in https://github.com/gofiber/fiber/pull/3113\n## 🛠️ Maintenance\n* Update benchmark-action to v1.20.3 by @gaby in https://github.com/gofiber/fiber/pull/3084\n* Add CODEOWNERS file by @gaby in https://github.com/gofiber/fiber/pull/3124\n* Update dependencies by @gaby in https://github.com/gofiber/fiber/pull/3254\n* Add parallel benchmark for Next() by @gaby in https://github.com/gofiber/fiber/pull/3259\n**Full Changelog**: https://github.com/gofiber/fiber/compare/v2.52.5...v2.52.6",
+      "memory_unit_text": "In the gofiber/fiber release v2.52.6, bug fixes use Content-Length for bytesReceived/bytesSent in logger, handle unmatched open brackets in query params, remove scheme restriction in CORS, respect immutable config for Body, and support square bracket notation in multipart form data. Documentation adds detailed templates guide. Maintenance updates benchmark-action, adds CODEOWNERS, updates dependencies, and adds parallel benchmark for Next."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v2_52_8",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.52.8",
+      "tag_name": "v2.52.8",
+      "title": "v2.52.8",
+      "time_hint": "2025-05-22",
+      "published_at": "2025-05-22T07:01:43Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v2.52.8",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v2.52.8\nTag: v2.52.8; draft: False; prerelease: False; published_at: 2025-05-22T07:01:43Z; created_at: 2025-05-22T07:00:28Z\nRelease notes:\n## 👮 Security\n* Fix for BodyParser - GHSA-hg3g-gphw-5hhm\n## 🧹 Updates\n* Backport ctx.String() from v3 by @gaby in https://github.com/gofiber/fiber/pull/3294\n## 🐛 Bug Fixes\n* Fix routing with mount and static by @ReneWerner87 in https://github.com/gofiber/fiber/pull/3454\n## 📚 Documentation\n* Update usage of ctx.Redirect() by @andradei in https://github.com/gofiber/fiber/pull/3417\n* Add AGENTS.md by @gaby in https://github.com/gofiber/fiber/pull/3461\n**Full Changelog**: https://github.com/gofiber/fiber/compare/v2.52.6...v2.52.8",
+      "memory_unit_text": "In the gofiber/fiber release v2.52.8, a security fix addresses BodyParser vulnerability. Updates backport ctx.String from v3. Bug fixes resolve routing with mount and static. Documentation updates ctx.Redirect usage and adds AGENTS.md."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v2_52_9",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.52.9",
+      "tag_name": "v2.52.9",
+      "title": "v2.52.9",
+      "time_hint": "2025-07-20",
+      "published_at": "2025-07-20T13:43:53Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v2.52.9",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v2.52.9\nTag: v2.52.9; draft: False; prerelease: False; published_at: 2025-07-20T13:43:53Z; created_at: 2025-07-20T13:43:40Z\nRelease notes:\n## 🐛 Bug Fixes\n* Add upper index limit for parsers by @gaby in https://github.com/gofiber/fiber/pull/3503\n* Embedded struct parsing by @ReneWerner87 in https://github.com/gofiber/fiber/pull/3478\n* Fix Content-Type comparison in `Is()` by @gaby in https://github.com/gofiber/fiber/pull/3537\n* Fix MIME type equality checks by @gaby in https://github.com/gofiber/fiber/pull/3603\n**Full Changelog**: https://github.com/gofiber/fiber/compare/v2.52.8...v2.52.9",
+      "memory_unit_text": "In the gofiber/fiber release v2.52.9, bug fixes add upper index limit for parsers, fix embedded struct parsing, fix Content-Type comparison in Is(), and fix MIME type equality checks."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v3_0_0_beta_5",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.0.0-beta.5",
+      "tag_name": "v3.0.0-beta.5",
+      "title": "v3.0.0-beta.5",
+      "time_hint": "2025-07-20",
+      "published_at": "2025-07-20T14:49:17Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v3.0.0-beta.5",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v3.0.0-beta.5\nTag: v3.0.0-beta.5; draft: False; prerelease: True; published_at: 2025-07-20T14:49:17Z; created_at: 2025-07-20T14:38:31Z\nRelease notes:\n## 🚀 New Features\n* Middleware/keyAuth: Add support for context.Context in keyauth middleware by @vhespanha in https://github.com/gofiber/fiber/pull/3287\n* Middleware/logger: Add Skip function to logger middleware by @JIeJaitt in https://github.com/gofiber/fiber/pull/3333\n* Middleware/logger: Add predefined log formats by @edvardsanta in https://github.com/gofiber/fiber/pull/3359\n* Middleware/logger: Add support for ForceColors in Logger middleware by @yorickdewid in https://github.com/gofiber/fiber/pull/3428\n* Middleware/session: Add support for Keys() in session middleware by @sixcolors in https://github.com/gofiber/fiber/pull/3517\n* Middelware/timeout: Add config for Timeout middleware by @ReneWerner87 in https://github.com/gofiber/fiber/pull/3604\n* Add End() method to Ctx by @grivera64 in https://github.com/gofiber/fiber/pull/3280\n* Improve and Optimize ShutdownWithContext Func by @JIeJaitt in https://github.com/gofiber/fiber/pull/3162\n* Add support for multipart file binding by @efectn in https://github.com/gofiber/fiber/pull/3309\n* Add Req and Res API by @nickajacks1 in https://github.com/gofiber/fiber/pull/2894\n* Add support for application state management by @efectn in https://github.com/gofiber/fiber/pull/3360\n* Enhance CheckConstraint method for improved error handling by @JIeJaitt in https://github.com/gofiber/fiber/pull/3356\n* Add `All` method to Bind by @edvardsanta in https://github.com/gofiber/fiber/pull/3373\n* Add Support for service dependencies by @mdelapenya in https://github.com/gofiber/fiber/pull/3434\n* Add Support for Removing Routes by @ckoch786 in https://github.com/gofiber/fiber/pull/3230\n* `fiber.Context` implement context.Context by @pjebs in https://github.com/gofiber/fiber/pull/3382\n* Add support for NewErrorf by @gaby in https://github.com/gofiber/fiber/pull/3463\n* Add NewWithCustomCtx initialization helper by @ReneWerner87 in https://github.com/gofiber/fiber/pull/3476\n* Add UNIX socket support by @LaptopCat in https://github.com/gofiber/fiber/pull/3535\n* Add support for Msgpack by @hotrungnhan in https://github.com/gofiber/fiber/pull/3565\n* Add context methods to `fiber.Storage` interface by @efectn in https://github.com/gofiber/fiber/pull/3566\n## 🧹 Updates\n* Middleware/basicAuth: Enhance BasicAuth middleware to better comply with RFC 6750 by @gaby in https://github.com/gofiber/fiber/pull/3484\n* Middleware/basicAuth: Improve BasicAuth middleware default security by @gaby in https://github.com/gofiber/fiber/pull/3522\n* Middleware/cache: Improve cache middleware RFC compliance by @gaby in https://github.com/gofiber/fiber/pull/3488\n* Middleware/cors: Improve CORS middleware response headers  by @gaby in https://github.com/gofiber/fiber/pull/3505\n* Middleware/cors: Improve CORS tests coverage by @gaby in https://github.com/gofiber/fiber/pull/3530\n* Middleware/csrf: Improve CSRF tests coverage by @gaby in https://github.com/gofiber/fiber/pull/3531\n* Middleware/csrf: Add missing CSRF token extractor tests by @gaby in https://github.com/gofiber/fiber/pull/3527\n* Middleware/csrf: Refactor CSRF middleware and enhance documentation by @sixcolors in https://github.com/gofiber/fiber/pull/3598\n* Middleware/csrf: Enhance CSRF tests to address unsafe header value issue (#2045) by @sixcolors in https://github.com/gofiber/fiber/pull/3485\n* Middleware/earlyData: Improve EarlyData middleware tests coverage by @gaby in https://github.com/gofiber/fiber/pull/3520\n* Middleware/encryptCookie: Enhance config validation in EncryptCookie middleware by @gaby in https://github.com/gofiber/fiber/pull/3491\n* Middleware/envVar: Refactor EnvVar middleware by @gaby in https://github.com/gofiber/fiber/pull/3513\n* Middleware/helmet: Improve Helmet middleware tests coverage by @gaby in https://github.com/gofiber/fiber/pull/3523\n* Middleware/idempo...",
+      "memory_unit_text": "In the gofiber/fiber release v3.0.0-beta.5, new features add context.Context support to keyauth, Skip function to logger, predefined log formats, ForceColors in logger, Keys() in session, Timeout middleware config, End() method to Ctx, ShutdownWithContext optimization, multipart file binding, Req and Res API, application state management, CheckConstraint enhancement, All method to Bind, service dependencies, route removal, fiber.Context implementing context.Context, NewErrorf, NewWithCustomCtx, UNIX socket support, Msgpack support, and context methods to fiber.Storage. Updates enhance BasicAuth RFC compliance and security, cache RFC compliance, CORS response headers and tests, CSRF tests and refactor, earlydata tests, encryptcookie config validation, envvar refactor, helmet tests, idempotency tests, and more."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v3_0_0_rc_1",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.0.0-rc.1",
+      "tag_name": "v3.0.0-rc.1",
+      "title": "v3.0.0-rc.1",
+      "time_hint": "2025-08-26",
+      "published_at": "2025-08-26T07:28:06Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v3.0.0-rc.1",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v3.0.0-rc.1\nTag: v3.0.0-rc.1; draft: False; prerelease: True; published_at: 2025-08-26T07:28:06Z; created_at: 2025-08-26T06:58:11Z\nRelease notes:\n### 🚀 New Features\n* Middleware/basicAuth: Add Fiber Context to BasicAuth Authorizer by @gaby in https://github.com/gofiber/fiber/pull/3621\n* Middleware/basicAuth: Add HeaderLimit option to BasicAuth middleware by @gaby in https://github.com/gofiber/fiber/pull/3620\n* Middleware/basicAuth: Support hashed BasicAuth passwords by @gaby in https://github.com/gofiber/fiber/pull/3631\n* Middleware/csrf: Enhance extractor functionality with metadata and security validation by @sixcolors in https://github.com/gofiber/fiber/pull/3630\n* Middleware/limiter: Support for disabling response headers in Limiter Middleware by @gaby in https://github.com/gofiber/fiber/pull/3618\n* Middleware/proxy: Add KeepConnectionHeader option to Proxy middleware by @gaby in https://github.com/gofiber/fiber/pull/3662\n* Middleware/session: Introduce Extractor pattern for session ID retrieval by @sixcolors in https://github.com/gofiber/fiber/pull/3625\n* Support for SendEarlyHints by @pjebs in https://github.com/gofiber/fiber/pull/3483\n* Support generic configurable logger by @ReneWerner87 in https://github.com/gofiber/fiber/pull/3705\n* Add conditional copy helpers by @ReneWerner87 in https://github.com/gofiber/fiber/pull/3703\n* Add support for embedded Koa-Style Req and Res structs by @grivera64 in https://github.com/gofiber/fiber/pull/3533\n* Add default UTF-8 charset by @Copilot in https://github.com/gofiber/fiber/pull/3583\n### 🧹 Updates\n* Middleware/basicAuth: Remove SHA-1/MD5 support in BasicAuth middleware by @gaby in https://github.com/gofiber/fiber/pull/3634\n* Middleware/basicAuth: Remove support for PasswordFromContext from BasicAuth middleware by @gaby in https://github.com/gofiber/fiber/pull/3638\n* Middleware/cors: Fix CORS docs and comments by @gaby in https://github.com/gofiber/fiber/pull/3637\n* Middleware/csrf: Fix CSRF error message mismatch with documentation by @gaby in https://github.com/gofiber/fiber/pull/3636\n* Middleware/csrf: Fix CSRF subdomain wildcard boundary by @gaby in https://github.com/gofiber/fiber/pull/3694\n* Middleware/keyAuth: Extractor-Based Configuration and Enhanced Flexibility by @sixcolors in https://github.com/gofiber/fiber/pull/3685\n* Middleware/keyAuth: Return generic errors in KeyAuth middleware by @gaby in https://github.com/gofiber/fiber/pull/3692\n* Middleware/pprof: Fix pprof middleware docs and default config by @gaby in https://github.com/gofiber/fiber/pull/3642\n* Add tests for quoteRawString by @gaby in https://github.com/gofiber/fiber/pull/3613\n* Replace math/rand with crypto/rand by @gaby in https://github.com/gofiber/fiber/pull/3508\n* Enable govet shadow by @ReneWerner87 in https://github.com/gofiber/fiber/pull/3617\n* Fix Cookie SameSite constants to Pascal case per RFC specification by @Copilot in https://github.com/gofiber/fiber/pull/3608\n* Fix timing for streaming test by @ReneWerner87 in https://github.com/gofiber/fiber/pull/3628\n* Reduce allocation in AutoFormat by @ReneWerner87 in https://github.com/gofiber/fiber/pull/3652\n* Add sync pool and release helpers for Bind by @ReneWerner87 in https://github.com/gofiber/fiber/pull/3660\n* Add CBOR support to AutoFormat() by @gaby in https://github.com/gofiber/fiber/pull/3665\n* Add missing checks in Ctx tests by @gaby in https://github.com/gofiber/fiber/pull/3670\n* Stabilize interrupted stream writer test by @ReneWerner87 in https://github.com/gofiber/fiber/pull/3669\n* Fix AcceptsLanguages() RFC compliance by @gaby in https://github.com/gofiber/fiber/pull/3672\n* Respect immutable config in Params(), Protocol(), and Body() by @gaby in https://github.com/gofiber/fiber/pull/3676\n* Optimize Fresh header parsing for fasthttp 1.65 by @ReneWerner87 in https://github.com/gofiber/fiber/pull/3687\n* Use ephemeral ports in unit tests by @ReneWerner87 in https://github.com/gofiber/fiber/pull/3686\n* D...",
+      "memory_unit_text": "In the gofiber/fiber release v3.0.0-rc.1, new features add Fiber Context to BasicAuth Authorizer, HeaderLimit option, hashed passwords support, CSRF extractor enhancement, limiter response headers disable, proxy KeepConnectionHeader, session extractor pattern, SendEarlyHints, generic configurable logger, conditional copy helpers, embedded Koa-style Req/Res structs, and default UTF-8 charset. Updates remove SHA-1/MD5 and PasswordFromContext from BasicAuth, fix CORS docs, CSRF error message and subdomain wildcard, keyauth extractor-based config and generic errors, pprof docs, add tests, replace math/rand with crypto/rand, enable govet shadow, fix Cookie SameSite constants, streaming test timing, reduce AutoFormat allocation, add sync pool for Bind, CBOR support to AutoFormat, missing Ctx tests, stabilize stream writer test, fix AcceptsLanguages RFC compliance, respect immutable config, optimize Fresh header parsing, use ephemeral ports, and more."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v3_0_0_rc_2",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.0.0-rc.2",
+      "tag_name": "v3.0.0-rc.2",
+      "title": "v3.0.0-rc.2",
+      "time_hint": "2025-09-29",
+      "published_at": "2025-09-29T11:15:51Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v3.0.0-rc.2",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v3.0.0-rc.2\nTag: v3.0.0-rc.2; draft: False; prerelease: True; published_at: 2025-09-29T11:15:51Z; created_at: 2025-09-29T10:57:20Z\nRelease notes:\n### 🚀 New Features\n* Add request inspection helpers by @gaby in https://github.com/gofiber/fiber/pull/3727\n* Add extractors package by @sixcolors in https://github.com/gofiber/fiber/pull/3725\n* Add support for redacting values by @gaby in https://github.com/gofiber/fiber/pull/3759\n### 🧹 Updates\n* Middleware/cache: Improve Cache middleware defaults by @gaby in https://github.com/gofiber/fiber/pull/3740\n* Middleware/cache: Fix cache cleanup and redact token values by @gaby in https://github.com/gofiber/fiber/pull/3757\n* Middleware/compress: Improve Compress middleware RFC compliance by @gaby in https://github.com/gofiber/fiber/pull/3745\n* Middleware/csrf: update CSRF middleware to use shared extractors by @sixcolors in https://github.com/gofiber/fiber/pull/3746\n* Middleware/keyAuth: Improve KeyAuth middleware RFC compliance by @gaby in https://github.com/gofiber/fiber/pull/3742\n* Middleware/keyAuth: Update keyauth middleware to use shared extractors by @sixcolors in https://github.com/gofiber/fiber/pull/3747\n* Middleware/session: Migrate Session middleware to new extractors package by @sixcolors in https://github.com/gofiber/fiber/pull/3744\n* Handle Transfer-Encoding bodies in HasBody by @gaby in https://github.com/gofiber/fiber/pull/3748\n* Improve error handling when using storage drivers by @gaby in https://github.com/gofiber/fiber/pull/3754\n* Improve performance analyseConstantPart by @ksw2000 in https://github.com/gofiber/fiber/pull/3753\n* Ensure middleware prefix matching requires slash boundary by @ReneWerner87 in https://github.com/gofiber/fiber/pull/3755\n* Use sync.Pool for Client hooks by @arturmelanchyk in https://github.com/gofiber/fiber/pull/3758\n* Avoid locking in gc() if nothing to delete by @arturmelanchyk in https://github.com/gofiber/fiber/pull/3765\n* Improve allocations for Request Params() by @arturmelanchyk in https://github.com/gofiber/fiber/pull/3766\n* Cleanup return error logic in Bind() by @arturmelanchyk in https://github.com/gofiber/fiber/pull/3764\n* Update RouteChain function by @ReneWerner87 in https://github.com/gofiber/fiber/pull/3761\n* Expand Binder tests coverage by @gaby in https://github.com/gofiber/fiber/pull/3714\n### 🐛 Bug Fixes\n* Middleware/BasicAuth: Improve BasicAuth middleware RFC compliance by @gaby in https://github.com/gofiber/fiber/pull/3743\n* Middleware/Adapter: Handle Unix sockets in adaptor middleware by @Dishank-Sen in https://github.com/gofiber/fiber/pull/3760\n* Fix support for context.Context by @gaby in https://github.com/gofiber/fiber/pull/3720\n### 🛠️ Maintenance\n* build(deps): bump github.com/tinylib/msgp from 1.3.0 to 1.4.0 by @dependabot[bot] in https://github.com/gofiber/fiber/pull/3716\n* build(deps): bump github.com/stretchr/testify from 1.11.0 to 1.11.1 by @dependabot[bot] in https://github.com/gofiber/fiber/pull/3715\n* build(deps): bump github.com/shamaton/msgpack/v2 from 2.3.0 to 2.3.1 by @dependabot[bot] in https://github.com/gofiber/fiber/pull/3719\n* build(deps): bump benchmark-action/github-action-benchmark from 1.20.4 to 1.20.5 by @dependabot[bot] in https://github.com/gofiber/fiber/pull/3730\n* build(deps): bump actions/setup-go from 5 to 6 by @dependabot[bot] in https://github.com/gofiber/fiber/pull/3732\n* build(deps): bump actions/setup-node from 4 to 5 by @dependabot[bot] in https://github.com/gofiber/fiber/pull/3733\n* build(deps): bump codecov/codecov-action from 5.5.0 to 5.5.1 by @dependabot[bot] in https://github.com/gofiber/fiber/pull/3734\n* build(deps): bump golang.org/x/crypto from 0.41.0 to 0.42.0 by @dependabot[bot] in https://github.com/gofiber/fiber/pull/3737\n* build(deps): bump golang.org/x/net from 0.43.0 to 0.44.0 by @dependabot[bot] in https://github.com/gofiber/fiber/pull/3738\n* build(deps): bump benchmark-action/github-action-benchmark from 1.20.5 to 1.20.7 by @depen...",
+      "memory_unit_text": "In the gofiber/fiber release v3.0.0-rc.2, new features add request inspection helpers, extractors package, and support for redacting values. Updates improve cache middleware defaults, fix cache cleanup and redact tokens, improve compress RFC compliance, update CSRF to use shared extractors, improve keyauth RFC compliance and update to shared extractors, migrate session to new extractors, handle Transfer-Encoding bodies, improve storage driver error handling, improve constant part analysis performance, ensure middleware prefix matching, use sync.Pool for client hooks, avoid locking in gc, improve request Params allocations, cleanup Bind error logic, update RouteChain, and expand binder tests. Bug fixes improve BasicAuth RFC compliance, handle Unix sockets in adaptor, and fix context.Context support. Maintenance bumps dependencies."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v2_52_10",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.52.10",
+      "tag_name": "v2.52.10",
+      "title": "v2.52.10",
+      "time_hint": "2025-11-19",
+      "published_at": "2025-11-19T14:21:16Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v2.52.10",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v2.52.10\nTag: v2.52.10; draft: False; prerelease: False; published_at: 2025-11-19T14:21:16Z; created_at: 2025-11-19T14:20:57Z\nRelease notes:\n<!-- Release notes generated using configuration in .github/release.yml at v2 -->\n### 🐛 Bug Fixes\n* Handle invalid path in filesystem by @rokostik in https://github.com/gofiber/fiber/pull/3688\n* Fix recover middleware panic output formatting by @ReneWerner87 in https://github.com/gofiber/fiber/pull/3818\n* Fix enforcement of Immutable config for some edge cases by @gaby in https://github.com/gofiber/fiber/pull/3835\n### 📚 Documentation\n* Document RoutePatternMatch by @ReneWerner87 in https://github.com/gofiber/fiber/pull/3723\n## New Contributors\n* @rokostik made their first contribution in https://github.com/gofiber/fiber/pull/3688\n**Full Changelog**: https://github.com/gofiber/fiber/compare/v2.52.9...v2.52.10",
+      "memory_unit_text": "In the gofiber/fiber release v2.52.10, bug fixes handle invalid path in filesystem, fix recover middleware panic output formatting, and fix enforcement of Immutable config for edge cases. Documentation adds RoutePatternMatch."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v3_0_0_rc_3",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.0.0-rc.3",
+      "tag_name": "v3.0.0-rc.3",
+      "title": "v3.0.0-rc.3",
+      "time_hint": "2025-11-19",
+      "published_at": "2025-11-19T15:42:23Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v3.0.0-rc.3",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v3.0.0-rc.3\nTag: v3.0.0-rc.3; draft: False; prerelease: True; published_at: 2025-11-19T15:42:23Z; created_at: 2025-11-19T15:10:40Z\nRelease notes:\n### 🚀 New Features\n* Middleware/encryptCookie: Add cookie name authentication for EncryptCookie middleware by @gaby in https://github.com/gofiber/fiber/pull/3788\n* Middleware/proxy: Add BodyStream() logic to `adaptor.FiberHandler` middleware by @grivera64 in https://github.com/gofiber/fiber/pull/3799\n* Client: Add support for HostClient and LBClient by @gaby in https://github.com/gofiber/fiber/pull/3774\n* Native support for net/http and fasthttp handlers by @gaby in https://github.com/gofiber/fiber/pull/3769\n* Add support for Express.js style req/res handlers by @gaby in https://github.com/gofiber/fiber/pull/3809\n* Add support for DisableAutoRegister of HEAD routes by @ReneWerner87 in https://github.com/gofiber/fiber/pull/3817\n* Add support for handling unsupported HTTP methods as HTTP 501 by @gaby in https://github.com/gofiber/fiber/pull/3854\n* Add support for ReloadViews() by @gaby in https://github.com/gofiber/fiber/pull/3876\n* Expose startup message customization hooks by @efectn in https://github.com/gofiber/fiber/pull/3824\n### 🧹 Updates\n* Middleware/adaptor: prevent CopyContextToFiberContext panic and add comprehensive test coverage by @sixcolors in https://github.com/gofiber/fiber/pull/3770\n* Middleware/adaptor: Add flushing-related unit tests for net/http adaptor by @grivera64 in https://github.com/gofiber/fiber/pull/3807\n* Middleware/encryptCookie: Return error during EncryptCookie failure by @gaby in https://github.com/gofiber/fiber/pull/3842\n* Client: Preallocate slice size in Client::Param() by @arturmelanchyk in https://github.com/gofiber/fiber/pull/3782\n* Reduce allocations in Request (saves ~16% B/op) by @arturmelanchyk in https://github.com/gofiber/fiber/pull/3768\n* Make boundary a const by @arturmelanchyk in https://github.com/gofiber/fiber/pull/3783\n* Skip locking garbage collector if nothing to delete by @arturmelanchyk in https://github.com/gofiber/fiber/pull/3787\n* Reduce the memory usage of cacheableStatusCodes by @ZihxS in https://github.com/gofiber/fiber/pull/3789\n* Merge duplicate constants by @jsoref in https://github.com/gofiber/fiber/pull/3812\n* Improve propagation of context.Context by @gaby in https://github.com/gofiber/fiber/pull/3822\n* Inline Request state wrappers by @arturmelanchyk in https://github.com/gofiber/fiber/pull/3827\n* Remove unneeded \"utils\" alias by @arturmelanchyk in https://github.com/gofiber/fiber/pull/3834\n* Benchmark for cache miss case by @arturmelanchyk in https://github.com/gofiber/fiber/pull/3836\n* Add FullPath() helper to context by @gaby in https://github.com/gofiber/fiber/pull/3837\n* Handle nil map targets in Binder by @gaby in https://github.com/gofiber/fiber/pull/3839\n* Extracted generic releasePooledBinder function by @arturmelanchyk in https://github.com/gofiber/fiber/pull/3841\n* Refactor internal errors to use sentinel values by @gaby in https://github.com/gofiber/fiber/pull/3864\n* Test HEAD request compliance by @gaby in https://github.com/gofiber/fiber/pull/3868\n* Improve OPTIONS wildcard regression test by @gaby in https://github.com/gofiber/fiber/pull/3869\n* Improve byte-range handling for SendFile() by @gaby in https://github.com/gofiber/fiber/pull/3870\n* Use int64 when dealing with HTTP Ranges by @gaby in https://github.com/gofiber/fiber/pull/3874\n### 🐛 Bug Fixes\n* Middleware/limiter: Fix default value for MaxFunc in Limiter middleware by @gaby in https://github.com/gofiber/fiber/pull/3871\n* Middleware/recover: Fix recover middleware panic output formatting by @gaby in https://github.com/gofiber/fiber/pull/3816\n* Middleware/session: correct fresh flag logic in getSession by @sixcolors in https://github.com/gofiber/fiber/pull/3825\n* Fix spelling issues by @jsoref in https://github.com/gofiber/fiber/pull/3813\n* Fix fatal error calls in adapter_test.go by @ReneWerner87 in https://g...",
+      "memory_unit_text": "In the gofiber/fiber release v3.0.0-rc.3, new features add cookie name authentication for encryptcookie, BodyStream logic to adaptor, HostClient and LBClient support, native net/http and fasthttp handler support, Express.js style req/res handlers, DisableAutoRegister of HEAD routes, handling unsupported HTTP methods as 501, ReloadViews, and startup message customization hooks. Updates include adaptor panic prevention and tests, flushing unit tests, encryptcookie error return, client slice preallocation, request allocation reduction, boundary const, gc locking skip, cacheableStatusCodes memory reduction, duplicate constant merge, context.Context propagation, inline request state wrappers, utils alias removal, cache miss benchmark, FullPath helper, nil map target handling, generic releasePooledBinder, sentinel errors, HEAD request compliance test, OPTIONS wildcard regression test, byte-range handling improvement, and int64 for HTTP ranges. Bug fixes address limiter MaxFunc default, recover panic formatting, session fresh flag logic, spelling issues, and fatal error calls."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v2_52_11",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.52.11",
+      "tag_name": "v2.52.11",
+      "title": "v2.52.11",
+      "time_hint": "2026-01-31",
+      "published_at": "2026-01-31T15:56:24Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v2.52.11",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v2.52.11\nTag: v2.52.11; draft: False; prerelease: False; published_at: 2026-01-31T15:56:24Z; created_at: 2026-01-31T15:55:53Z\nRelease notes:\n<!-- Release notes generated using configuration in .github/release.yml at v2 -->\n## What's Changed\n### 🧹 Updates\n* Improve mount functionality by @gaby in https://github.com/gofiber/fiber/pull/3900\n### 🐛 Bug Fixes\n* Backport defensive copying fixes from #3828 and #3829 to v2 by @sixcolors in https://github.com/gofiber/fiber/pull/3888\n* Fixes and improvements for limiter middleware by @gaby in https://github.com/gofiber/fiber/pull/3899\n**Full Changelog**: https://github.com/gofiber/fiber/compare/v2.52.10...v2.52.11",
+      "memory_unit_text": "In the gofiber/fiber release v2.52.11, updates improve mount functionality. Bug fixes backport defensive copying fixes and improve limiter middleware."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v3_0_0",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.0.0",
+      "tag_name": "v3.0.0",
+      "title": "v3.0.0",
+      "time_hint": "2026-02-02",
+      "published_at": "2026-02-02T18:22:38Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v3.0.0",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v3.0.0\nTag: v3.0.0; draft: False; prerelease: False; published_at: 2026-02-02T18:22:38Z; created_at: 2026-02-02T17:59:53Z\nRelease notes:\nFor a detailed view of all changes and the migration guide, visit:\nhttps://docs.gofiber.io/whats_new\nTry our new [migration tool](https://docs.gofiber.io/next/whats_new#%EF%B8%8F-migration-tool) to help you upgrade from v2 to v3:\n```sh\ngo install github.com/gofiber/cli/fiber@latest\nfiber migrate --to v3\n```\n## What's Changed\n### 🚀 New Features\n* 🚀 App ([Docs](https://docs.gofiber.io/next/whats_new#-app))\n* `Rename WithTlsConfig` method to `WithTLSConfig` in (#2570)\n* Use any as default Message type of Error struct in (#1925)\n* Add support for custom constraints in (#2807)\n* Add support for trusted origins in (#2910)\n* Add DialDualStack option for upstream IPv6 support in (#2900)\n* TrustedOrigins using `https://*.example.com` style subdomains in (#2925)\n* Add configuration support to `c.SendFile()` in (#3017)\n* Add CHIPS support to Cookie in (#3047)\n* Add TestConfig to `app.Test()` for configurable testing in (#3161)\n* Add buffered streaming support in (#3131)\n* Add support for AutoTLS / ACME in (#3201)\n* Add support for configuring TLS Min Version in (#3248)\n* Fix square bracket notation in Multipart FormData in (#3235)\n* Add support for application state management in (#3360)\n* Add support for `NewErrorf` in (#3463)\n* Add UNIX socket support in (#3535)\n* Add support for Msgpack in (#3565)\n* Add default UTF-8 charset in (#3583)\n* Support for SendEarlyHints in (#3483)\n* Add conditional copy helpers in (#3703)\n* Add request inspection helpers in (#3727)\n* Add support for redacting values in (#3759)\n* Add support for handling unsupported HTTP methods as HTTP 501 in (#3854)\n* Add support for ReloadViews() in (#3876)\n* Expose startup message customization hooks in (#3824)\n* Migrate from UUIDv4 to SecureToken for key generation in (#3946)\n* Add ExpirationFunc for dynamic expiration in (#3984)\n* Auto-enforce Secure=true for Partitioned cookies in Cookie() in (#3976)\n* 📎 Binding ([Docs](https://docs.gofiber.io/next/whats_new#-binding))\n* Initial support for binding in (#1981)\n* Bind: add support for multipart file binding in (#3309)\n* Add All method to Bind in (#3373)\n* 🌎 Client ([Docs](https://docs.gofiber.io/next/whats_new#-client-package))\n* Client refactor in (#1986)\n* Add support for creating Fiber client from existing FastHTTP client in (#3214)\n* Add support for iterator methods to Fiber client in (#3228)\n* Add support for HostClient and LBClient in (#3774)\n* Add support for streaming response bodies in client and response handling in (#4014)\n* 🧠 Context ([Docs](https://docs.gofiber.io/next/whats_new#-context))\n* `Convert fiber.Ctx` type to interface in (#1928)\n* Add Drop method to DefaultCtx for silent connection termination in (#3257)\n* Add `End()` method to `Ctx` in (#3280)\n* Improve and Optimize `ShutdownWithContext` Func in (#3162)\n* Add support for `context.Context` in keyauth middleware in (#3287)\n* `Fiber.Context` implement `context.Context` in (#3382)\n* Add NewWithCustomCtx initialization helper in (#3476)\n* Add context methods to fiber.Storage interface in (#3566)\n* Add Fiber Context to BasicAuth Authorizer in (#3621)\n* Implement OverrideParam override behavior for DefaultCtx in (#3962)\n* Add context common request helpers in (#4007)\n* Adding GetReqHeaders and GetRespHeaders in (#2831)\n* Add Req and Res API in (#2894)\n* 🔬 Extractors ([Docs](https://docs.gofiber.io/next/whats_new#-extractors-package))\n* Introduce Extractor pattern for session ID retrieval in (#3625)\n* Enhance extractor functionality with metadata and security validation in (#3630)\n* Add extractors package in (#3725)\n* 🧰 Generic ([Docs](https://docs.gofiber.io/next/whats_new#-generic-functions))\n* Add QueryParser for get query using generic in (#2776)\n* Addition of Locals Function with Go Generics as an Alternative to c.Locals in (#2813)\n* Implement new generic functions: Params, Ge...",
+      "memory_unit_text": "In the gofiber/fiber release v3.0.0, the project announces the general availability of Fiber v3 with a migration tool. New features span App (TLS config rename, any error message type, custom constraints, trusted origins, DialDualStack, subdomain trusted origins, SendFile config, CHIPS cookie, TestConfig, buffered streaming, AutoTLS/ACME, TLS Min Version, square bracket notation, application state management, NewErrorf, UNIX sockets, Msgpack, UTF-8 charset, SendEarlyHints, conditional copy helpers, request inspection helpers, redacting values, unsupported HTTP methods as 501, ReloadViews, startup message hooks, UUIDv4 to SecureToken, ExpirationFunc, auto-enforce Secure for Partitioned cookies), Binding (initial support, multipart file binding, All method), Client (refactor, from existing FastHTTP client, iterator methods, HostClient/LBClient, streaming response bodies), Context (Ctx to interface, Drop method, End method, ShutdownWithContext optimization, context.Context in keyauth, fiber.Context implements context.Context, NewWithCustomCtx, context methods to Storage, BasicAuth Authorizer context, OverrideParam, common request helpers, GetReqHeaders/GetRespHeaders, Req/Res API), Extractors (session ID extractor, enhanced extractor, extractors package), Generic (QueryParser, Locals with generics, Params/Get/Convert), Middleware (BasicAuth context, HeaderLimit, hashed passwords, CSRF extractor enhancement, limiter response headers disable, proxy KeepConnectionHeader, session extractor, SendEarlyHints, generic configurable logger, conditional copy helpers, embedded Koa-style Req/Res, default UTF-8 charset, encryptcookie cookie name auth, BodyStream adaptor, HostClient/LBClient, native handlers, Express.js style handlers, DisableAutoRegister HEAD, unsupported methods 501, ReloadViews, startup message hooks, SecureToken, ExpirationFunc, Partitioned cookies), and more."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v3_1_0",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.1.0",
+      "tag_name": "v3.1.0",
+      "title": "v3.1.0",
+      "time_hint": "2026-02-24",
+      "published_at": "2026-02-24T20:30:38Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v3.1.0",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v3.1.0\nTag: v3.1.0; draft: False; prerelease: False; published_at: 2026-02-24T20:30:38Z; created_at: 2026-02-24T20:12:46Z\nRelease notes:\n## 🚀 New\n- expand middleware context helpers (#4079)\n```go\napp := fiber.New(fiber.Config{\nPassLocalsToContext: true, // default: false\n})\n// Works for requestid, csrf, session, basicauth, keyauth middlewares\napp.Use(requestid.New())\napp.Get(\"/\", func(ctx fiber.Ctx) error {\n// Value helpers from middlewares works now with 3 different context items\nid := requestid.FromContext(ctx)              // works always\nid := requestid.FromContext(ctx.RequestCtx()) // works always\nid := requestid.FromContext(ctx.Context())    // works only when `PassLocalsToContext` is true\nreturn c.SendString(id)\n})\n```\nhttps://docs.gofiber.io/api/fiber/#passlocalstocontext\n## 🧹 Updates\n- update utils and add go 1.26 for test workflow (#4087)\n- optimize helpers performance (#4049)\n- harden numeric constraint parsing and expand route tests (#4054)\n## 🐛 Fixes\n- harden DefaultRes.Format against nil handler panics (#4105)\n- guard nil request in adaptor LocalContextFromHTTPRequest (#4097)\n- fix Unix-socket support in IsProxyTrusted (#4088)\n- harden proxy nil client handling in Do/Forward paths (#4083)\n- add nil-safety to response decode helpers (#4081)\n- sanitize attachment/download filenames (#4070)\n- harden flash cookie detection (#4078)\n- fix bind struct validation only for struct targets (#4082)\n- enforce Range header limit configuration (#4071)\n- apply limits to msgp serialization (#4065)\n- fix sanitizePath validation logic (#4064)\n- fix Test method returning empty response on timeout (#4063)\n- fix nil pointer dereference in context methods when accessed after release (#4062)\n- retry addon: remove unnecessary sleep after last failed attempt (#4060)\n- make TLS listener config discovery safer (#4055)\n- validate nil services early and during lifecycle (#4050)\n- skip non-string state keys during iteration (#4048)\n- harden Port() handling (#4051)\n- prevent panics on non-string log keys (#4046)\n## 🛠️ Maintenance\n- bump streetsidesoftware/cspell-action from 8.2.0 to 8.3.0 (#4111)\n- bump the golang-modules group with 3 updates (#4080)\n- bump github.com/shamaton/msgpack/v3 from 3.0.0 to 3.1.0 (#4075)\n- bump github.com/klauspost/compress from 1.18.3 to 1.18.4 (#4076)\n- bump github.com/gofiber/schema from 1.6.0 to 1.7.0 (#4074)\n- bump golang.org/x/sys from 0.40.0 to 0.41.0 in the golang-modules group (#4073)\n- bump github/codeql-action from 4.32.3 to 4.32.4 (#4104)\n- bump github/codeql-action from 4.32.1 to 4.32.2 (#4058)\n- bump github/codeql-action from 4.32.0 to 4.32.1 (#4047)\n## 📚 Documentation\n- update versioned storage imports in middleware docs (#4102)\n- update documentation for parser configuration and request handling (#4096)\n- fix invalid Go slice literal in middleware registration example (#4095)\n- document `uri` struct tag for `ctx.Bind().URI()` in migration guide (#4092)\n- document logger Stream rename (#4057)\n**📒 Documentation**: https://docs.gofiber.io/next/\n**💬 Discord**: https://gofiber.io/discord\n**Full Changelog**: https://github.com/gofiber/fiber/compare/v3.0.0...v3.1.0\nThank you @ReneWerner87, @SadikSunbul, @gaby and @sixcolors for making this release possible.",
+      "memory_unit_text": "In the gofiber/fiber release v3.1.0, new features expand middleware context helpers with PassLocalsToContext config. Updates include utils update, go 1.26 test workflow, helper performance optimization, and numeric constraint parsing hardening. Fixes address nil handler panics in DefaultRes.Format, nil request in adaptor, Unix-socket in IsProxyTrusted, proxy nil client handling, nil-safety in response decode, attachment/download filename sanitization, flash cookie detection, bind struct validation, Range header limit, msgp serialization limits, sanitizePath validation, Test method timeout response, nil pointer dereference after release, retry addon sleep, TLS listener config safety, nil services validation, non-string state keys, Port handling, and non-string log keys. Maintenance bumps dependencies."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v2_52_12",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.52.12",
+      "tag_name": "v2.52.12",
+      "title": "v2.52.12",
+      "time_hint": "2026-02-24",
+      "published_at": "2026-02-24T20:40:25Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v2.52.12",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v2.52.12\nTag: v2.52.12; draft: False; prerelease: False; published_at: 2026-02-24T20:40:25Z; created_at: 2026-02-24T20:37:56Z\nRelease notes:\n## 🐛 Fixes\n- CVE fix [GHSA-mrq8-rjmw-wpq3](https://github.com/gofiber/fiber/security/advisories/GHSA-mrq8-rjmw-wpq3)\n**Full Changelog**: https://github.com/gofiber/fiber/compare/v2.52.11...v2.52.12",
+      "memory_unit_text": "In the gofiber/fiber release v2.52.12, a fix addresses a CVE (GHSA-mrq8-rjmw-wpq3)."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v3_2_0",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.2.0",
+      "tag_name": "v3.2.0",
+      "title": "v3.2.0",
+      "time_hint": "2026-04-25",
+      "published_at": "2026-04-25T10:53:02Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v3.2.0",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v3.2.0\nTag: v3.2.0; draft: False; prerelease: False; published_at: 2026-04-25T10:53:02Z; created_at: 2026-04-25T10:49:18Z\nRelease notes:\n## 🚀 New\n- Add URL() method to Route for generating URLs with parameters (#4195)\nhttps://docs.gofiber.io/api/app#getroute\n- Add comprehensive tests for binding to pointer scalar types (#4191)\n- Add response format support to healthcheck middleware (#4178)\nhttps://docs.gofiber.io/middleware/healthcheck#config\n- Route Domain() func for host-based routing (#4100)\n- Add pagination middleware (#4127)\nhttps://docs.gofiber.io/middleware/paginate\n- Add BindError type with source and field metadata (#4120)\nhttps://docs.gofiber.io/api/bind#binderror\n- Add PanicHandler in recover middleware (#4110)\nhttps://docs.gofiber.io/middleware/recover#config\n## 🧹 Updates\n- Optimize speed (#4231)\n- Remove duplicate benchmark handling and update benchmark action version (#4108)\n## 🐛 Fixes\n- Fix race condition in TestTimeout\\_ContextPropagation (#4119)\n- Fix ARMv7 build overflow in etag middleware (#4190)\n- Fix HTML escaping in AutoFormat (#4228)\n- Structured default cache keys, and controls (#4224)\n- Enforce BodyLimit on request decompression and multipart form parsing (#4213)\n- Implement releaseData function for better resource management (#4209)\n- Strip path from referer before matching trusted origins (#4204)\n- Improve clarity for ProxyHeader and TrustProxy configuration (#4140)\n- Prefork children exit immediately in Docker containers (#4133)\n- Fix math.MaxUint32 overflow in etag middleware on 32-bit platforms (#4135)\n- Add nil checks to `End()` to prevent panic in streaming mode (#4128)\n- Custom binders bypass StructValidator in Body() and Custom() (#4124)\n## 🛠️ Maintenance\n<details>\n<summary>43 changes</summary>\n- bump actions/setup-go from 6.2.0 to 6.3.0 (#4114)\n- bump golang.org/x/net from 0.50.0 to 0.51.0 in the golang-modules group (#4113)\n- bump github.com/gofiber/schema from 1.7.0 to 1.7.1 (#4220)\n- bump actions/setup-node from 6.3.0 to 6.4.0 (#4222)\n- bump dependabot/fetch-metadata from 3.0.0 to 3.1.0 (#4221)\n- bump github.com/tinylib/msgp from 1.6.3 to 1.6.4 (#4215)\n- bump github/codeql-action from 4.35.1 to 4.35.2 (#4216)\n- bump actions/cache from 5.0.4 to 5.0.5 (#4214)\n- bump actions/github-script from 8.0.0 to 9.0.0 (#4207)\n- bump release-drafter/release-drafter from 7.1.1 to 7.2.0 (#4206)\n- bump the golang-modules group with 2 updates (#4205)\n- bump github.com/mattn/go-isatty from 0.0.20 to 0.0.21 (#4203)\n- bump golang.org/x/text from 0.35.0 to 0.36.0 in the golang-modules group (#4202)\n- bump golang.org/x/sys from 0.42.0 to 0.43.0 in the golang-modules group (#4201)\n- bump github.com/valyala/fasthttp from 1.69.0 to 1.70.0 in the fasthttp-modules group across 1 directory (#4197)\n- bump lewagon/wait-on-check-action from 1.6.0 to 1.6.1 (#4198)\n- bump streetsidesoftware/cspell-action from 8.3.0 to 8.4.0 (#4188)\n- bump github.com/andybalholm/brotli from 1.2.0 to 1.2.1 (#4174)\n- bump benchmark-action/github-action-benchmark from 1.21.0 to 1.22.0 (#4172)\n- bump actions/setup-go from 6.3.0 to 6.4.0 (#4170)\n- bump lewagon/wait-on-check-action from 1.5.0 to 1.6.0 (#4171)\n- bump github/codeql-action from 4.35.0 to 4.35.1 (#4169)\n- bump dependabot/fetch-metadata from 2.5.0 to 3.0.0 (#4165)\n- bump codecov/codecov-action from 5.5.3 to 6.0.0 (#4166)\n- bump github/codeql-action from 4.34.1 to 4.35.0 (#4164)\n- bump DavidAnson/markdownlint-cli2-action from 22.0.0 to 23.0.0 (#4161)\n- bump github.com/klauspost/compress from 1.18.4 to 1.18.5 (#4158)\n- bump github/codeql-action from 4.34.0 to 4.34.1 (#4159)\n- bump github/codeql-action from 4.33.0 to 4.34.0 (#4156)\n- bump codecov/codecov-action from 5.5.2 to 5.5.3 (#4153)\n- bump release-drafter/release-drafter from 7.1.0 to 7.1.1 (#4152)\n- bump actions/cache from 5.0.3 to 5.0.4 (#4151)\n- bump release-drafter/release-drafter from 7.0.0 to 7.1.0 (#4147)\n- bump release-drafter/release-drafter from 6.4.0 to 7.0.0 (#4142)\n- bump github/co...",
+      "memory_unit_text": "In the gofiber/fiber release v3.2.0, new features add URL() method to Route, comprehensive binding tests for pointer scalars, response format support to healthcheck, Route Domain() for host-based routing, pagination middleware, BindError type with source/field metadata, and PanicHandler in recover middleware. Updates optimize speed and remove duplicate benchmark handling. Fixes address race condition in TestTimeout, ARMv7 build overflow in etag, HTML escaping in AutoFormat, structured default cache keys, BodyLimit enforcement on decompression and multipart, releaseData function, referer path stripping for trusted origins, ProxyHeader/TrustProxy clarity, prefork children exit in Docker, math.MaxUint32 overflow in etag, nil checks in End, and custom binders bypassing StructValidator. Maintenance bumps many dependencies."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v2_52_13",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.52.13",
+      "tag_name": "v2.52.13",
+      "title": "v2.52.13",
+      "time_hint": "2026-04-25",
+      "published_at": "2026-04-25T13:07:17Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v2.52.13",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v2.52.13\nTag: v2.52.13; draft: False; prerelease: False; published_at: 2026-04-25T13:07:17Z; created_at: 2026-04-25T13:05:55Z\nRelease notes:\n## What's Changed\n### 🐛 Bug Fixes\n* Escape HTML output in Ctx.Format by @gaby in https://github.com/gofiber/fiber/pull/4232\n**Full Changelog**: https://github.com/gofiber/fiber/compare/v2.52.12...v2.52.13",
+      "memory_unit_text": "In the gofiber/fiber release v2.52.13, a bug fix escapes HTML output in Ctx.Format."
+    },
+    {
+      "memory_node_id": "gofiber__fiber__release__v3_3_0",
+      "repo": "gofiber/fiber",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.3.0",
+      "tag_name": "v3.3.0",
+      "title": "v3.3.0",
+      "time_hint": "2026-05-22",
+      "published_at": "2026-05-22T07:15:22Z",
+      "source_url": "https://github.com/gofiber/fiber/releases/tag/v3.3.0",
+      "raw_text": "Repository: gofiber/fiber\nRelease: v3.3.0\nTag: v3.3.0; draft: False; prerelease: False; published_at: 2026-05-22T07:15:22Z; created_at: 2026-05-22T06:53:30Z\nRelease notes:\n## 🚀 New\n- Add support for configuring the Regex engine on the router (#4254)\nSwap the compiler used for `regex()` route constraints. Assign a drop-in engine such as `coregex.MustCompile` for faster matching;Fiber reuses the compiled matcher across requests.\n```go\napp := fiber.New(fiber.Config{\nRegexHandler: coregex.MustCompile, // default: regexp.MustCompile\n})\n```\nhttps://docs.gofiber.io/api/fiber#regexhandler\n- Host auth middleware  (#4199)\nNew `hostauthorization` middleware that validates the incoming `Host` header against an allowlist (exact host, `.subdomain` wildcard, CIDR range) to protect against DNS rebinding attacks.\n```go\napp.Use(hostauthorization.New(hostauthorization.Config{\nAllowedHosts: []string{\"api.myapp.com\", \".myapp.com\", \"10.0.0.0/8\"},\n}))\n```\nhttps://docs.gofiber.io/middleware/hostauthorization\n- Delegate implementation to fasthttp/prefork (#4210)\nPrefork now delegates to fasthttp's `prefork` package and adds `PreforkRecoverThreshold` (max child restarts before the master exits) and `PreforkLogger` to `ListenConfig`.\nhttps://docs.gofiber.io/api/fiber#preforkrecoverthreshold\n- Add support for contextual logs (#4241)\nRender request-scoped fields in `log.WithContext(c)` by configuring a template with `log.SetContextTemplate`, reusing the `middleware/logger` engine (including `${value:key}` for arbitrary context values).\n```go\nlog.MustSetContextTemplate(log.ContextConfig{Format: log.RequestIDFormat})\napp.Get(\"/\", func(c fiber.Ctx) error {\nlog.WithContext(c).Info(\"start\") // renders the request id\nreturn c.SendString(\"ok\")\n})\n```\nhttps://docs.gofiber.io/api/log#bind-context\n- Add storage backed SharedState for prefork applications (#4243)\nA prefork-safe, storage-backed key/value store via `app.SharedState()` for data shared across workers/processes, with JSON/MsgPack/CBOR/XML helpers and automatic key namespacing. `app.State()` stays process-local.\n```go\napp := fiber.New(fiber.Config{\nSharedStorage: redis.New(), // any fiber.Storage shared across workers\n})\napp.SharedState().SetJSON(\"config\", cfg, 0)\n```\nhttps://docs.gofiber.io/api/state#sharedstate-prefork-safe\n- Add lightweight SSE middleware (#4239)\nA Fiber-native `middleware/sse` for Server-Sent Events: SSE headers, event/comment/retry frames, per-write flushing, heartbeats,\n`Last-Event-ID` access, and disconnect detection via `stream.Context()`.\n```go\napp.Get(\"/events\", sse.New(sse.Config{\nHandler: func(c fiber.Ctx, stream *sse.Stream) error {\nreturn stream.Event(sse.Event{Name: \"message\", Data: fiber.Map{\"message\": \"hello\"}})\n},\n}))\n```\nhttps://docs.gofiber.io/middleware/sse\n## 🧹 Updates\n- Add prefixes to unexported boolean fields (#4300)\n- Improve error messages in SaveFileToStorage (#4173)\n- Streamline request handler selection and context management for improved performance (#4233)\n## 🐛 Fixes\n- Preserve mounted sub-app regex handler during mount prefixing (#4308)\n- Trim only one trailing dot in host normalization (#4307)\n- Reject oversized unknown-length adaptor request bodies (#4306)\n- Fix compress middleware's shouldSkip method to avoid memory growth (#4284)\n- Reject malformed host authorities in hostauthorization (#4293)\n- Synchronize view reloads with template rendering (#4288)\n- Avoid panic for non-struct listeners in TLS config discovery (#4305)\n- Clear plaintext cookie when encryption fails (#4303)\n- Fix regex route constraint parsing with literal > (#4292)\n- Reject empty normalized host before dynamic matching (#4291)\n- Preserve idempotency replay protection for oversized responses (#4287)\n- Enforce CookieJar domain acceptance and host-only cookie matching (#4282)\n- Avoid panic when reading released Fiber context values (#4271)\n- Enforce static root for fs-backed directory serving (#4277)\n- Prevent negative paginate start overflow (#4272)\n- Prevent SharedState namespace k...",
+      "memory_unit_text": "In the gofiber/fiber release v3.3.0, new features add configurable regex engine on router, host authorization middleware, delegate prefork to fasthttp/prefork with PreforkRecoverThreshold and PreforkLogger, contextual logs with context template, storage-backed SharedState for prefork, and lightweight SSE middleware. Updates add prefixes to unexported boolean fields, improve error messages in SaveFileToStorage, and streamline request handler selection. Fixes preserve mounted sub-app regex handler, trim trailing dot in host normalization, reject oversized unknown-length adaptor bodies, fix compress shouldSkip memory growth, reject malformed host authorities, synchronize view reloads, avoid panic for non-struct listeners, clear plaintext cookie on encryption failure, fix regex route constraint parsing, reject empty normalized host, preserve idempotency replay protection, enforce CookieJar domain acceptance, avoid panic on released context values, enforce static root for fs-backed serving, prevent negative paginate start overflow, prevent SharedState namespace key collisions, and more."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the gofiber/fiber releases, which release introduces a healthcheck middleware with liveness and readiness checks?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v2.48.0"
+        },
+        {
+          "option_id": "B",
+          "text": "v2.52.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v2.50.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v2.51.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v2.52.0",
+      "source_chunk_ids": [
+        "gofiber__fiber__release__v2_52_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "gofiber__fiber__release__v2_52_0",
+          "answer_text": "a new healthcheck middleware adds liveness and readiness checks"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the gofiber/fiber releases, how does the CSRF middleware change described in v2.50.0 differ from the CSRF middleware change described in v3.0.0-beta.2?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v2.50.0 adds single-use tokens, session integration, origin checks, and double submit cookie approach; v3.0.0-beta.2 adds support for trusted origins with subdomain style."
+        },
+        {
+          "option_id": "B",
+          "text": "v2.50.0 removes CSRF middleware entirely; v3.0.0-beta.2 reintroduces it with trusted origins."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only update CSRF documentation without functional changes."
+        },
+        {
+          "option_id": "D",
+          "text": "v2.50.0 adds trusted origins; v3.0.0-beta.2 adds single-use tokens."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v2.50.0 adds single-use tokens, session integration, origin checks, and double submit cookie approach; v3.0.0-beta.2 adds support for trusted origins with subdomain style.",
+      "source_chunk_ids": [
+        "gofiber__fiber__release__v2_50_0",
+        "gofiber__fiber__release__v3_0_0_beta_2"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "gofiber__fiber__release__v2_50_0",
+          "answer_text": "Security improvements to CSRF middleware include single-use tokens, session integration, origin checks, and double submit cookie approach"
+        },
+        {
+          "memory_node_id": "gofiber__fiber__release__v3_0_0_beta_2",
+          "answer_text": "CSRF trusted origins with subdomain style"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the gofiber/fiber release window, order the following release-content states from earliest to latest: (1) a release that adds a healthcheck middleware with liveness and readiness checks, (2) a release that introduces a cookie parser and session Reset/Delete methods, (3) a release that adds support for parameters in content negotiation and application/problem+json.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2 -> 3 -> 1"
+        },
+        {
+          "option_id": "B",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "3 -> 1 -> 2"
+        },
+        {
+          "option_id": "D",
+          "text": "2 -> 1 -> 3"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2 -> 3 -> 1",
+      "source_chunk_ids": [
+        "gofiber__fiber__release__v2_50_0",
+        "gofiber__fiber__release__v2_51_0",
+        "gofiber__fiber__release__v2_52_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "gofiber__fiber__release__v2_50_0",
+          "answer_text": "New features add a cookie parser, session Reset and Store Delete methods"
+        },
+        {
+          "memory_node_id": "gofiber__fiber__release__v2_51_0",
+          "answer_text": "new features add support for parameters in content negotiation and application/problem+json"
+        },
+        {
+          "memory_node_id": "gofiber__fiber__release__v2_52_0",
+          "answer_text": "a new healthcheck middleware adds liveness and readiness checks"
+        }
+      ]
+    }
+  ]
+}

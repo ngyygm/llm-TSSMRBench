@@ -1,0 +1,525 @@
+{
+  "prototype_id": "termux__termux_app_release_window",
+  "domain": "github_release_evolution",
+  "repo": "termux/termux-app",
+  "source_type": "release_note",
+  "window_title": "termux/termux-app recent release evolution",
+  "window_summary": "This window tracks the recent termux/termux-app release stream from v0.95 through v0.119.0-beta.3, covering terminal emulation fixes, new configuration properties, bootstrap updates, and support for modern Android features.",
+  "chunks": [
+    {
+      "memory_node_id": "termux__termux_app__release__v0_95",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.95",
+      "tag_name": "v0.95",
+      "title": "v0.95",
+      "time_hint": "2020-06-09",
+      "published_at": "2020-06-09T20:04:31Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.95",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.95\nTag: v0.95; draft: False; prerelease: False; published_at: 2020-06-09T20:04:31Z; created_at: 2020-06-17T11:08:58Z\nRelease notes:\n* Fixed incorrect message which is shown in case when bootstrap installation fails.\n* Updated bootstrap archives.\n* Fixed issue when malformed `\\uXXXX` tokens in termux.properties lead to application crash. Issue https://github.com/termux/termux-app/issues/1589.\n* Introduced support for auto-detection of system dark theme (https://github.com/termux/termux-app/pull/1476).\n* Properly set orientation of text selection handle (https://github.com/termux/termux-app/pull/1477).\n* Update notification icon to match the launcher icon (https://github.com/termux/termux-app/pull/1478).\n* Extended extra keys configuration (https://github.com/termux/termux-app/pull/1479).\n* Support opening log files with view intent (https://github.com/termux/termux-app/pull/1502).\n* Provide a way to allow third-party applications to execute commands within Termux environment. Issue https://github.com/termux/termux-app/issues/804.\n* Use vector drawables for text selection handles.",
+      "memory_unit_text": "In the termux/termux-app release v0.95, the project fixes an incorrect message shown when bootstrap installation fails, updates bootstrap archives, resolves a crash caused by malformed \\uXXXX tokens in termux.properties, introduces auto-detection of system dark theme, properly sets the orientation of the text selection handle, updates the notification icon to match the launcher icon, extends extra keys configuration, supports opening log files with a view intent, provides a way for third-party applications to execute commands within the Termux environment, and switches to vector drawables for text selection handles."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_96",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.96",
+      "tag_name": "v0.96",
+      "title": "v0.96",
+      "time_hint": "2020-07-30",
+      "published_at": "2020-07-30T21:05:12Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.96",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.96\nTag: v0.96; draft: False; prerelease: False; published_at: 2020-07-30T21:05:12Z; created_at: 2020-07-30T20:56:27Z\nRelease notes:\n* Export environment variables specific to Android 11 if available.\n* Export environment variable `COLORTERM=truecolor` - used by certain programs when checking for True Color support. (https://github.com/termux/termux-app/pull/1610)\n* Fixed selection rendering when alternate cursor styles are used. (https://github.com/termux/termux-app/pull/1627)\n* Fixed invisible text issue on some color schemes - now colors are being inverted. (https://github.com/termux/termux-app/pull/1628)\n* Fixed notification icon. (https://github.com/termux/termux-app/pull/1649)\n* Fixed argument handling for `com.termux.RUN_COMMAND` intent action + allow background command execution. (https://github.com/termux/termux-app/pull/1679)",
+      "memory_unit_text": "In the termux/termux-app release v0.96, the project exports environment variables specific to Android 11 if available, exports COLORTERM=truecolor for True Color support, fixes selection rendering when alternate cursor styles are used, fixes an invisible text issue on some color schemes by inverting colors, fixes the notification icon, and fixes argument handling for the com.termux.RUN_COMMAND intent action while allowing background command execution."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_97",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.97",
+      "tag_name": "v0.97",
+      "title": "v0.97",
+      "time_hint": "2020-08-07",
+      "published_at": "2020-08-07T11:48:25Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.97",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.97\nTag: v0.97; draft: False; prerelease: True; published_at: 2020-08-07T11:48:25Z; created_at: 2020-08-07T11:39:33Z\nRelease notes:\n* Fix width of some unicode characters\nSome unicode characters where updated in wcwidth/libandroid-support previously, but the WcWidth.java was not, leading to some characters being detected as having the wrong width. With this the java code is in-sync with the c code in libandroid-support. Thanks @landfillbaby.\n**Not a release due to version mismatch between this tag and value in app/build.gradle!**",
+      "memory_unit_text": "In the termux/termux-app release v0.97, the project fixes the width of some unicode characters by synchronizing the Java WcWidth.java with the C code in libandroid-support. This release is marked as not a release due to a version mismatch between the tag and the value in app/build.gradle."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_98",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.98",
+      "tag_name": "v0.98",
+      "title": "v0.98",
+      "time_hint": "2020-08-07",
+      "published_at": "2020-08-07T12:44:14Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.98",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.98\nTag: v0.98; draft: False; prerelease: False; published_at: 2020-08-07T12:44:14Z; created_at: 2020-08-07T12:39:44Z\nRelease notes:\n* Fix width of some unicode characters.\nSome unicode characters where updated in wcwidth/libandroid-support previously, but the WcWidth.java was not, leading to some characters being detected as having the wrong width. With this the java code is in-sync with the c code in libandroid-support. Thanks @landfillbaby.\n* Update bootstrap archives.",
+      "memory_unit_text": "In the termux/termux-app release v0.98, the project fixes the width of some unicode characters by synchronizing WcWidth.java with libandroid-support and updates bootstrap archives."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_99",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.99",
+      "tag_name": "v0.99",
+      "title": "v0.99",
+      "time_hint": "2020-08-26",
+      "published_at": "2020-08-26T17:58:02Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.99",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.99\nTag: v0.99; draft: False; prerelease: False; published_at: 2020-08-26T17:58:02Z; created_at: 2020-09-01T00:38:53Z\nRelease notes:\n* Provide a workaround for input issues with some keyboards. Issue https://github.com/termux/termux-app/issues/686.\n* Fix linter errors. Issue https://github.com/termux/termux-app/issues/1670.\n* Always flush terminal output before closing session. Issue https://github.com/termux/termux-app/issues/1695.\n* Fix permission description for RUN_COMMAND intent. Issue https://github.com/termux/termux-app/issues/1713.\n* Updated bootstrap archives.",
+      "memory_unit_text": "In the termux/termux-app release v0.99, the project provides a workaround for input issues with some keyboards, fixes linter errors, always flushes terminal output before closing a session, fixes the permission description for the RUN_COMMAND intent, and updates bootstrap archives."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_100",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.100",
+      "tag_name": "v0.100",
+      "title": "v0.100",
+      "time_hint": "2020-09-27",
+      "published_at": "2020-09-27T22:04:46Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.100",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.100\nTag: v0.100; draft: False; prerelease: True; published_at: 2020-09-27T22:04:46Z; created_at: 2020-09-27T21:59:52Z\nRelease notes:\n* Terminal emulation: fix handling of DECRQM sequence. Issue https://github.com/termux/termux-app/issues/1752.\n* Fix crash when using RunCommandService and issue with foreground sessions. Pull request https://github.com/termux/termux-app/pull/1764.\n* Update bootstrap archives.\n*Note: bootstrap archives contain broken dpkg (crashes on ARM devices). Fixed app will be resubmitted as v0.101.*",
+      "memory_unit_text": "In the termux/termux-app release v0.100, the project fixes handling of the DECRQM sequence in terminal emulation, fixes a crash when using RunCommandService and an issue with foreground sessions, and updates bootstrap archives. This release notes that the bootstrap archives contain a broken dpkg that crashes on ARM devices, and a fixed app will be resubmitted as v0.101."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_101",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.101",
+      "tag_name": "v0.101",
+      "title": "v0.101",
+      "time_hint": "2020-09-28",
+      "published_at": "2020-09-28T00:31:45Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.101",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.101\nTag: v0.101; draft: False; prerelease: False; published_at: 2020-09-28T00:31:45Z; created_at: 2020-09-28T00:30:21Z\nRelease notes:\n* Terminal emulation: fix handling of DECRQM sequence. Issue https://github.com/termux/termux-app/issues/1752.\n* Fix crash when using RunCommandService and issue with foreground sessions. Pull request https://github.com/termux/termux-app/pull/1764.\n* Update bootstrap archives.\n*Resubmission of v0.100 but with fixed bootstrap archives.*",
+      "memory_unit_text": "In the termux/termux-app release v0.101, the project fixes handling of the DECRQM sequence in terminal emulation, fixes a crash when using RunCommandService and an issue with foreground sessions, and updates bootstrap archives. This is a resubmission of v0.100 with fixed bootstrap archives."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_102",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.102",
+      "tag_name": "v0.102",
+      "title": "v0.102 (F-Droid only)",
+      "time_hint": "2020-10-12",
+      "published_at": "2020-10-12T17:48:38Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.102",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.102 (F-Droid only)\nTag: v0.102; draft: False; prerelease: False; published_at: 2020-10-12T17:48:38Z; created_at: 2020-10-12T17:39:28Z\nRelease notes:\n* Add context menu action \"Autofill password\". Pull request https://github.com/termux/termux-app/pull/1664.\n* Update bootstrap archives.",
+      "memory_unit_text": "In the termux/termux-app release v0.102 (F-Droid only), the project adds a context menu action \"Autofill password\" and updates bootstrap archives."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_103",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.103",
+      "tag_name": "v0.103",
+      "title": "v0.103 (F-Droid only)",
+      "time_hint": "2020-11-17",
+      "published_at": "2020-11-17T18:43:25Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.103",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.103 (F-Droid only)\nTag: v0.103; draft: False; prerelease: False; published_at: 2020-11-17T18:43:25Z; created_at: 2020-11-17T18:40:40Z\nRelease notes:\n* Added `READ_LOGS` and `WRITE_SECURE_SETTINGS` permissions for advanced users. These permissions can be enabled with ADB.\n* Updated bootstrap archives.",
+      "memory_unit_text": "In the termux/termux-app release v0.103 (F-Droid only), the project adds READ_LOGS and WRITE_SECURE_SETTINGS permissions for advanced users, which can be enabled with ADB, and updates bootstrap archives."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_104",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.104",
+      "tag_name": "v0.104",
+      "title": "v0.104 (F-Droid only)",
+      "time_hint": "2020-12-29",
+      "published_at": "2020-12-29T11:47:45Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.104",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.104 (F-Droid only)\nTag: v0.104; draft: False; prerelease: False; published_at: 2020-12-29T11:47:45Z; created_at: 2020-12-29T11:45:35Z\nRelease notes:\n* Expose dotfiles through SAF. https://github.com/termux/termux-app/issues/1220\n* Updated bootstrap archives.",
+      "memory_unit_text": "In the termux/termux-app release v0.104 (F-Droid only), the project exposes dotfiles through SAF and updates bootstrap archives."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_105",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.105",
+      "tag_name": "v0.105",
+      "title": "v0.105 (DO NOT INSTALL: IT'S BROKEN)",
+      "time_hint": "2021-01-06",
+      "published_at": "2021-01-06T12:38:34Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.105",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.105 (DO NOT INSTALL: IT'S BROKEN)\nTag: v0.105; draft: False; prerelease: True; published_at: 2021-01-06T12:38:34Z; created_at: 2021-01-06T12:31:56Z\nRelease notes:\n- Remove restrictions from file types viewable by `~/bin/termux-file-editor`.\n- If Termux:Styling is not installed, suggest to install it from F-Droid instead of Play Store, when attempting to change terminal font/colors.\n- Add property `ctrl-space-workaround` to enable ctrl+space usable on hardware keyboard for some devices.\n- Updated bootstrap archives.\n***\n**This release is broken, sorry.** *Use v0.104 instead!*",
+      "memory_unit_text": "In the termux/termux-app release v0.105 (DO NOT INSTALL: IT'S BROKEN), the project removes restrictions from file types viewable by ~/bin/termux-file-editor, suggests installing Termux:Styling from F-Droid instead of Play Store when changing terminal font/colors, adds a ctrl-space-workaround property to enable ctrl+space on hardware keyboards for some devices, and updates bootstrap archives. This release is marked as broken and users are advised to use v0.104 instead."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_106",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.106",
+      "tag_name": "v0.106",
+      "title": "v0.106 (F-Droid only)",
+      "time_hint": "2021-01-17",
+      "published_at": "2021-01-17T17:45:48Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.106",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.106 (F-Droid only)\nTag: v0.106; draft: False; prerelease: False; published_at: 2021-01-17T17:45:48Z; created_at: 2021-01-17T17:45:19Z\nRelease notes:\nThis is actually fixed v0.105 release, so changes are same by comparing to v0.104:\n- Remove restrictions from file types viewable by `~/bin/termux-file-editor`.\n- If Termux:Styling is not installed, suggest to install it from F-Droid instead of Play Store, when attempting to change terminal font/colors.\n- Add property `ctrl-space-workaround` to enable ctrl+space usable on hardware keyboard for some devices.\n- Updated bootstrap archives.",
+      "memory_unit_text": "In the termux/termux-app release v0.106 (F-Droid only), the project provides the same changes as the broken v0.105 release: removes restrictions from file types viewable by ~/bin/termux-file-editor, suggests installing Termux:Styling from F-Droid instead of Play Store when changing terminal font/colors, adds a ctrl-space-workaround property to enable ctrl+space on hardware keyboards for some devices, and updates bootstrap archives."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_107",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.107",
+      "tag_name": "v0.107",
+      "title": "v0.107 (F-Droid only)",
+      "time_hint": "2021-02-03",
+      "published_at": "2021-02-03T21:56:18Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.107",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.107 (F-Droid only)\nTag: v0.107; draft: False; prerelease: True; published_at: 2021-02-03T21:56:18Z; created_at: 2021-02-03T21:47:30Z\nRelease notes:\nChanges:\n- Implement numpad arrows/home/end/pgup/pgdn/ins/del when num lock is off.\n- Extra keys: handle multiple defined special buttons and in popup. Fix for https://github.com/termux/termux-app/issues/1881.\n- `~/.termux/termux.properties`: add option `fullscreen` to toggle fullscreen mode. You may need to enable `use-fullscreen-workaround` on some devices to fix layout issues, though on some devices it still doesn't work properly. *Consider fullscreen mode as unstable for now.*\n- `~/.termux/termux.properties`: add option `default-working-directory` which allows to open Termux in a specified directory instead of home.\n- Added back PNG icons in addition to current adaptive/vector icon. This should fix issues with launchers still not supporting adaptive icons.\n- Export current application version as environment variable `TERMUX_VERSION`.\n- Update bootstrap archives.\n***\n*~~From this point Termux does split-apk builds. One APK per CPU architecture: for aarch64, arm, i686 and x86_64.~~*",
+      "memory_unit_text": "In the termux/termux-app release v0.107 (F-Droid only), the project implements numpad arrows/home/end/pgup/pgdn/ins/del when num lock is off, handles multiple defined special buttons in extra keys and in popup, adds a fullscreen option in ~/.termux/termux.properties (with a use-fullscreen-workaround for some devices), adds a default-working-directory option to open Termux in a specified directory, adds back PNG icons in addition to the adaptive/vector icon, exports the current application version as the TERMUX_VERSION environment variable, and updates bootstrap archives."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_108",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.108",
+      "tag_name": "v0.108",
+      "title": "v0.108 (F-Droid only)",
+      "time_hint": "2021-02-19",
+      "published_at": "2021-02-19T00:00:14Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.108",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.108 (F-Droid only)\nTag: v0.108; draft: False; prerelease: False; published_at: 2021-02-19T00:00:14Z; created_at: 2021-02-18T23:54:46Z\nRelease notes:\nSpecial release to fix F-Droid build issue as new build configuration (split apks) is not supported by F-Droid in way how it was introduced. Now it is reverted back to all-in-one architecture apk. Otherwise, changelog is same as unreleased v0.107.",
+      "memory_unit_text": "In the termux/termux-app release v0.108 (F-Droid only), the project is a special release to fix an F-Droid build issue by reverting the split APK configuration back to an all-in-one architecture APK. The changelog is the same as the unreleased v0.107."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_109",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.109",
+      "tag_name": "v0.109",
+      "title": "v0.109 (F-Droid only)",
+      "time_hint": "2021-04-13",
+      "published_at": "2021-04-13T14:07:52Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.109",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.109 (F-Droid only)\nTag: v0.109; draft: False; prerelease: False; published_at: 2021-04-13T14:07:52Z; created_at: 2021-04-13T12:18:27Z\nRelease notes:\nChange Log:\n- Updated bootstrap archives.\n- Lots of fixes and improvements (see expandable list below).\n<details>\n<summary>Full change log</summary>\n### Added\n- Added `SettingsActivity` (`Termux Settings)` which can be accessed by `Long pressing terminal view` -> `More` -> `Settings`. This will allow GUI based management of settings in future, like keyboard key mapping, etc. Currently supports controlling log level, plugin errors and softkeyboard state. (d39972b3)\n- Add `SettingsActivity` to launcher shortcuts. (2b3f6817, 325a6f7d)\n- Added `ReportActivity` and `ReportInfo` to be used as base for showing reports to users. Currently supports plugin errors, app crashes and issue reports. (9d36e9ad)\n- Added centralized `Logging` framework to the entire app and `terminal-view` and `terminal-emulator` libraries which has 4 levels, `Off`, `Normal` (default), `Debug`, `Verbose` which can be used by users via `logcat` to debug problems.  Users can set the log level from `Termux Settings` -> `Debugging` -> `Log Level`. Terminal view key logging can now also be enabled with the `Terminal View Key Logging` toggle without having to recompile the app. Support for writing to files in addition to writing to `logcat` will/can be added in future. (d39972b3)\n- Added logging for termux bootstrap package installation and setup of storage symlinks. (92b804dc).\n- Requested `android.permission.DUMP permission` so that users can use `dumsys` commands without root after running `adb shell pm grant com.termux android.permission.DUMP`. (356a442c)\n- Requested `android.permission.REQUEST_INSTALL_PACKAGES permission` to allow users to access `Android/obb` on android 11 after explicitly granting Termux the permission by going to Termux `App Info` in Android `Settings` -> `Advance` -> `Install unknown apps`. (93a5bf8d)\n- Added support to warn users if `Draw over other apps permission` is missing when attempting to start Termux foreground session from the background with plugin commands, like for `RUN_COMMAND` intent. Check [android background restrictions](https://developer.android.com/guide/components/activities/background-starts) for more info. Now, the Termux foreground session will not even be attempted to be started if permission is missing since it would fail randomly otherwise and users would report bugs for it. (d3ddb217)\n- Added `hide-soft-keyboard-on-startup` `termux.properties` property which when set to `true` will automatically hide the soft keyboard on Termux startup to solve issues for when users use hardware keyboard and soft keyboard wastes screen space. Fixes #1978. (1ef8eb92)\n- Added support for disabling soft keyboard completely for when users use hardware keyboard. Users can toggle the state from `Termux Settings` -> `Keyboard I/O` -> `Soft Keyboard` toggle. (2a8d5e29)\n- Added support for adjusting termux toolbar height with `terminal-toolbar-height` `termux.properties` property. The user can set a float value between `0.4` and `3.0` which will be used as the scaling factor for the default height. The default scaling factor is `1`. So adding an entry like `terminal-toolbar-height=2.0` to `termux.properties` file will make the toolbar height twice its original height. Fixes #1857. (ff0440d7)\n- Added executable and working directory validation for `RUN_COMMAND` intent. The working directory will also also be created if its under `TermuxConstants.TERMUX_FILES_DIR_PATH`. (b4995ef9)\n- Added support for session actions for foreground session commands received via `RUN_COMMAND` intent or `termux-tasker`. (ec7568d2)\n- Added support for sending back background and foreground command results for `RUN_COMMAND` intent and foreground command results for `Termux:Tasker`. Check [`RUN_COMMAND` Intent Wiki](https://github.com/termux/termux-app/wiki/RUN_COMMAND-Inte...",
+      "memory_unit_text": "In the termux/termux-app release v0.109 (F-Droid only), the project updates bootstrap archives and includes lots of fixes and improvements such as adding a SettingsActivity for GUI-based settings management, a ReportActivity for showing reports, a centralized logging framework, logging for bootstrap installation and storage symlink setup, requesting android.permission.DUMP, android.permission.REQUEST_INSTALL_PACKAGES, and adding support for warning users about missing Draw over other apps permission, a hide-soft-keyboard-on-startup property, support for disabling soft keyboard completely, adjusting toolbar height, executable and working directory validation for RUN_COMMAND intent, and support for session actions for foreground session commands."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_110",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.110",
+      "tag_name": "v0.110",
+      "title": "v0.110 (F-Droid only)",
+      "time_hint": "2021-04-15",
+      "published_at": "2021-04-15T00:24:19Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.110",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.110 (F-Droid only)\nTag: v0.110; draft: False; prerelease: False; published_at: 2021-04-15T00:24:19Z; created_at: 2021-04-15T00:14:31Z\nRelease notes:\n## [0.110] - 2021-04-15\n### Added\n- Add support to include source jar files for libraries published by termux so that developers that import the libraries can see javadocs and comments. (3306c3c2)\n### Fixed\n- Fix Termux Settings crash for release builds. Fixes #2005 (cde0bd22)\n[0.110]: https://github.com/termux/termux-app/compare/v0.109...v0.110",
+      "memory_unit_text": "In the termux/termux-app release v0.110 (F-Droid only), the project adds support to include source jar files for libraries published by termux so that developers can see javadocs and comments, and fixes a Termux Settings crash for release builds."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_111",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.111",
+      "tag_name": "v0.111",
+      "title": "v0.111 (F-Droid only)",
+      "time_hint": "2021-04-21",
+      "published_at": "2021-04-21T09:11:49Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.111",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.111 (F-Droid only)\nTag: v0.111; draft: False; prerelease: False; published_at: 2021-04-21T09:11:49Z; created_at: 2021-04-21T09:07:25Z\nRelease notes:\n## [0.111] - 2021-04-21 (**RE-RELEASED**)\n### Changed\n- Bumped gradle wrapper to 7.0. (1d06ff9b)\n### Fixed\n- Fixed `termux-reset` not working properly since v0.109. (d6eb5e35)\n- Fixed cases where bootstrap was not reinstalled even if `PREFIX` was broken, i.e if it was empty or only contained the `tmp` directory. (107927f5, b34f60b1)\n##\n[`Github Build` APK](https://github.com/termux/termux-app/actions/runs/770094929). Check [Installation](https://github.com/termux/termux-app#github) for more info on `Github Build` APKs.\n[0.111]: https://github.com/termux/termux-app/compare/v0.110...v0.111",
+      "memory_unit_text": "In the termux/termux-app release v0.111 (F-Droid only), the project bumps the gradle wrapper to 7.0, fixes termux-reset not working properly since v0.109, and fixes cases where bootstrap was not reinstalled even if PREFIX was broken."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_112",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.112",
+      "tag_name": "v0.112",
+      "title": "v0.112 (F-Droid only)",
+      "time_hint": "2021-04-22",
+      "published_at": "2021-04-22T15:03:22Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.112",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.112 (F-Droid only)\nTag: v0.112; draft: False; prerelease: False; published_at: 2021-04-22T15:03:22Z; created_at: 2021-04-22T14:57:08Z\nRelease notes:\n## [0.112] - 2021-04-22\n### Fixed\n- Reverted the versioning logic change done in a6ae656c since that caused F-Droid bot and Github Packages to fail to pick up new releases. The versions must be bumped directly in `build.gradle` file in future and not through other files like `gradle.properties`. Thanks to @jspricke for [notifying](https://github.com/termux/termux-app/issues/2011#issuecomment-824837387) us. (0aa5a123)\n##\n[`Github Build` APK](https://github.com/termux/termux-app/actions/runs/774634534). Check [Installation](https://github.com/termux/termux-app#github) for more info on `Github Build` APKs.\n[0.112]: https://github.com/termux/termux-app/compare/v0.111...v0.112",
+      "memory_unit_text": "In the termux/termux-app release v0.112 (F-Droid only), the project reverts a versioning logic change that caused F-Droid bot and Github Packages to fail to pick up new releases, requiring versions to be bumped directly in build.gradle."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_113",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.113",
+      "tag_name": "v0.113",
+      "title": "v0.113 (F-Droid only)",
+      "time_hint": "2021-05-16",
+      "published_at": "2021-05-16T18:51:51Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.113",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.113 (F-Droid only)\nTag: v0.113; draft: False; prerelease: False; published_at: 2021-05-16T18:51:51Z; created_at: 2021-05-16T18:44:43Z\nRelease notes:\n## [0.113] - 2021-05-16\n<details>\n<summary>Changelog</summary>\n### Added\n- Allow users to `enable/disable` keyboard instead of just `show/hide` with `KEYBOARD` toggle buttons. This `soft-keyboard-toggle-behaviour` key can be used to change the behaviour. The default behaviour is `show/hide`. The user can add a line `soft-keyboard-toggle-behaviour=enable/disable` in `~/termux.properties` file to change default behaviour of keyboard toggle buttons to `enable/disable`. In this mode, tapping the keyboard toggle button will disable (and hide) the keyboard and tapping on the terminal view will not open the keybaord automatically, until the keyboard toggle button is pressed again manually. This applies to split screen and floating keyboard as well. The keyboard can also be enabled from `Termux Settings` -> `Termux` -> `Terminal I/O` -> `Soft Keyboard Enabled` toggle. Running `termux-reload-settings` command will also update the behaviour instantaneously if changed. Also fixes [#1098](https://github.com/termux/termux-app/issues/1098). (e4e638bd)\n- Allow users to disable soft keyboard automatically if hardware keyboard is connected. Users can enable this behaviour by enabling the `Termux Settings` -> `Termux` -> `Terminal I/O` -> `Soft Keyboard Only If No Hardware` toggle. (90c9a7b3)\n- Allow users to enable terminal cursor blinking with termux.properties. This `terminal-cursor-blink-rate` key can be used to enable terminal cursor blinking. The user can set an int value between `100` and `2000` which will be used as blink rate in millisecond. The default value is `0`, which disables cursor blinking. So adding an entry like `terminal-cursor-blink-rate=600` to `~/termux.properties` file will make the cursor attempt to blink every 600ms. Running `termux-reload-settings` command will also update the cursor blinking rate instantaneously if changed.\nThis will have a performance impact, so use wisely and at your own risk. Note that you can also change the cursor color by adding `cursor` property to `~/colors.properties` file, like `cursor=#FFFFFF` for a white cursor. Closes [#153](https://github.com/termux/termux-app/issues/153). (31298b88, 89a1e02)\n- Add in-app Donation link in Termux Settings for non google playstore releases. We [**require donations**](https://github.com/termux/termux-packages/wiki/Donate) due to bintray shutdown to pay for termux apt repository hosting costs. Related issue [termux-packages#6348](https://github.com/termux/termux-packages/issues/6348). (6de37130)\n- Moved `Termux` app settings into dedicated \"directory\" in `Termux Settings` and added `About` page to show info of all termux apps installed and important links. (d42514d8)\n- Added support for showing `APK` release type in `App Info` reports and `About` page. (1e30022c)\n- Add support for setting `Termux:Tasker` log level from `Termux Settings`. (339b2a24)\n- All invalid values stored in `termux.properties` file during load time will be logged. (f8ccbb49)\n- Updated `bootstrap` to [`2021.05.16-r1`](https://github.com/termux/termux-packages/releases/tag/bootstrap-2021.05.16-r1). (6524a619)\n### Fixed\n- Disable error flashes when clearing `TMPDIR` directory on termux app exit. (b268b6ed)\n- Fixed `NullPointerException on com.termux.app.TermuxService.wantsToStop()`. Fixes [#2026](https://github.com/termux/termux-app/issues/2026). (42ad3723)\n- Attempt to fix issues where soft keyboard was not shown in some cases when hardware keyboard was attached. The extra keys and drawer `KEYBOARD` toggle button and `ctrl+alt+k` hardware keyboard shortcut will all behave the same now and may help in showing soft keyboard forcefully. Related issues [#1995](https://github.com/termux/termux-app/issues/1995). (**Requires testers**). (4d1851e6, 39c69db8)\n- Release terminal beep `SoundPool` resources o...",
+      "memory_unit_text": "In the termux/termux-app release v0.113 (F-Droid only), the project allows users to enable/disable keyboard instead of just show/hide with a soft-keyboard-toggle-behaviour key, disable soft keyboard automatically if a hardware keyboard is connected, enable terminal cursor blinking with a terminal-cursor-blink-rate key, adds an in-app Donation link, moves Termux app settings into a dedicated directory in Termux Settings, adds an About page, supports showing APK release type, supports setting Termux:Tasker log level, logs invalid values in termux.properties, updates bootstrap to 2021.05.16-r1, and includes various fixes such as disabling error flashes when clearing TMPDIR, fixing a NullPointerException, attempting to fix soft keyboard issues with hardware keyboard, and releasing terminal beep SoundPool resources."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_114",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.114",
+      "tag_name": "v0.114",
+      "title": "v0.114 (F-Droid only)",
+      "time_hint": "2021-06-10",
+      "published_at": "2021-06-10T22:32:12Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.114",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.114 (F-Droid only)\nTag: v0.114; draft: False; prerelease: False; published_at: 2021-06-10T22:32:12Z; created_at: 2021-06-10T21:57:56Z\nRelease notes:\n## [0.114] - 2021-06-11\n<details>\n<summary>Changelog</summary>\n### Added\n- Allow users to adjust terminal transcript rows with termux.properties. The `terminal-transcript-rows` key can be used to adjust the terminal transcript rows. The user can set an integer value between `100` and `50000`. The default value is still `2000`. So adding an entry like `terminal-transcript-rows=10000` to `termux.properties` file will allow users to scroll back `~10000` lines of command output. After updating the value, termux must be restarted. You can also run `termux-reload-settings` command so that termux loads the updated value, but only new sessions will use the updated value, existing sessions will not be affected. Be advised that using large values may have a performance impact depending on your device capabilities, so use at your own risk. Closes [#2071](https://github.com/termux/termux-app/issues/2071). (0b4bbaf2)\n- Allow users to set terminal cursor style with termux.properties. The `terminal-cursor-style` key can be used to set the terminal cursor style. The user can set a string value to `block` for `■`, `underline` for `_` or `bar` for `|` cursor style. The default value is still `block`. So adding an entry like `terminal-cursor-style=bar` to `termux.properties` file will allow users to change to the `bar` cursor style. After updating the value, termux must be restarted. You can also run `termux-reload-settings` command so that termux loads the updated value, but only new sessions will use the updated value, existing sessions will not be affected unless you Reset them from terminal's long hold options menu `More` -> `Reset` or restart termux activity after double back press to exit. Closes [#2075](https://github.com/termux/termux-app/issues/2075). (f545ebf0)\n- Allow users to disable terminal session change toast. The user can add `disable-terminal-session-change-toast=true` entry to `termux.properties` file to disable terminal session change toast. The default value is `false`. Running `termux-reload-settings` command will also update the behaviour instantaneously if changed. Closes [#2118](https://github.com/termux/termux-app/issues/2118). (7ac62c98)\n- Updated `bootstrap` to [`2021.06.04-r1`](https://github.com/termux/termux-packages/releases/tag/bootstrap-2021.06.04-r1). (7620800c)\n### Changed\n- Change default extra keys style. If a user does not define a custom value in termux.properties file, then by default `2` rows will be shown with all arrow keys (up/down/left/right) for ease of terminal use. (fd80cdaf)\n### Fixed\n- Do not close soft keyboard when toolbar text input view is focused on. Fixes [#2077](https://github.com/termux/termux-app/issues/2077). (e08e3b53)\n- Fix issue where soft keyboard would not show in some cases. Fixes [#2111](https://github.com/termux/termux-app/issues/2111), Fixes [#2112](https://github.com/termux/termux-app/issues/2112). (1ad038ec)\n- Fix issue where soft keyboard overlaps extra keys or terminal in some cases. Check [TermuxActivityRootView javadocs](https://github.com/termux/termux-app/blob/v0.114/app/src/main/java/com/termux/app/terminal/TermuxActivityRootView.java#L21) for the details. This affected people who had set `enforce-char-based-input=true` in `termux.properties` and Gboard clipboard suggestions covered part of extra keys/terminal, but only when text is copied and clipboard suggestions **and** number keys row toggles are enabled in its settings. Reports have been received for other keyboards as well, like for SwiftKey number key rows overlapping, but hopefully it should be fixed now. If not, then report it. Related [#538](https://github.com/termux/termux-app/issues/538) and [#1539](https://github.com/termux/termux-app/issues/1539). (e7dd0eee)\n- Remove hardcoded wiki.termux.com url from `HelpActivit...",
+      "memory_unit_text": "In the termux/termux-app release v0.114 (F-Droid only), the project allows users to adjust terminal transcript rows with a terminal-transcript-rows key, set terminal cursor style with a terminal-cursor-style key, disable terminal session change toast, updates bootstrap to 2021.06.04-r1, changes default extra keys style to show 2 rows with all arrow keys, and fixes issues such as not closing soft keyboard when toolbar text input view is focused, soft keyboard not showing in some cases, soft keyboard overlapping extra keys or terminal, and removes a hardcoded wiki.termux.com url from HelpActivity."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_115",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.115",
+      "tag_name": "v0.115",
+      "title": "v0.115 (F-Droid only)",
+      "time_hint": "2021-07-01",
+      "published_at": "2021-07-01T03:40:04Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.115",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.115 (F-Droid only)\nTag: v0.115; draft: False; prerelease: False; published_at: 2021-07-01T03:40:04Z; created_at: 2021-07-01T02:13:03Z\nRelease notes:\n## [0.115] - 2021-07-01\n<details>\n<summary>Changelog</summary>\n### Added\n- Add support to send back or store `RUN_COMMAND` intent command results in files and provide way to fix argument splitting sent with `am` command caused by commas `,` in arguments itself. Native support has been added inside termux to store results of both foreground and background commands inside files, that also sends back internal `errmsgs` as long as result files extras are valid. This can be used to run synchronous commands from inside termux, with other apps that have `Run commands in Termux environment` (`com.termux.permission.RUN_COMMAND`) like Tasker, from pc over `adb` or inside `adb shell` if you have a rooted device, or from pc if you have setup termux `sshd`. The `RUN_COMMAND` intent can only be sent by the `termux` user itself, by an app that has the permission or by the `root` user. The `shell` user of `adb` cannot send it. A script will be provided at a later time that will automatically detect these cases to easily run `RUN_COMMAND` intent commands which will also automatically create temp directories and do cleanup. This can also be useful inside termux itself, like if you want to start a new foreground session and to automatically store its output to a log file when you exit. Support can also be added for this to be done for `termux-boot` and `termux-widget` as well but will require updates for them. Check the commit message for full details and examples for this since too long to be added here. (2aafcf84)\n- Add termux settings button to left drawer too since apparently people can't find the one in context menu. (59877a08)\n- Allow users to disable terminal margin adjustment. The user can add `disable-terminal-margin-adjustment=true` entry to `termux.properties` file to disable terminal view margin adjustment that is done to prevent soft keyboard from covering bottom part of terminal view on some devices. Margin adjustment may cause screen flickering on some devices and so should be disabled. The default value is `false`. So adding the entry `disable-terminal-margin-adjustment=true` to `termux.properties` file will disable margin adjustment. Exit termux and restart for changes to take affect after updating value. In case e5a9b99a did not fix screen flickering issues for [#2127](https://github.com/termux/termux-app/issues/2127), then this can be used to disable it. Closes [#2127](https://github.com/termux/termux-app/issues/2127).\n- Show crash notification when bootstrap installation or setup storage failures. Sometimes users report that bootstrap installation failed on their devices but provide no details. Since they don't check logcat for the exception or exception is one time only, we can't know what happened. Although, reasons are likely root ownership files. The notification will show the full stacktrace including suppressed ones for why failure occurred and hopefully be easier to find the problems and we can get reports too. (e408fdcc)\n- Updated `bootstrap` to [`2021.06.30-r1`](https://github.com/termux/termux-packages/releases/tag/bootstrap-2021.06.30-r1). (56701282)\n### Changed\n- Move from github packages to https://jitpack.io for hosting termux library packages. Github Package hosting is considered a private repository since it requires github APIs keys if a hosted library needs to be imported as a dependency. Importing from private repositories is not allowed as per `F-Droid` policy so termux plugin apps can't import termux libraries as dependencies so hence we move to `Jitpack`. Usage details for importing termux libraries in your own app as dependencies are in the commit message. (b7b12ebe, 69e5deed, 886e52dc)\n- Change license for non-termux utils from `GPLv3` to `MIT` so that they can be used by other termux plugin apps or apps that ma...",
+      "memory_unit_text": "In the termux/termux-app release v0.115 (F-Droid only), the project adds support to send back or store RUN_COMMAND intent command results in files, adds a termux settings button to the left drawer, allows users to disable terminal margin adjustment, shows crash notifications when bootstrap installation or setup storage fails, updates bootstrap to 2021.06.30-r1, moves from github packages to jitpack for hosting termux library packages, changes license for non-termux utils from GPLv3 to MIT, and includes various fixes."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_116",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.116",
+      "tag_name": "v0.116",
+      "title": "v0.116 (F-Droid only)",
+      "time_hint": "2021-07-01",
+      "published_at": "2021-07-01T06:21:38Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.116",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.116 (F-Droid only)\nTag: v0.116; draft: False; prerelease: False; published_at: 2021-07-01T06:21:38Z; created_at: 2021-07-01T06:17:47Z\nRelease notes:\n## [0.116] - 2021-07-01\n<details>\n<summary>Changelog</summary>\n### Fixed\n- Jitpack library publishing failed for initial `v0.115` release so 886e52dc was done to fix it and `v0.115` was re-released but jitpack kept building pre-fix initial release as per commit `Date` in [`build.log`](https://jitpack.io/com/github/termux/termux-app/0.115/build.log), likely due to one time download. So releasing `v0.116` so that it gets picked up. Users can import library based on entries like the following. The one mentioned in b7b12ebe are invalid.\n- `implementation 'com.termux.termux-app:termux-shared:0.116'`\n- `implementation 'com.termux.termux-app:termux-shared:master-SNAPSHOT'`\n- `implementation 'com.termux.termux-app:termux-shared:e547c15481'`\n- `implementation 'com.github.termux.termux-app:termux-shared:0.116'`\nNote that the first time someone imports a new version, it will take some time to build and you may get errors like `Unable to resolve dependency for ':app@debug/compileClasspath'`. It will take a few minutes for builds to be downloadable even after `build.log` shows them to have succeeded, run `Sync Project with Gradle Files` again to try to redownload. You can check builds and their logs at https://jitpack.io/#termux/termux-app and the API at e.g https://jitpack.io/api/resolve/com.termux/termux-app/master-SNAPSHOT.\n##\n</details>\n[`Github Build` APK](https://github.com/termux/termux-app/actions/runs/988922416). Check [Installation](https://github.com/termux/termux-app#github) for more info on `Github Build` APKs.\n[0.116]: https://github.com/termux/termux-app/compare/v0.115...v0.116",
+      "memory_unit_text": "In the termux/termux-app release v0.116 (F-Droid only), the project fixes jitpack library publishing that failed for the initial v0.115 release by re-releasing so that jitpack picks up the new version, and provides updated dependency import examples."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_117",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.117",
+      "tag_name": "v0.117",
+      "title": "v0.117 (F-Droid only)",
+      "time_hint": "2021-07-08",
+      "published_at": "2021-07-08T08:26:36Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.117",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.117 (F-Droid only)\nTag: v0.117; draft: False; prerelease: False; published_at: 2021-07-08T08:26:36Z; created_at: 2021-07-08T08:12:31Z\nRelease notes:\n## [0.117] - 2021-07-08\n<details>\n<summary>Changelog</summary>\n### Added\n- Enable split apks for debug builds. APKs for each architecture and a universal APK that is compatible for all architectures will now be available from Github Actions page from the workflow runs labeled `Build`. The APKs will be available as zips under the Artifact section named `termux-app-*`. Architecture specific APKs can be used by users with low disk space since F-Droid releases are universal (since it doesn't support split APKs #1904) and their install+bootstrap installation size is `~180MB` instead of `~120MB` if an architecture specific APK is used. This should also reduce bandwidth usage and download time for debug builds users if they download an architecture specific zip instead of the universal one. Related #2153. (dccd155b, b90d5947)\n- Add app and device info too for crash notification shown when bootstrap installation or setup storage fails. (56c38266)\n- Trigger termux library builds on jitpack on releases. (d49fd6b0)\n### Changed\n- Allow users to disable terminal margin adjustment from termux settings. Previously in `v0.115` (32135025) support was added with `disable-terminal-margin-adjustment` `termux.properties` property to disable terminal margin adjustment in case in causes screen flickering or other issues on some devices. It has now been removed in (7aefd943) and moved to Termux Settings since if it causes issues at startup and users can't access `termux.properties` file from the terminal, they will have to use `SAF` or root to access it, which will require an external app. Users can set the value from the `Termux Settings` -> `Termux` -> `Terminal View` -> `Terminal Margin Adjustment` toggle. The `Termux Settings` can be accessed from left drawer in termux and from the android launcher shortcut for Termux `Settings`, usually accessible by long holding on Termux icon. (e0ad9ff5)\n### Fixed\n- Fix `java.lang.AbstractMethodError: androidx.window.sidecar.SidecarInterface$SidecarCallback.onDeviceStateChanged`. The crash was reported for `Microsoft Surface Duo`, which would affect some Samsung and other devices as well, mainly dual screens/foldables. It was caused by `androidx:window` library that has been used by `termux-shared` since `v0.115` having a typo in its proguard rules which didn't stop the removal of the required method for release builds (not debug) by proguard. For people who are getting the crash in `v0.115` and `v0.116` should set `disable-terminal-margin-adjustment=true` in `termux.properties` created as per instructions [here](https://github.com/termux/termux-app/issues/1896#issuecomment-766188879) and then start termux again and see if it fixes the issue. If you had termux installed before updating, you should be able to directly access the `~/.termux/termux.properties` file with `SAF`. The property will not work in `v0.117` as mentioned in `Changed` section above. (4361c5e0)\n- Fix issue where a colour tint/highlight would be added to the terminal. This would happen when soft keyboard was to be disabled or hidden at startup and a hardware keyboard was attached and user started typing on hardware keyboard without tapping on the terminal first. (c6b4114f)\n- Fix issue where `RUN_COMMAND` intent was failing for `coreutils`/`busybox` applets. (cce6dfed)\n- Attempt to fix bootstrap installation failure that may be caused by invalid `mkdirs` return value. (dc8bdfe6)\n##\n</details>\n[`Github Build` APK](https://github.com/termux/termux-app/actions/runs/1010928970). Check [Installation](https://github.com/termux/termux-app#github) for more info on `Github Build` APKs.\n[0.117]: https://github.com/termux/termux-app/compare/v0.116...v0.117",
+      "memory_unit_text": "In the termux/termux-app release v0.117 (F-Droid only), the project enables split apks for debug builds, adds app and device info to crash notifications for bootstrap installation or setup storage failures, triggers termux library builds on jitpack on releases, moves the disable-terminal-margin-adjustment setting from termux.properties to Termux Settings, and fixes issues such as a java.lang.AbstractMethodError on Microsoft Surface Duo and other devices, a colour tint/highlight on the terminal, RUN_COMMAND intent failing for coreutils/busybox applets, and attempts to fix bootstrap installation failure caused by invalid mkdirs return value."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_118_0",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.118.0",
+      "tag_name": "v0.118.0",
+      "title": "v0.118.0",
+      "time_hint": "2022-01-07",
+      "published_at": "2022-01-07T22:35:50Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.118.0",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.118.0\nTag: v0.118.0; draft: False; prerelease: False; published_at: 2022-01-07T22:35:50Z; created_at: 2022-01-07T22:32:35Z\nRelease notes:\n## [v0.118.0] - 2022-01-07 22.35\n<details>\n<summary>Changelog</summary>\n### Added\n- Allow users to directly open URL links in terminal transcript when clicked or tapped. The user can add `terminal-onclick-url-open=true` entry to `termux.properties` file to enable opening of URL links in terminal transcript when clicked or tapped. The default value is `false`. Running `termux-reload-settings` command will also update the behaviour instantaneously if changed. Implemented by @trygveaa in [#2146](https://github.com/termux/termux-app/pull/2146). ([`af16e79b`](https://github.com/termux/termux-app/commit/af16e79b), [`1a5a66d0`](https://github.com/termux/termux-app/commit/1a5a66d0))\n- Allow users to disable auto capitalization of extra keys text. The user can add `extra-keys-text-all-caps=false` entry to `termux.properties` file to disable auto capitalization of extra keys text for both normal and popup buttons. The default value is `true`. Running `termux-reload-settings` command will also update the behaviour instantaneously if changed. ([`5c72c3ca`](https://github.com/termux/termux-app/commit/5c72c3ca))\n- Allow users to adjust terminal horizontal and vertical margin. The `terminal-margin-horizontal` key can be used to adjust the terminal left/right margin and the `terminal-margin-vertical` can be used to adjust the terminal top/bottom margin. This will also affect drawer. The user can set an integer value between `0` and `100` as `dp` units. The default value is still `3` for horizontal and `0` for vertical margin. So adding an entry like `terminal-margin-horizontal=10` to `termux.properties` file will allow users to set a horizontal margin of `10dp`. After updating the value, either restart termux or run `termux-reload-settings` for changes to take effect.\nThis was added since for some users text on edges would not be shown on the screen or they had screen protectors/cases that covered screen edges (Of course, that would require fixing every single app and android system UI itself, so kinda stupid to use). Moreover, horizontal margin of like `10dp` may be helpful with peek-and-slide for people having gesture navigation enabled on android `10+` since they won't be to touch at exactly the edge of the screen to trigger peek (#1325).\nCloses [#2210](https://github.com/termux/termux-app/issues/2210)\n([`63504f0a`](https://github.com/termux/termux-app/commit/63504f0a))\n- Allow users to disable hardware keyboard shortcuts. The user can add `disable-hardware-keyboard-shortcuts=true` entry to `termux.properties` file to disable hardware keyboard shortcuts. The default value is `false`. Running `termux-reload-settings` command will also update the behaviour instantaneously if changed. Note that for `ctrl+alt+p` to work, you need to unset `shortcut.rename-session = ctrl + n`. https://wiki.termux.com/wiki/Terminal_Settings. Closes [#1825](https://github.com/termux/termux-app/issues/1825). ([`829cc398`](https://github.com/termux/termux-app/commit/829cc398), [`fcc0d362`](https://github.com/termux/termux-app/commit/fcc0d362))\n- Request `android.permission.PACKAGE_USAGE_STATS` permission. The permission can be granted from `Android Settings` -> `System` -> `Usage Access`. Closes [#2269](https://github.com/termux/termux-app/issues/2269). ([`865f29d4`](https://github.com/termux/termux-app/commit/865f29d4))\n- Add `TERMUX_API_VERSION` to termux shell environment. This can be used to check if `Termux:API` is installed and enabled for cases where users try to run `termux-api` commands and it hangs. ([`0cf3cef7`](https://github.com/termux/termux-app/commit/0cf3cef7))\n- Add `TERMUX_IS_DEBUGGABLE_BUILD`, `TERMUX_APK_RELEASE` and `TERMUX_APP_PID` to termux shell environment.\nThe `TERMUX_IS_DEBUGGABLE_BUILD` env variable will be set to `1` if termux APK is a debuggable APK and `0...",
+      "memory_unit_text": "In the termux/termux-app release v0.118.0, the project allows users to directly open URL links in terminal transcript when clicked or tapped, disable auto capitalization of extra keys text, adjust terminal horizontal and vertical margins, disable hardware keyboard shortcuts, requests android.permission.PACKAGE_USAGE_STATS, adds TERMUX_API_VERSION, TERMUX_IS_DEBUGGABLE_BUILD, TERMUX_APK_RELEASE, and TERMUX_APP_PID to the shell environment, and includes various other additions and fixes."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_118_1",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.118.1",
+      "tag_name": "v0.118.1",
+      "title": "v0.118.1",
+      "time_hint": "2024-06-18",
+      "published_at": "2024-06-18T00:07:53Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.118.1",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.118.1\nTag: v0.118.1; draft: False; prerelease: False; published_at: 2024-06-18T00:07:53Z; created_at: 2024-06-17T23:10:09Z\nRelease notes:\n## v0.118.1 - 2024-06-18 00.05\n**Commit history:** [`v0.118.0...v0.118.1`](https://github.com/termux/termux-app/compare/9259ef0b...v0.118.1)\n<details>\n<summary>Changelog</summary>\n### Added\n- Add support for Termux bootstrap second stage by running `termux-bootstrap-second-stage.sh`. ([`2c82a558`](https://github.com/termux/termux-app/commit/2c82a558))\n- Request `SET_ALARM` permission to allow broadcasting an intent to set an alarm or timer in an alarm clock app. Closes [#3990](https://github.com/termux/termux-app/issues/3990). ([`9735ae28`](https://github.com/termux/termux-app/commit/9735ae28))\n## &nbsp;\n&nbsp;\n### Changed\n- Update support and donate users to `termux.dev` domain. ([`2a008d83`](https://github.com/termux/termux-app/commit/2a008d83))\n- Use black or white cursor color based on terminal background instead of always white if `colors.properties` didn't have cursor color set. Credit for algorithm link belong to @Jamie-Landeg-Jones. Closes [#2653](https://github.com/termux/termux-app/issues/2653). ([`160ab68e`](https://github.com/termux/termux-app/commit/160ab68e))\n- Update `WcWidth.java` to Unicode `15.0.0`. ([`63833d9c`](https://github.com/termux/termux-app/commit/63833d9c), [`fc8245bb`](https://github.com/termux/termux-app/commit/fc8245bb), [`6ece249c`](https://github.com/termux/termux-app/commit/6ece249c))\n## &nbsp;\n&nbsp;\n### Fixed\n- Limit max combining characters in TerminalRow to `15` characters to prevent buffer overflows. Closes [#3839](https://github.com/termux/termux-app/issues/3839). ([`0813e463`](https://github.com/termux/termux-app/commit/0813e463))\n- Fix shared terminal transcript joining back lines. ([`c9e2a75e`](https://github.com/termux/termux-app/commit/c9e2a75e))\n- Ensure CSI parameter value is not greater than `9999` as per `vt510`. ([`9433f107`](https://github.com/termux/termux-app/commit/9433f107))\n- Fix CSI parameters parsing like for SGR sequences that start with a `;` or have sequential `;` characters. Credits for finding the issue belongs to @Screwtapello. Closes [#2272](https://github.com/termux/termux-app/issues/2272), Closes [mawww/kakoune#4339](https://github.com/mawww/kakoune/issues/4339). ([`fbf55fd4`](https://github.com/termux/termux-app/commit/fbf55fd4))\n- Fix message dialog button text not showing in day mode due to white text. ([`903f2496`](https://github.com/termux/termux-app/commit/903f2496))\n- Fix wrong input type selected if toolbar is switched back to extra keys after tapping terminal if in text input mode. Closes [#2503](https://github.com/termux/termux-app/issues/2503). ([`2dc7381b`](https://github.com/termux/termux-app/commit/2dc7381b))\n- Change extra keys and terminal input view background to black. Required for day/night theming and should fix issues where both views were translucent with light terminal color themes. ([`e55639e4`](https://github.com/termux/termux-app/commit/e55639e4))\n- Fix issue where a colour tint/highlight would be added to the terminal on activity re-creation. ([`087da0b5`](https://github.com/termux/termux-app/commit/087da0b5))\n- Fix termux app restarting on samsung dex version `< 3.0` when switching modes. ([`d7f22982`](https://github.com/termux/termux-app/commit/d7f22982))\n- Fix `ArrayIndexOutOfBoundsException` when setting zero width terminal character. ([`f222315b`](https://github.com/termux/termux-app/commit/f222315b))\n- Log exception instead of crashing app on `NumberFormatException` for invalid termcap/terminfo string requested. ([`e11bcfc9`](https://github.com/termux/termux-app/commit/e11bcfc9))\n- Fix `CSI` Delete `Ps` Column(s) (`DECDC`). ([`af5fef4c`](https://github.com/termux/termux-app/commit/af5fef4c))\n- Fix `ArrayIndexOutOfBoundsException` thrown because length was less than 0 when selecting text from terminal buffer. ([`03e31d19`](https://github.com/termux/t...",
+      "memory_unit_text": "In the termux/termux-app release v0.118.1, the project adds support for Termux bootstrap second stage by running termux-bootstrap-second-stage.sh, requests SET_ALARM permission, updates support and donate users to termux.dev domain, uses black or white cursor color based on terminal background, updates WcWidth.java to Unicode 15.0.0, and fixes various issues including limiting max combining characters, fixing shared terminal transcript joining back lines, ensuring CSI parameter value is not greater than 9999, fixing CSI parameters parsing, fixing message dialog button text, fixing wrong input type selected, changing extra keys and terminal input view background to black, fixing a colour tint/highlight on activity re-creation, fixing termux app restarting on samsung dex version < 3.0, and other terminal emulation fixes."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_119_0_beta_1",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.119.0-beta.1",
+      "tag_name": "v0.119.0-beta.1",
+      "title": "v0.119.0-beta.1",
+      "time_hint": "2024-06-18",
+      "published_at": "2024-06-18T00:11:25Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.119.0-beta.1",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.119.0-beta.1\nTag: v0.119.0-beta.1; draft: False; prerelease: True; published_at: 2024-06-18T00:11:25Z; created_at: 2024-06-17T23:12:29Z\nRelease notes:\n## v0.119.0-beta.1 - 2024-06-18 00.11\n**Commit history:** [`v0.118.0...v0.119.0-beta.1`](https://github.com/termux/termux-app/compare/9259ef0b...v0.119.0-beta.1)\n## Downloads\n### Android `7+` only\n- [`termux-app_v0.119.0-beta.1+apt-android-7-github-debug_universal.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.1/termux-app_v0.119.0-beta.1+apt-android-7-github-debug_universal.apk)\n- [`termux-app_v0.119.0-beta.1+apt-android-7-github-debug_arm64-v8a.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.1/termux-app_v0.119.0-beta.1+apt-android-7-github-debug_arm64-v8a.apk)\n- [`termux-app_v0.119.0-beta.1+apt-android-7-github-debug_armeabi-v7a.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.1/termux-app_v0.119.0-beta.1+apt-android-7-github-debug_armeabi-v7a.apk)\n- [`termux-app_v0.119.0-beta.1+apt-android-7-github-debug_x86_64.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.1/termux-app_v0.119.0-beta.1+apt-android-7-github-debug_x86_64.apk)\n- [`termux-app_v0.119.0-beta.1+apt-android-7-github-debug_x86.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.1/termux-app_v0.119.0-beta.1+apt-android-7-github-debug_x86.apk)\n### Android `5` and `6` only\n- [`termux-app_v0.119.0-beta.1+apt-android-5-github-debug_universal.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.1/termux-app_v0.119.0-beta.1+apt-android-5-github-debug_universal.apk)\n- [`termux-app_v0.119.0-beta.1+apt-android-5-github-debug_arm64-v8a.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.1/termux-app_v0.119.0-beta.1+apt-android-5-github-debug_arm64-v8a.apk)\n- [`termux-app_v0.119.0-beta.1+apt-android-5-github-debug_armeabi-v7a.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.1/termux-app_v0.119.0-beta.1+apt-android-5-github-debug_armeabi-v7a.apk)\n- [`termux-app_v0.119.0-beta.1+apt-android-5-github-debug_x86_64.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.1/termux-app_v0.119.0-beta.1+apt-android-5-github-debug_x86_64.apk)\n- [`termux-app_v0.119.0-beta.1+apt-android-5-github-debug_x86.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.1/termux-app_v0.119.0-beta.1+apt-android-5-github-debug_x86.apk)\n##\n**NOTICE:** Use `apt-android-7` variant for Android `>= 7` and `apt-android-5` variant for Android `5`/`6` and do not mix. Use `universal` variant if device/Android architecture is unknown. Basically, use [`termux-app_v0.119.0-beta.1+apt-android-7-github-debug_universal.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.1/termux-app_v0.119.0-beta.1+apt-android-7-github-debug_universal.apk) variant for Android `>= 7` if in doubt. Check [install](https://github.com/termux/termux-app#installation) and [GitHub install source](https://github.com/termux/termux-app#github) docs for more info.",
+      "memory_unit_text": "In the termux/termux-app release v0.119.0-beta.1, the project provides download links for Android 7+ and Android 5/6 variants with apt-android-7 and apt-android-5 suffixes, and instructs users to use the universal variant if unsure."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_118_2",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.118.2",
+      "tag_name": "v0.118.2",
+      "title": "v0.118.2",
+      "time_hint": "2025-03-29",
+      "published_at": "2025-03-29T07:00:23Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.118.2",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.118.2\nTag: v0.118.2; draft: False; prerelease: False; published_at: 2025-03-29T07:00:23Z; created_at: 2025-03-29T04:27:24Z\nRelease notes:\n## v0.118.2 - 2025-03-29 07:00\n**Commit history:** [`v0.118.1...v0.118.2`](https://github.com/termux/termux-app/compare/43317b78...v0.118.2)\n<details>\n<summary>Changelog</summary>\n### Added\n- Add package `SE_PROCESS_CONTEXT`, `SE_FILE_CONTEXT` and `SE_INFO` when generating app info markdown string. ([`999f10d7`](https://github.com/termux/termux-app/commit/999f10d7))\n- Add info to device info for supported ABIs for armv8l and 64-bit-only aarch64 devices and `PAGE_SIZE` for `16KB` page size devices. ([`3aa986cf`](https://github.com/termux/termux-app/commit/3aa986cf))\n- Export additional primary `TERMUX_*` scoped shell environment variables, i.e `TERMUX__ROOTFS`, `TERMUX__HOME`, `TERMUX__PREFIX`, `TERMUX_APP__DATA_DIR`, `TERMUX_APP__LEGACY_DATA_DIR`, `TERMUX_APP__BUILD_DATA_DIR`, `TERMUX__SE_PROCESS_CONTEXT`, `TERMUX_APP__SE_FILE_CONTEXT`, `TERMUX_APP__SE_INFO` and `ANDROID__BUILD_VERSION_SDK`. This is also required for `libtermux-exec-*-ld-preload.so` `$LD_PRELOAD` library as well for `termux-exec` version `>= 2.0.0`. ([`b7d2a4b6`](https://github.com/termux/termux-app/commit/b7d2a4b6), [`8440a728`](https://github.com/termux/termux-app/commit/8440a728))\n- Basic MIME type recognition in ContentProvider. ([`c5f000a1`](https://github.com/termux/termux-app/commit/c5f000a1))\n- Terminal CSI reporting of window and cell pixel size. ([`254e885f`](https://github.com/termux/termux-app/commit/254e885f))\n- Fill `.ws_xpixel` and `.ws_ypixel` in `winsize`. ([`bb7fa88f`](https://github.com/termux/termux-app/commit/bb7fa88f))\n- Do not show AutoFill UI on Termux start and add support for usernames. Closes [#3909](https://github.com/termux/termux-app/issues/3909). ([`043923e6`](https://github.com/termux/termux-app/commit/043923e6))\n- Add support for `Share selected text` of terminal in long hold `MORE` menu so that users don't have to copy and paste to move text between apps. ([`2d38a1ca`](https://github.com/termux/termux-app/commit/2d38a1ca))\n## &nbsp;\n&nbsp;\n### Changed\n- Bump `apt-android-7` bootstraps to `2025.03.28-r1`. ([`a8f8be18`](https://github.com/termux/termux-app/commit/a8f8be18))\n- Add `PGUP` and `PGDN` extra keys to repetitive keys so that long holding them triggers page scrolling instead of having to repeatedly press the key to change pages. ([`fa710c47`](https://github.com/termux/termux-app/commit/fa710c47))\n- Make Shift-PgUp and Shift-PgDn scroll by pages rather than lines. ([`915e053a`](https://github.com/termux/termux-app/commit/915e053a))\n## &nbsp;\n&nbsp;\n### Fixed\n- Generate debug report before deleting broken prefix directory after bootstrap second stage failure to get `stat` info at time of failure. ([`7f632cf4`](https://github.com/termux/termux-app/commit/7f632cf4))\n- Fully consume unknown CSI sequences containing unsupported parameter and intermediate bytes. Closes [#4338](https://github.com/termux/termux-app/issues/4338). Co-authored-by: @krobelus and @agnostic-apollo. ([`3f237502`](https://github.com/termux/termux-app/commit/3f237502))\n- Implement colon separated CSI parameters. ([`0415681d`](https://github.com/termux/termux-app/commit/0415681d))\n- Make ScrollDown escape respect margins. Closes [#2576](https://github.com/termux/termux-app/issues/2576). ([`4baf12ba`](https://github.com/termux/termux-app/commit/4baf12ba))\n- Use Canvas.drawTextRun instead of drawText. drawText does (very) basic BiDi, which causes inconsistent behaviour. This ensures everything is LtR. ([`c1544076`](https://github.com/termux/termux-app/commit/c1544076))\n- Mark view as important for AutoFill before requesting an AutoFill. Co-authored-by: @AChep and @agnostic-apollo. ([`ee9b31a0`](https://github.com/termux/termux-app/commit/ee9b31a0))\n- Parse (but ignore for now) terminal APC sequences. ([`f35063da`](https://github.com/termux/termux-app/commit/f35063da))\n- Fix `SH...",
+      "memory_unit_text": "In the termux/termux-app release v0.118.2, the project adds package SE_PROCESS_CONTEXT, SE_FILE_CONTEXT, and SE_INFO when generating app info markdown string, adds info to device info for supported ABIs and PAGE_SIZE, exports additional primary TERMUX_* scoped shell environment variables, adds basic MIME type recognition in ContentProvider, adds terminal CSI reporting of window and cell pixel size, fills .ws_xpixel and .ws_ypixel in winsize, does not show AutoFill UI on Termux start and adds support for usernames, adds support for Share selected text in long hold MORE menu, bumps apt-android-7 bootstraps to 2025.03.28-r1, adds PGUP and PGDN extra keys to repetitive keys, makes Shift-PgUp and Shift-PgDn scroll by pages, and fixes various issues including generating debug report before deleting broken prefix directory, fully consuming unknown CSI sequences, implementing colon separated CSI parameters, making ScrollDown escape respect margins, using Canvas.drawTextRun instead of drawText, marking view as important for AutoFill, parsing terminal APC sequences, and fixing SH..."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_119_0_beta_2",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.119.0-beta.2",
+      "tag_name": "v0.119.0-beta.2",
+      "title": "v0.119.0-beta.2",
+      "time_hint": "2025-03-29",
+      "published_at": "2025-03-29T07:05:11Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.119.0-beta.2",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.119.0-beta.2\nTag: v0.119.0-beta.2; draft: False; prerelease: True; published_at: 2025-03-29T07:05:11Z; created_at: 2025-03-29T04:27:32Z\nRelease notes:\n## v0.119.0-beta.2 - 2025-03-29 07:05\n**Commit history:** [`v0.119.0-beta.1...v0.119.0-beta.2`](https://github.com/termux/termux-app/compare/7c5992d3...v0.119.0-beta.2)\n## Downloads\n### Android `7+` only\n- [`termux-app_v0.119.0-beta.2+apt-android-7-github-debug_universal.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.2/termux-app_v0.119.0-beta.2+apt-android-7-github-debug_universal.apk)\n- [`termux-app_v0.119.0-beta.2+apt-android-7-github-debug_arm64-v8a.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.2/termux-app_v0.119.0-beta.2+apt-android-7-github-debug_arm64-v8a.apk)\n- [`termux-app_v0.119.0-beta.2+apt-android-7-github-debug_armeabi-v7a.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.2/termux-app_v0.119.0-beta.2+apt-android-7-github-debug_armeabi-v7a.apk)\n- [`termux-app_v0.119.0-beta.2+apt-android-7-github-debug_x86_64.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.2/termux-app_v0.119.0-beta.2+apt-android-7-github-debug_x86_64.apk)\n- [`termux-app_v0.119.0-beta.2+apt-android-7-github-debug_x86.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.2/termux-app_v0.119.0-beta.2+apt-android-7-github-debug_x86.apk)\n### Android `5` and `6` only\n- [`termux-app_v0.119.0-beta.2+apt-android-5-github-debug_universal.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.2/termux-app_v0.119.0-beta.2+apt-android-5-github-debug_universal.apk)\n- [`termux-app_v0.119.0-beta.2+apt-android-5-github-debug_arm64-v8a.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.2/termux-app_v0.119.0-beta.2+apt-android-5-github-debug_arm64-v8a.apk)\n- [`termux-app_v0.119.0-beta.2+apt-android-5-github-debug_armeabi-v7a.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.2/termux-app_v0.119.0-beta.2+apt-android-5-github-debug_armeabi-v7a.apk)\n- [`termux-app_v0.119.0-beta.2+apt-android-5-github-debug_x86_64.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.2/termux-app_v0.119.0-beta.2+apt-android-5-github-debug_x86_64.apk)\n- [`termux-app_v0.119.0-beta.2+apt-android-5-github-debug_x86.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.2/termux-app_v0.119.0-beta.2+apt-android-5-github-debug_x86.apk)\n##\n**NOTICE:** Use `apt-android-7` variant for Android `>= 7` and `apt-android-5` variant for Android `5`/`6` and do not mix. Use `universal` variant if device/Android architecture is unknown. Basically, use [`termux-app_v0.119.0-beta.2+apt-android-7-github-debug_universal.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.2/termux-app_v0.119.0-beta.2+apt-android-7-github-debug_universal.apk) variant for Android `>= 7` if in doubt. Check [install](https://github.com/termux/termux-app#installation) and [GitHub install source](https://github.com/termux/termux-app#github) docs for more info.",
+      "memory_unit_text": "In the termux/termux-app release v0.119.0-beta.2, the project provides download links for Android 7+ and Android 5/6 variants with apt-android-7 and apt-android-5 suffixes, and instructs users to use the universal variant if unsure."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_118_3",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.118.3",
+      "tag_name": "v0.118.3",
+      "title": "v0.118.3",
+      "time_hint": "2025-05-22",
+      "published_at": "2025-05-22T22:47:26Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.118.3",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.118.3\nTag: v0.118.3; draft: False; prerelease: False; published_at: 2025-05-22T22:47:26Z; created_at: 2025-05-22T21:53:15Z\nRelease notes:\n## v0.118.3 - 2025-05-22 10:47\n**Commit history:** [`v0.118.2...v0.118.3`](https://github.com/termux/termux-app/compare/21c0d51f...v0.118.3)\n<details>\n<summary>Changelog</summary>\n### Changed\n- **!** Remove `TERMUX_APP__BUILD_DATA_DIR` as a different naming scheme will be used for build variables and rename `TERMUX__ROOTFS` to `TERMUX__ROOTFS_DIR`. ([`849e6b10`](https://github.com/termux/termux-app/commit/849e6b10))\n## &nbsp;\n&nbsp;\n### Fixed\n- Bump `org.lsposed.hiddenapibypass:hiddenapibypass` to `6.1` to fix crash on Android 16 QPR1. Related commit https://github.com/LSPosed/AndroidHiddenApiBypass/commit/9efadf06. Related commit https://android-review.googlesource.com/c/platform/libcore/+/3380841. Related commit https://cs.android.com/android/_/android/platform/libcore/+/0dc31afe. Closes [#4556](https://github.com/termux/termux-app/issues/4556). ([`fda17afa`](https://github.com/termux/termux-app/commit/fda17afa))\n- Declare `MANAGE_EXTERNAL_STORAGE` as it being added in Termux:API version `0.51.0` is revoking the storage permission of Termux app after updates and sometimes later. Related issue [#4486](https://github.com/termux/termux-app/issues/4486). ([`23756528`](https://github.com/termux/termux-app/commit/23756528))\n- Add explicit `serialVersionUID` to `Serializable` classes like `ReportInfo` and `TextIOInfo`. Reading `ReportInfo` with `Bundle.getSerializable()` by `ReportActivity` is triggering exception when default algorithm is used for `serialVersionUID` in Termux:API plugin app when error notification created in `ResultReturner.returnData()` by `TermuxPluginUtils.sendPluginCommandErrorNotification()` is clicked. Related issue https://github.com/termux/termux-api/issues/762. ([`4f033b34`](https://github.com/termux/termux-app/commit/4f033b34))\n---\n&nbsp;\n</details>",
+      "memory_unit_text": "In the termux/termux-app release v0.118.3, the project removes TERMUX_APP__BUILD_DATA_DIR and renames TERMUX__ROOTFS to TERMUX__ROOTFS_DIR, bumps org.lsposed.hiddenapibypass:hiddenapibypass to 6.1 to fix a crash on Android 16 QPR1, declares MANAGE_EXTERNAL_STORAGE to prevent storage permission revocation, and adds explicit serialVersionUID to Serializable classes like ReportInfo and TextIOInfo."
+    },
+    {
+      "memory_node_id": "termux__termux_app__release__v0_119_0_beta_3",
+      "repo": "termux/termux-app",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.119.0-beta.3",
+      "tag_name": "v0.119.0-beta.3",
+      "title": "v0.119.0-beta.3",
+      "time_hint": "2025-05-22",
+      "published_at": "2025-05-22T22:48:54Z",
+      "source_url": "https://github.com/termux/termux-app/releases/tag/v0.119.0-beta.3",
+      "raw_text": "Repository: termux/termux-app\nRelease: v0.119.0-beta.3\nTag: v0.119.0-beta.3; draft: False; prerelease: True; published_at: 2025-05-22T22:48:54Z; created_at: 2025-05-22T21:53:57Z\nRelease notes:\n## v0.119.0-beta.3 - 2025-05-22 10:48\n**Commit history:** [`v0.119.0-beta.2...v0.119.0-beta.3`](https://github.com/termux/termux-app/compare/e3449515...v0.119.0-beta.3)\n## Downloads\n### Android `7+` only\n- [`termux-app_v0.119.0-beta.3+apt-android-7-github-debug_universal.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.3/termux-app_v0.119.0-beta.3+apt-android-7-github-debug_universal.apk)\n- [`termux-app_v0.119.0-beta.3+apt-android-7-github-debug_arm64-v8a.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.3/termux-app_v0.119.0-beta.3+apt-android-7-github-debug_arm64-v8a.apk)\n- [`termux-app_v0.119.0-beta.3+apt-android-7-github-debug_armeabi-v7a.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.3/termux-app_v0.119.0-beta.3+apt-android-7-github-debug_armeabi-v7a.apk)\n- [`termux-app_v0.119.0-beta.3+apt-android-7-github-debug_x86_64.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.3/termux-app_v0.119.0-beta.3+apt-android-7-github-debug_x86_64.apk)\n- [`termux-app_v0.119.0-beta.3+apt-android-7-github-debug_x86.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.3/termux-app_v0.119.0-beta.3+apt-android-7-github-debug_x86.apk)\n### Android `5` and `6` only\n- [`termux-app_v0.119.0-beta.3+apt-android-5-github-debug_universal.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.3/termux-app_v0.119.0-beta.3+apt-android-5-github-debug_universal.apk)\n- [`termux-app_v0.119.0-beta.3+apt-android-5-github-debug_arm64-v8a.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.3/termux-app_v0.119.0-beta.3+apt-android-5-github-debug_arm64-v8a.apk)\n- [`termux-app_v0.119.0-beta.3+apt-android-5-github-debug_armeabi-v7a.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.3/termux-app_v0.119.0-beta.3+apt-android-5-github-debug_armeabi-v7a.apk)\n- [`termux-app_v0.119.0-beta.3+apt-android-5-github-debug_x86_64.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.3/termux-app_v0.119.0-beta.3+apt-android-5-github-debug_x86_64.apk)\n- [`termux-app_v0.119.0-beta.3+apt-android-5-github-debug_x86.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.3/termux-app_v0.119.0-beta.3+apt-android-5-github-debug_x86.apk)\n##\n**NOTICE:** Use `apt-android-7` variant for Android `>= 7` and `apt-android-5` variant for Android `5`/`6` and do not mix. Use `universal` variant if device/Android architecture is unknown. Basically, use [`termux-app_v0.119.0-beta.3+apt-android-7-github-debug_universal.apk`](https://github.com/termux/termux-app/releases/download/v0.119.0-beta.3/termux-app_v0.119.0-beta.3+apt-android-7-github-debug_universal.apk) variant for Android `>= 7` if in doubt. Check [install](https://github.com/termux/termux-app#installation) and [GitHub install source](https://github.com/termux/termux-app#github) docs for more info.",
+      "memory_unit_text": "In the termux/termux-app release v0.119.0-beta.3, the project provides download links for Android 7+ and Android 5/6 variants with apt-android-7 and apt-android-5 suffixes, and instructs users to use the universal variant if unsure."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the termux/termux-app releases, which release adds a context menu action \"Autofill password\"?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.102"
+        },
+        {
+          "option_id": "B",
+          "text": "v0.103"
+        },
+        {
+          "option_id": "C",
+          "text": "v0.104"
+        },
+        {
+          "option_id": "D",
+          "text": "v0.105"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v0.102",
+      "source_chunk_ids": [
+        "termux__termux_app__release__v0_102"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "termux__termux_app__release__v0_102",
+          "answer_text": "Add context menu action \"Autofill password\"."
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the termux/termux-app releases, how does the handling of the DECRQM sequence in v0.100 differ from the handling in v0.101?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.100 fixes the DECRQM sequence but has broken bootstrap archives, while v0.101 is a resubmission with the same DECRQM fix and fixed bootstrap archives."
+        },
+        {
+          "option_id": "B",
+          "text": "v0.100 introduces the DECRQM sequence, while v0.101 removes it."
+        },
+        {
+          "option_id": "C",
+          "text": "v0.100 does not mention DECRQM, while v0.101 adds it."
+        },
+        {
+          "option_id": "D",
+          "text": "Both releases have identical DECRQM handling and identical bootstrap archives."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v0.100 fixes the DECRQM sequence but has broken bootstrap archives, while v0.101 is a resubmission with the same DECRQM fix and fixed bootstrap archives.",
+      "source_chunk_ids": [
+        "termux__termux_app__release__v0_100",
+        "termux__termux_app__release__v0_101"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "termux__termux_app__release__v0_100",
+          "answer_text": "fix handling of DECRQM sequence ... bootstrap archives contain broken dpkg"
+        },
+        {
+          "memory_node_id": "termux__termux_app__release__v0_101",
+          "answer_text": "fix handling of DECRQM sequence ... Resubmission of v0.100 but with fixed bootstrap archives."
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the termux/termux-app release window, order the following release-content states from earliest to latest: (1) a release that adds a fullscreen option in termux.properties, (2) a release that adds a context menu action \"Autofill password\", (3) a release that exposes dotfiles through SAF.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2 -> 3 -> 1"
+        },
+        {
+          "option_id": "B",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "3 -> 2 -> 1"
+        },
+        {
+          "option_id": "D",
+          "text": "2 -> 1 -> 3"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2 -> 3 -> 1",
+      "source_chunk_ids": [
+        "termux__termux_app__release__v0_102",
+        "termux__termux_app__release__v0_104",
+        "termux__termux_app__release__v0_107"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "termux__termux_app__release__v0_102",
+          "answer_text": "Add context menu action \"Autofill password\"."
+        },
+        {
+          "memory_node_id": "termux__termux_app__release__v0_104",
+          "answer_text": "Expose dotfiles through SAF."
+        },
+        {
+          "memory_node_id": "termux__termux_app__release__v0_107",
+          "answer_text": "add option fullscreen to toggle fullscreen mode."
+        }
+      ]
+    }
+  ]
+}

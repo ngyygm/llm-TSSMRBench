@@ -1,0 +1,525 @@
+{
+  "prototype_id": "hexojs__hexo_release_window",
+  "domain": "github_release_evolution",
+  "repo": "hexojs/hexo",
+  "source_type": "release_note",
+  "window_title": "hexojs/hexo recent release evolution",
+  "window_summary": "This window tracks the recent hexojs/hexo release stream from version 4.0.0 through v8.1.2, covering breaking changes, new features, performance improvements, and fixes across major and minor releases.",
+  "chunks": [
+    {
+      "memory_node_id": "hexojs__hexo__release__4_0_0",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.0.0",
+      "tag_name": "4.0.0",
+      "title": "4.0.0",
+      "time_hint": "2019-10-16",
+      "published_at": "2019-10-16T00:25:47Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/4.0.0",
+      "raw_text": "Repository: hexojs/hexo\nRelease: 4.0.0\nTag: 4.0.0; draft: False; prerelease: False; published_at: 2019-10-16T00:25:47Z; created_at: 2019-10-16T00:17:27Z\nRelease notes:\n## Breaking change\n- chore: drop Node 6 [#3598]\n- fix post_link, asset_link when title contains unescaped html charaters [#3704]\n* Affects `asset_link`, `post_link` [tag plugins](https://hexo.io/docs/tag-plugins)\n* If you want to retain unescaped characters, set `false` to the final argument `{% asset_link 'filename 'title' 'false' %}`\n- fix: encode permalink by default [#3708]\n* If you currently use `encodeURI(post.permalink)` (including `permalink` of page, tag & category variables), there are three options:\n1. Use `encodeURI(decodeURI(post.permalink))` for backward-compatibility with hexo v3.9 (and older)\n2. Use [`encodeURL()`](https://github.com/hexojs/hexo-util#encodeurlstr) function provided by hexo-util, it is backward-compatible\n3. Drop `encodeURI()` function, this breaks backward-compatibility\n* If you want to use the variables in decoded form,\n- Use `decodeURI(post.permalink)`\n- [`decodeURL()`](https://github.com/hexojs/hexo-util#decodeurlstr) of hexo-util can decode [punycoded](https://en.wikipedia.org/wiki/Punycode) domain.\n* This change does not apply to `this.url` variable.\n- fix(paginator): add `escape` option for compatibility with hexo-util@1.3.0 [#3728]\n* Theme devs, if you customize `prev_text`/`next_text` with html (e.g. to insert icons), you need to set [`escape: false`](https://github.com/theme-next/hexo-theme-next/blob/7d6272274afcc88edcefe3504e452a502c05329f/layout/_partials/pagination.swig#L8) in the parameter.\n## Feature\n- feat(filter): use existing excerpt if possible [#3612]\n* Support `excerpt:` in [front-matter](https://hexo.io/docs/front-matter)\n- switch minimatch to micromatch [#3538]\n* Refer to [micromatch docs](https://github.com/micromatch/micromatch#extended-globbing) for advanced globbing\n- feat: add option to disable meta generator tag [#3653]\n* Add `meta_generator: false` to config to disable\n- feat(generator): allow limit parallel generation [#3665]\n* If you experience \"Out of memory\" issue, try lowering the value in `hexo g --concurrency <number>`\n- Option to use date instead of file mtime for updated date [#3235]\n* If you prefer not to use file modification time in the `post.updated` variable, set `use_date_for_updated: true` in config\n- feat(list_tags): add Schema \"keywords\" and Microdata \"tag\" [#3678]\n- feat(permalink_variable): add pretty_urls option to remove index.html from url [#3691]\n* Use the following config to remove the trailing `index.html` from `permalink` [variables](https://hexo.io/docs/variables)\n``` yml\npretty_urls:\ntrailing_index: false\n```\n* Does not apply to `this.url` variable (see [#3661]).\n* Should be compatible with existing canonical-related plugins, recommend plugin and theme devs to test\n- feat: add `full_url_for` helper [#3701]\n* use this helper `full_url_for(page.path)` instead of `config.url + page.path`\n- fix: external_link should use after_render [#3675]\n* added `field` and `exclude` options, see [#3675] for guide.\n## Performance\n- perf(meta_generator): drop cheerio [#3671]\n- perf(open_graph): drop cheerio and use regex [#3680]\n- perf(external_link): drop cheerio and use regex [#3685]\n- perf(cache): enforce caching across modes [#3756]\n## Fix\n- fix: set english as default [#3654]\n- Use filename when title is not specified in the front-matter [#3672]\n- fix: ignore categories / tags with zero posts [#3624]\n- fix(open_graph): remove index.html from url [#3661]\n- fix(open_graph): remove duplicate twitter card tags #3668\n- fix(helpers, tag plugins): encode url by default [#3710]\n* Refer to [#3708] for guide on decoding.\n- fix(open_graph): percent-encode url, not html escape [#3686]\n- fix: Allow backtick code block in \"blockquote\" tag plugin [#2321]\n- fix: Correct processing of backtick code block on blockquote [#3765]\n- fix: prevent inserting extra new line character into the end of backtick...",
+      "memory_unit_text": "In the hexojs/hexo release 4.0.0, the project introduces breaking changes including dropping Node 6 support, fixing post_link and asset_link when titles contain unescaped HTML characters, encoding permalink by default, and adding an escape option for paginator. New features include using existing excerpt if possible, switching from minimatch to micromatch, an option to disable the meta generator tag, limiting parallel generation, using date instead of file mtime for updated date, adding Schema keywords and Microdata tag for list_tags, a pretty_urls option to remove index.html from URLs, a full_url_for helper, and external_link after_render with field and exclude options. Performance improvements drop cheerio in meta_generator, open_graph, and external_link, and enforce caching across modes. Fixes set English as default, use filename when title is not specified, ignore categories/tags with zero posts, remove index.html from open_graph URL, remove duplicate twitter card tags, encode URL by default in helpers and tag plugins, percent-encode open_graph URL, allow backtick code block in blockquote tag plugin, correct processing of backtick code block on blockquote, and prevent inserting extra new line character into the end of backtick code blocks."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__4_1_0",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.1.0",
+      "tag_name": "4.1.0",
+      "title": "4.1.0",
+      "time_hint": "2019-12-09",
+      "published_at": "2019-12-09T03:52:47Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/4.1.0",
+      "raw_text": "Repository: hexojs/hexo\nRelease: 4.1.0\nTag: 4.1.0; draft: False; prerelease: False; published_at: 2019-12-09T03:52:47Z; created_at: 2019-12-09T03:47:49Z\nRelease notes:\n### Breaking change\n- Requires Node 8.10 or above [#3778]\n* Node 8 is going to be deprecated in [less than a month](https://github.com/nodejs/Release/blob/master/README.md), we strongly urge to upgrade to Node 10 or newer\n- `og:locale` Open Graph tag won't be inserted if `language:` (in config, front-matter of post/page or [`open_graph()`](https://hexo.io/docs/helpers#open-graph) helper) is not in `language-TERRITORY` format [#3808]\n* `en` is invalid\n* `en-GB` is valid\n* Not all locales are supported (e.g. `en-AU` is not valid), see [official list](https://developers.facebook.com/docs/messenger-platform/messenger-profile/supported-locales/)\n* Dash (e.g. \"en-GB\") must be used for multilingual support, dash is automatically transformed to underscore (e.g. \"en_GB\") in `og:locale`\n* **Verify** the corresponding file exists in the `languages/` folder of installed theme before changing the `language:` config\n### Features\n- Support adding hour and minute to post permalink [#3629]\n* Example usage:\n``` yml\n_config.yml\npermalink: :year/:month/:day/:hour/:minute/:title/\n```\n* Results in `https://yoursite.com/2019/12/09/23/59/a-post/`\n- Insert `article:published_time` [#3674] `article:author` [#3805] Open Graph tags\n- Enable `lazyload` in iframe-related tag plugins [#3798]\n* Affects [`iframe`](https://hexo.io/docs/tag-plugins#iframe), [`jsfiddle`](https://hexo.io/docs/tag-plugins#jsFiddle), [`vimeo`](https://hexo.io/docs/tag-plugins#Vimeo), [`youtube`](https://hexo.io/docs/tag-plugins#YouTube) tag plugins\n* Requires [supported browsers](https://caniuse.com/#feat=loading-lazy-attr) to benefit from this feature\n* Unsupported browsers would simply ignore the attribute, thus it is safe to use and always enabled\n- `meta_generator` helper to insert [metadata](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta) element tag [#3782]\n* Example usage:\n* Insert the following snippet (if EJS is used) inside `<head>` element of your theme layout,\n``` js\n<%- meta_generator() %>\n```\n* would output `<meta name=\"generator\" content=\"Hexo 4.1.0\">`\n* Hexo 3.9.0+ inserts the tag automatically; to get the performance benefit (of the `meta_generator` helper), [`meta_generator:`](https://hexo.io/docs/configuration#Extensions) option should be disabled,\n``` yml\n_config.yml\nmeta_generator: false\n```\n- Support custom attributes in [`js()`](https://hexo.io/docs/helpers#js) [#3681] and [`css()`](https://hexo.io/docs/helpers#css) [#3690] helpers\n* Example usage:\n``` js\n<%- js({ src: 'script.js', integrity: 'foo', async: true }) %>\n// <script src=\"/script.js\" integrity=\"foo\" async></script>\n<%- css({ href: 'style.css', integrity: 'foo' }) %>\n// <link rel=\"stylesheet\" href=\"/style.css\" integrity=\"foo\">\n```\n- Support `wrap:` option to enable/disable wrapping backtick codeblock in `<table>` element [#3827]\n* Enabled by default, enabling `line_number` also enables it\n* Configure in [`highlight:`](https://hexo.io/docs/configuration#Writing)\n``` yml\n_config.yml\nhighlight:\nline_number: false # must be disabled to disable wrap:\nwrap: false\n```\n* This option also can be passed to [`codeblock()`](https://hexo.io/docs/tag-plugins#Code-Block) tag plugin [#3848]\n``` js\n{% codeblock lang:js wrap:false %}\nconst foo = (bar) => {\nreturn bar;\n};\n{% endcodeblock %}\n```\n### Fixes\n- Retain blank lines in a codeblock attached in blockquote [#3770]\n- Replaced deprecated `og_updated_time` [Open Graph](https://ogp.me/) tag with `article:modified_time` [#3674]\n- Replaced deprecated `keywords` Open Graph tag with `article:tag` [#3805]\n- meta_generator tag should be inserted into `<head>` that spans multiple lines [#3778]\n- No longer clear database `db.json` when running `hexo new` or `hexo --help` [#3793]\n- Completely ignore files/folders specified in [`ignore:`](https://hexo.io/docs/configuration#Include-Exclude-Fil...",
+      "memory_unit_text": "In the hexojs/hexo release 4.1.0, breaking changes require Node 8.10 or above and change og:locale Open Graph tag insertion to require language-TERRITORY format. New features support adding hour and minute to post permalink, insert article:published_time and article:author Open Graph tags, enable lazyload in iframe-related tag plugins, provide a meta_generator helper to insert metadata element tag, support custom attributes in js() and css() helpers, and support a wrap option to enable/disable wrapping backtick codeblock in table element. Fixes retain blank lines in a codeblock attached in blockquote, replace deprecated og_updated_time with article:modified_time, replace deprecated keywords Open Graph tag with article:tag, ensure meta_generator tag is inserted into multi-line head, no longer clear database db.json when running hexo new or hexo --help, and completely ignore files/folders specified in ignore."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__4_1_1",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.1.1",
+      "tag_name": "4.1.1",
+      "title": "4.1.1",
+      "time_hint": "2019-12-12",
+      "published_at": "2019-12-12T07:24:50Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/4.1.1",
+      "raw_text": "Repository: hexojs/hexo\nRelease: 4.1.1\nTag: 4.1.1; draft: False; prerelease: False; published_at: 2019-12-12T07:24:50Z; created_at: 2019-12-12T07:00:21Z\nRelease notes:\n### Feature\n- Add `trailing_html:` to [`pretty_urls:`](https://hexo.io/docs/configuration#URL) option to remove \".html\" from url [#3917]\n* Use the following config to remove the trailing \".html\" from permalink [variables](https://hexo.io/docs/variables)\n``` yml\n_config.yml\npretty_urls:\ntrailing_html: false\n```\n* Example: `https://yoursite.com/page/about.html` -> `https://yoursite.com/page/about`\n### Fixes\n- Set default locales (in \"language_TERRITORY\" format) for [`og:locale`](https://ogp.me/#optional) Open Graph tag [#3921]\n* Previously `og:locale` was inserted only if [`language:`](https://hexo.io/docs/configuration#Site) is configured in \"language-TERRITORY\" format\n* With this fix, if the language is \"en\", `og:locale` will default to \"en_US\". Refer to the pull request for the full list.\n- [`meta_generator()`](https://hexo.io/docs/helpers#meta-generator) helper should output the correct Hexo version [#3925]\n- [`permalink_defaults:`](https://hexo.io/docs/configuration#URL) option should be parsed, not replaced [#3926]\n- \"node_modules/\" and \".git/\" folders in themes/ are now always ignored [#3918]\n### Refactor\n- Further reduces lodash usage [#3880]",
+      "memory_unit_text": "In the hexojs/hexo release 4.1.1, a new feature adds trailing_html to pretty_urls option to remove .html from URL. Fixes set default locales in language_TERRITORY format for og:locale Open Graph tag, ensure meta_generator() helper outputs the correct Hexo version, parse permalink_defaults option instead of replacing it, and always ignore node_modules/ and .git/ folders in themes. A refactor further reduces lodash usage."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__4_2_0",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.2.0",
+      "tag_name": "4.2.0",
+      "title": "4.2.0",
+      "time_hint": "2019-12-22",
+      "published_at": "2019-12-22T10:10:38Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/4.2.0",
+      "raw_text": "Repository: hexojs/hexo\nRelease: 4.2.0\nTag: 4.2.0; draft: False; prerelease: False; published_at: 2019-12-22T10:10:38Z; created_at: 2019-12-22T09:27:26Z\nRelease notes:\n### Features\n- Caching is disabled by default in hexo-server [#3963]\n* It's disabled so that any changes (particularly to the theme's layout) can be previewed in real-time.\n* If you use hexo-server in production environment to serve your website, it can be enabled by,\n``` yml\n_config.yml\nserver:\ncache: true\n```\n- Add `min_depth:` option to [`toc()`](https://hexo.io/docs/helpers#toc) helper [#3997]\n* Example usage:\n``` js\n<%- toc(page.content, { min_depth: 2 }) %>\n// table of content would only include <h2>, <h3> and above\n```\n### Fixes\n- Merges similar theme configs in main config and theme's config [#3967]\n* For example:\n``` yml\n_config.yml\ntheme_config:\na:\nb: 'foo'\n```\n* Plus,\n``` yml\n_config.yml of theme\na:\nc: 'bar'\n```\n* [`theme`](https://hexo.io/docs/variables#Global-Variables) variable should have,\n```\na: {\nb: 'foo',\nc: 'bar'\n}\n```\n- Fixes some caching issue [#3985]\n- [Open Graph](https://hexo.io/docs/helpers#open-graph) now applies all [`pretty_urls`](https://hexo.io/docs/configuration#URL) options to `og:url` tag [#3983]\n### Refactor\n- No longer uses lodash [#3969], [#3987], [#3753]\n* Lodash `_` is still available as a [global variable](https://hexo.io/docs/variables#Global-Variables), usually utilized in theme layout.\n* However, we plan to completely drop it in the coming Hexo 5.0.0\n* This [project page](https://github.com/orgs/hexojs/projects/5#card-27533837) includes all the relevant pull requests which you may find useful\n- Completely drops cheerio [#3850], [#3677]\n* This means Hexo no longer includes cheerio as part of its production dependencies (it's still a development dependency)\n* This also means the following initialization methods no longer work,\n``` js\nconst cheerio = require('./node_modules/hexo/node_modules/cheerio/index')\nconst cheerio = require('./node_modules/cheerio/index')\n```\n* To use cheerio,\n``` sh\n$ npm install --save cheerio\n```\n``` js\nconst cheerio = require('cheerio')\n```",
+      "memory_unit_text": "In the hexojs/hexo release 4.2.0, features include disabling caching by default in hexo-server and adding a min_depth option to toc() helper. Fixes merge similar theme configs in main config and theme's config, resolve some caching issue, and apply all pretty_urls options to og:url tag in Open Graph. Refactors no longer use lodash and completely drop cheerio from production dependencies."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__4_2_1",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:4.2.1",
+      "tag_name": "4.2.1",
+      "title": "4.2.1",
+      "time_hint": "2020-05-14",
+      "published_at": "2020-05-14T12:39:03Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/4.2.1",
+      "raw_text": "Repository: hexojs/hexo\nRelease: 4.2.1\nTag: 4.2.1; draft: False; prerelease: False; published_at: 2020-05-14T12:39:03Z; created_at: 2020-05-14T12:34:28Z\nRelease notes:\n## Fix\n- Fix compatibility with Node 14 [#4285]",
+      "memory_unit_text": "In the hexojs/hexo release 4.2.1, a fix ensures compatibility with Node 14."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__5_0_0",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.0.0",
+      "tag_name": "5.0.0",
+      "title": "5.0.0",
+      "time_hint": "2020-07-29",
+      "published_at": "2020-07-29T02:24:16Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/5.0.0",
+      "raw_text": "Repository: hexojs/hexo\nRelease: 5.0.0\nTag: 5.0.0; draft: False; prerelease: False; published_at: 2020-07-29T02:24:16Z; created_at: 2020-07-27T08:57:49Z\nRelease notes:\n## Breaking change\n- refactor(external_link): migrate config during load_config @SukkaW [#4414] [#4371]\n* See [Writing](https://hexo.io/docs/configuration#Writing) section for new options (introduced back in v4)\n``` yml\n# _config.yml\nexternal_link: true|false # deprecated\n# New option\nexternal_link:\nenable: true|false\n```\n``` yml\n# _config.yml\n# https://hexo.io/docs/configuration#Date-Time-format\nuse_date_for_updated: true # deprecated\n# New option\nupdated_option: date\n```\n* If you check `external_link` for truthy value, since it's now automatically converted to object, it will be always truthy:\n``` js\n<% if (config.external_link) { %>\n```\n* If you wish to maintain backward compatibility with older Hexo versions:\n``` js\n<% if ((typeof config.external_link === 'boolean' && config.external_link === true) || (typeof config.external_link === 'object' && config.external_link.enable === true)) { %>\n```\n- refactor(box): remove Bluebird.asCallback @SukkaW [#4379]\n* Callback syntax for [`Box`](https://hexo.io/api/box) is never documented nor utilized in Hexo's internal.\n* This is also a reminder that we might drop callbacks from all Hexo API in future. [#3328]\n- feat: bring up config.[updated_option](https://hexo.io/docs/configuration#Date-Time-format) @SukkaW [#4278]\n* This can be useful for a theme that prefers to display `Updated: ` only when it's set in the article's front-matter.\n- feat(open_graph): drop 'keywords' option from front-matter @curbengh [#4174]\n* Search engines no longer support `keywords`.\n- fix(#3464): override permalink use the front-matter @SukkaW [#4359]\n* User config:\n``` yml\n# _config.yml\npermalink: :year/:month/:day/:title/\n```\n* Front-matter\n``` yml\n---\ntitle: foo bar\npermalink: breaking-news/\n---\n```\n* That post will be available on `http://yourhexo.com/breaking-news/`\n* A reminder that permalink must have a trailing `.html` or `/`\n``` yml\npermalink: :year/:month/:day/:title/ # default\n# or\npermalink: :year/:month/:day/:title.html\n```\n- Remove lodash from global variable @SukkaW [#4266]\n* Lodash `_` is no longer available on Hexo API.\n*\n``` js\n// Dropped\n<% const arrayB = _.uniq(arrayA) %>\n```\n* We encourage the use over native JS API over Lodash, we find [this guide](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore) to be helpful.\n* If you prefer to use Lodash, you can always install it and make it available via [`Helper`](https://hexo.io/api/helper) API\n- chore/ci: drop Node.js 8 and add Node.js 14 @SukkaW [#4255]\n* Node 8 has [reached EOL](https://github.com/nodejs/Release) on 31 Dec 2019.\n* Hexo now requires Node 10+; although Node 10.x is still supported, but it's going to be officially deprecated in less than a year (April 2021), so we recommend Node 12+.\n- refactor: remove site config from theme config @SukkaW [#4145]\n* Previously `hexo.theme.config` is merged into `hexo.config`, they are now separated to avoid possible conflict in configuration.\n## New feature\n- feat([tag](https://hexo.io/api/tag)): show source of the error & beautify @SukkaW [#4420]\n- feat([post_link](https://hexo.io/docs/tag-plugins#Include-Posts)): better error message when a post could not be located [#4426]\n* The error message is now clearer when there is an incorrect filename.\n- skip assets of unpublished posts and delete them if exist @DaemondShu [#3489]\n* When there is an unpublished post:\n``` yml\n---\ntitle: Still a draft....\npublished: false\n---\n```\n* That post including its assets will not be generated into the `public/` folder.\n- feat(extend/injector): bring up new extend Injector @SukkaW [#4049]\n* Refer to the API [documentation](https://hexo.io/api/injector) for usage.\n- feat: add prism highlight support @SukkaW [#4119]\n* Refer to the [documentation](https://hexo.io/docs/syntax-highlight#PrismJS) for usage.\n- feat([tagcloud](https://hexo...",
+      "memory_unit_text": "In the hexojs/hexo release 5.0.0, breaking changes include migrating external_link config during load_config, removing Bluebird.asCallback from Box, bringing up config.updated_option, dropping keywords option from open_graph front-matter, overriding permalink using front-matter, removing lodash from global variable, dropping Node.js 8 and adding Node.js 14 support, and removing site config from theme config. New features show source of error and beautify in tag, provide better error message when a post could not be located in post_link, skip assets of unpublished posts and delete them if exist, bring up new extend Injector, add prism highlight support, and add tagcloud features. Other changes include various refactors and dependency updates."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__5_0_1",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.0.1",
+      "tag_name": "5.0.1",
+      "title": "5.0.1",
+      "time_hint": "2020-08-10",
+      "published_at": "2020-08-10T04:20:15Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/5.0.1",
+      "raw_text": "Repository: hexojs/hexo\nRelease: 5.0.1\nTag: 5.0.1; draft: False; prerelease: False; published_at: 2020-08-10T04:20:15Z; created_at: 2020-08-10T04:17:49Z\nRelease notes:\n## Changes\n- fix(helpers): call url_for from hexo-util @curbengh [#4447]\n* [helpers](https://hexo.io/docs/helpers) are now accessible from APIs such as [`Injector`](https://hexo.io/api/injector#Example)\n- perf(external_link): update regexp @SukkaW [#4467]\n* regex of [`external_link`](https://github.com/hexojs/hexo/blob/master/lib/plugins/filter/after_render/external_link.js) filter now pre-match external links, instead of solely rely on [`isExternalLink`](https://github.com/hexojs/hexo-util#isexternallinkurl-sitehost-exclude)\n- perf(injector): shorthand optimization @SukkaW [#4462]",
+      "memory_unit_text": "In the hexojs/hexo release 5.0.1, changes include fixing helpers to call url_for from hexo-util, updating regexp for external_link filter to pre-match external links, and shorthand optimization for injector."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__5_0_2",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.0.2",
+      "tag_name": "5.0.2",
+      "title": "5.0.2",
+      "time_hint": "2020-08-10",
+      "published_at": "2020-08-10T07:30:43Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/5.0.2",
+      "raw_text": "Repository: hexojs/hexo\nRelease: 5.0.2\nTag: 5.0.2; draft: False; prerelease: False; published_at: 2020-08-10T07:30:43Z; created_at: 2020-08-10T07:27:58Z\nRelease notes:\n## Changes\n- Revert \"perf: avoid running plugins in 'clean' command\" [#4386] @curbengh [#4470]\n* This fixes error in `hexo clean`.",
+      "memory_unit_text": "In the hexojs/hexo release 5.0.2, a change reverts a performance improvement that avoided running plugins in 'clean' command, fixing an error in hexo clean."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__5_1_0",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.1.0",
+      "tag_name": "5.1.0",
+      "title": "5.1.0",
+      "time_hint": "2020-08-22",
+      "published_at": "2020-08-22T03:24:56Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/5.1.0",
+      "raw_text": "Repository: hexojs/hexo\nRelease: 5.1.0\nTag: 5.1.0; draft: False; prerelease: False; published_at: 2020-08-22T03:24:56Z; created_at: 2020-08-22T02:38:27Z\nRelease notes:\n## Features\n- feat(highlight): parse 'caption' option to prismHighlight @curbengh [#4476]\n* `caption` is now available in prismjs:\n``` yml\n# _config.yml\nhighlight:\nenable: false\nprismjs:\nenable: true\n```\n* It can be used in triple backtick codeblock:\n<pre><code>``` js caption\nconsole.log('foo')\n```</code></pre>\n* above codeblock will be rendered as:\n(class attributes are omitted for brevity)\n``` html\n<pre><div class=\"caption\"><span>caption</span></div><code>console...</code></pre>\n```\n* you can style the caption by:\n``` css\npre div.caption {\nfont-size: 0.9em;\ncolor: #888;\n}\npre div.caption a {\nfloat: right;\n}\n```\n* also available via [`codeblock`](https://hexo.io/docs/tag-plugins#Code-Block) and [`include_code`](https://hexo.io/docs/tag-plugins#Include-Code) tag plugins.\n- fix: refactor post escape @SukkaW [#4472]\n* fixed issue with prismjs that, in some cases, did not remove hexo's processing tag properly\n- Remove plugins option in config @stevenjoezhang [#4475]\n``` yml\n# _config.yml\nplugins:\n```\n* `plugins` option has been deprecated long ago and it's now completely dropped\n* plugins should be saved in `scripts/` folder or installed via npm `package.json`.\n## Performance\n- perf(backtick_code): avoid duplicated escaping @SukkaW [#4478]",
+      "memory_unit_text": "In the hexojs/hexo release 5.1.0, features include parsing caption option to prismHighlight, refactoring post escape to fix prismjs processing tag removal, and removing the deprecated plugins option from config. Performance improvement avoids duplicated escaping in backtick_code."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__5_1_1",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.1.1",
+      "tag_name": "5.1.1",
+      "title": "5.1.1",
+      "time_hint": "2020-08-23",
+      "published_at": "2020-08-23T08:58:36Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/5.1.1",
+      "raw_text": "Repository: hexojs/hexo\nRelease: 5.1.1\nTag: 5.1.1; draft: False; prerelease: False; published_at: 2020-08-23T08:58:36Z; created_at: 2020-08-23T08:48:57Z\nRelease notes:\n## Changes\n- fix(filter/highlight): avoid escaping curly bracket when highlight & prismjs disabled @curbengh [#4489]\n* When both highlight.js and prismjs are disabled:\n``` yml\n# _config.yml\nhighlight:\nenable: false\nprismjs\nenable: false\n```\n* there was an issue that curly brackets `{ }` are escaped `&#123; &#125;` mistakenly in the [backtick_code_block.js](https://github.com/hexojs/hexo/blob/5795c1225f602ff0d5848fecf560fd33409cd96f/lib/plugins/filter/before_post_render/backtick_code_block.js) filter. The fix is to avoid running that filter when code highlight is disabled.\n* Some users disable Hexo's default code highlight as they prefer to their own method.",
+      "memory_unit_text": "In the hexojs/hexo release 5.1.1, a fix avoids escaping curly brackets when both highlight.js and prismjs are disabled, preventing mistaken escaping in the backtick_code_block filter."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__5_2_0",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.2.0",
+      "tag_name": "5.2.0",
+      "title": "5.2.0",
+      "time_hint": "2020-09-17",
+      "published_at": "2020-09-17T09:07:55Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/5.2.0",
+      "raw_text": "Repository: hexojs/hexo\nRelease: 5.2.0\nTag: 5.2.0; draft: False; prerelease: False; published_at: 2020-09-17T09:07:55Z; created_at: 2020-09-17T09:03:21Z\nRelease notes:\n## Changes\n- perf(external_link): faster regexp @SukkaW [#4536]\n* prioritise `http(s)://` over `//`\n- feat: support 'disableNunjucks' in front-matter @curbengh [#4518]\n* Enable this option to disable [tag plugin](https://hexo.io/docs/tag-plugins)\n* Setting this option in front-matter will override the same option set by the renderer (e.g. [hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked))\n``` yml\n---\ntitle: foo\ndate: 2020-01-02 03:04:05\ndisableNunjucks: true|false\n---\n```\n- fix: avoid escaping front-matter if unnecessary @curbengh [#4522]\n* using variable (e.g. `{{ title }}`) with special characters no longer result in double-quote wrap\n- fix: validate value of [config.url](https://hexo.io/docs/configuration#URL) @curbengh [#4520]\n* `config.url` should starts with \"http://\" or \"https://\"\n- fix(router): convert string to buffer in route stream @ppoffice [#4517]\n* fix crash in `hexo generate --bail`\n- fix(disableNunjucks): query both async and sync versions of renderer @curbengh [#4498]\n* [`disableNunjucks`](https://hexo.io/api/renderer#Disable-Nunjucks-tags) option should now works reliably with synchronous renderer\n- feat(load_plugin): ignore pkg name endswith theme name @SukkaW [#4497]\n* An initial effort to support scoped package\n## Housekeeping\n- chore/ci: move benchmark & profiling to Actions @SukkaW [#4525] [#4514] [#4335]\n* Travis is now completely replaced by Actions (in this repo)\n- chore: use example.com for example domain @YoshinoriN [#4512]",
+      "memory_unit_text": "In the hexojs/hexo release 5.2.0, changes include faster regexp for external_link, support for disableNunjucks in front-matter, avoiding unnecessary escaping of front-matter, validating config.url to start with http:// or https://, converting string to buffer in route stream to fix crash in hexo generate --bail, making disableNunjucks work reliably with synchronous renderer, and ignoring package names ending with theme name in load_plugin. Housekeeping moves benchmark and profiling to Actions."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__5_3_0",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.3.0",
+      "tag_name": "5.3.0",
+      "title": "v5.3.0",
+      "time_hint": "2020-12-17",
+      "published_at": "2020-12-17T14:05:12Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/5.3.0",
+      "raw_text": "Repository: hexojs/hexo\nRelease: v5.3.0\nTag: 5.3.0; draft: False; prerelease: False; published_at: 2020-12-17T14:05:12Z; created_at: 2020-12-17T13:47:38Z\nRelease notes:\n## New features\n- expose `escape_html` helper method for string manipulation to templates @awwong1 [#4581]\n- list_tags: span element & custom class for label @noraj [#4578]\n## Fixes\n- fix(load_plugins): ignore plugin whose name is started with \"hexo-theme\" @stevenjoezhang [#4592]\n- fix(codeblock): closing code fence may be followed only by spaces @stevenjoezhang [#4574]\n## Refactor\n- Replace `process.mainModule` with `require.main` @stevenjoezhang [#4583]\n## Docs\n- docs(badge): replace david-dm with more reliable shields.io @curbengh [#4538]",
+      "memory_unit_text": "In the hexojs/hexo release v5.3.0, new features expose escape_html helper method for string manipulation to templates and add span element and custom class for label in list_tags. Fixes ignore plugin whose name starts with hexo-theme in load_plugins and allow closing code fence to be followed only by spaces in codeblock. Refactor replaces process.mainModule with require.main. Docs replace david-dm badge with shields.io."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__5_4_0",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.4.0",
+      "tag_name": "5.4.0",
+      "title": "v5.4.0",
+      "time_hint": "2021-02-21",
+      "published_at": "2021-02-21T08:06:23Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/5.4.0",
+      "raw_text": "Repository: hexojs/hexo\nRelease: v5.4.0\nTag: 5.4.0; draft: False; prerelease: False; published_at: 2021-02-21T08:06:23Z; created_at: 2021-02-21T07:56:43Z\nRelease notes:\n## New features\n- feat: handle config.root is not exist @jiangtj [#4616]\n## Breaking change\n- fix(excerpt): use span instead of anchor element for better SEO performance @stevenjoezhang [#4627]\n## Fixes\n- fix(box): set property awaitWriteFinish for chokidar filewatcher @stevenjoezhang [#4633]\n- fix(codeblock): match whitespace but not newlines @stevenjoezhang [#4625]\n- fix(i18n): page.lang is undefined when using the key `language` in front-matter @stevenjoezhang [#4614]\n## Misc\n- github: update actions/setup-node action to v2 @stevenjoezhang [#4604]\n- chore/ci: migrate from probot/stale to GitHub Actions @stevenjoezhang [#4598]\n## Dependencies\n- chore(deps): bump js-yaml from 3.14.1 to 4.0.0 @dependabot-preview [#4607]",
+      "memory_unit_text": "In the hexojs/hexo release v5.4.0, new features handle config.root not existing. Breaking change uses span instead of anchor element for excerpt for better SEO. Fixes set property awaitWriteFinish for chokidar filewatcher in box, match whitespace but not newlines in codeblock, and resolve page.lang undefined when using language key in front-matter. Misc updates include GitHub Actions updates and dependency bumps."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__6_0_0",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:6.0.0",
+      "tag_name": "6.0.0",
+      "title": "v6.0.0",
+      "time_hint": "2021-12-22",
+      "published_at": "2021-12-22T13:30:54Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/6.0.0",
+      "raw_text": "Repository: hexojs/hexo\nRelease: v6.0.0\nTag: 6.0.0; draft: False; prerelease: False; published_at: 2021-12-22T13:30:54Z; created_at: 2021-12-22T13:10:10Z\nRelease notes:\n## Breaking Changes\n- Drop Node 10 @stevenjoezhang [#4779, #4691]\n## Security\n- Escape HTML  by default in list_tag @tomap [#4743]\n**Please see more detail:** [Announcement: About CVE-2021-25987](https://github.com/hexojs/hexo/issues/4838)\n## New features\n- feat: load hexo plugin in the theme's package.json @stevenjoezhang [#4771]\n- feat(open_graph): different URLs for `og:image` and `twitter:image` @KentarouTakeda [#4748]\n## Performance\n- perf(tag/helper): memoize @SukkaW [#4789]\n- perf(external_link): optimize regex @SukkaW [#4790]\n- refactor/perf: use nanocolors @SukkaW [#4788]\n- Switch to picocolors @tomap [#4825]\n- perf: avoid using delete operator @SukkaW [#4711]\n- perf: overall improvements @SukkaW [#4783]\n- refactor/perf(post): use state machine to escape swig tag @SukkaW [#4780]\n- refactor: refactor pagination - paginatorHelper - pagenasionPartShow @CroMarmot [#4662]\n## Fixes\n- fix(post): escape swig full tag with args @stevenjoezhang [#4824]\n- fix(processor): remove race condition failsafe @SukkaW [#4791]\n- fix(#4780): curly brackets @SukkaW [#4784]\n- fix(#4780): empty tag name correction @SukkaW [#4786]\n- Generate draft assets in draft mode @darekkay [#4563]\n## Refactor\n- refactor: native `Array.flat()` @curbengh [#4806]\n## Docs\n- doc: add homebrew install @chenrui333 [#4724]\n- doc(extend/console): add jsdoc @SukkaW [#4500]\n## Dependencies\n- Cleanup dependabot @tomap [#4820]\n- chore: bump actions/stale from 3 to 4 @dependabot [#4828]\n- chore: bump sinon from 11.1.2 to 12.0.1 @dependabot [#4810]\n- chore: bump eslint from 7.32.0 to 8.0.0 @dependabot [#4799]\n- chore: bump hexo-log from 2.0.0 to 3.0.0 @dependabot [#4794]\n- chore: bump husky from 4.3.8 to 7.0.2 @dependabot [#4763]\n- chore: bump sinon from 10.0.1 to 11.1.2 @dependabot [#4747]\n- chore: bump mocha from 8.4.0 to 9.1.1 @dependabot [#4765]\n- chore: bump lint-staged from 10.5.4 to 11.0.0 @dependabot [#4697]\n- Upgrade to GitHub-native Dependabot @dependabot-preview [#4689]\n- chore(deps-dev): bump sinon from 9.2.4 to 10.0.0 @dependabot-preview [#4670]\n- chore(deps-dev): bump hexo-renderer-marked from 3.3.0 to 4.0.0 @dependabot-preview [#4649]\n## New Contributors\n* @CroMarmot made their first contribution in https://github.com/hexojs/hexo/pull/4662\n* @darekkay made their first contribution in https://github.com/hexojs/hexo/pull/4563\n* @dependabot made their first contribution in https://github.com/hexojs/hexo/pull/4697\n* @chenrui333 made their first contribution in https://github.com/hexojs/hexo/pull/4724\n**Full Changelog**: https://github.com/hexojs/hexo/compare/5.4.0...6.0.0",
+      "memory_unit_text": "In the hexojs/hexo release v6.0.0, breaking changes drop Node 10. Security escapes HTML by default in list_tag. New features load hexo plugin in the theme's package.json and provide different URLs for og:image and twitter:image in open_graph. Performance improvements include memoizing tag/helper, optimizing regex for external_link, using nanocolors/picocolors, avoiding delete operator, overall improvements, using state machine to escape swig tag in post, and refactoring pagination. Fixes escape swig full tag with args, remove race condition failsafe in processor, fix curly brackets and empty tag name correction, and generate draft assets in draft mode. Refactor uses native Array.flat(). Docs add homebrew install and jsdoc. Dependencies are updated."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__5_4_1",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.4.1",
+      "tag_name": "5.4.1",
+      "title": "5.4.1",
+      "time_hint": "2022-01-22",
+      "published_at": "2022-01-22T11:33:20Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/5.4.1",
+      "raw_text": "Repository: hexojs/hexo\nRelease: 5.4.1\nTag: 5.4.1; draft: False; prerelease: False; published_at: 2022-01-22T11:33:20Z; created_at: 2022-01-22T11:29:48Z\nRelease notes:\n## Fixes\n* Fix js-yaml tags for v4.0.0+ (#4869) by @marcofranssen in https://github.com/hexojs/hexo/pull/4876\n**Full Changelog**: https://github.com/hexojs/hexo/compare/5.4.0...5.4.1",
+      "memory_unit_text": "In the hexojs/hexo release 5.4.1, a fix addresses js-yaml tags for v4.0.0+."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__6_1_0",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:6.1.0",
+      "tag_name": "6.1.0",
+      "title": "6.1.0",
+      "time_hint": "2022-03-11",
+      "published_at": "2022-03-11T12:07:34Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/6.1.0",
+      "raw_text": "Repository: hexojs/hexo\nRelease: 6.1.0\nTag: 6.1.0; draft: False; prerelease: False; published_at: 2022-03-11T12:07:34Z; created_at: 2022-03-11T12:00:41Z\nRelease notes:\n## New Features\n* feat(toc): Support unnumbered headings by @Cerallin in https://github.com/hexojs/hexo/pull/4871\n* Exclude some languages in code highlighting by @corvofeng in https://github.com/hexojs/hexo/pull/3865\n* Add line threshold option for codeblocks by @dbelokon in https://github.com/hexojs/hexo/pull/4821\n## Fixes\n* fix(#1490): if `post_asset_folder` is set, restrict renderable files to default file extension by @kristofzerbe in https://github.com/hexojs/hexo/pull/4781\n* chore/fix(benchmark): fix benchmark on node 16+ by @SukkaW in https://github.com/hexojs/hexo/pull/4906\n* fix: plugin loading conflict with @vercel/nft by @SukkaW in https://github.com/hexojs/hexo/pull/4863\n* Fix js-yaml tags for v4.0.0+ by @marcofranssen in https://github.com/hexojs/hexo/pull/4869\n## Tests\n* chore/test: use chai#should by @SukkaW in https://github.com/hexojs/hexo/pull/4902\n## Dependencies\n* chore: bump eslint-config-hexo from 4.2.0 to 5.0.0 by @dependabot in https://github.com/hexojs/hexo/pull/4861\n* chore: bump hexo-front-matter from 2.0.0 to 3.0.0 by @dependabot in https://github.com/hexojs/hexo/pull/4856\n* chore: bump 0x from 4.11.0 to 5.0.0 by @dependabot in https://github.com/hexojs/hexo/pull/4846\n* chore: bump hexo-util from 2.5.0 to 2.6.0 by @yoshinorin in https://github.com/hexojs/hexo/pull/4908\n* chore(deps): update some dependencies minor & patch version by @yoshinorin in https://github.com/hexojs/hexo/pull/4898\n* chore: bump hexo-renderer-marked from 4.1.0 to 5.0.0 by @dependabot in https://github.com/hexojs/hexo/pull/4891\n* chore: bump actions/setup-node from 2 to 3 by @dependabot in https://github.com/hexojs/hexo/pull/4904\n## Misc\n* chore: delete question-help ISSUTE_TEMPLATE & add discussion link for question by @yoshinorin in https://github.com/hexojs/hexo/pull/4848\n* github(pull_request_template): remove `How to test` section by @stevenjoezhang in https://github.com/hexojs/hexo/pull/4576\n* fix: typo by @renbaoshuo in https://github.com/hexojs/hexo/pull/4896\n* chore/ci: reply flamegraph URL in pull request by @stevenjoezhang in https://github.com/hexojs/hexo/pull/4793\n## New Contributors\n* @kristofzerbe made their first contribution in https://github.com/hexojs/hexo/pull/4781\n* @marcofranssen made their first contribution in https://github.com/hexojs/hexo/pull/4869\n* @dbelokon made their first contribution in https://github.com/hexojs/hexo/pull/4821\n* @renbaoshuo made their first contribution in https://github.com/hexojs/hexo/pull/4896\n* @corvofeng made their first contribution in https://github.com/hexojs/hexo/pull/3865\n* @Cerallin made their first contribution in https://github.com/hexojs/hexo/pull/4871\n**Full Changelog**: https://github.com/hexojs/hexo/compare/6.0.0...6.1.0",
+      "memory_unit_text": "In the hexojs/hexo release 6.1.0, new features support unnumbered headings in toc, exclude some languages in code highlighting, and add line threshold option for codeblocks. Fixes restrict renderable files to default file extension when post_asset_folder is set, fix benchmark on node 16+, resolve plugin loading conflict with @vercel/nft, and fix js-yaml tags for v4.0.0+. Tests use chai#should. Dependencies are updated."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__5_4_2",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:5.4.2",
+      "tag_name": "5.4.2",
+      "title": "5.4.2",
+      "time_hint": "2022-04-07",
+      "published_at": "2022-04-07T13:15:40Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/5.4.2",
+      "raw_text": "Repository: hexojs/hexo\nRelease: 5.4.2\nTag: 5.4.2; draft: False; prerelease: False; published_at: 2022-04-07T13:15:40Z; created_at: 2022-04-07T13:14:03Z\nRelease notes:\n## Fixes\n* fix(#4917): downgrade `js-yaml` from `v4.x` to `v3.14.x` by @yoshinorin in https://github.com/hexojs/hexo/pull/4932\n**Full Changelog**: https://github.com/hexojs/hexo/compare/5.4.1...5.4.2",
+      "memory_unit_text": "In the hexojs/hexo release 5.4.2, a fix downgrades js-yaml from v4.x to v3.14.x."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__6_2_0",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:6.2.0",
+      "tag_name": "6.2.0",
+      "title": "6.2.0",
+      "time_hint": "2022-05-10",
+      "published_at": "2022-05-10T20:32:20Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/6.2.0",
+      "raw_text": "Repository: hexojs/hexo\nRelease: 6.2.0\nTag: 6.2.0; draft: False; prerelease: False; published_at: 2022-05-10T20:32:20Z; created_at: 2022-05-10T20:26:45Z\nRelease notes:\n## Fixes\n* fix(#4917): suppress YAMLException when load js-yaml by @yoshinorin in https://github.com/hexojs/hexo/pull/4927\n* This change is workaround for #4917. Please see PR comments.\n* chore(deps): bump warehouse from 4.0.0 to 4.0.1 by @yoshinorin in https://github.com/hexojs/hexo/pull/4943\n* This change is workaround for  #4922. Please see https://github.com/hexojs/warehouse/pull/123\n## Refactors\n* chore: replace deprecated String.prototype.substr() by @CommanderRoot in https://github.com/hexojs/hexo/pull/4918\n## Dependencies\n* chore: bump sinon from 12.0.1 to 13.0.2 by @dependabot in https://github.com/hexojs/hexo/pull/4944\n* chore: bump mocha from 9.2.2 to 10.0.0 by @dependabot in https://github.com/hexojs/hexo/pull/4960\n* chore(deps): bump hexo-util from 2.6.0 to 2.6.1 by @yoshinorin in https://github.com/hexojs/hexo/pull/4957\n* chore: bump actions/checkout from 2 to 3 by @dependabot in https://github.com/hexojs/hexo/pull/4905\n## Miscs\n* chore(bot): delete stale bot by @yoshinorin in https://github.com/hexojs/hexo/pull/4901\n* chore(ISSUE_TEMPLATE): delete `Your theme _config.yml` section by @yoshinorin in https://github.com/hexojs/hexo/pull/4931\n## New Contributors\n* @CommanderRoot made their first contribution in https://github.com/hexojs/hexo/pull/4918\n**Full Changelog**: https://github.com/hexojs/hexo/compare/6.1.0...6.2.0",
+      "memory_unit_text": "In the hexojs/hexo release 6.2.0, fixes suppress YAMLException when loading js-yaml and bump warehouse to 4.0.1 as workarounds. Refactors replace deprecated String.prototype.substr(). Dependencies are updated. Misc deletes stale bot and removes Your theme _config.yml section from issue template."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__6_3_0",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:6.3.0",
+      "tag_name": "6.3.0",
+      "title": "6.3.0",
+      "time_hint": "2022-09-08",
+      "published_at": "2022-09-08T13:13:34Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/6.3.0",
+      "raw_text": "Repository: hexojs/hexo\nRelease: 6.3.0\nTag: 6.3.0; draft: False; prerelease: False; published_at: 2022-09-08T13:13:34Z; created_at: 2022-09-08T13:02:48Z\nRelease notes:\n## New Features\n* feat(tag/post_link): throw on post_link error by @xbc5 in https://github.com/hexojs/hexo/pull/4938\n* feat(tag/include_code): robust for url compuation of `view raw` by @stevenjoezhang in https://github.com/hexojs/hexo/pull/4996\n* feat(paginator): allow custom class name by @renbaoshuo in https://github.com/hexojs/hexo/pull/5001\n* feat(helper/toc): more flexible class name by @renbaoshuo in https://github.com/hexojs/hexo/pull/5010\n* feat(helper/tagcloud): show_count option (#5047) by @renbaoshuo in https://github.com/hexojs/hexo/pull/5048\n* feat(tag/code): add `language_attr` option (hexojs/hexo-util#278) by @renbaoshuo in https://github.com/hexojs/hexo/pull/5017\n* feat(helper/is): add `is_home_first_page()` helper by @renbaoshuo in https://github.com/hexojs/hexo/pull/5006\n## Improvements\n* let post_link use original post title as title attribute by @ppwwyyxx in https://github.com/hexojs/hexo/pull/4973\n## Fixes\n* fix(hexo/index): `db.json` file path in debug logging on Windows by @stevenjoezhang in https://github.com/hexojs/hexo/pull/4994\n* fix(tag): show source file in unformatted error message by @curbengh in https://github.com/hexojs/hexo/pull/5031\n* Don't use data-uri for og:image by @KentarouTakeda in https://github.com/hexojs/hexo/pull/5053\n## Refactors\n* refactor(helper/open_graph): use whatwg url api by @renbaoshuo in https://github.com/hexojs/hexo/pull/5007\n* chore(mail_to): use native URLSearchParams by @renbaoshuo in https://github.com/hexojs/hexo/pull/5002\n## Test\n* test: replace nyc with c8 by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5040\n* chore(test/extend/tag): async function (#3328) by @renbaoshuo in https://github.com/hexojs/hexo/pull/5003\n## CI/CD\n* chore: Set permissions for GitHub actions by @neilnaveen in https://github.com/hexojs/hexo/pull/4947\n* chore: delete `release-drafter` by @yoshinorin in https://github.com/hexojs/hexo/pull/5044\n* chore: improved benchmark result in github actions by @renbaoshuo in https://github.com/hexojs/hexo/pull/5013\n## Dependencies\n* chore(deps): bump hexo-util and warehouse by @yoshinorin in https://github.com/hexojs/hexo/pull/5028\n* chore(deps): bump hexo-log from 3.0.0 to 3.2.0 by @yoshinorin in https://github.com/hexojs/hexo/pull/5054\n## Misc\n* Update license year by @renbaoshuo in https://github.com/hexojs/hexo/pull/5041\n* chore: update issue template by @yoshinorin in https://github.com/hexojs/hexo/pull/5030\n* chore: update .gitignore by @yoshinorin in https://github.com/hexojs/hexo/pull/4967\n## New Contributors\n* @xbc5 made their first contribution in https://github.com/hexojs/hexo/pull/4938\n* @neilnaveen made their first contribution in https://github.com/hexojs/hexo/pull/4947\n* @ppwwyyxx made their first contribution in https://github.com/hexojs/hexo/pull/4973\n**Full Changelog**: https://github.com/hexojs/hexo/compare/6.2.0...6.3.0",
+      "memory_unit_text": "In the hexojs/hexo release 6.3.0, new features include throwing on post_link error, robust URL computation for view raw in include_code, allowing custom class name in paginator, more flexible class name in toc helper, show_count option in tagcloud helper, adding language_attr option in code tag, and adding is_home_first_page() helper. Improvements let post_link use original post title as title attribute. Fixes correct db.json file path in debug logging on Windows, show source file in unformatted error message in tag, and don't use data-uri for og:image. Refactors use whatwg url api in open_graph helper and native URLSearchParams in mail_to. Test replaces nyc with c8 and makes tag test async. CI/CD updates permissions, deletes release-drafter, and improves benchmark result. Dependencies are updated."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__v7_0_0_rc1",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v7.0.0-rc1",
+      "tag_name": "v7.0.0-rc1",
+      "title": "v7.0.0 (RC1)",
+      "time_hint": "2023-03-18",
+      "published_at": "2023-03-18T04:35:37Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/v7.0.0-rc1",
+      "raw_text": "Repository: hexojs/hexo\nRelease: v7.0.0 (RC1)\nTag: v7.0.0-rc1; draft: False; prerelease: False; published_at: 2023-03-18T04:35:37Z; created_at: 2023-03-18T04:24:00Z\nRelease notes:\n## Migration Guide\nSome of the built-in tags have been dropped (E.g. `gist`, `youtube`, `jsfiddle`, and `vimeo`). If you use those tags in your existing blog posts, you can install [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) to continue using them with Hexo 7.0.0.\n> **Note**\n>\n> No need to install it if you are not using (or will not use) `gist`, `youtube`, `jsfiddle`, `vimeo` tags in your post or page.\n```sh\n$ npm i hexo-tag-embed\n```\n## Breaking Changes\n* chore: require node14+ by @yoshinorin in https://github.com/hexojs/hexo/pull/5061\n* Dropped tag features. Please see `Migration Guid` section.\n* refactor: drop `gist` tag by @yoshinorin in https://github.com/hexojs/hexo/pull/5067\n* refactor: drop `youtube` tag by @yoshinorin in https://github.com/hexojs/hexo/pull/5064\n* refactor: drop `jsfiddle` tag by @yoshinorin in https://github.com/hexojs/hexo/pull/5066\n* refactor: drop `vimeo` tag by @yoshinorin in https://github.com/hexojs/hexo/pull/5065\n* Dropped features\n* refactor: drop `external_link` boolean type by @yoshinorin in https://github.com/hexojs/hexo/pull/5063\n* refactor: drop `use_date_for_updated` option for `updated_option` by @yoshinorin in https://github.com/hexojs/hexo/pull/5062\n## Notable Changes\n* Migrate TypeSctipt\n* refactor: prepare for migration to typescript by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5094\n* refactor: migrate typescript by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5092\n## New Features\n* feat(tags/post_link): search for both slug and title by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5114\n* feat(open_graph): drop google_plus by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5115\n* feat(tags/img): support quotes in img title and alt by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5112\n* feat(console-new): support default title from path by @xu-song in https://github.com/hexojs/hexo/pull/4714\n* feat: add an option to disable titlecase in post by @renbaoshuo in https://github.com/hexojs/hexo/pull/5156\n## Fixes\n* fix(#1099): hexo server error when changing the config by @D-Sketon in https://github.com/hexojs/hexo/pull/5055\n* fix: exclude_languages does not work in code blocks by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5088\n* When promisifying, store does not preserve disableNunjucks property by @tcr in https://github.com/hexojs/hexo/pull/2670\n* fix(post): skip before_post_render and after_post_render on non-posts by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5118\n* fix: Failed to create post with special character title by @D-Sketon in https://github.com/hexojs/hexo/pull/5149\n* fix(box): check for invalid file by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5173\n## Performance\n* perf: reduce the number of traversals through posts by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5119\n## Refactor\n* refactor highlight: add extend api for highlight by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5095\n* refactor: use the `WHATWG URL API` instead of `url.resolve` by @yoshinorin in https://github.com/hexojs/hexo/pull/5136\n## Dependencies\n* chore: bump sinon from 13.0.2 to 14.0.0 by @dependabot in https://github.com/hexojs/hexo/pull/4965\n* chore: bump lint-staged from 11.2.6 to 13.0.3 by @dependabot in https://github.com/hexojs/hexo/pull/5008\n* chore: bump husky from 7.0.4 to 8.0.1 by @dependabot in https://github.com/hexojs/hexo/pull/4966\n* chore: bump hexo-fs from 3.1.0 to 4.0.0 by @dependabot in https://github.com/hexojs/hexo/pull/5077\n* chore: bump hexo-renderer-marked from 5.0.0 to 6.0.0 by @dependabot in https://github.com/hexojs/hexo/pull/5081\n* chore: bump hexo-front-matter from 3.0.0 to 4.0.0 by @dependabot in https://github.com/hexojs/hexo/pull/5087\n* chore: bump abbrev from 1.1.1 to 2....",
+      "memory_unit_text": "In the hexojs/hexo release v7.0.0 (RC1), migration guide notes that built-in tags gist, youtube, jsfiddle, and vimeo are dropped and can be replaced by hexo-tag-embed. Breaking changes require Node 14+, drop those tags, drop external_link boolean type, and drop use_date_for_updated option for updated_option. Notable changes migrate to TypeScript. New features include searching for both slug and title in post_link, dropping google_plus in open_graph, supporting quotes in img title and alt, supporting default title from path in console-new, and adding an option to disable titlecase in post. Fixes address hexo server error when changing config, exclude_languages not working in code blocks, preserving disableNunjucks property when promisifying, skipping before_post_render and after_post_render on non-posts, failing to create post with special character title, and checking for invalid file in box. Performance reduces traversals through posts. Refactor adds extend API for highlight and uses WHATWG URL API instead of url.resolve. Dependencies are updated."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__v7_0_0_rc2",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v7.0.0-rc2",
+      "tag_name": "v7.0.0-rc2",
+      "title": "v7.0.0 (RC2)",
+      "time_hint": "2023-07-11",
+      "published_at": "2023-07-11T13:53:21Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/v7.0.0-rc2",
+      "raw_text": "Repository: hexojs/hexo\nRelease: v7.0.0 (RC2)\nTag: v7.0.0-rc2; draft: False; prerelease: False; published_at: 2023-07-11T13:53:21Z; created_at: 2023-07-11T13:40:26Z\nRelease notes:\n# Changes since v7.0.0 (RC1)\n## New Features\n* feat: add exclude_languages feature to prismjs by @D-Sketon in https://github.com/hexojs/hexo/pull/5182\n* feat(tags/post_link): use slug when title is empty by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5220\n* feat: add url_for and full_url_for tag plugins by @D-Sketon in https://github.com/hexojs/hexo/pull/5198\n* feat: allow top-level await in plugins or scripts by @Pcrab in https://github.com/hexojs/hexo/pull/5228\n## Fixes\n* fix(backtick_code): handle empty code block by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5206\n* fix(moize): helper function not working fine with relative_url by @D-Sketon in https://github.com/hexojs/hexo/pull/5217\n## Refactor\n* Refactor types by @Pcrab in https://github.com/hexojs/hexo/pull/5178\n## Test\n* test: improve coverage by @D-Sketon in https://github.com/hexojs/hexo/pull/5221\n* test: improve coverage by @D-Sketon in https://github.com/hexojs/hexo/pull/5223\n## Dependencies\n* chore: change dependencies version by @Pcrab in https://github.com/hexojs/hexo/pull/5202\n## New Contributors\n* @Pcrab made their first contribution in https://github.com/hexojs/hexo/pull/5178\n**Full Changelog**: https://github.com/hexojs/hexo/compare/v7.0.0-rc1...v7.0.0-rc2\n-----\n# Changes between v6.3.0 and v7.0.0 (RC1)\n## Migration Guide\nSome of the built-in tags have been dropped (E.g. `gist`, `youtube`, `jsfiddle`, and `vimeo`). If you use those tags in your existing blog posts, you can install [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) to continue using them with Hexo 7.0.0.\n> **Note**\n>\n> No need to install it if you are not using (or will not use) `gist`, `youtube`, `jsfiddle`, `vimeo` tags in your post or page.\n```sh\n$ npm i hexo-tag-embed\n```\n## Breaking Changes\n* chore: require node14+ by @yoshinorin in https://github.com/hexojs/hexo/pull/5061\n* Dropped tag features. Please see `Migration Guid` section.\n* refactor: drop `gist` tag by @yoshinorin in https://github.com/hexojs/hexo/pull/5067\n* refactor: drop `youtube` tag by @yoshinorin in https://github.com/hexojs/hexo/pull/5064\n* refactor: drop `jsfiddle` tag by @yoshinorin in https://github.com/hexojs/hexo/pull/5066\n* refactor: drop `vimeo` tag by @yoshinorin in https://github.com/hexojs/hexo/pull/5065\n* Dropped features\n* refactor: drop `external_link` boolean type by @yoshinorin in https://github.com/hexojs/hexo/pull/5063\n* refactor: drop `use_date_for_updated` option for `updated_option` by @yoshinorin in https://github.com/hexojs/hexo/pull/5062\n## Notable Changes\n* Migrate TypeSctipt\n* refactor: prepare for migration to typescript by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5094\n* refactor: migrate typescript by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5092\n## New Features\n* feat(tags/post_link): search for both slug and title by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5114\n* feat(open_graph): drop google_plus by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5115\n* feat(tags/img): support quotes in img title and alt by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5112\n* feat(console-new): support default title from path by @xu-song in https://github.com/hexojs/hexo/pull/4714\n* feat: add an option to disable titlecase in post by @renbaoshuo in https://github.com/hexojs/hexo/pull/5156\n## Fixes\n* fix(#1099): hexo server error when changing the config by @D-Sketon in https://github.com/hexojs/hexo/pull/5055\n* fix: exclude_languages does not work in code blocks by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5088\n* When promisifying, store does not preserve disableNunjucks property by @tcr in https://github.com/hexojs/hexo/pull/2670\n* fix(post): skip before_post_render and after_post_render on non-posts by @stevenjoezhang in http...",
+      "memory_unit_text": "In the hexojs/hexo release v7.0.0 (RC2), new features since RC1 include adding exclude_languages feature to prismjs, using slug when title is empty in post_link, adding url_for and full_url_for tag plugins, and allowing top-level await in plugins or scripts. Fixes handle empty code block in backtick_code and fix moize helper function not working with relative_url. Refactor types. Tests improve coverage. Dependencies are changed. The release also includes all changes from v6.3.0 to v7.0.0 (RC1) as listed in the RC1 notes."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__v7_0_0",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v7.0.0",
+      "tag_name": "v7.0.0",
+      "title": "v7.0.0",
+      "time_hint": "2023-10-31",
+      "published_at": "2023-10-31T13:37:00Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/v7.0.0",
+      "raw_text": "Repository: hexojs/hexo\nRelease: v7.0.0\nTag: v7.0.0; draft: False; prerelease: False; published_at: 2023-10-31T13:37:00Z; created_at: 2023-10-31T13:35:53Z\nRelease notes:\n## Migration Guide\n### built-in tags\n> **WARNING**\n> Some of the built-in tags have been dropped (`gist`, `youtube`, `jsfiddle`, and `vimeo`). If you use those tags in your existing blog posts, you can install [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) to continue using them with Hexo `v7.0.0`.\n> **Note**\n> No need to install it if you are not using (or will not use) `gist`, `youtube`, `jsfiddle`, `vimeo` tags in your post or page.\n```sh\n$ npm i hexo-tag-embed\n```\n### Syntax highlighting\n> **WARNING**\n> Syntax highlighting is refactored and controlled by the following settings. See [Syntax Highlighting](https://hexo.io/docs/syntax-highlight#Configuration) for more details.\n```yaml\nsyntax_highlighter: highlight.js # highlight.js | prismjs | <empty>\n```\n## Breaking Changes\n* chore: require node14+ by @yoshinorin in https://github.com/hexojs/hexo/pull/5061\n* Dropped tag features. Please see `Migration Guid` section.\n* refactor: drop `gist` tag by @yoshinorin in https://github.com/hexojs/hexo/pull/5067\n* refactor: drop `youtube` tag by @yoshinorin in https://github.com/hexojs/hexo/pull/5064\n* refactor: drop `jsfiddle` tag by @yoshinorin in https://github.com/hexojs/hexo/pull/5066\n* refactor: drop `vimeo` tag by @yoshinorin in https://github.com/hexojs/hexo/pull/5065\n* Dropped features\n* refactor: drop `external_link` boolean type by @yoshinorin in https://github.com/hexojs/hexo/pull/5063\n* refactor: drop `use_date_for_updated` option for `updated_option` by @yoshinorin in https://github.com/hexojs/hexo/pull/5062\n* feat(post): remove front-matter property `link` (#5253) by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5253\n* revert: Access data files from source folder (#1969) (#5325) by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5325\n* refactor highlight: add extend api for highlight by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5095\n## Notable Changes\n* Migrate TypeSctipt\n* refactor: prepare for migration to typescript by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5094\n* refactor: migrate typescript by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5092\n* Refactor types by @Pcrab in https://github.com/hexojs/hexo/pull/5178\n## New Features\n* feat(tags/post_link): search for both slug and title by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5114\n* feat(open_graph): drop google_plus by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5115\n* feat(tags/img): support quotes in img title and alt by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5112\n* feat(console-new): support default title from path by @xu-song in https://github.com/hexojs/hexo/pull/4714\n* feat: add an option to disable titlecase in post by @renbaoshuo in https://github.com/hexojs/hexo/pull/5156\n* feat: add exclude_languages feature to prismjs by @D-Sketon in https://github.com/hexojs/hexo/pull/5182\n* feat(tags/post_link): use slug when title is empty by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5220\n* feat: add url_for and full_url_for tag plugins by @D-Sketon in https://github.com/hexojs/hexo/pull/5198\n* feat: allow top-level await in plugins or scripts by @Pcrab in https://github.com/hexojs/hexo/pull/5228\n* feat: define global variable hexo (#5242) by @dimaslanjaka in https://github.com/hexojs/hexo/pull/5242\n## Fixes\n* fix(#1099): hexo server error when changing the config by @D-Sketon in https://github.com/hexojs/hexo/pull/5055\n* fix: exclude_languages does not work in code blocks by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5088\n* When promisifying, store does not preserve disableNunjucks property by @tcr in https://github.com/hexojs/hexo/pull/2670\n* fix(post): skip before_post_render and after_post_render on non-posts by @stevenjoezhang in https://github.com/hexojs/hexo/pull...",
+      "memory_unit_text": "In the hexojs/hexo release v7.0.0, migration guide warns that built-in tags gist, youtube, jsfiddle, and vimeo are dropped and can be replaced by hexo-tag-embed, and syntax highlighting is refactored with a new syntax_highlighter setting. Breaking changes require Node 14+, drop those tags, drop external_link boolean type, drop use_date_for_updated option, remove front-matter property link, revert access data files from source folder, and refactor highlight with extend API. Notable changes migrate to TypeScript and refactor types. New features include searching for both slug and title in post_link, dropping google_plus in open_graph, supporting quotes in img title and alt, supporting default title from path in console-new, adding an option to disable titlecase in post, adding exclude_languages feature to prismjs, using slug when title is empty in post_link, adding url_for and full_url_for tag plugins, allowing top-level await in plugins or scripts, and defining global variable hexo. Fixes address hexo server error when changing config, exclude_languages not working in code blocks, preserving disableNunjucks property when promisifying, skipping before_post_render and after_post_render on non-posts, failing to create post with special character title, checking for invalid file in box, and other issues. Performance reduces traversals through posts. Refactor adds extend API for highlight and uses WHATWG URL API. Dependencies are updated."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__v7_1_0",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v7.1.0",
+      "tag_name": "v7.1.0",
+      "title": "v7.1.0",
+      "time_hint": "2024-01-19",
+      "published_at": "2024-01-19T14:15:10Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/v7.1.0",
+      "raw_text": "Repository: hexojs/hexo\nRelease: v7.1.0\nTag: v7.1.0; draft: False; prerelease: False; published_at: 2024-01-19T14:15:10Z; created_at: 2024-01-19T14:11:42Z\nRelease notes:\n## Notable Changes\n* chore(Hexo): add event emitter descriptor by @dimaslanjaka in https://github.com/hexojs/hexo/pull/5302\n* refactor: refactor types by @D-Sketon in https://github.com/hexojs/hexo/pull/5344\n## New Features\n* Added URL hash support for post_link tag by @iliayatsenko in https://github.com/hexojs/hexo/pull/5356\n## Fixes\n* fix(types): cast from `number` to `string` explicitly by @yoshinorin in https://github.com/hexojs/hexo/pull/5342\n* fix: permalink should be overwritten when post_asset_folder is true by @D-Sketon in https://github.com/hexojs/hexo/pull/5254\n* fix(escapeAllSwigTags): check tag completeness by @uiolee in https://github.com/hexojs/hexo/pull/5395\n## CI/CD\n* ci(commenter): use workflows_run event to comment flamegraph by @uiolee in https://github.com/hexojs/hexo/pull/5384\n* ci(benchmark): add PR permissions for comment by @uiolee in https://github.com/hexojs/hexo/pull/5334\n## Dependencies\n* chore: bump typescript from 4.9.5 to 5.3.2 by @dependabot in https://github.com/hexojs/hexo/pull/5358\n* chore(deps-dev): remove @ts/eslint-plugin, parser by @uiolee in https://github.com/hexojs/hexo/pull/5290\n* chore: bump c8 from 8.0.1 to 9.0.0 by @dependabot in https://github.com/hexojs/hexo/pull/5391\n* chore(dev-deps): bump sinon from 15.2.0 to 17.0.1 by @dependabot in https://github.com/hexojs/hexo/pull/5343\n* chore(dev-deps): bump lint-staged from 14.0.1 to 15.2.0 by @dependabot in https://github.com/hexojs/hexo/pull/5373\n## New Contributors\n* @iliayatsenko made their first contribution in https://github.com/hexojs/hexo/pull/5356\n**Full Changelog**: https://github.com/hexojs/hexo/compare/v7.0.0...v7.1.0",
+      "memory_unit_text": "In the hexojs/hexo release v7.1.0, notable changes add event emitter descriptor and refactor types. New features add URL hash support for post_link tag. Fixes cast from number to string explicitly in types, overwrite permalink when post_asset_folder is true, and check tag completeness in escapeAllSwigTags. CI/CD updates commenter and benchmark workflows. Dependencies are updated."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__v7_1_1",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v7.1.1",
+      "tag_name": "v7.1.1",
+      "title": "v7.1.1",
+      "time_hint": "2024-01-22",
+      "published_at": "2024-01-22T11:19:48Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/v7.1.1",
+      "raw_text": "Repository: hexojs/hexo\nRelease: v7.1.1\nTag: v7.1.1; draft: False; prerelease: False; published_at: 2024-01-22T11:19:48Z; created_at: 2024-01-22T11:13:10Z\nRelease notes:\n## Fixes\n* fix(escapeTags): escape tag which includes line break by @uiolee in https://github.com/hexojs/hexo/pull/5402\n## Misc\n* chore: use `prepublishOnly` instead of `prepublish` and run `npm install` in `prepublishOnly` script by @yoshinorin in https://github.com/hexojs/hexo/pull/5399\n**Full Changelog**: https://github.com/hexojs/hexo/compare/v7.1.0...v7.1.1",
+      "memory_unit_text": "In the hexojs/hexo release v7.1.1, a fix escapes tag which includes line break in escapeTags. Misc uses prepublishOnly instead of prepublish and runs npm install in prepublishOnly script."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__v7_2_0",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v7.2.0",
+      "tag_name": "v7.2.0",
+      "title": "v7.2.0",
+      "time_hint": "2024-04-17",
+      "published_at": "2024-04-17T10:43:03Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/v7.2.0",
+      "raw_text": "Repository: hexojs/hexo\nRelease: v7.2.0\nTag: v7.2.0; draft: False; prerelease: False; published_at: 2024-04-17T10:43:03Z; created_at: 2024-04-17T10:32:26Z\nRelease notes:\n## New Features\n* feat(highlight): add an option to switch stripIndent by @uiolee in https://github.com/hexojs/hexo/pull/5427\n## Improved type definitions\n* refactor: refactor types by @D-Sketon in https://github.com/hexojs/hexo/pull/5398\n* chore: make callback on exit optional by @dimaslanjaka in https://github.com/hexojs/hexo/pull/5421\n* refactor: migrate typescript by @D-Sketon in https://github.com/hexojs/hexo/pull/5417\n* refactor: migrate typescript by @D-Sketon in https://github.com/hexojs/hexo/pull/5430\n## Fixes\n* Fix typos by @mobeicanyue in https://github.com/hexojs/hexo/pull/5426\n* fix: post_link behaviour when using subdir by @leafbird in https://github.com/hexojs/hexo/pull/5419\n* fix(tag): use url_for by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5385\n* fix(tag/include_code): prevent path traversal by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5251\n* revert(categories,tags): revert behavior of locals.tags and locals.categories by @uiolee in https://github.com/hexojs/hexo/pull/5388\n## Refactor\n* refactor: backslashes on Windows by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5457\n## Test\n* test: add test case for issue #4334 by @D-Sketon in https://github.com/hexojs/hexo/pull/5465\n## CI/CD\n* ci: suppress comment err and reduce benchmark running by @uiolee in https://github.com/hexojs/hexo/pull/5454\n## Docs\n* docs(README): Update Sponsors images by @uiolee in https://github.com/hexojs/hexo/pull/5410\n## Dependencies\n* chore(deps): bump hexo-fs from ^4.1.1 to ^4.1.3 by @D-Sketon in https://github.com/hexojs/hexo/pull/5463\n* chore(deps-dev): Limited `@types/node` version by @uiolee in https://github.com/hexojs/hexo/pull/5411\n## New Contributors\n* @mobeicanyue made their first contribution in https://github.com/hexojs/hexo/pull/5426\n* @leafbird made their first contribution in https://github.com/hexojs/hexo/pull/5419\n**Full Changelog**: https://github.com/hexojs/hexo/compare/v7.1.1...v7.2.0",
+      "memory_unit_text": "In the hexojs/hexo release v7.2.0, new features add an option to switch stripIndent in highlight. Improved type definitions refactor types, make callback on exit optional, and migrate typescript. Fixes correct typos, fix post_link behaviour when using subdir, use url_for in tag, prevent path traversal in include_code tag, and revert behavior of locals.tags and locals.categories. Refactor handles backslashes on Windows. Test adds test case for issue #4334. CI/CD suppresses comment err and reduces benchmark running. Docs update Sponsors images. Dependencies are updated."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__v7_3_0",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v7.3.0",
+      "tag_name": "v7.3.0",
+      "title": "v7.3.0",
+      "time_hint": "2024-07-01",
+      "published_at": "2024-07-01T14:41:17Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/v7.3.0",
+      "raw_text": "Repository: hexojs/hexo\nRelease: v7.3.0\nTag: v7.3.0; draft: False; prerelease: False; published_at: 2024-07-01T14:41:17Z; created_at: 2024-07-01T14:39:04Z\nRelease notes:\n## New Features\n* feat(renderScaffold): deepMerge frontMatter of post and scaffold by @uiolee in https://github.com/hexojs/hexo/pull/5472\n* feat: add option to use slug as title of post by @uiolee in https://github.com/hexojs/hexo/pull/5470\n* feat(helper/toc): specify maximum number of items to output by @KentarouTakeda in https://github.com/hexojs/hexo/pull/5487\n## Fixes\n* Revert \"refactor: backslashes on Windows (#5457)\" by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5481\n## Performances\n* perf(processor/post): improve processing speed when `config.post_asset_folder` is enabled by @yoshinorin in https://github.com/hexojs/hexo/pull/5473\n## Test\n* Revert \"test: add test case for issue #4334\" by @D-Sketon in https://github.com/hexojs/hexo/pull/5475\n## CI\n* ci(comment): fix wrong condition by @uiolee in https://github.com/hexojs/hexo/pull/5471\n## Misc\n* build: upgrade ecmascript version by @uiolee in https://github.com/hexojs/hexo/pull/5507\n## Full Changelog\nhttps://github.com/hexojs/hexo/compare/v7.2.0...v7.3.0",
+      "memory_unit_text": "In the hexojs/hexo release v7.3.0, new features include deepMerge frontMatter of post and scaffold in renderScaffold, add option to use slug as title of post, and specify maximum number of items to output in toc helper. Fixes revert backslashes on Windows refactor. Performances improve processing speed when config.post_asset_folder is enabled. Test reverts test case for issue #4334. CI fixes wrong condition in comment. Misc upgrades ecmascript version."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__v8_0_0",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.0.0",
+      "tag_name": "v8.0.0",
+      "title": "v8.0.0",
+      "time_hint": "2025-09-15",
+      "published_at": "2025-09-15T14:57:06Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/v8.0.0",
+      "raw_text": "Repository: hexojs/hexo\nRelease: v8.0.0\nTag: v8.0.0; draft: False; prerelease: False; published_at: 2025-09-15T14:57:06Z; created_at: 2025-09-15T14:34:32Z\nRelease notes:\n## Breaking Changes\n* chore: drop Node.js 16 by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5592\n* chore: drop Node.js 18 by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5674\n## New Features\n* feat: bind hexo context to helper function callback by @dimaslanjaka in https://github.com/hexojs/hexo/pull/5555\n* feat: add url config validation by @ShaytonXu in https://github.com/hexojs/hexo/pull/5578\n* feat: add permalink variable `timestamp` by @uiolee in https://github.com/hexojs/hexo/pull/5611\n* feat: Support additional options for Backtick Code Block by @D-Sketon in https://github.com/hexojs/hexo/pull/5625\n* feat(load_config): enforce stricter extension checks by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5591\n## Fixes\n* fix:changed the judgement of whether it has been injected by @mRNA16 in https://github.com/hexojs/hexo/pull/5573\n* fix(escapeAllSwigTags): backtrack when tag is incomplete by @D-Sketon in https://github.com/hexojs/hexo/pull/5618\n* fix: `hexo.locals.get('posts')` doesn't show all posts by @D-Sketon in https://github.com/hexojs/hexo/pull/5612\n* fix: Parsing error for code blocks in list items by @D-Sketon in https://github.com/hexojs/hexo/pull/5617\n* fix(open_graph): sort the tags by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5656\n* Escape HTML in title of `code` and `include_code` tags by @tommy351 in https://github.com/hexojs/hexo/pull/5688\n## Performances\n* perf(external_link): optimize external link filter by @D-Sketon in https://github.com/hexojs/hexo/pull/5598\n* perf(PostCategory/PostTag): add binary relation index for performance by @D-Sketon in https://github.com/hexojs/hexo/pull/5605\n* perf(listArchives): add cache for posts by @D-Sketon in https://github.com/hexojs/hexo/pull/5624\n* perf(escapeAllSwigTags): reducing GC overhead by @D-Sketon in https://github.com/hexojs/hexo/pull/5620\n* perf: skip tag render when there is no swigTags by @D-Sketon in https://github.com/hexojs/hexo/pull/5650\n* perf: faster text-table by @D-Sketon in https://github.com/hexojs/hexo/pull/5665\n* warehouse6\n* perf(model): add caching for data keys by @D-Sketon in [#271](https://github.com/hexojs/warehouse/pull/271)\n## Refactor\n* refactor(common): delete unused function `ignoreTmpAndHiddenFile` by @yoshinorin in https://github.com/hexojs/hexo/pull/5600\n* delete scripts `pretest` by @uiolee in https://github.com/hexojs/hexo/pull/5610\n* refactor(moment): remove unused timezone setting by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5654\n## Test\n* test(box/file): extend the mocha timeout to prevent the async file read test from failing by @yoshinorin in https://github.com/hexojs/hexo/pull/5601\n* test: improve coverage by @D-Sketon in https://github.com/hexojs/hexo/pull/5638\n## Depenrencies\n* chore(deps-dev): bump @types/node to ^20.16.10 by @uiolee in https://github.com/hexojs/hexo/pull/5558\n* chore(deps): remove resolve by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5594\n* chore(deps): update dependencies by @yoshinorin in https://github.com/hexojs/hexo/pull/5597\n* chore(deps): update `cheerio` from `0.22` to `1.0.0` by @yoshinorin in https://github.com/hexojs/hexo/pull/5603\n* chore(deps): migrate `husky` from `8.x` to `9.x` by @yoshinorin in https://github.com/hexojs/hexo/pull/5602\n* chore(deps): update eslint by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5599\n* chore(deps): bump actions/checkout from 4 to 5 by @dependabot[bot] in https://github.com/hexojs/hexo/pull/5684\n* chore(deps): bump strip-ansi from 6.0.1 to 7.1.0 by @dependabot[bot] in https://github.com/hexojs/hexo/pull/5218\n* chore: bump actions/setup-node from 4 to 5 by @dependabot[bot] in https://github.com/hexojs/hexo/pull/5687\n## Misc\n* chore(lint): apply eslint to test files by @yoshinorin in https://github.com/hexojs/he...",
+      "memory_unit_text": "In the hexojs/hexo release v8.0.0, breaking changes drop Node.js 16 and Node.js 18. New features bind hexo context to helper function callback, add url config validation, add permalink variable timestamp, support additional options for Backtick Code Block, and enforce stricter extension checks in load_config. Fixes change judgement of whether it has been injected, backtrack when tag is incomplete in escapeAllSwigTags, show all posts in hexo.locals.get('posts'), fix parsing error for code blocks in list items, sort tags in open_graph, and escape HTML in title of code and include_code tags. Performances optimize external link filter, add binary relation index for PostCategory/PostTag, add cache for posts in listArchives, reduce GC overhead in escapeAllSwigTags, skip tag render when there is no swigTags, faster text-table, and warehouse6 with caching for data keys. Refactor deletes unused function ignoreTmpAndHiddenFile, deletes scripts pretest, and removes unused timezone setting in moment. Test extends mocha timeout and improves coverage. Dependencies are updated."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__v8_1_0",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.1.0",
+      "tag_name": "v8.1.0",
+      "title": "v8.1.0",
+      "time_hint": "2025-10-26",
+      "published_at": "2025-10-26T11:58:21Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/v8.1.0",
+      "raw_text": "Repository: hexojs/hexo\nRelease: v8.1.0\nTag: v8.1.0; draft: False; prerelease: False; published_at: 2025-10-26T11:58:21Z; created_at: 2025-10-26T11:53:19Z\nRelease notes:\n## Performances\n* perf: fix potential cache miss issues with moize by @D-Sketon in https://github.com/hexojs/hexo/pull/5694\n* perf: reduce ObjectAssign overhead by @D-Sketon in https://github.com/hexojs/hexo/pull/5698\n* perf: faster archy by @D-Sketon in https://github.com/hexojs/hexo/pull/5700\n* perf: reduce the number of match calls in metaGenerator by @D-Sketon in https://github.com/hexojs/hexo/pull/5707\n* perf: faster `escapeAllSwigTags` by @D-Sketon in https://github.com/hexojs/hexo/pull/5699\n## Fixes\n* fix/perf: Incorrect TOC anchor generation by @D-Sketon in https://github.com/hexojs/hexo/pull/5696\n* fix(regression): missing tags and categories when running `hexo s` with cache existed by @D-Sketon in https://github.com/hexojs/hexo/pull/5697\n* fix: fix ts error in test by @D-Sketon in https://github.com/hexojs/hexo/pull/5709\n* fix(regression): remove overly strict invalid tag format check in Swig parser by @D-Sketon in https://github.com/hexojs/hexo/pull/5691\n* fix(processor/post): updated post assets not being copied in hot processing when `post_asset_folder` is enabled by @yoshinorin in https://github.com/hexojs/hexo/pull/5704\n* fix: nunjucks/code blocks in HTML comments were incorrectly converted by @D-Sketon in https://github.com/hexojs/hexo/pull/5616\n## Refactor\n* refactor(toc): support skipping heading level by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5653\n## Dependencies\n* chore: bump actions/setup-node from 5 to 6 by @dependabot[bot] in https://github.com/hexojs/hexo/pull/5708\n* chore(deps): bump actions/download-artifact from 4 to 5 by @dependabot[bot] in https://github.com/hexojs/hexo/pull/5682\n* chore(deps): bump actions/download-artifact from 5 to 6 by @dependabot[bot] in https://github.com/hexojs/hexo/pull/5710\n* chore(deps): bump actions/upload-artifact from 4 to 5 by @dependabot[bot] in https://github.com/hexojs/hexo/pull/5711\n* chore(deps): bump hexo-util from 3 to 4 by @D-Sketon in https://github.com/hexojs/hexo/pull/5712\n**Full Changelog**: https://github.com/hexojs/hexo/compare/v8.0.0...v8.1.0",
+      "memory_unit_text": "In the hexojs/hexo release v8.1.0, performances fix potential cache miss issues with moize, reduce ObjectAssign overhead, faster archy, reduce match calls in metaGenerator, and faster escapeAllSwigTags. Fixes correct incorrect TOC anchor generation, fix missing tags and categories when running hexo s with cache existed, fix ts error in test, remove overly strict invalid tag format check in Swig parser, fix updated post assets not being copied in hot processing when post_asset_folder is enabled, and fix nunjucks/code blocks in HTML comments incorrectly converted. Refactor supports skipping heading level in toc. Dependencies are updated."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__v8_1_1",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.1.1",
+      "tag_name": "v8.1.1",
+      "title": "v8.1.1",
+      "time_hint": "2025-10-31",
+      "published_at": "2025-10-31T12:03:47Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/v8.1.1",
+      "raw_text": "Repository: hexojs/hexo\nRelease: v8.1.1\nTag: v8.1.1; draft: False; prerelease: False; published_at: 2025-10-31T12:03:47Z; created_at: 2025-10-31T12:00:17Z\nRelease notes:\n## Fixes\n* fix(regression): handle comment nesting in code fence and nunjucks by @D-Sketon in https://github.com/hexojs/hexo/pull/5717\n## Misc\n* chore: use object format for repository field in `package.json` by @yoshinorin in https://github.com/hexojs/hexo/pull/5714\n**Full Changelog**: https://github.com/hexojs/hexo/compare/v8.1.0...v8.1.1",
+      "memory_unit_text": "In the hexojs/hexo release v8.1.1, a fix handles comment nesting in code fence and nunjucks. Misc uses object format for repository field in package.json."
+    },
+    {
+      "memory_node_id": "hexojs__hexo__release__v8_1_2",
+      "repo": "hexojs/hexo",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v8.1.2",
+      "tag_name": "v8.1.2",
+      "title": "v8.1.2",
+      "time_hint": "2026-05-06",
+      "published_at": "2026-05-06T13:24:24Z",
+      "source_url": "https://github.com/hexojs/hexo/releases/tag/v8.1.2",
+      "raw_text": "Repository: hexojs/hexo\nRelease: v8.1.2\nTag: v8.1.2; draft: False; prerelease: False; published_at: 2026-05-06T13:24:24Z; created_at: 2026-05-06T13:19:19Z\nRelease notes:\n## Fixes\n* fix(external_link): noopenner should be noopener by @stevenjoezhang in https://github.com/hexojs/hexo/pull/5729\n* fix: Incorrectly ignores single-line code blocks when escaping Swig and HTML comments by @D-Sketon in https://github.com/hexojs/hexo/pull/5722\n## Performances\n* perf: faster externalLink regexp by @D-Sketon in https://github.com/hexojs/hexo/pull/5706\n## Refactor\n* refactor: remove node internal api usage in loadPlugin by @renbaoshuo in https://github.com/hexojs/hexo/pull/5769\n## CI/CD\n* ci: add dependency-review action for vulnerability scanning by @yoshinorin in https://github.com/hexojs/hexo/pull/5734\n* ci: enable trusted publishing by @yoshinorin in https://github.com/hexojs/hexo/pull/5735\n## Test\n* fix(test): add missing await to unlink in save_database test by @KentarouTakeda in https://github.com/hexojs/hexo/pull/5753\n## Dependencies\n* chore(deps): bump actions/checkout from 5 to 6 by @dependabot[bot] in https://github.com/hexojs/hexo/pull/5724\n* chore(deps): bump actions/download-artifact from 6 to 7 by @dependabot[bot] in https://github.com/hexojs/hexo/pull/5726\n* chore(deps): bump actions/upload-artifact from 5 to 6 by @dependabot[bot] in https://github.com/hexojs/hexo/pull/5727\n* chore(deps): bump actions/dependency-review-action from 4.8.2 to 4.8.3 by @dependabot[bot] in https://github.com/hexojs/hexo/pull/5741\n* chore(deps): bump actions/dependency-review-action from 4.8.3 to 4.9.0 by @dependabot[bot] in https://github.com/hexojs/hexo/pull/5744\n* chore(deps): bump marocchino/sticky-pull-request-comment from 2 to 3 by @dependabot[bot] in https://github.com/hexojs/hexo/pull/5746\n* chore(deps): bump actions/download-artifact from 7 to 8 by @dependabot[bot] in https://github.com/hexojs/hexo/pull/5742\n* chore(deps): bump actions/upload-artifact from 6 to 7 by @dependabot[bot] in https://github.com/hexojs/hexo/pull/5743\n* chore(deps): add lockfile by @yoshinorin in https://github.com/hexojs/hexo/pull/5739\n## Misc\n* fix: update ESLint test configuration by @D-Sketon in https://github.com/hexojs/hexo/pull/5725\n**Full Changelog**: https://github.com/hexojs/hexo/compare/v8.1.1...v8.1.2",
+      "memory_unit_text": "In the hexojs/hexo release v8.1.2, fixes correct noopenner to noopener in external_link and fix incorrectly ignoring single-line code blocks when escaping Swig and HTML comments. Performances faster externalLink regexp. Refactor removes node internal api usage in loadPlugin. CI/CD adds dependency-review action and enables trusted publishing. Test adds missing await to unlink in save_database test. Dependencies are updated."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the hexojs/hexo releases, which release introduces the `full_url_for` helper and switches from minimatch to micromatch?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "4.0.0"
+        },
+        {
+          "option_id": "B",
+          "text": "4.1.0"
+        },
+        {
+          "option_id": "C",
+          "text": "4.2.0"
+        },
+        {
+          "option_id": "D",
+          "text": "5.0.0"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "4.0.0",
+      "source_chunk_ids": [
+        "hexojs__hexo__release__4_0_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "hexojs__hexo__release__4_0_0",
+          "answer_text": "a full_url_for helper, and switching from minimatch to micromatch"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the hexojs/hexo releases, how does the handling of the `external_link` configuration differ between release 5.0.0 and release v7.0.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "5.0.0 migrates external_link from a boolean to an object with an enable property, while v7.0.0 drops the boolean type entirely."
+        },
+        {
+          "option_id": "B",
+          "text": "5.0.0 introduces external_link as a new feature, while v7.0.0 removes it completely."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases treat external_link as a boolean only."
+        },
+        {
+          "option_id": "D",
+          "text": "5.0.0 drops external_link, while v7.0.0 restores it as a boolean."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "5.0.0 migrates external_link from a boolean to an object with an enable property, while v7.0.0 drops the boolean type entirely.",
+      "source_chunk_ids": [
+        "hexojs__hexo__release__5_0_0",
+        "hexojs__hexo__release__v7_0_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "hexojs__hexo__release__5_0_0",
+          "answer_text": "migrating external_link config during load_config ... external_link: true|false # deprecated ... New option external_link: enable: true|false"
+        },
+        {
+          "memory_node_id": "hexojs__hexo__release__v7_0_0",
+          "answer_text": "drop external_link boolean type"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the hexojs/hexo release window, order the following release-content states from earliest to latest: (1) a release that drops Node 6 support and adds a full_url_for helper, (2) a release that drops Node 10 and escapes HTML by default in list_tag, (3) a release that drops Node 16 and Node 18 and adds a permalink variable timestamp.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2"
+        },
+        {
+          "option_id": "D",
+          "text": "3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3",
+      "source_chunk_ids": [
+        "hexojs__hexo__release__4_0_0",
+        "hexojs__hexo__release__6_0_0",
+        "hexojs__hexo__release__v8_0_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "hexojs__hexo__release__4_0_0",
+          "answer_text": "drop Node 6 ... full_url_for helper"
+        },
+        {
+          "memory_node_id": "hexojs__hexo__release__6_0_0",
+          "answer_text": "Drop Node 10 ... Escape HTML by default in list_tag"
+        },
+        {
+          "memory_node_id": "hexojs__hexo__release__v8_0_0",
+          "answer_text": "drop Node.js 16 ... drop Node.js 18 ... add permalink variable timestamp"
+        }
+      ]
+    }
+  ]
+}

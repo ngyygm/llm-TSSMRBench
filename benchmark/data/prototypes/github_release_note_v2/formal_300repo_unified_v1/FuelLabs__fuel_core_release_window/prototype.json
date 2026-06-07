@@ -1,0 +1,530 @@
+{
+  "prototype_id": "FuelLabs__fuel_core_release_window",
+  "domain": "github_release_evolution",
+  "repo": "FuelLabs/fuel-core",
+  "source_type": "release_note",
+  "window_title": "FuelLabs/fuel-core recent release evolution",
+  "window_summary": "This window tracks the recent FuelLabs/fuel-core release stream from v0.40.0 through v0.48.2, covering GraphQL improvements, metrics additions, shared sequencer support, gas price service enhancements, preconfirmations, block aggregation, and PoA high-availability fixes.",
+  "chunks": [
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_40_0",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.40.0",
+      "tag_name": "v0.40.0",
+      "title": "v0.40.0",
+      "time_hint": "2024-10-14",
+      "published_at": "2024-10-14T23:29:00Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.40.0",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.40.0\nTag: v0.40.0; draft: False; prerelease: False; published_at: 2024-10-14T23:29:00Z; created_at: 2024-10-14T23:28:01Z\nRelease notes:\n## Version v0.40.0\n### Added\n- [2347](https://github.com/FuelLabs/fuel-core/pull/2347): Add GraphQL complexity histogram to metrics.\n- [2350](https://github.com/FuelLabs/fuel-core/pull/2350): Added a new CLI flag `graphql-number-of-threads` to limit the number of threads used by the GraphQL service. The default value is `2`, `0` enables the old behavior.\n- [2335](https://github.com/FuelLabs/fuel-core/pull/2335): Added CLI arguments for configuring GraphQL query costs.\n### Fixed\n- [2345](https://github.com/FuelLabs/fuel-core/pull/2345): In PoA increase priority of block creation timer trigger compare to txpool event management\n### Changed\n- [2334](https://github.com/FuelLabs/fuel-core/pull/2334): Prepare the GraphQL service for the switching to `async` methods.\n- [2310](https://github.com/FuelLabs/fuel-core/pull/2310): New metrics: \"The gas prices used in a block\" (`importer_gas_price_for_block`), \"The total gas used in a block\" (`importer_gas_per_block`), \"The total fee (gwei) paid by transactions in a block\" (`importer_fee_per_block_gwei`), \"The total number of transactions in a block\" (`importer_transactions_per_block`), P2P metrics for swarm and protocol.\n- [2340](https://github.com/FuelLabs/fuel-core/pull/2340): Avoid long heavy tasks in the GraphQL service by splitting work into batches.\n- [2341](https://github.com/FuelLabs/fuel-core/pull/2341): Updated all pagination queries to work with the async stream instead of the sync iterator.\n- [2350](https://github.com/FuelLabs/fuel-core/pull/2350): Limited the number of threads used by the GraphQL service.\n#### Breaking\n- [2310](https://github.com/FuelLabs/fuel-core/pull/2310): The `metrics` command-line parameter has been replaced with `disable-metrics`. Metrics are now enabled by default, with the option to disable them entirely or on a per-module basis.\n- [2341](https://github.com/FuelLabs/fuel-core/pull/2341): The maximum number of processed coins from the `coins_to_spend` query is limited to `max_inputs`.\n## What's Changed\n* fix(gas_price_service): service name and unused trait impl by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2317\n* Do not require build of docker images to pass CI by @xgreenx in https://github.com/FuelLabs/fuel-core/pull/2342\n* Prepare the GraphQL service for the switching to `async` methods by @xgreenx in https://github.com/FuelLabs/fuel-core/pull/2334\n* Limited the number of threads used by the GraphQL service by @xgreenx in https://github.com/FuelLabs/fuel-core/pull/2350\n* Increase priority of timer over txpool event by @xgreenx in https://github.com/FuelLabs/fuel-core/pull/2345\n* Disable flaky `test_poa_multiple_producers` test by @rafal-ch in https://github.com/FuelLabs/fuel-core/pull/2353\n* feat: CLI arguments for configuring GraphQL query costs. by @netrome in https://github.com/FuelLabs/fuel-core/pull/2335\n* Add graphql query complexity histogram metric by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2349\n* Updated all pagination queries to work with the `Stream` instead of `Iterator` by @xgreenx in https://github.com/FuelLabs/fuel-core/pull/2341\n* Avoid long heavy tasks in the GraphQL service by @xgreenx in https://github.com/FuelLabs/fuel-core/pull/2340\n* Add more metrics by @rafal-ch in https://github.com/FuelLabs/fuel-core/pull/2310\n* Release v0.40.0 by @xgreenx in https://github.com/FuelLabs/fuel-core/pull/2356\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.39.0...v0.40.0",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.40.0, the project added a GraphQL complexity histogram to metrics, a new CLI flag `graphql-number-of-threads` to limit GraphQL service threads (default 2, 0 for old behavior), and CLI arguments for configuring GraphQL query costs. Fixed PoA block creation timer priority over txpool events. Changed the GraphQL service to prepare for async methods, added new metrics for gas prices, gas used, fees, transactions per block, and P2P swarm/protocol, avoided long heavy tasks in GraphQL by splitting work into batches, updated pagination queries to use async streams, and limited GraphQL service threads. Breaking changes: the `metrics` CLI parameter was replaced with `disable-metrics` (metrics now enabled by default), and the maximum processed coins from `coins_to_spend` query is limited to `max_inputs`."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_40_1",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.40.1",
+      "tag_name": "v0.40.1",
+      "title": "v0.40.1",
+      "time_hint": "2024-11-25",
+      "published_at": "2024-11-25T20:58:40Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.40.1",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.40.1\nTag: v0.40.1; draft: False; prerelease: False; published_at: 2024-11-25T20:58:40Z; created_at: 2024-11-25T20:57:31Z\nRelease notes:\n## Release v0.40.1\n- [2450](https://github.com/FuelLabs/fuel-core/pull/2450): Added support for posting blocks to the shared sequencer.\n## What's Changed\n* Shared sequencer integration for `fuel-core 0.40.0` by @xgreenx in https://github.com/FuelLabs/fuel-core/pull/2451\n* Release v0.40.1 by @xgreenx in https://github.com/FuelLabs/fuel-core/pull/2452\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.40.0...v0.40.1",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.40.1, the project added support for posting blocks to the shared sequencer."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_40_2",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.40.2",
+      "tag_name": "v0.40.2",
+      "title": "v0.40.2",
+      "time_hint": "2024-12-06",
+      "published_at": "2024-12-06T18:32:01Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.40.2",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.40.2\nTag: v0.40.2; draft: False; prerelease: False; published_at: 2024-12-06T18:32:01Z; created_at: 2024-12-06T09:27:25Z\nRelease notes:\n## Version v0.40.2\n### Fixed\n- [2476](https://github.com/FuelLabs/fuel-core/pull/2476): Hardcode the timestamp of the genesis block.\n## What's Changed\n* Make genesis block timestamp hardcoded. by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2476\n* Release v0.40.2 by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2477\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.40.1...v0.40.2",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.40.2, the project fixed an issue by hardcoding the timestamp of the genesis block."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_41_0",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.41.0",
+      "tag_name": "v0.41.0",
+      "title": "v0.41.0",
+      "time_hint": "2025-01-15",
+      "published_at": "2025-01-15T05:01:52Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.41.0",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.41.0\nTag: v0.41.0; draft: False; prerelease: False; published_at: 2025-01-15T05:01:52Z; created_at: 2025-01-15T05:00:43Z\nRelease notes:\n## Version v0.41.0\n> [!WARNING]\n> This release has a bug while executing the LDC and CCP opcodes. It has been patched in [v0.41.6](https://github.com/FuelLabs/fuel-core/releases/tag/v0.41.6), please use that version.\n### Added\n- [2547](https://github.com/FuelLabs/fuel-core/pull/2547): Replace the old Graphql gas price provider adapter with the ArcGasPriceEstimate.\n- [2445](https://github.com/FuelLabs/fuel-core/pull/2445): Added GQL endpoint for querying asset details.\n- [2442](https://github.com/FuelLabs/fuel-core/pull/2442): Add uninitialized task for V1 gas price service\n- [2154](https://github.com/FuelLabs/fuel-core/pull/2154): Added `Unknown` variant to `ConsensusParameters` graphql queries\n- [2154](https://github.com/FuelLabs/fuel-core/pull/2154): Added `Unknown` variant to `Block` graphql queries\n- [2154](https://github.com/FuelLabs/fuel-core/pull/2154): Added `TransactionType` type in `fuel-client`\n- [2321](https://github.com/FuelLabs/fuel-core/pull/2321): New metrics for the TxPool:\n- The size of transactions in the txpool (`txpool_tx_size`)\n- The time spent by a transaction in the txpool in seconds (`txpool_tx_time_in_txpool_seconds`)\n- The number of transactions in the txpool (`txpool_number_of_transactions`)\n- The number of transactions pending verification before entering the txpool (`txpool_number_of_transactions_pending_verification`)\n- The number of executable transactions in the txpool (`txpool_number_of_executable_transactions`)\n- The time it took to select transactions for inclusion in a block in microseconds (`txpool_select_transactions_time_microseconds`)\n- The time it took to insert a transaction in the txpool in microseconds (`transaction_insertion_time_in_thread_pool_microseconds`)\n- [2385](https://github.com/FuelLabs/fuel-core/pull/2385): Added new histogram buckets for some of the TxPool metrics, optimize the way they are collected.\n- [2347](https://github.com/FuelLabs/fuel-core/pull/2364): Add activity concept in order to protect against infinitely increasing DA gas price scenarios\n- [2362](https://github.com/FuelLabs/fuel-core/pull/2362): Added a new request_response protocol version `/fuel/req_res/0.0.2`. In comparison with `/fuel/req/0.0.1`, which returns an empty response when a request cannot be fulfilled, this version returns more meaningful error codes. Nodes still support the version `0.0.1` of the protocol to guarantee backward compatibility with fuel-core nodes. Empty responses received from nodes using the old protocol `/fuel/req/0.0.1` are automatically converted into an error `ProtocolV1EmptyResponse` with error code 0, which is also the only error code implemented. More specific error codes will be added in the future.\n- [2386](https://github.com/FuelLabs/fuel-core/pull/2386): Add a flag to define the maximum number of file descriptors that RocksDB can use. By default it's half of the OS limit.\n- [2376](https://github.com/FuelLabs/fuel-core/pull/2376): Add a way to fetch transactions in P2P without specifying a peer.\n- [2361](https://github.com/FuelLabs/fuel-core/pull/2361): Add caches to the sync service to not reask for data it already fetched from the network.\n- [2327](https://github.com/FuelLabs/fuel-core/pull/2327): Add more services tests and more checks of the pool. Also add an high level documentation for users of the pool and contributors.\n- [2416](https://github.com/FuelLabs/fuel-core/issues/2416): Define the `GasPriceServiceV1` task.\n- [2447](https://github.com/FuelLabs/fuel-core/pull/2447): Use new `expiration` policy in the transaction pool. Add a mechanism to prune the transactions when they expired.\n- [1922](https://github.com/FuelLabs/fuel-core/pull/1922): Added support for posting blocks to the shared sequencer.\n- [2033](https://github.com/FuelLabs/fuel-core/pull/2033): Remove `Option<BlockHe...",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.41.0, the project added a replacement of the old GraphQL gas price provider adapter with ArcGasPriceEstimate, a GQL endpoint for querying asset details, an uninitialized task for V1 gas price service, `Unknown` variants to `ConsensusParameters` and `Block` GraphQL queries, a `TransactionType` type in `fuel-client`, new TxPool metrics (size, time in pool, number of transactions, pending verification, executable transactions, selection time, insertion time), new histogram buckets for TxPool metrics, an activity concept to protect against infinitely increasing DA gas price, a new request_response protocol version `/fuel/req_res/0.0.2` with error codes, a flag to define maximum file descriptors for RocksDB, a way to fetch transactions in P2P without specifying a peer, caches in the sync service, more service tests and pool documentation, definition of `GasPriceServiceV1` task, a new expiration policy in the transaction pool with pruning, support for posting blocks to the shared sequencer, and removal of `Option<BlockHe...` (truncated)."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_40_3",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.40.3",
+      "tag_name": "v0.40.3",
+      "title": "v0.40.3",
+      "time_hint": "2025-01-16",
+      "published_at": "2025-01-16T14:28:32Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.40.3",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.40.3\nTag: v0.40.3; draft: False; prerelease: False; published_at: 2025-01-16T14:28:32Z; created_at: 2025-01-16T14:27:33Z\nRelease notes:\n## Version v0.40.3\n### Added\nhttps://github.com/FuelLabs/fuel-core/pull/2573: Add txpool stats to the node_info GraphQL endpoint\n## What's Changed\n* Node info stats backport by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2573\n* Bump the version of the `fuel-core` to 0.40.3 by @xgreenx in https://github.com/FuelLabs/fuel-core/pull/2578\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.40.2...v0.40.3",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.40.3, the project added txpool stats to the node_info GraphQL endpoint."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_41_1",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.41.1",
+      "tag_name": "v0.41.1",
+      "title": "v0.41.1",
+      "time_hint": "2025-01-23",
+      "published_at": "2025-01-23T05:21:06Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.41.1",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.41.1\nTag: v0.41.1; draft: False; prerelease: False; published_at: 2025-01-23T05:21:06Z; created_at: 2025-01-23T02:13:37Z\nRelease notes:\n## Version v0.41.1\n> [!WARNING]\n> This release has a bug while executing the LDC and CCP opcodes. It has been patched in [v0.41.6](https://github.com/FuelLabs/fuel-core/releases/tag/v0.41.6), please use that version.\n### Added\n- [2551](https://github.com/FuelLabs/fuel-core/pull/2551): Enhanced the DA compressed block header to include block id.\n- [2595](https://github.com/FuelLabs/fuel-core/pull/2595): Added `indexation` field to the `nodeInfo` GraphQL endpoint to allow checking if a specific indexation is enabled.\n### Changed\n- [2603](https://github.com/FuelLabs/fuel-core/pull/2603): Sets the latest recorded height on initialization, not just when DA costs are received\n### Fixed\n- [2612](https://github.com/FuelLabs/fuel-core/pull/2612): Use latest gas price to estimate next block gas price during dry runs\n- [2612](https://github.com/FuelLabs/fuel-core/pull/2612): Use latest gas price to estimate next block gas price in tx pool instead of using algorithm directly\n- [2609](https://github.com/FuelLabs/fuel-core/pull/2609): Check response before trying to deserialize, return error instead\n- [2599](https://github.com/FuelLabs/fuel-core/pull/2599): Use the proper `url` apis to construct full url path in `BlockCommitterHttpApi` client\n- [2593](https://github.com/FuelLabs/fuel-core/pull/2593): Fixed utxo id decompression\n## What's Changed\n* fault_proving(compression): include block_id in da compressed block headers by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2551\n* chore: Add myself and Andrea as codeowner for graphql API + related crates by @netrome in https://github.com/FuelLabs/fuel-core/pull/2570\n* fix(integration_tests): remove flake from produce_block__l1_committed_block_affects_gas_price by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2566\n* bugfix: Improve the `BlockCommitterHttpApi` client to use `url` apis better by @MitchTurner in https://github.com/FuelLabs/fuel-core/pull/2599\n* Fix version compatibility error by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2608\n* Improve error messages for responses from committer by @MitchTurner in https://github.com/FuelLabs/fuel-core/pull/2609\n* Update async processor tests by @rafal-ch in https://github.com/FuelLabs/fuel-core/pull/2577\n* The amount of returned dust coins is limited by factor relative to the amount of selected big coins by @rafal-ch in https://github.com/FuelLabs/fuel-core/pull/2610\n* fix(da_compression): invalid decompression of utxo id and CoinConfig fix by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2593\n* Use latest gas price to estimate next price for tx pool checks by @MitchTurner in https://github.com/FuelLabs/fuel-core/pull/2612\n* Set Latest Recorded Height on startup by @MitchTurner in https://github.com/FuelLabs/fuel-core/pull/2603\n* Use latest gas price to estimate next block gas price during dry runs by @MitchTurner in https://github.com/FuelLabs/fuel-core/pull/2615\n* Check that fuel-core lib builds correctly without default features by @rafal-ch in https://github.com/FuelLabs/fuel-core/pull/2594\n* Expose indexation status in `NodeInfo` endpoint by @rafal-ch in https://github.com/FuelLabs/fuel-core/pull/2595\n* Release v0.41.1 by @MitchTurner in https://github.com/FuelLabs/fuel-core/pull/2620\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.41.0...v0.41.1",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.41.1, the project enhanced the DA compressed block header to include block id, added an `indexation` field to the `nodeInfo` GraphQL endpoint, changed the latest recorded height to be set on initialization, fixed the use of latest gas price to estimate next block gas price during dry runs and in the tx pool, fixed response checking before deserialization, fixed URL construction in `BlockCommitterHttpApi` client, and fixed utxo id decompression."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_41_2",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.41.2",
+      "tag_name": "v0.41.2",
+      "title": "v0.41.2",
+      "time_hint": "2025-01-23",
+      "published_at": "2025-01-23T06:23:28Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.41.2",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.41.2\nTag: v0.41.2; draft: False; prerelease: False; published_at: 2025-01-23T06:23:28Z; created_at: 2025-01-23T06:19:59Z\nRelease notes:\n## Version v0.41.2\n> [!WARNING]\n> This release has a bug while executing the LDC and CCP opcodes. It has been patched in [v0.41.6](https://github.com/FuelLabs/fuel-core/releases/tag/v0.41.6), please use that version.\n### Fixed\n- [2623](https://github.com/FuelLabs/fuel-core/pull/2623): Pinned netlink-proto's version.\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.41.1...v0.41.2",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.41.2, the project fixed an issue by pinning the netlink-proto version."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_41_3",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.41.3",
+      "tag_name": "v0.41.3",
+      "title": "v0.41.3",
+      "time_hint": "2025-01-24",
+      "published_at": "2025-01-24T10:21:52Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.41.3",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.41.3\nTag: v0.41.3; draft: False; prerelease: False; published_at: 2025-01-24T10:21:52Z; created_at: 2025-01-24T10:19:12Z\nRelease notes:\n## What's Changed\n> [!WARNING]\n> This release has a bug while executing the LDC and CCP opcodes. It has been patched in [v0.41.6](https://github.com/FuelLabs/fuel-core/releases/tag/v0.41.6), please use that version.\n* fix(rocksdb): import when rocksdb is enabled within local_node_with_reader fn by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2626\n* Release 0.41.3 by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2628\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.41.2...v0.41.3",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.41.3, the project fixed a rocksdb import issue when rocksdb is enabled within the `local_node_with_reader` function."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_41_4",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.41.4",
+      "tag_name": "v0.41.4",
+      "title": "v0.41.4",
+      "time_hint": "2025-01-24",
+      "published_at": "2025-01-24T20:32:02Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.41.4",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.41.4\nTag: v0.41.4; draft: False; prerelease: False; published_at: 2025-01-24T20:32:02Z; created_at: 2025-01-24T19:35:05Z\nRelease notes:\n## What's Changed\n> [!WARNING]\n> This release has a bug while executing the LDC and CCP opcodes. It has been patched in [v0.41.6](https://github.com/FuelLabs/fuel-core/releases/tag/v0.41.6), please use that version.\n* Release 0.41.4 by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2629\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.41.3...v0.41.4",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.41.4, the project did not list specific changes in the release notes beyond a warning about LDC and CCP opcode bugs and a reference to the patch in v0.41.6."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_40_4",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.40.4",
+      "tag_name": "v0.40.4",
+      "title": "v0.40.4",
+      "time_hint": "2025-01-28",
+      "published_at": "2025-01-28T18:12:18Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.40.4",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.40.4\nTag: v0.40.4; draft: False; prerelease: False; published_at: 2025-01-28T18:12:18Z; created_at: 2025-01-28T18:06:50Z\nRelease notes:\n## Version 0.40.4\n### Changed\n- [2639](https://github.com/FuelLabs/fuel-core/pull/2639): Refactor fetching `latest_height` from `OnChainIterableKeyValueView` to instead use height at the time of its creation.\n### Fixed\n- [2638](https://github.com/FuelLabs/fuel-core/pull/2638): Optimize the `cumulative_percent_change` function used in estimation of gas price, convert multiple async functions to sync.\n- [2641](https://github.com/FuelLabs/fuel-core/pull/2641): Remove `txPoolStats` requirement from fuel core client\n- [2642](https://github.com/FuelLabs/fuel-core/pull/2642): Before this fix when tip is zero, transactions that use 30M have the same priority as transactions with 1M gas. Now they are correctly ordered.\n## What's Changed\n* backport(gas_price_service): performance improvements to estimate_gas_price by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2638\n* chore(storage): use the cached block height from the database at the time of creation of the view by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2639\n* Bump to 0.40.4 versions by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2640\n* Remove txpool request client by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2641\n* Backport: patch transaction pool ordering zero tip by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2642\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.40.3...v0.40.4",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.40.4, the project changed the fetching of `latest_height` to use the height at the time of view creation, optimized the `cumulative_percent_change` function used in gas price estimation by converting async functions to sync, removed the `txPoolStats` requirement from the fuel core client, and fixed transaction ordering when tip is zero so that transactions with different gas amounts are correctly prioritized."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_41_5",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.41.5",
+      "tag_name": "v0.41.5",
+      "title": "v0.41.5",
+      "time_hint": "2025-02-03",
+      "published_at": "2025-02-03T22:53:37Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.41.5",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.41.5\nTag: v0.41.5; draft: False; prerelease: False; published_at: 2025-02-03T22:53:37Z; created_at: 2025-02-03T22:43:50Z\nRelease notes:\n## Version 0.41.5\n> [!WARNING]\n> This release has a bug while executing the LDC and CCP opcodes. It has been patched in [v0.41.6](https://github.com/FuelLabs/fuel-core/releases/tag/v0.41.6), please use that version.\n### Changed\n- [2387](https://github.com/FuelLabs/fuel-core/pull/2387): Update description `tx-max-depth` flag.\n- [2630](https://github.com/FuelLabs/fuel-core/pull/2630): Removed some noisy `tracing::info!` logs\n- [2643](https://github.com/FuelLabs/fuel-core/pull/2643): Before this fix when tip is zero, transactions that use 30M have the same priority as transactions with 1M gas. Now they are correctly ordered.\n### Added\n- [2617](https://github.com/FuelLabs/fuel-core/pull/2617): Add integration skeleton of parallel-executor.\n- [2553](https://github.com/FuelLabs/fuel-core/pull/2553): Scaffold global merkle root storage crate.\n- [2598](https://github.com/FuelLabs/fuel-core/pull/2598): Add initial test suite for global merkle root storage updates.\n- [2635](https://github.com/FuelLabs/fuel-core/pull/2635): Add metrics to gas price service\n### Fixed\n- [2632](https://github.com/FuelLabs/fuel-core/pull/2632): Improved performance of certain async trait impls in the gas price service.\n- [2662](https://github.com/FuelLabs/fuel-core/pull/2662): Fix balances query endpoint cost without indexation and behavior coins to spend with one parameter at zero.\n## What's Changed\n* Remove noisy logging by @MitchTurner in https://github.com/FuelLabs/fuel-core/pull/2630\n* chore(gas_price_service): refactor usage of async_trait impls to improve performance by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2632\n* Change description flag depth in TxPool by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2387\n* Add generation of docker images on release/master push by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2631\n* chore(async_trait): reduce usage of async_trait for small types again by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2634\n* chore(gas_price_service): minor refactors to make the code more readable by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2636\n* Remove netlink proto fix by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2637\n* fault_proving(global_roots): scaffold global merkle root storage crate by @netrome in https://github.com/FuelLabs/fuel-core/pull/2553\n* Add metrics to gas price service by @MitchTurner in https://github.com/FuelLabs/fuel-core/pull/2635\n* chore: Add code owners for fraud proofs by @netrome in https://github.com/FuelLabs/fuel-core/pull/2649\n* Patch transaction pool ordering zero tip by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2643\n* chore: Add entire team as code owners for the changelog and `Cargo.lock` by @netrome in https://github.com/FuelLabs/fuel-core/pull/2655\n* fault_proving(global_roots): Initial test suite for merklized storage updates by @netrome in https://github.com/FuelLabs/fuel-core/pull/2598\n* Add integration skeleton of parallel-executor by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2617\n* Fix balances query endpoint cost without indexation and behavior coins to spend with one parameter at zero by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2662\n* Add print of collision reason in TxPool by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2664\n* Release/v0.41.5 by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2663\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.41.4...v0.41.5",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.41.5, the project updated the description of the `tx-max-depth` flag, removed some noisy `tracing::info!` logs, fixed transaction ordering when tip is zero, added an integration skeleton of parallel-executor, scaffolded a global merkle root storage crate, added an initial test suite for global merkle root storage updates, added metrics to the gas price service, improved performance of certain async trait impls in the gas price service, and fixed balances query endpoint cost without indexation and behavior of coins to spend with one parameter at zero."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_41_6",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.41.6",
+      "tag_name": "v0.41.6",
+      "title": "v0.41.6",
+      "time_hint": "2025-02-05",
+      "published_at": "2025-02-05T22:32:56Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.41.6",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.41.6\nTag: v0.41.6; draft: False; prerelease: False; published_at: 2025-02-05T22:32:56Z; created_at: 2025-02-05T21:54:57Z\nRelease notes:\n## Version 0.41.6\n### Added\n- [2668](https://github.com/FuelLabs/fuel-core/pull/2668): Expose gas price service test helpers\n- [2621](https://github.com/FuelLabs/fuel-core/pull/2598): Global merkle root storage updates process upgrade transactions.\n- [2650](https://github.com/FuelLabs/fuel-core/pull/2650): Populate `ProcessedTransactions` table in global merkle root storage.\n- [2667](https://github.com/FuelLabs/fuel-core/pull/2667): Populate `Blobs` table in global merkle root storage.\n- [2652](https://github.com/FuelLabs/fuel-core/pull/2652): Global Merkle Root storage crate: Add Raw contract bytecode to global merkle root storage when processing Create transactions.\n### Fixed\n- [2673](https://github.com/FuelLabs/fuel-core/pull/2673): Change read behavior on the InMemoryTransaction to use offset and allow not equal buf size (fix CCP and LDC broken from https://github.com/FuelLabs/fuel-vm/pull/847)\n## What's Changed\n* chore(runnable_task): remove async_trait usage by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2660\n* Expose gas price service test helpers by @MitchTurner in https://github.com/FuelLabs/fuel-core/pull/2668\n* Handle new state transition bytecode and new consensus parameter version by @acerone85 in https://github.com/FuelLabs/fuel-core/pull/2621\n* fault_proving(global_roots): populate ProcessedTransactions table by @netrome in https://github.com/FuelLabs/fuel-core/pull/2650\n* fault_proving(global_roots): Populate `Blobs` table by @netrome in https://github.com/FuelLabs/fuel-core/pull/2667\n* Fault proving: Populate ContractsRawCode when processing Create Transaction in global merkle root crate by @acerone85 in https://github.com/FuelLabs/fuel-core/pull/2652\n* Change `read` behavior on the `InMemoryTransaction` to use offset and allow not equal buf size by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2673\n* Release 0.41.6 by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2674\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.41.5...v0.41.6",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.41.6, the project exposed gas price service test helpers, added global merkle root storage updates for processing upgrade transactions, populated the `ProcessedTransactions` table in global merkle root storage, populated the `Blobs` table in global merkle root storage, added raw contract bytecode to global merkle root storage when processing Create transactions, and fixed the read behavior on InMemoryTransaction to use offset and allow unequal buffer sizes, addressing the LDC and CCP opcode bug."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_41_7",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.41.7",
+      "tag_name": "v0.41.7",
+      "title": "v0.41.7",
+      "time_hint": "2025-02-13",
+      "published_at": "2025-02-13T10:42:50Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.41.7",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.41.7\nTag: v0.41.7; draft: False; prerelease: False; published_at: 2025-02-13T10:42:50Z; created_at: 2025-02-13T10:40:59Z\nRelease notes:\n## Version 0.41.7\n### Fixed\n- [2710](https://github.com/FuelLabs/fuel-core/pull/2710): Update Fuel-VM to fix compressed transaction backward compatibility.\n## What's Changed\n* Update fuel-vm 0.59.2 by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2710\n* Bump versions to 0.41.7 by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2711\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.41.6...v0.41.7",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.41.7, the project fixed compressed transaction backward compatibility by updating Fuel-VM."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_41_8",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.41.8",
+      "tag_name": "v0.41.8",
+      "title": "v0.41.8",
+      "time_hint": "2025-03-06",
+      "published_at": "2025-03-06T17:00:57Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.41.8",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.41.8\nTag: v0.41.8; draft: False; prerelease: False; published_at: 2025-03-06T17:00:57Z; created_at: 2025-03-06T17:00:11Z\nRelease notes:\n## What's Changed\n* fix(modifications_history): Reworked the migration logic for historical tables by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2809\n* Bump versions 0.41.8 by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2810\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.41.7...v0.41.8",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.41.8, the project reworked the migration logic for historical tables in the modifications_history."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_41_9",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.41.9",
+      "tag_name": "v0.41.9",
+      "title": "v0.41.9",
+      "time_hint": "2025-03-09",
+      "published_at": "2025-03-09T16:55:10Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.41.9",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.41.9\nTag: v0.41.9; draft: False; prerelease: False; published_at: 2025-03-09T16:55:10Z; created_at: 2025-03-09T14:05:43Z\nRelease notes:\n## What's Changed\n* fix(relayer): ensure local state is updated after logs downloaded by @rymnc and @xgreenx in https://github.com/FuelLabs/fuel-core/pull/2829\n* fix(sub_services): enable block production only after all other services have been started by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2830\n* chore(v0.41.9): bump versions, release changelog by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2831\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.41.8...v0.41.9",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.41.9, the project fixed the relayer to ensure local state is updated after logs are downloaded, and enabled block production only after all other services have been started."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_42_0",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.42.0",
+      "tag_name": "v0.42.0",
+      "title": "v0.42.0",
+      "time_hint": "2025-03-18",
+      "published_at": "2025-03-18T19:41:38Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.42.0",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.42.0\nTag: v0.42.0; draft: False; prerelease: False; published_at: 2025-03-18T19:41:38Z; created_at: 2025-03-18T16:45:20Z\nRelease notes:\n## Version 0.42.0\n### Breaking\n- [2648](https://github.com/FuelLabs/fuel-core/pull/2648): Add feature-flagged field to block header `fault_proving_header` that contains a commitment to all transaction ids.\n- [2678](https://github.com/FuelLabs/fuel-core/pull/2678): Removed public accessors for `BlockHeader` fields and replaced with methods instead, moved `tx_id_commitment` to the application header of `BlockHeaderV2`.\n- [2746](https://github.com/FuelLabs/fuel-core/pull/2746): Breaking changes to the CLI arguments:\n- To disable `random-walk` just don't specify it. Before it required to use `--random-walk 0`.\n- Next CLI arguments were renamed:\n- `relayer-min-duration-s` -> `relayer-min-duration`\n- `relayer-eth-sync-call-freq-s` -> `relayer-eth-sync-call-freq`\n- `relayer-eth-sync-log-freq-s` -> `relayer-eth-sync-log-freq`\n- Default value for the `heartbeat-idle-duration` was changed from `1s` to `100ms`. So information about new block will be propagated faster by default.\n- All CLI arguments below use time(like `100ms`, `1s`, `1d`, etc.) use as a flag argument instead of number of seconds:\n- `random-walk`\n- `connection-idle-timeout`\n- `info-interval`\n- `identify-interval`\n- `request-timeout`\n- `connection-keep-alive`\n- `heartbeat-send-duration`\n- `heartbeat-idle-duration`\n- `heartbeat-check-interval`\n- `heartbeat-max-avg-interval`\n- `heartbeat-max-time-since-last`\n- `relayer-min-duration`\n- `relayer-eth-sync-call-freq`\n- `relayer-eth-sync-log-freq`\n- [2840](https://github.com/FuelLabs/fuel-core/pull/2840): CLI argument `vm-backtrace` is deprecated and does nothing. It will be removed in a future version of `fuel-core`.\nThe `extra_tx_checks` field was renamed into `forbid_fake_coins` that affects JSON based serialization/deserialization.\nRenamed `extra_tx_checks_default` field into `forbid_fake_coins_default`.\n### Added\n- [2150](https://github.com/FuelLabs/fuel-core/pull/2150): Upgraded `libp2p` to `0.54.1` and introduced `ConnectionLimiter` to limit pending incoming/outgoing connections.\n- [2491](https://github.com/FuelLabs/fuel-core/pull/2491): Storage read replays of historical blocks for execution tracing. Only available behind `--historical-execution` flag.\n- [2619](https://github.com/FuelLabs/fuel-core/pull/2619): Add possibility to submit list of changes to rocksdb.\n- [2666](https://github.com/FuelLabs/fuel-core/pull/2666): Added two new CLI arguments to control the GraphQL queries consistency: `--graphql-block-height-tolerance` (default: `10`) and `--graphql-block-height-min-timeout` (default: `30s`). If a request requires a specific block height and the node is slightly behind, it will wait instead of failing.\n- [2682](https://github.com/FuelLabs/fuel-core/pull/2682): Added GraphQL APIs to get contract storage and balances for current and past blocks.\n- [2719](https://github.com/FuelLabs/fuel-core/pull/2719): Merklized DA compression temporal registry tables.\n- [2722](https://github.com/FuelLabs/fuel-core/pull/2722): Service definition for state root service.\n- [2724](https://github.com/FuelLabs/fuel-core/pull/2724): Explicit error type for merkleized storage.\n- [2726](https://github.com/FuelLabs/fuel-core/pull/2726): Add a new gossip-sub message for transaction preconfirmations\n- [2731](https://github.com/FuelLabs/fuel-core/pull/2731): Include `TemporalRegistry` trait implementations for v2 tables.\n- [2733](https://github.com/FuelLabs/fuel-core/pull/2733): Add a pending pool transaction that allow transaction to wait a bit of time if an input is missing instead of direct delete.\n- [2742](https://github.com/FuelLabs/fuel-core/pull/2742): Added API crate for merkle root service.\n- [2756](https://github.com/FuelLabs/fuel-core/pull/2756): Add new service for managing pre-confirmations\n- [2769](https://github.com/FuelLabs/fuel-core/pull/2769): Adde...",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.42.0, the project introduced breaking changes including a feature-flagged `fault_proving_header` in block headers with a commitment to all transaction ids, removal of public accessors for `BlockHeader` fields, moving `tx_id_commitment` to the application header of `BlockHeaderV2`, CLI argument changes (renaming, time format changes, default value changes), deprecation of `vm-backtrace`, and renaming of `extra_tx_checks` to `forbid_fake_coins`. Added upgrades to libp2p 0.54.1 with ConnectionLimiter, storage read replays for historical blocks behind `--historical-execution`, possibility to submit list of changes to rocksdb, GraphQL query consistency CLI arguments, GraphQL APIs for contract storage and balances for current and past blocks, merklized DA compression temporal registry tables, service definition for state root service, explicit error type for merkleized storage, a new gossip-sub message for transaction preconfirmations, `TemporalRegistry` trait implementations for v2 tables, a pending pool transaction mechanism, API crate for merkle root service, and a new service for managing pre-confirmations."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_43_0",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.43.0",
+      "tag_name": "v0.43.0",
+      "title": "v0.43.0",
+      "time_hint": "2025-04-10",
+      "published_at": "2025-04-10T00:29:40Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.43.0",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.43.0\nTag: v0.43.0; draft: False; prerelease: False; published_at: 2025-04-10T00:29:40Z; created_at: 2025-04-10T00:28:47Z\nRelease notes:\n## Version 0.43.0\n### Breaking\n- [2882](https://github.com/FuelLabs/fuel-core/pull/2882): Changed the type of the `resolved_outputs` for pre-confirmations. Now it also includes `Utxoid`. `resolved_outputs` field contains only `Change` and `Variable` outputs, so the `UtxoId` for them could be hard to derive, if transaction has known inputs. This information should help to create dependent transactions more easily.\n- [2900](https://github.com/FuelLabs/fuel-core/pull/2900): Get rid of `Deref` impl on `ImportResult` by introducing wrapper type.\n- [2909](https://github.com/FuelLabs/fuel-core/pull/2909): Compressed block headers now include a merkle root of the temporal registry after compression was performed.\n- [2931](https://github.com/FuelLabs/fuel-core/pull/2931): In `fuel-core-compression`, the `compress` function now takes a reference to `Config` instead of the value.\n### Added\n- [2848](https://github.com/FuelLabs/fuel-core/pull/2848): Link all components of preconfirmations and add E2E tests.\n- [2882](https://github.com/FuelLabs/fuel-core/pull/2882): Listen to tx status update from `TxStatusManager` in `TxPool`. Added logic to clean up transactions from the pool if received squeezed out pre confirmations. Added logic to promote transactions on sentry nodes when receive pre-confirmation.\n- [2885](https://github.com/FuelLabs/fuel-core/pull/2885): Notify P2P from `TxStatusManager` in case of bad preconfirmation message.\n- [2901](https://github.com/FuelLabs/fuel-core/pull/2901): New query `dryRunRecordStorageReads` which works like `dryRun` but also returns storage reads, allowing use of execution tracer or local debugger\n- [2912](https://github.com/FuelLabs/fuel-core/pull/2912): Add the `allow_partial` parameter to the `coinsToSpend` query. The default value of this parameters is `false` to preserve the old behavior. If set to `true`, the query returns available coins instead of failing when the requested amount is unavailable.\n- [2914](https://github.com/FuelLabs/fuel-core/pull/2914): Tests ensuring the proof generation and validation of tables with sparse and merklized blueprints work.\n### Changed\n- [2859](https://github.com/FuelLabs/fuel-core/pull/2859): Swap out off-chain worker compression for dedicated compression service in `fuel-core-bin`.\n- [2914](https://github.com/FuelLabs/fuel-core/pull/2914): Break out test logic to trait methods for `root_storage_tests` and `basic_merkleized_storage_tests` test macros.\n- [2925](https://github.com/FuelLabs/fuel-core/pull/2925): Make preconfirmation optional on API endpoints.\n### Fixed\n- [2918](https://github.com/FuelLabs/fuel-core/pull/2918): Only cancel background work if primary RocksDB instance is dropped\n- [2935](https://github.com/FuelLabs/fuel-core/pull/2935): The change rejects transactions immediately, if they use spent coins. `TxPool` has a SpentInputs LRU cache, storing all spent coins.\n### Removed\n- [2859](https://github.com/FuelLabs/fuel-core/pull/2859): Removed DA compression from off-chain worker in favor of dedicated compression service in `fuel-core-bin`.\n## What's Changed\n* Rework `TxStatusManager` tests by @rafal-ch in https://github.com/FuelLabs/fuel-core/pull/2871\n* fix(storage): custom impl of EnumCount for MerkleizedColumn by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2875\n* Update network versions on README by @github-actions in https://github.com/FuelLabs/fuel-core/pull/2889\n* fix(version-compatibility): pin async-graphql to 7.0.15 by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2891\n* Fix proptest for tx status manager by @rafal-ch in https://github.com/FuelLabs/fuel-core/pull/2893\n* fault_proving(compression): glue code for integ into fuel-core by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2859\n* Link and activate preconfirmations and add integration...",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.43.0, the project introduced breaking changes: the type of `resolved_outputs` for pre-confirmations now includes `Utxoid`, removal of `Deref` impl on `ImportResult`, compressed block headers include a merkle root of the temporal registry after compression, and the `compress` function takes a reference to `Config`. Added linking of all preconfirmation components with E2E tests, listening to tx status updates from `TxStatusManager` in `TxPool` with cleanup and promotion logic, notifying P2P from `TxStatusManager` on bad preconfirmation messages, a new `dryRunRecordStorageReads` query, an `allow_partial` parameter for `coinsToSpend`, and tests for proof generation and validation of sparse and merklized tables. Changed off-chain worker compression to a dedicated compression service, broke out test logic to trait methods, and made preconfirmation optional on API endpoints. Fixed background work cancellation on primary RocksDB drop and immediate rejection of transactions using spent coins via a SpentInputs LRU cache. Removed DA compression from off-chain worker."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_41_10",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.41.10",
+      "tag_name": "v0.41.10",
+      "title": "v0.41.10",
+      "time_hint": "2025-04-22",
+      "published_at": "2025-04-22T16:33:58Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.41.10",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.41.10\nTag: v0.41.10; draft: False; prerelease: False; published_at: 2025-04-22T16:33:58Z; created_at: 2025-04-22T16:25:33Z\nRelease notes:\n## Version 0.41.10\n### Fixed\n- [2963](https://github.com/FuelLabs/fuel-core/pull/2963): Ensure that vm heap memory is zeroed out on rellocation after `reset`. Bumps `fuel-vm` to `0.59.3`.\n## What's Changed\n* chore(tx): add test to ensure heap memory is cleared between predicate executions by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2963\n* chore(v0.41.10): bump versions, release changelog by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2965\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.41.9...v0.41.10",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.41.10, the project fixed an issue to ensure that VM heap memory is zeroed out on reallocation after `reset`, bumping `fuel-vm` to 0.59.3."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_43_1",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.43.1",
+      "tag_name": "v0.43.1",
+      "title": "v0.43.1",
+      "time_hint": "2025-04-22",
+      "published_at": "2025-04-22T18:00:48Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.43.1",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.43.1\nTag: v0.43.1; draft: False; prerelease: False; published_at: 2025-04-22T18:00:48Z; created_at: 2025-04-22T17:59:15Z\nRelease notes:\n## Version 0.43.1\n- [2964](https://github.com/FuelLabs/fuel-core/pull/2964): Ensure that vm heap memory is zeroed out on rellocation after `reset`. Adds support for `GM::GetGasPrice` Bumps `fuel-vm` to `0.60.2`.\n## What's Changed\n* chore(tx|gas_price): add test to ensure heap memory is cleared, add gm opcode integ test by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2964\n* chore(v0.43.1): bump versions, release changelog by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2966\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.43.0...v0.43.1",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.43.1, the project ensured that VM heap memory is zeroed out on reallocation after `reset`, added support for `GM::GetGasPrice`, and bumped `fuel-vm` to 0.60.2."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_43_2",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.43.2",
+      "tag_name": "v0.43.2",
+      "title": "v0.43.2",
+      "time_hint": "2025-04-28",
+      "published_at": "2025-04-28T20:53:55Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.43.2",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.43.2\nTag: v0.43.2; draft: False; prerelease: False; published_at: 2025-04-28T20:53:55Z; created_at: 2025-04-28T20:52:56Z\nRelease notes:\n## What's Changed\n* fix(compression_service): prevent syncing from genesis if compression db is empty by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2978\n* chore(v0.43.2): bump versions by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2980\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.43.1...v0.43.2",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.43.2, the project fixed the compression service to prevent syncing from genesis if the compression database is empty."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_44_0",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.44.0",
+      "tag_name": "v0.44.0",
+      "title": "v0.44.0",
+      "time_hint": "2025-05-26",
+      "published_at": "2025-05-26T19:23:53Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.44.0",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.44.0\nTag: v0.44.0; draft: False; prerelease: False; published_at: 2025-05-26T19:23:53Z; created_at: 2025-05-26T19:19:16Z\nRelease notes:\n## Version v0.44.0\n### Breaking\n- [2887](https://github.com/FuelLabs/fuel-core/pull/2887): Bump Rust version to `1.85.0`.\nStarting with this release, newly generated WASM state transition functions are no longer compatible with old versions of the `fuel-core`. So, the change breaks forward compatibility for the network and each node should start to use a new `fuel-core` release.\n- [2943](https://github.com/FuelLabs/fuel-core/pull/2943): Registry root calculation for compression tables no longer accounts for the evictor cache.\n- [2947](https://github.com/FuelLabs/fuel-core/pull/2947): Upgrade to 2024 Rust edition.\n- [2958](https://github.com/FuelLabs/fuel-core/pull/2958): Changed return type of `balance` endpoint from `u64` to `u128`\n- [3002](https://github.com/FuelLabs/fuel-core/pull/3002): Update `fuel-vm` to `0.61.1`. In doing this, we've changed Receipts to use the `SubId` scalar type for sub asset IDs.\n### Added\n- [2954](https://github.com/FuelLabs/fuel-core/pull/2954): Made `registry` mod public in `fuel-core-compression`\n- [2956](https://github.com/FuelLabs/fuel-core/pull/2956): Add excluded_contract filter to extract of transaction from TxPool.\n- [2994](https://github.com/FuelLabs/fuel-core/pull/2994): Simple makefile with basic commands.\n- [3004](https://github.com/FuelLabs/fuel-core/pull/3004): Additional error logs for Ethereum provider failures.\n### Changed\n- [3021](https://github.com/FuelLabs/fuel-core/pull/3021): Updated fuel-vm to 0.62.0, see https://github.com/fuelLabs/fuel-vm/releases/v0.62.0\n### Fixed\n- [2969](https://github.com/FuelLabs/fuel-core/pull/2969): Ensure that vm heap memory is zeroed out on rellocation after `reset`. Adds support for `GM::GetGasPrice` Bumps `fuel-vm` to `0.60.2`.\n- [2984](https://github.com/FuelLabs/fuel-core/pull/2984): Fix client coins endpoint so that passing `None` for `asset_id` no longer defaults to `AssetId::default()` but correctly returns all asset types.\n- [2987](https://github.com/FuelLabs/fuel-core/pull/2987): Make txpool pre-conf broadcast conditional on there being some txs in the list\n- [2989](https://github.com/FuelLabs/fuel-core/pull/2989): Prevent syncing compression database from genesis if override cli arg `--da-compression-starting-height` is provided.\n- [2992](https://github.com/FuelLabs/fuel-core/pull/2992): Make sure assemble tx doesn't count message data inputs as spendable inputs for covering fee\n- [2993](https://github.com/FuelLabs/fuel-core/pull/2993): Pin the graphiql playground to v3, and cache the result to be reused across multiple calls to render the playground.\n### Removed\n- [2955](https://github.com/FuelLabs/fuel-core/pull/2955): Remove unnecessary lifetime constraints on fuel-core-client.\n## What's Changed\n* Update network versions on README by @github-actions in https://github.com/FuelLabs/fuel-core/pull/2942\n* Try to fix flakiness in p2p tests by @xgreenx in https://github.com/FuelLabs/fuel-core/pull/2945\n* fix(decompression): registry root calculation by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2943\n* chore: Bump rust version to 1.85.0 by @netrome in https://github.com/FuelLabs/fuel-core/pull/2887\n* chore(compression): make registry mod public by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2954\n* chore!: change `balance` endpoint return type to `u128` by @hal3e in https://github.com/FuelLabs/fuel-core/pull/2958\n* Remove unnecessary lifetime constraints on fuel-core-client by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2955\n* chore(deps): bump crossbeam-channel from 0.5.14 to 0.5.15 by @dependabot in https://github.com/FuelLabs/fuel-core/pull/2962\n* Add benches for all opcodes by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2936\n* fix: clean up Docker chain config by @mchristopher in https://github.com/FuelLabs/fuel-co...",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.44.0, the project introduced breaking changes: bumped Rust version to 1.85.0, made newly generated WASM state transition functions incompatible with old fuel-core versions, changed registry root calculation for compression tables to no longer account for the evictor cache, upgraded to 2024 Rust edition, changed the return type of the `balance` endpoint from `u64` to `u128`, and updated `fuel-vm` to 0.61.1 with receipts using `SubId` scalar type. Added making the `registry` mod public in `fuel-core-compression`, an `excluded_contract` filter for transaction extraction from TxPool, a simple makefile, and additional error logs for Ethereum provider failures. Changed by updating fuel-vm to 0.62.0. Fixed VM heap memory zeroing on reallocation with `GM::GetGasPrice` support and fuel-vm 0.60.2, client coins endpoint to correctly return all asset types when `asset_id` is `None`, conditional txpool pre-conf broadcast, prevention of syncing compression database from genesis with `--da-compression-starting-height`, assemble tx not counting message data inputs as spendable for fees, and pinned graphiql playground to v3 with caching. Removed unnecessary lifetime constraints on fuel-core-client."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_45_1",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.45.1",
+      "tag_name": "v0.45.1",
+      "title": "v0.45.1",
+      "time_hint": "2025-07-27",
+      "published_at": "2025-07-27T13:46:09Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.45.1",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.45.1\nTag: v0.45.1; draft: False; prerelease: False; published_at: 2025-07-27T13:46:09Z; created_at: 2025-07-27T13:45:10Z\nRelease notes:\n## Version v0.45.1\n### Breaking\n- [3022](https://github.com/FuelLabs/fuel-core/pull/3022): Support rolling back Relayer DB.\n- [3056](https://github.com/FuelLabs/fuel-core/pull/3056): Bump Rust version to 1.86.0\n- [3058](https://github.com/FuelLabs/fuel-core/pull/3058): upgrade `wasmtime` and `thiserror` dependencies\n### Added\n- [2959](https://github.com/FuelLabs/fuel-core/pull/2959): Add `Registrations` table to the compression database. This is merkleized.\n- [3027](https://github.com/FuelLabs/fuel-core/pull/3027): Support state rewind for compression DB.\n- [3054](https://github.com/FuelLabs/fuel-core/pull/3054): Added a new configuration option `--p2p-cache-size` to control the size of the p2p req/res protocol cache size.\n### Changed\n- [3030](https://github.com/FuelLabs/fuel-core/pull/3030): Disable dependency on blob transactions in transaction pool.\n- [3033](https://github.com/FuelLabs/fuel-core/pull/3033): Use ubuntu:24.04 to build x86_64 binary\n- [3060](https://github.com/FuelLabs/fuel-core/pull/3060): Use v44 STF if forward-compatibility test\n- [3062](https://github.com/FuelLabs/fuel-core/pull/3062): Increase default transmition size to 260MB, to support 2.5MB blocks by default during synchronization\n### Fixed\n- [3048](https://github.com/FuelLabs/fuel-core/pull/3048): The `MaxCoinsReached` error is now thrown when the target reached the max input limit.\n## What's Changed\n* Prevent dependency on blob transactions by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/3030\n* docs(deepwiki): add deepwiki badge so it gets updated weekly by @rymnc in https://github.com/FuelLabs/fuel-core/pull/3037\n* Fix x86_64 build in the CI release pipeline by @Dentosal in https://github.com/FuelLabs/fuel-core/pull/3033\n* chore(codeowners): update with new policy by @rymnc in https://github.com/FuelLabs/fuel-core/pull/3042\n* Update network versions on README by @github-actions[bot] in https://github.com/FuelLabs/fuel-core/pull/3044\n* (parallel-executor): tests by @AurelienFT in https://github.com/FuelLabs/fuel-core/pull/2967\n* chore(compression): merkleized registration table by @rymnc in https://github.com/FuelLabs/fuel-core/pull/2959\n* Update network versions on README by @github-actions[bot] in https://github.com/FuelLabs/fuel-core/pull/3046\n* feat: Support rolling back relayer DB by @netrome in https://github.com/FuelLabs/fuel-core/pull/3022\n* chore(ci): unblock spellcheck ci by @rymnc in https://github.com/FuelLabs/fuel-core/pull/3051\n* bump rust version to 1.86 by @MitchTurner in https://github.com/FuelLabs/fuel-core/pull/3056\n* bump wasmtime version to deal with rust-sec issue by @MitchTurner in https://github.com/FuelLabs/fuel-core/pull/3058\n* The `MaxCoinsReached` error is now thrown when the target reached the max input limit. by @petertonysmith94 in https://github.com/FuelLabs/fuel-core/pull/3048\n* Increase default transmition size to support 2.5MB blocks by default during synchronization by @xgreenx in https://github.com/FuelLabs/fuel-core/pull/3062\n* fix(p2p): reduce cached view on req/res to one quarter to prevent mem overuse by @rymnc in https://github.com/FuelLabs/fuel-core/pull/3054\n* Release v0.45.0 by @xgreenx in https://github.com/FuelLabs/fuel-core/pull/3063\n* Fix publishing of the release 0.45.0 by @xgreenx in https://github.com/FuelLabs/fuel-core/pull/3064\n* Release v0.45.1 by @xgreenx in https://github.com/FuelLabs/fuel-core/pull/3065\n## New Contributors\n* @petertonysmith94 made their first contribution in https://github.com/FuelLabs/fuel-core/pull/3048\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.44.0...v0.45.1",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.45.1, the project introduced breaking changes: support for rolling back Relayer DB, bumped Rust version to 1.86.0, and upgraded `wasmtime` and `thiserror` dependencies. Added a `Registrations` table to the compression database (merkleized), support for state rewind for compression DB, and a new configuration option `--p2p-cache-size`. Changed by disabling dependency on blob transactions in the transaction pool, using ubuntu:24.04 for x86_64 binary builds, using v44 STF for forward-compatibility tests, and increasing default transmission size to 260MB to support 2.5MB blocks during synchronization. Fixed the `MaxCoinsReached` error to be thrown when the target reaches the max input limit."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_46_0",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.46.0",
+      "tag_name": "v0.46.0",
+      "title": "v0.46.0",
+      "time_hint": "2025-08-02",
+      "published_at": "2025-08-02T22:44:23Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.46.0",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.46.0\nTag: v0.46.0; draft: False; prerelease: False; published_at: 2025-08-02T22:44:23Z; created_at: 2025-08-02T22:43:15Z\nRelease notes:\n## Version v0.46.0\n### Breaking\n- [3070](https://github.com/FuelLabs/fuel-core/pull/3070): Fix the `AssetDetails` endpoint to match GraphQL standards\n### Added\n- [3061](https://github.com/FuelLabs/fuel-core/pull/3061): Add tests showing that mints are correctly added and validated\n- [3074](https://github.com/FuelLabs/fuel-core/pull/3074): Added alpha version of new subscriptions for pre confirmations and new blocks.\nThese subscriptions are not final and may change in the future.\nSubscriptions are disabled by default and can be enabled by setting `--expensive-subscriptions` via CLI.\n### Fixed\n- [3071](https://github.com/FuelLabs/fuel-core/pull/3071): Use outputs instead of events to compress blocks\n## What's Changed\n* Update network versions on README by @github-actions[bot] in https://github.com/FuelLabs/fuel-core/pull/3067\n* Fix `AssetDetails` endpoint to match GraphQL standards by @MitchTurner in https://github.com/FuelLabs/fuel-core/pull/3070\n* Update network versions on README by @github-actions[bot] in https://github.com/FuelLabs/fuel-core/pull/3068\n* Add test showing mint added by @MitchTurner in https://github.com/FuelLabs/fuel-core/pull/3061\n* Use inputs/outputs instead of events to compress blocks by @MitchTurner in https://github.com/FuelLabs/fuel-core/pull/3071\n* Added new subscriptions for pre confirmations and blocks by @xgreenx in https://github.com/FuelLabs/fuel-core/pull/3074\n* Release v0.46.0 by @xgreenx in https://github.com/FuelLabs/fuel-core/pull/3075\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.45.1...v0.46.0",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.46.0, the project introduced a breaking change to fix the `AssetDetails` endpoint to match GraphQL standards. Added tests showing that mints are correctly added and validated, and an alpha version of new subscriptions for pre confirmations and new blocks (disabled by default, enabled via `--expensive-subscriptions`). Fixed block compression to use outputs instead of events."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_47_1",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.47.1",
+      "tag_name": "v0.47.1",
+      "title": "v0.47.1",
+      "time_hint": "2025-10-21",
+      "published_at": "2025-10-21T07:46:36Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.47.1",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.47.1\nTag: v0.47.1; draft: False; prerelease: False; published_at: 2025-10-21T07:46:36Z; created_at: 2025-10-21T07:45:24Z\nRelease notes:\n## Version 0.47.1\n### Breaking\n- [3014](https://github.com/FuelLabs/fuel-core/pull/3014): Extend `CoinConfig` to also support being configured with private keys.\n- [3050](https://github.com/FuelLabs/fuel-core/pull/3050): - Used a new `fuel-vm 0.64.0` release which brings breaking changes: https://github.com/FuelLabs/fuel-vm/releases/tag/v0.64.0\n- The default gas cost has been changed according to new optimizations and a new benchmark machine for a local node.\n- Receipts now are behind an `Arc` pointer to avoid unnecessary cloning. It affects transaction states and preconfirmations.\n- The `deploy_contract_with_id` now works with `[u8]` instead of the `Contract` type.\n- [3083](https://github.com/FuelLabs/fuel-core/pull/3083): Disable gossip subscription for transactions by default. It can be enabled using --subscribe-to-transactions flag.\n- [3094](https://github.com/FuelLabs/fuel-core/pull/3094): Fixed the bug where we charged for additional 40 entries on the GraphQL query\n- [3099](https://github.com/FuelLabs/fuel-core/pull/3099): Use hash-based `balance_root` and `state_root` fields in tx inputs and outputs\n- [3110](https://github.com/FuelLabs/fuel-core/pull/3110): Bump Rust version to 1.90.0 and fuel-vm to 0.65.0\n- [3117](https://github.com/FuelLabs/fuel-core/pull/3117): The algorithm to calculate the genesis state root and the balance root was changed to not use SMTs. This change doesn't affect mainnet, testnet, and devnet, because these networks didn't use any balances or storage slots in the state config. But the change is breaking for anyone who used them.\n### Added\n- [3023](https://github.com/FuelLabs/fuel-core/pull/3023): Add a method to wait for `gas_price` to finish syncing upon receiving a new block, and modify the test accordingly.\n- [3049](https://github.com/FuelLabs/fuel-core/pull/3049): Support awating of DA block height on pre defined block production.\n- [3050](https://github.com/FuelLabs/fuel-core/pull/3050): A new benchmarking group for `niop` operations in the `alu.rs` file. The changes add comprehensive benchmarks for various operations (`ADD`, `SUB`, `MUL`, `EXP`, `SLL`, `XNOR`) across different operand widths (`U8`, `U16`, `U32`)\n### Additions to benchmarking:\n* A new `niop` benchmarking group was added to evaluate the performance of narrow integer operations (`niop`) with different operand widths (`U8`, `U16`, `U32`).\n* Introduced the `niop_bench` macro to simplify the creation of benchmarks for operations like `ADD`, `SUB`, `MUL`, `EXP`, `SLL`, and `XNOR`.\n* Benchmarks iterate over generated operand pairs for each width, ensuring a variety of test cases for each operation.\n- [3059](https://github.com/FuelLabs/fuel-core/pull/3059): Enable debug logging in predicates and scripts using ECAL. Upgrades fuel-vm to 0.63.0.\n- [3085](https://github.com/FuelLabs/fuel-core/pull/3085): Add scaffolding for the new block aggregator service\n- [3092](https://github.com/FuelLabs/fuel-core/pull/3092): Add adapter for the block aggregator DB\n- [3096](https://github.com/FuelLabs/fuel-core/pull/3096): Add subscription manager for core service\n- [3097](https://github.com/FuelLabs/fuel-core/pull/3097): Add block source adapter using fuel storage and block importer\n### Changed\n- [3050](https://github.com/FuelLabs/fuel-core/pull/3050): Actualized benchmarks with the performance of the network. With this change we should be able to run benchmarks on nightly bases.\nAdded several optimizations to the code base:\n- Executor now reuses the memory instance between blocks production and validation avoiding allocations.\n- Receipts are not cloned anymore from the VM. Instead, they are extracted from the VM and stored ina s shared pointer.\n- The gas usage for script is discovered in a faster way.\n- `Create` transaction doesn't require a cloning of the contract b...",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.47.1, the project introduced breaking changes: extended `CoinConfig` to support private keys, used new `fuel-vm 0.64.0` with default gas cost changes and receipts behind `Arc`, changed `deploy_contract_with_id` to work with `[u8]`, disabled gossip subscription for transactions by default (enable with `--subscribe-to-transactions`), fixed a bug charging for additional 40 entries on GraphQL queries, used hash-based `balance_root` and `state_root` fields in tx inputs and outputs, bumped Rust version to 1.90.0 and fuel-vm to 0.65.0, and changed the algorithm for genesis state root and balance root to not use SMTs. Added a method to wait for `gas_price` to finish syncing, support for awaiting DA block height on pre-defined block production, a new benchmarking group for `niop` operations, debug logging in predicates and scripts using ECAL with fuel-vm 0.63.0, scaffolding for a new block aggregator service, an adapter for the block aggregator DB, a subscription manager for core service, and a block source adapter using fuel storage and block importer. Changed by actualizing benchmarks with network performance, adding optimizations (memory reuse, receipt extraction, faster gas discovery, avoiding contract bytecode cloning), and other improvements."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_47_2",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.47.2",
+      "tag_name": "v0.47.2",
+      "title": "v0.47.2",
+      "time_hint": "2026-03-06",
+      "published_at": "2026-03-06T00:57:06Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.47.2",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.47.2\nTag: v0.47.2; draft: False; prerelease: False; published_at: 2026-03-06T00:57:06Z; created_at: 2026-03-06T00:50:12Z\nRelease notes:\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.47.1...v0.47.2\n## What's Changed\n* Add fork resilience for Leader Lock by @MitchTurner in https://github.com/FuelLabs/fuel-core/pull/3210\n* Bump version by @MitchTurner in https://github.com/FuelLabs/fuel-core/pull/3219\n## Cherry Pick\n* Add lease port for PoA adapter to allow multiple producers to be live but only one leader. in https://github.com/FuelLabs/fuel-core/pull/3203\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.47.1...v0.47.2",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.47.2, the project added fork resilience for Leader Lock and added a lease port for PoA adapter to allow multiple producers to be live but only one leader."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_47_3",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.47.3",
+      "tag_name": "v0.47.3",
+      "title": "v0.47.3",
+      "time_hint": "2026-03-23",
+      "published_at": "2026-03-23T22:25:30Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.47.3",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.47.3\nTag: v0.47.3; draft: False; prerelease: False; published_at: 2026-03-23T22:25:30Z; created_at: 2026-03-23T22:18:35Z\nRelease notes:\n## What's Changed\n* bump version by @MitchTurner in https://github.com/FuelLabs/fuel-core/pull/3223\n* PoA quorum and HA failover fixes (to release/v0.47.3) by @Voxelot in https://github.com/FuelLabs/fuel-core/pull/3225\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.47.2...v0.47.3",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.47.3, the project included PoA quorum and HA failover fixes."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_48_0",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.48.0",
+      "tag_name": "v0.48.0",
+      "title": "v0.48.0",
+      "time_hint": "2026-04-01",
+      "published_at": "2026-04-01T14:15:30Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.48.0",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.48.0\nTag: v0.48.0; draft: False; prerelease: False; published_at: 2026-04-01T14:15:30Z; created_at: 2026-04-01T14:14:51Z\nRelease notes:\n## Version v0.48.0\n### Breaking\n- [3105](https://github.com/FuelLabs/fuel-core/pull/3105): Only the first RPC Url is now used to create a provider in relayer server; others are ignored.\n- [3141](https://github.com/FuelLabs/fuel-core/pull/3141): Fix the index of the transaction inside the pre-confirmation during native block production.\n- [3217](https://github.com/FuelLabs/fuel-core/pull/3217): Bump dependencies and the rust version to 1.93.0\n### Added\n- [3100](https://github.com/FuelLabs/fuel-core/pull/3100): Add protobuf api for querying the block aggregator\n- [3101](https://github.com/FuelLabs/fuel-core/pull/3101): Integrate new block aggregation RPC into Fuel Core\n- [3106](https://github.com/FuelLabs/fuel-core/pull/3106): Add adapter for storing blocks on AWS S3 bucket\n- [3115](https://github.com/FuelLabs/fuel-core/pull/3115): Add quorum provider.\n- [3116](https://github.com/FuelLabs/fuel-core/pull/3116): Complete coverage of proto block types to cover all cases\n- [3127](https://github.com/FuelLabs/fuel-core/pull/3127): - Introduced `FailoverTransport`, a resilient transport layer that retries GraphQL queries across multiple endpoints.\n- [3131](https://github.com/FuelLabs/fuel-core/pull/3131): Integrated the backup tool into fuel-core as a `archive` subcommand.\n- [3155](https://github.com/FuelLabs/fuel-core/pull/3155): Add integration tests for preconfirmation transaction indices to verify correct indexing for single and multiple transactions in a block.\n- [3156](https://github.com/FuelLabs/fuel-core/pull/3156): Add comprehensive integration tests for FuelClient failover functionality covering both GraphQL queries and subscriptions.\n### Changed\n- [3105](https://github.com/FuelLabs/fuel-core/pull/3105): Migrated relayer service and related tests from ethers-rs to alloy-rs.\n- [3133](https://github.com/FuelLabs/fuel-core/pull/3133): Include `tx_id` into `SqueezedOut` reason to simplify debugging.\n- [3134](https://github.com/FuelLabs/fuel-core/pull/3134): `stage` and `data` fields made public in `DataSource` struct.\n- [3138](https://github.com/FuelLabs/fuel-core/pull/3138): Migrate CI from BuildJet to WarpBuild runners, update GitHub Actions to latest versions, and use pre-built binaries for cargo-nextest and cargo-audit.\n- [3182](https://github.com/FuelLabs/fuel-core/pull/3182): Updated fuel-vm to 0.66 and added benchmark for the new instructions\n- [3203](https://github.com/FuelLabs/fuel-core/pull/3203): Add lease port for PoA adapter to allow multiple producers to be live but only one leader.\n- [3225](https://github.com/FuelLabs/fuel-core/pull/3225): PoA quorum and HA failover fixes: Redis leader lease adapter improvements, write_block.lua HEIGHT_EXISTS check, sub-quorum block repair, Prometheus metrics, and chaos test harness.\n### Fixed\n- [3112](https://github.com/FuelLabs/fuel-core/pull/3112): Use Protobuf types in serialization rather than opaque bytes\n- [3124](https://github.com/FuelLabs/fuel-core/pull/3124): Using Debian Bookworm as the runtime base image for Docker builds. This is the same base image as the Rust builder images. Keeping the images in-sync will help prevent runtime dependency mismatch issues.\n- [3128](https://github.com/FuelLabs/fuel-core/pull/3128): Better signal handling (SIGABRT, SIGQUIT, SIGHUP).\n- [3148](https://github.com/FuelLabs/fuel-core/pull/3148): Add `aloc` to ignored words, to fix typo errors in CI.\n- [3150](https://github.com/FuelLabs/fuel-core/pull/3150): Ignore rustsec advisories `RUSTSEC-2025-0118`\n- [3159](https://github.com/FuelLabs/fuel-core/pull/3159): Fix `FuelClient::with_urls` to normalize URLs with `/v1/graphql` path, matching the behavior of `FuelClient::new`.\n- [3172](https://github.com/FuelLabs/fuel-core/pull/3172): Validate TxPool transactions against next block height instead of current block heig...",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.48.0, the project introduced breaking changes: only the first RPC URL is used for relayer server provider, fixed the index of transactions inside pre-confirmations during native block production, and bumped dependencies and Rust version to 1.93.0. Added a protobuf API for querying the block aggregator, integrated new block aggregation RPC into Fuel Core, added an adapter for storing blocks on AWS S3 bucket, added a quorum provider, completed coverage of proto block types, introduced `FailoverTransport` for retrying GraphQL queries across multiple endpoints, integrated a backup tool as an `archive` subcommand, added integration tests for preconfirmation transaction indices, and added integration tests for FuelClient failover functionality. Changed by migrating relayer service and tests from ethers-rs to alloy-rs, including `tx_id` into `SqueezedOut` reason, making `stage` and `data` fields public in `DataSource`, migrating CI from BuildJet to WarpBuild runners, updating fuel-vm to 0.66 with new instruction benchmarks, adding lease port for PoA adapter, and applying PoA quorum and HA failover fixes. Fixed serialization to use Protobuf types, using Debian Bookworm as Docker runtime base image, better signal handling, typo errors in CI, ignored rustsec advisories, fixed `FuelClient::with_urls` to normalize URLs, and validated TxPool transactions against next block height."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_47_4",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.47.4",
+      "tag_name": "v0.47.4",
+      "title": "v0.47.4",
+      "time_hint": "2026-04-17",
+      "published_at": "2026-04-17T22:39:53Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.47.4",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.47.4\nTag: v0.47.4; draft: False; prerelease: False; published_at: 2026-04-17T22:39:53Z; created_at: 2026-04-17T22:27:56Z\nRelease notes:\n### Changed\n- [3138](https://github.com/FuelLabs/fuel-core/pull/3138): Migrate CI from BuildJet to WarpBuild runners, update GitHub Actions to latest versions, and use pre-built binaries for cargo-nextest and cargo-audit.\n- [3203](https://github.com/FuelLabs/fuel-core/pull/3203): Add lease port for PoA adapter to allow multiple producers to be live but only one leader.\n- [3225](https://github.com/FuelLabs/fuel-core/pull/3225): PoA quorum and HA failover fixes: Redis leader lease adapter improvements, write_block.lua HEIGHT_EXISTS check, sub-quorum block repair, Prometheus metrics, and chaos test harness.\n### Fixed\n- [3124](https://github.com/FuelLabs/fuel-core/pull/3124): Using Debian Bookworm as the runtime base image for Docker builds. This is the same base image as the Rust builder images. Keeping the images in-sync will help prevent runtime dependency mismatch issues.\n- [3264](https://github.com/FuelLabs/fuel-core/pull/3264): Rollback stale preconfirmations in the mempool when the canonical block at that height omits the preconfirmed transactions, restoring spent inputs and removing dependent transactions.\n- [3271](https://github.com/FuelLabs/fuel-core/pull/3271): fix: group reconciliation votes by block_id to resolve same-block deadlock (cherry-picked).\n- [3274](https://github.com/FuelLabs/fuel-core/pull/3274): fix: prevent PoA leader deadlock after reconciliation import (cherry-picked).\n- [3273](https://github.com/FuelLabs/fuel-core/pull/3273): improve redis publish performance (cherry-picked).\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.47.3...v0.47.4",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.47.4, the project changed by migrating CI from BuildJet to WarpBuild runners, adding lease port for PoA adapter, and applying PoA quorum and HA failover fixes. Fixed by using Debian Bookworm as Docker runtime base image, rolling back stale preconfirmations in the mempool, grouping reconciliation votes by block_id, preventing PoA leader deadlock after reconciliation import, and improving redis publish performance."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_48_1",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.48.1",
+      "tag_name": "v0.48.1",
+      "title": "v0.48.1",
+      "time_hint": "2026-04-30",
+      "published_at": "2026-04-30T02:28:06Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.48.1",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.48.1\nTag: v0.48.1; draft: False; prerelease: False; published_at: 2026-04-30T02:28:06Z; created_at: 2026-04-30T02:27:14Z\nRelease notes:\n## Version v0.48.1\n### Changed\n- [3243](https://github.com/FuelLabs/fuel-core/pull/3243): Migrating from standard Debian slim base Docker images to GCR Distroless images.\n- [3255](https://github.com/FuelLabs/fuel-core/pull/3255): Adds client & server support for the existing protobuf HTTP-based remote RPC block accessor.\n- [3259](https://github.com/FuelLabs/fuel-core/pull/3259): Bump wasmtime to 0.43.1\n### Fixed\n- [3258](https://github.com/FuelLabs/fuel-core/pull/3258): Fix backward-compatiblity of GraphQL queries for pre-0.48.0 versions\n- [3261](https://github.com/FuelLabs/fuel-core/pull/3261): Fix PoA leader deadlock after reconciliation import where `ensure_synced()` blocked forever because `execute_and_commit` marked reconciliation blocks as `Source::Network`, causing the SyncTask to transition to `NotSynced`.\n- [3264](https://github.com/FuelLabs/fuel-core/pull/3264): Rollback stale preconfirmations in the mempool when the canonical block at that height omits the preconfirmed transactions, restoring spent inputs and removing dependent transactions.\n- [3269](https://github.com/FuelLabs/fuel-core/pull/3269): Fix PoA reconciliation deadlock when the same block exists on all Redis nodes but with different epochs. `unreconciled_blocks` now groups votes by `block_id` only (tracking max epoch as tiebreaker), so identical blocks written during re-promotion storms count toward quorum.\n- [3272](https://github.com/FuelLabs/fuel-core/pull/3272): Improve performance of redis block publish by making more parallel and optimizing the lua code\n- [3278](https://github.com/FuelLabs/fuel-core/pull/3278): Fix mainnet block-production hang when a single ElastiCache leader-lock node enters a half-alive state. Bumps `redis` to 1.2 (the older 0.27 client did not apply the connect timeout to the post-connect handshake pipeline) and short-circuits `publish_block_on_all_nodes` on quorum so a stuck per-node thread can no longer wedge the publish path.\n- [3281](https://github.com/FuelLabs/fuel-core/pull/3281): Add forward-compatibility for old clients and new fuel-core\n## [Version 0.48.0]\n### Breaking\n- [3105](https://github.com/FuelLabs/fuel-core/pull/3105): Only the first RPC Url is now used to create a provider in relayer server; others are ignored.\n- [3141](https://github.com/FuelLabs/fuel-core/pull/3141): Fix the index of the transaction inside the pre-confirmation during native block production.\n- [3217](https://github.com/FuelLabs/fuel-core/pull/3217): Bump dependencies and the rust version to 1.93.0\n### Added\n- [3100](https://github.com/FuelLabs/fuel-core/pull/3100): Add protobuf api for querying the block aggregator\n- [3101](https://github.com/FuelLabs/fuel-core/pull/3101): Integrate new block aggregation RPC into Fuel Core\n- [3106](https://github.com/FuelLabs/fuel-core/pull/3106): Add adapter for storing blocks on AWS S3 bucket\n- [3115](https://github.com/FuelLabs/fuel-core/pull/3115): Add quorum provider.\n- [3116](https://github.com/FuelLabs/fuel-core/pull/3116): Complete coverage of proto block types to cover all cases\n- [3127](https://github.com/FuelLabs/fuel-core/pull/3127): - Introduced `FailoverTransport`, a resilient transport layer that retries GraphQL queries across multiple endpoints.\n- [3131](https://github.com/FuelLabs/fuel-core/pull/3131): Integrated the backup tool into fuel-core as a `archive` subcommand.\n- [3155](https://github.com/FuelLabs/fuel-core/pull/3155): Add integration tests for preconfirmation transaction indices to verify correct indexing for single and multiple transactions in a block.\n- [3156](https://github.com/FuelLabs/fuel-core/pull/3156): Add comprehensive integration tests for FuelClient failover functionality covering both GraphQL queries and subscriptions.\n### Changed\n- [3105](https://github.com/FuelLabs/fuel-core/pull/3105): Mi...",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.48.1, the project changed by migrating to GCR Distroless Docker images, adding client and server support for protobuf HTTP-based remote RPC block accessor, and bumping wasmtime to 0.43.1. Fixed backward-compatibility of GraphQL queries for pre-0.48.0 versions, PoA leader deadlock after reconciliation import, rollback of stale preconfirmations in the mempool, PoA reconciliation deadlock when the same block exists on all Redis nodes with different epochs, improved performance of redis block publish, fixed mainnet block-production hang when a single ElastiCache leader-lock node enters a half-alive state, and added forward-compatibility for old clients and new fuel-core."
+    },
+    {
+      "memory_node_id": "FuelLabs__fuel_core__release__v0_48_2",
+      "repo": "FuelLabs/fuel-core",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.48.2",
+      "tag_name": "v0.48.2",
+      "title": "v0.48.2",
+      "time_hint": "2026-05-17",
+      "published_at": "2026-05-17T18:43:58Z",
+      "source_url": "https://github.com/FuelLabs/fuel-core/releases/tag/v0.48.2",
+      "raw_text": "Repository: FuelLabs/fuel-core\nRelease: v0.48.2\nTag: v0.48.2; draft: False; prerelease: False; published_at: 2026-05-17T18:43:58Z; created_at: 2026-05-17T17:49:50Z\nRelease notes:\n## Version v0.48.2\n### Fixed\n- [3289](https://github.com/FuelLabs/fuel-core/pull/3289): shutdown services in parallel to stop poa promptly\n- [3290](https://github.com/FuelLabs/fuel-core/pull/3290): Use semantic JSON comparison in QuorumTransport\n- [3301](https://github.com/FuelLabs/fuel-core/pull/3301): disable coredumps in the fuel-core binary so the rocksdb atexit SIGABRT does not block pod restart for tens of seconds; set `FUEL_CORE_ENABLE_COREDUMP=1` to opt back in.\n## What's Changed\n* Fix a typo in changelog by @Dentosal in https://github.com/FuelLabs/fuel-core/pull/3291\n* Ignore audits blocking CI by @Dentosal in https://github.com/FuelLabs/fuel-core/pull/3297\n* Use semantic JSON comparison in QuorumTransport by @Dentosal in https://github.com/FuelLabs/fuel-core/pull/3290\n* Update network versions on README by @github-actions[bot] in https://github.com/FuelLabs/fuel-core/pull/3299\n* bugfix: improve shutdown and stop PoA sooner by @MitchTurner in https://github.com/FuelLabs/fuel-core/pull/3289\n* disable coredumps in fuel-core-bin to keep pod restarts fast by @xgreenx in https://github.com/FuelLabs/fuel-core/pull/3301\n* Release v0.48.2 by @xgreenx in https://github.com/FuelLabs/fuel-core/pull/3302\n**Full Changelog**: https://github.com/FuelLabs/fuel-core/compare/v0.48.1...v0.48.2",
+      "memory_unit_text": "In the FuelLabs/fuel-core release v0.48.2, the project fixed shutdown services to run in parallel to stop PoA promptly, used semantic JSON comparison in QuorumTransport, and disabled coredumps in the fuel-core binary to prevent RocksDB atexit SIGABRT from blocking pod restarts (opt back in with `FUEL_CORE_ENABLE_COREDUMP=1`)."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the FuelLabs/fuel-core releases, which release adds support for posting blocks to the shared sequencer?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.40.0"
+        },
+        {
+          "option_id": "B",
+          "text": "v0.40.1"
+        },
+        {
+          "option_id": "C",
+          "text": "v0.40.2"
+        },
+        {
+          "option_id": "D",
+          "text": "v0.40.3"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v0.40.1",
+      "source_chunk_ids": [
+        "FuelLabs__fuel_core__release__v0_40_1"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "FuelLabs__fuel_core__release__v0_40_1",
+          "answer_text": "Added support for posting blocks to the shared sequencer."
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the FuelLabs/fuel-core releases, how does the change to the `balance` endpoint in v0.44.0 differ from the change to the `AssetDetails` endpoint in v0.46.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.44.0 changes the return type from u64 to u128, while v0.46.0 fixes the endpoint to match GraphQL standards."
+        },
+        {
+          "option_id": "B",
+          "text": "v0.44.0 adds a new `balance` endpoint, while v0.46.0 removes the `AssetDetails` endpoint."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only update the underlying fuel-vm dependency without endpoint changes."
+        },
+        {
+          "option_id": "D",
+          "text": "v0.44.0 deprecates the `balance` endpoint, while v0.46.0 introduces the `AssetDetails` endpoint."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v0.44.0 changes the return type from u64 to u128, while v0.46.0 fixes the endpoint to match GraphQL standards.",
+      "source_chunk_ids": [
+        "FuelLabs__fuel_core__release__v0_44_0",
+        "FuelLabs__fuel_core__release__v0_46_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "FuelLabs__fuel_core__release__v0_44_0",
+          "answer_text": "Changed return type of `balance` endpoint from `u64` to `u128`"
+        },
+        {
+          "memory_node_id": "FuelLabs__fuel_core__release__v0_46_0",
+          "answer_text": "Fix the `AssetDetails` endpoint to match GraphQL standards"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the FuelLabs/fuel-core release window, order the following release-content states from earliest to latest: (1) a release that adds a GraphQL complexity histogram to metrics and introduces a `graphql-number-of-threads` CLI flag, (2) a release that adds support for posting blocks to the shared sequencer, (3) a release that hardcodes the timestamp of the genesis block, (4) a release that adds txpool stats to the node_info GraphQL endpoint.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "FuelLabs__fuel_core__release__v0_40_0",
+        "FuelLabs__fuel_core__release__v0_40_1",
+        "FuelLabs__fuel_core__release__v0_40_2",
+        "FuelLabs__fuel_core__release__v0_40_3"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "FuelLabs__fuel_core__release__v0_40_0",
+          "answer_text": "Add GraphQL complexity histogram to metrics ... Added a new CLI flag `graphql-number-of-threads`"
+        },
+        {
+          "memory_node_id": "FuelLabs__fuel_core__release__v0_40_1",
+          "answer_text": "Added support for posting blocks to the shared sequencer."
+        },
+        {
+          "memory_node_id": "FuelLabs__fuel_core__release__v0_40_2",
+          "answer_text": "Hardcode the timestamp of the genesis block."
+        },
+        {
+          "memory_node_id": "FuelLabs__fuel_core__release__v0_40_3",
+          "answer_text": "Add txpool stats to the node_info GraphQL endpoint"
+        }
+      ]
+    }
+  ]
+}

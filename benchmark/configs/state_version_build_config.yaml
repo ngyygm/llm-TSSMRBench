@@ -1,0 +1,101 @@
+dataset_name: state_chain_benchmark_en
+language: en
+dataset_root: benchmark/data/state_chain_bench/en
+
+llm:
+  base_url: "https://api.deepseek.com"
+  api_key: "sk-a45943a4ef8b476ea164c79554497460"
+  generation_model: "deepseek-v4-pro"
+  evaluation_model: "deepseek-v4-pro"
+  temperature: 0.0
+  max_tokens: 12000
+  timeout: 180
+  extra_body:
+    thinking:
+      type: "disabled"
+
+generation_runtime:
+  concurrent_requests: 3
+  retry_max: 3
+  retry_delay: 5
+
+question_count:
+  min_per_chain: 8
+  max_per_chain: 12
+  target_per_chain: 10
+
+hard_limits:
+  min_nodes_by_domain:
+    github_evolution: 8
+    narrative_evolution: 8
+  max_nodes_by_domain:
+    github_evolution: 20
+    narrative_evolution: 20
+  min_text_units_by_language:
+    en: 30
+    zh: 80
+  distribution_tolerance: 0.05
+
+distribution_targets:
+  difficulty:
+    low: 0.6
+    high: 0.4
+  answerability:
+    answerable: 1.0
+  answer_format:
+    multiple_choice: 0.6
+    boolean: 0.2
+    abstractive: 0.2
+  question_family:
+    single_version: 0.6
+    multi_version: 0.4
+
+canonical_abstentions:
+  multiple_choice: The retrieved memory is insufficient to choose an answer.
+  boolean: The retrieved memory is insufficient to make a judgment.
+  abstractive: Insufficient information to support reasoning.
+
+prompts:
+  chain_generation:
+    github_evolution: benchmark/prompts/state_version/state_chain_generation_github_en.txt
+    narrative_evolution: benchmark/prompts/state_version/state_chain_generation_narrative_en.txt
+  chain_review:
+    github_evolution: benchmark/prompts/state_version/state_chain_review_en.txt
+    narrative_evolution: benchmark/prompts/state_version/state_chain_review_en.txt
+  qa_generation:
+    github_evolution: benchmark/prompts/state_version/state_chain_qa_generation_github_en.txt
+    narrative_evolution: benchmark/prompts/state_version/state_chain_qa_generation_narrative_en.txt
+  qa_review: benchmark/prompts/state_version/state_chain_qa_review_en.txt
+
+phases:
+  smoke:
+    total_chains: 8
+    domain_counts:
+      github_evolution: 5
+      narrative_evolution: 3
+    splits:
+      pilot:
+        github_evolution: 5
+        narrative_evolution: 3
+    target_questions_per_chain: 10
+  formal:
+    total_chains: 400
+    domain_counts:
+      github_evolution: 200
+      narrative_evolution: 200
+    splits:
+      train:
+        github_evolution: 120
+        narrative_evolution: 120
+      dev:
+        github_evolution: 40
+        narrative_evolution: 40
+      test:
+        github_evolution: 40
+        narrative_evolution: 40
+    target_questions_per_chain: 10
+    recommended_question_plan:
+      low_answerable: 6
+      high_answerable: 4
+      low_unanswerable: 0
+      high_unanswerable: 0

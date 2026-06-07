@@ -1,0 +1,525 @@
+{
+  "prototype_id": "glanceapp__glance_release_window",
+  "domain": "github_release_evolution",
+  "repo": "glanceapp/glance",
+  "source_type": "release_note",
+  "window_title": "glanceapp/glance recent release evolution",
+  "window_summary": "This window tracks the recent glanceapp/glance release stream from v0.5.0-beta.1 through v0.8.5, covering new widgets, configuration enhancements, and bug fixes across multiple minor and patch versions.",
+  "chunks": [
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_5_0_beta_1",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.5.0-beta.1",
+      "tag_name": "v0.5.0-beta.1",
+      "title": "v0.5.0-beta.1",
+      "time_hint": "2024-05-18",
+      "published_at": "2024-05-18T10:09:17Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.5.0-beta.1",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.5.0-beta.1\nTag: v0.5.0-beta.1; draft: False; prerelease: True; published_at: 2024-05-18T10:09:17Z; created_at: 2024-05-18T10:05:55Z\nRelease notes:\n## What's Changed\n* Adds reporting serve errors by @brian-petersen in https://github.com/glanceapp/glance/pull/74\n* Add web app support by @medinnna in https://github.com/glanceapp/glance/pull/49\n* Add 24-hour time format support for weather by @tarikcoskun in https://github.com/glanceapp/glance/pull/59\n* Add custom sorting to the twitch channels widget by @fawni in https://github.com/glanceapp/glance/pull/76\n**Full Changelog**: https://github.com/glanceapp/glance/compare/v0.4.0...v0.5.0-beta.1",
+      "memory_unit_text": "In the glanceapp/glance release v0.5.0-beta.1, the project adds reporting of server errors, web app support, 24-hour time format support for the weather widget, and custom sorting for the twitch channels widget."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_5_0",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.5.0",
+      "tag_name": "v0.5.0",
+      "title": "v0.5.0",
+      "time_hint": "2024-06-02",
+      "published_at": "2024-06-02T19:20:29Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.5.0",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.5.0\nTag: v0.5.0; draft: False; prerelease: False; published_at: 2024-06-02T19:20:29Z; created_at: 2024-06-02T19:17:50Z\nRelease notes:\nYou can discuss this release [here](https://github.com/glanceapp/glance/discussions/122).\nComplete information about each new widget and property can be found in the [configuration docs](https://github.com/glanceapp/glance/blob/main/docs/configuration.md).\n## New\n### Search widget\n![search-widget-preview](https://github.com/glanceapp/glance/assets/7613769/5b0e1290-b154-4de5-898c-db24c22e36b1)\n![search-widget-bangs-preview](https://github.com/glanceapp/glance/assets/7613769/8e95dc27-3b33-4b48-b03d-0f60207cd781)\n```yaml\n- type: search\nsearch-engine: duckduckgo\nbangs:\n- title: YouTube\nshortcut: \"!yt\"\nurl: https://www.youtube.com/results?search_query={QUERY}\n```\nYes, there's support for custom bangs! If you don't know what bangs are, you can learn about them [here](https://duckduckgo.com/bangs). In short, you can easily specify where to search depending on how your query starts. With the above configuration, the query \"!yt good mythical morning\" will search in YouTube.\nYou can also use a custom search engine:\n```yaml\n- type: search\nsearch-engine: https://whoogle.your-domain.com/search?q={QUERY}\n```\n> [!TIP]\n>\n> Pressing <kbd>S</kbd> anywhere on the page will focus the search input.\n>\n> Pressing <kbd>Enter</kbd> will show search results in the same tab.\n>\n> Pressing <kbd>Ctrl</kbd> + <kbd>Enter</kbd> will show search results in a new tab.\n(thanks for contributing @chand1012)\n### Clock widget\n![clock-widget-preview](https://github.com/glanceapp/glance/assets/7613769/2a2423cf-591e-415b-8959-f2e184451ccf)\n```yaml\n- type: clock\nhour-format: 24h\ntimezones:\n- timezone: Europe/Paris\nlabel: Paris\n- timezone: America/New_York\nlabel: New York\n- timezone: Asia/Tokyo\nlabel: Tokyo\n```\nThe timezones are optional.\n(thanks for contributing @yardenshoham)\n### Lobsters widget\n![lobsters-widget-preview](https://github.com/glanceapp/glance/assets/7613769/697ae1ae-f8f5-40f1-9ecd-e0254e5b9634)\n```yaml\n- type: lobsters\nsort-by: hot\n```\n(thanks for contributing @jonasknobloch)\n### changedetection.io widget\n![change-detection-widget-preview](https://github.com/glanceapp/glance/assets/7613769/b914ab23-9b87-4a8e-95f7-9f9ca5ac60bf)\n```yaml\n- type: change-detection\ninstance-url: changedetection.your-domain.com\ntoken: <your API token>\n```\n(thanks for contributing @knhash)\n### Extension widget\nWhile I will continue adding new widgets, I won't be able to add every single requested widget. To alleviate this, if you know how to setup an HTTP server and a bit of HTML and CSS, you can now develop your own widgets:\n![extension-example](https://github.com/glanceapp/glance/assets/7613769/732dbb6e-4e73-4d5f-8aba-2576c71e6ce4)\n```yaml\n- type: extension\nurl: http://localhost:9001\nallow-potentially-dangerous-html: true\nparameters:\nname: David\n```\nRegardless of whether you know PHP:\n```php\n<?php\nheader('Widget-Title: My first extension');\nheader('Widget-Content-Type: html');\n?>\n<p>Hello, <span class=\"color-primary\"><?= $_GET['name'] ?>!</span></p>\n```\nJavaScript:\n```js\nconst express = require('express');\nconst app = express();\napp.get('/', (req, res) => {\nres.set('Widget-Title', 'My first extension');\nres.set('Widget-Content-Type', 'html');\nres.send(`<p>Hello, <span class=\"color-primary\">${req.query.name}!</span></p>`);\n});\napp.listen(9001);\n```\nOr any other programming language. You can learn more about building your own extensions [here](https://github.com/glanceapp/glance/blob/main/docs/extensions.md).\nNote that the API for this is not set in stone and may change in the future.\n#### What's with the scary looking `allow-potentially-dangerous-html`?\nIn its current state, the extension widget is meant to be used by developers who want to add their own widgets to Glance but may not want to build and deploy their own fork (or may not know/want to learn Go). As we know, with great power comes great resp...",
+      "memory_unit_text": "In the glanceapp/glance release v0.5.0, new widgets are introduced: a search widget with custom bangs and search engine support, a clock widget with optional timezones, a lobsters widget, a changedetection.io widget, and an extension widget for custom widgets via HTTP server."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_6_0_beta_1",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.6.0-beta.1",
+      "tag_name": "v0.6.0-beta.1",
+      "title": "v0.6.0-beta.1",
+      "time_hint": "2024-07-16",
+      "published_at": "2024-07-16T09:18:01Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.6.0-beta.1",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.6.0-beta.1\nTag: v0.6.0-beta.1; draft: False; prerelease: True; published_at: 2024-07-16T09:18:01Z; created_at: 2024-07-15T20:59:51Z\nRelease notes:\nMore information about the configuration for this release can be found [here](https://github.com/glanceapp/glance/blob/release/v0.6.0/docs/configuration.md).\n## New\n* Added `new-tab` property to the search widget which opens results in a new tab by default (thanks @ralphocdol)\n* Added `css-class` property for every widget which allows setting custom CSS classes for that specific widget (thanks @DickenSerm)\n* Added `instance-url` and `custom-url` properties to the lobsters widget (thanks @bersace)\n* Added `autofocus` property to the search widget which when set to `true` automatically focuses the search on page load (thanks @tversteeg)\n* Added `title-url` property for every widget which allows setting a custom link for the widget's title\n* Added default title URLs for `hacker-news`, `lobsters`, `reddit`, `twitch-channels` and `twitch-top-games` widgets\n## Fixes\n* Fixed an issue in the releases widget where latest releases sometimes couldn't be fetched (thanks @wfg)\n* Fixed search widget text color when using a light theme (thanks @knhash)\n* Fixed an issue in the RSS widget for feeds without titles so that item descriptions are used instead (thanks @ssrtw)\n* Fixed RSS feeds not having thumbnails in a lot of cases (thanks @Generator)",
+      "memory_unit_text": "In the glanceapp/glance release v0.6.0-beta.1, the search widget gains a new-tab property and an autofocus property; a css-class property is added for every widget; the lobsters widget gets instance-url and custom-url properties; a title-url property is added for every widget; default title URLs are added for hacker-news, lobsters, reddit, twitch-channels and twitch-top-games widgets; and several fixes are made for the releases, search, and RSS widgets."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_6_0_beta_2",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.6.0-beta.2",
+      "tag_name": "v0.6.0-beta.2",
+      "title": "v0.6.0-beta.2",
+      "time_hint": "2024-08-07",
+      "published_at": "2024-08-07T18:05:20Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.6.0-beta.2",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.6.0-beta.2\nTag: v0.6.0-beta.2; draft: False; prerelease: True; published_at: 2024-08-07T18:05:20Z; created_at: 2024-08-07T18:03:12Z\nRelease notes:\nMore information about the configuration for this release can be found [here](https://github.com/glanceapp/glance/blob/release/v0.6.0/docs/configuration.md).\n## New\n* Added `group` widget that allows grouping multiple widgets into one via tabs (thanks @VeryEvilHumna)\n* [Monitor widget] Added `check-url` property which allows having a different URL that gets pinged versus the one in the UI (thanks @MrExplode)\n* Added `width` property for each page with options `slim` and `wide`\n* Added `base-url` property to `server` which allows serving Glance behind a proxy and under a directory rather than a subdomain (thanks @CremaLuca)\n* Added `hide-desktop-navigation` property for each page which hides the desktop navigation for that page when set to `true`\n## Changed\n* [Videos widget] Shorts from YouTube channels are now filtered by default, to include them again use `include-shorts: true` (thanks @3rd)\n## Fixes\n* Fixed crash when using `custom-css-file` (thanks @DVDAndroid)\n* [Twitch channels widget] Fixed Twitch streams that don't have a category (thanks @DVDAndroid)",
+      "memory_unit_text": "In the glanceapp/glance release v0.6.0-beta.2, a group widget is added that allows grouping multiple widgets into one via tabs; the monitor widget gains a check-url property; a width property is added for each page with slim and wide options; a base-url property is added to the server configuration; a hide-desktop-navigation property is added for each page; the videos widget now filters YouTube shorts by default; and fixes are made for custom-css-file crashes and twitch channels without categories."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_5_1",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.5.1",
+      "tag_name": "v0.5.1",
+      "title": "v0.5.1",
+      "time_hint": "2024-08-09",
+      "published_at": "2024-08-09T15:13:33Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.5.1",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.5.1\nTag: v0.5.1; draft: False; prerelease: False; published_at: 2024-08-09T15:13:33Z; created_at: 2024-08-09T15:08:30Z\nRelease notes:\nThis is a small release that backports fixes from beta v0.6.0\n## Fixes\n* [Releases widget] fixed missing latest releases for repositories with lots of pre-releases (thanks @wfg)\n* [RSS widget] fixed missing thumbnails in a lot of scenarios\n* [Search widget] fixed input color when using light theme",
+      "memory_unit_text": "In the glanceapp/glance release v0.5.1, fixes are backported from the v0.6.0 beta: the releases widget now correctly fetches latest releases for repositories with many pre-releases, the RSS widget fixes missing thumbnails, and the search widget fixes input color when using a light theme."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_6_0",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.6.0",
+      "tag_name": "v0.6.0",
+      "title": "v0.6.0",
+      "time_hint": "2024-09-08",
+      "published_at": "2024-09-08T03:30:55Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.6.0",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.6.0\nTag: v0.6.0; draft: False; prerelease: False; published_at: 2024-09-08T03:30:55Z; created_at: 2024-09-08T03:18:11Z\nRelease notes:\nMore information about each new widget and property can be found in the [configuration docs](https://github.com/glanceapp/glance/blob/main/docs/configuration.md).\n## New\n### Preconfigured pages\nThere's a [new document with a couple of example preconfigured pages](https://github.com/glanceapp/glance/blob/main/docs/preconfigured-pages.md) for those who are looking for inspiration or just want to copy-paste something without going through the effort of configuring entire pages from scratch. Pull requests are welcome if you'd like to share your page configs!\n### Group widget\n![group-widget](https://github.com/user-attachments/assets/c6177478-5dfb-438e-a17e-b3ac98593ef7)\n```yaml\n- type: group\nwidgets:\n- type: reddit\nsubreddit: gamingnews\nshow-thumbnails: true\n- type: reddit\nsubreddit: games\nshow-thumbnails: true\n- type: reddit\nsubreddit: pcgaming\nshow-thumbnails: true\n```\nGrouping widgets of any type is possible, not just reddit. It also works for both `small` and `full` columns! The only exception is that you can't have a group within a group, for those who were going to be cheeky and try that.\n(thanks @VeryEvilHumna #169)\n### DNS stats widget\n![dns-stats-widget](https://github.com/user-attachments/assets/94e526c6-0f94-4ed9-b39b-cb99c15f1bba)\nSupports showing stats from both AdGuard Home and Pi-hole.\n```yaml\n- type: dns-stats\nservice: adguard\nurl: https://adguard.domain.com/\nusername: ...\npassword: ...\n```\n```yaml\n- type: dns-stats\nservice: pihole\nurl: https://pihole.domain.com/\ntoken: ...\n```\n### Branding customization\nYou can now change things such as the logo, favicon, footer, etc through the new top level `branding` property:\n```yaml\nbranding:\n# With support for HTML\ncustom-footer: |\n<p>Powered by <a href=\"https://github.com/glanceapp/glance\">Glance</a></p>\n# Or remove the footer entirely\nhide-footer: true\nlogo-url: /assets/logo.png\nfavicon-url: /assets/logo.png\n```\n(thanks @realdavidops #75)\n### Releases widget now supports showing releases from Docker Hub and GitLab\n![releases-widget](https://github.com/user-attachments/assets/ea9d6800-57aa-4941-9e86-af053e6473a1)\nTo help distinguish the source of each repository, there is also a new `show-source-icon` property:\n```yaml\n- type: releases\nshow-source-icon: true\nrepositories:\n- go-gitea/gitea\n- jellyfin/jellyfin\n- glanceapp/glance\n- gitlab:fdroid/fdroidclient\n- dockerhub:gotify/server\n```\n(thanks @bigsk1 #120 & @Fumesover #165)\n### New customization properties for pages\nYou can now change the maximum width of pages with the new `width` property:\n```yaml\n- name: Startpage\nwidth: slim\n```\nPossible options are `slim` and `wide`. The maximum width for each is:\n* default: `1600px`\n* slim: `1100px`\n* wide: `1920px`\n**Note that when set to `slim`, the maximum number of columns you can have goes down from 3 to 2.**\nYou can now hide the desktop navigation for individual pages, useful for creating minimalsitic pages:\n```yaml\n- name: Startpage\nhide-desktop-navigation: true\n```\nYou can now vertically center the content on the page:\n```yaml\n- name: Startpage\ncenter-vertically: true\n```\nCombining all 3 properties can give you a pretty clean startpage:\n![startpage-preview](https://github.com/user-attachments/assets/430790d4-c46c-4ffb-a8b0-c1d13b9fd076)\n_The config for this page is available in the [preconfigured pages doc](https://github.com/glanceapp/glance/blob/main/docs/preconfigured-pages.md)_.\n### New `base-url` property under `server`\nThis allows you to host Glance behind a reverse proxy and under a path rather than having to give Glance its own subdomain:\n```yaml\nserver:\nbase-url: /glance\n```\nWithout `base-url`:\n```\nhttps://glance.yourdomain.com/\n```\nWith `base-url` (assuming you have your reverse proxy setup correctly):\n```\nhttps://yourdomain.com/glance/\n```\n(thanks @fenying #125 & @CremaLuca #167)\n### New `co...",
+      "memory_unit_text": "In the glanceapp/glance release v0.6.0, preconfigured pages are introduced; the group widget is officially released; a DNS stats widget supporting AdGuard Home and Pi-hole is added; branding customization allows changing logo, favicon, and footer; the releases widget now supports Docker Hub and GitLab sources; page customization properties include width, hide-desktop-navigation, and center-vertically; a base-url property under server enables hosting behind a reverse proxy; and many other enhancements and fixes are included."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_6_1",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.6.1",
+      "tag_name": "v0.6.1",
+      "title": "v0.6.1",
+      "time_hint": "2024-09-10",
+      "published_at": "2024-09-10T04:45:49Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.6.1",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.6.1\nTag: v0.6.1; draft: False; prerelease: False; published_at: 2024-09-10T04:45:49Z; created_at: 2024-09-10T04:38:14Z\nRelease notes:\n## New\n* [Releases widget] Added the ability to fetch releases from Codeberg via `codeberg:` prefix (thanks @micash545 #210)\n## Fixed\n* [DNS stats widget] Fixed AdGuard not displaying graph data when statistics retention isn't set to 24 hours (thanks @samcro1967 #211)\n* Mobile navigation links wrapping",
+      "memory_unit_text": "In the glanceapp/glance release v0.6.1, the releases widget gains the ability to fetch releases from Codeberg via a codeberg: prefix; the DNS stats widget fixes AdGuard graph display when statistics retention is not 24 hours; and mobile navigation link wrapping is fixed."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_6_2",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.6.2",
+      "tag_name": "v0.6.2",
+      "title": "v0.6.2",
+      "time_hint": "2024-09-29",
+      "published_at": "2024-09-29T23:54:56Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.6.2",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.6.2\nTag: v0.6.2; draft: False; prerelease: False; published_at: 2024-09-29T23:54:56Z; created_at: 2024-09-29T23:42:19Z\nRelease notes:\n## New\n* Added `/api/healthz` endpoint that just returns a status code 200, useful for checking if Glance is running and is reachable (thanks @xunleii)\n## Fixes\n* Fixed a bug with the collapsing behavior of the videos widget using grid-cards style inside of a group widget on chromium based browsers (thanks Atlas)\n* Fixed a bug with the dns-stats widget for Pi-hole instances where the privacy setting was used to hide domain names (thanks @SimJunYou)\n* Fixed a bug with the bookmarks widget where icons for links with long titles were unintentionally shrinking (thanks @cody-at-ats)",
+      "memory_unit_text": "In the glanceapp/glance release v0.6.2, a /api/healthz endpoint is added that returns status 200; fixes include a videos widget collapsing bug in group widgets on Chromium browsers, a DNS stats widget bug for Pi-hole with hidden domain names, and a bookmarks widget icon shrinking issue."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_6_3",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.6.3",
+      "tag_name": "v0.6.3",
+      "title": "v0.6.3",
+      "time_hint": "2024-12-11",
+      "published_at": "2024-12-11T19:10:34Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.6.3",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.6.3\nTag: v0.6.3; draft: False; prerelease: False; published_at: 2024-12-11T19:10:34Z; created_at: 2024-12-11T18:56:48Z\nRelease notes:\n## Changes\n* Changed simple icons provider from `cdnjs.cloudflare.com` to `cdn.jsdelivr.net` and switched to always using the latest version (was previously stuck on 11.14.0, plenty of icons have been added/updated since)\n## Fixes\n* Fixed a couple of graphical bugs such as the rain indicator in the weather widget not showing as well as the DNS stats widget having its graph displayed incorrectly\n* Fixed a bug with the weather widget graph in instances where the temperature for the entire day was the same\n## Heads up\nv0.7.0 will likely come with a backwards-incompatible change in the Docker image which will require a slight tweak to your docker-compose file.",
+      "memory_unit_text": "In the glanceapp/glance release v0.6.3, the simple icons provider is changed from cdnjs.cloudflare.com to cdn.jsdelivr.net and always uses the latest version; graphical bugs in the weather widget rain indicator and DNS stats widget graph are fixed; a weather widget graph bug for constant temperature is fixed; and a heads-up is given about a future backwards-incompatible Docker image change in v0.7.0."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_6_4",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.6.4",
+      "tag_name": "v0.6.4",
+      "title": "v0.6.4",
+      "time_hint": "2024-12-26",
+      "published_at": "2024-12-26T13:37:23Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.6.4",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.6.4\nTag: v0.6.4; draft: False; prerelease: False; published_at: 2024-12-26T13:37:23Z; created_at: 2024-12-26T13:24:40Z\nRelease notes:\n## Security\n* Updated dependencies to address a security vulnerability in golang.org/x/net.\n## Fixes\n* Fixed broken thumbnails of Reddit posts marked NSFW and those containing videos",
+      "memory_unit_text": "In the glanceapp/glance release v0.6.4, dependencies are updated to address a security vulnerability in golang.org/x/net, and broken thumbnails for NSFW Reddit posts and those containing videos are fixed."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_7_0",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.0",
+      "tag_name": "v0.7.0",
+      "title": "v0.7.0",
+      "time_hint": "2025-02-09",
+      "published_at": "2025-02-09T19:45:05Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.7.0",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.7.0\nTag: v0.7.0; draft: False; prerelease: False; published_at: 2025-02-09T19:45:05Z; created_at: 2025-02-09T19:07:48Z\nRelease notes:\n## Jump to section\n* [Docker container breaking changes](#g-rh-1)\n* [CLI breaking changes](#g-rh-2)\n* [New widgets](#g-rh-3)\n- [Docker containers](#g-rh-4)\n- [Custom API](#g-rh-5)\n- [Server stats](#g-rh-6)\n- [Split column](#g-rh-7)\n- [Calendar](#g-rh-8) (reworked)\n* [New features](#g-rh-9)\n- [Auto reload on config change](#g-rh-10)\n- [Environment variables _anywhere_ in the config](#g-rh-11)\n- [Include files in the config](#g-rh-12)\n- [Custom HTML in document &lt;head&gt;](#g-rh-13)\n- [Support for selfh.st and Dashboard icons](#g-rh-14)\n* [New styles](#g-rh-15)\n- [[Monitor] `compact`](#g-rh-16)\n- [[Videos] `vertical-list`](#g-rh-17)\n* [Widget enhancements](#g-rh-18)\n- [[Twitch channels] stream preview on hover](#g-rh-19)\n- [[RSS] request headers, `limit` per feed, `preserve-order`](#g-rh-20)\n- [[Videos] `playlists`](#g-rh-21)\n- [[Group] support for `title-url`](#g-rh-22)\n- [[Monitor] `alt-status-codes`, `error-url`](#g-rh-23)\n- [[Extension] specify if content should have no frame](#g-rh-24)\n- [[Bookmarks] `target` for links, `same-tab` and `hide-arrow` for groups](#g-rh-25)\n- [[Reddit] `proxy`](#g-rh-26)\n- [[Search] `placeholder` and clear input on search](#g-rh-27)\n- [[Markets] `chart-link-template`, `symbol-link-template` and `sort-by`](#g-rh-28)\n- [[Releases] `include-prereleases`](#g-rh-29)\n- [[DNS stats] `hide-graph`, `hide-top-domains` and `allow-insecure`](#g-rh-30)\n- [[Clock] now displays exact time difference for timezones](#g-rh-31)\n* [Fixes](#g-rh-32)\n* [Been a while](#g-rh-33)\n* [Community overhaul](#g-rh-34)\n* [Thank you](#g-rh-35)\n## <a id=\"g-rh-1\"></a> Docker container breaking changes\nUntil now, setting up Glance using its Docker container involved a somewhat unusual step where the config file was solely mounted as a volume. This tripped up some users and caused unnecessary confusion due to a few odd behaviors.\nThe default location of the config file has now been changed to `/app/config/glance.yml` from `/app/glance.yml`. That means your `docker-compose.yml` file should now look like the following:\n```yaml\nservices:\nglance:\nimage: glanceapp/glance\nvolumes:\n- ./config:/app/config\n```\nThis also requires that you place your `glance.yml` file in a `config` directory in the same location as your `docker-compose.yml` file. If you're unsure what changes you need to make, there is an upgrade guide available [here](https://github.com/glanceapp/glance/tree/main/docs/v0.7.0-upgrade.md) as well as a new recommended docker compose directory structure available [here](https://github.com/glanceapp/docker-compose-template/tree/main/root).\n## <a id=\"g-rh-2\"></a> CLI breaking changes\nPreviously, you could run the following to validate your config file without starting Glance:\n```glance --config /path/to/config.yml --check-config```\nFor the sake of consistency with the few new added comands (and because this shouldn't have been a flag in the first place), this has now been changed to:\n```glance --config /path/to/config.yml config:validate```\n## <a id=\"g-rh-3\"></a> New widgets\n### <a id=\"g-rh-4\"></a> Docker containers\nDisplay the status of your Docker containers along with an icon and an optional short description.\n![docker-containers-preview](https://github.com/user-attachments/assets/67b6bab6-67a6-4759-a209-f5df1cadab93)\n```yaml\n- type: docker-containers\nhide-by-default: false\n```\n> [!NOTE]\n>\n> The widget requires access to `docker.sock`. If you're running Glance inside a container, this can be done by mounting the socket as a volume:\n>\n> ```yaml\n> services:\n>   glance:\n>     image: glanceapp/glance\n>     volumes:\n>       - /var/run/docker.sock:/var/run/docker.sock\n> ```\nConfiguration of the containers is done via labels applied to each container:\n```yaml\njellyfin:\nimage: jellyfin/jellyfin:latest\nlabels:\nglance.name: Jellyfin\nglance.icon: si:jellyfin\ngla...",
+      "memory_unit_text": "In the glanceapp/glance release v0.7.0, Docker container breaking changes move the config file to /app/config/glance.yml; CLI breaking changes rename --check-config to config:validate; new widgets include docker-containers, custom-api, server-stats, split-column, and a reworked calendar; new features include auto-reload on config change, environment variables anywhere in the config, config file includes, custom HTML in document head, and support for selfh.st and Dashboard icons; new styles include compact for monitor and vertical-list for videos; and many widget enhancements and fixes are included."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_7_1",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.1",
+      "tag_name": "v0.7.1",
+      "title": "v0.7.1",
+      "time_hint": "2025-02-10",
+      "published_at": "2025-02-10T11:27:29Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.7.1",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.7.1\nTag: v0.7.1; draft: False; prerelease: False; published_at: 2025-02-10T11:27:29Z; created_at: 2025-02-10T11:22:48Z\nRelease notes:\nFixed an error when using the new `playlists` property in the videos widget (thanks corbin)",
+      "memory_unit_text": "In the glanceapp/glance release v0.7.1, an error when using the new playlists property in the videos widget is fixed."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_7_2",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.2",
+      "tag_name": "v0.7.2",
+      "title": "v0.7.2",
+      "time_hint": "2025-02-15",
+      "published_at": "2025-02-15T15:24:04Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.7.2",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.7.2\nTag: v0.7.2; draft: False; prerelease: False; published_at: 2025-02-15T15:24:04Z; created_at: 2025-02-15T14:59:20Z\nRelease notes:\n## New\n* Added `hide-mountpoints-by-default` property to the `server-stats` widget\n## Fixed\n* Potential fix for crash on OpenBSD when using `server-stats` widget\n* Fixed URL of Dashboard Icons to point to new repository\n* Fixed small visual glitch with the popover functionality",
+      "memory_unit_text": "In the glanceapp/glance release v0.7.2, a hide-mountpoints-by-default property is added to the server-stats widget; a potential crash on OpenBSD when using server-stats is fixed; the Dashboard Icons URL is updated; and a small visual glitch with popover functionality is fixed."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_7_3",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.3",
+      "tag_name": "v0.7.3",
+      "title": "v0.7.3",
+      "time_hint": "2025-02-19",
+      "published_at": "2025-02-19T02:45:36Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.7.3",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.7.3\nTag: v0.7.3; draft: False; prerelease: False; published_at: 2025-02-19T02:45:36Z; created_at: 2025-02-19T02:25:07Z\nRelease notes:\n## Fixed\n* Config auto reload not working when editing with Vim (thanks @rubiojr)\n* Markets widget rate limit error (thanks @ChezOps)\n## Changed\n* Increased docker containers widget timeout (thanks @wagwan-piffting-blud)\n* No longer shows errors in the console when trying to get sensors data for server stats widget on OpenBSD (thanks @WickedShell)",
+      "memory_unit_text": "In the glanceapp/glance release v0.7.3, config auto-reload not working when editing with Vim is fixed; a markets widget rate limit error is fixed; the docker containers widget timeout is increased; and console errors for sensors data on OpenBSD are suppressed."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_7_4",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.4",
+      "tag_name": "v0.7.4",
+      "title": "v0.7.4",
+      "time_hint": "2025-03-12",
+      "published_at": "2025-03-12T18:11:07Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.7.4",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.7.4\nTag: v0.7.4; draft: False; prerelease: False; published_at: 2025-03-12T18:11:07Z; created_at: 2025-03-12T18:01:35Z\nRelease notes:\n## What's Changed\n* Made a number of accessibility improvements that should hopefully make Glance available to a wider audience\n## Fixed\n* Currency symbol not being properly set for some markets (thanks @hkrob)\n## New Contributors\n* @DavisYe made their first contribution in https://github.com/glanceapp/glance/pull/372\n* @legoraft made their first contribution in https://github.com/glanceapp/glance/pull/382\n* @KadoBOT made their first contribution in https://github.com/glanceapp/glance/pull/399",
+      "memory_unit_text": "In the glanceapp/glance release v0.7.4, accessibility improvements are made; a currency symbol issue for some markets is fixed; and new contributors are welcomed."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_7_5",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.5",
+      "tag_name": "v0.7.5",
+      "title": "v0.7.5",
+      "time_hint": "2025-03-15",
+      "published_at": "2025-03-15T19:06:23Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.7.5",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.7.5\nTag: v0.7.5; draft: False; prerelease: False; published_at: 2025-03-15T19:06:23Z; created_at: 2025-03-15T19:03:48Z\nRelease notes:\n## What's Changed\nAdded support for Pi-hole version 6 via:\n```yaml\n- type: dns-stats\nservice: pihole-v6\nurl: ${PIHOLE_URL}\npassword: ${PIHOLE_PASSWORD}\n```\n(thanks to @KallanX and @ralphocdol)\nWhere `${PIHOLE_PASSWORD}` is either the admin dashboard password or the application password which can be created from:\n```\nSettings -> Web Interface / API -> Configure app password\n```",
+      "memory_unit_text": "In the glanceapp/glance release v0.7.5, support for Pi-hole version 6 is added via a new pihole-v6 service option in the DNS stats widget."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_7_6",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.6",
+      "tag_name": "v0.7.6",
+      "title": "v0.7.6",
+      "time_hint": "2025-03-15",
+      "published_at": "2025-03-15T19:43:53Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.7.6",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.7.6\nTag: v0.7.6; draft: False; prerelease: False; published_at: 2025-03-15T19:43:53Z; created_at: 2025-03-15T19:41:08Z\nRelease notes:\nFixed an issue with the previous release for the DNS stats widget when using `service: pihole-v6`",
+      "memory_unit_text": "In the glanceapp/glance release v0.7.6, an issue with the DNS stats widget when using service: pihole-v6 from the previous release is fixed."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_7_7",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.7",
+      "tag_name": "v0.7.7",
+      "title": "v0.7.7",
+      "time_hint": "2025-03-17",
+      "published_at": "2025-03-17T02:24:06Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.7.7",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.7.7\nTag: v0.7.7; draft: False; prerelease: False; published_at: 2025-03-17T02:24:06Z; created_at: 2025-03-17T02:06:32Z\nRelease notes:\n## What's changed\n* Improved accessibility of the Docker containers widget (thanks @Lanie-Carmelo)\n* Reduced the contrast of calendar dates to better match the design language of other widgets\n* Added more info to error messages of DNS stats widget when using `service: pihole-v6` to help with debugging issues\n* Changed the integer type in the Custom API widget to `int` from `int64` so that you can now perform calculations on the result of the `len` function (thanks @titembaatar)\n## Fixed\n* Videos widget with style `vertical-list` not opening links in new tab (thanks @aliaghil)\n* DNS stats widget \"Top blocked domains\" in the UI having an additional triangle on the left on Safari (thanks @lukpep)",
+      "memory_unit_text": "In the glanceapp/glance release v0.7.7, accessibility of the docker containers widget is improved; calendar date contrast is reduced; DNS stats widget error messages for pihole-v6 are enhanced; the custom API widget integer type is changed to int; and fixes include videos widget vertical-list links not opening in new tab and a Safari display issue in DNS stats."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_7_8",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.8",
+      "tag_name": "v0.7.8",
+      "title": "v0.7.8",
+      "time_hint": "2025-03-26",
+      "published_at": "2025-03-26T19:59:07Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.7.8",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.7.8\nTag: v0.7.8; draft: False; prerelease: False; published_at: 2025-03-26T19:59:07Z; created_at: 2025-03-26T19:44:35Z\nRelease notes:\nThe `custom-api` widget has received a lot of positive feedback since its introduction in v0.7.0. Many people have made and shared their own widgets over at the new [`community-widgets`](https://github.com/glanceapp/community-widgets) repository as well as the Discord server. This release includes many improvements based on feedback from the community that will make it even more capable and easier to use.\n## New\n### Insecure requests\nYou can now allow insecure requests (those to APIs behind a self-signed certificate) via a `allow-insecure` property:\n```yaml\n- type: custom-api\nurl: https://api.example.com\nallow-insecure: true\n```\n(thanks @ralphocdol)\n### Parameters\nYou can now specify query parameters via a `parameters` property:\n```yaml\n- type: custom-api\nurl: https://api.example.com\nparameters:\nfoo: bar\nbaz: qux\n```\n> [!NOTE]\n>\n> Using the parameters property will override any query parameters specified in the URL.\n(thanks @ralphocdol)\n### Request method and body\nYou can now specify the request method and body via the `method`, `body-type` and `body` properties:\n```yaml\n- type: custom-api\nurl: https://api.example.com\nmethod: POST\nbody-type: json\nbody:\nfoo: bar\nbaz: qux\n```\nIf you set a `body`, the `method` will automatically be set to `POST` and the `body-type` will be set to `json`, so you don't have to specify them explicitly.\n```yaml\n- type: custom-api\nurl: https://api.example.com\nbody-type: string\nbody: |\nfoo=bar&baz=qux\n```\n(thanks @not-first)\n### Subrequests\nYou can now make multiple requests in a single `custom-api` widget via a `subrequests` property:\n```yaml\n- type: custom-api\nurl: https://api.example.com\nsubrequests:\nanother-one:\nurl: https://api.example.com/another-one\nand-another-one:\nurl: https://api.example.com/and-another-one\n```\nSubrequests can take all of the same properties as the main request, such as: `parameters`, `headers`, `method`, `body-type`, `body` and `allow-insecure`.\nTo access the JSON of a subrequest, you can use `.Subrequest \"key\"`:\n```html\n<p>{{ (.Subrequest \"another-one\").JSON.String \"foo\" }}</p>\n```\nThis can get cumbersome to write if you need to reference the subrequest in multiple places, so you can instead assign it to a variable:\n```html\n{{ $anotherOne := .Subrequest \"another-one\" }}\n<p>{{ $anotherOne.JSON.String \"foo\" }}</p>\n<p>{{ $anotherOne.JSON.Int \"bar\" }}</p>\n```\nYou can also access the response as you would on the main request:\n```html\n{{ $andAnotherOne := .Subrequest \"and-another-one\" }}\n<p>{{ $andAnotherOne.Response.StatusCode }}</p>\n```\n(thanks @ralphocdol)\n### New functions\n#### `trimPrefix`\n```json\n{\"foo\": \"bazbar\"}\n```\n```html\n<p>{{ .JSON.String \"foo\" | trimPrefix \"baz\" }}</p>\n```\n```html\n<p>bar</p>\n```\n#### `trimSuffix`\n```json\n{\"foo\": \"barbaz\"}\n```\n```html\n<p>{{ .JSON.String \"foo\" | trimSuffix \"baz\" }}</p>\n```\n```html\n<p>bar</p>\n```\n#### `trimSpace`\n```json\n{\"foo\": \"  bar  \"}\n```\n```html\n<p>{{ .JSON.String \"foo\" | trimSpace }}</p>\n```\n```html\n<p>bar</p>\n```\n#### `replaceAll`\n```json\n{\"foo\": \"barbazbar\"}\n```\n```html\n<p>{{ .JSON.String \"foo\" | replaceAll \"baz\" \"bar\" }}</p>\n```\n```html\n<p>barbarbar</p>\n```\n#### `findMatch`\n```json\n{\"foo\": \"bar-123456-baz\"}\n```\n```html\n<p>{{ .JSON.String \"foo\" | findMatch \"\\\\d+\" }}</p>\n```\nThe pattern is a regular expression, although note that backslashes need to be escaped, so `\\d` in a normal regular expression would be `\\\\d` here.\n```html\n<p>123456</p>\n```\n#### `findSubmatch`\n```json\n{\"foo\": \"bar-unknown-value\"}\n```\n```html\n<p>{{ .JSON.String \"foo\" | findSubmatch \"bar-(.*)\" }}</p>\n```\nThe pattern is a regular expression, and only the first submatch is returned.\n```html\n<p>unknown-value</p>\n```\n#### `parseTime`\n```json\n{\"foo\": \"2021-01-02T15:04:05Z\"}\n```\n```html\n{{ $parsedTime := .JSON.String \"foo\" | parseTime \"rfc3339\" }}\n<p>Year: {{ $parsedTime.Year }}</p>\n<p>Mont...",
+      "memory_unit_text": "In the glanceapp/glance release v0.7.8, the custom-api widget receives many improvements: allow-insecure property, parameters property, request method and body support, subrequests, and new functions trimPrefix, trimSuffix, trimSpace, replaceAll, findMatch, findSubmatch, parseTime, and more."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_7_9",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.9",
+      "tag_name": "v0.7.9",
+      "title": "v0.7.9",
+      "time_hint": "2025-03-29",
+      "published_at": "2025-03-29T18:08:11Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.7.9",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.7.9\nTag: v0.7.9; draft: False; prerelease: False; published_at: 2025-03-29T18:08:11Z; created_at: 2025-03-29T18:00:36Z\nRelease notes:\nAnother small release that's primarily focused around `custom-api` widget improvements.\n## Changed\nYou no longer need to convert numbers to float before doing math operations with them. When adding two integers together, the result will be an integer. Adding two floats together or an integer and a float will result in a float.\nBefore:\n```html\n{{ (add (.JSON.Int \"foo\" | toFloat) (.JSON.Int \"bar\" | toFloat)) | toInt }}\n```\nNow:\n```html\n{{ add (.JSON.Int \"foo\") (.JSON.Int \"bar\") }}\n```\n(this is consistent for all math operations, not just addition)\n## New\n### `skip-json-validation` and `.JSONLines`\n```yaml\n- type: custom-api\nurl: https://api.example.com\nskip-json-validation: true\n```\nSome API's return newline separated JSON objects instead of a single JSON array. This is not valid JSON, so the `custom-api` widget will fail to parse it. You can now set `skip-json-validation` to `true` to skip the validation step and parse the response as a list of JSON objects within your template.\n```json\n{\"name\": \"Steve\", \"age\": 30}\n{\"name\": \"Alex\", \"age\": 25}\n{\"name\": \"John\", \"age\": 35}\n```\nYou can then access the JSON objects using `.JSONLines`:\n```html\n{{ range .JSONLines }}\n{{ .String \"name\" }}\n{{ end }}\n```\n### New functions\n#### `concat`\n```\n{{ concat \"foo\" \"bar\" \"baz\" }}\n```\nwill return `foobarbaz`.\n(thanks @ralphocdol)\n#### `now`\nReturns the current time as a [`time.Time`](https://pkg.go.dev/time#Time) object.\n```\n{{ now }}\n{{ now.Hour }}:{{ now.Minute }}:{{ now.Second }}\n{{ now.Unix }}\n```\n```\n2025-03-29 17:20:18.4905224 +0000 GMT m=+376.954385401\n17:20:18\n1743268818\n```\nThis can also be used to convert time to your current timezone:\n```\n{{ $parsedTime := .JSON.String \"date_created\" | parseTime \"rfc3339\" }}\n{{ $created := $parsedTime.In now.Location }}\n{{ $created.Hour }}:{{ $created.Minute }}:{{ $created.Second }}\n```\n(thanks @not-first & @ralphocdol)\n#### `offsetNow`\nReturns the current time offset by a given amount:\n```\n{{ offsetNow \"1h\" }}\n{{ now }}\n{{ offsetNow \"-1h\" }}\n```\n```\n2025-03-29 18:44:04.2719241 +0000 GMT m=+4178.324981601\n2025-03-29 17:44:04.2719241 +0000 GMT m=+578.324981601\n2025-03-29 16:44:04.2719241 +0000 GMT m=-3021.675018399\n```\nThis can be used to check if something happened within a certain time frame:\n```\n{{ $created := .JSON.String \"date_created\" | parseTime \"rfc3339\" }}\n{{ if ($created.After (offsetNow \"-1h\")) }}\nCreated less than 1 hour ago\n{{ end }}\n```\n### `Widget-Title-URL` header for extension widget\nThe extension widget can now return a `Widget-Title-URL` header to set the link of the widget's title if it has not already been set by the user.\n(thanks @not-first)\n## Fixes\n* The markets widget will now properly display prices of markets where the price is less than 0.01 (thanks @nsdont)",
+      "memory_unit_text": "In the glanceapp/glance release v0.7.9, custom-api widget improvements continue: math operations no longer require float conversion; skip-json-validation and .JSONLines are added; new functions concat, now, offsetNow are introduced; the extension widget can return a Widget-Title-URL header; and the markets widget properly displays prices less than 0.01."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_7_10",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.10",
+      "tag_name": "v0.7.10",
+      "title": "v0.7.10",
+      "time_hint": "2025-04-09",
+      "published_at": "2025-04-09T23:51:06Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.7.10",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.7.10\nTag: v0.7.10; draft: False; prerelease: False; published_at: 2025-04-09T23:51:06Z; created_at: 2025-04-09T23:44:55Z\nRelease notes:\n## What's Changed\n* Slightly increased the scale of everything on mobile to make things easier to tap on\n* Added `sensors:print` CLI command that lists all temperature sensors that Glance has access to\n* Bumped versions of dependencies\n## New Contributors\n* @diceroll123 made their first contribution in https://github.com/glanceapp/glance/pull/528\n* @FranklyFuzzy made their first contribution in https://github.com/glanceapp/glance/pull/499\n* @daot made their first contribution in https://github.com/glanceapp/glance/pull/486\n* @Panonim made their first contribution in https://github.com/glanceapp/glance/pull/553\n**Full Changelog**: https://github.com/glanceapp/glance/compare/v0.7.9...v0.7.10",
+      "memory_unit_text": "In the glanceapp/glance release v0.7.10, mobile scaling is slightly increased; a sensors:print CLI command is added to list temperature sensors; and dependencies are bumped."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_7_11",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.11",
+      "tag_name": "v0.7.11",
+      "title": "v0.7.11",
+      "time_hint": "2025-04-13",
+      "published_at": "2025-04-13T16:22:22Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.7.11",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.7.11\nTag: v0.7.11; draft: False; prerelease: False; published_at: 2025-04-13T16:22:22Z; created_at: 2025-04-13T16:09:51Z\nRelease notes:\n## What's changed\n* [RSS widget] Duplicate post links will now be filtered out (thanks @HtFilia)\n* [Custom API widget] Added `replaceMatches` and `unique` functions (thanks @ralphocdol)\n* Added `mountpoint:info` CLI command\n* Added more details to the output of `sensors:print` CLI command\n## Fixes\n* [Twitch channels widget] Fixed live channels with 0 viewers getting incorrectly sorted lower than offline channels\n* [Server stats widget] Potential fix for missing mountpoint stats\n* Fixed the Yahoo finance test request in the `diagnose` CLI command",
+      "memory_unit_text": "In the glanceapp/glance release v0.7.11, the RSS widget filters duplicate post links; the custom API widget adds replaceMatches and unique functions; mountpoint:info CLI command is added; sensors:print output is enhanced; and fixes include twitch channels sorting for zero viewers, potential missing mountpoint stats, and a Yahoo finance test request in diagnose."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_7_12",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.12",
+      "tag_name": "v0.7.12",
+      "title": "v0.7.12",
+      "time_hint": "2025-04-14",
+      "published_at": "2025-04-14T00:16:15Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.7.12",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.7.12\nTag: v0.7.12; draft: False; prerelease: False; published_at: 2025-04-14T00:16:15Z; created_at: 2025-04-14T00:07:04Z\nRelease notes:\nFixed server crash in some configurations when a widget is provided with a single resource to fetch instead of multiple",
+      "memory_unit_text": "In the glanceapp/glance release v0.7.12, a server crash in some configurations when a widget is provided with a single resource to fetch instead of multiple is fixed."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_7_13",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.7.13",
+      "tag_name": "v0.7.13",
+      "title": "v0.7.13",
+      "time_hint": "2025-04-22",
+      "published_at": "2025-04-22T22:19:16Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.7.13",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.7.13\nTag: v0.7.13; draft: False; prerelease: False; published_at: 2025-04-22T22:19:16Z; created_at: 2025-04-22T22:07:07Z\nRelease notes:\n## New\n* [Custom API] Added `parseLocalTime` function, which works like `parseTime`, however in the absence of a timezone it uses the local timezone instead of UTC.\n* [Search widget] Added [`target`](https://developer.mozilla.org/en-US/docs/Web/API/Window/open#target) property which is used when opening the search results in a new tab (thanks @Jacksaur)\n## Fixes\n* [Server stats widget] Fixed being unable to retrieve temperature sensors in some instances (thanks @anxdpanic)\n* [Reddit widget] Fixed the URL not being correctly escaped when using `request-url-template` (thanks @yurigiu)",
+      "memory_unit_text": "In the glanceapp/glance release v0.7.13, the custom API widget adds a parseLocalTime function; the search widget adds a target property for opening results in a new tab; and fixes include server stats temperature sensor retrieval and Reddit widget URL escaping."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_8_0",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.8.0",
+      "tag_name": "v0.8.0",
+      "title": "v0.8.0",
+      "time_hint": "2025-05-13",
+      "published_at": "2025-05-13T18:35:12Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.8.0",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.8.0\nTag: v0.8.0; draft: False; prerelease: False; published_at: 2025-05-13T18:35:12Z; created_at: 2025-05-13T18:22:13Z\nRelease notes:\nAnother big update is here! This one includes authentication, a theme picker, new customization options, a to-do widget and lots of improvements to existing widgets. Before we get to details of all that...\n## Feedback wanted\nDeciding what features to add to a project like this is no easy task. Most self-hosted services focus on doing one thing and adding features around that thing, but with a personal dashboard/feed aggregator you can practically display _anything_, so how do you decide what does and doesn't belong? So far I've been prioritizing feature requests with a high number of upvotes and those I believe fit with the vision of the project, although admittedly Glance has deviated quite a bit from its initial purpose.\nAs with almost all communities, a minority of people are very vocal about their wants and needs, while the majority are just riding along. Rather than guessing what the community as a whole would benefit from the most moving forward, I thought I could just ask through a short survey.\n[Link to the survey](https://docs.google.com/forms/d/e/1FAIpQLSdoNDjJYugVm6kb2NpVO5QO1inGbEeuydkta-XEIMRbgYIsXg/viewform)\nIt's entirely anonymous, should only take about 1 to 3 minutes to complete, and I'd be happy to share the results once there are enough responses. Thank you to those who take the time to fill it out.\n## Jump to section\n* [Community widgets](#g-rh-1)\n* [New logo](#g-rh-2)\n* [New features](#g-rh-3)\n- [Nested config includes and new include syntax](#g-rh-4)\n- [Using Docker secrets within the config](#g-rh-5)\n- [Theme picker](#g-rh-6)\n- [Authentication](#g-rh-7)\n- [To-do widget](#g-rh-8)\n- [Hiding widget titles](#g-rh-9)\n- [Head widgets](#g-rh-10)\n- [Separate navigation and page widths](#g-rh-11)\n- [PWA configuration](#g-rh-12)\n* [Widget enhancements](#g-rh-13)\n- [[Docker containers] Container customization in the config, support for proxies, `category` and `format-container-names` properties](#g-rh-14)\n- [[Custom API] Synchronous API calls and `options` property](#g-rh-15)\n- [[Reddit] Support for application auth](#g-rh-16)\n- [[RSS] Conditional requests](#g-rh-17)\n- [[Monitor] `basic-auth` and `timeout` properties](#g-rh-18)\n- [[DNS Stats] Support for Technitium](#g-rh-19)\n## <a id=\"g-rh-1\"></a> Community widgets\nIf you weren't aware, there's now [a repository for widgets made by the community](https://github.com/glanceapp/community-widgets) with 40+ widgets available so far. Most are made using the `custom-api` widget, so adding them is as simple as copying them into your `glance.yml`. It's a great place to find new widgets, and if you have a widget that you think others would benefit from, please consider sharing it there. Thank you to everyone who has contributed!\n## <a id=\"g-rh-2\"></a> New logo\nBig thanks to @Tom607 for offering help with the logo and going over dozens of different iterations!\n![logo](https://github.com/user-attachments/assets/2a19f0c5-83bc-4ad0-8ccd-b78d4d11ad29)\nI believe it does a great job at conveying the widgety layout of Glance, while also being simple and clean, as is the rest of the design language.\n## <a id=\"g-rh-3\"></a> New features\n### <a id=\"g-rh-4\"></a> Nested config includes and new include syntax\nUp until now, you could only use the `!include` directive in your `glance.yml` file, but not within any of the included files. This has been changed so that you can includes files from within included files as many times as you need, meaning you can have a separate file for each page, a separate file for each column, and even a separate file for each widget if you wanted to:\n```\nglance.yml\n├── home.yml\n│   ├── column1.yml\n│   │   ├── widget1.yml\n│   │   └── widget2.yml\n│   └── column2.yml\n│       ├── widget3.yml\n│       └── widget4.yml\n```\nIn addition, the `!include` directive can now instead be written as `$...",
+      "memory_unit_text": "In the glanceapp/glance release v0.8.0, major features include authentication, a theme picker, a to-do widget, nested config includes with new include syntax, Docker secrets support, hiding widget titles, head widgets, separate navigation and page widths, PWA configuration, and many widget enhancements such as Docker containers customization, custom API synchronous calls and options, Reddit application auth, RSS conditional requests, monitor basic-auth and timeout, and DNS stats Technitium support."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_8_1",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.8.1",
+      "tag_name": "v0.8.1",
+      "title": "v0.8.1",
+      "time_hint": "2025-05-13",
+      "published_at": "2025-05-13T19:42:42Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.8.1",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.8.1\nTag: v0.8.1; draft: False; prerelease: False; published_at: 2025-05-13T19:42:42Z; created_at: 2025-05-13T19:35:34Z\nRelease notes:\nFixed an error that prevented the page from loading when `hide-desktop-navigation` is set to `true` (thanks @Geffreyvanderbos and @Blooym)\n[Visit the release notes for v0.8.0 to learn about all new features](https://github.com/glanceapp/glance/releases/tag/v0.8.0)",
+      "memory_unit_text": "In the glanceapp/glance release v0.8.1, an error that prevented page loading when hide-desktop-navigation is set to true is fixed."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_8_2",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.8.2",
+      "tag_name": "v0.8.2",
+      "title": "v0.8.2",
+      "time_hint": "2025-05-14",
+      "published_at": "2025-05-14T21:34:41Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.8.2",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.8.2\nTag: v0.8.2; draft: False; prerelease: False; published_at: 2025-05-14T21:34:41Z; created_at: 2025-05-14T21:05:35Z\nRelease notes:\n* Fixed `hide-deskop-navigation` not working (thanks @LZStealth)\n* Fixed custom favicons not working in Chromium browsers (thanks @AWildLeon)\n* Fixed server crash when using `head-widgets` with the releases widget (thanks @aykhans)\n* Fixed URLs getting escaped when using `video-url-template` in the `videos` widget with the `vertical-list` style (thanks @Kamalaja)\n* Added `startOfDay` and `endOfDay` functions to the custom API widget (thanks @ralphocdol)\n[Visit the release notes for v0.8.0 to learn about all new features](https://github.com/glanceapp/glance/releases/tag/v0.8.0)",
+      "memory_unit_text": "In the glanceapp/glance release v0.8.2, fixes include hide-desktop-navigation not working, custom favicons not working in Chromium browsers, server crash with head-widgets and releases widget, URLs getting escaped in videos widget vertical-list style, and startOfDay and endOfDay functions are added to the custom API widget."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_8_3",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.8.3",
+      "tag_name": "v0.8.3",
+      "title": "v0.8.3",
+      "time_hint": "2025-05-19",
+      "published_at": "2025-05-19T20:45:10Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.8.3",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.8.3\nTag: v0.8.3; draft: False; prerelease: False; published_at: 2025-05-19T20:45:10Z; created_at: 2025-05-19T20:25:48Z\nRelease notes:\n## New\n* Added the ability to disable the theme picker via `disable-picker: true` under `theme` (thanks @NeoNyaa)\n* Added `mod` function (modulo) to the custom API widget (thanks @anant-j)\n* Added `safeHTML` function to the custom API widget which prevents HTML from being escaped (thanks @sudoexec)\n* Added `.Options.JSON` to the custom API widget which takes any nested option value and turns it into a JSON string (thanks @ralphocdol)\n<details>\n<summary>View example</summary>\n```yaml\n- type: custom-api\noptions:\nrequest-body:\nservice: Session\nmethod: login\nparams:\nusername: ${USERNAME}\npassword: ${PASSWORD}\n# useful if you need to send JSON in a request body\ntemplate: |\n...\n| withStringBody (.Options.JSON \"request-body\")\n...\n```\n</details>\n* Added the theme key to the document root so that you can apply styles based on the selected theme (thanks @EricKotato)\n<details>\n<summary>View example</summary>\n```css\n:root[data-theme=\"default-dark\"] {\n.color-primary-if-not-visited {\ncolor: #ff0000;\n}\n}\n:root[data-theme=\"default-light\"] {\n.color-primary-if-not-visited {\ncolor: #00ff00;\n}\n}\n:root[data-theme=\"your-theme-name\"] {\n.color-primary-if-not-visited {\ncolor: #0000ff;\n}\n}\n```\n</details>\n## Fixes\n* Fixed `HTTP_PROXY` and `HTTPS_PROXY` environment variables not getting used (thanks @mazzz1y)\n* Fixed truncated links' hover text having unnecessary whitespace (thanks @ralphocdol)\n[Visit the release notes for v0.8.0 to learn about all new features](https://github.com/glanceapp/glance/releases/tag/v0.8.0)",
+      "memory_unit_text": "In the glanceapp/glance release v0.8.3, the theme picker can be disabled; mod, safeHTML, and .Options.JSON functions are added to the custom API widget; a theme key is added to the document root for theme-based styling; and fixes include HTTP_PROXY/HTTPS_PROXY environment variables not being used and truncated link hover text whitespace."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_8_4",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.8.4",
+      "tag_name": "v0.8.4",
+      "title": "v0.8.4",
+      "time_hint": "2025-06-10",
+      "published_at": "2025-06-10T07:57:14Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.8.4",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.8.4\nTag: v0.8.4; draft: False; prerelease: False; published_at: 2025-06-10T07:57:14Z; created_at: 2025-06-10T07:43:26Z\nRelease notes:\n## New\n* Added support for [Material Design icons](https://pictogrammers.com/library/mdi/) via `mdi` prefix (thanks @NextBlaubeere)\n* Made the `auto-invert` icon prefix work for icons from libraries, so you can now do things like `icon: auto-invert sh:glance-dark` which will automatically invert dark icons to light depending on your theme\n## Fixes\n* Fixed multiple to-do widgets on a single page not working (thanks @rhijjawi & @tty2)\n* Fixed the search widget shortcut (`S`) not working when using a keyboard layout other than English (thanks @NikD0T)\n## Changed\n* The Docker image health check has been removed, for more information see #676\n## New Contributors\n* @chenkhuaning0816 made their first contribution in https://github.com/glanceapp/glance/pull/687\n* @thallada made their first contribution in https://github.com/glanceapp/glance/pull/689\n* @chenrui333 made their first contribution in https://github.com/glanceapp/glance/pull/693\n* @rhijjawi made their first contribution in https://github.com/glanceapp/glance/pull/705\n* @septechx made their first contribution in https://github.com/glanceapp/glance/pull/699",
+      "memory_unit_text": "In the glanceapp/glance release v0.8.4, Material Design icons support is added via mdi prefix; the auto-invert icon prefix works for icon libraries; multiple to-do widgets on a single page are fixed; the search widget shortcut works with non-English keyboard layouts; and the Docker image health check is removed."
+    },
+    {
+      "memory_node_id": "glanceapp__glance__release__v0_8_5",
+      "repo": "glanceapp/glance",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.8.5",
+      "tag_name": "v0.8.5",
+      "title": "v0.8.5",
+      "time_hint": "2026-05-30",
+      "published_at": "2026-05-30T20:36:29Z",
+      "source_url": "https://github.com/glanceapp/glance/releases/tag/v0.8.5",
+      "raw_text": "Repository: glanceapp/glance\nRelease: v0.8.5\nTag: v0.8.5; draft: False; prerelease: False; published_at: 2026-05-30T20:36:29Z; created_at: 2026-05-30T20:35:16Z\nRelease notes:\n## Changes\n* Added a way to bypass Reddit's API restrictions, so the widget _should_ be working again without any config changes. I don't know how long this will work for (or if it will work for everybody), see #1016 for the ongoing discussion in case it breaks again or to report issues.\n* Bumped Go and Alpine versions",
+      "memory_unit_text": "In the glanceapp/glance release v0.8.5, a workaround is added to bypass Reddit API restrictions so the widget works without config changes; Go and Alpine versions are bumped."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the glanceapp/glance releases, which release introduces a search widget with custom bangs and a clock widget with optional timezones?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.5.0-beta.1"
+        },
+        {
+          "option_id": "B",
+          "text": "v0.5.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v0.6.0-beta.1"
+        },
+        {
+          "option_id": "D",
+          "text": "v0.6.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v0.5.0",
+      "source_chunk_ids": [
+        "glanceapp__glance__release__v0_5_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "glanceapp__glance__release__v0_5_0",
+          "answer_text": "new widgets are introduced: a search widget with custom bangs and search engine support, a clock widget with optional timezones"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the glanceapp/glance releases, how does the DNS stats widget change from v0.6.0 to v0.7.5?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.6.0 introduces the DNS stats widget supporting AdGuard Home and Pi-hole, while v0.7.5 adds support for Pi-hole version 6 via a new pihole-v6 service option."
+        },
+        {
+          "option_id": "B",
+          "text": "v0.6.0 removes the DNS stats widget, and v0.7.5 reintroduces it with Pi-hole v6 support."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only fix graphical bugs in the DNS stats widget without adding new features."
+        },
+        {
+          "option_id": "D",
+          "text": "v0.6.0 adds Pi-hole v6 support, while v0.7.5 adds AdGuard Home support."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v0.6.0 introduces the DNS stats widget supporting AdGuard Home and Pi-hole, while v0.7.5 adds support for Pi-hole version 6 via a new pihole-v6 service option.",
+      "source_chunk_ids": [
+        "glanceapp__glance__release__v0_6_0",
+        "glanceapp__glance__release__v0_7_5"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "glanceapp__glance__release__v0_6_0",
+          "answer_text": "a DNS stats widget supporting AdGuard Home and Pi-hole is added"
+        },
+        {
+          "memory_node_id": "glanceapp__glance__release__v0_7_5",
+          "answer_text": "support for Pi-hole version 6 is added via a new pihole-v6 service option in the DNS stats widget"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the glanceapp/glance release window, order the following release-content states from earliest to latest: (1) a release that adds a group widget allowing multiple widgets to be grouped into one via tabs, (2) a release that introduces a search widget with custom bangs and a clock widget with optional timezones, (3) a release that adds a to-do widget and authentication.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2 -> 1 -> 3"
+        },
+        {
+          "option_id": "B",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "3 -> 1 -> 2"
+        },
+        {
+          "option_id": "D",
+          "text": "2 -> 3 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2 -> 1 -> 3",
+      "source_chunk_ids": [
+        "glanceapp__glance__release__v0_5_0",
+        "glanceapp__glance__release__v0_6_0_beta_2",
+        "glanceapp__glance__release__v0_8_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "glanceapp__glance__release__v0_5_0",
+          "answer_text": "new widgets are introduced: a search widget with custom bangs and search engine support, a clock widget with optional timezones"
+        },
+        {
+          "memory_node_id": "glanceapp__glance__release__v0_6_0_beta_2",
+          "answer_text": "a group widget is added that allows grouping multiple widgets into one via tabs"
+        },
+        {
+          "memory_node_id": "glanceapp__glance__release__v0_8_0",
+          "answer_text": "major features include authentication, a theme picker, a to-do widget"
+        }
+      ]
+    }
+  ]
+}

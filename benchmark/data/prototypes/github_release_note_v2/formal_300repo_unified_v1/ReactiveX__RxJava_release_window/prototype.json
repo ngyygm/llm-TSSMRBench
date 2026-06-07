@@ -1,0 +1,530 @@
+{
+  "prototype_id": "ReactiveX__RxJava_release_window",
+  "domain": "github_release_evolution",
+  "repo": "ReactiveX/RxJava",
+  "source_type": "release_note",
+  "window_title": "ReactiveX/RxJava recent release evolution",
+  "window_summary": "This window tracks the recent ReactiveX/RxJava release stream across stable 3.x releases, release candidates, and early 4.x alpha versions, highlighting API additions, bugfixes, and infrastructure changes.",
+  "chunks": [
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v3_1_6_rc0",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.1.6-RC0",
+      "tag_name": "v3.1.6-RC0",
+      "title": "3.1.6-RC0",
+      "time_hint": "2023-01-18",
+      "published_at": "2023-01-18T08:06:41Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v3.1.6-RC0",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: 3.1.6-RC0\nTag: v3.1.6-RC0; draft: False; prerelease: True; published_at: 2023-01-18T08:06:41Z; created_at: 2023-01-17T08:23:43Z\nRelease notes:\nVerifying the release process still works after half a year.",
+      "memory_unit_text": "In the ReactiveX/RxJava release 3.1.6-RC0, the release note states that this version is for verifying the release process still works after half a year."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v3_1_6",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.1.6",
+      "tag_name": "v3.1.6",
+      "title": "v3.1.6",
+      "time_hint": "2023-01-18",
+      "published_at": "2023-01-18T08:28:47Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v3.1.6",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v3.1.6\nTag: v3.1.6; draft: False; prerelease: False; published_at: 2023-01-18T08:28:47Z; created_at: 2023-01-17T08:23:43Z\nRelease notes:\n[Maven](http://search.maven.org/#artifactdetails%7Cio.reactivex.rxjava3%7Crxjava%7C3.1.6%7C)\n[JavaDocs](http://reactivex.io/RxJava/3.x/javadoc/3.1.6)\n#### API changes\n- Add an overload to `throttleLatest` operator with an `onDropped` callback. (<a href='https://github.com/ReactiveX/RxJava/issues/7457'>#7457</a>)\n- Add  an overload to `throttleFirst`  operator with an `onDropped` callback. (<a href='https://github.com/ReactiveX/RxJava/issues/7482'>#7482</a>)\n- Add  an overload to `throttleLast` operator with an `onDropped` callback. (<a href='https://github.com/ReactiveX/RxJava/issues/7488'>#7488</a>)\n- Add  an overload to `throttleWithTimeout` operator with an `onDropped` callback. (<a href='https://github.com/ReactiveX/RxJava/issues/7510'>#7510</a>)\n#### Bugfixes\n- Fix a race condition in `Single.timeout` that prevented the timeout signal from happening. (<a href='https://github.com/ReactiveX/RxJava/issues/7515'>#7515</a>)\n#### Documentation\n- Fix formatting in `TestObserver/Consumer/Subscriber` javadoc html. (<a href='https://github.com/ReactiveX/RxJava/issues/7442'>#7442</a>)\n- Fix typo in `BehaviorSubject.java`. (<a href='https://github.com/ReactiveX/RxJava/issues/7452'>#7452</a>)\n- Fix grammar about cancellation in `Schedulers` javadoc. (<a href='https://github.com/ReactiveX/RxJava/issues/7453'>#7453</a>)\n- Change `@coded` tag to `@code` tag. (<a href='https://github.com/ReactiveX/RxJava/issues/7463'>#7463</a>)\n- Fix `fromCompletionStage` javadoc. (<a href='https://github.com/ReactiveX/RxJava/issues/7508'>#7508</a>)\n#### Other\n- Add missing `@NonNull` annotation to `Maybe` type argument. (<a href='https://github.com/ReactiveX/RxJava/issues/7436'>#7436</a>)\n- Remove redundant interface declarations. (<a href='https://github.com/ReactiveX/RxJava/issues/7438'>#7438</a>)\n- Standardize `MissingBackpressureException` message, introduce `QueueOverflowException`. (<a href='https://github.com/ReactiveX/RxJava/issues/7459'>#7459</a>)\n- Update `Flowable.throttleLatest` `MissingBackpressureException` message. (<a href='https://github.com/ReactiveX/RxJava/issues/7460'>#7460</a>)\n- Fix cancellation order in `throttleFirst`. (<a href='https://github.com/ReactiveX/RxJava/issues/7484'>#7484</a>)",
+      "memory_unit_text": "In the ReactiveX/RxJava release v3.1.6, the release note includes API changes adding overloads to throttleLatest, throttleFirst, throttleLast, and throttleWithTimeout operators with an onDropped callback. It also fixes a race condition in Single.timeout, updates documentation formatting and grammar, and makes other changes such as standardizing MissingBackpressureException message and introducing QueueOverflowException."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v3_1_7",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.1.7",
+      "tag_name": "v3.1.7",
+      "title": "v3.1.7",
+      "time_hint": "2023-08-23",
+      "published_at": "2023-08-23T11:07:08Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v3.1.7",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v3.1.7\nTag: v3.1.7; draft: False; prerelease: False; published_at: 2023-08-23T11:07:08Z; created_at: 2023-08-23T10:47:36Z\nRelease notes:\n[Maven](http://search.maven.org/#artifactdetails%7Cio.reactivex.rxjava3%7Crxjava%7C3.1.7%7C)\n[JavaDocs](http://reactivex.io/RxJava/3.x/javadoc/3.1.7)\n#### API changes\n- Add `onDropped` callback for `onBackpressureLatest`. (<a href='https://github.com/ReactiveX/RxJava/issues/7542'>#7542</a>)\n- Add `onDropped` callback to `onBackpressureBuffer`. (<a href='https://github.com/ReactiveX/RxJava/issues/7567'>#7567</a>)\n#### Documentation\n- Change summary to caption, because summary is obsolete in HTML5. (<a href='https://github.com/ReactiveX/RxJava/issues/7534'>#7534</a>)\n- Try using https to access the reactive streams javadoc. (<a href='https://github.com/ReactiveX/RxJava/issues/7535'>#7535</a>)\n- Improve Javadoc of `Disposable`.\n#### Other\n- Add minimum GitHub token permissions for workflows. (<a href='https://github.com/ReactiveX/RxJava/issues/7541'>#7541</a>)\n- Create SECURITY.md (<a href='https://github.com/ReactiveX/RxJava/issues/7546'>#7546</a>)\n- Add copyright and license to jar. (<a href='https://github.com/ReactiveX/RxJava/issues/7520'>#7520</a>)\n- Convert `CompletableOnErrorComplete$onError` inner class to static. (<a href='https://github.com/ReactiveX/RxJava/issues/7575'>#7575</a>)\n- Allow null accumulator type in the `collect(Collector)` operators. (<a href='https://github.com/ReactiveX/RxJava/issues/7590'>#7590</a>)",
+      "memory_unit_text": "In the ReactiveX/RxJava release v3.1.7, the release note adds onDropped callback for onBackpressureLatest and onBackpressureBuffer operators. Documentation improvements include changing summary to caption, using https for reactive streams javadoc, and improving Disposable javadoc. Other changes include adding minimum GitHub token permissions, creating SECURITY.md, adding copyright and license to jar, converting an inner class to static, and allowing null accumulator type in collect(Collector) operators."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v3_1_8",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.1.8",
+      "tag_name": "v3.1.8",
+      "title": "v3.1.8",
+      "time_hint": "2023-09-29",
+      "published_at": "2023-09-29T07:54:48Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v3.1.8",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v3.1.8\nTag: v3.1.8; draft: False; prerelease: False; published_at: 2023-09-29T07:54:48Z; created_at: 2023-09-25T08:00:08Z\nRelease notes:\n[Maven](http://search.maven.org/#artifactdetails%7Cio.reactivex.rxjava3%7Crxjava%7C3.1.8%7C)\n[JavaDocs](http://reactivex.io/RxJava/3.x/javadoc/3.1.8)\n#### Bugfixes\n- Fix `ObservableSwitchMap` `NullPointerException` due to cancel race. (https://github.com/ReactiveX/RxJava/pull/7597)",
+      "memory_unit_text": "In the ReactiveX/RxJava release v3.1.8, the release note fixes a NullPointerException in ObservableSwitchMap due to a cancel race."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v3_1_9",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.1.9",
+      "tag_name": "v3.1.9",
+      "title": "v3.1.9",
+      "time_hint": "2024-08-13",
+      "published_at": "2024-08-13T07:46:12Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v3.1.9",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v3.1.9\nTag: v3.1.9; draft: False; prerelease: False; published_at: 2024-08-13T07:46:12Z; created_at: 2024-08-10T20:58:12Z\nRelease notes:\n[Maven](http://search.maven.org/#artifactdetails%7Cio.reactivex.rxjava3%7Crxjava%7C3.1.9%7C)\n[JavaDocs](http://reactivex.io/RxJava/3.x/javadoc/3.1.9)\n#### Bugfixes\n- Fix `ScheduledRunnable`'s interruption logic if used from a no-interrupt `Schedulers.from`. [#7745](https://github.com/ReactiveX/RxJava/pull/7745)\n#### Documentation\n- Update the javadoc description of `cast()`. [#7606](https://github.com/ReactiveX/RxJava/pull/7606)\n- Update `How-To-Use-RxJava.md` (https://github.com/ReactiveX/RxJava/commit/d0038c98af7bf052253c89cbe07f0df62e2d4b83, https://github.com/ReactiveX/RxJava/commit/6d63111bde472e94ff8dbfa4288c6964c7363a15)\n- Update `Readme.md` with reference to `JavaFXScheduler.platform`. (https://github.com/ReactiveX/RxJava/commit/f822ffbc48de4de9273120aaf58ac0a591bc7e99)\n- Fix broken annotation links. [#7652](https://github.com/ReactiveX/RxJava/pull/7652)\n- Update marbles for concatMap{Single|Maybe}[DelayError] [#7698](https://github.com/ReactiveX/RxJava/pull/7698)",
+      "memory_unit_text": "In the ReactiveX/RxJava release v3.1.9, the release note fixes ScheduledRunnable's interruption logic when used from a no-interrupt Schedulers.from. Documentation updates include javadoc for cast(), How-To-Use-RxJava.md, Readme.md with JavaFXScheduler.platform reference, broken annotation links, and marbles for concatMap operators."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v3_1_10",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.1.10",
+      "tag_name": "v3.1.10",
+      "title": "v3.1.10",
+      "time_hint": "2024-11-26",
+      "published_at": "2024-11-26T07:10:06Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v3.1.10",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v3.1.10\nTag: v3.1.10; draft: False; prerelease: False; published_at: 2024-11-26T07:10:06Z; created_at: 2024-11-22T14:34:21Z\nRelease notes:\n# Version 3.1.10 - November 26, 2024\n[Maven](http://search.maven.org/#artifactdetails%7Cio.reactivex.rxjava3%7Crxjava%7C3.1.10%7C)\n[JavaDocs](http://reactivex.io/RxJava/3.x/javadoc/3.1.10)\n#### Bugfixes\n- Fix GC nepotism with `MpscLinkedQueue`'s poll logic. [#7799](https://github.com/ReactiveX/RxJava/pull/7799)\n- Fix `FlowableBlockingIterable.onNext` to set the exception before terminating to avoid losing it. [#7789](https://github.com/ReactiveX/RxJava/pull/7789)",
+      "memory_unit_text": "In the ReactiveX/RxJava release v3.1.10, the release note fixes GC nepotism with MpscLinkedQueue's poll logic and fixes FlowableBlockingIterable.onNext to set the exception before terminating to avoid losing it."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v3_1_11_rc1",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.1.11-RC1",
+      "tag_name": "v3.1.11-RC1",
+      "title": "v3.1.11-RC1",
+      "time_hint": "2025-05-19",
+      "published_at": "2025-05-19T19:25:07Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v3.1.11-RC1",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v3.1.11-RC1\nTag: v3.1.11-RC1; draft: False; prerelease: True; published_at: 2025-05-19T19:25:07Z; created_at: 2025-05-19T19:02:04Z\nRelease notes:\nTesting if releasing to the new Central Sonatype repository works.\nPlease ignore this update.",
+      "memory_unit_text": "In the ReactiveX/RxJava release v3.1.11-RC1, the release note indicates this is a test to see if releasing to the new Central Sonatype repository works, and asks to ignore this update."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v3_1_11_rc2",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.1.11-RC2",
+      "tag_name": "v3.1.11-RC2",
+      "title": "v3.1.11-RC2",
+      "time_hint": "2025-05-19",
+      "published_at": "2025-05-19T20:05:24Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v3.1.11-RC2",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v3.1.11-RC2\nTag: v3.1.11-RC2; draft: False; prerelease: True; published_at: 2025-05-19T20:05:24Z; created_at: 2025-05-19T20:03:40Z\nRelease notes:\nTesting if releasing to the new Central Sonatype repository works. Attempt 2.\nPlease ignore this update.",
+      "memory_unit_text": "In the ReactiveX/RxJava release v3.1.11-RC2, the release note indicates this is a second attempt at testing releasing to the new Central Sonatype repository, and asks to ignore this update."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v3_1_11_rc3",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.1.11-RC3",
+      "tag_name": "v3.1.11-RC3",
+      "title": "v3.1.11-RC3",
+      "time_hint": "2025-05-19",
+      "published_at": "2025-05-19T20:23:38Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v3.1.11-RC3",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v3.1.11-RC3\nTag: v3.1.11-RC3; draft: False; prerelease: True; published_at: 2025-05-19T20:23:38Z; created_at: 2025-05-19T20:22:34Z\nRelease notes:\nTesting if releasing to the new Central Sonatype repository works. Attempt 3.\nPlease ignore this update.",
+      "memory_unit_text": "In the ReactiveX/RxJava release v3.1.11-RC3, the release note indicates this is a third attempt at testing releasing to the new Central Sonatype repository, and asks to ignore this update."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v3_1_11_rc4",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.1.11-RC4",
+      "tag_name": "v3.1.11-RC4",
+      "title": "v3.1.11-RC4",
+      "time_hint": "2025-05-19",
+      "published_at": "2025-05-19T20:55:34Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v3.1.11-RC4",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v3.1.11-RC4\nTag: v3.1.11-RC4; draft: False; prerelease: True; published_at: 2025-05-19T20:55:34Z; created_at: 2025-05-19T20:53:32Z\nRelease notes:\nTesting if releasing to the new Central Sonatype repository works. Attempt 4.\nPlease ignore this update.",
+      "memory_unit_text": "In the ReactiveX/RxJava release v3.1.11-RC4, the release note indicates this is a fourth attempt at testing releasing to the new Central Sonatype repository, and asks to ignore this update."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v3_1_11_rc5",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.1.11-RC5",
+      "tag_name": "v3.1.11-RC5",
+      "title": "v3.1.11-RC5",
+      "time_hint": "2025-07-07",
+      "published_at": "2025-07-07T07:04:56Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v3.1.11-RC5",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v3.1.11-RC5\nTag: v3.1.11-RC5; draft: False; prerelease: True; published_at: 2025-07-07T07:04:56Z; created_at: 2025-07-07T06:55:40Z\nRelease notes:\nTesting if releasing to the new Central Sonatype repository works. Round 5.\nPlease ignore this update.",
+      "memory_unit_text": "In the ReactiveX/RxJava release v3.1.11-RC5, the release note indicates this is a fifth round of testing releasing to the new Central Sonatype repository, and asks to ignore this update."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v3_1_11",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.1.11",
+      "tag_name": "v3.1.11",
+      "title": "v3.1.11",
+      "time_hint": "2025-07-07",
+      "published_at": "2025-07-07T07:31:29Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v3.1.11",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v3.1.11\nTag: v3.1.11; draft: False; prerelease: False; published_at: 2025-07-07T07:31:29Z; created_at: 2025-07-07T06:55:40Z\nRelease notes:\n# Version 3.1.11 - July 7, 2025\n[Maven](http://search.maven.org/#artifactdetails%7Cio.reactivex.rxjava3%7Crxjava%7C3.1.11%7C)\n[JavaDocs](http://reactivex.io/RxJava/3.x/javadoc/3.1.11)\n#### Bugfixes\n- Fix ReplaySubject termination-subscription race emitting wrongly. [#7879](https://github.com/ReactiveX/RxJava/pull/7879)",
+      "memory_unit_text": "In the ReactiveX/RxJava release v3.1.11, the release note fixes a ReplaySubject termination-subscription race that emitted wrongly."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v3_1_12_rc1",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.1.12-RC1",
+      "tag_name": "v3.1.12-RC1",
+      "title": "v3.1.12-RC1",
+      "time_hint": "2025-09-22",
+      "published_at": "2025-09-22T17:26:45Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v3.1.12-RC1",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v3.1.12-RC1\nTag: v3.1.12-RC1; draft: False; prerelease: True; published_at: 2025-09-22T17:26:45Z; created_at: 2025-09-22T16:46:21Z\nRelease notes:\n# Version 3.1.12-RC1 - September 22, 2025\n:warning: Not for general consumption yet.\n#### Bugfixes\n- Fix for the empty module version string in the module-info.class. [#7906](https://github.com/ReactiveX/RxJava/pull/7906)",
+      "memory_unit_text": "In the ReactiveX/RxJava release v3.1.12-RC1, the release note warns it is not for general consumption yet and fixes an empty module version string in the module-info.class."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v3_1_12",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v3.1.12",
+      "tag_name": "v3.1.12",
+      "title": "v3.1.12",
+      "time_hint": "2025-09-24",
+      "published_at": "2025-09-24T07:55:10Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v3.1.12",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v3.1.12\nTag: v3.1.12; draft: False; prerelease: False; published_at: 2025-09-24T07:55:10Z; created_at: 2025-09-22T16:46:21Z\nRelease notes:\n# Version 3.1.12 - September 24, 2025\n#### Bugfixes\n- Fix for the empty module version string in the `module-info.class` file. [#7906](https://github.com/ReactiveX/RxJava/pull/7906)",
+      "memory_unit_text": "In the ReactiveX/RxJava release v3.1.12, the release note fixes an empty module version string in the module-info.class file."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v4_0_0_alpha_1",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.0-alpha-1",
+      "tag_name": "v4.0.0-alpha-1",
+      "title": "v4.0.0-alpha-1",
+      "time_hint": "2026-03-18",
+      "published_at": "2026-03-18T15:32:18Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v4.0.0-alpha-1",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v4.0.0-alpha-1\nTag: v4.0.0-alpha-1; draft: False; prerelease: True; published_at: 2026-03-18T15:32:18Z; created_at: 2026-03-18T15:28:50Z\nRelease notes:\nPlease ignore this release.",
+      "memory_unit_text": "In the ReactiveX/RxJava release v4.0.0-alpha-1, the release note asks to ignore this release."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v4_0_0_alpha_2",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.0-alpha-2",
+      "tag_name": "v4.0.0-alpha-2",
+      "title": "v4.0.0-alpha-2",
+      "time_hint": "2026-03-18",
+      "published_at": "2026-03-18T20:32:58Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v4.0.0-alpha-2",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v4.0.0-alpha-2\nTag: v4.0.0-alpha-2; draft: False; prerelease: True; published_at: 2026-03-18T20:32:58Z; created_at: 2026-03-18T20:21:02Z\nRelease notes:\nRxJava 4.x is now fully converted to juc.Flow-based system, including the TCK tests.\nResolves: #7967 - 4.x: Prefer Java Flow API to Reactive Streams\nResolves: #7968 - Bootstrap\nResolves: #7483 - ThreadDeath is deprecated for removal in Java 20",
+      "memory_unit_text": "In the ReactiveX/RxJava release v4.0.0-alpha-2, the release note states that RxJava 4.x is now fully converted to a juc.Flow-based system, including TCK tests, and resolves issues related to preferring Java Flow API, bootstrapping, and ThreadDeath deprecation."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v4_0_0_alpha_3",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.0-alpha-3",
+      "tag_name": "v4.0.0-alpha-3",
+      "title": "v4.0.0-alpha-3",
+      "time_hint": "2026-03-18",
+      "published_at": "2026-03-18T20:40:24Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v4.0.0-alpha-3",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v4.0.0-alpha-3\nTag: v4.0.0-alpha-3; draft: False; prerelease: True; published_at: 2026-03-18T20:40:24Z; created_at: 2026-03-18T20:38:38Z\nRelease notes:\nRxJava 4.x is now fully converted to juc.Flow-based system, including the TCK tests.\nResolves: #7967 - 4.x: Prefer Java Flow API to Reactive Streams\nResolves: #7968 - Bootstrap\nResolves: #7483 - ThreadDeath is deprecated for removal in Java 20",
+      "memory_unit_text": "In the ReactiveX/RxJava release v4.0.0-alpha-3, the release note states that RxJava 4.x is now fully converted to a juc.Flow-based system, including TCK tests, and resolves issues related to preferring Java Flow API, bootstrapping, and ThreadDeath deprecation."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v4_0_0_alpha_4",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.0-alpha-4",
+      "tag_name": "v4.0.0-alpha-4",
+      "title": "v4.0.0-alpha-4",
+      "time_hint": "2026-03-18",
+      "published_at": "2026-03-18T20:43:28Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v4.0.0-alpha-4",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v4.0.0-alpha-4\nTag: v4.0.0-alpha-4; draft: False; prerelease: True; published_at: 2026-03-18T20:43:28Z; created_at: 2026-03-18T20:42:13Z\nRelease notes:\nRxJava 4.x is now fully converted to juc.Flow-based system, including the TCK tests.\nResolves: #7967 - 4.x: Prefer Java Flow API to Reactive Streams\nResolves: #7968 - Bootstrap\nResolves: #7483 - ThreadDeath is deprecated for removal in Java 20",
+      "memory_unit_text": "In the ReactiveX/RxJava release v4.0.0-alpha-4, the release note states that RxJava 4.x is now fully converted to a juc.Flow-based system, including TCK tests, and resolves issues related to preferring Java Flow API, bootstrapping, and ThreadDeath deprecation."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v4_0_0_alpha_5",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.0-alpha-5",
+      "tag_name": "v4.0.0-alpha-5",
+      "title": "v4.0.0-alpha-5",
+      "time_hint": "2026-03-19",
+      "published_at": "2026-03-19T10:16:38Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v4.0.0-alpha-5",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v4.0.0-alpha-5\nTag: v4.0.0-alpha-5; draft: False; prerelease: False; published_at: 2026-03-19T10:16:38Z; created_at: 2026-03-19T10:14:28Z\nRelease notes:\n## What's Changed\n* 4.x: Add virtualCreate and virtualTransform to Flowable by @akarnokd in https://github.com/ReactiveX/RxJava/pull/8014\n* chore(deps): bump codecov/codecov-action from 5.5.2 to 5.5.3 by @dependabot[bot] in https://github.com/ReactiveX/RxJava/pull/8018\n* chore(deps): bump org.junit.platform:junit-platform-launcher from 1.11.3 to 6.0.3 by @dependabot[bot] in https://github.com/ReactiveX/RxJava/pull/8017\n* chore(deps): bump actions/cache from 5.0.3 to 5.0.4 by @dependabot[bot] in https://github.com/ReactiveX/RxJava/pull/8015\n* chore(deps): bump jupiterVersion from 5.11.3 to 6.0.3 by @dependabot[bot] in https://github.com/ReactiveX/RxJava/pull/8016\n* 4.x: Hide documentation in sealed interfaces [1/x] by @akarnokd in https://github.com/ReactiveX/RxJava/pull/8028\n**Full Changelog**: https://github.com/ReactiveX/RxJava/compare/v4.0.0-alpha-4...v4.0.0-alpha-5",
+      "memory_unit_text": "In the ReactiveX/RxJava release v4.0.0-alpha-5, the release note includes adding virtualCreate and virtualTransform to Flowable, hiding documentation in sealed interfaces, and several dependency bumps."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v4_0_0_alpha_6",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.0-alpha-6",
+      "tag_name": "v4.0.0-alpha-6",
+      "title": "v4.0.0-alpha-6",
+      "time_hint": "2026-03-19",
+      "published_at": "2026-03-19T18:46:57Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v4.0.0-alpha-6",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v4.0.0-alpha-6\nTag: v4.0.0-alpha-6; draft: False; prerelease: False; published_at: 2026-03-19T18:46:57Z; created_at: 2026-03-19T18:28:23Z\nRelease notes:\n## What's Changed\n* 4.x: Introduce FlatMapConfig & remove some overload bloat by @akarnokd in https://github.com/ReactiveX/RxJava/pull/8031\n* Various infrastructure fixes, including Javadoc for 4.x\n**Full Changelog**: https://github.com/ReactiveX/RxJava/compare/v4.0.0-alpha-5...v4.0.0-alpha-6",
+      "memory_unit_text": "In the ReactiveX/RxJava release v4.0.0-alpha-6, the release note introduces FlatMapConfig and removes some overload bloat, along with various infrastructure fixes including Javadoc for 4.x."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v4_0_0_alpha_6_1",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.0-alpha-6-1",
+      "tag_name": "v4.0.0-alpha-6-1",
+      "title": "v4.0.0-alpha-6-1",
+      "time_hint": "2026-03-19",
+      "published_at": "2026-03-19T19:13:16Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v4.0.0-alpha-6-1",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v4.0.0-alpha-6-1\nTag: v4.0.0-alpha-6-1; draft: False; prerelease: False; published_at: 2026-03-19T19:13:16Z; created_at: 2026-03-19T19:10:31Z\nRelease notes:\nFix javadoc generator by removing the old stylesheet override. No other changes.\n**Full Changelog**: https://github.com/ReactiveX/RxJava/compare/v4.0.0-alpha-6...v4.0.0-alpha-6-1",
+      "memory_unit_text": "In the ReactiveX/RxJava release v4.0.0-alpha-6-1, the release note fixes the javadoc generator by removing the old stylesheet override, with no other changes."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v4_0_0_alpha_7",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.0-alpha-7",
+      "tag_name": "v4.0.0-alpha-7",
+      "title": "v4.0.0-alpha-7",
+      "time_hint": "2026-03-19",
+      "published_at": "2026-03-19T19:42:50Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v4.0.0-alpha-7",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v4.0.0-alpha-7\nTag: v4.0.0-alpha-7; draft: False; prerelease: False; published_at: 2026-03-19T19:42:50Z; created_at: 2026-03-19T19:40:02Z\nRelease notes:\nFix the remnant `org.reactivestreams` references in the javadoc. No functional changes.\n:point_right: https://reactivex.io/RxJava/4.x/javadoc/\n:point_right: https://reactivex.io/RxJava/4.x/javadoc/v4.0.0-alpha-7/\n( :notebook: Please wait for the build & deploy to finish, usually takes 11 minutes. )\n**Full Changelog**: https://github.com/ReactiveX/RxJava/compare/v4.0.0-alpha-6-1...v4.0.0-alpha-7",
+      "memory_unit_text": "In the ReactiveX/RxJava release v4.0.0-alpha-7, the release note fixes remnant org.reactivestreams references in the javadoc, with no functional changes."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v4_0_0_alpha_7_1",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.0-alpha-7-1",
+      "tag_name": "v4.0.0-alpha-7-1",
+      "title": "v4.0.0-alpha-7-1",
+      "time_hint": "2026-03-19",
+      "published_at": "2026-03-19T20:29:15Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v4.0.0-alpha-7-1",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v4.0.0-alpha-7-1\nTag: v4.0.0-alpha-7-1; draft: False; prerelease: False; published_at: 2026-03-19T20:29:15Z; created_at: 2026-03-19T20:07:43Z\nRelease notes:\nTesting release log posting to X.\n**Full Changelog**: https://github.com/ReactiveX/RxJava/compare/v4.0.0-alpha-7...v4.0.0-alpha-7-1",
+      "memory_unit_text": "In the ReactiveX/RxJava release v4.0.0-alpha-7-1, the release note indicates this is a test for release log posting to X."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v4_0_0_alpha_7_2",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.0-alpha-7-2",
+      "tag_name": "v4.0.0-alpha-7-2",
+      "title": "v4.0.0-alpha-7-2",
+      "time_hint": "2026-03-19",
+      "published_at": "2026-03-19T20:32:36Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v4.0.0-alpha-7-2",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v4.0.0-alpha-7-2\nTag: v4.0.0-alpha-7-2; draft: False; prerelease: False; published_at: 2026-03-19T20:32:36Z; created_at: 2026-03-19T20:30:53Z\nRelease notes:\nOutdated doc of captradeoff/x-post-action@v1 mislead Grok, the current version is v1.2 :face_exhaling:.\n**Full Changelog**: https://github.com/ReactiveX/RxJava/compare/v4.0.0-alpha-7-1...v4.0.0-alpha-7-2",
+      "memory_unit_text": "In the ReactiveX/RxJava release v4.0.0-alpha-7-2, the release note mentions that outdated documentation of captradeoff/x-post-action misled Grok, and the current version is v1.2."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v4_0_0_alpha_8",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.0-alpha-8",
+      "tag_name": "v4.0.0-alpha-8",
+      "title": "v4.0.0-alpha-8",
+      "time_hint": "2026-03-23",
+      "published_at": "2026-03-23T18:10:01Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v4.0.0-alpha-8",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v4.0.0-alpha-8\nTag: v4.0.0-alpha-8; draft: False; prerelease: False; published_at: 2026-03-23T18:10:01Z; created_at: 2026-03-23T17:58:15Z\nRelease notes:\n## What's Changed\n* 4.x: Introduce `Streamable` / `Streamer`, inspired by C#'s `IAsyncEnumerable` / `IAsyncEnumerator` by @akarnokd in https://github.com/ReactiveX/RxJava/pull/8048\n* chore(deps): bump github/codeql-action from 4.33.0 to 4.34.1 by @dependabot[bot] in https://github.com/ReactiveX/RxJava/pull/8049\n* 4.x: Improve Javadocs + limit line length + cleanup indentation + check by @akarnokd in https://github.com/ReactiveX/RxJava/pull/8050\n* 4.x: Introduce `Schedulers.virtual()`, `Schedulers.cached()`, deprecate `Schedulers.io()`, fix tests by @akarnokd in https://github.com/ReactiveX/RxJava/pull/8051\n**Full Changelog**: https://github.com/ReactiveX/RxJava/compare/v4.0.0-alpha-7-2...v4.0.0-alpha-8",
+      "memory_unit_text": "In the ReactiveX/RxJava release v4.0.0-alpha-8, the release note introduces Streamable/Streamer inspired by C#'s IAsyncEnumerable/IAsyncEnumerator, improves Javadocs, limits line length, cleans up indentation, introduces Schedulers.virtual() and Schedulers.cached(), and deprecates Schedulers.io()."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v4_0_0_alpha_09",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.0-alpha-09",
+      "tag_name": "v4.0.0-alpha-09",
+      "title": "v4.0.0-alpha-09",
+      "time_hint": "2026-03-25",
+      "published_at": "2026-03-25T10:44:26Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v4.0.0-alpha-09",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v4.0.0-alpha-09\nTag: v4.0.0-alpha-09; draft: False; prerelease: False; published_at: 2026-03-25T10:44:26Z; created_at: 2026-03-25T21:28:41Z\nRelease notes:\n## What's Changed\n* chore(deps): bump gradle/actions from 5 to 6 by @dependabot[bot] in https://github.com/ReactiveX/RxJava/pull/8052\n* Harden RxJava CI toolchain by @akarnokd in https://github.com/ReactiveX/RxJava/pull/8055\n* Update gradle_release.yml, limit write capabilities of tools by @akarnokd in https://github.com/ReactiveX/RxJava/pull/8056\n* Fix gradle_snapshot.yml - need to checkout/gradle at push too by @akarnokd in https://github.com/ReactiveX/RxJava/pull/8059\n* gradle_snapshot.yml run build -> prerelease sequentially by @akarnokd in https://github.com/ReactiveX/RxJava/pull/8062\n* Cache things with entropy-beauty-scan.yml by @akarnokd in https://github.com/ReactiveX/RxJava/pull/8064\n* 4.x: Report back test failures in a readable manner for PRs/Snaps by @akarnokd in https://github.com/ReactiveX/RxJava/pull/8066\n**Full Changelog**: https://github.com/ReactiveX/RxJava/compare/v4.0.0-alpha-8...v4.0.0-alpha-9",
+      "memory_unit_text": "In the ReactiveX/RxJava release v4.0.0-alpha-09, the release note includes hardening the CI toolchain, updating gradle workflows, caching, and reporting test failures in a readable manner for PRs and snapshots."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v4_0_0_alpha_10",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.0-alpha-10",
+      "tag_name": "v4.0.0-alpha-10",
+      "title": "v4.0.0-alpha-10",
+      "time_hint": "2026-03-25",
+      "published_at": "2026-03-25T14:16:40Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v4.0.0-alpha-10",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v4.0.0-alpha-10\nTag: v4.0.0-alpha-10; draft: False; prerelease: False; published_at: 2026-03-25T14:16:40Z; created_at: 2026-03-25T14:11:17Z\nRelease notes:\n## What's Changed\n* 4.x: Try to fix parallel testng failures by @akarnokd in https://github.com/ReactiveX/RxJava/pull/8067\n* chore(deps): bump biz.aQute.bnd.builder from 7.2.1 to 7.2.3 by @dependabot[bot] in https://github.com/ReactiveX/RxJava/pull/8073\n* chore(deps): bump actions/setup-python from 5.6.0 to 6.2.0 by @dependabot[bot] in https://github.com/ReactiveX/RxJava/pull/8072\n* chore(deps): bump actions/cache from 4.2.4 to 5.0.4 by @dependabot[bot] in https://github.com/ReactiveX/RxJava/pull/8071\n* chore(deps): bump gradle/actions from 205054a7257716ec64af10a2e2ff1ac5d3b132db to 39e147cb9de83bb9910b8ef8bd7fff0ee20fcd6f by @dependabot[bot] in https://github.com/ReactiveX/RxJava/pull/8068\n* chore(deps): bump SethCohen/github-releases-to-discord from 1b3dde6c63d699e660bf6e1b5605217b84d700fe to b96a33520f8ad5e6dcdecee6f1212bdf88b16550 by @dependabot[bot] in https://github.com/ReactiveX/RxJava/pull/8070\n* chore(deps): bump captradeoff/x-post-action from d643d2bb835a1c915a056b2241cbda3c444d016d to 3538d7eeb4e7d50013ed06127f352967967da8c9 by @dependabot[bot] in https://github.com/ReactiveX/RxJava/pull/8069\n**Full Changelog**: https://github.com/ReactiveX/RxJava/compare/v4.0.0-alpha-9...v4.0.0-alpha-10",
+      "memory_unit_text": "In the ReactiveX/RxJava release v4.0.0-alpha-10, the release note attempts to fix parallel testng failures and includes several dependency bumps."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v4_0_0_alpha_11",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.0-alpha-11",
+      "tag_name": "v4.0.0-alpha-11",
+      "title": "v4.0.0-alpha-11",
+      "time_hint": "2026-03-25",
+      "published_at": "2026-03-25T14:59:08Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v4.0.0-alpha-11",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v4.0.0-alpha-11\nTag: v4.0.0-alpha-11; draft: False; prerelease: False; published_at: 2026-03-25T14:59:08Z; created_at: 2026-03-25T14:56:47Z\nRelease notes:\n## What's Changed\n* 4.x: Upgrade to Java 26 baseline compilation, test isolation by @akarnokd in https://github.com/ReactiveX/RxJava/pull/8074\n**Full Changelog**: https://github.com/ReactiveX/RxJava/compare/v4.0.0-alpha-10...v4.0.0-alpha-11",
+      "memory_unit_text": "In the ReactiveX/RxJava release v4.0.0-alpha-11, the release note upgrades to Java 26 baseline compilation and implements test isolation."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v4_0_0_alpha_12",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.0-alpha-12",
+      "tag_name": "v4.0.0-alpha-12",
+      "title": "v4.0.0-alpha-12",
+      "time_hint": "2026-03-25",
+      "published_at": "2026-03-25T21:35:12Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v4.0.0-alpha-12",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v4.0.0-alpha-12\nTag: v4.0.0-alpha-12; draft: False; prerelease: False; published_at: 2026-03-25T21:35:12Z; created_at: 2026-03-25T21:28:41Z\nRelease notes:\n## What's Changed\n* 4.x: Add optional build/test for future JDKs by @akarnokd in https://github.com/ReactiveX/RxJava/pull/8077\n**Full Changelog**: https://github.com/ReactiveX/RxJava/compare/v4.0.0-alpha-11...v4.0.0-alpha-12",
+      "memory_unit_text": "In the ReactiveX/RxJava release v4.0.0-alpha-12, the release note adds optional build/test for future JDKs."
+    },
+    {
+      "memory_node_id": "ReactiveX__RxJava__release__v4_0_0_alpha_13",
+      "repo": "ReactiveX/RxJava",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v4.0.0-alpha-13",
+      "tag_name": "v4.0.0-alpha-13",
+      "title": "v4.0.0-alpha-13",
+      "time_hint": "2026-04-03",
+      "published_at": "2026-04-03T15:02:31Z",
+      "source_url": "https://github.com/ReactiveX/RxJava/releases/tag/v4.0.0-alpha-13",
+      "raw_text": "Repository: ReactiveX/RxJava\nRelease: v4.0.0-alpha-13\nTag: v4.0.0-alpha-13; draft: False; prerelease: False; published_at: 2026-04-03T15:02:31Z; created_at: 2026-04-03T14:52:40Z\nRelease notes:\n## What's Changed\n* 4.x: Add optional build/test for future JDKs by @akarnokd in https://github.com/ReactiveX/RxJava/pull/8077\n* 4.x: Isolate FlowableMergeTest.synchronizationOfMultipleSequencesLoop by @akarnokd in https://github.com/ReactiveX/RxJava/pull/8078\n* chore(deps): bump codecov/codecov-action from 5.5.3 to 6.0.0 by @dependabot[bot] in https://github.com/ReactiveX/RxJava/pull/8085\n* Fix #8086: Isolate windowUnsubscribeNonOverlappingAsyncSource to JUnit 5 by @ZhangDT-sky in https://github.com/ReactiveX/RxJava/pull/8087\n* chore(deps): bump github/codeql-action from 4.34.1 to 4.35.1 by @dependabot[bot] in https://github.com/ReactiveX/RxJava/pull/8088\n* chore(deps): bump trufflesecurity/trufflehog from 3.94.1 to 3.94.2 by @dependabot[bot] in https://github.com/ReactiveX/RxJava/pull/8091\n* 4.x: Enhance Streamable/Streamer and DisposableContainer APIs by @akarnokd in https://github.com/ReactiveX/RxJava/pull/8092\n## New Contributors\n* @ZhangDT-sky made their first contribution in https://github.com/ReactiveX/RxJava/pull/8087\n**Full Changelog**: https://github.com/ReactiveX/RxJava/compare/v4.0.0-alpha-11...v4.0.0-alpha-13",
+      "memory_unit_text": "In the ReactiveX/RxJava release v4.0.0-alpha-13, the release note adds optional build/test for future JDKs, isolates FlowableMergeTest, fixes windowUnsubscribeNonOverlappingAsyncSource isolation, enhances Streamable/Streamer and DisposableContainer APIs, and includes dependency bumps."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the ReactiveX/RxJava releases, which release adds overloads to throttleLatest, throttleFirst, throttleLast, and throttleWithTimeout operators with an onDropped callback?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v3.1.6"
+        },
+        {
+          "option_id": "B",
+          "text": "v3.1.7"
+        },
+        {
+          "option_id": "C",
+          "text": "v3.1.8"
+        },
+        {
+          "option_id": "D",
+          "text": "v3.1.9"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v3.1.6",
+      "source_chunk_ids": [
+        "ReactiveX__RxJava__release__v3_1_6"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "ReactiveX__RxJava__release__v3_1_6",
+          "answer_text": "API changes adding overloads to throttleLatest, throttleFirst, throttleLast, and throttleWithTimeout operators with an onDropped callback."
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the ReactiveX/RxJava releases, how does the bugfix in v3.1.8 differ from the bugfix in v3.1.10?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v3.1.8 fixes a NullPointerException in ObservableSwitchMap due to cancel race, while v3.1.10 fixes GC nepotism with MpscLinkedQueue's poll logic and a FlowableBlockingIterable.onNext exception loss."
+        },
+        {
+          "option_id": "B",
+          "text": "v3.1.8 fixes a race condition in Single.timeout, while v3.1.10 fixes a ReplaySubject termination-subscription race."
+        },
+        {
+          "option_id": "C",
+          "text": "v3.1.8 fixes ScheduledRunnable's interruption logic, while v3.1.10 fixes an empty module version string."
+        },
+        {
+          "option_id": "D",
+          "text": "Both releases only update documentation without any bugfixes."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v3.1.8 fixes a NullPointerException in ObservableSwitchMap due to cancel race, while v3.1.10 fixes GC nepotism with MpscLinkedQueue's poll logic and a FlowableBlockingIterable.onNext exception loss.",
+      "source_chunk_ids": [
+        "ReactiveX__RxJava__release__v3_1_8",
+        "ReactiveX__RxJava__release__v3_1_10"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "ReactiveX__RxJava__release__v3_1_8",
+          "answer_text": "Fix ObservableSwitchMap NullPointerException due to cancel race."
+        },
+        {
+          "memory_node_id": "ReactiveX__RxJava__release__v3_1_10",
+          "answer_text": "Fix GC nepotism with MpscLinkedQueue's poll logic. Fix FlowableBlockingIterable.onNext to set the exception before terminating to avoid losing it."
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the ReactiveX/RxJava release window, order the following release-content states from earliest to latest: (1) a release that adds onDropped callback for onBackpressureLatest and onBackpressureBuffer, (2) a release that fixes a ReplaySubject termination-subscription race, (3) a release that fixes an empty module version string in module-info.class, (4) a release that introduces Streamable/Streamer and deprecates Schedulers.io().",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "ReactiveX__RxJava__release__v3_1_7",
+        "ReactiveX__RxJava__release__v3_1_11",
+        "ReactiveX__RxJava__release__v3_1_12",
+        "ReactiveX__RxJava__release__v4_0_0_alpha_8"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "ReactiveX__RxJava__release__v3_1_7",
+          "answer_text": "Add onDropped callback for onBackpressureLatest and onBackpressureBuffer."
+        },
+        {
+          "memory_node_id": "ReactiveX__RxJava__release__v3_1_11",
+          "answer_text": "Fix ReplaySubject termination-subscription race emitting wrongly."
+        },
+        {
+          "memory_node_id": "ReactiveX__RxJava__release__v3_1_12",
+          "answer_text": "Fix for the empty module version string in the module-info.class file."
+        },
+        {
+          "memory_node_id": "ReactiveX__RxJava__release__v4_0_0_alpha_8",
+          "answer_text": "Introduce Streamable/Streamer, deprecate Schedulers.io()."
+        }
+      ]
+    }
+  ]
+}

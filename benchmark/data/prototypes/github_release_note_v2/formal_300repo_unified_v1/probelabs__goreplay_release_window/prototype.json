@@ -1,0 +1,525 @@
+{
+  "prototype_id": "probelabs__goreplay_release_window",
+  "domain": "github_release_evolution",
+  "repo": "probelabs/goreplay",
+  "source_type": "release_note",
+  "window_title": "probelabs/goreplay recent release evolution",
+  "window_summary": "This window tracks the recent probelabs/goreplay release stream from v0.9.8 through v2.0.0-rc2, covering middleware support, license changes, capture engine improvements, and major version milestones.",
+  "chunks": [
+    {
+      "memory_node_id": "probelabs__goreplay__release__0_9_8",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:0.9.8",
+      "tag_name": "0.9.8",
+      "title": "v0.9.8",
+      "time_hint": "2015-08-06",
+      "published_at": "2015-08-06T07:52:49Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/0.9.8",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v0.9.8\nTag: 0.9.8; draft: False; prerelease: False; published_at: 2015-08-06T07:52:49Z; created_at: 2015-08-06T06:34:51Z\nRelease notes:\n- Improve `raw-input` performance, especially for large payloads #170\n- Use all cores by default #170\n- Improve code styling, thanks to `golint`. #171\n- Added `--http-disallow-header` option #173\n- Do not override host if it explicitly specified by`--http-host` #182\n- Add option to keep original Host headers #188\n- Configurable http timeout via `--output-http-timeout` #183\n- Fix http response buffer overflow #185\n- Fix trailing `null` byte while communicating between intput-tcp and output-tcp #176",
+      "memory_unit_text": "In the probelabs/goreplay release v0.9.8, the project improves raw-input performance especially for large payloads, uses all cores by default, improves code styling with golint, adds --http-disallow-header option, does not override host if explicitly specified by --http-host, adds option to keep original Host headers, makes http timeout configurable via --output-http-timeout, fixes http response buffer overflow, and fixes trailing null byte in communication between input-tcp and output-tcp."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__0_10_0",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:0.10.0",
+      "tag_name": "0.10.0",
+      "title": "v0.10.0",
+      "time_hint": "2015-08-24",
+      "published_at": "2015-08-24T07:49:43Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/0.10.0",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v0.10.0\nTag: 0.10.0; draft: False; prerelease: False; published_at: 2015-08-24T07:49:43Z; created_at: 2015-08-24T06:44:00Z\nRelease notes:\n- **Middleware** support! See README and examples folder. #162\n- Raw input now track responses (they are recorded to file input as well) #162\n- Changed file format, now it human readable #162\n- Changed internal TCP communication format (same as file format) #162\n- Add protection for malformed messages\n- Significantly improved test speed #162\n- Fix: do not add 80 port to HOST header #190",
+      "memory_unit_text": "In the probelabs/goreplay release v0.10.0, the project introduces middleware support, makes raw input track responses and records them to file input, changes file format to human readable, changes internal TCP communication format to match file format, adds protection for malformed messages, significantly improves test speed, and fixes not adding port 80 to HOST header."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v0_10_1",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.10.1",
+      "tag_name": "v0.10.1",
+      "title": "v0.10.1",
+      "time_hint": "2015-09-03",
+      "published_at": "2015-09-03T19:08:19Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v0.10.1",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v0.10.1\nTag: v0.10.1; draft: False; prerelease: False; published_at: 2015-09-03T19:08:19Z; created_at: 2015-09-03T18:55:09Z\nRelease notes:\n- Fixed memory leaks #194 #201\n- Improved speed by dramatically reducing number of goroutines  #194\n- Fixed input-file #202",
+      "memory_unit_text": "In the probelabs/goreplay release v0.10.1, the project fixes memory leaks, improves speed by dramatically reducing number of goroutines, and fixes input-file."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v0_11_0",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.11.0",
+      "tag_name": "v0.11.0",
+      "title": "v0.11.0",
+      "time_hint": "2016-04-29",
+      "published_at": "2016-04-29T13:13:25Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v0.11.0",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v0.11.0\nTag: v0.11.0; draft: False; prerelease: False; published_at: 2016-04-29T13:13:25Z; created_at: 2016-04-29T11:01:37Z\nRelease notes:\n## New site and announce of Pro version https://gortool.com\n### Release details:\n- **License switched to LGPL**, and added option for commercial friendly option\n- Default traffic interception engine now libpcap, which significantly increased capture quality and speed\n- Multiple fixes improving stability, speed and quality\n- Go 1.6.1",
+      "memory_unit_text": "In the probelabs/goreplay release v0.11.0, the project announces a new site and Pro version at gortool.com, switches license to LGPL with a commercial friendly option, changes default traffic interception engine to libpcap for increased capture quality and speed, includes multiple fixes for stability, speed, and quality, and updates to Go 1.6.1."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v0_11_1",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.11.1",
+      "tag_name": "v0.11.1",
+      "title": "v0.11.1",
+      "time_hint": "2016-04-29",
+      "published_at": "2016-04-29T16:47:50Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v0.11.1",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v0.11.1\nTag: v0.11.1; draft: False; prerelease: False; published_at: 2016-04-29T16:47:50Z; created_at: 2016-04-29T16:44:50Z\nRelease notes:\n- Fixed critical bug preventing using --input-raw\nhttps://gortool.com - test your system with real data",
+      "memory_unit_text": "In the probelabs/goreplay release v0.11.1, the project fixes a critical bug preventing use of --input-raw."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v0_11_2",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.11.2",
+      "tag_name": "v0.11.2",
+      "title": "v0.11.2",
+      "time_hint": "2016-05-03",
+      "published_at": "2016-05-03T12:57:52Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v0.11.2",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v0.11.2\nTag: v0.11.2; draft: False; prerelease: False; published_at: 2016-05-03T12:57:52Z; created_at: 2016-05-03T12:55:38Z\nRelease notes:\nBugfix release\n- `libpcap` now linked statically and does not require host system to have it\n- Fixed panic when gor meet malformed TCPpacket",
+      "memory_unit_text": "In the probelabs/goreplay release v0.11.2, the project statically links libpcap so it does not require the host system to have it, and fixes a panic when encountering malformed TCP packets."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v0_12_0",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.0",
+      "tag_name": "v0.12.0",
+      "title": "v0.12.0",
+      "time_hint": "2016-05-11",
+      "published_at": "2016-05-11T12:00:44Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v0.12.0",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v0.12.0\nTag: v0.12.0; draft: False; prerelease: False; published_at: 2016-05-11T12:00:44Z; created_at: 2016-05-11T11:53:23Z\nRelease notes:\nShould be faster, consume less memory, and catch more traffic\n- Support for IPv6\n- Fixed traffic interception without specifying port (e.g. on all interfaces: \":80\")\n- Fixed memory leaks\n- Better handling of fragmented messages",
+      "memory_unit_text": "In the probelabs/goreplay release v0.12.0, the project adds support for IPv6, fixes traffic interception without specifying a port, fixes memory leaks, and improves handling of fragmented messages, aiming to be faster, consume less memory, and catch more traffic."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v0_12_1",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.12.1",
+      "tag_name": "v0.12.1",
+      "title": "v0.12.1",
+      "time_hint": "2016-05-13",
+      "published_at": "2016-05-13T13:00:11Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v0.12.1",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v0.12.1\nTag: v0.12.1; draft: False; prerelease: False; published_at: 2016-05-13T13:00:11Z; created_at: 2016-05-13T12:42:59Z\nRelease notes:\n- Full Mac OS support including pre-compiled binaries (go for mac does not support static linking, you need to have libpcap installed)\n- Update to use latest libpcap: was 0.8 now 1.7.4\n- Ensure to clean up sockets after exit\n- Fixed crashing on system with complex networking\n- Fixed few data-races",
+      "memory_unit_text": "In the probelabs/goreplay release v0.12.1, the project adds full Mac OS support including pre-compiled binaries, updates to use latest libpcap 1.7.4, ensures cleanup of sockets after exit, fixes crashing on systems with complex networking, and fixes a few data-races."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v0_13_0",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.13.0",
+      "tag_name": "v0.13.0",
+      "title": "v0.13.0",
+      "time_hint": "2016-05-25",
+      "published_at": "2016-05-25T11:52:40Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v0.13.0",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v0.13.0\nTag: v0.13.0; draft: False; prerelease: False; published_at: 2016-05-25T11:52:40Z; created_at: 2016-05-25T11:27:18Z\nRelease notes:\n- `--input-raw` now do not track responses by default, you can enable them using `--input-raw-track-response` #279\n- `--output-dummy` now renamed to `--output-stdout` and does not require arguments #282\n- HTTP client response buffer now configurable via `--output-http-response-buffer` #249\n- Fixed recovery when `--output-tcp` endpoint goes down https://github.com/buger/gor/commit/0ccace8cad988dfb15ceb725ff3085b5f7c386fd\n- Improved HTTP capture and replaying for requests with multi-packet headers and POST requests #277 #281\n- Fixed libpcap crashing when listening on multiple interfaces https://github.com/buger/gor/commit/98868e81c500579428049944ce47ee50d0ec107b\n- Fixed `--input-tcp` crashing for payloads > 64kb https://github.com/buger/gor/commit/d40d6c6116c93f5f0f8da768296738cf915821ad\n- Fixed raw socket engine IPv6 support https://github.com/buger/gor/commit/98fe7f19b21eaaffcd0d733a57668f63de5921d7",
+      "memory_unit_text": "In the probelabs/goreplay release v0.13.0, the project makes --input-raw not track responses by default with an option to enable via --input-raw-track-response, renames --output-dummy to --output-stdout without arguments, makes HTTP client response buffer configurable via --output-http-response-buffer, fixes recovery when --output-tcp endpoint goes down, improves HTTP capture and replaying for multi-packet headers and POST requests, fixes libpcap crashing on multiple interfaces, fixes --input-tcp crashing for payloads over 64kb, and fixes raw socket engine IPv6 support."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v0_14_0",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.14.0",
+      "tag_name": "v0.14.0",
+      "title": "v0.14.0",
+      "time_hint": "2016-06-09",
+      "published_at": "2016-06-09T14:44:22Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v0.14.0",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v0.14.0\nTag: v0.14.0; draft: False; prerelease: False; published_at: 2016-06-09T14:44:22Z; created_at: 2016-06-09T13:06:59Z\nRelease notes:\n- Windows support!\n- Allow date variables in --output-file names: `--output-file %Y-%m-%d-%H.log` will create new file each hour #290\n- Support for gzip compressed files, both for input and output #290\n- Replaying from multiple files: --input-file now support file name patterns #290\n- Looping files for replaying indefinitely #290\n- New default --output-file behaviour for writing files in multiple chunks #293\n- Faster buffered file output #290\n- Support for lower-case HTTP headers\n- Added built-in file server for the tutorial: `gor file-server :8000`\n- Fix bug when gor catch its own --output-http traffic if it replayed to the same port as origin #295\n- `--input-raw-realip-header` option to injecting header with user real IP #296",
+      "memory_unit_text": "In the probelabs/goreplay release v0.14.0, the project adds Windows support, allows date variables in --output-file names, supports gzip compressed files for input and output, supports replaying from multiple files with file name patterns, supports looping files for replaying indefinitely, changes default --output-file behavior to write files in multiple chunks, adds faster buffered file output, supports lower-case HTTP headers, adds a built-in file server for the tutorial, fixes a bug where gor catches its own --output-http traffic, and adds --input-raw-realip-header option to inject header with user real IP."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v0_14_1",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.14.1",
+      "tag_name": "v0.14.1",
+      "title": "v0.14.1",
+      "time_hint": "2016-06-10",
+      "published_at": "2016-06-10T15:19:27Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v0.14.1",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v0.14.1\nTag: v0.14.1; draft: False; prerelease: False; published_at: 2016-06-10T15:19:27Z; created_at: 2016-06-10T15:15:08Z\nRelease notes:\n- Fixed critical issues with crashing when used --output-file",
+      "memory_unit_text": "In the probelabs/goreplay release v0.14.1, the project fixes critical issues with crashing when using --output-file."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v0_15_0",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.15.0",
+      "tag_name": "v0.15.0",
+      "title": "v0.15.0",
+      "time_hint": "2016-08-10",
+      "published_at": "2016-08-10T11:15:55Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v0.15.0",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v0.15.0\nTag: v0.15.0; draft: False; prerelease: False; published_at: 2016-08-10T11:15:55Z; created_at: 2016-08-08T16:35:11Z\nRelease notes:\n- **[PRO]** Added support for working with [binary protocols (thrift/protocol buffers)](https://github.com/buger/gor/wiki/%5BPRO%5D-Replaying-Binary-protocols)\n- **[PRO]** [Recording and replaying keep alive TCP sessions](https://github.com/buger/gor/wiki/%5BPRO%5D-Recording-and-replaying-keep-alive-TCP-sessions)\n- Replaying request in proper order when using multiple files #300\n- Validate bodies when Content-Length or Transfer-Encoding found #317\n- Return of ElasticSearch support! #331 #333\n- Added `--exit-after` option to specify duration after which Gor will exit #336\n- Updated response output file format, now third value is timestamp and forth is latency\n- Properly read body when no `Content-Length` but there is `Connection: close` d34c27c\n- Remove `--input-http` option (too confusing and never really worked) f0acd31\n- Force Go DNS resolver (C one caused crashes for multiple people) 07fa6d9\n- Fix interception on loopback interface when non-local IP used 1ed8691\n- Fix intercepting traffic from virtual interfaces 51860e1\n- Fix 100-continue header when it places not in the end #314\n- Fix relative file names when using `--output-file` #304\n- Properly cleanup used resources on exit #305\n- Fix connection timeout when using `--output-http-timeout` c4271ff",
+      "memory_unit_text": "In the probelabs/goreplay release v0.15.0, the project adds PRO support for binary protocols and recording/replaying keep-alive TCP sessions, replays requests in proper order when using multiple files, validates bodies when Content-Length or Transfer-Encoding found, returns ElasticSearch support, adds --exit-after option, updates response output file format with timestamp and latency, properly reads body when no Content-Length but Connection: close, removes --input-http option, forces Go DNS resolver, fixes interception on loopback interface with non-local IP, fixes intercepting traffic from virtual interfaces, fixes 100-continue header placement, fixes relative file names with --output-file, properly cleans up resources on exit, and fixes connection timeout with --output-http-timeout."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v0_15_1_beta1",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.15.1-beta1",
+      "tag_name": "v0.15.1-beta1",
+      "title": "v0.15.1-beta1",
+      "time_hint": "2016-08-23",
+      "published_at": "2016-08-23T16:48:02Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v0.15.1-beta1",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v0.15.1-beta1\nTag: v0.15.1-beta1; draft: False; prerelease: True; published_at: 2016-08-23T16:48:02Z; created_at: 2016-08-23T16:29:27Z\nRelease notes:\n- Gopacket package now vendored same as the rest of 3-rd party dependencies",
+      "memory_unit_text": "In the probelabs/goreplay release v0.15.1-beta1, the project vendors the gopacket package same as other third-party dependencies."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v0_15_1",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.15.1",
+      "tag_name": "v0.15.1",
+      "title": "v0.15.1",
+      "time_hint": "2016-08-31",
+      "published_at": "2016-08-31T15:46:44Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v0.15.1",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v0.15.1\nTag: v0.15.1; draft: False; prerelease: False; published_at: 2016-08-31T15:46:44Z; created_at: 2016-08-31T14:27:45Z\nRelease notes:\n- Add support for basic http auth for `--output-http` 1674b58\n- Fix handling of \"Connection: close\" for POST requests fc0361d\n- Fix inconsistency in replayed response meta when used in middleware a2f5e43",
+      "memory_unit_text": "In the probelabs/goreplay release v0.15.1, the project adds support for basic HTTP auth for --output-http, fixes handling of Connection: close for POST requests, and fixes inconsistency in replayed response meta when used in middleware."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v0_16_0_2",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.16.0.2",
+      "tag_name": "v0.16.0.2",
+      "title": "v0.16.0",
+      "time_hint": "2017-05-01",
+      "published_at": "2017-05-01T15:24:27Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v0.16.0.2",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v0.16.0\nTag: v0.16.0.2; draft: False; prerelease: False; published_at: 2017-05-01T15:24:27Z; created_at: 2017-05-01T15:56:50Z\nRelease notes:\nFinally a new big release, a lot of changes on all fronts. New features, usability stability, fixes.\n### Thank you, everyone, who made it happen!\nIt would not be possible without this people @smostovoy @exklamationmark @manjeshnilange @kudos @oivoodoo @sattvik @ylegat @nrwiersma @SophisticaSean\n## CHANGELOG\n### Major\n* **[PRO]** Added S3 input and output https://github.com/buger/goreplay/wiki/%5BPRO%5D-Using-S3-for-storing-and-replaying-traffic\n* Added new NodeJS middleware framework https://github.com/buger/goreplay/tree/master/middleware\n* Add Kafka input and output https://github.com/buger/goreplay/wiki/Streaming-from-and-to-Apache-Kafka\n* Improve accuracy of replay by using timestamp of when TCP packet was received by network interface (previously used time of package capture by GoReplay)\n* Using `—prettify-http` option, you can automatically decode Gzip encoded responses, and de-construct chunked bodies.\n* Now you can enable HTTP response tracking by providing `—output-http-track-respose`. Previously was available only if middleware is turned on.\n### Minor\n* Add new option `--input-raw-expire` to configure TCP message expiration\n* Filter response if its request was filtered\n* Allow space inside filters syntax: `--http-disallow-header 'Host: www.vertaa.fi' now valid syntax\n* File name pattern now support request id `%r`, will log each request to separate file, and `%t` for payload type (0 - request, 1 - response, 2 - replayed response).\n* Add basic SNI support to support HTTP replay to hosts that require SNI, such as Amazon API Gateway.\nAPI Gateway)\n* Fix `--output-file-size-limit` option\n* Do not add port to Host header #383\n* Improve malformed TCP packet handling to avoid panics\n* Fix HTTP timeout for 204 (No content) responses\n* Fix handling of HTTP error codes like 400 or 304.\n* Fixed replay of HTTP PATCH requests",
+      "memory_unit_text": "In the probelabs/goreplay release v0.16.0, the project adds PRO S3 input and output, adds a new NodeJS middleware framework, adds Kafka input and output, improves replay accuracy by using network interface timestamp, adds --prettify-http option to decode gzip and de-chunk bodies, enables HTTP response tracking via --output-http-track-response, adds --input-raw-expire option, filters response if its request was filtered, allows space inside filter syntax, adds file name pattern support for request id and payload type, adds basic SNI support, fixes --output-file-size-limit, does not add port to Host header, improves malformed TCP packet handling, fixes HTTP timeout for 204 responses, fixes handling of HTTP error codes, and fixes replay of HTTP PATCH requests."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v0_16_1",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v0.16.1",
+      "tag_name": "v0.16.1",
+      "title": "v0.16.1",
+      "time_hint": "2017-06-30",
+      "published_at": "2017-06-30T14:47:52Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v0.16.1",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v0.16.1\nTag: v0.16.1; draft: False; prerelease: False; published_at: 2017-06-30T14:47:52Z; created_at: 2017-06-30T13:58:45Z\nRelease notes:\n* Add support for TLS connections between --input-tcp and --output-tcp. `--input-tcp-secure --input-tcp-certificate ./cert.pem --input-tcp-certificate-key ./key.pem  --output-tcp-secure` #457\n* Add basic support for old server, like HTTP 0.9 #468 #463 #467\n* GoReplay now exit once finished replaying with --input-file #456\n* Fix prettifier issue, when there is problems with gzip encoding payload #470",
+      "memory_unit_text": "In the probelabs/goreplay release v0.16.1, the project adds support for TLS connections between --input-tcp and --output-tcp, adds basic support for old servers like HTTP 0.9, makes GoReplay exit once finished replaying with --input-file, and fixes a prettifier issue with gzip encoding payload."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v1_0_rc2",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.0-rc2",
+      "tag_name": "v1.0-rc2",
+      "title": "GoReplay 1.0 RC2",
+      "time_hint": "2019-02-23",
+      "published_at": "2019-02-23T09:51:35Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v1.0-rc2",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: GoReplay 1.0 RC2\nTag: v1.0-rc2; draft: False; prerelease: True; published_at: 2019-02-23T09:51:35Z; created_at: 2019-02-23T09:46:53Z\nRelease notes:\n- Added support for HTTP proxies. Just set HTTP_PROXY env variable.",
+      "memory_unit_text": "In the probelabs/goreplay release GoReplay 1.0 RC2, the project adds support for HTTP proxies by setting the HTTP_PROXY environment variable."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v1_0_0",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.0.0",
+      "tag_name": "v1.0.0",
+      "title": "1.0.0",
+      "time_hint": "2019-03-30",
+      "published_at": "2019-03-30T08:54:36Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v1.0.0",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: 1.0.0\nTag: v1.0.0; draft: False; prerelease: False; published_at: 2019-03-30T08:54:36Z; created_at: 2019-03-10T09:29:28Z\nRelease notes:\n## Long awaited major release of GoReplay!\n- Added option to specify custom BPF filter (e.g. tcpdump syntax). Can be useful in case of non standard network interfaces like tunneling or SPAN port. Example: `--input-raw-bpf-filter 'dst port 80’` https://github.com/buger/goreplay/pull/478\n- Support for reading directly from pcap file, using `--input-raw-engine pcap_file --input-raw ./recording.pcap`_\n- Added official Docker image `docker pull buger/goreplay`. Should be run with `--network host` argument.\n- Added RPM and DEB packages\n- Added support for HTTP proxies. Just set `HTTP_PROXY` env variable.\n- Added HTTP basic auth filter: `--http-basic-auth-filter \"^customer[0-9].*`. You specify regexp which match `userid:passwd` string. [https://github.com/buger/goreplay/pull/475]\n- Added option to limit size of output file: when limit is reached, it will exit. Can be used for safety reasons. Example: `--output-file-max-size-limit 5gb`.\n- Added way to configure output HTTO request queue, which used to hold requests, if all workers are busy. Example: `--output-http-queue-len 5000`. Default is 1000.\n- Control frequency of `--output-http-stats` reports using `--output-http-stats-ms`option. Example: `--output-http-stats-ms 5000` (every 5 seconds).\n- Configurable way to set minimum number of HTTP workers, by setting `--output-http-workers-min`. Can be used in conjunction with `--output-http-workers` which will act as a max worker count.\n- Added way to dynamically profile GoReplay performance using Golang pprof tools. Example: `--http-pprof :8181`. It starts web server on given address, and expose special `/debug/pprof` endpoint with list of reports.\n- Added `—input-raw-buffer-size` which controls size of the OS buffer (in\nbytes) which holds packets until they dispatched. Default value depends\nby system: in Linux around 2MB. If you see big package drop, increase\nthis value.\n- In addition to buffer size, added option to turn  pcap `immediate` mode when packets delivered without buffering. Can help reduce packet drop. Example:   `--input-raw-immediate-mode`.\n- Added way to use standard Golang HTTP client, by adding `--output-http-compatibility-mode`\n- Snaplen (max number of bytes being read for each packet)\nnow dynamically set based on interface MTU + max header size. In most\nsituations it should reduce package drop, because each packet will\nconsume less space in the buffer. However in some virtualized environments like OpenShift, packet size can be significantly bigger then MTU, so you can disable optimization by setting `--input-raw-override-snaplen`.\n- Added support for ElasticSearch basic HTTP auth\n- Numerous fixes to improve quality of HTTP packets parsing",
+      "memory_unit_text": "In the probelabs/goreplay release 1.0.0, the project adds custom BPF filter support, support for reading directly from pcap files, an official Docker image, RPM and DEB packages, HTTP proxy support, HTTP basic auth filter, option to limit output file size, configurable output HTTP request queue, configurable output HTTP stats frequency, configurable minimum HTTP workers, dynamic profiling via pprof, --input-raw-buffer-size option, pcap immediate mode, standard Golang HTTP client compatibility mode, dynamic snaplen based on interface MTU, ElasticSearch basic HTTP auth, and numerous fixes for HTTP packet parsing."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v1_1_0",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.1.0",
+      "tag_name": "v1.1.0",
+      "title": "v1.1.0",
+      "time_hint": "2020-07-04",
+      "published_at": "2020-07-04T08:47:14Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v1.1.0",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v1.1.0\nTag: v1.1.0; draft: False; prerelease: False; published_at: 2020-07-04T08:47:14Z; created_at: 2020-06-24T14:19:19Z\nRelease notes:\n- Fix usage of multiple `--input-raw` plugins, e.g. `--input-raw :80 --input-raw :81 --input-raw :82` https://github.com/buger/goreplay/pull/700\n- Allow to set byte size limits in human friedly format:  `--output-file-size-limit`, `--output-file-max-size-limit`, `--copy-buffer-size` and `--input-raw-buffer-size` can now parse inputs from differents bases and data units like: 10mb, 10kb, 100gb, 18t https://github.com/buger/goreplay/pull/754\n- Fix calculation of the output file size when using gzip compression https://github.com/buger/goreplay/pull/777\n- Added `--output-tcp-sticky` so request/response with same ID sent to the same connection.\n- Better handling of malformed middleware output https://github.com/buger/goreplay/pull/737\n- Fixed race when reading or writing using files https://github.com/buger/goreplay/pull/756 https://github.com/buger/goreplay/pull/764\n- Improved errors verbosity https://github.com/buger/goreplay/issues/703\n- Updated dependencies, including libpcap which should bring more stability and performance\n- Move to Go modules\n- PRO code moved to the main repository under separate license",
+      "memory_unit_text": "In the probelabs/goreplay release v1.1.0, the project fixes usage of multiple --input-raw plugins, allows human-friendly byte size limits, fixes calculation of output file size with gzip compression, adds --output-tcp-sticky option, improves handling of malformed middleware output, fixes race conditions with files, improves error verbosity, updates dependencies including libpcap, moves to Go modules, and moves PRO code to the main repository under a separate license."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v1_2_0",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.2.0",
+      "tag_name": "v1.2.0",
+      "title": "v1.2.0",
+      "time_hint": "2020-09-17",
+      "published_at": "2020-09-17T06:48:43Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v1.2.0",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v1.2.0\nTag: v1.2.0; draft: False; prerelease: False; published_at: 2020-09-17T06:48:43Z; created_at: 2020-09-16T15:34:58Z\nRelease notes:\n- Engine CPU consumption reduced by 60%\n- Implemented M'mapped AF_PACKET for Linux. To enable set `--input-raw-engine af_packet`. #807\n- Added Kafka TLS configuration flag #800\n- Fix wrong param value updated while `--http-set-param` #791\n- The engine can now capture more requests with large payload #797\n- Created TCP package #97\n- Fixed minor bugs in HTTP proto parser",
+      "memory_unit_text": "In the probelabs/goreplay release v1.2.0, the project reduces engine CPU consumption by 60%, implements memory-mapped AF_PACKET for Linux, adds Kafka TLS configuration flag, fixes wrong param value update with --http-set-param, improves capture of requests with large payload, creates a TCP package, and fixes minor bugs in HTTP proto parser."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v1_3_0_rc4",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.0_RC4",
+      "tag_name": "v1.3.0_RC4",
+      "title": "v1.3.0_RC4",
+      "time_hint": "2021-06-09",
+      "published_at": "2021-06-09T16:26:47Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v1.3.0_RC4",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v1.3.0_RC4\nTag: v1.3.0_RC4; draft: False; prerelease: True; published_at: 2021-06-09T16:26:47Z; created_at: 2021-06-09T15:26:09Z\nRelease notes:\n# Changes from previous RC\n- Big changes in capture engine to give more performance and stability #916\n- Fixed a bug when GoRepay were including outgoing HTTP request initialized within the app, and having the same port #941\n- Added (again) windows support #940\n- Fix Output HTTP connection leak #927",
+      "memory_unit_text": "In the probelabs/goreplay release v1.3.0_RC4, the project makes big changes in the capture engine for more performance and stability, fixes a bug where GoReplay included outgoing HTTP requests with the same port, adds Windows support again, and fixes an output HTTP connection leak."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v1_3_0_rc5",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.0_RC5",
+      "tag_name": "v1.3.0_RC5",
+      "title": "v1.3.0_RC5",
+      "time_hint": "2021-06-10",
+      "published_at": "2021-06-10T13:17:13Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v1.3.0_RC5",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v1.3.0_RC5\nTag: v1.3.0_RC5; draft: False; prerelease: True; published_at: 2021-06-10T13:17:13Z; created_at: 2021-06-10T12:01:55Z\nRelease notes:\n- Added a way to capture multiple ports using one input like this: `--input-raw :80,8080,3000` #935\n- Fixed usage of \"localhost\" hostname when trying to limit scope of packet capture (e.g. `--input-raw localhost:80`), now it properly binds to loopback interface #943\n- Fixed detection of windows network interfaces #943\n- Fixed Makefile job to generate windows binaries\n- Fixed big memory allocation issue happening during HTTP message end check. Was also causing issues in chunked message detection.",
+      "memory_unit_text": "In the probelabs/goreplay release v1.3.0_RC5, the project adds a way to capture multiple ports with a single input, fixes usage of localhost hostname for packet capture scope, fixes detection of Windows network interfaces, fixes Makefile job for Windows binaries, and fixes a big memory allocation issue during HTTP message end check."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v1_3_0_rc6",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.0_RC6",
+      "tag_name": "v1.3.0_RC6",
+      "title": "v1.3.0_RC6",
+      "time_hint": "2021-06-30",
+      "published_at": "2021-06-30T17:07:18Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v1.3.0_RC6",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v1.3.0_RC6\nTag: v1.3.0_RC6; draft: False; prerelease: True; published_at: 2021-06-30T17:07:18Z; created_at: 2021-06-29T20:10:39Z\nRelease notes:\n- Significantly improved CPU and Memory usage.\n- Added `af_packet` packet capture engine for Linux https://github.com/buger/goreplay/pull/950\n- Skip incomplete or malformed messages from output (can be enabled back by setting --input-raw-allow-incomplete) https://github.com/buger/goreplay/pull/953",
+      "memory_unit_text": "In the probelabs/goreplay release v1.3.0_RC6, the project significantly improves CPU and memory usage, adds af_packet packet capture engine for Linux, and skips incomplete or malformed messages from output with an option to allow them."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v1_3_0_rc11",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.0_RC11",
+      "tag_name": "v1.3.0_RC11",
+      "title": "v1.3.0_RC11",
+      "time_hint": "2021-08-03",
+      "published_at": "2021-08-03T19:48:49Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v1.3.0_RC11",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v1.3.0_RC11\nTag: v1.3.0_RC11; draft: False; prerelease: True; published_at: 2021-08-03T19:48:49Z; created_at: 2021-08-03T14:42:13Z\nRelease notes:\n- Fix loopback interface issue on windows https://github.com/buger/goreplay/commit/c9274ac92a6f021240d82682002240cfceaecd5e\n- Fix buffer index number for sticky tcp output connection https://github.com/buger/goreplay/pull/981 @DimaGolomozy\n- Fix output file size limits https://github.com/buger/goreplay/pull/974 @lins05\n- Fixed usage of `--input-raw-bpf-filter` https://github.com/buger/goreplay/commit/2b993eda49b2a9e9d54ae6cbd616dbb6f6f28388\n- Fix BPF filter when listen on all interfaces https://github.com/buger/goreplay/commit/a727ade00608b526f0388e9d60c21705136be75c\n- Optimize packet capture thread to reduce context switching https://github.com/buger/goreplay/commit/214edb45f63ac38dc63c9f21017ddfab557f9d06\n- Added new debugging endpoint when `--http-pprof` enabled: /debug/vars\n- Added `--input-file-dry-run` option to previewing how long it will take and how many requests in given file input https://github.com/buger/goreplay/commit/8e76559b492402ef1d2aee99e0106d085db7f935\n- Added `--input-raw-max-wait` option (in seconds), which allows to skip long pauses in recorded files https://github.com/buger/goreplay/commit/19ad90aa4bb0320c8ba623d5509a0690e8c3ec25\n- Added `--input-file-read-depth` option to pre-read and buffer requests (and sort them). By default, is 100 https://github.com/buger/goreplay/commit/625ed54f1ebcc006e7d04a27544807fbaff08508\n- Added `--input-raw-timestamp-type go` to enable application level timestamps, when network timestamps unreliable https://github.com/buger/goreplay/commit/8edb74e57276c712444ccfb89ed40dd0ca5c39d6",
+      "memory_unit_text": "In the probelabs/goreplay release v1.3.0_RC11, the project fixes loopback interface issue on Windows, fixes buffer index number for sticky TCP output connection, fixes output file size limits, fixes usage of --input-raw-bpf-filter, fixes BPF filter when listening on all interfaces, optimizes packet capture thread to reduce context switching, adds a new debugging endpoint /debug/vars, adds --input-file-dry-run option, adds --input-raw-max-wait option, adds --input-file-read-depth option, and adds --input-raw-timestamp-type go option."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v1_3_0",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.0",
+      "tag_name": "v1.3.0",
+      "title": "v1.3.0",
+      "time_hint": "2021-08-06",
+      "published_at": "2021-08-06T18:22:46Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v1.3.0",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v1.3.0\nTag: v1.3.0; draft: False; prerelease: False; published_at: 2021-08-06T18:22:46Z; created_at: 2021-08-03T14:42:13Z\nRelease notes:\n# Highlights\nAdded official Windows support https://github.com/buger/goreplay/wiki/Running-on-Windows\nTraffic capture engine fully re-constructed to be more scalable, efficient and bulletproof.\nYou should see way lower packet loss, capture quality, and CPU/Memory usage.\nDeprecated own HTTP client in favour of native Go HTTP library https://github.com/buger/goreplay/pull/833\nIncreased stability, and numerous bug fixes.\n# Features\n- Added way to capture traffic from multipe ports with single input `--input-raw :80,8080,3000` https://github.com/buger/goreplay/pull/935\n- Added `--output-tcp-skip-verify` flag to skip TCP output TLS verification https://github.com/buger/goreplay/pull/814 @tomerf\n- Added `--output-tcp-workers` to configure number of TCP output connections https://github.com/buger/goreplay/pull/819\n- Added new debugging endpoint when `--http-pprof` enabled: /debug/vars\n- Added new `%i` file name variable to inject unique instance ID to file name. Can be useful if you have logs from multiple machines and you need unique names.\n- Added `--input-file-dry-run` option to previewing how long it will take and how many requests in given file input https://github.com/buger/goreplay/commit/8e76559b492402ef1d2aee99e0106d085db7f935\n- Added `--input-raw-max-wait` option (in seconds), which allows to skip long pauses in recorded files https://github.com/buger/goreplay/commit/19ad90aa4bb0320c8ba623d5509a0690e8c3ec25\n- Added `--input-file-read-depth` option to pre-read and buffer requests (and sort them). By default, is 100 https://github.com/buger/goreplay/commit/625ed54f1ebcc006e7d04a27544807fbaff08508\n- Added `--input-raw-timestamp-type go` to enable application level timestamps, when network timestamps unreliable https://github.com/buger/goreplay/commit/8edb74e57276c712444ccfb89ed40dd0ca5c39d6\nThank you, @urbanishimwe, @slimus, @arijitAD for jumping with me to this adventure!\nHuge kudos to all GoReplay community, especially to our contributors\n@DimaGolomozy @tomerf @swills @davidFR @two @jl2005 @rmasclef @othererik @ankitdobhal @eko @code4wt @wangfeng22 @lins05\n@betty1126 @YuriYin @StanleyP",
+      "memory_unit_text": "In the probelabs/goreplay release v1.3.0, the project adds official Windows support, fully re-constructs the traffic capture engine for scalability and efficiency, deprecates its own HTTP client in favor of native Go HTTP library, increases stability with numerous bug fixes, adds multi-port capture with a single input, adds --output-tcp-skip-verify flag, adds --output-tcp-workers option, adds /debug/vars endpoint, adds %i file name variable, adds --input-file-dry-run option, adds --input-raw-max-wait option, adds --input-file-read-depth option, and adds --input-raw-timestamp-type go option."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v1_3_1",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.1",
+      "tag_name": "v1.3.1",
+      "title": "v1.3.1",
+      "time_hint": "2021-08-12",
+      "published_at": "2021-08-12T19:54:40Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v1.3.1",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v1.3.1\nTag: v1.3.1; draft: False; prerelease: False; published_at: 2021-08-12T19:54:40Z; created_at: 2021-08-12T19:50:08Z\nRelease notes:\n- Fix duplicated requests on Linux #989\n- Improve packet capture, to make packet processing multithreaded 11d61dcb4d518f7ba33ae6f3817a279cee36398d",
+      "memory_unit_text": "In the probelabs/goreplay release v1.3.1, the project fixes duplicated requests on Linux and improves packet capture to make packet processing multithreaded."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v1_3_2",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.2",
+      "tag_name": "v1.3.2",
+      "title": "v1.3.2",
+      "time_hint": "2021-08-19",
+      "published_at": "2021-08-19T17:57:30Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v1.3.2",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v1.3.2\nTag: v1.3.2; draft: False; prerelease: False; published_at: 2021-08-19T17:57:30Z; created_at: 2021-08-19T17:47:56Z\nRelease notes:\n- Fix promiscuous mode - if enabled no need to filter on host as we want to capture traffic not related to this host #994\n- Fix `--input-raw-realip-header` https://github.com/buger/goreplay/pull/996\n- Fixed false positive network interface lookups https://github.com/buger/goreplay/pull/1000\nThanks @DimaGolomozy!",
+      "memory_unit_text": "In the probelabs/goreplay release v1.3.2, the project fixes promiscuous mode to not filter on host when enabled, fixes --input-raw-realip-header, and fixes false positive network interface lookups."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__1_3_3",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:1.3.3",
+      "tag_name": "1.3.3",
+      "title": "v1.3.3",
+      "time_hint": "2021-10-06",
+      "published_at": "2021-10-06T18:00:17Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/1.3.3",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v1.3.3\nTag: 1.3.3; draft: False; prerelease: False; published_at: 2021-10-06T18:00:17Z; created_at: 2021-10-06T17:55:25Z\nRelease notes:\n## What's Changed\n- Various improvements for packet capture, especially for POST requests https://github.com/buger/goreplay/pull/1007\n- Fixed replay of pcap files https://github.com/buger/goreplay/pull/1007\n- Fixed replay of files with malformed records https://github.com/buger/goreplay/pull/1015\n**Full Changelog**: https://github.com/buger/goreplay/compare/v1.3.2...1.3.3",
+      "memory_unit_text": "In the probelabs/goreplay release v1.3.3, the project makes various improvements for packet capture especially for POST requests, fixes replay of pcap files, and fixes replay of files with malformed records."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v2_0_0_rc1",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.0.0-rc1",
+      "tag_name": "v2.0.0-rc1",
+      "title": "v2.0.0-rc1",
+      "time_hint": "2022-02-07",
+      "published_at": "2022-02-07T18:31:20Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v2.0.0-rc1",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v2.0.0-rc1\nTag: v2.0.0-rc1; draft: False; prerelease: True; published_at: 2022-02-07T18:31:20Z; created_at: 2022-02-07T18:27:31Z\nRelease notes:\nTBD",
+      "memory_unit_text": "In the probelabs/goreplay release v2.0.0-rc1, the release notes are to be determined."
+    },
+    {
+      "memory_node_id": "probelabs__goreplay__release__v2_0_0_rc2",
+      "repo": "probelabs/goreplay",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.0.0-rc2",
+      "tag_name": "v2.0.0-rc2",
+      "title": "v2.0.0-rc2",
+      "time_hint": "2022-02-07",
+      "published_at": "2022-02-07T18:35:00Z",
+      "source_url": "https://github.com/probelabs/goreplay/releases/tag/v2.0.0-rc2",
+      "raw_text": "Repository: probelabs/goreplay\nRelease: v2.0.0-rc2\nTag: v2.0.0-rc2; draft: False; prerelease: True; published_at: 2022-02-07T18:35:00Z; created_at: 2022-02-07T18:27:31Z\nRelease notes:\nTBD",
+      "memory_unit_text": "In the probelabs/goreplay release v2.0.0-rc2, the release notes are to be determined."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the probelabs/goreplay releases, which release introduces middleware support and changes the file format to human readable?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.9.8"
+        },
+        {
+          "option_id": "B",
+          "text": "v0.10.0"
+        },
+        {
+          "option_id": "C",
+          "text": "v0.10.1"
+        },
+        {
+          "option_id": "D",
+          "text": "v0.11.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "v0.10.0",
+      "source_chunk_ids": [
+        "probelabs__goreplay__release__0_10_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "probelabs__goreplay__release__0_10_0",
+          "answer_text": "Middleware support! ... Changed file format, now it human readable"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the probelabs/goreplay releases, how does the traffic capture engine change described in v0.11.0 differ from the engine change described in v1.3.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v0.11.0 switches the default engine to libpcap, while v1.3.0 fully re-constructs the capture engine for scalability and efficiency."
+        },
+        {
+          "option_id": "B",
+          "text": "v0.11.0 removes libpcap, while v1.3.0 adds libpcap support."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only update Go version without engine changes."
+        },
+        {
+          "option_id": "D",
+          "text": "v0.11.0 adds Windows support, while v1.3.0 removes Windows support."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v0.11.0 switches the default engine to libpcap, while v1.3.0 fully re-constructs the capture engine for scalability and efficiency.",
+      "source_chunk_ids": [
+        "probelabs__goreplay__release__v0_11_0",
+        "probelabs__goreplay__release__v1_3_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "probelabs__goreplay__release__v0_11_0",
+          "answer_text": "Default traffic interception engine now libpcap"
+        },
+        {
+          "memory_node_id": "probelabs__goreplay__release__v1_3_0",
+          "answer_text": "Traffic capture engine fully re-constructed to be more scalable, efficient and bulletproof"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the probelabs/goreplay release window, order the following release-content states from earliest to latest: (1) a release that adds support for IPv6 and fixes memory leaks, (2) a release that adds official Windows support and deprecates its own HTTP client, (3) a release that adds middleware support and changes file format to human readable.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "3 -> 1 -> 2"
+        },
+        {
+          "option_id": "B",
+          "text": "1 -> 2 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "2 -> 1 -> 3"
+        },
+        {
+          "option_id": "D",
+          "text": "1 -> 3 -> 2"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "3 -> 1 -> 2",
+      "source_chunk_ids": [
+        "probelabs__goreplay__release__0_10_0",
+        "probelabs__goreplay__release__v0_12_0",
+        "probelabs__goreplay__release__v1_3_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "probelabs__goreplay__release__0_10_0",
+          "answer_text": "Middleware support! ... Changed file format, now it human readable"
+        },
+        {
+          "memory_node_id": "probelabs__goreplay__release__v0_12_0",
+          "answer_text": "Support for IPv6 ... Fixed memory leaks"
+        },
+        {
+          "memory_node_id": "probelabs__goreplay__release__v1_3_0",
+          "answer_text": "Added official Windows support ... Deprecated own HTTP client in favour of native Go HTTP library"
+        }
+      ]
+    }
+  ]
+}

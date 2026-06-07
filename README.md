@@ -1,213 +1,182 @@
-<div align="center">
-
 # BiTempQA
 
-### A Diagnostic Benchmark for Bitemporal Reasoning in LLM Agent Memory Systems
+BiTempQA is a benchmark project for evaluating memory systems on **bi-temporal / multi-version retrieval and reasoning**.  
+The current final artifact in this repository is a **GitHub release-note based benchmark** built from influential open-source projects, together with unified mixed-pool evaluation pipelines for:
 
-[![Paper](https://img.shields.io/badge/Paper-PDF-red)](paper/main.pdf)
-[![Dataset](https://img.shields.io/badge/HuggingFace-Dataset-yellow)](https://huggingface.co/datasets/heihei/BiTempQA)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+- `BM25`
+- `FAISS`
+- `Mem0`
+- `Graphiti`
 
-**1,536 Chinese QA pairs (308 test) | 10 scenario types | 9 question types | 5 memory backends**
+This README only documents the **final release-note unified dataset and the final evaluation pipeline**. Earlier prototype routes are not part of the recommended workflow.
 
-</div>
+## Final Deliverables
 
----
+### 1. Final dataset
 
-## Overview
+The current final dataset is the **formal 300-repository unified release-note dataset**:
 
-Memory-augmented LLM agents must track not only **what** happened but **when** it happened and **when they learned about it**. This dual-timestamp (bitemporal) distinction is critical for real-world applications such as medical records, financial systems, and news analysis.
+- [benchmark/data/prototypes/github_release_note_v2/formal_300repo_unified_v1](benchmark/data/prototypes/github_release_note_v2/formal_300repo_unified_v1)
 
-**BiTempQA** is the first benchmark explicitly designed to evaluate bitemporal reasoning in LLM agent memory systems. Every memory entry carries explicit `event_time` (when something occurred) and `record_time` (when the system stored it) annotations. Over half (56.5%) of questions require reasoning about **both** timestamps simultaneously.
+Key files:
 
-<div align="center">
-<img src="paper/figures/fig1_framework.jpeg" width="90%" alt="BiTempQA Framework">
+- `official_300_merged.json`
+  - merged formal dataset entry point used by full experiments
+- `prototype_index_official_300.jsonl`
+  - official list of the 300 repository windows
+- each `<repo>_release_window/prototype.json`
+  - one project sample containing:
+    - `chunks`
+    - `questions`
 
-*BiTempQA framework: Each memory write carries dual timestamps. Five memory backends retrieve context through a unified Retrieve -> Generate -> Judge pipeline.*
-</div>
+### 2. Final scripts
 
----
+The main scripts for the final pipeline are:
 
-## Key Features
+- [benchmark/scripts/77_build_github_release_note_unified_prototype.py](benchmark/scripts/77_build_github_release_note_unified_prototype.py)
+  - builds one unified project-level release-note sample
+- [benchmark/scripts/78_generate_github_release_unified_formal.py](benchmark/scripts/78_generate_github_release_unified_formal.py)
+  - constructs the large formal dataset with incremental persistence
+- [benchmark/scripts/79_merge_github_release_unified_formal.py](benchmark/scripts/79_merge_github_release_unified_formal.py)
+  - merges the per-project formal samples into one experiment-ready JSON
+- [benchmark/scripts/82_run_merged_github_release_unified_global_pool_evaluation.py](benchmark/scripts/82_run_merged_github_release_unified_global_pool_evaluation.py)
+  - runs the **global mixed-pool** evaluation, i.e. all project memories are stored first and then queried from one shared memory pool
+- [benchmark/scripts/68_run_state_version_evaluation.py](benchmark/scripts/68_run_state_version_evaluation.py)
+  - shared evaluation system factory and config entry helpers
 
-| Feature | Detail |
-|---------|--------|
-| **Dual-timestamp annotations** | Every memory entry has `event_time` + `record_time` |
-| **56.5% bitemporal questions** | Over half require reasoning about both timestamps |
-| **10 scenario types** | Entity evolution, late-arriving facts, knowledge retraction, etc. |
-| **9 question types @ 3 levels** | L1 (easy) to L3 (hard), including counterfactual and version conflict |
-| **5 memory backends** | FAISS, BM25, Naive RAG, Simple KG, ChromaDB |
+### 3. Final configs
 
----
+The main configs used in the final experiments are:
 
-## Dataset
+- [benchmark/configs/state_version_build_config.yaml](benchmark/configs/state_version_build_config.yaml)
+- [benchmark/configs/state_version_experiment_config_deepseek_flash_memory.yaml](benchmark/configs/state_version_experiment_config_deepseek_flash_memory.yaml)
+- [benchmark/configs/state_version_experiment_config_deepseek_flash_memory_mem0_internal10.yaml](benchmark/configs/state_version_experiment_config_deepseek_flash_memory_mem0_internal10.yaml)
 
-The dataset is available on HuggingFace: **[heihei/BiTempQA](https://huggingface.co/datasets/heihei/BiTempQA)**
+## Final Dataset Format
 
-### Dataset Splits
+Each project sample is a unified JSON file:
 
-| Split | Scenarios | QA Pairs |
-|-------|-----------|----------|
-| Train | 120 | 1,075 |
-| Dev | 87 | 153 |
-| Test (held-out) | 112 | 308 |
-| **Total** | **120** | **1,536** |
-
-### Dual-Timestamp Composition (Test Set)
-
-| Temporal Requirement | Count | Example |
-|---------------------|-------|---------|
-| Both timestamps required | 174 (56.5%) | "Did the system know X when Y happened?" |
-| Event-time only | 110 (35.7%) | "When did event X occur?" |
-| Record-time only | 24 (7.8%) | "When was fact X first recorded?" |
-
-### Scenario Types
-
-1. Entity Attribute Evolution
-2. Relationship Evolution
-3. Contradictory Information
-4. Late-Arriving Facts
-5. Future-Dated Information
-6. Entity Identity Resolution
-7. Knowledge Retraction
-8. Multi-Source Information
-9. Gradual Accumulation
-10. Temporal Ambiguity
-
----
-
-## Main Results
-
-### Overall Performance (Test Set, n=308)
-
-| System | Accuracy | F1 | 95% CI |
-|--------|----------|-----|--------|
-| **FAISS** | **75.6%** | **0.870** | [70.8, 80.2] |
-| Naive RAG | 74.0% | 0.867 | [69.2, 78.9] |
-| BM25 | 73.4% | 0.867 | [68.2, 78.2] |
-| Simple KG | 67.2% | 0.841 | [61.7, 72.4] |
-| ChromaDB | 41.2% | 0.744 | [35.7, 46.8] |
-
-> Top 3 systems are statistically tied (p>0.3, McNemar's test), but diverge sharply on specific question types (40.6pp spread).
-
-### Per-Question-Type Breakdown
-
-<div align="center">
-<img src="paper/figures/fig3_heatmap.png" width="85%" alt="Heatmap">
-
-*System x Question Type accuracy. No single system dominates all types.*
-</div>
-
-### Record-Time Reasoning Is Genuinely Harder
-
-A mixed-effects logistic regression confirms record-time reasoning is harder than event-time reasoning (**p=0.023**), controlling for question type, difficulty, and scenario variation.
-
-<div align="center">
-<img src="paper/figures/fig6_temporal.png" width="85%" alt="Temporal breakdown">
-
-*Accuracy by temporal requirement. Record-only questions (n=24) are hardest across all systems.*
-</div>
-
-### Difficulty Calibration
-
-<div align="center">
-<img src="paper/figures/fig4_difficulty.png" width="75%" alt="Difficulty">
-
-*FAISS is most robust to difficulty increase (-2.9pp); BM25 is most fragile (-16.6pp).*
-</div>
-
-### System Complementarity
-
-<div align="center">
-<img src="paper/figures/fig5_complementarity.png" width="75%" alt="Complementarity">
-
-*Oracle ensemble reaches 85.4% vs. 75.6% best single system (+9.8pp). 45 irreducible failures remain.*
-</div>
-
-### Cross-Benchmark: LoCoMo
-
-| System | BiTempQA | LoCoMo Overall | LoCoMo Temporal | LoCoMo Adversarial |
-|--------|----------|---------------|-----------------|-------------------|
-| FAISS | **75.6%** | **57.0%** | **46.9%** | 63.0% |
-| Simple KG | 67.2% | 56.8% | 37.5% | **97.5%** |
-
-> Simple KG shows extreme asymmetry: 97.5% adversarial robustness but only 37.5% temporal accuracy.
-
----
-
-## Diagnostic Findings
-
-**1. Retrieval is the bottleneck.** ~55% of failures stem from insufficient retrieval context (avg 200 chars for wrong answers vs. 500 chars for correct ones).
-
-**2. Confidence is anti-calibrated.** FAISS AUROC = 0.453: wrong answers receive *higher* confidence than correct ones.
-
-**3. Graph memory has unique strengths.** Simple KG excels at version tracking (81.0%) and adversarial robustness (97.5%), but struggles with knowledge retraction (53.6%).
-
-<div align="center">
-<img src="paper/figures/fig7_calibration.png" width="85%" alt="Calibration">
-
-*Confidence calibration: vector-based systems produce anti-calibrated scores (AUROC < 0.5).*
-</div>
-
----
-
-## Quick Start
-
-### Installation
-
-```bash
-pip install -r benchmark/requirements.txt
-```
-
-### Run Evaluation
-
-```bash
-# Configure API keys in benchmark/configs/eval_config.yaml
-python benchmark/scripts/16_full_evaluation.py
-```
-
-### Generate Paper Figures
-
-```bash
-python benchmark/scripts/30_paper_figures.py
-```
-
-## Project Structure
-
-```
-├── paper/                    # ACL 2026 paper (LaTeX + PDF)
-│   ├── main.tex
-│   ├── sections/             # Paper sections
-│   ├── figures/              # Paper figures
-│   └── references.bib
-├── benchmark/
-│   ├── src/
-│   │   ├── generation/       # Scenario & QA generation
-│   │   ├── evaluation/       # Evaluation pipeline (Retrieve->Generate->Judge)
-│   │   ├── systems/          # 5 memory backends + TMG/Mem0/Graphiti
-│   │   ├── benchmarks/       # Benchmark loaders
-│   │   └── schemas.py        # Pydantic data models
-│   ├── scripts/              # 24 experiment scripts
-│   ├── configs/              # YAML configs
-│   ├── tests/                # Unit tests
-│   └── data/
-│       ├── raw/              # Scenario templates & seed prompts
-│       ├── validated/        # train/dev/test splits
-│       └── eval_results/     # Statistical reports
-└── huggingface_dataset/      # HuggingFace upload-ready data
-```
-
-## Citation
-
-```bibtex
-@inproceedings{bitempqa2026,
-  title={BiTempQA: A Diagnostic Benchmark for Bitemporal Reasoning in LLM Agent Memory Systems},
-  author={Anonymous},
-  booktitle={Proceedings of ACL 2026},
-  year={2026}
+```json
+{
+  "prototype_id": "...",
+  "repo": "...",
+  "window_title": "...",
+  "window_summary": "...",
+  "chunks": [...],
+  "questions": [...]
 }
 ```
 
-## License
+Important properties:
 
-MIT License
+- `chunks`
+  - memory units derived from recent GitHub release notes
+- `questions`
+  - three task types:
+    - `single_state_lookup`
+    - `cross_version_comparison`
+    - `temporal_version_ordering`
+- each question uses `source_chunk_ids` to indicate the chunks required for answering
+
+## Final Evaluation Setting
+
+### Global mixed-pool setting
+
+The final experiments use a **single mixed memory pool**:
+
+1. store all memories from all selected projects
+2. query from the same global pool
+3. evaluate answer generation with task-specific `top-k` slicing
+
+This is different from earlier prototype experiments that evaluated one project window at a time.
+
+### Task-specific top-k
+
+Retrieval is done once with `top-10`, then answer generation reuses the retrieved list with task-specific slicing:
+
+- `single_state_lookup`: `k = 1 / 2 / 3`
+- `cross_version_comparison`: `k = 2 / 5 / 8`
+- `temporal_version_ordering`: `k = 5 / 8 / 10`
+
+### Main reported metrics
+
+The main table metrics are:
+
+- `ACC`
+- `Cov`
+- `CSR`
+- `Latency`
+
+The result files also support additional analysis such as:
+
+- `Zero-Gold`
+- `D/G`
+- `Context Tokens`
+- `Top-1 vs Top-k stability`
+- correct answers without retrieving required gold chunks
+
+## Final Result Directories
+
+### Simple baselines
+
+- BM25:
+  - [benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_bm25_globalpool_taskk_v1](benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_bm25_globalpool_taskk_v1)
+- FAISS:
+  - [benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_faiss_globalpool_taskk_v1](benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_faiss_globalpool_taskk_v1)
+
+### Memory systems
+
+- Mem0, `internal_fact_k = 60`:
+  - [benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_mem0_deepseekflash_globalpool_taskk_resume50_v2](benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_mem0_deepseekflash_globalpool_taskk_resume50_v2)
+- Mem0, `internal_fact_k = 10`:
+  - [benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_mem0_deepseekflash_globalpool_taskk_internal10](benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_mem0_deepseekflash_globalpool_taskk_internal10)
+- Graphiti:
+  - [benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_graphiti_deepseekflash_globalpool_taskk_resume50_v1](benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_graphiti_deepseekflash_globalpool_taskk_resume50_v1)
+
+## How To Reproduce
+
+### 1. Build / refresh formal dataset
+
+```powershell
+python benchmark/scripts/78_generate_github_release_unified_formal.py
+python benchmark/scripts/79_merge_github_release_unified_formal.py
+```
+
+### 2. Run simple baselines on the global mixed pool
+
+```powershell
+python benchmark/scripts/82_run_merged_github_release_unified_global_pool_evaluation.py `
+  --config benchmark/configs/state_version_experiment_config_deepseek_flash_memory.yaml `
+  --merged-json benchmark/data/prototypes/github_release_note_v2/formal_300repo_unified_v1/official_300_merged.json `
+  --system bm25 `
+  --output-dir benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_bm25_globalpool_taskk_v1
+```
+
+Replace `--system bm25` with:
+
+- `faiss`
+- `mem0`
+- `graphiti`
+
+### 3. Reuse an existing Mem0 mixed pool with `internal_fact_k = 10`
+
+```powershell
+python benchmark/scripts/82_run_merged_github_release_unified_global_pool_evaluation.py `
+  --config benchmark/configs/state_version_experiment_config_deepseek_flash_memory_mem0_internal10.yaml `
+  --merged-json benchmark/data/prototypes/github_release_note_v2/formal_300repo_unified_v1/official_300_merged.json `
+  --system mem0 `
+  --output-dir benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_mem0_deepseekflash_globalpool_taskk_internal10
+```
+
+## Notes
+
+- The final benchmark uses **release-note memory units**, not raw code blocks.
+- The final formal experiments should use the **official 300 merged dataset**.
+- Large per-question result files may exceed GitHub single-file upload limits; summary files are the most convenient entry point for quick inspection.
+
+## File Guide
+
+For a Chinese file-level guide to the final dataset, result directories, and intermediate files, see:
+
+- [benchmark/docs/FORMAL_RELEASE_UNIFIED_FILE_GUIDE_ZH.md](benchmark/docs/FORMAL_RELEASE_UNIFIED_FILE_GUIDE_ZH.md)
+

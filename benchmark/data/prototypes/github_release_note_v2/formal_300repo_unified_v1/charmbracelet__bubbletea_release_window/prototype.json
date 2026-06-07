@@ -1,0 +1,530 @@
+{
+  "prototype_id": "charmbracelet__bubbletea_release_window",
+  "domain": "github_release_evolution",
+  "repo": "charmbracelet/bubbletea",
+  "source_type": "release_note",
+  "window_title": "charmbracelet/bubbletea recent release evolution",
+  "window_summary": "This window tracks the recent charmbracelet/bubbletea release stream from v1.2.2 through v2.0.7, covering rendering fixes, interrupt handling, Windows support, and the major v2.0.0 release with a new renderer, declarative view API, and keyboard enhancements.",
+  "chunks": [
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v1_2_2",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.2.2",
+      "tag_name": "v1.2.2",
+      "title": "v1.2.2",
+      "time_hint": "2024-11-18",
+      "published_at": "2024-11-18T21:30:00Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v1.2.2",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v1.2.2\nTag: v1.2.2; draft: False; prerelease: False; published_at: 2024-11-18T21:30:00Z; created_at: 2024-11-12T18:55:15Z\nRelease notes:\nHi! This release fixes some bugs found the fast new renderer introduced in [v1.2.0](https://github.com/charmbracelet/bubbletea/releases/tag/v1.2.0). Happy rendering!\n## Fixed\n* Incorrect line skipping in renderer flush by @semihbkgr in https://github.com/charmbracelet/bubbletea/pull/1233\n* Erase the rest of the line when it's shorter than the width by @aymanbagabas in https://github.com/charmbracelet/bubbletea/pull/1227\n## New Contributors\n* @semihbkgr made their first contribution in https://github.com/charmbracelet/bubbletea/pull/1233\n**Full Changelog**: https://github.com/charmbracelet/bubbletea/compare/v1.2.0...v1.2.2\n---\n<a href=\"https://charm.sh/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-badge.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [Twitter](https://twitter.com/charmcli), [The Fediverse](https://mastodon.technology/@charm), or on [Discord](https://charm.sh/chat).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v1.2.2, the project fixes bugs in the fast new renderer introduced in v1.2.0, specifically incorrect line skipping in renderer flush and erasing the rest of the line when it is shorter than the width."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v1_2_3",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.2.3",
+      "tag_name": "v1.2.3",
+      "title": "v1.2.3",
+      "time_hint": "2024-11-19",
+      "published_at": "2024-11-19T21:49:58Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v1.2.3",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v1.2.3\nTag: v1.2.3; draft: False; prerelease: False; published_at: 2024-11-19T21:49:58Z; created_at: 2024-11-19T21:47:48Z\nRelease notes:\n# Altscreen-not-altscreen\nThis release fixes a sneaky longstanding bug in the renderer where mis-paints could happen when toggling in and out of the altscreen if the height of the TUI changed whilst in the altscreen. Special thanks to @applejag for reporting the issue and @semihbkgr for the fix.\n## Changelog\n* f8f840c38a36140fe890a02c6b35589f15a85ff5: fix: cursor position adjustment after exiting alt screen (#1241) (@semihbkgr)\n---\n<a href=\"https://charm.sh/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-badge.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [Twitter](https://twitter.com/charmcli), [The Fediverse](https://mastodon.technology/@charm), or on [Discord](https://charm.sh/chat).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v1.2.3, a longstanding bug in the renderer is fixed where mis-paints could occur when toggling in and out of the altscreen if the height of the TUI changed while in the altscreen, by adjusting cursor position after exiting alt screen."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v1_2_4",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.2.4",
+      "tag_name": "v1.2.4",
+      "title": "v1.2.4",
+      "time_hint": "2024-11-25",
+      "published_at": "2024-11-25T14:53:46Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v1.2.4",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v1.2.4\nTag: v1.2.4; draft: False; prerelease: False; published_at: 2024-11-25T14:53:46Z; created_at: 2024-11-25T14:52:12Z\nRelease notes:\n# A few little rendering fixes\nThis release fixes a couple rendering bugs. Quality rendering in Bubble Tea is paramount!\n## Changelog\n### Bug fixes\n* 4ad07926d7ff00bc21a05b2536d82a7cc629225e: fix: cursor position adjustment after exiting alt screen (#1241) (@semihbkgr)\n* ede8caa9d4f588a4a2c744d8e135a1b444bf2ce9: fix: renderer: keep a separate count of lines rendered in the alt screen (@aymanbagabas)\n### Other work\n* 76b0f818b3174a3e9b77f93c19820d07855f13f4: ci: fix goreleaser config (#1238) (@caarlos0)\n---\n<a href=\"https://charm.sh/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-badge.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [Twitter](https://twitter.com/charmcli), [The Fediverse](https://mastodon.technology/@charm), or on [Discord](https://charm.sh/chat).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v1.2.4, a couple of rendering bugs are fixed: cursor position adjustment after exiting alt screen and keeping a separate count of lines rendered in the alt screen."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v1_3_0",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.0",
+      "tag_name": "v1.3.0",
+      "title": "v1.3.0",
+      "time_hint": "2025-02-04",
+      "published_at": "2025-02-04T17:01:47Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v1.3.0",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v1.3.0\nTag: v1.3.0; draft: False; prerelease: False; published_at: 2025-02-04T17:01:47Z; created_at: 2025-02-04T17:00:26Z\nRelease notes:\n## Sorry to interrupt: it's time for Bubble Tea v1.3.0!\nBubble Tea now ships with refined interrupt handling, courtesy @caarlos0. Now, you can throw your terminal a <kbd>ctrl+c</kbd> or an interrupt signal, Bubble Tea will take it with grace and poise. Switch any ol’ run-of-the-mill `tea.Quit` command with `tea.Interrupt` for seamless interruptions.\n### Bug Fixes\n* 2556e01416b7f7cda13b27724c4e07ad5bb5d51c: The last rendered line count now includes those sneaky alt screen lines, thanks to @semihbkgr's keen eye (#1254)\n* c8d6005325d3b370ea48d3e0c2129792d988e471: Windows users rejoice! @awoodbeck has managed to cancel those unruly threads like an expert party planner using `CancelIoEx` (#1305)\n### New Contributors\nSpecial thanks to the following new contributors:\n- @awoodbeck, for totally fixing input on Windows\n- @Bilogweb3, for help with the docs\n- @simonnordberg, for catching some outdated typos\n<details>\n<summary>\n### Changelog\n</summary>\n### New Features\n* cb9395982335da2fbc8cf90c5cf2c3b73eee4787: feat(SIGINT): better handle interrupts (#1255) (@caarlos0)\n### Bug fixes\n* 2556e01416b7f7cda13b27724c4e07ad5bb5d51c: fix: getting last rendered line counts including alt screen lines (#1254) (@semihbkgr)\n* 31b433ce48d9e396e496273a10be8c688f60c4bf: fix: replace deprecated ansi codes (@aymanbagabas)\n* c8d6005325d3b370ea48d3e0c2129792d988e471: fix: use CancelIoEx to cancel Windows conInputReader across threads (#1305) (@awoodbeck)\n### Documentation updates\n* 9306010a31eef1bcaaced41ec6c99e3bdee4b5e8: docs(example): resize chat example based on window (#1262) (@bashbunni)\n* 2060f938a069c5894a2213d684855296c12742af: docs(examples): fix glamour example (#1204) (@meowgorithm)\n* 07288b1a746ed3168bbc7a71d3990fbcc4817a90: docs(readme): add more stuff to \"In the Wild\" (@meowgorithm)\n* 1bf18861d91be438c860c58d2d2c1274f5eab444: docs(readme): additional readme tiyding up (@meowgorithm)\n* 79cc2fb92466c957002319fdc321a8e31c103acb: docs(readme): fix tiny typo in readme (@meowgorithm)\n* e0515bc22ad1292ecbb1f3f8ae7a795bf0d11e31: docs(readme): fix typos (#1265) (@Bilogweb3)\n* 39f9fae50f6285fc77139b5af796bac0f0e48493: docs: clarify imports in the readme (#1234) (@caarlos0)\n### Other work\n* eb7e3d0884f5976bbd94144bf3495ecb935dbce4: Update README.md references to main branch (@simonnordberg)\n</details>\n---\n<a href=\"https://charm.sh/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-badge.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [Twitter](https://twitter.com/charmcli), [The Fediverse](https://mastodon.technology/@charm), or on [Discord](https://charm.sh/chat).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v1.3.0, refined interrupt handling is introduced, allowing graceful handling of ctrl+c or interrupt signals via a new tea.Interrupt command. It also fixes the last rendered line count to include alt screen lines and cancels Windows console input threads using CancelIoEx."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v1_3_1",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.1",
+      "tag_name": "v1.3.1",
+      "title": "v1.3.1",
+      "time_hint": "2025-02-10",
+      "published_at": "2025-02-10T21:25:04Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v1.3.1",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v1.3.1\nTag: v1.3.1; draft: False; prerelease: False; published_at: 2025-02-10T21:25:04Z; created_at: 2025-02-10T21:22:49Z\nRelease notes:\nThis release introduces some important bug fixes when it comes to cursor movements while rendering, and properly handle Windows AltGr key on non-English keyboards.\n## Changelog\n### Bug fixes\n* 771a10156269427e1e0c0be807410a0246135bf3: fix: renderer: use newline instead of cud1 to move cursor down (#1323) (@aymanbagabas)\n* c66daf9744ee9cf9285e9d2e2c5f1ebb084b11fe: fix: windows: AltGr maps to LEFT_CTRL+RIGHT_ALT (#1162) (@aymanbagabas)\n### Other work\n* 439398b1dd1791a253723819baf8f184a7dcc385: Remove irrelevant option comments (@nervo)\n---\n<a href=\"https://charm.sh/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-badge.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [Twitter](https://twitter.com/charmcli), [The Fediverse](https://mastodon.technology/@charm), or on [Discord](https://charm.sh/chat).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v1.3.1, important bug fixes are introduced for cursor movements while rendering, using newline instead of cud1 to move cursor down, and properly handling Windows AltGr key on non-English keyboards."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v1_3_2",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.2",
+      "tag_name": "v1.3.2",
+      "title": "v1.3.2",
+      "time_hint": "2025-02-10",
+      "published_at": "2025-02-10T21:31:37Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v1.3.2",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v1.3.2\nTag: v1.3.2; draft: False; prerelease: False; published_at: 2025-02-10T21:31:37Z; created_at: 2025-02-10T21:30:16Z\nRelease notes:\nFix canceling terminal input reads on Windows.\n## Changelog\n### Bug fixes\n* b0186ada899e2c5f270b753f577be2c89ed1836f: fix: windows: handle cancel io error (@aymanbagabas)\n---\n<a href=\"https://charm.sh/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-badge.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [Twitter](https://twitter.com/charmcli), [The Fediverse](https://mastodon.technology/@charm), or on [Discord](https://charm.sh/chat).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v1.3.2, a fix is provided for canceling terminal input reads on Windows by handling cancel io error."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v1_3_3",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.3",
+      "tag_name": "v1.3.3",
+      "title": "v1.3.3",
+      "time_hint": "2025-02-11",
+      "published_at": "2025-02-11T15:31:27Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v1.3.3",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v1.3.3\nTag: v1.3.3; draft: False; prerelease: False; published_at: 2025-02-11T15:31:27Z; created_at: 2025-02-11T15:30:01Z\nRelease notes:\nThis release restore the program options that were deprecated in the previous releases.\n## Changelog\n**Full Changelog**: https://github.com/charmbracelet/bubbletea/compare/v1.3.2...v1.3.3\n---\n<a href=\"https://charm.sh/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-badge.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [Twitter](https://twitter.com/charmcli), [The Fediverse](https://mastodon.technology/@charm), or on [Discord](https://charm.sh/chat).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v1.3.3, the program options that were deprecated in previous releases are restored."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v1_3_4",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.4",
+      "tag_name": "v1.3.4",
+      "title": "v1.3.4",
+      "time_hint": "2025-02-25",
+      "published_at": "2025-02-25T16:54:54Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v1.3.4",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v1.3.4\nTag: v1.3.4; draft: False; prerelease: False; published_at: 2025-02-25T16:54:54Z; created_at: 2025-02-25T16:53:26Z\nRelease notes:\nThis release fixes an issue on Windows where the mouse is always enabled even if it wasn't requested. Now, using mouse options such as `tea.WithAllMouseMotion()` and commands such as `tea.EnableMouseAllMotion` and `tea.DisableMouse` turns the mouse on/off as expected.\n## Changelog\n### New Features\n* e817654e03769c14bdc09f9032724dfc53aa936f: feat(ci): move from goveralls to codecov (#1332) (@aymanbagabas)\n### Bug fixes\n* bf1216dfaf642b73b639262ab91a7e7c86095d34: fix: windows: enable mouse mode on demand (#1340) (@aymanbagabas)\n### Other work\n* 00e3ef47acdd1b39b3aa3c8260910f5fd57867bb: ci: sync dependabot config (#1328) (@charmcli)\n* 4a30f3fd2a2c3ff8d13572d9aceb3007a9940006: ci: sync dependabot config (#1329) (@charmcli)\n---\n<a href=\"https://charm.sh/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-badge.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [Twitter](https://twitter.com/charmcli), [The Fediverse](https://mastodon.technology/@charm), or on [Discord](https://charm.sh/chat).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v1.3.4, an issue on Windows is fixed where the mouse is always enabled even if not requested; now mouse options and commands turn the mouse on/off as expected."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v2_0_0_beta_1",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.0.0-beta.1",
+      "tag_name": "v2.0.0-beta.1",
+      "title": "v2.0.0-beta.1",
+      "time_hint": "2025-03-26",
+      "published_at": "2025-03-26T18:20:23Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v2.0.0-beta.1",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v2.0.0-beta.1\nTag: v2.0.0-beta.1; draft: False; prerelease: True; published_at: 2025-03-26T18:20:23Z; created_at: 2025-03-26T18:38:19Z\nRelease notes:\n# It’s time for Bubble Tea v2 Beta\nWe're very excited to announce the first beta release of Bubble Tea v2! This release includes a number of improvements and features over the last alpha 2 release.\n🍔 New to v2? Looking to upgrade? Check out [the full Bubble Tea v2 guide](https://github.com/charmbracelet/bubbletea/discussions/1374).\n## Changes Since Alpha 2\nSince the last [alpha 2](https://github.com/charmbracelet/bubbletea/releases/tag/v2.0.0-alpha.2) release, we've made a few changes and added some new features. Including restoring old `Init` behavior, actual cursor support, and some minor API name changes.\n### Init and Model Changes\nWe restored the old `tea.Model` interface and `Init` method changes. Now, `Init` returns a `tea.Cmd` as what it was before. The thought here is that it's more ergonomic and returning a `tea.Model` doesn't make much sense because during `Init` you already have a newly created model.\n```go\ntype Model struct\n// My model fields\n}\nfunc newModel() Model {\nreturn Model{\n// Initialize your model here\n}\n}\n// Before in alpha 2\nfunc (m Model) Init() (tea.Model, tea.Cmd) {\n// But we already have a model, so why return a new one?\nreturn m, nil\n}\n// After in beta 1\nfunc (m Model) Init() tea.Cmd {\n// Same as original Bubble Tea\nreturn nil\n}\n```\n### Cursor Support and View Interfaces\nYes, finally, you can control the cursor! We've added a new `tea.CursorView` interface that you can implement to control the cursor position and style. This is a long-awaited feature, and we're excited to see what you do with it.\nOriginally, `tea.Model` implemented a `View` method that returned a `string`. We changed this to be in its own `tea.ViewModel` interface and took it out of `tea.Model`. Now `tea.Model` only has `Update` and `Init` methods. Not implementing a `View` method is equivalent to disabling rendering. Both new interfaces are optional. The difference is that `tea.CursorModel` returns a `tea.Cursor` along with a string to control the cursor.\n```go\n// Before\nfunc (m Model) View() string {\n// How can I move the cursor?\nreturn \"My awesome program! █\" // <- fake cursor 😛\n}\n// After\nfunc (m Model) View() (string, *tea.Cursor) {\nvar c *tea.Cursor\n// Nil cursor means a hidden cursor\nif m.showCursor {\n// Move the cursor to the 21nd column right after the text\nc := tea.NewCursor(20, 0) // X: 20, Y: 0\nc.Style = tea.CursorBlock // 😎\nc.Blink = false\n}\nreturn \"My awesome program!\", c\n}\n```\n### Enhanced Keyboard Support\nTerminologies matter. Previously, we introduced `tea.EnableKeyboardEnhancements` to request different keyboard enhancement features. We've renamed this to `tea.RequestKeyboardEnhancement` to signal that the program is requesting keyboard enhancements from the terminal and the terminal may or may not support them.\n```go\n// Before in alpha 2\nfunc (m Model) Init() (tea.Model, tea.Cmd) {\nreturn m, tea.EnableKeyboardEnhancements(\ntea.WithKeyReleases,\ntea.WithUniformKeyLayout,\n)\n}\n// After in beta 1\nfunc (m Model) Init() tea.Cmd {\nreturn tea.RequestKeyboardEnhancement(\ntea.WithKeyReleases,\ntea.WithUniformKeyLayout,\n)\n}\n```\n## Like details?\nHere’s [the full changelog](https://github.com/charmbracelet/bubbletea/compare/v2.0.0-alpha.2...v2.0.0-beta.1) since v2.0.0-alpha.2\n---\n## 🌈 Feedback\nHave thoughts on Bubble Tea v2 Alpha? We’d _love_ to hear about it. Let us know on…\n- [Discord](https://charm.sh/chat)\n- [Matrix](https://charm.sh/matrix)\n- [Email](mailto:vt100@charm.sh)\n---\nPart of [Charm](https://charm.sh).\n<a href=\"https://charm.sh/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-badge.jpg\" width=\"400\"></a>\nCharm热爱开源 • Charm loves open source • نحنُ نحب المصادر المفتوحة.",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v2.0.0-beta.1, the first beta of Bubble Tea v2 is announced, restoring the old Init behavior, adding cursor support via a new tea.CursorView interface, and renaming keyboard enhancement request function to tea.RequestKeyboardEnhancement."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v1_3_5",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.5",
+      "tag_name": "v1.3.5",
+      "title": "v1.3.5",
+      "time_hint": "2025-04-29",
+      "published_at": "2025-04-29T20:11:53Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v1.3.5",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v1.3.5\nTag: v1.3.5; draft: False; prerelease: False; published_at: 2025-04-29T20:11:53Z; created_at: 2025-04-29T20:10:12Z\nRelease notes:\nThis release fixes an important bug on Windows where function keys (F1..F20) don't get recognized and sent to the program. It also fixes multiple concurrency bugs related to using external context and p.Wait() and p.Kill().\nAlso, _huge_ thank you to @desertwitch who went in and just crushed a handful of deadlocks.\nHappy hacking!\n## Changelog\n### Bug fixes\n* 62ca063a256528e23e05b49750019039a3cd71fc: fix(key): windows: recognize function keys on Windows (#1405) (@aymanbagabas)\n* 0f9cd5b5376b8456a46f1d414590e81511ce3f06: fix(panics): fix race condition and false nil error return (@desertwitch)\n* a79ab3fd2f547843583ddf30d41b9fe39aee37cc: fix(tests): account for multiple p.Wait() (@desertwitch)\n* 1b5fc275fc34411ea74b6b22c05642498f478929: fix: prevent deadlock on ctx cancel during msg processing (@desertwitch)\n* aa7a240b9ad054d5d0dd400961f0dd843e26cf31: fix: release p.Wait() on p.Kill() to prevent external deadlocks (@desertwitch)\n* 1923181af63c7304e0b5f17a71d68dccc8a1bc45: fix: report only external ctx cancel as ctx error (@desertwitch)\n* c56f7768c53848fb844618598060e730fd99d6b2: fix: resolve race conditions caused by p.Kill() (@desertwitch)\n### Documentation updates\n* 3797acbe453e9f4597c81b22f7238e90b8d5cdd0: docs(readme): fix header image mis-caching (@meowgorithm)\n* 8508131fee51e579291b9d2c378c5c6babb266ea: docs(readme): header art adjustments (@meowgorithm)\n* b3150e1e52e4d3d187b4dddde74cd54a29942ca3: docs(readme): update header art (@meowgorithm)\n### Other work\n* b224818d994537a25de86e2658fb9f437ea0baf4: ci(lint): fix all lint issues on `main` (#1342) (@andreynering)\n* 1a0062becb4a36a76d7b63e55c44888c53d65835: ci: fix lint issues (@andreynering)\n* d0c4b6559aba02e4c859a5f147fa6aceedfad328: ci: fix linting on windows-only files (#1361) (@andreynering)\n* 0b18d1f86f0740d57d317f42bbef91bda940a428: ci: sync dependabot config (#1403) (@charmcli)\n* 0e49efb90f1bd8b24e8f30a42335a302bad5af14: ci: sync golangci-lint config (#1354) (@github-actions[bot])\n* a46d16dccbfa5439b208c38eb0cb5962836f17a5: ci: sync golangci-lint config (#1379) (@github-actions[bot])\n* 5a360c9fba5a83e7c1ed6acc038a001f1ebda1f1: ci: sync golangci-lint config (#1394) (@github-actions[bot])\n---\n<a href=\"https://charm.sh/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-badge.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [Twitter](https://twitter.com/charmcli), [The Fediverse](https://mastodon.technology/@charm), or on [Discord](https://charm.sh/chat).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v1.3.5, an important bug on Windows is fixed where function keys (F1..F20) were not recognized, and multiple concurrency bugs related to external context and p.Wait()/p.Kill() are resolved."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v2_0_0_beta_2",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.0.0-beta.2",
+      "tag_name": "v2.0.0-beta.2",
+      "title": "v2.0.0-beta.2",
+      "time_hint": "2025-04-30",
+      "published_at": "2025-04-30T18:59:51Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v2.0.0-beta.2",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v2.0.0-beta.2\nTag: v2.0.0-beta.2; draft: False; prerelease: True; published_at: 2025-04-30T18:59:51Z; created_at: 2025-04-30T18:58:19Z\nRelease notes:\n# Extra! Extra! Bubble Tea Beta 2!\nWe're honing in on v2! This update is fairly minor and makes some adjustments based on the _awesome_ community feedback we've received. Let’s jump into it.\n```bash\ngo get github.com/charmbracelet/bubbletea/v2@v2.0.0-beta.2\n```\n## Keys\n<!-- not yet there we need to push a new beta\n### Better Keys by Default\nKey disambiguation is now enabled by default, when supported. This means that <kbd>ctrl+i</kbd>, which would normally send a <kbd>tab</kbd> will now send an actual <kbd>ctrl+i</kbd> in supporting terminals. To check for support listen for `tea.KeyboardEnhancementsMsg` in your update:\n```go\nswitch msg := msg.(type) {\ncase tea.KeyboardEnhancementsMsg:\nif msg.SupportsKeyDisambiguation() {\n// Yay!\n}\n}\n```\nNote that on Windows key disambiguation is always supported.\n-->\n### Easier Mappings\nThanks to some feedback from our beta users (thank you! ❤️), key events now always return the textual value when using `key.String()`. You can use `key.Keystroke()` to get the keystroke string representation of the event. For example, pressing <kbd>shift+h</kbd> would give you `k.String() == \"H\"` and `k.Keystroke() == \"shift+h\"` when keyboard enhancements is on. We believe this will make input handling closer to the good parts of v1 and avoid some gotchas with international keyboards.\n```go\n// Imagine the user pressed shift+h and key is a KeyMsg\nkey.String () == \"H\"\nkey.Keystroke() == \"shift+h\"\n// Now imagine the user entered a \"?\"\nkey.String() == \"?\"\nkey.Keystroke() == \"shift+/ on an American keyboard, shift+, on a French keyboard\"\n```\n## Other Stuff\n- We reverted the new trailing newline character on program exit. We found that while it's a nice touch that simplifies many programs, it can cause issues for others. This brings rendering in-line with v1, so there will be no action needed migrating from v1\n- Fix concurrency and add deadlock prevention (courtesy @desertwitch)\n- Fixed some examples\nThanks again to @desertwitch for his amazing work on concurrency and deadlock prevention 🤘\n## Changelog\n### New Features\n* 60b6f30124100aa5a4029799de0973e0b32a1741: feat: add keystroke representation to Key struct (#1399) (@aymanbagabas)\n### Bug fixes\n* 929ff5aaa7ef91b10740d4eb4832ca67e8b70ae1: Revert \"fix: ensure terminal prompt is on a new line after program shutdown\" (@aymanbagabas)\n* f4c85670c513462b5e22c7c33f1e47e6cfb6bc53: fix(examples): credit-card-form: use VirtualCursor in inputs (@aymanbagabas)\n* 551bf9cc65c3cfec87f8094f4f6a14f128fa930b: fix(examples): textarea: remove debug log (@aymanbagabas)\n* 62ca063a256528e23e05b49750019039a3cd71fc: fix(key): windows: recognize function keys on Windows (#1405) (@aymanbagabas)\n* 0f9cd5b5376b8456a46f1d414590e81511ce3f06: fix(panics): fix race condition and false nil error return (@desertwitch)\n* a79ab3fd2f547843583ddf30d41b9fe39aee37cc: fix(tests): account for multiple p.Wait() (@desertwitch)\n* ed4fde7ae48fc04204a91669d55698fbc1357ed5: fix: lint issues (@caarlos0)\n* 1b5fc275fc34411ea74b6b22c05642498f478929: fix: prevent deadlock on ctx cancel during msg processing (@desertwitch)\n* aa7a240b9ad054d5d0dd400961f0dd843e26cf31: fix: release p.Wait() on p.Kill() to prevent external deadlocks (@desertwitch)\n* 1923181af63c7304e0b5f17a71d68dccc8a1bc45: fix: report only external ctx cancel as ctx error (@desertwitch)\n* c56f7768c53848fb844618598060e730fd99d6b2: fix: resolve race conditions caused by p.Kill() (@desertwitch)\n* d67e48a5d344a596846f461a73a598b30ae94943: fix: windows: remove broken key_windows.go (@aymanbagabas)\n### Documentation updates\n* 5eee00a636540a02b1c4f5069b8a72a69f89a1d0: docs(examples): add keyboard enhancements demo (@meowgorithm)\n* 35334b9bda7eab8484e212804cc4e3afd6a7a29a: docs(examples): remove extraneous lines in query-term example (@meowgorithm)\n* 3797acbe453e9f459...",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v2.0.0-beta.2, key events now always return the textual value via key.String() and a keystroke representation via key.Keystroke(), the trailing newline on program exit is reverted, and concurrency fixes with deadlock prevention are added."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v2_0_0_beta_3",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.0.0-beta.3",
+      "tag_name": "v2.0.0-beta.3",
+      "title": "v2.0.0-beta.3",
+      "time_hint": "2025-05-02",
+      "published_at": "2025-05-02T13:48:57Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v2.0.0-beta.3",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v2.0.0-beta.3\nTag: v2.0.0-beta.3; draft: False; prerelease: True; published_at: 2025-05-02T13:48:57Z; created_at: 2025-05-02T13:47:08Z\nRelease notes:\n# Another one! Bubble Tea Beta 3!\nThis is a fairly small update that makes key enhancements support even better. Let's get into it.\n```bash\ngo get github.com/charmbracelet/bubbletea/v2@v2.0.0-beta.3\n```\n## Keys\n### Better Keys by Default\nKey disambiguation is now enabled by default, when supported. This means that <kbd>ctrl+i</kbd>, which would normally send a <kbd>tab</kbd> will now send an actual <kbd>ctrl+i</kbd> in supporting terminals. To check for support listen for `tea.KeyboardEnhancementsMsg` in your update:\n```go\nswitch msg := msg.(type) {\ncase tea.KeyboardEnhancementsMsg:\nif msg.SupportsKeyDisambiguation() {\n// Yay!\n}\n}\n```\nNote that on Windows key disambiguation is always supported.\n### Does the terminal support key disambigation?\nWhile we suggest designing your application in a way that gracefully upgrades when key disambiguation is available, you could detect for lack of support with a simple timeout:\n```go\n// queryTimeoutMsg is a message that will get sent after a certain timeout.\ntype queryTimeoutMsg struct{}\n// queryTimeout is a Bubble Tea command that waits for a timeout before sending a [queryTimeoutMsg].\nfunc queryTimeout(d time.Duration) tea.Msg {\ntime.Sleep(200*time.Millisecond) // 200 ms is purly arbitrary\nreturn queryTimeoutMsg{}\n}\nfunc (m model) Init() tea.Cmd {\nreturn tea.Batch(\ntea.RequestKeyboardEnhancements(),\nqueryTimout,\n)\n}\nfunc (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {\nswitch msg := msg.(type) {\ncase tea.KeyboardEnhancementsMsg:\n// We have more keys, heh\nm.hasEnhancements = true\ncase queryTimeoutMsg:\nif !m.hasEnhancements {\n// Terminal doesn't support keyboard enhancements :'(\nm.quit = true\n}\n}\n}\n```\n## Changelog\n### Bug fixes\n* 0ed772736b3777e61965960219c7a9d6b4860bd1: fix(examples): we don't need to wait for background color query (#1407) (@aymanbagabas)\n* 825e109a2a77f32d7f5fb36456ade91a7d41743c: fix: always enable basic keyboard enhancements to disambiguate keys (@aymanbagabas)\n* 07fa6f6caeeae35e85a88e65fa28edeb72aaa803: fix: don't send keyboard enhancements message on startup (@aymanbagabas)\n* cb090c0aed290753e0bdb65881be5d63b1e06184: fix: lint: use isWindows() helper function (@aymanbagabas)\n* 7aa6fec874d724889de0f5d14feaf80ae79dd1a5: fix: only request default key enhancements on non-windows platforms (@aymanbagabas)\n---\n<a href=\"https://charm.sh/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-badge.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [Twitter](https://twitter.com/charmcli), [The Fediverse](https://mastodon.technology/@charm), or on [Discord](https://charm.sh/chat).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v2.0.0-beta.3, key disambiguation is enabled by default when supported, and basic keyboard enhancements are always enabled to disambiguate keys."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v1_3_6",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.6",
+      "tag_name": "v1.3.6",
+      "title": "v1.3.6",
+      "time_hint": "2025-07-07",
+      "published_at": "2025-07-07T20:15:28Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v1.3.6",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v1.3.6\nTag: v1.3.6; draft: False; prerelease: False; published_at: 2025-07-07T20:15:28Z; created_at: 2025-07-07T20:13:13Z\nRelease notes:\nThis version fixes some important issues regarding `tea.Exec` output after resuming from the executed program, and Windows losing input character on successive program execution.\nBig thanks to @raphaelvigee and @joshallenit for working on these issues, you're the best!\n## Changelog\n### Bug fixes\n* 0a63003a85a3a4800bba0a2bf4c476aedec9b172: fix: Windows: first character input lost on successive programs  (#1368) (@joshallenit)\n* 78ed49b060c81477836604621a079edf7b683ff5: fix: maintain exec output (#1276) (@raphaelvigee)\n### Documentation updates\n* 1b0f48941ac53ce3a11a91778fe555fde2b1e70c: docs(readme): cleanup badges (@meowgorithm)\n### Other work\n* ca9473b2d93dc3abce4f8b634e11a4b351517a84: ci: sync golangci-lint config (#1431) (@github-actions[bot])\n---\n<a href=\"https://charm.sh/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-badge.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [Twitter](https://twitter.com/charmcli), [The Fediverse](https://mastodon.technology/@charm), or on [Discord](https://charm.sh/chat).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v1.3.6, issues regarding tea.Exec output after resuming from the executed program and Windows losing input character on successive program execution are fixed."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v2_0_0_beta_4",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.0.0-beta.4",
+      "tag_name": "v2.0.0-beta.4",
+      "title": "v2.0.0-beta.4",
+      "time_hint": "2025-07-10",
+      "published_at": "2025-07-10T18:48:41Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v2.0.0-beta.4",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v2.0.0-beta.4\nTag: v2.0.0-beta.4; draft: False; prerelease: True; published_at: 2025-07-10T18:48:41Z; created_at: 2025-07-10T18:47:25Z\nRelease notes:\n# How’s it going?\nThis is a small beta release with a few changes and a bunch of bug fixes. Enjoy!\n## Keyboard\n`WithKeyboardEnhancements` has been split into three separate functions for clarity:\n- `WithKeyReleases`: Enables support for reporting key release events.\n- `WithUniformKeyLayout`: Enables support for reporting key events in a uniform layout format.\n- `RequestKeyDisambiguation`: Enables support for disambiguated key events.\n## Debugging Panics\nYou can now set `TEA_DEBUG` to true to dump panic logs to the current directory.\n```bash\nexport TEA_DEBUG=1\n```\n## Changelog\n### New Features\n* 3ce0c2452ac121634f0530b9181dd0b5ddfa516a: feat: create a panic trace file (#1446) (@aymanbagabas)\n* 99a80e67ee43a282a1571ac4ec25c0919ac0ce8a: feat: keyboard: split keyboard enhancements into separate functions (@aymanbagabas)\n### Bug fixes\n* 576a623d540ea0ed880e1ee315cd42ce2c56642b: fix(example): fix `keyboard-enhancements` example (@andreynering)\n* b62fc32f3ecb1a025f44745d842d0bdf9098e2c8: fix(examples): tui-daemon-combo: modelView must also implement Init and Update (@aymanbagabas)\n* f97ba58c0f7ed835ed6f7af793d4e3b14e6b73ee: fix(key): add Keystroke() method to KeyPressMsg and KeyReleaseMsg (@aymanbagabas)\n* b152063fd2744082eb4225e8e792fb3f1c7e38d2: fix(tutorials): update basics tutorial per v2 tea.Model changes (@meowgorithm)\n* 0a63003a85a3a4800bba0a2bf4c476aedec9b172: fix: Windows: first character input lost on successive programs  (#1368) (@joshallenit)\n* 78ed49b060c81477836604621a079edf7b683ff5: fix: maintain exec output (#1276) (@raphaelvigee)\n* 536b713a081c228832bb85f56f1de38b8a2d2452: fix: remove unused keyboardc channel (@aymanbagabas)\n* 65af983b4e31d8e8b0ea81ae8384d8d63de1934f: fix: renderer: reset cursor state on close (@aymanbagabas)\n* 185e28113f13f29a98e63ff7df932fa79e7982ba: fix: renderer: use mapnl when terminal is not a tty (@aymanbagabas)\n### Documentation updates\n* af1fcd396c7755243a3b241a786e9799fb356a8f: docs(examples): update textinput and textarea examples per Bubbles v2 API changes (#1425) (@meowgorithm)\n* 1b0f48941ac53ce3a11a91778fe555fde2b1e70c: docs(readme): cleanup badges (@meowgorithm)\n* f502dc548b7157ba49e3889f296750dec74791be: docs: add isbn form validation example (#1401) (@DerMaddis)\n* a806274f6249b0aab90236fcb754cf390bc647eb: docs: tidy (@bashbunni)\n### Other work\n* ca9473b2d93dc3abce4f8b634e11a4b351517a84: ci: sync golangci-lint config (#1431) (@github-actions[bot])\n* 42c169ad3003b0ff0feb83aaf39f54a7c261e735: docs(examples/textinput): support virtual cursor (@meowgorithm)\n---\n<a href=\"https://charm.sh/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-badge.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [Twitter](https://twitter.com/charmcli), [The Fediverse](https://mastodon.technology/@charm), or on [Discord](https://charm.sh/chat).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v2.0.0-beta.4, keyboard enhancements are split into three separate functions: WithKeyReleases, WithUniformKeyLayout, and RequestKeyDisambiguation. A panic trace file can be created by setting TEA_DEBUG=true."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v1_3_7",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.7",
+      "tag_name": "v1.3.7",
+      "title": "v1.3.7",
+      "time_hint": "2025-09-05",
+      "published_at": "2025-09-05T15:22:06Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v1.3.7",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v1.3.7\nTag: v1.3.7; draft: False; prerelease: False; published_at: 2025-09-05T15:22:06Z; created_at: 2025-09-05T15:20:30Z\nRelease notes:\n## Changelog\n### Bug fixes\n* 28ab4f41b29fef14d900c46a4873a45891a9ee9b: fix(renderer): properly reset cursor position to start of line (#1472) (@aymanbagabas)\n* c76509a9d4974207cd66255707d14f4f938f7f52: fix: compact sequences like batches (#958) (@jdhenke)\n* f5da8d068af74764b271a197de54e2bc2bfedb38: fix: handle nested SequenceMsg in event loop and use sync.WaitGroup f… (#1463) (@aymanbagabas)\n* 80ea844a7650c84e13958de14cdd4f63ac1775aa: fix: lint issues in key_windows.go and tty_windows.go (@aymanbagabas)\n### Documentation updates\n* c3136ed49037a096fe05c6cb16f0a14a38e20c58: docs(license): update copyright date range (@meowgorithm)\n* 919805f8f0d134af7e3569b0054c13b561976dfa: docs(readme): update footer art (@meowgorithm)\n* f01583bb899e125c7a26d3b870eff585ec0f4816: docs: show the correct branch in the build badge (@aymanbagabas)\n### Other work\n* a81d6f3875fe87e19e780954a0008b93ebc182c8: ci: sync dependabot config (#1480) (@charmcli)\n* 53609c1f4a7423b7f4f95f23f2308bc45b623cc0: ci: sync golangci-lint config (#1466) (@github-actions[bot])\n---\n<a href=\"https://charm.land/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-banner-next.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [Twitter](https://twitter.com/charmcli), [Discord](https://charm.land/discord), [Slack](https://charm.land/slack), [The Fediverse](https://mastodon.technology/@charm).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v1.3.7, the renderer properly resets cursor position to start of line, compact sequences like batches are fixed, and nested SequenceMsg is handled in the event loop."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v1_3_8",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.8",
+      "tag_name": "v1.3.8",
+      "title": "v1.3.8",
+      "time_hint": "2025-09-08",
+      "published_at": "2025-09-08T20:05:05Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v1.3.8",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v1.3.8\nTag: v1.3.8; draft: False; prerelease: False; published_at: 2025-09-08T20:05:05Z; created_at: 2025-09-08T20:03:48Z\nRelease notes:\n## Changelog\n### Bug fixes\n* 21eecd586367fd0cd78da6842c48f9c4b1185b6f: fix: send batch commands to cmds channel instead of executing them in event loop (#1473) (@aymanbagabas)\n---\n<a href=\"https://charm.land/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-banner-next.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [Twitter](https://twitter.com/charmcli), [Discord](https://charm.land/discord), [Slack](https://charm.land/slack), [The Fediverse](https://mastodon.technology/@charm).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v1.3.8, batch commands are sent to the cmds channel instead of being executed in the event loop."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v1_3_9",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.9",
+      "tag_name": "v1.3.9",
+      "title": "v1.3.9",
+      "time_hint": "2025-09-11",
+      "published_at": "2025-09-11T18:52:24Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v1.3.9",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v1.3.9\nTag: v1.3.9; draft: False; prerelease: False; published_at: 2025-09-11T18:52:24Z; created_at: 2025-09-11T18:50:49Z\nRelease notes:\n## Changelog\n### New Features\n* 314b50c7b452fd737d28582ae9d27c04ea725001: feat: properly call nested sequenceMsg and batchMsg (@wolfmagnate)\n### Bug fixes\n* 9e0e8f0df1c55044ed04bd17f4b460e01e94dc9c: fix: recover from nested panics in Sequence and Batch commands (@aymanbagabas)\n### Other work\n* 6e1282a76358cb680de9d4de7520f9f99c9e2903: add example for the nested Sequence and Batch (@wolfmagnate)\n* 0290af4a499ee6a3e22822cebe1e74fdeac313be: simplify case for BatchMsg (@wolfmagnate)\n---\n<a href=\"https://charm.land/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-banner-next.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [Twitter](https://twitter.com/charmcli), [Discord](https://charm.land/discord), [Slack](https://charm.land/slack), [The Fediverse](https://mastodon.technology/@charm).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v1.3.9, nested sequenceMsg and batchMsg are properly called, and recovery from nested panics in Sequence and Batch commands is added."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v1_3_10",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v1.3.10",
+      "tag_name": "v1.3.10",
+      "title": "v1.3.10",
+      "time_hint": "2025-09-17",
+      "published_at": "2025-09-17T20:13:57Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v1.3.10",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v1.3.10\nTag: v1.3.10; draft: False; prerelease: False; published_at: 2025-09-17T20:13:57Z; created_at: 2025-09-17T20:12:21Z\nRelease notes:\n## Changelog\n### Bug fixes\n* 9edf69c677c7353eca5fae6d3ea3986af39717b7: fix: handle setWindowTitleMsg and windowSizeMsg in eventLoop (@aymanbagabas)\n---\n<a href=\"https://charm.land/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-banner-next.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [X](https://x.com/charmcli), [Discord](https://charm.land/discord), [Slack](https://charm.land/slack), [The Fediverse](https://mastodon.social/@charmcli), [Bluesky](https://bsky.app/profile/charm.land).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v1.3.10, setWindowTitleMsg and windowSizeMsg are handled in the event loop."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v2_0_0_beta_5",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.0.0-beta.5",
+      "tag_name": "v2.0.0-beta.5",
+      "title": "v2.0.0-beta.5",
+      "time_hint": "2025-10-22",
+      "published_at": "2025-10-22T20:13:35Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v2.0.0-beta.5",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v2.0.0-beta.5\nTag: v2.0.0-beta.5; draft: False; prerelease: True; published_at: 2025-10-22T20:13:35Z; created_at: 2025-10-22T20:07:41Z\nRelease notes:\n# Bubble Tea beta 5 is here!\nWe're excited to share the new Bubble Tea v2 beta 5 release with you! In this release, we focused on refining the `View` API, making it more declarative with a single source of truth for view-related properties.\n## Summary\nAll the changes since [Beta 4](https://github.com/charmbracelet/bubbletea/releases/tag/v2.0.0-beta.4) are to supporting a more declarative `View` type. This might sound like a lot but it's fairly simple in practice. This is what it looks like now:\n```go\nfunc (m model) View() tea.View {\nv := tea.NewView(\"Hi, mom!\")\nv.AltScreen = true\nv.WindowTitle = \"It’s all about Mom today\"\n}\n```\n### Why the change?\nThe general impetus for doing this is to eliminate the possibility of race conditions and greatly improve view performance. For example, the altscreen was previously triggered via a `Cmd`, which would not necessarily hit at the same moment the view was being rendered.\n### What else happened?\nWe've removed many _view-based_ startup options and commands in favor of a more declarative approach using the `View` type. For example, `WithMouseCellMotion()` is now a property on `View`, i.e. `view.MouseMode = tea.MouseModeCellMotion`.\nNow, the `View()` method returns a `View` struct that encapsulates all view-related properties. This change simplifies the API and makes it more intuitive to use with a single point of configuration for views.\n## The View API\nPreviously, Bubble Tea used functional options and commands to configure various view-related properties. This approach was flexible but led to a fragmented API surface. Should I use `WithAltScreen()` or `EnterAltScreen`? Is there a difference between them? Why can't I enable focus reporting with `WithReportFocus()` but not via a command?\nThese questions and inconsistencies led us to rethink how we handle view configuration. The new `View` struct consolidates all view-related properties, making it easier to understand and use with a single source of truth. I.e., this is how your view looks like, and these are its properties.\n```go\ntype View struct {\nLayer                     Layer        // Layer represents the content of the view\nCursor                    *Cursor      // Position, style, color (nil = hidden)\nBackgroundColor           color.Color  // Terminal default background color\nForegroundColor           color.Color  // Terminal default foreground color\nWindowTitle               string       // Window title\nProgressBar               *ProgressBar // Progress bar (nil = no progressbar)\nAltScreen                 bool         // Alternate screen buffer (fullscreen mode)\nMouseMode                 MouseMode    // Mouse event mode\nReportFocus               bool         // Focus/blur events\nDisableBracketedPasteMode bool         // Bracketed paste\nDisableKeyEnhancements    bool         // Keyboard enhancements\nKeyReleases               bool         // Key release events\nUniformKeyLayout          bool         // Uniform key layout\n}\n```\n### Options and Commands\nWe've removed many of the view-related options and commands that were previously set using functional options or commands. Instead, these properties are now part of the `View` struct returned by the `View()` method.\nRemoved options include:\n- `WithAltScreen()` → `View.AltScreen = true`\n- `WithMouseCellMotion()` → `View.MouseMode = tea.MouseModeCellMotion`\n- `WithMouseAllMotion()` → `View.MouseMode = tea.MouseModeAllMotion`\n- `WithReportFocus()` → `View.ReportFocus = true`\n- `WithKeyReleases()` → `View.KeyReleases = true`\n- `WithUniformKeyLayout()` → `View.UniformKeyLayout = true`\n- `WithoutBracketedPaste()` → `View.DisableBracketedPasteMode = true`\n- `WithInputTTY()` → use `OpenTTY()` and set input/output manually\nRemoved commands include:\n- `EnterAltScreen`/`ExitAltScreen` → `View.AltScreen`...",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v2.0.0-beta.5, the View API is refined to be more declarative, with a View struct encapsulating all view-related properties, and many view-based startup options and commands are removed in favor of this approach."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v2_0_0_beta_6",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.0.0-beta.6",
+      "tag_name": "v2.0.0-beta.6",
+      "title": "v2.0.0-beta.6",
+      "time_hint": "2025-10-30",
+      "published_at": "2025-10-30T18:39:59Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v2.0.0-beta.6",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v2.0.0-beta.6\nTag: v2.0.0-beta.6; draft: False; prerelease: True; published_at: 2025-10-30T18:39:59Z; created_at: 2025-10-30T18:38:22Z\nRelease notes:\n# Renderer Fixes\nThis new beta release includes a number of fixes related to the renderer.\n## Changelog\n### Fixed\n* 4accb1c4d586b272aadf3224e68763155e789e7c: fix: renderer: avoid requesting keyboard enhancements on close (@aymanbagabas)\n* 6781fb5a5d6b2d5f3a9acc2a183d886d40dd64b9: fix: renderer: ensure we reset cursor style and color on close (@aymanbagabas)\n* fa36fb177ea4e865cc48ee70d9e26616df750b29: fix: renderer: only move cursor to bottom when we're in the main screen (@aymanbagabas)\n* d7c95b8a277871ecc53c90567f1f19aec1950342: fix: renderer: sync buffer resize with frame rate (@aymanbagabas)\n---\n<a href=\"https://charm.land/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-banner-next.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [X](https://x.com/charmcli), [Discord](https://charm.land/discord), [Slack](https://charm.land/slack), [The Fediverse](https://mastodon.social/@charmcli), [Bluesky](https://bsky.app/profile/charm.land).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v2.0.0-beta.6, renderer fixes are included: avoiding keyboard enhancement requests on close, resetting cursor style and color on close, moving cursor to bottom only in main screen, and syncing buffer resize with frame rate."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v2_0_0_rc_1",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.0.0-rc.1",
+      "tag_name": "v2.0.0-rc.1",
+      "title": "v2.0.0-rc.1",
+      "time_hint": "2025-11-04",
+      "published_at": "2025-11-04T20:08:51Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v2.0.0-rc.1",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v2.0.0-rc.1\nTag: v2.0.0-rc.1; draft: False; prerelease: True; published_at: 2025-11-04T20:08:51Z; created_at: 2025-11-04T20:06:44Z\nRelease notes:\nThis release includes a _big_ change in the module name, and several message type changes. These types changed from type aliases to structs to improve extensibility and allow for future enhancements without breaking changes:\n- `github.com/charmbracelet/bubbletea/v2` - now moved to `charm.land/bubbletea/v2`\n- `CursorPositionMsg` - now a struct type\n- `KeyboardEnhancementsMsg` - now a struct type\n- `PasteMsg` - now a struct type\n- `CapabilityMsg` - now a struct type\n- `TerminalVersionMsg` - now struct types\n### Migration Guide\n#### Charm Land!\n```go\n// Before\nimport tea \"github.com/charmbracelet/bubbletea/v2\"\n// After\nimport tea \"charm.land/bubbletea/v2\"\n```\nOr you can use this GNU `sed` oneliner in your project root 😉\n```sh\nfind . -name \\*.go | xargs -I{} sed -i 's/\"github.com\\/charmbracelet\\/bubbletea\\/v2\"/\"charm.land\\/bubbletea\\/v2\"/' {}\n```\n#### CursorPositionMsg\n```go\n// Before\ncase CursorPositionMsg:\nx, y := msg.X, msg.Y\n// After (no change needed - fields remain the same)\ncase CursorPositionMsg:\nx, y := msg.X, msg.Y\n```\n#### KeyboardEnhancementsMsg\n```go\n// Before\ncase KeyboardEnhancementsMsg:\nif msg&ansi.KittyDisambiguateEscapeCodes != 0 {\n// ...\n}\n// After\ncase KeyboardEnhancementsMsg:\nif msg.Flags&ansi.KittyDisambiguateEscapeCodes != 0 {\n// ...\n}\n// Or use the helper methods:\nif msg.SupportsKeyDisambiguation() {\n// ...\n}\n```\n#### PasteMsg\n```go\n// Before\ncase PasteMsg:\ncontent := string(msg)\n// After\ncase PasteMsg:\ncontent := msg.Content\n// Or use the String() method:\ncontent := msg.String()\n```\n#### CapabilityMsg\n```go\n// Before\ncase CapabilityMsg:\nswitch msg {\ncase \"RGB\", \"Tc\":\n// ...\n}\n// After\ncase CapabilityMsg:\nswitch msg.Content {\ncase \"RGB\", \"Tc\":\n// ...\n}\n// Or use the String() method:\nswitch msg.String() {\ncase \"RGB\", \"Tc\":\n// ...\n}\n```\n#### TerminalVersionMsg\n```go\n// Before\ncase TerminalVersionMsg:\nversion := string(msg)\n// After\ncase TerminalVersionMsg:\nversion := msg.Name\n// Or use the String() method:\nversion := msg.String()\n```\n## Changelog\n### Docs\n* ff8c8247c5522dd228de6ae6a48433bb268ceb5e: docs(examples): migrate imports to charm.land (@aymanbagabas)\n### Other stuff\n* b947ade70df86b9c126bef1a0ca369b0f9bfef79: refactor: change several message types to structs for extensibility (@aymanbagabas)\n* cc0168c65ec5ab5bcc3164640f1c8af3b0127693: refactor: migrate imports to charm.land domain (@aymanbagabas)\n* b8645799fe45c921ad96adf9de580a56185b9e44: refactor: update module path to charm.land/bubbletea/v2 (@aymanbagabas)\n---\n<a href=\"https://charm.land/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-banner-next.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [X](https://x.com/charmcli), [Discord](https://charm.land/discord), [Slack](https://charm.land/slack), [The Fediverse](https://mastodon.social/@charmcli), [Bluesky](https://bsky.app/profile/charm.land).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v2.0.0-rc.1, the module name changes to charm.land/bubbletea/v2, and several message types (CursorPositionMsg, KeyboardEnhancementsMsg, PasteMsg, CapabilityMsg, TerminalVersionMsg) change from type aliases to structs for extensibility."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v2_0_0_rc_2",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.0.0-rc.2",
+      "tag_name": "v2.0.0-rc.2",
+      "title": "v2.0.0-rc.2",
+      "time_hint": "2025-11-17",
+      "published_at": "2025-11-17T20:53:05Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v2.0.0-rc.2",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v2.0.0-rc.2\nTag: v2.0.0-rc.2; draft: False; prerelease: True; published_at: 2025-11-17T20:53:05Z; created_at: 2025-11-17T20:50:21Z\nRelease notes:\n# Smooth Operator (Mode 2026)\nThis release introduces synchronized output updates, which is enabled by default. This mode enhances how supported terminals render program updates by triggering the updates atomically.\nWe've also fixed a bunch of renderer bugs and edge cases 🙂\n## Changelog\n### New!\n* 94247ed8f1de0b14d18221c5b1bc0a3ace867491: feat: add SupportsKeyDisambiguation to KeyboardEnhancementsMsg (@aymanbagabas)\n* f1799cdf0528fa6eabd3e3f234aaa3ff9bea0ae7: feat: add synchronized updates option to renderer interface (@aymanbagabas)\n* 7120058b79d9bd1147923b6d3c80730715c889e4: feat: introduce ModeReportMsg for terminal mode reports (@aymanbagabas)\n* 349783e879971124e16fd6bd6d4ee5a68eecf449: feat: query terminal for synchronized output support (mode 2026) (@aymanbagabas)\n* d88ab58421e23806003a92c034848234c75f3643: feat: renderer: use uv altscreen helpers (@aymanbagabas)\n### Fixed\n* 101fd110a0c5ce2021c0b661b3e16d1a131cf25a: Revert \"fix: renderer: sync buffer resize with frame rate\" (@aymanbagabas)\n* 8f17c3584f3df68f12703cb0f5e58f482f2e5d62: fix(examples): revert textarea pointers to values (@aymanbagabas)\n* 78766cd0caffe74e4556b8cb81015be7186d74fa: fix(examples): use updated progress bar blend api (@aymanbagabas)\n* d9f7210a9efd9d5badaeb4ded9c2a65a70d9322e: fix(renderer): avoid unnecessary resize on alt screen buffer (@aymanbagabas)\n* 03b65248bf57d2db591717a069bd17a6e189b046: fix: edge case where cursor visibility is the only change (@aymanbagabas)\n* 1ef7dd45893b2a1015c56a4eedd3eeddcea848b7: fix: ensure TERM_PROGRAM is set (@aymanbagabas)\n* 513313125a10d7d62c83d295ca4fcbe0b547ac05: fix: renderer: always erase to end of line when prepending lines (@aymanbagabas)\n* f206009f44a500e25ff21a155d98fdddc228c5f5: fix: renderer: always redraw on resize (@aymanbagabas)\n* 2c7af7f201d59cdf7b7ee815da7beca2ac80aab0: fix: renderer: avoid redundant cursor toggles (@aymanbagabas)\n* 4687350583449b10eb27f6be36c4bd0dc4b81447: fix: renderer: check for cellbuf size change before skipping flush (@aymanbagabas)\n* f19cb6850adb26d4b472967d6aab331918189f02: fix: renderer: defer resize and draw until flush (@aymanbagabas)\n* 3a71934c730fb80d422a03a7784c37baba45df1a: fix: renderer: ensure prepended lines queued before render (@aymanbagabas)\n* 83e606b3d00262767f84c39258257543d11439fa: fix: renderer: handle cursor visibility and syncd output efficiently (@aymanbagabas)\n* f01fc811bc64e4b3549330a860c61e7650ab0375: fix: renderer: reset cursor position in inline mode to avoid line wraps (@aymanbagabas)\n* f952eb953acf76a30205b1c350a8154554ce8325: fix: renderer: use an interface for inline height calculation (@aymanbagabas)\n* 1dcdea988ca7528967868c14cbde497005f496ef: fix: renderer: use the correct size when resizing the screen (@aymanbagabas)\n* aa0071e72dc6c1ed3e1bb788f06cef223ad3299a: fix: renderer: we want to always use the frame area for drawing (@aymanbagabas)\n### Docs\n* 9878b7a536694e0878bb01d558cdd331e6bae622: docs: update NewView and SetContent to add examples and notes (@aymanbagabas)\n* cfe67248a64a82c9aeb6cb560be5bea76e2b7ae5: docs: update code example formatting in screen.go (@aymanbagabas)\n* 3780c0e8b11d04c0bfa0e977cd3f970a2c874304: docs: update keyboard enhancement flags comment (@aymanbagabas)\n### Other stuff\n* 514da28df3ee0bda03d51689900d6e2307feeb6e: perf: renderer: skip flush if no changes (@aymanbagabas)\n* ed050cd1086878ecc4ae28a3c356f0e706e57407: refactor: extract terminal capability detection into helper function (#1543) (@Copilot)\n* f03c467c1b08d1bf316777591dfd963b059be4ac: refactor: keyboard enhancements api improvements (#1534) (@aymanbagabas)\n* a1ecb94bda0e4ced64384234e6296129341f16a6: refactor: rename View.Layer to View.Content for clarity (#1536) (@aymanbagabas)\n* c3c752dbf7b3dbf33f3895af2970c5840b3b32e8: refactor: renderer: support mode 2026, manage cu...",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v2.0.0-rc.2, synchronized output updates (mode 2026) are introduced and enabled by default, along with various renderer bug fixes and edge case handling."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v2_0_0",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.0.0",
+      "tag_name": "v2.0.0",
+      "title": "v2.0.0",
+      "time_hint": "2026-02-24",
+      "published_at": "2026-02-24T15:32:26Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v2.0.0",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v2.0.0\nTag: v2.0.0; draft: False; prerelease: False; published_at: 2026-02-24T15:32:26Z; created_at: 2026-02-24T15:30:39Z\nRelease notes:\n![bubbletea-v2-block](https://github.com/user-attachments/assets/99d2edd1-283c-4e1f-8758-14eea6ee36d6)\n# What's New in Bubble Tea v2\nWe're very excited to announce the second major release of Bubble Tea!\nIf you (or your LLM) are just looking for technical details on on migrating from v1, please check out the [Upgrade Guide](UPGRADE_GUIDE_V2.md).\n> [!NOTE]\n> We don't take API changes lightly and strive to make the upgrade process as simple as possible. We believe the changes bring necessary improvements as well as pave the way for the future. If something feels way off, let us know.\n## ❤️ Charm Land Import Path\nWe've updated our import paths to use vanity domains and use our domain to import Go packages.\n```go\n// Before\nimport tea \"github.com/charmbracelet/bubbletea\"\n// After\nimport tea \"charm.land/bubbletea/v2\"\n```\nEverything else stays the same 🙂\n## 👾 The Cursed Renderer\nBubble Tea v2 ships with the all-new Cursed Renderer which was built from the ground up. It's based on the ncurses rendering algorithm and is highly optimized for speed, efficiency, and accuracy and is built on an _enormous_ amount of research and development.\nOptimized renders also means that [Wish][wish] users get big performance benefits and lower bandwidth usage by orders of magnitude.\nTo take advantage of the new Cursed Renderer you don't need to do anything at all except keep on using the Bubble Tea you know and love.\n## ✌️ Key handling is way better now\nNewer terminals can now take advantage of all sorts keyboard input via [progressive keyboard enhancements][kitty-keyboard]. You can now map all sorts of keys and modifiers like <kbd>shift+enter</kbd> and <kbd>super+space</kbd>. You can also detect key releases (we're looking at you, game developers).\nIt's easy to detect support for supporting terminals and add fallbacks for those that don't. For details, see [keyboard enhancements](#keyboard-enhancements) below.\n## 🥊 No more fighting\nIn the past, Bubble Tea and [Lip Gloss][lg] would often fight over i/o. Bubble Tea wanted to read keyboard input and Lip Gloss wanted to query for the background color. This means that things could get messy. Not anymore! In v2, Lip Gloss is now pure, which means, Bubble Tea manages i/o and gives orders to Lip Gloss. In short, we only need one lib to call the shots, and in the context of this relationship, that lib is Bubble Tea.\nBut what about color downsampling? That's a great question.\n[lg]: https://charm.land/lipgloss\n[wish]: https://charm.land/wish\n[cp]: https://charm.land/wish\n[kitty-keyboard]: https://sw.kovidgoyal.net/kitty/keyboard-protocol/\n## 👨🏻‍🎨 Built-in Color Downsampling\nWe sneakily released a little library called [colorprofile][cp] that will detect the terminal's color profile and auto-downsample _any_ ANSI styling that flows through it to the best available color profile. This means that color will \"just work\" (and not misbehave) no matter where the ANSI styling comes from.\nDownsampling is built-into Bubble Tea and is automatically enabled.\n## 🧘 Declarative, Not Imperative\nThis is a big one. In v1, you'd toggle terminal features on and off with commands like `tea.EnterAltScreen`, `tea.EnableMouseCellMotion`, `tea.EnableReportFocus`, and so on. In v2, all of that is gone and replaced by fields on the `View` struct. You just _declare_ what you want your view to look like and Bubble Tea takes care of the rest.\nThis means no more fighting over startup options and commands. Just set the fields and forget about it. For example, to enter full screen mode:\n```go\nfunc (m Model) View() tea.View {\nv := tea.NewView(\"Hello, full screen!\")\nv.AltScreen = true\nreturn v\n}\n```\nThe same goes for mouse mode, bracketed paste, focus reporting, window title, keyboard enhancements, and more. See [A Declarative View](#a-declarative-view) below for t...",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v2.0.0, the second major release is announced, featuring the new Cursed Renderer, improved key handling with progressive keyboard enhancements, built-in color downsampling, a declarative view API, and a charm.land import path."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v2_0_1",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.0.1",
+      "tag_name": "v2.0.1",
+      "title": "v2.0.1",
+      "time_hint": "2026-03-02",
+      "published_at": "2026-03-02T19:17:18Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v2.0.1",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v2.0.1\nTag: v2.0.1; draft: False; prerelease: False; published_at: 2026-03-02T19:17:18Z; created_at: 2026-03-02T19:14:40Z\nRelease notes:\nA small patch release to fix opening the proper default stdin file for input.\n## Changelog\n### Fixed\n* 110a91911314541601ff156fa96904350a4cd07f: fix(examples): add missing `WithWidth` to table example (#1598) (@shv-ng)\n* 66b7abdecfad6cc67a5b408e66d54170a063ff89: fix: check if os.Stdin is a terminal before opening the TTY (@aymanbagabas)\n### Docs\n* c7513746b118758a3412895bad933dcccba8893d: docs: correct whats new link (@aymanbagabas)\n* 736fba22c570ddccbc325b2e33af04c457fa7591: docs: upgrade guide: correct badge url (@aymanbagabas)\n---\n<a href=\"https://charm.land/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-banner-next.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [X](https://x.com/charmcli), [Discord](https://charm.land/discord), [Slack](https://charm.land/slack), [The Fediverse](https://mastodon.social/@charmcli), [Bluesky](https://bsky.app/profile/charm.land).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v2.0.1, a small patch fixes opening the proper default stdin file for input by checking if os.Stdin is a terminal before opening the TTY."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v2_0_2",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.0.2",
+      "tag_name": "v2.0.2",
+      "title": "v2.0.2",
+      "time_hint": "2026-03-09",
+      "published_at": "2026-03-09T10:58:01Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v2.0.2",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v2.0.2\nTag: v2.0.2; draft: False; prerelease: False; published_at: 2026-03-09T10:58:01Z; created_at: 2026-03-09T10:56:00Z\nRelease notes:\nThis release contains a small patch fixing a rendering that might affect Wish users running on Unix platforms.\n## Changelog\n### Fixed\n* f25595a848eb11a87631a9e43ffe078d713c2236: fix(renderer): use mapNl optimization when not on Windows and no PTY input (#1615) (@aymanbagabas)\n---\n<a href=\"https://charm.land/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-banner-next.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [X](https://x.com/charmcli), [Discord](https://charm.land/discord), [Slack](https://charm.land/slack), [The Fediverse](https://mastodon.social/@charmcli), [Bluesky](https://bsky.app/profile/charm.land).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v2.0.2, a rendering fix is applied for Wish users on Unix platforms by using mapNl optimization when not on Windows and no PTY input."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v2_0_3",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.0.3",
+      "tag_name": "v2.0.3",
+      "title": "v2.0.3",
+      "time_hint": "2026-04-13",
+      "published_at": "2026-04-13T15:14:57Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v2.0.3",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v2.0.3\nTag: v2.0.3; draft: False; prerelease: False; published_at: 2026-04-13T15:14:57Z; created_at: 2026-04-13T15:13:15Z\nRelease notes:\n# Extra Extra Extended Keyboard Enhancements!\nThis release adds support for the full set of Keyboard Enhancements. Now you can enable any enhancements on top of the default disambiguate one.\n```go\nfunc (m model) View() tea.View {\nvar v tea.View\nv.KeyboardEnhancements.ReportAlternateKeys = true\nv.KeyboardEnhancements.ReportAllKeysAsEscapeCodes = true\nreturn v\n}\n```\n# Smarter Renderer\nWe also fixed a few renderer related bugs and made the Cursed Renderer smarter. Now, we always reset the terminal tab stops for the Bubble Tea program process context. People using `tabs -N` in their shell profiles shouldn't be affected.\nSee the full changelog below.\n## Changelog\n### New!\n* 05df5aecf81f67ba8dd312367246bc1c9465adfa: feat: support extended keyboard enhancements (#1626) (@aymanbagabas)\n### Fixed\n* a3d78073b74c2ddb2b8820e9751ad6dca485a6d5: fix(ci): only run build-examples on non-dependabot PRs (@aymanbagabas)\n* 7df1e650b31224cc8cc6e80f9854551c9dccde10: fix(examples): migrate imports to charm.land for the glamour example (#1642) (@mhdna)\n* ee06e98c4174012046bd35c0f869e875131859b2: fix(examples): resolve nil pointer dereference (#1663) (@mattpcaswell)\n* ac355fe194c3e9f07c0d2b061bcf51ad802103fb: fix(renderer): restore tab stops if hard tabs are enabled (#1677) (@aymanbagabas)\n* 729f05c315343faa36902cedff46d135b6a4b3c7: fix: add missing signal.Stop in suspendProcess to prevent signal channel leak (Closes #1673) (#1674) (@kuishou68)\n### Docs\n* bbe4faf35db767a2657396f25da0f1c7c8fa0c03: docs(example): add textarea dynamic height example (#1639) (@meowgorithm)\n* e19d2554f50eb61396baab18e4872562bc7b5cdc: docs: fix README wording (#1624) (@Rohan5commit)\n### Other stuff\n* 65c397863ffdca680845eb036c6a164719415fd3: ci: sync golangci-lint config (#1556) (@github-actions[bot])\n---\n<a href=\"https://charm.land/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-banner-next.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [X](https://x.com/charmcli), [Discord](https://charm.land/discord), [Slack](https://charm.land/slack), [The Fediverse](https://mastodon.social/@charmcli), [Bluesky](https://bsky.app/profile/charm.land).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v2.0.3, support for extended keyboard enhancements is added, and the Cursed Renderer is made smarter by resetting terminal tab stops for the program process context."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v2_0_4",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.0.4",
+      "tag_name": "v2.0.4",
+      "title": "v2.0.4",
+      "time_hint": "2026-04-13",
+      "published_at": "2026-04-13T17:04:13Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v2.0.4",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v2.0.4\nTag: v2.0.4; draft: False; prerelease: False; published_at: 2026-04-13T17:04:13Z; created_at: 2026-04-13T17:02:36Z\nRelease notes:\nThis release includes a small fix related to width calculation in [x/ansi](https://github.com/charmbracelet/x/tree/main/ansi). See https://github.com/charmbracelet/bubbletea/commit/c788fe932e8aa4d99322101730a7e97a74684d51 and https://github.com/charmbracelet/x/commit/6921c759c9134ae68bd1a6ff6e171bf470664aaf for more details.\n---\n<a href=\"https://charm.land/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-banner-next.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [X](https://x.com/charmcli), [Discord](https://charm.land/discord), [Slack](https://charm.land/slack), [The Fediverse](https://mastodon.social/@charmcli), [Bluesky](https://bsky.app/profile/charm.land).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v2.0.4, a small fix related to width calculation in x/ansi is included."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v2_0_5",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.0.5",
+      "tag_name": "v2.0.5",
+      "title": "v2.0.5",
+      "time_hint": "2026-04-13",
+      "published_at": "2026-04-13T21:15:04Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v2.0.5",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v2.0.5\nTag: v2.0.5; draft: False; prerelease: False; published_at: 2026-04-13T21:15:04Z; created_at: 2026-04-13T21:13:38Z\nRelease notes:\nA small release to remove accidental unwanted debug log file. See https://github.com/charmbracelet/bubbletea/commit/1ed724a2d1316ace504f87a2f0bbbcc189d280f6 and https://github.com/charmbracelet/ultraviolet/commit/b516641c662e2094c163ebc3a992983061b979ca for details.\n---\n<a href=\"https://charm.land/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-banner-next.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [X](https://x.com/charmcli), [Discord](https://charm.land/discord), [Slack](https://charm.land/slack), [The Fediverse](https://mastodon.social/@charmcli), [Bluesky](https://bsky.app/profile/charm.land).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v2.0.5, an accidental unwanted debug log file is removed."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v2_0_6",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.0.6",
+      "tag_name": "v2.0.6",
+      "title": "v2.0.6",
+      "time_hint": "2026-04-16",
+      "published_at": "2026-04-16T16:02:09Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v2.0.6",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v2.0.6\nTag: v2.0.6; draft: False; prerelease: False; published_at: 2026-04-16T16:02:09Z; created_at: 2026-04-16T16:00:24Z\nRelease notes:\nThis release fixes an issue with how Bubble Tea handled wide characters. Before, a wide character might be skipped or cause an infinite loop causing the CPU to spike. See https://github.com/charmbracelet/bubbletea/commit/fdcd0cfd598195e7043c18ab1bc65dcae03588f5 and https://github.com/charmbracelet/ultraviolet/pull/109 for more details.\n---\n<a href=\"https://charm.land/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-banner-next.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [X](https://x.com/charmcli), [Discord](https://charm.land/discord), [Slack](https://charm.land/slack), [The Fediverse](https://mastodon.social/@charmcli), [Bluesky](https://bsky.app/profile/charm.land).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v2.0.6, an issue with handling wide characters is fixed, preventing skipping or infinite loops that could cause CPU spikes."
+    },
+    {
+      "memory_node_id": "charmbracelet__bubbletea__release__v2_0_7",
+      "repo": "charmbracelet/bubbletea",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:v2.0.7",
+      "tag_name": "v2.0.7",
+      "title": "v2.0.7",
+      "time_hint": "2026-06-01",
+      "published_at": "2026-06-01T16:35:20Z",
+      "source_url": "https://github.com/charmbracelet/bubbletea/releases/tag/v2.0.7",
+      "raw_text": "Repository: charmbracelet/bubbletea\nRelease: v2.0.7\nTag: v2.0.7; draft: False; prerelease: False; published_at: 2026-06-01T16:35:20Z; created_at: 2026-06-01T16:34:19Z\nRelease notes:\n# A few lil’ stability patches\nHi! This is a patch release with a few solid improvements around stability and correctness.\n* @lrstanley, one of our faves, fixed a race condition around mice in the Cursed Renderer\n* @lawrence3699 fixed a panic that could happen when input's not available\n* We fixed a correctness issue with regard to mouse releases when Kitty Keyboard was active (thanks, @mitchellh)\nThanks for using Bubble Tea, and if you see anything awry please do let us know!\n—Charm 👋\n## Changelog\n### Fixed\n* c60f0c53042238305ec13b486326588f12aea0ec: fix: prevent data race with cursedRenderer.onMouse (#1691) (@lrstanley)\n* 074596e14e2f5ca5e3986ee72e7c08f1569c4178: fix: skip input reader restore when input is disabled (#1680) (@lawrence3699)\n* 878d7df2f2b02f3ca8db177fa8553834bc35ea7c: fix(deps): bump ultraviolet for kitty keyboard fix (@meowgorithm)\n---\n<a href=\"https://charm.land/\"><img alt=\"The Charm logo\" src=\"https://stuff.charm.sh/charm-banner-next.jpg\" width=\"400\"></a>\nThoughts? Questions? We love hearing from you. Feel free to reach out on [X](https://x.com/charmcli), [Discord](https://charm.land/discord), [Slack](https://charm.land/slack), [The Fediverse](https://mastodon.social/@charmcli), [Bluesky](https://bsky.app/profile/charm.land).",
+      "memory_unit_text": "In the charmbracelet/bubbletea release v2.0.7, stability patches are provided: a race condition around mice in the Cursed Renderer is fixed, a panic when input is not available is fixed, and a correctness issue with mouse releases when Kitty Keyboard is active is resolved."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the charmbracelet/bubbletea releases, which release introduces the new Cursed Renderer and a declarative view API?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v2.0.0-beta.1"
+        },
+        {
+          "option_id": "B",
+          "text": "v2.0.0-rc.1"
+        },
+        {
+          "option_id": "C",
+          "text": "v2.0.0"
+        },
+        {
+          "option_id": "D",
+          "text": "v2.0.3"
+        }
+      ],
+      "correct_option_id": "C",
+      "expected_answer": "v2.0.0",
+      "source_chunk_ids": [
+        "charmbracelet__bubbletea__release__v2_0_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "charmbracelet__bubbletea__release__v2_0_0",
+          "answer_text": "features the new Cursed Renderer, improved key handling with progressive keyboard enhancements, built-in color downsampling, a declarative view API"
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the charmbracelet/bubbletea releases, how does the interrupt handling change described in v1.3.0 differ from the keyboard enhancement changes described in v2.0.0-beta.3?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "v1.3.0 introduces a tea.Interrupt command for graceful ctrl+c handling, while v2.0.0-beta.3 enables key disambiguation by default and always enables basic keyboard enhancements."
+        },
+        {
+          "option_id": "B",
+          "text": "v1.3.0 removes interrupt handling, while v2.0.0-beta.3 disables keyboard enhancements."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only fix Windows input issues without changing interrupt or keyboard behavior."
+        },
+        {
+          "option_id": "D",
+          "text": "v1.3.0 adds keyboard enhancements, while v2.0.0-beta.3 adds interrupt handling."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "v1.3.0 introduces a tea.Interrupt command for graceful ctrl+c handling, while v2.0.0-beta.3 enables key disambiguation by default and always enables basic keyboard enhancements.",
+      "source_chunk_ids": [
+        "charmbracelet__bubbletea__release__v1_3_0",
+        "charmbracelet__bubbletea__release__v2_0_0_beta_3"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "charmbracelet__bubbletea__release__v1_3_0",
+          "answer_text": "refined interrupt handling is introduced, allowing graceful handling of ctrl+c or interrupt signals via a new tea.Interrupt command"
+        },
+        {
+          "memory_node_id": "charmbracelet__bubbletea__release__v2_0_0_beta_3",
+          "answer_text": "key disambiguation is enabled by default when supported, and basic keyboard enhancements are always enabled to disambiguate keys"
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the charmbracelet/bubbletea release window, order the following release-content states from earliest to latest: (1) a release that fixes canceling terminal input reads on Windows, (2) a release that restores deprecated program options, (3) a release that fixes an issue where the mouse is always enabled on Windows even if not requested, (4) a release that fixes function key recognition on Windows and concurrency bugs.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "2 -> 1 -> 4 -> 3"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 3 -> 2 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 3 -> 2 -> 1"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "1 -> 2 -> 3 -> 4",
+      "source_chunk_ids": [
+        "charmbracelet__bubbletea__release__v1_3_2",
+        "charmbracelet__bubbletea__release__v1_3_3",
+        "charmbracelet__bubbletea__release__v1_3_4",
+        "charmbracelet__bubbletea__release__v1_3_5"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "charmbracelet__bubbletea__release__v1_3_2",
+          "answer_text": "fix is provided for canceling terminal input reads on Windows"
+        },
+        {
+          "memory_node_id": "charmbracelet__bubbletea__release__v1_3_3",
+          "answer_text": "program options that were deprecated in previous releases are restored"
+        },
+        {
+          "memory_node_id": "charmbracelet__bubbletea__release__v1_3_4",
+          "answer_text": "issue on Windows is fixed where the mouse is always enabled even if not requested"
+        },
+        {
+          "memory_node_id": "charmbracelet__bubbletea__release__v1_3_5",
+          "answer_text": "important bug on Windows is fixed where function keys (F1..F20) were not recognized, and multiple concurrency bugs are resolved"
+        }
+      ]
+    }
+  ]
+}

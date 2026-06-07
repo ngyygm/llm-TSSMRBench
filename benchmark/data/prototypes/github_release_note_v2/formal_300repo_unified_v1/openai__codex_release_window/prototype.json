@@ -1,0 +1,530 @@
+{
+  "prototype_id": "openai__codex_release_window",
+  "domain": "github_release_evolution",
+  "repo": "openai/codex",
+  "source_type": "release_note",
+  "window_title": "openai/codex recent release evolution",
+  "window_summary": "This window tracks the recent openai/codex release stream from 0.130.0 through 0.136.0, including alpha pre-releases. The releases introduce features such as remote control, plugin workflows, Python SDK improvements, TUI enhancements, and session management capabilities.",
+  "chunks": [
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_130_0",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.130.0",
+      "tag_name": "rust-v0.130.0",
+      "title": "0.130.0",
+      "time_hint": "2026-05-08",
+      "published_at": "2026-05-08T23:09:55Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.130.0",
+      "raw_text": "Repository: openai/codex\nRelease: 0.130.0\nTag: rust-v0.130.0; draft: False; prerelease: False; published_at: 2026-05-08T23:09:55Z; created_at: 2026-05-08T21:57:55Z\nRelease notes:\n## New Features\n- Plugin details now show bundled hooks, and plugin sharing exposes link metadata plus discoverability controls. (#21447, #21495, #21637)\n- Added `codex remote-control` as a simpler entrypoint for starting a headless, remotely controllable app-server. (#21424)\n- App-server clients can page large threads with unloaded, summary, or full turn item views. (#21566)\n- Bedrock auth can now use AWS console-login credentials from `aws login` profiles. (#21623)\n- `view_image` can resolve files through the selected environment for multi-environment sessions. (#21143)\n## Bug Fixes\n- Live app-server threads now pick up config changes without requiring a restart. (#21187)\n- Turn diffs stay accurate across apply-patch operations, including partial failures that still mutated files. (#21180, #21518)\n- Thread summaries, renames, resume, and fork paths work better through `ThreadStore`, including threads without local rollout paths. (#21264, #21265, #21266)\n- Remote compaction now emits `response.processed` for v2 streams and avoids sending `service_tier` on API-key compact requests. (#21642, #21676)\n- Windows sandbox setup now grants sandbox users access to the desktop runtime binary cache. (#21564)\n- Removed stale “research preview” wording from the `codex exec` startup banner. (#21683)\n## Documentation\n- Fixed issue templates so CLI reports keep the intended guidance, labels apply correctly, and feature requests link to the right contributing docs. (#21685, #21686, #21688)\n- Updated install and tooling docs to consistently use `cargo install --locked`. (#21592)\n## Chores\n- Added a faster Cargo profiling build profile and disabled empty doctest targets to speed up Rust development loops. (#21574, #21584)\n- Hardened dependency and CI hygiene with fully qualified GitHub Action pins, a Dependabot cooldown, and a `cargo-shear` upgrade. (#21436, #21547, #21599)\n- Simplified internal surfaces by removing unused device-key APIs, extra skills roots, the remote thread-store implementation, and string-keyed MCP tool maps. (#21487, #21485, #21596, #21454)\n- Added configurable OpenTelemetry trace metadata and richer review/feedback analytics for better debugging and triage. (#21556, #18747, #21434, #21498)\n## Changelog\nFull Changelog: https://github.com/openai/codex/compare/rust-v0.129.0...rust-v0.130.0\n- #21494 [codex] fix PluginListParams test initializer @xli-oai\n- #21447 Show plugin hooks in plugin details @abhinav-oai\n- #21356 feat: make built-in MCPs first-class runtime servers @jif-oai\n- #21180 Make turn diff tracking operation backed @jif-oai\n- #21498 [codex] add account id to feedback uploads @pakrym-oai\n- #21487 device-key: clean up unused crate @euroelessar\n- #21518 fix: preserve exact turn diffs after partial apply_patch failures @jif-oai\n- #18747 [codex-analytics] add tool review event schema @rhan-oai\n- #21495 feat: Expose plugin share metadata in shareContext @xl-openai\n- #21454 [codex] Remove string-keyed MCP tool maps @pakrym-oai\n- #21424 add top-level remote-control command @owenlin0\n- #21187 app-server: refresh live threads from latest config snapshot @jif-oai\n- #21461 [codex] Move tool specs onto handlers @pakrym-oai\n- #21547 Upgrade `cargo-shear` to 1.11.2 @charliemarsh-oai\n- #21264 Move thread name edits to ThreadStore @wiltzius-openai\n- #21266 [codex] Fix pathless thread summaries @wiltzius-openai\n- #21265 Route ThreadManager rollout path reads through thread store @wiltzius-openai\n- #21564 Grant sandbox users access to desktop runtime bin @iceweasel-oai\n- #21582 Use descriptive names for Cargo profile options @zanie-oai\n- #21574 Add a Cargo build profile for benchmarking @zanie-oai\n- #21436 [codex] Fully qualify hash-pins in GitHub Actions @ww-oai\n- #21592 Ensure all mentions of cargo-install are --locked @gankra-oai\n- #21584 Disable em...",
+      "memory_unit_text": "In the openai/codex release 0.130.0 (tag rust-v0.130.0), new features include plugin details showing bundled hooks, plugin sharing with link metadata and discoverability controls, a new `codex remote-control` command for headless app-server control, app-server clients paging large threads with different item views, Bedrock auth using AWS console-login credentials, and `view_image` resolving files through the selected environment. Bug fixes address live thread config updates, turn diff accuracy, thread store improvements, remote compaction stream handling, Windows sandbox setup, and removal of stale research preview wording. Documentation updates fix issue templates and install docs. Chores add faster Cargo profiling, dependency hygiene, internal simplifications, and OpenTelemetry trace metadata."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_131_0_alpha_1",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.131.0-alpha.1",
+      "tag_name": "rust-v0.131.0-alpha.1",
+      "title": "0.131.0-alpha.1",
+      "time_hint": "2026-05-09",
+      "published_at": "2026-05-09T00:30:24Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.1",
+      "raw_text": "Repository: openai/codex\nRelease: 0.131.0-alpha.1\nTag: rust-v0.131.0-alpha.1; draft: False; prerelease: True; published_at: 2026-05-09T00:30:24Z; created_at: 2026-05-08T23:41:40Z\nRelease notes:\nRelease 0.131.0-alpha.1",
+      "memory_unit_text": "The openai/codex release 0.131.0-alpha.1 (tag rust-v0.131.0-alpha.1) is a pre-release with minimal notes, simply stating 'Release 0.131.0-alpha.1'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_131_0_alpha_2",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.131.0-alpha.2",
+      "tag_name": "rust-v0.131.0-alpha.2",
+      "title": "0.131.0-alpha.2",
+      "time_hint": "2026-05-09",
+      "published_at": "2026-05-09T04:36:38Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.2",
+      "raw_text": "Repository: openai/codex\nRelease: 0.131.0-alpha.2\nTag: rust-v0.131.0-alpha.2; draft: False; prerelease: True; published_at: 2026-05-09T04:36:38Z; created_at: 2026-05-09T03:47:45Z\nRelease notes:\nRelease 0.131.0-alpha.2",
+      "memory_unit_text": "The openai/codex release 0.131.0-alpha.2 (tag rust-v0.131.0-alpha.2) is a pre-release with minimal notes, simply stating 'Release 0.131.0-alpha.2'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_131_0_alpha_4",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.131.0-alpha.4",
+      "tag_name": "rust-v0.131.0-alpha.4",
+      "title": "0.131.0-alpha.4",
+      "time_hint": "2026-05-09",
+      "published_at": "2026-05-09T06:12:00Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.4",
+      "raw_text": "Repository: openai/codex\nRelease: 0.131.0-alpha.4\nTag: rust-v0.131.0-alpha.4; draft: False; prerelease: True; published_at: 2026-05-09T06:12:00Z; created_at: 2026-05-09T05:22:01Z\nRelease notes:\nRelease 0.131.0-alpha.4",
+      "memory_unit_text": "The openai/codex release 0.131.0-alpha.4 (tag rust-v0.131.0-alpha.4) is a pre-release with minimal notes, simply stating 'Release 0.131.0-alpha.4'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_131_0_alpha_6",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.131.0-alpha.6",
+      "tag_name": "rust-v0.131.0-alpha.6",
+      "title": "0.131.0-alpha.6",
+      "time_hint": "2026-05-11",
+      "published_at": "2026-05-11T11:48:21Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.6",
+      "raw_text": "Repository: openai/codex\nRelease: 0.131.0-alpha.6\nTag: rust-v0.131.0-alpha.6; draft: False; prerelease: True; published_at: 2026-05-11T11:48:21Z; created_at: 2026-05-11T10:58:45Z\nRelease notes:\nRelease 0.131.0-alpha.6",
+      "memory_unit_text": "The openai/codex release 0.131.0-alpha.6 (tag rust-v0.131.0-alpha.6) is a pre-release with minimal notes, simply stating 'Release 0.131.0-alpha.6'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_131_0_alpha_9",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.131.0-alpha.9",
+      "tag_name": "rust-v0.131.0-alpha.9",
+      "title": "0.131.0-alpha.9",
+      "time_hint": "2026-05-12",
+      "published_at": "2026-05-12T01:20:36Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.9",
+      "raw_text": "Repository: openai/codex\nRelease: 0.131.0-alpha.9\nTag: rust-v0.131.0-alpha.9; draft: False; prerelease: True; published_at: 2026-05-12T01:20:36Z; created_at: 2026-05-12T00:02:43Z\nRelease notes:\nRelease 0.131.0-alpha.9",
+      "memory_unit_text": "The openai/codex release 0.131.0-alpha.9 (tag rust-v0.131.0-alpha.9) is a pre-release with minimal notes, simply stating 'Release 0.131.0-alpha.9'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_131_0_alpha_7",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.131.0-alpha.7",
+      "tag_name": "rust-v0.131.0-alpha.7",
+      "title": "0.131.0-alpha.7",
+      "time_hint": "2026-05-12",
+      "published_at": "2026-05-12T01:58:34Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.7",
+      "raw_text": "Repository: openai/codex\nRelease: 0.131.0-alpha.7\nTag: rust-v0.131.0-alpha.7; draft: False; prerelease: True; published_at: 2026-05-12T01:58:34Z; created_at: 2026-05-11T20:05:55Z\nRelease notes:\nRelease 0.131.0-alpha.7",
+      "memory_unit_text": "The openai/codex release 0.131.0-alpha.7 (tag rust-v0.131.0-alpha.7) is a pre-release with minimal notes, simply stating 'Release 0.131.0-alpha.7'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_131_0_alpha_8",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.131.0-alpha.8",
+      "tag_name": "rust-v0.131.0-alpha.8",
+      "title": "0.131.0-alpha.8",
+      "time_hint": "2026-05-12",
+      "published_at": "2026-05-12T06:40:43Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.8",
+      "raw_text": "Repository: openai/codex\nRelease: 0.131.0-alpha.8\nTag: rust-v0.131.0-alpha.8; draft: False; prerelease: True; published_at: 2026-05-12T06:40:43Z; created_at: 2026-05-11T22:30:40Z\nRelease notes:\nRelease 0.131.0-alpha.8",
+      "memory_unit_text": "The openai/codex release 0.131.0-alpha.8 (tag rust-v0.131.0-alpha.8) is a pre-release with minimal notes, simply stating 'Release 0.131.0-alpha.8'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_131_0_alpha_16",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.131.0-alpha.16",
+      "tag_name": "rust-v0.131.0-alpha.16",
+      "title": "0.131.0-alpha.16",
+      "time_hint": "2026-05-14",
+      "published_at": "2026-05-14T16:42:33Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.16",
+      "raw_text": "Repository: openai/codex\nRelease: 0.131.0-alpha.16\nTag: rust-v0.131.0-alpha.16; draft: False; prerelease: True; published_at: 2026-05-14T16:42:33Z; created_at: 2026-05-14T15:52:02Z\nRelease notes:\nRelease 0.131.0-alpha.16",
+      "memory_unit_text": "The openai/codex release 0.131.0-alpha.16 (tag rust-v0.131.0-alpha.16) is a pre-release with minimal notes, simply stating 'Release 0.131.0-alpha.16'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_131_0_alpha_18",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.131.0-alpha.18",
+      "tag_name": "rust-v0.131.0-alpha.18",
+      "title": "0.131.0-alpha.18",
+      "time_hint": "2026-05-14",
+      "published_at": "2026-05-14T21:41:33Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.18",
+      "raw_text": "Repository: openai/codex\nRelease: 0.131.0-alpha.18\nTag: rust-v0.131.0-alpha.18; draft: False; prerelease: True; published_at: 2026-05-14T21:41:33Z; created_at: 2026-05-14T20:50:41Z\nRelease notes:\nRelease 0.131.0-alpha.18",
+      "memory_unit_text": "The openai/codex release 0.131.0-alpha.18 (tag rust-v0.131.0-alpha.18) is a pre-release with minimal notes, simply stating 'Release 0.131.0-alpha.18'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_131_0_alpha_19",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.131.0-alpha.19",
+      "tag_name": "rust-v0.131.0-alpha.19",
+      "title": "0.131.0-alpha.19",
+      "time_hint": "2026-05-15",
+      "published_at": "2026-05-15T05:12:37Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.19",
+      "raw_text": "Repository: openai/codex\nRelease: 0.131.0-alpha.19\nTag: rust-v0.131.0-alpha.19; draft: False; prerelease: True; published_at: 2026-05-15T05:12:37Z; created_at: 2026-05-15T04:16:43Z\nRelease notes:\nRelease 0.131.0-alpha.19",
+      "memory_unit_text": "The openai/codex release 0.131.0-alpha.19 (tag rust-v0.131.0-alpha.19) is a pre-release with minimal notes, simply stating 'Release 0.131.0-alpha.19'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_131_0_alpha_21",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.131.0-alpha.21",
+      "tag_name": "rust-v0.131.0-alpha.21",
+      "title": "0.131.0-alpha.21",
+      "time_hint": "2026-05-15",
+      "published_at": "2026-05-15T18:48:07Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.21",
+      "raw_text": "Repository: openai/codex\nRelease: 0.131.0-alpha.21\nTag: rust-v0.131.0-alpha.21; draft: False; prerelease: True; published_at: 2026-05-15T18:48:07Z; created_at: 2026-05-15T17:43:37Z\nRelease notes:\nRelease 0.131.0-alpha.21",
+      "memory_unit_text": "The openai/codex release 0.131.0-alpha.21 (tag rust-v0.131.0-alpha.21) is a pre-release with minimal notes, simply stating 'Release 0.131.0-alpha.21'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_131_0_alpha_22",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.131.0-alpha.22",
+      "tag_name": "rust-v0.131.0-alpha.22",
+      "title": "0.131.0-alpha.22",
+      "time_hint": "2026-05-15",
+      "published_at": "2026-05-15T23:39:25Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.22",
+      "raw_text": "Repository: openai/codex\nRelease: 0.131.0-alpha.22\nTag: rust-v0.131.0-alpha.22; draft: False; prerelease: True; published_at: 2026-05-15T23:39:25Z; created_at: 2026-05-15T21:55:45Z\nRelease notes:\nRelease 0.131.0-alpha.22",
+      "memory_unit_text": "The openai/codex release 0.131.0-alpha.22 (tag rust-v0.131.0-alpha.22) is a pre-release with minimal notes, simply stating 'Release 0.131.0-alpha.22'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_131_0",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.131.0",
+      "tag_name": "rust-v0.131.0",
+      "title": "0.131.0",
+      "time_hint": "2026-05-18",
+      "published_at": "2026-05-18T17:39:34Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.131.0",
+      "raw_text": "Repository: openai/codex\nRelease: 0.131.0\nTag: rust-v0.131.0; draft: False; prerelease: False; published_at: 2026-05-18T17:39:34Z; created_at: 2026-05-18T15:40:26Z\nRelease notes:\n## New Features\n- The TUI now offers richer session controls and display: data-driven service-tier commands, blended token usage, permissions/approval mode, effective workspace roots, and responsive Markdown tables. (#21745, #21906, #21991, #21669, #21677, #22052, #22612)\n- `@` mentions now search files, directories, plugins, and skills in one picker, backed by app-server plugin metadata. (#19068, #22375)\n- Plugin workflows gained marketplace CLI commands, version-aware sharing, share checkout, clearer shared-workspace buckets, and default-enabled plugin hooks. (#21396, #22397, #22425, #22435, #22549)\n- Remote workflows now support daemon-managed `codex remote-control`, runtime enable/disable APIs, status reads, and registry-backed/configured remote environments. (#20718, #22218, #22562, #22578, #22877, #20667, #21323)\n- The Python SDK moved to `openai-codex` / `openai_codex`, with pinned runtime-generated types, concurrent turn routing, approval modes, and integration coverage. (#21778, #21891, #21893, #21896, #21905, #21910, #22014)\n- Added `codex doctor` for support-ready diagnostics across runtime, auth, terminal, network, config, and local state. (#22336)\n## Bug Fixes\n- Fixed several TUI interaction and rendering issues, including URL wrapping, light-mode selection contrast, Shift+Enter in tmux, `/review` MCP startup status, `/side` Esc handling, and network approval history text. (#21760, #21950, #21943, #21624, #22710, #22229)\n- Hardened Windows sandbox behavior around deny-read rules, scoped write roots, ineffective firewall policy, and PowerShell edge cases. (#18202, #21479, #22353, #21400, #22643)\n- Preserved managed read restrictions during permission escalation and cleaned up workspace-root permission profile resolution. (#15977, #22624, #22683)\n- Made app-server and local state startup safer by preserving SQLite data, failing closed when state cannot open, adding recovery paths, and softening optional metadata sync failures. (#21831, #21847, #22580, #22734, #22899)\n- Improved Git and auth reliability by using root worktree hooks consistently, ignoring repo hook/fsmonitor config in helper commands, binding local MCP OAuth callbacks, and revoking superseded login tokens. (#21969, #22843, #22652, #20237, #21747)\n- Reduced remote and Windows cleanup friction with longer exec-server transport timeouts, quieter `taskkill` cleanup, and non-queued plugin reads. (#21825, #21759, #22058, #22703)\n## Documentation\n- Clarified that general Codex product docs should not be added to this repo, while app-server API docs remain in scope. (#21772)\n- Updated plugin-creator guidance for the simplified local plugin handoff links. (#22240)\n- Documented new app-server/API contracts for remote environments and the desktop-owned config namespace. (#21323, #22584)\n## Chores\n- Improved CI and release reliability across Rust CI, exact PR-head checkout, Windows Bazel sharding, unsigned macOS artifacts, and signed macOS promotion. (#21604, #21628, #21835, #22408, #22559, #22649, #22737, #22788, #22900)\n- Split large TUI ChatWidget, history, and composer code into focused modules without intended behavior changes. (#21866, #22269, #22407, #22433, #22518, #22537, #22704, #22581, #22656)\n- Continued extracting extension and tool internals, including shared tool contracts plus guardian and memory extension plumbing. (#21736, #21737, #21738, #22138, #22147, #22216, #22258, #22344, #22476, #22480, #22485, #22498)\n- Removed obsolete tool paths, feature flags, config gates, and legacy hooks as defaults stabilized. (#21651, #21805, #22173, #22246, #22565, #22711, #22717, #22724, #22730)\n## Changelog\nFull Changelog: https://github.com/openai/codex/compare/rust-v0.130.0...rust-v0.131.0\n- #21550 [codex] make shutdown pending-touch test deterministic @jif-oai\n- #21697 Allow str...",
+      "memory_unit_text": "In the openai/codex release 0.131.0 (tag rust-v0.131.0), new features include TUI session controls with data-driven service-tier commands, blended token usage, permissions/approval mode, effective workspace roots, and responsive Markdown tables; `@` mentions searching files, directories, plugins, and skills; plugin marketplace CLI commands, version-aware sharing, share checkout, and default-enabled plugin hooks; remote workflows with daemon-managed `codex remote-control`, runtime enable/disable APIs, status reads, and registry-backed remote environments; Python SDK moved to `openai-codex` / `openai_codex` with pinned runtime-generated types, concurrent turn routing, approval modes, and integration coverage; and `codex doctor` for support diagnostics. Bug fixes address TUI interaction and rendering, Windows sandbox behavior, permission escalation, app-server and local state startup safety, Git and auth reliability, and remote/Windows cleanup. Documentation clarifies product docs scope, plugin-creator guidance, and app-server/API contracts. Chores improve CI/release reliability, split large TUI modules, extract extension/tool internals, and remove obsolete tool paths and feature flags."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_132_0_alpha_1",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.132.0-alpha.1",
+      "tag_name": "rust-v0.132.0-alpha.1",
+      "title": "0.132.0-alpha.1",
+      "time_hint": "2026-05-18",
+      "published_at": "2026-05-18T21:26:52Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.132.0-alpha.1",
+      "raw_text": "Repository: openai/codex\nRelease: 0.132.0-alpha.1\nTag: rust-v0.132.0-alpha.1; draft: False; prerelease: True; published_at: 2026-05-18T21:26:52Z; created_at: 2026-05-18T19:21:57Z\nRelease notes:\nRelease 0.132.0-alpha.1",
+      "memory_unit_text": "The openai/codex release 0.132.0-alpha.1 (tag rust-v0.132.0-alpha.1) is a pre-release with minimal notes, simply stating 'Release 0.132.0-alpha.1'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_132_0",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.132.0",
+      "tag_name": "rust-v0.132.0",
+      "title": "0.132.0",
+      "time_hint": "2026-05-20",
+      "published_at": "2026-05-20T01:52:52Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.132.0",
+      "raw_text": "Repository: openai/codex\nRelease: 0.132.0\nTag: rust-v0.132.0; draft: False; prerelease: False; published_at: 2026-05-20T01:52:52Z; created_at: 2026-05-19T23:22:38Z\nRelease notes:\n## New Features\n- The Python SDK now supports first-class authentication, including API key login, ChatGPT browser and device-code flows, account inspection, and logout APIs. (#23093)\n- Python turn APIs are easier to use for text-only workflows: you can pass a plain string as input, and handle-based runs now return a richer `TurnResult` with collected items, timing, and usage data. (#23151, #23162)\n- `codex exec resume` now accepts `--output-schema`, so resumed automations can keep session context while still enforcing structured JSON output. (#23123)\n- TUI startup is faster because terminal capability probes are now batched instead of waiting on several serial checks before the first interactive frame. (#23175)\n- Remote executor registration can now use standard Codex auth instead of a separate registry credential flow. (#22769)\n- App-server turns can preserve requested image fidelity, including original-resolution local images, across user inputs and image-producing tools. (#20693)\n## Bug Fixes\n- Goal continuations now stop when they hit usage limits or a repeated blocker instead of looping and burning more tokens, and completion responses phrase usage more naturally. (#23094, #22907)\n- The session picker is easier to trust: renamed threads now show `name (thread-id)` in resume hints, and pasted text works in the picker search box. (#23234, #23338)\n- Multi-session TUI flows are more reliable: in-progress MCP calls stay marked as active during replay, and elicitation replies are sent back to the thread that requested them. (#23236, #23241)\n- Remote sessions now keep websocket connections alive and show repo-relative diff paths again instead of `/tmp/...`-prefixed paths. (#23226, #23261)\n- Windows installs are more robust: `codex doctor` now detects npm-managed installs correctly, and MSVC release binaries no longer depend on separately installed VC++ runtime DLLs. (#22967, #22905)\n- TUI polish fixes include immediate shutdown feedback on exit, hiding the ChatGPT usage link for non-OpenAI providers, and keeping a cleared Fast tier from reappearing after side-thread resume. (#23323, #23127, #23121)\n## Documentation\n- The Python SDK docs, FAQ, and examples were refreshed around the new auth flow and turn APIs, with clearer setup guidance and simpler text-only examples. (#22941, #23093, #23151, #23162)\n## Chores\n- Memory summaries are now versioned and rebuilt when the stored format is stale, which should keep long-lived memory context leaner and more predictable. (#23148)\n## Changelog\nFull Changelog: https://github.com/openai/codex/compare/rust-v0.131.0...rust-v0.132.0\n- #20693 Preserve image detail in app-server inputs @fjord-oai\n- #22891 tui: pass active permission profiles through app commands @bolinfest\n- #22924 app-server-protocol: remove PermissionProfile from API @bolinfest\n- #22941 [codex] Refine Python SDK user-facing docs @aibrahim-oai\n- #22967 Fix Windows doctor npm root probe @etraut-openai\n- #22920 core: set permission profiles from snapshots @bolinfest\n- #22939 [codex] Split Python SDK helper logic @aibrahim-oai\n- #22907 Improve goal completion usage reporting @etraut-openai\n- #23030 test: construct permission profiles directly @bolinfest\n- #22769 exec-server: support auth-backed remote executor registration @miz-openai\n- #22946 [codex] preserve MCP result meta in McpToolCallItemResult @miaolin-oai\n- #23069 multiagent: trim model-visible description, cap to 5 models @sayan-oai\n- #22913 [1 of 4] tui: route primary settings writes through app server @etraut-openai\n- #23093 sdk/python: add first-class login support @aibrahim-oai\n- #23151 [codex] Return TurnResult from Python turn handles @aibrahim-oai\n- #23147 Make multi-agent v2 tool namespace configurable @jif-oai\n- #23036 test: reduce core sandbox policy test setup @bolinfest\n- #23162 [...",
+      "memory_unit_text": "In the openai/codex release 0.132.0 (tag rust-v0.132.0), new features include Python SDK first-class authentication (API key login, ChatGPT browser and device-code flows, account inspection, logout), easier text-only turn APIs with plain string input and richer `TurnResult`, `codex exec resume` with `--output-schema` for structured JSON output, faster TUI startup via batched terminal capability probes, remote executor registration using standard Codex auth, and app-server turns preserving requested image fidelity. Bug fixes address goal continuation loops, session picker improvements, multi-session TUI reliability, remote session websocket keep-alive and diff paths, Windows install robustness, and TUI polish. Documentation refreshes Python SDK docs, FAQ, and examples. Chores version and rebuild memory summaries."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_133_0_alpha_1",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.133.0-alpha.1",
+      "tag_name": "rust-v0.133.0-alpha.1",
+      "title": "0.133.0-alpha.1",
+      "time_hint": "2026-05-20",
+      "published_at": "2026-05-20T15:51:11Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.133.0-alpha.1",
+      "raw_text": "Repository: openai/codex\nRelease: 0.133.0-alpha.1\nTag: rust-v0.133.0-alpha.1; draft: False; prerelease: True; published_at: 2026-05-20T15:51:11Z; created_at: 2026-05-20T03:16:16Z\nRelease notes:\nRelease 0.133.0-alpha.1",
+      "memory_unit_text": "The openai/codex release 0.133.0-alpha.1 (tag rust-v0.133.0-alpha.1) is a pre-release with minimal notes, simply stating 'Release 0.133.0-alpha.1'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_133_0_alpha_3",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.133.0-alpha.3",
+      "tag_name": "rust-v0.133.0-alpha.3",
+      "title": "0.133.0-alpha.3",
+      "time_hint": "2026-05-20",
+      "published_at": "2026-05-20T22:52:52Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.133.0-alpha.3",
+      "raw_text": "Repository: openai/codex\nRelease: 0.133.0-alpha.3\nTag: rust-v0.133.0-alpha.3; draft: False; prerelease: True; published_at: 2026-05-20T22:52:52Z; created_at: 2026-05-20T21:55:00Z\nRelease notes:\nRelease 0.133.0-alpha.3",
+      "memory_unit_text": "The openai/codex release 0.133.0-alpha.3 (tag rust-v0.133.0-alpha.3) is a pre-release with minimal notes, simply stating 'Release 0.133.0-alpha.3'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_133_0_alpha_4",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.133.0-alpha.4",
+      "tag_name": "rust-v0.133.0-alpha.4",
+      "title": "0.133.0-alpha.4",
+      "time_hint": "2026-05-21",
+      "published_at": "2026-05-21T02:02:08Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.133.0-alpha.4",
+      "raw_text": "Repository: openai/codex\nRelease: 0.133.0-alpha.4\nTag: rust-v0.133.0-alpha.4; draft: False; prerelease: True; published_at: 2026-05-21T02:02:08Z; created_at: 2026-05-21T01:04:04Z\nRelease notes:\nRelease 0.133.0-alpha.4",
+      "memory_unit_text": "The openai/codex release 0.133.0-alpha.4 (tag rust-v0.133.0-alpha.4) is a pre-release with minimal notes, simply stating 'Release 0.133.0-alpha.4'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_133_0",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.133.0",
+      "tag_name": "rust-v0.133.0",
+      "title": "0.133.0",
+      "time_hint": "2026-05-21",
+      "published_at": "2026-05-21T16:48:03Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.133.0",
+      "raw_text": "Repository: openai/codex\nRelease: 0.133.0\nTag: rust-v0.133.0; draft: False; prerelease: False; published_at: 2026-05-21T16:48:03Z; created_at: 2026-05-21T15:27:50Z\nRelease notes:\n## New Features\n- Goals are now enabled by default, backed by dedicated storage, and track progress across active turns. (#23300, #23685, #23696, #23732)\n- `codex remote-control` now runs like a foreground command, waits for readiness, reports machine status, and keeps explicit daemon-style `start`/`stop` commands. (#22878)\n- Permission profiles gained list APIs, inheritance, managed `requirements.toml` support, runtime refresh behavior, and stronger Windows sandbox integration. (#22928, #23412, #22270, #23433, #22931, #23715)\n- Plugin discovery is easier to inspect, with marketplace-aware list output, installed versions, visible marketplace roots, and remote collection support. (#23372, #23584, #23727, #23730)\n- Extensions can observe more lifecycle events, including subagent start/stop, tool execution, turn metadata, and async approval/turn processing. (#22782, #22873, #23309, #23688, #23690, #23692)\n## Bug Fixes\n- Fixed TUI startup choosing the wrong working directory when reusing a local app-server socket. (#23538)\n- Fixed plan-mode free-form answers so modified Enter keys, like Shift+Enter, no longer submit unexpectedly. (#23536)\n- Removed stale background terminal poll events after a process exits. (#23231)\n- Preserved raw code-mode exec output unless an explicit output token limit is requested. (#23564)\n- Made AGENTS instruction loading more reliable, including local global reads and warnings for invalid UTF-8 instead of silent drops. (#23343, #23232)\n- Fixed app-server startup/shutdown races, empty resume/fork paths, plugin upgrade failures, and realtime v1 websocket compatibility. (#23516, #23578, #23400, #23356, #23771)\n## Documentation\n- Added clearer plugin-creator guidance for updating and reinstalling local personal plugins. (#23542)\n- Expanded app-server/API docs and schema coverage around managed permission profile requirements. (#23433, #23555)\n## Chores\n- Added a canonical Codex package archive pipeline and moved installers, npm packages, DotSlash, and SDK runtimes toward that shared layout. (#23513, #23582, #23586, #23596, #23635, #23636, #23637, #23638, #23786)\n- Fixed Linux Python runtime wheel tags so glibc-based systems can install the runtime artifacts. (#21812)\n- Improved release and CI reliability with package-builder tests, prebuilt resource packaging, DotSlash zstd handling, platform-sharded Rust tests, and Codex Linux release runners. (#23760, #23759, #23752, #23358, #23761)\n## Changelog\nFull Changelog: https://github.com/openai/codex/compare/rust-v0.132.0...rust-v0.133.0\n- #23343 codex: route global AGENTS reads through LOCAL_FS @starr-openai\n- #22380 fix: default unknown tool schemas to empty schemas @celia-oai\n- #23309 Add tool lifecycle extension contributor @jif-oai\n- #23253 Reduce rust-ci-full Windows nextest timeout flakes @starr-openai\n- #22878 Improve `codex remote-control` CLI UX @owenlin0\n- #21812 Publish Linux runtime wheels with glibc-compatible tags @aibrahim-oai\n- #22709 [codex] Trim unused TurnContextItem fields @pakrym-oai\n- #23353 Include plugin id in plugin MCP tool metadata @mzeng-openai\n- #22728 [codex] Move pending input into input queue @pakrym-oai\n- #23371 fix(tui): warn on unsupported iTerm2 pet versions @fcoury-oai\n- #23376 [codex-analytics] preserve user thread source for exec threads @marksteinbrick-oai\n- #23360 app-server: use profile ids in v2 permission params @bolinfest\n- #23384 [codex] Remove external websocket session resets @pakrym-oai\n- #22721 cleanup: Remove skill env var dependency prompting @xl-openai\n- #23389 Remove ToolSearch feature toggle @sayan-oai\n- #23080 [1 of 7] Add thread settings to UserInput @etraut-openai\n- #23081 [2 of 7] Remove UserInputWithTurnContext @etraut-openai\n- #23075 [3 of 7] Remove UserTurn @etraut-openai\n- #23396 [codex] Extract turn skill and plugin injec...",
+      "memory_unit_text": "In the openai/codex release 0.133.0 (tag rust-v0.133.0), new features include goals enabled by default with dedicated storage and progress tracking, `codex remote-control` running as a foreground command with readiness and status reporting, permission profiles with list APIs, inheritance, managed requirements, runtime refresh, and stronger Windows sandbox integration, plugin discovery improvements with marketplace-aware list output and remote collection support, and extensions observing more lifecycle events. Bug fixes address TUI startup working directory, plan-mode free-form answer submission, stale background terminal poll events, raw code-mode exec output preservation, AGENTS instruction loading reliability, and app-server startup/shutdown races. Documentation adds plugin-creator guidance and expands app-server/API docs. Chores introduce a canonical Codex package archive pipeline, fix Linux Python runtime wheel tags, and improve release/CI reliability."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_134_0_alpha_1",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.134.0-alpha.1",
+      "tag_name": "rust-v0.134.0-alpha.1",
+      "title": "0.134.0-alpha.1",
+      "time_hint": "2026-05-22",
+      "published_at": "2026-05-22T19:03:43Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.134.0-alpha.1",
+      "raw_text": "Repository: openai/codex\nRelease: 0.134.0-alpha.1\nTag: rust-v0.134.0-alpha.1; draft: False; prerelease: True; published_at: 2026-05-22T19:03:43Z; created_at: 2026-05-22T17:45:41Z\nRelease notes:\nRelease 0.134.0-alpha.1",
+      "memory_unit_text": "The openai/codex release 0.134.0-alpha.1 (tag rust-v0.134.0-alpha.1) is a pre-release with minimal notes, simply stating 'Release 0.134.0-alpha.1'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_134_0_alpha_2",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.134.0-alpha.2",
+      "tag_name": "rust-v0.134.0-alpha.2",
+      "title": "0.134.0-alpha.2",
+      "time_hint": "2026-05-22",
+      "published_at": "2026-05-22T21:32:26Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.134.0-alpha.2",
+      "raw_text": "Repository: openai/codex\nRelease: 0.134.0-alpha.2\nTag: rust-v0.134.0-alpha.2; draft: False; prerelease: True; published_at: 2026-05-22T21:32:26Z; created_at: 2026-05-22T20:41:31Z\nRelease notes:\nRelease 0.134.0-alpha.2",
+      "memory_unit_text": "The openai/codex release 0.134.0-alpha.2 (tag rust-v0.134.0-alpha.2) is a pre-release with minimal notes, simply stating 'Release 0.134.0-alpha.2'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_134_0_alpha_3",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.134.0-alpha.3",
+      "tag_name": "rust-v0.134.0-alpha.3",
+      "title": "0.134.0-alpha.3",
+      "time_hint": "2026-05-23",
+      "published_at": "2026-05-23T01:05:40Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.134.0-alpha.3",
+      "raw_text": "Repository: openai/codex\nRelease: 0.134.0-alpha.3\nTag: rust-v0.134.0-alpha.3; draft: False; prerelease: True; published_at: 2026-05-23T01:05:40Z; created_at: 2026-05-23T00:13:54Z\nRelease notes:\nRelease 0.134.0-alpha.3",
+      "memory_unit_text": "The openai/codex release 0.134.0-alpha.3 (tag rust-v0.134.0-alpha.3) is a pre-release with minimal notes, simply stating 'Release 0.134.0-alpha.3'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_134_0",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.134.0",
+      "tag_name": "rust-v0.134.0",
+      "title": "0.134.0",
+      "time_hint": "2026-05-26",
+      "published_at": "2026-05-26T19:13:26Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.134.0",
+      "raw_text": "Repository: openai/codex\nRelease: 0.134.0\nTag: rust-v0.134.0; draft: False; prerelease: False; published_at: 2026-05-26T19:13:26Z; created_at: 2026-05-26T16:46:11Z\nRelease notes:\n## New Features\n- Added search across local conversation history, including case-insensitive content matches with result previews. (#23519, #23921)\n- Made `--profile` the primary profile selector across CLI, TUI permissions, and sandbox flows, with legacy profile configs rejected through migration guidance. (#23708, #23883, #23890, #24051, #24055, #24059, #24067, #24110)\n- Improved MCP setup with per-server environment targeting and OAuth options for streamable HTTP servers. (#23583, #24120)\n- Made connector tool schemas more reliable by preserving local `$ref`/`$defs` structures and compacting oversized schemas before exposure. (#23357, #23904)\n- Let read-only MCP tools run concurrently when they advertise `readOnlyHint`. (#23750)\n- Added richer extension and hook context, including conversation history for extension tools and subagent identity in hook inputs. (#22882, #23963)\n## Bug Fixes\n- Improved remote reliability by reconnecting stale exec-server websocket clients, retrying remote control immediately after auth recovery, and retrying remote compaction v2 streams. (#23867, #23775, #23951)\n- Fixed Windows TUI rendering corruption by restoring virtual terminal mode before drawing. (#24082)\n- Displayed workspace-specific usage-limit messages for credit and spend-cap failures. (#24114)\n- Allowed plugin skills to reuse shared plugin-level icon assets. (#23776)\n- Preserved active permission profile metadata when syncing auto-review runtime settings. (#23956)\n- Ensured Node-based tools honor Codex’s managed network proxy environment. (#23905)\n## Documentation\n- Documented the curl and PowerShell installer paths in the README. (#24106)\n- Updated developer docs to prefer `just test` over direct `cargo test` for repo-local test runs. (#23910)\n- Added profile migration documentation links to relevant config errors. (#23879)\n## Chores\n- Simplified release packaging around canonical native artifacts, reusable DotSlash fetching, and a new macOS x64 zsh artifact. (#23833, #23836, #24129, #24165)\n- Added release-build support for Codex-produced V8 artifacts. (#23934)\n- Added image re-encoding benchmarks and connector-style JSON schema policy fixtures. (#23935, #24152)\n- Improved tracing and analytics for websocket requests, turn starts, and remote compaction v2. (#23581, #23980, #24146)\n## Changelog\nFull Changelog: https://github.com/openai/codex/compare/rust-v0.133.0...rust-v0.134.0\n- #23581 Trace logical websocket request after untraced warmup @jif-oai\n- #23718 [codex] Steer budget-limited goal extension turns @jif-oai\n- #23861 fix: cargo lock @jif-oai\n- #23728 feat: retain remote compaction truncation parity in v2 @jif-oai\n- #23870 Make tool executor specs mandatory @jif-oai\n- #23882 [codex] Stabilize subagent start hook test @jif-oai\n- #23876 refactor: centralize tool exposure planning @jif-oai\n- #23879 chore: link doc in profile error messages @jif-oai\n- #23883 cli: rename profile v2 flag to --profile @jif-oai\n- #23835 docs: add description to codex-cli/package.json @bolinfest\n- #23583 Route MCP servers through explicit environments @starr-openai\n- #23886 cli: remove legacy profile v1 plumbing @jif-oai\n- #23708 tui: plumb permission profile selection @viyatb-oai\n- #23833 packaging: move rg manifest out of npm bin @bolinfest\n- #23796 Improve `/goal` error messages for ephemeral sessions @etraut-openai\n- #23867 Reconnect disconnected exec-server websocket clients with fresh sessions @starr-openai\n- #23792 TUI: skip goal replace prompt for completed goals @etraut-openai\n- #23519 [codex] Add rollout-backed thread content search @fc-oai\n- #22552 Remove plugin hooks feature flag @abhinav-oai\n- #23836 npm: remove legacy package artifact synthesis @bolinfest\n- #23921 [codex] Make thread search case-insensitive @fc-oai\n- #23775 fix(remote-control): retry after a...",
+      "memory_unit_text": "In the openai/codex release 0.134.0 (tag rust-v0.134.0), new features include search across local conversation history with case-insensitive content matches and result previews, `--profile` as the primary profile selector with legacy profile migration, improved MCP setup with per-server environment targeting and OAuth options, more reliable connector tool schemas preserving local `$ref`/`$defs` and compacting oversized schemas, concurrent read-only MCP tool execution, and richer extension/hook context. Bug fixes improve remote reliability with stale websocket reconnection and retry logic, fix Windows TUI rendering corruption, display workspace-specific usage-limit messages, allow plugin skills to reuse shared icon assets, preserve active permission profile metadata, and ensure Node-based tools honor managed network proxy. Documentation adds installer paths, updates developer docs, and adds profile migration links. Chores simplify release packaging, add release-build support for V8 artifacts, add image re-encoding benchmarks, and improve tracing/analytics."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_135_0_alpha_1",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.135.0-alpha.1",
+      "tag_name": "rust-v0.135.0-alpha.1",
+      "title": "0.135.0-alpha.1",
+      "time_hint": "2026-05-27",
+      "published_at": "2026-05-27T18:34:58Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.135.0-alpha.1",
+      "raw_text": "Repository: openai/codex\nRelease: 0.135.0-alpha.1\nTag: rust-v0.135.0-alpha.1; draft: False; prerelease: True; published_at: 2026-05-27T18:34:58Z; created_at: 2026-05-27T17:38:54Z\nRelease notes:\nRelease 0.135.0-alpha.1",
+      "memory_unit_text": "The openai/codex release 0.135.0-alpha.1 (tag rust-v0.135.0-alpha.1) is a pre-release with minimal notes, simply stating 'Release 0.135.0-alpha.1'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_135_0_alpha_2",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.135.0-alpha.2",
+      "tag_name": "rust-v0.135.0-alpha.2",
+      "title": "0.135.0-alpha.2",
+      "time_hint": "2026-05-27",
+      "published_at": "2026-05-27T21:38:24Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.135.0-alpha.2",
+      "raw_text": "Repository: openai/codex\nRelease: 0.135.0-alpha.2\nTag: rust-v0.135.0-alpha.2; draft: False; prerelease: True; published_at: 2026-05-27T21:38:24Z; created_at: 2026-05-27T19:39:45Z\nRelease notes:\nRelease 0.135.0-alpha.2",
+      "memory_unit_text": "The openai/codex release 0.135.0-alpha.2 (tag rust-v0.135.0-alpha.2) is a pre-release with minimal notes, simply stating 'Release 0.135.0-alpha.2'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_135_0",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.135.0",
+      "tag_name": "rust-v0.135.0",
+      "title": "0.135.0",
+      "time_hint": "2026-05-28",
+      "published_at": "2026-05-28T17:31:35Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.135.0",
+      "raw_text": "Repository: openai/codex\nRelease: 0.135.0\nTag: rust-v0.135.0; draft: False; prerelease: False; published_at: 2026-05-28T17:31:35Z; created_at: 2026-05-28T16:14:50Z\nRelease notes:\n## New Features\n- `codex doctor` now reports richer environment, Git, terminal, app-server, and thread inventory diagnostics for support cases. (#24261, #24311, #24305)\n- `/status` shows remote connection details and server version when the TUI is connected over a remote transport. (#24420)\n- Vim mode gained text-object editing, improved word/line-end behavior, and a configurable interrupt-turn binding. (#24382, #24380, #24766)\n- `/permissions` now understands named permission profiles and displays configured custom profiles. (#21559)\n- Packaged Codex builds can discover and use the bundled patched zsh helper across supported macOS and Linux targets. (#23756, #24171)\n- The Python SDK now exposes friendly `Sandbox` presets for thread and turn APIs. (#24772)\n- `install.sh`/`install.ps1` supports a non-interactive installation mode when `CODEX_NON_INTERACTIVE=1` is set. (#21567)\n## Bug Fixes\n- Markdown tables and multiline lists render more readably in the TUI, with better column sizing and app-style table formatting. (#24489, #24346, #24351)\n- TUI output is more stable on macOS and Zellij, avoiding stderr/composer corruption and raw-output overlap. (#24459, #24479, #24593)\n- Slash-command completion now preserves existing draft text for commands that accept inline arguments. (#23950)\n- Older tmux/iTerm control-mode sessions no longer lose normal `Ctrl-C` handling from unsupported keyboard enhancement setup. (#24371)\n- App mentions now exclude inaccessible or disabled apps instead of offering unusable `$` suggestions. (#24625)\n- Resume flows now include non-interactive exec sessions when requested and honor cwd overrides for idle cached threads. (#24503, #24528)\n## Documentation\n- Clarified image-viewing tool detail behavior and removed stale TUI composer documentation references. (#23949, #24641)\n- Updated Python SDK docs, examples, and notebook content to use the new sandbox preset API. (#24772)\n## Chores\n- Updated Rust toolchain pins and SQLx/SQLite dependencies. (#24684, #24728)\n- Moved memory runtime state into a dedicated SQLite database. (#24591)\n- Removed remaining legacy config-profile consumers and routed more TUI config/plugin state through app-server-owned APIs. (#24076, #24254, #24255, #24265, #24266, #24257)\n- Centralized Responses retry handling and MCP tool naming logic to reduce duplicated internal plumbing. (#24131, #21576)\n## Changelog\nFull Changelog: https://github.com/openai/codex/compare/rust-v0.134.0...rust-v0.135.0\n- #24164 fix(remote-control): cap reconnect backoff @apanasenko-oai\n- #23756 package: include zsh fork in Codex package @bolinfest\n- #23757 Default function tools into tool hooks @abhinav-oai\n- #24171 package: add x64 macOS codex-zsh artifact @bolinfest\n- #24159 code-mode: merge stored values by key @cconger\n- #23983 fix: plugin bundle archive handling for upload and install @xl-openai\n- #24261 feat(doctor): add environment diagnostics @fcoury-oai\n- #24311 Report app-server version in codex doctor @etraut-openai\n- #24314 tui: label compact rate-limit percentages @etraut-openai\n- #24420 Show remote connection details in /status @etraut-openai\n- #24317 Respect hook trust bypass during TUI startup @etraut-openai\n- #24254 TUI config cleanup: oss_provider @etraut-openai\n- #24255 TUI config cleanup: trusted projects @etraut-openai\n- #24265 TUI config cleanup: MCP inventory @etraut-openai\n- #24305 Add doctor thread inventory audit @etraut-openai\n- #24346 fix(tui): improve markdown table column allocation @fcoury-oai\n- #24351 fix(tui): improve multiline markdown list readability @fcoury-oai\n- #24459 fix(tui): prevent macos stderr from corrupting composer @fcoury-oai\n- #24479 fix(process-hardening): preserve macos malloc diagnostics @fcoury-oai\n- #24474 Log rollout writer OS errors @etraut-openai\n- #24076 chore: stop consumin...",
+      "memory_unit_text": "In the openai/codex release 0.135.0 (tag rust-v0.135.0), new features include `codex doctor` reporting richer diagnostics, `/status` showing remote connection details and server version, Vim mode gaining text-object editing and configurable interrupt-turn binding, `/permissions` understanding named permission profiles, packaged Codex builds discovering bundled patched zsh helper, Python SDK exposing friendly `Sandbox` presets, and non-interactive installation mode. Bug fixes improve TUI markdown table and list rendering, TUI output stability on macOS and Zellij, slash-command completion preserving draft text, older tmux/iTerm control-mode `Ctrl-C` handling, app mentions excluding inaccessible apps, and resume flows including non-interactive exec sessions. Documentation clarifies image-viewing tool detail behavior, removes stale TUI composer references, and updates Python SDK docs. Chores update Rust toolchain pins, move memory runtime state into a dedicated SQLite database, remove legacy config-profile consumers, and centralize retry handling and MCP tool naming."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_136_0_alpha_1",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.136.0-alpha.1",
+      "tag_name": "rust-v0.136.0-alpha.1",
+      "title": "0.136.0-alpha.1",
+      "time_hint": "2026-05-29",
+      "published_at": "2026-05-29T00:38:12Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.136.0-alpha.1",
+      "raw_text": "Repository: openai/codex\nRelease: 0.136.0-alpha.1\nTag: rust-v0.136.0-alpha.1; draft: False; prerelease: True; published_at: 2026-05-29T00:38:12Z; created_at: 2026-05-28T21:23:42Z\nRelease notes:\nRelease 0.136.0-alpha.1",
+      "memory_unit_text": "The openai/codex release 0.136.0-alpha.1 (tag rust-v0.136.0-alpha.1) is a pre-release with minimal notes, simply stating 'Release 0.136.0-alpha.1'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_136_0_alpha_2",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.136.0-alpha.2",
+      "tag_name": "rust-v0.136.0-alpha.2",
+      "title": "0.136.0-alpha.2",
+      "time_hint": "2026-05-31",
+      "published_at": "2026-05-31T19:40:07Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.136.0-alpha.2",
+      "raw_text": "Repository: openai/codex\nRelease: 0.136.0-alpha.2\nTag: rust-v0.136.0-alpha.2; draft: False; prerelease: True; published_at: 2026-05-31T19:40:07Z; created_at: 2026-05-31T16:03:01Z\nRelease notes:\nRelease 0.136.0-alpha.2",
+      "memory_unit_text": "The openai/codex release 0.136.0-alpha.2 (tag rust-v0.136.0-alpha.2) is a pre-release with minimal notes, simply stating 'Release 0.136.0-alpha.2'."
+    },
+    {
+      "memory_node_id": "openai__codex__release__rust_v0_136_0",
+      "repo": "openai/codex",
+      "artifact_type": "release_note",
+      "artifact_ref": "release:rust-v0.136.0",
+      "tag_name": "rust-v0.136.0",
+      "title": "0.136.0",
+      "time_hint": "2026-06-01",
+      "published_at": "2026-06-01T17:49:22Z",
+      "source_url": "https://github.com/openai/codex/releases/tag/rust-v0.136.0",
+      "raw_text": "Repository: openai/codex\nRelease: 0.136.0\nTag: rust-v0.136.0; draft: False; prerelease: False; published_at: 2026-06-01T17:49:22Z; created_at: 2026-06-01T16:00:24Z\nRelease notes:\n## New Features\n- TUI markdown now keeps web links clickable with OSC 8 metadata, and cramped tables switch to readable key/value records without losing link targets. (#24472, #24636, #24825)\n- Sessions can now be archived from the TUI with `/archive` or from the CLI with `codex archive` / `codex unarchive`; archived sessions are protected from resume/fork until restored. (#25027, #25021)\n- App-server integrations can resume a thread with its initial turns page, see richer MCP server status, and launch stdio mode with `codex app-server --stdio`. (#23534, #24698, #24940)\n- Remote execution setup now supports `CODEX_API_KEY` registration for approved OpenAI hosts, while remote-control websockets use short-lived server tokens instead of ChatGPT access tokens. (#24666, #24141)\n- Windows admins get an alpha `codex sandbox setup --elevated` provisioning path, plus requirements support for allowed Windows sandbox implementations. (#24831, #23766)\n- A feature-gated standalone image generation extension can run through the native Codex image artifact completion pipeline. (#24723, #24972)\n## Bug Fixes\n- ChatGPT auth refreshes tokens before the five-minute expiry window and shows a relogin-required path for reused refresh tokens instead of collapsing into a generic cloud error. (#23546, #24830)\n- Command-safety hardening prevents `/diff` from running repository-provided Git helpers/hooks, avoids PowerShell parser execution on non-Windows hosts, and rejects browser-origin exec-server websocket handshakes. (#24954, #24946, #24947)\n- Sandboxed commands clean up more reliably after interruptions or denied Windows network attempts, and `deny` read rules stay enforced for safe-command and approval-bypass paths. (#22729, #19880, #23943)\n- Resumed TUI sessions seed prompt history from the session transcript, multiline hook output renders as separate rows, and Vim normal-mode editing behaves correctly. (#24298, #24965, #25022)\n- App-server filesystem watchers debounce later batches correctly, and standalone web search calls now show and restore completed search activity. (#24716, #24693)\n- Bedrock auth now falls back to `AWS_REGION` / `AWS_DEFAULT_REGION`, and unsupported Bedrock GPT service tiers are no longer advertised or sent. (#25171, #25318)\n## Documentation\n- Python SDK beta docs and package metadata now present the standard `pip install openai-codex` path, refreshed quickstarts, API reference, FAQ, and examples. (#24836, #24866, #24868, #24870)\n- Python SDK examples and docs now use the public `CodexConfig` name for configuring `Codex` / `AsyncCodex`. (#24800)\n- The bundled OpenAI Docs skill was updated with current Codex manual routing and a cached manual fetch helper. (#24914)\n- Built-in tool schema descriptions now clarify defaults, optional fields, bounds, and enums across shell, Code Mode, MCP, image, goal, plan, multi-agent, and related tools. (#24794)\n- App-server and exec-server docs now cover API-key remote registration, `--stdio`, runtime extra skill roots, and remote-control server-token behavior. (#24666, #24940, #24977, #24141)\n## Chores\n- Python SDK releases can now be staged and published independently from runtime releases using `python-v*` tags while preserving the reviewed runtime dependency pin. (#24828, #24872)\n- Updated MCP dependencies to `rmcp` 1.7.0 and refreshed compatibility code. (#24763)\n- Refreshed Amazon Bedrock catalog metadata, including GPT-5.5, removal of unsupported OSS entries, and default-tier-only GPT model behavior. (#24701, #24960, #25318)\n- Removed the stale app-server debug-client pieces and cleaned up the workspace after deletion. (#25063, #25064, #25065, #25066, #25067, #25068, #25069, #25070, #25075)\n- Trimmed CI/build maintenance by moving Bazel Windows jobs to Codex runners, removing the libubsan workaround, and r...",
+      "memory_unit_text": "In the openai/codex release 0.136.0 (tag rust-v0.136.0), new features include TUI markdown with clickable OSC 8 links and key/value record tables, session archiving with `/archive` and `codex archive`/`unarchive`, app-server integrations resuming threads with initial turns page and richer MCP server status, remote execution setup supporting `CODEX_API_KEY` registration and short-lived server tokens, Windows admin alpha `codex sandbox setup --elevated` provisioning, and a feature-gated standalone image generation extension. Bug fixes address ChatGPT auth token refresh and relogin, command-safety hardening for `/diff`, sandboxed command cleanup, resumed TUI session prompt history, app-server filesystem watcher debouncing, and Bedrock auth fallback and unsupported service tier removal. Documentation updates Python SDK beta docs and package metadata, uses public `CodexConfig` name, updates bundled OpenAI Docs skill, clarifies built-in tool schema descriptions, and expands app-server/exec-server docs. Chores enable independent Python SDK releases, update MCP dependencies, refresh Bedrock catalog metadata, remove stale app-server debug-client pieces, and trim CI/build maintenance."
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "q1_single_state_lookup",
+      "task_type": "single_state_lookup",
+      "difficulty": "low",
+      "answer_format": "multiple_choice",
+      "query_text": "In the openai/codex releases, which release introduces the `codex doctor` command for support-ready diagnostics across runtime, auth, terminal, network, config, and local state?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "0.130.0"
+        },
+        {
+          "option_id": "B",
+          "text": "0.131.0"
+        },
+        {
+          "option_id": "C",
+          "text": "0.132.0"
+        },
+        {
+          "option_id": "D",
+          "text": "0.133.0"
+        }
+      ],
+      "correct_option_id": "B",
+      "expected_answer": "0.131.0",
+      "source_chunk_ids": [
+        "openai__codex__release__rust_v0_131_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "openai__codex__release__rust_v0_131_0",
+          "answer_text": "Added `codex doctor` for support-ready diagnostics across runtime, auth, terminal, network, config, and local state."
+        }
+      ]
+    },
+    {
+      "question_id": "q2_cross_version_comparison",
+      "task_type": "cross_version_comparison",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "Across the openai/codex releases, how does the remote control feature described in release 0.130.0 differ from the remote control feature described in release 0.131.0?",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "0.130.0 introduces `codex remote-control` as a simpler entrypoint for starting a headless, remotely controllable app-server, while 0.131.0 adds daemon-managed remote-control with runtime enable/disable APIs, status reads, and registry-backed/configured remote environments."
+        },
+        {
+          "option_id": "B",
+          "text": "0.130.0 removes remote control entirely, while 0.131.0 reintroduces it with daemon management."
+        },
+        {
+          "option_id": "C",
+          "text": "Both releases only update documentation for remote control without functional changes."
+        },
+        {
+          "option_id": "D",
+          "text": "0.130.0 adds daemon-managed remote-control, while 0.131.0 simplifies it to a single entrypoint."
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "0.130.0 introduces `codex remote-control` as a simpler entrypoint for starting a headless, remotely controllable app-server, while 0.131.0 adds daemon-managed remote-control with runtime enable/disable APIs, status reads, and registry-backed/configured remote environments.",
+      "source_chunk_ids": [
+        "openai__codex__release__rust_v0_130_0",
+        "openai__codex__release__rust_v0_131_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "openai__codex__release__rust_v0_130_0",
+          "answer_text": "Added `codex remote-control` as a simpler entrypoint for starting a headless, remotely controllable app-server."
+        },
+        {
+          "memory_node_id": "openai__codex__release__rust_v0_131_0",
+          "answer_text": "Remote workflows now support daemon-managed `codex remote-control`, runtime enable/disable APIs, status reads, and registry-backed/configured remote environments."
+        }
+      ]
+    },
+    {
+      "question_id": "q3_temporal_version_ordering",
+      "task_type": "temporal_version_ordering",
+      "difficulty": "high",
+      "answer_format": "multiple_choice",
+      "query_text": "In the openai/codex release window, order the following release-content states from earliest to latest: (1) a release that adds search across local conversation history with case-insensitive content matches and result previews, (2) a release that introduces `codex doctor` for support-ready diagnostics, (3) a release that enables goals by default with dedicated storage and progress tracking, (4) a release that adds session archiving with `/archive` and `codex archive`/`unarchive`.",
+      "options": [
+        {
+          "option_id": "A",
+          "text": "2 -> 3 -> 1 -> 4"
+        },
+        {
+          "option_id": "B",
+          "text": "3 -> 2 -> 4 -> 1"
+        },
+        {
+          "option_id": "C",
+          "text": "1 -> 2 -> 3 -> 4"
+        },
+        {
+          "option_id": "D",
+          "text": "4 -> 1 -> 2 -> 3"
+        }
+      ],
+      "correct_option_id": "A",
+      "expected_answer": "2 -> 3 -> 1 -> 4",
+      "source_chunk_ids": [
+        "openai__codex__release__rust_v0_131_0",
+        "openai__codex__release__rust_v0_133_0",
+        "openai__codex__release__rust_v0_134_0",
+        "openai__codex__release__rust_v0_136_0"
+      ],
+      "answer_support": [
+        {
+          "memory_node_id": "openai__codex__release__rust_v0_131_0",
+          "answer_text": "Added `codex doctor` for support-ready diagnostics across runtime, auth, terminal, network, config, and local state."
+        },
+        {
+          "memory_node_id": "openai__codex__release__rust_v0_133_0",
+          "answer_text": "Goals are now enabled by default, backed by dedicated storage, and track progress across active turns."
+        },
+        {
+          "memory_node_id": "openai__codex__release__rust_v0_134_0",
+          "answer_text": "Added search across local conversation history, including case-insensitive content matches with result previews."
+        },
+        {
+          "memory_node_id": "openai__codex__release__rust_v0_136_0",
+          "answer_text": "Sessions can now be archived from the TUI with `/archive` or from the CLI with `codex archive` / `codex unarchive`; archived sessions are protected from resume/fork until restored."
+        }
+      ]
+    }
+  ]
+}
