@@ -1,17 +1,7 @@
 \section{Conclusion}
 
-We presented BiTempQA, the first diagnostic benchmark explicitly designed to evaluate bitemporal reasoning (reasoning about \emph{when events occurred} vs.\ \emph{when the system learned about them}) in LLM agent memory systems.
-Unlike prior benchmarks that use purely synthetic data, BiTempQA v3 is grounded in real-world temporal data: 64.6\% of scenarios come from ChronoQA (Chinese news QA) and manually curated public events, with the test set being 100\% real-source.
-Our evaluation of seven memory backends (five lightweight, two production) reveals four key findings.
+We presented TSSMRBench, a benchmark for temporal semantic state memory retrieval over evolving memories. TSSMRBench evaluates whether the stage-correct state can be retrieved from a memory system given an evolving memory trajectory, rather than merely returning a relevant or recent memory.
 
-First, \textbf{retrieval design matters less than expected} for short-context scenarios: BM25, FAISS, Naive RAG, and Simple KG achieve statistically indistinguishable accuracy (81.0--82.1\%), suggesting that all systems retrieve sufficient context when scenarios contain fewer than 10 memory writes.
+To study this ability, we constructed a benchmark dataset with 300 scenarios, 9{,}000 memory nodes, and 900 questions, organized into three task families: single-state lookup, cross-version comparison, and temporal ordering. This design lets us test not only whether a memory system retrieves relevant memory, but also whether it retrieves the temporally correct state evidence needed by questions of increasing multi-state complexity.
 
-Second, \textbf{production memory systems are not yet temporally capable}: Mem0 (8.3\%) and Graphiti (2.4\%) dramatically underperform lightweight backends, primarily due to aggressive memory compression that destroys bitemporal detail and temporal indexing that does not preserve event-time/record-time separation.
-
-Third, \textbf{rigid temporal metadata filtering fails catastrophically}: ChromaDB's 22.6\% accuracy reflects the fundamental mismatch between metadata-based temporal queries and the heterogeneous temporal formats in real-world data.
-
-Fourth, \textbf{real-world data validates the benchmark}: the balanced gap distribution in ChronoQA-sourced scenarios and diverse domains confirm that bitemporal reasoning challenges exist in naturally-occurring data, and LLM-based data augmentation produces comparable difficulty levels.
-
-These findings provide actionable guidance for building temporally-aware memory systems: preserve raw temporal context rather than compressing it, invest in generation quality for short contexts, avoid rigid temporal schemas, and ground benchmarks in real-world temporal dynamics.
-
-Future work includes: human expert validation of QA pairs, English translation, expansion to longer scenarios with 50+ memory writes where retrieval selectivity matters, and evaluation of bitemporal-aware memory architectures that preserve both temporal dimensions as first-class citizens.
+Our experiments show that current memory systems are substantially stronger on single-state lookup than on cross-version comparison and temporal ordering, and that many failures arise even when semantically related evidence is present in memory. Sparse and dense retrieval backends often retrieve topically relevant versions but do not explicitly preserve version identity, fact-based memory systems suffer from fragmentation, and structured memory systems can blur historical boundaries through abstraction and updating. These results highlight the challenge of temporal semantic state retrieval for current memory systems and clarify an important future design direction: memory systems should preserve version history, retrieve coherent state-level evidence, support stage-aware selection among semantically similar memories, and do so efficiently over large mixed-memory pools.

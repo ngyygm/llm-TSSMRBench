@@ -11,10 +11,10 @@ dataset:
 
 llm:
   answer_base_url: "https://api.deepseek.com"
-  answer_api_key: "sk-a45943a4ef8b476ea164c79554497460"
+  answer_api_key: "${DEEPSEEK_API_KEY}"
   answer_model: "deepseek-v4-pro"
   judge_base_url: "https://api.deepseek.com"
-  judge_api_key: "sk-a45943a4ef8b476ea164c79554497460"
+  judge_api_key: "${DEEPSEEK_API_KEY}"
   judge_model: "deepseek-v4-pro"
   generation_temperature: 0.0
   extra_body:
@@ -26,19 +26,19 @@ embeddings:
   model: "Pro/BAAI/bge-m3"
   base_url: "https://api.siliconflow.cn/v1"
   endpoint: "https://api.siliconflow.cn/v1/embeddings"
-  api_key: "sk-wnxdjdaziesfyshhvsgbsanisggnohwxcnznjtrjrrkiactc"
+  api_key: "${SILICONFLOW_API_KEY}"
 
 reranker:
   provider: "siliconflow"
   model: "BAAI/bge-reranker-v2-m3"
   base_url: "https://api.siliconflow.cn/v1"
-  api_key: "sk-wnxdjdaziesfyshhvsgbsanisggnohwxcnznjtrjrrkiactc"
+  api_key: "${SILICONFLOW_API_KEY}"
 
 memory_llm:
   provider: "openai"
   model: "deepseek-v4-flash"
   base_url: "https://api.deepseek.com"
-  api_key: "sk-a45943a4ef8b476ea164c79554497460"
+  api_key: "${DEEPSEEK_API_KEY}"
 
 systems:
   no_context:
@@ -64,10 +64,10 @@ systems:
     chain_ingest_workers: 50
     llm_model: "deepseek-v4-flash"
     llm_base_url: "https://api.deepseek.com"
-    llm_api_key: "sk-a45943a4ef8b476ea164c79554497460"
+    llm_api_key: "${DEEPSEEK_API_KEY}"
     embedder_model: "Pro/BAAI/bge-m3"
     embedder_base_url: "https://api.siliconflow.cn/v1/embeddings"
-    embedder_api_key: "sk-wnxdjdaziesfyshhvsgbsanisggnohwxcnznjtrjrrkiactc"
+    embedder_api_key: "${SILICONFLOW_API_KEY}"
 
   graphiti:
     enabled: false
@@ -76,20 +76,20 @@ systems:
     chain_ingest_workers: 50
     neo4j_uri: "bolt://localhost:7687"
     neo4j_user: "neo4j"
-    neo4j_password: "graphiti"
+    neo4j_password: "${GRAPHITI_NEO4J_PASSWORD}"
     llm_model: "deepseek-v4-flash"
     llm_base_url: "https://api.deepseek.com"
-    llm_api_key: "sk-a45943a4ef8b476ea164c79554497460"
+    llm_api_key: "${DEEPSEEK_API_KEY}"
     embedder_model: "Pro/BAAI/bge-m3"
     embedder_base_url: "https://api.siliconflow.cn/v1/embeddings"
-    embedder_api_key: "sk-wnxdjdaziesfyshhvsgbsanisggnohwxcnznjtrjrrkiactc"
+    embedder_api_key: "${SILICONFLOW_API_KEY}"
     reranker_model: "BAAI/bge-reranker-v2-m3"
     reranker_base_url: "https://api.siliconflow.cn/v1"
-    reranker_api_key: "sk-wnxdjdaziesfyshhvsgbsanisggnohwxcnznjtrjrrkiactc"
+    reranker_api_key: "${SILICONFLOW_API_KEY}"
 
 answer_generator:
   base_url: "https://api.deepseek.com"
-  api_key: "sk-a45943a4ef8b476ea164c79554497460"
+  api_key: "${DEEPSEEK_API_KEY}"
   model: "deepseek-v4-pro"
   temperature: 0.0
   extra_body:
@@ -99,7 +99,7 @@ answer_generator:
 llm_judge:
   enabled: true
   base_url: "https://api.deepseek.com"
-  api_key: "sk-a45943a4ef8b476ea164c79554497460"
+  api_key: "${DEEPSEEK_API_KEY}"
   model: "deepseek-v4-pro"
   temperature: 0.0
   max_workers: 50

@@ -1,109 +1,124 @@
-\section{BiTempQA Benchmark}
+\section{TSSMRBench}
 
-\subsection{Problem Formulation}
-Following bitemporal data modeling~\citep{snodgrass1999tsql2}, we define two temporal dimensions for memory-system evaluation.
-\textit{Event time} ($t_e$) is when an event actually occurred in the real world.
-\textit{Record time} ($t_r$) is when the memory system recorded the event.
-A memory entry is represented as a tuple $(\textit{text}, t_e, t_r)$, and a memory store at logical time $T$ contains all entries with $t_r \leq T$. A question may require reasoning about $t_e$ only, $t_r$ only, or both simultaneously.
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{{paper/figures/system overview}.pdf}
+\Description{Overall framework of TSSMRBench. The figure summarizes the paper from left to right: the problem of retrieving stage-correct states from evolving memories, the three benchmark task families, the construction of 30-state memory trajectories and multiple-choice questions, and the unified evaluation protocol across shared-memory baselines and retrieval metrics.}
+\caption{Overall framework of TSSMRBench. The figure summarizes the temporal semantic state retrieval problem, the benchmark task design, the release-derived data construction pipeline, and the unified evaluation protocol. It is intended as a paper-level overview of how the benchmark connects the problem definition, dataset construction, and memory-system evaluation.}
+\label{fig:tssmrbench-framework}
+\end{figure*}
 
-\subsection{Data Sources}
-A core design principle of BiTempQA is grounding scenarios in real-world temporal data rather than purely synthetic generation. Our dataset combines two data sources:
+Figure~\ref{fig:tssmrbench-framework} summarizes TSSMRBench. This section defines the task (Section~3.1), presents the benchmark evaluation design principles (Section~3.2), describes the data construction flow (Section~3.3) and question design (Section~3.4), and then introduces the evaluation pipeline and metrics (Section~3.5). TSSMRBench focuses specifically on whether the stage-correct state can be retrieved from a memory system given an evolving memory trajectory.
 
-\paragraph{ChronoQA~\citep{chronoqa2025}.}
-We extract 200 bitemporal candidates from ChronoQA, a Chinese temporal QA dataset of news events with natural event-time/record-time separation (event date vs.\ publication date).
-Each candidate includes golden text chunks, event dates, and publication dates, which we map directly to the ($t_e$, $t_r$) dimensions.
-We select candidates with gap $\geq 1$ day between event and publication, yielding a balanced distribution: 100 with 1--6 day gaps, 40 with 7--29 day gaps, 30 with 30--364 day gaps, and 30 with 365+ day gaps.
+\subsection{Task Definition}
 
-\paragraph{Curated real-world events.}
-We manually construct 15 scenarios from well-documented public events across diverse domains: CEO transitions (Microsoft, Apple, Alibaba), political leadership changes (Japanese/UK Prime Ministers), sports coaching changes (Real Madrid), corporate headquarters migration (Lenovo), scientific discoveries (Pluto reclassification, Tu Youyou Nobel Prize, Chang'e lunar missions), health events (COVID-19 timeline, vaccine development), and multi-source news events (MH370, SpaceX-NASA collaboration).
-Each scenario includes 3--7 memory writes with verified dates from public records.
+TSSMRBench evaluates \emph{temporal semantic state memory retrieval}: whether the stage-correct state can be retrieved from a memory system given an evolving memory trajectory, rather than merely returning a relevant or recent memory.
 
-\paragraph{LLM augmentation.}
-For scenario types not naturally covered by real data (contradictory information, future-dated information, entity identity resolution, temporal ambiguity), we retain 118 LLM-generated scenarios from an initial template-based generation round using Qwen2.5-72B-Instruct.
-This yields a dataset that is 64.6\% real-source (215 scenarios) and 35.4\% LLM-generated (118 scenarios).
+Formally, let
+\[
+\mathcal{T} = (m_1, m_2, \ldots, m_n)
+\]
+denote an evolving memory trajectory, where each memory node $m_i$ records a semantic state of the same underlying object, event, entity, or plan, and where the ordering function
+\[
+\tau(m_i) < \tau(m_j)
+\]
+indicates that $m_i$ precedes $m_j$ in the evolution process. A natural-language query $q$ specifies, either explicitly or implicitly, a stage constraint $\sigma(q)$ over this trajectory. Let
+\[
+G(q) \subseteq \mathcal{T}
+\]
+be the minimal set of supporting state nodes sufficient to answer $q$ under $\sigma(q)$, and let
+\[
+R_k(q) = (r_1, r_2, \ldots, r_k)
+\]
+be the ranked retrieval output returned by a memory system.
 
-\subsection{Scenario Design}
-We design 10 scenario types spanning 6 domains (corporate, academic, social, fictional, historical, and scientific):
-(1) Entity Attribute Evolution: attributes change over time (e.g., job titles);
-(2) Relationship Evolution: social/professional relationships change;
-(3) Contradictory Information: different sources report conflicting facts;
-(4) Late-Arriving Facts: events recorded well after they occurred ($|t_r - t_e|$ large);
-(5) Future-Dated Information: events recorded before their stated occurrence ($t_r < t_e$);
-(6) Entity Identity Resolution: same entity referenced differently across time;
-(7) Knowledge Retraction: previously recorded facts are later revoked;
-(8) Multi-Source Information: multiple independent sources report overlapping events;
-(9) Gradual Accumulation: knowledge builds incrementally over time;
-(10) Temporal Ambiguity: unclear or ambiguous temporal references.
+The task is to retrieve a ranked list $R_k(q)$ such that the supporting set $G(q)$ is recovered and the answer generator can derive the gold answer $y(q)$ using only the retrieved evidence. The core difficulty is that several states in $\mathcal{T}$ may be semantically adjacent while being temporally incompatible with the query.
 
-Each scenario consists of 2--7 memory writes, each annotated with explicit ISO~8601 timestamps for $t_e$ and $t_r$. In most cases, scenarios are constructed so that $t_e \neq t_r$, creating natural bitemporal tension.
+TSSMRBench operationalizes this capability through three task families:
+\begin{itemize}[leftmargin=*]
+\item \textbf{Single-state lookup}: $|G(q)| = 1$. The memory system must identify the one state node that supports the answer.
+\item \textbf{Cross-version comparison}: $|G(q)| = 2$. The memory system must recover the two states required to contrast what changed.
+\item \textbf{Temporal ordering}: $|G(q)| \in \{3,4,5\}$. The memory system must recover enough states to reconstruct a local evolution order.
+\end{itemize}
 
-\subsection{Question Taxonomy}
-Questions are organized into 3 types at 2 difficulty levels:
-
-\textit{Level 1 (Easy).} Point-in-time retrieval (58.3\%) and temporal ordering (21.4\%).
-
-\textit{Level 2 (Medium).} Multi-hop temporal reasoning (20.2\%).
-
-All questions use abstractive (free-text) answer format. Each question is annotated with metadata indicating whether it requires event time reasoning, record time reasoning, version tracking, or knowledge retraction.
-
-\subsection{Dataset Statistics}
-BiTempQA v3 contains 415 QA pairs across 333 scenarios (215 real-source + 118 LLM-generated), split into train (290, 70\%), dev (41, 10\%), and test (84, 20\%).
-All reported results use the held-out test set, which consists entirely of real-source scenarios (64 ChronoQA-sourced + 20 from curated events).
-Table~\ref{tab:composition} shows the dual-timestamp composition of the test set.
+These tasks differ in support size, but they test the same underlying ability: retrieving the stage-correct state or state set required by the query.
 
 \begin{table}[t]
 \centering
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{lrl}
+\small
+\caption{Task families and evaluation budgets in TSSMRBench. $|G(q)|$ denotes the number of supporting states required by a question, and the listed retrieval top-k values are the answer-time cutoffs reused from one shared top-10 retrieval result.}
+\label{tab:task-family-budget}
+\begin{tabular}{lll}
 \toprule
-\textbf{Temporal Requirement} & \textbf{Count (\%)} & \textbf{Example Question Type} \\
+Task family & $|G(q)|$ & Retrieval top-k \\
 \midrule
-Both timestamps required & 47 (56.0\%) & ``What was known about X as of date Y?'' \\
-Event-time only & 37 (44.0\%) & ``When did event X occur?'' \\
-Record-time only & 0 (0.0\%) & --- \\
-\midrule
-Version tracking needed & 0 (0.0\%) & --- \\
-Knowledge retraction & 0 (0.0\%) & --- \\
+Single-state lookup & 1 & 1, 2, 3 \\
+Cross-version comparison & 2 & 2, 5, 8 \\
+Temporal ordering & 3--5 & 5, 8, 10 \\
 \bottomrule
-\end{tabular}%
-}
-\caption{Dual-timestamp composition of the BiTempQA v3 test set (84 questions). Over half of the questions require reasoning about both $t_e$ and $t_r$.}
-\label{tab:composition}
+\end{tabular}
 \end{table}
 
-Table~\ref{tab:scenario_dist} shows the distribution of scenario types across the full dataset.
+\subsection{Benchmark Evaluation Design Principles}
 
-\begin{table}[t]
-\centering
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{lrrr}
-\toprule
-\textbf{Scenario Type} & \textbf{Real} & \textbf{LLM} & \textbf{Total} \\
-\midrule
-Entity Attribute Evol. & 114 & 0 & 114 \\
-Multi-Source Information & 98 & 0 & 98 \\
-Temporal Ambiguity & 35 & 0 & 35 \\
-Late Arriving Facts & 2 & 14 & 16 \\
-Knowledge Retraction & 1 & 12 & 13 \\
-Contradictory Info. & 0 & 12 & 12 \\
-Future-Dated Info. & 0 & 12 & 12 \\
-Gradual Accumulation & 1 & 11 & 12 \\
-Relationship Evol. & 1 & 10 & 11 \\
-Entity Identity Resol. & 0 & 10 & 10 \\
-\midrule
-\textbf{Total} & \textbf{215} & \textbf{118} & \textbf{333} \\
-\bottomrule
-\end{tabular}%
-}
-\caption{Scenario type distribution by data source. Real-source scenarios concentrate on entity evolution, multi-source information, and temporal ambiguity; LLM-generated scenarios cover rare types with no natural real-world data.}
-\label{tab:scenario_dist}
-\end{table}
+To isolate this capability, the benchmark and its evaluation protocol follow five principles. Questions must depend on \emph{stage-specific validity}: the correct answer should be determined by which temporal semantic state is valid for the queried stage, not simply by topical relevance or recency. They must also remain \emph{evidence-grounded}: the final answer should only be derivable by aligning the question's state description with retrieved memory content, rather than by exploiting superficial cues such as version labels, dates, or option formatting. The benchmark further varies \emph{support requirements} so that some questions depend on one state while others require several states, allowing us to distinguish pointwise retrieval from complete support recovery over a trajectory. The evaluation preserves \emph{mixed-memory interference} by retrieving from repository-mixed memory collections instead of isolated per-trajectory stores. Finally, the protocol separates \emph{retrieval failure} from \emph{state-selection failure}, allowing us to tell whether a memory system missed the required state entirely or instead retrieved semantically related but temporally incompatible evidence.
 
-\subsection{Evaluation Pipeline}
-We implement a unified Retrieve $\rightarrow$ Generate $\rightarrow$ Judge pipeline (Figure~\ref{fig:framework}):
+\subsection{Data Construction Flow}
 
-\textit{Step 1: Retrieve.} The memory backend retrieves the top-$k$ context passages given the question and the scenario memory store.
+We instantiate these principles using an auditable release-only benchmark built from official repository evolution records.
 
-\textit{Step 2: Generate.} DeepSeek-V3~\citep{deepseekv3} generates an answer conditioned on the retrieved context.
+\paragraph{Step 1: Data source selection.}
+We use official GitHub release notes because they are repository-authoritative descriptions of evolving software states, including feature additions, policy changes, fixes, migrations, and deprecations. Compared with informal discussions, release notes provide a cleaner and more reproducible record of how a system changes across versions.
 
-\textit{Step 3: Judge.} An independent LLM call scores the generated answer against the gold answer. Since all test questions are abstractive, DeepSeek-V3 in ``answer\_judge'' mode evaluates semantic correctness with lenient matching. Without the LLM judge, exact text matching is too strict for abstractive evaluation; with the judge, accuracy reflects semantically appropriate correctness.
+\paragraph{Step 2: Trajectory node determination.}
+For each repository, we take the latest 30 usable release notes and treat them as a fixed local evolution window. Each release note becomes one temporal semantic state node, producing an evolving memory trajectory of length 30. Repositories without a sufficient release history are excluded. The formal benchmark contains 300 repositories, yielding 9{,}000 memory nodes in total.
+
+\paragraph{Step 3: LLM rewriting of raw materials.}
+Raw release notes contain hyperlinks, formatting markers, references, and other artifacts that are not ideal as a memory surface. We therefore use a large language model to rewrite each release note into a normalized English memory unit. This rewriting preserves repository identity and release-specific state content while removing markup-heavy noise. The resulting normalized text is the only memory surface ingested by the evaluated memory systems; the original release note is retained only for audit and provenance.
+
+\paragraph{Step 4: QA generation.}
+On top of each 30-node evolving memory trajectory, we generate one multiple-choice question for each task family, yielding 3 questions per repository and 900 questions overall. For every question, we annotate the supporting state nodes required for answering it. This makes it possible to evaluate not only final answer correctness but also support recovery.
+
+\subsection{Question Design}
+
+Question design is driven by support complexity rather than by superficial wording diversity.
+
+\paragraph{Single-state lookup.}
+These questions ask the memory system to identify one state node that contains a target condition, decision, fix, or release-specific behavior. They test whether the memory system can localize a single correct state among semantically nearby alternatives.
+
+\paragraph{Cross-version comparison.}
+These questions require contrasting two states that differ in a clear, evidence-supported way. We only construct such questions when the source evidence contains a substantive difference between the two releases. Comparison questions are not generated from pairs whose behavior is essentially unchanged.
+
+\paragraph{Temporal ordering.}
+These questions require mapping several state descriptions back to their supporting nodes and ordering them correctly along the trajectory. They are designed so that solving them robustly still depends on retrieving the corresponding memory content, rather than simply relying on superficial ordering cues in the question text alone.
+
+All questions are multiple-choice. Version identifiers, tags, or publication cues may appear when they are part of the original material, but the question and options are constrained so that the answer cannot be derived reliably without aligning the state descriptions in the query to the stored memory units.
+
+\subsection{Evaluation Pipeline and Metrics}
+
+All baselines are evaluated under one global mixed-memory protocol. Before any query is asked, all 9{,}000 memory nodes are written into each baseline's own memory backend or retrieval index. Retrieval therefore operates over a repository-mixed memory collection within each baseline, rather than in isolated per-trajectory memory stores.
+
+For each query $q$, the evaluated memory system retrieves top-10 memories once:
+\[
+R_{10}(q) = (r_1, \ldots, r_{10}).
+\]
+We then reuse the same ranked retrieval output for answer generation with task-specific context budgets:
+\begin{itemize}[leftmargin=*]
+\item \textbf{single-state lookup}: $k \in \{1,2,3\}$
+\item \textbf{cross-version comparison}: $k \in \{2,5,8\}$
+\item \textbf{temporal ordering}: $k \in \{5,8,10\}$
+\end{itemize}
+
+The answer LLM is allowed to read only these retrieved memories and is not given access to unretrieved memory nodes. This protocol separates retrieval quality from how much of the ranked memory list is exposed at answer time. It also allows us to analyze whether a memory system places the required support near the top of the ranking or only recovers it deeper in the retrieved list.
+
+We report four primary metrics. \textbf{Accuracy (ACC)} measures whether the final answer is correct. \textbf{Coverage (Cov)} measures how much of the required support set is recovered:
+\[
+\mathrm{Cov}(q,k) = \frac{|G(q)\cap R_k(q)|}{|G(q)|}.
+\]
+\textbf{Complete Support Rate (CSR)} measures whether the full support set is recovered:
+\[
+\mathrm{CSR}(q,k) = \mathbf{1}[G(q)\subseteq R_k(q)].
+\]
+\textbf{Latency} measures retrieval time only, excluding answer generation.
+
+Because TSSMRBench is intended to diagnose memory retrieval rather than only final QA success, these metrics are designed to jointly capture answer correctness, support completeness, and retrieval cost.

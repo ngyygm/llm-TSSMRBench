@@ -27,17 +27,22 @@ class TMGClient(MemorySystem):
         api_base: str = "http://localhost:8732",
         storage_path: Optional[str] = None,
         timeout: int = 30,
+        top_k: int = 5,
     ):
         super().__init__(name)
         self.api_base = api_base.rstrip("/")
         self.storage_path = storage_path or str(Path("/tmp/tmg_benchmark_storage"))
         self.timeout = timeout
+        self.top_k = top_k
 
-    def remember(self, text: str, event_time: str, source_name: str = "scenario_trace") -> str:
+    def remember(
+        self,
+        text: str,
+    ) -> str:
         # POST /api/remember
         resp = requests.post(
             f"{self.api_base}/api/remember",
-            json={"text": text, "event_time": event_time},
+            json={"text": text},
             timeout=self.timeout,
         )
         resp.raise_for_status()
@@ -62,17 +67,10 @@ class TMGClient(MemorySystem):
     def query(
         self,
         question: str,
-        query_event_time: Optional[str] = None,
-        query_record_time: Optional[str] = None,
-        time_before: Optional[str] = None,
-        time_after: Optional[str] = None,
+        top_k: Optional[int] = None,
     ) -> QueryResult:
         start = time.time()
         params: dict = {"query": question, "expand": "true"}
-        if time_before:
-            params["time_before"] = time_before
-        if time_after:
-            params["time_after"] = time_after
 
         resp = requests.post(
             f"{self.api_base}/api/find",
@@ -84,7 +82,8 @@ class TMGClient(MemorySystem):
 
         # Extract results
         results = data.get("data", {}).get("results", [])
-        context_parts = [r.get("text", "") for r in results]
+        effective_top_k = top_k if top_k is not None else self.top_k
+        context_parts = [r.get("text", "") for r in results[:effective_top_k]]
         context = "\n".join(context_parts)
 
         return QueryResult(

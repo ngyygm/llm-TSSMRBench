@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\scriptsize
+\caption{Computational cost profile. Latency is mean retrieval-only latency in milliseconds, excluding answer generation. Retrieved context length is the mean number of context tokens passed to the answer model at the primary answer budget of each task family.}
+\label{tab:cost-profile}
+\setlength{\tabcolsep}{2pt}
+\begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}p{0.22\columnwidth}>{\centering\arraybackslash}p{0.13\columnwidth}>{\centering\arraybackslash}p{0.17\columnwidth}>{\centering\arraybackslash}p{0.17\columnwidth}>{\centering\arraybackslash}p{0.17\columnwidth}@{}}
+\toprule
+System & \shortstack{Latency\\(ms)} & \shortstack{Single\\tokens\\($k{=}3$)} & \shortstack{Cross\\tokens\\($k{=}8$)} & \shortstack{Temporal\\tokens\\($k{=}10$)} \\
+\midrule
+BM25 & 1110.63 & 181.41 & 402.16 & 438.14 \\
+FAISS & 195.12 & 270.17 & 611.98 & 856.29 \\
+Mem0 & 417.71 & 90.72 & 174.46 & 214.38 \\
+Graphiti & 34425.76 & 224.58 & 539.11 & 836.39 \\
+Oracle Gold Context & 0.00 & 87.64 & 169.43 & 309.78 \\
+\bottomrule
+\end{tabularx}
+\end{table}

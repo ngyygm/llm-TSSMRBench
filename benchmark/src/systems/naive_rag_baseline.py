@@ -19,17 +19,15 @@ class NaiveRAGBaseline(MemorySystem):
         self.texts: List[str] = []
         self.top_k: int = 5
 
-    def remember(self, text: str, event_time: str, record_time: Optional[str] = None, source_name: str = "scenario_trace") -> str:
+    def remember(self, text: str) -> str:
+        # 中文注释：Naive RAG 主实验只保留原始文本。
         self.texts.append(text)
         return f"naive_{len(self.texts)}"
 
     def query(
         self,
         question: str,
-        query_event_time: Optional[str] = None,
-        query_record_time: Optional[str] = None,
-        time_before: Optional[str] = None,
-        time_after: Optional[str] = None,
+        top_k: Optional[int] = None,
     ) -> QueryResult:
         start = time.time()
         if not self.texts:
@@ -49,14 +47,16 @@ class NaiveRAGBaseline(MemorySystem):
             scored.append((overlap, i, text))
 
         scored.sort(key=lambda x: (-x[0], x[1]))
-        retrieved = [s[2] for s in scored[:self.top_k]]
+        effective_top_k = top_k if top_k is not None else self.top_k
+        retrieved = [s[2] for s in scored[:effective_top_k] if s[0] > 0]
+        best_overlap = scored[0][0] if scored and scored[0][0] > 0 else 0
 
         context = "\n".join(retrieved)
         return QueryResult(
             answer=context,
             retrieved_context=context,
             retrieved_facts=retrieved,
-            confidence=scored[0][0] / max(len(q_features), 1) if scored else 0.0,
+            confidence=best_overlap / max(len(q_features), 1) if best_overlap else 0.0,
             latency_ms=(time.time() - start) * 1000,
         )
 

@@ -1,14 +1,15 @@
-# BiTempQA
+# llm-TSSMRBench
 
-BiTempQA is a benchmark project for evaluating memory systems on **bi-temporal / multi-version retrieval and reasoning**.  
-The current final artifact in this repository is a **GitHub release-note based benchmark** built from influential open-source projects, together with unified mixed-pool evaluation pipelines for:
+`llm-TSSMRBench` is the repository for **TSSMRBench**, a benchmark for evaluating whether memory systems can retrieve the stage-correct temporal semantic state from evolving memories.
+
+The current final artifact in this repository is a **300-repository release-window benchmark** built from influential open-source projects, together with unified mixed-pool evaluation pipelines for:
 
 - `BM25`
 - `FAISS`
 - `Mem0`
 - `Graphiti`
 
-This README only documents the **final release-note unified dataset and the final evaluation pipeline**. Earlier prototype routes are not part of the recommended workflow.
+This README documents only the **final formal dataset, final evaluation pipeline, paper artifacts, and reproducibility entry points**. Earlier prototype routes are not part of the recommended workflow.
 
 ## Final Deliverables
 
@@ -41,6 +42,10 @@ The main scripts for the final pipeline are:
   - merges the per-project formal samples into one experiment-ready JSON
 - [benchmark/scripts/82_run_merged_github_release_unified_global_pool_evaluation.py](benchmark/scripts/82_run_merged_github_release_unified_global_pool_evaluation.py)
   - runs the **global mixed-pool** evaluation, i.e. all project memories are stored first and then queried from one shared memory pool
+- [benchmark/scripts/84_generate_official300_paper_artifacts.py](benchmark/scripts/84_generate_official300_paper_artifacts.py)
+  - aggregates the final result files into paper-ready statistics
+- [benchmark/scripts/85_plot_official300_paper_figures.py](benchmark/scripts/85_plot_official300_paper_figures.py)
+  - reproduces the main paper figures
 - [benchmark/scripts/68_run_state_version_evaluation.py](benchmark/scripts/68_run_state_version_evaluation.py)
   - shared evaluation system factory and config entry helpers
 
@@ -51,6 +56,8 @@ The main configs used in the final experiments are:
 - [benchmark/configs/state_version_build_config.yaml](benchmark/configs/state_version_build_config.yaml)
 - [benchmark/configs/state_version_experiment_config_deepseek_flash_memory.yaml](benchmark/configs/state_version_experiment_config_deepseek_flash_memory.yaml)
 - [benchmark/configs/state_version_experiment_config_deepseek_flash_memory_mem0_internal10.yaml](benchmark/configs/state_version_experiment_config_deepseek_flash_memory_mem0_internal10.yaml)
+
+All private credentials have been replaced by environment-variable placeholders. See [.env.example](.env.example) for the expected variables.
 
 ## Final Dataset Format
 
@@ -138,6 +145,7 @@ The result files also support additional analysis such as:
 ### 1. Build / refresh formal dataset
 
 ```powershell
+# First export the variables listed in .env.example into your shell environment.
 python benchmark/scripts/78_generate_github_release_unified_formal.py
 python benchmark/scripts/79_merge_github_release_unified_formal.py
 ```
@@ -168,15 +176,21 @@ python benchmark/scripts/82_run_merged_github_release_unified_global_pool_evalua
   --output-dir benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_mem0_deepseekflash_globalpool_taskk_internal10
 ```
 
+### 4. Rebuild paper statistics and figures
+
+```powershell
+python benchmark/scripts/84_generate_official300_paper_artifacts.py
+python benchmark/scripts/85_plot_official300_paper_figures.py
+```
+
 ## Notes
 
 - The final benchmark uses **release-note memory units**, not raw code blocks.
 - The final formal experiments should use the **official 300 merged dataset**.
-- Large per-question result files may exceed GitHub single-file upload limits; summary files are the most convenient entry point for quick inspection.
+- Oversized per-question result files are stored as `.jsonl.gz` to keep the repository pushable while preserving the full raw outputs.
 
 ## File Guide
 
 For a Chinese file-level guide to the final dataset, result directories, and intermediate files, see:
 
 - [benchmark/docs/FORMAL_RELEASE_UNIFIED_FILE_GUIDE_ZH.md](benchmark/docs/FORMAL_RELEASE_UNIFIED_FILE_GUIDE_ZH.md)
-

@@ -1,72 +1,131 @@
-\documentclass[11pt]{article}
+\documentclass[sigconf]{acmart}
 
-% 中文注释：ACL/EMNLP 投稿阶段建议使用 review 模式；定稿时可改回 \usepackage{acl}。
-\usepackage[review]{acl}
-\usepackage{times}
-\usepackage{latexsym}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{microtype}
-\usepackage{graphicx}
+\setcopyright{none}
+\copyrightyear{2027}
+\acmYear{2027}
+\acmDOI{}
+\acmConference[EDBT '27]{28th International Conference on Extending Database Technology}{April 6--9, 2027}{Lille, France}
+\acmBooktitle{28th International Conference on Extending Database Technology (EDBT '27), April 6--9, 2027, Lille, France}
+
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{natbib}
-\usepackage{hyperref}
-\usepackage{xcolor}
 \usepackage{enumitem}
-\usepackage{subcaption}
-\usepackage{algorithm}
-\usepackage{algorithmic}
-\usepackage{pifont}
-\newcommand{\cmark}{\ding{51}}
-\newcommand{\xmark}{\ding{55}}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{listings}
 
-% 中文注释：为双栏排版增加少量断行弹性，尽量减少 underfull hbox 警告。
-\emergencystretch=1.5em
-
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    citecolor=blue,
-    urlcolor=blue
+\lstset{
+  basicstyle=\ttfamily\scriptsize,
+  breaklines=true,
+  breakatwhitespace=false,
+  columns=fullflexible,
+  keepspaces=true,
+  showstringspaces=false,
+  frame=single,
+  aboveskip=4pt,
+  belowskip=4pt
 }
 
-% 中文注释：按 ACL 字体要求，术语标记改为 Times 系正文样式，不再依赖等宽或粗体字形。
-\newcommand{\eventmark}{\textcolor{blue}{event time}}
-\newcommand{\recordmark}{\textcolor{red}{record time}}
+\settopmatter{printacmref=true}
+\renewcommand\footnotetextcopyrightpermission[1]{}
 
-% 中文注释：保留原题目语义，仅按 ACL 模板常见写法控制手工换行。
-\title{BiTempQA: A Diagnostic Benchmark for Bitemporal Reasoning\\ in LLM Agent Memory Systems}
+\title{[EA\&B] TSSMRBench: Benchmarking Memory Systems for Retrieving Correct Temporal Semantic States from Evolving Memories}
 
-\author{
-  Anonymous
+\author{Hai Lin}
+\authornote{Hai Lin and Jianhua Sun contributed equally to this work.}
+\affiliation{%
+  \institution{Shenzhen International Graduate School, Tsinghua University}
+  \city{Shenzhen}
+  \country{China}
 }
+\affiliation{%
+  \institution{Pengcheng Laboratory}
+  \city{Shenzhen}
+  \country{China}
+}
+\email{ngyygm@outlook.com}
+
+\author{Jianhua Sun}
+\authornotemark[1]
+\affiliation{%
+  \institution{Shenzhen International Graduate School, Tsinghua University}
+  \city{Shenzhen}
+  \country{China}
+}
+\email{sunjianhua1225@gmail.com}
+
+\author{Hai-Tao Zheng}
+\authornote{Corresponding author.}
+\affiliation{%
+  \institution{Shenzhen International Graduate School, Tsinghua University}
+  \city{Shenzhen}
+  \country{China}
+}
+\affiliation{%
+  \institution{Pengcheng Laboratory}
+  \city{Shenzhen}
+  \country{China}
+}
+\email{zheng.haitao@sz.tsinghua.edu.cn}
+
+\author{Hui Wang}
+\affiliation{%
+  \institution{Pengcheng Laboratory}
+  \city{Shenzhen}
+  \country{China}
+}
+\email{wangh06@pcl.ac.cn}
+
+\begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10002951.10003260.10003282</concept_id>
+<concept_desc>Information systems~Information retrieval</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10002951.10003260.10003277</concept_id>
+<concept_desc>Information systems~Data mining</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+<concept>
+<concept_id>10010147.10010178.10010219</concept_id>
+<concept_desc>Computing methodologies~Natural language processing</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Information systems~Information retrieval}
+\ccsdesc[300]{Information systems~Data mining}
+\ccsdesc[300]{Computing methodologies~Natural language processing}
+
+\keywords{agent memory systems, temporal semantic state retrieval, benchmark evaluation, evolving memories}
 
 \begin{document}
-\maketitle
+
 \begin{abstract}
-\input{sections/abstract}
+\input{paper/sections/abstract}
 \end{abstract}
 
-\input{sections/intro}
-\input{sections/related}
-\input{sections/method}
-\input{sections/experiment}
-\input{sections/results}
-\input{sections/analysis}
-\input{sections/conclusion}
-% 中文注释：按 ACL 官方格式要求，将 Limitations 放在 Conclusion 之后、References 之前。
-\input{sections/limitations}
-% 中文注释：按 ACL 官方建议，将 Ethics Statement 放在 Conclusion/Limitations 之后、References 之前。
-\input{sections/ethics}
+\maketitle
 
-% 中文注释：EMNLP/ACL 模板的 acl.sty 已经内置 bibliographystyle，这里只保留 bibliography。
-% 中文注释：references.bib 中的条目已按会议论文 / arXiv / 官网资源分别做了兼容 BibTeX 的格式整理。
-\bibliography{references}
+\input{paper/sections/intro}
+\input{paper/sections/related}
+\input{paper/sections/method}
+\input{paper/sections/experiment}
+\input{paper/sections/conclusion}
+\input{paper/sections/artifacts}
 
+\clearpage
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{paper/references}
+
+\clearpage
+\onecolumn
 \appendix
-\input{sections/appendix}
+\input{paper/sections/appendix}
 
 \end{document}

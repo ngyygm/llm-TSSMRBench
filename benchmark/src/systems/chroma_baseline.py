@@ -1,4 +1,4 @@
-"""ChromaDB baseline — metadata filtering with limited temporal support."""
+"""ChromaDB baseline：语义检索后端。"""
 
 from __future__ import annotations
 
@@ -14,19 +14,23 @@ logger = logging.getLogger(__name__)
 
 
 class ChromaBaseline(MemorySystem):
-    """ChromaDB with time metadata filtering (limited temporal awareness)."""
+    """ChromaDB semantic retrieval baseline."""
 
     def __init__(
         self,
         name: str = "ChromaDB",
         embedding_model: str = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
         top_k: int = 5,
+        expose_metadata_in_context: bool = False,
     ):
         super().__init__(name)
         self.encoder = SentenceTransformer(embedding_model)
         self.top_k = top_k
+        # 中文注释：主实验默认不把命中结果的 metadata 手动拼回上下文。
+        self.expose_metadata_in_context = expose_metadata_in_context
 
         import chromadb
+
         self.client = chromadb.Client()
         self.collection = self.client.get_or_create_collection(
             name="bitpqa_memory",
@@ -34,80 +38,65 @@ class ChromaBaseline(MemorySystem):
         )
         self._all_docs: List[str] = []
 
-    def remember(self, text: str, event_time: str, record_time: Optional[str] = None, source_name: str = "scenario_trace") -> str:
+    def remember(
+        self,
+        text: str,
+    ) -> str:
         write_id = f"chroma_{self.collection.count()}"
         emb = self.encoder.encode([text]).tolist()
-        # Store event_time and record_time as ISO strings and numeric timestamps for filtering
-        event_ts = self._iso_to_timestamp(event_time)
-        record_ts = self._iso_to_timestamp(record_time) if record_time else event_ts
-        metadata = {
-            "event_time": event_time,
-            "event_ts": event_ts,
-            "source": source_name,
-        }
-        if record_time:
-            metadata["record_time"] = record_time
-            metadata["record_ts"] = record_ts
         self.collection.add(
             ids=[write_id],
             documents=[text],
             embeddings=emb,
-            metadatas=[metadata],
         )
         self._all_docs.append(text)
         return write_id
 
     @staticmethod
-    def _iso_to_timestamp(iso_str: str) -> float:
-        """Convert ISO 8601 string to Unix timestamp for numeric comparison."""
-        from datetime import datetime
-        try:
-            dt = datetime.fromisoformat(iso_str.replace("Z", "+00:00"))
-            return dt.timestamp()
-        except Exception:
-            return 0.0
+    def _format_with_metadata(doc: str, metadata: Optional[dict]) -> str:
+        """构造 metadata-exposed 补充实验使用的检索文本。"""
+        metadata = metadata or {}
+        parts = [doc]
+        if metadata.get("event_time"):
+            parts.append(f"event_time={metadata['event_time']}")
+        if metadata.get("record_time"):
+            parts.append(f"record_time={metadata['record_time']}")
+        if metadata.get("source"):
+            parts.append(f"source={metadata['source']}")
+        return " | ".join(parts)
 
     def query(
         self,
         question: str,
-        query_event_time: Optional[str] = None,
-        query_record_time: Optional[str] = None,
-        time_before: Optional[str] = None,
-        time_after: Optional[str] = None,
+        top_k: Optional[int] = None,
     ) -> QueryResult:
         start = time.time()
 
-        where_filter = {}
-        if time_before and time_after:
-            where_filter["$and"] = [
-                {"event_ts": {"$lt": self._iso_to_timestamp(time_before)}},
-                {"event_ts": {"$gt": self._iso_to_timestamp(time_after)}},
-            ]
-        elif time_before:
-            where_filter["event_ts"] = {"$lt": self._iso_to_timestamp(time_before)}
-        elif time_after:
-            where_filter["event_ts"] = {"$gt": self._iso_to_timestamp(time_after)}
-
+        effective_top_k = top_k if top_k is not None else self.top_k
         kwargs = {
-            "query_texts": [question],
-            "n_results": min(self.top_k, self.collection.count() or 1),
+            "query_embeddings": self.encoder.encode([question]).tolist(),
+            "n_results": min(effective_top_k, self.collection.count() or 1),
         }
-        if where_filter:
-            kwargs["where"] = where_filter
 
         try:
             results = self.collection.query(**kwargs)
             docs = results["documents"][0] if results["documents"] else []
         except Exception as e:
-            logger.warning(f"ChromaDB query failed: {e}")
-            docs = self._all_docs[-self.top_k:]  # Fallback to recent docs
+            logger.warning("ChromaDB query failed: %s", e)
+            docs = []
 
-        context = "\n".join(docs)
+        facts = docs
+
+        context = "\n".join(facts)
         return QueryResult(
             answer=context,
             retrieved_context=context,
-            retrieved_facts=docs,
+            retrieved_facts=facts,
             latency_ms=(time.time() - start) * 1000,
+            metadata={
+                "num_results": len(docs),
+                "metadata_exposed": False,
+            },
         )
 
     def reset(self) -> None:

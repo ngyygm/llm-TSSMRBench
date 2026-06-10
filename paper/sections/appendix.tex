@@ -1,94 +1,156 @@
 \section{Appendix}
 
-\subsection{Full Per-Scenario-Type Results}
+\subsection{Exact Prompt Excerpts}
 
-Table~\ref{tab:full_stype} provides accuracy by scenario type for all seven systems on the 84-question test set.
+We include exact prompt excerpts here for reproducibility. Listings~\ref{lst:artifact-prompt}--\ref{lst:answer-prompt} show the final construction and answer-generation prompts used in the released benchmark.
 
-\begin{table}[h]
-\centering
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{lccccccc}
-\toprule
-\textbf{Scenario Type} & \textbf{N} & \textbf{FAISS} & \textbf{BM25} & \textbf{Simple KG} & \textbf{ChromaDB} & \textbf{Mem0} & \textbf{Graphiti} \\
-\midrule
-Entity Attr. Evol. & 114 & 100.0\% & 100.0\% & 100.0\% & 23.1\% & 19.2\% & 7.7\% \\
-Multi-Source Info. & 98 & 70.4\% & 72.2\% & 70.4\% & 22.2\% & 1.9\% & 0.0\% \\
-Temporal Ambiguity & 35 & 100.0\% & 100.0\% & 100.0\% & 0.0\% & 0.0\% & 0.0\% \\
-Relationship Evol. & 11 & 100.0\% & 100.0\% & 100.0\% & 100.0\% & 100.0\% & 0.0\% \\
-\midrule
-\textbf{Overall} & \textbf{84} & \textbf{81.0\%} & \textbf{82.1\%} & \textbf{81.0\%} & \textbf{22.6\%} & \textbf{8.3\%} & \textbf{2.4\%} \\
-\bottomrule
-\end{tabular}%
+\begin{lstlisting}[caption={Exact excerpt from the final release-window construction prompt.},label={lst:artifact-prompt}]
+Build one unified repository release-evolution prototype from the provided official GitHub release-note nodes.
+
+Requirements:
+- Use only the provided release-note nodes.
+- Produce one single JSON object matching the output schema.
+- Only generate chunk-level memory_unit_text values keyed by memory_node_id.
+- For every chunk, write memory_unit_text in English.
+- Every memory_unit_text must explicitly name both the repository and the current release version or tag.
+- Every memory_unit_text must describe only the current release note itself.
+- Do not compare to earlier or later releases inside memory_unit_text.
+- Do not mention benchmark setup, memory pools, retrieval, neighboring releases, hidden context, or any chain-construction process.
+...
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Exact prompt excerpt defining the final output schema and QA rules.},label={lst:qa-prompt}]
+"questions": [
+  {
+    "question_id": "string",
+    "task_type": "single_state_lookup / cross_version_comparison / temporal_version_ordering",
+    "answer_format": "multiple_choice",
+    "query_text": "question text that explicitly names the repository",
+    "options": [
+      {"option_id": "A", "text": "option text"},
+      {"option_id": "B", "text": "option text"},
+      {"option_id": "C", "text": "option text"},
+      {"option_id": "D", "text": "option text"}
+    ],
+    "correct_option_id": "A",
+    "source_chunk_ids": ["memory_node_id_1"],
+    "answer_support": [{"memory_node_id": "memory_node_id_1", "answer_text": "support text"}]
+  }
+]
+
+- Generate exactly 3 multiple-choice questions, one per task type.
+- Every query_text must explicitly name the repository.
+- Use source_chunk_ids as the question-level gold evidence field.
+- For cross_version_comparison, compare two releases using concrete release-content differences.
+- For temporal_version_ordering, use 3 to 5 release-content states.
+- The answer options for temporal_version_ordering should only be orderings of those indices.
+- The question should still require the system to retrieve the corresponding chunk-level memory_unit_text content.
+...
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Exact excerpt from \texttt{benchmark/src/evaluation/answer\_generator.py}.},label={lst:answer-prompt}]
+MC_SYSTEM_PROMPT = """You are a strict evaluation assistant for a memory benchmark.
+
+You must answer using only the retrieved memory.
+You must not use outside knowledge, background knowledge, guessing, or prior world knowledge.
+Your job is to choose the best-supported answer from the retrieved memory.
+
+Output rule:
+- Return exactly one uppercase option letter: A, B, C, D, or E.
+- Do not output any explanation, punctuation, JSON, markdown, or extra text.
+- If the retrieved memory contains relevant evidence for one option, choose that option actively.
+- Return E only when the retrieved memory is completely irrelevant or contains no answer-bearing evidence for any option."""
+
+MC_USER_PROMPT = """You may answer only from the retrieved memory below.
+If the retrieved memory contains relevant evidence for one option, choose the best-supported option.
+Return E only if the retrieved memory is completely irrelevant or contains no answer-bearing evidence.
+...
+"""
+\end{lstlisting}
+
+\subsection{Exact Dataset Excerpts}
+
+Listing~\ref{lst:dataset-json} shows a real excerpt from the unified formal dataset file for the \texttt{Raphire/Win11Debloat} repository window used in Figure~\ref{fig:tssmrbench-example}.
+
+\begin{lstlisting}[caption={Exact excerpt from \texttt{official\_300\_merged.json} for \texttt{Raphire/Win11Debloat}.},label={lst:dataset-json}]
+{
+  "repo": "Raphire/Win11Debloat",
+  "window_title": "Raphire/Win11Debloat recent release evolution",
+  "chunk_example": {
+    "memory_node_id": "Raphire__Win11Debloat__release__2025_06_11",
+    "repo": "Raphire/Win11Debloat",
+    "tag_name": "2025.06.11",
+    "title": "Release 2025.06.11",
+    "time_hint": "2025-06-10",
+    "published_at": "2025-06-10T22:10:42Z",
+    "raw_text": "Repository: Raphire/Win11Debloat ...",
+    "memory_unit_text": "In the Raphire/Win11Debloat release 2025.06.11, this minor release fixes an issue with clearing the start menu pinned apps layout for all users."
+  },
+  "question_example": {
+    "question_id": "q3_temporal_version_ordering",
+    "task_type": "temporal_version_ordering",
+    "answer_format": "multiple_choice",
+    "query_text": "In the Raphire/Win11Debloat release window, order the following release-content states from earliest to latest: (1) a release that adds a full graphical user interface (GUI), (2) a release that adds an option to disable AI features in Paint & Notepad, (3) a release that adds System Registry backup & restore, (4) a release that adds an option to disable BitLocker automatic device encryption.",
+    "options": [
+      { "option_id": "A", "text": "2 -> 1 -> 4 -> 3" },
+      { "option_id": "B", "text": "2 -> 4 -> 1 -> 3" },
+      { "option_id": "C", "text": "1 -> 2 -> 3 -> 4" },
+      { "option_id": "D", "text": "4 -> 2 -> 1 -> 3" }
+    ],
+    "correct_option_id": "A",
+    "source_chunk_ids": [
+      "Raphire__Win11Debloat__release__2025_08_01",
+      "Raphire__Win11Debloat__release__2026_02_01",
+      "Raphire__Win11Debloat__release__2026_02_04",
+      "Raphire__Win11Debloat__release__2026_05_10"
+    ],
+    "answer_support": [
+      { "memory_node_id": "Raphire__Win11Debloat__release__2025_08_01", "answer_text": "an option to disable AI features in Paint & Notepad is introduced" },
+      ...
+    ]
+  }
 }
-\caption{Accuracy by scenario type (test set, 84 questions). Naive RAG results are identical to FAISS and Simple KG.}
-\label{tab:full_stype}
-\end{table}
+\end{lstlisting}
 
-\subsection{Curated Real-World Scenarios}
+\subsection{Exact Retrieval Result Excerpts}
 
-Table~\ref{tab:curated} lists the 15 manually curated scenarios with verified dates from public records.
+Listings~\ref{lst:eval-json-success} and \ref{lst:eval-json-failure} show exact successful and failed records from the formal Mem0 evaluation on the same repository window.
 
-\begin{table}[h]
-\centering
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{lllc}
-\toprule
-\textbf{ID} & \textbf{Topic} & \textbf{Domain} & \textbf{Writes} \\
-\midrule
-CEO\_001 & Microsoft CEO succession & Tech & 3 \\
-CEO\_002 & Apple CEO succession & Tech & 3 \\
-CEO\_003 & Alibaba CEO succession & Tech & 5 \\
-SPORT\_001 & Real Madrid coaches & Sports & 7 \\
-POLI\_001 & Japanese PM succession & Politics & 4 \\
-POLI\_002 & UK PM succession & Politics & 4 \\
-HQ\_001 & Lenovo HQ migration & Tech & 4 \\
-LATE\_001 & COVID-19 timeline & Health & 4 \\
-LATE\_002 & COVID vaccine development & Health & 5 \\
-RETRACT\_001 & Pluto reclassification & Science & 3 \\
-MULTI\_001 & MH370 multi-source reporting & News & 4 \\
-PRIZE\_001 & Tu Youyou Nobel Prize & Science & 3 \\
-SPORT\_002 & World Cup champions & Sports & 6 \\
-ACCUM\_001 & Chang'e lunar missions & Science & 5 \\
-REL\_001 & SpaceX-NASA collaboration & Tech & 4 \\
-\bottomrule
-\end{tabular}%
+\begin{lstlisting}[caption={Exact successful Mem0 result excerpt from \texttt{mem0.questions.jsonl}.},label={lst:eval-json-success}]
+{
+  "question_id": "Raphire__Win11Debloat_release_window__q1_single_state_lookup",
+  "query_text": "In the Raphire/Win11Debloat releases, which release adds an option to disable AI features in Paint & Notepad?",
+  "retrieved_facts": [
+    "- In the Raphire/Win11Debloat release 2025.08.01, an option to disable AI features in Paint & Notepad is introduced.",
+    "- In the Raphire/Win11Debloat release 2025.08.16, a missing key for Disable Paint AI Sysprep/Undo files is fixed. ...",
+    "- In the Raphire/Win11Debloat release 2025.06.12, new options are added to disable animations and visual effects. ..."
+  ],
+  "matched_gold_node_ids": [
+    "Raphire__Win11Debloat__release__2025_08_01"
+  ],
+  "support_coverage": 1.0,
+  "generated_answer": "B",
+  "is_correct": true
 }
-\caption{Manually curated real-world temporal event scenarios. All dates verified from public records and news sources.}
-\label{tab:curated}
-\end{table}
+\end{lstlisting}
 
-\subsection{Data Construction Pipeline}
-
-The BiTempQA v3 dataset is constructed in four stages:
-
-\begin{enumerate}
-\item \textbf{ChronoQA extraction:} 200 bitemporal candidates selected from ChronoQA with gap $\geq 1$ day, balanced across gap ranges and question types.
-\item \textbf{Curated scenarios:} 15 manually constructed scenarios from verified public events across 6 domains.
-\item \textbf{LLM augmentation:} 118 template-generated scenarios covering rare types not found in real data (contradictory information, future-dated information, entity identity resolution).
-\item \textbf{Merge and split:} All 333 scenarios combined, QA pairs extracted, shuffled (seed=42), and split 70/10/20 into train/dev/test. Test set contains only real-source scenarios.
-\end{enumerate}
-
-\subsection{System Configuration Details}
-
-Table~\ref{tab:system_config} shows the configuration used for each system.
-
-\begin{table}[h]
-\centering
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{llccc}
-\toprule
-\textbf{System} & \textbf{Retrieval} & \textbf{Embedding} & \textbf{Top-$k$} & \textbf{Internal LLM} \\
-\midrule
-FAISS & Dense similarity & MiniLM-L12-v2 & 5 & --- \\
-BM25 & Sparse (jieba) & --- & 5 & --- \\
-Naive RAG & Concatenation & --- & 5 & --- \\
-Simple KG & Graph traversal & --- & 5 & --- \\
-ChromaDB & Metadata filter + dense & MiniLM-L12-v2 & 5 & --- \\
-Mem0 & Semantic search (Qdrant) & bge-m3 & 5 & Qwen2.5-32B \\
-Graphiti & Temporal KG search (Neo4j) & --- & 5 & Qwen2.5-32B \\
-\bottomrule
-\end{tabular}%
+\begin{lstlisting}[caption={Exact failed Mem0 temporal-ordering result excerpt from \texttt{mem0.questions.jsonl}.},label={lst:eval-json-failure}]
+{
+  "question_id": "Raphire__Win11Debloat_release_window__q3_temporal_version_ordering",
+  "query_text": "In the Raphire/Win11Debloat release window, order the following release-content states from earliest to latest: ...",
+  "retrieved_facts": [
+    "- In the Raphire/Win11Debloat release 2025.08.01, an option to disable AI features in Paint & Notepad is introduced.",
+    "- In the Raphire/Win11Debloat release 2026.02.01-R2, a full graphical user interface (GUI) is introduced.",
+    "- In the Raphire/Win11Debloat release 2026.04.26, the app & tweak selection UI is improved ...",
+    "- In the Raphire/Win11Debloat release 2026.02.12, the DisableEdgeAds feature is improved ..."
+  ],
+  "matched_gold_node_ids": [
+    "Raphire__Win11Debloat__release__2025_08_01"
+  ],
+  "support_coverage": 0.25,
+  "generated_answer": "E",
+  "is_correct": false
 }
-\caption{System configurations. All lightweight systems use the same answer generator (DeepSeek-V3). Mem0/Graphiti additionally use Qwen2.5-32B for internal memory extraction.}
-\label{tab:system_config}
-\end{table}
+\end{lstlisting}
+
+In the formal release-only experiments, the evaluated memory systems ingest only \texttt{memory\_unit\_text}. Raw release-note text is preserved for auditing but is not written into the retrieval pool. The released result files also retain the original prompt payload, retrieved-memory text, matched supporting node identifiers, and per-\textit{k} sliced evaluation outputs so that every reported score can be traced back to concrete evidence.

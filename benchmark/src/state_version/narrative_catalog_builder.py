@@ -177,7 +177,7 @@ def fetch_url_text(url: str, timeout: int = 60, max_retries: int = 3, retry_dela
         request = urllib.request.Request(
             url,
             headers={
-                "User-Agent": "BiTempQA-state-version-builder/0.1",
+                "User-Agent": "llm-TSSMRBench-state-version-builder/0.1",
                 "Accept-Language": "en-US,en;q=0.9",
             },
             method="GET",
