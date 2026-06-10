@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Task-wise accuracy at the primary answer budget of each task family.}
+\label{tab:task-maink}
+\begin{tabular}{lrrr}
+\toprule
+System & Single ($k{=}3$) & Cross ($k{=}8$) & Temporal ($k{=}10$) \\
+\midrule
+BM25 & 0.8800 & 0.3933 & 0.3200 \\
+FAISS & 0.9433 & 0.8400 & 0.6300 \\
+Mem0 & 0.6567 & 0.4467 & 0.2600 \\
+Graphiti & 0.7267 & 0.6700 & 0.4767 \\
+Oracle Gold Context & 1.0000 & 0.9800 & 0.9100 \\
+\bottomrule
+\end{tabular}
+\end{table}

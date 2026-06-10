@@ -39,6 +39,7 @@ from src.state_version.github_collection import (  # noqa: E402
     normalize_text,
     parse_datetime,
 )
+from src.utils.config_env import load_yaml_with_env  # noqa: E402
 
 
 DEFAULT_OUT_DIR = (
@@ -161,7 +162,7 @@ def slugify(text: str) -> str:
 
 
 def create_llm(config_path: Path) -> JsonLLM:
-    cfg = yaml.safe_load(config_path.read_text(encoding="utf-8")) or {}
+    cfg = load_yaml_with_env(config_path)
     llm_cfg = cfg.get("llm", {}) or {}
     return JsonLLM(
         base_url=llm_cfg["base_url"],

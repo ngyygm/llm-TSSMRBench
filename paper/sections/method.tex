@@ -1,0 +1,124 @@
+\section{TSSMRBench}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{{paper/figures/system overview}.pdf}
+\Description{Overall framework of TSSMRBench. The figure summarizes the paper from left to right: the problem of retrieving stage-correct states from evolving memories, the three benchmark task families, the construction of 30-state memory trajectories and multiple-choice questions, and the unified evaluation protocol across shared-memory baselines and retrieval metrics.}
+\caption{Overall framework of TSSMRBench. The figure summarizes the temporal semantic state retrieval problem, the benchmark task design, the release-derived data construction pipeline, and the unified evaluation protocol. It is intended as a paper-level overview of how the benchmark connects the problem definition, dataset construction, and memory-system evaluation.}
+\label{fig:tssmrbench-framework}
+\end{figure*}
+
+Figure~\ref{fig:tssmrbench-framework} summarizes TSSMRBench. This section defines the task (Section~3.1), presents the benchmark evaluation design principles (Section~3.2), describes the data construction flow (Section~3.3) and question design (Section~3.4), and then introduces the evaluation pipeline and metrics (Section~3.5). TSSMRBench focuses specifically on whether the stage-correct state can be retrieved from a memory system given an evolving memory trajectory.
+
+\subsection{Task Definition}
+
+TSSMRBench evaluates \emph{temporal semantic state memory retrieval}: whether the stage-correct state can be retrieved from a memory system given an evolving memory trajectory, rather than merely returning a relevant or recent memory.
+
+Formally, let
+\[
+\mathcal{T} = (m_1, m_2, \ldots, m_n)
+\]
+denote an evolving memory trajectory, where each memory node $m_i$ records a semantic state of the same underlying object, event, entity, or plan, and where the ordering function
+\[
+\tau(m_i) < \tau(m_j)
+\]
+indicates that $m_i$ precedes $m_j$ in the evolution process. A natural-language query $q$ specifies, either explicitly or implicitly, a stage constraint $\sigma(q)$ over this trajectory. Let
+\[
+G(q) \subseteq \mathcal{T}
+\]
+be the minimal set of supporting state nodes sufficient to answer $q$ under $\sigma(q)$, and let
+\[
+R_k(q) = (r_1, r_2, \ldots, r_k)
+\]
+be the ranked retrieval output returned by a memory system.
+
+The task is to retrieve a ranked list $R_k(q)$ such that the supporting set $G(q)$ is recovered and the answer generator can derive the gold answer $y(q)$ using only the retrieved evidence. The core difficulty is that several states in $\mathcal{T}$ may be semantically adjacent while being temporally incompatible with the query.
+
+TSSMRBench operationalizes this capability through three task families:
+\begin{itemize}[leftmargin=*]
+\item \textbf{Single-state lookup}: $|G(q)| = 1$. The memory system must identify the one state node that supports the answer.
+\item \textbf{Cross-version comparison}: $|G(q)| = 2$. The memory system must recover the two states required to contrast what changed.
+\item \textbf{Temporal ordering}: $|G(q)| \in \{3,4,5\}$. The memory system must recover enough states to reconstruct a local evolution order.
+\end{itemize}
+
+These tasks differ in support size, but they test the same underlying ability: retrieving the stage-correct state or state set required by the query.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Task families and evaluation budgets in TSSMRBench. $|G(q)|$ denotes the number of supporting states required by a question, and the listed retrieval top-k values are the answer-time cutoffs reused from one shared top-10 retrieval result.}
+\label{tab:task-family-budget}
+\begin{tabular}{lll}
+\toprule
+Task family & $|G(q)|$ & Retrieval top-k \\
+\midrule
+Single-state lookup & 1 & 1, 2, 3 \\
+Cross-version comparison & 2 & 2, 5, 8 \\
+Temporal ordering & 3--5 & 5, 8, 10 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Benchmark Evaluation Design Principles}
+
+To isolate this capability, the benchmark and its evaluation protocol follow five principles. Questions must depend on \emph{stage-specific validity}: the correct answer should be determined by which temporal semantic state is valid for the queried stage, not simply by topical relevance or recency. They must also remain \emph{evidence-grounded}: the final answer should only be derivable by aligning the question's state description with retrieved memory content, rather than by exploiting superficial cues such as version labels, dates, or option formatting. The benchmark further varies \emph{support requirements} so that some questions depend on one state while others require several states, allowing us to distinguish pointwise retrieval from complete support recovery over a trajectory. The evaluation preserves \emph{mixed-memory interference} by retrieving from repository-mixed memory collections instead of isolated per-trajectory stores. Finally, the protocol separates \emph{retrieval failure} from \emph{state-selection failure}, allowing us to tell whether a memory system missed the required state entirely or instead retrieved semantically related but temporally incompatible evidence.
+
+\subsection{Data Construction Flow}
+
+We instantiate these principles using an auditable release-only benchmark built from official repository evolution records.
+
+\paragraph{Step 1: Data source selection.}
+We use official GitHub release notes because they are repository-authoritative descriptions of evolving software states, including feature additions, policy changes, fixes, migrations, and deprecations. Compared with informal discussions, release notes provide a cleaner and more reproducible record of how a system changes across versions.
+
+\paragraph{Step 2: Trajectory node determination.}
+For each repository, we take the latest 30 usable release notes and treat them as a fixed local evolution window. Each release note becomes one temporal semantic state node, producing an evolving memory trajectory of length 30. Repositories without a sufficient release history are excluded. The formal benchmark contains 300 repositories, yielding 9{,}000 memory nodes in total.
+
+\paragraph{Step 3: LLM rewriting of raw materials.}
+Raw release notes contain hyperlinks, formatting markers, references, and other artifacts that are not ideal as a memory surface. We therefore use a large language model to rewrite each release note into a normalized English memory unit. This rewriting preserves repository identity and release-specific state content while removing markup-heavy noise. The resulting normalized text is the only memory surface ingested by the evaluated memory systems; the original release note is retained only for audit and provenance.
+
+\paragraph{Step 4: QA generation.}
+On top of each 30-node evolving memory trajectory, we generate one multiple-choice question for each task family, yielding 3 questions per repository and 900 questions overall. For every question, we annotate the supporting state nodes required for answering it. This makes it possible to evaluate not only final answer correctness but also support recovery.
+
+\subsection{Question Design}
+
+Question design is driven by support complexity rather than by superficial wording diversity.
+
+\paragraph{Single-state lookup.}
+These questions ask the memory system to identify one state node that contains a target condition, decision, fix, or release-specific behavior. They test whether the memory system can localize a single correct state among semantically nearby alternatives.
+
+\paragraph{Cross-version comparison.}
+These questions require contrasting two states that differ in a clear, evidence-supported way. We only construct such questions when the source evidence contains a substantive difference between the two releases. Comparison questions are not generated from pairs whose behavior is essentially unchanged.
+
+\paragraph{Temporal ordering.}
+These questions require mapping several state descriptions back to their supporting nodes and ordering them correctly along the trajectory. They are designed so that solving them robustly still depends on retrieving the corresponding memory content, rather than simply relying on superficial ordering cues in the question text alone.
+
+All questions are multiple-choice. Version identifiers, tags, or publication cues may appear when they are part of the original material, but the question and options are constrained so that the answer cannot be derived reliably without aligning the state descriptions in the query to the stored memory units.
+
+\subsection{Evaluation Pipeline and Metrics}
+
+All baselines are evaluated under one global mixed-memory protocol. Before any query is asked, all 9{,}000 memory nodes are written into each baseline's own memory backend or retrieval index. Retrieval therefore operates over a repository-mixed memory collection within each baseline, rather than in isolated per-trajectory memory stores.
+
+For each query $q$, the evaluated memory system retrieves top-10 memories once:
+\[
+R_{10}(q) = (r_1, \ldots, r_{10}).
+\]
+We then reuse the same ranked retrieval output for answer generation with task-specific context budgets:
+\begin{itemize}[leftmargin=*]
+\item \textbf{single-state lookup}: $k \in \{1,2,3\}$
+\item \textbf{cross-version comparison}: $k \in \{2,5,8\}$
+\item \textbf{temporal ordering}: $k \in \{5,8,10\}$
+\end{itemize}
+
+The answer LLM is allowed to read only these retrieved memories and is not given access to unretrieved memory nodes. This protocol separates retrieval quality from how much of the ranked memory list is exposed at answer time. It also allows us to analyze whether a memory system places the required support near the top of the ranking or only recovers it deeper in the retrieved list.
+
+We report four primary metrics. \textbf{Accuracy (ACC)} measures whether the final answer is correct. \textbf{Coverage (Cov)} measures how much of the required support set is recovered:
+\[
+\mathrm{Cov}(q,k) = \frac{|G(q)\cap R_k(q)|}{|G(q)|}.
+\]
+\textbf{Complete Support Rate (CSR)} measures whether the full support set is recovered:
+\[
+\mathrm{CSR}(q,k) = \mathbf{1}[G(q)\subseteq R_k(q)].
+\]
+\textbf{Latency} measures retrieval time only, excluding answer generation.
+
+Because TSSMRBench is intended to diagnose memory retrieval rather than only final QA success, these metrics are designed to jointly capture answer correctness, support completeness, and retrieval cost.

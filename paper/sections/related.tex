@@ -1,0 +1,42 @@
+\section{Related Work}
+
+\subsection{Agent Memory Systems}
+
+MemGPT frames long-term memory as a memory-management problem and studies how an LLM can move information across different memory regions to support persistent interaction~\cite{packer2023memgpt}. Letta extends this line of work into a broader framework for agent memory operating across sessions and tasks~\cite{packer2023memgpt}. Mem0 focuses on practical long-term memory for production systems, emphasizing memory extraction, storage, and retrieval as reusable infrastructure for personalized agents~\cite{mem02025}. Graphiti, developed in the Zep ecosystem, organizes memory through a graph-centered representation intended to preserve richer structure over time~\cite{graphiti2025}. A-MEM studies more agentic memory behaviors, including how memory can be selectively maintained and used during ongoing interaction~\cite{amem2025}.
+
+These memory systems differ substantially in retrieval granularity, memory organization, and update behavior. However, they are typically evaluated through downstream task success, user-level memory recall, or general question answering. Such evaluations are valuable, but they do not isolate a narrower question that is central to our benchmark: when several semantically similar states of the same evolving object coexist in memory, can the memory system retrieve the one that matches the queried stage?
+
+\subsection{Long-Term Memory Benchmarks}
+
+LoCoMo evaluates conversational memory over long multi-session interactions~\cite{locomo2024}. LongMemEval studies whether systems can recall and use information distributed across long histories~\cite{longmemeval2024}. MemoryAgentBench examines how memory-equipped agents perform when information from prior interaction needs to be reused in later tasks~\cite{memoryagentbench2025}.
+
+Taken together, these benchmarks have moved evaluation beyond single-turn QA and made persistent memory a serious empirical target. At the same time, they mainly treat memory as facts, dialogue details, or episodes to be recalled later. They do not usually build explicit versioned state trajectories for the same underlying object, and they rarely ask for an earlier but stage-correct state when a later state is also present. TSSMRBench complements this line of work by making that distinction explicit.
+
+\subsection{Temporal Reasoning and Knowledge Update Benchmarks}
+
+Temporal databases and temporal query languages provided early formal tools for representing and querying time-dependent data~\cite{jensen1999temporal,snodgrass1999tsql2}. In NLP, TORQUE focuses on event-centric temporal reasoning~\cite{ning2020torque}; TimeDial studies temporal commonsense in dialogue~\cite{qin2021timedial}; TimeQA targets time-sensitive question answering~\cite{timeqa2021}; ETR-QA and MUST-Q extend temporal QA toward richer event timelines and multi-state reasoning~\cite{etrqa2024,mustq2024}; and Test of Time studies robustness under temporal shifts and temporal knowledge changes~\cite{testoftime2025,time2025}. These benchmarks are important because they test whether models can reason about order, duration, and time-conditioned facts.
+
+Another neighboring family comes from retrieval and evidence-based QA. HotpotQA emphasizes multi-hop evidence aggregation~\cite{yang2018hotpotqa}. NarrativeQA studies understanding over long narrative evidence~\cite{kocisky2018narrativeqa}. Natural Questions evaluates open-domain retrieval and answer extraction from large corpora~\cite{kwiatkowski2019naturalquestions}. MuSiQue focuses on compositional multi-hop questions that require integrating several pieces of retrieved evidence~\cite{trivedi2022musique}. RAG and its later variants study how retrieved evidence can be incorporated into generation~\cite{gao2023rag,lewis2020rag}. These works sharpen our understanding of retrieval and evidence use, but they do not directly target stage-specific state disambiguation inside an evolving memory trajectory.
+
+Knowledge-update settings raise a different but related issue: how a memory system should incorporate newer information and avoid outdated answers. This perspective is highly relevant, but its default assumption is often that newer information ought to dominate older information. TSSMRBench differs in an important way. Our goal is not simply to test whether a memory system prefers the latest state. Instead, we test whether the memory system can retrieve the \emph{correct} state for the queried stage, even when that state is not the most recent one.
+
+\begin{table}[!t]
+\centering
+\scriptsize
+\caption{Comparison of TSSMRBench with representative neighboring benchmarks. LongMem indicates whether the benchmark targets long-term memory; Temporal indicates whether temporal reasoning is a core requirement; Stage-correct retrieval indicates whether the benchmark explicitly asks for the state that is correct for a queried stage rather than merely a relevant or recent memory; Language reports the primary benchmark language; Scale summarizes benchmark size at a coarse level.}
+\label{tab:benchmark-comparison}
+\setlength{\tabcolsep}{2pt}
+\begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}p{0.28\columnwidth}>{\centering\arraybackslash}p{0.08\columnwidth}>{\centering\arraybackslash}p{0.10\columnwidth}>{\centering\arraybackslash}p{0.18\columnwidth}>{\centering\arraybackslash}p{0.08\columnwidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+Benchmark & \shortstack{Long\\Mem} & Temporal & \shortstack{Stage-correct\\retrieval} & Lang. & Scale \\
+\midrule
+LoCoMo~\cite{locomo2024} & Yes & Partial & No & EN & 1,986 QA \\
+LongMemEval~\cite{longmemeval2024} & Yes & Partial & No & EN & 500 QA \\
+MemoryAgentBench~\cite{memoryagentbench2025} & Yes & Partial & No & EN & Multi-source suite \\
+TimeQA~\cite{timeqa2021} & No & Yes & No & EN & 20K QA \\
+MusTQ~\cite{mustq2024} & No & Yes & No & EN & 15K QA \\
+\midrule
+TSSMRBench & Yes & Yes & Yes & EN & 300 repositories / 900 QA \\
+\bottomrule
+\end{tabularx}
+\end{table}

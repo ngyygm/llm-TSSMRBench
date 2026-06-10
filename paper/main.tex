@@ -1,0 +1,131 @@
+\documentclass[sigconf]{acmart}
+
+\setcopyright{none}
+\copyrightyear{2027}
+\acmYear{2027}
+\acmDOI{}
+\acmConference[EDBT '27]{28th International Conference on Extending Database Technology}{April 6--9, 2027}{Lille, France}
+\acmBooktitle{28th International Conference on Extending Database Technology (EDBT '27), April 6--9, 2027, Lille, France}
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{listings}
+
+\lstset{
+  basicstyle=\ttfamily\scriptsize,
+  breaklines=true,
+  breakatwhitespace=false,
+  columns=fullflexible,
+  keepspaces=true,
+  showstringspaces=false,
+  frame=single,
+  aboveskip=4pt,
+  belowskip=4pt
+}
+
+\settopmatter{printacmref=true}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+
+\title{[EA\&B] TSSMRBench: Benchmarking Memory Systems for Retrieving Correct Temporal Semantic States from Evolving Memories}
+
+\author{Hai Lin}
+\authornote{Hai Lin and Jianhua Sun contributed equally to this work.}
+\affiliation{%
+  \institution{Shenzhen International Graduate School, Tsinghua University}
+  \city{Shenzhen}
+  \country{China}
+}
+\affiliation{%
+  \institution{Pengcheng Laboratory}
+  \city{Shenzhen}
+  \country{China}
+}
+\email{ngyygm@outlook.com}
+
+\author{Jianhua Sun}
+\authornotemark[1]
+\affiliation{%
+  \institution{Shenzhen International Graduate School, Tsinghua University}
+  \city{Shenzhen}
+  \country{China}
+}
+\email{sunjianhua1225@gmail.com}
+
+\author{Hai-Tao Zheng}
+\authornote{Corresponding author.}
+\affiliation{%
+  \institution{Shenzhen International Graduate School, Tsinghua University}
+  \city{Shenzhen}
+  \country{China}
+}
+\affiliation{%
+  \institution{Pengcheng Laboratory}
+  \city{Shenzhen}
+  \country{China}
+}
+\email{zheng.haitao@sz.tsinghua.edu.cn}
+
+\author{Hui Wang}
+\affiliation{%
+  \institution{Pengcheng Laboratory}
+  \city{Shenzhen}
+  \country{China}
+}
+\email{wangh06@pcl.ac.cn}
+
+\begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10002951.10003260.10003282</concept_id>
+<concept_desc>Information systems~Information retrieval</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10002951.10003260.10003277</concept_id>
+<concept_desc>Information systems~Data mining</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+<concept>
+<concept_id>10010147.10010178.10010219</concept_id>
+<concept_desc>Computing methodologies~Natural language processing</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Information systems~Information retrieval}
+\ccsdesc[300]{Information systems~Data mining}
+\ccsdesc[300]{Computing methodologies~Natural language processing}
+
+\keywords{agent memory systems, temporal semantic state retrieval, benchmark evaluation, evolving memories}
+
+\begin{document}
+
+\begin{abstract}
+\input{paper/sections/abstract}
+\end{abstract}
+
+\maketitle
+
+\input{paper/sections/intro}
+\input{paper/sections/related}
+\input{paper/sections/method}
+\input{paper/sections/experiment}
+\input{paper/sections/conclusion}
+\input{paper/sections/artifacts}
+
+\clearpage
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{paper/references}
+
+\clearpage
+\onecolumn
+\appendix
+\input{paper/sections/appendix}
+
+\end{document}

@@ -20,6 +20,7 @@ build/
 *.log
 *.out
 *.synctex.gz
+*.synctex(busy)
 
 # Data (large files - use HuggingFace)
 benchmark/data/eval_results/eval_*.json
@@ -65,8 +66,21 @@ benchmark/tmp/
 benchmark/data/cache/
 benchmark/data/raw/github_release_notes_formal_v1/
 benchmark/data/prototype_eval_results/*/*.questions.jsonl
+benchmark/data/prototype_eval_results/*/*.questions.jsonl.gz
 benchmark/data/prototype_eval_results/*/*.stderr.log
 benchmark/data/prototype_eval_results/*/*.stdout.log
 benchmark/data/prototype_eval_results/*/*.ingest_progress.jsonl
 benchmark/data/prototype_eval_results/*/*.ingest_checkpoint.json
 benchmark/data/prototype_eval_results/*/*memory_run.json
+!benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_*/*.questions.jsonl.gz
+
+# Local paper build/temp helpers
+.tmp_paper_build*/
+paper_build_*/
+$build/
+$out/
+tmp/
+tmp_progress_bom_test/
+paper/pagecheck*/
+paper/generated/
+paper/pdflatex*.fls

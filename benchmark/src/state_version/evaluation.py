@@ -133,18 +133,13 @@ def _match_retrieved_nodes(
     metadata: Optional[dict[str, Any]] = None,
     threshold: float = 0.35,
 ) -> list[str]:
-    explicit_node_ids = list((metadata or {}).get("retrieved_source_node_ids") or [])
-    explicit_chain_ids = list((metadata or {}).get("retrieved_source_chain_ids") or [])
-    if explicit_node_ids:
+    explicit_pairs = _explicit_retrieved_pairs_from_metadata(metadata)
+    if explicit_pairs:
         valid_node_ids = {node.node_id for node in chain.chain_nodes}
         ordered = []
         seen: set[str] = set()
-        if explicit_chain_ids and len(explicit_chain_ids) == len(explicit_node_ids):
-            explicit_pairs = zip(explicit_chain_ids, explicit_node_ids)
-        else:
-            explicit_pairs = [(chain.state_chain_id, node_id) for node_id in explicit_node_ids]
         for source_chain_id, node_id in explicit_pairs:
-            if source_chain_id != chain.state_chain_id:
+            if source_chain_id and source_chain_id != chain.state_chain_id:
                 continue
             if node_id in valid_node_ids and node_id not in seen:
                 ordered.append(node_id)
@@ -165,6 +160,37 @@ def _match_retrieved_nodes(
             seen.add(best_node_id)
             matched_node_ids.append(best_node_id)
     return matched_node_ids
+
+
+def _explicit_retrieved_pairs_from_metadata(
+    metadata: Optional[dict[str, Any]],
+) -> list[tuple[str, str]]:
+    payload = metadata or {}
+    explicit_node_ids = list(payload.get("retrieved_source_node_ids") or [])
+    explicit_chain_ids = list(payload.get("retrieved_source_chain_ids") or [])
+    if explicit_node_ids:
+        if explicit_chain_ids and len(explicit_chain_ids) == len(explicit_node_ids):
+            return [
+                (str(chain_id or ""), str(node_id))
+                for chain_id, node_id in zip(explicit_chain_ids, explicit_node_ids)
+                if node_id is not None
+            ]
+        return [("", str(node_id)) for node_id in explicit_node_ids if node_id is not None]
+
+    grouped_results = payload.get("grouped_results")
+    if isinstance(grouped_results, list):
+        pairs: list[tuple[str, str]] = []
+        for item in grouped_results:
+            if not isinstance(item, dict):
+                continue
+            node_id = item.get("source_node_id")
+            if node_id is None:
+                continue
+            pairs.append((str(item.get("source_chain_id") or ""), str(node_id)))
+        if pairs:
+            return pairs
+
+    return []
 
 
 def _mean(values: list[float]) -> Optional[float]:
@@ -282,6 +308,11 @@ def _slice_query_result(query_result: QueryResult, top_k: int) -> QueryResult:
         metadata["grouped_results"] = list(metadata["grouped_results"])[:top_k]
     if "raw_results" in metadata and isinstance(metadata.get("raw_results"), list):
         metadata["raw_results"] = list(metadata["raw_results"])
+    if not list(metadata.get("retrieved_source_node_ids") or []):
+        explicit_pairs = _explicit_retrieved_pairs_from_metadata(metadata)
+        if explicit_pairs:
+            metadata["retrieved_source_chain_ids"] = [chain_id for chain_id, _ in explicit_pairs]
+            metadata["retrieved_source_node_ids"] = [node_id for _, node_id in explicit_pairs]
     metadata["sliced_top_k"] = top_k
 
     return QueryResult(

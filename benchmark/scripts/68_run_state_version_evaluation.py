@@ -23,10 +23,11 @@ from src.state_version.evaluation import (
     load_state_version_dataset,
 )
 from src.systems.base import MemorySystem
+from src.utils.config_env import load_yaml_with_env
 
 
 def load_yaml(path: Path) -> dict[str, Any]:
-    return yaml.safe_load(path.read_text(encoding="utf-8"))
+    return load_yaml_with_env(path)
 
 
 def resolve_llm_value(
