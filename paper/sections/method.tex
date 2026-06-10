@@ -32,7 +32,7 @@ R_k(q) = (r_1, r_2, \ldots, r_k)
 \]
 be the ranked retrieval output returned by a memory system.
 
-The task is to retrieve a ranked list $R_k(q)$ such that the supporting set $G(q)$ is recovered and the answer generator can derive the gold answer $y(q)$ using only the retrieved evidence. The core difficulty is that several states in $\mathcal{T}$ may be semantically adjacent while being temporally incompatible with the query.
+The task is to retrieve a ranked list $R_k(q)$ such that the supporting set $G(q)$ is recovered and the answer generator can derive the gold answer $y(q)$ using only the retrieved evidence. The core difficulty is that several states in $\mathcal{T}$ may be semantically similar while being temporally incompatible with the query.
 
 TSSMRBench operationalizes this capability through three task families:
 \begin{itemize}[leftmargin=*]
@@ -73,7 +73,7 @@ We use official GitHub release notes because they are repository-authoritative d
 \paragraph{Step 2: Trajectory node determination.}
 For each repository, we take the latest 30 usable release notes and treat them as a fixed local evolution window. Each release note becomes one temporal semantic state node, producing an evolving memory trajectory of length 30. Repositories without a sufficient release history are excluded. The formal benchmark contains 300 repositories, yielding 9{,}000 memory nodes in total.
 
-\paragraph{Step 3: LLM rewriting of raw materials.}
+\paragraph{Step 3: LLM rewriting of raw release notes.}
 Raw release notes contain hyperlinks, formatting markers, references, and other artifacts that are not ideal as a memory surface. We therefore use a large language model to rewrite each release note into a normalized English memory unit. This rewriting preserves repository identity and release-specific state content while removing markup-heavy noise. The resulting normalized text is the only memory surface ingested by the evaluated memory systems; the original release note is retained only for audit and provenance.
 
 \paragraph{Step 4: QA generation.}
@@ -96,13 +96,13 @@ All questions are multiple-choice. Version identifiers, tags, or publication cue
 
 \subsection{Evaluation Pipeline and Metrics}
 
-All baselines are evaluated under one global mixed-memory protocol. Before any query is asked, all 9{,}000 memory nodes are written into each baseline's own memory backend or retrieval index. Retrieval therefore operates over a repository-mixed memory collection within each baseline, rather than in isolated per-trajectory memory stores.
+All baselines are evaluated under a shared global memory pool: before any query is issued, all 9{,}000 memory nodes from all 300 repositories are written into each baseline's own memory backend or retrieval index. Retrieval therefore operates over a single repository-mixed memory collection per baseline, rather than over isolated per-trajectory memory stores. This setting introduces cross-repository interference and prevents the memory system from exploiting trajectory boundaries.
 
-For each query $q$, the evaluated memory system retrieves top-10 memories once:
+For each query $q$, the evaluated memory system retrieves the top-10 ranked memories:
 \[
 R_{10}(q) = (r_1, \ldots, r_{10}).
 \]
-We then reuse the same ranked retrieval output for answer generation with task-specific context budgets:
+The same ranked list is then reused across task-specific context budgets:
 \begin{itemize}[leftmargin=*]
 \item \textbf{single-state lookup}: $k \in \{1,2,3\}$
 \item \textbf{cross-version comparison}: $k \in \{2,5,8\}$
