@@ -48,6 +48,18 @@ Thumbs.db
 # Secrets
 *.env
 
+# V3 benchmark - large data files (>100MB, exceed GitHub limit)
+new_benchmark/data/benchmark_github/all_versioned_files.jsonl
+
+# V3 benchmark - raw repo clones (2.4GB)
+new_benchmark/data/github_versions/
+
+# V3 benchmark - regenerable embedding cache
+new_benchmark/data/cache/
+
+# V3 benchmark - LLM API cache
+llm_cache/
+
 # State-version local runtime / large intermediate results
 benchmark/logs/
 benchmark/tmp/
