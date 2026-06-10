@@ -10,7 +10,7 @@ To study this problem, we introduce \textbf{TSSMRBench}, a benchmark for \emph{t
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=\textwidth]{{paper/figures/dataset case1}.pdf}
+\includegraphics[width=0.7\textwidth]{{figures/dataset case1}.pdf}
 \Description{Illustrative TSSMRBench instance built from the Raphire slash Win11Debloat release window. The left side shows task-relevant temporal semantic states selected from a 30-state memory trajectory, with omitted states collapsed by ellipses. The right side shows one example question for each task family and the supporting states required to answer it.}
 \caption{Illustrative benchmark instance from the \texttt{Raphire/Win11Debloat} repository. The full scenario contains 30 temporal semantic states, but only the task-relevant states are shown here. The single-state lookup question depends on one state, the cross-version comparison question depends on two states, and the temporal ordering question depends on four states. The benchmark therefore tests whether a memory system can retrieve the stage-correct supporting states from an evolving memory trajectory, not merely retrieve a topically related memory.}
 \label{fig:tssmrbench-example}

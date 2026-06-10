@@ -28,7 +28,7 @@ Oracle Gold Context & annotated supporting memory units & none & none & DeepSeek
 
 \subsection{Overall Results}
 
-\input{paper/tables/generated/main_results_expanded}
+\input{tables/generated/main_results_expanded}
 
 Table~\ref{tab:overall-expanded} reports the main results. Oracle Gold Context is treated as ideal retrieval, so its Cov and CSR are 1.0 by construction because the annotated supporting states are directly provided to the answer model. Its remaining errors appear only in ACC.
 
@@ -42,7 +42,7 @@ Figure~\ref{fig:task-topk-acc} reports the results by task family and retrieval 
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=\textwidth]{paper/figures/generated/official300_task_topk_acc}
+\includegraphics[width=\textwidth]{figures/generated/official300_task_topk_acc}
 \Description{A six-panel figure with three task columns. The top row plots answer accuracy and the bottom row plots gold-support coverage as functions of retrieval top-k. The three columns correspond to single-state lookup, cross-version comparison, and temporal ordering.}
 \caption{ACC and Cov by task family and retrieval top-k. The top row reports ACC and the bottom row reports Cov; the three columns correspond to single-state lookup, cross-version comparison, and temporal ordering.}
 \label{fig:task-topk-acc}
@@ -54,7 +54,7 @@ The second trend is a consistent difficulty ordering across baselines: single-st
 
 To quantify the task effect beyond the descriptive plots, we fit a mixed-effects logistic regression on answer correctness using the automatic baselines at the main task-specific retrieval top-k settings. The model uses fixed effects for task family and system, with a random intercept for question. Table~\ref{tab:task-effect-mixed-logit} shows that, relative to single-state lookup, the odds of a correct answer drop to 0.26$\times$ for cross-version comparison and to 0.11$\times$ for temporal ordering. This provides model-based support for the same conclusion suggested by the curves: retrieving the stage-correct state becomes substantially harder once the question depends on multiple temporally related versions.
 
-\input{paper/tables/generated/task_effect_mixed_logit}
+\input{tables/generated/task_effect_mixed_logit}
 
 \subsection{Decoupling Retrieval from Reasoning}
 
@@ -64,7 +64,7 @@ This analysis is important because overall answer accuracy alone cannot tell us 
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\columnwidth]{paper/figures/generated/official300_decoupling_maink}
+\includegraphics[width=\columnwidth]{figures/generated/official300_decoupling_maink}
 \Description{A stacked bar chart for BM25, FAISS, Mem0, Graphiti, and Oracle Gold Context. Each bar partitions questions into all-recalled correct, all-recalled incorrect, partial-recalled correct, partial-recalled incorrect, zero-recalled correct, and zero-recalled incorrect at the main task-specific retrieval top-k settings.}
 \caption{Retrieval--reasoning decoupling at the main task-specific retrieval top-k settings. Each bar partitions questions by retrieval completeness and final answer correctness.}
 \label{fig:retrieval-reasoning}
@@ -80,7 +80,7 @@ These findings point to a broader design implication. A memory system for evolvi
 
 \subsection{Computational Efficiency}
 
-\input{paper/tables/generated/cost_profile}
+\input{tables/generated/cost_profile}
 
 Table~\ref{tab:cost-profile} shows that effectiveness must be read together with computational cost. FAISS is the strongest efficiency--effectiveness trade-off among the automatic baselines: it is the fastest retriever (195.12 ms on average) and also the strongest automatic system in accuracy, coverage, and complete-support rate. BM25 is slower than FAISS despite weaker overall effectiveness, which makes it a useful lexical reference point but not a strong efficiency frontier.
 
