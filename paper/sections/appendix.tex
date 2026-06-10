@@ -1,25 +1,35 @@
 \section{Appendix}
 
-\subsection{Exact Prompt Excerpts}
+This appendix provides details supporting the reproducibility and interpretability of TSSMRBench. Section~A.1 presents the prompts used during benchmark construction and answer generation. Section~A.2 explains the dataset schema. Section~A.3 illustrates retrieval success and failure patterns with concrete examples.
 
-We include exact prompt excerpts here for reproducibility. Listings~\ref{lst:artifact-prompt}--\ref{lst:answer-prompt} show the final construction and answer-generation prompts used in the released benchmark.
+\subsection{Construction and Evaluation Prompts}
 
-\begin{lstlisting}[caption={Exact excerpt from the final release-window construction prompt.},label={lst:artifact-prompt}]
+TSSMRBench uses LLM-assisted construction at two stages: (1)~rewriting raw release notes into normalized memory units, and (2)~generating multiple choice questions with annotated supporting states. We present the key excerpts and explain the design choices behind them.
+
+\paragraph{Memory-unit construction.}
+Listing~\ref{lst:artifact-prompt} shows the core instructions. Several constraints are critical for benchmark integrity. First, each normalized memory unit must describe \emph{only the current release note} without comparing it to earlier or later releases; this prevents cross-version leakage that would trivialize retrieval. Second, each unit must explicitly name both the repository and the release version or tag, ensuring that version identity is preserved. Third, the prompt forbids mentioning benchmark setup, memory pools, or neighboring releases, so that the resulting text resembles a natural memory entry rather than an artificially constructed artifact.
+
+\needspace{12\baselineskip}
+\begin{lstlisting}[caption={Excerpt from the release-window construction prompt.},label={lst:artifact-prompt}]
 Build one unified repository release-evolution prototype from the provided official GitHub release-note nodes.
 
 Requirements:
 - Use only the provided release-note nodes.
 - Produce one single JSON object matching the output schema.
-- Only generate chunk-level memory_unit_text values keyed by memory_node_id.
-- For every chunk, write memory_unit_text in English.
-- Every memory_unit_text must explicitly name both the repository and the current release version or tag.
-- Every memory_unit_text must describe only the current release note itself.
-- Do not compare to earlier or later releases inside memory_unit_text.
-- Do not mention benchmark setup, memory pools, retrieval, neighboring releases, hidden context, or any chain-construction process.
+- Only generate chunk-level normalized text values keyed by node identifier.
+- For every chunk, write in English.
+- Each text must explicitly name the repository and the current release version or tag.
+- Each text must describe only the current release note itself.
+- Do not compare to earlier or later releases.
+- Do not mention benchmark setup, memory pools, retrieval, or neighboring releases.
 ...
 \end{lstlisting}
 
-\begin{lstlisting}[caption={Exact prompt excerpt defining the final output schema and QA rules.},label={lst:qa-prompt}]
+\paragraph{QA generation schema.}
+Listing~\ref{lst:qa-prompt} shows the output schema and rules. Each repository receives exactly three questions, one per task family. Every question must include the gold supporting node identifiers, which make it possible to compute coverage and complete-support rate independently of final answer correctness. The rules enforce task-specific constraints: cross-version comparison questions must be grounded in concrete differences (not trivially unchanged pairs), and temporal-ordering questions must use 3--5 states whose ordering requires reading the actual memory content rather than relying on version-number patterns.
+
+\needspace{14\baselineskip}
+\begin{lstlisting}[caption={Excerpt defining the output schema and QA rules.},label={lst:qa-prompt}]
 "questions": [
   {
     "question_id": "string",
@@ -27,130 +37,104 @@ Requirements:
     "answer_format": "multiple_choice",
     "query_text": "question text that explicitly names the repository",
     "options": [
-      {"option_id": "A", "text": "option text"},
-      {"option_id": "B", "text": "option text"},
-      {"option_id": "C", "text": "option text"},
-      {"option_id": "D", "text": "option text"}
+      {"option_id": "A", "text": "option text"}, ...
     ],
     "correct_option_id": "A",
-    "source_chunk_ids": ["memory_node_id_1"],
-    "answer_support": [{"memory_node_id": "memory_node_id_1", "answer_text": "support text"}]
+    "source_chunk_ids": ["node_id_1"],
+    "answer_support": [{"node_id": "node_id_1", "answer_text": "support text"}]
   }
 ]
 
-- Generate exactly 3 multiple-choice questions, one per task type.
-- Every query_text must explicitly name the repository.
-- Use source_chunk_ids as the question-level gold evidence field.
-- For cross_version_comparison, compare two releases using concrete release-content differences.
+- Generate exactly 3 questions, one per task type.
+- Every query must explicitly name the repository.
+- For cross_version_comparison, compare two releases using concrete differences.
 - For temporal_version_ordering, use 3 to 5 release-content states.
-- The answer options for temporal_version_ordering should only be orderings of those indices.
-- The question should still require the system to retrieve the corresponding chunk-level memory_unit_text content.
+- The answer should require retrieving the corresponding memory content.
 ...
 \end{lstlisting}
 
-\begin{lstlisting}[caption={Exact excerpt from \texttt{benchmark/src/evaluation/answer\_generator.py}.},label={lst:answer-prompt}]
-MC_SYSTEM_PROMPT = """You are a strict evaluation assistant for a memory benchmark.
+\paragraph{Answer-generation prompt.}
+Listing~\ref{lst:answer-prompt} shows the answer-generation prompt applied identically across all baselines. Two design choices are worth noting. First, the prompt instructs the model to answer \emph{only from the retrieved memory}, explicitly forbidding outside knowledge or guessing, so that the final answer reflects what the memory system provided. Second, the model may return option~E when the retrieved memory is completely irrelevant, which prevents forced guessing and makes accuracy a more faithful measure of retrieval quality.
+
+
+\subsection{Dataset Schema}
+
+The benchmark dataset stores each scenario as a JSON object containing the memory trajectory and the associated questions. We explain the two core record types.
+
+
+
+\paragraph{Memory-node record.}
+Each memory node contains a unique identifier encoding the repository, source type, and date-derived key. The raw release-note text is preserved for auditing, while the normalized text (produced by the LLM rewriting step) is the only text written into the retrieval pool. The normalization removes hyperlinks, formatting markers, and cross-release comparisons, producing a clean description of the release-specific state. Timestamp fields provide the temporal grounding for the node's position in the evolution trajectory. Separating the raw and normalized versions ensures that the benchmark measures retrieval over a controlled memory surface.
+
+
+\needspace{12\baselineskip}
+\begin{lstlisting}[caption={Excerpt from the answer-generation prompt.},label={lst:answer-prompt}]
+You are a strict evaluation assistant for a memory benchmark.
 
 You must answer using only the retrieved memory.
-You must not use outside knowledge, background knowledge, guessing, or prior world knowledge.
+You must not use outside knowledge, background knowledge, guessing,
+or prior world knowledge.
 Your job is to choose the best-supported answer from the retrieved memory.
 
 Output rule:
 - Return exactly one uppercase option letter: A, B, C, D, or E.
 - Do not output any explanation, punctuation, JSON, markdown, or extra text.
-- If the retrieved memory contains relevant evidence for one option, choose that option actively.
-- Return E only when the retrieved memory is completely irrelevant or contains no answer-bearing evidence for any option."""
-
-MC_USER_PROMPT = """You may answer only from the retrieved memory below.
-If the retrieved memory contains relevant evidence for one option, choose the best-supported option.
-Return E only if the retrieved memory is completely irrelevant or contains no answer-bearing evidence.
+- If the retrieved memory contains relevant evidence for one option,
+  choose that option actively.
+- Return E only when the retrieved memory is completely irrelevant
+  or contains no answer-bearing evidence for any option.
 ...
-"""
 \end{lstlisting}
 
-\subsection{Exact Dataset Excerpts}
+\paragraph{Question record.}
+Each question record includes the task type, the query text, four multiple choice options, the correct option, and the annotated gold supporting nodes. The gold node identifiers make it possible to evaluate not only whether the final answer is correct but also whether the memory system retrieved the right supporting states. For temporal-ordering questions, the options are orderings of state indices (e.g., $2\!\to\!1\!\to\!4\!\to\!3$), so the question cannot be solved by pattern-matching version numbers alone. Each question also includes an \texttt{answer\_support} field that provides per-node evidence text explaining why each supporting node is relevant, useful for auditing gold annotations.
 
-Listing~\ref{lst:dataset-json} shows a real excerpt from the unified formal dataset file for the \texttt{Raphire/Win11Debloat} repository window used in Figure~\ref{fig:tssmrbench-example}.
+\subsection{Retrieval Result Examples}
 
-\begin{lstlisting}[caption={Exact excerpt from \texttt{official\_300\_merged.json} for \texttt{Raphire/Win11Debloat}.},label={lst:dataset-json}]
-{
-  "repo": "Raphire/Win11Debloat",
-  "window_title": "Raphire/Win11Debloat recent release evolution",
-  "chunk_example": {
-    "memory_node_id": "Raphire__Win11Debloat__release__2025_06_11",
-    "repo": "Raphire/Win11Debloat",
-    "tag_name": "2025.06.11",
-    "title": "Release 2025.06.11",
-    "time_hint": "2025-06-10",
-    "published_at": "2025-06-10T22:10:42Z",
-    "raw_text": "Repository: Raphire/Win11Debloat ...",
-    "memory_unit_text": "In the Raphire/Win11Debloat release 2025.06.11, this minor release fixes an issue with clearing the start menu pinned apps layout for all users."
-  },
-  "question_example": {
-    "question_id": "q3_temporal_version_ordering",
-    "task_type": "temporal_version_ordering",
-    "answer_format": "multiple_choice",
-    "query_text": "In the Raphire/Win11Debloat release window, order the following release-content states from earliest to latest: (1) a release that adds a full graphical user interface (GUI), (2) a release that adds an option to disable AI features in Paint & Notepad, (3) a release that adds System Registry backup & restore, (4) a release that adds an option to disable BitLocker automatic device encryption.",
-    "options": [
-      { "option_id": "A", "text": "2 -> 1 -> 4 -> 3" },
-      { "option_id": "B", "text": "2 -> 4 -> 1 -> 3" },
-      { "option_id": "C", "text": "1 -> 2 -> 3 -> 4" },
-      { "option_id": "D", "text": "4 -> 2 -> 1 -> 3" }
-    ],
-    "correct_option_id": "A",
-    "source_chunk_ids": [
-      "Raphire__Win11Debloat__release__2025_08_01",
-      "Raphire__Win11Debloat__release__2026_02_01",
-      "Raphire__Win11Debloat__release__2026_02_04",
-      "Raphire__Win11Debloat__release__2026_05_10"
-    ],
-    "answer_support": [
-      { "memory_node_id": "Raphire__Win11Debloat__release__2025_08_01", "answer_text": "an option to disable AI features in Paint & Notepad is introduced" },
-      ...
-    ]
-  }
-}
-\end{lstlisting}
+To illustrate retrieval-level behavior at the individual question level (complementing the aggregate analysis in Section~4.4), we describe one successful and one failed case from the Mem0 evaluation.
 
-\subsection{Exact Retrieval Result Excerpts}
+\paragraph{Successful single-state retrieval.}
+In this case, Mem0 retrieves three memory facts, all topically related to the query. The first retrieved fact matches the gold node exactly, yielding a support coverage of 1.0, and the answer model correctly selects the right option. This illustrates a case where Mem0's fact-level retrieval aligns well with the benchmark's state-level gold support: the relevant fact is present, and no competing version facts introduce confusion. The second and third retrieved facts come from nearby releases that mention related but different features; this is exactly the kind of semantically adjacent distractor that makes the task non-trivial, yet the correct fact still ranks first.
 
-Listings~\ref{lst:eval-json-success} and \ref{lst:eval-json-failure} show exact successful and failed records from the formal Mem0 evaluation on the same repository window.
+\paragraph{Failed temporal-ordering retrieval.}
+In this case, the gold support requires four state nodes, but Mem0 retrieves only one matching fact, yielding a support coverage of 0.25. The remaining retrieved facts are topically related (e.g., UI improvements, feature tweaks) but do not correspond to the other three gold nodes. Because the answer model cannot reconstruct the full temporal ordering from partial evidence, it returns~E (no answer-bearing evidence), and the question is scored as incorrect. This case illustrates the granularity mismatch discussed in Section~4.4: retrieving individual facts rather than complete version states is often insufficient when a question depends on multiple temporally ordered states. More broadly, this failure mode suggests that fact-oriented memory systems may need an additional mechanism (such as explicit version grouping or trajectory-aware retrieval) to assemble multi-state evidence as a coherent unit rather than as a bag of independently retrieved facts.
 
-\begin{lstlisting}[caption={Exact successful Mem0 result excerpt from \texttt{mem0.questions.jsonl}.},label={lst:eval-json-success}]
-{
-  "question_id": "Raphire__Win11Debloat_release_window__q1_single_state_lookup",
-  "query_text": "In the Raphire/Win11Debloat releases, which release adds an option to disable AI features in Paint & Notepad?",
-  "retrieved_facts": [
-    "- In the Raphire/Win11Debloat release 2025.08.01, an option to disable AI features in Paint & Notepad is introduced.",
-    "- In the Raphire/Win11Debloat release 2025.08.16, a missing key for Disable Paint AI Sysprep/Undo files is fixed. ...",
-    "- In the Raphire/Win11Debloat release 2025.06.12, new options are added to disable animations and visual effects. ..."
-  ],
-  "matched_gold_node_ids": [
-    "Raphire__Win11Debloat__release__2025_08_01"
-  ],
-  "support_coverage": 1.0,
-  "generated_answer": "B",
-  "is_correct": true
-}
-\end{lstlisting}
+\paragraph{Data provenance.}
+In the formal experiments, the evaluated memory systems ingest only the normalized text. Raw release-note text is preserved in the dataset but is never written into the retrieval pool. The released result files also retain the original prompt payload, the full retrieved-memory text, the matched supporting node identifiers, and per-$k$ sliced evaluation outputs, so that every reported score can be traced back to a concrete record without re-running the full pipeline. This provenance is important because a benchmark that aims to diagnose system behavior, not only rank systems, must allow reviewers to inspect the evidence behind any individual result.
 
-\begin{lstlisting}[caption={Exact failed Mem0 temporal-ordering result excerpt from \texttt{mem0.questions.jsonl}.},label={lst:eval-json-failure}]
-{
-  "question_id": "Raphire__Win11Debloat_release_window__q3_temporal_version_ordering",
-  "query_text": "In the Raphire/Win11Debloat release window, order the following release-content states from earliest to latest: ...",
-  "retrieved_facts": [
-    "- In the Raphire/Win11Debloat release 2025.08.01, an option to disable AI features in Paint & Notepad is introduced.",
-    "- In the Raphire/Win11Debloat release 2026.02.01-R2, a full graphical user interface (GUI) is introduced.",
-    "- In the Raphire/Win11Debloat release 2026.04.26, the app & tweak selection UI is improved ...",
-    "- In the Raphire/Win11Debloat release 2026.02.12, the DisableEdgeAds feature is improved ..."
-  ],
-  "matched_gold_node_ids": [
-    "Raphire__Win11Debloat__release__2025_08_01"
-  ],
-  "support_coverage": 0.25,
-  "generated_answer": "E",
-  "is_correct": false
-}
-\end{lstlisting}
+\subsection{Per-Task Retrieval--Reasoning Decoupling}
 
-In the formal release-only experiments, the evaluated memory systems ingest only \texttt{memory\_unit\_text}. Raw release-note text is preserved for auditing but is not written into the retrieval pool. The released result files also retain the original prompt payload, retrieved-memory text, matched supporting node identifiers, and per-\textit{k} sliced evaluation outputs so that every reported score can be traced back to concrete evidence.
+
+\begin{table}[t]
+\centering
+\scriptsize
+\caption{Per-task retrieval--reasoning decoupling at the main task-specific top-$k$ settings. Each cell reports the fraction of questions in each retrieval completeness bucket. All-recalled: full support recovered; partial-recalled: only part of the support recovered; zero-recalled: no supporting states recovered.}
+\label{tab:per-task-decoupling}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llccc}
+\toprule
+Task & System & All & Partial & Zero \\
+\midrule
+\multirow{4}{*}{Single}
+ & BM25 & 0.89 & 0.00 & 0.11 \\
+ & FAISS & 0.95 & 0.00 & 0.05 \\
+ & Mem0 & 0.71 & 0.00 & 0.29 \\
+ & Graphiti & 0.73 & 0.00 & 0.27 \\
+\midrule
+\multirow{4}{*}{Cross}
+ & BM25 & 0.30 & 0.29 & 0.41 \\
+ & FAISS & 0.79 & 0.20 & 0.01 \\
+ & Mem0 & 0.46 & 0.37 & 0.18 \\
+ & Graphiti & 0.55 & 0.39 & 0.06 \\
+\midrule
+\multirow{4}{*}{Temporal}
+ & BM25 & 0.29 & 0.61 & 0.11 \\
+ & FAISS & 0.62 & 0.37 & 0.00 \\
+ & Mem0 & 0.31 & 0.61 & 0.09 \\
+ & Graphiti & 0.38 & 0.59 & 0.04 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+Table~\ref{tab:per-task-decoupling} breaks down the retrieval--reasoning decoupling from Section~4.4 by task family. On single-state lookup, the partial-recalled bucket is empty by construction because the gold support consists of exactly one node. On cross-version comparison and temporal ordering, partial-recalled becomes the largest bucket for most systems, reflecting the increasing difficulty of recovering all required states simultaneously. FAISS achieves the highest all-recalled rate across all three tasks, but still drops from 0.95 on single-state lookup to 0.62 on temporal ordering, showing that even dense retrieval struggles to recover the full support set when multiple temporally related states are needed. A notable contrast is between Mem0 and Graphiti on temporal ordering: Mem0 has a higher zero-recalled rate (0.09 vs.\ 0.04) but a similar partial-recalled rate, suggesting that Graphiti's graph traversal more reliably reaches the right memory region but still loses individual version boundaries during graph construction.

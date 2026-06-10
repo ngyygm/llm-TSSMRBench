@@ -15,6 +15,7 @@
 \usepackage{tabularx}
 \usepackage{xcolor}
 \usepackage{listings}
+\usepackage{needspace}
 
 \lstset{
   basicstyle=\ttfamily\scriptsize,
@@ -119,13 +120,11 @@
 \input{sections/conclusion}
 \input{sections/artifacts}
 
+\appendix
+\input{sections/appendix}
+
 \clearpage
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{references}
-
-\clearpage
-\onecolumn
-\appendix
-\input{sections/appendix}
 
 \end{document}

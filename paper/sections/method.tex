@@ -3,7 +3,7 @@
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{{figures/system overview}.pdf}
-\Description{Overall framework of TSSMRBench. The figure summarizes the paper from left to right: the problem of retrieving stage-correct states from evolving memories, the three benchmark task families, the construction of 30-state memory trajectories and multiple-choice questions, and the unified evaluation protocol across shared-memory baselines and retrieval metrics.}
+\Description{Overall framework of TSSMRBench. The figure summarizes the paper from left to right: the problem of retrieving stage-correct states from evolving memories, the three benchmark task families, the construction of 30-state memory trajectories and multiple choice questions, and the unified evaluation protocol across shared-memory baselines and retrieval metrics.}
 \caption{Overall framework of TSSMRBench. The figure summarizes the temporal semantic state retrieval problem, the benchmark task design, the release-derived data construction pipeline, and the unified evaluation protocol. It is intended as a paper-level overview of how the benchmark connects the problem definition, dataset construction, and memory-system evaluation.}
 \label{fig:tssmrbench-framework}
 \end{figure*}
@@ -32,7 +32,7 @@ R_k(q) = (r_1, r_2, \ldots, r_k)
 \]
 be the ranked retrieval output returned by a memory system.
 
-The task is to retrieve a ranked list $R_k(q)$ such that the supporting set $G(q)$ is recovered and the answer generator can derive the gold answer $y(q)$ using only the retrieved evidence. The core difficulty is that several states in $\mathcal{T}$ may be semantically similar while being temporally incompatible with the query.
+The task is to retrieve a ranked list $R_k(q)$ such that the supporting set $G(q)$ is recovered and the answer generator can derive the gold answer $y(q)$ using only the retrieved evidence. In plain terms, the memory system receives a query about a specific stage of an evolving object and must return exactly those memory nodes that describe the object at that stage. The core difficulty is that several states in $\mathcal{T}$ may be semantically similar while being temporally incompatible with the query. For example, if a project has gone through ten planning revisions, the memory system must distinguish between the version that first introduced a feature, the version that later modified it, and the current version, even though all ten revisions may describe the same feature in similar language.
 
 TSSMRBench operationalizes this capability through three task families:
 \begin{itemize}[leftmargin=*]
@@ -61,42 +61,57 @@ Temporal ordering & 3--5 & 5, 8, 10 \\
 
 \subsection{Benchmark Evaluation Design Principles}
 
-To isolate this capability, the benchmark and its evaluation protocol follow five principles. Questions must depend on \emph{stage-specific validity}: the correct answer should be determined by which temporal semantic state is valid for the queried stage, not simply by topical relevance or recency. They must also remain \emph{evidence-grounded}: the final answer should only be derivable by aligning the question's state description with retrieved memory content, rather than by exploiting superficial cues such as version labels, dates, or option formatting. The benchmark further varies \emph{support requirements} so that some questions depend on one state while others require several states, allowing us to distinguish pointwise retrieval from complete support recovery over a trajectory. The evaluation preserves \emph{mixed-memory interference} by retrieving from repository-mixed memory collections instead of isolated per-trajectory stores. Finally, the protocol separates \emph{retrieval failure} from \emph{state-selection failure}, allowing us to tell whether a memory system missed the required state entirely or instead retrieved semantically related but temporally incompatible evidence.
+To isolate this capability, the benchmark and its evaluation protocol follow five principles.
+
+\paragraph{Stage-specific validity.}
+Questions must depend on which temporal semantic state is valid for the queried stage, not simply on topical relevance or recency. For instance, a question asking ``which version first introduced delayed-hearing handling?'' requires the system to identify the earliest matching state, not the latest one.
+
+\paragraph{Evidence-grounded answering.}
+The final answer should only be derivable by aligning the question's state description with retrieved memory content, rather than by exploiting superficial cues such as version labels, dates, or option formatting. This prevents the answer model from guessing the correct option without actually reading the retrieved evidence.
+
+\paragraph{Varied support requirements.}
+Some questions depend on one state while others require several states. By varying the support size across task families, the benchmark can distinguish pointwise retrieval (whether the system can find one correct state) from complete support recovery over a trajectory, which requires finding all of the relevant states simultaneously.
+
+\paragraph{Mixed-memory interference.}
+All retrieval operates over repository-mixed memory collections rather than isolated per-trajectory stores. This means the memory system cannot exploit trajectory boundaries to narrow the search space, and must instead disambiguate the correct state from a much larger pool of semantically overlapping memories.
+
+\paragraph{Separating retrieval failure from state-selection failure.}
+The protocol distinguishes whether a memory system missed the required state entirely (retrieval failure) or instead retrieved semantically related but temporally incompatible evidence (state-selection failure). This distinction is important because the two failure modes suggest very different system improvements: retrieval failures call for better indexing or recall strategies, while state-selection failures call for better temporal reasoning or version-aware reranking.
 
 \subsection{Data Construction Flow}
 
 We instantiate these principles using an auditable release-only benchmark built from official repository evolution records.
 
 \paragraph{Step 1: Data source selection.}
-We use official GitHub release notes because they are repository-authoritative descriptions of evolving software states, including feature additions, policy changes, fixes, migrations, and deprecations. Compared with informal discussions, release notes provide a cleaner and more reproducible record of how a system changes across versions.
+We use official GitHub release notes because they are repository-authoritative descriptions of evolving software states, including feature additions, policy changes, fixes, migrations, and deprecations. Compared with informal discussions such as commit messages or issue threads, release notes provide a cleaner and more reproducible record of how a system changes across versions. They are also publicly available and version-stamped, which makes the benchmark fully auditable: any result can be traced back to a specific release of a specific repository.
 
 \paragraph{Step 2: Trajectory node determination.}
-For each repository, we take the latest 30 usable release notes and treat them as a fixed local evolution window. Each release note becomes one temporal semantic state node, producing an evolving memory trajectory of length 30. Repositories without a sufficient release history are excluded. The formal benchmark contains 300 repositories, yielding 9{,}000 memory nodes in total.
+For each repository, we take the latest 30 usable release notes and treat them as a fixed local evolution window. Each release note becomes one temporal semantic state node, producing an evolving memory trajectory of length 30. We choose 30 nodes because it is long enough to create meaningful interference among semantically similar states (the memory system must pick out the correct stage from dozens of candidates) while still being short enough for the evaluation pipeline to process reliably. Repositories without a sufficient release history are excluded. The formal benchmark contains 300 repositories, yielding 9{,}000 memory nodes in total.
 
 \paragraph{Step 3: LLM rewriting of raw release notes.}
-Raw release notes contain hyperlinks, formatting markers, references, and other artifacts that are not ideal as a memory surface. We therefore use a large language model to rewrite each release note into a normalized English memory unit. This rewriting preserves repository identity and release-specific state content while removing markup-heavy noise. The resulting normalized text is the only memory surface ingested by the evaluated memory systems; the original release note is retained only for audit and provenance.
+Raw release notes contain hyperlinks, formatting markers, references, and other artifacts that are not ideal as a memory surface. We therefore use a large language model to rewrite each release note into a normalized English memory unit. This rewriting preserves repository identity and release-specific state content while removing markup-heavy noise. The normalization serves two purposes: it puts all memory units on a level playing field so that retrieval systems are not biased by differences in formatting style across repositories, and it removes information that would make the task trivially easy (e.g., direct links to earlier releases). The resulting normalized text is the only memory surface ingested by the evaluated memory systems; the original release note is retained only for audit and provenance.
 
 \paragraph{Step 4: QA generation.}
-On top of each 30-node evolving memory trajectory, we generate one multiple-choice question for each task family, yielding 3 questions per repository and 900 questions overall. For every question, we annotate the supporting state nodes required for answering it. This makes it possible to evaluate not only final answer correctness but also support recovery.
+On top of each 30-node evolving memory trajectory, we generate one multiple choice question for each task family, yielding 3 questions per repository and 900 questions overall. For every question, we annotate the supporting state nodes required for answering it. This annotation step is essential: without it, we could only measure final answer correctness, but with it we can also measure whether the memory system retrieved the right supporting states regardless of whether the final answer was correct. This makes it possible to evaluate not only final answer correctness but also support recovery.
 
 \subsection{Question Design}
 
 Question design is driven by support complexity rather than by superficial wording diversity.
 
 \paragraph{Single-state lookup.}
-These questions ask the memory system to identify one state node that contains a target condition, decision, fix, or release-specific behavior. They test whether the memory system can localize a single correct state among semantically nearby alternatives.
+These questions ask the memory system to identify one state node that contains a target condition, decision, fix, or release-specific behavior. For example, a question might ask ``which release first introduced an option to disable AI features in Paint \& Notepad?'' The memory system must locate the one state node among 30 candidates that describes this specific behavior, rather than returning any state that merely mentions AI features. They test whether the memory system can localize a single correct state among semantically nearby alternatives.
 
 \paragraph{Cross-version comparison.}
-These questions require contrasting two states that differ in a clear, evidence-supported way. We only construct such questions when the source evidence contains a substantive difference between the two releases. Comparison questions are not generated from pairs whose behavior is essentially unchanged.
+These questions require contrasting two states that differ in a clear, evidence-supported way. For example, a question might ask ``what changed between release~X and release~Y regarding the handling of BitLocker encryption?'' Answering requires retrieving both states and identifying the concrete difference between them. We only construct such questions when the source evidence contains a substantive difference between the two releases. Comparison questions are not generated from pairs whose behavior is essentially unchanged.
 
 \paragraph{Temporal ordering.}
-These questions require mapping several state descriptions back to their supporting nodes and ordering them correctly along the trajectory. They are designed so that solving them robustly still depends on retrieving the corresponding memory content, rather than simply relying on superficial ordering cues in the question text alone.
+These questions require mapping several state descriptions back to their supporting nodes and ordering them correctly along the trajectory. For example, a question might present four feature descriptions and ask which temporal ordering is correct. The difficulty is that the descriptions themselves do not contain explicit dates or version numbers; instead, the answer model must retrieve the corresponding memory nodes and use their content to determine which came first. They are designed so that solving them robustly still depends on retrieving the corresponding memory content, rather than simply relying on superficial ordering cues in the question text alone.
 
-All questions are multiple-choice. Version identifiers, tags, or publication cues may appear when they are part of the original material, but the question and options are constrained so that the answer cannot be derived reliably without aligning the state descriptions in the query to the stored memory units.
+All questions are multiple choice. Version identifiers, tags, or publication cues may appear when they are part of the original material, but the question and options are constrained so that the answer cannot be derived reliably without aligning the state descriptions in the query to the stored memory units.
 
 \subsection{Evaluation Pipeline and Metrics}
 
-All baselines are evaluated under a shared global memory pool: before any query is issued, all 9{,}000 memory nodes from all 300 repositories are written into each baseline's own memory backend or retrieval index. Retrieval therefore operates over a single repository-mixed memory collection per baseline, rather than over isolated per-trajectory memory stores. This setting introduces cross-repository interference and prevents the memory system from exploiting trajectory boundaries.
+All baselines are evaluated under a shared global memory pool: before any query is issued, all 9{,}000 memory nodes from all 300 repositories are written into each baseline's own memory backend or retrieval index. Retrieval therefore operates over a single repository-mixed memory collection per baseline, rather than over isolated per-trajectory memory stores. This design choice is intentional: in a real deployed agent, memory from all interactions would coexist in the same store, and the retrieval system would need to disambiguate among overlapping memories without knowing which repository or context they belong to. This setting introduces cross-repository interference and prevents the memory system from exploiting trajectory boundaries.
 
 For each query $q$, the evaluated memory system retrieves the top-10 ranked memories:
 \[
@@ -111,11 +126,11 @@ The same ranked list is then reused across task-specific context budgets:
 
 The answer LLM is allowed to read only these retrieved memories and is not given access to unretrieved memory nodes. This protocol separates retrieval quality from how much of the ranked memory list is exposed at answer time. It also allows us to analyze whether a memory system places the required support near the top of the ranking or only recovers it deeper in the retrieved list.
 
-We report four primary metrics. \textbf{Accuracy (ACC)} measures whether the final answer is correct. \textbf{Coverage (Cov)} measures how much of the required support set is recovered:
+We report four primary metrics. \textbf{Accuracy (ACC)} measures whether the final answer is correct; this is the end-to-end metric that reflects what a user would observe. \textbf{Coverage (Cov)} measures how much of the required support set is recovered. In other words, of all the gold supporting states needed to answer the question, what fraction did the memory system actually retrieve:
 \[
 \mathrm{Cov}(q,k) = \frac{|G(q)\cap R_k(q)|}{|G(q)|}.
 \]
-\textbf{Complete Support Rate (CSR)} measures whether the full support set is recovered:
+\textbf{Complete Support Rate (CSR)} measures whether the full support set is recovered: a binary indicator that is 1 only when every required supporting state appears in the retrieved list.
 \[
 \mathrm{CSR}(q,k) = \mathbf{1}[G(q)\subseteq R_k(q)].
 \]

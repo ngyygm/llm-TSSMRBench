@@ -10,13 +10,13 @@ To study this problem, we introduce \textbf{TSSMRBench}, a benchmark for \emph{t
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.7\textwidth]{{figures/dataset case1}.pdf}
+\includegraphics[width=0.85\textwidth]{{figures/dataset case1}.pdf}
 \Description{Illustrative TSSMRBench instance built from the Raphire slash Win11Debloat release window. The left side shows task-relevant temporal semantic states selected from a 30-state memory trajectory, with omitted states collapsed by ellipses. The right side shows one example question for each task family and the supporting states required to answer it.}
 \caption{Illustrative benchmark instance from the \texttt{Raphire/Win11Debloat} repository. The full scenario contains 30 temporal semantic states, but only the task-relevant states are shown here. The single-state lookup question depends on one state, the cross-version comparison question depends on two states, and the temporal ordering question depends on four states. The benchmark therefore tests whether a memory system can retrieve the stage-correct supporting states from an evolving memory trajectory, not merely retrieve a topically related memory.}
 \label{fig:tssmrbench-example}
 \end{figure*}
 
-The current release of TSSMRBench contains 300 scenarios, 9{,}000 memory nodes, and 900 multiple-choice questions. We evaluate representative sparse retrieval, dense retrieval, and memory-system baselines under a unified global mixed-pool setting, where all memories are stored together before retrieval and each question must be answered from retrieved evidence. The evaluation target is the memory system used by the agent rather than the underlying answer LLM: answer generation is held fixed so that differences primarily reflect memory retrieval quality. Our baseline design spans lexical and dense retrieval together with recent memory-system architectures such as Mem0~\cite{mem02025} and Graphiti~\cite{graphiti2025}. The results show that current memory systems are far more reliable on single-state questions than on comparison and ordering questions; that many failures arise from retrieving temporally incompatible but semantically adjacent states; and that more complex memory systems do not automatically outperform simpler retrievers once state fidelity, memory granularity, and latency are taken into account.
+The current release of TSSMRBench contains 300 scenarios, 9{,}000 memory nodes, and 900 multiple choice questions. We evaluate representative sparse retrieval, dense retrieval, and memory-system baselines under a unified global mixed-pool setting, where all memories are stored together before retrieval and each question must be answered from retrieved evidence. The evaluation target is the memory system used by the agent rather than the underlying answer LLM: answer generation is held fixed so that differences primarily reflect memory retrieval quality. Our baseline design spans lexical and dense retrieval together with recent memory-system architectures such as Mem0~\cite{mem02025} and Graphiti~\cite{rasmussen2025zep}. The results show that current memory systems are far more reliable on single-state questions than on comparison and ordering questions; that many failures arise from retrieving temporally incompatible but semantically adjacent states; and that more complex memory systems do not automatically outperform simpler retrievers once state fidelity, memory granularity, and latency are taken into account.
 
 \begin{table}[t]
 \centering
@@ -29,7 +29,7 @@ Item & Value \\
 \midrule
 Scenarios & 300 repository-level release windows \\
 Memory nodes & 9{,}000 temporal semantic states \\
-Questions & 900 multiple-choice questions \\
+Questions & 900 multiple choice questions \\
 Task families & Single-state, cross-version, temporal ordering \\
 \bottomrule
 \end{tabular}

@@ -1,32 +1,35 @@
 \begin{table*}[t]
 \centering
 \small
-\caption{Main results on TSSMRBench. Each cell reports ACC / Cov / CSR, where ACC is answer accuracy, Cov is the average fraction of gold supporting states recovered in the retrieved set, and CSR is the fraction of questions for which the full gold support set is recovered. Oracle Gold Context is shown as an upper bound and is excluded from strongest-baseline marking. Bold marks the best automatic baseline and underline marks the second-best automatic baseline for each metric under the same task and retrieval top-k setting.}
+\caption{Main results on TSSMRBench. Each cell reports ACC / Cov / CSR, where ACC is answer accuracy, Cov is the average fraction of gold supporting states recovered in the retrieved set, and CSR is the fraction of questions for which the full gold support set is recovered. Each task family is evaluated at its own retrieval top-$k$ settings: single-state lookup uses $k{=}1,2,3$; cross-version comparison uses $k{=}2,5,8$; temporal ordering uses $k{=}5,8,10$. Oracle Gold Context is shown as an upper bound and is excluded from strongest-baseline marking. Bold marks the best automatic baseline and underline marks the second-best automatic baseline for each metric under the same task and top-$k$ setting.}
 \label{tab:overall-expanded}
-\setlength{\tabcolsep}{6pt}
+\setlength{\tabcolsep}{4pt}
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llccc@{}}
 \toprule
-Task & System & Top-k 1 & Top-k 2 & Top-k 3 \\
+ & & \multicolumn{3}{c}{Retrieval top-$k$} \\
+\cmidrule(lr){3-5}
+Task & System & $k{=}1$ & $k{=}2$ & $k{=}3$ \\
 \midrule
-\multicolumn{5}{l}{\textbf{Single-state lookup} (top-k cells: $k=1$, $k=2$, $k=3$; values are ACC / Cov / CSR)} \\
-\cmidrule(lr){1-5}
-\multirow{5}{*}{Single} & BM25 & \underline{0.8533} / \underline{0.8333} / \underline{0.8333} & \underline{0.8633} / \underline{0.8733} / \underline{0.8733} & \underline{0.8800} / \underline{0.8900} / \underline{0.8900} \\
+\multirow{5}{*}{Single-state lookup}
+ & BM25 & \underline{0.8533} / \underline{0.8333} / \underline{0.8333} & \underline{0.8633} / \underline{0.8733} / \underline{0.8733} & \underline{0.8800} / \underline{0.8900} / \underline{0.8900} \\
  & FAISS & \textbf{0.8933} / \textbf{0.8667} / \textbf{0.8667} & \textbf{0.9133} / \textbf{0.9200} / \textbf{0.9200} & \textbf{0.9433} / \textbf{0.9500} / \textbf{0.9500} \\
  & Mem0 & 0.6433 / 0.6733 / 0.6733 & 0.6533 / 0.7033 / 0.7033 & 0.6567 / 0.7100 / 0.7100 \\
  & Graphiti & 0.6800 / 0.6467 / 0.6467 & 0.7300 / 0.7167 / 0.7167 & 0.7267 / 0.7267 / 0.7267 \\
  & Oracle Gold Context & 0.9967 / 1.0000 / 1.0000 & 1.0000 / 1.0000 / 1.0000 & 1.0000 / 1.0000 / 1.0000 \\
 \midrule
-\multicolumn{5}{l}{\textbf{Cross-version comparison} (top-k cells: $k=2$, $k=5$, $k=8$; values are ACC / Cov / CSR)} \\
-\cmidrule(lr){1-5}
-\multirow{5}{*}{Cross} & BM25 & 0.2100 / 0.2767 / 0.1233 & 0.3200 / 0.3933 / 0.2567 & 0.3933 / 0.4483 / 0.3033 \\
+ & & $k{=}2$ & $k{=}5$ & $k{=}8$ \\
+\cmidrule(lr){3-5}
+\multirow{5}{*}{Cross-version comparison}
+ & BM25 & 0.2100 / 0.2767 / 0.1233 & 0.3200 / 0.3933 / 0.2567 & 0.3933 / 0.4483 / 0.3033 \\
  & FAISS & \underline{0.5033} / \underline{0.6033} / \underline{0.3433} & \textbf{0.7467} / \textbf{0.8067} / \textbf{0.6467} & \textbf{0.8400} / \textbf{0.8917} / \textbf{0.7933} \\
  & Mem0 & 0.2700 / 0.4400 / 0.1900 & 0.4067 / 0.5917 / 0.3833 & 0.4467 / 0.6400 / 0.4567 \\
  & Graphiti & \textbf{0.5467} / \textbf{0.6200} / \textbf{0.3933} & \underline{0.6567} / \underline{0.7150} / \underline{0.5100} & \underline{0.6700} / \underline{0.7417} / \underline{0.5467} \\
  & Oracle Gold Context & 0.9900 / 1.0000 / 1.0000 & 0.9833 / 1.0000 / 1.0000 & 0.9800 / 1.0000 / 1.0000 \\
 \midrule
-\multicolumn{5}{l}{\textbf{Temporal ordering} (top-k cells: $k=5$, $k=8$, $k=10$; values are ACC / Cov / CSR)} \\
-\cmidrule(lr){1-5}
-\multirow{5}{*}{Temporal} & BM25 & 0.2767 / 0.5406 / 0.2033 & 0.3267 / 0.5803 / 0.2600 & 0.3200 / 0.6094 / 0.2867 \\
+ & & $k{=}5$ & $k{=}8$ & $k{=}10$ \\
+\cmidrule(lr){3-5}
+\multirow{5}{*}{Temporal ordering}
+ & BM25 & 0.2767 / 0.5406 / 0.2033 & 0.3267 / 0.5803 / 0.2600 & 0.3200 / 0.6094 / 0.2867 \\
  & FAISS & \textbf{0.4633} / \textbf{0.7036} / \textbf{0.3033} & \textbf{0.5633} / \textbf{0.8200} / \textbf{0.5200} & \textbf{0.6300} / \textbf{0.8606} / \textbf{0.6233} \\
  & Mem0 & 0.1867 / 0.5556 / 0.1733 & 0.2500 / 0.6136 / 0.2733 & 0.2600 / 0.6356 / 0.3067 \\
  & Graphiti & \underline{0.3767} / \underline{0.6503} / \underline{0.2733} & \underline{0.4833} / \underline{0.6975} / \underline{0.3533} & \underline{0.4767} / \underline{0.7136} / \underline{0.3767} \\
