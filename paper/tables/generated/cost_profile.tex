@@ -1,10 +1,10 @@
-\begin{table}[t]
+\begin{table}[H]
 \centering
 \scriptsize
-\caption{Computational cost profile. Latency is mean retrieval-only latency in milliseconds, excluding answer generation. Retrieved context length is the mean number of context tokens passed to the answer model at the primary retrieval top-k setting of each task family.}
+\caption{Computational cost profile. Latency is mean retrieval-only latency; token columns report the mean answer-context tokens at the primary retrieval top-$k$ of each task family.}
 \label{tab:cost-profile}
-\setlength{\tabcolsep}{2pt}
-\begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}p{0.27\columnwidth}*{4}{>{\centering\arraybackslash}X}@{}}
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}p{0.31\columnwidth}*{4}{>{\centering\arraybackslash}X}@{}}
 \toprule
 System & Latency & Single & Cross & Temporal \\
 \midrule

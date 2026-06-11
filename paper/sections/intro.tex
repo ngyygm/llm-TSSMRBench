@@ -6,19 +6,9 @@ What makes this setting difficult is that many memories evolve. A plan may be re
 
 This requirement is not well captured by existing evaluation practice. Long-term memory benchmarks such as LoCoMo have substantially improved the evaluation of persistent memory~\cite{locomo2024}. Temporal and time-sensitive benchmarks such as TimeQA have sharpened our understanding of reasoning under changing information~\cite{timeqa2021}. Retrieval-oriented evaluation has also advanced through RAG-style settings, for which survey work now provides a broad overview of evaluation practices and failure modes~\cite{gao2023rag}. However, these benchmarks usually emphasize retention, relevance, or recency, rather than whether a memory system can distinguish among several semantically similar states of the same evolving object and retrieve the one that matches the queried stage. We discuss these neighboring benchmark families in Section~2. Here, the key point is simple: storing an evolving memory trajectory is not the same as retrieving the stage-correct state from that trajectory.
 
-To study this problem, we introduce \textbf{TSSMRBench}, a benchmark for \emph{temporal semantic state memory retrieval} in agent memory systems. TSSMRBench models each scenario as an evolving memory trajectory composed of temporal semantic states and evaluates whether the stage-correct state can be retrieved from a memory system given that trajectory. The benchmark contains three task families: \emph{single-state lookup}, which targets one stage-specific state; \emph{cross-version comparison}, which requires jointly retrieving two stage-specific states for contrast; and \emph{temporal ordering}, which requires recovering several states and arranging them along the correct temporal progression. Figure~\ref{fig:tssmrbench-example} shows one representative benchmark instance.
+To study this problem, we introduce \textbf{TSSMRBench}, a benchmark for \emph{temporal semantic state memory retrieval} in agent memory systems. TSSMRBench models each scenario as an evolving memory trajectory composed of temporal semantic states and evaluates whether the stage-correct state can be retrieved from a memory system given that trajectory. The benchmark contains three task families: \emph{single-state lookup}, which targets one stage-specific state; \emph{cross-version comparison}, which requires jointly retrieving two stage-specific states for contrast; and \emph{temporal ordering}, which requires recovering several states and arranging them along the correct temporal progression. The central benchmark contribution is therefore not another temporal QA set, but an evaluation target centered on the memory system itself: can it recover the correct version memory for the queried temporal semantic state? Figure~\ref{fig:tssmrbench-example} shows one representative benchmark instance.
 
-\begin{figure*}[t]
-\centering
-\includegraphics[width=0.85\textwidth]{{figures/dataset case1}.pdf}
-\Description{Illustrative TSSMRBench instance built from the Raphire slash Win11Debloat release window. The left side shows task-relevant temporal semantic states selected from a 30-state memory trajectory, with omitted states collapsed by ellipses. The right side shows one example question for each task family and the supporting states required to answer it.}
-\caption{Illustrative benchmark instance from the \texttt{Raphire/Win11Debloat} repository. The full scenario contains 30 temporal semantic states, but only the task-relevant states are shown here. The single-state lookup question depends on one state, the cross-version comparison question depends on two states, and the temporal ordering question depends on four states. The benchmark therefore tests whether a memory system can retrieve the stage-correct supporting states from an evolving memory trajectory, not merely retrieve a topically related memory.}
-\label{fig:tssmrbench-example}
-\end{figure*}
-
-The current release of TSSMRBench contains 300 scenarios, 9{,}000 memory nodes, and 900 multiple choice questions. We evaluate representative sparse retrieval, dense retrieval, and memory-system baselines under a unified global mixed-pool setting, where all memories are stored together before retrieval and each question must be answered from retrieved evidence. The evaluation target is the memory system used by the agent rather than the underlying answer LLM: answer generation is held fixed so that differences primarily reflect memory retrieval quality. Our baseline design spans lexical and dense retrieval together with recent memory-system architectures such as Mem0~\cite{mem02025} and Graphiti~\cite{rasmussen2025zep}. The results show that current memory systems are far more reliable on single-state questions than on comparison and ordering questions; that many failures arise from retrieving temporally incompatible but semantically adjacent states; and that more complex memory systems do not automatically outperform simpler retrievers once state fidelity, memory granularity, and latency are taken into account.
-
-\begin{table}[t]
+\begin{table}[!b]
 \centering
 \small
 \caption{TSSMRBench at a glance. A scenario is one repository-level release-evolution window, each memory node is one temporal semantic state, and each scenario contributes one question for each task family.}
@@ -35,6 +25,16 @@ Task families & Single-state, cross-version, temporal ordering \\
 \end{tabular}
 \end{table}
 
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.85\textwidth]{{figures/dataset case1}.pdf}
+\Description{Illustrative TSSMRBench instance built from the Raphire slash Win11Debloat release window. The left side shows task-relevant temporal semantic states selected from a 30-state memory trajectory, with omitted states collapsed by ellipses. The right side shows one example question for each task family and the supporting states required to answer it.}
+\caption{Illustrative benchmark instance from the Raphire/Win11Debloat repository. The full scenario contains 30 temporal semantic states, but only the task-relevant states are shown here. The single-state lookup question depends on one state, the cross-version comparison question depends on two states, and the temporal ordering question depends on four states. The benchmark therefore tests whether a memory system can retrieve the stage-correct supporting states from an evolving memory trajectory, not merely retrieve a topically related memory.}
+\label{fig:tssmrbench-example}
+\end{figure*}
+
+The current release of TSSMRBench contains 300 scenarios, 9{,}000 memory nodes, and 900 multiple choice questions. We evaluate representative lexical retrieval, vector-index retrieval, and memory-system baselines under a unified global mixed-pool setting, where all memories are stored together before retrieval and each question must be answered from retrieved evidence. The evaluation target is the memory system used by the agent rather than the underlying answer LLM: answer generation is held fixed so that differences primarily reflect memory retrieval quality. Our baseline design spans lexical and vector-index baselines together with recent memory-system architectures such as Mem0~\cite{mem02025} and Graphiti~\cite{rasmussen2025zep}. The results show that current memory systems are far more reliable on single-state questions than on comparison and ordering questions; that many failures arise from retrieving temporally incompatible but semantically adjacent states; and that more complex memory architectures do not automatically outperform simpler version-level retrievers once state fidelity, memory granularity, and latency are taken into account.
+
 Our contributions are threefold:
 \begin{enumerate}[leftmargin=*,topsep=2pt,itemsep=1pt]
 \item We introduce TSSMRBench and formalize \emph{temporal semantic state memory retrieval}: the ability to retrieve the stage-correct state from a memory system given an evolving memory trajectory.
@@ -42,4 +42,4 @@ Our contributions are threefold:
 \item We conduct a systematic experimental study showing that current memory systems still struggle on this problem, especially when semantically similar states coexist, and we use these findings to motivate future designs that preserve version history and support stage-aware retrieval.
 \end{enumerate}
 
-\textbf{Outline.} Section~2 reviews related work. Section~3 presents the task definition, design principles, and benchmark construction. Section~4 reports the experimental setup and results. Section~5 concludes. An unnumbered Artifacts section appears immediately before the references.
+\textbf{Outline.} Section~2 reviews related work. Section~3 presents the task definition, design principles, and benchmark construction. Section~4 reports the experimental setup and results. Section~5 concludes. Artifact availability and the required AI-use disclosure appear before the references.

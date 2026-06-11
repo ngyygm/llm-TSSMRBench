@@ -23,16 +23,16 @@ Finally, knowledge-update settings raise a different but related issue: how a me
 \begin{table}[!t]
 \centering
 \scriptsize
-\caption{Comparison of TSSMRBench with representative neighboring benchmarks. LongMem indicates whether the benchmark targets long-term memory; Temporal indicates whether temporal reasoning is a core requirement; Stage-correct retrieval indicates whether the benchmark explicitly asks for the state that is correct for a queried stage rather than merely a relevant or recent memory; Language reports the primary benchmark language; Scale summarizes benchmark size at a coarse level.}
+\caption{Comparison of TSSMRBench with representative neighboring benchmarks. LongMem indicates long-term memory focus; Spec-state indicates explicit retrieval of the stage-correct state; Lang. reports the primary language; Scale reports coarse benchmark size.}
 \label{tab:benchmark-comparison}
-\setlength{\tabcolsep}{2pt}
-\begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}p{0.28\columnwidth}>{\centering\arraybackslash}p{0.08\columnwidth}>{\centering\arraybackslash}p{0.10\columnwidth}>{\centering\arraybackslash}p{0.18\columnwidth}>{\centering\arraybackslash}p{0.08\columnwidth}>{\raggedright\arraybackslash}X@{}}
+\setlength{\tabcolsep}{1.5pt}
+\begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}p{0.28\columnwidth}>{\centering\arraybackslash}p{0.09\columnwidth}>{\centering\arraybackslash}p{0.11\columnwidth}>{\centering\arraybackslash}p{0.14\columnwidth}>{\centering\arraybackslash}p{0.08\columnwidth}>{\raggedright\arraybackslash}X@{}}
 \toprule
-Benchmark & \shortstack{Long\\Mem} & Temporal & \shortstack{Stage-correct\\retrieval} & Lang. & Scale \\
+Benchmark & \shortstack{Long\\Mem} & Temporal & \shortstack{Spec-\\state} & Lang. & Scale \\
 \midrule
 LoCoMo~\cite{locomo2024} & Yes & Partial & No & EN & 1,986 QA \\
 LongMemEval~\cite{longmemeval2024} & Yes & Partial & No & EN & 500 QA \\
-MemoryAgentBench~\cite{memoryagentbench2025} & Yes & Partial & No & EN & Multi-source suite \\
+\shortstack[l]{MemoryAgentBench\\\cite{memoryagentbench2025}} & Yes & Partial & No & EN & Multi-source suite \\
 TimeQA~\cite{timeqa2021} & No & Yes & No & EN & $\approx$40K QA \\
 MusTQ~\cite{mustq2024} & No & Yes & No & EN & $\approx$666K QA \\
 \midrule

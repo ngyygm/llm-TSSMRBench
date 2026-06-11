@@ -1,13 +1,3 @@
-\section*{Artifacts}
+\section*{Artifact Availability}
 
-\noindent\textbf{Repository.} The complete source code, benchmark dataset, evaluation pipeline, and raw result files are publicly available at:
-
-\noindent\url{https://github.com/ngyygm/llm-TSSMRBench}
-
-\noindent\textbf{Contents.} The repository includes: (1) the formal benchmark dataset (\texttt{official\_300\_merged.json}) containing 300 repository-level release-evolution windows with 9,000 memory nodes and 900 annotated multiple choice questions; (2) evaluation scripts that reproduce all reported experiments for BM25, FAISS, Mem0, and Graphiti baselines; (3) per-system result files (\texttt{*.questions.jsonl}) retaining the full prompt payload, retrieved-memory text, matched supporting node identifiers, and per-$k$ sliced evaluation outputs so that every reported score can be traced to concrete evidence; and (4) configuration files for all baseline systems.
-
-\noindent\textbf{Usage.} To reproduce the evaluation results: (1) install dependencies as specified in the repository README; (2) run the evaluation pipeline with the provided configuration files; (3) use the included analysis scripts to regenerate all tables and figures reported in this paper. The benchmark dataset is self-contained and can also be loaded directly for custom evaluation.
-
-\noindent\textbf{Dataset mirror.} The benchmark dataset is additionally available on HuggingFace Datasets for convenient access.
-
-\noindent\textbf{License.} The benchmark dataset and evaluation code are released under the MIT License.
+The source code, benchmark dataset, evaluation outputs, and paper materials are publicly available at \url{https://github.com/ngyygm/llm-TSSMRBench}.
