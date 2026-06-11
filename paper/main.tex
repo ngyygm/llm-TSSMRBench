@@ -1,21 +1,20 @@
-\documentclass[sigconf]{acmart}
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
 
-\setcopyright{none}
-\copyrightyear{2027}
-\acmYear{2027}
-\acmDOI{}
-\acmConference[EDBT '27]{28th International Conference on Extending Database Technology}{April 6--9, 2027}{Lille, France}
-\acmBooktitle{28th International Conference on Extending Database Technology (EDBT '27), April 6--9, 2027, Lille, France}
-
+\usepackage{cite}
 \usepackage{booktabs}
 \usepackage{multirow}
-\usepackage{amsmath}
+\usepackage{amsmath,amssymb,amsfonts}
 \usepackage{enumitem}
 \usepackage{array}
 \usepackage{tabularx}
 \usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{float}
 \usepackage{listings}
 \usepackage{needspace}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
 
 \lstset{
   basicstyle=\ttfamily\scriptsize,
@@ -29,89 +28,44 @@
   belowskip=4pt
 }
 
-\settopmatter{printacmref=true}
-\renewcommand\footnotetextcopyrightpermission[1]{}
+\newcommand{\Description}[1]{}
 
-\title{[EA\&B] TSSMRBench: Benchmarking Memory Systems for Retrieving Correct Temporal Semantic States from Evolving Memories}
+\title{[Experiment, Analysis, and Benchmark] TSSMRBench: Benchmarking Memory Systems for\\Retrieving Correct Temporal Semantic States from Evolving Memories}
 
-\author{Hai Lin}
-\authornote{Hai Lin and Jianhua Sun contributed equally to this work.}
-\affiliation{%
-  \institution{Shenzhen International Graduate School, Tsinghua University}
-  \city{Shenzhen}
-  \country{China}
+\author{
+\IEEEauthorblockN{Hai Lin\textsuperscript{1,2,*},
+Jianhua Sun\textsuperscript{1,*},
+Hai-Tao Zheng\textsuperscript{1,2,\textdagger},
+Hui Wang\textsuperscript{2}\\
+Chunxia Ma\textsuperscript{3,4},
+XiuTeng Zhou\textsuperscript{4},
+Hong-Gee Kim\textsuperscript{5}}
+\IEEEauthorblockA{\textsuperscript{1}Shenzhen International Graduate School, Tsinghua University, Shenzhen, China}
+\IEEEauthorblockA{\textsuperscript{2}Pengcheng Laboratory, Shenzhen, China}
+\IEEEauthorblockA{\textsuperscript{3}Shandong Analysis and Test Center, Qilu University of Technology\\
+(Shandong Academy of Sciences), Jinan, China}
+\IEEEauthorblockA{\textsuperscript{4}State Key Laboratory for Quality Ensurance and Sustainable Use of Dao-di Herbs,\\
+National Resource Center for Chinese Materia Medica, China Academy of Chinese Medical Sciences, Beijing, China}
+\IEEEauthorblockA{\textsuperscript{5}Seoul National University, Seoul, Republic of Korea}
+\IEEEauthorblockA{\{ngyygm@outlook.com, sunjianhua1225@gmail.com, zheng.haitao@sz.tsinghua.edu.cn\}\\
+wangh06@pcl.ac.cn; machunxia8927@qlu.edu.cn; zhouxt@nrc.ac.cn; hgkim@snu.ac.kr}
 }
-\affiliation{%
-  \institution{Pengcheng Laboratory}
-  \city{Shenzhen}
-  \country{China}
-}
-\email{ngyygm@outlook.com}
-
-\author{Jianhua Sun}
-\authornotemark[1]
-\affiliation{%
-  \institution{Shenzhen International Graduate School, Tsinghua University}
-  \city{Shenzhen}
-  \country{China}
-}
-\email{sunjianhua1225@gmail.com}
-
-\author{Hai-Tao Zheng}
-\authornote{Corresponding author.}
-\affiliation{%
-  \institution{Shenzhen International Graduate School, Tsinghua University}
-  \city{Shenzhen}
-  \country{China}
-}
-\affiliation{%
-  \institution{Pengcheng Laboratory}
-  \city{Shenzhen}
-  \country{China}
-}
-\email{zheng.haitao@sz.tsinghua.edu.cn}
-
-\author{Hui Wang}
-\affiliation{%
-  \institution{Pengcheng Laboratory}
-  \city{Shenzhen}
-  \country{China}
-}
-\email{wangh06@pcl.ac.cn}
-
-\begin{CCSXML}
-<ccs2012>
-<concept>
-<concept_id>10002951.10003260.10003282</concept_id>
-<concept_desc>Information systems~Information retrieval</concept_desc>
-<concept_significance>500</concept_significance>
-</concept>
-<concept>
-<concept_id>10002951.10003260.10003277</concept_id>
-<concept_desc>Information systems~Data mining</concept_desc>
-<concept_significance>300</concept_significance>
-</concept>
-<concept>
-<concept_id>10010147.10010178.10010219</concept_id>
-<concept_desc>Computing methodologies~Natural language processing</concept_desc>
-<concept_significance>300</concept_significance>
-</concept>
-</ccs2012>
-\end{CCSXML}
-
-\ccsdesc[500]{Information systems~Information retrieval}
-\ccsdesc[300]{Information systems~Data mining}
-\ccsdesc[300]{Computing methodologies~Natural language processing}
-
-\keywords{agent memory systems, temporal semantic state retrieval, benchmark evaluation, evolving memories}
 
 \begin{document}
+
+\maketitle
+\begingroup
+\renewcommand\thefootnote{}
+\footnotetext{* Equal contribution. \textdagger\ Corresponding author.}
+\endgroup
 
 \begin{abstract}
 \input{sections/abstract}
 \end{abstract}
 
-\maketitle
+\begin{IEEEkeywords}
+agent memory systems, temporal semantic state retrieval, benchmark evaluation, evolving memories
+\end{IEEEkeywords}
 
 \input{sections/intro}
 \input{sections/related}
@@ -119,12 +73,10 @@
 \input{sections/experiment}
 \input{sections/conclusion}
 \input{sections/artifacts}
-
-\appendix
-\input{sections/appendix}
+\input{sections/acknowledgments}
 
 \clearpage
-\bibliographystyle{ACM-Reference-Format}
+\bibliographystyle{IEEEtran}
 \bibliography{references}
 
 \end{document}

@@ -144,12 +144,12 @@ def plot_task_topk_acc(metrics: dict, output_dir: Path) -> list[str]:
         acc_ax.grid(alpha=0.25, linestyle="--", linewidth=0.7)
         cov_ax.grid(alpha=0.25, linestyle="--", linewidth=0.7)
         cov_ax.set_xlabel("Retrieval top-k")
-    axes[0][0].set_ylabel("ACC")
-    axes[1][0].set_ylabel("COV")
+    axes[0][0].set_ylabel("Accuracy")
+    axes[1][0].set_ylabel("Coverage")
     handles, labels = axes[0][0].get_legend_handles_labels()
     fig.legend(handles, labels, loc="upper center", ncol=5, frameon=False, bbox_to_anchor=(0.5, 0.995))
     fig.suptitle(
-        "ACC and COV by task family and retrieval top-k",
+        "Answer accuracy and coverage by task family and retrieval top-k",
         y=1.04,
         fontsize=13,
     )
