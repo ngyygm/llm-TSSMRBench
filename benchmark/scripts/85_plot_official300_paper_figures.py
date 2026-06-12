@@ -9,6 +9,12 @@ import math
 from pathlib import Path
 
 import matplotlib.pyplot as plt
+from matplotlib import rcParams
+
+
+rcParams["pdf.fonttype"] = 42
+rcParams["ps.fonttype"] = 42
+rcParams["svg.fonttype"] = "none"
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -79,7 +85,7 @@ def get_system_entry(metrics: dict, system_name: str) -> dict:
 
 def save_figure(fig: plt.Figure, output_stem: Path) -> None:
     output_stem.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(output_stem.with_suffix(".png"), dpi=220, bbox_inches="tight")
+    fig.savefig(output_stem.with_suffix(".png"), dpi=360, bbox_inches="tight")
     fig.savefig(output_stem.with_suffix(".svg"), bbox_inches="tight")
     fig.savefig(output_stem.with_suffix(".pdf"), bbox_inches="tight")
 

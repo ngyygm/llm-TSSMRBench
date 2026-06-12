@@ -32,7 +32,7 @@ R_k(q) = (r_1, r_2, \ldots, r_k)
 \]
 be the ranked retrieval output returned by a memory system.
 
-The task is to retrieve a ranked list $R_k(q)$ such that the supporting set $G(q)$ is recovered and the answer generator can derive the gold answer $y(q)$ using only the retrieved evidence. In plain terms, the memory system receives a query about a specific stage of an evolving object and must return exactly those memory nodes that describe the object at that stage. The core difficulty is that several states in $\mathcal{T}$ may be semantically similar while being temporally incompatible with the query. For example, if a project has gone through ten planning revisions, the memory system must distinguish between the version that first introduced a feature, the version that later modified it, and the current version, even though all ten revisions may describe the same feature in similar language.
+The task is to retrieve a ranked list $R_k(q)$ such that the supporting set $G(q)$ is recovered and the answer generator can derive the gold answer $y(q)$ using only the retrieved evidence. In plain terms, the memory system receives a query about a specific stage of an evolving object and must return exactly those memory nodes that describe the object at that stage. The core difficulty is that several states in $\mathcal{T}$ may be semantically similar while being temporally incompatible with the query. For example, if a project has gone through ten planning revisions, the memory system must distinguish between the version that first introduced a feature, the version that later modified it, and the current version, even though all ten revisions may describe the same feature in similar language. The formal task definition therefore treats temporal semantic state retrieval as a problem of selecting the correct version-conditioned support set, not merely returning evidence that remains topically close to the query surface.
 
 TSSMRBench operationalizes this capability through three task families:
 \begin{itemize}[leftmargin=*]
@@ -93,10 +93,16 @@ These questions require mapping several state descriptions back to their support
 
 All questions are multiple choice. Version identifiers, tags, or publication cues may appear when they are part of the original material, but the question and options are constrained so that the answer cannot be derived reliably without aligning the state descriptions in the query to the stored memory units.
 
-\begin{table}[!b]
+\subsection{Benchmark Record Schema}
+
+Beyond task design, TSSMRBench is released as an auditable benchmark rather than only as a set of final scores. Each scenario contains both the evolving memory trajectory and the associated questions, and the released records preserve the link between source evidence, normalized memory text, annotated support, and evaluation output. This design matters for a benchmark of evolving memories because reviewers and future users need to inspect not only whether a system was right or wrong, but also which version states were available, which ones were annotated as support, and what the system actually retrieved.
+
+At the memory level, each released state node preserves repository identity, release identity, timestamps, the original release note, and the normalized memory unit used as the retrieval surface. Retaining both the raw and normalized forms allows the benchmark to remain faithful to the original source while still standardizing the memory surface presented to each baseline. At the question level, every record stores the task type, options, correct option, and the annotated supporting node identifiers. These supporting identifiers are essential because they turn the benchmark from pure answer evaluation into memory-system evaluation: they allow us to measure not only final answer correctness, but also whether the system retrieved the stage-correct version states required by the query.
+
+\begin{table}[t]
 \centering
-\small
-\caption{Task families and evaluation budgets in TSSMRBench. $|G(q)|$ denotes the number of supporting states required by a question, and the listed retrieval top-k values are the answer-time cutoffs reused from one shared top-10 retrieval result.}
+\scriptsize
+\caption{Task families and evaluation budgets in TSSMRBench. $|G(q)|$ denotes the number of supporting states required by a question, and retrieval top-k lists the answer-time cutoffs reused from one shared top-10 retrieval result.}
 \label{tab:task-family-budget}
 \begin{tabular}{lll}
 \toprule
@@ -108,12 +114,6 @@ Temporal ordering & 3--5 & 5, 8, 10 \\
 \bottomrule
 \end{tabular}
 \end{table}
-
-\subsection{Benchmark Record Schema}
-
-Beyond task design, TSSMRBench is released as an auditable benchmark rather than only as a set of final scores. Each scenario contains both the evolving memory trajectory and the associated questions, and the released records preserve the link between source evidence, normalized memory text, annotated support, and evaluation output. This design matters for a benchmark of evolving memories because reviewers and future users need to inspect not only whether a system was right or wrong, but also which version states were available, which ones were annotated as support, and what the system actually retrieved.
-
-At the memory level, each released state node preserves repository identity, release identity, timestamps, the original release note, and the normalized memory unit used as the retrieval surface. Retaining both the raw and normalized forms allows the benchmark to remain faithful to the original source while still standardizing the memory surface presented to each baseline. At the question level, every record stores the task type, options, correct option, and the annotated supporting node identifiers. These supporting identifiers are essential because they turn the benchmark from pure answer evaluation into memory-system evaluation: they allow us to measure not only final answer correctness, but also whether the system retrieved the stage-correct version states required by the query.
 
 \begin{table}[t]
 \centering
@@ -136,7 +136,7 @@ This schema also supports the failure analysis reported later in Section~4. Beca
 
 \subsection{Evaluation Pipeline and Metrics}
 
-All baselines are evaluated under a shared global memory pool: before any query is issued, all 9{,}000 memory nodes from all 300 repositories are written into each baseline's own memory backend or retrieval index. Retrieval therefore operates over a single repository-mixed memory collection per baseline, rather than over isolated per-trajectory memory stores. This design choice is intentional: in a real deployed agent, memory from all interactions would coexist in the same store, and the retrieval system would need to disambiguate among overlapping memories without knowing which repository or context they belong to. This setting introduces cross-repository interference and prevents the memory system from exploiting trajectory boundaries.
+All baselines are evaluated under a shared global memory pool: before any query is issued, all 9{,}000 memory nodes from all 300 repositories are written into each baseline's own memory backend or retrieval index. Retrieval therefore operates over a single repository-mixed memory collection per baseline, rather than over isolated per-trajectory memory stores. This design choice is intentional: in a real deployed agent, memory from all interactions would coexist in the same store, and the retrieval system would need to disambiguate among overlapping memories without knowing which repository or context they belong to. This setting introduces cross-repository interference and prevents the memory system from exploiting trajectory boundaries. As a result, the evaluation reflects not only whether a system can recover the right state within one local version history, but also whether it can preserve that state's identity under realistic mixed-pool competition from many unrelated yet partially overlapping memories.
 
 For each query $q$, the evaluated memory system retrieves the top-10 ranked memories:
 \[
@@ -149,7 +149,7 @@ The same ranked list is then reused across task-specific context budgets:
 \item \textbf{temporal ordering}: $k \in \{5,8,10\}$
 \end{itemize}
 
-The answer model is allowed to read only these retrieved memories and is not given access to unretrieved memory nodes. This protocol separates retrieval quality from how much of the ranked memory list is exposed at answer time. It also allows us to analyze whether a memory system places the required support near the top of the ranking or only recovers it deeper in the retrieved list.
+The answer model is allowed to read only these retrieved memories and is not given access to unretrieved memory nodes. This protocol separates retrieval quality from how much of the ranked memory list is exposed at answer time. It also allows us to analyze whether a memory system places the required support near the top of the ranking or only recovers it deeper in the retrieved list. In other words, a system is rewarded not only for eventually reaching the right repository or topic, but for ranking the stage-correct version evidence high enough to remain usable under realistic answer-time context limits.
 
 We report four primary metrics. \textbf{Accuracy (ACC)} measures whether the final answer is correct; this is the end-to-end metric that reflects what a user would observe. \textbf{Coverage (Cov)} measures how much of the required support set is recovered. In other words, of all the gold supporting states needed to answer the question, what fraction did the memory system actually retrieve:
 \[
