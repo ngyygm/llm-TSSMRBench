@@ -93,13 +93,7 @@ These questions require mapping several state descriptions back to their support
 
 All questions are multiple choice. Version identifiers, tags, or publication cues may appear when they are part of the original material, but the question and options are constrained so that the answer cannot be derived reliably without aligning the state descriptions in the query to the stored memory units.
 
-\subsection{Benchmark Record Schema}
-
-Beyond task design, TSSMRBench is released as an auditable benchmark rather than only as a set of final scores. Each scenario contains both the evolving memory trajectory and the associated questions, and the released records preserve the link between source evidence, normalized memory text, annotated support, and evaluation output. This design matters for a benchmark of evolving memories because reviewers and future users need to inspect not only whether a system was right or wrong, but also which version states were available, which ones were annotated as support, and what the system actually retrieved.
-
-At the memory level, each released state node preserves repository identity, release identity, timestamps, the original release note, and the normalized memory unit used as the retrieval surface. Retaining both the raw and normalized forms allows the benchmark to remain faithful to the original source while still standardizing the memory surface presented to each baseline. At the question level, every record stores the task type, options, correct option, and the annotated supporting node identifiers. These supporting identifiers are essential because they turn the benchmark from pure answer evaluation into memory-system evaluation: they allow us to measure not only final answer correctness, but also whether the system retrieved the stage-correct version states required by the query.
-
-\begin{table}[t]
+\begin{table}[htbp]
 \centering
 \scriptsize
 \caption{Task families and evaluation budgets in TSSMRBench. $|G(q)|$ denotes the number of supporting states required by a question, and retrieval top-k lists the answer-time cutoffs reused from one shared top-10 retrieval result.}
@@ -114,6 +108,12 @@ Temporal ordering & 3--5 & 5, 8, 10 \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+\subsection{Benchmark Record Schema}
+
+Beyond task design, TSSMRBench is released as an auditable benchmark rather than only as a set of final scores. Each scenario contains both the evolving memory trajectory and the associated questions, and the released records preserve the link between source evidence, normalized memory text, annotated support, and evaluation output. This design matters for a benchmark of evolving memories because reviewers and future users need to inspect not only whether a system was right or wrong, but also which version states were available, which ones were annotated as support, and what the system actually retrieved.
+
+At the memory level, each released state node preserves repository identity, release identity, timestamps, the original release note, and the normalized memory unit used as the retrieval surface. Retaining both the raw and normalized forms allows the benchmark to remain faithful to the original source while still standardizing the memory surface presented to each baseline. At the question level, every record stores the task type, options, correct option, and the annotated supporting node identifiers. These supporting identifiers are essential because they turn the benchmark from pure answer evaluation into memory-system evaluation: they allow us to measure not only final answer correctness, but also whether the system retrieved the stage-correct version states required by the query.
 
 \begin{table}[t]
 \centering

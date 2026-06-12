@@ -62,7 +62,7 @@ To better diagnose failure modes, we decouple retrieval success from final answe
 
 This analysis is important because overall answer accuracy alone cannot tell us whether a memory system fails by missing relevant memories entirely, by retrieving incomplete support, or by retrieving related but temporally incompatible evidence. In particular, the \emph{all-recalled but incorrect} bucket is highly diagnostic: it indicates that the memory system has already retrieved the necessary state evidence but the final answer is still not resolved correctly. Conversely, the \emph{partial-recalled but correct} and \emph{zero-recalled but correct} buckets indicate cases where the answer may be guessed from partial cues or option bias rather than supported by complete evidence.
 
-\begin{figure}[t]
+\begin{figure}[!b]
 \centering
 \includegraphics[width=\columnwidth]{figures/generated/official300_decoupling_maink.pdf}
 \Description{A stacked bar chart for BM25, FAISS, Mem0, Graphiti, and Oracle Gold Context. Each bar partitions questions into all-recalled correct, all-recalled incorrect, partial-recalled correct, partial-recalled incorrect, zero-recalled correct, and zero-recalled incorrect at the main task-specific retrieval top-k settings.}
