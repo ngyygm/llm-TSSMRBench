@@ -29,6 +29,9 @@
 }
 
 \newcommand{\Description}[1]{}
+\setlength{\textfloatsep}{8pt plus 2pt minus 4pt}
+\setlength{\floatsep}{6pt plus 2pt minus 2pt}
+\setlength{\intextsep}{6pt plus 2pt minus 2pt}
 
 \title{[Experiment, Analysis, and Benchmark] TSSMRBench: Benchmarking Memory Systems for\\Retrieving Correct Temporal Semantic States from Evolving Memories}
 
@@ -38,20 +41,19 @@ Jianhua Sun\textsuperscript{1,*},
 Hai-Tao Zheng\textsuperscript{1,2,\textdagger},
 Hui Wang\textsuperscript{2}\\
 Chunxia Ma\textsuperscript{3,4},
-XiuTeng Zhou\textsuperscript{4},
-Hong-Gee Kim\textsuperscript{5}}
+XiuTeng Zhou\textsuperscript{4}}
 \IEEEauthorblockA{\textsuperscript{1}Shenzhen International Graduate School, Tsinghua University, Shenzhen, China}
 \IEEEauthorblockA{\textsuperscript{2}Pengcheng Laboratory, Shenzhen, China}
 \IEEEauthorblockA{\textsuperscript{3}Shandong Analysis and Test Center, Qilu University of Technology\\
 (Shandong Academy of Sciences), Jinan, China}
 \IEEEauthorblockA{\textsuperscript{4}State Key Laboratory for Quality Ensurance and Sustainable Use of Dao-di Herbs,\\
 National Resource Center for Chinese Materia Medica, China Academy of Chinese Medical Sciences, Beijing, China}
-\IEEEauthorblockA{\textsuperscript{5}Seoul National University, Seoul, Republic of Korea}
 \IEEEauthorblockA{\{ngyygm@outlook.com, sunjianhua1225@gmail.com, zheng.haitao@sz.tsinghua.edu.cn\}\\
-wangh06@pcl.ac.cn; machunxia8927@qlu.edu.cn; zhouxt@nrc.ac.cn; hgkim@snu.ac.kr}
+wangh06@pcl.ac.cn; machunxia8927@qlu.edu.cn; zhouxt@nrc.ac.cn}
 }
 
 \begin{document}
+\raggedbottom
 
 \maketitle
 \begingroup
@@ -75,7 +77,6 @@ agent memory systems, temporal semantic state retrieval, benchmark evaluation, e
 \input{sections/artifacts}
 \input{sections/acknowledgments}
 
-\clearpage
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 

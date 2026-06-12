@@ -1,13 +1,3 @@
-\section{Experiments}
-
-\subsection{Experimental Setup}
-
-The formal benchmark is built from 300 repositories, yielding 300 repository-level release-evolution scenarios, 9{,}000 memory nodes, and 900 multiple choice questions. We compare five baselines under the same benchmark inputs: BM25, FAISS, Mem0, Graphiti, and Oracle Gold Context.
-
-BM25 indexes the normalized memory units directly and serves as a lexical release-level retriever. FAISS is a vector-index baseline over the same release-level memory units. Mem0 is an LLM-based memory system that extracts fine-grained memory facts from each ingested state, stores them in a vector-backed memory store, and applies memory merging and update operations; at query time, it returns grouped fact results, which we align back to the corresponding source state nodes for node-level metrics. Graphiti is the graph-structured memory processing package used in the Zep line of work: it uses an internal LLM to extract episodes, entities, and relations, updates a structured memory graph over time, and reranks retrieved candidates before returning them. Oracle Gold Context does not perform retrieval; instead, it directly provides the answer model with the annotated supporting memory units required by each question. We include Oracle Gold Context as an ideal-retrieval control: it serves as an upper bound on end-to-end answer accuracy when the required supporting states are supplied directly.
-
-All baselines use the same normalized memory units and the same answer-generation model. In the final evaluation, answer generation and LLM-based judging both use DeepSeek-V4-Pro with temperature 0.0 and thinking disabled. The embedding-based baselines use BGE-M3 embeddings. Mem0 and Graphiti use DeepSeek-V4-Flash as their internal memory-processing model, and Graphiti additionally uses a BGE Reranker v2 M3 model. The answer model is therefore controlled across baselines, so the evaluation target is the memory system used by the agent rather than the answer LLM itself.
-
 \begin{table*}[t]
 \centering
 \scriptsize
@@ -26,6 +16,16 @@ Oracle Gold Context & annotated supporting memory units & none & none & DeepSeek
 \end{tabularx}
 \end{table*}
 
+\section{Experiments}
+
+\subsection{Experimental Setup}
+
+The formal benchmark is built from 300 repositories, yielding 300 repository-level release-evolution scenarios, 9{,}000 memory nodes, and 900 multiple choice questions. We compare five baselines under the same benchmark inputs: BM25, FAISS, Mem0, Graphiti, and Oracle Gold Context.
+
+BM25 indexes the normalized memory units directly and serves as a lexical release-level retriever. FAISS is a vector-index baseline over the same release-level memory units. Mem0 is an LLM-based memory system that extracts fine-grained memory facts from each ingested state, stores them in a vector-backed memory store, and applies memory merging and update operations; at query time, it returns grouped fact results, which we align back to the corresponding source state nodes for node-level metrics. Graphiti is the graph-structured memory processing package used in the Zep line of work: it uses an internal LLM to extract episodes, entities, and relations, updates a structured memory graph over time, and reranks retrieved candidates before returning them. Oracle Gold Context does not perform retrieval; instead, it directly provides the answer model with the annotated supporting memory units required by each question. We include Oracle Gold Context as an ideal-retrieval control: it serves as an upper bound on end-to-end answer accuracy when the required supporting states are supplied directly.
+
+All baselines use the same normalized memory units and the same answer-generation model. In the final evaluation, answer generation and LLM-based judging both use DeepSeek-V4-Pro with temperature 0.0 and thinking disabled. The embedding-based baselines use BGE-M3 embeddings. Mem0 and Graphiti use DeepSeek-V4-Flash as their internal memory-processing model, and Graphiti additionally uses a BGE Reranker v2 M3 model. The answer model is therefore controlled across baselines, so the evaluation target is the memory system used by the agent rather than the answer LLM itself.
+
 \subsection{Overall Results}
 
 \input{tables/generated/task_maink_accuracy}
@@ -40,21 +40,19 @@ The remaining systems reveal where current memory architectures still struggle. 
 
 \subsection{Results by Task Type and Top-k}
 
-Figure~\ref{fig:task-topk-acc} reports the results by task family and retrieval top-k.
-
-\input{tables/generated/task_effect_mixed_logit}
-
 \begin{figure*}[t]
 \centering
-\includegraphics[width=\textwidth]{figures/generated/official300_task_topk_acc}
+\includegraphics[width=\textwidth]{figures/generated/official300_task_topk_acc.pdf}
 \Description{A six-panel figure with three task columns. The top row plots answer accuracy and the bottom row plots gold-support coverage as functions of retrieval top-k. The three columns correspond to single-state lookup, cross-version comparison, and temporal ordering.}
 \caption{Answer accuracy and gold-support coverage by task family and retrieval top-k. The top row reports answer accuracy and the bottom row reports gold-support coverage; the three columns correspond to single-state lookup, cross-version comparison, and temporal ordering.}
 \label{fig:task-topk-acc}
 \end{figure*}
 
-The first trend concerns larger retrieval top-k. Coverage usually increases with $k$, especially on cross-version comparison and temporal ordering, but answer accuracy does not rise at the same rate. This pattern means that recovering more gold states is not the same as making the final decision easier. In many questions, larger top-k adds neighboring versions that are topically related but not all stage-correct; in Mem0, it also adds more fact fragments that point to the same repository topic without cleanly reconstructing the required version states. The answer model therefore sees more relevant evidence, but also more competing evidence, so ACC can plateau or even decline while Cov keeps rising.
+Figure~\ref{fig:task-topk-acc} reports the results by task family and retrieval top-k. The first trend concerns larger retrieval top-k. Coverage usually increases with $k$, especially on cross-version comparison and temporal ordering, but answer accuracy does not rise at the same rate. This pattern means that recovering more gold states is not the same as making the final decision easier. In many questions, larger top-k adds neighboring versions that are topically related but not all stage-correct; in Mem0, it also adds more fact fragments that point to the same repository topic without cleanly reconstructing the required version states. The answer model therefore sees more relevant evidence, but also more competing evidence, so ACC can plateau or even decline while Cov keeps rising.
 
 The second trend is a consistent difficulty ordering across baselines: single-state lookup is easiest, cross-version comparison is harder, and temporal ordering is hardest. This ordering matches the benchmark design. As the number of required supporting states grows from one to two and then to three-to-five, the retrieval target is no longer ``a relevant memory'' but ``the temporally compatible subset of version states needed by the question.'' The relative behavior of the baselines follows the same logic. FAISS remains strongest because each retrieved item is still a complete version-level memory unit, so the answer model sees intact states rather than fragments. BM25 declines more sharply because lexical overlap is too coarse to separate nearby versions with similar wording. Mem0 improves less because its fact-level representation and update pipeline do not naturally preserve complete version boundaries. Graphiti benefits from structure and reranking, especially on cross-version comparison, but its gains flatten once the question requires several exact states rather than one relevant neighborhood.
+
+\input{tables/generated/task_effect_mixed_logit}
 
 To quantify the task effect beyond the descriptive plots, we fit a mixed-effects logistic regression on answer correctness using the automatic baselines at the main task-specific retrieval top-k settings. The model uses fixed effects for task family and system, with a random intercept for question. Table~\ref{tab:task-effect-mixed-logit} shows that, relative to single-state lookup, the odds of a correct answer drop to 0.26$\times$ for cross-version comparison and to 0.11$\times$ for temporal ordering. This model-based result supports the same conclusion suggested by the curves: current memory systems are much less reliable once the query depends on multiple temporally related states rather than one isolated state.
 
@@ -66,7 +64,7 @@ This analysis is important because overall answer accuracy alone cannot tell us 
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\columnwidth]{figures/generated/official300_decoupling_maink}
+\includegraphics[width=\columnwidth]{figures/generated/official300_decoupling_maink.pdf}
 \Description{A stacked bar chart for BM25, FAISS, Mem0, Graphiti, and Oracle Gold Context. Each bar partitions questions into all-recalled correct, all-recalled incorrect, partial-recalled correct, partial-recalled incorrect, zero-recalled correct, and zero-recalled incorrect at the main task-specific retrieval top-k settings.}
 \caption{Retrieval--reasoning decoupling at the main task-specific retrieval top-k settings. Each bar partitions questions by retrieval completeness and final answer correctness.}
 \label{fig:retrieval-reasoning}
@@ -138,10 +136,10 @@ Table~\ref{tab:cost-profile} shows the results. FAISS offers the strongest effic
 
 Mem0 occupies a different point in the trade-off space. Its latency remains moderate, and its retrieved contexts are the shortest among the automatic systems because it operates on compact memory facts. However, the main results show that this compactness comes with lower state-level fidelity: the system is efficient at retrieving small fact snippets, but those snippets often do not reconstruct a complete version state. Graphiti sits at the opposite end. It retrieves contexts of similar scale to FAISS on the harder tasks, but its retrieval latency is much higher (34{,}425.76 ms on average), which matches its heavier pipeline of graph expansion, LLM-mediated memory processing, and reranking.
 
+\input{tables/generated/cost_profile}
+
 For this benchmark, the efficiency conclusion is straightforward. A memory system that aggressively compacts memory can become fast but lose the version structure required by the question. A memory system that preserves richer structure can recover harder cases more often, but the added processing must remain affordable at retrieval time. Future memory systems therefore need both properties together: explicit preservation of version history and efficient retrieval of the stage-correct state from a large shared memory pool.
 
 Taken together, the retrieval traces and the system-level results suggest three concrete design requirements for future memory systems. First, memory compaction should remain traceable to coherent version-level states. The strongest baseline in this study is not the one with the richest internal processing, but the one that preserves each temporal semantic state as a complete retrieval unit. Second, memory update should preserve version history instead of folding successive states into a blurred summary. Mem0's failures show that fact extraction plus merging can retain topical clues while weakening the exact state boundary needed by cross-version and temporal-ordering questions. Third, retrieval should support explicit multi-state assembly rather than only nearest-neighbor matching. Many failures on TSSMRBench occur after the system has already reached the right repository or topic, but before it has assembled the full temporally compatible support set required by the question.
 
 These requirements also clarify the benchmark's broader value. TSSMRBench is not simply harder because it contains long histories or mixed repositories; it is diagnostic because it isolates a failure mode that is easy to miss in ordinary memory QA. A system may appear to remember the right subject, return highly related evidence, and even retrieve the latest state correctly, yet still fail when the query requires a particular earlier state or a coordinated set of states along the same version history. The benchmark therefore exposes a gap between remembering that something evolved and retrieving which state of that evolution is correct for the current question.
-
-\input{tables/generated/cost_profile}
