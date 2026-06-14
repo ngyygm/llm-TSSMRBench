@@ -421,6 +421,12 @@ class GraphitiBaseline(MemorySystem):
         self._write_lock = threading.Lock()
         self._instance_tag = self._normalize_instance_tag(run_id) if run_id else self._build_instance_tag()
         self._group_id = f"graphiti_{self._instance_tag}"
+        # Map ingested node text -> (source_node_id, source_chain_id) so that, at
+        # query time, retrieved episode facts can be aligned back to exact source
+        # node ids for identity-based coverage scoring (consumed by
+        # evaluation._explicit_retrieved_pairs_from_metadata). Without this map
+        # Graphiti coverage falls back to fuzzy text matching.
+        self._text_to_node: dict[str, tuple[str, str]] = {}
         self._init_graphiti()
 
     @staticmethod
@@ -910,6 +916,40 @@ class GraphitiBaseline(MemorySystem):
             ids.append(self.remember(text=text))
         return ids
 
+    def remember_chain(self, chain_id: str, node_ids: list[str], texts: list[str]) -> list[str]:
+        """Ingest one chain while recording text -> source node id for coverage alignment."""
+        for index, text in enumerate(texts):
+            node_id = node_ids[index] if index < len(node_ids) else f"{chain_id}_node_{index + 1:04d}"
+            if text and text.strip():
+                self._text_to_node[text.strip()] = (node_id, chain_id)
+        return self.remember_many(texts)
+
+    def _node_id_for_fact(self, fact: str) -> tuple[str, str]:
+        """Map a retrieved episode/edge fact back to (source_node_id, source_chain_id).
+
+        Episode facts are formatted as ``Episode: <content> | valid_at=...`` where
+        ``<content>`` is the original ingested node text. We recover that text and
+        look it up in the text -> node map. Edge-only facts have no node mapping
+        and return empty strings (safely skipped by evaluation).
+        """
+        text = (fact or "").strip()
+        prefix = "Episode:"
+        if text.startswith(prefix):
+            remainder = text[len(prefix):].strip()
+            # Try the full remainder first (handles content that itself contains
+            # the delimiter), then fall back to the pre-delimiter portion.
+            candidates = [remainder]
+            if " | valid_at=" in remainder:
+                candidates.append(remainder.split(" | valid_at=")[0].strip())
+        else:
+            candidates = [text]
+        for content in candidates:
+            if content:
+                hit = self._text_to_node.get(content)
+                if hit is not None:
+                    return hit
+        return ("", "")
+
     def query(
         self,
         question: str,
@@ -929,6 +969,15 @@ class GraphitiBaseline(MemorySystem):
             retrieved_context = '\n'.join(facts)
             graphiti_metadata = self._build_graphiti_metadata(search_results)
 
+            # Align retrieved facts back to exact source node ids (1:1, in
+            # retrieval order) so coverage/CSR are scored by identity.
+            retrieved_source_node_ids: list[str] = []
+            retrieved_source_chain_ids: list[str] = []
+            for fact in facts:
+                node_id, chain_id = self._node_id_for_fact(fact)
+                retrieved_source_node_ids.append(node_id)
+                retrieved_source_chain_ids.append(chain_id)
+
             return QueryResult(
                 answer=retrieved_context,
                 retrieved_context=retrieved_context,
@@ -943,6 +992,8 @@ class GraphitiBaseline(MemorySystem):
                     'episode_count': len(search_results.episodes),
                     'community_count': len(search_results.communities),
                     'edge_reranker_scores': list(search_results.edge_reranker_scores),
+                    'retrieved_source_node_ids': retrieved_source_node_ids,
+                    'retrieved_source_chain_ids': retrieved_source_chain_ids,
                     **graphiti_metadata,
                 },
             )
@@ -984,4 +1035,5 @@ class GraphitiBaseline(MemorySystem):
             logger.warning('Graphiti Neo4j clear error: %s', exc)
 
         self._write_counter = 0
+        self._text_to_node = {}
         self._init_graphiti()

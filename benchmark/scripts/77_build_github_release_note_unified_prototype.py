@@ -376,7 +376,7 @@ Requirements:
   - which release contains a specific release-note content item
   - what content appears in a specific release
 - For cross_version_comparison, compare two releases using concrete release-content differences.
-- For temporal_version_ordering, use 3 to 5 release-content states.
+- For temporal_version_ordering, use 3 to 4 release-content states.
 - For temporal_version_ordering, you may mention version numbers, tag names, or dates when they are naturally part of the release-content descriptions.
 - For temporal_version_ordering, do not reveal the answer in the options.
 - The question text should describe the candidate release-content states and number them, for example (1), (2), (3), (4).

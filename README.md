@@ -133,10 +133,10 @@ The result files also support additional analysis such as:
 
 ### Memory systems
 
-- Mem0, `internal_fact_k = 60`:
-  - [benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_mem0_deepseekflash_globalpool_taskk_resume50_v2](benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_mem0_deepseekflash_globalpool_taskk_resume50_v2)
-- Mem0, `internal_fact_k = 10`:
+- Mem0, `internal_fact_k = 10` (**used in the paper's main table**; see the experimental setup section):
   - [benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_mem0_deepseekflash_globalpool_taskk_internal10](benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_mem0_deepseekflash_globalpool_taskk_internal10)
+- Mem0, `internal_fact_k = 60` (alternate over-retrieval budget; not used in the main table):
+  - [benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_mem0_deepseekflash_globalpool_taskk_resume50_v2](benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_mem0_deepseekflash_globalpool_taskk_resume50_v2)
 - Graphiti:
   - [benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_graphiti_deepseekflash_globalpool_taskk_resume50_v1](benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_graphiti_deepseekflash_globalpool_taskk_resume50_v1)
 
@@ -194,3 +194,35 @@ python benchmark/scripts/85_plot_official300_paper_figures.py
 For a Chinese file-level guide to the final dataset, result directories, and intermediate files, see:
 
 - [benchmark/docs/FORMAL_RELEASE_UNIFIED_FILE_GUIDE_ZH.md](benchmark/docs/FORMAL_RELEASE_UNIFIED_FILE_GUIDE_ZH.md)
+
+## Research Integrity Audit & Reproducibility
+
+A research-integrity audit identified several issues that the scripts and notes
+in this section address. The headline points:
+
+- **Answer-position artifact.** On the released (unshuffled) data the correct
+  option is `A` for ~97.7% of cross-version and ~93% of temporal-ordering
+  questions, so an always-pick-A baseline beats every system on those two
+  families. Retrieval metrics (Cov, CSR) are position-independent and remain
+  valid. Run `benchmark/scripts/90_option_position_baselines.py` to compute the
+  deterministic baselines, and `benchmark/scripts/91_shuffle_balance_options.py`
+  to emit a position-balanced dataset (`official_300_merged_balanced.json`) for
+  re-evaluation.
+- **Dataset validation.** `benchmark/scripts/92_validate_official300.py` checks
+  support-size invariants (single |G|=1, cross |G|=2, temporal |G| in {3,4}),
+  option correctness, gold-id existence, and reports the position skew. Two
+  questions currently violate the support-size invariant (one cross question
+  with |G|=1, one single question with |G|=3) and are flagged for regeneration.
+- **Oracle upper bound.** The Oracle raw per-question file is not committed, so
+  Oracle ACC is from an earlier dataset revision; `benchmark/scripts/93_verify_oracle_coverage.py`
+  proves Oracle Cov/CSR = 1.0 by construction on the current dataset. Regenerate
+  Oracle ACC with `82_..._evaluation.py --system full_context`.
+- **Reproducibility scripts.** `84_generate_official300_paper_artifacts.py` and
+  `paper/scripts/build_task_effect_regression.py` now read the committed
+  `*.questions.jsonl.gz` files directly and add system-effect confidence
+  intervals plus a paired significance test for the Graphiti-vs-FAISS claim.
+- **Coverage by identity.** BM25/FAISS/Graphiti now emit `retrieved_source_node_ids`
+  so coverage is scored by exact node identity rather than fuzzy text matching.
+
+See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for the exact commands and the
+items that require an API key to refresh.

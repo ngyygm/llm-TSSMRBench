@@ -1,0 +1,10 @@
+{
+  "dataset": "/home/linkco/exa/llm-TSSMRBench/benchmark/data/prototypes/github_release_note_v2/formal_300repo_unified_v1/official_300_merged.json",
+  "questions_checked": 900,
+  "gold_ids_missing_across_dataset": 0,
+  "oracle_coverage_equals_1_for_all": true,
+  "oracle_csr_equals_1_for_all": true,
+  "note": "Oracle injects gold nodes directly; since every gold id exists in its chain on the current dataset, Cov=CSR=1.0 for all questions. Oracle ACC still requires an answer-model rerun.",
+  "rerun_command": "python benchmark/scripts/82_run_merged_github_release_unified_global_pool_evaluation.py --system full_context --merged-json <official_300_merged.json> --output-dir <...>/official_300repo_release_unified_v1_simple_baselines_conda_taskk",
+  "missing_examples": []
+}

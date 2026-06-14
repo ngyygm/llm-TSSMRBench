@@ -30,10 +30,26 @@ TASK_LABEL = {
 }
 
 
+def _open_maybe_gz(path: Path):
+    """Open a per-question JSONL, transparently handling .gz.
+
+    Committed raw results are stored as ``*.questions.jsonl.gz``; this lets the
+    regression run on the committed repo without manual decompression.
+    """
+    import gzip
+
+    if path.exists():
+        return path.open("r", encoding="utf-8")
+    gz = Path(str(path) + ".gz")
+    if gz.exists():
+        return gzip.open(gz, "rt", encoding="utf-8")
+    raise FileNotFoundError(f"Neither {path} nor {gz} exists")
+
+
 def load_main_k_rows() -> pd.DataFrame:
     rows = []
     for system_name, path in SOURCE_DIRS.items():
-        with path.open("r", encoding="utf-8") as f:
+        with _open_maybe_gz(path) as f:
             for line in f:
                 item = json.loads(line)
                 task_type = item["task_type"]
@@ -50,6 +66,51 @@ def load_main_k_rows() -> pd.DataFrame:
                     }
                 )
     return pd.DataFrame(rows)
+
+
+def _load_per_k_correctness(system_name: str, task: str, k: str) -> dict[str, int]:
+    """Return {question_id: is_correct} for one system/task/k from the raw .jsonl(.gz)."""
+    out: dict[str, int] = {}
+    with _open_maybe_gz(SOURCE_DIRS[system_name]) as f:
+        for line in f:
+            item = json.loads(line)
+            if item["task_type"] != task:
+                continue
+            per_k = item["per_k_results"][k]
+            out[item["question_id"]] = int(bool(per_k["is_correct"]))
+    return out
+
+
+def paired_two_proportion(a: dict[str, int], b: dict[str, int]) -> dict:
+    """Two-proportion z-test plus paired McNemar for two systems on shared questions."""
+    common = sorted(set(a) & set(b))
+    n = len(common)
+    xa = sum(a[q] for q in common)
+    xb = sum(b[q] for q in common)
+    pa, pb = xa / n, xb / n
+    pooled = (xa + xb) / (2 * n)
+    se = math.sqrt(2 * pooled * (1 - pooled) / n) if 0 < pooled < 1 else 0.0
+    z = (pa - pb) / se if se else 0.0
+    # two-sided p from normal CDF approximation
+    p_two = math.erfc(abs(z) / math.sqrt(2.0))
+    # McNemar (discordant pairs)
+    b01 = sum(1 for q in common if a[q] == 0 and b[q] == 1)  # a wrong, b right
+    b10 = sum(1 for q in common if a[q] == 1 and b[q] == 0)  # a right, b wrong
+    if b01 + b10:
+        mcnemar_chi2 = (abs(b01 - b10) - 1) ** 2 / (b01 + b10)
+    else:
+        mcnemar_chi2 = 0.0
+    return {
+        "n": n,
+        "acc_a": pa,
+        "acc_b": pb,
+        "acc_diff": pa - pb,
+        "z": z,
+        "p_two_sided": p_two,
+        "mcnemar_b01": b01,
+        "mcnemar_b10": b10,
+        "mcnemar_chi2": mcnemar_chi2,
+    }
 
 
 def fit_model(df: pd.DataFrame):
@@ -91,11 +152,48 @@ def build_summary(df: pd.DataFrame, result) -> dict:
             }
         )
 
+    # System fixed effects (odds ratio vs FAISS reference) so that "FAISS is the
+    # strongest baseline" and "Graphiti exceeds FAISS" claims carry uncertainty.
+    system_terms = [name for name in names if name.startswith("C(system")]
+    system_rows = []
+    for term in system_terms:
+        # term looks like C(system, ...)[T.Graphiti]
+        label = term.split("[T.")[1].rstrip("]") if "[T." in term else term
+        mean = coef.get(term)
+        se = sd.get(term)
+        if mean is None or se is None:
+            continue
+        system_rows.append(
+            {
+                "system": label,
+                "log_odds_vs_faiss": mean,
+                "log_odds_sd": se,
+                "odds_ratio": math.exp(mean),
+                "or_ci_low": math.exp(mean - 1.96 * se),
+                "or_ci_high": math.exp(mean + 1.96 * se),
+            }
+        )
+
+    # Paired test for the specific headline claim "Graphiti exceeds FAISS on
+    # cross-version at k=2" (ACC 0.5467 vs 0.5033). Reports whether the 13/300
+    # difference is significant once question pairing is accounted for.
+    pairwise_claims = []
+    try:
+        g = _load_per_k_correctness("Graphiti", "cross_version_comparison", "2")
+        f_ = _load_per_k_correctness("FAISS", "cross_version_comparison", "2")
+        test = paired_two_proportion(f_, g)  # a=FAISS, b=Graphiti
+        test["claim"] = "Graphiti vs FAISS, cross-version, k=2"
+        pairwise_claims.append(test)
+    except Exception as exc:  # pragma: no cover - defensive
+        pairwise_claims.append({"claim": "Graphiti vs FAISS, cross-version, k=2", "error": str(exc)})
+
     return {
         "n_rows": int(len(df)),
         "n_questions": int(df["question_id"].nunique()),
         "n_systems": int(df["system"].nunique()),
         "task_rows": summary_rows,
+        "system_rows": system_rows,
+        "pairwise_claims": pairwise_claims,
     }
 
 
@@ -125,6 +223,26 @@ def write_outputs(summary: dict):
             f"{row['contrast']} & {row['odds_ratio']:.2f} & "
             f"[{row['or_ci_low']:.2f}, {row['or_ci_high']:.2f}] \\\\"
         )
+    if summary.get("system_rows"):
+        lines.append(r"\midrule")
+        lines.append(r"\multicolumn{3}{l}{\emph{System effect (odds ratio vs.\ FAISS)}} \\")
+        for row in summary["system_rows"]:
+            lines.append(
+                f"{row['system']} & {row['odds_ratio']:.2f} & "
+                f"[{row['or_ci_low']:.2f}, {row['or_ci_high']:.2f}] \\\\"
+            )
+    pairwise_note = ""
+    for claim in summary.get("pairwise_claims", []):
+        if "error" in claim:
+            continue
+        pairwise_note = (
+            f"Paired test, Graphiti vs.~FAISS at cross k=2: "
+            f"acc.~diff {claim['acc_diff']:+.3f}, z={claim['z']:.2f}, p={claim['p_two_sided']:.3f} "
+            f"(McNemar discordant {claim['mcnemar_b01']}/{claim['mcnemar_b10']}, $\\chi^2{{=}}{claim['mcnemar_chi2']:.2f}$)."
+        )
+    if pairwise_note:
+        lines.append(r"\midrule")
+        lines.append(r"\multicolumn{3}{l}{\scriptsize " + pairwise_note.strip() + r"} \\")
     lines.extend([r"\bottomrule", r"\end{tabular}", r"\end{table}"])
     tex_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 

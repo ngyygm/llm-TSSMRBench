@@ -1,4 +1,4 @@
-\begin{table}[H]
+\begin{table}[t]
 \centering
 \small
 \caption{Mixed-effects logistic regression on answer correctness at the main task-specific retrieval top-k settings. The model uses fixed effects for task family and system, with a random intercept for question. Odds ratios are reported relative to single-state lookup.}
@@ -9,6 +9,13 @@ Contrast & Odds ratio & 95\% interval \\
 \midrule
 Cross vs Single & 0.26 & [0.23, 0.30] \\
 Temporal vs Single & 0.11 & [0.09, 0.12] \\
+\midrule
+\multicolumn{3}{l}{\emph{System effect (odds ratio vs.\ FAISS)}} \\
+BM25 & 0.18 & [0.16, 0.21] \\
+Graphiti & 0.31 & [0.26, 0.36] \\
+Mem0 & 0.12 & [0.10, 0.14] \\
+\midrule
+\multicolumn{3}{l}{\scriptsize Paired test, Graphiti vs.~FAISS at cross k=2: acc.~diff -0.043, z=-1.06, p=0.288 (McNemar discordant 67/54, $\chi^2{=}1.19$).} \\
 \bottomrule
 \end{tabular}
 \end{table}

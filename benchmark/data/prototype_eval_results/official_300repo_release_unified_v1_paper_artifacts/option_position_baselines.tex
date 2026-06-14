@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\scriptsize
+\caption{Retrieval-free answer-position baselines (depend only on gold option labels, no answer model). \texttt{always-A} always picks option~A; \texttt{majority} always picks the most frequent gold letter within each task; \texttt{uniform} is random over A--D (0.25). Because option position is never shuffled at construction time, these baselines expose how much of each system's ACC is recoverable from position alone. A memory system should clear \texttt{majority} by a wide margin before its ACC is read as retrieval quality.}
+\label{tab:option-position-baselines}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lccccrrr}
+\toprule
+Task & Gold A\% & Gold B\% & Gold C\% & Gold D\% & always-A & majority & uniform \\
+\midrule
+Single & 28.0 & 61.3 & 9.7 & 1.0 & 0.2800 & 0.6133 & 0.2500 \\
+Cross & 97.7 & 2.0 & 0.3 & 0.0 & 0.9767 & 0.9767 & 0.2500 \\
+Temporal & 93.0 & 5.7 & 0.7 & 0.7 & 0.9300 & 0.9300 & 0.2500 \\
+\bottomrule
+\end{tabular}
+\end{table}

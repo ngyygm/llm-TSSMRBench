@@ -10,7 +10,7 @@ import math
 from collections import defaultdict
 from pathlib import Path
 from statistics import fmean
-from typing import Any
+from typing import Any, Optional
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -78,8 +78,24 @@ def canonical_task(task_type: str | None) -> str:
 
 
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
+    """Load one-object-per-line JSONL, transparently handling .gz compression.
+
+    The committed raw per-question results are stored as ``*.questions.jsonl.gz``
+    to keep the repository pushable. Earlier revisions referenced uncompressed
+    ``*.questions.jsonl`` files; this loader accepts either so the script can
+    regenerate the paper tables from the committed (compressed) artifacts.
+    """
+    import gzip
+
     rows: list[dict[str, Any]] = []
-    with path.open("r", encoding="utf-8") as handle:
+    if not path.exists():
+        gz = Path(str(path) + ".gz")
+        if gz.exists():
+            path = gz
+        else:
+            raise FileNotFoundError(f"Neither {path} nor {path}.gz exists")
+    opener = gzip.open if str(path).endswith(".gz") else open
+    with opener(path, "rt", encoding="utf-8") as handle:
         for line in handle:
             line = line.strip()
             if not line:
@@ -252,6 +268,17 @@ def format_metric_with_style(value: float, style: str) -> str:
 
 
 def normalized_metrics_for_display(system_name: str, metrics: dict[str, Any]) -> dict[str, Any]:
+    """Return metrics for table display.
+
+    For Oracle Gold Context the support coverage and complete-support rate are
+    1.0 by construction: the baseline injects the annotated gold nodes directly,
+    and on the released dataset every annotated gold id exists in its chain
+    (verified by ``93_verify_oracle_coverage.py``: 0/1987 gold ids missing), so
+    Cov = CSR = 1.0 for all questions. This is a *definition*, not an override
+    of a measured sub-1.0 value. Oracle ACC is the only Oracle metric that
+    depends on the answer model and must be regenerated with
+    ``82_..._evaluation.py --system full_context``.
+    """
     if system_name != ORACLE_SYSTEM_NAME:
         return metrics
     adjusted = dict(metrics)
@@ -449,11 +476,49 @@ def main() -> None:
     task_topk_csv_rows: list[dict[str, Any]] = []
     decoupling_csv_rows: list[dict[str, Any]] = []
     case_candidates: dict[str, Any] = {}
+    provenance: dict[str, str] = {}
+
+    # Fallback for Oracle when its raw per-question file is missing: reuse the
+    # Oracle metrics previously written to paper_metrics.json (clearly flagged as
+    # stale) so the table can still be regenerated on the committed repo. Oracle
+    # ACC must be refreshed by re-running script 82 with --system full_context.
+    existing_metrics_path = output_dir / "paper_metrics.json"
+    existing_oracle_metrics: Optional[dict[str, Any]] = None
+    if existing_metrics_path.exists():
+        try:
+            for sysrow in json.loads(existing_metrics_path.read_text(encoding="utf-8")).get("systems", []):
+                if sysrow.get("paper_name") == ORACLE_SYSTEM_NAME:
+                    existing_oracle_metrics = sysrow
+                    break
+        except Exception:
+            existing_oracle_metrics = None
 
     for spec in SYSTEM_SPECS:
         question_path = spec["result_dir"] / spec["questions_file"]
-        rows = load_jsonl(question_path)
-        rows = [{**row, "task_type": canonical_task(row.get("task_type"))} for row in rows]
+        try:
+            rows = load_jsonl(question_path)
+            rows = [{**row, "task_type": canonical_task(row.get("task_type"))} for row in rows]
+            provenance[spec["paper_name"]] = "raw_committed"
+        except FileNotFoundError:
+            if spec["paper_name"] != ORACLE_SYSTEM_NAME or existing_oracle_metrics is None:
+                raise
+            print(
+                f"WARNING: Oracle raw results missing ({question_path}). Reusing the "
+                "previously committed Oracle metrics, flagged stale_pre_rerun. "
+                "Regenerate with: 82_run_merged_github_release_unified_global_pool_evaluation.py --system full_context"
+            )
+            oracle_payload = {
+                "paper_name": ORACLE_SYSTEM_NAME,
+                "question_count": existing_oracle_metrics.get("question_count", 900),
+                "retrieval_latency_ms": 0.0,
+                "task_topk_metrics": existing_oracle_metrics.get("task_topk_metrics", {}),
+                "decoupling_maink": existing_oracle_metrics.get("decoupling_maink", {}),
+                "oracle_note": "Cov/CSR=1.0 by construction (gold injection, verified on current dataset by 93_verify_oracle_coverage.py). ACC is from a pre-rerun dataset revision; rerun --system full_context to refresh.",
+            }
+            system_rows.append(oracle_payload)
+            provenance[ORACLE_SYSTEM_NAME] = "stale_pre_rerun"
+            case_candidates[ORACLE_SYSTEM_NAME] = {"success_candidates": [], "failure_candidates": []}
+            continue
 
         task_topk_metrics: dict[str, dict[str, Any]] = {}
         for task in TASK_ORDER:
@@ -525,6 +590,8 @@ def main() -> None:
         "primary_top_k": PRIMARY_K,
         "case_candidates": case_candidates,
         "source_result_dirs": {spec["paper_name"]: str(spec["result_dir"]) for spec in SYSTEM_SPECS},
+        "system_provenance": provenance,
+        "option_position_baselines": "see option_position_baselines.json (produced by 90_option_position_baselines.py); always-A scores 0.977 (cross) and 0.930 (temporal), so unshuffled ACC is position-confounded",
     }
 
     (output_dir / "paper_metrics.json").write_text(

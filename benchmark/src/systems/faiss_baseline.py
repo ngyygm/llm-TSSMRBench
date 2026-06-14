@@ -39,6 +39,12 @@ class FAISSBaseline(MemorySystem):
         )
         self.top_k = top_k
         self.texts: List[str] = []
+        # Parallel provenance lists, aligned with self.texts by position, so that
+        # coverage/CSR can be scored by exact node identity (consumed by
+        # evaluation._explicit_retrieved_pairs_from_metadata) instead of fuzzy
+        # text matching.
+        self.node_ids: List[str] = []
+        self.chain_ids: List[str] = []
         self.embeddings: Optional[np.ndarray] = None
         self.index = None
 
@@ -72,6 +78,8 @@ class FAISSBaseline(MemorySystem):
 
     def remember(self, text: str) -> str:
         self.texts.append(text)
+        self.node_ids.append(f"faiss_{len(self.texts)}")
+        self.chain_ids.append("")
         emb = self._embed([text])
         if self.embeddings is None:
             self.embeddings = emb
@@ -79,6 +87,25 @@ class FAISSBaseline(MemorySystem):
             self.embeddings = np.vstack([self.embeddings, emb])
         self._rebuild_index()
         return f"faiss_{len(self.texts)}"
+
+    def remember_chain(self, chain_id: str, node_ids: List[str], texts: List[str]) -> List[str]:
+        """Ingest one chain while preserving per-node source identity.
+
+        Embeds in a single batch to keep ingestion efficient.
+        """
+        if not texts:
+            return []
+        ids: List[str] = []
+        for index, text in enumerate(texts):
+            node_id = node_ids[index] if index < len(node_ids) else f"{chain_id}_node_{index + 1:04d}"
+            self.texts.append(text)
+            self.node_ids.append(node_id)
+            self.chain_ids.append(chain_id)
+            ids.append(node_id)
+        emb = self._embed(texts)
+        self.embeddings = emb if self.embeddings is None else np.vstack([self.embeddings, emb])
+        self._rebuild_index()
+        return ids
 
     def _rebuild_index(self) -> None:
         if self.embeddings is None:
@@ -112,13 +139,29 @@ class FAISSBaseline(MemorySystem):
 
         retrieved = []
         candidate_scores = []
+        retrieved_node_ids: List[str] = []
+        retrieved_chain_ids: List[str] = []
+        has_provenance = len(self.node_ids) == len(self.texts) and len(self.chain_ids) == len(self.texts)
         for rank, idx in enumerate(indices[0]):
             score = float(scores[0][rank])
             if idx >= 0 and score > 0:
                 retrieved.append(self.texts[idx])
                 candidate_scores.append(score)
+                if has_provenance:
+                    retrieved_node_ids.append(self.node_ids[idx])
+                    retrieved_chain_ids.append(self.chain_ids[idx])
 
         max_score = max(candidate_scores) if candidate_scores else 0.0
+
+        metadata = {
+            "embedding_model": self.embedding_model,
+            "embedding_base_url": self.embedding_base_url,
+            "implementation": "faiss" if self._faiss_available else "numpy_inner_product_fallback",
+        }
+        # Emit exact source node ids so evaluation scores coverage by identity.
+        if has_provenance:
+            metadata["retrieved_source_node_ids"] = retrieved_node_ids
+            metadata["retrieved_source_chain_ids"] = retrieved_chain_ids
 
         return QueryResult(
             answer="\n".join(retrieved),
@@ -126,14 +169,12 @@ class FAISSBaseline(MemorySystem):
             retrieved_facts=retrieved,
             confidence=max_score if candidate_scores else 0.0,
             latency_ms=(time.time() - start) * 1000,
-            metadata={
-                "embedding_model": self.embedding_model,
-                "embedding_base_url": self.embedding_base_url,
-                "implementation": "faiss" if self._faiss_available else "numpy_inner_product_fallback",
-            },
+            metadata=metadata,
         )
 
     def reset(self) -> None:
         self.texts = []
+        self.node_ids = []
+        self.chain_ids = []
         self.embeddings = None
         self.index = None

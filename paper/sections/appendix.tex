@@ -26,7 +26,7 @@ Requirements:
 \end{lstlisting}
 
 \paragraph{QA generation schema.}
-Listing~\ref{lst:qa-prompt} shows the output schema and rules. Each repository receives exactly three questions, one per task family. Every question must include the gold supporting node identifiers, which make it possible to compute coverage and complete-support rate independently of final answer correctness. The rules enforce task-specific constraints: cross-version comparison questions must be grounded in concrete differences (not trivially unchanged pairs), and temporal-ordering questions must use 3--5 states whose ordering requires reading the actual memory content rather than relying on version-number patterns.
+Listing~\ref{lst:qa-prompt} shows the output schema and rules. Each repository receives exactly three questions, one per task family. Every question must include the gold supporting node identifiers, which make it possible to compute coverage and complete-support rate independently of final answer correctness. The rules enforce task-specific constraints: cross-version comparison questions must be grounded in concrete differences (not trivially unchanged pairs), and temporal-ordering questions must use 3--4 states whose ordering requires reading the actual memory content rather than relying on version-number patterns.
 
 \needspace{14\baselineskip}
 \begin{lstlisting}[caption={Excerpt defining the output schema and QA rules.},label={lst:qa-prompt}]
@@ -48,7 +48,7 @@ Listing~\ref{lst:qa-prompt} shows the output schema and rules. Each repository r
 - Generate exactly 3 questions, one per task type.
 - Every query must explicitly name the repository.
 - For cross_version_comparison, compare two releases using concrete differences.
-- For temporal_version_ordering, use 3 to 5 release-content states.
+- For temporal_version_ordering, use 3 to 4 release-content states.
 - The answer should require retrieving the corresponding memory content.
 ...
 \end{lstlisting}
@@ -87,7 +87,13 @@ Output rule:
 \end{lstlisting}
 
 \paragraph{Question record.}
-Each question record includes the task type, the query text, four multiple choice options, the correct option, and the annotated gold supporting nodes. The gold node identifiers make it possible to evaluate not only whether the final answer is correct but also whether the memory system retrieved the right supporting states. For temporal-ordering questions, the options are orderings of state indices (e.g., $2\!\to\!1\!\to\!4\!\to\!3$), so the question cannot be solved by pattern-matching version numbers alone. Each question also includes an \texttt{answer\_support} field that provides per-node evidence text explaining why each supporting node is relevant, useful for auditing gold annotations.
+Each question record includes the task type, the query text, four multiple choice options, the correct option, and the annotated gold supporting nodes. The gold node identifiers make it possible to evaluate not only whether the final answer is correct but also whether the memory system retrieved the right supporting states. For temporal-ordering questions, the options are orderings of state content descriptions; the descriptions deliberately omit explicit dates and version numbers so the answer must be grounded in the retrieved memory content. We note, however, that in the released (unshuffled) data the correct temporal ordering is the ascending/listed order for the majority of questions, which is why we additionally release a position-balanced variant and report position-free baselines (Section~\ref{sec:position-bias}); the retrieval metrics remain valid on either variant. Each question also includes an \texttt{answer\_support} field that provides per-node evidence text explaining why each supporting node is relevant, useful for auditing gold annotations.
+
+\paragraph{Model access and versioning.}
+Answer generation and dataset construction use the DeepSeek-V4 model family (Pro for construction and answer generation; Flash as the internal memory-processing model for Mem0 and Graphiti) accessed via the DeepSeek API at temperature~0 with thinking disabled. At the time of writing there is no public DeepSeek-V4 technical report to cite; the exact API model strings (\texttt{deepseek-v4-pro}, \texttt{deepseek-v4-flash}), the access date, and the API endpoint are recorded in the released configuration files. Embeddings use the BGE-M3 model and reranking uses BGE Reranker v2~M3. Because ACC depends on the exact answer-model snapshot, fully reproducing the ACC numbers requires the same API access; the retrieval metrics (Cov, CSR) and the deterministic position baselines are reproducible from the committed data alone.
+
+\paragraph{Data license and attribution.}
+The benchmark redistributes LLM-rewritten memory units derived from the public release notes of 300 open-source repositories, together with the original release-note text for audit. Release notes are copyrighted by their repository owners under varied licenses. The dataset is released for research use with attribution; each scenario record preserves the repository identifier, source URL, and license-relevant metadata so that downstream users can respect the terms of each upstream repository, and repositories with non-permissive or non-redistributable terms should be filtered before any commercial redistribution.
 
 \subsection{Retrieval Result Examples}
 

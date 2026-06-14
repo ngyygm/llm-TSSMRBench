@@ -76,6 +76,12 @@ class BM25Baseline(MemorySystem):
         super().__init__(name)
         self.raw_texts: List[str] = []
         self.tokenized_texts: List[List[str]] = []
+        # Parallel provenance lists, aligned with raw_texts by position, so that
+        # coverage/CSR can be scored by exact node identity (consumed by
+        # evaluation._explicit_retrieved_pairs_from_metadata) instead of fuzzy
+        # text matching.
+        self.node_ids: List[str] = []
+        self.chain_ids: List[str] = []
         self.bm25: Optional[object] = None
         self.top_k: int = 5
 
@@ -102,8 +108,25 @@ class BM25Baseline(MemorySystem):
     def remember(self, text: str) -> str:
         self.raw_texts.append(text)
         self.tokenized_texts.append(self._tokenize(text))
+        self.node_ids.append(f"bm25_{len(self.raw_texts)}")
+        self.chain_ids.append("")
         self._build_index()
         return f"bm25_{len(self.raw_texts)}"
+
+    def remember_chain(self, chain_id: str, node_ids: List[str], texts: List[str]) -> List[str]:
+        """Ingest one chain while preserving per-node source identity."""
+        if not texts:
+            return []
+        ids: List[str] = []
+        for index, text in enumerate(texts):
+            node_id = node_ids[index] if index < len(node_ids) else f"{chain_id}_node_{index + 1:04d}"
+            self.raw_texts.append(text)
+            self.tokenized_texts.append(self._tokenize(text))
+            self.node_ids.append(node_id)
+            self.chain_ids.append(chain_id)
+            ids.append(node_id)
+        self._build_index()
+        return ids
 
     def query(
         self,
@@ -127,18 +150,27 @@ class BM25Baseline(MemorySystem):
         max_score = positive_scores[0] if positive_scores else 0.0
         confidence = min(max_score / 10.0, 1.0)
 
+        metadata = {
+            "implementation": "rank_bm25" if _RankBM25Okapi is not None else "fallback_python_bm25",
+        }
+        # Emit exact source node ids so evaluation scores coverage by identity.
+        has_provenance = len(self.node_ids) == len(self.raw_texts) and len(self.chain_ids) == len(self.raw_texts)
+        if has_provenance:
+            metadata["retrieved_source_node_ids"] = [self.node_ids[i] for i in top_indices if scores[i] > 0]
+            metadata["retrieved_source_chain_ids"] = [self.chain_ids[i] for i in top_indices if scores[i] > 0]
+
         return QueryResult(
             answer=context,
             retrieved_context=context,
             retrieved_facts=retrieved,
             confidence=confidence,
             latency_ms=(time.time() - start) * 1000,
-            metadata={
-                "implementation": "rank_bm25" if _RankBM25Okapi is not None else "fallback_python_bm25",
-            },
+            metadata=metadata,
         )
 
     def reset(self) -> None:
         self.raw_texts.clear()
         self.tokenized_texts.clear()
+        self.node_ids.clear()
+        self.chain_ids.clear()
         self.bm25 = None
