@@ -35,8 +35,9 @@ from src.state_version.schemas import (
     StateChainSample,
     StateQuestion,
 )
+from src.utils.config_env import load_yaml_with_env
 
-DEFAULT_CONFIG = ROOT / "benchmark" / "configs" / "state_version_experiment_config_deepseek_flash_memory.yaml"
+DEFAULT_CONFIG = ROOT / "benchmark" / "configs" / "state_version_experiment_config.yaml"
 DEFAULT_MERGED_JSON = (
     ROOT
     / "benchmark"
@@ -48,15 +49,39 @@ DEFAULT_MERGED_JSON = (
 )
 
 
-def load_eval71_module() -> Any:
-    script_path = ROOT / "benchmark" / "scripts" / "71_run_narrative_prototype_evaluation.py"
-    spec = importlib.util.spec_from_file_location("prototype_eval_v71_globalpool", script_path)
+def load_yaml(path: Path, profile: str | None = None) -> dict[str, Any]:
+    return load_yaml_with_env(path, profile=profile)
+
+
+def load_create_systems() -> Any:
+    script_path = ROOT / "benchmark" / "scripts" / "68_run_state_version_evaluation.py"
+    spec = importlib.util.spec_from_file_location("state_version_eval_cli_globalpool", script_path)
     if spec is None or spec.loader is None:
         raise RuntimeError(f"Could not load evaluation module from {script_path}")
     module = importlib.util.module_from_spec(spec)
     sys.modules[spec.name] = module
     spec.loader.exec_module(module)
-    return module
+    return module.create_systems
+
+
+def display_system_name(system_name: str) -> str:
+    if system_name == "Full Context":
+        return "Oracle Gold Context"
+    return system_name
+
+
+def attach_question_metadata(run: dict[str, Any], question_meta: dict[str, Any]) -> dict[str, Any]:
+    for row in run.get("question_results") or []:
+        meta = question_meta.get(row["question_id"]) or {}
+        row["bundle_id"] = meta.get("bundle_id")
+        row["bundle_focus_event"] = meta.get("focus_event")
+        row["task_type"] = meta.get("task_type")
+        row["prototype_gold_evidence"] = meta.get("gold_evidence") or []
+        row["prototype_adversarial_evidence"] = meta.get("adversarial_evidence") or []
+        row["original_question_id"] = meta.get("original_question_id")
+        row.pop("question_family", None)
+        row.pop("dynamic_top_k", None)
+    return run
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -354,6 +379,7 @@ def build_global_dataset_from_merged_payload(merged: dict[str, Any]) -> tuple[St
 def main() -> None:
     parser = argparse.ArgumentParser(description="Run one-system evaluation over the official merged GitHub release dataset in one mixed memory pool.")
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
+    parser.add_argument("--config-profile", default=None)
     parser.add_argument("--merged-json", type=Path, default=DEFAULT_MERGED_JSON)
     parser.add_argument("--system", choices=["mem0", "graphiti", "bm25", "faiss", "full_context"], required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
@@ -369,18 +395,14 @@ def main() -> None:
         format="%(asctime)s [%(levelname)s] %(message)s",
     )
 
-    eval71 = load_eval71_module()
-    load_yaml = eval71.load_yaml
-    create_systems = eval71._load_create_systems()
-    attach_question_metadata = eval71.attach_question_metadata
-    display_system_name = eval71.display_system_name
+    create_systems = load_create_systems()
 
     merged = load_json(args.merged_json)
     dataset, audit = build_global_dataset_from_merged_payload(merged)
     args.output_dir.mkdir(parents=True, exist_ok=True)
     write_json(args.output_dir / "global_pool_audit.json", audit)
 
-    eval_cfg = load_yaml(args.config)
+    eval_cfg = load_yaml(args.config, profile=args.config_profile)
     _, eval_cfg = _ensure_system_run_id(eval_cfg, args.system, args.output_dir)
     answer_cfg = eval_cfg["answer_generator"]
     answer_generator = AnswerGenerator(
@@ -409,12 +431,12 @@ def main() -> None:
         raise RuntimeError(f"Expected one system for {args.system}, got {len(systems)}")
     system = systems[0]
 
+    # All repository windows are ingested into one shared memory pool before question answering.
     runner = StateVersionEvaluationRunner(
         dataset=dataset,
         systems=systems,
         answer_generator=answer_generator,
         judge=judge,
-        random_context_pool_nodes=[],
         question_task_type_map={
             qid: str(meta.get("task_type") or "")
             for qid, meta in audit["question_meta"].items()
@@ -429,6 +451,8 @@ def main() -> None:
         resume=args.resume,
     )
 
+    # Retrieval is executed once at the largest needed top-k; downstream scoring reuses
+    # the saved retrieval slice for each task-specific k without re-querying the memory system.
     run = runner.run_system(
         system,
         output_dir=args.output_dir,

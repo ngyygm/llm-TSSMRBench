@@ -58,6 +58,8 @@ def main() -> None:
         }
         prototypes.append(payload)
 
+    # This merged file is the canonical single-file artifact for formal evaluation
+    # and for building the lighter public release package.
     merged = {
         "dataset_id": "official_300repo_release_unified_v1",
         "dataset_title": "Official 300-repository GitHub release-note unified benchmark",
