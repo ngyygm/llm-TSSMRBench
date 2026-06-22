@@ -735,6 +735,8 @@ class StateVersionEvaluationRunner:
                 )
 
         retrieval_latency_ms = query_result.latency_ms
+        # One retrieval call is reused for all task-specific k values by slicing the
+        # same ranked memory list, which keeps the comparison across k on one trace.
         per_k_results: dict[str, Any] = {}
         for top_k in question_analysis_top_ks:
             sliced = _slice_query_result(query_result, top_k)

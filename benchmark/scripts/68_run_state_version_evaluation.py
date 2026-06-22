@@ -4,14 +4,11 @@
 from __future__ import annotations
 
 import argparse
-import json
 import logging
-import os
 import sys
 from pathlib import Path
 from typing import Any, Optional
 
-import yaml
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
@@ -26,8 +23,8 @@ from src.systems.base import MemorySystem
 from src.utils.config_env import load_yaml_with_env
 
 
-def load_yaml(path: Path) -> dict[str, Any]:
-    return load_yaml_with_env(path)
+def load_yaml(path: Path, profile: str | None = None) -> dict[str, Any]:
+    return load_yaml_with_env(path, profile=profile)
 
 
 def resolve_llm_value(
@@ -59,6 +56,8 @@ def resolve_embedding_value(
 
 
 def create_systems(config: dict[str, Any], generation_cfg: dict[str, Any], only_systems: Optional[list[str]] = None) -> list[MemorySystem]:
+    """Build the maintained retrieval backends used by the benchmark runners."""
+
     systems: list[MemorySystem] = []
     systems_cfg = config.get("systems", {})
 
@@ -71,16 +70,6 @@ def create_systems(config: dict[str, Any], generation_cfg: dict[str, Any], only_
         if allowed is None:
             return systems_cfg.get(name, {}).get("enabled", False)
         return normalize(name) in allowed
-
-    if enabled("no_context"):
-        from src.systems.no_context_baseline import NoContextBaseline
-
-        systems.append(NoContextBaseline())
-
-    if enabled("random_context"):
-        from src.systems.random_context_baseline import RandomContextBaseline
-
-        systems.append(RandomContextBaseline())
 
     if enabled("full_context"):
         from src.systems.full_context_baseline import FullContextBaseline
@@ -107,30 +96,6 @@ def create_systems(config: dict[str, Any], generation_cfg: dict[str, Any], only_
                 top_k=cfg.get("top_k", 5),
             )
         )
-
-    if enabled("chroma"):
-        from src.systems.chroma_baseline import ChromaBaseline
-
-        cfg = systems_cfg["chroma"]
-        systems.append(
-            ChromaBaseline(
-                embedding_model=cfg.get("embedding_model"),
-                top_k=cfg.get("top_k", 5),
-            )
-        )
-
-    if enabled("naive_rag"):
-        from src.systems.naive_rag_baseline import NaiveRAGBaseline
-
-        system = NaiveRAGBaseline()
-        system.top_k = systems_cfg["naive_rag"].get("top_k", 5)
-        systems.append(system)
-
-    if enabled("simple_kg"):
-        from src.systems.simple_kg_baseline import SimpleKGBaseline
-
-        cfg = systems_cfg["simple_kg"]
-        systems.append(SimpleKGBaseline(top_k=cfg.get("top_k", 5)))
 
     if enabled("mem0"):
         from src.systems.mem0_baseline import Mem0Baseline
@@ -200,6 +165,7 @@ def create_systems(config: dict[str, Any], generation_cfg: dict[str, Any], only_
 def main() -> None:
     parser = argparse.ArgumentParser(description="Run state-version benchmark evaluation")
     parser.add_argument("--config", default="configs/state_version_experiment_config.yaml")
+    parser.add_argument("--config-profile", default=None)
     parser.add_argument("--systems", nargs="*", default=None)
     parser.add_argument("--splits", nargs="*", default=None)
     parser.add_argument("--domains", nargs="*", default=None)
@@ -220,12 +186,12 @@ def main() -> None:
     )
 
     repo_root = Path(__file__).parent.parent
-    eval_cfg = load_yaml(repo_root / args.config)
+    eval_cfg = load_yaml(repo_root / args.config, profile=args.config_profile)
     generation_cfg = eval_cfg
 
     dataset_cfg = eval_cfg["dataset"]
     splits = args.splits or dataset_cfg.get("splits", ["dev", "test"])
-    domains = args.domains or dataset_cfg.get("domains", ["github_evolution", "narrative_evolution"])
+    domains = args.domains or dataset_cfg.get("domains", ["github_evolution"])
     dataset = load_state_version_dataset(
         dataset_root=repo_root / dataset_cfg["dataset_root"],
         language=dataset_cfg.get("language", "en"),
@@ -234,37 +200,9 @@ def main() -> None:
         splits=splits,
     )
     dataset = build_memory_view_dataset(dataset, memory_view=args.memory_view)
-    random_pool_nodes: list[tuple[str, str, str]] = []
-    systems_cfg = eval_cfg.get("systems", {})
-    requested_systems = {name.lower().replace("_", "").replace(" ", "") for name in (args.systems or [])}
-    random_enabled = (
-        systems_cfg.get("random_context", {}).get("enabled", False)
-        if not requested_systems
-        else "randomcontext" in requested_systems
-    )
-    if random_enabled:
-        random_pool_splits = systems_cfg.get("random_context", {}).get("pool_splits")
-        if not random_pool_splits:
-            random_pool_splits = [split for split in ("train", "dev", "test") if split not in splits]
-        if random_pool_splits:
-            random_pool_dataset = load_state_version_dataset(
-                dataset_root=repo_root / dataset_cfg["dataset_root"],
-                language=dataset_cfg.get("language", "en"),
-                phase=dataset_cfg.get("phase", "formal"),
-                domains=domains,
-                splits=random_pool_splits,
-            )
-            random_pool_dataset = build_memory_view_dataset(random_pool_dataset, memory_view=args.memory_view)
-            for pool_chain_id in sorted(random_pool_dataset.chains):
-                pool_chain = random_pool_dataset.chains[pool_chain_id]
-                ordered_nodes = sorted(pool_chain.chain_nodes, key=lambda node: node.surface_order)
-                for node in ordered_nodes:
-                    random_pool_nodes.append((pool_chain_id, node.node_id, node.text))
-            logging.info(
-                "Loaded %s random-context pool nodes from splits=%s",
-                len(random_pool_nodes),
-                random_pool_splits,
-            )
+
+    # The maintained reproduction path evaluates only real retrieval backends plus
+    # the oracle full-context reader; older synthetic-context baselines were removed.
     if args.question_ids or args.max_questions:
         allowed = set(args.question_ids or [])
         limited_questions = {}
@@ -340,7 +278,6 @@ def main() -> None:
             systems=[system],
             answer_generator=answer_generator,
             judge=judge,
-            random_context_pool_nodes=random_pool_nodes,
         )
         run = runner.run_system(
             system,

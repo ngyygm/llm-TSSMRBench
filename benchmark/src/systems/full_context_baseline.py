@@ -1,4 +1,4 @@
-"""Full-context baseline for upper-bound reading with the complete event chain."""
+﻿"""Full-context baseline for upper-bound reading with the complete event chain."""
 
 from __future__ import annotations
 

@@ -1,3 +1,4 @@
+import gzip
 import json
 import math
 from pathlib import Path
@@ -7,14 +8,14 @@ from statsmodels.genmod.bayes_mixed_glm import BinomialBayesMixedGLM
 
 
 ROOT = Path(__file__).resolve().parents[2]
-ARTIFACT_DIR = ROOT / "benchmark" / "data" / "prototype_eval_results" / "official_300repo_release_unified_v1_paper_artifacts"
+ARTIFACT_DIR = ROOT / "benchmark" / "data" / "results" / "official_300repo_release_unified_v1" / "analysis_exports"
 PAPER_TABLE_DIR = ROOT / "paper" / "tables" / "generated"
 
 SOURCE_DIRS = {
-    "BM25": ROOT / "benchmark" / "data" / "prototype_eval_results" / "official_300repo_release_unified_v1_bm25_globalpool_taskk_v1" / "bm25.questions.jsonl",
-    "FAISS": ROOT / "benchmark" / "data" / "prototype_eval_results" / "official_300repo_release_unified_v1_faiss_globalpool_taskk_v1" / "faiss_vector_store.questions.jsonl",
-    "Mem0": ROOT / "benchmark" / "data" / "prototype_eval_results" / "official_300repo_release_unified_v1_mem0_deepseekflash_globalpool_taskk_internal10" / "mem0.questions.jsonl",
-    "Graphiti": ROOT / "benchmark" / "data" / "prototype_eval_results" / "official_300repo_release_unified_v1_graphiti_deepseekflash_globalpool_taskk_resume50_v1" / "graphiti.questions.jsonl",
+    "BM25": ROOT / "benchmark" / "data" / "results" / "official_300repo_release_unified_v1" / "bm25" / "bm25.questions.jsonl.gz",
+    "FAISS": ROOT / "benchmark" / "data" / "results" / "official_300repo_release_unified_v1" / "faiss" / "faiss_vector_store.questions.jsonl.gz",
+    "Mem0": ROOT / "benchmark" / "data" / "results" / "official_300repo_release_unified_v1" / "mem0_internal10" / "mem0.questions.jsonl.gz",
+    "Graphiti": ROOT / "benchmark" / "data" / "results" / "official_300repo_release_unified_v1" / "graphiti" / "graphiti.questions.jsonl.gz",
 }
 
 MAIN_TOP_K = {
@@ -33,7 +34,8 @@ TASK_LABEL = {
 def load_main_k_rows() -> pd.DataFrame:
     rows = []
     for system_name, path in SOURCE_DIRS.items():
-        with path.open("r", encoding="utf-8") as f:
+        opener = gzip.open if path.suffix == ".gz" else path.open
+        with opener(path, "rt", encoding="utf-8") as f:
             for line in f:
                 item = json.loads(line)
                 task_type = item["task_type"]

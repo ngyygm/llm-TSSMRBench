@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import gzip
 import json
 import math
 from collections import defaultdict
@@ -14,30 +15,32 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[2]
-RESULTS_ROOT = ROOT / "benchmark" / "data" / "prototype_eval_results"
-DEFAULT_OUTPUT_DIR = RESULTS_ROOT / "official_300repo_release_unified_v1_paper_artifacts"
+RESULTS_ROOT = ROOT / "benchmark" / "data" / "results" / "official_300repo_release_unified_v1"
+DEFAULT_OUTPUT_DIR = RESULTS_ROOT / "analysis_exports"
 DEFAULT_PAPER_TABLE_DIR = ROOT / "paper" / "tables" / "generated"
 
+# These result directories are the only inputs needed to rebuild the paper tables
+# after the official benchmark runs have finished.
 SYSTEM_SPECS = [
     {
         "paper_name": "BM25",
-        "result_dir": RESULTS_ROOT / "official_300repo_release_unified_v1_bm25_globalpool_taskk_v1",
-        "questions_file": "bm25.questions.jsonl",
+        "result_dir": RESULTS_ROOT / "bm25",
+        "questions_file": "bm25.questions.jsonl.gz",
     },
     {
         "paper_name": "FAISS",
-        "result_dir": RESULTS_ROOT / "official_300repo_release_unified_v1_faiss_globalpool_taskk_v1",
-        "questions_file": "faiss_vector_store.questions.jsonl",
+        "result_dir": RESULTS_ROOT / "faiss",
+        "questions_file": "faiss_vector_store.questions.jsonl.gz",
     },
     {
         "paper_name": "Mem0",
-        "result_dir": RESULTS_ROOT / "official_300repo_release_unified_v1_mem0_deepseekflash_globalpool_taskk_internal10",
-        "questions_file": "mem0.questions.jsonl",
+        "result_dir": RESULTS_ROOT / "mem0_internal10",
+        "questions_file": "mem0.questions.jsonl.gz",
     },
     {
         "paper_name": "Graphiti",
-        "result_dir": RESULTS_ROOT / "official_300repo_release_unified_v1_graphiti_deepseekflash_globalpool_taskk_resume50_v1",
-        "questions_file": "graphiti.questions.jsonl",
+        "result_dir": RESULTS_ROOT / "graphiti",
+        "questions_file": "graphiti.questions.jsonl.gz",
     },
     {
         "paper_name": "Oracle Gold Context",
@@ -79,7 +82,8 @@ def canonical_task(task_type: str | None) -> str:
 
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
-    with path.open("r", encoding="utf-8") as handle:
+    opener = gzip.open if path.suffix == ".gz" else path.open
+    with opener(path, "rt", encoding="utf-8") as handle:
         for line in handle:
             line = line.strip()
             if not line:

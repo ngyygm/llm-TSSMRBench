@@ -1,67 +1,63 @@
-# llm-TSSMRBench
+# TSSM-RBench
 
-`llm-TSSMRBench` is the repository for **TSSMRBench**, a benchmark for evaluating whether memory systems can retrieve the stage-correct temporal semantic state from evolving memories.
+<p align="center">
+  <img src="docs/readme_assets/system_overview.png" alt="TSSM-RBench system overview" width="92%" />
+</p>
 
-The current final artifact in this repository is a **300-repository release-window benchmark** built from influential open-source projects, together with unified mixed-pool evaluation pipelines for:
+## News
 
-- `BM25`
-- `FAISS`
-- `Mem0`
-- `Graphiti`
+- The official public dataset is available on Hugging Face: <https://huggingface.co/datasets/l4st/TSSMRBench>
+- This repository keeps the maintained formal release-only benchmark pipeline and paper artifacts.
+- If TSSM-RBench is useful for your research, please consider giving the repository a star.
 
-This README documents only the **final formal dataset, final evaluation pipeline, paper artifacts, and reproducibility entry points**. Earlier prototype routes are not part of the recommended workflow.
+## Overview
 
-## Final Deliverables
+TSSM-RBench is a benchmark for evaluating whether a memory system can retrieve the correct temporal semantic state from evolving memories. The current formal benchmark is built from 300 repository-level version-evolution scenarios and is evaluated in a single global mixed-memory pool.
 
-### 1. Final dataset
+The maintained pipeline in this repository covers:
 
-The current final dataset is the **formal 300-repository unified release-note dataset**:
+- formal dataset construction;
+- unified global-pool evaluation for `BM25`, `FAISS`, `Mem0`, `Graphiti`, and the oracle full-context reader;
+- paper statistics and figure reproduction;
+- a public redistribution package for Hugging Face.
 
-- [benchmark/data/prototypes/github_release_note_v2/formal_300repo_unified_v1](benchmark/data/prototypes/github_release_note_v2/formal_300repo_unified_v1)
+## Task Definition
 
-Key files:
+Each benchmark question targets one or more state-specific memory units from an evolving version history. The evaluated memory system must retrieve the evidence needed for a downstream answer model to identify the correct state under a temporal constraint.
 
-- `official_300_merged.json`
-  - merged formal dataset entry point used by full experiments
-- `prototype_index_official_300.jsonl`
-  - official list of the 300 repository windows
-- each `<repo>_release_window/prototype.json`
-  - one project sample containing:
-    - `chunks`
-    - `questions`
+TSSM-RBench contains three task families:
 
-### 2. Final scripts
+- `single_state_lookup`
+- `cross_version_comparison`
+- `temporal_version_ordering`
 
-The main scripts for the final pipeline are:
+<p align="center">
+  <img src="docs/readme_assets/dataset_case.png" alt="TSSM-RBench dataset case" width="88%" />
+</p>
 
-- [benchmark/scripts/77_build_github_release_note_unified_prototype.py](benchmark/scripts/77_build_github_release_note_unified_prototype.py)
-  - builds one unified project-level release-note sample
-- [benchmark/scripts/78_generate_github_release_unified_formal.py](benchmark/scripts/78_generate_github_release_unified_formal.py)
-  - constructs the large formal dataset with incremental persistence
-- [benchmark/scripts/79_merge_github_release_unified_formal.py](benchmark/scripts/79_merge_github_release_unified_formal.py)
-  - merges the per-project formal samples into one experiment-ready JSON
-- [benchmark/scripts/82_run_merged_github_release_unified_global_pool_evaluation.py](benchmark/scripts/82_run_merged_github_release_unified_global_pool_evaluation.py)
-  - runs the **global mixed-pool** evaluation, i.e. all project memories are stored first and then queried from one shared memory pool
-- [benchmark/scripts/84_generate_official300_paper_artifacts.py](benchmark/scripts/84_generate_official300_paper_artifacts.py)
-  - aggregates the final result files into paper-ready statistics
-- [benchmark/scripts/85_plot_official300_paper_figures.py](benchmark/scripts/85_plot_official300_paper_figures.py)
-  - reproduces the main paper figures
-- [benchmark/scripts/68_run_state_version_evaluation.py](benchmark/scripts/68_run_state_version_evaluation.py)
-  - shared evaluation system factory and config entry helpers
+## Dataset
 
-### 3. Final configs
+The formal dataset lives in:
 
-The main configs used in the final experiments are:
+- [benchmark/data/datasets/official_300repo_release_unified_v1](benchmark/data/datasets/official_300repo_release_unified_v1)
 
-- [benchmark/configs/state_version_build_config.yaml](benchmark/configs/state_version_build_config.yaml)
-- [benchmark/configs/state_version_experiment_config_deepseek_flash_memory.yaml](benchmark/configs/state_version_experiment_config_deepseek_flash_memory.yaml)
-- [benchmark/configs/state_version_experiment_config_deepseek_flash_memory_mem0_internal10.yaml](benchmark/configs/state_version_experiment_config_deepseek_flash_memory_mem0_internal10.yaml)
+The public release package prepared for redistribution lives in:
 
-All private credentials have been replaced by environment-variable placeholders. See [.env.example](.env.example) for the expected variables.
+- [huggingface_dataset/tssmrbench_official300_public](huggingface_dataset/tssmrbench_official300_public)
 
-## Final Dataset Format
+### Data Statistics
 
-Each project sample is a unified JSON file:
+- repositories: `300`
+- memory units: `9000`
+- questions: `900`
+- task families:
+  - `single_state_lookup`
+  - `cross_version_comparison`
+  - `temporal_version_ordering`
+
+### Data Format
+
+Each repository sample is stored as one unified JSON object:
 
 ```json
 {
@@ -74,123 +70,186 @@ Each project sample is a unified JSON file:
 }
 ```
 
-Important properties:
+Important fields:
 
-- `chunks`
-  - memory units derived from recent GitHub release notes
-- `questions`
-  - three task types:
-    - `single_state_lookup`
-    - `cross_version_comparison`
-    - `temporal_version_ordering`
-- each question uses `source_chunk_ids` to indicate the chunks required for answering
+- `chunks`: normalized release-derived memory units stored as `memory_unit_text`
+- `questions`: benchmark questions over the repository window
+- `source_chunk_ids`: gold supporting state identifiers required by each question
 
-## Final Evaluation Setting
+The public merged file is:
 
-### Global mixed-pool setting
+- `huggingface_dataset/tssmrbench_official300_public/data/official_300_merged_public.json`
 
-The final experiments use a **single mixed memory pool**:
+The formal experiment file is:
 
-1. store all memories from all selected projects
-2. query from the same global pool
-3. evaluate answer generation with task-specific `top-k` slicing
+- `benchmark/data/datasets/official_300repo_release_unified_v1/official_300_merged.json`
 
-This is different from earlier prototype experiments that evaluated one project window at a time.
+## Repository Structure
 
-### Task-specific top-k
+- [benchmark/scripts](benchmark/scripts): maintained build, evaluation, aggregation, and plotting entry points
+- [benchmark/src](benchmark/src): shared benchmark logic and system adapters
+- [benchmark/configs](benchmark/configs): maintained builder and evaluation configs
+- [benchmark/data/datasets](benchmark/data/datasets): formal datasets
+- [benchmark/data/results](benchmark/data/results): full local experiment outputs
+- [benchmark/data/public_stats](benchmark/data/public_stats): aggregate-only statistics prepared for public release
+- [huggingface_dataset](huggingface_dataset): public dataset package prepared for Hugging Face
+- [paper](paper): paper source, generated tables, and figures
+- [docs/readme_assets](docs/readme_assets): GitHub-friendly figure assets used in this README
 
-Retrieval is done once with `top-10`, then answer generation reuses the retrieved list with task-specific slicing:
+## Installation
 
-- `single_state_lookup`: `k = 1 / 2 / 3`
-- `cross_version_comparison`: `k = 2 / 5 / 8`
-- `temporal_version_ordering`: `k = 5 / 8 / 10`
+TSSM-RBench keeps secrets and machine-local settings separate from public configs:
 
-### Main reported metrics
+- `.env.example` documents the required environment variables;
+- `benchmark/configs/*.yaml` stores the reproducible experiment structure and model settings.
 
-The main table metrics are:
+This separation is recommended and should be kept. Config files already resolve values from environment variables such as `${DEEPSEEK_API_KEY}` and `${SILICONFLOW_API_KEY}`.
+
+Install the core dependencies:
+
+```powershell
+pip install -r requirements.txt
+```
+
+Install the optional memory-system dependencies when reproducing `Mem0`, `Graphiti`, and the exact FAISS setup:
+
+```powershell
+pip install -r requirements-memory.txt
+```
+
+You also need the backing services required by the maintained systems:
+
+- Neo4j for `Graphiti`
+- Qdrant for `Mem0`
+- external API access for DeepSeek and SiliconFlow
+
+## Quick Start
+
+Build or refresh the formal dataset:
+
+```powershell
+python benchmark/scripts/78_generate_github_release_unified_formal.py
+python benchmark/scripts/79_merge_github_release_unified_formal.py
+```
+
+Run one maintained system on the global mixed pool:
+
+```powershell
+python benchmark/scripts/82_run_merged_github_release_unified_global_pool_evaluation.py `
+  --config benchmark/configs/state_version_experiment_config.yaml `
+  --merged-json benchmark/data/datasets/official_300repo_release_unified_v1/official_300_merged.json `
+  --system bm25 `
+  --output-dir benchmark/data/results/official_300repo_release_unified_v1/bm25
+```
+
+## Running Baselines
+
+Replace `--system bm25` with one of:
+
+- `faiss`
+- `mem0`
+- `graphiti`
+- `full_context`
+
+To reuse the Mem0 pool with `internal_fact_k = 10`:
+
+```powershell
+python benchmark/scripts/82_run_merged_github_release_unified_global_pool_evaluation.py `
+  --config benchmark/configs/state_version_experiment_config.yaml `
+  --config-profile mem0_internal10 `
+  --merged-json benchmark/data/datasets/official_300repo_release_unified_v1/official_300_merged.json `
+  --system mem0 `
+  --output-dir benchmark/data/results/official_300repo_release_unified_v1/mem0_internal10
+```
+
+## Evaluation
+
+The final experiments use a single global mixed memory pool:
+
+1. ingest all repository memories into one system-wide pool;
+2. query the same pool for every question;
+3. reuse one retrieval trace with task-specific `top-k` slicing.
+
+### Prediction Format
+
+Prediction records in the local result files include:
+
+- generated answer text;
+- selected option id when applicable;
+- retrieved memory context;
+- retrieved state matches;
+- per-`k` evaluation slices.
+
+### Metrics
+
+Main reported metrics:
 
 - `ACC`
 - `Cov`
 - `CSR`
 - `Latency`
 
-The result files also support additional analysis such as:
+Additional aggregate analyses include task-wise breakdowns, `top-k` trends, retrieval-versus-reasoning decoupling, and context-length summaries.
 
-- `Zero-Gold`
-- `D/G`
-- `Context Tokens`
-- `Top-1 vs Top-k stability`
-- correct answers without retrieving required gold chunks
+## Official Results
 
-## Final Result Directories
+The maintained full local experiment outputs live in:
 
-### Simple baselines
+- [benchmark/data/results/official_300repo_release_unified_v1](benchmark/data/results/official_300repo_release_unified_v1)
 
-- BM25:
-  - [benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_bm25_globalpool_taskk_v1](benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_bm25_globalpool_taskk_v1)
-- FAISS:
-  - [benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_faiss_globalpool_taskk_v1](benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_faiss_globalpool_taskk_v1)
+The aggregate-only public statistics package lives in:
 
-### Memory systems
+- [benchmark/data/public_stats/official_300repo_release_unified_v1](benchmark/data/public_stats/official_300repo_release_unified_v1)
 
-- Mem0, `internal_fact_k = 60`:
-  - [benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_mem0_deepseekflash_globalpool_taskk_resume50_v2](benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_mem0_deepseekflash_globalpool_taskk_resume50_v2)
-- Mem0, `internal_fact_k = 10`:
-  - [benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_mem0_deepseekflash_globalpool_taskk_internal10](benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_mem0_deepseekflash_globalpool_taskk_internal10)
-- Graphiti:
-  - [benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_graphiti_deepseekflash_globalpool_taskk_resume50_v1](benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_graphiti_deepseekflash_globalpool_taskk_resume50_v1)
+<p align="center">
+  <img src="docs/readme_assets/task_topk_acc.png" alt="TSSM-RBench task and top-k results" width="92%" />
+</p>
 
-## How To Reproduce
+## Reproducing Paper Results
 
-### 1. Build / refresh formal dataset
-
-```powershell
-# First export the variables listed in .env.example into your shell environment.
-python benchmark/scripts/78_generate_github_release_unified_formal.py
-python benchmark/scripts/79_merge_github_release_unified_formal.py
-```
-
-### 2. Run simple baselines on the global mixed pool
-
-```powershell
-python benchmark/scripts/82_run_merged_github_release_unified_global_pool_evaluation.py `
-  --config benchmark/configs/state_version_experiment_config_deepseek_flash_memory.yaml `
-  --merged-json benchmark/data/prototypes/github_release_note_v2/formal_300repo_unified_v1/official_300_merged.json `
-  --system bm25 `
-  --output-dir benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_bm25_globalpool_taskk_v1
-```
-
-Replace `--system bm25` with:
-
-- `faiss`
-- `mem0`
-- `graphiti`
-
-### 3. Reuse an existing Mem0 mixed pool with `internal_fact_k = 10`
-
-```powershell
-python benchmark/scripts/82_run_merged_github_release_unified_global_pool_evaluation.py `
-  --config benchmark/configs/state_version_experiment_config_deepseek_flash_memory_mem0_internal10.yaml `
-  --merged-json benchmark/data/prototypes/github_release_note_v2/formal_300repo_unified_v1/official_300_merged.json `
-  --system mem0 `
-  --output-dir benchmark/data/prototype_eval_results/official_300repo_release_unified_v1_mem0_deepseekflash_globalpool_taskk_internal10
-```
-
-### 4. Rebuild paper statistics and figures
+Rebuild the paper statistics and figures:
 
 ```powershell
 python benchmark/scripts/84_generate_official300_paper_artifacts.py
 python benchmark/scripts/85_plot_official300_paper_figures.py
 ```
 
-## Notes
+## Adding a New Method
 
-- The final benchmark uses **release-note memory units**, not raw code blocks.
-- The final formal experiments should use the **official 300 merged dataset**.
-- Oversized per-question result files are stored as `.jsonl.gz` to keep the repository pushable while preserving the full raw outputs.
+To add a new method:
 
-## File Guide
+1. implement a new adapter under [benchmark/src/systems](benchmark/src/systems);
+2. expose it through the shared system factory in [benchmark/scripts/68_run_state_version_evaluation.py](benchmark/scripts/68_run_state_version_evaluation.py);
+3. add its configuration block to [benchmark/configs/state_version_experiment_config.yaml](benchmark/configs/state_version_experiment_config.yaml);
+4. run it through the global mixed-pool evaluation script.
 
-For a Chinese file-level guide to the final dataset, result directories, and intermediate files, see:
+## Data Construction
 
-- [benchmark/docs/FORMAL_RELEASE_UNIFIED_FILE_GUIDE_ZH.md](benchmark/docs/FORMAL_RELEASE_UNIFIED_FILE_GUIDE_ZH.md)
+The maintained data-construction route in this repository is the release-only formal pipeline:
+
+1. collect versioned release materials;
+2. build repository-level version-evolution windows;
+3. normalize selected releases into `memory_unit_text`;
+4. generate benchmark questions and merge them into the formal unified dataset.
+
+The main entry points are:
+
+- `benchmark/scripts/77_build_github_release_note_unified_prototype.py`
+- `benchmark/scripts/78_generate_github_release_unified_formal.py`
+- `benchmark/scripts/79_merge_github_release_unified_formal.py`
+
+## Citation
+
+If you use TSSM-RBench, please cite the paper in [paper](paper). You can also cite the Hugging Face dataset release.
+
+## License
+
+Please refer to the dataset package and repository license files before redistribution or derivative release.
+
+## Contact
+
+For questions about the benchmark, dataset, or reproduction pipeline, please open an issue in this repository.
+
+## Acknowledgement
+
+This repository accompanies the TSSM-RBench benchmark and its paper artifacts. Thanks for your interest and support.

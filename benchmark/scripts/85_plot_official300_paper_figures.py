@@ -22,8 +22,9 @@ DEFAULT_METRICS_JSON = (
     ROOT
     / "benchmark"
     / "data"
-    / "prototype_eval_results"
-    / "official_300repo_release_unified_v1_paper_artifacts"
+    / "results"
+    / "official_300repo_release_unified_v1"
+    / "analysis_exports"
     / "paper_metrics.json"
 )
 DEFAULT_OUTPUT_DIR = ROOT / "paper" / "figures" / "generated"
@@ -72,6 +73,8 @@ DECOUPLING_COLORS = {
 }
 
 
+# Plotting consumes the aggregated paper_metrics.json file instead of re-reading
+# question-level outputs, which keeps the figure build step lightweight.
 def load_metrics(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
